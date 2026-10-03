@@ -231,7 +231,7 @@ h3 {
   position: relative;
 }
 .hero-logo {
-  width: clamp(64px, 9vw, 96px);
+  width: clamp(80px, 11vw, 120px);
   height: auto;
   margin-bottom: 24px;
   filter: drop-shadow(0 0 24px rgba(245, 184, 0, 0.5));
@@ -1070,3 +1070,12 @@ a.btn-store {
   font-size: clamp(1rem, 2vw, 1.25rem);
   color: #f2f2f0;
 }
+
+/* bWalletX: big wordmark under the hero logo. */
+.wordmark {
+  margin: 0 0 0.4rem;
+  font: 800 clamp(3rem, 11vw, 6.5rem) / 1 'Space Grotesk', sans-serif;
+  letter-spacing: -0.03em;
+  color: #f2f2f0;
+}
+.brand { font-size: 1.35rem; }
