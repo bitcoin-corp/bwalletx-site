@@ -1095,3 +1095,12 @@ a.btn-store {
 }
 .topbar { top: 30px; }
 .hero { padding-top: calc(30px + var(--hero-pad, 0px)); }
+.web-btn {
+  text-decoration: none;
+  font: 700 0.95rem var(--hf);
+  color: #000;
+  background: #f5b800;
+  padding: 4px 12px;
+  border-radius: 999px;
+  font-weight: 700;
+}
