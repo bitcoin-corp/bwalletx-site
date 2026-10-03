@@ -1073,9 +1073,25 @@ a.btn-store {
 
 /* bWalletX: big wordmark under the hero logo. */
 .wordmark {
-  margin: 0 0 0.4rem;
+  margin: 0 0 1.4rem;
   font: 800 clamp(3rem, 11vw, 6.5rem) / 1 'Space Grotesk', sans-serif;
   letter-spacing: -0.03em;
   color: #f2f2f0;
 }
 .brand { font-size: 1.35rem; }
+
+.beta-banner {
+  position: fixed;
+  inset: 0 0 auto;
+  height: 30px;
+  box-sizing: border-box;
+  z-index: 60;
+  padding: 6px 16px;
+  text-align: center;
+  font: 600 0.8rem/1.4 'Space Grotesk', sans-serif;
+  letter-spacing: 0.02em;
+  color: #000;
+  background: #f5b800;
+}
+.topbar { top: 30px; }
+.hero { padding-top: calc(30px + var(--hero-pad, 0px)); }
