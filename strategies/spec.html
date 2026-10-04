@@ -35,7 +35,9 @@
       .ext .small { color: #8a8a86; font-size: 0.85rem; }
       .ext .row { display: flex; gap: 12px; flex-wrap: wrap; margin: 26px 0; }
           .ext pre { background: #101114; border: 1px solid #ffffff12; border-radius: 14px; padding: 16px; overflow-x: auto; font-size: 0.82rem; line-height: 1.55; }
-      .ext table { width: 100%; border-collapse: collapse; margin: 14px 0; font-size: 0.92rem; }
+      .ext table { display: block; max-width: 100%; overflow-x: auto; border-collapse: collapse; margin: 14px 0; font-size: 0.92rem; }
+      .ext pre { max-width: 100%; white-space: pre-wrap; overflow-wrap: anywhere; }
+      .ext td code { white-space: nowrap; }
       .ext th, .ext td { text-align: left; padding: 9px 10px; border-bottom: 1px solid #ffffff14; vertical-align: top; }
       .ext th { color: #F5B800; font-weight: 700; }
     </style>
