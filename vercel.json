@@ -1,1 +1,6 @@
-{ "cleanUrls": true }
+{
+  "cleanUrls": true,
+  "rewrites": [
+    { "source": "/.well-known/bsvalias", "destination": "https://pay.bwallet.space/.well-known/bsvalias" }
+  ]
+}
