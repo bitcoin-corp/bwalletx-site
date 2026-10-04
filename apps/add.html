@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Add your app to bWallet</title>
+    <meta name="description" content="Built a BSV app? Add it to the Apps screen in bWallet and bWalletX, in front of every wallet user. Free, reviewed by a person." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://bwalletx.com/apps/add" />
+    <meta property="og:site_name" content="bWalletX" />
+    <meta property="og:title" content="Add your app to bWallet" />
+    <meta property="og:description" content="Built a BSV app? Add it to the Apps screen in bWallet and bWalletX, in front of every wallet user. Free, reviewed by a person." />
+    <meta property="og:image" content="https://bwalletx.com/og-apps-add.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Add your apps to bWallet at bwalletx.com/apps/add" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Add your app to bWallet" />
+    <meta name="twitter:description" content="Built a BSV app? Add it to the Apps screen in bWallet and bWalletX, in front of every wallet user. Free, reviewed by a person." />
+    <meta name="twitter:image" content="https://bwalletx.com/og-apps-add.png" />
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="stylesheet" href="/styles.css" />
+    <style>
+      .ext { max-width: 760px; margin: 0 auto; padding: 120px 20px 80px; }
+      .ext h1 { font-size: clamp(2.2rem, 6vw, 3.4rem); margin: 18px 0 10px; }
+      .ext h2 { margin: 48px 0 10px; font-size: 1.5rem; }
+      .ext p, .ext li { line-height: 1.65; }
+      .ext code { background: #17191e; padding: 2px 7px; border-radius: 6px; overflow-wrap: anywhere; }
+      .flow { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; margin: 22px 0; }
+      .pill { background: #101114; border: 1px solid #F5B80055; color: #F5B800; border-radius: 999px; padding: 8px 16px; font-weight: 700; }
+      .arrow { color: #667085; }
+      .box { background: #101114; border: 1px solid #ffffff12; border-radius: 16px; padding: 18px 20px; margin: 16px 0; }
+      .box h3 { margin: 0 0 6px; font-size: 1rem; }
+      .box p { margin: 0; color: #a7adb8; }
+      .ext .small { color: #8a8a86; font-size: 0.85rem; }
+      .ext .row { display: flex; gap: 12px; flex-wrap: wrap; margin: 26px 0; }
+          form.add { display: grid; gap: 14px; margin: 26px 0; }
+      form.add label { display: grid; gap: 6px; font-weight: 600; font-size: 0.95rem; }
+      form.add input, form.add select, form.add textarea { background: #101114; border: 1px solid #ffffff22; border-radius: 12px; color: #fff; padding: 12px 14px; font: inherit; font-weight: 400; }
+      form.add small { color: #8a8a86; font-weight: 400; }
+      form.add button { background: #F5B800; color: #000; border: 0; border-radius: 999px; padding: 14px 22px; font-weight: 800; font-size: 1rem; cursor: pointer; }
+      .hp { position: absolute; left: -9999px; }
+      #msg { font-weight: 700; }
+    </style>
+  </head>
+  <body>
+    <div class="beta-banner">bWalletX is in <strong>beta</strong>: test with small amounts.</div>
+    <header class="topbar">
+      <div class="wrap topbar-in">
+        <a class="brand" href="/"><img src="/logo.svg" alt="" width="34" height="30" /><span>bWallet<span class="gold">X</span></span></a>
+        <nav aria-label="Pages">
+          <a href="/features">Features</a><a href="/exchange">Exchange</a><a href="/friends">Friends</a><a href="/agent">Agents</a><a href="/strategies">Strategies</a><a href="/android">Android</a><a href="/extension">Chrome</a><a href="/developers">Developers</a>
+        </nav>
+        <span class="nav-cta"><a class="dl-btn" href="/get">Download</a><a class="web-btn" href="https://web.bwalletx.com" target="_blank" rel="noopener">Web &rarr;</a></span>
+      </div>
+    </header>
+    <main class="ext">
+      <img src="/logo.svg" alt="bWalletX" width="72" height="64" />
+      <h1>Add your app to <span class="gold">bWallet</span></h1>
+      <p class="lede">Built something on BSV? Put it on the Apps screen of bWallet and bWalletX, one tap away for every wallet user. It's free.</p>
+      <div class="flow">
+        <span class="pill">Submit</span><span class="arrow">&rarr;</span>
+        <span class="pill">We review it</span><span class="arrow">&rarr;</span>
+        <span class="pill">Live in Apps</span>
+      </div>
+      <form class="add" method="post" action="/api/apps-submit" id="add">
+        <label>App address <input name="url" type="url" required placeholder="https://yourapp.com" inputmode="url" autocapitalize="none" /></label>
+        <label>Name <input name="name" required maxlength="40" placeholder="Your App" /></label>
+        <label>Category
+          <select name="category" required>
+            <option value="">Choose…</option>
+            <option value="games">Games</option><option value="social">Social</option><option value="media">Media</option>
+            <option value="market">Market</option><option value="money">Money</option><option value="tools">Tools</option>
+            <option value="explore">Explore</option><option value="learn">Learn</option>
+          </select>
+        </label>
+        <label>One-line description <input name="description" maxlength="140" placeholder="What it does, in a sentence" /></label>
+        <label>Your email <small>Only to tell you when it's live. Never shown.</small><input name="email" type="email" required placeholder="you@example.com" /></label>
+        <label>BSV address <small>Optional: for future tips and revenue share.</small><input name="bsv_address" maxlength="40" placeholder="1…" autocapitalize="none" /></label>
+        <input class="hp" name="company" tabindex="-1" autocomplete="off" aria-hidden="true" />
+        <button type="submit">Submit my app</button>
+        <p id="msg" role="status"></p>
+      </form>
+      <h2>What we check</h2>
+      <div class="box"><h3>It works and it's yours</h3><p>The site loads over https, does what it says, and you made it or run it.</p></div>
+      <div class="box"><h3>It's safe</h3><p>No scams, no phishing, nothing asking for seed phrases or private keys, nothing illegal. Payments go through the wallet's approval screen, so users always see what they're paying.</p></div>
+      <div class="box"><h3>Icon and name</h3><p>We use your site's own icon and title. Add an <code>apple-touch-icon</code> for the best tile.</p></div>
+      <h2>Connect to the wallet</h2>
+      <p>Apps open in bWallet's built-in browser with the wallet available to them. See <a href="/developers">Developers</a> to request payments, sign in with a wallet and read tokens.</p>
+      <p class="small">Questions: <a href="mailto:bitcoincorp11@gmail.com">bitcoincorp11@gmail.com</a></p>
+    </main>
+    <script>
+      (function () {
+        var f = document.getElementById('add'), m = document.getElementById('msg');
+        var q = new URLSearchParams(location.search).get('sent');
+        if (q) m.textContent = q === 'ok' ? 'Thanks! We review every app and will email you.' : 'Something went wrong. Please try again.';
+        f.addEventListener('submit', function (e) {
+          e.preventDefault();
+          var b = f.querySelector('button'); b.disabled = true; m.textContent = 'Sending…';
+          fetch(f.action, { method: 'POST', headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+            body: JSON.stringify(Object.fromEntries(new FormData(f))) })
+            .then(function (r) { return r.json(); })
+            .then(function (j) { m.textContent = j.message; m.style.color = j.ok ? '#6CE9A6' : '#F97066'; if (j.ok) f.reset(); })
+            .catch(function () { m.textContent = 'Network error. Please try again.'; m.style.color = '#F97066'; })
+            .finally(function () { b.disabled = false; });
+        });
+      })();
+    </script>
+  </body>
+</html>

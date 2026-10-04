@@ -8,6 +8,10 @@
     {
       "source": "/api/waitlist",
       "destination": "https://www.bwallet.space/api/waitlist"
+    },
+    {
+      "source": "/api/apps-submit",
+      "destination": "https://www.bwallet.space/api/apps-submit"
     }
   ]
 }
