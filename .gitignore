@@ -1,3 +1,10 @@
 .vercel
 node_modules
 .DS_Store
+
+# Screenshots never go in git (open-source repo; owner rule)
+screenshots/
+Screenshot*.png
+Screen Shot*.png
+/s[0-9]*.png
+*.screenshot.png
