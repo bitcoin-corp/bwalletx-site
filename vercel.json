@@ -1,6 +1,13 @@
 {
   "cleanUrls": true,
   "rewrites": [
-    { "source": "/.well-known/bsvalias", "destination": "https://pay.bwallet.space/.well-known/bsvalias" }
+    {
+      "source": "/.well-known/bsvalias",
+      "destination": "https://pay.bwallet.space/.well-known/bsvalias"
+    },
+    {
+      "source": "/api/waitlist",
+      "destination": "https://www.bwallet.space/api/waitlist"
+    }
   ]
 }
