@@ -58,18 +58,32 @@
         <span class="pill">Any MCP agent</span>
       </div>
       <h2>What agents can do</h2>
-      <div class="box"><h3>Wallet tools</h3><p>Check balances and prices, send, buy, sell and list on the Exchange, mint, load and run strategies, and read the activity log.</p></div>
-      <div class="box"><h3>Only the accounts you give it</h3><p>Agents work in agent accounts with their own keys and budget. Your main wallet is never exposed. Permissions per account: read, trade, send, mint, rooms.</p></div>
-      <div class="box"><h3>Bounded and revocable</h3><p>Access is a scoped agent token lasting 30 days at most, revocable any time, with rate limits on reads, writes and trades. Stop all agents with one switch.</p></div>
+      <div class="box"><h3>Tools (v0.1)</h3><p><code>accounts</code>, <code>balance</code>, <code>price</code>, <code>send</code> (BSV, live), <code>buy</code> (paper for now), <code>strategy_show</code>, <code>strategy_load</code> (always on paper), <code>log</code>, <code>stop_all</code>.</p></div>
+      <div class="box"><h3>Only the accounts you give it</h3><p>Agents work in agent accounts with their own keys and budget, exported from bWalletX. Your main wallet is never exposed.</p></div>
+      <div class="box"><h3>Bounded</h3><p>Every spend passes the same checks as the app: the kill switch, the daily cap, at most 30 spends an hour, then the strategy's rules. An AI can only load strategies on paper; going live is a step you take yourself.</p></div>
       <h2>Set up</h2>
-      <pre><code>bwalletx mcp            # starts the MCP server from the bWalletX CLI</code></pre>
-      <p>Add it to Claude, ChatGPT, Cursor or any MCP client, then pair it with your wallet.</p>
+      <pre><code>npm i -g bwalletx
+bwalletx key import ./trader.key.json      # from bWalletX: Agents &rsaquo; Export for CLI</code></pre>
+      <p><strong>Claude Code:</strong></p>
+      <pre><code>claude mcp add bwalletx -e BWALLETX_PASSPHRASE=your-passphrase -- npx -y bwalletx mcp</code></pre>
+      <p><strong>Claude Desktop, Cursor and others</strong> (MCP config file):</p>
+      <pre><code>{
+  "mcpServers": {
+    "bwalletx": {
+      "command": "npx",
+      "args": ["-y", "bwalletx", "mcp"],
+      "env": { "BWALLETX_PASSPHRASE": "your-passphrase" }
+    }
+  }
+}</code></pre>
+      <p class="small">The passphrase unlocks the agent account's key file on your machine. Use a separate agent account with a small balance for AI agents. Leave the passphrase out and the server stays paper-only: it can read and practise, but never send.</p>
+      <p>Coming: pairing with the app (scoped tokens lasting 30 days at most, revocable), live buys, selling, listing and minting. Source: <a href="https://github.com/b0ase/bwalletx-cli">github.com/b0ase/bwalletx-cli</a>.</p>
 
       <div class="row">
         <a class="btn btn-store" href="/agent">Agent wallet</a>
         <a class="btn btn-store btn-ghost" href="/developers">Developers</a>
       </div>
-      <p class="small">Coming soon. Agent accounts are already in bWalletX (Settings &rsaquo; Agents). Questions: <a href="mailto:bitcoincorp11@gmail.com">bitcoincorp11@gmail.com</a></p>
+      <p class="small">Questions: <a href="mailto:bitcoincorp11@gmail.com">bitcoincorp11@gmail.com</a></p>
     </main>
   </body>
 </html>

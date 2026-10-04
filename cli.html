@@ -53,29 +53,38 @@
       <h1>bWallet<span class="gold">X</span> CLI</h1>
       <p class="lede">Your wallet and your agents from the command line, on your laptop or a server.</p>
       <div class="flow">
-        <span class="pill">bwalletx login</span><span class="arrow">&rarr;</span>
-        <span class="pill">bwalletx buy</span><span class="arrow">&rarr;</span>
+        <span class="pill">npm i -g bwalletx</span><span class="arrow">&rarr;</span>
+        <span class="pill">bwalletx key import</span><span class="arrow">&rarr;</span>
         <span class="pill">bwalletx agent run</span>
       </div>
+      <h2>Get started</h2>
+      <pre><code>npm i -g bwalletx                    # Node 20+
+# In bWalletX: Settings &rsaquo; Agents &rsaquo; your agent account &rsaquo; Run on a computer &rsaquo; Export for CLI
+bwalletx key import ./trader.key.json   # asks for the file's passphrase</code></pre>
       <h2>Commands</h2>
-      <pre><code>bwalletx login                       # pair with your wallet (QR / link)
-bwalletx accounts                    # accounts you've shared with this CLI
-bwalletx balance --account trader
-bwalletx send 10 HANDLE name@bwalletx.com --account trader
-bwalletx buy HANDLE --max-usd 20 --account trader
-bwalletx strategy load ./accumulator.json --account trader
-bwalletx agent run trader            # run that account's strategy unattended
-bwalletx log --account trader</code></pre>
+      <pre><code>bwalletx accounts                    # imported agent accounts
+bwalletx balance --account trader    # BSV and tokens, in dollars
+bwalletx price &lt;tokenId&gt;
+bwalletx send 1 name@bwalletx.com --account trader
+bwalletx buy &lt;tokenId&gt; --max-usd 2 --account trader     # paper mode for now
+bwalletx strategy load ./slow-accumulator.json --account trader
+bwalletx agent run trader            # run its strategy unattended
+bwalletx log --account trader
+bwalletx stop                        # kill switch: refuse every spend</code></pre>
+      <h2>What works today (v0.1)</h2>
+      <div class="box"><h3>Live</h3><p>Balances, prices, the activity log, and sending BSV to an address or paymail, from an agent account.</p></div>
+      <div class="box"><h3>Paper only for now</h3><p>Buying tokens, and strategies run by <code>agent run</code>: live prices, pretend money, nothing signed. Real buys from the CLI are coming; for now buy in the app.</p></div>
+      <div class="box"><h3>Coming</h3><p>Pairing with the app (<code>bwalletx login</code>) so the CLI gets a scoped, revocable token instead of a key file. Selling, listing and minting.</p></div>
       <h2>Your keys stay safe</h2>
-      <div class="box"><h3>Paired (default)</h3><p>The CLI pairs with your wallet like a website. It gets a scoped agent token, not your keys: it names the accounts and actions allowed, lasts 30 days at most, and you can revoke it any time.</p></div>
-      <div class="box"><h3>Standalone, for servers</h3><p>Run one agent account unattended from its own key file, encrypted with a passphrase. Only agent accounts can be exported this way, never your main wallet.</p></div>
-      <div class="box"><h3>Limits</h3><p>The agent account's balance is the budget, with optional daily caps and rate limits. Every action is logged.</p></div>
+      <div class="box"><h3>Agent accounts only</h3><p>Only agent accounts can be exported, never your main wallet. The key file is encrypted with a passphrase you choose and stays encrypted on disk.</p></div>
+      <div class="box"><h3>Limits</h3><p>The agent account's balance is the budget. Every spend is checked first: the kill switch, the daily cap, at most 30 spends an hour, then the strategy's rules. Every action is logged.</p></div>
+      <p>Free example strategies and the file format: <a href="/strategies">Strategies</a> &middot; <a href="/strategies/spec">spec</a>. Source: <a href="https://github.com/b0ase/bwalletx-cli">github.com/b0ase/bwalletx-cli</a> &middot; <a href="https://www.npmjs.com/package/bwalletx">npm</a>.</p>
 
       <div class="row">
         <a class="btn btn-store" href="/agent">Agent wallet</a>
         <a class="btn btn-store btn-ghost" href="/developers">Developers</a>
       </div>
-      <p class="small">Coming soon. Agent accounts are already in bWalletX (Settings &rsaquo; Agents). Questions: <a href="mailto:bitcoincorp11@gmail.com">bitcoincorp11@gmail.com</a></p>
+      <p class="small">Questions: <a href="mailto:bitcoincorp11@gmail.com">bitcoincorp11@gmail.com</a></p>
     </main>
   </body>
 </html>
