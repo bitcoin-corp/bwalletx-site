@@ -12,6 +12,10 @@
     {
       "source": "/api/apps-submit",
       "destination": "https://www.bwallet.space/api/apps-submit"
+    },
+    {
+      "source": "/api/strategies",
+      "destination": "https://www.bwallet.space/api/strategies"
     }
   ]
 }

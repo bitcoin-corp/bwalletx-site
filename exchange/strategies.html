@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>bWalletX Exchange: Strategies</title>
+    <meta name="description" content="Strategies for sale on the bWalletX Exchange: programs your agent account runs, sold as encrypted NFTs. Compare the spec, buy in bWalletX, run on paper first." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://bwalletx.com/exchange/strategies" />
+    <meta property="og:site_name" content="bWalletX" />
+    <meta property="og:title" content="Strategies for sale on the bWalletX Exchange" />
+    <meta property="og:description" content="Strategies for sale on the bWalletX Exchange: programs your agent account runs, sold as encrypted NFTs. Compare the spec, buy in bWalletX, run on paper first." />
+    <meta property="og:image" content="https://bwalletx.com/og-strategies-b.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Strategies for sale on the bWalletX Exchange: programs your agent account runs, sold as encrypted NFTs. Compare the spec, buy in bWalletX, run on paper first." />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Strategies for sale on the bWalletX Exchange" />
+    <meta name="twitter:description" content="Strategies for sale on the bWalletX Exchange: programs your agent account runs, sold as encrypted NFTs. Compare the spec, buy in bWalletX, run on paper first." />
+    <meta name="twitter:image" content="https://bwalletx.com/og-strategies-b.png" />
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="stylesheet" href="/styles.css" />
+    <style>
+      .ext { max-width: 760px; margin: 0 auto; padding: 120px 20px 80px; }
+      .ext h1 { font-size: clamp(2.2rem, 6vw, 3.4rem); margin: 18px 0 10px; }
+      .ext h2 { margin: 48px 0 10px; font-size: 1.5rem; }
+      .ext p, .ext li { line-height: 1.65; }
+      .ext code { background: #17191e; padding: 2px 7px; border-radius: 6px; overflow-wrap: anywhere; }
+      .flow { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; margin: 22px 0; }
+      .pill { background: #101114; border: 1px solid #F5B80055; color: #F5B800; border-radius: 999px; padding: 8px 16px; font-weight: 700; }
+      .arrow { color: #667085; }
+      .box { background: #101114; border: 1px solid #ffffff12; border-radius: 16px; padding: 18px 20px; margin: 16px 0; }
+      .box h3 { margin: 0 0 6px; font-size: 1rem; }
+      .box p { margin: 0; color: #a7adb8; }
+      .ext .small { color: #8a8a86; font-size: 0.85rem; }
+      .ext .row { display: flex; gap: 12px; flex-wrap: wrap; margin: 26px 0; }
+          .card { background: #101114; border: 1px solid #ffffff12; border-radius: 16px; padding: 18px 20px; margin: 14px 0; }
+      .card .top { display: flex; gap: 12px; align-items: baseline; }
+      .card h3 { margin: 0; font-size: 1.1rem; flex: 1; }
+      .price { color: #A1FF8B; font-weight: 800; }
+      .meta { color: #a7adb8; font-size: 0.88rem; margin: 6px 0 10px; }
+      .spec { display: grid; grid-template-columns: 150px 1fr; gap: 4px 12px; font-size: 0.88rem; }
+      .spec dt { color: #8a8a86; } .spec dd { margin: 0; }
+      .risk-Low { color: #6CE9A6; } .risk-Medium { color: #F5B800; } .risk-High { color: #FDA29B; } .risk-Experimental { color: #BDB4FE; }
+      @media (max-width: 520px) { .spec { grid-template-columns: 1fr; } .spec dt { margin-top: 6px; } }
+    </style>
+  </head>
+  <body>
+    <div class="beta-banner">bWalletX is in <strong>beta</strong>: test with small amounts.</div>
+    <header class="topbar">
+      <div class="wrap topbar-in">
+        <a class="brand" href="/"><img src="/logo.svg" alt="" width="34" height="30" /><span>bWallet<span class="gold">X</span></span></a>
+        <nav aria-label="Pages">
+          <a href="/features">Features</a><a href="/exchange" aria-current="page">Exchange</a><a href="/friends">Friends</a><a href="/agent">Agents</a><a href="/strategies">Strategies</a><a href="/android">Android</a><a href="/extension">Chrome</a><a href="/developers">Developers</a>
+        </nav>
+        <span class="nav-cta"><a class="dl-btn" href="/get">Download</a><a class="web-btn" href="https://web.bwalletx.com" target="_blank" rel="noopener">Web &rarr;</a></span>
+      </div>
+    </header>
+    <main class="ext">
+      <img src="/logo.svg" alt="bWalletX" width="72" height="64" />
+      <h1>Exchange &rsaquo; <span class="gold">Strategies</span></h1>
+      <p class="lede">Programs your agent account runs, written and sold by bWalletX users. Each one is an encrypted NFT: read the spec here, buy it in bWalletX, run it on paper first.</p>
+      <div class="flow"><span class="pill">Compare the spec</span><span class="arrow">&rarr;</span><span class="pill">Buy in bWalletX</span><span class="arrow">&rarr;</span><span class="pill">Run on paper</span></div>
+      <div class="box"><p>Strategies are programs written and sold by users. bWalletX doesn&rsquo;t review, rate or recommend them. The wallet enforces each strategy&rsquo;s own limits before anything is signed.</p></div>
+      <h2>For sale now</h2>
+      <div id="list"><p class="small">Loading strategies&hellip;</p></div>
+      <h2>Free examples</h2>
+      <p>Four starter strategies you can download and load straight into an agent account: <a href="/strategies/slow-accumulator.json" download>Slow accumulator</a>, <a href="/strategies/dip-buyer.json" download>Dip buyer</a>, <a href="/strategies/take-profit.json" download>Take profit</a> and <a href="/strategies/allowance.json" download>Allowance</a>. More on <a href="/strategies">Strategies</a>.</p>
+      <h2>Sell yours</h2>
+      <p>In bWalletX, load your strategy into an agent account, then tap <strong>Sell</strong>: fill in the spec, set a dollar price and how many copies, and publish. Buyers pay you directly. The format is in the <a href="/strategies/spec">strategy spec</a>.</p>
+      <div class="row">
+        <a class="btn btn-store" href="/get">Get bWalletX</a>
+        <a class="btn btn-store btn-ghost" href="/strategies/spec">Strategy spec</a>
+      </div>
+    </main>
+    <script>
+      (function () {
+        var el = document.getElementById('list');
+        var esc = function (s) { return String(s == null ? '' : s).replace(/[&<>"']/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]; }); };
+        var LABELS = [['trades', 'What it trades'], ['risk', 'Seller’s risk rating'], ['spends', 'Most it will spend'], ['often', 'How often it acts'], ['stops', 'When it stops'], ['needs', 'Needs']];
+        fetch('/api/strategies').then(function (r) { return r.json(); }).then(function (j) {
+          var xs = (j && j.strategies) || [];
+          if (!xs.length) { el.innerHTML = '<p class="small">Nothing for sale yet. Be the first: publish yours from bWalletX.</p>'; return; }
+          el.innerHTML = xs.map(function (x) {
+            var e = x.envelope, left = e.sale.copies - x.sold;
+            var spec = LABELS.map(function (l) { return '<dt>' + l[1] + '</dt><dd class="' + (l[0] === 'risk' ? 'risk-' + esc(e.spec.risk) : '') + '">' + esc(e.spec[l[0]]) + '</dd>'; }).join('');
+            return '<div class="card"><div class="top"><h3>' + esc(e.name) + ' <span class="small">v' + esc(e.version) + '</span></h3><span class="price">$' + Number(e.sale.priceUsd).toFixed(2) + '</span></div>' +
+              '<div class="meta">by ' + esc(e.author.name || String(e.author.address).slice(0, 10)) + ' &middot; ' + (left > 0 ? left + ' of ' + e.sale.copies + ' left' : 'sold out') + ' &middot; ' + new Date(x.createdAt).toLocaleDateString() + '</div>' +
+              (e.description ? '<p>' + esc(e.description) + '</p>' : '') + '<dl class="spec">' + spec + '</dl>' +
+              '<p class="small" style="margin-top:10px">Buy in bWalletX: Exchange &rsaquo; Strategies.</p></div>';
+          }).join('');
+        }).catch(function () { el.innerHTML = '<p class="small">Couldn’t load strategies right now. Try again in a moment.</p>'; });
+      })();
+    </script>
+  </body>
+</html>
