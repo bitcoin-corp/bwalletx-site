@@ -24,10 +24,27 @@
       .ext { max-width: 980px; margin: 0 auto; padding: 120px 20px 80px; }
       .ext h1 { font-size: clamp(2.2rem, 6vw, 3.4rem); margin: 18px 0 10px; }
       .ext h2 { margin: 44px 0 14px; font-size: 1.35rem; }
-      .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 14px; }
-      .card { background: #101114; border: 1px solid #ffffff12; border-radius: 16px; padding: 16px 18px; }
-      .card h3 { margin: 0 0 6px; font-size: 1rem; color: #fff; }
+      .legend { margin: 8px 0 8px; color: #a7adb8; font-size: 0.9rem; display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
+      .fgroup { margin-top: 52px; }
+      .fgroup h2 { display: flex; align-items: center; gap: 12px; font-size: 1.6rem; margin: 0 0 16px; }
+      .ficon { width: 44px; height: 44px; border-radius: 14px; display: grid; place-items: center; font-size: 1.35rem;
+        background: color-mix(in srgb, var(--c) 18%, transparent); border: 1px solid color-mix(in srgb, var(--c) 45%, transparent); }
+      .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 14px; }
+      .card { position: relative; background: linear-gradient(160deg, color-mix(in srgb, var(--c) 9%, #101114), #0c0d10 70%);
+        border: 1px solid #ffffff12; border-radius: 18px; padding: 18px 18px 16px; overflow: hidden;
+        transition: transform .18s ease, border-color .18s ease, box-shadow .18s ease; }
+      .card::before { content: ''; position: absolute; inset: 0 0 auto; height: 3px; background: var(--c); opacity: .75; }
+      .card:hover { transform: translateY(-3px); border-color: color-mix(in srgb, var(--c) 55%, transparent);
+        box-shadow: 0 10px 30px color-mix(in srgb, var(--c) 18%, transparent); }
+      .card.big { grid-column: span 2; padding: 24px 22px 20px; }
+      .card.big h3 { font-size: 1.3rem; }
+      .card.big p { font-size: 1rem; }
+      .card h3 { margin: 0 0 6px; font-size: 1.02rem; color: #fff; display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
       .card p { margin: 0; color: #a7adb8; font-size: 0.9rem; line-height: 1.5; }
+      .card.xonly { border-color: #F5B80055; }
+      .xbadge { font: 700 0.62rem var(--hf); letter-spacing: .06em; text-transform: uppercase; color: #000;
+        background: linear-gradient(135deg, #ffe58a, #f5b800); border-radius: 999px; padding: 3px 8px; }
+      @media (max-width: 560px) { .card.big { grid-column: span 1; } }
       .ext .row { display: flex; gap: 12px; flex-wrap: wrap; margin: 26px 0; }
       .ext .small { color: #8a8a86; font-size: 0.85rem; }
     </style>
@@ -40,7 +57,7 @@
         <nav aria-label="Pages">
           <a href="/features" aria-current="page">Features</a><a href="/friends">Friends</a><a href="/android">Android</a><a href="/extension">Chrome</a><a href="/developers">Developers</a>
         </nav>
-        <a class="web-btn" href="https://web.bwalletx.com" target="_blank" rel="noopener">Web &rarr;</a>
+        <span class="nav-cta"><a class="dl-btn" href="/get">Download</a><a class="web-btn" href="https://web.bwalletx.com" target="_blank" rel="noopener">Web &rarr;</a></span>
       </div>
     </header>
     <main class="ext">
@@ -49,77 +66,89 @@
       <p class="lede">One non-custodial BSV wallet for money, names, tokens, rooms, media and apps. Your keys never leave your device.</p>
       <div class="row">
         <a class="btn btn-store" href="/android">Android</a>
+        <a class="btn btn-store btn-ghost" href="/#waitlist">iPhone · coming soon</a>
         <a class="btn btn-store btn-ghost" href="/extension">Chrome extension</a>
         <a class="btn btn-store btn-ghost" href="https://web.bwalletx.com">Web</a>
       </div>
 
-      <h2>Wallet</h2>
-      <div class="grid">
-        <div class="card"><h3>BSV, priced in dollars</h3><p>Balances and prices shown in USD; you pay in sats. Live price chart.</p></div>
-        <div class="card"><h3>Send to names</h3><p>Pay a paymail like <code>name@bwalletx.com</code> instead of a long address.</p></div>
-        <div class="card"><h3>Tokens and NFTs</h3><p>Hold, send and receive BSV-21 tokens and 1Sat Ordinals, with a separate ordinals address.</p></div>
-        <div class="card"><h3>Restore from anywhere</h3><p>12 words are enough. Import from Yours, Panda, RelayX or Twetch, a private key or a backup file.</p></div>
-        <div class="card"><h3>Sweep another wallet</h3><p>Pull funds in from any 12/24-word wallet, scanning its addresses for you.</p></div>
-        <div class="card"><h3>Find lost tokens</h3><p>Recover purchases and tokens that didn't show up, and heal indexing.</p></div>
-        <div class="card"><h3>bCredits</h3><p>Top up credits for bCorp apps from the Wallet tab.</p></div>
-        <div class="card"><h3>Several accounts</h3><p>Keep separate accounts, each with its own name, token and room.</p></div>
-      </div>
-
-      <h2>Names and identity</h2>
-      <div class="grid">
-        <div class="card"><h3>Your own paymail</h3><p>Claim <code>yourname@bwalletx.com</code> and receive to it.</p></div>
-        <div class="card"><h3>Verified X and Google names</h3><p>Prove your X account or Gmail for a verified <code>name.x</code> or <code>name.gmail</code>.</p></div>
-        <div class="card"><h3>Every name visible</h3><p>Settings lists every name your wallet receives at, with one-tap unlink.</p></div>
-        <div class="card"><h3>Profile and avatar</h3><p>Pick an avatar and a display name that follow you into chat and the market.</p></div>
-        <div class="card"><h3>Signed issuer statements</h3><p>Every token you mint carries a statement signed by your identity, so anyone can check who made it.</p></div>
-        <div class="card"><h3>Verified identity (optional)</h3><p>KYC through bit-sign, where you choose what to reveal.</p></div>
-      </div>
-
-      <h2>Make things</h2>
-      <div class="grid">
-        <div class="card"><h3>Your personal token</h3><p>Mint a $HANDLE token named after you, in one tap.</p></div>
-        <div class="card"><h3>Mint tokens</h3><p>Create BSV-21 tokens with your own supply, icon and name.</p></div>
-        <div class="card"><h3>Mint NFTs</h3><p>Inscribe images, music and video as 1Sat Ordinals.</p></div>
-        <div class="card"><h3>Tickets</h3><p>Mint a ticket token; sending one invites someone into your room.</p></div>
-      </div>
-
-      <h2>Social</h2>
-      <div class="grid">
-        <div class="card"><h3>Token rooms</h3><p>Hold the token, join the room. Each token gets a chat room; the owner sets the rules.</p></div>
-        <div class="card"><h3>Direct messages</h3><p>Private chats with your contacts.</p></div>
-        <div class="card"><h3>Voice and video calls</h3><p>Call friends straight from the wallet.</p></div>
-        <div class="card"><h3>Bounties</h3><p>Post paid tasks in a token room and pay out from your wallet when they're done.</p></div>
-        <div class="card"><h3>Feed</h3><p>A feed of on-chain posts from BSV social apps, with bookmarks.</p></div>
-        <div class="card"><h3>Lock to like</h3><p>Back a post by time-locking your own BSV against it, plus a most-locked leaderboard.</p></div>
-        <div class="card"><h3>Notifications</h3><p>Payments, messages and room activity, with per-category controls.</p></div>
-      </div>
-
-      <h2>Market and media</h2>
-      <div class="grid">
-        <div class="card"><h3>Market</h3><p>Browse and buy tokens and NFTs, including every $HANDLE token and verified X accounts.</p></div>
-        <div class="card"><h3>Sell</h3><p>List your tokens and NFTs for sale from the wallet.</p></div>
-        <div class="card"><h3>Safety filter</h3><p>Always-on filter for unsafe content in the market; your own items blur instead.</p></div>
-        <div class="card"><h3>Media player</h3><p>Play music and video ordinals you own, with a mini player.</p></div>
-        <div class="card"><h3>Shares</h3><p>See company share listings in the market.</p></div>
-      </div>
-
-      <h2>Apps and websites</h2>
-      <div class="grid">
-        <div class="card"><h3>bApps store</h3><p>A built-in store of Bitcoin apps, one tap away.</p></div>
-        <div class="card"><h3>Browser</h3><p>Open BSV apps inside the wallet; they can ask it to pay or sign.</p></div>
-        <div class="card"><h3>Connect to websites</h3><p>A BRC-100 wallet sites can connect to. <a href="/developers">For developers</a>.</p></div>
-        <div class="card"><h3>Pair by QR</h3><p>Scan a site's QR with your phone to connect it, and see or remove paired sites.</p></div>
-        <div class="card"><h3>b agent</h3><p>A help assistant: use your own AI key, or pay per message from the wallet.</p></div>
-      </div>
-
-      <h2>Security</h2>
-      <div class="grid">
-        <div class="card"><h3>Non-custodial</h3><p>Keys are created and stored on your device. We never see them.</p></div>
-        <div class="card"><h3>Approve every request</h3><p>Nothing is signed or paid without your tap; set a one-tap limit for small payments.</p></div>
-        <div class="card"><h3>Face ID and fingerprint</h3><p>Unlock with biometrics on your phone.</p></div>
-        <div class="card"><h3>Strong passwords</h3><p>Generate a strong password and change it anytime.</p></div>
-        <div class="card"><h3>Delete your account</h3><p>Remove your paymail, profile and messages from our servers whenever you like.</p></div>
-      </div>
+      <div class="legend"><span class="xbadge">bWalletX</span> only in bWalletX (Android, Chrome, web). Everything else is also in <a href="https://www.bwallet.space">bWallet</a> from the App Store and Google Play.</div>
+      <section class="fgroup" style="--c:#F5B800">
+        <h2><span class="ficon" aria-hidden="true">💰</span>Wallet</h2>
+        <div class="grid">
+          <div class="card big"><h3>BSV, priced in dollars</h3><p>Balances and prices in USD; you pay in sats. Live price chart.</p></div>
+          <div class="card big"><h3>Send to names</h3><p>Pay a paymail like <code>name@bwalletx.com</code> instead of a long address.</p></div>
+          <div class="card"><h3>Tokens and NFTs</h3><p>Hold, send and receive BSV-21 tokens and 1Sat Ordinals, with a separate ordinals address.</p></div>
+          <div class="card"><h3>Restore from anywhere</h3><p>12 words are enough. Import from Yours, Panda, RelayX or Twetch, a private key or a backup file.</p></div>
+          <div class="card"><h3>Sweep another wallet</h3><p>Pull funds in from any 12/24-word wallet, scanning its addresses for you.</p></div>
+          <div class="card"><h3>Find lost tokens</h3><p>Recover purchases and tokens that didn't show up, and heal indexing.</p></div>
+          <div class="card"><h3>Several accounts</h3><p>Keep separate accounts, each with its own name.</p></div>
+          <div class="card xonly"><h3>bCredits<span class="xbadge">bWalletX</span></h3><p>Top up credits for bCorp apps from the Wallet tab.</p></div>
+        </div>
+      </section>
+      <section class="fgroup" style="--c:#5EEAD4">
+        <h2><span class="ficon" aria-hidden="true">🪪</span>Names and identity</h2>
+        <div class="grid">
+          <div class="card big"><h3>Your own paymail</h3><p>Claim <code>yourname@bwalletx.com</code> and receive to it.</p></div>
+          <div class="card big xonly"><h3>Verified X and Google names<span class="xbadge">bWalletX</span></h3><p>Sign in with X or Google for a verified <code>name.x</code> or <code>name.gmail</code>, with your photo.</p></div>
+          <div class="card"><h3>Every name visible</h3><p>Settings lists every name your wallet receives at, with one-tap unlink.</p></div>
+          <div class="card"><h3>Profile and avatar</h3><p>An avatar and display name that follow you into chat and the market.</p></div>
+          <div class="card"><h3>Signed issuer statements</h3><p>Every token you mint carries a statement signed by your identity, so anyone can check who made it.</p></div>
+          <div class="card"><h3>Verified identity (optional)</h3><p>KYC through bit-sign, where you choose what to reveal.</p></div>
+        </div>
+      </section>
+      <section class="fgroup" style="--c:#C4B5FD">
+        <h2><span class="ficon" aria-hidden="true">✨</span>Make things</h2>
+        <div class="grid">
+          <div class="card big xonly"><h3>Your personal token<span class="xbadge">bWalletX</span></h3><p>Mint a $HANDLE token named after you in one tap. Its icon is your profile picture.</p></div>
+          <div class="card"><h3>Mint tokens</h3><p>Create BSV-21 tokens with your own supply, icon and name.</p></div>
+          <div class="card"><h3>Mint NFTs</h3><p>Inscribe images, music and video as 1Sat Ordinals.</p></div>
+          <div class="card xonly"><h3>Tickets<span class="xbadge">bWalletX</span></h3><p>Mint a ticket token; sending one invites someone into your room.</p></div>
+        </div>
+      </section>
+      <section class="fgroup" style="--c:#F9A8D4">
+        <h2><span class="ficon" aria-hidden="true">💬</span>Friends and social</h2>
+        <div class="grid">
+          <div class="card big xonly"><h3>Token rooms<span class="xbadge">bWalletX</span></h3><p>Hold the token, join the room. Every token gets a chat room; its owner sets the rules.</p></div>
+          <div class="card big"><h3>Friends</h3><p>Your address book: message, call or pay anyone, and see their token and room.</p></div>
+          <div class="card"><h3>Direct messages</h3><p>Private chats with your contacts.</p></div>
+          <div class="card"><h3>Voice and video calls</h3><p>Call friends straight from the wallet.</p></div>
+          <div class="card xonly"><h3>Bounties<span class="xbadge">bWalletX</span></h3><p>Post paid tasks in a token room and pay out from your wallet when they're done.</p></div>
+          <div class="card"><h3>Feed</h3><p>On-chain posts from BSV social apps, with bookmarks.</p></div>
+          <div class="card"><h3>Lock to like</h3><p>Back a post by time-locking your own BSV against it, plus a most-locked leaderboard.</p></div>
+          <div class="card"><h3>Notifications</h3><p>Payments, messages and room activity, with per-category controls.</p></div>
+        </div>
+      </section>
+      <section class="fgroup" style="--c:#93C5FD">
+        <h2><span class="ficon" aria-hidden="true">📈</span>Market and media</h2>
+        <div class="grid">
+          <div class="card big xonly"><h3>The exchange<span class="xbadge">bWalletX</span></h3><p>Buy and sell tokens and NFTs wallet to wallet, including every $HANDLE token and verified X accounts.</p></div>
+          <div class="card"><h3>Browse the market</h3><p>Explore tokens and NFTs, filtered for safety.</p></div>
+          <div class="card xonly"><h3>Sell<span class="xbadge">bWalletX</span></h3><p>List your tokens and NFTs at your own price from the wallet.</p></div>
+          <div class="card"><h3>Safety filter</h3><p>Always-on filter for unsafe content in the market; your own items blur instead.</p></div>
+          <div class="card big"><h3>Media player</h3><p>Play music and video ordinals you own, with a mini player.</p></div>
+          <div class="card xonly"><h3>Shares<span class="xbadge">bWalletX</span></h3><p>See company share listings in the market.</p></div>
+        </div>
+      </section>
+      <section class="fgroup" style="--c:#86EFAC">
+        <h2><span class="ficon" aria-hidden="true">🧩</span>Apps and websites</h2>
+        <div class="grid">
+          <div class="card big"><h3>bApps store</h3><p>A built-in store of Bitcoin apps, one tap away. Desktop- or phone-sized.</p></div>
+          <div class="card"><h3>Browser</h3><p>Open BSV apps inside the wallet; they can ask it to pay or sign.</p></div>
+          <div class="card"><h3>Connect to websites</h3><p>A BRC-100 wallet sites can connect to. <a href="/developers">For developers</a>.</p></div>
+          <div class="card"><h3>Pair by QR</h3><p>Scan a site's QR with your phone to connect it, and see or remove paired sites.</p></div>
+          <div class="card"><h3>b agent</h3><p>A help assistant with your own AI key, or pay per message from the wallet.</p></div>
+        </div>
+      </section>
+      <section class="fgroup" style="--c:#FCA5A5">
+        <h2><span class="ficon" aria-hidden="true">🔐</span>Security</h2>
+        <div class="grid">
+          <div class="card big"><h3>Non-custodial</h3><p>Keys are created and stored on your device. We never see them.</p></div>
+          <div class="card big"><h3>Approve every request</h3><p>Nothing is signed or paid without your tap; set a one-tap limit for small payments.</p></div>
+          <div class="card"><h3>Face ID and fingerprint</h3><p>Unlock with biometrics on your phone.</p></div>
+          <div class="card"><h3>Strong passwords</h3><p>Generate a strong password and change it anytime.</p></div>
+          <div class="card"><h3>Delete your account</h3><p>Remove your paymail, profile and messages from our servers whenever you like.</p></div>
+        </div>
+      </section>
 
       <p class="small" style="margin-top: 48px">Some features are still in beta and vary by platform. Questions: <a href="mailto:bitcoincorp11@gmail.com">bitcoincorp11@gmail.com</a></p>
     </main>
