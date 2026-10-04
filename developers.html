@@ -83,6 +83,9 @@ const { signature } = await wallet.createSignature({
       <pre><code>const wallets = await bWalletX.discover();
 // [{ info: { name, icon, rdns, kind }, wallet }, …]</code></pre>
 
+      <h2>What your site can do</h2>
+      <p>bWalletX implements the BRC-100 wallet interface. Sites can request any BRC-100 action, including signatures and keys from any protocol (BRC-29 payment-key derivation included). The user approves each request; we don't keep a hidden blocklist. If we ever have to restrict something, we'll say so here and in the release notes first.</p>
+
       <h2>Which address will I see?</h2>
       <p>BRC-100 wallets don't hand sites the user's main receive address. <code>identityKey</code> is the user's stable identity for your site, and payments made through <code>createAction</code> come from the user's wallet balance. So an address you derive from the identity key won't match the address shown on the wallet's Receive screen. That's expected.</p>
 
