@@ -64,10 +64,17 @@
       <p>Every strategy has fixed limits: which tokens, how much per trade, how much per day, when to stop. The wallet checks them before anything is signed, so an agent can decide <i>when</i> to act but can never go past the limits.</p>
 
       <h2>Buy and sell strategies</h2>
-      <div class="box"><h3>Publish &amp; sell in one tap</h3><p>When you're happy with a strategy, publish it straight from the chat and list it in Market &rsaquo; Strategies at your price, one-off or limited editions.</p></div>
+      <div class="box"><h3>Publish &amp; sell in one tap</h3><p>When you're happy with a strategy, publish it straight from the chat and list it in Exchange &rsaquo; Strategies at your price, one-off or limited editions.</p></div>
       <div class="box"><h3>Encrypted</h3><p>The program is locked inside an encrypted NFT. Anyone can read the public spec; only the owner can open and run it. Resell it like any NFT.</p></div>
       <div class="box"><h3>A spec on every listing</h3><p>Sellers fill in the same spec for every strategy: what it trades, the most it spends, how often it acts, when it stops, and the seller's own risk rating. Easy to compare.</p></div>
 
+      <h2>Example strategies</h2>
+      <p>Free to download. In bWalletX: Settings &rsaquo; Agents &rsaquo; your agent account &rsaquo; Load strategy &rsaquo; Choose file. Every strategy starts on paper (pretend money) until you choose Run live. Change the token to one you want first.</p>
+      <div class="box"><h3>Slow accumulator <span class="small">· Medium risk</span></h3><p>Builds a $B0ASEX position a little at a time, only while the price is low.</p><p class="small" style="margin-top:6px">Buy only · $2 a trade · $10/day · $200 total · stops at 100k tokens</p><p style="margin-top:8px"><a href="/strategies/slow-accumulator.json" download>Download slow-accumulator.json</a></p></div>
+      <div class="box"><h3>Dip buyer <span class="small">· High risk</span></h3><p>Waits for sharp dips and buys then; does nothing on quiet days.</p><p class="small" style="margin-top:6px">Buy only · $5 a trade · $5/day · $50 total · stops if down 30%</p><p style="margin-top:8px"><a href="/strategies/dip-buyer.json" download>Download dip-buyer.json</a></p></div>
+      <div class="box"><h3>Take profit <span class="small">· Low risk</span></h3><p>Sells $B0ASEX in slices once the price is above target. Never below it.</p><p class="small" style="margin-top:6px">Sell / list only · at or above $0.002 · $20/day</p><p style="margin-top:8px"><a href="/strategies/take-profit.json" download>Download take-profit.json</a></p></div>
+      <div class="box"><h3>Allowance <span class="small">· Low risk</span></h3><p>Sends a small daily BSV allowance to a fixed list of people. Edit the list first.</p><p class="small" style="margin-top:6px">Send only · $1 a send · $2/day · $60 total · fixed recipients</p><p style="margin-top:8px"><a href="/strategies/allowance.json" download>Download allowance.json</a></p></div>
+      <p>Writing your own, or building tools? Read the <a href="/strategies/spec">strategy file and listing spec</a>.</p>
       <h2>Our part</h2>
       <p>Strategies are programs written and sold by users. bWalletX doesn't review, rate or recommend them. Your own b agent can suggest strategies that fit the goals you give it.</p>
 
@@ -75,7 +82,7 @@
         <a class="btn btn-store" href="/get">Get bWalletX</a>
         <a class="btn btn-store btn-ghost" href="/features">All features</a>
       </div>
-      <p class="small">Strategies and Market &rsaquo; Strategies are coming to bWalletX. Agent accounts are available now. Questions: <a href="mailto:bitcoincorp11@gmail.com">bitcoincorp11@gmail.com</a></p>
+      <p class="small">Strategies and Exchange &rsaquo; Strategies are live in bWalletX 5.1.39. Questions: <a href="mailto:bitcoincorp11@gmail.com">bitcoincorp11@gmail.com</a></p>
     </main>
   </body>
 </html>

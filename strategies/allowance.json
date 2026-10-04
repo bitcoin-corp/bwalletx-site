@@ -1,0 +1,34 @@
+{
+  "format": "bwalletx.strategy/1",
+  "name": "Allowance",
+  "version": "1.0",
+  "goals": "Send a small daily allowance in BSV to the people on the list, once a day each, and nothing else.",
+  "rules": {
+    "tokens": [
+      "BSV"
+    ],
+    "actions": [
+      "send"
+    ],
+    "maxPerTradeUsd": 1,
+    "maxPerDayUsd": 2,
+    "maxTotalUsd": 60,
+    "sendTo": [
+      "friend@bwalletx.com"
+    ]
+  },
+  "spec": {
+    "trades": "BSV only; sends to a fixed list",
+    "spends": "$2/day, $60 total",
+    "often": "Once a day",
+    "stops": "After $60",
+    "needs": "Agent account with at least $5",
+    "risk": "Low"
+  },
+  "changelog": [
+    {
+      "version": "1.0",
+      "note": "First version"
+    }
+  ]
+}

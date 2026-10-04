@@ -1,0 +1,35 @@
+{
+  "format": "bwalletx.strategy/1",
+  "name": "Dip buyer",
+  "version": "1.0",
+  "goals": "Watch $B0ASEX and buy only on sharp dips below the buy price. Prefer one bigger buy after a clear drop over many small ones. Do nothing on quiet days.",
+  "rules": {
+    "tokens": [
+      "B0ASEX"
+    ],
+    "actions": [
+      "buy"
+    ],
+    "maxPerTradeUsd": 5,
+    "buyBelowUsd": 0.0005,
+    "maxPerDayUsd": 5,
+    "maxTotalUsd": 50,
+    "stop": {
+      "downPct": 30
+    }
+  },
+  "spec": {
+    "trades": "$B0ASEX; BSV-21 only",
+    "spends": "$5/day, $50 total",
+    "often": "Rarely: only on dips",
+    "stops": "Account down 30%",
+    "needs": "Agent account with at least $10",
+    "risk": "High"
+  },
+  "changelog": [
+    {
+      "version": "1.0",
+      "note": "First version"
+    }
+  ]
+}

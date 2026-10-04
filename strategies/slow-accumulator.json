@@ -1,0 +1,35 @@
+{
+  "format": "bwalletx.strategy/1",
+  "name": "Slow accumulator",
+  "version": "1.0",
+  "goals": "Build a position in $B0ASEX slowly. Buy small amounts a few times a day, only while the price is low. Never chase a pump: if the price runs up, wait.",
+  "rules": {
+    "tokens": [
+      "B0ASEX"
+    ],
+    "actions": [
+      "buy"
+    ],
+    "maxPerTradeUsd": 2,
+    "buyBelowUsd": 0.001,
+    "maxPerDayUsd": 10,
+    "maxTotalUsd": 200,
+    "stop": {
+      "holdTokens": 100000
+    }
+  },
+  "spec": {
+    "trades": "$B0ASEX; BSV-21 only",
+    "spends": "$10/day, $200 total",
+    "often": "A few times a day",
+    "stops": "Holds 100k tokens",
+    "needs": "Agent account with at least $20",
+    "risk": "Medium"
+  },
+  "changelog": [
+    {
+      "version": "1.0",
+      "note": "First version"
+    }
+  ]
+}

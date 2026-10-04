@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>bWalletX Strategy Spec</title>
+    <meta name="description" content="The bWalletX strategy file format (bwalletx.strategy/1), the rules the wallet enforces, paper mode, and how strategies are sold as encrypted NFTs." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://bwalletx.com/strategies/spec" />
+    <meta property="og:site_name" content="bWalletX" />
+    <meta property="og:title" content="bWalletX strategy spec: files, rules, encrypted NFTs" />
+    <meta property="og:description" content="The bWalletX strategy file format (bwalletx.strategy/1), the rules the wallet enforces, paper mode, and how strategies are sold as encrypted NFTs." />
+    <meta property="og:image" content="https://bwalletx.com/og-strategies-b.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="The bWalletX strategy file format (bwalletx.strategy/1), the rules the wallet enforces, paper mode, and how strategies are sold as encrypted NFTs." />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="bWalletX strategy spec: files, rules, encrypted NFTs" />
+    <meta name="twitter:description" content="The bWalletX strategy file format (bwalletx.strategy/1), the rules the wallet enforces, paper mode, and how strategies are sold as encrypted NFTs." />
+    <meta name="twitter:image" content="https://bwalletx.com/og-strategies-b.png" />
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="stylesheet" href="/styles.css" />
+    <style>
+      .ext { max-width: 760px; margin: 0 auto; padding: 120px 20px 80px; }
+      .ext h1 { font-size: clamp(2.2rem, 6vw, 3.4rem); margin: 18px 0 10px; }
+      .ext h2 { margin: 48px 0 10px; font-size: 1.5rem; }
+      .ext p, .ext li { line-height: 1.65; }
+      .ext code { background: #17191e; padding: 2px 7px; border-radius: 6px; overflow-wrap: anywhere; }
+      .flow { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; margin: 22px 0; }
+      .pill { background: #101114; border: 1px solid #F5B80055; color: #F5B800; border-radius: 999px; padding: 8px 16px; font-weight: 700; }
+      .arrow { color: #667085; }
+      .box { background: #101114; border: 1px solid #ffffff12; border-radius: 16px; padding: 18px 20px; margin: 16px 0; }
+      .box h3 { margin: 0 0 6px; font-size: 1rem; }
+      .box p { margin: 0; color: #a7adb8; }
+      .ext .small { color: #8a8a86; font-size: 0.85rem; }
+      .ext .row { display: flex; gap: 12px; flex-wrap: wrap; margin: 26px 0; }
+          .ext pre { background: #101114; border: 1px solid #ffffff12; border-radius: 14px; padding: 16px; overflow-x: auto; font-size: 0.82rem; line-height: 1.55; }
+      .ext table { width: 100%; border-collapse: collapse; margin: 14px 0; font-size: 0.92rem; }
+      .ext th, .ext td { text-align: left; padding: 9px 10px; border-bottom: 1px solid #ffffff14; vertical-align: top; }
+      .ext th { color: #F5B800; font-weight: 700; }
+    </style>
+  </head>
+  <body>
+    <div class="beta-banner">bWalletX is in <strong>beta</strong>: test with small amounts.</div>
+    <header class="topbar">
+      <div class="wrap topbar-in">
+        <a class="brand" href="/"><img src="/logo.svg" alt="" width="34" height="30" /><span>bWallet<span class="gold">X</span></span></a>
+        <nav aria-label="Pages">
+          <a href="/features">Features</a><a href="/exchange">Exchange</a><a href="/friends">Friends</a><a href="/agent">Agents</a><a href="/strategies" aria-current="page">Strategies</a><a href="/android">Android</a><a href="/extension">Chrome</a><a href="/developers">Developers</a>
+        </nav>
+        <span class="nav-cta"><a class="dl-btn" href="/get">Download</a><a class="web-btn" href="https://web.bwalletx.com" target="_blank" rel="noopener">Web &rarr;</a></span>
+      </div>
+    </header>
+    <main class="ext">
+      <img src="/logo.svg" alt="bWalletX" width="72" height="64" />
+      <h1>Strategy <span class="gold">spec</span></h1>
+      <p class="lede">The file format for bWalletX strategies, what the wallet enforces, and how strategies are sold as encrypted NFTs. Version 1.</p>
+      <div class="flow"><span class="pill">bwalletx.strategy/1</span><span class="arrow">&rarr;</span><span class="pill">bwalletx.strategy-nft/1</span></div>
+
+      <h2>1. The strategy file</h2>
+      <p>A strategy is a JSON file loaded into an <a href="/agent">agent account</a>. One strategy per account. It has goals for the AI, rules for the wallet, a public spec, and a version.</p>
+      <pre><code>{
+  "format": "bwalletx.strategy/1",
+  "name": "Slow accumulator",
+  "version": "1.0",
+  "goals": "Build a position in $B0ASEX slowly. Buy small amounts a few times a day, only while the price is low. Never chase a pump: if the price runs up, wait.",
+  "rules": {
+    "tokens": [
+      "B0ASEX"
+    ],
+    "actions": [
+      "buy"
+    ],
+    "maxPerTradeUsd": 2,
+    "buyBelowUsd": 0.001,
+    "maxPerDayUsd": 10,
+    "maxTotalUsd": 200,
+    "stop": {
+      "holdTokens": 100000
+    }
+  },
+  "spec": {
+    "trades": "$B0ASEX; BSV-21 only",
+    "spends": "$10/day, $200 total",
+    "often": "A few times a day",
+    "stops": "Holds 100k tokens",
+    "needs": "Agent account with at least $20",
+    "risk": "Medium"
+  },
+  "changelog": [
+    {
+      "version": "1.0",
+      "note": "First version"
+    }
+  ]
+}
+</code></pre>
+      <table>
+        <tr><th>Field</th><th>Required</th><th>Meaning</th></tr>
+        <tr><td><code>format</code></td><td>yes</td><td>Always <code>"bwalletx.strategy/1"</code>.</td></tr>
+        <tr><td><code>name</code>, <code>version</code></td><td>yes</td><td>Up to 60 and 20 characters. Version like software: 1.0, 1.1…</td></tr>
+        <tr><td><code>goals</code></td><td>yes</td><td>Plain language for the AI: what to aim for and how to behave. Up to 4,000 characters.</td></tr>
+        <tr><td><code>rules</code></td><td>yes</td><td>Exact limits the wallet enforces (section 2).</td></tr>
+        <tr><td><code>spec</code></td><td>to sell</td><td>The public description buyers compare (section 4).</td></tr>
+        <tr><td><code>changelog</code></td><td></td><td><code>[{"version","note"}]</code>, newest first.</td></tr>
+      </table>
+      <p>Unknown fields are dropped on load, so a file can never carry instructions the wallet doesn't understand.</p>
+
+      <h2>2. Rules the wallet enforces</h2>
+      <p>Before any agent action is signed, the wallet checks, in order: <strong>Stop all agents</strong> and the account's own Stop, the account's daily cap, then these rules. A refused action is not signed and is written to the account's Activity log with the rule that refused it. The AI decides <em>when</em> and <em>whether</em>; it can never widen a rule.</p>
+      <table>
+        <tr><th>Rule</th><th>Required</th><th>Meaning</th></tr>
+        <tr><td><code>tokens</code></td><td>yes</td><td>Tickers or BSV-21 token ids the agent may touch. Never "any". A ticker matches the token's symbol; use the id to be exact.</td></tr>
+        <tr><td><code>actions</code></td><td>yes</td><td>Any of <code>buy</code>, <code>sell</code>, <code>send</code>, <code>list</code>.</td></tr>
+        <tr><td><code>maxPerTradeUsd</code></td><td>yes</td><td>Most one action may spend, in dollars.</td></tr>
+        <tr><td><code>maxPerDayUsd</code></td><td></td><td>Most per UTC day while loaded.</td></tr>
+        <tr><td><code>maxTotalUsd</code></td><td></td><td>Most in total while loaded.</td></tr>
+        <tr><td><code>buyBelowUsd</code></td><td></td><td>Buy only at or below this price per token.</td></tr>
+        <tr><td><code>sellAboveUsd</code></td><td></td><td>Sell or list only at or above this price per token.</td></tr>
+        <tr><td><code>sendTo</code></td><td>if <code>send</code></td><td>Addresses or paymails it may send to; nobody else.</td></tr>
+        <tr><td><code>stop.holdTokens</code></td><td></td><td>Finished once it holds this many of its tokens.</td></tr>
+        <tr><td><code>stop.downPct</code></td><td></td><td>Finished if the account is down this % since loading.</td></tr>
+      </table>
+
+      <h2>3. Paper mode</h2>
+      <p>Every strategy loads on paper first: live prices, $100 of pretend money, nothing signed. Paper trades show in Activity as "Paper buy …". <strong>Run live</strong> (two taps) switches to the account's real balance. The same rules apply in both modes.</p>
+
+      <h2>4. Selling: the spec</h2>
+      <p>To publish, every field must be filled in. The wallet checks only that; it doesn't judge the strategy.</p>
+      <table>
+        <tr><th>Field</th><th>Shown as</th><th>Example</th></tr>
+        <tr><td><code>trades</code></td><td>What it trades</td><td>$B0ASEX; BSV-21 only</td></tr>
+        <tr><td><code>risk</code></td><td>Seller's risk rating</td><td>Low · Medium · High · Experimental</td></tr>
+        <tr><td><code>spends</code></td><td>Most it will spend</td><td>$10/day, $200 total</td></tr>
+        <tr><td><code>often</code></td><td>How often it acts</td><td>A few times a day</td></tr>
+        <tr><td><code>stops</code></td><td>When it stops</td><td>Holds 100k tokens, or down 30%</td></tr>
+        <tr><td><code>needs</code></td><td>Needs</td><td>Agent account with at least $50</td></tr>
+      </table>
+
+      <h2>5. Encrypted strategy NFTs</h2>
+      <p>A strategy for sale is a 1Sat ordinal with content type <code>application/vnd.bwalletx.strategy+json</code>. Its content is a public envelope; the program inside is encrypted.</p>
+      <pre><code>{
+  "format": "bwalletx.strategy-nft/1",
+  "name": "Slow accumulator", "version": "1.0",
+  "description": "…",
+  "spec": { "trades": "…", "risk": "Medium", "spends": "…", "often": "…", "stops": "…", "needs": "…" },
+  "author": { "name": "…", "address": "1…" },
+  "sale": { "priceUsd": 5, "copies": 100, "payTo": "1…" },
+  "keyHash": "sha256 of the content key, hex",
+  "iv": "base64, 12 bytes",
+  "ciphertext": "base64: AES-256-GCM of the strategy file"
+}</code></pre>
+      <ul>
+        <li><strong>Publish:</strong> the author mints the first copy (the original) and gives the content key to the key service, proving they hold that copy. The key must hash to <code>keyHash</code>.</li>
+        <li><strong>Buy:</strong> one transaction mints the buyer's copy of the same envelope, pays <code>priceUsd</code> in BSV to <code>payTo</code>, and pays the 1% market fee.</li>
+        <li><strong>Unlock:</strong> the owner of a copy signs <code>bwalletx strategy unlock: &lt;outpoint&gt;: &lt;ms timestamp&gt;</code> with the key that holds it. The service checks the copy on chain (unspent, locked to that key), finds its origin, and returns the content key if the origin is the original or a paid copy within the edition size. Payment is checked against the <em>published</em> terms, so a re-minted envelope with a lower price is refused.</li>
+        <li><strong>Resell or give:</strong> send the NFT. The new owner unlocks it the same way.</li>
+      </ul>
+      <p>Key service: <code>GET https://www.bwallet.space/api/strategies</code> lists published strategies (public envelope fields, copies sold). <code>?origin=&lt;outpoint&gt;</code> returns one, with the encrypted envelope. <code>POST</code> with <code>{"action":"publish"|"unlock", outpoint, message, pubkey_hex, signature}</code>.</p>
+
+      <h2>6. Our part</h2>
+      <p>Strategies are programs written and sold by users. bWalletX doesn't review, rate or recommend them. The wallet enforces each strategy's own rules; whether a strategy is any good is up to you.</p>
+      <div class="row">
+        <a class="btn btn-store" href="/strategies">Strategies</a>
+        <a class="btn btn-store btn-ghost" href="/cli">CLI</a>
+      </div>
+      <p class="small">The CLI uses the same format: <code>bwalletx strategy load file.json</code>. Source: <a href="https://github.com/b0ase/bwalletx-cli">github.com/b0ase/bwalletx-cli</a>. Questions: <a href="mailto:bitcoincorp11@gmail.com">bitcoincorp11@gmail.com</a></p>
+    </main>
+  </body>
+</html>

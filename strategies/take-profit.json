@@ -1,0 +1,32 @@
+{
+  "format": "bwalletx.strategy/1",
+  "name": "Take profit",
+  "version": "1.0",
+  "goals": "Sell $B0ASEX in small slices once the price is above the target, so some gains are locked in on the way up. Never sell below the target.",
+  "rules": {
+    "tokens": [
+      "B0ASEX"
+    ],
+    "actions": [
+      "sell",
+      "list"
+    ],
+    "maxPerTradeUsd": 10,
+    "sellAboveUsd": 0.002,
+    "maxPerDayUsd": 20
+  },
+  "spec": {
+    "trades": "$B0ASEX; BSV-21 only",
+    "spends": "Sells only; spends nothing",
+    "often": "When the price is above target",
+    "stops": "When nothing is left to sell",
+    "needs": "Agent account holding $B0ASEX",
+    "risk": "Low"
+  },
+  "changelog": [
+    {
+      "version": "1.0",
+      "note": "First version"
+    }
+  ]
+}
