@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>bWalletX CLI</title>
+    <meta name="description" content="Run your bWalletX wallet and AI agents from the command line: balances, sends, trades and strategies, on your laptop or a server." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://bwalletx.com/cli" />
+    <meta property="og:site_name" content="bWalletX" />
+    <meta property="og:title" content="bWalletX CLI: your wallet and agents from the command line" />
+    <meta property="og:description" content="Run your bWalletX wallet and AI agents from the command line: balances, sends, trades and strategies, on your laptop or a server." />
+    <meta property="og:image" content="https://bwalletx.com/og-cli.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Run your bWalletX wallet and AI agents from the command line: balances, sends, trades and strategies, on your laptop or a server." />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="bWalletX CLI: your wallet and agents from the command line" />
+    <meta name="twitter:description" content="Run your bWalletX wallet and AI agents from the command line: balances, sends, trades and strategies, on your laptop or a server." />
+    <meta name="twitter:image" content="https://bwalletx.com/og-cli.png" />
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="stylesheet" href="/styles.css" />
+    <style>
+      .ext { max-width: 760px; margin: 0 auto; padding: 120px 20px 80px; }
+      .ext h1 { font-size: clamp(2.2rem, 6vw, 3.4rem); margin: 18px 0 10px; }
+      .ext h2 { margin: 48px 0 10px; font-size: 1.5rem; }
+      .ext p, .ext li { line-height: 1.65; }
+      .ext code { background: #17191e; padding: 2px 7px; border-radius: 6px; overflow-wrap: anywhere; }
+      .flow { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; margin: 22px 0; }
+      .pill { background: #101114; border: 1px solid #F5B80055; color: #F5B800; border-radius: 999px; padding: 8px 16px; font-weight: 700; }
+      .arrow { color: #667085; }
+      .box { background: #101114; border: 1px solid #ffffff12; border-radius: 16px; padding: 18px 20px; margin: 16px 0; }
+      .box h3 { margin: 0 0 6px; font-size: 1rem; }
+      .box p { margin: 0; color: #a7adb8; }
+      .ext .small { color: #8a8a86; font-size: 0.85rem; }
+      .ext .row { display: flex; gap: 12px; flex-wrap: wrap; margin: 26px 0; }
+          .ext pre { background: #101114; border: 1px solid #ffffff12; border-radius: 14px; padding: 16px; overflow-x: auto; font-size: 0.85rem; line-height: 1.6; }
+    </style>
+  </head>
+  <body>
+    <div class="beta-banner">bWalletX is in <strong>beta</strong>: test with small amounts.</div>
+    <header class="topbar">
+      <div class="wrap topbar-in">
+        <a class="brand" href="/"><img src="/logo.svg" alt="" width="34" height="30" /><span>bWallet<span class="gold">X</span></span></a>
+        <nav aria-label="Pages">
+          <a href="/features">Features</a><a href="/exchange">Exchange</a><a href="/friends">Friends</a><a href="/agent">Agents</a><a href="/strategies">Strategies</a><a href="/android">Android</a><a href="/extension">Chrome</a><a href="/developers">Developers</a>
+        </nav>
+        <span class="nav-cta"><a class="dl-btn" href="/get">Download</a><a class="web-btn" href="https://web.bwalletx.com" target="_blank" rel="noopener">Web &rarr;</a></span>
+      </div>
+    </header>
+    <main class="ext">
+      <img src="/logo.svg" alt="bWalletX" width="72" height="64" />
+      <h1>bWallet<span class="gold">X</span> CLI</h1>
+      <p class="lede">Your wallet and your agents from the command line, on your laptop or a server.</p>
+      <div class="flow">
+        <span class="pill">bwalletx login</span><span class="arrow">&rarr;</span>
+        <span class="pill">bwalletx buy</span><span class="arrow">&rarr;</span>
+        <span class="pill">bwalletx agent run</span>
+      </div>
+      <h2>Commands</h2>
+      <pre><code>bwalletx login                       # pair with your wallet (QR / link)
+bwalletx accounts                    # accounts you've shared with this CLI
+bwalletx balance --account trader
+bwalletx send 10 HANDLE name@bwalletx.com --account trader
+bwalletx buy HANDLE --max-usd 20 --account trader
+bwalletx strategy load ./accumulator.json --account trader
+bwalletx agent run trader            # run that account's strategy unattended
+bwalletx log --account trader</code></pre>
+      <h2>Your keys stay safe</h2>
+      <div class="box"><h3>Paired (default)</h3><p>The CLI pairs with your wallet like a website. It gets a scoped agent token, not your keys: it names the accounts and actions allowed, lasts 30 days at most, and you can revoke it any time.</p></div>
+      <div class="box"><h3>Standalone, for servers</h3><p>Run one agent account unattended from its own key file, encrypted with a passphrase. Only agent accounts can be exported this way, never your main wallet.</p></div>
+      <div class="box"><h3>Limits</h3><p>The agent account's balance is the budget, with optional daily caps and rate limits. Every action is logged.</p></div>
+
+      <div class="row">
+        <a class="btn btn-store" href="/agent">Agent wallet</a>
+        <a class="btn btn-store btn-ghost" href="/developers">Developers</a>
+      </div>
+      <p class="small">Coming soon. Agent accounts are already in bWalletX (Settings &rsaquo; Agents). Questions: <a href="mailto:bitcoincorp11@gmail.com">bitcoincorp11@gmail.com</a></p>
+    </main>
+  </body>
+</html>
