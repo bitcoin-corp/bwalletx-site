@@ -1136,3 +1136,28 @@ a.btn-store {
     font-size: 0.9rem;
   }
 }
+
+/* Home only: a second, quieter row of in-page section links, distinct from the page links above. */
+.section-nav {
+  border-top: 1px solid #ffffff14;
+  background: rgba(0, 0, 0, 0.55);
+}
+.section-nav .wrap {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  scrollbar-width: none;
+  padding-top: 7px;
+  padding-bottom: 7px;
+}
+.section-nav a {
+  color: #8a8a86;
+  text-decoration: none;
+  font: 500 0.8rem var(--hf);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+.section-nav a:hover {
+  color: var(--gold-hi);
+}
