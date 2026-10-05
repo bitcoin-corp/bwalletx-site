@@ -17,6 +17,32 @@ Full text of every page: https://bwalletx.com/llms-full.txt
 - [Get bWalletX](https://bwalletx.com/get): Get bWalletX for Android, Chrome, the web and iPhone.
 - [bWalletX — Just b](https://bwalletx.com/): bWalletX: the BSV wallet for tokens, media and apps. BSV, MNEE and BSV-21 tokens, an exchange for tokens and NFTs, the bApps store, an ordinals media player and bChat. Non-custodial, by The Bitcoin Corporation Ltd.
 - [bWalletX on iPhone](https://bwalletx.com/iphone): Use bWalletX on iPhone today: install the web app from Safari in under a minute. No App Store needed.
+- [media-src/walkthrough-01/cut/tmp/cap-16x9-2.html](https://bwalletx.com/media-src/walkthrough-01/cut/tmp/cap-16x9-2)
+- [media-src/walkthrough-01/cut/tmp/cap-16x9-3.html](https://bwalletx.com/media-src/walkthrough-01/cut/tmp/cap-16x9-3)
+- [media-src/walkthrough-01/cut/tmp/cap-16x9-4.html](https://bwalletx.com/media-src/walkthrough-01/cut/tmp/cap-16x9-4)
+- [media-src/walkthrough-01/cut/tmp/cap-16x9-5.html](https://bwalletx.com/media-src/walkthrough-01/cut/tmp/cap-16x9-5)
+- [media-src/walkthrough-01/cut/tmp/cap-16x9-5b.html](https://bwalletx.com/media-src/walkthrough-01/cut/tmp/cap-16x9-5b)
+- [media-src/walkthrough-01/cut/tmp/cap-16x9-5c.html](https://bwalletx.com/media-src/walkthrough-01/cut/tmp/cap-16x9-5c)
+- [media-src/walkthrough-01/cut/tmp/cap-16x9-6.html](https://bwalletx.com/media-src/walkthrough-01/cut/tmp/cap-16x9-6)
+- [media-src/walkthrough-01/cut/tmp/cap-16x9-7.html](https://bwalletx.com/media-src/walkthrough-01/cut/tmp/cap-16x9-7)
+- [media-src/walkthrough-01/cut/tmp/cap-9x16-2.html](https://bwalletx.com/media-src/walkthrough-01/cut/tmp/cap-9x16-2)
+- [media-src/walkthrough-01/cut/tmp/cap-9x16-3.html](https://bwalletx.com/media-src/walkthrough-01/cut/tmp/cap-9x16-3)
+- [media-src/walkthrough-01/cut/tmp/cap-9x16-4.html](https://bwalletx.com/media-src/walkthrough-01/cut/tmp/cap-9x16-4)
+- [media-src/walkthrough-01/cut/tmp/cap-9x16-5.html](https://bwalletx.com/media-src/walkthrough-01/cut/tmp/cap-9x16-5)
+- [media-src/walkthrough-01/cut/tmp/cap-9x16-5b.html](https://bwalletx.com/media-src/walkthrough-01/cut/tmp/cap-9x16-5b)
+- [media-src/walkthrough-01/cut/tmp/cap-9x16-5c.html](https://bwalletx.com/media-src/walkthrough-01/cut/tmp/cap-9x16-5c)
+- [media-src/walkthrough-01/cut/tmp/cap-9x16-6.html](https://bwalletx.com/media-src/walkthrough-01/cut/tmp/cap-9x16-6)
+- [media-src/walkthrough-01/cut/tmp/cap-9x16-7.html](https://bwalletx.com/media-src/walkthrough-01/cut/tmp/cap-9x16-7)
+- [media-src/walkthrough-01/cut/tmp/end-16x9-1.html](https://bwalletx.com/media-src/walkthrough-01/cut/tmp/end-16x9-1)
+- [media-src/walkthrough-01/cut/tmp/end-16x9-9.html](https://bwalletx.com/media-src/walkthrough-01/cut/tmp/end-16x9-9)
+- [media-src/walkthrough-01/cut/tmp/end-9x16-1.html](https://bwalletx.com/media-src/walkthrough-01/cut/tmp/end-9x16-1)
+- [media-src/walkthrough-01/cut/tmp/end-9x16-9.html](https://bwalletx.com/media-src/walkthrough-01/cut/tmp/end-9x16-9)
+- [Playwright Dashboard](https://bwalletx.com/media-src/walkthrough-01/rec/node_modules/playwright-core/lib/vite/dashboard/)
+- [Playwright Test Report](https://bwalletx.com/media-src/walkthrough-01/rec/node_modules/playwright-core/lib/vite/htmlReport/)
+- [Playwright Inspector](https://bwalletx.com/media-src/walkthrough-01/rec/node_modules/playwright-core/lib/vite/recorder/)
+- [Playwright Trace Viewer](https://bwalletx.com/media-src/walkthrough-01/rec/node_modules/playwright-core/lib/vite/traceViewer/)
+- [media-src/walkthrough-01/rec/node_modules/playwright-core/lib/vite/traceViewer/snapshot.html](https://bwalletx.com/media-src/walkthrough-01/rec/node_modules/playwright-core/lib/vite/traceViewer/snapshot)
+- [Playwright Test](https://bwalletx.com/media-src/walkthrough-01/rec/node_modules/playwright-core/lib/vite/traceViewer/uiMode)
 - [PNEEs: Penny Stablecoins](https://bwalletx.com/pnee): PNEEs (Penny Stablecoins): digital pennies on BSV, one US cent each, backed only by BSV locked in public vaults. No bank, no co-signer on transfers, no freeze. Live mainnet pilot.
 - [PNEEs: Penny Stablecoins](https://bwalletx.com/pnees): PNEEs (Penny Stablecoins): digital pennies on BSV, one US cent each, backed only by BSV locked in public vaults. No bank, no co-signer on transfers, no freeze. Live mainnet pilot.
 - [bWalletX Social](https://bwalletx.com/social): Your handle is your paymail, your token and your chat room. Sign in with X or Google, hold friends’ tokens, chat in token rooms, post to the Feed, call and pay friends.

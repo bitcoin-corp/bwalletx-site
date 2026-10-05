@@ -112,7 +112,7 @@ Source: https://bwalletx.com/android
 
 The full bWalletX wallet on your Android phone or tablet. Your keys stay on your device.
 
-[Download APK (beta) ↓](https://bwalletx.com/download/bwalletx-android-5.1.54.apk)
+[Download APK (beta) ↓](https://bwalletx.com/download/bwalletx-android-5.1.55.apk)
 
 It isn't on Google Play yet, so install it by hand:
 
@@ -120,13 +120,13 @@ It isn't on Google Play yet, so install it by hand:
 
 - If Android asks, allow your browser to install unknown apps (Settings › Apps › your browser › Install unknown apps).
 
-- Open `bwalletx-android-5.1.54.apk` and tap Install.
+- Open `bwalletx-android-5.1.55.apk` and tap Install.
 
 - Open bWalletX and create or restore your wallet.
 
 Updating from an older version? Install over the top and your wallet stays. If Android says the app can't be updated, write down your 12 words first, then uninstall and reinstall.
 
-Version 5.1.54 beta · 17.9 MB · Android 7+ · SHA-256 cf8fa6f46e09fd81bd623df2beb68ca806d035de6c42fdd66436069ecb4a41dd
+Version 5.1.55 beta · 17.3 MB · Android 7+ · SHA-256 ce25426f6e4c41bab49785f78b82b36bf4e808cda10122b9dabecf93f6c9590a
 
 Also: [Chrome extension](https://bwalletx.com/extension) · [Developers](https://bwalletx.com/developers)
 
@@ -221,12 +221,12 @@ Source: https://bwalletx.com/extension
 
 The full bWalletX wallet in Chrome's side panel, and a wallet websites like TokenBlaster can connect to. Your keys stay in the extension.
 
-[Download for Chrome (beta) ↓](https://bwalletx.com/download/bwalletx-extension-5.1.54.zip)
-[Download for Brave (beta) ↓](https://bwalletx.com/download/bwalletx-extension-5.1.54.zip)
+[Download for Chrome (beta) ↓](https://bwalletx.com/download/bwalletx-extension-5.1.55.zip)
+[Download for Brave (beta) ↓](https://bwalletx.com/download/bwalletx-extension-5.1.55.zip)
 
 It isn't on the Chrome Web Store yet, so install it by hand:
 
-- Unzip `bwalletx-extension-5.1.54.zip`.
+- Unzip `bwalletx-extension-5.1.55.zip`.
 
 - Open `chrome://extensions` in Chrome.
 
@@ -240,7 +240,7 @@ It isn't on the Chrome Web Store yet, so install it by hand:
 
 Same extension, same file. Brave runs Chrome extensions, so:
 
-- Unzip `bwalletx-extension-5.1.54.zip`.
+- Unzip `bwalletx-extension-5.1.55.zip`.
 
 - Open `brave://extensions` in Brave.
 
@@ -250,7 +250,7 @@ Same extension, same file. Brave runs Chrome extensions, so:
 
 - Pin bWalletX from the puzzle-piece menu, click it, and create or restore your wallet.
 
-Version 5.1.54 beta · SHA-256 ea3efd3e74f59aed040d845940dd44319aa3be511e5c5e67b63fccd052bf9a63 · Source: [github.com/bitcoin-corp/bwallet](https://github.com/bitcoin-corp/bwallet)
+Version 5.1.55 beta · SHA-256 cdaf23ef88b003124e560a3eb35905b93976863d3678598ab82d14dbdce6c83c · Source: [github.com/bitcoin-corp/bwallet](https://github.com/bitcoin-corp/bwallet)
 
 ---
 
@@ -521,8 +521,8 @@ Source: https://bwalletx.com/get
 
 The full bWalletX on every device. Your keys stay on your device.
 
-[AndroidAPK download · v5.1.54 beta](https://bwalletx.com/android)
-[ChromeExtension · v5.1.54 beta](https://bwalletx.com/extension)
+[AndroidAPK download · v5.1.55 beta](https://bwalletx.com/android)
+[ChromeExtension · v5.1.55 beta](https://bwalletx.com/extension)
 [WebOpen in your browser](https://web.bwalletx.com)
 [iPhoneWeb app · install from Safari, no App Store](https://bwalletx.com/iphone)
 
@@ -539,7 +539,7 @@ bWalletX
 Mint, trade and chat in one non-custodial app. Send to names, browse 180+ BSV-21 tokens, open the bApps
 store and play your on-chain media.
 
-Android · Download APK (beta)v5.1.54 beta · sideload[iPhone · Web appInstall from Safari · no App StoreChrome · Download extensionv5.1.54 beta · zip + install steps
+Android · Download APK (beta)v5.1.55 beta · sideload[iPhone · Web appInstall from Safari · no App StoreChrome · Download extensionv5.1.55 beta · zip + install steps
 
 How to sideload on Android
 
@@ -547,10 +547,10 @@ How to sideload on Android
 Tap Download APK (beta). If Android asks, allow your browser to install unknown apps
 (Settings › Apps › your browser › Install unknown apps).
 
-- Open the downloaded bwalletx-android-5.1.54.apk and tap Install.
+- Open the downloaded bwalletx-android-5.1.55.apk and tap Install.
 
 -
-Optional but recommended: check the SHA-256 checksum matchescf8fa6f46e09fd81bd623df2beb68ca806d035de6c42fdd66436069ecb4a41dd
+Optional but recommended: check the SHA-256 checksum matchesce25426f6e4c41bab49785f78b82b36bf4e808cda10122b9dabecf93f6c9590a
 
 Beta software. Use small amounts and back up your recovery phrase. Only install the APK from this site or
 the official GitHub release.
@@ -572,18 +572,20 @@ Wallet
 
 ## Hold, mint and send to names.
 
-Hold BSV, MNEE and BSV-21 tokens side by side. Mint your photos, art, video and music as NFTs. Send to a
+Hold BSV, MNEE, PNEEs and BSV-21 tokens side by side. Mint your photos, art, video and music as NFTs. Send to a
 $handle, a paymail or an OpNS name instead of a long address, and get a name of your own.
 
-BBSVBitcoin SV0.0000
+BSVBitcoin SV0.0000
 
-MMNEEUSD stablecoin0.00
+MNEEUSD stablecoin0.00
 
-21BSV-21Your fungible tokens—
+PNEEsPennies, backed by BSV0.00
 
-+MintPhotos, art, video, musicNFT
+BSV-21Your fungible tokens—
 
-$Send to $handlePaymail and OpNS names tooGet your name
+MintPhotos, art, video, musicNFT
+
+Send to $handlePaymail and OpNS names tooGet your name
 
 Exchange
 
@@ -713,7 +715,7 @@ Join the waitlist →](https://www.bitcoinchat.online)
 
 Currently in beta.
 
-Android · Download APK (beta)v5.1.54 beta · sideloadiPhone · Web appInstall from Safari · no App StoreChrome · Download extensionv5.1.54 beta · zip + install steps
+Android · Download APK (beta)v5.1.55 beta · sideloadiPhone · Web appInstall from Safari · no App StoreChrome · Download extensionv5.1.55 beta · zip + install steps
 
 ---
 
@@ -769,6 +771,266 @@ bWallet is our App Store edition: send, receive, tokens, names and rooms, with t
 [Other devices](https://bwalletx.com/get)
 
 Questions: [bitcoincorp11@gmail.com](mailto:bitcoincorp11@gmail.com)
+
+---
+
+Source: https://bwalletx.com/media-src/walkthrough-01/cut/tmp/cap-16x9-2
+
+01 · Wallet
+
+Create a wallet
+
+Making a wallet takes a few seconds. Your keys are created on your device, and they never leave it.
+
+---
+
+Source: https://bwalletx.com/media-src/walkthrough-01/cut/tmp/cap-16x9-3
+
+02 · Safety
+
+Back up first
+
+Before you can receive money, it asks you to back up: an encrypted file you can save or email to yourself, or your twelve words on paper.
+
+---
+
+Source: https://bwalletx.com/media-src/walkthrough-01/cut/tmp/cap-16x9-4
+
+03 · Wallet
+
+Your money, in dollars
+
+Balances are in dollars. Send to a name instead of a long address, and keep BSV, MNEE and all your tokens in one place.
+
+---
+
+Source: https://bwalletx.com/media-src/walkthrough-01/cut/tmp/cap-16x9-5
+
+04 · Exchange
+
+The Exchange
+
+The Exchange lets you buy and sell tokens and NFTs, wallet to wallet, with no middleman.
+
+---
+
+Source: https://bwalletx.com/media-src/walkthrough-01/cut/tmp/cap-16x9-5b
+
+05 · Media
+
+Music & movie NFTs
+
+Music and movie NFTs trade here too, and play in your wallet's media player once you own them.
+
+---
+
+Source: https://bwalletx.com/media-src/walkthrough-01/cut/tmp/cap-16x9-5c
+
+06 · Apps
+
+The Apps store
+
+The Apps tab is a store of BSV apps, and you can add any site you like.
+
+---
+
+Source: https://bwalletx.com/media-src/walkthrough-01/cut/tmp/cap-16x9-6
+
+07 · Social
+
+Feed & group chats
+
+The Feed shows posts from across BSV social apps. In Chat, join group rooms, or hold a friend's token to get into theirs.
+
+---
+
+Source: https://bwalletx.com/media-src/walkthrough-01/cut/tmp/cap-16x9-7
+
+08 · b agent
+
+Meet b, your agent
+
+And b, your AI assistant, is built in. Pay a cent a message, or add your own AI key for more privacy.
+
+---
+
+Source: https://bwalletx.com/media-src/walkthrough-01/cut/tmp/cap-9x16-2
+
+01 · Wallet
+
+Create a wallet
+
+Making a wallet takes a few seconds. Your keys are created on your device, and they never leave it.
+
+---
+
+Source: https://bwalletx.com/media-src/walkthrough-01/cut/tmp/cap-9x16-3
+
+02 · Safety
+
+Back up first
+
+Before you can receive money, it asks you to back up: an encrypted file you can save or email to yourself, or your twelve words on paper.
+
+---
+
+Source: https://bwalletx.com/media-src/walkthrough-01/cut/tmp/cap-9x16-4
+
+03 · Wallet
+
+Your money, in dollars
+
+Balances are in dollars. Send to a name instead of a long address, and keep BSV, MNEE and all your tokens in one place.
+
+---
+
+Source: https://bwalletx.com/media-src/walkthrough-01/cut/tmp/cap-9x16-5
+
+04 · Exchange
+
+The Exchange
+
+The Exchange lets you buy and sell tokens and NFTs, wallet to wallet, with no middleman.
+
+---
+
+Source: https://bwalletx.com/media-src/walkthrough-01/cut/tmp/cap-9x16-5b
+
+05 · Media
+
+Music & movie NFTs
+
+Music and movie NFTs trade here too, and play in your wallet's media player once you own them.
+
+---
+
+Source: https://bwalletx.com/media-src/walkthrough-01/cut/tmp/cap-9x16-5c
+
+06 · Apps
+
+The Apps store
+
+The Apps tab is a store of BSV apps, and you can add any site you like.
+
+---
+
+Source: https://bwalletx.com/media-src/walkthrough-01/cut/tmp/cap-9x16-6
+
+07 · Social
+
+Feed & group chats
+
+The Feed shows posts from across BSV social apps. In Chat, join group rooms, or hold a friend's token to get into theirs.
+
+---
+
+Source: https://bwalletx.com/media-src/walkthrough-01/cut/tmp/cap-9x16-7
+
+08 · b agent
+
+Meet b, your agent
+
+And b, your AI assistant, is built in. Pay a cent a message, or add your own AI key for more privacy.
+
+---
+
+Source: https://bwalletx.com/media-src/walkthrough-01/cut/tmp/end-16x9-1
+
+bWalletX
+
+One wallet for everything
+
+---
+
+Source: https://bwalletx.com/media-src/walkthrough-01/cut/tmp/end-16x9-9
+
+bwalletx.com
+
+Android · iPhone · Chrome · Web · beta
+
+---
+
+Source: https://bwalletx.com/media-src/walkthrough-01/cut/tmp/end-9x16-1
+
+bWalletX
+
+One wallet for everything
+
+---
+
+Source: https://bwalletx.com/media-src/walkthrough-01/cut/tmp/end-9x16-9
+
+bwalletx.com
+
+Android · iPhone · Chrome · Web · beta
+
+---
+
+Source: https://bwalletx.com/media-src/walkthrough-01/rec/node_modules/playwright-core/lib/vite/dashboard/
+
+-
+Playwright Dashboard
+
+-
+
+---
+
+Source: https://bwalletx.com/media-src/walkthrough-01/rec/node_modules/playwright-core/lib/vite/htmlReport/
+
+Playwright Test Report
+
+-
+
+---
+
+Source: https://bwalletx.com/media-src/walkthrough-01/rec/node_modules/playwright-core/lib/vite/recorder/
+
+-
+Playwright Inspector
+
+-
+
+---
+
+Source: https://bwalletx.com/media-src/walkthrough-01/rec/node_modules/playwright-core/lib/vite/traceViewer/
+
+-
+
+-
+Playwright Trace Viewer
+
+-
+
+-
+
+-
+
+-
+
+The Playwright Trace Viewer must be loaded over the `http://` or `https://` protocols.
+
+For more information, please see the [docs](https://aka.ms/playwright/trace-viewer-file-protocol).
+
+---
+
+Source: https://bwalletx.com/media-src/walkthrough-01/rec/node_modules/playwright-core/lib/vite/traceViewer/snapshot
+
+-
+
+---
+
+Source: https://bwalletx.com/media-src/walkthrough-01/rec/node_modules/playwright-core/lib/vite/traceViewer/uiMode
+
+-
+Playwright Test
+
+-
+
+-
+
+-
+
+-
 
 ---
 
@@ -1087,11 +1349,11 @@ One script gives your site a standard BRC-100 wallet. No API keys, no sign-up, a
 
 ## Get bWalletX to test with
 
-Install the wallet you'll connect to (version 5.1.54 beta). Checksums are on each download page.
+Install the wallet you'll connect to (version 5.1.55 beta). Checksums are on each download page.
 
-- [Chrome / Brave extension (zip)](https://bwalletx.com/download/bwalletx-extension-5.1.54.zip) · [install steps](https://bwalletx.com/extension)
+- [Chrome / Brave extension (zip)](https://bwalletx.com/download/bwalletx-extension-5.1.55.zip) · [install steps](https://bwalletx.com/extension)
 
-- [Android APK](https://bwalletx.com/download/bwalletx-android-5.1.54.apk) · [install steps](https://bwalletx.com/android)
+- [Android APK](https://bwalletx.com/download/bwalletx-android-5.1.55.apk) · [install steps](https://bwalletx.com/android)
 
 - [Web app](https://web.bwalletx.com) · [iPhone](https://bwalletx.com/iphone)
 
