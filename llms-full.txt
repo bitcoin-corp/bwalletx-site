@@ -563,28 +563,10 @@ One app
 
 ## Meet bWalletX. Five tabs, everything on-chain.
 
-Wallet, Exchange, Apps, Media and Chat, with Settings tucked into the account drawer. A wallet that does
+Wallet, Exchange, Apps, Feed and Chat, with Settings tucked into the account drawer. A wallet that does
 more than hold a balance.
 
-bWalletX
-
-Total balance
-
-0.0000 BSV
-
-$0.00
-
-ReceiveSend
-
-BBSVBitcoin SV0.0000
-
-MMNEEStablecoin0.00
-
-21BSV-21Tokens—
-
-WalletExchangeAppsMediaChat
-
-Illustration of the home screen. Built in HTML, not a screenshot.
+The real wallet home screen (web app, test wallet).
 
 Wallet
 

@@ -1224,3 +1224,19 @@ html,
 body {
   overflow-x: clip;
 }
+
+/* Real app screenshot inside the phone frame (home page). */
+.phone-screen.phone-real {
+  padding: 0;
+  background: #000;
+}
+.phone-screen.phone-real img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+}
+.phone-screen.phone-real .notch {
+  z-index: 2;
+}
