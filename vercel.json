@@ -26,12 +26,17 @@
     },
     {
       "source": "/PNEE",
-      "destination": "/pnee",
+      "destination": "/pnees",
       "permanent": true
     },
     {
       "source": "/penny-notes",
-      "destination": "/pnee",
+      "destination": "/pnees",
+      "permanent": true
+    },
+    {
+      "source": "/PNEES",
+      "destination": "/pnees",
       "permanent": true
     }
   ]

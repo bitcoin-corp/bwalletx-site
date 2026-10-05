@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>PNEEs: Penny Notes</title>
+    <meta name="description" content="PNEEs (Penny Notes): digital pennies on BSV, one US cent each, backed only by BSV locked in public vaults. No bank, no co-signer, no freeze. Live mainnet pilot." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://bwalletx.com/pnees" />
+    <meta property="og:site_name" content="bWalletX" />
+    <meta property="og:title" content="PNEEs: Penny Notes, pennies backed by BSV" />
+    <meta property="og:description" content="PNEEs (Penny Notes): digital pennies on BSV, one US cent each, backed only by BSV locked in public vaults. No bank, no co-signer, no freeze. Live mainnet pilot." />
+    <meta property="og:image" content="https://bwalletx.com/og-pnees-v3.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="PNEEs (Penny Notes): digital pennies on BSV, one US cent each, backed only by BSV locked in public vaults. No bank, no co-signer, no freeze. Live mainnet pilot." />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="PNEEs: Penny Notes, pennies backed by BSV" />
+    <meta name="twitter:description" content="PNEEs (Penny Notes): digital pennies on BSV, one US cent each, backed only by BSV locked in public vaults. No bank, no co-signer, no freeze. Live mainnet pilot." />
+    <meta name="twitter:image" content="https://bwalletx.com/og-pnees-v3.png" />
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="stylesheet" href="/styles.css" />
+    <style>
+      .ext { max-width: 760px; margin: 0 auto; padding: 120px 20px 80px; }
+      .ext h1 { font-size: clamp(2.2rem, 6vw, 3.4rem); margin: 18px 0 10px; }
+      .ext h2 { margin: 48px 0 10px; font-size: 1.5rem; }
+      .ext p, .ext li { line-height: 1.65; }
+      .ext code { background: #17191e; padding: 2px 7px; border-radius: 6px; overflow-wrap: anywhere; }
+      .flow { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; margin: 22px 0; }
+      .pill { background: #101114; border: 1px solid #F5B80055; color: #F5B800; border-radius: 999px; padding: 8px 16px; font-weight: 700; }
+      .arrow { color: #667085; }
+      .box { background: #101114; border: 1px solid #ffffff12; border-radius: 16px; padding: 18px 20px; margin: 16px 0; }
+      .box h3 { margin: 0 0 6px; font-size: 1rem; }
+      .box p { margin: 0; color: #a7adb8; }
+      .ext .small { color: #8a8a86; font-size: 0.85rem; }
+      .ext .row { display: flex; gap: 12px; flex-wrap: wrap; margin: 26px 0; }
+          table.cmp { width:100%; border-collapse:collapse; margin:14px 0; display:block; overflow-x:auto; }
+      table.cmp th, table.cmp td { text-align:left; padding:9px 10px; border-bottom:1px solid #ffffff14; vertical-align:top; }
+      table.cmp th { color:#F5B800; }
+    </style>
+  </head>
+  <body>
+    <div class="beta-banner">bWalletX is in <strong>beta</strong>: test with small amounts.</div>
+    <header class="topbar">
+      <div class="wrap topbar-in">
+        <a class="brand" href="/"><img src="/logo.svg" alt="" width="34" height="30" /><span>bWallet<span class="gold">X</span></span></a>
+        <nav aria-label="Pages">
+          <a href="/features">Features</a><a href="/exchange">Exchange</a><a href="/social">Social</a><a href="/agent">Agents</a><a href="/strategies">Strategies</a><a href="/android">Android</a><a href="/iphone">iPhone</a><a href="/extension">Extension</a><a href="/developers">Developers</a>
+        </nav>
+        <span class="nav-cta"><a class="dl-btn" href="/get">Download</a><a class="web-btn" href="https://web.bwalletx.com" target="_blank" rel="noopener">Web &rarr;</a></span>
+      </div>
+    </header>
+    <main class="ext">
+      <img src="/pnee-icon.svg" alt="PNEE" width="72" height="72" />
+      <h1><span class="gold">PNEEs</span> · Penny Notes</h1>
+      <p class="lede">Digital pennies on BSV. Each PNEE is one US cent (ticker $PNEE), backed only by BSV locked in public vaults. Notes are cash: spend them, send them, price things in them. No bank account behind them, no co-signer on your transfers, nobody who can freeze them.</p>
+      <div class="flow"><span class="pill">Lock BSV</span><span class="arrow">&rarr;</span><span class="pill">Mint penny notes</span><span class="arrow">&rarr;</span><span class="pill">Spend them</span></div>
+
+      <h2>How it works</h2>
+      <div class="box"><h3>Notes are pennies that add up</h3><p>One PNEE unit is one cent. A $10 note is just 1,000 of them together; they split and combine like any token, and the wallet shows dollars. PNEE is an ordinary BSV-21 token, so any 1Sat-compatible wallet can hold it.</p></div>
+      <div class="box"><h3>Vaults: lock BSV, mint notes</h3><p>Anyone can lock BSV in a vault contract and mint notes against it, up to a tenth of its value to start (10x collateral). They keep their BSV and its upside; to unlock it, they hand the notes back. BSV went from $11 to $20 in three months, so we started very safe: a vault survives an 85% fall in BSV.</p></div>
+      <div class="box"><h3>Liquidation keeps every note backed</h3><p>If BSV falls so far that a vault drops below 150%, anyone may repay its notes and take its BSV at a 10% discount. The price comes from 3 of 5 signers, using the median, with fresh timestamps.</p></div>
+      <div class="box"><h3>No interest</h3><p>Notes are cash, like banknotes: holders don&rsquo;t earn interest and vault owners don&rsquo;t pay a yearly fee. The vault owner&rsquo;s reward is spendable dollars without selling their BSV.</p></div>
+
+      <h2>PNEEs and MNEE</h2>
+      <table class="cmp">
+        <tr><th></th><th>PNEEs</th><th>MNEE</th></tr>
+        <tr><td>Backed by</td><td>BSV locked in public vaults, visible on chain</td><td>US dollars held by a company</td></tr>
+        <tr><td>Can your transfer be blocked?</td><td>No: notes move freely</td><td>Every transfer is co-signed by MNEE&rsquo;s server</td></tr>
+        <tr><td>If BSV crashes</td><td>Protected by 10x collateral and liquidations</td><td>Unaffected (dollar reserves)</td></tr>
+      </table>
+
+      <h2>The mainnet pilot (live)</h2>
+      <p>PNEEs are live on BSV mainnet in a small, capped pilot: a $5 cap per vault and $10 in total.</p>
+      <ul>
+        <li>Token: <a href="https://whatsonchain.com/tx/1599c4e49a28c7791295f50613e1545aa9246dd592ae8b8f696b81916a475ae4">1599c4e49a…_0</a> (BSV-21, 2 decimals). The whole supply sits in the issuer treasury; notes leave it only when a vault mints.</li>
+        <li>First vault: <a href="https://whatsonchain.com/tx/3a782a53ea17fdea202488c7d4e0ca335be85d1663b9a6bfb87e9435245d78f2">3a782a53…</a>, 12,500,000 sats of BSV (about $2.54) locked.</li>
+        <li>First mint: <a href="https://whatsonchain.com/tx/de18356cb0560547d68776941a921c28fe04227b7f9e892ebbefbd1e43a00980">de18356c…</a>, 25 penny notes, checked against a 3-of-5 price of $20.32.</li>
+        <li>First release: <a href="https://whatsonchain.com/tx/913e2a786da02d21b86d4d688e25a3879879ac6e62130cfd0ebacb4657145c5a">913e2a78…</a>, 25 PNEE from the treasury to the vault owner.</li>
+      </ul>
+
+      <h2>What we haven&rsquo;t solved yet</h2>
+      <div class="box"><h3>Honest trust model</h3><p>The vault contract can&rsquo;t yet see by itself that notes were really burned, so for now the issuer (bCorp) co-signs note releases and burns, in public on chain. The five price signers are run by us during the pilot. Both are fine for a few dollars and not for real money: independent price signers and an on-chain burn check come before any meaningful amount.</p></div>
+
+      <div class="row">
+        <a class="btn btn-store" href="/exchange">Exchange &rsaquo; Bonds</a>
+        <a class="btn btn-store btn-ghost" href="/get">Get bWalletX</a>
+      </div>
+      <p class="small">Penny Notes are an experiment. Don&rsquo;t put in more than you can lose. Questions: <a href="mailto:bitcoincorp11@gmail.com">bitcoincorp11@gmail.com</a></p>
+    </main>
+  </body>
+</html>
