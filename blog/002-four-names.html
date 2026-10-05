@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>002 Four names in a week · bWalletX blog</title>
+    <meta name="description" content="Yours Wallet Mobile, bCorp Wallet, bWallet, then bWalletX. Why the name kept changing, and why there are now two apps." />
+    <link rel="canonical" href="https://bwalletx.com/blog/002-four-names" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://bwalletx.com/blog/002-four-names" />
+    <meta property="og:site_name" content="bWalletX" />
+    <meta property="og:title" content="Four names in a week" />
+    <meta property="og:description" content="Yours Wallet Mobile, bCorp Wallet, bWallet, then bWalletX. Why the name kept changing, and why there are now two apps." />
+    <meta property="og:image" content="https://bwalletx.com/og-home.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Four names in a week" />
+    <meta name="twitter:description" content="Yours Wallet Mobile, bCorp Wallet, bWallet, then bWalletX. Why the name kept changing, and why there are now two apps." />
+    <meta name="twitter:image" content="https://bwalletx.com/og-home.png" />
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="stylesheet" href="/styles.css" />
+    <style>
+      .ext { max-width: 760px; margin: 0 auto; padding: 120px 20px 80px; }
+      .ext h1 { font-size: clamp(2rem, 6vw, 3rem); margin: 10px 0 10px; line-height: 1.15; }
+      .ext h2 { margin: 44px 0 10px; font-size: 1.4rem; }
+      .ext p, .ext li { line-height: 1.7; }
+      .ext code { background: #17191e; padding: 2px 7px; border-radius: 6px; overflow-wrap: anywhere; }
+      .ext a { overflow-wrap: anywhere; }
+      .meta { color: #8a8a86; font-size: 0.9rem; margin: 0; }
+      .num { color: #F5B800; font-weight: 700; letter-spacing: .04em; }
+      .box { background: #101114; border: 1px solid #ffffff12; border-radius: 16px; padding: 18px 22px; margin: 28px 0; }
+      .box h2 { margin: 0 0 8px; font-size: 1.1rem; }
+      .box ul { margin: 0; padding-left: 1.2em; }
+      .related { color: #a7adb8; }
+      .pn { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; margin-top: 40px; border-top: 1px solid #ffffff14; padding-top: 20px; }
+      .pn a { color: #F5B800; text-decoration: none; max-width: 100%; }
+      .posts { list-style: none; padding: 0; margin: 28px 0; }
+      .posts li { background: #101114; border: 1px solid #ffffff12; border-radius: 16px; padding: 16px 20px; margin: 12px 0; }
+      .posts a { color: #fff; text-decoration: none; font-weight: 700; font-size: 1.1rem; }
+      .posts a:hover { color: #F5B800; }
+      .posts p { margin: 4px 0 0; color: #a7adb8; line-height: 1.55; }
+      .ext .small { color: #8a8a86; font-size: 0.85rem; }
+    </style>
+  </head>
+  <body>
+    <div class="beta-banner">bWalletX is in <strong>beta</strong>: test with small amounts.</div>
+    <header class="topbar">
+      <div class="wrap topbar-in">
+        <a class="brand" href="/"><img src="/logo.svg" alt="" width="34" height="30" /><span>bWallet<span class="gold">X</span></span></a>
+        <nav aria-label="Pages">
+          <a href="/features">Features</a><a href="/exchange">Exchange</a><a href="/social">Social</a><a href="/agent">Agents</a><a href="/android">Android</a><a href="/iphone">iPhone</a><a href="/extension">Extension</a><a href="/developers">Developers</a>
+        </nav>
+        <span class="nav-cta"><a class="dl-btn" href="/get">Download</a><a class="web-btn" href="https://web.bwalletx.com" target="_blank" rel="noopener">Web &rarr;</a></span>
+      </div>
+    </header>
+    <script src="/nav.js"></script>
+    <main class="ext">
+      <p class="meta"><a href="/blog">Development blog</a> · <span class="num">002</span> · 30 Sep – 4 Oct 2026</p>
+      <h1>Four names in a week</h1>
+      <p class="lede">Yours Wallet Mobile, bCorp Wallet, bWallet, then bWalletX. Why the name kept changing, and why there are now two apps.</p>
+
+      <h2>Yours Wallet Mobile</h2>
+      <p>The first builds were called Yours Wallet Mobile, with an "Experimental" tag and a switch for the brand. That made sense while the port was a gift to the Yours team. It stopped making sense once we started adding our own features, because users could reasonably think the Yours authors stood behind them.</p>
+
+      <h2>bCorp Wallet, then bWallet</h2>
+      <p>On 30 September the app ID moved to a Bitcoin Corporation one and the store build became "bCorp Wallet". The next day it became bWallet. At build time we also recoloured upstream's greens to a BSV gold, and replaced the Yours sprout with our own mark. That rename touched app IDs, the user agent string (<code>bWallet/1</code>), icons and splash screens. App IDs are hard to change once an app is in a store, so doing this early was cheap compared with doing it later.</p>
+
+      <h2>Two apps: bWallet and bWalletX</h2>
+      <p>By 2 October it was clear that the App Store and Google Play would not accept everything we wanted to build (more on that in post 007). So we split into release channels. The store builds stay "bWallet". The private builds, with everything turned on, became bWalletX on 3 October.</p>
+      <p>The "X" itself went back and forth. First we added a small x to the b in the logo. Then the extension shipped with b+x icons. Then a flag-top b with a Space Grotesk X. On 4 October we removed the X from every logo: bWalletX is a gold b on black, and the store bWallet is a black b on yellow. The X now lives only in the name.</p>
+
+      <h2>Market or Exchange</h2>
+      <p>The same split shows in the tab names. In bWalletX the trading tab is called Exchange. In the store app it is called Market, and it is browse-only. One setting in the code picks the label, so the two apps share the same screens.</p>
+
+      <h2>Was it worth it</h2>
+      <p>Probably, but it cost time. Every rename meant new icons, new share images, site copy and checks that old installs still update in place. One example: the private iOS channel kept its earlier bundle ID so existing installs would update to bWalletX instead of appearing as a second app. If we did it again, we would decide the store/private split before choosing any name.</p>
+
+      <div class="box"><h2>What's not done</h2><ul><li>Some older share images and APK file names still use earlier names.</li><li>The store bWallet has not been approved by Apple or Google as far as our history records.</li></ul></div>
+      <p class="related">Related: <a href="/features">Features</a> · <a href="/get">Get bWalletX</a></p>
+      <div class="pn"><a href="/blog/001-the-fork">&larr; 001 Forking Yours Wallet onto phones</a><a href="/blog/003-tabs-apps-feed">003 Tabs, apps and a social feed &rarr;</a></div>
+    </main>
+  </body>
+</html>

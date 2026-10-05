@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>001 Forking Yours Wallet onto phones · bWalletX blog</title>
+    <meta name="description" content="We took the Yours Wallet browser extension and wrapped it as an iPhone and Android app with Capacitor, without rewriting its code." />
+    <link rel="canonical" href="https://bwalletx.com/blog/001-the-fork" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://bwalletx.com/blog/001-the-fork" />
+    <meta property="og:site_name" content="bWalletX" />
+    <meta property="og:title" content="Forking Yours Wallet onto phones" />
+    <meta property="og:description" content="We took the Yours Wallet browser extension and wrapped it as an iPhone and Android app with Capacitor, without rewriting its code." />
+    <meta property="og:image" content="https://bwalletx.com/og-home.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Forking Yours Wallet onto phones" />
+    <meta name="twitter:description" content="We took the Yours Wallet browser extension and wrapped it as an iPhone and Android app with Capacitor, without rewriting its code." />
+    <meta name="twitter:image" content="https://bwalletx.com/og-home.png" />
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="stylesheet" href="/styles.css" />
+    <style>
+      .ext { max-width: 760px; margin: 0 auto; padding: 120px 20px 80px; }
+      .ext h1 { font-size: clamp(2rem, 6vw, 3rem); margin: 10px 0 10px; line-height: 1.15; }
+      .ext h2 { margin: 44px 0 10px; font-size: 1.4rem; }
+      .ext p, .ext li { line-height: 1.7; }
+      .ext code { background: #17191e; padding: 2px 7px; border-radius: 6px; overflow-wrap: anywhere; }
+      .ext a { overflow-wrap: anywhere; }
+      .meta { color: #8a8a86; font-size: 0.9rem; margin: 0; }
+      .num { color: #F5B800; font-weight: 700; letter-spacing: .04em; }
+      .box { background: #101114; border: 1px solid #ffffff12; border-radius: 16px; padding: 18px 22px; margin: 28px 0; }
+      .box h2 { margin: 0 0 8px; font-size: 1.1rem; }
+      .box ul { margin: 0; padding-left: 1.2em; }
+      .related { color: #a7adb8; }
+      .pn { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; margin-top: 40px; border-top: 1px solid #ffffff14; padding-top: 20px; }
+      .pn a { color: #F5B800; text-decoration: none; max-width: 100%; }
+      .posts { list-style: none; padding: 0; margin: 28px 0; }
+      .posts li { background: #101114; border: 1px solid #ffffff12; border-radius: 16px; padding: 16px 20px; margin: 12px 0; }
+      .posts a { color: #fff; text-decoration: none; font-weight: 700; font-size: 1.1rem; }
+      .posts a:hover { color: #F5B800; }
+      .posts p { margin: 4px 0 0; color: #a7adb8; line-height: 1.55; }
+      .ext .small { color: #8a8a86; font-size: 0.85rem; }
+    </style>
+  </head>
+  <body>
+    <div class="beta-banner">bWalletX is in <strong>beta</strong>: test with small amounts.</div>
+    <header class="topbar">
+      <div class="wrap topbar-in">
+        <a class="brand" href="/"><img src="/logo.svg" alt="" width="34" height="30" /><span>bWallet<span class="gold">X</span></span></a>
+        <nav aria-label="Pages">
+          <a href="/features">Features</a><a href="/exchange">Exchange</a><a href="/social">Social</a><a href="/agent">Agents</a><a href="/android">Android</a><a href="/iphone">iPhone</a><a href="/extension">Extension</a><a href="/developers">Developers</a>
+        </nav>
+        <span class="nav-cta"><a class="dl-btn" href="/get">Download</a><a class="web-btn" href="https://web.bwalletx.com" target="_blank" rel="noopener">Web &rarr;</a></span>
+      </div>
+    </header>
+    <script src="/nav.js"></script>
+    <main class="ext">
+      <p class="meta"><a href="/blog">Development blog</a> · <span class="num">001</span> · 29–30 Sep 2026</p>
+      <h1>Forking Yours Wallet onto phones</h1>
+      <p class="lede">We took the Yours Wallet browser extension and wrapped it as an iPhone and Android app with Capacitor, without rewriting its code.</p>
+
+      <h2>Why fork at all</h2>
+      <p>Yours Wallet is an open-source BSV wallet for Chrome, released under the MIT licence by its authors. It already handled BSV, 1Sat Ordinals, BSV-21 tokens and MNEE, and it used the BRC-100 wallet standard. It had no phone app. We wanted one, and we wanted to build our own products on top of a wallet that already worked, rather than start a new one.</p>
+      <p>Our branch starts from upstream version 5.1.0 (an upstream commit dated 16 September 2026). The first commit of our own is dated 29 September 2026. Everything on this blog happened after that.</p>
+
+      <h2>The approach: leave upstream alone</h2>
+      <p>The first commit packaged the extension as native apps with Capacitor, and it did not modify upstream's <code>src/</code> folder. Instead we added a small mobile layer:</p>
+      <ul>
+        <li>a stand-in for the <code>chrome.*</code> APIs that an extension expects;</li>
+        <li>the extension's background script running in a Web Worker;</li>
+        <li>extension pop-up windows turned into overlays inside the app;</li>
+        <li>native storage for what the extension kept in <code>storage.local</code>.</li>
+      </ul>
+      <p>The reason was simple: we wanted to keep taking upstream fixes. The same day we replaced some early hacks (watching the page for text, CSS overrides) with small, optional hooks, so the mobile code plugs into upstream at named points instead of fighting it. That choice paid off on 4 October, when we merged upstream's latest main, including its storage repair work, without a rewrite.</p>
+
+      <h2>What went in on day one</h2>
+      <ul>
+        <li>A dApp browser inside the app, so BSV websites can talk to the wallet.</li>
+        <li>Biometric unlock, with the password as a fallback.</li>
+        <li>On Android: no cloud backup of app data, and screenshots blocked in release builds. On iPhone: the app-switcher snapshot is covered.</li>
+        <li>A first TestFlight build and an Android APK, plus a small download site.</li>
+        <li>A security review guide written for the Yours Wallet team, and the Yours-branded port shared with them. It is tagged <code>yours-mobile-v0.1</code> in our repository.</li>
+      </ul>
+
+      <h2>The first real bug</h2>
+      <p>On phones, the wallet could hang while starting up. The cause was duplicate rows in a sync-state table, which the extension never hit in practice. The fix shipped as iOS build 3 on the first day. It was a useful reminder that the extension's code had been tested in one environment, and a phone is a different one.</p>
+
+      <h2>What we owe</h2>
+      <p>bWallet and bWalletX are built on Yours Wallet. We are not affiliated with its authors, and they have not endorsed our work. Their licence and credit stay in the repository. We also lean on the 1Sat tooling (<code>@1sat/actions</code>, <code>@1sat/templates</code>), the BSV wallet toolbox and Capacitor.</p>
+
+      <div class="box"><h2>What's not done</h2><ul><li>Pinning our dependencies to upstream's lockfile works, but every upstream merge means re-pinning and re-testing.</li><li>The mobile layer is still a shim. Anything new upstream does with <code>chrome.*</code> can break it without warning.</li><li>Tests run on our builds. We have not had an independent security review of the mobile layer.</li></ul></div>
+      <p class="related">Related: <a href="/features">Features</a> · <a href="/android">Android</a> · <a href="/developers">Developers</a></p>
+      <div class="pn"><a href="/blog">&larr; All posts</a><a href="/blog/002-four-names">002 Four names in a week &rarr;</a></div>
+    </main>
+  </body>
+</html>

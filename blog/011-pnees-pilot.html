@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>011 From a dollar bond to PNEEs on mainnet · bWalletX blog</title>
+    <meta name="description" content="A BSV-backed dollar token went from a design note to a small, capped mainnet pilot in two days. This is what is enforced, what is not, and what went wrong." />
+    <link rel="canonical" href="https://bwalletx.com/blog/011-pnees-pilot" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://bwalletx.com/blog/011-pnees-pilot" />
+    <meta property="og:site_name" content="bWalletX" />
+    <meta property="og:title" content="From a dollar bond to PNEEs on mainnet" />
+    <meta property="og:description" content="A BSV-backed dollar token went from a design note to a small, capped mainnet pilot in two days. This is what is enforced, what is not, and what went wrong." />
+    <meta property="og:image" content="https://bwalletx.com/og-home.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="From a dollar bond to PNEEs on mainnet" />
+    <meta name="twitter:description" content="A BSV-backed dollar token went from a design note to a small, capped mainnet pilot in two days. This is what is enforced, what is not, and what went wrong." />
+    <meta name="twitter:image" content="https://bwalletx.com/og-home.png" />
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="stylesheet" href="/styles.css" />
+    <style>
+      .ext { max-width: 760px; margin: 0 auto; padding: 120px 20px 80px; }
+      .ext h1 { font-size: clamp(2rem, 6vw, 3rem); margin: 10px 0 10px; line-height: 1.15; }
+      .ext h2 { margin: 44px 0 10px; font-size: 1.4rem; }
+      .ext p, .ext li { line-height: 1.7; }
+      .ext code { background: #17191e; padding: 2px 7px; border-radius: 6px; overflow-wrap: anywhere; }
+      .ext a { overflow-wrap: anywhere; }
+      .meta { color: #8a8a86; font-size: 0.9rem; margin: 0; }
+      .num { color: #F5B800; font-weight: 700; letter-spacing: .04em; }
+      .box { background: #101114; border: 1px solid #ffffff12; border-radius: 16px; padding: 18px 22px; margin: 28px 0; }
+      .box h2 { margin: 0 0 8px; font-size: 1.1rem; }
+      .box ul { margin: 0; padding-left: 1.2em; }
+      .related { color: #a7adb8; }
+      .pn { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; margin-top: 40px; border-top: 1px solid #ffffff14; padding-top: 20px; }
+      .pn a { color: #F5B800; text-decoration: none; max-width: 100%; }
+      .posts { list-style: none; padding: 0; margin: 28px 0; }
+      .posts li { background: #101114; border: 1px solid #ffffff12; border-radius: 16px; padding: 16px 20px; margin: 12px 0; }
+      .posts a { color: #fff; text-decoration: none; font-weight: 700; font-size: 1.1rem; }
+      .posts a:hover { color: #F5B800; }
+      .posts p { margin: 4px 0 0; color: #a7adb8; line-height: 1.55; }
+      .ext .small { color: #8a8a86; font-size: 0.85rem; }
+    </style>
+  </head>
+  <body>
+    <div class="beta-banner">bWalletX is in <strong>beta</strong>: test with small amounts.</div>
+    <header class="topbar">
+      <div class="wrap topbar-in">
+        <a class="brand" href="/"><img src="/logo.svg" alt="" width="34" height="30" /><span>bWallet<span class="gold">X</span></span></a>
+        <nav aria-label="Pages">
+          <a href="/features">Features</a><a href="/exchange">Exchange</a><a href="/social">Social</a><a href="/agent">Agents</a><a href="/android">Android</a><a href="/iphone">iPhone</a><a href="/extension">Extension</a><a href="/developers">Developers</a>
+        </nav>
+        <span class="nav-cta"><a class="dl-btn" href="/get">Download</a><a class="web-btn" href="https://web.bwalletx.com" target="_blank" rel="noopener">Web &rarr;</a></span>
+      </div>
+    </header>
+    <script src="/nav.js"></script>
+    <main class="ext">
+      <p class="meta"><a href="/blog">Development blog</a> · <span class="num">011</span> · 4–5 Oct 2026</p>
+      <h1>From a dollar bond to PNEEs on mainnet</h1>
+      <p class="lede">A BSV-backed dollar token went from a design note to a small, capped mainnet pilot in two days. This is what is enforced, what is not, and what went wrong.</p>
+
+      <h2>Contracts and bonds</h2>
+      <p>On 4 October we wrote a design for a "$1 bond": lock BSV in a vault and mint dollar tokens against it. On 5 October the wallet got Exchange › Contracts and Bonds, where contract descriptions are published as public NFTs.</p>
+
+      <h2>The prototype</h2>
+      <p>The vault and token contracts are written in sCrypt in a separate repository. A vault holds BSV, mints against it up to a set ratio, lets the owner close it by handing the tokens back, and lets anyone liquidate it below 150% using a price signed by 3 of 5 signers (the median of the 3). There are 22 local tests, run through the Bitcoin Script interpreter.</p>
+      <p>We could not run it on testnet. On 5 October no faucet we tried could give us test coins: one returned an error, and the others were unreachable or needed a captcha.</p>
+
+      <h2>Bonds became Penny Notes, then PNEEs</h2>
+      <p>The same day we changed the design. These are not bonds; they are cash. One unit is one cent. Vaults start at 10x collateral, so $1 of BSV mints 10 cents, and a vault survives an 85% fall in BSV. The notes became an ordinary BSV-21 token, $PNEE, with 2 decimals, so any 1Sat-compatible wallet can hold them. The name settled as PNEEs (Penny Stablecoins).</p>
+
+      <h2>The mainnet pilot</h2>
+      <p>Mainnet runs only in a pilot mode with hard caps in code: about $5 of collateral per vault, $10 across all vaults, $2 of notes per vault, and a fee cap per transaction. Every broadcast prints a summary and needs "broadcast" typed to confirm. Plain mainnet mode is refused. The first vault locked 12,500,000 sats; the first mint was 25 PNEEs against a 3-of-5 price of $20.32. The transaction IDs are on the <a href="/pnees">PNEEs page</a>.</p>
+
+      <h2>What went wrong</h2>
+      <ul>
+        <li><strong>Reused coins.</strong> We were picking coins from WhatsOnChain's unspent list, which can lag behind. That let the tool try to spend a coin that had already been spent, and WhatsOnChain's broadcast did not report the double spend clearly. We now broadcast through ARC first, which reports double spends as errors, and keep a local list of spent coins.</li>
+        <li><strong>Missing notes.</strong> WhatsOnChain's address index skips inscription outputs, so notes didn't show up. We added a local ledger of notes.</li>
+        <li><strong>Indexing.</strong> The 1Sat overlay did not index PNEEs straight away, even after we paid its funding template. The wallet now shows PNEEs from GorillaPool, labelled "Indexing", until the overlay catches up.</li>
+      </ul>
+
+      <h2>The trust gaps</h2>
+      <p>The vault script can't check other inputs, so it can't prove that real notes were burned when a vault closes. For now bCorp, as issuer, co-signs releases and burns, in public on chain. That means the issuer could refuse to co-sign a liquidation. All five price signers are run by us during the pilot, so they are not independent. A liquidator can also choose an old transaction lock time, which weakens the price freshness check. The prototype's README lists these in full.</p>
+      <p>Note transfers themselves need no co-signer. Releases and burns do.</p>
+
+      <div class="box"><h2>What's not done</h2><ul><li>Independent price signers.</li><li>An on-chain check that burned notes are real, replacing the issuer co-signer. Shieldpool is one route we are watching; it is testnet only.</li><li>The stability pool (backers earn from liquidations) is design only.</li><li>A testnet run, and a review of the scripts, before any meaningful amount.</li><li>Wallet screens for opening and closing vaults. The PNEEs card is there; vault management is not.</li><li>Legal review before the stability pool opens to the public. Store editions stay browse-only.</li></ul></div>
+      <p class="related">Related: <a href="/pnees">PNEEs</a> · <a href="/exchange">Exchange</a></p>
+      <div class="pn"><a href="/blog/010-agents-strategies-cli">&larr; 010 Agent accounts, strategies, CLI and MCP</a><a href="/blog/012-extension-and-web">012 The extension, the web app and pairing &rarr;</a></div>
+    </main>
+  </body>
+</html>

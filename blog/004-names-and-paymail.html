@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>004 Names, handles and paymail · bWalletX blog</title>
+    <meta name="description" content="Send to $handle, name@bwalletx.com or an OpNS name. The paymail server moved domain twice, and social sign-in became a verified name." />
+    <link rel="canonical" href="https://bwalletx.com/blog/004-names-and-paymail" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://bwalletx.com/blog/004-names-and-paymail" />
+    <meta property="og:site_name" content="bWalletX" />
+    <meta property="og:title" content="Names, handles and paymail" />
+    <meta property="og:description" content="Send to $handle, name@bwalletx.com or an OpNS name. The paymail server moved domain twice, and social sign-in became a verified name." />
+    <meta property="og:image" content="https://bwalletx.com/og-home.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Names, handles and paymail" />
+    <meta name="twitter:description" content="Send to $handle, name@bwalletx.com or an OpNS name. The paymail server moved domain twice, and social sign-in became a verified name." />
+    <meta name="twitter:image" content="https://bwalletx.com/og-home.png" />
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="stylesheet" href="/styles.css" />
+    <style>
+      .ext { max-width: 760px; margin: 0 auto; padding: 120px 20px 80px; }
+      .ext h1 { font-size: clamp(2rem, 6vw, 3rem); margin: 10px 0 10px; line-height: 1.15; }
+      .ext h2 { margin: 44px 0 10px; font-size: 1.4rem; }
+      .ext p, .ext li { line-height: 1.7; }
+      .ext code { background: #17191e; padding: 2px 7px; border-radius: 6px; overflow-wrap: anywhere; }
+      .ext a { overflow-wrap: anywhere; }
+      .meta { color: #8a8a86; font-size: 0.9rem; margin: 0; }
+      .num { color: #F5B800; font-weight: 700; letter-spacing: .04em; }
+      .box { background: #101114; border: 1px solid #ffffff12; border-radius: 16px; padding: 18px 22px; margin: 28px 0; }
+      .box h2 { margin: 0 0 8px; font-size: 1.1rem; }
+      .box ul { margin: 0; padding-left: 1.2em; }
+      .related { color: #a7adb8; }
+      .pn { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; margin-top: 40px; border-top: 1px solid #ffffff14; padding-top: 20px; }
+      .pn a { color: #F5B800; text-decoration: none; max-width: 100%; }
+      .posts { list-style: none; padding: 0; margin: 28px 0; }
+      .posts li { background: #101114; border: 1px solid #ffffff12; border-radius: 16px; padding: 16px 20px; margin: 12px 0; }
+      .posts a { color: #fff; text-decoration: none; font-weight: 700; font-size: 1.1rem; }
+      .posts a:hover { color: #F5B800; }
+      .posts p { margin: 4px 0 0; color: #a7adb8; line-height: 1.55; }
+      .ext .small { color: #8a8a86; font-size: 0.85rem; }
+    </style>
+  </head>
+  <body>
+    <div class="beta-banner">bWalletX is in <strong>beta</strong>: test with small amounts.</div>
+    <header class="topbar">
+      <div class="wrap topbar-in">
+        <a class="brand" href="/"><img src="/logo.svg" alt="" width="34" height="30" /><span>bWallet<span class="gold">X</span></span></a>
+        <nav aria-label="Pages">
+          <a href="/features">Features</a><a href="/exchange">Exchange</a><a href="/social">Social</a><a href="/agent">Agents</a><a href="/android">Android</a><a href="/iphone">iPhone</a><a href="/extension">Extension</a><a href="/developers">Developers</a>
+        </nav>
+        <span class="nav-cta"><a class="dl-btn" href="/get">Download</a><a class="web-btn" href="https://web.bwalletx.com" target="_blank" rel="noopener">Web &rarr;</a></span>
+      </div>
+    </header>
+    <script src="/nav.js"></script>
+    <main class="ext">
+      <p class="meta"><a href="/blog">Development blog</a> · <span class="num">004</span> · 1–4 Oct 2026</p>
+      <h1>Names, handles and paymail</h1>
+      <p class="lede">Send to $handle, name@bwalletx.com or an OpNS name. The paymail server moved domain twice, and social sign-in became a verified name.</p>
+
+      <h2>Sending to a name</h2>
+      <p>Bitcoin addresses are hard to read aloud. On 1 October we added sending to a <code>$handle</code>, a paymail address or an OpNS name. We also added on-device OpNS mining: the phone runs the proof of work in a Web Worker and builds the mint transactions for a new name.</p>
+
+      <h2>Our own paymail server</h2>
+      <p>We wrote a paymail server with no server keys. Names are registered with a signed request, payment destinations are derived from the wallet's public key, and incoming payments wait in an inbox until the wallet collects them.</p>
+      <p>The domain moved twice. It started on b0ase.com. The same day it moved to bwallet.space. Then we removed b0ase.com entirely, because, as the commit says, it never had DNS set up. On 4 October the address shown in the app became <code>name@bwalletx.com</code>, and bwallet.space stayed as an alias for every name.</p>
+
+      <h2>Choosing a handle</h2>
+      <p>New wallets get a "Choose your handle" step after create or restore. Claiming a paymail name is free. The same step offers a personal <code>$NAME</code> token and room (post 005), which costs a fee and is shown before you pay.</p>
+
+      <h2>Continue with X or Google</h2>
+      <p>On 4 October we added "Continue with X / Google" on Create Account. If you sign in, you get a verified name such as <code>name.x</code> or <code>name.gmail</code>. A plain name can be claimed by anyone; a verified name shows that the person behind it controls that X or Google account.</p>
+      <p>The design changed during the day. First the chat server (bit-sign) handled the sign-in. Then we moved it to bWalletX's own server, and bit-sign keeps nothing: it only confirms the sign-in ticket. Then we decided one wallet has one identity, and a verified social name always wins over a plain one.</p>
+      <p>Social sign-in is off in the store build, pending Apple's guideline 4.8 on sign-in options.</p>
+
+      <h2>A detail that took longer than expected</h2>
+      <p>Placeholder names such as "Anonymous" or "Account 1" kept showing up in places where a real name should be. We now never show them; the paymail name is used instead.</p>
+
+      <div class="box"><h2>What's not done</h2><ul><li>Handles are not tradeable yet. The numbered accounts and tradeable handles spec is design only.</li><li>Name resolution depends on our paymail server being up.</li><li>Social sign-in is not in the store build.</li></ul></div>
+      <p class="related">Related: <a href="/social">Social</a> · <a href="/features">Features</a></p>
+      <div class="pn"><a href="/blog/003-tabs-apps-feed">&larr; 003 Tabs, apps and a social feed</a><a href="/blog/005-personal-tokens-and-rooms">005 Personal tokens and token rooms &rarr;</a></div>
+    </main>
+  </body>
+</html>

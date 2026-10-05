@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>009 The b agent: paid, or your own key · bWalletX blog</title>
+    <meta name="description" content="An assistant inside the wallet. It started free, became paid-only within a day, and now asks for consent before it sends anything." />
+    <link rel="canonical" href="https://bwalletx.com/blog/009-the-b-agent" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://bwalletx.com/blog/009-the-b-agent" />
+    <meta property="og:site_name" content="bWalletX" />
+    <meta property="og:title" content="The b agent: paid, or your own key" />
+    <meta property="og:description" content="An assistant inside the wallet. It started free, became paid-only within a day, and now asks for consent before it sends anything." />
+    <meta property="og:image" content="https://bwalletx.com/og-home.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="The b agent: paid, or your own key" />
+    <meta name="twitter:description" content="An assistant inside the wallet. It started free, became paid-only within a day, and now asks for consent before it sends anything." />
+    <meta name="twitter:image" content="https://bwalletx.com/og-home.png" />
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="stylesheet" href="/styles.css" />
+    <style>
+      .ext { max-width: 760px; margin: 0 auto; padding: 120px 20px 80px; }
+      .ext h1 { font-size: clamp(2rem, 6vw, 3rem); margin: 10px 0 10px; line-height: 1.15; }
+      .ext h2 { margin: 44px 0 10px; font-size: 1.4rem; }
+      .ext p, .ext li { line-height: 1.7; }
+      .ext code { background: #17191e; padding: 2px 7px; border-radius: 6px; overflow-wrap: anywhere; }
+      .ext a { overflow-wrap: anywhere; }
+      .meta { color: #8a8a86; font-size: 0.9rem; margin: 0; }
+      .num { color: #F5B800; font-weight: 700; letter-spacing: .04em; }
+      .box { background: #101114; border: 1px solid #ffffff12; border-radius: 16px; padding: 18px 22px; margin: 28px 0; }
+      .box h2 { margin: 0 0 8px; font-size: 1.1rem; }
+      .box ul { margin: 0; padding-left: 1.2em; }
+      .related { color: #a7adb8; }
+      .pn { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; margin-top: 40px; border-top: 1px solid #ffffff14; padding-top: 20px; }
+      .pn a { color: #F5B800; text-decoration: none; max-width: 100%; }
+      .posts { list-style: none; padding: 0; margin: 28px 0; }
+      .posts li { background: #101114; border: 1px solid #ffffff12; border-radius: 16px; padding: 16px 20px; margin: 12px 0; }
+      .posts a { color: #fff; text-decoration: none; font-weight: 700; font-size: 1.1rem; }
+      .posts a:hover { color: #F5B800; }
+      .posts p { margin: 4px 0 0; color: #a7adb8; line-height: 1.55; }
+      .ext .small { color: #8a8a86; font-size: 0.85rem; }
+    </style>
+  </head>
+  <body>
+    <div class="beta-banner">bWalletX is in <strong>beta</strong>: test with small amounts.</div>
+    <header class="topbar">
+      <div class="wrap topbar-in">
+        <a class="brand" href="/"><img src="/logo.svg" alt="" width="34" height="30" /><span>bWallet<span class="gold">X</span></span></a>
+        <nav aria-label="Pages">
+          <a href="/features">Features</a><a href="/exchange">Exchange</a><a href="/social">Social</a><a href="/agent">Agents</a><a href="/android">Android</a><a href="/iphone">iPhone</a><a href="/extension">Extension</a><a href="/developers">Developers</a>
+        </nav>
+        <span class="nav-cta"><a class="dl-btn" href="/get">Download</a><a class="web-btn" href="https://web.bwalletx.com" target="_blank" rel="noopener">Web &rarr;</a></span>
+      </div>
+    </header>
+    <script src="/nav.js"></script>
+    <main class="ext">
+      <p class="meta"><a href="/blog">Development blog</a> · <span class="num">009</span> · 1–5 Oct 2026</p>
+      <h1>The b agent: paid, or your own key</h1>
+      <p class="lede">An assistant inside the wallet. It started free, became paid-only within a day, and now asks for consent before it sends anything.</p>
+
+      <h2>The first version</h2>
+      <p>On 1 October the b in the centre of the top bar opened the b agent: a chat page built on the chat server's compose feature. It was free to use. Free AI costs us money with no limit, so it did not last.</p>
+
+      <h2>Paid only</h2>
+      <p>On 2 October we removed the free path. There are now two ways to use the agent:</p>
+      <ul>
+        <li><strong>Your own key.</strong> You add an API key for Anthropic, OpenAI or OpenRouter. It stays in secure storage on your device, and requests go straight from your phone to that provider. We don't see them.</li>
+        <li><strong>Pay per message in BSV.</strong> The wallet asks for a quote, pays and gets the answer, with a daily limit. The price is set in US dollars and converted to sats at quote time. These messages go through our server to Anthropic.</li>
+      </ul>
+      <p>We also cut the history sent with each message from 20 turns to 8. That lowers cost and sends less of your conversation.</p>
+
+      <h2>Consent</h2>
+      <p>For the stores, and because it is right, the agent now shows a consent sheet before the first message to each provider. It says what is sent (your message and the last 8 turns) and what isn't. You can revoke consent in Settings. The agent also refuses input that looks like a recovery phrase or a private key.</p>
+      <p>On 5 October we added a banner on the agent page to add your own key, since that is the more private option.</p>
+
+      <h2>What it can do</h2>
+      <p>The agent has a usage guide for the wallet as its system prompt, so it can explain features. In agent accounts it can act, buying and sending, but only through the strategy rules the wallet enforces (post 010). Quick-start buttons cover the common cases: create a strategy, trade with a strategy, buy or sell one.</p>
+
+      <div class="box"><h2>What's not done</h2><ul><li>The store build allows only your own key; pay-per-message is a private-build feature.</li><li>The agent can be wrong. Any action it takes in an agent account is limited by the strategy gate, not by its judgement.</li><li>There is no long-term memory, by design, and no way yet to export a conversation.</li></ul></div>
+      <p class="related">Related: <a href="/agent">Agents</a> · <a href="/strategies">Strategies</a></p>
+      <div class="pn"><a href="/blog/008-the-exchange">&larr; 008 Building the Exchange, and why buys broke</a><a href="/blog/010-agents-strategies-cli">010 Agent accounts, strategies, CLI and MCP &rarr;</a></div>
+    </main>
+  </body>
+</html>

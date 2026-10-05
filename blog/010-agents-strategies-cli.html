@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>010 Agent accounts, strategies, CLI and MCP · bWalletX blog</title>
+    <meta name="description" content="Separate wallet accounts for agents, spending rules the wallet enforces, a market for strategies, and a command-line tool that keeps keys on the phone." />
+    <link rel="canonical" href="https://bwalletx.com/blog/010-agents-strategies-cli" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://bwalletx.com/blog/010-agents-strategies-cli" />
+    <meta property="og:site_name" content="bWalletX" />
+    <meta property="og:title" content="Agent accounts, strategies, CLI and MCP" />
+    <meta property="og:description" content="Separate wallet accounts for agents, spending rules the wallet enforces, a market for strategies, and a command-line tool that keeps keys on the phone." />
+    <meta property="og:image" content="https://bwalletx.com/og-home.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Agent accounts, strategies, CLI and MCP" />
+    <meta name="twitter:description" content="Separate wallet accounts for agents, spending rules the wallet enforces, a market for strategies, and a command-line tool that keeps keys on the phone." />
+    <meta name="twitter:image" content="https://bwalletx.com/og-home.png" />
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="stylesheet" href="/styles.css" />
+    <style>
+      .ext { max-width: 760px; margin: 0 auto; padding: 120px 20px 80px; }
+      .ext h1 { font-size: clamp(2rem, 6vw, 3rem); margin: 10px 0 10px; line-height: 1.15; }
+      .ext h2 { margin: 44px 0 10px; font-size: 1.4rem; }
+      .ext p, .ext li { line-height: 1.7; }
+      .ext code { background: #17191e; padding: 2px 7px; border-radius: 6px; overflow-wrap: anywhere; }
+      .ext a { overflow-wrap: anywhere; }
+      .meta { color: #8a8a86; font-size: 0.9rem; margin: 0; }
+      .num { color: #F5B800; font-weight: 700; letter-spacing: .04em; }
+      .box { background: #101114; border: 1px solid #ffffff12; border-radius: 16px; padding: 18px 22px; margin: 28px 0; }
+      .box h2 { margin: 0 0 8px; font-size: 1.1rem; }
+      .box ul { margin: 0; padding-left: 1.2em; }
+      .related { color: #a7adb8; }
+      .pn { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; margin-top: 40px; border-top: 1px solid #ffffff14; padding-top: 20px; }
+      .pn a { color: #F5B800; text-decoration: none; max-width: 100%; }
+      .posts { list-style: none; padding: 0; margin: 28px 0; }
+      .posts li { background: #101114; border: 1px solid #ffffff12; border-radius: 16px; padding: 16px 20px; margin: 12px 0; }
+      .posts a { color: #fff; text-decoration: none; font-weight: 700; font-size: 1.1rem; }
+      .posts a:hover { color: #F5B800; }
+      .posts p { margin: 4px 0 0; color: #a7adb8; line-height: 1.55; }
+      .ext .small { color: #8a8a86; font-size: 0.85rem; }
+    </style>
+  </head>
+  <body>
+    <div class="beta-banner">bWalletX is in <strong>beta</strong>: test with small amounts.</div>
+    <header class="topbar">
+      <div class="wrap topbar-in">
+        <a class="brand" href="/"><img src="/logo.svg" alt="" width="34" height="30" /><span>bWallet<span class="gold">X</span></span></a>
+        <nav aria-label="Pages">
+          <a href="/features">Features</a><a href="/exchange">Exchange</a><a href="/social">Social</a><a href="/agent">Agents</a><a href="/android">Android</a><a href="/iphone">iPhone</a><a href="/extension">Extension</a><a href="/developers">Developers</a>
+        </nav>
+        <span class="nav-cta"><a class="dl-btn" href="/get">Download</a><a class="web-btn" href="https://web.bwalletx.com" target="_blank" rel="noopener">Web &rarr;</a></span>
+      </div>
+    </header>
+    <script src="/nav.js"></script>
+    <main class="ext">
+      <p class="meta"><a href="/blog">Development blog</a> · <span class="num">010</span> · 4–5 Oct 2026</p>
+      <h1>Agent accounts, strategies, CLI and MCP</h1>
+      <p class="lede">Separate wallet accounts for agents, spending rules the wallet enforces, a market for strategies, and a command-line tool that keeps keys on the phone.</p>
+
+      <h2>Agent accounts</h2>
+      <p>On 4 October we added a switch when you add an account: Agent account. An agent account is a separate wallet that you fund from your main one. Settings has Stop all, a stop per account, a daily cap, Sweep back for tokens, NFTs and BSV, and an activity log. The idea is that an agent can never spend more than you put in its account.</p>
+
+      <h2>Strategies</h2>
+      <p>A strategy is a file that says what an agent may do: which tokens, how much, how often, within what limits. The wallet enforces the limits, not the agent. You load a strategy into an agent account, and the b agent can then buy and send there, through that gate.</p>
+      <p>We first called the dry-run mode "paper mode", with paper fills. On 5 October the site wording changed to "test on live prices", because "paper" and "pretend money" undersold what it does: it uses real market prices without spending.</p>
+
+      <h2>Selling strategies</h2>
+      <p>Strategies can be sold on Exchange › Strategies as encrypted NFTs. A buyer pays the author plus a 1% fee, gets their own copy minted, unlocks it through our key service and loads it. Since the key service releases the content, buyers depend on it staying up.</p>
+
+      <h2>Running agents on a computer</h2>
+      <p>There are two ways to run an agent account from a laptop or server with the <code>bwalletx</code> CLI, which is published on npm, along with an MCP server for AI tools:</p>
+      <ul>
+        <li><strong>Pairing.</strong> Scan a QR code with the phone. The pairing is bound to one agent account, with scopes and an expiry of at most 30 days. Requests run on the phone through the agent gate, so keys never leave it.</li>
+        <li><strong>Key export.</strong> For a server with no phone, export a passphrase-encrypted key file. This works only for agent accounts, never for your main wallet.</li>
+      </ul>
+      <p>The CLI pages describe v0.1 and then v0.2, which added pairing and live buys.</p>
+
+      <div class="box"><h2>What's not done</h2><ul><li>Strategies are new. We have no track record of how they behave over weeks.</li><li>The strategy key service is ours and centralised; if it is down, bought strategies can't be unlocked.</li><li>Spec items such as per-agent rate limits and scoped agent tokens are partly built; check the spec page for what is live.</li><li>Nothing here is financial advice, and agents can lose money within their limits.</li></ul></div>
+      <p class="related">Related: <a href="/agent">Agents</a> · <a href="/strategies">Strategies</a> · <a href="/strategies/spec">Strategy spec</a> · <a href="/cli">CLI</a> · <a href="/mcp">MCP</a> · <a href="/exchange/strategies">Exchange › Strategies</a></p>
+      <div class="pn"><a href="/blog/009-the-b-agent">&larr; 009 The b agent: paid, or your own key</a><a href="/blog/011-pnees-pilot">011 From a dollar bond to PNEEs on mainnet &rarr;</a></div>
+    </main>
+  </body>
+</html>

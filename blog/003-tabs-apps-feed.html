@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>003 Tabs, apps and a social feed · bWalletX blog</title>
+    <meta name="description" content="The phone layout changed many times. We added an Apps home screen with 100+ BSV apps, a Media player and a feed that reads other BSV social apps." />
+    <link rel="canonical" href="https://bwalletx.com/blog/003-tabs-apps-feed" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://bwalletx.com/blog/003-tabs-apps-feed" />
+    <meta property="og:site_name" content="bWalletX" />
+    <meta property="og:title" content="Tabs, apps and a social feed" />
+    <meta property="og:description" content="The phone layout changed many times. We added an Apps home screen with 100+ BSV apps, a Media player and a feed that reads other BSV social apps." />
+    <meta property="og:image" content="https://bwalletx.com/og-home.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Tabs, apps and a social feed" />
+    <meta name="twitter:description" content="The phone layout changed many times. We added an Apps home screen with 100+ BSV apps, a Media player and a feed that reads other BSV social apps." />
+    <meta name="twitter:image" content="https://bwalletx.com/og-home.png" />
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="stylesheet" href="/styles.css" />
+    <style>
+      .ext { max-width: 760px; margin: 0 auto; padding: 120px 20px 80px; }
+      .ext h1 { font-size: clamp(2rem, 6vw, 3rem); margin: 10px 0 10px; line-height: 1.15; }
+      .ext h2 { margin: 44px 0 10px; font-size: 1.4rem; }
+      .ext p, .ext li { line-height: 1.7; }
+      .ext code { background: #17191e; padding: 2px 7px; border-radius: 6px; overflow-wrap: anywhere; }
+      .ext a { overflow-wrap: anywhere; }
+      .meta { color: #8a8a86; font-size: 0.9rem; margin: 0; }
+      .num { color: #F5B800; font-weight: 700; letter-spacing: .04em; }
+      .box { background: #101114; border: 1px solid #ffffff12; border-radius: 16px; padding: 18px 22px; margin: 28px 0; }
+      .box h2 { margin: 0 0 8px; font-size: 1.1rem; }
+      .box ul { margin: 0; padding-left: 1.2em; }
+      .related { color: #a7adb8; }
+      .pn { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; margin-top: 40px; border-top: 1px solid #ffffff14; padding-top: 20px; }
+      .pn a { color: #F5B800; text-decoration: none; max-width: 100%; }
+      .posts { list-style: none; padding: 0; margin: 28px 0; }
+      .posts li { background: #101114; border: 1px solid #ffffff12; border-radius: 16px; padding: 16px 20px; margin: 12px 0; }
+      .posts a { color: #fff; text-decoration: none; font-weight: 700; font-size: 1.1rem; }
+      .posts a:hover { color: #F5B800; }
+      .posts p { margin: 4px 0 0; color: #a7adb8; line-height: 1.55; }
+      .ext .small { color: #8a8a86; font-size: 0.85rem; }
+    </style>
+  </head>
+  <body>
+    <div class="beta-banner">bWalletX is in <strong>beta</strong>: test with small amounts.</div>
+    <header class="topbar">
+      <div class="wrap topbar-in">
+        <a class="brand" href="/"><img src="/logo.svg" alt="" width="34" height="30" /><span>bWallet<span class="gold">X</span></span></a>
+        <nav aria-label="Pages">
+          <a href="/features">Features</a><a href="/exchange">Exchange</a><a href="/social">Social</a><a href="/agent">Agents</a><a href="/android">Android</a><a href="/iphone">iPhone</a><a href="/extension">Extension</a><a href="/developers">Developers</a>
+        </nav>
+        <span class="nav-cta"><a class="dl-btn" href="/get">Download</a><a class="web-btn" href="https://web.bwalletx.com" target="_blank" rel="noopener">Web &rarr;</a></span>
+      </div>
+    </header>
+    <script src="/nav.js"></script>
+    <main class="ext">
+      <p class="meta"><a href="/blog">Development blog</a> · <span class="num">003</span> · 1–5 Oct 2026</p>
+      <h1>Tabs, apps and a social feed</h1>
+      <p class="lede">The phone layout changed many times. We added an Apps home screen with 100+ BSV apps, a Media player and a feed that reads other BSV social apps.</p>
+
+      <h2>The tab bar kept moving</h2>
+      <p>On 1 October the tabs were Wallet, Market, Apps, Media and Settings. The same day Chat got a tab and Media moved under the wallet's NFTs. Then the tabs became Wallet, Market, Apps, Feed, Chat. On 2 October Wallet moved to the centre. On 3 October Wallet moved to the left and Apps to the centre. Each change came from using the app on a phone and finding the main action in the wrong place. We do not think the order is final.</p>
+
+      <h2>Apps</h2>
+      <p>Apps started as two lists: our own bApps and "Other apps". It grew into a home screen with tiles, an iPhone-style arrange mode (hold, jiggle, drag) and pages for Home, bApps, Other apps and Games. Our own apps run inside the wallet in a frame and talk to it through the standard BRC-100 interface.</p>
+      <p>On 2 October we added 116 live BSV apps found through BSVRadar, and 12 from the Metanet app store. We removed one, a sat-burning stress tool, because it did not fit the rule we had set for the import. We also hid a "Buy BSV" group of on-ramp apps; it is parked until we decide how to handle it. Later, users could add their own apps, saved with their wallet so a restore brings them back.</p>
+      <p>One small correction: TokenBlaster was first listed as a bApp, then moved to Other apps on 5 October, because it is not one of ours.</p>
+
+      <h2>Media</h2>
+      <p>The wallet sorts inscriptions by kind and plays audio and video, with a queue. It started as a tab, then became part of NFTs, then got its own button in the top bar.</p>
+
+      <h2>Feed</h2>
+      <p>The Feed reads on-chain social posts using Bitcoin Schema (B, MAP and AIP). It also shows recent Treechat threads and Twetch posts through Twetch's public API, with a badge showing where each post came from. Posts the wallet writes itself are marked as bChat. You can lock BSV behind a post, in the style of Hodlocker, and sort by most locked. There is a leaderboard, bookmarks that sync across devices, notifications and thread views.</p>
+
+      <h2>What broke</h2>
+      <ul>
+        <li>On Android, Framer Motion transforms made scrolling slow, so we turned them off app-wide.</li>
+        <li>A spacer in the identity row squeezed the Wallet tab to zero height, which left it blank. We added error boundaries so one broken insert can't blank the whole screen.</li>
+        <li>Bottom sheets opened behind the tab bar more than once. A test now checks every sheet.</li>
+      </ul>
+
+      <div class="box"><h2>What's not done</h2><ul><li>The feed polls; it does not stream new posts live.</li><li>The app directory is curated by hand, and entries need checking again before each store submission.</li><li>The Buy BSV group is hidden, not finished.</li></ul></div>
+      <p class="related">Related: <a href="/features">Features</a> · <a href="/apps/add">Add your app</a> · <a href="/social">Social</a></p>
+      <div class="pn"><a href="/blog/002-four-names">&larr; 002 Four names in a week</a><a href="/blog/004-names-and-paymail">004 Names, handles and paymail &rarr;</a></div>
+    </main>
+  </body>
+</html>

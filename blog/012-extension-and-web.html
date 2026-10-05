@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>012 The extension, the web app and pairing · bWalletX blog</title>
+    <meta name="description" content="bWalletX also runs as a Chrome and Brave extension and as a web app. On iPhone the web app is the only way to get the full wallet, so we made backup mandatory there." />
+    <link rel="canonical" href="https://bwalletx.com/blog/012-extension-and-web" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://bwalletx.com/blog/012-extension-and-web" />
+    <meta property="og:site_name" content="bWalletX" />
+    <meta property="og:title" content="The extension, the web app and pairing" />
+    <meta property="og:description" content="bWalletX also runs as a Chrome and Brave extension and as a web app. On iPhone the web app is the only way to get the full wallet, so we made backup mandatory there." />
+    <meta property="og:image" content="https://bwalletx.com/og-home.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="The extension, the web app and pairing" />
+    <meta name="twitter:description" content="bWalletX also runs as a Chrome and Brave extension and as a web app. On iPhone the web app is the only way to get the full wallet, so we made backup mandatory there." />
+    <meta name="twitter:image" content="https://bwalletx.com/og-home.png" />
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="stylesheet" href="/styles.css" />
+    <style>
+      .ext { max-width: 760px; margin: 0 auto; padding: 120px 20px 80px; }
+      .ext h1 { font-size: clamp(2rem, 6vw, 3rem); margin: 10px 0 10px; line-height: 1.15; }
+      .ext h2 { margin: 44px 0 10px; font-size: 1.4rem; }
+      .ext p, .ext li { line-height: 1.7; }
+      .ext code { background: #17191e; padding: 2px 7px; border-radius: 6px; overflow-wrap: anywhere; }
+      .ext a { overflow-wrap: anywhere; }
+      .meta { color: #8a8a86; font-size: 0.9rem; margin: 0; }
+      .num { color: #F5B800; font-weight: 700; letter-spacing: .04em; }
+      .box { background: #101114; border: 1px solid #ffffff12; border-radius: 16px; padding: 18px 22px; margin: 28px 0; }
+      .box h2 { margin: 0 0 8px; font-size: 1.1rem; }
+      .box ul { margin: 0; padding-left: 1.2em; }
+      .related { color: #a7adb8; }
+      .pn { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; margin-top: 40px; border-top: 1px solid #ffffff14; padding-top: 20px; }
+      .pn a { color: #F5B800; text-decoration: none; max-width: 100%; }
+      .posts { list-style: none; padding: 0; margin: 28px 0; }
+      .posts li { background: #101114; border: 1px solid #ffffff12; border-radius: 16px; padding: 16px 20px; margin: 12px 0; }
+      .posts a { color: #fff; text-decoration: none; font-weight: 700; font-size: 1.1rem; }
+      .posts a:hover { color: #F5B800; }
+      .posts p { margin: 4px 0 0; color: #a7adb8; line-height: 1.55; }
+      .ext .small { color: #8a8a86; font-size: 0.85rem; }
+    </style>
+  </head>
+  <body>
+    <div class="beta-banner">bWalletX is in <strong>beta</strong>: test with small amounts.</div>
+    <header class="topbar">
+      <div class="wrap topbar-in">
+        <a class="brand" href="/"><img src="/logo.svg" alt="" width="34" height="30" /><span>bWallet<span class="gold">X</span></span></a>
+        <nav aria-label="Pages">
+          <a href="/features">Features</a><a href="/exchange">Exchange</a><a href="/social">Social</a><a href="/agent">Agents</a><a href="/android">Android</a><a href="/iphone">iPhone</a><a href="/extension">Extension</a><a href="/developers">Developers</a>
+        </nav>
+        <span class="nav-cta"><a class="dl-btn" href="/get">Download</a><a class="web-btn" href="https://web.bwalletx.com" target="_blank" rel="noopener">Web &rarr;</a></span>
+      </div>
+    </header>
+    <script src="/nav.js"></script>
+    <main class="ext">
+      <p class="meta"><a href="/blog">Development blog</a> · <span class="num">012</span> · 1–5 Oct 2026</p>
+      <h1>The extension, the web app and pairing</h1>
+      <p class="lede">bWalletX also runs as a Chrome and Brave extension and as a web app. On iPhone the web app is the only way to get the full wallet, so we made backup mandatory there.</p>
+
+      <h2>Back to an extension</h2>
+      <p>Since the code started as an extension, building one again was cheap. On 1 October we branded it; on 3 October it shipped as bWalletX, with the full mobile interface in Chrome's side panel and a gold strip to open it full screen. We serve it from this site, not the Chrome Web Store, so you install it in developer mode. Brave works too.</p>
+      <p>Two fixes mattered. Each version used to install with a new extension ID, which meant a new, empty wallet. Since 5.1.9 a fixed key in the manifest keeps the same ID across versions. And on the question of who answers websites: on 3 October the extension set <code>window.CWI</code> only if no other wallet had. The next day we reversed that: bWalletX takes it by default, even over Yours, and a setting hands it back.</p>
+
+      <h2>Letting websites find the wallet</h2>
+      <p>Websites can discover bWalletX through BRC-100 wallet announcements, in the style of EIP-6963. A small <code>connect.js</code> on the <a href="/developers">Developers page</a> shows how. For desktop sites and a phone wallet, there is phone pairing: scan a code, check the same 4-digit code on both screens, and requests travel through an encrypted relay that stores nothing. Each request still needs approval on the phone.</p>
+
+      <h2>The web app, and iPhone</h2>
+      <p>The web wallet runs at web.bwalletx.com. On iPhone, Apple only allows App Store apps, and the store edition can't trade. So bWalletX on iPhone is the web app, added to the Home Screen from Safari.</p>
+      <p>The iPhone page says it plainly: the keys are on your phone, not our servers, but browser storage is fragile. Safari can clear it. On 5 October we asked the browser for persistent storage, and added a mandatory backup step. After you create or restore a wallet, you save an encrypted backup or write down your recovery phrase and pass a three-word quiz. Receive waits until you have backed up. The only way to skip is "remind me later" at zero balance. In the native apps and the extension the step can be skipped.</p>
+
+      <div class="box"><h2>What's not done</h2><ul><li>The extension is not in the Chrome Web Store.</li><li>Persistent storage is a request; Safari may still clear site data. A backup is the only protection.</li><li>Pairing depends on our relay being up.</li></ul></div>
+      <p class="related">Related: <a href="/extension">Extension</a> · <a href="/iphone">iPhone</a> · <a href="/developers">Developers</a> · <a href="/android">Android</a></p>
+      <div class="pn"><a href="/blog/011-pnees-pilot">&larr; 011 From a dollar bond to PNEEs on mainnet</a><a href="/blog/013-sites-and-navigation">013 Two sites from one &rarr;</a></div>
+    </main>
+  </body>
+</html>

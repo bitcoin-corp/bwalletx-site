@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>bWalletX development blog</title>
+    <meta name="description" content="How bWallet and bWalletX were built from a fork of Yours Wallet: numbered posts from the git history, including what broke, what we reversed and what is still not done." />
+    <link rel="canonical" href="https://bwalletx.com/blog" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://bwalletx.com/blog" />
+    <meta property="og:site_name" content="bWalletX" />
+    <meta property="og:title" content="bWalletX development blog" />
+    <meta property="og:description" content="How bWallet and bWalletX were built from a fork of Yours Wallet: numbered posts from the git history, including what broke, what we reversed and what is still not done." />
+    <meta property="og:image" content="https://bwalletx.com/og-home.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="bWalletX development blog" />
+    <meta name="twitter:description" content="How bWallet and bWalletX were built from a fork of Yours Wallet: numbered posts from the git history, including what broke, what we reversed and what is still not done." />
+    <meta name="twitter:image" content="https://bwalletx.com/og-home.png" />
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="stylesheet" href="/styles.css" />
+    <style>
+      .ext { max-width: 760px; margin: 0 auto; padding: 120px 20px 80px; }
+      .ext h1 { font-size: clamp(2rem, 6vw, 3rem); margin: 10px 0 10px; line-height: 1.15; }
+      .ext h2 { margin: 44px 0 10px; font-size: 1.4rem; }
+      .ext p, .ext li { line-height: 1.7; }
+      .ext code { background: #17191e; padding: 2px 7px; border-radius: 6px; overflow-wrap: anywhere; }
+      .ext a { overflow-wrap: anywhere; }
+      .meta { color: #8a8a86; font-size: 0.9rem; margin: 0; }
+      .num { color: #F5B800; font-weight: 700; letter-spacing: .04em; }
+      .box { background: #101114; border: 1px solid #ffffff12; border-radius: 16px; padding: 18px 22px; margin: 28px 0; }
+      .box h2 { margin: 0 0 8px; font-size: 1.1rem; }
+      .box ul { margin: 0; padding-left: 1.2em; }
+      .related { color: #a7adb8; }
+      .pn { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; margin-top: 40px; border-top: 1px solid #ffffff14; padding-top: 20px; }
+      .pn a { color: #F5B800; text-decoration: none; max-width: 100%; }
+      .posts { list-style: none; padding: 0; margin: 28px 0; }
+      .posts li { background: #101114; border: 1px solid #ffffff12; border-radius: 16px; padding: 16px 20px; margin: 12px 0; }
+      .posts a { color: #fff; text-decoration: none; font-weight: 700; font-size: 1.1rem; }
+      .posts a:hover { color: #F5B800; }
+      .posts p { margin: 4px 0 0; color: #a7adb8; line-height: 1.55; }
+      .ext .small { color: #8a8a86; font-size: 0.85rem; }
+    </style>
+  </head>
+  <body>
+    <div class="beta-banner">bWalletX is in <strong>beta</strong>: test with small amounts.</div>
+    <header class="topbar">
+      <div class="wrap topbar-in">
+        <a class="brand" href="/"><img src="/logo.svg" alt="" width="34" height="30" /><span>bWallet<span class="gold">X</span></span></a>
+        <nav aria-label="Pages">
+          <a href="/features">Features</a><a href="/exchange">Exchange</a><a href="/social">Social</a><a href="/agent">Agents</a><a href="/android">Android</a><a href="/iphone">iPhone</a><a href="/extension">Extension</a><a href="/developers">Developers</a>
+        </nav>
+        <span class="nav-cta"><a class="dl-btn" href="/get">Download</a><a class="web-btn" href="https://web.bwalletx.com" target="_blank" rel="noopener">Web &rarr;</a></span>
+      </div>
+    </header>
+    <script src="/nav.js"></script>
+    <main class="ext">
+      <h1>Development <span class="gold">blog</span></h1>
+      <p class="lede">How bWallet and bWalletX were built, one chapter at a time. Every post is written from the git history of the wallet, this site, the chat server and the PNEEs prototype. It covers what we built, why, what broke, what we reversed and what is still not done.</p>
+      <p class="small">Newest first. Dates come from commits. bWallet is a fork of <a href="https://github.com/yours-org/yours-wallet">Yours Wallet</a> (MIT licence).</p>
+      <ul class="posts"><li><span class="meta"><span class="num">013</span> · 29 Sep – 5 Oct 2026</span><br /><a href="/blog/013-sites-and-navigation">Two sites from one</a><p>A download page became bwallet.space, then bwalletx.com became the main site, with the store site generated from it. And this blog.</p></li><li><span class="meta"><span class="num">012</span> · 1–5 Oct 2026</span><br /><a href="/blog/012-extension-and-web">The extension, the web app and pairing</a><p>bWalletX also runs as a Chrome and Brave extension and as a web app. On iPhone the web app is the only way to get the full wallet, so we made backup mandatory there.</p></li><li><span class="meta"><span class="num">011</span> · 4–5 Oct 2026</span><br /><a href="/blog/011-pnees-pilot">From a dollar bond to PNEEs on mainnet</a><p>A BSV-backed dollar token went from a design note to a small, capped mainnet pilot in two days. This is what is enforced, what is not, and what went wrong.</p></li><li><span class="meta"><span class="num">010</span> · 4–5 Oct 2026</span><br /><a href="/blog/010-agents-strategies-cli">Agent accounts, strategies, CLI and MCP</a><p>Separate wallet accounts for agents, spending rules the wallet enforces, a market for strategies, and a command-line tool that keeps keys on the phone.</p></li><li><span class="meta"><span class="num">009</span> · 1–5 Oct 2026</span><br /><a href="/blog/009-the-b-agent">The b agent: paid, or your own key</a><p>An assistant inside the wallet. It started free, became paid-only within a day, and now asks for consent before it sends anything.</p></li><li><span class="meta"><span class="num">008</span> · 1–5 Oct 2026</span><br /><a href="/blog/008-the-exchange">Building the Exchange, and why buys broke</a><p>Listing and buying 1Sat tokens from the wallet. Most of the work was not the screens but storage limits, double-encrypted records and slow APIs.</p></li><li><span class="meta"><span class="num">007</span> · 2–5 Oct 2026</span><br /><a href="/blog/007-store-and-private">Store rules, open rooms and moderation</a><p>We audited the app against App Store and Play rules, split it into four release channels and built the safety features the stores require.</p></li><li><span class="meta"><span class="num">006</span> · 1–4 Oct 2026</span><br /><a href="/blog/006-paying-for-indexing">Who pays for indexing</a><p>A BSV-21 token only shows up in wallets once an indexer lists it. Working out who pays for that, and how much, took four attempts.</p></li><li><span class="meta"><span class="num">005</span> · 1–5 Oct 2026</span><br /><a href="/blog/005-personal-tokens-and-rooms">Personal tokens and token rooms</a><p>Hold a token to enter its chat room. Your $NAME is a token with its own room. How rooms, tickets and issuers came together, and what we reversed.</p></li><li><span class="meta"><span class="num">004</span> · 1–4 Oct 2026</span><br /><a href="/blog/004-names-and-paymail">Names, handles and paymail</a><p>Send to $handle, name@bwalletx.com or an OpNS name. The paymail server moved domain twice, and social sign-in became a verified name.</p></li><li><span class="meta"><span class="num">003</span> · 1–5 Oct 2026</span><br /><a href="/blog/003-tabs-apps-feed">Tabs, apps and a social feed</a><p>The phone layout changed many times. We added an Apps home screen with 100+ BSV apps, a Media player and a feed that reads other BSV social apps.</p></li><li><span class="meta"><span class="num">002</span> · 30 Sep – 4 Oct 2026</span><br /><a href="/blog/002-four-names">Four names in a week</a><p>Yours Wallet Mobile, bCorp Wallet, bWallet, then bWalletX. Why the name kept changing, and why there are now two apps.</p></li><li><span class="meta"><span class="num">001</span> · 29–30 Sep 2026</span><br /><a href="/blog/001-the-fork">Forking Yours Wallet onto phones</a><p>We took the Yours Wallet browser extension and wrapped it as an iPhone and Android app with Capacitor, without rewriting its code.</p></li></ul>
+    </main>
+  </body>
+</html>

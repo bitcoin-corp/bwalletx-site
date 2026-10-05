@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>005 Personal tokens and token rooms · bWalletX blog</title>
+    <meta name="description" content="Hold a token to enter its chat room. Your $NAME is a token with its own room. How rooms, tickets and issuers came together, and what we reversed." />
+    <link rel="canonical" href="https://bwalletx.com/blog/005-personal-tokens-and-rooms" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://bwalletx.com/blog/005-personal-tokens-and-rooms" />
+    <meta property="og:site_name" content="bWalletX" />
+    <meta property="og:title" content="Personal tokens and token rooms" />
+    <meta property="og:description" content="Hold a token to enter its chat room. Your $NAME is a token with its own room. How rooms, tickets and issuers came together, and what we reversed." />
+    <meta property="og:image" content="https://bwalletx.com/og-home.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Personal tokens and token rooms" />
+    <meta name="twitter:description" content="Hold a token to enter its chat room. Your $NAME is a token with its own room. How rooms, tickets and issuers came together, and what we reversed." />
+    <meta name="twitter:image" content="https://bwalletx.com/og-home.png" />
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="stylesheet" href="/styles.css" />
+    <style>
+      .ext { max-width: 760px; margin: 0 auto; padding: 120px 20px 80px; }
+      .ext h1 { font-size: clamp(2rem, 6vw, 3rem); margin: 10px 0 10px; line-height: 1.15; }
+      .ext h2 { margin: 44px 0 10px; font-size: 1.4rem; }
+      .ext p, .ext li { line-height: 1.7; }
+      .ext code { background: #17191e; padding: 2px 7px; border-radius: 6px; overflow-wrap: anywhere; }
+      .ext a { overflow-wrap: anywhere; }
+      .meta { color: #8a8a86; font-size: 0.9rem; margin: 0; }
+      .num { color: #F5B800; font-weight: 700; letter-spacing: .04em; }
+      .box { background: #101114; border: 1px solid #ffffff12; border-radius: 16px; padding: 18px 22px; margin: 28px 0; }
+      .box h2 { margin: 0 0 8px; font-size: 1.1rem; }
+      .box ul { margin: 0; padding-left: 1.2em; }
+      .related { color: #a7adb8; }
+      .pn { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; margin-top: 40px; border-top: 1px solid #ffffff14; padding-top: 20px; }
+      .pn a { color: #F5B800; text-decoration: none; max-width: 100%; }
+      .posts { list-style: none; padding: 0; margin: 28px 0; }
+      .posts li { background: #101114; border: 1px solid #ffffff12; border-radius: 16px; padding: 16px 20px; margin: 12px 0; }
+      .posts a { color: #fff; text-decoration: none; font-weight: 700; font-size: 1.1rem; }
+      .posts a:hover { color: #F5B800; }
+      .posts p { margin: 4px 0 0; color: #a7adb8; line-height: 1.55; }
+      .ext .small { color: #8a8a86; font-size: 0.85rem; }
+    </style>
+  </head>
+  <body>
+    <div class="beta-banner">bWalletX is in <strong>beta</strong>: test with small amounts.</div>
+    <header class="topbar">
+      <div class="wrap topbar-in">
+        <a class="brand" href="/"><img src="/logo.svg" alt="" width="34" height="30" /><span>bWallet<span class="gold">X</span></span></a>
+        <nav aria-label="Pages">
+          <a href="/features">Features</a><a href="/exchange">Exchange</a><a href="/social">Social</a><a href="/agent">Agents</a><a href="/android">Android</a><a href="/iphone">iPhone</a><a href="/extension">Extension</a><a href="/developers">Developers</a>
+        </nav>
+        <span class="nav-cta"><a class="dl-btn" href="/get">Download</a><a class="web-btn" href="https://web.bwalletx.com" target="_blank" rel="noopener">Web &rarr;</a></span>
+      </div>
+    </header>
+    <script src="/nav.js"></script>
+    <main class="ext">
+      <p class="meta"><a href="/blog">Development blog</a> · <span class="num">005</span> · 1–5 Oct 2026</p>
+      <h1>Personal tokens and token rooms</h1>
+      <p class="lede">Hold a token to enter its chat room. Your $NAME is a token with its own room. How rooms, tickets and issuers came together, and what we reversed.</p>
+
+      <h2>The idea</h2>
+      <p>Every token can have a chat room, and holding the token gets you in. To invite someone, you send them the token. Your own <code>$NAME</code> is a token too, so you have a room that people enter by holding some of your token. The room's owner sets the rules: how many tokens to enter, and whether you just hold them or spend them per message, per minute or per day, burned or sent back to the issuer.</p>
+
+      <h2>A reversal on DMs</h2>
+      <p>On 1 October we went all in: Chat became token rooms only, and we removed direct messages and new-chat-by-handle from the interface. On 2 October we added DMs back, with a merged contact list. People need to message one person without first buying a token. Open rooms came the same day (post 007).</p>
+
+      <h2>Minting, and another reversal</h2>
+      <p>The Mint sheet briefly had "Mint a chatroom" as the first option. We then removed "Mint a token", on the grounds that a token is a room. The same day we put it back. People do want to mint a token without thinking about chat.</p>
+
+      <h2>Tickets</h2>
+      <p>We wrote a spec for tickets: tokens that are burned to enter a room, checked at zero confirmations so entry takes seconds, not blocks. The server can verify a ticket burn from the transaction itself before it is mined. For a while the wallet had a Tickets tab. On 3 October we dropped it: tickets are just tokens that get burned on entry, so they appear under Tokens.</p>
+
+      <h2>Who issued this token?</h2>
+      <p>Anyone can deploy a token with any ticker, so a ticker proves nothing. Since 2 October every mint from the wallet carries a signed issuer statement in the same transaction, in a separate output so 1Sat indexing is not affected. The wallet checks the signature and shows "Issued by $handle". When several tokens share a ticker, it says so.</p>
+
+      <h2>Only the issuer sets the rules</h2>
+      <p>At first, whoever created a room could edit it. On 5 October we changed this: room settings can be changed only by the token's issuer, proved by signing with the key behind the issuer address. A wallet that holds that key can "Claim admin". Everyone else sees the room rules read-only.</p>
+
+      <h2>Bounties</h2>
+      <p>Token rooms got a Bounties sheet: work posted in a room, paid in the room's token when it is merged. This is early and lightly used.</p>
+
+      <div class="box"><h2>What's not done</h2><ul><li>Token rooms are hidden in the store build.</li><li>Chat polls the server every few seconds; it is not live yet (see the bChat plan in post 007).</li><li>Numbered accounts and tradeable handles are specified but not built.</li></ul></div>
+      <p class="related">Related: <a href="/social">Social</a> · <a href="/exchange">Exchange</a></p>
+      <div class="pn"><a href="/blog/004-names-and-paymail">&larr; 004 Names, handles and paymail</a><a href="/blog/006-paying-for-indexing">006 Who pays for indexing &rarr;</a></div>
+    </main>
+  </body>
+</html>
