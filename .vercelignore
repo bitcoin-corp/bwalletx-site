@@ -2,3 +2,4 @@ media-src/
 .env*
 *.log
 .DS_Store
+scripts/
