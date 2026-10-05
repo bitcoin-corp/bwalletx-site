@@ -17,5 +17,12 @@
       "source": "/api/strategies",
       "destination": "https://www.bwallet.space/api/strategies"
     }
+  ],
+  "redirects": [
+    {
+      "source": "/friends",
+      "destination": "/social",
+      "permanent": true
+    }
   ]
 }
