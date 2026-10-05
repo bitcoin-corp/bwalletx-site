@@ -112,7 +112,7 @@ Source: https://bwalletx.com/android
 
 The full bWalletX wallet on your Android phone or tablet. Your keys stay on your device.
 
-[Download APK (beta) ↓](https://bwalletx.com/download/bwalletx-android-5.1.59.apk)
+[Download APK (beta) ↓](https://bwalletx.com/download/bwalletx-android-5.1.60.apk)
 
 It isn't on Google Play yet, so install it by hand:
 
@@ -120,13 +120,13 @@ It isn't on Google Play yet, so install it by hand:
 
 - If Android asks, allow your browser to install unknown apps (Settings › Apps › your browser › Install unknown apps).
 
-- Open `bwalletx-android-5.1.59.apk` and tap Install.
+- Open `bwalletx-android-5.1.60.apk` and tap Install.
 
 - Open bWalletX and create or restore your wallet.
 
 Updating from an older version? Install over the top and your wallet stays. If Android says the app can't be updated, write down your 12 words first, then uninstall and reinstall.
 
-Version 5.1.59 beta · 18.2 MB · Android 7+ · SHA-256 f4d32d4a9c2571c084101568ecd172f63b2fb9d88bc26322fb54023a52396bd2
+Version 5.1.60 beta · 18.2 MB · Android 7+ · SHA-256 2922ba7b17d04c05b93e68dc9412b4a3c17c1301725d8c0e3fff6a8e7f2cc92b
 
 Also: [Chrome extension](https://bwalletx.com/extension) · [Developers](https://bwalletx.com/developers)
 
@@ -221,12 +221,12 @@ Source: https://bwalletx.com/extension
 
 The full bWalletX wallet in Chrome's side panel, and a wallet websites like TokenBlaster can connect to. Your keys stay in the extension.
 
-[Download for Chrome (beta) ↓](https://bwalletx.com/download/bwalletx-extension-5.1.59.zip)
-[Download for Brave (beta) ↓](https://bwalletx.com/download/bwalletx-extension-5.1.59.zip)
+[Download for Chrome (beta) ↓](https://bwalletx.com/download/bwalletx-extension-5.1.60.zip)
+[Download for Brave (beta) ↓](https://bwalletx.com/download/bwalletx-extension-5.1.60.zip)
 
 It isn't on the Chrome Web Store yet, so install it by hand:
 
-- Unzip `bwalletx-extension-5.1.59.zip`.
+- Unzip `bwalletx-extension-5.1.60.zip`.
 
 - Open `chrome://extensions` in Chrome.
 
@@ -240,7 +240,7 @@ It isn't on the Chrome Web Store yet, so install it by hand:
 
 Same extension, same file. Brave runs Chrome extensions, so:
 
-- Unzip `bwalletx-extension-5.1.59.zip`.
+- Unzip `bwalletx-extension-5.1.60.zip`.
 
 - Open `brave://extensions` in Brave.
 
@@ -250,7 +250,7 @@ Same extension, same file. Brave runs Chrome extensions, so:
 
 - Pin bWalletX from the puzzle-piece menu, click it, and create or restore your wallet.
 
-Version 5.1.59 beta · SHA-256 193d3a8e2315f8bea1dce57da12953f1d13ff6ab33d5ba6de3006f12d83b9652 · Source: [github.com/bitcoin-corp/bwallet](https://github.com/bitcoin-corp/bwallet)
+Version 5.1.60 beta · SHA-256 48420d5d793a30faac1eb8064035c2c96a036f2c93efa711fb5095178c1da0f6 · Source: [github.com/bitcoin-corp/bwallet](https://github.com/bitcoin-corp/bwallet)
 
 ---
 
@@ -521,8 +521,8 @@ Source: https://bwalletx.com/get
 
 The full bWalletX on every device. Your keys stay on your device.
 
-[AndroidAPK download · v5.1.59 beta](https://bwalletx.com/android)
-[ChromeExtension · v5.1.59 beta](https://bwalletx.com/extension)
+[AndroidAPK download · v5.1.60 beta](https://bwalletx.com/android)
+[ChromeExtension · v5.1.60 beta](https://bwalletx.com/extension)
 [WebOpen in your browser](https://web.bwalletx.com)
 [iPhoneWeb app · install from Safari, no App Store](https://bwalletx.com/iphone)
 
@@ -539,7 +539,7 @@ bWalletX
 Mint, trade and chat in one non-custodial app. Send to names, browse 180+ BSV-21 tokens, open the bApps
 store and play your on-chain media.
 
-Android · Download APK (beta)v5.1.59 beta · sideload[iPhone · Web appInstall from Safari · no App StoreChrome · Download extensionv5.1.59 beta · zip + install steps
+Android · Download APK (beta)v5.1.60 beta · sideload[iPhone · Web appInstall from Safari · no App StoreChrome · Download extensionv5.1.60 beta · zip + install steps
 
 How to sideload on Android
 
@@ -547,10 +547,10 @@ How to sideload on Android
 Tap Download APK (beta). If Android asks, allow your browser to install unknown apps
 (Settings › Apps › your browser › Install unknown apps).
 
-- Open the downloaded bwalletx-android-5.1.59.apk and tap Install.
+- Open the downloaded bwalletx-android-5.1.60.apk and tap Install.
 
 -
-Optional but recommended: check the SHA-256 checksum matchesf4d32d4a9c2571c084101568ecd172f63b2fb9d88bc26322fb54023a52396bd2
+Optional but recommended: check the SHA-256 checksum matches2922ba7b17d04c05b93e68dc9412b4a3c17c1301725d8c0e3fff6a8e7f2cc92b
 
 Beta software. Use small amounts and back up your recovery phrase. Only install the APK from this site or
 the official GitHub release.
@@ -572,7 +572,7 @@ Wallet
 
 ## Hold, mint and send to names.
 
-Hold BSV, MNEE, PNEEs and BSV-21 tokens side by side. Mint your photos, art, video and music as NFTs. Send to a
+Hold BSV, MNEE, PNEEs and BSV-21 tokens side by side. [Mint](https://bwalletx.com/mint) your photos, art, video and music as NFTs. Send to a
 $handle, a paymail or an OpNS name instead of a long address, and get a name of your own.
 
 BSVBitcoin SV0.0000
@@ -715,7 +715,7 @@ Join the waitlist →](https://www.bitcoinchat.online)
 
 Currently in beta.
 
-Android · Download APK (beta)v5.1.59 beta · sideloadiPhone · Web appInstall from Safari · no App StoreChrome · Download extensionv5.1.59 beta · zip + install steps
+Android · Download APK (beta)v5.1.60 beta · sideloadiPhone · Web appInstall from Safari · no App StoreChrome · Download extensionv5.1.60 beta · zip + install steps
 
 ---
 
@@ -1034,6 +1034,137 @@ Playwright Test
 
 ---
 
+Source: https://bwalletx.com/mint
+
+# Make something. Mint it.
+
+Minting puts your thing on Bitcoin SV. After that it’s yours: you can sell it, send it to a friend, or let people collect it. All from the Mint button in bWalletX.
+
+[Get bWalletX](https://bwalletx.com/get)
+
+## What you can make
+
+### Art & photos
+
+One of a kind, or a numbered collection.
+
+A painting you photographed, sold as a single piece. Or 50 numbered prints of your best shot.
+
+Straight from the Mint button.
+
+### Music
+
+Tracks fans own and play in their wallet.
+
+Release a single as 100 copies. Fans keep it, play it, and can pass it on.
+
+Straight from the Mint button.
+
+### Videos & films
+
+Clips, shorts or a whole film.
+
+A short film, a behind-the-scenes clip, or episode one of your series.
+
+Straight from the Mint button. Up to 10 MB per file.
+
+### Books & PDFs
+
+Ebooks, zines, guides, reports.
+
+A zine, a recipe book, or a guide you wrote, as a PDF, ebook or text file.
+
+Straight from the Mint button.
+
+### A website
+
+A one-page site, on chain for good.
+
+A one-page portfolio, a wedding page, or a manifesto that nobody can take down.
+
+Straight from the Mint button, as one HTML page.
+
+### Tickets & passes
+
+Entry to your chatroom, event or site.
+
+Sell 30 passes to your private chatroom, or tickets to a gig. Holding one lets you in.
+
+Straight from the Mint button.
+
+### A coin or memecoin
+
+Your own token, fixed supply.
+
+A coin for your club, your community or just for fun. You pick the name and how many exist.
+
+Straight from the Mint button.
+
+### Contracts
+
+Agreements both sides sign.
+
+A deal with a client: half up front, half when the work is delivered.
+
+b, the wallet’s AI assistant, drafts it with you.
+
+### Trading strategies
+
+Package a strategy others can buy.
+
+A rule like “buy this token weekly, stop at $50”, packaged so others can buy and run it.
+
+b, the wallet’s AI assistant, drafts it with you.
+
+### An app
+
+List your bApp with its own token.
+
+You built an app. List it in the wallet’s Apps tab with a token of its own.
+
+b, the wallet’s AI assistant, drafts it with you.
+
+## What it costs
+
+### Usually well under a cent for a photo
+
+You pay the Bitcoin SV network to store your file, so the price depends on its size. A typical photo costs a fraction of a cent. A 1 MB file is about two cents. A full 10 MB video is about 20 cents. bWalletX adds a 1% fee on top of the network fee. Starting a new collection takes one extra transaction, so it roughly doubles the cost of that first mint.
+
+The wallet shows the exact price in dollars before you confirm. Prices here assume BSV at about $20 and the wallet’s standard network fee; they move with the BSV price. The limit is 10 MB per file; the wallet can shrink a big photo for you.
+
+## Contracts and new kinds of instruments
+
+A contract in bWalletX is an agreement that both sides sign. Once it is locked on chain, it pays out by its own rules: money goes where the contract says, when the contract says. b, the wallet’s AI assistant, helps you draft it. It asks who it’s between, what each side agrees to, the price and the dates.
+
+### Please read this
+
+Anything that works like an investment, such as shares, bonds or a pension, may be regulated where you live. You are responsible for following the law. bWalletX is a wallet: it does not offer investments, and it can’t tell you whether something you make is allowed. If in doubt, ask a lawyer before you mint or sell it.
+
+## Questions
+
+### Is it permanent?
+
+Yes. Inscriptions on Bitcoin SV can’t be deleted. So don’t mint anything you don’t own, and nothing illegal.
+
+### Who owns it?
+
+Whoever holds it in their wallet. When you mint, that’s you. Your keys stay on your device; we can’t move your things.
+
+### Can I sell it?
+
+Yes. List it on the [Exchange](https://bwalletx.com/exchange) tab, set a price in dollars, and buyers pay in BSV. You can also just send it to someone.
+
+### Does it work on my phone and in Chrome?
+
+Yes. bWalletX runs on [Android](https://bwalletx.com/android), [iPhone](https://bwalletx.com/iphone) and as a [Chrome extension](https://bwalletx.com/extension). Contracts, strategies and apps need the full bWalletX (with b, the assistant).
+
+[Get bWalletX](https://bwalletx.com/get)
+[All features](https://bwalletx.com/features)
+
+bWalletX is in beta: test with small amounts. Questions: [bitcoincorp11@gmail.com](mailto:bitcoincorp11@gmail.com)
+
+---
+
 Source: https://bwalletx.com/pnee
 
 # PNEEs · Penny Stablecoins
@@ -1349,11 +1480,11 @@ One script gives your site a standard BRC-100 wallet. No API keys, no sign-up, a
 
 ## Get bWalletX to test with
 
-Install the wallet you'll connect to (version 5.1.59 beta). Checksums are on each download page.
+Install the wallet you'll connect to (version 5.1.60 beta). Checksums are on each download page.
 
-- [Chrome / Brave extension (zip)](https://bwalletx.com/download/bwalletx-extension-5.1.59.zip) · [install steps](https://bwalletx.com/extension)
+- [Chrome / Brave extension (zip)](https://bwalletx.com/download/bwalletx-extension-5.1.60.zip) · [install steps](https://bwalletx.com/extension)
 
-- [Android APK](https://bwalletx.com/download/bwalletx-android-5.1.59.apk) · [install steps](https://bwalletx.com/android)
+- [Android APK](https://bwalletx.com/download/bwalletx-android-5.1.60.apk) · [install steps](https://bwalletx.com/android)
 
 - [Web app](https://web.bwalletx.com) · [iPhone](https://bwalletx.com/iphone)
 
