@@ -219,6 +219,8 @@ Source: https://bwalletx.com/exchange
 
 In bWalletX the Market is an exchange: buy and sell tokens and NFTs directly between wallets. bWalletX never holds your tokens or money.
 
+Need BSV to start? [Buy BSV in bWalletX →](https://bwalletx.com/buy) with a card, Apple Pay, Google Pay or bank, or from a friend.
+
 Browse→Buy→Sell
 
 ## What's on it
@@ -263,7 +265,7 @@ Adult (18+, encrypted)ComingNever
 
 Why two? App stores only allow trading from licensed exchanges, so the App Store and Google Play edition, bWallet, lets you browse. The full edition, bWalletX, trades. The X is for exchange.
 
-[Get bWalletX](https://bwalletx.com/get)[bWallet Market (App Store) →](https://www.bwallet.space/market)
+[Get bWalletX](https://bwalletx.com/get)[Buy BSV →](https://bwalletx.com/buy)[bWallet Market (App Store) →](https://www.bwallet.space/market)
 
 Trades settle on chain between wallets. Tokens and NFTs can lose all value.
 
