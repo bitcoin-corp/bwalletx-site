@@ -132,6 +132,87 @@ Also: [Chrome extension](https://bwalletx.com/extension) · [Developers](https:/
 
 ---
 
+Source: https://bwalletx.com/buy
+
+# Buy BSV in bWalletX
+
+Open the wallet and the gold Buy BSV card is right at the top, with today’s price. Tap it to buy with a card or bank, or to receive BSV from an exchange or a friend.
+
+Buy BSV$20.26 per BSV
+
+The price on the card is live and updates every minute. You’ll also find the card under the BSV price chart, and a Get BSV button on your BSV row while it’s empty.
+
+[Get bWalletX](https://bwalletx.com/get)
+
+## How it works
+
+### Tap Buy BSV
+
+The gold card at the top of your wallet opens the Get BSV sheet.
+
+### Pick how
+
+Pay with a card, Apple Pay, Google Pay or bank. Or receive from an exchange, another wallet or a friend.
+
+### It lands in your wallet
+
+Your BSV shows up in your wallet, in dollars. Ready to send, mint or trade.
+
+## Ways to get BSV
+
+### From an exchange or another wallet
+
+bWalletX shows your BSV address and QR code. Send from wherever your BSV is now.
+
+### From a friend
+
+Share your $name or paymail. They send to it and it arrives in seconds.
+
+### With a card or bank
+
+Pick a provider in the sheet. It opens in the wallet’s browser. Copy your address from Receive and paste it there.
+
+The card and bank providers in the sheet today:
+
+- Ramp · Apple Pay, Google Pay, card or bank
+
+- BSV Association · buy page run by the BSV Association
+
+- Guardarian · card or bank transfer
+
+- ChangeNOW · card, many currencies
+
+- Alchemy Pay · card, Apple Pay, Google Pay
+
+- Onramper · compares several card providers
+
+- cex.io · card; needs an exchange account
+
+### Good to know
+
+These providers are independent companies, not bWalletX. They check your ID and set their own fees and limits, and what’s on offer depends on where you live. bWalletX never holds your money: you pay the provider, and the BSV goes straight to your own wallet. We’re working on buying with Ramp fully inside the app, with your address filled in for you. It isn’t live yet.
+
+## What can I do with BSV?
+
+### [Mint something](https://bwalletx.com/mint)
+
+Put your art, music or tickets on chain. A photo costs a fraction of a cent.
+
+### [Get PNEEs](https://bwalletx.com/pnees)
+
+Digital cents on BSV, backed by BSV locked in public vaults.
+
+### [Trade on the Exchange](https://bwalletx.com/exchange)
+
+Buy and sell tokens, priced in dollars.
+
+[Get bWalletX](https://bwalletx.com/get)
+[All features](https://bwalletx.com/features)
+
+bWalletX is in beta: test with small amounts. Questions: [bitcoincorp11@gmail.com](mailto:bitcoincorp11@gmail.com)
+
+---
+
 Source: https://bwalletx.com/exchange
 
 # bWalletX Exchange
@@ -886,6 +967,33 @@ How we're building it, post by post: what worked, what broke, and what's not don
 001Forking Yours Wallet onto phones
 
 bwalletx.com/blog · 13 posts
+
+---
+
+Source: https://bwalletx.com/media-src/og/og-buy
+
+-
+
+bWalletX
+
+# Buy BSV.
+Right in your wallet.
+
+Tap the gold card. Your BSV lands in your wallet, shown in dollars.
+
+CardApple PayGoogle PayBankFrom a friend
+
+bwalletx.com/buy · Android · iPhone · Chrome · Web
+
+BSV price · live
+
+Buy BSV$20.26 per BSV
+
+From an exchange or another wallet
+
+From a friend · send to your $name
+
+Buy with a card or bank
 
 ---
 

@@ -9,6 +9,7 @@ Full text of every page: https://bwalletx.com/llms-full.txt
 - [bWalletX Adult](https://bwalletx.com/adult): An 18+ market for encrypted adult images and video, bWalletX only. Every file is checked before listing.
 - [bWalletX Agent Wallet](https://bwalletx.com/agent): Give your AI agent a trading account and a strategy. It trades for you, inside the budget you set. Stop or sweep back any time.
 - [bWalletX for Android](https://bwalletx.com/android): Download the bWalletX Android app (APK): the BSV wallet for tokens, media and apps.
+- [Buy BSV in bWalletX](https://bwalletx.com/buy): Buy BSV right in bWalletX: tap the gold Buy BSV card, pay with card, Apple Pay, Google Pay or bank through an independent provider, or receive from an exchange or a friend. Your BSV lands in your wallet, shown in dollars.
 - [bWalletX Exchange](https://bwalletx.com/exchange): Buy and sell anything on-chain, wallet to wallet: tokens, NFTs, people’s $HANDLE tokens, AI trading strategies and encrypted 18+ content. Only in bWalletX.
 - [bWalletX Exchange: Strategies](https://bwalletx.com/exchange/strategies): Strategies for sale on the bWalletX Exchange: programs your agent account runs, sold as encrypted NFTs. Compare the spec, buy in bWalletX, test it on live prices first.
 - [bWalletX for Chrome](https://bwalletx.com/extension): Install the bWalletX Chrome extension: the full bWalletX wallet in Chrome's side panel, and a wallet websites can connect to.
@@ -23,6 +24,7 @@ Full text of every page: https://bwalletx.com/llms-full.txt
 - [media-src/og/og-agent.html](https://bwalletx.com/media-src/og/og-agent)
 - [media-src/og/og-apps-add.html](https://bwalletx.com/media-src/og/og-apps-add)
 - [media-src/og/og-blog.html](https://bwalletx.com/media-src/og/og-blog)
+- [media-src/og/og-buy.html](https://bwalletx.com/media-src/og/og-buy)
 - [media-src/og/og-cli.html](https://bwalletx.com/media-src/og/og-cli)
 - [media-src/og/og-dev.html](https://bwalletx.com/media-src/og/og-dev)
 - [media-src/og/og-exchange-v2.html](https://bwalletx.com/media-src/og/og-exchange-v2)
