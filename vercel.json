@@ -23,6 +23,16 @@
       "source": "/friends",
       "destination": "/social",
       "permanent": true
+    },
+    {
+      "source": "/PNEE",
+      "destination": "/pnee",
+      "permanent": true
+    },
+    {
+      "source": "/penny-notes",
+      "destination": "/pnee",
+      "permanent": true
     }
   ]
 }
