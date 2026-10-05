@@ -1,2 +1,5 @@
 User-agent: *
 Allow: /
+
+Sitemap: https://bwalletx.com/sitemap.xml
+# AI-readable guide: https://bwalletx.com/llms.txt (full text: /llms-full.txt)

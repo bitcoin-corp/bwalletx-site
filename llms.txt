@@ -1,0 +1,52 @@
+# bWalletX
+
+> bWalletX is a non-custodial BSV wallet from The Bitcoin Corporation Ltd, forked from the open-source Yours Wallet (MIT). It runs as an Android app, an iPhone web app, a Chrome/Brave extension and a web app, with an Exchange, token-gated chat rooms, AI agent accounts with strategies, and PNEEs (Penny Stablecoins, a BSV-backed dollar token in a capped mainnet pilot). The store edition is called bWallet (bwallet.space). Beta software: test with small amounts.
+
+Full text of every page: https://bwalletx.com/llms-full.txt
+
+## Product
+
+- [bWalletX Adult](https://bwalletx.com/adult): An 18+ market for encrypted adult images and video, bWalletX only. Every file is checked before listing.
+- [bWalletX Agent Wallet](https://bwalletx.com/agent): Give your AI agent a trading account and a strategy. It trades for you, inside the budget you set. Stop or sweep back any time.
+- [bWalletX for Android](https://bwalletx.com/android): Download the bWalletX Android app (APK): the BSV wallet for tokens, media and apps.
+- [bWalletX Exchange](https://bwalletx.com/exchange): Buy and sell anything on-chain, wallet to wallet: tokens, NFTs, people’s $HANDLE tokens, AI trading strategies and encrypted 18+ content. Only in bWalletX.
+- [bWalletX Exchange: Strategies](https://bwalletx.com/exchange/strategies): Strategies for sale on the bWalletX Exchange: programs your agent account runs, sold as encrypted NFTs. Compare the spec, buy in bWalletX, test it on live prices first.
+- [bWalletX for Chrome](https://bwalletx.com/extension): Install the bWalletX Chrome extension: the full bWalletX wallet in Chrome's side panel, and a wallet websites can connect to.
+- [bWalletX Features](https://bwalletx.com/features): Everything bWalletX does: BSV and tokens, names and paymail, token rooms, calls, market, media, minting, and a wallet websites can connect to.
+- [bWalletX Friends](https://bwalletx.com/friends): Your handle is your paymail, your token and your chat room. How bWalletX friends, user tokens, the market and token-gated rooms work.
+- [Get bWalletX](https://bwalletx.com/get): Get bWalletX for Android, Chrome, the web and iPhone.
+- [bWalletX — Just b](https://bwalletx.com/): bWalletX: the BSV wallet for tokens, media and apps. BSV, MNEE and BSV-21 tokens, an exchange for tokens and NFTs, the bApps store, an ordinals media player and bChat. Non-custodial, by The Bitcoin Corporation Ltd.
+- [bWalletX on iPhone](https://bwalletx.com/iphone): Use bWalletX on iPhone today: install the web app from Safari in under a minute. No App Store needed.
+- [PNEEs: Penny Stablecoins](https://bwalletx.com/pnee): PNEEs (Penny Stablecoins): digital pennies on BSV, one US cent each, backed only by BSV locked in public vaults. No bank, no co-signer on transfers, no freeze. Live mainnet pilot.
+- [PNEEs: Penny Stablecoins](https://bwalletx.com/pnees): PNEEs (Penny Stablecoins): digital pennies on BSV, one US cent each, backed only by BSV locked in public vaults. No bank, no co-signer on transfers, no freeze. Live mainnet pilot.
+- [bWalletX Social](https://bwalletx.com/social): Your handle is your paymail, your token and your chat room. Sign in with X or Google, hold friends’ tokens, chat in token rooms, post to the Feed, call and pay friends.
+
+## Developers and agents
+
+- [Add your app to bWallet](https://bwalletx.com/apps/add): Built a BSV app? Add it to the Apps screen in bWallet and bWalletX, in front of every wallet user. Free, reviewed by a person.
+- [bWalletX CLI](https://bwalletx.com/cli): Run your bWalletX wallet and AI agents from the command line: balances, sends, trades and strategies, on your laptop or a server.
+- [bWalletX for Developers](https://bwalletx.com/developers): Add a Connect with bWalletX button to your site: one script, a standard BRC-100 wallet, no API keys.
+- [bWalletX MCP](https://bwalletx.com/mcp): Let Claude, ChatGPT, Cursor or any MCP agent use your bWalletX agent accounts: balances, sends, trades and strategies, within the budget and limits you set.
+- [bWalletX Strategies](https://bwalletx.com/strategies): Tell the b agent your idea: it writes the strategy, tests it against live prices and packages it as an encrypted NFT to sell on Exchange › Strategies. Buyers load it into their own agent, with spending limits the wallet enforces.
+- [bWalletX Strategy Spec](https://bwalletx.com/strategies/spec): The bWalletX strategy file format (bwalletx.strategy/1), the rules the wallet enforces, paper mode, and how strategies are sold as encrypted NFTs.
+
+## Development blog
+
+- [001 Forking Yours Wallet onto phones · bWalletX blog](https://bwalletx.com/blog/001-the-fork): We took the Yours Wallet browser extension and wrapped it as an iPhone and Android app with Capacitor, without rewriting its code.
+- [002 Four names in a week · bWalletX blog](https://bwalletx.com/blog/002-four-names): Yours Wallet Mobile, bCorp Wallet, bWallet, then bWalletX. Why the name kept changing, and why there are now two apps.
+- [003 Tabs, apps and a social feed · bWalletX blog](https://bwalletx.com/blog/003-tabs-apps-feed): The phone layout changed many times. We added an Apps home screen with 100+ BSV apps, a Media player and a feed that reads other BSV social apps.
+- [004 Names, handles and paymail · bWalletX blog](https://bwalletx.com/blog/004-names-and-paymail): Send to $handle, name@bwalletx.com or an OpNS name. The paymail server moved domain twice, and social sign-in became a verified name.
+- [005 Personal tokens and token rooms · bWalletX blog](https://bwalletx.com/blog/005-personal-tokens-and-rooms): Hold a token to enter its chat room. Your $NAME is a token with its own room. How rooms, tickets and issuers came together, and what we reversed.
+- [006 Who pays for indexing · bWalletX blog](https://bwalletx.com/blog/006-paying-for-indexing): A BSV-21 token only shows up in wallets once an indexer lists it. Working out who pays for that, and how much, took four attempts.
+- [007 Store rules, open rooms and moderation · bWalletX blog](https://bwalletx.com/blog/007-store-and-private): We audited the app against App Store and Play rules, split it into four release channels and built the safety features the stores require.
+- [008 Building the Exchange, and why buys broke · bWalletX blog](https://bwalletx.com/blog/008-the-exchange): Listing and buying 1Sat tokens from the wallet. Most of the work was not the screens but storage limits, double-encrypted records and slow APIs.
+- [009 The b agent: paid, or your own key · bWalletX blog](https://bwalletx.com/blog/009-the-b-agent): An assistant inside the wallet. It started free, became paid-only within a day, and now asks for consent before it sends anything.
+- [010 Agent accounts, strategies, CLI and MCP · bWalletX blog](https://bwalletx.com/blog/010-agents-strategies-cli): Separate wallet accounts for agents, spending rules the wallet enforces, a market for strategies, and a command-line tool that keeps keys on the phone.
+- [011 From a dollar bond to PNEEs on mainnet · bWalletX blog](https://bwalletx.com/blog/011-pnees-pilot): A BSV-backed dollar token went from a design note to a small, capped mainnet pilot in two days. This is what is enforced, what is not, and what went wrong.
+- [012 The extension, the web app and pairing · bWalletX blog](https://bwalletx.com/blog/012-extension-and-web): bWalletX also runs as a Chrome and Brave extension and as a web app. On iPhone the web app is the only way to get the full wallet, so we made backup mandatory there.
+- [013 Two sites from one · bWalletX blog](https://bwalletx.com/blog/013-sites-and-navigation): A download page became bwallet.space, then bwalletx.com became the main site, with the store site generated from it. And this blog.
+- [bWalletX development blog](https://bwalletx.com/blog/): How bWallet and bWalletX were built from a fork of Yours Wallet: numbered posts from the git history, including what broke, what we reversed and what is still not done.
+
+## Legal
+
+- [Privacy Policy · bWalletX (Beta)](https://bwalletx.com/privacy)
