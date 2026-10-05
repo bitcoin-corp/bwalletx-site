@@ -54,27 +54,28 @@
       <p class="lede">Your wallet and your agents from the command line, on your laptop or a server.</p>
       <div class="flow">
         <span class="pill">npm i -g bwalletx</span><span class="arrow">&rarr;</span>
-        <span class="pill">bwalletx key import</span><span class="arrow">&rarr;</span>
+        <span class="pill">bwalletx login</span><span class="arrow">&rarr;</span>
         <span class="pill">bwalletx agent run</span>
       </div>
       <h2>Get started</h2>
       <pre><code>npm i -g bwalletx                    # Node 20+
-# In bWalletX: Settings &rsaquo; Agents &rsaquo; your agent account &rsaquo; Run on a computer &rsaquo; Export for CLI
-bwalletx key import ./trader.key.json   # asks for the file's passphrase</code></pre>
+bwalletx login --account phone       # shows a QR: scan it in bWalletX from your agent account</code></pre>
+      <p>In bWalletX (5.1.40 or later), open your <strong>agent account</strong>, then Settings &rsaquo; Paired websites &rsaquo; <strong>Scan to connect</strong>. Check both screens show the same 4-digit code, choose what the CLI may do and for how long (1, 7 or 30 days), and tap Pair. Your keys never leave the phone.</p>
+      <p class="small">For a server with no phone around, export a key file instead: Agents &rsaquo; your agent account &rsaquo; Run on a computer &rsaquo; Export for CLI, then <code>bwalletx key import ./trader.key.json</code>.</p>
       <h2>Commands</h2>
-      <pre><code>bwalletx accounts                    # imported agent accounts
+      <pre><code>bwalletx accounts                    # paired and imported agent accounts
 bwalletx balance --account trader    # BSV and tokens, in dollars
 bwalletx price &lt;tokenId&gt;
 bwalletx send 1 name@bwalletx.com --account trader
-bwalletx buy &lt;tokenId&gt; --max-usd 2 --account trader     # paper mode for now
+bwalletx buy &lt;tokenId&gt; --max-usd 2 --account phone      # cheapest listing, +1% fee, never over the cap
 bwalletx strategy load ./slow-accumulator.json --account trader
 bwalletx agent run trader            # run its strategy unattended
 bwalletx log --account trader
 bwalletx stop                        # kill switch: refuse every spend</code></pre>
-      <h2>What works today (v0.1)</h2>
-      <div class="box"><h3>Live</h3><p>Balances, prices, the activity log, and sending BSV to an address or paymail, from an agent account.</p></div>
-      <div class="box"><h3>Paper only for now</h3><p>Buying tokens, and strategies run by <code>agent run</code>: live prices, pretend money, nothing signed. Real buys from the CLI are coming; for now buy in the app.</p></div>
-      <div class="box"><h3>Coming</h3><p>Pairing with the app (<code>bwalletx login</code>) so the CLI gets a scoped, revocable token instead of a key file. Selling, listing and minting.</p></div>
+      <h2>What works today (v0.2)</h2>
+      <div class="box"><h3>Live</h3><p>Balances, prices, the activity log, sending BSV to an address or paymail, and buying BSV-21 tokens from the Exchange. Strategies run by <code>agent run</code> trade for real once you load them live.</p></div>
+      <div class="box"><h3>Paired or key file</h3><p><strong>Paired</strong> (<code>bwalletx login</code>): the phone checks and signs every request, so bWalletX must be open on that agent account. <strong>Key file</strong>: runs unattended on a server.</p></div>
+      <div class="box"><h3>Coming</h3><p>Selling, listing and minting from the CLI.</p></div>
       <h2>Your keys stay safe</h2>
       <div class="box"><h3>Agent accounts only</h3><p>Only agent accounts can be exported, never your main wallet. The key file is encrypted with a passphrase you choose and stays encrypted on disk.</p></div>
       <div class="box"><h3>Limits</h3><p>The agent account's balance is the budget. Every spend is checked first: the kill switch, the daily cap, at most 30 spends an hour, then the strategy's rules. Every action is logged.</p></div>

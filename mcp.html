@@ -58,13 +58,15 @@
         <span class="pill">Any MCP agent</span>
       </div>
       <h2>What agents can do</h2>
-      <div class="box"><h3>Tools (v0.1)</h3><p><code>accounts</code>, <code>balance</code>, <code>price</code>, <code>send</code> (BSV, live), <code>buy</code> (paper for now), <code>strategy_show</code>, <code>strategy_load</code> (always on paper), <code>log</code>, <code>stop_all</code>.</p></div>
+      <div class="box"><h3>Tools (v0.2)</h3><p><code>accounts</code>, <code>balance</code>, <code>price</code>, <code>send</code> (BSV, live), <code>buy</code> (live), <code>strategy_show</code>, <code>strategy_load</code> (always on paper), <code>log</code>, <code>stop_all</code>.</p></div>
       <div class="box"><h3>Only the accounts you give it</h3><p>Agents work in agent accounts with their own keys and budget, exported from bWalletX. Your main wallet is never exposed.</p></div>
       <div class="box"><h3>Bounded</h3><p>Every spend passes the same checks as the app: the kill switch, the daily cap, at most 30 spends an hour, then the strategy's rules. An AI can only load strategies on paper; going live is a step you take yourself.</p></div>
       <h2>Set up</h2>
       <pre><code>npm i -g bwalletx
-bwalletx key import ./trader.key.json      # from bWalletX: Agents &rsaquo; Export for CLI</code></pre>
-      <p><strong>Claude Code:</strong></p>
+bwalletx login --account phone             # pair with your agent account in bWalletX</code></pre>
+      <p><strong>Claude Code</strong> (paired: no passphrase needed, your phone signs):</p>
+      <pre><code>claude mcp add bwalletx -- npx -y bwalletx mcp</code></pre>
+      <p>Or with a key file for an unattended server:</p>
       <pre><code>claude mcp add bwalletx -e BWALLETX_PASSPHRASE=your-passphrase -- npx -y bwalletx mcp</code></pre>
       <p><strong>Claude Desktop, Cursor and others</strong> (MCP config file):</p>
       <pre><code>{
@@ -77,7 +79,7 @@ bwalletx key import ./trader.key.json      # from bWalletX: Agents &rsaquo; Expo
   }
 }</code></pre>
       <p class="small">The passphrase unlocks the agent account's key file on your machine. Use a separate agent account with a small balance for AI agents. Leave the passphrase out and the server stays paper-only: it can read and practise, but never send.</p>
-      <p>Coming: pairing with the app (scoped tokens lasting 30 days at most, revocable), live buys, selling, listing and minting. Source: <a href="https://github.com/b0ase/bwalletx-cli">github.com/b0ase/bwalletx-cli</a>.</p>
+      <p>Coming: selling, listing and minting. Source: <a href="https://github.com/b0ase/bwalletx-cli">github.com/b0ase/bwalletx-cli</a>.</p>
 
       <div class="row">
         <a class="btn btn-store" href="/agent">Agent wallet</a>
