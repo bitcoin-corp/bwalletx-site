@@ -112,7 +112,7 @@ Source: https://bwalletx.com/android
 
 The full bWalletX wallet on your Android phone or tablet. Your keys stay on your device.
 
-[Download APK (beta) ↓](https://bwalletx.com/download/bwalletx-android-5.1.57.apk)
+[Download APK (beta) ↓](https://bwalletx.com/download/bwalletx-android-5.1.58.apk)
 
 It isn't on Google Play yet, so install it by hand:
 
@@ -120,13 +120,13 @@ It isn't on Google Play yet, so install it by hand:
 
 - If Android asks, allow your browser to install unknown apps (Settings › Apps › your browser › Install unknown apps).
 
-- Open `bwalletx-android-5.1.57.apk` and tap Install.
+- Open `bwalletx-android-5.1.58.apk` and tap Install.
 
 - Open bWalletX and create or restore your wallet.
 
 Updating from an older version? Install over the top and your wallet stays. If Android says the app can't be updated, write down your 12 words first, then uninstall and reinstall.
 
-Version 5.1.57 beta · 18.2 MB · Android 7+ · SHA-256 c9a3352c079249648f890283bb2c00f6524333db5ebc16da03713476c442fa03
+Version 5.1.58 beta · 18.2 MB · Android 7+ · SHA-256 fc2cf14afc5b07860809ddc36aef2f718e25c6ea1f6e86a1415f8da639039f17
 
 Also: [Chrome extension](https://bwalletx.com/extension) · [Developers](https://bwalletx.com/developers)
 
@@ -221,12 +221,12 @@ Source: https://bwalletx.com/extension
 
 The full bWalletX wallet in Chrome's side panel, and a wallet websites like TokenBlaster can connect to. Your keys stay in the extension.
 
-[Download for Chrome (beta) ↓](https://bwalletx.com/download/bwalletx-extension-5.1.57.zip)
-[Download for Brave (beta) ↓](https://bwalletx.com/download/bwalletx-extension-5.1.57.zip)
+[Download for Chrome (beta) ↓](https://bwalletx.com/download/bwalletx-extension-5.1.58.zip)
+[Download for Brave (beta) ↓](https://bwalletx.com/download/bwalletx-extension-5.1.58.zip)
 
 It isn't on the Chrome Web Store yet, so install it by hand:
 
-- Unzip `bwalletx-extension-5.1.57.zip`.
+- Unzip `bwalletx-extension-5.1.58.zip`.
 
 - Open `chrome://extensions` in Chrome.
 
@@ -240,7 +240,7 @@ It isn't on the Chrome Web Store yet, so install it by hand:
 
 Same extension, same file. Brave runs Chrome extensions, so:
 
-- Unzip `bwalletx-extension-5.1.57.zip`.
+- Unzip `bwalletx-extension-5.1.58.zip`.
 
 - Open `brave://extensions` in Brave.
 
@@ -250,7 +250,7 @@ Same extension, same file. Brave runs Chrome extensions, so:
 
 - Pin bWalletX from the puzzle-piece menu, click it, and create or restore your wallet.
 
-Version 5.1.57 beta · SHA-256 9606d0c4100d6bf7838705d13702268c10c872e0f2f25c7659c334df29419e42 · Source: [github.com/bitcoin-corp/bwallet](https://github.com/bitcoin-corp/bwallet)
+Version 5.1.58 beta · SHA-256 849ba8bb0c3203958b69f8607bfb9bdfdc09e142b97a27debbfef118b9d74934 · Source: [github.com/bitcoin-corp/bwallet](https://github.com/bitcoin-corp/bwallet)
 
 ---
 
@@ -521,8 +521,8 @@ Source: https://bwalletx.com/get
 
 The full bWalletX on every device. Your keys stay on your device.
 
-[AndroidAPK download · v5.1.57 beta](https://bwalletx.com/android)
-[ChromeExtension · v5.1.57 beta](https://bwalletx.com/extension)
+[AndroidAPK download · v5.1.58 beta](https://bwalletx.com/android)
+[ChromeExtension · v5.1.58 beta](https://bwalletx.com/extension)
 [WebOpen in your browser](https://web.bwalletx.com)
 [iPhoneWeb app · install from Safari, no App Store](https://bwalletx.com/iphone)
 
@@ -539,7 +539,7 @@ bWalletX
 Mint, trade and chat in one non-custodial app. Send to names, browse 180+ BSV-21 tokens, open the bApps
 store and play your on-chain media.
 
-Android · Download APK (beta)v5.1.57 beta · sideload[iPhone · Web appInstall from Safari · no App StoreChrome · Download extensionv5.1.57 beta · zip + install steps
+Android · Download APK (beta)v5.1.58 beta · sideload[iPhone · Web appInstall from Safari · no App StoreChrome · Download extensionv5.1.58 beta · zip + install steps
 
 How to sideload on Android
 
@@ -547,10 +547,10 @@ How to sideload on Android
 Tap Download APK (beta). If Android asks, allow your browser to install unknown apps
 (Settings › Apps › your browser › Install unknown apps).
 
-- Open the downloaded bwalletx-android-5.1.57.apk and tap Install.
+- Open the downloaded bwalletx-android-5.1.58.apk and tap Install.
 
 -
-Optional but recommended: check the SHA-256 checksum matchesc9a3352c079249648f890283bb2c00f6524333db5ebc16da03713476c442fa03
+Optional but recommended: check the SHA-256 checksum matchesfc2cf14afc5b07860809ddc36aef2f718e25c6ea1f6e86a1415f8da639039f17
 
 Beta software. Use small amounts and back up your recovery phrase. Only install the APK from this site or
 the official GitHub release.
@@ -715,7 +715,7 @@ Join the waitlist →](https://www.bitcoinchat.online)
 
 Currently in beta.
 
-Android · Download APK (beta)v5.1.57 beta · sideloadiPhone · Web appInstall from Safari · no App StoreChrome · Download extensionv5.1.57 beta · zip + install steps
+Android · Download APK (beta)v5.1.58 beta · sideloadiPhone · Web appInstall from Safari · no App StoreChrome · Download extensionv5.1.58 beta · zip + install steps
 
 ---
 
@@ -1349,11 +1349,11 @@ One script gives your site a standard BRC-100 wallet. No API keys, no sign-up, a
 
 ## Get bWalletX to test with
 
-Install the wallet you'll connect to (version 5.1.57 beta). Checksums are on each download page.
+Install the wallet you'll connect to (version 5.1.58 beta). Checksums are on each download page.
 
-- [Chrome / Brave extension (zip)](https://bwalletx.com/download/bwalletx-extension-5.1.57.zip) · [install steps](https://bwalletx.com/extension)
+- [Chrome / Brave extension (zip)](https://bwalletx.com/download/bwalletx-extension-5.1.58.zip) · [install steps](https://bwalletx.com/extension)
 
-- [Android APK](https://bwalletx.com/download/bwalletx-android-5.1.57.apk) · [install steps](https://bwalletx.com/android)
+- [Android APK](https://bwalletx.com/download/bwalletx-android-5.1.58.apk) · [install steps](https://bwalletx.com/android)
 
 - [Web app](https://web.bwalletx.com) · [iPhone](https://bwalletx.com/iphone)
 
