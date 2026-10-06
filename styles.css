@@ -1384,7 +1384,11 @@ body {
 }
 /* /watch page */
 .watch-page {
-  padding: 48px 0 80px;
+  /* Clear the fixed beta banner + topbar, as main.ext does on other sub-pages. */
+  padding: 150px 0 80px;
+}
+@media (max-width: 859px) {
+  .watch-page { padding-top: 172px; }
 }
 .watch-page h1 {
   font: 700 clamp(2rem, 5vw, 3rem) / 1.1 var(--hf);
