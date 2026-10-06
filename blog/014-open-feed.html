@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- DRAFT: remove this noindex line when 014 is published -->
+    <meta name="robots" content="noindex" />
+    <title>014 One feed for BSV · bWalletX blog</title>
+    <meta name="description" content="Every BSV social app keeps its own feed. bChat shows all of them, credits them, and pays the people who wrote the posts." />
+    <link rel="canonical" href="https://bwalletx.com/blog/014-open-feed" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://bwalletx.com/blog/014-open-feed" />
+    <meta property="og:site_name" content="bWalletX" />
+    <meta property="og:title" content="One feed for BSV" />
+    <meta property="og:description" content="Every BSV social app keeps its own feed. bChat shows all of them, credits them, and pays the people who wrote the posts." />
+    <meta property="og:image" content="https://bwalletx.com/og/og-blog-014.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@bWalletX" />
+    <meta name="twitter:title" content="One feed for BSV" />
+    <meta name="twitter:description" content="Every BSV social app keeps its own feed. bChat shows all of them, credits them, and pays the people who wrote the posts." />
+    <meta name="twitter:image" content="https://bwalletx.com/og/og-blog-014.png" />
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="stylesheet" href="/styles.css" />
+    <style>
+      .ext { max-width: 760px; margin: 0 auto; padding: 120px 20px 80px; }
+      .ext h1 { font-size: clamp(2rem, 6vw, 3rem); margin: 10px 0 10px; line-height: 1.15; }
+      .ext h2 { margin: 44px 0 10px; font-size: 1.4rem; }
+      .ext p, .ext li { line-height: 1.7; }
+      .ext code { background: #17191e; padding: 2px 7px; border-radius: 6px; overflow-wrap: anywhere; }
+      .ext a { overflow-wrap: anywhere; }
+      .meta { color: #8a8a86; font-size: 0.9rem; margin: 0; }
+      .num { color: #F5B800; font-weight: 700; letter-spacing: .04em; }
+      .box { background: #101114; border: 1px solid #ffffff12; border-radius: 16px; padding: 18px 22px; margin: 28px 0; }
+      .box h2 { margin: 0 0 8px; font-size: 1.1rem; }
+      .box ul { margin: 0; padding-left: 1.2em; }
+      .related { color: #a7adb8; }
+      .pn { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; margin-top: 40px; border-top: 1px solid #ffffff14; padding-top: 20px; }
+      .pn a { color: #F5B800; text-decoration: none; max-width: 100%; }
+      .posts { list-style: none; padding: 0; margin: 28px 0; }
+      .posts li { background: #101114; border: 1px solid #ffffff12; border-radius: 16px; padding: 16px 20px; margin: 12px 0; }
+      .posts a { color: #fff; text-decoration: none; font-weight: 700; font-size: 1.1rem; }
+      .posts a:hover { color: #F5B800; }
+      .posts p { margin: 4px 0 0; color: #a7adb8; line-height: 1.55; }
+      .ext .small { color: #8a8a86; font-size: 0.85rem; }
+      .ext pre { background: #17191e; padding: 14px 16px; border-radius: 10px; overflow-x: auto; }
+      .ext pre code { padding: 0; background: none; overflow-wrap: normal; white-space: pre; }
+    </style>
+  </head>
+  <body>
+    <div class="beta-banner">bWalletX is in <strong>beta</strong>: test with small amounts.</div>
+    <header class="topbar">
+      <div class="wrap topbar-in">
+        <a class="brand" href="/"><img src="/logo.svg" alt="" width="34" height="30" /><span>bWallet<span class="gold">X</span></span></a>
+        <nav aria-label="Pages">
+          <a href="/features">Features</a><a href="/exchange">Exchange</a><a href="/social">Social</a><a href="/agent">Agents</a><a href="/extension">Extension</a><a href="/developers">Developers</a>
+        </nav>
+        <span class="nav-cta"><a class="dl-btn" href="/get">Download</a><a class="web-btn" href="https://web.bwalletx.com" target="_blank" rel="noopener">Web &rarr;</a></span>
+      </div>
+    </header>
+    <script src="/nav.js"></script>
+    <main class="ext">
+      <p class="meta"><a href="/blog">Development blog</a> · <span class="num">014</span> · October 2026</p>
+      <h1>One feed for BSV</h1>
+      <p class="lede">Every BSV social app keeps its own feed. bChat shows all of them, credits them, and pays the people who wrote the posts.</p>
+
+      <h2>The odd thing about BSV social apps</h2>
+      <p>Everything you post on Twetch, Treechat, Peck or Fwetch goes on-chain. It's public. Anyone can read it.</p>
+      <p>And yet each app only shows its own posts. You need a separate app, account and wallet for each one, and a writer on one app never reaches the readers on another.</p>
+      <p>That's a Web2 habit. On Twitter or Reddit the company owns the posts, so walling them in makes sense for the company. On BSV nobody owns the posts except the people who wrote them. The walls are only around the indexers.</p>
+
+      <h2>What bChat does</h2>
+      <p><a href="https://www.bitcoinchat.online/feed">bitcoinchat.online/feed</a> shows posts from Twetch, Treechat, Peck, Fwetch and bChat in one timeline.</p>
+      <ul>
+        <li>Every post has a badge saying where it came from, and a link back to the original.</li>
+        <li>You can like, reply and tip from bChat. Your reply is a bChat post that points at the original; we never post as another app.</li>
+        <li>Tips go straight to the author's own address. bChat takes nothing.</li>
+      </ul>
+
+      <h2>Authors first</h2>
+      <p>The rule we've written down is simple: a post belongs to the person who wrote it, not to the app they wrote it in.</p>
+      <ul>
+        <li>Any app can show any author's post, with credit and a link home.</li>
+        <li>Authors get paid wherever their post is read.</li>
+        <li>If an author hides their own post (a signed "hide" from the same key), every app that follows the spec hides it.</li>
+        <li>An app can't stop another app showing public posts. If it wants something kept private, it can keep it off-chain.</li>
+      </ul>
+
+      <h2>Apps get paid too</h2>
+      <p>When a bChat user tips a post that came from another app, bChat adds 5% on top for that app, in the same transaction. The author still gets the full tip.</p>
+      <p>So a $0.05 tip on a Treechat post pays the author $0.05 and Treechat $0.0025. Treechat earns from its posts being read in bChat without doing anything.</p>
+      <p>That's the bit I think the other apps haven't seen yet. Syndication isn't someone taking your content. It's your content earning in more places.</p>
+
+      <h2>What we need from the other apps</h2>
+      <p>Two small things:</p>
+      <ol>
+        <li><strong>A payment address for each author on each post.</strong> Some apps post everything from one shared address, so a tip can't reach the right person. That's why tips on Treechat posts are switched off in bChat for now.</li>
+        <li><strong>A payment address for the app itself</strong>, for the 5% share.</li>
+      </ol>
+      <p>And if they want to show bChat posts back, with a bChat badge, it's one line of code.</p>
+
+      <h2>Join</h2>
+      <p>The format is an open spec: <a href="https://www.bitcoinchat.online/docs/feed-protocol">bitcoinchat.online/docs/feed-protocol</a></p>
+      <p>There's a free public indexer and a drop-in embed:</p>
+      <pre><code>&lt;script src="https://www.bitcoinchat.online/embed/feed.js" data-source="all"&gt;&lt;/script&gt;</code></pre>
+      <p>If you build a BSV app with a feed, come and talk to us in the <a href="https://www.bitcoinchat.online/room/LOUNGE">bWallet Lounge on bChat</a>, or email <a href="mailto:support@bwalletx.com">support@bwalletx.com</a>.</p>
+      <p>— Richard</p>
+
+      <p class="related">Related: <a href="/social">Social</a> · <a href="/developers">Developers</a> · <a href="/blog/003-tabs-apps-feed">003 Tabs, apps and a social feed</a></p>
+      <div class="pn"><a href="/blog/013-sites-and-navigation">&larr; 013 Two sites from one</a><a href="/blog">All posts &rarr;</a></div>
+    </main>
+  </body>
+</html>
