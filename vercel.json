@@ -2,6 +2,10 @@
   "cleanUrls": true,
   "rewrites": [
     {
+      "source": "/push",
+      "destination": "/push-notifications"
+    },
+    {
       "source": "/.well-known/bsvalias",
       "destination": "https://pay.bwallet.space/.well-known/bsvalias"
     },
