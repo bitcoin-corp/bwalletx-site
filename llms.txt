@@ -99,6 +99,7 @@ Full text of every page: https://bwalletx.com/llms-full.txt
 - [011 From a dollar bond to PNEEs on mainnet · bWalletX blog](https://bwalletx.com/blog/011-pnees-pilot): A BSV-backed dollar token went from a design note to a small, capped mainnet pilot in two days. This is what is enforced, what is not, and what went wrong.
 - [012 The extension, the web app and pairing · bWalletX blog](https://bwalletx.com/blog/012-extension-and-web): bWalletX also runs as a Chrome and Brave extension and as a web app. On iPhone the web app is the only way to get the full wallet, so we made backup mandatory there.
 - [013 Two sites from one · bWalletX blog](https://bwalletx.com/blog/013-sites-and-navigation): A download page became bwallet.space, then bwalletx.com became the main site, with the store site generated from it. And this blog.
+- [014 One feed for BSV · bWalletX blog](https://bwalletx.com/blog/014-open-feed): Every BSV social app keeps its own feed. bChat shows all of them, credits them, and pays the people who wrote the posts.
 - [bWalletX development blog](https://bwalletx.com/blog/): How bWallet and bWalletX were built from a fork of Yours Wallet: numbered posts from the git history, including what broke, what we reversed and what is still not done.
 
 ## Legal
