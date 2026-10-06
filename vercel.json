@@ -37,6 +37,11 @@
       "source": "/PNEES",
       "destination": "/pnees",
       "permanent": true
+    },
+    {
+      "source": "/watch",
+      "destination": "/video",
+      "permanent": true
     }
   ]
 }
