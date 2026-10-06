@@ -24,7 +24,7 @@
           sans-serif;
       }
       main {
-        max-width: 760px;
+        max-width: 720px;
         margin: 0 auto;
         padding: max(24px, env(safe-area-inset-top)) 16px 48px;
       }
@@ -74,19 +74,24 @@
     <main>
       <p><a href="/">← bWalletX</a></p>
       <h1>Privacy Policy</h1>
-      <p class="meta">bWalletX (Beta) · Effective 1 October 2026</p>
+      <p class="meta">bWalletX (Beta) · Effective 6 October 2026</p>
 
       <p class="notice">
         bWalletX is published by The Bitcoin Corporation Ltd and is based on the open-source Yours Wallet (MIT licence).
-        It is not made, reviewed or endorsed by the Yours Wallet authors, and this policy covers only the bWalletX mobile
-        app.
+        It is not made, reviewed or endorsed by the Yours Wallet authors. This policy covers bWalletX (the full-feature
+        app, Chrome extension and web wallet) and bWallet, the edition on the App Store and Google Play.
       </p>
 
       <h2>Summary</h2>
       <p>
-        bWalletX is non-custodial. We run no servers for the app and don't operate accounts. We don't collect your name,
-        email, contacts, location, advertising identifiers, analytics or crash reports. Your private keys and recovery
-        phrase never leave your device.
+        bWalletX is non-custodial: your private keys and recovery phrase never leave your device, and we can't move your
+        money. To run chat, names, contacts and calls, our own service (bit-sign, operated by The Bitcoin Corporation
+        Ltd) keeps the data listed under
+        <a href="#service">What our service keeps</a>, linked to your wallet's identity key. If you use bChat on a
+        phone, our push server also keeps your device's push token and notification settings so it can notify you (see
+        <a href="#push">Notifications</a>). We use all of this only to run those features. We don't collect your email
+        (unless you choose Continue with Google), phone number, location, advertising identifiers, analytics or crash
+        reports, and we don't track you, sell your data or use it for advertising.
       </p>
 
       <h2>What stays on your device</h2>
@@ -114,7 +119,9 @@
         </li>
         <li>
           <b>Blockchain services:</b> address, balance, transaction and token lookups, and transaction broadcasts, go to
-          BSV indexing services (1Sat APIs). Transaction links open on WhatsOnChain.
+          BSV indexing services (1Sat APIs). Some address-history lookups (when you move funds in from another wallet),
+          transaction checks and the BSV price history use the WhatsOnChain API, and transaction links open on
+          WhatsOnChain. The BSV price comes from public price feeds.
         </li>
         <li><b>Wallet messaging:</b> wallet-to-wallet messages use <code>messagebox.1sat.app</code>.</li>
         <li>
@@ -124,13 +131,26 @@
         </li>
         <li>
           <b>Names and payments to names:</b> when you send to a $handle, paymail or OpNS name, or look up your own
-          name, the app asks 1Sat indexers (including OpNS), bit-sign and HandCash paymail lookup services to resolve
-          that name to a payment destination. Those services see the name being looked up.
+          name, the app asks 1Sat indexers (including OpNS), bit-sign and the paymail service of the address's domain
+          (for example HandCash for <code>@handcash.io</code>) to resolve that name to a payment destination. Those
+          services see the name being looked up.
         </li>
         <li>
           <b>Market and Chat:</b> token and NFT listings, media and token rooms are loaded from 1Sat indexers. The
           Market's safety filter runs as part of that loading; if you use Report, the item is hidden on your device and,
           where a review service is configured, the item reference is sent to us for review.
+        </li>
+        <li>
+          <b>Feed:</b> public on-chain posts are loaded from a public bmap indexer and from our own bChat indexer
+          (<code>push.bwalletx.com/feed</code>). Posting puts your post on the public blockchain.
+        </li>
+        <li>
+          <b>$b assistant (optional):</b> nothing is sent until you allow it in the app. In bWallet from the App Store
+          and Google Play, $b uses your own AI provider key (Anthropic, OpenAI or OpenRouter) and your message and the
+          recent conversation go straight from your phone to that provider. In bWalletX's pay-per-message mode, they go
+          to our server (bitcoinchat.online), which passes them to Anthropic; our server also sees the payment's
+          transaction id and your bChat sign-in, and Anthropic does not. Your keys, balances, addresses, contacts, chats
+          and files are never sent. You can withdraw consent in Settings › b agent.
         </li>
         <li>
           <b>Websites you open</b> in the in-app browser receive the requests you make and the responses you approve.
@@ -142,34 +162,105 @@
         transactions are public by nature.
       </p>
 
+      <h2 id="service">What our service keeps</h2>
+      <p>
+        Chat, names, contacts and calls run on bit-sign (<code>bitcoinchat.online</code>), operated by The Bitcoin
+        Corporation Ltd. When you use those features it stores:
+      </p>
+      <ul>
+        <li><b>Your identifiers:</b> your wallet's identity key, your $handle and your paymail name.</li>
+        <li><b>Your name:</b> the display name you choose.</li>
+        <li><b>Messages:</b> chat-room and direct messages you send, and room posts.</li>
+        <li>
+          <b>Contacts:</b> the contacts, friends and blocked users you keep in the app (not your phone's address book).
+        </li>
+        <li><b>Other content you create:</b> bookmarks, and items you report for review.</li>
+        <li>
+          <b>Wallet details for rooms and tickets:</b> your wallet addresses and the token holdings needed to check
+          access to token rooms and tickets.
+        </li>
+      </ul>
+      <p>
+        Calls connect your device directly to the other person's; the service only helps the two devices find each other
+        and doesn't record calls. All of this is used only to provide these features. It is not shared with third
+        parties except the hosting providers that run the service, and it is never used for advertising or tracking. You
+        can delete your account and this data from Settings (Delete account), or by contacting us.
+      </p>
+
       <h2 id="kyc">Verified identity (KYC certificates)</h2>
       <p>
         Identity verification is optional. If you choose to verify, you are sent to bit-sign, which uses Veriff to check
         your identity document. bit-sign and Veriff keep the verification record under their own privacy policies.
-        bit-sign then issues a private certificate that is stored in your wallet on your device. bWalletX does not upload
-        that certificate anywhere by itself: you choose which details, if any, to reveal to an app or service, and only
-        when you approve it.
+        bit-sign then issues a private certificate that is stored in your wallet on your device. bWalletX does not
+        upload that certificate anywhere by itself: you choose which details, if any, to reveal to an app or service,
+        and only when you approve it.
       </p>
 
-      <h2>Notifications</h2>
+      <h2 id="social">Continue with X or Google (bWalletX only)</h2>
       <p>
-        If you allow notifications, the app shows local alerts about incoming transactions. They're generated on your
-        device; no push notification service is used.
+        If you choose Continue with X or Continue with Google when creating an account, you sign in on X or Google in
+        your browser and our sign-in service (the bWalletX paymail server, run by The Bitcoin Corporation Ltd) receives
+        your X @name or Gmail address, your display name and your profile photo from them. The app uses these to fill in
+        your name and photo and, if you claim it, to register a verified paymail such as
+        <code>yourname.x@bwalletx.com</code>. We keep that registration so the paymail keeps working. We don't receive
+        your X or Google password, and we don't post anything or read anything else from your account. This option isn't
+        in bWallet from the App Store and Google Play.
+      </p>
+
+      <h2 id="push">Notifications</h2>
+      <p>
+        <b>On-device alerts.</b> If you allow notifications, the app shows local alerts about incoming transactions.
+        They're generated on your device.
+      </p>
+      <p>
+        <b>Push notifications (bChat).</b> When you're signed in to bChat, the app registers your device with our push
+        server, <code>push.bwalletx.com</code>, run by The Bitcoin Corporation Ltd on a server we rent from Hetzner, so
+        you can be told about room mentions and direct messages while the app is closed. On a phone this is on by
+        default once you sign in to bChat, and your phone asks for permission first; in the web wallet and Chrome
+        extension it stays off until you turn it on. To do this the app sends:
+      </p>
+      <ul>
+        <li>the device push token issued by your phone (or, in a browser, the Web Push subscription);</li>
+        <li>the platform (iOS, Android, web or extension), the app (bWallet or bWalletX) and its bundle id;</li>
+        <li>the bChat handle the device belongs to (your bChat sign-in);</li>
+        <li>
+          your notification preferences: message previews, quiet hours and your time zone, which kinds of alerts you
+          want, and per-room settings (All, Mentions or Off).
+        </li>
+      </ul>
+      <p>
+        We use this only to send you those notifications. The notification itself is delivered through Google Firebase
+        Cloud Messaging (Android), Apple Push Notification service (iPhone) or your browser's push service, which
+        receive the push token and the notification.
+        <b>Message previews are off by default</b>: a notification then says only that you have something new, without
+        the message text. If you turn previews on, the message text passes through those services to show it on your
+        screen.
+      </p>
+      <p>
+        Turn push off or change previews, quiet hours and alerts in Settings › Notifications › Push notifications, or in
+        your phone's notification settings. Turning push off, signing out of bChat or switching to another account
+        removes this device's registration from our push server; uninstalling the app makes its push token stop working.
       </p>
 
       <h2 id="waitlist">Testing waitlist (this website)</h2>
       <p>
         If you join the testing waitlist on this website, we collect your email address, the phone platform you chose
         (iPhone, Android or Either), the time you signed up, and your browser's user-agent string (to help spot abuse).
-        This is stored by The Bitcoin Corporation Ltd in our own database and is used only to invite you to test bWalletX
+        This is stored by The Bitcoin Corporation Ltd in our own database and is used only to invite you to test bWallet
         and send testing updates. We do not sell it or share it for marketing. You can unsubscribe from any email, or
         ask us to delete your entry at any time using the contact details below.
       </p>
 
       <h2>Your choices</h2>
       <ul>
-        <li>You can delete all app data by signing out in Settings, or by uninstalling the app.</li>
+        <li>You can delete your account and the data our service keeps from Settings (Delete account).</li>
+        <li>You can delete all app data on your device by signing out in Settings, or by uninstalling the app.</li>
         <li>You can turn biometric unlock off from the lock screen at any time.</li>
+        <li>
+          You can turn push notifications and message previews off in Settings › Notifications, and remove this device's
+          push registration by signing out of bChat.
+        </li>
+        <li>You can withdraw consent for the $b assistant in Settings › b agent.</li>
         <li>You can change the remote wallet storage provider in Settings → Wallet Backup.</li>
       </ul>
 
@@ -184,7 +275,8 @@
 
       <h2>Contact</h2>
       <p>
-        Questions about this mobile app: open an issue at
+        The Bitcoin Corporation Ltd:
+        <a href="mailto:support@bwalletx.com">support@bwalletx.com</a>, or open an issue at
         <a href="https://github.com/b0ase/yours-mobile/issues">github.com/b0ase/yours-mobile/issues</a>.
       </p>
     </main>
