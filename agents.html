@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>bWalletX Agent Accounts</title>
+    <meta name="description" content="Give each AI its own bWalletX account, its own budget and its own ghost. Daily caps, Stop all, an activity log, and the CLI or MCP for Claude and other agents." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://bwalletx.com/agents" />
+    <meta property="og:site_name" content="bWalletX" />
+    <meta property="og:title" content="bWalletX agent accounts: one account, one budget, one ghost per AI" />
+    <meta property="og:description" content="Give each AI its own bWalletX account, its own budget and its own ghost. Daily caps, Stop all, an activity log, and the CLI or MCP for Claude and other agents." />
+    <meta property="og:image" content="https://bwalletx.com/og-agents.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Pixel ghosts in red, pink, cyan and orange: bWalletX agent accounts" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@bWalletX" />
+    <meta name="twitter:title" content="bWalletX agent accounts: one account, one budget, one ghost per AI" />
+    <meta name="twitter:description" content="Give each AI its own bWalletX account, its own budget and its own ghost. Daily caps, Stop all, an activity log, and the CLI or MCP for Claude and other agents." />
+    <meta name="twitter:image" content="https://bwalletx.com/og-agents.png" />
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="stylesheet" href="/styles.css" />
+    <style>
+      .ext h1 { font-size: clamp(2.2rem, 6vw, 3.4rem); margin: 18px 0 10px; }
+      .ext h1 em { font-style: normal; color: #F5B800; }
+      .ext h2 { margin: 48px 0 10px; font-size: 1.5rem; }
+      .ext p, .ext li { line-height: 1.65; }
+      .ext code { background: #17191e; padding: 2px 7px; border-radius: 6px; overflow-wrap: anywhere; }
+      .box { background: #101114; border: 1px solid #ffffff12; border-radius: 16px; padding: 18px 20px; margin: 16px 0; }
+      .box h3 { margin: 0 0 6px; font-size: 1rem; }
+      .box p { margin: 0; color: #a7adb8; }
+      .xlink { border-color: #F5B80055; }
+      .ext .small { color: #8a8a86; font-size: 0.85rem; }
+      .ext .row { display: flex; gap: 12px; flex-wrap: wrap; margin: 26px 0; }
+      .parade { display: flex; gap: 14px; align-items: flex-end; margin: 22px 0; }
+      .parade .g { animation: float 2.4s ease-in-out infinite; }
+      .parade .g:nth-child(2) { animation-delay: .3s; } .parade .g:nth-child(3) { animation-delay: .6s; } .parade .g:nth-child(4) { animation-delay: .9s; }
+      @keyframes float { 50% { transform: translateY(-6px); } }
+      .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; margin: 16px 0; }
+      .grid .box { margin: 0; min-width: 0; }
+      .grid .ic { margin-bottom: 8px; }
+      .colours { display: flex; flex-wrap: wrap; gap: 16px; margin-top: 14px; }
+      .colours div { text-align: center; font-size: 12px; color: #a7adb8; }
+      .menu { background: #0b0b0c; border: 1px solid #ffffff14; border-radius: 18px; padding: 10px; max-width: 460px; margin: 22px 0; }
+      .acct { display: grid; grid-template-columns: 40px 1fr auto; gap: 12px; align-items: center; padding: 10px; border-radius: 12px; }
+      .acct.on { background: #17191e; }
+      .acct .av { width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; background: #0b0b0b; border: 1.5px solid var(--c); }
+      .acct .nm { font-weight: 600; } .acct .sub { font-size: 12px; color: #a7adb8; }
+      .acct .bal { font-variant-numeric: tabular-nums; font-weight: 600; }
+      .tag { display: inline-block; font-size: 11px; padding: 1px 8px; border-radius: 999px; border: 1px solid currentColor; margin-left: 6px; }
+      .run { color: #7ee2a8; } .stop { color: #f97066; } .read { color: #a7adb8; }
+      pre { background: #0b0b0c; border: 1px solid #ffffff14; border-radius: 12px; padding: 16px; overflow-x: auto; font: 13px/1.6 ui-monospace, monospace; color: #e8e2cf; }
+      pre .c { color: #6f7682; }
+      @media (prefers-reduced-motion: reduce) { .parade .g { animation: none; } .ga, .gl { animation: none !important; opacity: 1 !important; } .gb, .gr { animation: none !important; opacity: 0 !important; } }
+      .ga, .gl { animation: on .5s steps(1, end) infinite; } .gb, .gr { animation: off .5s steps(1, end) infinite; }
+      .gl, .gr { animation-duration: 1.6s; }
+      @keyframes on { 0% { opacity: 1 } 50% { opacity: 0 } } @keyframes off { 0% { opacity: 0 } 50% { opacity: 1 } }
+    </style>
+  </head>
+  <body>
+    <div class="beta-banner">bWalletX is in <strong>beta</strong>: test with small amounts.</div>
+    <header class="topbar">
+      <div class="wrap topbar-in">
+        <a class="brand" href="/"><img src="/logo.svg" alt="" width="34" height="30" /><span>bWallet<span class="gold">X</span></span></a>
+        <nav aria-label="Pages">
+          <a href="/features">Features</a><a href="/exchange">Exchange</a><a href="/social">Social</a><a href="/agents">Agents</a><a href="/extension">Extension</a><a href="/developers">Developers</a>
+        </nav>
+        <span class="nav-cta"><a class="dl-btn" href="/get">Download</a><a class="web-btn" href="https://web.bwalletx.com" target="_blank" rel="noopener">Web &rarr;</a></span>
+      </div>
+    </header>
+    <script src="/nav.js"></script>
+    <main class="ext">
+      <div class="parade">
+        <span class="g" data-ghost="#FF0000" data-size="64"></span><span class="g" data-ghost="#FFB8FF" data-size="64"></span><span class="g" data-ghost="#00FFFF" data-size="64"></span><span class="g" data-ghost="#FFB852" data-size="64"></span>
+      </div>
+      <h1>Agent accounts: every AI gets <em>its own ghost</em></h1>
+      <p class="lede">An agent account is a separate wallet account that an AI runs for you, with its own keys and its own budget. It trades, sends and reports inside the limits you set, and you can stop it or sweep everything back any time.</p>
+      <div class="box xlink"><h3>Looking for the b agent?</h3><p>The assistant you chat with inside the wallet is the b agent. <a href="/agent">The b agent &rarr;</a></p></div>
+
+      <div class="menu" aria-label="Example account menu">
+        <div class="acct on"><span class="av" style="--c:#FF0000"><span data-ghost="#FF0000" data-size="26"></span></span><span><span class="nm">Trader</span><span class="tag run">running</span><div class="sub">Slow accumulator &middot; cap $20/day</div></span><span class="bal">$120.00</span></div>
+        <div class="acct"><span class="av" style="--c:#00FFFF"><span data-ghost="#00FFFF" data-size="26"></span></span><span><span class="nm">Treasurer</span><span class="tag run">running</span><div class="sub">Tops up the other agents</div></span><span class="bal">$64.25</span></div>
+        <div class="acct"><span class="av" style="--c:#FFB8FF"><span data-ghost="#FFB8FF" data-size="26"></span></span><span><span class="nm">Reporter</span><span class="tag read">read only</span><div class="sub">Daily summary to chat</div></span><span class="bal">$0.00</span></div>
+        <div class="acct"><span class="av" style="--c:#FFB852"><span data-ghost="#FFB852" data-size="26"></span></span><span><span class="nm">Scout</span><span class="tag stop">stopped</span><div class="sub">$HANDLE fund &middot; paused by you</div></span><span class="bal">$18.90</span></div>
+      </div>
+
+      <h2>The ghost is the agent's face</h2>
+      <p>Make an account an agent account and it gets a pixel ghost in its own colour. It shows on the wallet card when that account is selected and is the account's avatar everywhere: the account menu, Settings and chat. One look tells you which agent you're in.</p>
+      <div class="colours"><div><span data-ghost="#FF0000" data-size="48"></span><br />1st</div><div><span data-ghost="#FFB8FF" data-size="48"></span><br />2nd</div><div><span data-ghost="#00FFFF" data-size="48"></span><br />3rd</div><div><span data-ghost="#FFB852" data-size="48"></span><br />4th</div><div><span data-ghost="#2ECC71" data-size="48"></span><br />5th</div><div><span data-ghost="#A06BFF" data-size="48"></span><br />6th</div><div><span data-ghost="#FFE14D" data-size="48"></span><br />7th</div><div><span data-ghost="#4D7CFF" data-size="48"></span><br />8th</div></div>
+
+      <h2>What an agent account can do</h2>
+      <div class="grid">
+        <div class="box"><div class="ic"><span data-ghost="#FF0000" data-size="28"></span></div><h3>Spend only its budget</h3><p>Its balance is all it can ever spend. Fund it from any of your accounts in one tap; your other accounts are never touched.</p></div>
+        <div class="box"><div class="ic"><span data-ghost="#00FFFF" data-size="28"></span></div><h3>Follow a strategy</h3><p>Agree the rules in plain words, or load a strategy, and it trades by those rules and nothing else. <a href="/strategies">Strategies &rarr;</a></p></div>
+        <div class="box"><div class="ic"><span data-ghost="#FFB8FF" data-size="28"></span></div><h3>Show its work</h3><p>An activity log lists every action, with links to the transactions. Add labels and an optional daily spending cap in dollars.</p></div>
+        <div class="box"><div class="ic"><span data-ghost="#FFB852" data-size="28"></span></div><h3>Stop on your word</h3><p>Stop one agent or <b>Stop all agents</b>. A stopped account refuses every spend until you resume it, and <b>Sweep back</b> moves every token, NFT and all the BSV home.</p></div>
+      </div>
+
+      <h2>Many agents</h2>
+      <p>Run one AI per account, or one across several. A Trader on two strategy accounts, a Treasurer that tops them up, a Reporter that only reads: each sees only the accounts you give it.</p>
+
+      <h2>bAgents</h2>
+      <p>bAgents is the home for agents on bWalletX: browse, set up and manage the AIs that run your agent accounts. <a href="https://agents.bwalletx.com" target="_blank" rel="noopener">agents.bwalletx.com &rarr;</a></p>
+
+      <h2>Pair a computer, or Claude</h2>
+      <p>The bWalletX CLI runs agent accounts on a laptop or a server. Pair it with your phone so the phone signs every request, or export an agent account's key file to run unattended. Every spend is checked first: the kill switch, the daily cap, at most 30 spends an hour, then the strategy's rules.</p>
+<pre><span class="c"># install (Node 20+)</span>
+npm i -g bwalletx
+bwalletx login --account phone   <span class="c"># scan the QR in your agent account</span>
+bwalletx agent run trader        <span class="c"># run its strategy</span>
+bwalletx stop                    <span class="c"># kill switch</span>
+<span class="c"># Claude Code, over MCP</span>
+claude mcp add bwalletx -- npx -y bwalletx mcp</pre>
+      <p>Over MCP, Claude, ChatGPT, Cursor or any agent can manage the agent accounts you give it, within the same limits as the app. An AI can only load strategies on paper: going live is a step you take yourself. <a href="/cli">CLI guide &rarr;</a> &middot; <a href="/mcp">MCP guide &rarr;</a></p>
+
+      <h2>Start in a minute</h2>
+      <p>In bWalletX, open the account menu and tap <b>Add agent account</b>, or go to Settings &rsaquo; Agents. Move in a small budget, give it a strategy, and its ghost appears on the card.</p>
+      <div class="row">
+        <a class="btn btn-store" href="/get">Get bWalletX</a>
+        <a class="btn btn-store btn-ghost" href="https://web.bwalletx.com/agents" target="_blank" rel="noopener">Agents in the web wallet</a>
+      </div>
+      <p class="small">Agent accounts spend real money: start with small amounts. Questions: <a href="mailto:support@bwalletx.com">support@bwalletx.com</a></p>
+    </main>
+    <script>
+      // The app's pixel ghost (src/mobile/agents/PixelGhost.tsx), drawn as SVG from the same 14x14 map.
+      (function () {
+        var BODY = ['.....####.....', '...########...', '..##########..', '.############.', '.############.', '.############.',
+          '##############', '##############', '##############', '##############', '##############', '##############'];
+        var A = ['##.###..###.##', '#...##..##...#'], B = ['####.####.####', '.##...##...##.'];
+        var W = [[3,3,2,1],[2,4,4,2],[3,6,2,1],[9,3,2,1],[8,4,4,2],[9,6,2,1]];
+        function px(rows, y0) { var s = ''; rows.forEach(function (r, y) { for (var x = 0; x < r.length; x++) if (r[x] === '#') s += '<rect x="' + x + '" y="' + (y0 + y) + '" width="1.02" height="1.02"/>'; }); return s; }
+        function ghost(c, n) {
+          return '<svg width="' + n + '" height="' + n + '" viewBox="0 0 14 14" shape-rendering="crispEdges" aria-hidden="true">' +
+            '<g fill="' + c + '">' + px(BODY, 0) + '<g class="ga">' + px(A, 12) + '</g><g class="gb">' + px(B, 12) + '</g></g>' +
+            '<g fill="#fff">' + W.map(function (w) { return '<rect x="' + w[0] + '" y="' + w[1] + '" width="' + w[2] + '" height="' + w[3] + '"/>'; }).join('') + '</g>' +
+            '<g fill="#2121DE"><g class="gl"><rect x="2" y="5" width="2" height="2"/><rect x="8" y="5" width="2" height="2"/></g>' +
+            '<g class="gr"><rect x="4" y="5" width="2" height="2"/><rect x="10" y="5" width="2" height="2"/></g></g></svg>';
+        }
+        document.querySelectorAll('[data-ghost]').forEach(function (el) { el.innerHTML = ghost(el.getAttribute('data-ghost'), +el.getAttribute('data-size') || 28); });
+      })();
+    </script>
+  </body>
+</html>

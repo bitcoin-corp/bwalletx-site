@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://bwalletx.com/agent</loc></url>
+  <url><loc>https://bwalletx.com/agents</loc></url>
   <url><loc>https://bwalletx.com/android</loc></url>
   <url><loc>https://bwalletx.com/apps/add</loc></url>
   <url><loc>https://bwalletx.com/blog/001-the-fork</loc></url>
@@ -48,6 +49,7 @@
   <url><loc>https://bwalletx.com/media-src/og/og-home-v2</loc></url>
   <url><loc>https://bwalletx.com/media-src/og/og-home-v3</loc></url>
   <url><loc>https://bwalletx.com/media-src/og/og-iphone</loc></url>
+  <url><loc>https://bwalletx.com/media-src/og/og-lounge</loc></url>
   <url><loc>https://bwalletx.com/media-src/og/og-mcp</loc></url>
   <url><loc>https://bwalletx.com/media-src/og/og-mint</loc></url>
   <url><loc>https://bwalletx.com/media-src/og/og-pnee</loc></url>
@@ -90,6 +92,6 @@
   <url><loc>https://bwalletx.com/social</loc></url>
   <url><loc>https://bwalletx.com/strategies</loc></url>
   <url><loc>https://bwalletx.com/strategies/spec</loc></url>
-  <url><loc>https://bwalletx.com/privacy</loc></url>
   <url><loc>https://bwalletx.com/video</loc></url>
+  <url><loc>https://bwalletx.com/privacy</loc></url>
 </urlset>

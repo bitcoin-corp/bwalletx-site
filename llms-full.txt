@@ -4,65 +4,6 @@ Generated 2026-10-06 from https://bwalletx.com. Source pages are linked above ea
 
 ---
 
-Source: https://bwalletx.com/agent
-
-# The agent wallet
-
-Give your AI agent a trading account and a strategy, and it trades for you: buying, selling, sending and minting, inside the budget you set. Stop it or sweep everything back any time.
-
-Fund a trading account→
-Load a strategy→
-Your agent trades
-
-## Agent accounts
-
-An agent account is a separate account with its own keys. You decide how much goes in; that balance is all an agent can ever spend. Your other accounts are never touched.
-
-### Fund it
-
-Move BSV or tokens in from any of your accounts, in one tap.
-
-### Stop it
-
-Stop one agent account, or Stop all agents at once. Stopped accounts refuse every agent action until you resume them.
-
-### Sweep back
-
-Move every token, NFT and all the BSV back to another account in one go.
-
-### See everything
-
-An activity log lists every action an agent took, with links to the transactions. Add an optional daily spending cap and labels like "long-term" or "$HANDLE fund".
-
-## Many agents
-
-Run one agent per account, or one agent across several. A Trader on two strategy accounts, a Treasurer that tops them up, a Reporter that only reads: each sees only the accounts you give it.
-
-## Strategies
-
-Agree a strategy with your agent in plain words, and it follows that strategy and nothing else. Make your own in chat, or buy one. [How strategies work →](https://bwalletx.com/strategies)
-
-## Everywhere you work
-
-### In the app
-
-The b agent chats with you, designs strategies and runs them.
-
-### bWalletX CLI
-
-Run your agents from the command line, on your laptop or a server. Coming soon.
-
-### Claude and other agents
-
-The same tools over MCP, so any AI agent can manage the accounts you give it. Coming soon.
-
-[Get bWalletX](https://bwalletx.com/get)
-[All features](https://bwalletx.com/features)
-
-Agent accounts are available now in bWalletX (Settings › Agents). Agent trading, the bWalletX CLI and MCP are coming next. Questions: [support@bwalletx.com](mailto:support@bwalletx.com)
-
----
-
 Source: https://bwalletx.com/android
 
 # bWalletX for Android
@@ -307,6 +248,10 @@ bWalletX only in bWalletX (Android, Chrome, web). Everything else is also in [bW
 
 Balances and prices in USD; you pay in sats. Live price chart.
 
+### Buy BSV
+
+Buy with a card from inside the wallet, in dollars, sent straight to your address. [How](https://bwalletx.com/buy).
+
 ### Send to names
 
 Pay a paymail like `name@bwalletx.com` instead of a long address.
@@ -395,23 +340,31 @@ Private chats with your contacts.
 
 ### Voice and video calls
 
-Call friends straight from the wallet.
+Call friends straight from the wallet. Turn your camera on or off mid-call and flip between front and back.
 
 ### BountiesbWalletX
 
 Post paid tasks in a token room and pay out from your wallet when they're done.
 
-### Feed
+### One feed for BSV social
 
-On-chain posts from BSV social apps, with bookmarks.
+Twetch, Treechat and bChat posts in one timeline, with full-size images, source badges and bookmarks. Twetch first by default.
 
 ### Lock to like
 
 Back a post by time-locking your own BSV against it, plus a most-locked leaderboard.
 
-### Notifications
+### Push notifications
 
-Payments, messages and room activity, with per-category controls.
+DMs always reach you; groups only when you're mentioned, or set each room's bell to All, Mentions or Off. Previews off by default, plus quiet hours. On iPhone, Android, the web and Chrome. [More](https://bwalletx.com/push).
+
+### $b in every room
+
+Type `/b` in any chat and bWalletX's own assistant answers there, day or night. `/b` on its own lists the commands.
+
+### bWallet Lounge
+
+The community room on [bChat](https://www.bitcoinchat.online/room/LOUNGE): ask questions, meet other users, talk to the team.
 
 ## 📈Market and media
 
@@ -460,6 +413,24 @@ Scan a site's QR with your phone to connect it, and see or remove paired sites.
 ### b agent
 
 A help assistant with your own AI key, or pay per message from the wallet.
+
+## 👻Agents
+
+### Agent accountsbWalletX
+
+Give an AI its own account with a budget and a daily cap. Each one gets a little pixel ghost in its own colour, on the card and as its avatar. [How it works](https://bwalletx.com/agent).
+
+### Stop allbWalletX
+
+One tap freezes every agent; a stopped agent can't spend. Every action is logged in dollars.
+
+### bAgentsbWalletX
+
+The ghost house: see all your agents, their balances and spending today, and stop or resume them. At [agents.bwalletx.com](https://agents.bwalletx.com).
+
+### CLI and MCP
+
+Pair a computer or Claude to an agent account with `npx bwalletx`. [CLI](https://bwalletx.com/cli) · [MCP](https://bwalletx.com/mcp).
 
 ## 🔐Security
 
@@ -644,6 +615,8 @@ Mint, trade and chat in one non-custodial app. Send to names, browse 180+ BSV-21
 store and play your on-chain media.
 
 Android · Download APK (beta)v5.1.71 beta · sideload[iPhone · Web appInstall from Safari · no App StoreChrome · Download extensionv5.1.71 beta · zip + install steps
+
+▶Watch the explainer · 1 min
 
 Download on theApp StorebWallet · coming soonGET IT ONGoogle PlaybWallet · coming soon
 
@@ -881,6 +854,30 @@ bWallet is our App Store edition: send, receive, tokens, names and rooms, with t
 [Other devices](https://bwalletx.com/get)
 
 Questions: [support@bwalletx.com](mailto:support@bwalletx.com)
+
+---
+
+Source: https://bwalletx.com/lounge
+
+# bWallet Lounge
+
+The Lounge is where bWallet and bWalletX people talk. Ask a question, share an idea, tell us what's broken. The team is in there too.
+
+[Open the Lounge on bChat](https://www.bitcoinchat.online/room/LOUNGE)
+
+## What it is
+
+It's a group chat room on bChat, ticker LOUNGE. Anyone can come in and read along. Sign in with bWalletX and you can join the conversation.
+
+Stuck at 2am and nobody's around? Type `/b` followed by your question and the $b assistant answers, any time of day.
+
+## How to join
+
+- Open [bitcoinchat.online/room/LOUNGE](https://www.bitcoinchat.online/room/LOUNGE).
+
+- Sign in with bWalletX, or with X or Google.
+
+- Say hi.
 
 ---
 
@@ -1206,6 +1203,24 @@ MMNEEStablecoin0.00
 WalletExchangeAppsMediaChat
 
 bwalletx.com/iphone · web app · beta
+
+---
+
+Source: https://bwalletx.com/media-src/og/og-lounge
+
+-
+
+bChat
+
+# bWallet
+Lounge
+
+Talk to the team and other bWallet people · /b answers anytime
+
+bwalletx.com/lounge · open to everyone
+
+bWallet Lounge
+$LOUNGE
 
 ---
 
@@ -2007,6 +2022,160 @@ Call anyone with a name, straight from the wallet. Calls are signed by your wall
 [All features](https://bwalletx.com/features)
 
 bWalletX is in beta and some room rules are still being rolled out. Tokens can lose all value. Questions: [support@bwalletx.com](mailto:support@bwalletx.com)
+
+---
+
+Source: https://bwalletx.com/video
+
+# bWalletX in one minute
+
+Create a wallet, back it up, keep your money in dollars, trade on the Exchange, add apps, join group chats
+and meet b, your AI agent.
+
+Female voiceMale voice
+
+Get bWalletXAndroid · iPhone · Chrome · WebOpen the web walletNo install
+
+---
+
+Source: https://bwalletx.com/agent
+
+# The b agent
+
+The b agent is the AI assistant built into bWalletX. Tap the b in the centre of the top bar to chat with it: it knows how the wallet works, helps you design strategies, and in chat rooms you can call it in with `/b`.
+
+### Looking for agent accounts: AIs with their own wallet?
+
+Separate accounts that an AI runs for you, each with its own budget and its own ghost. [Agent accounts →](https://bwalletx.com/agents)
+
+## Two ways to use it
+
+### Your own key
+
+Add an API key for Anthropic, OpenAI or OpenRouter. It stays in secure storage on your device and requests go straight from your phone to that provider. We don't see them. This is the more private option.
+
+### Pay per message
+
+The wallet gets a quote, pays in BSV and gets the answer, with a daily limit. The price is set in US dollars and converted to sats at quote time.
+
+## In chats: /b
+
+Type `/b` followed by your question in a chat room and the b agent answers there, paid in $b.
+
+## What it can do
+
+Explain a feature
+Create a strategy
+Trade with a strategy
+Buy or sell one
+
+It has the wallet's usage guide as its system prompt, so it can explain features. In an agent account it can act, buying and sending, but only through the strategy rules the wallet enforces, never on its own judgement. [How strategies work →](https://bwalletx.com/strategies)
+
+## Privacy and consent
+
+Before the first message to each provider, a consent sheet shows what is sent (your message and the last 8 turns) and what isn't. You can revoke consent in Settings. The agent refuses input that looks like a recovery phrase or private key, and it has no long-term memory, by design.
+
+[Get bWalletX](https://bwalletx.com/get)
+[Agent accounts](https://bwalletx.com/agents)
+
+The store builds use your own key only. The story so far: [009 The b agent: paid, or your own key](https://bwalletx.com/blog/009-the-b-agent). Questions: [support@bwalletx.com](mailto:support@bwalletx.com)
+
+---
+
+Source: https://bwalletx.com/agents
+
+# Agent accounts: every AI gets its own ghost
+
+An agent account is a separate wallet account that an AI runs for you, with its own keys and its own budget. It trades, sends and reports inside the limits you set, and you can stop it or sweep everything back any time.
+
+### Looking for the b agent?
+
+The assistant you chat with inside the wallet is the b agent. [The b agent →](https://bwalletx.com/agent)
+
+Traderrunning
+Slow accumulator · cap $20/day
+$120.00
+
+Treasurerrunning
+Tops up the other agents
+$64.25
+
+Reporterread only
+Daily summary to chat
+$0.00
+
+Scoutstopped
+$HANDLE fund · paused by you
+$18.90
+
+## The ghost is the agent's face
+
+Make an account an agent account and it gets a pixel ghost in its own colour. It shows on the wallet card when that account is selected and is the account's avatar everywhere: the account menu, Settings and chat. One look tells you which agent you're in.
+
+1st
+
+2nd
+
+3rd
+
+4th
+
+5th
+
+6th
+
+7th
+
+8th
+
+## What an agent account can do
+
+### Spend only its budget
+
+Its balance is all it can ever spend. Fund it from any of your accounts in one tap; your other accounts are never touched.
+
+### Follow a strategy
+
+Agree the rules in plain words, or load a strategy, and it trades by those rules and nothing else. [Strategies →](https://bwalletx.com/strategies)
+
+### Show its work
+
+An activity log lists every action, with links to the transactions. Add labels and an optional daily spending cap in dollars.
+
+### Stop on your word
+
+Stop one agent or Stop all agents. A stopped account refuses every spend until you resume it, and Sweep back moves every token, NFT and all the BSV home.
+
+## Many agents
+
+Run one AI per account, or one across several. A Trader on two strategy accounts, a Treasurer that tops them up, a Reporter that only reads: each sees only the accounts you give it.
+
+## bAgents
+
+bAgents is the home for agents on bWalletX: browse, set up and manage the AIs that run your agent accounts. [agents.bwalletx.com →](https://agents.bwalletx.com)
+
+## Pair a computer, or Claude
+
+The bWalletX CLI runs agent accounts on a laptop or a server. Pair it with your phone so the phone signs every request, or export an agent account's key file to run unattended. Every spend is checked first: the kill switch, the daily cap, at most 30 spends an hour, then the strategy's rules.
+
+`# install (Node 20+)
+npm i -g bwalletx
+bwalletx login --account phone # scan the QR in your agent account
+bwalletx agent run trader # run its strategy
+bwalletx stop # kill switch
+# Claude Code, over MCP
+claude mcp add bwalletx -- npx -y bwalletx mcp`
+
+Over MCP, Claude, ChatGPT, Cursor or any agent can manage the agent accounts you give it, within the same limits as the app. An AI can only load strategies on paper: going live is a step you take yourself. [CLI guide →](https://bwalletx.com/cli) · [MCP guide →](https://bwalletx.com/mcp)
+
+## Start in a minute
+
+In bWalletX, open the account menu and tap Add agent account, or go to Settings › Agents. Move in a small budget, give it a strategy, and its ghost appears on the card.
+
+[Get bWalletX](https://bwalletx.com/get)
+[Agents in the web wallet](https://web.bwalletx.com/agents)
+
+Agent accounts spend real money: start with small amounts. Questions: [support@bwalletx.com](mailto:support@bwalletx.com)
 
 ---
 
@@ -3118,7 +3287,81 @@ These posts were written from the git history of the wallet, this site, the chat
 
 Related: [Home](https://bwalletx.com/) · [Features](https://bwalletx.com/features) · [Developers](https://bwalletx.com/developers)
 
-[← 012 The extension, the web app and pairing](https://bwalletx.com/blog/012-extension-and-web)[All posts →](https://bwalletx.com/blog)
+[← 012 The extension, the web app and pairing](https://bwalletx.com/blog/012-extension-and-web)[014 One feed for BSV →](https://bwalletx.com/blog/014-open-feed)
+
+---
+
+Source: https://bwalletx.com/blog/014-open-feed
+
+[Development blog](https://bwalletx.com/blog) · 014 · 6 Oct 2026
+
+# One feed for BSV
+
+Every BSV social app keeps its own feed. bChat shows all of them, credits them, and pays the people who wrote the posts.
+
+## The odd thing about BSV social apps
+
+Everything you post on Twetch, Treechat, Peck or Fwetch goes on-chain. It's public. Anyone can read it.
+
+And yet each app only shows its own posts. You need a separate app, account and wallet for each one, and a writer on one app never reaches the readers on another.
+
+That's a Web2 habit. On Twitter or Reddit the company owns the posts, so walling them in makes sense for the company. On BSV nobody owns the posts except the people who wrote them. The walls are only around the indexers.
+
+## What bChat does
+
+[bitcoinchat.online/feed](https://www.bitcoinchat.online/feed) shows posts from Twetch, Treechat, Peck, Fwetch and bChat in one timeline.
+
+- Every post has a badge saying where it came from, and a link back to the original.
+
+- You can like, reply and tip from bChat. Your reply is a bChat post that points at the original; we never post as another app.
+
+- Tips go straight to the author's own address. bChat takes nothing.
+
+## Authors first
+
+The rule we've written down is simple: a post belongs to the person who wrote it, not to the app they wrote it in.
+
+- Any app can show any author's post, with credit and a link home.
+
+- Authors get paid wherever their post is read.
+
+- If an author hides their own post (a signed "hide" from the same key), every app that follows the spec hides it.
+
+- An app can't stop another app showing public posts. If it wants something kept private, it can keep it off-chain.
+
+## Apps get paid too
+
+When a bChat user tips a post that came from another app, bChat adds 5% on top for that app, in the same transaction. The author still gets the full tip.
+
+So a $0.05 tip on a Treechat post pays the author $0.05 and Treechat $0.0025. Treechat earns from its posts being read in bChat without doing anything.
+
+That's the bit I think the other apps haven't seen yet. Syndication isn't someone taking your content. It's your content earning in more places.
+
+## What we need from the other apps
+
+Two small things:
+
+- A payment address for each author on each post. Some apps post everything from one shared address, so a tip can't reach the right person. That's why tips on Treechat posts are switched off in bChat for now.
+
+- A payment address for the app itself, for the 5% share.
+
+And if they want to show bChat posts back, with a bChat badge, it's one line of code.
+
+## Join
+
+The format is an open spec: [bitcoinchat.online/docs/feed-protocol](https://www.bitcoinchat.online/docs/feed-protocol)
+
+There's a free public indexer and a drop-in embed:
+
+``<script src="https://www.bitcoinchat.online/embed/feed.js" data-source="all"></script>``
+
+If you build a BSV app with a feed, come and talk to us in the [bWallet Lounge on bChat](https://www.bitcoinchat.online/room/LOUNGE), or email [support@bwalletx.com](mailto:support@bwalletx.com).
+
+— Richard
+
+Related: [Social](https://bwalletx.com/social) · [Developers](https://bwalletx.com/developers) · [003 Tabs, apps and a social feed](https://bwalletx.com/blog/003-tabs-apps-feed)
+
+[← 013 Two sites from one](https://bwalletx.com/blog/013-sites-and-navigation)[All posts →](https://bwalletx.com/blog)
 
 ---
 
@@ -3129,6 +3372,10 @@ Source: https://bwalletx.com/blog/
 How bWallet and bWalletX were built, one chapter at a time. Every post is written from the git history of the wallet, this site, the chat server and the PNEEs prototype. It covers what we built, why, what broke, what we reversed and what is still not done.
 
 Newest first. Dates come from commits. bWallet is a fork of [Yours Wallet](https://github.com/yours-org/yours-wallet) (MIT licence).
+
+- 014 · 6 Oct 2026
+[One feed for BSV](https://bwalletx.com/blog/014-open-feed)
+Every BSV social app keeps its own feed. bChat shows all of them, credits them, and pays the people who wrote the posts.
 
 - 013 · 29 Sep – 5 Oct 2026
 [Two sites from one](https://bwalletx.com/blog/013-sites-and-navigation)
@@ -3190,17 +3437,22 @@ Source: https://bwalletx.com/privacy
 
 # Privacy Policy
 
-bWalletX (Beta) · Effective 1 October 2026
+bWalletX (Beta) · Effective 6 October 2026
 
 bWalletX is published by The Bitcoin Corporation Ltd and is based on the open-source Yours Wallet (MIT licence).
-It is not made, reviewed or endorsed by the Yours Wallet authors, and this policy covers only the bWalletX mobile
-app.
+It is not made, reviewed or endorsed by the Yours Wallet authors. This policy covers bWalletX (the full-feature
+app, Chrome extension and web wallet) and bWallet, the edition on the App Store and Google Play.
 
 ## Summary
 
-bWalletX is non-custodial. We run no servers for the app and don't operate accounts. We don't collect your name,
-email, contacts, location, advertising identifiers, analytics or crash reports. Your private keys and recovery
-phrase never leave your device.
+bWalletX is non-custodial: your private keys and recovery phrase never leave your device, and we can't move your
+money. To run chat, names, contacts and calls, our own service (bit-sign, operated by The Bitcoin Corporation
+Ltd) keeps the data listed under
+[What our service keeps](#service), linked to your wallet's identity key. If you use bChat on a
+phone, our push server also keeps your device's push token and notification settings so it can notify you (see
+[Notifications](#push)). We use all of this only to run those features. We don't collect your email
+(unless you choose Continue with Google), phone number, location, advertising identifiers, analytics or crash
+reports, and we don't track you, sell your data or use it for advertising.
 
 ## What stays on your device
 
@@ -3227,7 +3479,9 @@ metadata, not your private keys) are synced to a remote wallet storage service o
 
 -
 Blockchain services: address, balance, transaction and token lookups, and transaction broadcasts, go to
-BSV indexing services (1Sat APIs). Transaction links open on WhatsOnChain.
+BSV indexing services (1Sat APIs). Some address-history lookups (when you move funds in from another wallet),
+transaction checks and the BSV price history use the WhatsOnChain API, and transaction links open on
+WhatsOnChain. The BSV price comes from public price feeds.
 
 - Wallet messaging: wallet-to-wallet messages use `messagebox.1sat.app`.
 
@@ -3238,13 +3492,26 @@ and other bApps you open talk to their own services, which receive what you send
 
 -
 Names and payments to names: when you send to a $handle, paymail or OpNS name, or look up your own
-name, the app asks 1Sat indexers (including OpNS), bit-sign and HandCash paymail lookup services to resolve
-that name to a payment destination. Those services see the name being looked up.
+name, the app asks 1Sat indexers (including OpNS), bit-sign and the paymail service of the address's domain
+(for example HandCash for `@handcash.io`) to resolve that name to a payment destination. Those
+services see the name being looked up.
 
 -
 Market and Chat: token and NFT listings, media and token rooms are loaded from 1Sat indexers. The
 Market's safety filter runs as part of that loading; if you use Report, the item is hidden on your device and,
 where a review service is configured, the item reference is sent to us for review.
+
+-
+Feed: public on-chain posts are loaded from a public bmap indexer and from our own bChat indexer
+(`push.bwalletx.com/feed`). Posting puts your post on the public blockchain.
+
+-
+$b assistant (optional): nothing is sent until you allow it in the app. In bWallet from the App Store
+and Google Play, $b uses your own AI provider key (Anthropic, OpenAI or OpenRouter) and your message and the
+recent conversation go straight from your phone to that provider. In bWalletX's pay-per-message mode, they go
+to our server (bitcoinchat.online), which passes them to Anthropic; our server also sees the payment's
+transaction id and your bChat sign-in, and Anthropic does not. Your keys, balances, addresses, contacts, chats
+and files are never sent. You can withdraw consent in Settings › b agent.
 
 -
 Websites you open in the in-app browser receive the requests you make and the responses you approve.
@@ -3253,32 +3520,102 @@ They're governed by their own privacy policies.
 These services see your IP address and the public blockchain data needed to answer each request. Blockchain
 transactions are public by nature.
 
+## What our service keeps
+
+Chat, names, contacts and calls run on bit-sign (`bitcoinchat.online`), operated by The Bitcoin
+Corporation Ltd. When you use those features it stores:
+
+- Your identifiers: your wallet's identity key, your $handle and your paymail name.
+
+- Your name: the display name you choose.
+
+- Messages: chat-room and direct messages you send, and room posts.
+
+-
+Contacts: the contacts, friends and blocked users you keep in the app (not your phone's address book).
+
+- Other content you create: bookmarks, and items you report for review.
+
+-
+Wallet details for rooms and tickets: your wallet addresses and the token holdings needed to check
+access to token rooms and tickets.
+
+Calls connect your device directly to the other person's; the service only helps the two devices find each other
+and doesn't record calls. All of this is used only to provide these features. It is not shared with third
+parties except the hosting providers that run the service, and it is never used for advertising or tracking. You
+can delete your account and this data from Settings (Delete account), or by contacting us.
+
 ## Verified identity (KYC certificates)
 
 Identity verification is optional. If you choose to verify, you are sent to bit-sign, which uses Veriff to check
 your identity document. bit-sign and Veriff keep the verification record under their own privacy policies.
-bit-sign then issues a private certificate that is stored in your wallet on your device. bWalletX does not upload
-that certificate anywhere by itself: you choose which details, if any, to reveal to an app or service, and only
-when you approve it.
+bit-sign then issues a private certificate that is stored in your wallet on your device. bWalletX does not
+upload that certificate anywhere by itself: you choose which details, if any, to reveal to an app or service,
+and only when you approve it.
+
+## Continue with X or Google (bWalletX only)
+
+If you choose Continue with X or Continue with Google when creating an account, you sign in on X or Google in
+your browser and our sign-in service (the bWalletX paymail server, run by The Bitcoin Corporation Ltd) receives
+your X @name or Gmail address, your display name and your profile photo from them. The app uses these to fill in
+your name and photo and, if you claim it, to register a verified paymail such as
+`yourname.x@bwalletx.com`. We keep that registration so the paymail keeps working. We don't receive
+your X or Google password, and we don't post anything or read anything else from your account. This option isn't
+in bWallet from the App Store and Google Play.
 
 ## Notifications
 
-If you allow notifications, the app shows local alerts about incoming transactions. They're generated on your
-device; no push notification service is used.
+On-device alerts. If you allow notifications, the app shows local alerts about incoming transactions.
+They're generated on your device.
+
+Push notifications (bChat). When you're signed in to bChat, the app registers your device with our push
+server, `push.bwalletx.com`, run by The Bitcoin Corporation Ltd on a server we rent from Hetzner, so
+you can be told about room mentions and direct messages while the app is closed. On a phone this is on by
+default once you sign in to bChat, and your phone asks for permission first; in the web wallet and Chrome
+extension it stays off until you turn it on. To do this the app sends:
+
+- the device push token issued by your phone (or, in a browser, the Web Push subscription);
+
+- the platform (iOS, Android, web or extension), the app (bWallet or bWalletX) and its bundle id;
+
+- the bChat handle the device belongs to (your bChat sign-in);
+
+-
+your notification preferences: message previews, quiet hours and your time zone, which kinds of alerts you
+want, and per-room settings (All, Mentions or Off).
+
+We use this only to send you those notifications. The notification itself is delivered through Google Firebase
+Cloud Messaging (Android), Apple Push Notification service (iPhone) or your browser's push service, which
+receive the push token and the notification.
+Message previews are off by default: a notification then says only that you have something new, without
+the message text. If you turn previews on, the message text passes through those services to show it on your
+screen.
+
+Turn push off or change previews, quiet hours and alerts in Settings › Notifications › Push notifications, or in
+your phone's notification settings. Turning push off, signing out of bChat or switching to another account
+removes this device's registration from our push server; uninstalling the app makes its push token stop working.
 
 ## Testing waitlist (this website)
 
 If you join the testing waitlist on this website, we collect your email address, the phone platform you chose
 (iPhone, Android or Either), the time you signed up, and your browser's user-agent string (to help spot abuse).
-This is stored by The Bitcoin Corporation Ltd in our own database and is used only to invite you to test bWalletX
+This is stored by The Bitcoin Corporation Ltd in our own database and is used only to invite you to test bWallet
 and send testing updates. We do not sell it or share it for marketing. You can unsubscribe from any email, or
 ask us to delete your entry at any time using the contact details below.
 
 ## Your choices
 
-- You can delete all app data by signing out in Settings, or by uninstalling the app.
+- You can delete your account and the data our service keeps from Settings (Delete account).
+
+- You can delete all app data on your device by signing out in Settings, or by uninstalling the app.
 
 - You can turn biometric unlock off from the lock screen at any time.
+
+-
+You can turn push notifications and message previews off in Settings › Notifications, and remove this device's
+push registration by signing out of bChat.
+
+- You can withdraw consent for the $b assistant in Settings › b agent.
 
 - You can change the remote wallet storage provider in Settings → Wallet Backup.
 
@@ -3293,5 +3630,6 @@ We'll post changes to this policy on this page, and in the source repository at
 
 ## Contact
 
-Questions about this mobile app: open an issue at
+The Bitcoin Corporation Ltd:
+[support@bwalletx.com](mailto:support@bwalletx.com), or open an issue at
 [github.com/b0ase/yours-mobile/issues](https://github.com/b0ase/yours-mobile/issues).

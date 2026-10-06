@@ -52,7 +52,7 @@ for p in sorted(glob.glob(os.path.join(ROOT, '**', '*.html'), recursive=True)):
 def group(r):
     if r.startswith('blog/'): return 'Development blog'
     if r in ('privacy.html',): return 'Legal'
-    if r.split('/')[0].replace('.html', '') in ('developers', 'cli', 'mcp', 'apps', 'strategies'): return 'Developers and agents'
+    if r.split('/')[0].replace('.html', '') in ('developers', 'cli', 'mcp', 'apps', 'strategies', 'agent', 'agents'): return 'Developers and agents'
     return 'Product'
 
 order = ['Product', 'Developers and agents', 'Development blog', 'Legal']

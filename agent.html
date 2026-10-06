@@ -3,21 +3,21 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>bWalletX Agent Wallet</title>
-    <meta name="description" content="Give your AI agent a trading account and a strategy. It trades for you, inside the budget you set. Stop or sweep back any time." />
+    <title>The b agent · bWalletX</title>
+    <meta name="description" content="The b agent is the AI assistant inside bWalletX: ask how the wallet works, design strategies, or call it into a chat with /b. Use your own API key, or pay per message." />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://bwalletx.com/agent" />
     <meta property="og:site_name" content="bWalletX" />
-    <meta property="og:title" content="bWalletX: the agent wallet" />
-    <meta property="og:description" content="Give your AI agent a trading account and a strategy. It trades for you, inside the budget you set. Stop or sweep back any time." />
+    <meta property="og:title" content="The b agent: the AI assistant inside bWalletX" />
+    <meta property="og:description" content="The b agent is the AI assistant inside bWalletX: ask how the wallet works, design strategies, or call it into a chat with /b. Use your own API key, or pay per message." />
     <meta property="og:image" content="https://bwalletx.com/og-agent-v2.png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
-    <meta property="og:image:alt" content="Give your AI agent a trading account and a strategy. It trades for you, inside the budget you set. Stop or sweep back any time." />
+    <meta property="og:image:alt" content="The b agent is the AI assistant inside bWalletX: ask how the wallet works, design strategies, or call it into a chat with /b. Use your own API key, or pay per message." />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@bWalletX" />
-    <meta name="twitter:title" content="bWalletX: the agent wallet" />
-    <meta name="twitter:description" content="Give your AI agent a trading account and a strategy. It trades for you, inside the budget you set. Stop or sweep back any time." />
+    <meta name="twitter:title" content="The b agent: the AI assistant inside bWalletX" />
+    <meta name="twitter:description" content="The b agent is the AI assistant inside bWalletX: ask how the wallet works, design strategies, or call it into a chat with /b. Use your own API key, or pay per message." />
     <meta name="twitter:image" content="https://bwalletx.com/og-agent-v2.png" />
     <link rel="icon" href="/favicon.ico" />
     <link rel="stylesheet" href="/styles.css" />
@@ -42,7 +42,7 @@
       <div class="wrap topbar-in">
         <a class="brand" href="/"><img src="/logo.svg" alt="" width="34" height="30" /><span>bWallet<span class="gold">X</span></span></a>
         <nav aria-label="Pages">
-          <a href="/features">Features</a><a href="/exchange">Exchange</a><a href="/social">Social</a><a href="/agent">Agents</a><a href="/extension">Extension</a><a href="/developers">Developers</a>
+          <a href="/features">Features</a><a href="/exchange">Exchange</a><a href="/social">Social</a><a href="/agents">Agents</a><a href="/extension">Extension</a><a href="/developers">Developers</a>
         </nav>
         <span class="nav-cta"><a class="dl-btn" href="/get">Download</a><a class="web-btn" href="https://web.bwalletx.com" target="_blank" rel="noopener">Web &rarr;</a></span>
       </div>
@@ -50,37 +50,34 @@
     <script src="/nav.js"></script>
     <main class="ext">
       <img src="/logo.svg" alt="bWalletX" width="72" height="64" />
-      <h1>The <span class="gold">agent wallet</span></h1>
-      <p class="lede">Give your AI agent a trading account and a strategy, and it trades for you: buying, selling, sending and minting, inside the budget you set. Stop it or sweep everything back any time.</p>
+      <h1>The <span class="gold">b agent</span></h1>
+      <p class="lede">The b agent is the AI assistant built into bWalletX. Tap the b in the centre of the top bar to chat with it: it knows how the wallet works, helps you design strategies, and in chat rooms you can call it in with <code>/b</code>.</p>
+      <div class="box" style="border-color:#F5B80055"><h3>Looking for agent accounts: AIs with their own wallet?</h3><p>Separate accounts that an AI runs for you, each with its own budget and its own ghost. <a href="/agents">Agent accounts &rarr;</a></p></div>
+
+      <h2>Two ways to use it</h2>
+      <div class="box"><h3>Your own key</h3><p>Add an API key for Anthropic, OpenAI or OpenRouter. It stays in secure storage on your device and requests go straight from your phone to that provider. We don't see them. This is the more private option.</p></div>
+      <div class="box"><h3>Pay per message</h3><p>The wallet gets a quote, pays in BSV and gets the answer, with a daily limit. The price is set in US dollars and converted to sats at quote time.</p></div>
+
+      <h2>In chats: /b</h2>
+      <p>Type <code>/b</code> followed by your question in a chat room and the b agent answers there, paid in <b>$b</b>.</p>
+
+      <h2>What it can do</h2>
       <div class="flow">
-        <span class="pill">Fund a trading account</span><span class="arrow">&rarr;</span>
-        <span class="pill">Load a strategy</span><span class="arrow">&rarr;</span>
-        <span class="pill">Your agent trades</span>
+        <span class="pill">Explain a feature</span>
+        <span class="pill">Create a strategy</span>
+        <span class="pill">Trade with a strategy</span>
+        <span class="pill">Buy or sell one</span>
       </div>
+      <p>It has the wallet's usage guide as its system prompt, so it can explain features. In an agent account it can act, buying and sending, but only through the strategy rules the wallet enforces, never on its own judgement. <a href="/strategies">How strategies work &rarr;</a></p>
 
-      <h2>Agent accounts</h2>
-      <p>An agent account is a separate account with its own keys. You decide how much goes in; that balance is all an agent can ever spend. Your other accounts are never touched.</p>
-      <div class="box"><h3>Fund it</h3><p>Move BSV or tokens in from any of your accounts, in one tap.</p></div>
-      <div class="box"><h3>Stop it</h3><p>Stop one agent account, or <b>Stop all agents</b> at once. Stopped accounts refuse every agent action until you resume them.</p></div>
-      <div class="box"><h3>Sweep back</h3><p>Move every token, NFT and all the BSV back to another account in one go.</p></div>
-      <div class="box"><h3>See everything</h3><p>An activity log lists every action an agent took, with links to the transactions. Add an optional daily spending cap and labels like "long-term" or "$HANDLE fund".</p></div>
-
-      <h2>Many agents</h2>
-      <p>Run one agent per account, or one agent across several. A Trader on two strategy accounts, a Treasurer that tops them up, a Reporter that only reads: each sees only the accounts you give it.</p>
-
-      <h2>Strategies</h2>
-      <p>Agree a strategy with your agent in plain words, and it follows that strategy and nothing else. Make your own in chat, or buy one. <a href="/strategies">How strategies work &rarr;</a></p>
-
-      <h2>Everywhere you work</h2>
-      <div class="box"><h3>In the app</h3><p>The b agent chats with you, designs strategies and runs them.</p></div>
-      <div class="box"><h3>bWalletX CLI</h3><p>Run your agents from the command line, on your laptop or a server. <span class="small">Coming soon.</span></p></div>
-      <div class="box"><h3>Claude and other agents</h3><p>The same tools over MCP, so any AI agent can manage the accounts you give it. <span class="small">Coming soon.</span></p></div>
+      <h2>Privacy and consent</h2>
+      <p>Before the first message to each provider, a consent sheet shows what is sent (your message and the last 8 turns) and what isn't. You can revoke consent in Settings. The agent refuses input that looks like a recovery phrase or private key, and it has no long-term memory, by design.</p>
 
       <div class="row">
         <a class="btn btn-store" href="/get">Get bWalletX</a>
-        <a class="btn btn-store btn-ghost" href="/features">All features</a>
+        <a class="btn btn-store btn-ghost" href="/agents">Agent accounts</a>
       </div>
-      <p class="small">Agent accounts are available now in bWalletX (Settings &rsaquo; Agents). Agent trading, the bWalletX CLI and MCP are coming next. Questions: <a href="mailto:support@bwalletx.com">support@bwalletx.com</a></p>
+      <p class="small">The store builds use your own key only. The story so far: <a href="/blog/009-the-b-agent">009 The b agent: paid, or your own key</a>. Questions: <a href="mailto:support@bwalletx.com">support@bwalletx.com</a></p>
     </main>
   </body>
 </html>
