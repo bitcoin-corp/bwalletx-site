@@ -59,7 +59,7 @@ The same tools over MCP, so any AI agent can manage the accounts you give it. Co
 [Get bWalletX](https://bwalletx.com/get)
 [All features](https://bwalletx.com/features)
 
-Agent accounts are available now in bWalletX (Settings › Agents). Agent trading, the bWalletX CLI and MCP are coming next. Questions: [bitcoincorp11@gmail.com](mailto:bitcoincorp11@gmail.com)
+Agent accounts are available now in bWalletX (Settings › Agents). Agent trading, the bWalletX CLI and MCP are coming next. Questions: [support@bwalletx.com](mailto:support@bwalletx.com)
 
 ---
 
@@ -166,7 +166,7 @@ Buy and sell tokens, priced in dollars.
 [Get bWalletX](https://bwalletx.com/get)
 [All features](https://bwalletx.com/features)
 
-bWalletX is in beta: test with small amounts. Questions: [bitcoincorp11@gmail.com](mailto:bitcoincorp11@gmail.com)
+bWalletX is in beta: test with small amounts. Questions: [support@bwalletx.com](mailto:support@bwalletx.com)
 
 ---
 
@@ -483,7 +483,7 @@ Generate a strong password and change it anytime.
 
 Remove your paymail, profile and messages from our servers whenever you like.
 
-Some features are still in beta and vary by platform. Questions: [bitcoincorp11@gmail.com](mailto:bitcoincorp11@gmail.com)
+Some features are still in beta and vary by platform. Questions: [support@bwalletx.com](mailto:support@bwalletx.com)
 
 ---
 
@@ -545,7 +545,7 @@ The Friends tab in your wallet is your address book: people you've paid, called,
 [Chrome extension](https://bwalletx.com/extension)
 [All features](https://bwalletx.com/features)
 
-bWalletX is in beta and some room rules are still being rolled out. Tokens can lose all value. Questions: [bitcoincorp11@gmail.com](mailto:bitcoincorp11@gmail.com)
+bWalletX is in beta and some room rules are still being rolled out. Tokens can lose all value. Questions: [support@bwalletx.com](mailto:support@bwalletx.com)
 
 ---
 
@@ -630,7 +630,7 @@ Signing in with Google proves the name. Your 12-word recovery phrase is still th
 [Social in bWalletX](https://bwalletx.com/social)
 [Privacy](https://bwalletx.com/privacy)
 
-Sign in with Google and X are in bWalletX. The App Store and Google Play version, bWallet, doesn't have them yet. Questions: [bitcoincorp11@gmail.com](mailto:bitcoincorp11@gmail.com)
+Sign in with Google and X are in bWalletX. The App Store and Google Play version, bWallet, doesn't have them yet. Questions: [support@bwalletx.com](mailto:support@bwalletx.com)
 
 ---
 
@@ -880,7 +880,7 @@ bWallet is our App Store edition: send, receive, tokens, names and rooms, with t
 [Open web.bwalletx.com](https://web.bwalletx.com)
 [Other devices](https://bwalletx.com/get)
 
-Questions: [bitcoincorp11@gmail.com](mailto:bitcoincorp11@gmail.com)
+Questions: [support@bwalletx.com](mailto:support@bwalletx.com)
 
 ---
 
@@ -1752,7 +1752,7 @@ Yes. bWalletX runs on [Android](https://bwalletx.com/android), [iPhone](https://
 [Get bWalletX](https://bwalletx.com/get)
 [All features](https://bwalletx.com/features)
 
-bWalletX is in beta: test with small amounts. Questions: [bitcoincorp11@gmail.com](mailto:bitcoincorp11@gmail.com)
+bWalletX is in beta: test with small amounts. Questions: [support@bwalletx.com](mailto:support@bwalletx.com)
 
 ---
 
@@ -1815,7 +1815,7 @@ The vault contract can’t yet see by itself that notes were really burned, so f
 [Exchange › Bonds](https://bwalletx.com/exchange)
 [Get bWalletX](https://bwalletx.com/get)
 
-PNEEs are an experiment. Don’t put in more than you can lose. Questions: [bitcoincorp11@gmail.com](mailto:bitcoincorp11@gmail.com)
+PNEEs are an experiment. Don’t put in more than you can lose. Questions: [support@bwalletx.com](mailto:support@bwalletx.com)
 
 ---
 
@@ -1878,7 +1878,7 @@ The vault contract can’t yet see by itself that notes were really burned, so f
 [Exchange › Bonds](https://bwalletx.com/exchange)
 [Get bWalletX](https://bwalletx.com/get)
 
-PNEEs are an experiment. Don’t put in more than you can lose. Questions: [bitcoincorp11@gmail.com](mailto:bitcoincorp11@gmail.com)
+PNEEs are an experiment. Don’t put in more than you can lose. Questions: [support@bwalletx.com](mailto:support@bwalletx.com)
 
 ---
 
@@ -1948,7 +1948,7 @@ Call anyone with a name, straight from the wallet. Calls are signed by your wall
 [Chrome extension](https://bwalletx.com/extension)
 [All features](https://bwalletx.com/features)
 
-bWalletX is in beta and some room rules are still being rolled out. Tokens can lose all value. Questions: [bitcoincorp11@gmail.com](mailto:bitcoincorp11@gmail.com)
+bWalletX is in beta and some room rules are still being rolled out. Tokens can lose all value. Questions: [support@bwalletx.com](mailto:support@bwalletx.com)
 
 ---
 
@@ -1995,7 +1995,7 @@ We use your site's own icon and title. Add an `apple-touch-icon` for the best ti
 
 Apps open in bWallet's built-in browser with the wallet available to them. See [Developers](https://bwalletx.com/developers) to request payments, sign in with a wallet and read tokens.
 
-Questions: [bitcoincorp11@gmail.com](mailto:bitcoincorp11@gmail.com)
+Questions: [support@bwalletx.com](mailto:support@bwalletx.com)
 
 ---
 
@@ -2059,7 +2059,7 @@ Free example strategies and the file format: [Strategies](https://bwalletx.com/s
 [Agent wallet](https://bwalletx.com/agent)
 [Developers](https://bwalletx.com/developers)
 
-Questions: [bitcoincorp11@gmail.com](mailto:bitcoincorp11@gmail.com)
+Questions: [support@bwalletx.com](mailto:support@bwalletx.com)
 
 ---
 
@@ -2135,7 +2135,7 @@ BRC-100 wallets don't hand sites the user's main receive address. `identityKey` 
 
 Connect with bWalletX
 
-Questions: [bitcoincorp11@gmail.com](mailto:bitcoincorp11@gmail.com) · Source: [connect.js](https://bwalletx.com/connect.js)
+Questions: [support@bwalletx.com](mailto:support@bwalletx.com) · Source: [connect.js](https://bwalletx.com/connect.js)
 
 ---
 
@@ -2195,7 +2195,7 @@ Coming: selling, listing and minting. Source: [github.com/b0ase/bwalletx-cli](ht
 [Agent wallet](https://bwalletx.com/agent)
 [Developers](https://bwalletx.com/developers)
 
-Questions: [bitcoincorp11@gmail.com](mailto:bitcoincorp11@gmail.com)
+Questions: [support@bwalletx.com](mailto:support@bwalletx.com)
 
 ---
 
@@ -2294,7 +2294,7 @@ Strategies are programs written and sold by users. bWalletX doesn't review, rate
 [Get bWalletX](https://bwalletx.com/get)
 [All features](https://bwalletx.com/features)
 
-Strategies and Exchange › Strategies are live in bWalletX 5.1.39. Questions: [bitcoincorp11@gmail.com](mailto:bitcoincorp11@gmail.com)
+Strategies and Exchange › Strategies are live in bWalletX 5.1.39. Questions: [support@bwalletx.com](mailto:support@bwalletx.com)
 
 ---
 
@@ -2444,7 +2444,7 @@ Strategies are programs written and sold by users. bWalletX doesn't review, rate
 [Strategies](https://bwalletx.com/strategies)
 [CLI](https://bwalletx.com/cli)
 
-The CLI uses the same format: `bwalletx strategy load file.json`. Source: [github.com/b0ase/bwalletx-cli](https://github.com/b0ase/bwalletx-cli). Questions: [bitcoincorp11@gmail.com](mailto:bitcoincorp11@gmail.com)
+The CLI uses the same format: `bwalletx strategy load file.json`. Source: [github.com/b0ase/bwalletx-cli](https://github.com/b0ase/bwalletx-cli). Questions: [support@bwalletx.com](mailto:support@bwalletx.com)
 
 ---
 
