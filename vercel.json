@@ -41,7 +41,7 @@
     {
       "source": "/watch",
       "destination": "/video",
-      "permanent": true
+      "statusCode": 301
     }
   ]
 }
