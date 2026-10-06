@@ -72,6 +72,7 @@ Full text of every page: https://bwalletx.com/llms-full.txt
 - [Mint with bWalletX](https://bwalletx.com/mint): Mint your art, music, films, books, tickets, coins and contracts on Bitcoin SV with bWalletX. What you can make, what it costs, and what to watch out for.
 - [PNEEs: Penny Stablecoins](https://bwalletx.com/pnee): PNEEs (Penny Stablecoins): digital pennies on BSV, one US cent each, backed only by BSV locked in public vaults. No bank, no co-signer on transfers, no freeze. Live mainnet pilot.
 - [PNEEs: Penny Stablecoins](https://bwalletx.com/pnees): PNEEs (Penny Stablecoins): digital pennies on BSV, one US cent each, backed only by BSV locked in public vaults. No bank, no co-signer on transfers, no freeze. Live mainnet pilot.
+- [Push notifications (coming soon) · bWalletX](https://bwalletx.com/push-notifications): Push notifications for bWalletX are coming soon: messages, mentions, payments and calls on iPhone, Android, web and the Chrome extension, even with the app closed. Who messaged you, not what they wrote.
 - [bWalletX Social](https://bwalletx.com/social): Your handle is your paymail, your token and your chat room. Sign in with X or Google, hold friends’ tokens, chat in token rooms, post to the Feed, call and pay friends.
 
 ## Developers and agents
