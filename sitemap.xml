@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://bwalletx.com/adult</loc></url>
   <url><loc>https://bwalletx.com/agent</loc></url>
   <url><loc>https://bwalletx.com/android</loc></url>
   <url><loc>https://bwalletx.com/apps/add</loc></url>
@@ -27,11 +26,10 @@
   <url><loc>https://bwalletx.com/features</loc></url>
   <url><loc>https://bwalletx.com/friends</loc></url>
   <url><loc>https://bwalletx.com/get</loc></url>
+  <url><loc>https://bwalletx.com/gmail</loc></url>
   <url><loc>https://bwalletx.com/</loc></url>
   <url><loc>https://bwalletx.com/iphone</loc></url>
   <url><loc>https://bwalletx.com/mcp</loc></url>
-  <url><loc>https://bwalletx.com/media-src/og/og-adult</loc></url>
-  <url><loc>https://bwalletx.com/media-src/og/og-adult3</loc></url>
   <url><loc>https://bwalletx.com/media-src/og/og-agent-v2</loc></url>
   <url><loc>https://bwalletx.com/media-src/og/og-agent</loc></url>
   <url><loc>https://bwalletx.com/media-src/og/og-apps-add</loc></url>
@@ -41,6 +39,7 @@
   <url><loc>https://bwalletx.com/media-src/og/og-dev</loc></url>
   <url><loc>https://bwalletx.com/media-src/og/og-exchange-v2</loc></url>
   <url><loc>https://bwalletx.com/media-src/og/og-exchange-v3</loc></url>
+  <url><loc>https://bwalletx.com/media-src/og/og-exchange-v4</loc></url>
   <url><loc>https://bwalletx.com/media-src/og/og-exstrat</loc></url>
   <url><loc>https://bwalletx.com/media-src/og/og-friends</loc></url>
   <url><loc>https://bwalletx.com/media-src/og/og-friends5</loc></url>
