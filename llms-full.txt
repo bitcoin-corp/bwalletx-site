@@ -255,12 +255,12 @@ Source: https://bwalletx.com/extension
 
 The full bWalletX wallet in Chrome's side panel, and a wallet websites like TokenBlaster can connect to. Your keys stay in the extension.
 
-[Download for Chrome (beta) ↓](https://bwalletx.com/download/bwalletx-extension-5.1.70.zip)
-[Download for Brave (beta) ↓](https://bwalletx.com/download/bwalletx-extension-5.1.70.zip)
+[Download for Chrome (beta) ↓](https://bwalletx.com/download/bwalletx-extension-5.1.71.zip)
+[Download for Brave (beta) ↓](https://bwalletx.com/download/bwalletx-extension-5.1.71.zip)
 
 It isn't on the Chrome Web Store yet, so install it by hand:
 
-- Unzip `bwalletx-extension-5.1.70.zip`.
+- Unzip `bwalletx-extension-5.1.71.zip`.
 
 - Open `chrome://extensions` in Chrome.
 
@@ -274,7 +274,7 @@ It isn't on the Chrome Web Store yet, so install it by hand:
 
 Same extension, same file. Brave runs Chrome extensions, so:
 
-- Unzip `bwalletx-extension-5.1.70.zip`.
+- Unzip `bwalletx-extension-5.1.71.zip`.
 
 - Open `brave://extensions` in Brave.
 
@@ -2131,7 +2131,7 @@ One script gives your site a standard BRC-100 wallet. No API keys, no sign-up, a
 
 Install the wallet you'll connect to (version 5.1.70 beta). Checksums are on each download page.
 
-- [Chrome / Brave extension (zip)](https://bwalletx.com/download/bwalletx-extension-5.1.70.zip) · [install steps](https://bwalletx.com/extension)
+- [Chrome / Brave extension (zip)](https://bwalletx.com/download/bwalletx-extension-5.1.71.zip) · [install steps](https://bwalletx.com/extension)
 
 - [Android APK](https://bwalletx.com/download/bwalletx-android-5.1.70.apk) · [install steps](https://bwalletx.com/android)
 
