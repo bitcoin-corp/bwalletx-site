@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>015 Launchpad, and checking what we sign · bWalletX blog</title>
+    <meta name="description" content="bWalletX 5.1.74 can buy and sell bonding-curve coins. The wallet now checks every trade the server prepares before it signs anything." />
+    <link rel="canonical" href="https://bwalletx.com/blog/015-launchpad" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://bwalletx.com/blog/015-launchpad" />
+    <meta property="og:site_name" content="bWalletX" />
+    <meta property="og:title" content="Launchpad, and checking what we sign" />
+    <meta property="og:description" content="bWalletX 5.1.74 can buy and sell bonding-curve coins. The wallet now checks every trade the server prepares before it signs anything." />
+    <meta property="og:image" content="https://bwalletx.com/og/og-blog-015.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@bWalletX" />
+    <meta name="twitter:title" content="Launchpad, and checking what we sign" />
+    <meta name="twitter:description" content="bWalletX 5.1.74 can buy and sell bonding-curve coins. The wallet now checks every trade the server prepares before it signs anything." />
+    <meta name="twitter:image" content="https://bwalletx.com/og/og-blog-015.png" />
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="stylesheet" href="/styles.css" />
+    <style>
+      .ext { max-width: 760px; margin: 0 auto; padding: 120px 20px 80px; }
+      .ext h1 { font-size: clamp(2rem, 6vw, 3rem); margin: 10px 0 10px; line-height: 1.15; }
+      .ext h2 { margin: 44px 0 10px; font-size: 1.4rem; }
+      .ext p, .ext li { line-height: 1.7; }
+      .ext code { background: #17191e; padding: 2px 7px; border-radius: 6px; overflow-wrap: anywhere; }
+      .ext a { overflow-wrap: anywhere; }
+      .meta { color: #8a8a86; font-size: 0.9rem; margin: 0; }
+      .num { color: #F5B800; font-weight: 700; letter-spacing: .04em; }
+      .box { background: #101114; border: 1px solid #ffffff12; border-radius: 16px; padding: 18px 22px; margin: 28px 0; }
+      .box h2 { margin: 0 0 8px; font-size: 1.1rem; }
+      .box ul { margin: 0; padding-left: 1.2em; }
+      .related { color: #a7adb8; }
+      .pn { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; margin-top: 40px; border-top: 1px solid #ffffff14; padding-top: 20px; }
+      .pn a { color: #F5B800; text-decoration: none; max-width: 100%; }
+      .posts { list-style: none; padding: 0; margin: 28px 0; }
+      .posts li { background: #101114; border: 1px solid #ffffff12; border-radius: 16px; padding: 16px 20px; margin: 12px 0; }
+      .posts a { color: #fff; text-decoration: none; font-weight: 700; font-size: 1.1rem; }
+      .posts a:hover { color: #F5B800; }
+      .posts p { margin: 4px 0 0; color: #a7adb8; line-height: 1.55; }
+      .ext .small { color: #8a8a86; font-size: 0.85rem; }
+      .ext pre { background: #17191e; padding: 14px 16px; border-radius: 10px; overflow-x: auto; }
+      .ext pre code { padding: 0; background: none; overflow-wrap: normal; white-space: pre; }
+    </style>
+  </head>
+  <body>
+    <div class="beta-banner">bWalletX is in <strong>beta</strong>: test with small amounts.</div>
+    <header class="topbar">
+      <div class="wrap topbar-in">
+        <a class="brand" href="/"><img src="/logo.svg" alt="" width="34" height="30" /><span>bWallet<span class="gold">X</span></span></a>
+        <nav aria-label="Pages">
+          <a href="/features">Features</a><a href="/exchange">Exchange</a><a href="/social">Social</a><a href="/agent">Agents</a><a href="/extension">Extension</a><a href="/developers">Developers</a>
+        </nav>
+        <span class="nav-cta"><a class="dl-btn" href="/get">Download</a><a class="web-btn" href="https://web.bwalletx.com" target="_blank" rel="noopener">Web &rarr;</a></span>
+      </div>
+    </header>
+    <script src="/nav.js"></script>
+    <main class="ext">
+      <p class="meta"><a href="/blog">Development blog</a> · <span class="num">015</span> · 7 Oct 2026</p>
+      <h1>Launchpad, and checking what we sign</h1>
+      <p class="lede">bWalletX 5.1.74 can buy and sell bonding-curve coins. The wallet now checks every trade the server prepares before it signs anything.</p>
+
+      <h2>What Launchpad is</h2>
+      <p>Launchpad is a filter in Market. It lists BlastPad bonding-curve coins and lets you buy and sell them from inside the wallet.</p>
+      <p>A bonding curve sets the price from how many coins have been sold. The server builds the transaction for each trade and the wallet signs it.</p>
+      <p>Launchpad is only in bWalletX. The store builds of bWallet carry none of its code or text.</p>
+
+      <h2>Confirm before signing</h2>
+      <p>A Buy or Sell tap opens a confirm panel first. It shows the exact token amount, the BSV to the sat, the dollar value, the slippage floor and a line saying trades are final. Nothing is signed until you press Confirm.</p>
+      <p>Buys have a maximum size. You can only sell once your holdings have loaded.</p>
+
+      <h2>The wallet checks the server</h2>
+      <p>A confirm panel only shows what the server tells it. So in 5.1.74 the wallet works out the trade itself and compares.</p>
+      <p>It reads the pool's state from the transaction data the server sends, runs its own copy of the curve, and rebuilds every output. Then it checks:</p>
+      <ul>
+        <li>the token output: right token, right amount, going to you;</li>
+        <li>the BSV going into the pool;</li>
+        <li>0.70% to the house address and 0.30% to the route;</li>
+        <li>the indexing fee, capped;</li>
+        <li>that there are no other outputs;</li>
+        <li>that the server's quote equals ours;</li>
+        <li>that the BSV leaving your wallet is no more than the amount, the indexing fee and 2 sats.</li>
+      </ul>
+      <p>When you sell, the proceeds go to your own account address as a plain output, and that is checked before signing too.</p>
+      <p>If anything doesn't match, the wallet refuses the plan and releases the pool. We wrote tests for the bad cases: extra outputs, inflated outputs, the wrong token, the wrong amount, the wrong recipient, a short payout and a quote that doesn't match.</p>
+      <p>The point is simple. A server we run could be wrong or could be broken into. The wallet shouldn't take its word for it.</p>
+
+      <h2>Indexing a token you hold</h2>
+      <p>A token only shows up properly once the 1Sat indexer is funded to track it. If the indexer reports a token as inactive or out of funds, the token page now shows an <strong>Index $X</strong> button to anyone who holds it.</p>
+      <p>If you hold a token but didn't create it, you pay only the indexing cost. No fee to us.</p>
+      <p>If you created the token, the setup also includes our $1 fee. The button says the exact sats and whether the fee is included, and the confirm sheet lists each line and the network fee.</p>
+      <p>— Richard</p>
+
+      <p class="related">Related: <a href="/exchange">Exchange</a> · <a href="/blog/006-paying-for-indexing">006 Who pays for indexing</a> · <a href="/blog/008-the-exchange">008 Building the Exchange</a></p>
+      <div class="pn"><a href="/blog/014-open-feed">&larr; 014 One feed for BSV</a><a href="/blog/016-pots">016 Pots for bitcoin &rarr;</a></div>
+    </main>
+  </body>
+</html>

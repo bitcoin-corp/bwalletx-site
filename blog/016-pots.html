@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>016 Pots for bitcoin · bWalletX blog</title>
+    <meta name="description" content="Put money aside in a pot, set up regular payments from it, and pause them any time. Coming in 5.1.75." />
+    <link rel="canonical" href="https://bwalletx.com/blog/016-pots" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://bwalletx.com/blog/016-pots" />
+    <meta property="og:site_name" content="bWalletX" />
+    <meta property="og:title" content="Pots for bitcoin" />
+    <meta property="og:description" content="Put money aside in a pot, set up regular payments from it, and pause them any time. Coming in 5.1.75." />
+    <meta property="og:image" content="https://bwalletx.com/og/og-blog-016.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@bWalletX" />
+    <meta name="twitter:title" content="Pots for bitcoin" />
+    <meta name="twitter:description" content="Put money aside in a pot, set up regular payments from it, and pause them any time. Coming in 5.1.75." />
+    <meta name="twitter:image" content="https://bwalletx.com/og/og-blog-016.png" />
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="stylesheet" href="/styles.css" />
+    <style>
+      .ext { max-width: 760px; margin: 0 auto; padding: 120px 20px 80px; }
+      .ext h1 { font-size: clamp(2rem, 6vw, 3rem); margin: 10px 0 10px; line-height: 1.15; }
+      .ext h2 { margin: 44px 0 10px; font-size: 1.4rem; }
+      .ext p, .ext li { line-height: 1.7; }
+      .ext code { background: #17191e; padding: 2px 7px; border-radius: 6px; overflow-wrap: anywhere; }
+      .ext a { overflow-wrap: anywhere; }
+      .meta { color: #8a8a86; font-size: 0.9rem; margin: 0; }
+      .num { color: #F5B800; font-weight: 700; letter-spacing: .04em; }
+      .box { background: #101114; border: 1px solid #ffffff12; border-radius: 16px; padding: 18px 22px; margin: 28px 0; }
+      .box h2 { margin: 0 0 8px; font-size: 1.1rem; }
+      .box ul { margin: 0; padding-left: 1.2em; }
+      .related { color: #a7adb8; }
+      .pn { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; margin-top: 40px; border-top: 1px solid #ffffff14; padding-top: 20px; }
+      .pn a { color: #F5B800; text-decoration: none; max-width: 100%; }
+      .posts { list-style: none; padding: 0; margin: 28px 0; }
+      .posts li { background: #101114; border: 1px solid #ffffff12; border-radius: 16px; padding: 16px 20px; margin: 12px 0; }
+      .posts a { color: #fff; text-decoration: none; font-weight: 700; font-size: 1.1rem; }
+      .posts a:hover { color: #F5B800; }
+      .posts p { margin: 4px 0 0; color: #a7adb8; line-height: 1.55; }
+      .ext .small { color: #8a8a86; font-size: 0.85rem; }
+      .ext pre { background: #17191e; padding: 14px 16px; border-radius: 10px; overflow-x: auto; }
+      .ext pre code { padding: 0; background: none; overflow-wrap: normal; white-space: pre; }
+    </style>
+  </head>
+  <body>
+    <div class="beta-banner">bWalletX is in <strong>beta</strong>: test with small amounts.</div>
+    <header class="topbar">
+      <div class="wrap topbar-in">
+        <a class="brand" href="/"><img src="/logo.svg" alt="" width="34" height="30" /><span>bWallet<span class="gold">X</span></span></a>
+        <nav aria-label="Pages">
+          <a href="/features">Features</a><a href="/exchange">Exchange</a><a href="/social">Social</a><a href="/agent">Agents</a><a href="/extension">Extension</a><a href="/developers">Developers</a>
+        </nav>
+        <span class="nav-cta"><a class="dl-btn" href="/get">Download</a><a class="web-btn" href="https://web.bwalletx.com" target="_blank" rel="noopener">Web &rarr;</a></span>
+      </div>
+    </header>
+    <script src="/nav.js"></script>
+    <main class="ext">
+      <p class="meta"><a href="/blog">Development blog</a> · <span class="num">016</span> · 7 Oct 2026</p>
+      <h1>Pots for bitcoin</h1>
+      <p class="lede">Put money aside in a pot, set up regular payments from it, and pause them any time. Coming in 5.1.75.</p>
+
+      <p>Pots are not in the app yet. They are planned for 5.1.75. This post says what we are building so you can tell us if it's wrong.</p>
+
+      <h2>What a pot is</h2>
+      <p>If you use Monzo you know the idea. A pot is money set aside from your main balance, with a name: "Rent", "bChat", "Netflix".</p>
+      <p>In bWalletX a pot is its own small account, with its own keys and balance. It works the same way as agent accounts, with a stop button and a log of everything it paid.</p>
+
+      <h2>Regular payments</h2>
+      <p>You can add a regular payment to a pot: who to pay, how much, how often, when to start and, if you like, how many times.</p>
+      <p>The first version pays what is due when you open the app. If you don't open it for a week, it catches up when you do, up to three missed payments before it asks you. Your phone reminds you the day before a payment is due, even with the app closed.</p>
+      <p>Pause takes one tap and needs no confirmation. Resume is one tap too.</p>
+
+      <h2>The most you can lose</h2>
+      <p>A pot can only spend what is in it. The pot balance is the most you can ever lose to a payment, a bug or a bad payee. When you create a pot, the confirm screen says so in numbers.</p>
+      <p>There is also a daily limit on each pot, set a little above its largest payment, so a fault can't empty it in one day.</p>
+      <p>Your keys stay on your phone. We looked at holding pot keys on a server so payments could go out with the app closed, and said no. That would make us custodians of your money.</p>
+
+      <h2>No charge</h2>
+      <p>Pots are free. We have written down a possible charge of 1 cent a day for later, but it is switched off, and it will never be on in the store builds. If it ever comes on, pausing, cancelling and taking your money out of a pot will still be free.</p>
+
+      <h2>Next</h2>
+      <p>After that, we want payments that go out on time with the app closed, still without us holding keys. The wallet would sign a few payments in advance, each locked with nLockTime so it can't be broadcast before its date. That is the next step, not part of 5.1.75.</p>
+      <p>— Richard</p>
+
+      <p class="related">Related: <a href="/agents">Agent accounts</a> · <a href="/blog/010-agents-strategies-cli">010 Agent accounts, strategies, CLI and MCP</a></p>
+      <div class="pn"><a href="/blog/015-launchpad">&larr; 015 Launchpad, and checking what we sign</a><a href="/blog/017-sign-in-and-lounge">017 Sign in with bWalletX, and the Lounge &rarr;</a></div>
+    </main>
+  </body>
+</html>
