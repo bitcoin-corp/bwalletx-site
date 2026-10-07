@@ -28,6 +28,7 @@ Full text of every page: https://bwalletx.com/llms-full.txt
 - [media-src/og/og-apps-add.html](https://bwalletx.com/media-src/og/og-apps-add)
 - [media-src/og/og-blog.html](https://bwalletx.com/media-src/og/og-blog)
 - [media-src/og/og-buy.html](https://bwalletx.com/media-src/og/og-buy)
+- [media-src/og/og-chat-v2.html](https://bwalletx.com/media-src/og/og-chat-v2)
 - [media-src/og/og-cli.html](https://bwalletx.com/media-src/og/og-cli)
 - [media-src/og/og-connect.html](https://bwalletx.com/media-src/og/og-connect)
 - [media-src/og/og-dev.html](https://bwalletx.com/media-src/og/og-dev)

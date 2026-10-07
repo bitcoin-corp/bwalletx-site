@@ -17,11 +17,23 @@
 (function () {
   var X = 'https://bwalletx.com';
   var NAV = {
+    // Five sections by what people come for (owner, 7 Oct 2026: the bar was cluttered). Desktop: hover/focus
+    // dropdowns. Phones: a Menu button with one accordion per section. The current section's pages also show
+    // as a pill row under the bar.
     full: [
-      { label: 'Features', href: '/features' },
-      { label: 'Mint', href: '/mint' },
-      { label: 'Games', href: '/games' },
-      { label: 'Chat', href: '/chat' },
+      { label: 'Wallet', href: '/features', pages: ['/features', '/subscriptions', '/history', '/identity', '/mint', '/get', '/download', '/android', '/iphone', '/extension', '/push-notifications', '/testers', '/privacy'],
+        sub: [
+          { label: 'Features', href: '/features' },
+          { label: 'Subscriptions &amp; pots', href: '/subscriptions' },
+          { label: 'History', href: '/history' },
+          { label: 'Identity', href: '/identity' },
+          { label: 'Mint', href: '/mint' },
+          { label: 'Notifications', href: '/push-notifications' },
+          { label: 'Extension', href: '/extension' },
+          { label: 'iPhone', href: '/iphone' },
+          { label: 'Android', href: '/android' },
+          { label: 'Testers', href: '/testers' }
+        ] },
       { label: 'Exchange', href: '/exchange', pages: ['/exchange', '/exchange/strategies', '/pnees', '/pnee', '/buy'],
         sub: [
           { label: 'Exchange', href: '/exchange' },
@@ -29,10 +41,14 @@
           { label: 'PNEEs', href: '/pnees', also: ['/pnee'] },
           { label: 'Buy BSV', href: '/buy' }
         ] },
-      { label: 'Social', href: '/social', pages: ['/social', '/friends', '/gmail', '/x', '/sign'],
+      { label: 'Social', href: '/social', pages: ['/social', '/chat', '/friends', '/lounge', '/games', '/video', '/sign', '/x', '/gmail'],
         sub: [
           { label: 'Social', href: '/social' },
+          { label: 'Chat', href: '/chat' },
           { label: 'Friends', href: '/friends' },
+          { label: 'Lounge', href: '/lounge' },
+          { label: 'Games', href: '/games' },
+          { label: 'Video', href: '/video' },
           { label: 'Your signature', href: '/sign' },
           { label: 'Sign in with X', href: '/x' },
           { label: 'Sign in with Gmail', href: '/gmail' }
@@ -46,17 +62,15 @@
           { label: 'CLI', href: '/cli' },
           { label: 'MCP', href: '/mcp' }
         ] },
-      { label: 'Extension', href: '/extension' },
-      { label: 'Developers', href: '/developers', pages: ['/developers', '/connect', '/cli', '/mcp', '/apps/add', '/blog'],
+      { label: 'Developers', href: '/developers', pages: ['/developers', '/connect', '/apps/add'],
         sub: [
           { label: 'Developers', href: '/developers' },
           { label: 'Sign in with bWalletX', href: '/connect' },
-          { label: 'CLI', href: '/cli' },
-          { label: 'MCP', href: '/mcp' },
-          { label: 'Strategy spec', href: '/strategies/spec' },
           { label: 'Add your app', href: '/apps/add' },
-          { label: 'Blog', href: '/blog' }
-        ] }
+          { label: 'CLI', href: '/cli' },
+          { label: 'MCP', href: '/mcp' }
+        ] },
+      { label: 'Blog', href: '/blog' }
     ],
     // Store edition (bWallet): browse-only Market, no trading, everything else lives on bWalletX.
     store: [
@@ -80,7 +94,7 @@
     return p || '/';
   }
   var path = norm(location.pathname);
-  if (/^\/blog\//.test(path)) path = '/blog'; // every post sits under Developers › Blog
+  if (/^\/blog\//.test(path)) path = '/blog'; // every post sits under Blog
   function link(it, active) {
     return '<a href="' + it.href + '"' + (active ? ' aria-current="page"' : '') + '>' + it.label + '</a>';
   }
@@ -92,7 +106,40 @@
 
   var main = document.querySelector('.topbar nav[aria-label="Pages"]');
   if (!main) return;
-  main.innerHTML = items.map(function (it) { return link(it, it === section); }).join('');
+  function subLinks(it) {
+    return it.sub.map(function (s) { return link(s, path === s.href || (s.also || []).indexOf(path) !== -1); }).join('');
+  }
+  // Desktop: each section is a link with a dropdown of its pages.
+  main.innerHTML = items.map(function (it) {
+    if (!it.sub) return link(it, it === section);
+    return '<span class="nd">' + link(it, it === section) + '<span class="nd-menu">' + subLinks(it) + '</span></span>';
+  }).join('');
+  // Phones: a Menu button opening one accordion per section (the current one open).
+  var ctaBox = main.closest('.topbar') && main.closest('.topbar').querySelector('.nav-cta');
+  if (ctaBox && !ctaBox.querySelector('.menu-btn')) {
+    var mb = document.createElement('button');
+    mb.type = 'button';
+    mb.className = 'menu-btn';
+    mb.setAttribute('aria-expanded', 'false');
+    mb.setAttribute('aria-controls', 'm-menu');
+    mb.textContent = 'Menu';
+    var panel = document.createElement('nav');
+    panel.id = 'm-menu';
+    panel.className = 'm-menu';
+    panel.setAttribute('aria-label', 'Menu');
+    panel.hidden = true;
+    panel.innerHTML = items.map(function (it) {
+      if (!it.sub) return '<a class="m-top" href="' + it.href + '">' + it.label + '</a>';
+      return '<details' + (it === section ? ' open' : '') + '><summary>' + it.label + '</summary>' + subLinks(it) + '</details>';
+    }).join('') + '<a class="m-top" href="https://web.bwalletx.com">Web wallet &rarr;</a><p class="m-follow"><a href="https://x.com/bWalletX">X</a><a href="https://github.com/bitcoin-corp/bwallet">GitHub</a><a href="https://www.youtube.com/@bWalletX">YouTube</a><a href="https://www.bitcoinchat.online/room/LOUNGE">bChat Lounge</a></p>';
+    mb.addEventListener('click', function () {
+      var open = panel.hidden;
+      panel.hidden = !open;
+      mb.setAttribute('aria-expanded', String(open));
+    });
+    ctaBox.appendChild(mb);
+    main.closest('.topbar').appendChild(panel);
+  }
 
   if (section && section.sub) {
     var sub = document.createElement('nav');
@@ -160,8 +207,25 @@
     '.nav-cta .x-link{display:inline-flex;align-items:center;justify-content:center;width:34px;height:34px;border-radius:50%;border:1px solid #ffffff33;color:#fff;margin-right:8px;vertical-align:middle}' +
     '.nav-cta .x-link:hover{border-color:#F5B800;color:#F5B800}' +
     'html.has-subnav main.ext{padding-top:190px!important}' +
-    '@media (max-width:859px){html.has-subnav main.ext{padding-top:212px!important}}' +
-    (store ? '.topbar .sub-nav a[aria-current="page"]{color:#F5B800!important;background:#010101!important;border-color:#010101!important}' +
+    '.nd{position:relative;display:inline-flex;align-items:center}' +
+    '.nd-menu{display:none;position:absolute;top:100%;left:-14px;min-width:200px;padding:8px;margin-top:0;background:#0d0e11;border:1px solid #ffffff1f;border-radius:12px;box-shadow:0 12px 30px #0009;flex-direction:column;gap:2px;z-index:60}' +
+    '.nd:hover .nd-menu,.nd:focus-within .nd-menu{display:flex}' +
+    '.nd-menu a{padding:7px 10px;border-radius:8px;white-space:nowrap;font-size:.9rem!important}' +
+    '.nd-menu a:hover{background:#ffffff10}' +
+    '.menu-btn{display:none;font:600 .9rem inherit;color:#fff;background:transparent;border:1px solid #ffffff40;border-radius:999px;padding:5px 12px;cursor:pointer}' +
+    '.m-menu{background:#0d0e11;border-top:1px solid #ffffff14;padding:6px 16px 14px;max-height:calc(100vh - 120px);overflow-y:auto}' +
+    '.m-menu details{border-bottom:1px solid #ffffff12}' +
+    '.m-menu summary{padding:12px 0;font-weight:700;color:#fff;cursor:pointer}' +
+    '.m-menu a{display:block;padding:8px 12px;color:#c9c9c4;text-decoration:none}' +
+    '.m-menu a.m-top{padding:12px 0;font-weight:700;color:#fff}' +
+    '.m-menu a[aria-current="page"]{color:#F5B800}' +
+    '.m-follow{display:flex;flex-wrap:wrap;gap:4px;margin:10px 0 0}.m-follow a{padding:6px 10px!important;font-size:.85rem}' +
+    '@media (max-width:859px){.topbar nav[aria-label="Pages"]{display:none!important}.menu-btn{display:inline-block}' +
+    '.topbar-in:has(nav[aria-label="Pages"]){flex-wrap:nowrap!important;height:64px!important;padding-top:0!important}' +
+    '.nav-cta .x-link,.nav-cta .web-btn{display:none}.topbar nav.m-menu:not([hidden]){display:block}.brand{flex:none}main.ext{padding-top:120px!important}html.has-subnav main.ext{padding-top:160px!important}}' +
+    '@media (min-width:860px){.m-menu{display:none!important}}' +
+    (store ? '.nd-menu,.m-menu{background:#F5B800!important}.nd-menu a,.m-menu a,.m-menu summary{color:#010101!important}.menu-btn{color:#010101;border-color:#0006}' +
+      '.topbar .sub-nav a[aria-current="page"]{color:#F5B800!important;background:#010101!important;border-color:#010101!important}' +
       '.nav-cta .x-link{color:#010101!important;border-color:rgba(0,0,0,.35)!important}.nav-cta .x-link:hover{background:#010101;color:#F5B800!important}' : '');
   document.head.appendChild(css);
 })();

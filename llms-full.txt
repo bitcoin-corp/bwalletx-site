@@ -328,6 +328,14 @@ Pay a paymail like `name@bwalletx.com` instead of a long address.
 
 Hold, send and receive BSV-21 tokens and 1Sat Ordinals, with a separate ordinals address.
 
+### Pots and standing orders
+
+Set money aside in a pot and pay regular amounts from it. Pause or cancel any time. [How](https://bwalletx.com/subscriptions).
+
+### History and exports
+
+Every transaction for any date range, with a CSV export and a PDF statement. [More](https://bwalletx.com/history).
+
 ### Restore from anywhere
 
 12 words are enough. Import from Yours, Panda, RelayX or Twetch, a private key or a backup file.
@@ -372,7 +380,7 @@ Every token you mint carries a statement signed by your identity, so anyone can 
 
 ### Verified identity (optional)
 
-KYC through bit-sign, where you choose what to reveal.
+An ID check through bit-sign, only when something needs it. [More](https://bwalletx.com/identity#verify).
 
 ## ✨Make things
 
@@ -434,7 +442,7 @@ Type `/b` in any chat and bWalletX's own assistant answers there, day or night. 
 
 The community room on [bChat](https://www.bitcoinchat.online/room/LOUNGE): ask questions, meet other users, talk to the team.
 
-## 📈Market and media
+## 📈Exchange and media
 
 ### The exchangebWalletX
 
@@ -566,9 +574,9 @@ Personal tokens are social tokens: they're for access and fun, not investments. 
 
 ## 4. The market
 
-Every user token can be bought and sold in the bWalletX Market. List some of yours for sale at your own price, or buy someone else's to get into their room. Trades settle directly between wallets on chain; bWalletX never holds your tokens or money.
+Every user token can be bought and sold on the bWalletX Exchange. List some of yours for sale at your own price, or buy someone else's to get into their room. Trades settle directly between wallets on chain; bWalletX never holds your tokens or money.
 
-Before a token shows up in other wallets and the Market, its creator pays a one-off indexing deposit to the 1Sat indexer. It's a prepaid balance that pays for the token's transfers, not a fee to bWalletX.
+Before a token shows up in other wallets and the Exchange, its creator pays a one-off indexing deposit to the 1Sat indexer. It's a prepaid balance that pays for the token's transfers, not a fee to bWalletX.
 
 ## 5. Chat rooms
 
@@ -858,7 +866,7 @@ Link other accounts, such as X or Google, to your on-chain identity. Each link a
 
 - LiveDocument signing. Sign documents with bit-sign. Only hashes go on chain, never the document.
 
-- ComingSign and seal. Sign .NDS.HTML contracts with your drawn signature and your wallet key in one step, sealed on chain. The bit-sign side, including recovery of an interrupted paid seal, is built; the wallet side is not in bWalletX yet.
+- LiveSign and seal. Sign .NDS.HTML contracts on bit-sign with your drawn signature and your wallet key in one step, sealed on chain, from the Chrome extension or a paired phone. If a paid seal is interrupted, it can be recovered rather than paid twice.
 
 More on signing: [bwalletx.com/sign](https://bwalletx.com/sign).
 
@@ -1274,6 +1282,37 @@ From an exchange or another wallet
 From a friend · send to your $name
 
 Buy with a card or bank
+
+---
+
+Source: https://bwalletx.com/media-src/og/og-chat-v2
+
+-
+
+bWalletX
+
+# Coordinate on BSV.
+Talk where the money is.
+
+BSV is a messaging protocol at heart. Every transaction can carry a message. So the conversation about BSV should live on BSV, in the same wallet that holds your coins and tokens.
+
+RoomsToken roomsPrivate messagesCalls
+
+$
+
+$YOURNAME roomHolders only · 1 token to enter
+
+$friend
+Bought 10 of your tokens 👀
+
+Welcome in. Call later?
+
+$another
+Paid you to name@bwalletx.com ✓
+
+Hold 1 $YOURNAME to chat here
+
+bwalletx.com/chat · Android · iPhone · Chrome · Web
 
 ---
 
@@ -2428,9 +2467,9 @@ Personal tokens are social tokens: they're for access and fun, not investments. 
 
 ## 4. The market
 
-Every user token can be bought and sold in the bWalletX Market. List some of yours for sale at your own price, or buy someone else's to get into their room. Trades settle directly between wallets on chain; bWalletX never holds your tokens or money.
+Every user token can be bought and sold on the bWalletX Exchange. List some of yours for sale at your own price, or buy someone else's to get into their room. Trades settle directly between wallets on chain; bWalletX never holds your tokens or money.
 
-Before a token shows up in other wallets and the Market, its creator pays a one-off indexing deposit to the 1Sat indexer. It's a prepaid balance that pays for the token's transfers, not a fee to bWalletX.
+Before a token shows up in other wallets and the Exchange, its creator pays a one-off indexing deposit to the 1Sat indexer. It's a prepaid balance that pays for the token's transfers, not a fee to bWalletX.
 
 ## 5. Chat rooms
 
@@ -2635,7 +2674,7 @@ People send you BSV, tokens and messages at `yourhandle.x@bwalletx.com`. It's ma
 
 ### Your own token and room
 
-Turn the name into $YOURHANDLE, a BSV-21 token with your X picture as its icon. Hold the token, join your room. In Market › Friends it's listed with your x.com link and a tick.
+Turn the name into $YOURHANDLE, a BSV-21 token with your X picture as its icon. Hold the token, join your room. In Exchange › Friends it's listed with your x.com link and a tick.
 
 ### Your picture
 
