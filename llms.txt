@@ -13,6 +13,7 @@ Full text of every page: https://bwalletx.com/llms-full.txt
 - [bWalletX for Chrome](https://bwalletx.com/extension): Install the bWalletX Chrome extension: the full bWalletX wallet in Chrome's side panel, and a wallet websites can connect to.
 - [bWalletX Features](https://bwalletx.com/features): Everything bWalletX does: BSV and tokens, names and paymail, token rooms, calls, market, media, minting, and a wallet websites can connect to.
 - [bWalletX Friends](https://bwalletx.com/friends): Your handle is your paymail, your token and your chat room. How bWalletX friends, user tokens, the market and token-gated rooms work.
+- [Games in bWalletX](https://bwalletx.com/games): 32 games you can play now on Bitcoin SV, all in bGames inside bWalletX: bGames originals, the TokenBlaster arcade and more BSV games.
 - [Get bWalletX](https://bwalletx.com/get): Get bWalletX for Android, Chrome, the web and iPhone.
 - [Sign in with Gmail · bWalletX](https://bwalletx.com/gmail): Sign in to bWalletX with your Gmail account and get a verified name: yourname.gmail@bwalletx.com. Your paymail, your token and your chat room, with your Google picture.
 - [bWalletX — Just b](https://bwalletx.com/): bWalletX: the BSV wallet for tokens, media and apps. BSV, MNEE and BSV-21 tokens, an exchange for tokens and NFTs, the bApps store, an ordinals media player and bChat. Non-custodial, by The Bitcoin Corporation Ltd.

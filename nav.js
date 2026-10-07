@@ -20,6 +20,7 @@
     full: [
       { label: 'Features', href: '/features' },
       { label: 'Mint', href: '/mint' },
+      { label: 'Games', href: '/games' },
       { label: 'Exchange', href: '/exchange', pages: ['/exchange', '/exchange/strategies', '/pnees', '/pnee', '/buy'],
         sub: [
           { label: 'Exchange', href: '/exchange' },

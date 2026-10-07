@@ -520,6 +520,117 @@ bWalletX is in beta and some room rules are still being rolled out. Tokens can l
 
 ---
 
+Source: https://bwalletx.com/games
+
+# Games on Bitcoin. Play now.
+
+32 games you can play right now on Bitcoin SV. They’re all in bGames inside bWalletX: open the Apps tab, tap Games, and play with your wallet already signed in. Or tap any game below to play it in your browser.
+
+[Get bWalletX](https://bwalletx.com/get)
+
+## bGames
+
+Built by us. Open bGames in the Apps tab.
+
+[S
+### Snake
+Eat, grow, don’t hit the wallsPlay →](https://bitcoin-gaming.vercel.app)
+[2
+### 2048
+Merge tiles to reach 2048Play →](https://bitcoin-gaming.vercel.app)
+[N
+### Ninja Punk Girls
+Collect and battle cyberpunk NFT cardsPlay →](https://ninjapunkgirls.online)
+
+## TokenBlaster arcade
+
+From tokenblaster.lol. In LIVE mode every shot, jump or bite is a real transaction.
+
+[### Double-O Satoshi
+Spy shooter: every bullet is a token on chainPlay →](https://www.tokenblaster.lol/arcade/doubleosatoshi)
+[### BSVGun
+3D shooting range where the targets are the live chainPlay →](https://www.tokenblaster.lol/arcade/bsvgun)
+[### Arena
+DOOM-style maze: fire the tokens in your walletPlay →](https://www.tokenblaster.lol/arena)
+[### Chain Frogger
+Cross a 3D city of live mainnet transactionsPlay →](https://www.tokenblaster.lol/arcade/frogger)
+[### Block Hopper
+Side-scroller where the level is the live chainPlay →](https://www.tokenblaster.lol/arcade/hopper)
+[### Mempool Invaders
+3D shooter where every ship is a live transactionPlay →](https://www.tokenblaster.lol/arcade/invaders)
+[### Kweg's Expedition
+Sub through the chain hunting hidden $KWEGPlay →](https://www.tokenblaster.lol/arcade/kweg)
+[### Token Snake
+Neon 3D snake: every bite is a real transactionPlay →](https://www.tokenblaster.lol/arcade/snake)
+[### Satoshi City
+Open-world city where every car is a live txPlay →](https://www.tokenblaster.lol/arcade/city)
+[### NPG: Card Battle
+Ninja Punk Girls card battle, AI or onlinePlay →](https://www.tokenblaster.lol/arcade/npg-cards)
+[### NPG: Erobot Uprising
+Ninja Punk Girls platformer, three bossesPlay →](https://www.tokenblaster.lol/arcade/npg-runner)
+[### Token Rally
+Rally racing against live chain trafficPlay →](https://www.tokenblaster.lol/arcade/rally)
+[### Sat Stack 2048
+Merge sat stacks up to a 1 BSV tilePlay →](https://www.tokenblaster.lol/arcade/2048)
+[### Highway 21M
+OutRun-style racer through live token movesPlay →](https://www.tokenblaster.lol/arcade/highway21)
+[### Coin Pop
+Bubble shooter with token coinsPlay →](https://www.tokenblaster.lol/arcade/bubbo-bubbo)
+[### Token Potions
+Match-3 against a 60-second clockPlay →](https://www.tokenblaster.lol/arcade/puzzling-potions)
+[### bRacer
+Anti-gravity racing at 700 km/hPlay →](https://www.tokenblaster.lol/arcade/bracer)
+
+## More BSV games
+
+Made by other teams on Bitcoin SV.
+
+[S
+### Satoshi Pong
+Pong where every point is paid on chainPlay →](https://insertarcade.com/)
+[F
+### FPSV
+First-person arena shooter on BSVPlay →](https://insertarcade.com/)
+[C
+### CHESSV
+Chess on a clock on BSVPlay →](https://insertarcade.com/)
+[M
+### Midnight Pass
+From the Paiybit arcadePlay →](https://paiybit.com/paiybit/arcade)
+[H
+### Haste Arcade
+Arcade games with leaderboard payoutsPlay →](https://hastearcade.com)
+[5
+### 5TARS
+Football prediction and fantasy gamePlay →](https://5tars.io)
+[B
+### Bitcoin vs. Crypto
+HTML5 arcade shooterPlay →](https://bitcoinsv.itch.io/bitcoin-versus-crypto)
+[P
+### PixelWar
+Collaborative pixel art canvasPlay →](https://pixelwar.click)
+[N
+### Number Cruncher 3D
+Solve 3D math puzzlesPlay →](https://numbercrunchermath.com)
+[A
+### Ageless Republic
+Open-world RPGPlay →](https://agelessrepublic.com/)
+[H
+### HyperTypist
+Typing speed, records saved on chainPlay →](https://hypertypist.com/)
+[P
+### PeerJump
+How high can you climb?Play →](https://peerjump.fun/)
+
+Some games spend real tokens or pay out real money; play with small amounts. Games under “More BSV games” are made by other teams, not The Bitcoin Corporation. The App Store and Google Play edition (bWallet) shows a smaller list with no TokenBlaster or real-money games.
+
+[Get bWalletX](https://bwalletx.com/get)
+[All features](https://bwalletx.com/features)
+
+bWalletX is in beta: test with small amounts. Questions: [support@bwalletx.com](mailto:support@bwalletx.com)
+
+---
+
 Source: https://bwalletx.com/get
 
 # Get bWalletX
@@ -2034,7 +2145,7 @@ Source: https://bwalletx.com/sign
 
 # Your signature
 
-Your wallet card has a signature strip on the back, like a bank card. In bWalletX 5.1.81 you can sign it with your finger. Next, you'll be able to use the same signature to sign contracts and seal them on Bitcoin.
+Your wallet card has a signature strip on the back, like a bank card. In bWalletX 5.1.77 you can sign it with your finger. You can now also sign contracts on bit-sign with bWalletX and seal them on Bitcoin.
 
 Flip the card→
 Sign with your finger→
@@ -2070,17 +2181,19 @@ It's saved in a fixed format (one SVG path in a 1000 × 250 box) with a SHA-256 
 
 The signature isn't in your 12-word recovery phrase. If you restore your wallet on a new phone, sign again.
 
-## Sign and seal contracts Coming soon
+## Sign and seal contracts New
 
-bit-sign contracts (`.nds.html` files) have signature boxes. With Sign and seal, one tap in bWalletX will:
+bit-sign contracts (`.nds.html` files) have signature boxes. With Sign and seal with bWalletX on [bit-sign](https://www.bit-sign.online), you:
 
-- place your drawn signature in your box in the contract;
+- draw your signature into your box in the contract;
 
-- sign a record of what you signed with your wallet's identity key;
+- approve in bWalletX, which signs a record of what you signed with your wallet's identity key;
 
-- pay for a small seal on Bitcoin. That costs the network fee only, under a penny. bit-sign charges nothing.
+- approve the seal on Bitcoin. That costs the network fee only, under a penny. bit-sign charges nothing.
 
-Before anything happens, bWalletX shows its own screen with the document title, the box you're signing, a preview of your signature and the cost. Nothing is sent until you tap Sign and seal.
+Today that takes two approvals in your wallet: one to sign, one to pay. Nothing is sent until you approve. If anything interrupts after you've paid, reopen the document and bit-sign finishes the seal for you, for up to 24 hours. You never pay twice.
+
+Coming next: one tap. bWalletX will hand over the signature from your card and show its own screen with the document title, the box you're signing, your signature and the cost, then sign and pay together.
 
 Only fingerprints (hashes) go on-chain, never the document or your signature. Your contract stays private between the people signing it.
 
@@ -2090,7 +2203,7 @@ Anyone with a copy of the sealed contract can confirm three things: its fingerpr
 
 ### Works where you are
 
-On a computer, through the bWalletX Chrome extension. On your phone, in the bWalletX in-app browser. Or scan a QR code with your phone to sign a contract open on your computer.
+On a computer, through the bWalletX Chrome extension. Or pair your phone by scanning a QR code and approve there, for a contract open on your computer.
 
 This gives you an electronic signature backed by strong evidence of who signed, what and when. Whether a particular document can be signed electronically depends on the document and the law where you are; some documents, such as wills and deeds that need a witness, can't. This page isn't legal advice.
 
@@ -2099,7 +2212,7 @@ This gives you an electronic signature backed by strong evidence of who signed, 
 [Chrome extension](https://bwalletx.com/extension)
 [Privacy](https://bwalletx.com/privacy)
 
-The card signature is in bWalletX 5.1.81 (Android APK, Chrome extension, web and iPhone) and in bWallet, the App Store and Google Play version. Sign and seal is not out yet. Questions: [support@bwalletx.com](mailto:support@bwalletx.com)
+The card signature is in bWalletX 5.1.77 and later (Android APK, Chrome extension, web and iPhone) and in bWallet, the App Store and Google Play version. Sign and seal is live on bit-sign for bWalletX users (Chrome extension or a paired phone). Questions: [support@bwalletx.com](mailto:support@bwalletx.com)
 
 ---
 
