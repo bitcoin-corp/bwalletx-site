@@ -623,10 +623,6 @@ Verify once with bit-sign, powered by Veriff. You get a private certificate that
 
 Apps only see the details you approve. Nothing is shared by default.
 
-### Shares
-
-Verified, qualifying investors can view bCorp and bApp share offers inside the app.
-
 Contributors · Coming soon
 
 ## Build bApps with your agents.
@@ -1065,7 +1061,7 @@ Source: https://bwalletx.com/games
 
 # Games on Bitcoin. Play now.
 
-32 games you can play right now on Bitcoin SV. They’re all in bGames inside bWalletX: open the Apps tab, tap Games, and play with your wallet already signed in. Or tap any game below to play it in your browser.
+Play games on Bitcoin SV, right now. They’re all in bGames inside bWalletX: open the Apps tab, tap Games, and play with your wallet already signed in. Or tap any game below to play it in your browser.
 
 [Get bWalletX](https://bwalletx.com/get)
 
@@ -1264,7 +1260,7 @@ The check is run by Veriff, through bit-sign. You show an ID document and take a
 
 - bit-sign’s signed record of your check is private. Only you, signed in, can see all of it: the check level, the type and country of your document, the sanctions result and the date. It has no name and no date of birth. Anyone else who looks it up with your key gets “not found”, the same answer as for a key with no check, so they can’t even tell you’ve been checked.
 
-- Sharing part of it with one person will be your choice: you sign a grant naming the fields, the person’s key and an end date, and they see only those fields until then. The sanctions result is shown to them only as pass or fail, and never to the public. This is built and will be switched on soon.
+- Sharing part of it with one person is your choice: you sign a grant naming the fields, the person’s key and an end date, and they see only those fields until then. The same goes for an issuer asking bit-sign whether you meet its rules: without your grant it gets “not found”, and with one it sees only the checks your grant covers. The sanctions result is shown to them only as pass or fail, and never to the public.
 
 ## Using it
 
