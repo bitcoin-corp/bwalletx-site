@@ -3,7 +3,6 @@
   <url><loc>https://bwalletx.com/agent</loc></url>
   <url><loc>https://bwalletx.com/agents</loc></url>
   <url><loc>https://bwalletx.com/android</loc></url>
-  <url><loc>https://bwalletx.com/testers</loc></url>
   <url><loc>https://bwalletx.com/apps/add</loc></url>
   <url><loc>https://bwalletx.com/blog/001-the-fork</loc></url>
   <url><loc>https://bwalletx.com/blog/002-four-names</loc></url>
@@ -20,8 +19,8 @@
   <url><loc>https://bwalletx.com/blog/013-sites-and-navigation</loc></url>
   <url><loc>https://bwalletx.com/blog/014-open-feed</loc></url>
   <url><loc>https://bwalletx.com/blog/015-launchpad</loc></url>
-  <url><loc>https://bwalletx.com/blog/017-sign-in-and-lounge</loc></url>
   <url><loc>https://bwalletx.com/blog/016-pots</loc></url>
+  <url><loc>https://bwalletx.com/blog/017-sign-in-and-lounge</loc></url>
   <url><loc>https://bwalletx.com/blog/018-testers</loc></url>
   <url><loc>https://bwalletx.com/blog/019-language-filter</loc></url>
   <url><loc>https://bwalletx.com/blog/</loc></url>
@@ -37,8 +36,10 @@
   <url><loc>https://bwalletx.com/gmail</loc></url>
   <url><loc>https://bwalletx.com/</loc></url>
   <url><loc>https://bwalletx.com/iphone</loc></url>
+  <url><loc>https://bwalletx.com/login</loc></url>
   <url><loc>https://bwalletx.com/lounge</loc></url>
   <url><loc>https://bwalletx.com/mcp</loc></url>
+  <url><loc>https://bwalletx.com/media-src/og/blog/og-blog-014</loc></url>
   <url><loc>https://bwalletx.com/media-src/og/og-agent-v2</loc></url>
   <url><loc>https://bwalletx.com/media-src/og/og-agent</loc></url>
   <url><loc>https://bwalletx.com/media-src/og/og-apps-add</loc></url>
@@ -55,6 +56,7 @@
   <url><loc>https://bwalletx.com/media-src/og/og-home-v2</loc></url>
   <url><loc>https://bwalletx.com/media-src/og/og-home-v3</loc></url>
   <url><loc>https://bwalletx.com/media-src/og/og-iphone</loc></url>
+  <url><loc>https://bwalletx.com/media-src/og/og-login</loc></url>
   <url><loc>https://bwalletx.com/media-src/og/og-lounge</loc></url>
   <url><loc>https://bwalletx.com/media-src/og/og-mcp</loc></url>
   <url><loc>https://bwalletx.com/media-src/og/og-mint</loc></url>
@@ -65,6 +67,7 @@
   <url><loc>https://bwalletx.com/media-src/og/og-spec</loc></url>
   <url><loc>https://bwalletx.com/media-src/og/og-strat3</loc></url>
   <url><loc>https://bwalletx.com/media-src/og/og-strategies</loc></url>
+  <url><loc>https://bwalletx.com/media-src/og/testers/og-testers</loc></url>
   <url><loc>https://bwalletx.com/media-src/walkthrough-01/cut/tmp/cap-16x9-2</loc></url>
   <url><loc>https://bwalletx.com/media-src/walkthrough-01/cut/tmp/cap-16x9-3</loc></url>
   <url><loc>https://bwalletx.com/media-src/walkthrough-01/cut/tmp/cap-16x9-4</loc></url>
@@ -98,6 +101,8 @@
   <url><loc>https://bwalletx.com/social</loc></url>
   <url><loc>https://bwalletx.com/strategies</loc></url>
   <url><loc>https://bwalletx.com/strategies/spec</loc></url>
+  <url><loc>https://bwalletx.com/testers</loc></url>
   <url><loc>https://bwalletx.com/video</loc></url>
   <url><loc>https://bwalletx.com/privacy</loc></url>
+  <url><loc>https://bwalletx.com/login.md</loc></url>
 </urlset>

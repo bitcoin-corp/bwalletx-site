@@ -38,9 +38,10 @@
           { label: 'MCP', href: '/mcp' }
         ] },
       { label: 'Extension', href: '/extension' },
-      { label: 'Developers', href: '/developers', pages: ['/developers', '/cli', '/mcp', '/apps/add', '/blog'],
+      { label: 'Developers', href: '/developers', pages: ['/developers', '/login', '/cli', '/mcp', '/apps/add', '/blog'],
         sub: [
           { label: 'Developers', href: '/developers' },
+          { label: 'Sign in with bWalletX', href: '/login' },
           { label: 'CLI', href: '/cli' },
           { label: 'MCP', href: '/mcp' },
           { label: 'Strategy spec', href: '/strategies/spec' },

@@ -18,6 +18,7 @@ Full text of every page: https://bwalletx.com/llms-full.txt
 - [bWalletX — Just b](https://bwalletx.com/): bWalletX: the BSV wallet for tokens, media and apps. BSV, MNEE and BSV-21 tokens, an exchange for tokens and NFTs, the bApps store, an ordinals media player and bChat. Non-custodial, by The Bitcoin Corporation Ltd.
 - [bWalletX on iPhone](https://bwalletx.com/iphone): Use bWalletX on iPhone today: install the web app from Safari in under a minute. No App Store needed.
 - [bWallet Lounge on bChat](https://bwalletx.com/lounge): The bWallet Lounge is where bWallet and bWalletX people talk: questions, ideas, and the team is there. Type /b to ask the $b assistant any time. Open to everyone.
+- [media-src/og/blog/og-blog-014.html](https://bwalletx.com/media-src/og/blog/og-blog-014)
 - [media-src/og/og-agent-v2.html](https://bwalletx.com/media-src/og/og-agent-v2)
 - [media-src/og/og-agent.html](https://bwalletx.com/media-src/og/og-agent)
 - [media-src/og/og-apps-add.html](https://bwalletx.com/media-src/og/og-apps-add)
@@ -34,6 +35,7 @@ Full text of every page: https://bwalletx.com/llms-full.txt
 - [media-src/og/og-home-v2.html](https://bwalletx.com/media-src/og/og-home-v2)
 - [media-src/og/og-home-v3.html](https://bwalletx.com/media-src/og/og-home-v3)
 - [media-src/og/og-iphone.html](https://bwalletx.com/media-src/og/og-iphone)
+- [media-src/og/og-login.html](https://bwalletx.com/media-src/og/og-login)
 - [media-src/og/og-lounge.html](https://bwalletx.com/media-src/og/og-lounge)
 - [media-src/og/og-mcp.html](https://bwalletx.com/media-src/og/og-mcp)
 - [media-src/og/og-mint.html](https://bwalletx.com/media-src/og/og-mint)
@@ -44,6 +46,7 @@ Full text of every page: https://bwalletx.com/llms-full.txt
 - [media-src/og/og-spec.html](https://bwalletx.com/media-src/og/og-spec)
 - [media-src/og/og-strat3.html](https://bwalletx.com/media-src/og/og-strat3)
 - [media-src/og/og-strategies.html](https://bwalletx.com/media-src/og/og-strategies)
+- [media-src/og/testers/og-testers.html](https://bwalletx.com/media-src/og/testers/og-testers)
 - [media-src/walkthrough-01/cut/tmp/cap-16x9-2.html](https://bwalletx.com/media-src/walkthrough-01/cut/tmp/cap-16x9-2)
 - [media-src/walkthrough-01/cut/tmp/cap-16x9-3.html](https://bwalletx.com/media-src/walkthrough-01/cut/tmp/cap-16x9-3)
 - [media-src/walkthrough-01/cut/tmp/cap-16x9-4.html](https://bwalletx.com/media-src/walkthrough-01/cut/tmp/cap-16x9-4)
@@ -75,15 +78,18 @@ Full text of every page: https://bwalletx.com/llms-full.txt
 - [PNEEs: Penny Stablecoins](https://bwalletx.com/pnees): PNEEs (Penny Stablecoins): digital pennies on BSV, one US cent each, backed only by BSV locked in public vaults. No bank, no co-signer on transfers, no freeze. Live mainnet pilot.
 - [Push notifications (coming soon) · bWalletX](https://bwalletx.com/push-notifications): Push notifications for bWalletX are coming soon: messages, mentions, payments and calls on iPhone, Android, web and the Chrome extension, even with the app closed. Who messaged you, not what they wrote.
 - [bWalletX Social](https://bwalletx.com/social): Your handle is your paymail, your token and your chat room. Sign in with X or Google, hold friends’ tokens, chat in token rooms, post to the Feed, call and pay friends.
+- [Get 1 BSV: test bWallet on Android](https://bwalletx.com/testers): Get 1 BSV for testing bWallet on Android for 14 days. 20 places. Apply with Google; paid to your own bWallet.
 - [Watch: bWalletX in one minute](https://bwalletx.com/video): A one-minute tour of bWalletX: create a wallet, back it up, dollar balances, the Exchange, the Apps store, the Feed and group chats, and b, your AI agent.
 
 ## Developers and agents
 
+- [Sign in with bWalletX (Markdown)](https://bwalletx.com/login.md): The sign-in guide as plain Markdown, for AI coding agents.
 - [The b agent · bWalletX](https://bwalletx.com/agent): The b agent is the AI assistant inside bWalletX: ask how the wallet works, design strategies, or call it into a chat with /b. Use your own API key, or pay per message.
 - [bWalletX Agent Accounts](https://bwalletx.com/agents): Give each AI its own bWalletX account, its own budget and its own ghost. Daily caps, Stop all, an activity log, and the CLI or MCP for Claude and other agents.
 - [Add your app to bWallet](https://bwalletx.com/apps/add): Built a BSV app? Add it to the Apps screen in bWallet and bWalletX, in front of every wallet user. Free, reviewed by a person.
 - [bWalletX CLI](https://bwalletx.com/cli): Run your bWalletX wallet and AI agents from the command line: balances, sends, trades and strategies, on your laptop or a server.
 - [bWalletX for Developers](https://bwalletx.com/developers): Add a Connect with bWalletX button to your site: one script, a standard BRC-100 wallet, no API keys.
+- [Sign in with bWalletX · Developer guide](https://bwalletx.com/login): Add Sign in with bWalletX to your app: the user's wallet signs a one-time challenge with its identity key and your server checks it with @bsv/sdk. Button, client and server code, security notes, and steps for AI agents.
 - [bWalletX MCP](https://bwalletx.com/mcp): Let Claude, ChatGPT, Cursor or any MCP agent use your bWalletX agent accounts: balances, sends, trades and strategies, within the budget and limits you set.
 - [bWalletX Strategies](https://bwalletx.com/strategies): Tell the b agent your idea: it writes the strategy, tests it against live prices and packages it as an encrypted NFT to sell on Exchange › Strategies. Buyers load it into their own agent, with spending limits the wallet enforces.
 - [bWalletX Strategy Spec](https://bwalletx.com/strategies/spec): The bWalletX strategy file format (bwalletx.strategy/1), the rules the wallet enforces, paper mode, and how strategies are sold as encrypted NFTs.
@@ -104,8 +110,8 @@ Full text of every page: https://bwalletx.com/llms-full.txt
 - [012 The extension, the web app and pairing · bWalletX blog](https://bwalletx.com/blog/012-extension-and-web): bWalletX also runs as a Chrome and Brave extension and as a web app. On iPhone the web app is the only way to get the full wallet, so we made backup mandatory there.
 - [013 Two sites from one · bWalletX blog](https://bwalletx.com/blog/013-sites-and-navigation): A download page became bwallet.space, then bwalletx.com became the main site, with the store site generated from it. And this blog.
 - [014 One feed for BSV · bWalletX blog](https://bwalletx.com/blog/014-open-feed): Every BSV social app keeps its own feed. bChat shows all of them, credits them, and pays the people who wrote the posts.
-- [016 Subscriptions, paid from pots · bWalletX blog](https://bwalletx.com/blog/016-pots): Out in bWalletX 5.1.75: put money aside in a pot, set up regular payments from it, and pause them any time. Free, billing off.
 - [015 Launchpad, and checking what we sign · bWalletX blog](https://bwalletx.com/blog/015-launchpad): bWalletX 5.1.74 can buy and sell bonding-curve coins. The wallet now checks every trade the server prepares before it signs anything.
+- [016 Subscriptions, paid from pots · bWalletX blog](https://bwalletx.com/blog/016-pots): Out in bWalletX 5.1.75: put money aside in a pot, set up regular payments from it, and pause them any time. Free, billing off.
 - [017 Sign in with bWalletX, and the Lounge · bWalletX blog](https://bwalletx.com/blog/017-sign-in-and-lounge): bChat now has one gold button to sign in with your wallet. Every account starts in the bWallet Lounge.
 - [018 1 BSV for testing bWallet on Android · bWalletX blog](https://bwalletx.com/blog/018-testers): Google needs 12 people to test bWallet for 14 days before it can go on the Play Store. We are paying 1 BSV for that time.
 - [019 Blur slurs, show swearing · bWalletX blog](https://bwalletx.com/blog/019-language-filter): The bChat feed and bWalletX now blur slurs behind a tap. Swearing is shown. Nothing is deleted.

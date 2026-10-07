@@ -1,6 +1,6 @@
 # bWalletX: full site text
 
-Generated 2026-10-06 from https://bwalletx.com. Source pages are linked above each section.
+Generated 2026-10-07 from https://bwalletx.com. Source pages are linked above each section.
 
 ---
 
@@ -865,9 +865,15 @@ The Lounge is where bWallet and bWalletX people talk. Ask a question, share an i
 
 [Open the Lounge on bChat](https://www.bitcoinchat.online/room/LOUNGE)
 
+## Already in your wallet
+
+Every bWalletX and bWallet user is in the Lounge from day one. It's in your Chat tab, no invite and no token needed. Open Chat and you're there.
+
+Don't want it? Leave any time, and it stays that way.
+
 ## What it is
 
-It's a group chat room on bChat, ticker LOUNGE. Anyone can come in and read along. Sign in with bWalletX and you can join the conversation.
+It's a group chat room on bChat, ticker LOUNGE. Anyone can come in and read along. If you use bWalletX or bWallet you're already a member.
 
 Stuck at 2am and nobody's around? Type `/b` followed by your question and the $b assistant answers, any time of day.
 
@@ -878,6 +884,32 @@ Stuck at 2am and nobody's around? Type `/b` followed by your question and the $b
 - Sign in with bWalletX, or with X or Google.
 
 - Say hi.
+
+---
+
+Source: https://bwalletx.com/media-src/og/blog/og-blog-014
+
+bWalletX blog
+
+014 · OPEN FEED
+
+# One feed.
+Every app.
+Authors paid.
+
+Twetch, Treechat, Peck, Fwetch and bChat in one timeline on bChat
+
+Twetch
+
+Treechat
+
+Peck
+
+Fwetch
+
+bChat
+
+Feed
 
 ---
 
@@ -1206,6 +1238,34 @@ bwalletx.com/iphone · web app · beta
 
 ---
 
+Source: https://bwalletx.com/media-src/og/og-login
+
+-
+
+bWalletX for Developers
+
+# Sign in with bWalletX. One signature, no passwords.
+
+Identity key@bsv/sdkExtension · Phone · Web
+
+The wallet signs your server's challenge. You check it with @bsv/sdk. No API keys.
+
+Sign in with bWalletX
+`await wallet.createSignature({
+protocolID: [2, 'bwallet sign in'],
+keyID: nonce,
+counterparty: 'anyone',
+data: challengeBytes,
+});
+
+// server
+new ProtoWallet('anyone')
+.verifySignature({ ..., counterparty: identityKey })`
+
+bwalletx.com/login · free · open standard
+
+---
+
 Source: https://bwalletx.com/media-src/og/og-lounge
 
 -
@@ -1215,9 +1275,9 @@ bChat
 # bWallet
 Lounge
 
-Talk to the team and other bWallet people · /b answers anytime
+Every bWalletX & bWallet user is in · /b answers anytime
 
-bwalletx.com/lounge · open to everyone
+bwalletx.com/lounge · already in your Chat tab
 
 bWallet Lounge
 $LOUNGE
@@ -1377,6 +1437,22 @@ Strategies are programs
 Write it→
 Load it→
 Sell it
+
+---
+
+Source: https://bwalletx.com/media-src/og/testers/og-testers
+
+-
+
+bWallet paid testers · Android
+
+# Get 1 BSV
+
+Test bWallet on Android for 14 days · 20 places
+
+Closed test on Google Play
+
+bwalletx.com/testers
 
 ---
 
@@ -2025,6 +2101,52 @@ bWalletX is in beta and some room rules are still being rolled out. Tokens can l
 
 ---
 
+Source: https://bwalletx.com/testers
+
+# Get 1 BSV for testing bWallet
+
+Test bWallet on your Android phone for 14 days and I'll pay you 1 BSV. Google won't let me publish on the Play Store until at least 12 people have tested it for 14 days in a row, so I'm paying for that time.
+
+20 places
+
+Loading…
+
+## How it works
+
+- Sign in with Google and apply. Use the Google account on your Android phone.
+
+- I read every application and approve testers by hand. If you're in, I add your email to the Google Play test and you'll see your tester code here.
+
+- Join the test on Google Play and install bWallet from there (not the APK from this site).
+
+- Open bWallet, go to Settings › Testing and enter your tester code. The app checks in once a day when you open it.
+
+- Open bWallet every day for 14 days. Use it like you normally would: send a little, receive, try the features.
+
+## What you get
+
+- 0.25 BSV after you first open the app installed from Google Play.
+
+- 0.75 BSV once you've checked in on at least 12 of the 14 days.
+
+- Paid to your own bWallet receive address. I pay each one by hand and you'll see the transaction id here.
+
+## The rules
+
+- One place per person: one Google account, one phone, one wallet. Duplicates get declined.
+
+- Payment never depends on ratings or reviews. Please don't leave a review because of this; Google doesn't allow paid reviews. Report bugs and ideas in the app instead (Settings › Contact and reports).
+
+- I approve applicants, and I can say no or remove a place if something looks wrong.
+
+- 20 places. When they're gone, they're gone.
+
+- What the app sends while you test is in the [privacy policy](https://bwalletx.com/privacy#testers): a random install id, your tester code, whether it came from Google Play, and the app version. Nothing about your keys or money.
+
+Questions: [@bWalletX on X](https://x.com/bWalletX).
+
+---
+
 Source: https://bwalletx.com/video
 
 # bWalletX in one minute
@@ -2341,6 +2463,10 @@ protocolID: [0, 'my site login'],
 keyID: '1',
 });``
 
+## Sign users in
+
+To let people sign in to your app with bWalletX (extension, phone or web wallet), follow the [Sign in with bWalletX guide](https://bwalletx.com/login): button, client and server code, and steps for AI agents.
+
 ## Already using window.CWI?
 
 bWalletX also sets `window.CWI`, so sites that call it directly work as they are. But if the user also has another wallet installed (such as Yours), you can't tell which one answers. `bWalletX.connect()` picks bWalletX by name (rdns `com.bwalletx.extension`) through BRC-100 wallet discovery, so it always gets the right wallet.
@@ -2363,6 +2489,529 @@ BRC-100 wallets don't hand sites the user's main receive address. `identityKey` 
 Connect with bWalletX
 
 Questions: [support@bwalletx.com](mailto:support@bwalletx.com) · Source: [connect.js](https://bwalletx.com/connect.js)
+
+---
+
+Source: https://bwalletx.com/login
+
+# Sign in with bWalletX
+
+How to let people sign in to your site or app with their bWalletX: a gold button, a few short TypeScript files you copy, and no API keys.
+
+Also as plain Markdown for AI coding agents: [bwalletx.com/login.md](https://bwalletx.com/login.md). Checked against bWalletX 5.1.75 and @bsv/sdk 2.2.0, 2.8.11 and 3.1.0 on 7 Oct 2026.
+
+## In 30 seconds
+
+- Your server makes a one-time challenge: a short text that names your site, a random nonce and an expiry two minutes away.
+
+- The user's bWalletX signs that text with BRC-100 `createSignature`, using a key derived from their wallet's identity key (protocol `[2, 'bwallet sign in']`, keyID = the nonce, counterparty `'anyone'`).
+
+- Your server checks the signature with `@bsv/sdk` (`new ProtoWallet('anyone').verifySignature(...)`), deletes the nonce, and signs the user in as that identity key.
+
+- No API key, no client ID, no account with us. Nothing passes through bwalletx.com. The only service of ours involved is the encrypted pairing relay, and only when the user signs in from a phone or the web wallet.
+
+The user's identity key (a 33-byte compressed public key, 66 hex characters) is their user ID on your site. It is the same key every time they sign in with the same wallet.
+
+## Three ways the user's wallet can answer
+
+Where the user is
+How your page reaches the wallet
+What you need
+
+Chrome or Brave with the bWalletX extension
+BRC-100 wallet discovery: dispatch `brc100:requestWallet`, take the `brc100:announceWallet` reply whose `info.rdns` is `com.bwalletx.extension`
+Nothing extra. `findBwalletX()` below, or `https://bwalletx.com/connect.js`
+
+Your site opened inside the bWalletX app's own browser
+Same discovery; the app announces `rdns: space.bwallet.mobile` and also sets `window.CWI`
+Nothing extra. `findBwalletX()` covers it
+
+bWalletX on a phone, or the web wallet at web.bwalletx.com
+Pairing: your page shows a `https://www.bwallet.space/pair?...` link as a QR code. The phone scans it; the web wallet takes it pasted. Both then talk to your page through `relay.bwallet.space`, end-to-end encrypted
+`protocol.ts` from the bWalletX repo, plus `pairBwalletX()` below
+
+All three give you the same thing: an object with the BRC-100 `WalletInterface` methods. Sign-in is the same code for all of them.
+
+## The button
+
+Sign in with bWalletXalso works with bWallet
+
+Use the gold button. Keep the label "Sign in with bWalletX". The logo is at `https://bwalletx.com/logo.svg` (the gold b, viewBox 74 x 100). Don't recolour it; it sits on a black circle so it reads on the gold.
+
+``<button type="button" id="bwx-signin" class="bwx-signin">
+<span class="bwx-mark"><img src="https://bwalletx.com/logo.svg" alt="" width="15" height="20"></span>
+<span class="bwx-label">Sign in with bWalletX<small>also works with bWallet</small></span>
+</button>
+<div id="bwx-pair"></div>
+``
+``.bwx-signin {
+display: inline-flex; align-items: center; gap: 12px;
+min-height: 48px; padding: 10px 22px 10px 10px;
+border: 0; border-radius: 12px; cursor: pointer;
+background: linear-gradient(180deg, #fcd34d, #f59e0b);
+color: #000; text-align: left;
+font: 700 16px/1.2 system-ui, -apple-system, "Segoe UI", sans-serif;
+box-shadow: 0 8px 24px rgba(245, 158, 11, 0.2);
+}
+.bwx-signin:hover { background: linear-gradient(180deg, #fde68a, #fbbf24); }
+.bwx-signin:focus-visible { outline: 2px solid #ffd24d; outline-offset: 3px; }
+.bwx-signin:disabled { opacity: 0.6; cursor: wait; }
+.bwx-signin .bwx-mark {
+display: inline-flex; align-items: center; justify-content: center;
+width: 32px; height: 32px; border-radius: 50%; background: #000; flex: none;
+}
+.bwx-signin small { display: block; font-size: 11px; font-weight: 500; color: rgba(0, 0, 0, 0.6); }
+``
+
+Put it first among your wallet options. The second line ("also works with bWallet") is optional: bWallet is the store edition of the same wallet and signs in the same way.
+
+## 1. Server: issue and verify challenges
+
+Install `@bsv/sdk` (any 2.x or 3.x). This file has no other dependencies.
+
+``// bwalletx-server.ts: server side of "Sign in with bWalletX". Needs @bsv/sdk only.
+import { ProtoWallet, PublicKey, type WalletProtocol } from '@bsv/sdk';
+import { randomBytes } from 'node:crypto';
+
+/** Security level 2, a protocol name used for nothing else. Keep it constant. */
+export const LOGIN_PROTOCOL: WalletProtocol = [2, 'bwallet sign in'];
+const LIFETIME_MS = 2 * 60 * 1000;
+
+export interface PendingChallenge {
+identityKey: string;
+message: string;
+expiresAt: number;
+}
+
+/** Where challenges wait. Use Redis or a database table in production; take() must delete atomically. */
+export interface ChallengeStore {
+put(nonce: string, c: PendingChallenge): Promise<void>;
+take(nonce: string): Promise<PendingChallenge | null>;
+}
+
+/** In-memory store: fine for one server process and for tests. */
+export function memoryStore(): ChallengeStore {
+const m = new Map<string, PendingChallenge>();
+return {
+async put(nonce, c) { m.set(nonce, c); },
+async take(nonce) { const c = m.get(nonce) ?? null; m.delete(nonce); return c; },
+};
+}
+
+export function isIdentityKey(x: unknown): x is string {
+if (typeof x !== 'string' || !/^0[23][0-9a-fA-F]{64}$/.test(x)) return false;
+try { PublicKey.fromString(x); return true; } catch { return false; }
+}
+
+/** The text the user signs. It names your site so a signature made for you is useless elsewhere. */
+export function loginMessage(origin: string, nonce: string, expiresAt: number): string {
+return [
+`Sign in to ${new URL(origin).host} with bWallet`,
+'',
+'This proves you hold this wallet. It does not spend anything.',
+'',
+`Origin: ${origin}`,
+`Nonce: ${nonce}`,
+`Expires: ${new Date(expiresAt).toISOString()}`,
+].join('\n');
+}
+
+/**
+* Step 1. `origin` is YOUR site's origin from config (e.g. "https://example.com"),
+* never taken from the request body.
+*/
+export async function createChallenge(store: ChallengeStore, origin: string, identityKey: unknown) {
+if (!isIdentityKey(identityKey)) throw new Error('identityKey must be a compressed public key (66 hex chars)');
+const nonce = randomBytes(16).toString('base64url');
+const expiresAt = Date.now() + LIFETIME_MS;
+const message = loginMessage(origin, nonce, expiresAt);
+await store.put(nonce, { identityKey: identityKey.toLowerCase(), message, expiresAt });
+return { nonce, message, protocolID: LOGIN_PROTOCOL, keyID: nonce };
+}
+
+/**
+* Step 2. Returns the proven identity key (lowercase hex), or null.
+* The nonce is deleted before checking, so each challenge can be tried once.
+*/
+export async function verifySignIn(
+store: ChallengeStore,
+body: { identityKey?: unknown; nonce?: unknown; signature?: unknown },
+): Promise<string | null> {
+if (typeof body.nonce !== 'string' || !isIdentityKey(body.identityKey)) return null;
+const c = await store.take(body.nonce);
+if (!c || Date.now() > c.expiresAt) return null;
+const identityKey = body.identityKey.toLowerCase();
+if (c.identityKey !== identityKey) return null;
+
+const sig = body.signature;
+if (!Array.isArray(sig) || sig.length < 8 || sig.length > 80 || !sig.every((b) => Number.isInteger(b) && b >= 0 && b <= 255)) {
+return null;
+}
+try {
+const { valid } = await new ProtoWallet('anyone').verifySignature({
+protocolID: LOGIN_PROTOCOL,
+keyID: body.nonce,
+counterparty: identityKey,
+data: Array.from(Buffer.from(c.message, 'utf8')),
+signature: sig as number[],
+});
+return valid ? identityKey : null;
+} catch {
+return null; // @bsv/sdk throws on a bad signature instead of returning valid: false
+}
+}
+``
+
+Two routes. This example uses Express; any framework works the same way.
+
+``// Example routes (Express). Any framework works the same way.
+import express from 'express';
+import { createChallenge, memoryStore, verifySignIn } from './bwalletx-server.js';
+
+const ORIGIN = process.env.APP_ORIGIN ?? 'https://example.com'; // your site, exactly as the browser sends Origin
+const store = memoryStore();
+const app = express();
+app.use(express.json());
+
+// Only accept calls from your own pages.
+app.use('/auth/bwalletx', (req, res, next) => {
+if (req.get('origin') !== ORIGIN) return res.status(403).json({ error: 'wrong origin' });
+next();
+});
+
+app.post('/auth/bwalletx/challenge', async (req, res) => {
+try {
+res.json(await createChallenge(store, ORIGIN, req.body?.identityKey));
+} catch (e) {
+res.status(400).json({ error: e instanceof Error ? e.message : 'bad request' });
+}
+});
+
+app.post('/auth/bwalletx/verify', async (req, res) => {
+const identityKey = await verifySignIn(store, req.body ?? {});
+if (!identityKey) return res.status(401).json({ error: 'That signature was not accepted. Start again.' });
+// identityKey is the user's stable id. Find or create the account keyed on it, then start your session.
+res.json({ ok: true, identityKey });
+});
+
+app.listen(3000);
+``
+
+## 2. Browser: find the wallet and sign in
+
+``// bwalletx-client.ts: browser side of "Sign in with bWalletX".
+import type { WalletInterface, WalletProtocol } from '@bsv/sdk';
+
+/** Ids bWalletX announces in BRC-100 wallet discovery: the Chrome extension, and the phone app's in-app browser. */
+export const BWALLETX_RDNS = ['com.bwalletx.extension', 'space.bwallet.mobile'];
+
+/**
+* Ask the page for bWalletX by name (BRC-100 discovery): the extension on a computer, or the
+* wallet itself when your site is open in bWalletX's in-app browser.
+* Resolves null if nothing answered within `ms` (not installed, or an ordinary phone browser).
+*/
+export function findBwalletX(ms = 1200): Promise<WalletInterface | null> {
+return new Promise((resolve) => {
+let done = false;
+const finish = (w: WalletInterface | null) => {
+if (done) return;
+done = true;
+window.removeEventListener('brc100:announceWallet', onAnnounce);
+resolve(w);
+};
+const onAnnounce = (e: Event) => {
+const d = (e as CustomEvent).detail as { info?: { rdns?: string }; wallet?: WalletInterface } | undefined;
+if (d?.wallet && BWALLETX_RDNS.includes(d.info?.rdns ?? '')) finish(d.wallet);
+};
+window.addEventListener('brc100:announceWallet', onAnnounce);
+window.dispatchEvent(new Event('brc100:requestWallet'));
+setTimeout(() => finish(null), ms);
+});
+}
+
+interface Challenge {
+nonce: string;
+message: string;
+protocolID: WalletProtocol;
+keyID: string;
+}
+
+async function postJson<T>(url: string, body: unknown): Promise<T> {
+const res = await fetch(url, {
+method: 'POST',
+headers: { 'content-type': 'application/json' },
+credentials: 'same-origin',
+body: JSON.stringify(body),
+});
+const out = await res.json().catch(() => ({}));
+if (!res.ok) throw new Error((out as { error?: string }).error || `HTTP ${res.status}`);
+return out as T;
+}
+
+/**
+* Prove the wallet's identity key to your server. Works with any BRC-100 wallet object:
+* the extension or in-app browser (findBwalletX), a paired phone or web wallet (pairBwalletX), or
+* window.CWI inside the bWalletX in-app browser.
+*/
+export async function signInWithBwalletX<T = unknown>(wallet: WalletInterface, apiBase = '/auth/bwalletx'): Promise<T> {
+// Asks the user to unlock if needed. Older wallets and paired phones may not implement it.
+await wallet.waitForAuthentication({}).catch(() => {});
+const { publicKey: identityKey } = await wallet.getPublicKey({ identityKey: true });
+
+const c = await postJson<Challenge>(`${apiBase}/challenge`, { identityKey });
+
+// The wallet shows the user an approval prompt for this.
+const { signature } = await wallet.createSignature({
+protocolID: c.protocolID,
+keyID: c.keyID,
+counterparty: 'anyone',
+data: Array.from(new TextEncoder().encode(c.message)), // the server's exact text
+});
+
+return postJson<T>(`${apiBase}/verify`, { identityKey, nonce: c.nonce, signature });
+}
+``
+
+## 3. Browser: pairing for phone and web wallet users
+
+Copy `protocol.ts` from [https://github.com/bitcoin-corp/bwallet/blob/main/src/pair/protocol.ts](https://github.com/bitcoin-corp/bwallet/blob/main/src/pair/protocol.ts) into your project, next to this file. It is the pairing protocol the bWalletX app speaks: ECDH on secp256k1, HKDF-SHA256, AES-256-GCM, and a 4-digit code both screens show. Don't change it; the app must understand every byte.
+
+``// bwalletx-pair.ts: pair with bWalletX on a phone (QR) or web.bwalletx.com (pasted link).
+// Needs protocol.ts from https://github.com/bitcoin-corp/bwallet/blob/main/src/pair/protocol.ts
+import { PrivateKey, type WalletInterface } from '@bsv/sdk';
+import {
+DEFAULT_RELAY, PAIR_VERSION, QR_LIFETIME_S, Sealer, deriveSession, isSealed, newChannel, pairUrl, relaySocketUrl,
+type HelloFrame, type PairMessage,
+} from './protocol';
+
+export interface PairingOptions {
+/** Show this link as a QR code, and as text to copy (web.bwalletx.com takes it pasted). */
+onLink: (link: string) => void;
+/** Show this 4-digit code. The wallet shows the same one; the user checks they match. */
+onCode: (code: string) => void;
+signal?: AbortSignal;
+}
+
+/**
+* Resolves with a BRC-100 wallet once the user taps Connect in bWalletX.
+* Every method call is sent, end-to-end encrypted, through relay.bwallet.space to the wallet,
+* which asks the user to approve it. Keep the returned object while the page is open.
+*/
+export function pairBwalletX(opts: PairingOptions): Promise<WalletInterface> {
+const siteKey = PrivateKey.fromRandom(); // a throwaway pairing key, not a wallet key
+const channel = newChannel();
+const expiry = Math.floor(Date.now() / 1000) + QR_LIFETIME_S;
+const ws = new WebSocket(relaySocketUrl(DEFAULT_RELAY, channel, 'site', expiry));
+const waiting = new Map<string, { resolve: (v: unknown) => void; reject: (e: Error) => void }>();
+let sealer: Sealer | null = null;
+let paired = false;
+
+opts.onLink(pairUrl({ v: PAIR_VERSION, r: DEFAULT_RELAY, c: channel, k: siteKey.toPublicKey().toString(), o: location.origin, e: expiry }));
+
+const call = async (action: string, params: unknown) => {
+if (!sealer || ws.readyState !== WebSocket.OPEN) throw new Error('bWalletX is not connected');
+const id = `${action}-${Date.now()}-${Math.random().toString(36).slice(2)}`;
+const result = new Promise<unknown>((resolve, reject) => {
+waiting.set(id, { resolve, reject });
+setTimeout(() => { if (waiting.delete(id)) reject(new Error('No answer from bWalletX')); }, 120_000);
+});
+ws.send(JSON.stringify(await sealer.seal({ t: 'req', id, action, params } satisfies PairMessage)));
+return result;
+};
+
+const wallet = new Proxy({} as WalletInterface, {
+get: (_t, method) => (typeof method !== 'string' || method === 'then' ? undefined : (params: unknown) => call(method, params ?? {})),
+});
+
+return new Promise<WalletInterface>((resolve, reject) => {
+const fail = (e: Error) => {
+for (const w of waiting.values()) w.reject(e);
+waiting.clear();
+if (!paired) reject(e);
+ws.close();
+};
+const timer = setTimeout(() => { if (!paired) fail(new Error('The pairing code expired. Show a new one.')); }, QR_LIFETIME_S * 1000);
+opts.signal?.addEventListener('abort', () => fail(new Error('cancelled')));
+ws.onerror = () => fail(new Error('Could not reach the bWalletX pairing service'));
+ws.onclose = () => fail(new Error('The connection to bWalletX closed'));
+// Handle frames one at a time, in order (the hello must be processed before the next frame).
+let queue = Promise.resolve();
+ws.onmessage = (ev) => { queue = queue.then(() => onFrame(String(ev.data))).catch(() => {}); };
+const onFrame = async (raw: string) => {
+let f: unknown;
+try { f = JSON.parse(raw); } catch { return; }
+if ((f as HelloFrame).t === 'hello' && !sealer) {
+const s = await deriveSession(siteKey, (f as HelloFrame).k, channel);
+sealer = new Sealer(s.key, 'site');
+opts.onCode(s.code);
+return;
+}
+if (!sealer || !isSealed(f)) return;
+const msg = await sealer.open(f);
+if (!msg) return;
+if (msg.t === 'ready') {
+paired = true;
+clearTimeout(timer);
+resolve(wallet);
+} else if (msg.t === 'res') {
+const w = waiting.get(msg.id);
+if (!w) return;
+waiting.delete(msg.id);
+if (msg.error) w.reject(new Error(msg.error.message));
+else w.resolve(msg.result);
+} else if (msg.t === 'close') {
+fail(new Error('bWalletX disconnected'));
+}
+};
+});
+}
+``
+
+## 4. Wire up the button
+
+Uses the `qrcode` package from npm to draw the QR code.
+
+``// button.ts: wire the gold button. Extension first; otherwise a QR / link for phone or web wallet.
+import QRCode from 'qrcode';
+import { findBwalletX, signInWithBwalletX } from './bwalletx-client';
+import { pairBwalletX } from './bwalletx-pair';
+
+const button = document.getElementById('bwx-signin') as HTMLButtonElement;
+const panel = document.getElementById('bwx-pair') as HTMLDivElement; // empty <div> under the button
+
+button.addEventListener('click', async () => {
+button.disabled = true;
+try {
+const wallet =
+(await findBwalletX()) ??
+(await pairBwalletX({
+onLink: async (link) => {
+panel.innerHTML = `<p>Scan with bWalletX on your phone, or paste this link into web.bwalletx.com:</p>
+<img alt="bWalletX pairing code" width="240" height="240" src="${await QRCode.toDataURL(link, { margin: 1, width: 240 })}">
+<input readonly style="width:100%" value="${link}">`;
+},
+onCode: (code) => {
+panel.insertAdjacentHTML('beforeend', `<p>Check bWalletX shows <b>${code}</b>, then tap Connect.</p>`);
+},
+}));
+const session = await signInWithBwalletX<{ identityKey: string }>(wallet);
+panel.textContent = `Signed in: ${session.identityKey}`;
+} catch (e) {
+panel.textContent = e instanceof Error ? e.message : 'Sign-in did not complete';
+} finally {
+button.disabled = false;
+}
+});
+``
+
+## Exactly what is signed
+
+The server builds this text, sends it to the browser, and keeps a copy. The wallet signs the UTF-8 bytes of it unchanged. Lines are joined with `\n`, no trailing newline.
+
+``Sign in to example.com with bWallet
+
+This proves you hold this wallet. It does not spend anything.
+
+Origin: https://example.com
+Nonce: 3q2-7wEXAMPLEnonce0Q8w
+Expires: 2026-10-07T12:02:00.000Z
+``
+
+(The second and fourth lines are empty.) This is the same text bChat and bit-sign use. The wallet does not parse it; any text works, but keep your origin, the nonce and the expiry in it so the user can see what they are approving and a signature made for your site is worthless anywhere else.
+
+The signature call, as the wallet receives it:
+
+Field
+Value
+
+`protocolID`
+`[2, 'bwallet sign in']` (security level 2: the derived key depends on the counterparty)
+
+`keyID`
+the nonce
+
+`counterparty`
+`'anyone'`
+
+`data`
+the UTF-8 bytes of the text, as `number[]`
+
+result `signature`
+DER-encoded ECDSA signature, as `number[]`
+
+The signing key is derived (BRC-42) from the wallet's root identity private key towards "anyone", for that protocol and keyID. Anyone holding only the identity public key can derive the matching public key, which is what `new ProtoWallet('anyone').verifySignature({ ..., counterparty: identityKey })` does (BRC-3). Only the holder of the identity private key can make the signature.
+
+## Security notes
+
+- One try per nonce. Delete the challenge before you check the signature, as `verifySignIn` does. A challenge that survives a failed attempt can be retried.
+
+- Two-minute expiry. Check it on the server. Don't trust an expiry sent by the browser.
+
+- The nonce is also the keyID, so each challenge is signed by a different derived key. A signature for one nonce can't be used for another.
+
+- Build the text on the server and verify against your stored copy. Never verify text the browser sends you.
+
+- Use your configured origin in the text, not a value from the request. Refuse challenge and verify calls whose `Origin` header isn't your site.
+
+- Bind the challenge to the identity key the browser claimed, and check it again at verify.
+
+- `verifySignature` throws on a bad signature in @bsv/sdk instead of returning `valid: false`. Catch it and treat it as a failure.
+
+- Check the key is a real point: `PublicKey.fromString` throws for a 66-hex string that isn't on the curve.
+
+- Rate-limit the challenge route per IP and per identity key. It is unauthenticated.
+
+- Sessions are yours. After `verifySignIn` returns a key, issue your normal session cookie. The wallet does not give you a token.
+
+- Privacy. The identity key is the same on every site the user signs in to with this method, so two sites can tell it is the same wallet. Tell your users this if it matters to them.
+
+- Pairing. The relay checks the WebSocket `Origin` of the page that opened the channel and tells the wallet; the wallet refuses to pair if it differs from the origin in the QR code. The relay only sees ciphertext. The pairing key in `pairBwalletX` is random and is not a wallet key.
+
+- What the user sees. The extension and the phone show their own approval prompt naming your site's host (taken from the page or the relay, not from your text). Nothing is spent.
+
+## Not yet available
+
+These are gaps today. Plan around them.
+
+- No npm package. There is no `@bwalletx/...` or `@b0ase/wallet` package. Copy the files on this page, and `protocol.ts` from the bWalletX repo.
+
+- connect.js does not sign in or pair. `https://bwalletx.com/connect.js` finds the extension only. It has no QR pairing and no sign-in helper.
+
+- No hosted sign-in or OAuth-style redirect. There is no bwalletx.com page you can send users to and get a callback from, and no hosted verify endpoint. You run the two routes yourself. bChat's own endpoints (`/api/bitsign/auth/bwallet/*` on bit-sign) accept requests from their own pages only and are not a public API.
+
+- No user profile. You get the identity key and nothing else: no $handle, paymail, name or picture, and no proof linking the key to them.
+
+- Pairing does not survive a reload in the sample above. bChat stores the pairing key and message counters in localStorage to reconnect; that code is not published as a library.
+
+- The relay is ours. `relay.bwallet.space` accepts any https origin, but it is a single service run by The Bitcoin Corporation with no published uptime or rate-limit guarantees (it currently allows 60 frames a minute per channel).
+
+- No test wallet. There is no testnet build or headless bWalletX for automated tests. To test your server, sign with `new ProtoWallet(PrivateKey.fromRandom()).createSignature(...)` using the same arguments; it makes exactly the signature bWalletX makes.
+
+## For AI agents
+
+Follow these steps in order. Do not invent packages, endpoints or methods that are not on this page.
+
+- Install `@bsv/sdk` in the server project (pnpm, npm or yarn, whichever the project uses). On the client also install `qrcode` if you add phone pairing.
+
+- Create `bwalletx-server.ts` with the code in section 1, unchanged. Set your site's origin (scheme + host, no trailing slash, e.g. `https://example.com`) in config.
+
+- Add two POST routes: `/auth/bwalletx/challenge` calls `createChallenge(store, ORIGIN, body.identityKey)` and returns its result as JSON; `/auth/bwalletx/verify` calls `verifySignIn(store, body)`. Reject both if the request `Origin` header is not your origin.
+
+- Replace `memoryStore()` with a shared store (database table or Redis) if you run more than one server process. `take(nonce)` must read and delete in one step.
+
+- In the verify route, when `verifySignIn` returns a key: find the user whose bWalletX identity key equals it, or create one, then start your normal session. Return 401 when it returns null.
+
+- Create `bwalletx-client.ts` with the code in section 2, unchanged. If your routes are not under `/auth/bwalletx`, pass the base path as the second argument to `signInWithBwalletX`.
+
+- For phone and web wallet users: download `https://raw.githubusercontent.com/bitcoin-corp/bwallet/main/src/pair/protocol.ts` into the same folder as `bwalletx-pair.ts` (section 3). Do not edit `protocol.ts`.
+
+- Add the button HTML and CSS from "The button" and the click handler from section 4.
+
+- Test the server without a wallet: create `const k = PrivateKey.fromRandom()`, call your challenge route with `k.toPublicKey().toString()`, sign `message` with `new ProtoWallet(k).createSignature({ protocolID, keyID, counterparty: 'anyone', data: Array.from(Buffer.from(message, 'utf8')) })`, post `{ identityKey, nonce, signature }` to verify and expect success. Post the same body again and expect 401.
+
+- Test by hand: with the bWalletX extension in Chrome, click the button and approve. Without it, scan the QR with bWalletX on a phone, check the 4-digit codes match, tap Connect, approve.
+
+Questions: [support@bwalletx.com](mailto:support@bwalletx.com)
 
 ---
 
@@ -3361,7 +4010,263 @@ If you build a BSV app with a feed, come and talk to us in the [bWallet Lounge o
 
 Related: [Social](https://bwalletx.com/social) · [Developers](https://bwalletx.com/developers) · [003 Tabs, apps and a social feed](https://bwalletx.com/blog/003-tabs-apps-feed)
 
-[← 013 Two sites from one](https://bwalletx.com/blog/013-sites-and-navigation)[All posts →](https://bwalletx.com/blog)
+[← 013 Two sites from one](https://bwalletx.com/blog/013-sites-and-navigation)[015 Launchpad, and checking what we sign →](https://bwalletx.com/blog/015-launchpad)
+
+---
+
+Source: https://bwalletx.com/blog/015-launchpad
+
+[Development blog](https://bwalletx.com/blog) · 015 · 7 Oct 2026
+
+# Launchpad, and checking what we sign
+
+bWalletX 5.1.74 can buy and sell bonding-curve coins. The wallet now checks every trade the server prepares before it signs anything.
+
+## What Launchpad is
+
+Launchpad is a filter in Market. It lists BlastPad bonding-curve coins and lets you buy and sell them from inside the wallet.
+
+A bonding curve sets the price from how many coins have been sold. The server builds the transaction for each trade and the wallet signs it.
+
+Launchpad is only in bWalletX. The store builds of bWallet carry none of its code or text.
+
+## Confirm before signing
+
+A Buy or Sell tap opens a confirm panel first. It shows the exact token amount, the BSV to the sat, the dollar value, the slippage floor and a line saying trades are final. Nothing is signed until you press Confirm.
+
+Buys have a maximum size. You can only sell once your holdings have loaded.
+
+## The wallet checks the server
+
+A confirm panel only shows what the server tells it. So in 5.1.74 the wallet works out the trade itself and compares.
+
+It reads the pool's state from the transaction data the server sends, runs its own copy of the curve, and rebuilds every output. Then it checks:
+
+- the token output: right token, right amount, going to you;
+
+- the BSV going into the pool;
+
+- 0.70% to the house address and 0.30% to the route;
+
+- the indexing fee, capped;
+
+- that there are no other outputs;
+
+- that the server's quote equals ours;
+
+- that the BSV leaving your wallet is no more than the amount, the indexing fee and 2 sats.
+
+When you sell, the proceeds go to your own account address as a plain output, and that is checked before signing too.
+
+If anything doesn't match, the wallet refuses the plan and releases the pool. We wrote tests for the bad cases: extra outputs, inflated outputs, the wrong token, the wrong amount, the wrong recipient, a short payout and a quote that doesn't match.
+
+The point is simple. A server we run could be wrong or could be broken into. The wallet shouldn't take its word for it.
+
+## Indexing a token you hold
+
+A token only shows up properly once the 1Sat indexer is funded to track it. If the indexer reports a token as inactive or out of funds, the token page now shows an Index $X button to anyone who holds it.
+
+If you hold a token but didn't create it, you pay only the indexing cost. No fee to us.
+
+When you mint your own handle's token and open its chat room, we add $1 on top. That is the only time we charge it. The button says the exact sats and whether the fee is included, and the confirm sheet lists each line and the network fee.
+
+— Richard
+
+Related: [Exchange](https://bwalletx.com/exchange) · [006 Who pays for indexing](https://bwalletx.com/blog/006-paying-for-indexing) · [008 Building the Exchange](https://bwalletx.com/blog/008-the-exchange)
+
+[← 014 One feed for BSV](https://bwalletx.com/blog/014-open-feed)[016 Subscriptions, paid from pots →](https://bwalletx.com/blog/016-pots)
+
+---
+
+Source: https://bwalletx.com/blog/016-pots
+
+[Development blog](https://bwalletx.com/blog) · 016 · 7 Oct 2026
+
+# Subscriptions, paid from pots
+
+Subscriptions in bWalletX are paid from a subscription pot: money you set aside for them. We call them pots for short. They are out now in 5.1.75, at Settings › Pots. Free, with billing off.
+
+## What a pot is
+
+If you use Monzo you know the idea. A pot is money set aside from your main balance, with a name: "Rent", "bChat", "Netflix".
+
+In bWalletX a pot is its own small account, with its own keys and balance. It works the same way as agent accounts, with a stop button and a log of everything it paid.
+
+## Regular payments
+
+You can add a regular payment to a pot: who to pay, how much, how often, when to start and, if you like, how many times.
+
+Payments are made when you open the app, on or after each date. If you don't open it for a while, it catches up when you do: up to three missed payments, and it asks you before paying more than that.
+
+Pause takes one tap and needs no confirmation. Resume is one tap too, and the payments you missed while paused are skipped, not paid. Cancel stops a payment for good.
+
+Your phone reminds you the day before a payment is due, even with the app closed. If a pot is running low, or a payment fails, you get a notice.
+
+## The most you can lose
+
+A pot can only spend what is in it. The pot balance is the most you can ever lose to a payment, a bug or a bad payee. The pot screens say so when you set one up.
+
+Each pot also has a daily cap. By default it is set from the pot's largest payment, with room for a three-payment catch-up, so a fault can't empty it in one day.
+
+Each payment is saved on the phone before it is sent. If the app crashes halfway, it sends the same saved payment again rather than making a new one, so nothing is paid twice.
+
+Your keys stay on your phone. We looked at holding pot keys on a server so payments could go out with the app closed, and said no. That would make us custodians of your money.
+
+## The store edition
+
+bWallet, the edition in the App Store and Play Store, has pots and regular payments to people (a $handle or paymail). Subscriptions to apps and services are in bWalletX only.
+
+## No charge
+
+Pots are free. We have written down a possible charge of 1 cent a day for later, but it is switched off, and it will never be on in the store builds. If it ever comes on, pausing, cancelling and taking your money out of a pot will still be free.
+
+## Next
+
+After that, we want payments that go out on time with the app closed, still without us holding keys. The wallet would sign a few payments in advance, each locked with nLockTime so it can't be broadcast before its date. That is the next step, not part of 5.1.75.
+
+— Richard
+
+Related: [Agent accounts](https://bwalletx.com/agents) · [010 Agent accounts, strategies, CLI and MCP](https://bwalletx.com/blog/010-agents-strategies-cli)
+
+[← 015 Launchpad, and checking what we sign](https://bwalletx.com/blog/015-launchpad)[017 Sign in with bWalletX, and the Lounge →](https://bwalletx.com/blog/017-sign-in-and-lounge)
+
+---
+
+Source: https://bwalletx.com/blog/017-sign-in-and-lounge
+
+[Development blog](https://bwalletx.com/blog) · 017 · 7 Oct 2026
+
+# Sign in with bWalletX, and the Lounge
+
+bChat now has one gold button to sign in with your wallet. Every account starts in the bWallet Lounge.
+
+## One button
+
+bChat's sign-in page used to offer a long list. Now there is one gold bWalletX button at the top, with X and Google under it and the rest under "More ways".
+
+The button works three ways:
+
+- with the bWalletX extension in Chrome or Brave;
+
+- with bWalletX on your phone, by scanning a QR code;
+
+- with the web wallet at web.bwalletx.com.
+
+bChat sends a challenge, your wallet signs it with your identity key, and bChat checks the signature. No password. If your wallet already has a bChat account, you land in that account instead of a new one.
+
+## Rooms and share links
+
+Token rooms on bChat now offer bWalletX first. Room share cards and offer emails used to say HandCash only; now they say you can sign in with bWalletX.
+
+We also fixed a rough edge. If you weren't signed in and opened an open room like the Lounge, you got "Unauthorized". Now you get a sign-in prompt.
+
+## The Lounge
+
+The bWallet Lounge is the room where everyone who uses the wallet can talk to each other and to us. Every account is now in it by default. If you leave, you stay left; we don't add you back.
+
+You can get there at [bitcoinchat.online/room/LOUNGE](https://www.bitcoinchat.online/room/LOUNGE), or from the b in the middle of the bwalletx.com navbar.
+
+— Richard
+
+Related: [Social](https://bwalletx.com/social) · [Lounge](https://bwalletx.com/lounge) · [014 One feed for BSV](https://bwalletx.com/blog/014-open-feed)
+
+[← 016 Subscriptions, paid from pots](https://bwalletx.com/blog/016-pots)[018 1 BSV for testing bWallet on Android →](https://bwalletx.com/blog/018-testers)
+
+---
+
+Source: https://bwalletx.com/blog/018-testers
+
+[Development blog](https://bwalletx.com/blog) · 018 · 7 Oct 2026
+
+# 1 BSV for testing bWallet on Android
+
+Google needs 12 people to test bWallet for 14 days before it can go on the Play Store. We are paying 1 BSV for that time.
+
+## Why we are paying
+
+Google won't let a new developer account publish an app on the Play Store until at least 12 people have tested it for 14 days in a row.
+
+We don't have 12 people sitting around with Android phones. So we are paying for their time: 1 BSV each.
+
+## How it works
+
+- Go to [bwalletx.com/testers](https://bwalletx.com/testers), sign in with the Google account on your Android phone and apply.
+
+- I read every application and approve testers by hand. If you're in, I add your email to the Google Play test and your tester code appears on the page.
+
+- Join the test on Google Play and install bWallet from there, not the APK from this site.
+
+- Open bWallet, go to Settings › Testing and enter your code. The app checks in once a day when you open it.
+
+## What you get
+
+- 0.25 BSV after you first open the app installed from Google Play.
+
+- 0.75 BSV once you've checked in on at least 12 of the 14 days.
+
+It goes to your own bWallet receive address. I pay each one by hand and the transaction id shows on the page.
+
+## The rules
+
+- Payment never depends on ratings or reviews. Please don't leave a review because of this; Google doesn't allow paid reviews. Report bugs in the app instead, under Settings › Contact and reports.
+
+- I can say no, or remove a place if something looks wrong.
+
+- There are 20 places.
+
+While you test, the app sends a random install id, your tester code, whether it came from Google Play, and the app version. That's in the [privacy policy](https://bwalletx.com/privacy#testers).
+
+— Richard
+
+Related: [Testers](https://bwalletx.com/testers) · [Android](https://bwalletx.com/android) · [007 Store rules, open rooms and moderation](https://bwalletx.com/blog/007-store-and-private)
+
+[← 017 Sign in with bWalletX, and the Lounge](https://bwalletx.com/blog/017-sign-in-and-lounge)[019 Blur slurs, show swearing →](https://bwalletx.com/blog/019-language-filter)
+
+---
+
+Source: https://bwalletx.com/blog/019-language-filter
+
+[Development blog](https://bwalletx.com/blog) · 019 · 7 Oct 2026
+
+# Blur slurs, show swearing
+
+The bChat feed and bWalletX now blur slurs behind a tap. Swearing is shown. Nothing is deleted.
+
+## What we changed
+
+The feed reads posts from Twetch, Treechat, Peck, Fwetch and bChat. Some of them contain slurs. We needed a rule.
+
+Our first version hid slurs and had a setting to blur strong language. We changed it a day later. Now, in bChat and bWalletX:
+
+- A post with a slur is blurred, with a "Show anyway" button on that post.
+
+- A display name with a slur is blurred. Tap it to see it. The @handle next to it stays visible.
+
+- Swearing is shown as written.
+
+- There is no 18+ switch to find in Settings.
+
+## Why
+
+Swearing is part of how people talk, so we leave it alone.
+
+Slurs are different. Most people don't want one in front of them without warning, so we put a blur over it and let you decide.
+
+## Nothing is deleted
+
+Every post is on-chain. A filter only changes what you see in our apps. The post is still there and any other app can show it. The "Why blurred?" note says exactly that.
+
+The feed API returns names as they were posted, so each app makes its own choice. The embeddable feed for other sites still drops posts with slurs.
+
+## The store edition
+
+bWallet, the version in the App Store and Google Play, is stricter because the stores require it. Slurs are hidden with no reveal, those names show as "Hidden name", and strong language is blurred.
+
+— Richard
+
+Related: [Social](https://bwalletx.com/social) · [014 One feed for BSV](https://bwalletx.com/blog/014-open-feed) · [007 Store rules, open rooms and moderation](https://bwalletx.com/blog/007-store-and-private)
+
+[← 018 1 BSV for testing bWallet on Android](https://bwalletx.com/blog/018-testers)[All posts →](https://bwalletx.com/blog)
 
 ---
 
@@ -3372,6 +4277,26 @@ Source: https://bwalletx.com/blog/
 How bWallet and bWalletX were built, one chapter at a time. Every post is written from the git history of the wallet, this site, the chat server and the PNEEs prototype. It covers what we built, why, what broke, what we reversed and what is still not done.
 
 Newest first. Dates come from commits. bWallet is a fork of [Yours Wallet](https://github.com/yours-org/yours-wallet) (MIT licence).
+
+- 019 · 7 Oct 2026
+[Blur slurs, show swearing](https://bwalletx.com/blog/019-language-filter)
+The bChat feed and bWalletX now blur slurs behind a tap. Swearing is shown. Nothing is deleted.
+
+- 018 · 7 Oct 2026
+[1 BSV for testing bWallet on Android](https://bwalletx.com/blog/018-testers)
+Google needs 12 people to test bWallet for 14 days before it can go on the Play Store. We are paying 1 BSV for that time.
+
+- 017 · 7 Oct 2026
+[Sign in with bWalletX, and the Lounge](https://bwalletx.com/blog/017-sign-in-and-lounge)
+bChat now has one gold button to sign in with your wallet. Every account starts in the bWallet Lounge.
+
+- 016 · 7 Oct 2026
+[Subscriptions, paid from pots](https://bwalletx.com/blog/016-pots)
+Out in bWalletX 5.1.75: put money aside in a pot, set up regular payments from it, and pause them any time. Free, billing off.
+
+- 015 · 7 Oct 2026
+[Launchpad, and checking what we sign](https://bwalletx.com/blog/015-launchpad)
+bWalletX 5.1.74 can buy and sell bonding-curve coins. The wallet now checks every trade the server prepares before it signs anything.
 
 - 014 · 6 Oct 2026
 [One feed for BSV](https://bwalletx.com/blog/014-open-feed)
@@ -3602,6 +4527,21 @@ If you join the testing waitlist on this website, we collect your email address,
 This is stored by The Bitcoin Corporation Ltd in our own database and is used only to invite you to test bWallet
 and send testing updates. We do not sell it or share it for marketing. You can unsubscribe from any email, or
 ask us to delete your entry at any time using the contact details below.
+
+## Paid testers programme and tester check-ins
+
+If you apply at [bwalletx.com/testers](https://bwalletx.com/testers), you sign in with Google and we keep
+your Google-verified email address, name and profile photo, the Android phone model you type, the X or GitHub
+name you give (optional), the BSV address you want to be paid to, the time you applied and your IP address (to
+spot duplicate applications). It is stored by The Bitcoin Corporation Ltd on our server
+(`push.bwalletx.com`, Hetzner) and used only to run the programme: approving testers, adding your email
+to the Google Play test list, and paying you.
+
+Tester check-ins. Only in the Google Play build, and only after you enter your tester code (or email) in
+Settings › Testing, the app sends one check-in a day while it is open: a random install id made on your
+phone, your tester code or email, which app store installed it (so we know it came from Google Play) and the app
+version. It sends nothing about your keys, addresses, balances or activity. Unlink in Settings › Testing to
+stop. Payment never depends on ratings or reviews. Ask us to delete your tester record at any time.
 
 ## Your choices
 

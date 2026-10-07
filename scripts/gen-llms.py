@@ -52,7 +52,7 @@ for p in sorted(glob.glob(os.path.join(ROOT, '**', '*.html'), recursive=True)):
 def group(r):
     if r.startswith('blog/'): return 'Development blog'
     if r in ('privacy.html',): return 'Legal'
-    if r.split('/')[0].replace('.html', '') in ('developers', 'cli', 'mcp', 'apps', 'strategies', 'agent', 'agents'): return 'Developers and agents'
+    if r.split('/')[0].replace('.html', '') in ('developers', 'login', 'cli', 'mcp', 'apps', 'strategies', 'agent', 'agents'): return 'Developers and agents'
     return 'Product'
 
 order = ['Product', 'Developers and agents', 'Development blog', 'Legal']
@@ -69,6 +69,7 @@ for g in order:
     for p in items:
         lines.append('- [%s](%s)%s' % (p['title'], p['url'], (': ' + p['desc']) if p['desc'] else ''))
     lines.append('')
+lines.insert(lines.index('## Developers and agents') + 2, '- [Sign in with bWalletX (Markdown)](%s/login.md): The sign-in guide as plain Markdown, for AI coding agents.' % BASE)
 open(os.path.join(ROOT, 'llms.txt'), 'w').write('\n'.join(lines))
 
 full = ['# bWalletX: full site text', '', 'Generated %s from %s. Source pages are linked above each section.' % (datetime.date.today().isoformat(), BASE), '']
@@ -78,7 +79,7 @@ for g in order:
 open(os.path.join(ROOT, 'llms-full.txt'), 'w').write('\n'.join(full))
 
 sm = ['<?xml version="1.0" encoding="UTF-8"?>', '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">']
-sm += ['  <url><loc>%s</loc></url>' % p['url'] for p in pages if p['rel'] != 'privacy.html'] + ['  <url><loc>%s/privacy</loc></url>' % BASE]
+sm += ['  <url><loc>%s</loc></url>' % p['url'] for p in pages if p['rel'] != 'privacy.html'] + ['  <url><loc>%s/privacy</loc></url>' % BASE, '  <url><loc>%s/login.md</loc></url>' % BASE]
 sm += ['</urlset>']
 open(os.path.join(ROOT, 'sitemap.xml'), 'w').write('\n'.join(sm) + '\n')
 print(len(pages), 'pages ->', 'llms.txt', 'llms-full.txt', 'sitemap.xml')
