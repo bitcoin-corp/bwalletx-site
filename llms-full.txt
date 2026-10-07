@@ -438,13 +438,9 @@ Every transaction your account has made, read from the chain. Pick a date range,
 
 - LiveConnections log. Which apps used the wallet, when, what you allowed them, what each spent, and a button to revoke access. Recorded on each device from 5.1.82.
 
+- LiveGains and losses. A Gains tab with realised gains and losses per tax year: UK HMRC share-pooling rules in pounds by default, FIFO in dollars elsewhere, BSV tracked as an asset, and a disposals CSV for your accountant. Since 5.1.83.
+
 Open it from the wallet: tap History on the account card. Payments from a pot show there too; see [Subscriptions and Pots](https://bwalletx.com/subscriptions).
-
-## Coming
-
-- ComingGains and losses. A Gains tab with realised gains and losses per tax year: UK HMRC share-pooling rules in pounds by default, FIFO in dollars elsewhere, BSV tracked as an asset, and a disposals CSV for your accountant. The Gains tab is built and being tested before it ships.
-
-No dates yet. These ship when they work.
 
 History and its exports are records, not tax advice. Check with an accountant before you file.
 
@@ -818,7 +814,7 @@ bWalletX master backup or USB key
 LiveRestore a whole walletThe backup file or USB key, and its passwordAll accounts in the backupEverything.
 
 Money Button
-Next releaseSweep into an account12 words, passphrase if it had one`m/44'/0'/0'`, receive chainBSV and anything else on those addresses. Money Button tokens (SFP) are found, listed and left where they are.
+LiveSweep into an account12 words, passphrase if it had one`m/44'/0'/0'`, receive chainBSV and anything else on those addresses. Money Button tokens (SFP) are found, listed and left where they are.
 
 ## What stays behind, and why
 
@@ -1176,15 +1172,17 @@ bWalletX is in beta: test with small amounts. Questions: [support@bwalletx.com](
 
 ---
 
-Source: https://bwalletx.com/identity
+Source: https://bwalletx.com/handles
 
-# Identity. Your 12 words are the account.
+# Handles. Your name is your paymail.
 
-There is no account ID and no email needed. Your recovery words are the account. Everything else here is optional, and you add it when you want it.
+There is no account ID and no email needed: your 12 words are the account. On top of them you get a $handle people can pay and message, and it can be your token and your room too.
 
 [Get bWalletX](https://bwalletx.com/get)
 
-## Handles
+Need to prove who you are in the real world, privately? See [Identity](https://bwalletx.com/identity).
+
+## $handles
 
 - Live$handles. A name people can pay and message, which is also your paymail.
 
@@ -1192,43 +1190,97 @@ There is no account ID and no email needed. Your recovery words are the account.
 
 - LiveRenames. Change to a name you prove you hold. Your rooms and messages move with you.
 
+- LiveYour token and your room. In bWalletX your $handle can be a personal token, with a room named after you. See [Features](https://bwalletx.com/features).
+
 - ComingMore than one handle per account. The groundwork is in; adding a second handle is not.
 
 - ComingHandle NFTs. Own your handle as an NFT you can hold or sell, separate from your account.
 
-## $401 identity
+## Linked accounts ($401)
 
-Link other accounts, such as X or Google, to your on-chain identity. Each link adds to your identity strength, so others can see more than one source vouches for you.
+Link other accounts to your on-chain identity. Each link adds to your identity strength, so others can see more than one source vouches for you.
 
-- LiveLinked accounts raise identity strength.
+- LiveIn the wallet: X and Google, under Settings › Identity.
 
-## Signatures
+- LiveOn bit-sign: X, Google, GitHub, Discord and LinkedIn.
 
-- LiveCard signature. Draw your signature once. It shows on the back of your wallet card. It stays on your device and is not put on chain.
+## Card signature
 
-- LiveDocument signing. Sign documents with bit-sign. Only hashes go on chain, never the document.
+- LiveYour signature on your card. Draw it once. It shows on the back of your wallet card. It stays on your device and is not put on chain.
 
-- LiveSign and seal. Sign .NDS.HTML contracts on bit-sign with your drawn signature and your wallet key in one step, sealed on chain, from the Chrome extension or a paired phone. If a paid seal is interrupted, it can be recovered rather than paid twice.
+Signing documents and contracts is on [/sign](https://bwalletx.com/sign).
 
-More on signing: [bwalletx.com/sign](https://bwalletx.com/sign).
+## Sign in
 
-## Sign in with bWalletX
+- LiveSign in with bWalletX. Apps can let you sign in with your wallet instead of a password. Your wallet signs a one-time challenge; no password or email is shared. For developers: [/connect](https://bwalletx.com/connect).
 
-Apps can let you sign in with your wallet instead of a password. Your wallet signs a one-time challenge; no password or email is shared. You can also sign in with X through the wallet: see [/x](https://bwalletx.com/x). For developers: [bwalletx.com/connect](https://bwalletx.com/connect).
+- LiveSign in with X. Get a verified name from your X account, with your photo: [/x](https://bwalletx.com/x).
 
-## Verify (ID check)
+bWalletX is in beta: test with small amounts. Questions: [support@bwalletx.com](mailto:support@bwalletx.com)
 
-Most people never need this. It is only asked for when something requires it, such as investing in a private placement.
+---
 
-- LiveHow it works. The check is run by Veriff, through bit-sign. You show an ID document and take a selfie in Veriff’s flow.
+Source: https://bwalletx.com/identity
 
-- LiveWho holds what. Veriff handles your document and selfie. bit-sign keeps the result, including your name, date of birth and document type, and runs a sanctions check. Your wallet gets a certificate that says you are verified, your country and whether you are over 18. It holds no name, date of birth or document data.
+# Identity. Verified when you need it. Private when you don’t.
 
-- LiveOn chain. Your personal details are not put on chain.
+Your wallet doesn’t need your name. Some things do. When one of them comes up, you verify once, and your wallet can then show that a real person stands behind it without carrying your details around.
 
-- ComingSelf-serve deletion. Not built yet. Until it is, ask [support@bwalletx.com](mailto:support@bwalletx.com).
+Looking for names, $handles and sign-in? They’re on [Handles](https://bwalletx.com/handles).
+
+## Why some things need a real identity
+
+Most of the wallet works with no name at all. A few things are different, because the other side has to know who they are dealing with:
+
+- Signing a contract that has to bind a real person.
+
+- Investing in a private placement.
+
+- Services that are regulated and must know their customer.
+
+You are only asked when something needs it.
+
+## Verify once
+
+The check is run by Veriff, through bit-sign. You show an ID document and take a selfie in Veriff’s flow. When Veriff approves, bit-sign records the result and your wallet can fetch a certificate that says you are verified.
+
+- LiveID check with Veriff, through bit-sign.
+
+- LiveCertificate in your wallet. Your wallet proves it owns its key, and bit-sign issues a certificate to that key.
+
+## Who sees what
+
+- VeriffYour document and selfie. Veriff handles them in its own flow.
+
+- bit-signThe result. bit-sign keeps your name, date of birth and document type, and checks your name against sanctions lists.
+
+- Your walletA certificate with no name and no date of birth. It says you are verified, whether you are over 18, the country of your document, the check level and its dates. Each of those is encrypted, so the wallet can show one without the others.
+
+- On chainNothing personal. Your name, date of birth and documents are not put on chain.
+
+### Who can see the result, and when
+
+- In a bit-sign deal room, a host can ask a named member for a check. The member chooses to accept. The room then sees that the check was submitted, and whether it was approved or declined. It does not see your name, date of birth or documents.
+
+- bit-sign’s signed record of your check can be looked up by anyone who has your bit-sign key, so an issuer can confirm it. It shows that you passed, the check level, the type and country of your document, the sanctions result and the date. It has no name and no date of birth.
+
+## Using it
+
+- LiveSign and seal. Sign .NDS.HTML contracts on bit-sign with your drawn signature and your wallet key in one step, sealed on chain, from the Chrome extension or a paired phone. Only hashes go on chain, never the document. If a paid seal is interrupted, it can be recovered rather than paid twice. More: [/sign](https://bwalletx.com/sign).
+
+- LiveChecks in deal rooms. A counterparty sees approved or declined, not your documents.
+
+- ComingShowing one fact from your wallet. The certificate is built so the wallet can reveal a single field, such as over 18, to an app. A finished flow for that is still being built.
 
 - ComingThe rest of the investor journey. One-tap pay from the wallet and a single investor flow are still being built.
+
+## Deleting your data
+
+- LiveDelete account in the wallet’s Settings removes your bit-sign account, handle, linked accounts and chats. The records of an identity check are kept, because anti-money-laundering rules require identity checks to be kept for a period.
+
+- ComingSelf-serve deletion of your check. Not built yet. Until it is, ask [support@bwalletx.com](mailto:support@bwalletx.com).
+
+- NoteAnything on chain cannot be deleted by anyone. That is why nothing personal is put there.
 
 ## Keys
 
@@ -3953,7 +4005,7 @@ If you hold a token but didn't create it, you pay only the indexing cost. No fee
 
 When you mint your own handle's token and open its chat room, we add $1 on top. That is the only time we charge it. The button says the exact sats and whether the fee is included, and the confirm sheet lists each line and the network fee.
 
-Update, 7 Oct 2026: the first 1,000 rooms are free.
+Update, 7 Oct 2026: the first 1,000 rooms are free. Since 5.1.83 the app checks how many free rooms are left and charges no $1 fee while any remain.
 
 — Richard
 
@@ -4319,7 +4371,7 @@ You don’t need to know which wallet the words came from. The sweep screen take
 
 ## Which wallets
 
-The full list, with the paths and what each needs, is on [bwalletx.com/restore](https://bwalletx.com/restore). In short: bWalletX, Yours and Panda, RelayX and Twetch can be restored as accounts. SimplyCash and other 12 or 24-word wallets can be swept. Private keys and xprvs work too, and you can type a custom path for anything else. Money Button is coming in the next release.
+The full list, with the paths and what each needs, is on [bwalletx.com/restore](https://bwalletx.com/restore). In short: bWalletX, Yours and Panda, RelayX and Twetch can be restored as accounts. SimplyCash and other 12 or 24-word wallets can be swept. Private keys and xprvs work too, and you can type a custom path for anything else. Money Button can be swept too, since 5.1.83.
 
 ## What can’t come across
 
