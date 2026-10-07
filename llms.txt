@@ -8,6 +8,7 @@ Full text of every page: https://bwalletx.com/llms-full.txt
 
 - [bWalletX for Android](https://bwalletx.com/android): Download the bWalletX Android app (APK): the BSV wallet for tokens, media and apps.
 - [Buy BSV in bWalletX](https://bwalletx.com/buy): Buy BSV right in bWalletX: tap the gold Buy BSV card, pay with card, Apple Pay, Google Pay or bank through an independent provider, or receive from an exchange or a friend. Your BSV lands in your wallet, shown in dollars.
+- [Chat in bWalletX](https://bwalletx.com/chat): BSV is a messaging protocol, so BSV conversation should live on it. Chat is built into bWalletX: rooms, token rooms, private messages and calls, with bChat as the full version.
 - [bWalletX Exchange](https://bwalletx.com/exchange): Buy and sell anything on-chain, wallet to wallet: tokens, NFTs, people’s $HANDLE tokens and AI trading strategies. Only in bWalletX.
 - [bWalletX Exchange: Strategies](https://bwalletx.com/exchange/strategies): Strategies for sale on the bWalletX Exchange: programs your agent account runs, sold as encrypted NFTs. Compare the spec, buy in bWalletX, test it on live prices first.
 - [bWalletX for Chrome](https://bwalletx.com/extension): Install the bWalletX Chrome extension: the full bWalletX wallet in Chrome's side panel, and a wallet websites can connect to.
@@ -119,6 +120,7 @@ Full text of every page: https://bwalletx.com/llms-full.txt
 - [018 1 BSV for testing bWallet on Android · bWalletX blog](https://bwalletx.com/blog/018-testers): Google needs 12 people to test bWallet for 14 days before it can go on the Play Store. We are paying 1 BSV for that time.
 - [019 Blur slurs, show swearing · bWalletX blog](https://bwalletx.com/blog/019-language-filter): The bChat feed and bWalletX now blur slurs behind a tap. Swearing is shown. Nothing is deleted.
 - [020 Sign in with X · bWalletX blog](https://bwalletx.com/blog/020-sign-in-with-x): bWalletX can make a wallet from your X account. You get your X username as a verified paymail, b0asex.x@bwalletx.com for example, with your picture, a token and a room.
+- [021 Coordinate on BSV · bWalletX blog](https://bwalletx.com/blog/021-coordinate-on-bsv): Big platforms put every community in one room. BSV needs a place to plan that it controls. Chat in bWalletX is that place: the first post in a series on chat on BSV.
 - [bWalletX development blog](https://bwalletx.com/blog/): How bWallet and bWalletX were built from a fork of Yours Wallet: numbered posts from the git history, including what broke, what we reversed and what is still not done.
 
 ## Legal

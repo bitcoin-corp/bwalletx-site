@@ -111,6 +111,74 @@ bWalletX is in beta: test with small amounts. Questions: [support@bwalletx.com](
 
 ---
 
+Source: https://bwalletx.com/chat
+
+# Coordinate on BSV. Talk where the money is.
+
+BSV is a messaging protocol at heart. Every transaction can carry a message. So the conversation about BSV should live on BSV, in the same wallet that holds your coins and tokens.
+
+[Get bWalletX](https://bwalletx.com/get)[Open bChat](https://www.bitcoinchat.online)
+
+## Why
+
+Twitter, Reddit and Telegram put every community in one room, and BSV threads there get buried or piled on. We still post there, because that is where new people are. But the planning should happen on BSV, where every account is a wallet and, as paid messages arrive, spam costs money. Advertise there, coordinate here. The full argument: [021 Coordinate on BSV](https://bwalletx.com/blog/021-coordinate-on-bsv).
+
+## Chat in your wallet
+
+Chat is part of bWalletX. You don’t sign up anywhere else: your wallet is your account, and the people you talk to can pay you, and you them, in the same place. bChat is the full version, on the web and inside the wallet.
+
+Other BSV networks are already here, and Chat reads from them rather than replacing them:
+
+[### Twetch
+One of the longest-running BSV social apps.](https://twetch.com)
+[### Treechat
+Threaded posts and replies on BSV.](https://app.treechat.com)
+[### Fwetch
+Boards on the Vulpine network.](https://fwetch.lol)
+[### Peck
+A BSV feed built on Bitcoin Schema.](https://peck.to)
+[### bChat
+Our full chat app. Rooms, feed and messages.](https://www.bitcoinchat.online)
+
+Twetch, Treechat, Fwetch and Peck are made by other teams, not The Bitcoin Corporation.
+
+## What Chat does
+
+Each item is marked by what the code does today.
+
+- LiveMessage boards. Open rooms in bChat: public or invite-only, anyone signed in can start one. The bChat feed also reads Twetch, Treechat, Fwetch and Peck posts in one place.
+
+- LiveToken-gated rooms. Hold a BSV-21 token or 1Sat collection and its room appears in your Chat list. Sell it and the room goes. bChat checks the holding on every read and post. Not in bWallet, the App Store and Google Play edition.
+
+- LivePrivate messages. Direct messages between wallets, with blocking and reporting.
+
+- LiveVoice and video calls. One-to-one calls between friends. Either side can turn the camera on or off during a call.
+
+- LiveTips. Tip the author of a post in BSV, paid to their own verified address.
+
+- ComingOne-to-many video streams. Broadcast to a room. Not built yet.
+
+- ComingPay per message. Rooms already have a price-per-message setting. Charging it is not switched on yet.
+
+- ComingPay per second. Pay for a call or stream by the second while it runs.
+
+- ComingPay with tokens. Pay for messages and calls in a token instead of BSV.
+
+- ComingSet your price to be reached. Choose what strangers pay to message or call you. Friends stay free.
+
+## Start now
+
+Download bWalletX, open the Chat tab, and join the bWallet Lounge. Buy a token to get into its room. Or open bChat in a browser and sign in with your wallet.
+
+[Get bWalletX](https://bwalletx.com/get)
+[Open bChat](https://www.bitcoinchat.online)
+
+Building a BSV app? Let your users sign in with bWalletX: [bwalletx.com/connect](https://bwalletx.com/connect).
+
+bWalletX is in beta: test with small amounts. Questions: [support@bwalletx.com](mailto:support@bwalletx.com)
+
+---
+
 Source: https://bwalletx.com/exchange
 
 # bWalletX Exchange
@@ -4527,7 +4595,85 @@ How-to page: [bwalletx.com/x](https://bwalletx.com/x).
 
 Related: [Sign in with X](https://bwalletx.com/x) · [Sign in with Gmail](https://bwalletx.com/gmail) · [004 Names, handles and paymail](https://bwalletx.com/blog/004-names-and-paymail) · [005 Personal tokens and token rooms](https://bwalletx.com/blog/005-personal-tokens-and-rooms)
 
-[← 019 Blur slurs, show swearing](https://bwalletx.com/blog/019-language-filter)[All posts →](https://bwalletx.com/blog)
+[← 019 Blur slurs, show swearing](https://bwalletx.com/blog/019-language-filter)[021 Coordinate on BSV →](https://bwalletx.com/blog/021-coordinate-on-bsv)
+
+---
+
+Source: https://bwalletx.com/blog/021-coordinate-on-bsv
+
+[Development blog](https://bwalletx.com/blog) · 021 · 7 Oct 2026 · Chat on BSV, part 1
+
+# Coordinate on BSV
+
+Big platforms put every community in one room. BSV needs a place to plan that it controls. Chat in bWalletX is that place: the first post in a series on chat on BSV.
+
+## Why coordination matters
+
+A currency is a shared agreement. It is worth something because enough people accept it, build on it and plan around it. That takes talking. Developers need to agree on standards. Merchants need to know who else takes it. Token holders need to find each other. New people need somewhere to ask questions and get a straight answer.
+
+A community that can’t talk can’t act together. It can still have good technology. But nobody ships the second app that uses the first one, nobody lists the token, and nobody shows up when it matters. Coordination is not a nice extra. It is how the work gets joined up.
+
+## How the conversation got scattered
+
+For most crypto communities, the conversation happens on Twitter, Reddit and Telegram. That is where people are. It works because everyone is in one room.
+
+It is also the problem. When every community shares one room, a small community with a contested history sits next to a much larger one that wants it gone. BSV split from Bitcoin Cash in November 2018, which itself split from Bitcoin in 2017. Each split left people angry at each other, and the arguments never really stopped.
+
+In April 2019 a #DelistBSV campaign spread on Twitter. It followed legal threats from BSV’s best-known backer against a pseudonymous critic, and the anger was not all unearned. But it was aimed at the coin and everyone building on it. Binance, Kraken and ShapeShift delisted BSV that month ([Bitcoin Magazine](https://bitcoinmagazine.com/markets/binance-delists-bitcoin-sv), [Finance Magnates](https://www.financemagnates.com/cryptocurrency/news/kraken-follows-binance-to-delist-bitcoin-sv/), [The Next Web](https://thenextweb.com/news/binance-delist-bitcoinsv-cryptocurrency)). Kraken ran a Twitter poll before deciding. Since then, BSV threads on the big platforms have often drawn pile-ons and ridicule from some prominent BTC advocates and from organised campaigns. Not from everyone who holds BTC. Most people don’t care either way. But a small, loud group is enough to make a room useless for planning.
+
+The effect is easy to see. Many BSV builders and users stopped posting in public. The ones who stayed are spread across a dozen group chats and a handful of accounts. A newcomer who searches for BSV finds the argument, not the work.
+
+Do the platforms themselves push BSV down? Maybe. We can’t show it, so we won’t claim it. It doesn’t change the answer. Even a perfectly neutral feed ranks what gets the most reactions, and a pile-on gets a lot of reactions.
+
+## BSV is a messaging protocol
+
+Every Bitcoin transaction can carry data. On BSV that data can be large and cheap, so a transaction can be a message: a post, a reply, a like, a payment with a note on it. Sending money and sending a message are the same act.
+
+People have built on that for years. Memo and Twetch put social posts on chain. Treechat built threaded discussion. Peck reads posts written in Bitcoin Schema. Fwetch posts to boards on the Vulpine network. These apps came and went at different times, and some are still running. They prove the point: BSV was a social network before anyone called it one.
+
+What was missing was one place that holds your money, your identity and your conversations together, and that reads the other apps instead of competing with them.
+
+## Why paid, signed messages change things
+
+On an ad-funded platform, attention is free to take. An account costs nothing, a reply costs nothing, and a hundred replies cost nothing. The platform makes money from the reactions either way. That is why a pile-on is cheap to start and hard to stop.
+
+Change two things and the sums change. First, tie every account to a wallet, so a name has a history and a balance behind it. Second, let the receiver set a price. A friend messages you free. A stranger pays a few cents. A thousand strangers pay a thousand times that, and the money goes to the person they are shouting at. Nobody needs to moderate a pile-on that pays its target.
+
+This is not new thinking. Hashcash, the proof-of-work idea Bitcoin borrowed, was first proposed in 1997 as a way to make email spam cost something. Small payments on BSV let us do the same thing with real money instead of burnt computation.
+
+## Advertise there, coordinate here
+
+We are not leaving Twitter, Reddit or Telegram. New people are there, and we want them. So we keep posting there: news, releases, links.
+
+But the planning happens somewhere else. On BSV-native rooms, where every account is a wallet. That changes the cost of bad behaviour. A throwaway account costs nothing on Twitter. In a token room you have to hold the token to get in. And once rooms can charge per message, and you can set a price for strangers to reach you, spam and pile-ons cost money. Brigading a room gets expensive. Talking with friends stays free.
+
+That is the rule: advertise there, coordinate here.
+
+## Where we are taking this
+
+A rule like that is only useful if there is a “here”. So we built Chat into bWalletX, with bChat as the full version on the web. Your wallet is your account. Rooms, private messages and calls sit next to your coins and tokens. Some of it is live, and the paid parts are still being built. What works today, and what doesn’t yet, is on [bwalletx.com/chat](https://bwalletx.com/chat).
+
+The tools matter less than the habit. If BSV people plan in BSV rooms, and point to them from everywhere else, the conversation stops depending on a feed that someone else ranks. Start a room for your project. Post the link on Twitter. Then go back to the room and do the work. App builders can let users sign in with their wallet: [bwalletx.com/connect](https://bwalletx.com/connect).
+
+— Richard
+
+## Next in this series
+
+- Token rooms: hold to enter
+
+- Paying to be heard: priced messages and calls
+
+- Pay-per-second calls and streams
+
+- Private messages and keys
+
+- Message boards versus feeds
+
+- Agents in chat
+
+Related: [Chat in bWalletX](https://bwalletx.com/chat) · [005 Personal tokens and token rooms](https://bwalletx.com/blog/005-personal-tokens-and-rooms) · [014 One feed for BSV](https://bwalletx.com/blog/014-open-feed) · [017 Sign in with bWalletX, and the Lounge](https://bwalletx.com/blog/017-sign-in-and-lounge)
+
+[← 020 Sign in with X](https://bwalletx.com/blog/020-sign-in-with-x)[All posts →](https://bwalletx.com/blog)
 
 ---
 
@@ -4538,6 +4684,10 @@ Source: https://bwalletx.com/blog/
 How bWallet and bWalletX were built, one chapter at a time. Every post is written from the git history of the wallet, this site, the chat server and the PNEEs prototype. It covers what we built, why, what broke, what we reversed and what is still not done.
 
 Newest first. Dates come from commits. bWallet is a fork of [Yours Wallet](https://github.com/yours-org/yours-wallet) (MIT licence).
+
+- 021 · 7 Oct 2026
+[Coordinate on BSV](https://bwalletx.com/blog/021-coordinate-on-bsv)
+Big platforms put every community in one room. BSV needs a place to plan that it controls. Chat in bWalletX is that place: the first post in a series on chat on BSV.
 
 - 020 · 7 Oct 2026
 [Sign in with X](https://bwalletx.com/blog/020-sign-in-with-x)

@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>021 Coordinate on BSV · bWalletX blog</title>
+    <meta name="description" content="Big platforms put every community in one room. BSV needs a place to plan that it controls. Chat in bWalletX is that place: the first post in a series on chat on BSV." />
+    <link rel="canonical" href="https://bwalletx.com/blog/021-coordinate-on-bsv" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://bwalletx.com/blog/021-coordinate-on-bsv" />
+    <meta property="og:site_name" content="bWalletX" />
+    <meta property="og:title" content="Coordinate on BSV" />
+    <meta property="og:description" content="Big platforms put every community in one room. BSV needs a place to plan that it controls. Chat in bWalletX is that place: the first post in a series on chat on BSV." />
+    <meta property="og:image" content="https://bwalletx.com/og/og-blog.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@bWalletX" />
+    <meta name="twitter:title" content="Coordinate on BSV" />
+    <meta name="twitter:description" content="Big platforms put every community in one room. BSV needs a place to plan that it controls. Chat in bWalletX is that place: the first post in a series on chat on BSV." />
+    <meta name="twitter:image" content="https://bwalletx.com/og/og-blog.png" />
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="stylesheet" href="/styles.css" />
+    <style>
+      .ext { max-width: 760px; margin: 0 auto; padding: 120px 20px 80px; }
+      .ext h1 { font-size: clamp(2rem, 6vw, 3rem); margin: 10px 0 10px; line-height: 1.15; }
+      .ext h2 { margin: 44px 0 10px; font-size: 1.4rem; }
+      .ext p, .ext li { line-height: 1.7; }
+      .ext code { background: #17191e; padding: 2px 7px; border-radius: 6px; overflow-wrap: anywhere; }
+      .ext a { overflow-wrap: anywhere; }
+      .meta { color: #8a8a86; font-size: 0.9rem; margin: 0; }
+      .num { color: #F5B800; font-weight: 700; letter-spacing: .04em; }
+      .box { background: #101114; border: 1px solid #ffffff12; border-radius: 16px; padding: 18px 22px; margin: 28px 0; }
+      .box h2 { margin: 0 0 8px; font-size: 1.1rem; }
+      .box ul { margin: 0; padding-left: 1.2em; }
+      .related { color: #a7adb8; }
+      .pn { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; margin-top: 40px; border-top: 1px solid #ffffff14; padding-top: 20px; }
+      .pn a { color: #F5B800; text-decoration: none; max-width: 100%; }
+      .posts { list-style: none; padding: 0; margin: 28px 0; }
+      .posts li { background: #101114; border: 1px solid #ffffff12; border-radius: 16px; padding: 16px 20px; margin: 12px 0; }
+      .posts a { color: #fff; text-decoration: none; font-weight: 700; font-size: 1.1rem; }
+      .posts a:hover { color: #F5B800; }
+      .posts p { margin: 4px 0 0; color: #a7adb8; line-height: 1.55; }
+      .ext .small { color: #8a8a86; font-size: 0.85rem; }
+      .ext pre { background: #17191e; padding: 14px 16px; border-radius: 10px; overflow-x: auto; }
+      .ext pre code { padding: 0; background: none; overflow-wrap: normal; white-space: pre; }
+    </style>
+  </head>
+  <body>
+    <div class="beta-banner">bWalletX is in <strong>beta</strong>: test with small amounts.</div>
+    <header class="topbar">
+      <div class="wrap topbar-in">
+        <a class="brand" href="/"><img src="/logo.svg" alt="" width="34" height="30" /><span>bWallet<span class="gold">X</span></span></a>
+        <nav aria-label="Pages">
+          <a href="/features">Features</a><a href="/exchange">Exchange</a><a href="/social">Social</a><a href="/agent">Agents</a><a href="/extension">Extension</a><a href="/developers">Developers</a>
+        </nav>
+        <span class="nav-cta"><a class="dl-btn" href="/get">Download</a><a class="web-btn" href="https://web.bwalletx.com" target="_blank" rel="noopener">Web &rarr;</a></span>
+      </div>
+    </header>
+    <script src="/nav.js"></script>
+    <main class="ext">
+      <p class="meta"><a href="/blog">Development blog</a> · <span class="num">021</span> · 7 Oct 2026 · Chat on BSV, part 1</p>
+      <h1>Coordinate on BSV</h1>
+      <p class="lede">Big platforms put every community in one room. BSV needs a place to plan that it controls. Chat in bWalletX is that place: the first post in a series on chat on BSV.</p>
+
+      <h2>Why coordination matters</h2>
+      <p>A currency is a shared agreement. It is worth something because enough people accept it, build on it and plan around it. That takes talking. Developers need to agree on standards. Merchants need to know who else takes it. Token holders need to find each other. New people need somewhere to ask questions and get a straight answer.</p>
+      <p>A community that can&rsquo;t talk can&rsquo;t act together. It can still have good technology. But nobody ships the second app that uses the first one, nobody lists the token, and nobody shows up when it matters. Coordination is not a nice extra. It is how the work gets joined up.</p>
+
+      <h2>How the conversation got scattered</h2>
+      <p>For most crypto communities, the conversation happens on Twitter, Reddit and Telegram. That is where people are. It works because everyone is in one room.</p>
+      <p>It is also the problem. When every community shares one room, a small community with a contested history sits next to a much larger one that wants it gone. BSV split from Bitcoin Cash in November 2018, which itself split from Bitcoin in 2017. Each split left people angry at each other, and the arguments never really stopped.</p>
+      <p>In April 2019 a <b>#DelistBSV</b> campaign spread on Twitter. It followed legal threats from BSV&rsquo;s best-known backer against a pseudonymous critic, and the anger was not all unearned. But it was aimed at the coin and everyone building on it. Binance, Kraken and ShapeShift delisted BSV that month (<a href="https://bitcoinmagazine.com/markets/binance-delists-bitcoin-sv">Bitcoin Magazine</a>, <a href="https://www.financemagnates.com/cryptocurrency/news/kraken-follows-binance-to-delist-bitcoin-sv/">Finance Magnates</a>, <a href="https://thenextweb.com/news/binance-delist-bitcoinsv-cryptocurrency">The Next Web</a>). Kraken ran a Twitter poll before deciding. Since then, BSV threads on the big platforms have often drawn pile-ons and ridicule from some prominent BTC advocates and from organised campaigns. Not from everyone who holds BTC. Most people don&rsquo;t care either way. But a small, loud group is enough to make a room useless for planning.</p>
+      <p>The effect is easy to see. Many BSV builders and users stopped posting in public. The ones who stayed are spread across a dozen group chats and a handful of accounts. A newcomer who searches for BSV finds the argument, not the work.</p>
+      <p>Do the platforms themselves push BSV down? Maybe. We can&rsquo;t show it, so we won&rsquo;t claim it. It doesn&rsquo;t change the answer. Even a perfectly neutral feed ranks what gets the most reactions, and a pile-on gets a lot of reactions.</p>
+
+      <h2>BSV is a messaging protocol</h2>
+      <p>Every Bitcoin transaction can carry data. On BSV that data can be large and cheap, so a transaction can be a message: a post, a reply, a like, a payment with a note on it. Sending money and sending a message are the same act.</p>
+      <p>People have built on that for years. Memo and Twetch put social posts on chain. Treechat built threaded discussion. Peck reads posts written in Bitcoin Schema. Fwetch posts to boards on the Vulpine network. These apps came and went at different times, and some are still running. They prove the point: BSV was a social network before anyone called it one.</p>
+      <p>What was missing was one place that holds your money, your identity and your conversations together, and that reads the other apps instead of competing with them.</p>
+
+      <h2>Why paid, signed messages change things</h2>
+      <p>On an ad-funded platform, attention is free to take. An account costs nothing, a reply costs nothing, and a hundred replies cost nothing. The platform makes money from the reactions either way. That is why a pile-on is cheap to start and hard to stop.</p>
+      <p>Change two things and the sums change. First, tie every account to a wallet, so a name has a history and a balance behind it. Second, let the receiver set a price. A friend messages you free. A stranger pays a few cents. A thousand strangers pay a thousand times that, and the money goes to the person they are shouting at. Nobody needs to moderate a pile-on that pays its target.</p>
+      <p>This is not new thinking. Hashcash, the proof-of-work idea Bitcoin borrowed, was first proposed in 1997 as a way to make email spam cost something. Small payments on BSV let us do the same thing with real money instead of burnt computation.</p>
+
+      <h2>Advertise there, coordinate here</h2>
+      <p>We are not leaving Twitter, Reddit or Telegram. New people are there, and we want them. So we keep posting there: news, releases, links.</p>
+      <p>But the planning happens somewhere else. On BSV-native rooms, where every account is a wallet. That changes the cost of bad behaviour. A throwaway account costs nothing on Twitter. In a token room you have to hold the token to get in. And once rooms can charge per message, and you can set a price for strangers to reach you, spam and pile-ons cost money. Brigading a room gets expensive. Talking with friends stays free.</p>
+      <p>That is the rule: <b>advertise there, coordinate here.</b></p>
+
+      <h2>Where we are taking this</h2>
+      <p>A rule like that is only useful if there is a &ldquo;here&rdquo;. So we built Chat into bWalletX, with bChat as the full version on the web. Your wallet is your account. Rooms, private messages and calls sit next to your coins and tokens. Some of it is live, and the paid parts are still being built. What works today, and what doesn&rsquo;t yet, is on <a href="/chat">bwalletx.com/chat</a>.</p>
+      <p>The tools matter less than the habit. If BSV people plan in BSV rooms, and point to them from everywhere else, the conversation stops depending on a feed that someone else ranks. Start a room for your project. Post the link on Twitter. Then go back to the room and do the work. App builders can let users sign in with their wallet: <a href="/connect">bwalletx.com/connect</a>.</p>
+      <p>— Richard</p>
+
+      <div class="box"><h2>Next in this series</h2><ul>
+        <li>Token rooms: hold to enter</li>
+        <li>Paying to be heard: priced messages and calls</li>
+        <li>Pay-per-second calls and streams</li>
+        <li>Private messages and keys</li>
+        <li>Message boards versus feeds</li>
+        <li>Agents in chat</li>
+      </ul></div>
+
+      <p class="related">Related: <a href="/chat">Chat in bWalletX</a> · <a href="/blog/005-personal-tokens-and-rooms">005 Personal tokens and token rooms</a> · <a href="/blog/014-open-feed">014 One feed for BSV</a> · <a href="/blog/017-sign-in-and-lounge">017 Sign in with bWalletX, and the Lounge</a></p>
+      <div class="pn"><a href="/blog/020-sign-in-with-x">&larr; 020 Sign in with X</a><a href="/blog">All posts &rarr;</a></div>
+    </main>
+  </body>
+</html>
