@@ -1,6 +1,6 @@
 # bWalletX: full site text
 
-Generated 2026-10-07 from https://bwalletx.com. Source pages are linked above each section.
+Generated 2026-10-08 from https://bwalletx.com. Source pages are linked above each section.
 
 ---
 
@@ -438,7 +438,7 @@ Every transaction your account has made, read from the chain. Pick a date range,
 
 - LiveConnections log. Which apps used the wallet, when, what you allowed them, what each spent, and a button to revoke access. Recorded on each device from 5.1.82.
 
-- LiveGains and losses. A Gains tab with realised gains and losses per tax year: UK HMRC share-pooling rules in pounds by default, FIFO in dollars elsewhere, BSV tracked as an asset, and a disposals CSV for your accountant. Since 5.1.83.
+- LiveGains and losses. A Gains tab with realised gains and losses per tax year: UK HMRC share-pooling rules in pounds by default, FIFO in dollars elsewhere, BSV tracked as an asset, and a disposals CSV for your accountant. Since 5.1.83. Gains is in beta: figures may be incomplete, so check them against your own records.
 
 Open it from the wallet: tap History on the account card. Payments from a pot show there too; see [Subscriptions and Pots](https://bwalletx.com/subscriptions).
 
@@ -1294,7 +1294,7 @@ Source: https://bwalletx.com/lock
 
 Lock BSV on the Bitcoin SV blockchain until a date you choose, or have it paid back to you a little at a time. Once it’s locked, nobody can move it before then: not you, not bWalletX, not anyone.
 
-Coming in a future release, not in the app yet Lock BSV is built and tested, but it is not in the app you can download today. This page describes what is coming.
+Live since 5.1.84 Lock BSV is in the app: tap the lock in the top bar. It is a new feature, so start small. Lock only small amounts, a few thousand satoshis, until it has been out for a while. The app asks again if you try to lock more than 0.01 BSV.
 
 ## What locking is
 
@@ -4473,7 +4473,7 @@ Source: https://bwalletx.com/blog/023-lock-bsv
 
 Lock BSV until a date, or as payouts over time, and nobody can unlock it early, not even you. Why that is useful, how BSV enforces it with no custodian, and where the limits are.
 
-Status: coming in a future release, not in the app yet. It is built and tested, but it is not in the app you can download today.
+Status: live since 5.1.84. Lock BSV is in the app now. It is a new feature, so start small: lock only small amounts until it has been out for a while. The app asks again above 0.01 BSV.
 
 ## Why you would want to lose access to your own money
 
@@ -4715,7 +4715,7 @@ Out in bWalletX 5.1.72: a paid like or a tip pays the author in the same transac
 
 - [](https://bwalletx.com/blog/023-lock-bsv)023 · 7 Oct 2026
 [Locks you can’t break](https://bwalletx.com/blog/023-lock-bsv)
-Lock BSV until a date, or as payouts over time, and nobody can unlock it early, not even you. Coming in a future release, not in the app yet.
+Lock BSV until a date, or as payouts over time, and nobody can unlock it early, not even you. Live since 5.1.84. New feature: start small.
 
 - [](https://bwalletx.com/blog/022-bring-your-coins-home)022 · 7 Oct 2026
 [Bring your coins home](https://bwalletx.com/blog/022-bring-your-coins-home)
