@@ -17,6 +17,7 @@ Full text of every page: https://bwalletx.com/llms-full.txt
 - [Games in bWalletX](https://bwalletx.com/games): 32 games you can play now on Bitcoin SV, all in bGames inside bWalletX: bGames originals, the TokenBlaster arcade and more BSV games.
 - [Get bWalletX](https://bwalletx.com/get): Get bWalletX for Android, Chrome, the web and iPhone.
 - [Sign in with Gmail · bWalletX](https://bwalletx.com/gmail): Sign in to bWalletX with your Gmail account and get a verified name: yourname.gmail@bwalletx.com. Your paymail, your token and your chat room, with your Google picture.
+- [History in bWalletX](https://bwalletx.com/history): See every transaction your bWalletX account made, for any date range, and export it as CSV or a PDF statement for your accountant.
 - [bWalletX — Just b](https://bwalletx.com/): bWalletX: the BSV wallet for tokens, media and apps. BSV, MNEE and BSV-21 tokens, an exchange for tokens and NFTs, the bApps store, an ordinals media player and bChat. Non-custodial, by The Bitcoin Corporation Ltd.
 - [bWalletX on iPhone](https://bwalletx.com/iphone): Use bWalletX on iPhone today: install the web app from Safari in under a minute. No App Store needed.
 - [bWallet Lounge on bChat](https://bwalletx.com/lounge): The bWallet Lounge is where bWallet and bWalletX people talk: questions, ideas, and the team is there. Type /b to ask the $b assistant any time. Open to everyone.
@@ -81,6 +82,7 @@ Full text of every page: https://bwalletx.com/llms-full.txt
 - [Push notifications (coming soon) · bWalletX](https://bwalletx.com/push-notifications): Push notifications for bWalletX are coming soon: messages, mentions, payments and calls on iPhone, Android, web and the Chrome extension, even with the app closed. Who messaged you, not what they wrote.
 - [Your signature · bWalletX](https://bwalletx.com/sign): Flip your bWalletX card and sign the back with your finger. Your signature stays on your device. Next: sign bit-sign contracts with it and seal them on Bitcoin for under a penny.
 - [bWalletX Social](https://bwalletx.com/social): Your handle is your paymail, your token and your chat room. Sign in with X or Google, hold friends’ tokens, chat in token rooms, post to the Feed, call and pay friends.
+- [Subscriptions and Pots in bWalletX](https://bwalletx.com/subscriptions): Put money aside in a pot and pay regular amounts from it. The pot balance is the most anyone can take. Pause or cancel any time.
 - [Get 1 BSV: test bWallet on Android](https://bwalletx.com/testers): Get 1 BSV for testing bWallet on Android for 14 days. 20 places. Apply with Google; paid to your own bWallet.
 - [Watch: bWalletX in one minute](https://bwalletx.com/video): A one-minute tour of bWalletX: create a wallet, back it up, dollar balances, the Exchange, the Apps store, the Feed and group chats, and b, your AI agent.
 - [Sign in with X · bWalletX](https://bwalletx.com/x): Sign in to bWalletX with your X account and get a verified name: yourhandle.x@bwalletx.com. Your paymail, your token and your chat room, with your X picture.

@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Subscriptions and Pots in bWalletX</title>
+    <meta name="description" content="Put money aside in a pot and pay regular amounts from it. The pot balance is the most anyone can take. Pause or cancel any time." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://bwalletx.com/subscriptions" />
+    <meta property="og:site_name" content="bWalletX" />
+    <meta property="og:title" content="Subscriptions and Pots: bWalletX" />
+    <meta property="og:description" content="Put money aside in a pot and pay regular amounts from it. The pot balance is the most anyone can take. Pause or cancel any time." />
+    <meta property="og:image" content="https://bwalletx.com/og-features-v2.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Put money aside in a pot and pay regular amounts from it. The pot balance is the most anyone can take. Pause or cancel any time." />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@bWalletX" />
+    <meta name="twitter:title" content="Subscriptions and Pots: bWalletX" />
+    <meta name="twitter:description" content="Put money aside in a pot and pay regular amounts from it. The pot balance is the most anyone can take. Pause or cancel any time." />
+    <meta name="twitter:image" content="https://bwalletx.com/og-features-v2.png" />
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="stylesheet" href="/styles.css" />
+    <style>
+      .ext h1 { font-size: clamp(2.2rem, 6vw, 3.4rem); margin: 18px 0 10px; }
+      .ext h2 { margin: 48px 0 8px; font-size: 1.5rem; }
+      .ext p, .ext li { line-height: 1.7; }
+      .ext .small { color: #8a8a86; font-size: 0.85rem; }
+      .ext .row { display: flex; gap: 12px; flex-wrap: wrap; margin: 26px 0; }
+      .ggrid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 230px), 1fr)); gap: 14px; margin: 18px 0; }
+      .gcard { display: block; background: #101114; border: 1px solid #ffffff12; border-radius: 16px; padding: 14px 16px; color: inherit; text-decoration: none; min-width: 0; }
+      .gcard:hover { border-color: #F5B80066; }
+      .gcard h3 { margin: 0 0 4px; font-size: 1.05rem; }
+      .gcard p { margin: 0; color: #a7adb8; font-size: 0.92rem; line-height: 1.5; }
+      .feat { list-style: none; padding: 0; margin: 18px 0; }
+      .feat li { display: flex; gap: 12px; align-items: baseline; padding: 12px 0; border-bottom: 1px solid #ffffff10; }
+      .tag { flex: none; font-size: 0.75rem; font-weight: 700; padding: 2px 9px; border-radius: 999px; }
+      .tag.live { background: #F5B800; color: #000; }
+      .tag.soon { border: 1px solid #ffffff40; color: #a7adb8; }
+    </style>
+  </head>
+  <body>
+    <div class="beta-banner">bWalletX is in <strong>beta</strong>: test with small amounts.</div>
+    <header class="topbar">
+      <div class="wrap topbar-in">
+        <a class="brand" href="/"><img src="/logo.svg" alt="" width="34" height="30" /><span>bWallet<span class="gold">X</span></span></a>
+        <nav aria-label="Pages">
+          <a href="/features">Features</a><a href="/exchange">Exchange</a><a href="/social">Social</a><a href="/agent">Agents</a><a href="/extension">Extension</a><a href="/developers">Developers</a>
+        </nav>
+        <span class="nav-cta"><a class="dl-btn" href="/get">Download</a><a class="web-btn" href="https://web.bwalletx.com" target="_blank" rel="noopener">Web &rarr;</a></span>
+      </div>
+    </header>
+    <script src="/nav.js"></script>
+    <main class="ext">
+      <h1>Subscriptions and Pots. <span class="gold">Set it, cap it, stop it.</span></h1>
+      <p class="lede">Put money aside in a pot. Set up regular payments from it. The pot balance is the most they can ever take. Pause or cancel any time, without asking anyone.</p>
+      <div class="row"><a class="btn btn-store" href="/get">Get bWalletX</a></div>
+
+      <h2 id="pots">Pots</h2>
+      <p>A pot is a named account inside your wallet, like Rent or Savings. It has its own balance. You fill it from your main account, and regular payments come out of it. If a pot is empty, nothing more can leave it.</p>
+      <p>Each pot has a <b>Stop this pot</b> switch, a Top up option, and its own History of every payment, with a link to each transaction on chain.</p>
+
+      <h2>Standing orders and subscriptions</h2>
+      <p>A <b>standing order</b> pays a person or a paymail a fixed dollar amount: daily, weekly or monthly. You choose the first payment date and, if you like, how many payments to make.</p>
+      <p>A <b>subscription</b> is the same thing paid to an app or service. Today that means our own services, bChat and the $b agent, and only in bWalletX.</p>
+      <p>Payments go out when you open the app on or after each date. If notifications are on, the wallet reminds you the day before, and tells you when a pot is running low or a payment fails. If you miss a few dates, the next open catches up, up to three payments; more than that, it asks you first.</p>
+
+      <h2>What works today</h2>
+      <ul class="feat">
+<li><span class="tag live">Live</span><span><b>Pots.</b> Name, fund, top up, stop and resume. Each has its own balance and history.</span></li>
+<li><span class="tag live">Live</span><span><b>Standing orders.</b> To a person or paymail, daily, weekly or monthly, from a pot.</span></li>
+<li><span class="tag live">Live</span><span><b>Subscriptions to our services.</b> bChat and the $b agent, in bWalletX only.</span></li>
+<li><span class="tag live">Live</span><span><b>Pause, resume, cancel.</b> One tap on each payment card.</span></li>
+<li><span class="tag live">Live</span><span><b>Reminders.</b> A notice the day before a payment, when a pot runs low, and when a payment fails.</span></li>
+<li><span class="tag soon">Coming</span><span><b>Payments while the app is closed.</b> Signing future payments in advance (nLockTime), so the payee can collect each one on its date. Pausing would cancel the unsent ones.</span></li>
+<li><span class="tag soon">Coming</span><span><b>Subscribe with bWalletX.</b> A way for any app or site to ask your wallet for a subscription.</span></li>
+<li><span class="tag soon">Coming</span><span><b>Paying in PNEEs.</b> Pots that hold and pay penny tokens, so a 1&cent; payment stays 1&cent;.</span></li>
+      </ul>
+
+      <h2>Set one up</h2>
+      <ol>
+        <li>Open <b>Settings</b> and tap <b>Subscriptions</b>.</li>
+        <li>Create a pot and give it a name.</li>
+        <li>Fund it from your main account.</li>
+        <li>Add a payment: who to pay, the amount in dollars, how often, the first date and, optionally, how many payments.</li>
+      </ol>
+
+      <h2>See and cancel them</h2>
+      <p>Open <b>Settings &rsaquo; Subscriptions</b> and tap a pot. Each payment has a card showing who it pays, how much, and the next date. Tap <b>Pause</b> to hold it, <b>Resume</b> to restart it, or <b>Cancel</b> to end it. To stop everything in a pot at once, use <b>Stop this pot</b>.</p>
+      <p>Every payment shows in the pot&rsquo;s History. In the wallet&rsquo;s <a href="/history">History</a> screen, payments from a pot are labelled &ldquo;pot payment&rdquo;.</p>
+
+      <h2>The 1&cent; a day idea</h2>
+      <p>One idea is that unlocking subscriptions to apps and services costs 1&cent; a day, paid from a pot like anything else. <b>That is not switched on.</b> Nobody is charged for it today, and it would never be on in the App Store or Google Play edition. Pots and standing orders stay free.</p>
+
+      <h2>bWallet (App Store and Google Play) and bWalletX</h2>
+      <ul class="feat">
+<li><span class="tag live">Live</span><span><b>Both:</b> pots, standing orders to a person or paymail, pause, resume, cancel and reminders.</span></li>
+<li><span class="tag live">Live</span><span><b>bWalletX only:</b> subscriptions to apps and services, and any future 1&cent;-a-day option. Store rules don&rsquo;t allow these in the store edition.</span></li>
+      </ul>
+
+      <p>Why we are building this: <a href="/blog/016-pots">016 Pots</a>.</p>
+      <p class="small">bWalletX is in beta: test with small amounts. Questions: <a href="mailto:support@bwalletx.com">support@bwalletx.com</a></p>
+    </main>
+  </body>
+</html>

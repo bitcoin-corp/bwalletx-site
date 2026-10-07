@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>History in bWalletX</title>
+    <meta name="description" content="See every transaction your bWalletX account made, for any date range, and export it as CSV or a PDF statement for your accountant." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://bwalletx.com/history" />
+    <meta property="og:site_name" content="bWalletX" />
+    <meta property="og:title" content="History: where your money went" />
+    <meta property="og:description" content="See every transaction your bWalletX account made, for any date range, and export it as CSV or a PDF statement for your accountant." />
+    <meta property="og:image" content="https://bwalletx.com/og-features-v2.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="See every transaction your bWalletX account made, for any date range, and export it as CSV or a PDF statement for your accountant." />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@bWalletX" />
+    <meta name="twitter:title" content="History: where your money went" />
+    <meta name="twitter:description" content="See every transaction your bWalletX account made, for any date range, and export it as CSV or a PDF statement for your accountant." />
+    <meta name="twitter:image" content="https://bwalletx.com/og-features-v2.png" />
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="stylesheet" href="/styles.css" />
+    <style>
+      .ext h1 { font-size: clamp(2.2rem, 6vw, 3.4rem); margin: 18px 0 10px; }
+      .ext h2 { margin: 48px 0 8px; font-size: 1.5rem; }
+      .ext p, .ext li { line-height: 1.7; }
+      .ext .small { color: #8a8a86; font-size: 0.85rem; }
+      .ext .row { display: flex; gap: 12px; flex-wrap: wrap; margin: 26px 0; }
+      .ggrid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 230px), 1fr)); gap: 14px; margin: 18px 0; }
+      .gcard { display: block; background: #101114; border: 1px solid #ffffff12; border-radius: 16px; padding: 14px 16px; color: inherit; text-decoration: none; min-width: 0; }
+      .gcard:hover { border-color: #F5B80066; }
+      .gcard h3 { margin: 0 0 4px; font-size: 1.05rem; }
+      .gcard p { margin: 0; color: #a7adb8; font-size: 0.92rem; line-height: 1.5; }
+      .feat { list-style: none; padding: 0; margin: 18px 0; }
+      .feat li { display: flex; gap: 12px; align-items: baseline; padding: 12px 0; border-bottom: 1px solid #ffffff10; }
+      .tag { flex: none; font-size: 0.75rem; font-weight: 700; padding: 2px 9px; border-radius: 999px; }
+      .tag.live { background: #F5B800; color: #000; }
+      .tag.soon { border: 1px solid #ffffff40; color: #a7adb8; }
+    </style>
+  </head>
+  <body>
+    <div class="beta-banner">bWalletX is in <strong>beta</strong>: test with small amounts.</div>
+    <header class="topbar">
+      <div class="wrap topbar-in">
+        <a class="brand" href="/"><img src="/logo.svg" alt="" width="34" height="30" /><span>bWallet<span class="gold">X</span></span></a>
+        <nav aria-label="Pages">
+          <a href="/features">Features</a><a href="/exchange">Exchange</a><a href="/social">Social</a><a href="/agent">Agents</a><a href="/extension">Extension</a><a href="/developers">Developers</a>
+        </nav>
+        <span class="nav-cta"><a class="dl-btn" href="/get">Download</a><a class="web-btn" href="https://web.bwalletx.com" target="_blank" rel="noopener">Web &rarr;</a></span>
+      </div>
+    </header>
+    <script src="/nav.js"></script>
+    <main class="ext">
+      <h1>History. <span class="gold">Where your money went.</span></h1>
+      <p class="lede">Every transaction your account has made, read from the chain. Pick a date range, see what came in and went out, and export it in a form your accountant can use.</p>
+      <div class="row"><a class="btn btn-store" href="/get">Get bWalletX</a></div>
+
+      <h2>What it does today</h2>
+      <ul class="feat">
+<li><span class="tag live">Live</span><span><b>Full on-chain history.</b> Every transaction that touched the account&rsquo;s addresses, not just ones made on this device.</span></li>
+<li><span class="tag live">Live</span><span><b>Date ranges.</b> 7 days, 30 days, this year, all time, or your own dates.</span></li>
+<li><span class="tag live">Live</span><span><b>Summary.</b> In, out, fees and net for the range.</span></li>
+<li><span class="tag live">Live</span><span><b>Labels.</b> Tips, likes, pot payments and agent spend are named where the wallet can tell.</span></li>
+<li><span class="tag live">Live</span><span><b>CSV export.</b> A spreadsheet of the range, one row per transaction.</span></li>
+<li><span class="tag live">Live</span><span><b>PDF statement.</b> A printable statement of the range. On a phone, open it and use Print &rsaquo; Save as PDF.</span></li>
+      </ul>
+      <p>Open it from the wallet: tap <b>History</b> on the account card. Payments from a pot show there too; see <a href="/subscriptions">Subscriptions and Pots</a>.</p>
+
+      <h2>Coming</h2>
+      <ul class="feat">
+<li><span class="tag soon">Coming</span><span><b>More kinds of transaction.</b> Token and NFT buys, sells and transfers, and game, subscription and app payments, each with its own label.</span></li>
+<li><span class="tag soon">Coming</span><span><b>Category filters.</b> Show only one kind at a time.</span></li>
+<li><span class="tag soon">Coming</span><span><b>Connections log.</b> Which apps the wallet connected to, what you allowed them to do, and how much each one spent.</span></li>
+<li><span class="tag soon">Coming</span><span><b>Gains and losses.</b> Realised gains and losses for capital gains reporting, using UK HMRC share-pooling rules by default with FIFO as an option, and historical prices in your currency.</span></li>
+      </ul>
+      <p>No dates yet. These ship when they work.</p>
+
+      <p class="small">History and its exports are records, not tax advice. Check with an accountant before you file.</p>
+      <p class="small">bWalletX is in beta: test with small amounts. Questions: <a href="mailto:support@bwalletx.com">support@bwalletx.com</a></p>
+    </main>
+  </body>
+</html>

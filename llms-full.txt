@@ -784,6 +784,48 @@ Sign in with Google and X are in bWalletX. The App Store and Google Play version
 
 ---
 
+Source: https://bwalletx.com/history
+
+# History. Where your money went.
+
+Every transaction your account has made, read from the chain. Pick a date range, see what came in and went out, and export it in a form your accountant can use.
+
+[Get bWalletX](https://bwalletx.com/get)
+
+## What it does today
+
+- LiveFull on-chain history. Every transaction that touched the account’s addresses, not just ones made on this device.
+
+- LiveDate ranges. 7 days, 30 days, this year, all time, or your own dates.
+
+- LiveSummary. In, out, fees and net for the range.
+
+- LiveLabels. Tips, likes, pot payments and agent spend are named where the wallet can tell.
+
+- LiveCSV export. A spreadsheet of the range, one row per transaction.
+
+- LivePDF statement. A printable statement of the range. On a phone, open it and use Print › Save as PDF.
+
+Open it from the wallet: tap History on the account card. Payments from a pot show there too; see [Subscriptions and Pots](https://bwalletx.com/subscriptions).
+
+## Coming
+
+- ComingMore kinds of transaction. Token and NFT buys, sells and transfers, and game, subscription and app payments, each with its own label.
+
+- ComingCategory filters. Show only one kind at a time.
+
+- ComingConnections log. Which apps the wallet connected to, what you allowed them to do, and how much each one spent.
+
+- ComingGains and losses. Realised gains and losses for capital gains reporting, using UK HMRC share-pooling rules by default with FIFO as an option, and historical prices in your currency.
+
+No dates yet. These ship when they work.
+
+History and its exports are records, not tax advice. Check with an accountant before you file.
+
+bWalletX is in beta: test with small amounts. Questions: [support@bwalletx.com](mailto:support@bwalletx.com)
+
+---
+
 Source: https://bwalletx.com/
 
 bWalletX
@@ -2351,6 +2393,78 @@ Call anyone with a name, straight from the wallet. Calls are signed by your wall
 [All features](https://bwalletx.com/features)
 
 bWalletX is in beta and some room rules are still being rolled out. Tokens can lose all value. Questions: [support@bwalletx.com](mailto:support@bwalletx.com)
+
+---
+
+Source: https://bwalletx.com/subscriptions
+
+# Subscriptions and Pots. Set it, cap it, stop it.
+
+Put money aside in a pot. Set up regular payments from it. The pot balance is the most they can ever take. Pause or cancel any time, without asking anyone.
+
+[Get bWalletX](https://bwalletx.com/get)
+
+## Pots
+
+A pot is a named account inside your wallet, like Rent or Savings. It has its own balance. You fill it from your main account, and regular payments come out of it. If a pot is empty, nothing more can leave it.
+
+Each pot has a Stop this pot switch, a Top up option, and its own History of every payment, with a link to each transaction on chain.
+
+## Standing orders and subscriptions
+
+A standing order pays a person or a paymail a fixed dollar amount: daily, weekly or monthly. You choose the first payment date and, if you like, how many payments to make.
+
+A subscription is the same thing paid to an app or service. Today that means our own services, bChat and the $b agent, and only in bWalletX.
+
+Payments go out when you open the app on or after each date. If notifications are on, the wallet reminds you the day before, and tells you when a pot is running low or a payment fails. If you miss a few dates, the next open catches up, up to three payments; more than that, it asks you first.
+
+## What works today
+
+- LivePots. Name, fund, top up, stop and resume. Each has its own balance and history.
+
+- LiveStanding orders. To a person or paymail, daily, weekly or monthly, from a pot.
+
+- LiveSubscriptions to our services. bChat and the $b agent, in bWalletX only.
+
+- LivePause, resume, cancel. One tap on each payment card.
+
+- LiveReminders. A notice the day before a payment, when a pot runs low, and when a payment fails.
+
+- ComingPayments while the app is closed. Signing future payments in advance (nLockTime), so the payee can collect each one on its date. Pausing would cancel the unsent ones.
+
+- ComingSubscribe with bWalletX. A way for any app or site to ask your wallet for a subscription.
+
+- ComingPaying in PNEEs. Pots that hold and pay penny tokens, so a 1¢ payment stays 1¢.
+
+## Set one up
+
+- Open Settings and tap Subscriptions.
+
+- Create a pot and give it a name.
+
+- Fund it from your main account.
+
+- Add a payment: who to pay, the amount in dollars, how often, the first date and, optionally, how many payments.
+
+## See and cancel them
+
+Open Settings › Subscriptions and tap a pot. Each payment has a card showing who it pays, how much, and the next date. Tap Pause to hold it, Resume to restart it, or Cancel to end it. To stop everything in a pot at once, use Stop this pot.
+
+Every payment shows in the pot’s History. In the wallet’s [History](https://bwalletx.com/history) screen, payments from a pot are labelled “pot payment”.
+
+## The 1¢ a day idea
+
+One idea is that unlocking subscriptions to apps and services costs 1¢ a day, paid from a pot like anything else. That is not switched on. Nobody is charged for it today, and it would never be on in the App Store or Google Play edition. Pots and standing orders stay free.
+
+## bWallet (App Store and Google Play) and bWalletX
+
+- LiveBoth: pots, standing orders to a person or paymail, pause, resume, cancel and reminders.
+
+- LivebWalletX only: subscriptions to apps and services, and any future 1¢-a-day option. Store rules don’t allow these in the store edition.
+
+Why we are building this: [016 Pots](https://bwalletx.com/blog/016-pots).
+
+bWalletX is in beta: test with small amounts. Questions: [support@bwalletx.com](mailto:support@bwalletx.com)
 
 ---
 

@@ -57,6 +57,11 @@
       "source": "/twitter",
       "destination": "/x",
       "permanent": true
+    },
+    {
+      "source": "/pots",
+      "destination": "/subscriptions#pots",
+      "permanent": true
     }
   ],
   "headers": [
