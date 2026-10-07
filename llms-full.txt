@@ -400,9 +400,9 @@ The full bWalletX on every device. Your keys stay on your device.
 
 ## bWallet in the app stores
 
-The store edition, bWallet, is on its way to the App Store and Google Play. [Join the waitlist](https://bwalletx.com/#waitlist) to hear when it lands.
+The store edition, bWallet, is in internal testing on Google Play; the wider closed test waits on Google verifying our organisation account. It hasn’t been submitted to the App Store yet; that waits on converting our Apple developer account to an organisation account. [Join the waitlist](https://bwalletx.com/#waitlist) to hear when either opens.
 
-[Download on theApp StorebWallet · coming soonGET IT ONGoogle PlaybWallet · coming soon
+[Download on theApp StorebWallet · not submitted yetGET IT ONGoogle PlaybWallet · Play internal testing
 
 Looking for plain bWallet from the App Store or Google Play? See bwallet.space](https://bwalletx.com/#waitlist).
 
@@ -442,7 +442,7 @@ Open it from the wallet: tap History on the account card. Payments from a pot sh
 
 ## Coming
 
-- ComingGains and losses. A Gains tab with realised gains and losses per tax year: UK HMRC share-pooling rules in pounds by default, FIFO in dollars elsewhere, BSV tracked as an asset, and a disposals CSV for your accountant. Built and in testing; due in the next release.
+- ComingGains and losses. A Gains tab with realised gains and losses per tax year: UK HMRC share-pooling rules in pounds by default, FIFO in dollars elsewhere, BSV tracked as an asset, and a disposals CSV for your accountant. The Gains tab is built and being tested before it ships.
 
 No dates yet. These ship when they work.
 
@@ -468,7 +468,7 @@ Android · Download APK (beta)v5.1.82 beta · sideload[iPhone · Web appInstall 
 
 ▶Watch the explainer · 1 min
 
-Download on theApp StorebWallet · coming soonGET IT ONGoogle PlaybWallet · coming soon
+Download on theApp StorebWallet · not submitted yetGET IT ONGoogle PlaybWallet · Play internal testing
 
 How to sideload on Android
 
@@ -562,7 +562,7 @@ Chat
 ## Token rooms. Hold the token, join the room.
 
 Chat is built on token rooms: buy a token and its room appears. To invite someone, send them the token.
-Coming soon: your own personal token and a room with your name on it.
+In bWalletX your `$name` can be a personal token too, with a room named after you.
 
 sent you the token, see you in the room
 
@@ -648,9 +648,9 @@ Currently in beta.
 
 Android · Download APK (beta)v5.1.82 beta · sideloadiPhone · Web appInstall from Safari · no App StoreChrome · Download extensionv5.1.82 beta · zip + install steps
 
-Download on theApp StorebWallet · coming soon
+Download on theApp StorebWallet · not submitted yet
 
-GET IT ONGoogle PlaybWallet · coming soon
+GET IT ONGoogle PlaybWallet · Play internal testing
 
 ---
 
@@ -700,7 +700,7 @@ No Face ID unlock: you use your password. Pairing the [CLI](https://bwalletx.com
 
 ## Prefer the App Store?
 
-bWallet is our App Store edition: send, receive, tokens, names and rooms, with the Market to browse. It’s coming to the App Store; [join the waitlist](https://www.bwallet.space/#waitlist) to hear when it’s out.
+bWallet is our App Store edition: send, receive, tokens, names and rooms. It has no Market or Exchange; trading is only in bWalletX. It hasn’t been submitted to the App Store yet: that waits on converting our Apple developer account to an organisation account. [Join the waitlist](https://www.bwallet.space/#waitlist) to hear when it’s out.
 
 [Open web.bwalletx.com](https://web.bwalletx.com)
 [Other devices](https://bwalletx.com/get)
@@ -713,29 +713,29 @@ Source: https://bwalletx.com/push-notifications
 
 # Push notifications
 
-Never miss a message. Real push notifications for messages, mentions, payments and calls are being built now and rolling out soon, on your phone, the web wallet and the Chrome extension.
+Never miss a message. Push notifications are live since version 5.1.70 and reach you even with the app closed: on your phone, the web wallet and the Chrome extension. They run through our own push server, push.bwalletx.com.
 
-Coming sooniPhoneAndroidWebChrome extension
+LiveiPhoneAndroidWebChrome extension
 
-## How it works today
-
-While the app is open, it checks for new messages, replies, mentions and payments every 90 seconds and shows a notification on your phone. When the app is closed, nothing arrives yet. On the web wallet and the Chrome extension you see the bell inside the app only.
-
-## What's coming
+## Where it works
 
 ### iPhone
 
-Apple Push Notifications, so alerts arrive with the app closed.
+Apple Push Notifications.
 
 ### Android
 
-Firebase Cloud Messaging, so alerts arrive with the app closed.
+Firebase Cloud Messaging.
 
 ### Web wallet and Chrome extension
 
 Web Push, so your browser can tell you even when the tab isn't open.
 
-## What will notify you
+## Turning it on
+
+Go to Settings › Notifications › Push notifications. In the phone apps the switch starts on. In the web wallet and the Chrome extension it starts off: turn it on there and your browser asks for permission. The switch is per device; previews and quiet hours belong to your account and follow you to every device.
+
+## What notifies you
 
 - Direct messages from friends, always.
 
@@ -743,17 +743,19 @@ Web Push, so your browser can tell you even when the tab isn't open.
 
 - Mentions of your `$name`.
 
-- Payments received: BSV and tokens.
+- Photos, voice and video messages sent to a room you're in.
 
 - $b answers to your `/b` questions.
 
-- Calls.
+- Requests to sign or witness a document.
+
+Tapping a notification opens the room or screen it's about. Several messages in quick succession are collapsed into one.
 
 ## Privacy
 
-By default a notification says who messaged you, not what they wrote, so nothing private shows on your lock screen. If you want message previews, turn them on in Settings. No message text is stored on our push server.
+By default a notification says who messaged you, not what they wrote, so nothing private shows on your lock screen. If you want message previews, turn on Show message previews. Quiet hours silence notifications overnight or whenever you choose. No message text is stored on our push server.
 
-You can turn notifications off per group, per category, or entirely in Settings › Notifications. Your keys never leave your device; notifications don't need them.
+You can turn notifications off per group with the bell, or entirely in Settings › Notifications. Your keys never leave your device; notifications don't need them.
 
 ## bWalletX and bWallet
 
@@ -763,7 +765,7 @@ Notifications work the same in both editions: bWalletX here, and bWallet, the Ap
 [Social in bWalletX](https://bwalletx.com/social)
 [Privacy](https://bwalletx.com/privacy)
 
-Push notifications are in development and not live yet; this page will be updated as they roll out. Questions: [support@bwalletx.com](mailto:support@bwalletx.com)
+Questions: [support@bwalletx.com](mailto:support@bwalletx.com)
 
 ---
 
@@ -1242,7 +1244,7 @@ Source: https://bwalletx.com/lock
 
 Lock BSV on the Bitcoin SV blockchain until a date you choose, or have it paid back to you a little at a time. Once it’s locked, nobody can move it before then: not you, not bWalletX, not anyone.
 
-Coming in the next release Lock BSV is built and tested but not in the app you can download today. This page describes what is coming.
+Coming in a future release, not in the app yet Lock BSV is built and tested, but it is not in the app you can download today. This page describes what is coming.
 
 ## What locking is
 
@@ -3843,6 +3845,8 @@ That's a Web2 habit. On Twitter or Reddit the company owns the posts, so walling
 
 - Tips go straight to the author's own address. bChat takes nothing.
 
+Update, 7 Oct 2026: Where each source is read from now: bChat posts from bWalletX’s own indexer (push.bwalletx.com/feed), merged with bmap; Twetch from Twetch’s own public read API, since bmap stopped indexing Twetch; Treechat from the overlay at overlay.peck.to, since bmap stopped indexing it; Peck from the same overlay; and Fwetch (fwetch.lol) from its public API, since its posts aren’t Bitcoin Schema and no general indexer reads them.
+
 ## Authors first
 
 The rule we've written down is simple: a post belongs to the person who wrote it, not to the app they wrote it in.
@@ -4359,7 +4363,7 @@ Source: https://bwalletx.com/blog/023-lock-bsv
 
 Lock BSV until a date, or as payouts over time, and nobody can unlock it early, not even you. Why that is useful, how BSV enforces it with no custodian, and where the limits are.
 
-Status: built and tested, coming in the next bWalletX release. It is not in the app you can download today.
+Status: coming in a future release, not in the app yet. It is built and tested, but it is not in the app you can download today.
 
 ## Why you would want to lose access to your own money
 
@@ -4441,7 +4445,7 @@ Newest first. Dates come from commits. bWallet is a fork of [Yours Wallet](https
 
 - [](https://bwalletx.com/blog/023-lock-bsv)023 · 7 Oct 2026
 [Locks you can’t break](https://bwalletx.com/blog/023-lock-bsv)
-Lock BSV until a date, or as payouts over time, and nobody can unlock it early, not even you. Coming in the next release.
+Lock BSV until a date, or as payouts over time, and nobody can unlock it early, not even you. Coming in a future release, not in the app yet.
 
 - [](https://bwalletx.com/blog/022-bring-your-coins-home)022 · 7 Oct 2026
 [Bring your coins home](https://bwalletx.com/blog/022-bring-your-coins-home)

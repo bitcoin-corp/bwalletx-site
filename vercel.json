@@ -2,6 +2,10 @@
   "cleanUrls": true,
   "rewrites": [
     {
+      "source": "/lock/verify",
+      "destination": "/lock/verify.html"
+    },
+    {
       "source": "/push",
       "destination": "/push-notifications"
     },

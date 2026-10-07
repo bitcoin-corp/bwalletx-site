@@ -19,7 +19,7 @@ Full text of every page below: https://bwalletx.com/llms-full.txt
 - [Buy BSV in bWalletX](https://bwalletx.com/buy): Buy BSV right in bWalletX: tap the gold Buy BSV card, pay with card, Apple Pay, Google Pay or bank through an independent provider, or receive from an exchange or a friend. Your BSV lands in your wallet, shown in dollars.
 - [Restore into bWalletX](https://bwalletx.com/restore): Every wallet you can restore or sweep into bWalletX: Yours, Panda, RelayX, Twetch, SimplyCash, BIP44 wallets, private keys and xprvs, with Money Button next. What each needs and what comes across.
 - [History in bWalletX](https://bwalletx.com/history): See every transaction your bWalletX account made, for any date range, and export it as CSV or a PDF statement for your accountant.
-- [Push notifications (coming soon) · bWalletX](https://bwalletx.com/push-notifications): Push notifications for bWalletX are coming soon: messages, mentions, payments and calls on iPhone, Android, web and the Chrome extension, even with the app closed. Who messaged you, not what they wrote.
+- [Push notifications · bWalletX](https://bwalletx.com/push-notifications): Push notifications are live in bWalletX: direct messages, mentions, group messages you opt into, $b answers and signing requests on iPhone, Android, the web wallet and the Chrome extension, even with the app closed. Who messaged you, not what they wrote.
 
 ## Wallet features
 
@@ -29,7 +29,7 @@ Full text of every page below: https://bwalletx.com/llms-full.txt
 - [PNEEs: Penny Stablecoins](https://bwalletx.com/pnees): PNEEs (Penny Stablecoins): digital pennies on BSV, one US cent each, backed only by BSV locked in public vaults. No bank, no co-signer on transfers, no freeze. Live mainnet pilot.
 - [Pots in bWalletX](https://bwalletx.com/pots): A pot is money set aside inside your wallet. Standing orders and subscriptions pay from it, and the pot balance is the most they can ever take.
 - [Subscriptions in bWalletX](https://bwalletx.com/subscriptions): Put money aside in a pot and pay regular amounts from it. The pot balance is the most anyone can take. Pause or cancel any time.
-- [Lock BSV](https://bwalletx.com/lock): Lock BSV until a date, or as payouts over time: dollar targets, fixed BSV or a percentage. Nobody can unlock it early, not even you. Coming in the next bWalletX release.
+- [Lock BSV](https://bwalletx.com/lock): Lock BSV until a date, or as payouts over time: dollar targets, fixed BSV or a percentage. Nobody can unlock it early, not even you. Coming in a future release, not in the app yet.
 - [Verify a lock](https://bwalletx.com/lock/verify): Check a bWalletX lock or lock receipt against the BSV blockchain: amounts, unlock heights and whether each lock has been claimed.
 - [Identity in bWalletX](https://bwalletx.com/identity): Your 12 words are your account. On top of them: a $handle, linked accounts, document signing, Sign in with bWalletX, and an optional ID check when you need one.
 - [Your signature · bWalletX](https://bwalletx.com/sign): Flip your bWalletX card and sign the back with your finger. Your signature stays on your device. Next: sign bit-sign contracts with it and seal them on Bitcoin for under a penny.
