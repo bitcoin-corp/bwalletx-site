@@ -82,6 +82,8 @@ Full text of every page below: https://bwalletx.com/llms-full.txt
 - [021 Coordinate on BSV · bWalletX blog](https://bwalletx.com/blog/021-coordinate-on-bsv): Big platforms put every community in one room. BSV needs a place to plan that it controls. Chat in bWalletX is that place: the first post in a series on chat on BSV.
 - [022 Bring your coins home · bWalletX blog](https://bwalletx.com/blog/022-bring-your-coins-home): BSV coins sit in wallets that closed, changed hands or changed their paths. The 12 words still work. How bWalletX restores or sweeps them, and what has to stay behind.
 - [023 Locks you can’t break · bWalletX blog](https://bwalletx.com/blog/023-lock-bsv): Lock BSV until a date, or as payouts over time, and nobody can unlock it early, not even you. Why that is useful, how BSV enforces it with no custodian, and where the limits are.
+- [024 Pay the person who wrote it · bWalletX blog](https://bwalletx.com/blog/024-tips-and-paid-likes): Tips and paid likes in bWalletX 5.1.72: the payment goes to the author in the same transaction as the like. Why bChat takes 0%, why the home app gets 5% on top, and how authors can hide their own posts.
+- [025 Push notifications, from our own server · bWalletX blog](https://bwalletx.com/blog/025-push-notifications): Since bWalletX 5.1.70, phones, the web wallet and the extension get push notifications from push.bwalletx.com. What notifies you, what the server knows and doesn’t, and what it costs.
 - [bWalletX development blog](https://bwalletx.com/blog/): How bWallet and bWalletX were built from a fork of Yours Wallet: numbered posts from the git history, including what broke, what we reversed and what is still not done.
 
 ## Support

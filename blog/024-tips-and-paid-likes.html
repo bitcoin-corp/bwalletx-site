@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>024 Pay the person who wrote it · bWalletX blog</title>
+    <meta name="description" content="Tips and paid likes in bWalletX 5.1.72: the payment goes to the author in the same transaction as the like. Why bChat takes 0%, why the home app gets 5% on top, and how authors can hide their own posts." />
+    <link rel="canonical" href="https://bwalletx.com/blog/024-tips-and-paid-likes" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://bwalletx.com/blog/024-tips-and-paid-likes" />
+    <meta property="og:site_name" content="bWalletX" />
+    <meta property="og:title" content="Pay the person who wrote it" />
+    <meta property="og:description" content="Tips and paid likes in bWalletX 5.1.72: the payment goes to the author in the same transaction as the like. Why bChat takes 0%, why the home app gets 5% on top, and how authors can hide their own posts." />
+    <meta property="og:image" content="https://bwalletx.com/og/og-blog-024.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@bWalletX" />
+    <meta name="twitter:title" content="Pay the person who wrote it" />
+    <meta name="twitter:description" content="Tips and paid likes in bWalletX 5.1.72: the payment goes to the author in the same transaction as the like. Why bChat takes 0%, why the home app gets 5% on top, and how authors can hide their own posts." />
+    <meta name="twitter:image" content="https://bwalletx.com/og/og-blog-024.png" />
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="stylesheet" href="/styles.css" />
+    <style>
+      .ext { max-width: 760px; margin: 0 auto; padding: 120px 20px 80px; }
+      .ext h1 { font-size: clamp(2rem, 6vw, 3rem); margin: 10px 0 10px; line-height: 1.15; }
+      .ext h2 { margin: 44px 0 10px; font-size: 1.4rem; }
+      .ext p, .ext li { line-height: 1.7; }
+      .ext code { background: #17191e; padding: 2px 7px; border-radius: 6px; overflow-wrap: anywhere; }
+      .ext a { overflow-wrap: anywhere; }
+      .meta { color: #8a8a86; font-size: 0.9rem; margin: 0; }
+      .num { color: #F5B800; font-weight: 700; letter-spacing: .04em; }
+      .box { background: #101114; border: 1px solid #ffffff12; border-radius: 16px; padding: 18px 22px; margin: 28px 0; }
+      .box h2 { margin: 0 0 8px; font-size: 1.1rem; }
+      .box ul { margin: 0; padding-left: 1.2em; }
+      .related { color: #a7adb8; }
+      .pn { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; margin-top: 40px; border-top: 1px solid #ffffff14; padding-top: 20px; }
+      .pn a { color: #F5B800; text-decoration: none; max-width: 100%; }
+      .posts { list-style: none; padding: 0; margin: 28px 0; }
+      .posts li { background: #101114; border: 1px solid #ffffff12; border-radius: 16px; padding: 16px 20px; margin: 12px 0; }
+      .posts a { color: #fff; text-decoration: none; font-weight: 700; font-size: 1.1rem; }
+      .posts a:hover { color: #F5B800; }
+      .posts p { margin: 4px 0 0; color: #a7adb8; line-height: 1.55; }
+      .ext .small { color: #8a8a86; font-size: 0.85rem; }
+      .ext pre { background: #17191e; padding: 14px 16px; border-radius: 10px; overflow-x: auto; }
+      .ext pre code { padding: 0; background: none; overflow-wrap: normal; white-space: pre; }
+    </style>
+      <!-- ld:start -->
+    <script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "BlogPosting",
+   "headline": "Pay the person who wrote it",
+   "description": "Tips and paid likes in bWalletX 5.1.72: the payment goes to the author in the same transaction as the like. Why bChat takes 0%, why the home app gets 5% on top, and how authors can hide their own posts.",
+   "url": "https://bwalletx.com/blog/024-tips-and-paid-likes",
+   "mainEntityOfPage": "https://bwalletx.com/blog/024-tips-and-paid-likes",
+   "image": "https://bwalletx.com/og/og-blog-024.png",
+   "inLanguage": "en",
+   "author": {
+    "@type": "Organization",
+    "name": "The Bitcoin Corporation Ltd",
+    "url": "https://bwalletx.com/"
+   },
+   "publisher": {
+    "@type": "Organization",
+    "name": "The Bitcoin Corporation Ltd",
+    "logo": {
+     "@type": "ImageObject",
+     "url": "https://bwalletx.com/icon-512.png"
+    }
+   },
+   "datePublished": "2026-10-07"
+  }
+ ]
+}
+    </script>
+    <!-- ld:end -->
+  </head>
+  <body>
+    <div class="beta-banner">bWalletX is in <strong>beta</strong>: test with small amounts.</div>
+    <header class="topbar">
+      <div class="wrap topbar-in">
+        <a class="brand" href="/"><img src="/logo.svg" alt="" width="34" height="30" /><span>bWallet<span class="gold">X</span></span></a>
+        <nav aria-label="Pages">
+          <a href="/features">Features</a><a href="/exchange">Exchange</a><a href="/social">Social</a><a href="/agent">Agents</a><a href="/extension">Extension</a><a href="/developers">Developers</a>
+        </nav>
+        <span class="nav-cta"><a class="dl-btn" href="/get">Download</a><a class="web-btn" href="https://web.bwalletx.com" target="_blank" rel="noopener">Web &rarr;</a></span>
+      </div>
+    </header>
+    <script src="/nav.js"></script>
+    <main class="ext">
+      <p class="meta"><a href="/blog">Development blog</a> · <span class="num">024</span> · 7 Oct 2026</p>
+      <h1>Pay the person who wrote it</h1>
+      <p class="lede">Tips and paid likes in bWalletX 5.1.72: the payment goes to the author in the same transaction as the like. Why bChat takes 0%, why the home app gets 5% on top, and how authors can hide their own posts.</p>
+      <p><b>Status: out in bWalletX 5.1.72.</b></p>
+
+      <h2>A like costs nothing, so it is worth nothing</h2>
+      <p>On most social apps a like is free. You tap a heart, a number goes up, and the person who wrote the post gets nothing they can use. The platform gets something: a signal it can sell to advertisers. Writers who want to be paid have to go somewhere else, to a tip jar, a subscription site or a payment app, and ask readers to follow them there. Most readers don&rsquo;t.</p>
+      <p>The gap between &ldquo;I liked this&rdquo; and &ldquo;I paid for this&rdquo; is a few extra steps, and that is where most of the money gets lost. Every extra screen, every separate account and every card form loses people who would have paid a few cents if it were as easy as tapping a heart.</p>
+      <p>In the bChat feed inside bWalletX, a like can carry money, and a tip is one tap. The payment goes to the person who wrote the post, in the same transaction as the like. There is no second step and no separate account.</p>
+
+      <h2>What happens when you tap</h2>
+      <p>There are two actions.</p>
+      <ul>
+        <li><b>Paid like.</b> A like with a payment attached. The default is 1,000 sats, and you can change it. It still counts as a like, once per person.</li>
+        <li><b>Tip.</b> You pick an amount. The presets are in dollars, $0.05, $0.25 and $1, converted to sats at the current rate. The smallest tip is 546 sats, and one tip can&rsquo;t be more than 1 BSV, so a typo can&rsquo;t empty your wallet.</li>
+      </ul>
+      <p>Either way, your wallet builds one Bitcoin transaction with two parts next to each other. The first is the record: &ldquo;this is a like (or a tip) for post X, of amount A&rdquo;, signed by you. The second is the payment: exactly A sats to the author&rsquo;s address. Your change comes back to you, and the network fee is the normal small one.</p>
+      <p>Because both parts are in one transaction, they can&rsquo;t come apart. There is no like that says it was paid when the payment failed, and no payment that lost track of what it was for. Anyone reading the chain can check that the payment output pays the author exactly the amount the record says. The feed only counts a tip towards a post&rsquo;s total when that check passes. Anything else counts as zero.</p>
+
+      <h2>The author gets the money, not the app</h2>
+      <p>The payment goes to the address that signed the post. For a bChat post, that is the author&rsquo;s own signing address. For a Twetch post, it is the address of the author&rsquo;s Twetch key, the one that signs their posts. The money arrives in their wallet whatever app they use, because it is just a Bitcoin payment and needs nobody&rsquo;s cooperation.</p>
+      <p>There is one exception, and we refuse it outright. Treechat signs every post with one shared key, so the signing address belongs to Treechat, not to the person who wrote the post. A tip there would go to Treechat. So for Treechat posts the wallet shows that tips are unavailable, and the builder throws an error rather than paying. When Treechat publishes a payment address for each author, that can change.</p>
+      <p>Unliking doesn&rsquo;t refund. If you paid-like a post and then unlike it, the like goes away and the payment stays with the author. That is how a payment works: once it is sent, it is theirs.</p>
+
+      <h2>Why bChat takes 0%</h2>
+      <p>The format allows the app you are using to add a fee of its own: up to 5% of the amount and never more than 10,000 sats, as a separate output, never taken from the author&rsquo;s share. bChat sets its fee to zero. With a zero fee, no fee output is written at all.</p>
+      <p>We did that on purpose. bChat shows posts from other BSV apps as well as its own. If we took a cut of every tip on someone else&rsquo;s post, we would be doing what we complain about in big platforms: standing between the writer and the reader and charging for it. The point of the feed is that it is open. It is easier to ask other apps to join an open feed when we aren&rsquo;t charging tolls on it. bWalletX makes its money in other places.</p>
+
+      <h2>Why the home app gets 5%, on top</h2>
+      <p>When you tip or paid-like a post that was written in another app, Twetch or Peck for example, bChat adds 5% of the amount on top for that app. If you tip 10,000 sats, the author still gets exactly 10,000 sats, and the home app gets 500 more as its own output. It is capped at 10,000 sats. The wallet&rsquo;s approval screen lists it as its own line, so you see what you are paying before you sign.</p>
+      <p>The reason is simple. That app found the writer, hosted the conversation and built the thing people came to read. bChat is showing its post to new readers. Sending a share back is the fair thing to do, and it gives other apps a reason to want their posts shown in an open feed instead of a reason to fight it.</p>
+      <p>There are rules. The share only goes to an address the home app has published for itself. We never guess one, and we never use a shared relay key. It is never paid to the author&rsquo;s address or the fee address, and never on bChat&rsquo;s own posts. Today no app has published one yet, so in practice the share is not being paid. When an app publishes its address, the share switches on for its posts, with no new release needed.</p>
+
+      <h2>Authors stay in control: hiding your own post</h2>
+      <p>Paying people for posts makes posts matter more, and that makes it more important that authors can change their minds. Posts on BSV are on chain and can&rsquo;t be deleted. What an author can do in bWalletX is ask for a post to be hidden.</p>
+      <p>&ldquo;Hide my post&rdquo; writes a small signed record: &ldquo;hide post X&rdquo;. The feed honours it only when it is signed by the same key that signed the post, so nobody else can hide your posts, and you can&rsquo;t hide anyone else&rsquo;s. The latest of hide and unhide wins, so you can undo it. The indexer checks each signature, and the feed leaves hidden posts out.</p>
+      <p>Hiding happens when the feed is read. The post is still on chain, and another app can still show it. We can&rsquo;t promise more than that, and we don&rsquo;t pretend to. It is the same model every app in the open feed uses: each one runs its own filters and moderation on top of the shared data. For the same reason as tips, this doesn&rsquo;t work for Treechat posts, because there is no per-author key to check.</p>
+
+      <h2>What it changes</h2>
+      <p>When liking and paying are the same action, the signal means something. A post with a hundred paid likes was worth real money to a hundred people. That is harder to fake than a hundred free taps, and it goes straight to the writer, not to the platform. A writer doesn&rsquo;t need a sponsorship deal or a paywall to get something back for a good post. They need readers who can pay as easily as they can like.</p>
+      <p>It is small money per tap. That is the point. Bitcoin SV fees are low enough that a few cents can move on its own, and a wallet built into the feed means nobody has to leave to pay.</p>
+      <p>More about the feed, tips and your handle on the <a href="/social">Social page</a>.</p>
+
+      <p class="related">Related: <a href="/blog/014-open-feed">014 One feed for BSV</a> · <a href="/blog/019-language-filter">019 Blur slurs, show swearing</a> · <a href="/chat">Chat</a></p>
+      <div class="pn"><a href="/blog/023-lock-bsv">&larr; 023 Locks you can&rsquo;t break</a><a href="/blog/025-push-notifications">025 Push notifications, from our own server &rarr;</a></div>
+    </main>
+  </body>
+</html>

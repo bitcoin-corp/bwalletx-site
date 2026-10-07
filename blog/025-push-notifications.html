@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>025 Push notifications, from our own server · bWalletX blog</title>
+    <meta name="description" content="Since bWalletX 5.1.70, phones, the web wallet and the extension get push notifications from push.bwalletx.com. What notifies you, what the server knows and doesn&rsquo;t, and what it costs." />
+    <link rel="canonical" href="https://bwalletx.com/blog/025-push-notifications" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://bwalletx.com/blog/025-push-notifications" />
+    <meta property="og:site_name" content="bWalletX" />
+    <meta property="og:title" content="Push notifications, from our own server" />
+    <meta property="og:description" content="Since bWalletX 5.1.70, phones, the web wallet and the extension get push notifications from push.bwalletx.com. What notifies you, what the server knows and doesn&rsquo;t, and what it costs." />
+    <meta property="og:image" content="https://bwalletx.com/og/og-blog-025.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@bWalletX" />
+    <meta name="twitter:title" content="Push notifications, from our own server" />
+    <meta name="twitter:description" content="Since bWalletX 5.1.70, phones, the web wallet and the extension get push notifications from push.bwalletx.com. What notifies you, what the server knows and doesn&rsquo;t, and what it costs." />
+    <meta name="twitter:image" content="https://bwalletx.com/og/og-blog-025.png" />
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="stylesheet" href="/styles.css" />
+    <style>
+      .ext { max-width: 760px; margin: 0 auto; padding: 120px 20px 80px; }
+      .ext h1 { font-size: clamp(2rem, 6vw, 3rem); margin: 10px 0 10px; line-height: 1.15; }
+      .ext h2 { margin: 44px 0 10px; font-size: 1.4rem; }
+      .ext p, .ext li { line-height: 1.7; }
+      .ext code { background: #17191e; padding: 2px 7px; border-radius: 6px; overflow-wrap: anywhere; }
+      .ext a { overflow-wrap: anywhere; }
+      .meta { color: #8a8a86; font-size: 0.9rem; margin: 0; }
+      .num { color: #F5B800; font-weight: 700; letter-spacing: .04em; }
+      .box { background: #101114; border: 1px solid #ffffff12; border-radius: 16px; padding: 18px 22px; margin: 28px 0; }
+      .box h2 { margin: 0 0 8px; font-size: 1.1rem; }
+      .box ul { margin: 0; padding-left: 1.2em; }
+      .related { color: #a7adb8; }
+      .pn { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; margin-top: 40px; border-top: 1px solid #ffffff14; padding-top: 20px; }
+      .pn a { color: #F5B800; text-decoration: none; max-width: 100%; }
+      .posts { list-style: none; padding: 0; margin: 28px 0; }
+      .posts li { background: #101114; border: 1px solid #ffffff12; border-radius: 16px; padding: 16px 20px; margin: 12px 0; }
+      .posts a { color: #fff; text-decoration: none; font-weight: 700; font-size: 1.1rem; }
+      .posts a:hover { color: #F5B800; }
+      .posts p { margin: 4px 0 0; color: #a7adb8; line-height: 1.55; }
+      .ext .small { color: #8a8a86; font-size: 0.85rem; }
+      .ext pre { background: #17191e; padding: 14px 16px; border-radius: 10px; overflow-x: auto; }
+      .ext pre code { padding: 0; background: none; overflow-wrap: normal; white-space: pre; }
+    </style>
+      <!-- ld:start -->
+    <script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "BlogPosting",
+   "headline": "Push notifications, from our own server",
+   "description": "Since bWalletX 5.1.70, phones, the web wallet and the extension get push notifications from push.bwalletx.com. What notifies you, what the server knows and doesn’t, and what it costs.",
+   "url": "https://bwalletx.com/blog/025-push-notifications",
+   "mainEntityOfPage": "https://bwalletx.com/blog/025-push-notifications",
+   "image": "https://bwalletx.com/og/og-blog-025.png",
+   "inLanguage": "en",
+   "author": {
+    "@type": "Organization",
+    "name": "The Bitcoin Corporation Ltd",
+    "url": "https://bwalletx.com/"
+   },
+   "publisher": {
+    "@type": "Organization",
+    "name": "The Bitcoin Corporation Ltd",
+    "logo": {
+     "@type": "ImageObject",
+     "url": "https://bwalletx.com/icon-512.png"
+    }
+   },
+   "datePublished": "2026-10-07"
+  }
+ ]
+}
+    </script>
+    <!-- ld:end -->
+  </head>
+  <body>
+    <div class="beta-banner">bWalletX is in <strong>beta</strong>: test with small amounts.</div>
+    <header class="topbar">
+      <div class="wrap topbar-in">
+        <a class="brand" href="/"><img src="/logo.svg" alt="" width="34" height="30" /><span>bWallet<span class="gold">X</span></span></a>
+        <nav aria-label="Pages">
+          <a href="/features">Features</a><a href="/exchange">Exchange</a><a href="/social">Social</a><a href="/agent">Agents</a><a href="/extension">Extension</a><a href="/developers">Developers</a>
+        </nav>
+        <span class="nav-cta"><a class="dl-btn" href="/get">Download</a><a class="web-btn" href="https://web.bwalletx.com" target="_blank" rel="noopener">Web &rarr;</a></span>
+      </div>
+    </header>
+    <script src="/nav.js"></script>
+    <main class="ext">
+      <p class="meta"><a href="/blog">Development blog</a> · <span class="num">025</span> · 7 Oct 2026</p>
+      <h1>Push notifications, from our own server</h1>
+      <p class="lede">Since bWalletX 5.1.70, phones, the web wallet and the extension get push notifications from push.bwalletx.com. What notifies you, what the server knows and doesn&rsquo;t, and what it costs.</p>
+      <p><b>Status: out in bWalletX 5.1.70</b>, on iPhone and Android, in the web wallet and in the Chrome extension.</p>
+
+      <h2>A wallet with chat needs to tap you on the shoulder</h2>
+      <p>bWalletX has chat built in: token rooms, DMs, calls and b, the assistant. Chat that only works while the app is open isn&rsquo;t much use. If a friend sends you a message, you should find out without having to check. That needs push notifications.</p>
+      <p>The usual way to add them is to sign up for a notification company, drop its SDK into the app and send it everything: who your users are, who is messaging whom, and often the text of the messages. It is quick to set up, and it means a third party ends up with a list of your users&rsquo; conversations.</p>
+      <p>We didn&rsquo;t want that, so we run our own small push server at <code>push.bwalletx.com</code>.</p>
+
+      <h2>What notifies you</h2>
+      <ul>
+        <li><b>Direct messages.</b> Always, unless you turn that conversation off.</li>
+        <li><b>Mentions.</b> When someone mentions you in a room, unless you turn that room off.</li>
+        <li><b>Group messages.</b> Only if you ask for them. Each room has a bell with three settings: All, Mentions and Off. Groups start on Mentions, so a busy room doesn&rsquo;t buzz your phone all day.</li>
+        <li><b>Calls.</b> An incoming call rings through.</li>
+        <li><b>Answers from b.</b> When the assistant replies in a room.</li>
+      </ul>
+      <p>Tapping a notification opens the room or DM it is about.</p>
+      <p>Two more rules keep it calm. If a room gets busy, you get one notification per room every 30 seconds at most, and the next one says &ldquo;N new messages in X&rdquo; instead of one buzz per line. And you can set quiet hours, which hold back everything except calls.</p>
+      <p>Your preview setting and quiet hours belong to your account, not to one device, so they follow you from your phone to the web wallet to the extension. The settings are in Settings &rsaquo; Notifications &rsaquo; Push notifications.</p>
+
+      <h2>What the server knows</h2>
+      <p>To send you a notification, the server has to know a few things, and it keeps only those:</p>
+      <ul>
+        <li><b>Your handle and your devices.</b> For each device: the platform (iPhone, Android, web or extension) and the push token Apple, Google or your browser gave it. That token is an address for a device, nothing more.</li>
+        <li><b>Your settings.</b> Previews on or off, quiet hours and your time zone, and the bell setting for each room you have changed.</li>
+      </ul>
+      <p>You register by signing in with your wallet, the same signed proof bChat uses. There is no email address and no password. If you turn notifications off, or sign out, the device is removed.</p>
+
+      <h2>What it doesn&rsquo;t know</h2>
+      <p>The push server doesn&rsquo;t read your rooms. When a message is sent, bChat, which already knows who is in each room, tells the server who should be told and passes a short preview. The server decides who gets a notification, sends it and forgets it. No message text is ever stored. Its database has a devices table and a settings table, and that is all. Its log line for each event says the kind of event and how many devices it went to. It doesn&rsquo;t log who sent what to whom.</p>
+      <p><b>Previews are off by default.</b> With previews off, the text of the message never leaves our server. The notification says &ldquo;$alice sent you a message&rdquo; or &ldquo;$alice mentioned you in $ROOM&rdquo;, and you open the app to read it. Answers from b say &ldquo;Tap to read the answer&rdquo;. If you turn previews on, the message text goes into the notification so you can read it on your lock screen.</p>
+
+      <h2>What we can&rsquo;t avoid</h2>
+      <p>We want to be exact here, because &ldquo;our own server&rdquo; can sound like more than it is.</p>
+      <p>Phones only accept notifications through their maker&rsquo;s service. An iPhone notification has to go through Apple&rsquo;s push service, and an Android one through Google&rsquo;s Firebase Cloud Messaging. There is no way around that for an app on those phones. So Apple or Google carries the notification to your device, and sees what is in it. That is why previews are off by default: with them off, all Apple or Google can see is that $alice sent you a message, not what she said.</p>
+      <p>In the web wallet and the extension, notifications use standard Web Push. The browser&rsquo;s push service carries them, but the content is encrypted for your browser, so the push service can&rsquo;t read it.</p>
+      <p>What running our own server changes is the part in the middle. No notification company gets a copy of every user, every device and every conversation. The list of who talks to whom stays with us and bChat, and the stored part is limited to devices and settings.</p>
+
+      <h2>What it costs</h2>
+      <p>Apple, Google and the browser push services don&rsquo;t charge to deliver notifications. The cost is our time and a small server. It runs next to our other services on a server we already rent, and we maintain it ourselves. We had to set up our own Apple push key, a Firebase account and a key pair for Web Push, and those keys live on the server only, never in any code repository.</p>
+      <p>There are real downsides. When something breaks, nobody else fixes it. Amazon Fire tablets have no Google Play services, so Android push doesn&rsquo;t reach them. And on an iPhone, the web wallet can only get notifications once it has been added to the home screen. We think that is a fair price for not handing out a map of who our users talk to.</p>
+
+      <h2>Turning it on</h2>
+      <p>In the phone apps the switch starts on. In the web wallet and the extension it starts off until you turn it on in Settings, which is when the browser asks for permission. The full details, including how to turn each room down or off, are on the <a href="/push-notifications">push notifications page</a>.</p>
+
+      <p class="related">Related: <a href="/blog/021-coordinate-on-bsv">021 Coordinate on BSV</a> · <a href="/blog/024-tips-and-paid-likes">024 Pay the person who wrote it</a> · <a href="/chat">Chat</a> · <a href="/privacy">Privacy</a></p>
+      <div class="pn"><a href="/blog/024-tips-and-paid-likes">&larr; 024 Pay the person who wrote it</a><a href="/blog">All posts &rarr;</a></div>
+    </main>
+  </body>
+</html>
