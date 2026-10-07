@@ -1,0 +1,519 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Sign in with bWalletX · Developer guide</title>
+    <meta name="description" content="Add Sign in with bWalletX to your app: the user's wallet signs a one-time challenge with its identity key and your server checks it with @bsv/sdk. One script tag, server code, security notes, and steps for AI agents." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://bwalletx.com/connect" />
+    <meta property="og:site_name" content="bWalletX" />
+    <meta property="og:title" content="Add Sign in with bWalletX to your app" />
+    <meta property="og:description" content="One script tag, connect.js, and two routes on your server. The wallet signs a challenge with its identity key; you check it with @bsv/sdk. No API keys." />
+    <meta property="og:image" content="https://bwalletx.com/og-connect.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Sign in with bWalletX: one script tag and the gold button" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@bWalletX" />
+    <meta name="twitter:title" content="Add Sign in with bWalletX to your app" />
+    <meta name="twitter:description" content="One script tag, connect.js, and two routes on your server. The wallet signs a challenge with its identity key; you check it with @bsv/sdk. No API keys." />
+    <meta name="twitter:image" content="https://bwalletx.com/og-connect.png" />
+    <link rel="alternate" type="text/markdown" href="https://bwalletx.com/connect.md" title="This guide as Markdown" />
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="stylesheet" href="/styles.css" />
+    <style>
+      .ext h1 { font-size: clamp(2.2rem, 6vw, 3.4rem); margin: 18px 0 10px; }
+      .ext h2 { margin: 44px 0 10px; font-size: 1.4rem; }
+      .ext pre { background: #101114; border: 1px solid #ffffff12; border-radius: 14px; padding: 16px; overflow-x: auto; font-size: 0.82rem; line-height: 1.55; }
+      .ext code { background: #17191e; padding: 2px 7px; border-radius: 6px; overflow-wrap: anywhere; }
+      .ext pre code { background: none; padding: 0; overflow-wrap: normal; }
+      .ext li { margin: 8px 0; }
+      .ext table { width: 100%; border-collapse: collapse; margin: 14px 0; font-size: 0.92rem; display: block; overflow-x: auto; }
+      .ext th, .ext td { text-align: left; vertical-align: top; padding: 9px 12px; border-bottom: 1px solid #ffffff14; }
+      .ext th { color: var(--gold-hi); font-weight: 600; }
+      .ext .small { color: #8a8a86; font-size: 0.85rem; }
+      .ext .src-note { color: #8a8a86; font-size: 0.85rem; }
+      .bwx-preview { display: flex; flex-wrap: wrap; gap: 16px; align-items: center; padding: 26px; margin: 16px 0; border-radius: 16px; border: 1px solid #ffffff14; background: #0b0c0f; }
+      .bwx-preview.light { background: #f4f4f2; }
+      #for-ai-agents + ol { background: #101114; border: 1px solid rgba(245, 184, 0, 0.35); border-radius: 14px; padding: 18px 18px 18px 40px; }
+.bwx-signin {
+  display: inline-flex; align-items: center; gap: 12px;
+  min-height: 48px; padding: 10px 22px 10px 10px;
+  border: 0; border-radius: 12px; cursor: pointer;
+  background: linear-gradient(180deg, #fcd34d, #f59e0b);
+  color: #000; text-align: left;
+  font: 700 16px/1.2 system-ui, -apple-system, "Segoe UI", sans-serif;
+  box-shadow: 0 8px 24px rgba(245, 158, 11, 0.2);
+}
+.bwx-signin:hover { background: linear-gradient(180deg, #fde68a, #fbbf24); }
+.bwx-signin:focus-visible { outline: 2px solid #ffd24d; outline-offset: 3px; }
+.bwx-signin:disabled { opacity: 0.6; cursor: wait; }
+.bwx-signin .bwx-mark {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 32px; height: 32px; border-radius: 50%; background: #000; flex: none;
+}
+.bwx-signin small { display: block; font-size: 11px; font-weight: 500; color: rgba(0, 0, 0, 0.6); }
+    </style>
+  </head>
+  <body>
+    <div class="beta-banner">bWalletX is in <strong>beta</strong>: test with small amounts.</div>
+    <header class="topbar">
+      <div class="wrap topbar-in">
+        <a class="brand" href="/"><img src="/logo.svg" alt="" width="34" height="30" /><span>bWallet<span class="gold">X</span></span></a>
+        <nav aria-label="Pages">
+          <a href="/features">Features</a><a href="/exchange">Exchange</a><a href="/social">Social</a><a href="/agent">Agents</a><a href="/extension">Extension</a><a href="/developers">Developers</a>
+        </nav>
+        <span class="nav-cta"><a class="dl-btn" href="/get">Download</a><a class="web-btn" href="https://web.bwalletx.com" target="_blank" rel="noopener">Web &rarr;</a></span>
+      </div>
+    </header>
+    <script src="/nav.js"></script>
+    <main class="ext">
+      <img src="/logo.svg" alt="bWalletX" width="72" height="64" />
+<h1 id="sign-in-with-bwalletx">Sign in with bWallet<span class="gold">X</span></h1>
+<p class="lede">How to let people sign in to your site or app with their bWalletX: one script tag, two routes on your server, and no API keys.</p>
+<p class="src-note">Also as plain Markdown for AI coding agents: <a href="/connect.md">bwalletx.com/connect.md</a>. Checked against bWalletX 5.1.75, connect.js and @bsv/sdk 2.8.11 on 7 Oct 2026.</p>
+<h2 id="in-30-seconds">In 30 seconds</h2>
+<p>One script tag on your page, two routes on your server.</p>
+<pre><code class="language-html">&lt;script src=&quot;https://bwalletx.com/connect.js&quot;&gt;&lt;/script&gt;
+</code></pre>
+<ul>
+<li><code>bWalletX.renderButton(&#39;#signin&#39;, { onClick })</code> draws the gold &quot;Sign in with bWalletX&quot; button.</li>
+<li><code>bWalletX.signIn({ challenge, pairing })</code> finds the user&#39;s wallet (Chrome extension, the bWalletX app&#39;s browser, or a phone or the web wallet by QR code), asks your server for a one-time challenge, and has the wallet sign it with a key derived from its <strong>identity key</strong>.</li>
+<li>Your server checks the signature with <code>@bsv/sdk</code>, deletes the nonce, and signs the user in as that identity key.</li>
+<li>No API key, no client ID, no account with us. Nothing passes through bwalletx.com except the script itself. The only service of ours involved is the encrypted pairing relay, and only when the user signs in from a phone or the web wallet.</li>
+</ul>
+<p>The user&#39;s identity key (a 33-byte compressed public key, 66 hex characters) is their user ID on your site. It is the same key every time they sign in with the same wallet.</p>
+<h2 id="three-ways-the-users-wallet-can-answer">Three ways the user&#39;s wallet can answer</h2>
+<table>
+<thead>
+<tr>
+<th>Where the user is</th>
+<th>How your page reaches the wallet</th>
+<th>What you need</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Chrome or Brave with the bWalletX extension</td>
+<td>BRC-100 wallet discovery: dispatch <code>brc100:requestWallet</code>, take the <code>brc100:announceWallet</code> reply whose <code>info.rdns</code> is <code>com.bwalletx.extension</code></td>
+<td>Nothing extra. connect.js finds it</td>
+</tr>
+<tr>
+<td>Your site opened inside the bWalletX app&#39;s own browser</td>
+<td>Same discovery; the app announces <code>rdns: space.bwallet.mobile</code> and also sets <code>window.CWI</code></td>
+<td>Nothing extra. connect.js finds it</td>
+</tr>
+<tr>
+<td>bWalletX on a phone, or the web wallet at web.bwalletx.com</td>
+<td>Pairing: your page shows a <code>https://www.bwallet.space/pair?...</code> link as a QR code. The phone scans it; the web wallet takes it pasted. Both then talk to your page through <code>relay.bwallet.space</code>, end-to-end encrypted</td>
+<td>A <code>pairing</code> option with somewhere to show the QR code. connect.js does the rest</td>
+</tr>
+</tbody></table>
+<p>All three give you the same thing: an object with the BRC-100 <code>WalletInterface</code> methods. Sign-in is the same code for all of them.</p>
+<h2 id="1-browser-one-script-tag">1. Browser: one script tag</h2>
+<p><code>connect.js</code> is small. It loads the full sign-in build (<code>https://bwalletx.com/connect/bwalletx-connect.global.js</code>, about 125 KB with <code>@bsv/sdk</code> inside) the first time you call <code>signIn</code>, <code>pair</code> or <code>renderButton</code>, so those three return promises. This example uses qrcodejs from cdnjs to draw the QR code; any QR library works.</p>
+<pre><code class="language-html">&lt;div id=&quot;signin&quot;&gt;&lt;/div&gt;
+&lt;div id=&quot;bwx-pair&quot;&gt;&lt;/div&gt;
+
+&lt;script src=&quot;https://bwalletx.com/connect.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js&quot;&gt;&lt;/script&gt;
+&lt;script&gt;
+  const panel = document.getElementById(&#39;bwx-pair&#39;);
+
+  async function post(url, body) {
+    const res = await fetch(url, { method: &#39;POST&#39;, headers: { &#39;content-type&#39;: &#39;application/json&#39; }, body: JSON.stringify(body) });
+    if (!res.ok) throw new Error((await res.json().catch(() =&gt; ({}))).error || &#39;HTTP &#39; + res.status);
+    return res.json();
+  }
+
+  bWalletX.renderButton(&#39;#signin&#39;, {
+    onClick: async (button) =&gt; {
+      button.disabled = true;
+      try {
+        const r = await bWalletX.signIn({
+          // 1. Your server makes the challenge for this identity key.
+          challenge: (identityKey) =&gt; post(&#39;/auth/bwalletx/challenge&#39;, { identityKey }),
+          // 2. Only used when there is no extension or in-app browser: phone or web wallet.
+          pairing: {
+            onLink: (link) =&gt; {
+              panel.replaceChildren();
+              new QRCode(panel, { text: link, width: 220, height: 220 });
+              const p = document.createElement(&#39;p&#39;);
+              p.textContent = &#39;Scan with bWalletX on your phone, or paste this link into web.bwalletx.com: &#39; + link;
+              panel.append(p);
+            },
+            onCode: (code) =&gt; panel.append(&#39;Check bWalletX shows &#39; + code + &#39;, then tap Connect.&#39;),
+          },
+        });
+        // 3. Your server checks the signature and starts a session.
+        const { identityKey } = await post(&#39;/auth/bwalletx/verify&#39;, {
+          identityKey: r.identityKey, nonce: r.nonce, signature: r.signature,
+        });
+        panel.textContent = &#39;Signed in as &#39; + identityKey.slice(0, 12) + &#39;…  (via &#39; + r.method + &#39;)&#39;;
+      } catch (e) {
+        panel.textContent = e.code === &#39;NOT_FOUND&#39; ? &#39;bWalletX was not found.&#39; : e.message;
+      } finally {
+        button.disabled = false;
+      }
+    },
+  });
+&lt;/script&gt;
+</code></pre>
+<p><code>bWalletX.signIn</code> looks for a wallet in this order:</p>
+<ol>
+<li>The bWalletX Chrome extension (BRC-100 discovery, <code>rdns</code> <code>com.bwalletx.extension</code>). <code>method: &#39;extension&#39;</code>.</li>
+<li>The bWalletX app&#39;s in-app browser (<code>rdns</code> <code>space.bwallet.mobile</code>, or <code>window.CWI</code> if nothing announced). <code>method: &#39;in-app&#39;</code>.</li>
+<li>A pairing saved by an earlier sign-in in this browser (in <code>localStorage</code> under <code>bwalletx.connect.pairing.v1</code>). <code>method: &#39;pairing&#39;</code>.</li>
+<li>A new pairing, if you passed <code>pairing</code>: <code>onLink</code> gets a <code>https://www.bwallet.space/pair?...</code> link to show as a QR code (and as text for web.bwalletx.com), and <code>onCode</code> gets a 4-digit code both screens show. <code>method: &#39;pairing&#39;</code>.</li>
+</ol>
+<p>If none of these works it throws an error with <code>code: &#39;NOT_FOUND&#39;</code>. It returns <code>{ identityKey, signature, nonce, method, wallet }</code>. Post the first three to your verify route. <code>wallet</code> is a BRC-100 <code>WalletInterface</code> you can keep using.</p>
+<p>Other things on <code>window.bWalletX</code>:</p>
+<table>
+<thead>
+<tr>
+<th>Call</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>bWalletX.connect({ timeout })</code></td>
+<td>The extension only, authenticated: <code>{ wallet, info, identityKey }</code>. Rejects with <code>code: &#39;NOT_INSTALLED&#39;</code>. Doesn&#39;t load the full build.</td>
+</tr>
+<tr>
+<td><code>bWalletX.pair({ onLink, onCode })</code></td>
+<td>A wallet paired by QR or pasted link, without signing in.</td>
+</tr>
+<tr>
+<td><code>bWalletX.renderButton(el, { onClick, subtitle })</code></td>
+<td>The gold button. <code>subtitle: false</code> hides the second line.</td>
+</tr>
+<tr>
+<td><code>bWalletX.load()</code></td>
+<td>The full build&#39;s exports (<code>signInWithBwalletX</code>, <code>pairBwalletX</code>, <code>restorePairing</code>, <code>clearPairing</code>, <code>findBwalletX</code>, ...).</td>
+</tr>
+</tbody></table>
+<p>Prefer to host it yourself? Copy <code>connect.js</code> and <code>connect/bwalletx-connect.global.js</code> to the same folder structure on your site; connect.js loads the full build from next to itself. It will also be on npm as <code>@bwalletx/connect</code> (coming soon).</p>
+<h2 id="the-button">The button</h2>
+<div class="bwx-preview"><button type="button" class="bwx-signin">
+  <span class="bwx-mark"><img src="https://bwalletx.com/logo.svg" alt="" width="15" height="20"></span>
+  <span class="bwx-label">Sign in with bWalletX<small>also works with bWallet</small></span>
+</button>
+</div><p><code>bWalletX.renderButton()</code> draws this for you. If you draw your own, use the gold button. Keep the label &quot;Sign in with bWalletX&quot;. The logo is at <code>https://bwalletx.com/logo.svg</code> (the gold b, viewBox 74 x 100). Don&#39;t recolour it; it sits on a black circle so it reads on the gold.</p>
+<pre><code class="language-html">&lt;button type=&quot;button&quot; id=&quot;bwx-signin&quot; class=&quot;bwx-signin&quot;&gt;
+  &lt;span class=&quot;bwx-mark&quot;&gt;&lt;img src=&quot;https://bwalletx.com/logo.svg&quot; alt=&quot;&quot; width=&quot;15&quot; height=&quot;20&quot;&gt;&lt;/span&gt;
+  &lt;span class=&quot;bwx-label&quot;&gt;Sign in with bWalletX&lt;small&gt;also works with bWallet&lt;/small&gt;&lt;/span&gt;
+&lt;/button&gt;
+&lt;div id=&quot;bwx-pair&quot;&gt;&lt;/div&gt;
+</code></pre>
+<pre><code class="language-css">.bwx-signin {
+  display: inline-flex; align-items: center; gap: 12px;
+  min-height: 48px; padding: 10px 22px 10px 10px;
+  border: 0; border-radius: 12px; cursor: pointer;
+  background: linear-gradient(180deg, #fcd34d, #f59e0b);
+  color: #000; text-align: left;
+  font: 700 16px/1.2 system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif;
+  box-shadow: 0 8px 24px rgba(245, 158, 11, 0.2);
+}
+.bwx-signin:hover { background: linear-gradient(180deg, #fde68a, #fbbf24); }
+.bwx-signin:focus-visible { outline: 2px solid #ffd24d; outline-offset: 3px; }
+.bwx-signin:disabled { opacity: 0.6; cursor: wait; }
+.bwx-signin .bwx-mark {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 32px; height: 32px; border-radius: 50%; background: #000; flex: none;
+}
+.bwx-signin small { display: block; font-size: 11px; font-weight: 500; color: rgba(0, 0, 0, 0.6); }
+</code></pre>
+<p>Put it first among your wallet options. The second line (&quot;also works with bWallet&quot;) is optional: bWallet is the store edition of the same wallet and signs in the same way.</p>
+<h2 id="2-server-issue-and-verify-challenges">2. Server: issue and verify challenges</h2>
+<p>The server half is not in the script (it must run on your server). Until the npm package is out, copy this file into your project as <code>bwalletx-server.ts</code>. Its only dependency is <code>@bsv/sdk</code> (2.2 or later, 2.x or 3.x). It is the same code as <code>@bwalletx/connect/server</code>, so later you can swap the import and change nothing else.</p>
+<pre><code class="language-ts">import { ProtoWallet, PublicKey, type WalletProtocol } from &#39;@bsv/sdk&#39;;
+
+/** Security level 2, a protocol name used for nothing else. Keep it constant. */
+export const LOGIN_PROTOCOL: WalletProtocol = [2, &#39;bwallet sign in&#39;];
+export const CHALLENGE_LIFETIME_MS = 2 * 60 * 1000;
+
+export interface PendingChallenge {
+  identityKey: string;
+  origin: string;
+  message: string;
+  expiresAt: number;
+}
+
+/**
+ * Where challenges wait between the two routes. Use Redis or a database table in production.
+ * `take` must read and delete in one step, so each nonce can be tried once.
+ */
+export interface NonceStore {
+  put(nonce: string, c: PendingChallenge): Promise&lt;void&gt; | void;
+  take(nonce: string): Promise&lt;PendingChallenge | null&gt; | PendingChallenge | null;
+}
+
+let warned = false;
+
+/**
+ * In-memory store. For development and tests only: it is lost on restart and not shared between
+ * server processes or serverless instances. Expired entries are pruned on each put.
+ */
+export function memoryStore(opts: { quiet?: boolean } = {}): NonceStore {
+  if (!opts.quiet &amp;&amp; !warned) {
+    warned = true;
+    console.warn(&#39;[@bwalletx/connect] Using the in-memory nonce store. It is for development only; pass a shared store (Redis, database) in production.&#39;);
+  }
+  const m = new Map&lt;string, PendingChallenge&gt;();
+  return {
+    put(nonce, c) {
+      const now = Date.now();
+      for (const [k, v] of m) if (v.expiresAt &lt; now) m.delete(k);
+      m.set(nonce, c);
+    },
+    take(nonce) {
+      const c = m.get(nonce) ?? null;
+      m.delete(nonce);
+      return c;
+    },
+  };
+}
+
+let defaultStore: NonceStore | null = null;
+const storeOrDefault = (s?: NonceStore) =&gt; s ?? (defaultStore ??= memoryStore());
+
+export function isIdentityKey(x: unknown): x is string {
+  if (typeof x !== &#39;string&#39; || !/^0[23][0-9a-fA-F]{64}$/.test(x)) return false;
+  try {
+    PublicKey.fromString(x);
+    return true;
+  } catch {
+    return false;
+  }
+}
+
+function normalOrigin(origin: string): string {
+  const u = new URL(origin);
+  if (u.origin === &#39;null&#39; || u.origin !== origin.replace(/\/$/, &#39;&#39;)) {
+    throw new Error(`origin must be scheme://host[:port], got ${origin}`);
+  }
+  return u.origin;
+}
+
+/** The text the user signs. Lines joined with \n, no trailing newline. */
+export function loginMessage(origin: string, nonce: string, expiresAt: number): string {
+  return [
+    `Sign in to ${new URL(origin).host} with bWallet`,
+    &#39;&#39;,
+    &#39;This proves you hold this wallet. It does not spend anything.&#39;,
+    &#39;&#39;,
+    `Origin: ${origin}`,
+    `Nonce: ${nonce}`,
+    `Expires: ${new Date(expiresAt).toISOString()}`,
+  ].join(&#39;\n&#39;);
+}
+
+function randomNonce(): string {
+  const b = new Uint8Array(16);
+  globalThis.crypto.getRandomValues(b);
+  let s = &#39;&#39;;
+  for (const x of b) s += String.fromCharCode(x);
+  return btoa(s).replace(/\+/g, &#39;-&#39;).replace(/\//g, &#39;_&#39;).replace(/=+$/, &#39;&#39;);
+}
+
+export interface CreateChallengeOptions {
+  /** YOUR site&#39;s origin from config, e.g. &quot;https://example.com&quot;. Never take it from the request. */
+  origin: string;
+  /** The identity key the browser claims. Checked again at verify. */
+  identityKey: unknown;
+  /** Default: a process-wide in-memory store (dev only). */
+  store?: NonceStore;
+}
+
+export interface ChallengeResponse {
+  nonce: string;
+  message: string;
+  protocolID: WalletProtocol;
+  keyID: string;
+  expiresAt: number;
+}
+
+/** Step 1. Throws if identityKey is not a valid compressed public key. Send the result to the browser. */
+export async function createChallenge(opts: CreateChallengeOptions): Promise&lt;ChallengeResponse&gt; {
+  if (!isIdentityKey(opts.identityKey)) throw new Error(&#39;identityKey must be a compressed public key (66 hex chars)&#39;);
+  const origin = normalOrigin(opts.origin);
+  const nonce = randomNonce();
+  const expiresAt = Date.now() + CHALLENGE_LIFETIME_MS;
+  const message = loginMessage(origin, nonce, expiresAt);
+  await storeOrDefault(opts.store).put(nonce, { identityKey: opts.identityKey.toLowerCase(), origin, message, expiresAt });
+  return { nonce, message, protocolID: LOGIN_PROTOCOL, keyID: nonce, expiresAt };
+}
+
+export interface VerifySignInOptions {
+  /** YOUR site&#39;s origin from config. Must equal the origin the challenge was made for. */
+  origin: string;
+  /** From the request body. */
+  identityKey: unknown;
+  nonce: unknown;
+  signature: unknown;
+  store?: NonceStore;
+}
+
+/**
+ * Step 2. Returns the proven identity key (lowercase hex), or null.
+ * The nonce is deleted before anything is checked, so each challenge can be tried once.
+ */
+export async function verifySignIn(opts: VerifySignInOptions): Promise&lt;string | null&gt; {
+  if (typeof opts.nonce !== &#39;string&#39; || opts.nonce.length &gt; 64) return null;
+  const c = await storeOrDefault(opts.store).take(opts.nonce);
+  if (!c || Date.now() &gt; c.expiresAt) return null;
+  let origin: string;
+  try {
+    origin = normalOrigin(opts.origin);
+  } catch {
+    return null;
+  }
+  if (c.origin !== origin) return null;
+  if (!isIdentityKey(opts.identityKey)) return null;
+  const identityKey = opts.identityKey.toLowerCase();
+  if (c.identityKey !== identityKey) return null;
+
+  const sig = opts.signature;
+  if (!Array.isArray(sig) || sig.length &lt; 8 || sig.length &gt; 80 || !sig.every((b) =&gt; Number.isInteger(b) &amp;&amp; b &gt;= 0 &amp;&amp; b &lt;= 255)) {
+    return null;
+  }
+  try {
+    const { valid } = await new ProtoWallet(&#39;anyone&#39;).verifySignature({
+      protocolID: LOGIN_PROTOCOL,
+      keyID: opts.nonce,
+      counterparty: identityKey,
+      data: Array.from(new TextEncoder().encode(c.message)),
+      signature: sig as number[],
+    });
+    return valid ? identityKey : null;
+  } catch {
+    return null; // @bsv/sdk throws on a bad signature instead of returning valid: false
+  }
+}
+
+/** True when a request&#39;s Origin header is exactly your configured origin. Check it on both routes. */
+export function originAllowed(requestOrigin: string | null | undefined, origin: string): boolean {
+  try {
+    return !!requestOrigin &amp;&amp; requestOrigin === normalOrigin(origin);
+  } catch {
+    return false;
+  }
+}
+</code></pre>
+<p>Two routes. This example uses Express; any framework works the same way.</p>
+<pre><code class="language-ts">// Two routes (Express). Any framework works the same way.
+import express from &#39;express&#39;;
+import { createChallenge, verifySignIn, originAllowed, memoryStore } from &#39;./bwalletx-server.js&#39;;
+
+const ORIGIN = &#39;https://example.com&#39;; // your site, from config. Never from the request.
+const store = memoryStore();          // dev only: use Redis or a database table in production
+const app = express();
+app.use(express.json());
+
+// POST /auth/bwalletx/challenge   body: { identityKey }
+app.post(&#39;/auth/bwalletx/challenge&#39;, async (req, res) =&gt; {
+  if (!originAllowed(req.get(&#39;origin&#39;), ORIGIN)) return res.status(403).end();
+  try {
+    res.json(await createChallenge({ origin: ORIGIN, identityKey: req.body?.identityKey, store }));
+  } catch (e) {
+    res.status(400).json({ error: (e as Error).message });
+  }
+});
+
+// POST /auth/bwalletx/verify   body: { identityKey, nonce, signature }
+app.post(&#39;/auth/bwalletx/verify&#39;, async (req, res) =&gt; {
+  if (!originAllowed(req.get(&#39;origin&#39;), ORIGIN)) return res.status(403).end();
+  const identityKey = await verifySignIn({ origin: ORIGIN, store, ...req.body });
+  if (!identityKey) return res.status(401).json({ error: &#39;That signature was not accepted. Start again.&#39; });
+  // identityKey is the user&#39;s stable id. Find or create the account keyed on it, then start your session.
+  res.json({ identityKey });
+});
+
+app.listen(3000);
+</code></pre>
+<p><code>verifySignIn</code> returns the identity key (66 lowercase hex characters) or <code>null</code>. It refuses a nonce that was already used, has expired (2 minutes), was issued for another origin or another identity key, or whose signature doesn&#39;t verify.</p>
+<p><code>memoryStore()</code> is for development: it is lost on restart and isn&#39;t shared between processes or serverless instances. In production pass a store whose <code>take(nonce)</code> reads and deletes in one step, such as Redis <code>GETDEL</code> or a database <code>DELETE ... RETURNING</code>.</p>
+<h2 id="exactly-what-is-signed">Exactly what is signed</h2>
+<p>The server builds this text, sends it to the browser, and keeps a copy. The wallet signs the UTF-8 bytes of it unchanged. Lines are joined with <code>\n</code>, no trailing newline.</p>
+<pre><code>Sign in to example.com with bWallet
+
+This proves you hold this wallet. It does not spend anything.
+
+Origin: https://example.com
+Nonce: 3q2-7wEXAMPLEnonce0Q8w
+Expires: 2026-10-07T12:02:00.000Z
+</code></pre>
+<p>(The second and fourth lines are empty.) This is the same text bChat and bit-sign use. The wallet does not parse it; any text works, but keep your origin, the nonce and the expiry in it so the user can see what they are approving and a signature made for your site is worthless anywhere else.</p>
+<p>The signature call, as the wallet receives it:</p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>protocolID</code></td>
+<td><code>[2, &#39;bwallet sign in&#39;]</code> (security level 2: the derived key depends on the counterparty)</td>
+</tr>
+<tr>
+<td><code>keyID</code></td>
+<td>the nonce</td>
+</tr>
+<tr>
+<td><code>counterparty</code></td>
+<td><code>&#39;anyone&#39;</code></td>
+</tr>
+<tr>
+<td><code>data</code></td>
+<td>the UTF-8 bytes of the text, as <code>number[]</code></td>
+</tr>
+<tr>
+<td>result <code>signature</code></td>
+<td>DER-encoded ECDSA signature, as <code>number[]</code></td>
+</tr>
+</tbody></table>
+<p>The signing key is derived (BRC-42) from the wallet&#39;s root identity private key towards &quot;anyone&quot;, for that protocol and keyID. Anyone holding only the identity public key can derive the matching public key, which is what <code>new ProtoWallet(&#39;anyone&#39;).verifySignature({ ..., counterparty: identityKey })</code> does (BRC-3). Only the holder of the identity private key can make the signature.</p>
+<h2 id="security-notes">Security notes</h2>
+<ul>
+<li><strong>One try per nonce.</strong> Delete the challenge before you check the signature, as <code>verifySignIn</code> does. A challenge that survives a failed attempt can be retried.</li>
+<li><strong>Two-minute expiry.</strong> Check it on the server. Don&#39;t trust an expiry sent by the browser.</li>
+<li><strong>The nonce is also the keyID,</strong> so each challenge is signed by a different derived key. A signature for one nonce can&#39;t be used for another.</li>
+<li><strong>Build the text on the server</strong> and verify against your stored copy. Never verify text the browser sends you.</li>
+<li><strong>Use your configured origin</strong> in the text, not a value from the request. Refuse challenge and verify calls whose <code>Origin</code> header isn&#39;t your site.</li>
+<li><strong>Bind the challenge to the identity key</strong> the browser claimed, and check it again at verify.</li>
+<li><strong><code>verifySignature</code> throws</strong> on a bad signature in @bsv/sdk instead of returning <code>valid: false</code>. Catch it and treat it as a failure.</li>
+<li><strong>Check the key is a real point:</strong> <code>PublicKey.fromString</code> throws for a 66-hex string that isn&#39;t on the curve.</li>
+<li><strong>Rate-limit</strong> the challenge route per IP and per identity key. It is unauthenticated.</li>
+<li><strong>Sessions are yours.</strong> After <code>verifySignIn</code> returns a key, issue your normal session cookie. The wallet does not give you a token.</li>
+<li><strong>Privacy.</strong> The identity key is the same on every site the user signs in to with this method, so two sites can tell it is the same wallet. Tell your users this if it matters to them.</li>
+<li><strong>Pairing.</strong> The relay checks the WebSocket <code>Origin</code> of the page that opened the channel and tells the wallet; the wallet refuses to pair if it differs from the origin in the QR code. The relay only sees ciphertext. The pairing key connect.js makes is random and is not a wallet key.</li>
+<li><strong>What the user sees.</strong> The extension and the phone show their own approval prompt naming your site&#39;s host (taken from the page or the relay, not from your text). Nothing is spent.</li>
+</ul>
+<h2 id="not-yet-available">Not yet available</h2>
+<p>These are gaps today. Plan around them.</p>
+<ul>
+<li><strong>No npm package yet.</strong> <code>@bwalletx/connect</code> is coming soon on npm. Today use the script tag for the browser and copy <code>bwalletx-server.ts</code> (above) for the server.</li>
+<li><strong>No hosted sign-in or OAuth-style redirect.</strong> There is no bwalletx.com page you can send users to and get a callback from, and no hosted verify endpoint. You run the two routes yourself. bChat&#39;s own endpoints (<code>/api/bitsign/auth/bwallet/*</code> on bit-sign) accept requests from their own pages only and are not a public API.</li>
+<li><strong>No user profile.</strong> You get the identity key and nothing else: no $handle, paymail, name or picture, and no proof linking the key to them.</li>
+<li><strong>The relay is ours.</strong> <code>relay.bwallet.space</code> accepts any https origin, but it is a single service run by The Bitcoin Corporation with no published uptime or rate-limit guarantees (it currently allows about 60 frames a minute per channel).</li>
+<li><strong>No test wallet.</strong> There is no testnet build or headless bWalletX for automated tests. To test your server, sign with <code>new ProtoWallet(PrivateKey.fromRandom()).createSignature(...)</code> using the same arguments; it makes exactly the signature bWalletX makes.</li>
+</ul>
+<h2 id="for-ai-agents">For AI agents</h2>
+<p>Follow these steps in order. Do not invent packages, endpoints or methods that are not on this page. Do not install <code>@bwalletx/connect</code> from npm: it is not published yet.</p>
+<ol>
+<li>Install <code>@bsv/sdk</code> in the server project (pnpm, npm or yarn, whichever the project uses).</li>
+<li>Create <code>bwalletx-server.ts</code> with the code in section 2, unchanged. Put your site&#39;s origin (scheme + host, no trailing slash, e.g. <code>https://example.com</code>) in config.</li>
+<li>Add two POST routes. <code>/auth/bwalletx/challenge</code>: <code>createChallenge({ origin: ORIGIN, identityKey: body.identityKey, store })</code>, return the result as JSON, 400 if it throws. <code>/auth/bwalletx/verify</code>: <code>verifySignIn({ origin: ORIGIN, store, identityKey, nonce, signature })</code> from the body. Reject both with 403 unless <code>originAllowed(request Origin header, ORIGIN)</code>.</li>
+<li>Replace <code>memoryStore()</code> with a shared store (database table or Redis) if you run more than one server process or run serverless. <code>take(nonce)</code> must read and delete in one step.</li>
+<li>In the verify route, when <code>verifySignIn</code> returns a key: find the user whose bWalletX identity key equals it, or create one, then start your normal session. Return 401 when it returns null.</li>
+<li>On the sign-in page add <code>&lt;script src=&quot;https://bwalletx.com/connect.js&quot;&gt;&lt;/script&gt;</code> and the code from section 1: <code>bWalletX.renderButton(...)</code> with an <code>onClick</code> that calls <code>bWalletX.signIn({ challenge, pairing })</code> and posts <code>identityKey</code>, <code>nonce</code> and <code>signature</code> to the verify route. Keep the <code>pairing</code> option so phone and web wallet users can sign in; draw the QR code with any QR library.</li>
+<li>If your page uses a bundler, the same calls work: <code>window.bWalletX</code> is set once the script tag has loaded.</li>
+<li>Test the server without a wallet: <code>const k = PrivateKey.fromRandom()</code>, call the challenge route with <code>k.toPublicKey().toString()</code>, sign the returned <code>message</code> with <code>new ProtoWallet(k).createSignature({ protocolID, keyID, counterparty: &#39;anyone&#39;, data: Array.from(Buffer.from(message, &#39;utf8&#39;)) })</code>, post <code>{ identityKey, nonce, signature }</code> to verify and expect success. Post the same body again and expect 401.</li>
+<li>Test by hand: with the bWalletX extension in Chrome, click the button and approve. Without it, scan the QR with bWalletX on a phone, check the 4-digit codes match, tap Connect, approve.</li>
+</ol>
+<p>Questions: <a href="mailto:support@bwalletx.com">support@bwalletx.com</a></p>
+
+    </main>
+  </body>
+</html>

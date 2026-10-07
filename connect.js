@@ -4,7 +4,7 @@
  *
  *   <script src="https://bwalletx.com/connect.js"></script>
  *   const { wallet, info } = await bWalletX.connect();   // BRC-100 WalletInterface
- *   const r = await bWalletX.signIn({ challenge, pairing }); // sign-in, see bwalletx.com/login.md
+ *   const r = await bWalletX.signIn({ challenge, pairing }); // sign-in, see bwalletx.com/connect
  *
  * Finds bWalletX by BRC-100 discovery (brc100:requestWallet → brc100:announceWallet, rdns
  * com.bwalletx.extension), so it is chosen by name even when another wallet (e.g. Yours) also

@@ -27,6 +27,7 @@
   <url><loc>https://bwalletx.com/blog/</loc></url>
   <url><loc>https://bwalletx.com/buy</loc></url>
   <url><loc>https://bwalletx.com/cli</loc></url>
+  <url><loc>https://bwalletx.com/connect</loc></url>
   <url><loc>https://bwalletx.com/developers</loc></url>
   <url><loc>https://bwalletx.com/exchange</loc></url>
   <url><loc>https://bwalletx.com/exchange/strategies</loc></url>
@@ -37,7 +38,6 @@
   <url><loc>https://bwalletx.com/gmail</loc></url>
   <url><loc>https://bwalletx.com/</loc></url>
   <url><loc>https://bwalletx.com/iphone</loc></url>
-  <url><loc>https://bwalletx.com/login</loc></url>
   <url><loc>https://bwalletx.com/lounge</loc></url>
   <url><loc>https://bwalletx.com/mcp</loc></url>
   <url><loc>https://bwalletx.com/media-src/og/blog/og-blog-014</loc></url>
@@ -47,6 +47,7 @@
   <url><loc>https://bwalletx.com/media-src/og/og-blog</loc></url>
   <url><loc>https://bwalletx.com/media-src/og/og-buy</loc></url>
   <url><loc>https://bwalletx.com/media-src/og/og-cli</loc></url>
+  <url><loc>https://bwalletx.com/media-src/og/og-connect</loc></url>
   <url><loc>https://bwalletx.com/media-src/og/og-dev</loc></url>
   <url><loc>https://bwalletx.com/media-src/og/og-exchange-v2</loc></url>
   <url><loc>https://bwalletx.com/media-src/og/og-exchange-v3</loc></url>
@@ -57,7 +58,6 @@
   <url><loc>https://bwalletx.com/media-src/og/og-home-v2</loc></url>
   <url><loc>https://bwalletx.com/media-src/og/og-home-v3</loc></url>
   <url><loc>https://bwalletx.com/media-src/og/og-iphone</loc></url>
-  <url><loc>https://bwalletx.com/media-src/og/og-login</loc></url>
   <url><loc>https://bwalletx.com/media-src/og/og-lounge</loc></url>
   <url><loc>https://bwalletx.com/media-src/og/og-mcp</loc></url>
   <url><loc>https://bwalletx.com/media-src/og/og-mint</loc></url>
@@ -106,5 +106,5 @@
   <url><loc>https://bwalletx.com/video</loc></url>
   <url><loc>https://bwalletx.com/x</loc></url>
   <url><loc>https://bwalletx.com/privacy</loc></url>
-  <url><loc>https://bwalletx.com/login.md</loc></url>
+  <url><loc>https://bwalletx.com/connect.md</loc></url>
 </urlset>
