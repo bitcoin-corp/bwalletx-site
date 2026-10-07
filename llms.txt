@@ -30,6 +30,7 @@ Full text of every page: https://bwalletx.com/llms-full.txt
 - [media-src/og/blog-num/og-019.html](https://bwalletx.com/media-src/og/blog-num/og-019)
 - [media-src/og/blog-num/og-020.html](https://bwalletx.com/media-src/og/blog-num/og-020)
 - [media-src/og/blog-num/og-021.html](https://bwalletx.com/media-src/og/blog-num/og-021)
+- [media-src/og/blog-num/og-022.html](https://bwalletx.com/media-src/og/blog-num/og-022)
 - [media-src/og/blog/og-021.html](https://bwalletx.com/media-src/og/blog/og-021)
 - [media-src/og/blog/og-blog-014.html](https://bwalletx.com/media-src/og/blog/og-blog-014)
 - [media-src/og/og-agent-v2.html](https://bwalletx.com/media-src/og/og-agent-v2)
@@ -58,10 +59,13 @@ Full text of every page: https://bwalletx.com/llms-full.txt
 - [media-src/og/og-pnee.html](https://bwalletx.com/media-src/og/og-pnee)
 - [media-src/og/og-pnees.html](https://bwalletx.com/media-src/og/og-pnees)
 - [media-src/og/og-pnees6.html](https://bwalletx.com/media-src/og/og-pnees6)
+- [media-src/og/og-pots.html](https://bwalletx.com/media-src/og/og-pots)
+- [media-src/og/og-restore.html](https://bwalletx.com/media-src/og/og-restore)
 - [media-src/og/og-social.html](https://bwalletx.com/media-src/og/og-social)
 - [media-src/og/og-spec.html](https://bwalletx.com/media-src/og/og-spec)
 - [media-src/og/og-strat3.html](https://bwalletx.com/media-src/og/og-strat3)
 - [media-src/og/og-strategies.html](https://bwalletx.com/media-src/og/og-strategies)
+- [media-src/og/og-subscriptions-v2.html](https://bwalletx.com/media-src/og/og-subscriptions-v2)
 - [media-src/og/og-subscriptions.html](https://bwalletx.com/media-src/og/og-subscriptions)
 - [media-src/og/testers/og-testers.html](https://bwalletx.com/media-src/og/testers/og-testers)
 - [media-src/walkthrough-01/cut/tmp/cap-16x9-2.html](https://bwalletx.com/media-src/walkthrough-01/cut/tmp/cap-16x9-2)
@@ -98,6 +102,7 @@ Full text of every page: https://bwalletx.com/llms-full.txt
 - [PNEEs: Penny Stablecoins](https://bwalletx.com/pnees): PNEEs (Penny Stablecoins): digital pennies on BSV, one US cent each, backed only by BSV locked in public vaults. No bank, no co-signer on transfers, no freeze. Live mainnet pilot.
 - [Pots in bWalletX](https://bwalletx.com/pots): A pot is money set aside inside your wallet. Standing orders and subscriptions pay from it, and the pot balance is the most they can ever take.
 - [Push notifications (coming soon) · bWalletX](https://bwalletx.com/push-notifications): Push notifications for bWalletX are coming soon: messages, mentions, payments and calls on iPhone, Android, web and the Chrome extension, even with the app closed. Who messaged you, not what they wrote.
+- [Restore into bWalletX](https://bwalletx.com/restore): Every wallet you can restore or sweep into bWalletX: Yours, Panda, RelayX, Twetch, SimplyCash, BIP44 wallets, private keys and xprvs, with Money Button next. What each needs and what comes across.
 - [Your signature · bWalletX](https://bwalletx.com/sign): Flip your bWalletX card and sign the back with your finger. Your signature stays on your device. Next: sign bit-sign contracts with it and seal them on Bitcoin for under a penny.
 - [bWalletX Social](https://bwalletx.com/social): Your handle is your paymail, your token and your chat room. Sign in with X or Google, hold friends’ tokens, chat in token rooms, post to the Feed, call and pay friends.
 - [Subscriptions in bWalletX](https://bwalletx.com/subscriptions): Put money aside in a pot and pay regular amounts from it. The pot balance is the most anyone can take. Pause or cancel any time.
@@ -141,6 +146,7 @@ Full text of every page: https://bwalletx.com/llms-full.txt
 - [019 Blur slurs, show swearing · bWalletX blog](https://bwalletx.com/blog/019-language-filter): The bChat feed and bWalletX now blur slurs behind a tap. Swearing is shown. Nothing is deleted.
 - [020 Sign in with X · bWalletX blog](https://bwalletx.com/blog/020-sign-in-with-x): bWalletX can make a wallet from your X account. You get your X username as a verified paymail, b0asex.x@bwalletx.com for example, with your picture, a token and a room.
 - [021 Coordinate on BSV · bWalletX blog](https://bwalletx.com/blog/021-coordinate-on-bsv): Big platforms put every community in one room. BSV needs a place to plan that it controls. Chat in bWalletX is that place: the first post in a series on chat on BSV.
+- [022 Bring your coins home · bWalletX blog](https://bwalletx.com/blog/022-bring-your-coins-home): BSV coins sit in wallets that closed, changed hands or changed their paths. The 12 words still work. How bWalletX restores or sweeps them, and what has to stay behind.
 - [bWalletX development blog](https://bwalletx.com/blog/): How bWallet and bWalletX were built from a fork of Yours Wallet: numbered posts from the git history, including what broke, what we reversed and what is still not done.
 
 ## Legal

@@ -25,6 +25,7 @@
   <url><loc>https://bwalletx.com/blog/019-language-filter</loc></url>
   <url><loc>https://bwalletx.com/blog/020-sign-in-with-x</loc></url>
   <url><loc>https://bwalletx.com/blog/021-coordinate-on-bsv</loc></url>
+  <url><loc>https://bwalletx.com/blog/022-bring-your-coins-home</loc></url>
   <url><loc>https://bwalletx.com/blog/</loc></url>
   <url><loc>https://bwalletx.com/buy</loc></url>
   <url><loc>https://bwalletx.com/chat</loc></url>
@@ -53,6 +54,7 @@
   <url><loc>https://bwalletx.com/media-src/og/blog-num/og-019</loc></url>
   <url><loc>https://bwalletx.com/media-src/og/blog-num/og-020</loc></url>
   <url><loc>https://bwalletx.com/media-src/og/blog-num/og-021</loc></url>
+  <url><loc>https://bwalletx.com/media-src/og/blog-num/og-022</loc></url>
   <url><loc>https://bwalletx.com/media-src/og/blog/og-021</loc></url>
   <url><loc>https://bwalletx.com/media-src/og/blog/og-blog-014</loc></url>
   <url><loc>https://bwalletx.com/media-src/og/og-agent-v2</loc></url>
@@ -81,10 +83,13 @@
   <url><loc>https://bwalletx.com/media-src/og/og-pnee</loc></url>
   <url><loc>https://bwalletx.com/media-src/og/og-pnees</loc></url>
   <url><loc>https://bwalletx.com/media-src/og/og-pnees6</loc></url>
+  <url><loc>https://bwalletx.com/media-src/og/og-pots</loc></url>
+  <url><loc>https://bwalletx.com/media-src/og/og-restore</loc></url>
   <url><loc>https://bwalletx.com/media-src/og/og-social</loc></url>
   <url><loc>https://bwalletx.com/media-src/og/og-spec</loc></url>
   <url><loc>https://bwalletx.com/media-src/og/og-strat3</loc></url>
   <url><loc>https://bwalletx.com/media-src/og/og-strategies</loc></url>
+  <url><loc>https://bwalletx.com/media-src/og/og-subscriptions-v2</loc></url>
   <url><loc>https://bwalletx.com/media-src/og/og-subscriptions</loc></url>
   <url><loc>https://bwalletx.com/media-src/og/testers/og-testers</loc></url>
   <url><loc>https://bwalletx.com/media-src/walkthrough-01/cut/tmp/cap-16x9-2</loc></url>
@@ -121,6 +126,7 @@
   <url><loc>https://bwalletx.com/pnees</loc></url>
   <url><loc>https://bwalletx.com/pots</loc></url>
   <url><loc>https://bwalletx.com/push-notifications</loc></url>
+  <url><loc>https://bwalletx.com/restore</loc></url>
   <url><loc>https://bwalletx.com/sign</loc></url>
   <url><loc>https://bwalletx.com/social</loc></url>
   <url><loc>https://bwalletx.com/strategies</loc></url>

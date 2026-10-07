@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Restore into bWalletX</title>
+    <meta name="description" content="Every wallet you can restore or sweep into bWalletX: Yours, Panda, RelayX, Twetch, SimplyCash, BIP44 wallets, private keys and xprvs, with Money Button next. What each needs and what comes across." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://bwalletx.com/restore" />
+    <meta property="og:site_name" content="bWalletX" />
+    <meta property="og:title" content="Restore: bWalletX" />
+    <meta property="og:description" content="Every wallet you can restore or sweep into bWalletX: Yours, Panda, RelayX, Twetch, SimplyCash, BIP44 wallets, private keys and xprvs, with Money Button next. What each needs and what comes across." />
+    <meta property="og:image" content="https://bwalletx.com/og-restore.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Every wallet you can restore or sweep into bWalletX: Yours, Panda, RelayX, Twetch, SimplyCash, BIP44 wallets, private keys and xprvs, with Money Button next. What each needs and what comes across." />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@bWalletX" />
+    <meta name="twitter:title" content="Restore: bWalletX" />
+    <meta name="twitter:description" content="Every wallet you can restore or sweep into bWalletX: Yours, Panda, RelayX, Twetch, SimplyCash, BIP44 wallets, private keys and xprvs, with Money Button next. What each needs and what comes across." />
+    <meta name="twitter:image" content="https://bwalletx.com/og-restore.png" />
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="stylesheet" href="/styles.css" />
+    <style>
+      .ext h1 { font-size: clamp(2.2rem, 6vw, 3.4rem); margin: 18px 0 10px; }
+      .ext h2 { margin: 48px 0 8px; font-size: 1.5rem; }
+      .ext p, .ext li { line-height: 1.7; }
+      .ext .small { color: #8a8a86; font-size: 0.85rem; }
+      .ext .row { display: flex; gap: 12px; flex-wrap: wrap; margin: 26px 0; }
+      .ggrid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 230px), 1fr)); gap: 14px; margin: 18px 0; }
+      .gcard { display: block; background: #101114; border: 1px solid #ffffff12; border-radius: 16px; padding: 14px 16px; color: inherit; text-decoration: none; min-width: 0; }
+      .gcard:hover { border-color: #F5B80066; }
+      .gcard h3 { margin: 0 0 4px; font-size: 1.05rem; }
+      .gcard p { margin: 0; color: #a7adb8; font-size: 0.92rem; line-height: 1.5; }
+      .feat { list-style: none; padding: 0; margin: 18px 0; }
+      .feat li { display: flex; gap: 12px; align-items: baseline; padding: 12px 0; border-bottom: 1px solid #ffffff10; }
+      .tag { flex: none; font-size: 0.75rem; font-weight: 700; padding: 2px 9px; border-radius: 999px; }
+      .tag.live { background: #F5B800; color: #000; }
+      .tag.soon { border: 1px solid #ffffff40; color: #a7adb8; }
+      .tw { overflow-x: auto; margin: 18px 0; }
+      table.wl { border-collapse: collapse; width: 100%; min-width: 720px; font-size: 0.92rem; }
+      table.wl th, table.wl td { text-align: left; vertical-align: top; padding: 10px 10px; border-bottom: 1px solid #ffffff14; line-height: 1.5; }
+      table.wl th { color: #F5B800; font-weight: 700; }
+      table.wl code { background: #17191e; padding: 1px 6px; border-radius: 6px; font-size: 0.85rem; white-space: nowrap; }
+      ol.steps li { margin: 6px 0; }
+    </style>
+  </head>
+  <body>
+    <div class="beta-banner">bWalletX is in <strong>beta</strong>: test with small amounts.</div>
+    <header class="topbar">
+      <div class="wrap topbar-in">
+        <a class="brand" href="/"><img src="/logo.svg" alt="" width="34" height="30" /><span>bWallet<span class="gold">X</span></span></a>
+        <nav aria-label="Pages">
+          <a href="/features">Features</a><a href="/exchange">Exchange</a><a href="/social">Social</a><a href="/agent">Agents</a><a href="/extension">Extension</a><a href="/developers">Developers</a>
+        </nav>
+        <span class="nav-cta"><a class="dl-btn" href="/get">Download</a><a class="web-btn" href="https://web.bwalletx.com" target="_blank" rel="noopener">Web &rarr;</a></span>
+      </div>
+    </header>
+    <script src="/nav.js"></script>
+    <main class="ext">
+      <h1>Restore. <span class="gold">Bring your coins home.</span></h1>
+      <p class="lede">Have an old BSV wallet? Its 12 words still work. bWalletX can open it as an account, or move what&rsquo;s in it into one of yours.</p>
+      <div class="row"><a class="btn btn-store" href="/get">Get bWalletX</a></div>
+
+      <h2>Restore or sweep?</h2>
+      <p><b>Restore</b> opens the old wallet as an account in bWalletX. The keys are the same, so nothing moves on chain. Use it when bWalletX knows the wallet&rsquo;s layout.</p>
+      <p><b>Sweep</b> moves the coins and tokens out of the old wallet into an account you already have, in new transactions. Use it for wallets that spread coins across many addresses, or when you just want everything in one place. Sweeping pays a small network fee.</p>
+
+      <h2>Wallets you can bring in</h2>
+      <div class="tw"><table class="wl">
+        <thead><tr><th>Wallet</th><th>How</th><th>You need</th><th>Derivation path</th><th>What comes across</th></tr></thead>
+        <tbody>
+<tr><td><b>bWalletX, Yours, Panda</b><br><span class="tag live">Live</span></td><td>Restore as an account</td><td>12 words</td><td><code>m/44'/236'/0'/1/0</code> payment<br><code>m/44'/236'/1'/0/0</code> ordinals<br><code>m/0'/236'/0'/0/0</code> identity</td><td>Everything: BSV, ordinals, BSV-20 and BSV-21 tokens, names. Coins on Yours' older payment key (<code>m/44'/236'/0'/0/0</code>) are moved across automatically.</td></tr>
+<tr><td><b>RelayX</b><br><span class="tag live">Live</span></td><td>Restore as an account</td><td>12 words</td><td><code>m/44'/236'/0'/0/0</code> payment<br><code>m/44'/236'/0'/2/0</code> ordinals</td><td>Everything on those two keys.</td></tr>
+<tr><td><b>Twetch</b><br><span class="tag live">Live</span></td><td>Restore as an account</td><td>12 words</td><td><code>m/0/0</code> payment</td><td>Everything on that key.</td></tr>
+<tr><td><b>SimplyCash</b><br><span class="tag live">Live</span></td><td>New wallet, then sweep</td><td>12 words, or SimplyCash&rsquo;s recovery string (words:path:passphrase)</td><td><code>m/44'/145'/0'</code>, receive and change chains, gap limit 20. Early SimplyCash wallets&rsquo; older derivation is tried too.</td><td>BSV, ordinals, BSV-21 tokens. SimplyCash spreads coins over many addresses, so it can&rsquo;t be one account; it is swept instead.</td></tr>
+<tr><td><b>Other BIP44 wallets</b><br><span class="tag live">Live</span></td><td>Sweep into an account</td><td>12 or 24 words, passphrase if it had one</td><td><code>m/44'/236'/0'</code> and <code>m/44'/0'/0'</code>, plus any custom path you type</td><td>BSV, ordinals, BSV-21 tokens.</td></tr>
+<tr><td><b>Any wallet, by custom path</b><br><span class="tag live">Live</span></td><td>Restore (Other &rsaquo; Use custom derivations) or sweep (Custom path)</td><td>12 or 24 words</td><td>The paths you enter</td><td>As above.</td></tr>
+<tr><td><b>A private key</b><br><span class="tag live">Live</span></td><td>Restore as an account, or sweep</td><td>WIF (starts with K, L or 5)</td><td>None: one key</td><td>Restore keeps everything on it. Sweep moves BSV, ordinals and BSV-21 tokens.</td></tr>
+<tr><td><b>An xprv</b><br><span class="tag live">Live</span></td><td>Sweep into an account</td><td>xprv</td><td>Walked from the key you paste</td><td>BSV, ordinals, BSV-21 tokens.</td></tr>
+<tr><td><b>bWalletX master backup or USB key</b><br><span class="tag live">Live</span></td><td>Restore a whole wallet</td><td>The backup file or USB key, and its password</td><td>All accounts in the backup</td><td>Everything.</td></tr>
+<tr><td><b>Money Button</b><br><span class="tag soon">Next release</span></td><td>Sweep into an account</td><td>12 words, passphrase if it had one</td><td><code>m/44'/0'/0'</code>, receive chain</td><td>BSV and anything else on those addresses. Money Button tokens (SFP) are found, listed and left where they are.</td></tr>
+        </tbody>
+      </table></div>
+
+      <h2>What stays behind, and why</h2>
+      <ul class="feat">
+<li><span><b>Names, BSV-20 tokens and locked coins</b> are not swept. The sweep screen tells you how many it found. Restore the wallet as an account instead to keep them.</span></li>
+<li><span><b>Money Button tokens (SFP).</b> Each one can only be spent with a signature from Money Button&rsquo;s token server, which shut down with Money Button in 2022. Nobody can move or burn them alone. bWalletX keeps them out of the BSV sweep so they are not destroyed by accident, and lists them for you.</span></li>
+<li><span><b>HandCash, Centbee, ElectrumSV</b> and others aren&rsquo;t listed by name. If you have their 12 or 24 words, try a sweep: bWalletX tries every path above. If it finds nothing, tell us.</span></li>
+      </ul>
+
+      <h2>How to restore</h2>
+      <ol class="steps">
+        <li>On the welcome screen, choose to restore a wallet.</li>
+        <li>Pick the wallet: <b>bWalletX</b> (also Yours and Panda), <b>RelayX</b>, <b>Twetch</b>, <b>SimplyCash</b> (phone app), <b>Restore with private key</b>, <b>Restore from master backup</b>, or <b>Other</b>.</li>
+        <li>Type your words (or key) and set a password. For <b>Other</b>, turn on <b>Use custom derivations</b> to enter your own paths.</li>
+      </ol>
+
+      <h2>How to sweep</h2>
+      <ol class="steps">
+        <li>Open <b>Settings &rsaquo; Account data &rsaquo; Sweep into this account</b>.</li>
+        <li>Paste the recovery phrase, private key (WIF) or xprv. Add the passphrase only if the old wallet had one, and a custom path if you know it.</li>
+        <li>bWalletX scans every known layout and shows what it found. Check it, then sweep. You get a link to each transaction.</li>
+      </ol>
+
+      <h2>Stay safe</h2>
+      <ul class="feat">
+<li><span><b>Never type your words into a website</b>, a chat or a form. Only into the wallet app itself.</span></li>
+<li><span>bWalletX derives every key <b>on your device</b>. Your words are never sent anywhere and are not stored after a sweep.</span></li>
+<li><span>A sweep moves funds in <b>new transactions</b>. Once they&rsquo;re in, the old words no longer hold anything you swept.</span></li>
+      </ul>
+
+      <h2>Don&rsquo;t see your wallet?</h2>
+      <p><a href="mailto:support@bwalletx.com?subject=Restore%20from%20another%20wallet">Tell us</a> which one, and we&rsquo;ll look at adding it.</p>
+      <p>The story behind this page: <a href="/blog/022-bring-your-coins-home">022 Bring your coins home</a>.</p>
+      <p class="small">bWalletX is in beta: test with small amounts. Questions: <a href="mailto:support@bwalletx.com">support@bwalletx.com</a></p>
+    </main>
+  </body>
+</html>

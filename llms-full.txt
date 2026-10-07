@@ -1308,6 +1308,22 @@ bwalletx.com/blog · post 21 of 21
 
 ---
 
+Source: https://bwalletx.com/media-src/og/blog-num/og-022
+
+-
+
+Blog · 022
+
+# Bring your coins home
+
+Your old 12 words still work. Restore or sweep any BSV wallet into bWalletX.
+
+0227 Oct 2026
+
+bwalletx.com/blog · post 22 of 22
+
+---
+
 Source: https://bwalletx.com/media-src/og/blog/og-021
 
 bWalletX blog
@@ -1903,6 +1919,34 @@ Spend them
 
 ---
 
+Source: https://bwalletx.com/media-src/og/og-pots
+
+-
+
+bWalletX
+
+Pots
+
+Set money aside. Pay from it.
+
+bwalletx.com/pots · Android · iPhone · Chrome · Web
+
+---
+
+Source: https://bwalletx.com/media-src/og/og-restore
+
+-
+
+bWalletX
+
+Restore
+
+Bring your coins home from any BSV wallet.
+
+bwalletx.com/restore · Android · iPhone · Chrome · Web
+
+---
+
 Source: https://bwalletx.com/media-src/og/og-social
 
 -
@@ -1979,6 +2023,20 @@ Strategies are programs
 Write it→
 Load it→
 Sell it
+
+---
+
+Source: https://bwalletx.com/media-src/og/og-subscriptions-v2
+
+-
+
+bWalletX
+
+Subscriptions
+
+Pay from pots. Pause any time.
+
+bwalletx.com/subscriptions · Android · iPhone · Chrome · Web
 
 ---
 
@@ -2678,6 +2736,99 @@ Notifications work the same in both editions: bWalletX here, and bWallet, the Ap
 [Privacy](https://bwalletx.com/privacy)
 
 Push notifications are in development and not live yet; this page will be updated as they roll out. Questions: [support@bwalletx.com](mailto:support@bwalletx.com)
+
+---
+
+Source: https://bwalletx.com/restore
+
+# Restore. Bring your coins home.
+
+Have an old BSV wallet? Its 12 words still work. bWalletX can open it as an account, or move what’s in it into one of yours.
+
+[Get bWalletX](https://bwalletx.com/get)
+
+## Restore or sweep?
+
+Restore opens the old wallet as an account in bWalletX. The keys are the same, so nothing moves on chain. Use it when bWalletX knows the wallet’s layout.
+
+Sweep moves the coins and tokens out of the old wallet into an account you already have, in new transactions. Use it for wallets that spread coins across many addresses, or when you just want everything in one place. Sweeping pays a small network fee.
+
+## Wallets you can bring in
+
+WalletHowYou needDerivation pathWhat comes across
+
+bWalletX, Yours, Panda
+LiveRestore as an account12 words`m/44'/236'/0'/1/0` payment
+`m/44'/236'/1'/0/0` ordinals
+`m/0'/236'/0'/0/0` identityEverything: BSV, ordinals, BSV-20 and BSV-21 tokens, names. Coins on Yours' older payment key (`m/44'/236'/0'/0/0`) are moved across automatically.
+
+RelayX
+LiveRestore as an account12 words`m/44'/236'/0'/0/0` payment
+`m/44'/236'/0'/2/0` ordinalsEverything on those two keys.
+
+Twetch
+LiveRestore as an account12 words`m/0/0` paymentEverything on that key.
+
+SimplyCash
+LiveNew wallet, then sweep12 words, or SimplyCash’s recovery string (words:path:passphrase)`m/44'/145'/0'`, receive and change chains, gap limit 20. Early SimplyCash wallets’ older derivation is tried too.BSV, ordinals, BSV-21 tokens. SimplyCash spreads coins over many addresses, so it can’t be one account; it is swept instead.
+
+Other BIP44 wallets
+LiveSweep into an account12 or 24 words, passphrase if it had one`m/44'/236'/0'` and `m/44'/0'/0'`, plus any custom path you typeBSV, ordinals, BSV-21 tokens.
+
+Any wallet, by custom path
+LiveRestore (Other › Use custom derivations) or sweep (Custom path)12 or 24 wordsThe paths you enterAs above.
+
+A private key
+LiveRestore as an account, or sweepWIF (starts with K, L or 5)None: one keyRestore keeps everything on it. Sweep moves BSV, ordinals and BSV-21 tokens.
+
+An xprv
+LiveSweep into an accountxprvWalked from the key you pasteBSV, ordinals, BSV-21 tokens.
+
+bWalletX master backup or USB key
+LiveRestore a whole walletThe backup file or USB key, and its passwordAll accounts in the backupEverything.
+
+Money Button
+Next releaseSweep into an account12 words, passphrase if it had one`m/44'/0'/0'`, receive chainBSV and anything else on those addresses. Money Button tokens (SFP) are found, listed and left where they are.
+
+## What stays behind, and why
+
+- Names, BSV-20 tokens and locked coins are not swept. The sweep screen tells you how many it found. Restore the wallet as an account instead to keep them.
+
+- Money Button tokens (SFP). Each one can only be spent with a signature from Money Button’s token server, which shut down with Money Button in 2022. Nobody can move or burn them alone. bWalletX keeps them out of the BSV sweep so they are not destroyed by accident, and lists them for you.
+
+- HandCash, Centbee, ElectrumSV and others aren’t listed by name. If you have their 12 or 24 words, try a sweep: bWalletX tries every path above. If it finds nothing, tell us.
+
+## How to restore
+
+- On the welcome screen, choose to restore a wallet.
+
+- Pick the wallet: bWalletX (also Yours and Panda), RelayX, Twetch, SimplyCash (phone app), Restore with private key, Restore from master backup, or Other.
+
+- Type your words (or key) and set a password. For Other, turn on Use custom derivations to enter your own paths.
+
+## How to sweep
+
+- Open Settings › Account data › Sweep into this account.
+
+- Paste the recovery phrase, private key (WIF) or xprv. Add the passphrase only if the old wallet had one, and a custom path if you know it.
+
+- bWalletX scans every known layout and shows what it found. Check it, then sweep. You get a link to each transaction.
+
+## Stay safe
+
+- Never type your words into a website, a chat or a form. Only into the wallet app itself.
+
+- bWalletX derives every key on your device. Your words are never sent anywhere and are not stored after a sweep.
+
+- A sweep moves funds in new transactions. Once they’re in, the old words no longer hold anything you swept.
+
+## Don’t see your wallet?
+
+[Tell us](mailto:support@bwalletx.com?subject=Restore%20from%20another%20wallet) which one, and we’ll look at adding it.
+
+The story behind this page: [022 Bring your coins home](https://bwalletx.com/blog/022-bring-your-coins-home).
+
+bWalletX is in beta: test with small amounts. Questions: [support@bwalletx.com](mailto:support@bwalletx.com)
 
 ---
 
@@ -5235,7 +5386,77 @@ The tools matter less than the habit. If BSV people plan in BSV rooms, and point
 
 Related: [Chat in bWalletX](https://bwalletx.com/chat) · [005 Personal tokens and token rooms](https://bwalletx.com/blog/005-personal-tokens-and-rooms) · [014 One feed for BSV](https://bwalletx.com/blog/014-open-feed) · [017 Sign in with bWalletX, and the Lounge](https://bwalletx.com/blog/017-sign-in-and-lounge)
 
-[← 020 Sign in with X](https://bwalletx.com/blog/020-sign-in-with-x)[All posts →](https://bwalletx.com/blog)
+[← 020 Sign in with X](https://bwalletx.com/blog/020-sign-in-with-x)[022 Bring your coins home →](https://bwalletx.com/blog/022-bring-your-coins-home)
+
+---
+
+Source: https://bwalletx.com/blog/022-bring-your-coins-home
+
+[Development blog](https://bwalletx.com/blog) · 022 · 7 Oct 2026
+
+# Bring your coins home
+
+BSV coins sit in wallets that closed, changed hands or changed their paths. The 12 words still work. How bWalletX restores or sweeps them, and what has to stay behind.
+
+## Why coins end up scattered
+
+Most people who have used BSV for a few years have used more than one wallet. Each app came with its own wallet, and each wallet made its own set of keys. You tried one for tipping, another for a game, another for a social site. A few cents here, a few dollars there.
+
+Then the wallets changed. Some shut down. Money Button closed in 2022, and its website went with it. Others changed hands and were rebuilt. Some changed how they turn your words into keys, so a newer version of the same wallet looks in a different place from the older one. The coins never moved. The app that knew where to look for them did.
+
+So the money is still there, on chain, on addresses nobody opens any more. What’s missing is a wallet that knows where to look.
+
+## Why the 12 words still work
+
+A recovery phrase is not a password stored on someone’s server. It is a large random number written as words. Every key the wallet ever used is worked out from that number by a fixed recipe, and the recipe is public. The steps are called a derivation path, and they look like `m/44'/236'/0'/0/0`.
+
+That means the words don’t depend on the company that gave them to you. If you know the words and the path the wallet used, any wallet can work out the same keys, today or in ten years. The only hard part is the path. Every wallet picked its own, and few of them wrote it down where users would see it.
+
+bWalletX knows the paths used by the wallets in its family tree and by the common standards, and it tries all of them for you.
+
+## Restoring and sweeping are different
+
+Restoring opens the old wallet as an account in bWalletX. It is the same keys, so nothing moves on chain and nothing is paid. Your coins, ordinals and tokens show up because bWalletX is now looking at the same addresses. This works when the old wallet used a small, known set of keys, as Yours, Panda, RelayX and Twetch do.
+
+Sweeping moves what’s in the old wallet into an account you already have. bWalletX walks through the old wallet’s addresses, finds everything on them, and sends it to you in new transactions. That costs a small network fee. It is the right choice for wallets that spread coins over many addresses, like SimplyCash, or when you want everything in one account and the old words retired.
+
+You don’t need to know which wallet the words came from. The sweep screen takes a phrase, a private key or an xprv in one box and tries every layout it knows.
+
+## Which wallets
+
+The full list, with the paths and what each needs, is on [bwalletx.com/restore](https://bwalletx.com/restore). In short: bWalletX, Yours and Panda, RelayX and Twetch can be restored as accounts. SimplyCash and other 12 or 24-word wallets can be swept. Private keys and xprvs work too, and you can type a custom path for anything else. Money Button is coming in the next release.
+
+## What can’t come across
+
+Not everything on an old wallet can be moved by the person who holds the words. The clearest case is Money Button’s tokens.
+
+Money Button tokens used a protocol called SFP. Each token sits in a small output that can only be spent with two signatures: yours and the token server’s. The server checked every transfer and signed it. When Money Button closed, the server went too. Your key is still valid, but the second signature can never come. Nobody can move these tokens, and nobody can burn them either.
+
+The danger is a sweep that doesn’t know this. A token output carries a few hundred satoshis, so a careless sweep sees it as spare BSV and tries to spend it. At best that fails. bWalletX recognises SFP outputs, keeps them out of the BSV sweep, and lists them so you know they’re there. They stay safe where they are, in case there is ever a way to honour them.
+
+A few other things are not swept today: names, BSV-20 tokens and locked coins. The sweep screen counts them and tells you. If you restore the wallet as an account instead, they stay visible in bWalletX.
+
+## A true story
+
+While building the Money Button import, we tested it on an old phrase from 2020, written down and then forgotten. The wallet that made it no longer exists. bWalletX walked Money Button’s path and found 31 used addresses. On them were a little BSV and 13 old Money Button tokens.
+
+The BSV came across in one sweep. The 13 tokens were found, named and left alone, which is the only safe thing to do with them. A phrase that had been dead for years was a working wallet again in a couple of minutes.
+
+## Stay safe
+
+- Never type your words into a website. Not a “wallet recovery” site, not a form, not a chat, not a support agent. Anyone who has your words has your coins. Type them only into the wallet app itself.
+
+- Everything is worked out on your device. bWalletX derives every key on your phone or computer. The words are never sent anywhere, and after a sweep they are not kept.
+
+- A sweep is final. It sends coins in new transactions to your account. Check what the scan found before you confirm.
+
+- Start small. bWalletX is in beta. If an old wallet holds a lot, sweep a small one first and see how it goes.
+
+If your old wallet isn’t found, [tell us which one](mailto:support@bwalletx.com?subject=Restore%20from%20another%20wallet). We’ll add the path if we can find it.
+
+Related: [Restore into bWalletX](https://bwalletx.com/restore) · [001 Forking Yours Wallet onto phones](https://bwalletx.com/blog/001-the-fork)
+
+[← 021 Coordinate on BSV](https://bwalletx.com/blog/021-coordinate-on-bsv)[All posts →](https://bwalletx.com/blog)
 
 ---
 
@@ -5246,6 +5467,10 @@ Source: https://bwalletx.com/blog/
 How bWallet and bWalletX were built, one chapter at a time. Every post is written from the git history of the wallet, this site, the chat server and the PNEEs prototype. It covers what we built, why, what broke, what we reversed and what is still not done.
 
 Newest first. Dates come from commits. bWallet is a fork of [Yours Wallet](https://github.com/yours-org/yours-wallet) (MIT licence).
+
+- [](https://bwalletx.com/blog/022-bring-your-coins-home)022 · 7 Oct 2026
+[Bring your coins home](https://bwalletx.com/blog/022-bring-your-coins-home)
+BSV coins sit in wallets that closed, changed hands or changed their paths. The 12 words still work. How bWalletX restores or sweeps them, and what has to stay behind.
 
 - [](https://bwalletx.com/blog/021-coordinate-on-bsv)021 · 7 Oct 2026
 [Coordinate on BSV](https://bwalletx.com/blog/021-coordinate-on-bsv)

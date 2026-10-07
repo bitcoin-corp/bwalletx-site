@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>022 Bring your coins home · bWalletX blog</title>
+    <meta name="description" content="BSV coins sit in wallets that closed, changed hands or changed their paths. The 12 words still work. How bWalletX restores or sweeps them, and what has to stay behind." />
+    <link rel="canonical" href="https://bwalletx.com/blog/022-bring-your-coins-home" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://bwalletx.com/blog/022-bring-your-coins-home" />
+    <meta property="og:site_name" content="bWalletX" />
+    <meta property="og:title" content="Bring your coins home" />
+    <meta property="og:description" content="BSV coins sit in wallets that closed, changed hands or changed their paths. The 12 words still work. How bWalletX restores or sweeps them, and what has to stay behind." />
+    <meta property="og:image" content="https://bwalletx.com/og/og-blog-022.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@bWalletX" />
+    <meta name="twitter:title" content="Bring your coins home" />
+    <meta name="twitter:description" content="BSV coins sit in wallets that closed, changed hands or changed their paths. The 12 words still work. How bWalletX restores or sweeps them, and what has to stay behind." />
+    <meta name="twitter:image" content="https://bwalletx.com/og/og-blog-022.png" />
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="stylesheet" href="/styles.css" />
+    <style>
+      .ext { max-width: 760px; margin: 0 auto; padding: 120px 20px 80px; }
+      .ext h1 { font-size: clamp(2rem, 6vw, 3rem); margin: 10px 0 10px; line-height: 1.15; }
+      .ext h2 { margin: 44px 0 10px; font-size: 1.4rem; }
+      .ext p, .ext li { line-height: 1.7; }
+      .ext code { background: #17191e; padding: 2px 7px; border-radius: 6px; overflow-wrap: anywhere; }
+      .ext a { overflow-wrap: anywhere; }
+      .meta { color: #8a8a86; font-size: 0.9rem; margin: 0; }
+      .num { color: #F5B800; font-weight: 700; letter-spacing: .04em; }
+      .box { background: #101114; border: 1px solid #ffffff12; border-radius: 16px; padding: 18px 22px; margin: 28px 0; }
+      .box h2 { margin: 0 0 8px; font-size: 1.1rem; }
+      .box ul { margin: 0; padding-left: 1.2em; }
+      .related { color: #a7adb8; }
+      .pn { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; margin-top: 40px; border-top: 1px solid #ffffff14; padding-top: 20px; }
+      .pn a { color: #F5B800; text-decoration: none; max-width: 100%; }
+      .posts { list-style: none; padding: 0; margin: 28px 0; }
+      .posts li { background: #101114; border: 1px solid #ffffff12; border-radius: 16px; padding: 16px 20px; margin: 12px 0; }
+      .posts a { color: #fff; text-decoration: none; font-weight: 700; font-size: 1.1rem; }
+      .posts a:hover { color: #F5B800; }
+      .posts p { margin: 4px 0 0; color: #a7adb8; line-height: 1.55; }
+      .ext .small { color: #8a8a86; font-size: 0.85rem; }
+      .ext pre { background: #17191e; padding: 14px 16px; border-radius: 10px; overflow-x: auto; }
+      .ext pre code { padding: 0; background: none; overflow-wrap: normal; white-space: pre; }
+    </style>
+  </head>
+  <body>
+    <div class="beta-banner">bWalletX is in <strong>beta</strong>: test with small amounts.</div>
+    <header class="topbar">
+      <div class="wrap topbar-in">
+        <a class="brand" href="/"><img src="/logo.svg" alt="" width="34" height="30" /><span>bWallet<span class="gold">X</span></span></a>
+        <nav aria-label="Pages">
+          <a href="/features">Features</a><a href="/exchange">Exchange</a><a href="/social">Social</a><a href="/agent">Agents</a><a href="/extension">Extension</a><a href="/developers">Developers</a>
+        </nav>
+        <span class="nav-cta"><a class="dl-btn" href="/get">Download</a><a class="web-btn" href="https://web.bwalletx.com" target="_blank" rel="noopener">Web &rarr;</a></span>
+      </div>
+    </header>
+    <script src="/nav.js"></script>
+    <main class="ext">
+      <p class="meta"><a href="/blog">Development blog</a> · <span class="num">022</span> · 7 Oct 2026</p>
+      <h1>Bring your coins home</h1>
+      <p class="lede">BSV coins sit in wallets that closed, changed hands or changed their paths. The 12 words still work. How bWalletX restores or sweeps them, and what has to stay behind.</p>
+
+      <h2>Why coins end up scattered</h2>
+      <p>Most people who have used BSV for a few years have used more than one wallet. Each app came with its own wallet, and each wallet made its own set of keys. You tried one for tipping, another for a game, another for a social site. A few cents here, a few dollars there.</p>
+      <p>Then the wallets changed. Some shut down. Money Button closed in 2022, and its website went with it. Others changed hands and were rebuilt. Some changed how they turn your words into keys, so a newer version of the same wallet looks in a different place from the older one. The coins never moved. The app that knew where to look for them did.</p>
+      <p>So the money is still there, on chain, on addresses nobody opens any more. What&rsquo;s missing is a wallet that knows where to look.</p>
+
+      <h2>Why the 12 words still work</h2>
+      <p>A recovery phrase is not a password stored on someone&rsquo;s server. It is a large random number written as words. Every key the wallet ever used is worked out from that number by a fixed recipe, and the recipe is public. The steps are called a derivation path, and they look like <code>m/44'/236'/0'/0/0</code>.</p>
+      <p>That means the words don&rsquo;t depend on the company that gave them to you. If you know the words and the path the wallet used, any wallet can work out the same keys, today or in ten years. The only hard part is the path. Every wallet picked its own, and few of them wrote it down where users would see it.</p>
+      <p>bWalletX knows the paths used by the wallets in its family tree and by the common standards, and it tries all of them for you.</p>
+
+      <h2>Restoring and sweeping are different</h2>
+      <p><b>Restoring</b> opens the old wallet as an account in bWalletX. It is the same keys, so nothing moves on chain and nothing is paid. Your coins, ordinals and tokens show up because bWalletX is now looking at the same addresses. This works when the old wallet used a small, known set of keys, as Yours, Panda, RelayX and Twetch do.</p>
+      <p><b>Sweeping</b> moves what&rsquo;s in the old wallet into an account you already have. bWalletX walks through the old wallet&rsquo;s addresses, finds everything on them, and sends it to you in new transactions. That costs a small network fee. It is the right choice for wallets that spread coins over many addresses, like SimplyCash, or when you want everything in one account and the old words retired.</p>
+      <p>You don&rsquo;t need to know which wallet the words came from. The sweep screen takes a phrase, a private key or an xprv in one box and tries every layout it knows.</p>
+
+      <h2>Which wallets</h2>
+      <p>The full list, with the paths and what each needs, is on <a href="/restore">bwalletx.com/restore</a>. In short: bWalletX, Yours and Panda, RelayX and Twetch can be restored as accounts. SimplyCash and other 12 or 24-word wallets can be swept. Private keys and xprvs work too, and you can type a custom path for anything else. Money Button is coming in the next release.</p>
+
+      <h2>What can&rsquo;t come across</h2>
+      <p>Not everything on an old wallet can be moved by the person who holds the words. The clearest case is Money Button&rsquo;s tokens.</p>
+      <p>Money Button tokens used a protocol called SFP. Each token sits in a small output that can only be spent with two signatures: yours and the token server&rsquo;s. The server checked every transfer and signed it. When Money Button closed, the server went too. Your key is still valid, but the second signature can never come. Nobody can move these tokens, and nobody can burn them either.</p>
+      <p>The danger is a sweep that doesn&rsquo;t know this. A token output carries a few hundred satoshis, so a careless sweep sees it as spare BSV and tries to spend it. At best that fails. bWalletX recognises SFP outputs, keeps them out of the BSV sweep, and lists them so you know they&rsquo;re there. They stay safe where they are, in case there is ever a way to honour them.</p>
+      <p>A few other things are not swept today: names, BSV-20 tokens and locked coins. The sweep screen counts them and tells you. If you restore the wallet as an account instead, they stay visible in bWalletX.</p>
+
+      <h2>A true story</h2>
+      <p>While building the Money Button import, we tested it on an old phrase from 2020, written down and then forgotten. The wallet that made it no longer exists. bWalletX walked Money Button&rsquo;s path and found 31 used addresses. On them were a little BSV and 13 old Money Button tokens.</p>
+      <p>The BSV came across in one sweep. The 13 tokens were found, named and left alone, which is the only safe thing to do with them. A phrase that had been dead for years was a working wallet again in a couple of minutes.</p>
+
+      <h2>Stay safe</h2>
+      <ul>
+        <li><b>Never type your words into a website.</b> Not a &ldquo;wallet recovery&rdquo; site, not a form, not a chat, not a support agent. Anyone who has your words has your coins. Type them only into the wallet app itself.</li>
+        <li><b>Everything is worked out on your device.</b> bWalletX derives every key on your phone or computer. The words are never sent anywhere, and after a sweep they are not kept.</li>
+        <li><b>A sweep is final.</b> It sends coins in new transactions to your account. Check what the scan found before you confirm.</li>
+        <li><b>Start small.</b> bWalletX is in beta. If an old wallet holds a lot, sweep a small one first and see how it goes.</li>
+      </ul>
+      <p>If your old wallet isn&rsquo;t found, <a href="mailto:support@bwalletx.com?subject=Restore%20from%20another%20wallet">tell us which one</a>. We&rsquo;ll add the path if we can find it.</p>
+
+      <p class="related">Related: <a href="/restore">Restore into bWalletX</a> · <a href="/blog/001-the-fork">001 Forking Yours Wallet onto phones</a></p>
+      <div class="pn"><a href="/blog/021-coordinate-on-bsv">&larr; 021 Coordinate on BSV</a><a href="/blog">All posts &rarr;</a></div>
+    </main>
+  </body>
+</html>
