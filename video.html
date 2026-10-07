@@ -58,7 +58,7 @@
           <button type="button" data-voice="jessica" aria-pressed="true">Female voice</button
           ><button type="button" data-voice="brian" aria-pressed="false">Male voice</button>
         </div>
-        <video class="watch-player" id="player" controls playsinline preload="metadata" poster="/media/explainer-poster-16x9.jpg">
+        <video class="watch-player" id="player" aria-label="bWalletX in one minute: explainer video with narration. Transcript below." aria-describedby="transcript" controls playsinline preload="metadata" poster="/media/explainer-poster-16x9.jpg">
           <source src="/media/explainer-jessica-9x16.mp4" type="video/mp4" media="(max-width: 720px)" />
           <source src="/media/explainer-jessica-16x9.mp4" type="video/mp4" />
         </video>
@@ -69,6 +69,27 @@
             ><span>Open the web wallet</span><small>No install</small></a
           >
         </div>
+        <section class="transcript" id="transcript" aria-labelledby="transcript-h">
+          <h2 id="transcript-h">Transcript</h2>
+          <p class="small">
+            The narration below is the voiceover script the video was recorded from (both voices read the same words).
+            The &ldquo;on screen&rdquo; lines are a short text summary of what each scene shows. The video was recorded on
+            the web app with a fresh test wallet, so balances show $0.00. About 73 seconds.
+          </p>
+          <ol>
+            <li><p><em>On screen:</em> The gold b logo fades up on black, with the title bWalletX.</p><p>This is bWalletX. One wallet for your money, your tokens, your apps and your AI agent.</p></li>
+            <li><p><em>On screen:</em> Create wallet: a password is typed and the wallet opens.</p><p>Making a wallet takes a few seconds. Your keys are created on your device, and they never leave it.</p></li>
+            <li><p><em>On screen:</em> The Back up your wallet screen: Save an encrypted backup, then the share sheet.</p><p>Before you can receive money, it asks you to back up: an encrypted file you can save or email to yourself, or your twelve words on paper.</p></li>
+            <li><p><em>On screen:</em> Wallet home: the balance in dollars, Receive, Send and Mint, and the token list.</p><p>Balances are in dollars. Send to a name instead of a long address, and keep BSV, MNEE and all your tokens in one place.</p></li>
+            <li><p><em>On screen:</em> The Exchange tab: Tokens, NFTs, Music and Video, with trending tokens.</p><p>The Exchange lets you buy and sell tokens and NFTs, wallet to wallet, with no middleman.</p></li>
+            <li><p><em>On screen:</em> Exchange, Music and Video: music and movie NFT listings.</p><p>Music and movie NFTs trade here too, and play in your wallet&rsquo;s media player once you own them.</p></li>
+            <li><p><em>On screen:</em> The Apps tab: the grid of bApps.</p><p>The Apps tab is a store of BSV apps, and you can add any site you like.</p></li>
+            <li><p><em>On screen:</em> The Feed of posts from BSV social apps, then Chat and its group rooms.</p><p>The Feed shows posts from across BSV social apps. In Chat, join group rooms, or hold a friend&rsquo;s token to get into theirs.</p></li>
+            <li><p><em>On screen:</em> The b agent page with its quick-start buttons.</p><p>And b, your AI assistant, is built in. Pay a cent a message, or add your own AI key for more privacy.</p></li>
+            <li><p><em>On screen:</em> A reply from b setting out goals and limits.</p><p>It writes the rules, and the wallet enforces the limits before anything is signed.</p></li>
+            <li><p><em>On screen:</em> End card: bwalletx.com, Android, iPhone, Chrome and Web, and a beta note.</p><p>bWalletX. Get it free at bwalletx.com. It&rsquo;s in beta, so start with small amounts.</p></li>
+          </ol>
+        </section>
       </div>
     </main>
     <footer class="foot">

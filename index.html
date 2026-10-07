@@ -39,6 +39,57 @@
     />
     <link rel="stylesheet" href="/styles.css" />
     <link rel="preload" as="image" href="/media/hero-poster.jpg" />
+      <!-- ld:start -->
+    <script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "Organization",
+   "@id": "https://bwalletx.com/#org",
+   "name": "The Bitcoin Corporation Ltd",
+   "url": "https://bwalletx.com/",
+   "logo": "https://bwalletx.com/icon-512.png",
+   "email": "support@bwalletx.com",
+   "sameAs": [
+    "https://x.com/bWalletX",
+    "https://www.youtube.com/@bWalletX",
+    "https://github.com/b0ase/yours-mobile"
+   ]
+  },
+  {
+   "@type": "WebSite",
+   "@id": "https://bwalletx.com/#site",
+   "name": "bWalletX",
+   "url": "https://bwalletx.com/",
+   "publisher": {
+    "@id": "https://bwalletx.com/#org"
+   }
+  },
+  {
+   "@type": "SoftwareApplication",
+   "@id": "https://bwalletx.com/#app",
+   "name": "bWalletX",
+   "description": "Non-custodial Bitcoin SV wallet for tokens, media and apps: an Exchange for tokens and NFTs, token-gated chat, a bApps store, an on-chain media player and b, a built-in AI assistant. bWalletX is the full edition; bWallet is the App Store / Google Play edition with fewer features.",
+   "operatingSystem": "Android, iOS, ChromeOS, Web",
+   "applicationCategory": "FinanceApplication",
+   "url": "https://bwalletx.com/",
+   "downloadUrl": "https://bwalletx.com/get",
+   "installUrl": "https://bwalletx.com/get",
+   "image": "https://bwalletx.com/og-home-v3.png",
+   "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+   },
+   "publisher": {
+    "@id": "https://bwalletx.com/#org"
+   }
+  }
+ ]
+}
+    </script>
+    <!-- ld:end -->
   </head>
   <body>
     <a class="skip" href="#main">Skip to content</a>
@@ -73,6 +124,7 @@
         >
           <source src="/media/hero.webm" type="video/webm" />
           <source src="/media/hero.mp4" type="video/mp4" />
+          <p class="vtext">Decorative background loop: a gold ring turning slowly on black. No information is shown in the video.</p>
         </video>
         <div class="hero-shade" aria-hidden="true"></div>
         <div class="wrap hero-in">
@@ -82,6 +134,10 @@
           <p class="lede">
             Mint, trade and chat in one non-custodial app. Send to names, browse 180+ BSV-21 tokens, open the bApps
             store and play your on-chain media.
+          </p>
+          <p class="editions">
+            <strong>bWalletX</strong> is the full edition (web, Chrome, Android sideload, private iPhone build);
+            <strong>bWallet</strong> is the App Store / Play edition with fewer features.
           </p>
           <div class="cta-row">
             <a
@@ -153,7 +209,9 @@
                 aria-hidden="true"
                 width="736"
                 height="400"
-              ></video>
+              >
+          <p class="vtext">Decorative loop: a black phone turning inside a ring of gold particles. The real home screen is shown as an image beside it.</p>
+        </video>
             </div>
           </div>
           <div class="phone-stage reveal">
@@ -206,7 +264,9 @@
                 aria-hidden="true"
                 width="736"
                 height="400"
-              ></video>
+              >
+          <p class="vtext">Decorative loop: a gold-edged phone lying flat in gold dust. The wallet features are listed in the text of this section.</p>
+        </video>
             </div>
             <div class="card stack">
               <div class="row">
@@ -281,9 +341,11 @@
                 aria-hidden="true"
                 width="736"
                 height="400"
-              ></video>
+              >
+          <p class="vtext">Decorative loop: gold coins tumbling on black. The Exchange is described in the text of this section.</p>
+        </video>
             </div>
-            <div class="card">
+            <div class="card" role="group" aria-label="Illustrative Exchange layout: Tokens (180+ BSV-21), Music NFTs, Video NFTs and Image NFTs. Not live market data.">
               <div class="card-head"><span>Trending</span><span class="chip">1Sat</span></div>
               <ol class="trend">
                 <li>
@@ -347,7 +409,9 @@
                 aria-hidden="true"
                 width="736"
                 height="400"
-              ></video>
+              >
+          <p class="vtext">Decorative loop: rows of dark gold-edged tiles. The apps are listed in the text of this section.</p>
+        </video>
             </div>
             <div class="card mini-apps">
               <span class="mini">bChat</span><span class="mini">bMovies</span><span class="mini">bMusic</span
@@ -368,7 +432,9 @@
           playsinline
           preload="none"
           aria-hidden="true"
-        ></video>
+        >
+          <p class="vtext">Decorative background loop: a gold sound wave. The media player is described in the text of this section.</p>
+        </video>
         <div class="bg-shade" aria-hidden="true"></div>
         <div class="wrap feature-grid">
           <div class="feature-copy reveal">
@@ -437,13 +503,16 @@
                 aria-hidden="true"
                 width="736"
                 height="400"
-              ></video>
+              >
+          <p class="vtext">Decorative loop: glowing gold chat bubbles. Token rooms are described in the text of this section.</p>
+        </video>
             </div>
-            <div class="card chat">
+            <div class="card chat" role="img" aria-label="Illustrative chat mockup: two people meeting in a token room after one sent the other the room token. Not real messages.">
               <p class="bubble in">sent you the token, see you in the room</p>
               <p class="bubble out">in. gm all</p>
               <p class="bubble in">see you there</p>
               <p class="typing" aria-hidden="true"><i></i><i></i><i></i></p>
+              <p class="note">Illustrative conversation, not real messages.</p>
             </div>
           </div>
         </div>
@@ -799,7 +868,9 @@
           playsinline
           preload="none"
           aria-hidden="true"
-        ></video>
+        >
+          <p class="vtext">Decorative background loop: a pool of liquid gold. No information is shown in the video.</p>
+        </video>
         <div class="liquid-shade" aria-hidden="true"></div>
         <div class="wrap final-in reveal">
           <img src="/logo.svg" alt="" width="64" height="64" />
@@ -844,6 +915,7 @@
       <div class="vbox-in">
         <button class="vbox-close" type="button" aria-label="Close video">&times;</button>
         <video
+          aria-label="bWalletX in one minute: explainer video. A transcript is on bwalletx.com/video."
           controls
           playsinline
           preload="none"

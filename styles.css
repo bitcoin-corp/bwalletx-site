@@ -1442,3 +1442,34 @@ body {
 .update strong:first-child { color: #F5B800; }
 .update a { color: #F5B800; }
 .update p { margin: 0; }
+
+/* Edition explainer under the hero lede */
+.editions {
+  margin: 12px 0 0;
+  max-width: 640px;
+  font-size: 0.92rem;
+  line-height: 1.5;
+  color: rgba(232, 234, 238, 0.82);
+}
+
+/* /video transcript */
+.transcript {
+  max-width: 720px;
+  margin: 48px auto 0;
+}
+.transcript ol {
+  padding-left: 1.2em;
+}
+.transcript li {
+  margin: 0 0 14px;
+}
+.transcript li p {
+  margin: 0 0 4px;
+}
+.transcript em {
+  color: var(--muted);
+}
+.transcript .small {
+  color: var(--muted);
+  font-size: 0.9rem;
+}

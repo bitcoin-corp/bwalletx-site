@@ -40,46 +40,81 @@ def to_md(s):
             out.append(l); blank = False
     return '\n'.join(out).strip()
 
+# Allowlist: only git-tracked public pages. Top-level *.html, blog/*.html, a few known sub-pages, and docs .md.
+# Never media-src/, walkthrough-*/, tmp/, cut/, og/, node_modules/, *-template files (they are gitignored and
+# .vercelignored, and git ls-files keeps untracked scratch out too).
+import subprocess, fnmatch
+SUBPAGES = {'apps/add.html', 'exchange/strategies.html', 'strategies/spec.html', 'lock/verify.html'}
+DUPES = {'download.html', 'pnee.html'}  # canonical points to /get and /pnees
+BAD_DIRS = {'media-src', 'tmp', 'node_modules', 'cut', 'og', 'scripts', 'download'}
+tracked = subprocess.check_output(['git', 'ls-files'], cwd=ROOT).decode().split('\n')
+def allowed(rel):
+    parts = rel.split('/')
+    if set(parts[:-1]) & BAD_DIRS or any(x.startswith('walkthrough-') for x in parts) or '-template' in rel or rel in DUPES or os.path.basename(rel) in SKIP: return False
+    if rel.endswith('.html'):
+        return '/' not in rel or fnmatch.fnmatch(rel, 'blog/*.html') or rel in SUBPAGES
+    return False
 pages = []
-for p in sorted(glob.glob(os.path.join(ROOT, '**', '*.html'), recursive=True)):
-    rel = os.path.relpath(p, ROOT)
-    if os.path.basename(p) in SKIP or rel.startswith(('download', 'node_modules', 'scripts', '.')): continue
+for rel in sorted(r for r in tracked if allowed(r)):
+    p = os.path.join(ROOT, rel)
     s = open(p, encoding='utf-8').read()
     t = re.search(r'<title>(.*?)</title>', s, re.S)
     pages.append(dict(url=url_of(p), rel=rel, title=html.unescape(t.group(1)).strip() if t else rel,
                       desc=meta(s, 'description') or meta(s, 'og:description'), md=to_md(s)))
+DOCS = [r for r in tracked if r.endswith('.md') and '/' not in r and r not in ('README.md', 'CLAUDE.md', 'AGENTS.md')]
 
+SECTIONS = {
+    'Product': ['index', 'get', 'android', 'iphone', 'extension', 'features', 'video', 'testers', 'buy', 'restore', 'history', 'push-notifications'],
+    'Wallet features': ['exchange', 'exchange/strategies', 'mint', 'pnees', 'pots', 'subscriptions', 'lock', 'lock/verify', 'identity', 'sign', 'games'],
+    'Social': ['social', 'chat', 'friends', 'lounge', 'gmail', 'x'],
+    'Agents & developers': ['agent', 'agents', 'strategies', 'strategies/spec', 'developers', 'connect', 'cli', 'mcp', 'apps/add'],
+    'Support': ['privacy'],
+}
 def group(r):
-    if r.startswith('blog/'): return 'Development blog'
-    if r in ('privacy.html',): return 'Legal'
-    if r.split('/')[0].replace('.html', '') in ('developers', 'connect', 'cli', 'mcp', 'apps', 'strategies', 'agent', 'agents'): return 'Developers and agents'
+    if r.startswith('blog/'): return 'Blog'
+    k = r[:-5]
+    for g, ks in SECTIONS.items():
+        if k in ks: return g
     return 'Product'
 
-order = ['Product', 'Developers and agents', 'Development blog', 'Legal']
+order = ['Product', 'Wallet features', 'Social', 'Agents & developers', 'Blog', 'Support']
+def one_line(d):
+    d = re.sub(r'\s+', ' ', d).strip()
+    return d
 lines = ['# bWalletX', '',
-         '> bWalletX is a non-custodial BSV wallet from The Bitcoin Corporation Ltd, forked from the open-source Yours Wallet (MIT). '
-         'It runs as an Android app, an iPhone web app, a Chrome/Brave extension and a web app, with an Exchange, token-gated chat rooms, '
-         'AI agent accounts with strategies, and PNEEs (Penny Stablecoins, a BSV-backed dollar token in a capped mainnet pilot). '
-         'The store edition is called bWallet (bwallet.space). Beta software: test with small amounts.', '',
-         'Full text of every page: %s/llms-full.txt' % BASE, '']
+         '> bWalletX is the full edition of the wallet (web app, Chrome extension, Android sideload APK and a private iPhone build, with the iPhone web app from Safari for everyone else); '
+         'bWallet is the App Store / Google Play edition with fewer features. Both are non-custodial Bitcoin SV (BSV) wallets from '
+         'The Bitcoin Corporation Ltd, forked from the open-source Yours Wallet (MIT). bwallet.space is the older bWallet store-edition site '
+         '(it still hosts the testing waitlist); bwalletx.com is the main site. Beta software: test with small amounts.', '',
+         'bWalletX includes an Exchange for tokens and NFTs, token-gated chat rooms, a bApps store, an on-chain media player, '
+         'b (a built-in AI assistant), agent accounts with strategies, and PNEEs (Penny Stablecoins, a BSV-backed dollar token in a capped mainnet pilot).', '',
+         'Full text of every page below: %s/llms-full.txt' % BASE, '']
 for g in order:
     items = [p for p in pages if group(p['rel']) == g]
+    ks = SECTIONS.get(g, [])
+    items.sort(key=lambda p: (ks.index(p['rel'][:-5]) if p['rel'][:-5] in ks else 999, p['rel']))
     if not items: continue
     lines += ['## ' + g, '']
     for p in items:
-        lines.append('- [%s](%s)%s' % (p['title'], p['url'], (': ' + p['desc']) if p['desc'] else ''))
+        lines.append('- [%s](%s)%s' % (p['title'], p['url'], (': ' + one_line(p['desc'])) if p['desc'] else ''))
+    if g == 'Agents & developers':
+        for d in DOCS:
+            lines.append('- [%s (Markdown)](%s/%s): Plain Markdown for AI coding agents.' % ('Sign in with bWalletX' if d == 'connect.md' else d, BASE, d))
+    if g == 'Support':
+        lines.append('- [Email support](mailto:support@bwalletx.com): support@bwalletx.com')
     lines.append('')
-lines.insert(lines.index('## Developers and agents') + 2, '- [Sign in with bWalletX (Markdown)](%s/connect.md): The sign-in guide as plain Markdown, for AI coding agents.' % BASE)
 open(os.path.join(ROOT, 'llms.txt'), 'w').write('\n'.join(lines))
 
 full = ['# bWalletX: full site text', '', 'Generated %s from %s. Source pages are linked above each section.' % (datetime.date.today().isoformat(), BASE), '']
 for g in order:
     for p in [p for p in pages if group(p['rel']) == g]:
         full += ['---', '', 'Source: ' + p['url'], '', p['md'], '']
+for d in DOCS:
+    full += ['---', '', 'Source: %s/%s' % (BASE, d), '', open(os.path.join(ROOT, d), encoding='utf-8').read().strip(), '']
 open(os.path.join(ROOT, 'llms-full.txt'), 'w').write('\n'.join(full))
 
 sm = ['<?xml version="1.0" encoding="UTF-8"?>', '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">']
-sm += ['  <url><loc>%s</loc></url>' % p['url'] for p in pages if p['rel'] != 'privacy.html'] + ['  <url><loc>%s/privacy</loc></url>' % BASE, '  <url><loc>%s/connect.md</loc></url>' % BASE]
+sm += ['  <url><loc>%s</loc></url>' % p['url'] for p in pages] + ['  <url><loc>%s/%s</loc></url>' % (BASE, d) for d in DOCS]
 sm += ['</urlset>']
 open(os.path.join(ROOT, 'sitemap.xml'), 'w').write('\n'.join(sm) + '\n')
 print(len(pages), 'pages ->', 'llms.txt', 'llms-full.txt', 'sitemap.xml')

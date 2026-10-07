@@ -3,3 +3,8 @@ media-src/
 *.log
 .DS_Store
 scripts/
+node_modules/
+**/node_modules/
+**/tmp/
+walkthrough-*/
+*-template.html
