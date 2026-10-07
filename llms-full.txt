@@ -826,6 +826,68 @@ bWalletX is in beta: test with small amounts. Questions: [support@bwalletx.com](
 
 ---
 
+Source: https://bwalletx.com/identity
+
+# Identity. Your 12 words are the account.
+
+There is no account ID and no email needed. Your recovery words are the account. Everything else here is optional, and you add it when you want it.
+
+[Get bWalletX](https://bwalletx.com/get)
+
+## Handles
+
+- Live$handles. A name people can pay and message, which is also your paymail.
+
+- LiveNumbered handles. New accounts get a free numbered handle, from $bwallet0101 onward. $bwallet0001 to 0100 are reserved.
+
+- LiveRenames. Change to a name you prove you hold. Your rooms and messages move with you.
+
+- ComingMore than one handle per account. The groundwork is in; adding a second handle is not.
+
+- ComingHandle NFTs. Own your handle as an NFT you can hold or sell, separate from your account.
+
+## $401 identity
+
+Link other accounts, such as X or Google, to your on-chain identity. Each link adds to your identity strength, so others can see more than one source vouches for you.
+
+- LiveLinked accounts raise identity strength.
+
+## Signatures
+
+- LiveCard signature. Draw your signature once. It shows on the back of your wallet card. It stays on your device and is not put on chain.
+
+- LiveDocument signing. Sign documents with bit-sign. Only hashes go on chain, never the document.
+
+- ComingSign and seal. Sign .NDS.HTML contracts with your drawn signature and your wallet key in one step, sealed on chain. The bit-sign side, including recovery of an interrupted paid seal, is built; the wallet side is not in bWalletX yet.
+
+More on signing: [bwalletx.com/sign](https://bwalletx.com/sign).
+
+## Sign in with bWalletX
+
+Apps can let you sign in with your wallet instead of a password. Your wallet signs a one-time challenge; no password or email is shared. You can also sign in with X through the wallet: see [/x](https://bwalletx.com/x). For developers: [bwalletx.com/connect](https://bwalletx.com/connect).
+
+## Verify (ID check)
+
+Most people never need this. It is only asked for when something requires it, such as investing in a private placement.
+
+- LiveHow it works. The check is run by Veriff, through bit-sign. You show an ID document and take a selfie in Veriff’s flow.
+
+- LiveWho holds what. Veriff handles your document and selfie. bit-sign keeps the result, including your name, date of birth and document type, and runs a sanctions check. Your wallet gets a certificate that says you are verified, your country and whether you are over 18. It holds no name, date of birth or document data.
+
+- LiveOn chain. Your personal details are not put on chain.
+
+- ComingSelf-serve deletion. Not built yet. Until it is, ask [support@bwalletx.com](mailto:support@bwalletx.com).
+
+- ComingThe rest of the investor journey. One-tap pay from the wallet and a single investor flow are still being built.
+
+## Keys
+
+Your keys are made and kept on your device. They are not sent to us. Lose your 12 words and nobody, including us, can recover the account.
+
+bWalletX is in beta: test with small amounts. Questions: [support@bwalletx.com](mailto:support@bwalletx.com)
+
+---
+
 Source: https://bwalletx.com/
 
 bWalletX

@@ -18,6 +18,7 @@ Full text of every page: https://bwalletx.com/llms-full.txt
 - [Get bWalletX](https://bwalletx.com/get): Get bWalletX for Android, Chrome, the web and iPhone.
 - [Sign in with Gmail · bWalletX](https://bwalletx.com/gmail): Sign in to bWalletX with your Gmail account and get a verified name: yourname.gmail@bwalletx.com. Your paymail, your token and your chat room, with your Google picture.
 - [History in bWalletX](https://bwalletx.com/history): See every transaction your bWalletX account made, for any date range, and export it as CSV or a PDF statement for your accountant.
+- [Identity in bWalletX](https://bwalletx.com/identity): Your 12 words are your account. On top of them: a $handle, linked accounts, document signing, Sign in with bWalletX, and an optional ID check when you need one.
 - [bWalletX — Just b](https://bwalletx.com/): bWalletX: the BSV wallet for tokens, media and apps. BSV, MNEE and BSV-21 tokens, an exchange for tokens and NFTs, the bApps store, an ordinals media player and bChat. Non-custodial, by The Bitcoin Corporation Ltd.
 - [bWalletX on iPhone](https://bwalletx.com/iphone): Use bWalletX on iPhone today: install the web app from Safari in under a minute. No App Store needed.
 - [bWallet Lounge on bChat](https://bwalletx.com/lounge): The bWallet Lounge is where bWallet and bWalletX people talk: questions, ideas, and the team is there. Type /b to ask the $b assistant any time. Open to everyone.
