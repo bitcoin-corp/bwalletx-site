@@ -1150,6 +1150,86 @@ Questions: [support@bwalletx.com](mailto:support@bwalletx.com)
 
 ---
 
+Source: https://bwalletx.com/lock
+
+# Lock. Even you can’t unlock it early.
+
+Lock BSV on the Bitcoin SV blockchain until a date you choose, or have it paid back to you a little at a time. Once it’s locked, nobody can move it before then: not you, not bWalletX, not anyone.
+
+Coming in the next release Lock BSV is built and tested but not in the app you can download today. This page describes what is coming.
+
+## What locking is
+
+A lock is a normal BSV output with a small contract attached. The contract says two things: these coins can only be spent by your key, and only in a transaction that the network won’t accept before a certain block height. Blocks come about every ten minutes, so a height is a date, roughly.
+
+The rule is enforced by every miner, not by us. There is no switch at bWalletX that releases a lock early, and no support process that can. The coins never leave your wallet’s keys; they just can’t move until the height is reached.
+
+## Two kinds of lock
+
+- One unlock date. The whole amount opens at one block height.
+
+- Gradual payouts. The amount is split into pieces, each locked to a later height: daily, weekly, monthly or every few days, for a number of payouts or until an end date. You choose how each payout is sized:
+
+• Dollars per payout (the default), for example $10 a day. You lock BSV, sized at today’s price plus a buffer (20% unless you change it). When a piece unlocks, your wallet pays out the dollar amount at that day’s price. If the piece is worth more, it offers to re-lock the extra into the next payout; if it is worth less, you get the whole piece and the schedule shows what it came to, for example “paid $8.40 of $10”. If the wallet can’t get a current price, it doesn’t guess: the piece stays in your wallet as BSV.
+
+• BSV per payout, for example 0.1 BSV a week.
+
+• A percentage, of the original amount (the same payout each time, ending after 100÷X payouts) or of what is left (shrinking payouts; the last small remainder is paid at once).
+
+Before you lock, the wallet shows every payout: estimated date, block height, BSV, and estimated dollars at today’s price.
+
+## Read this before you lock
+
+- It is irreversible. You type LOCK to confirm. After that, nobody can unlock it early, including you and bWalletX.
+
+- It is BSV. The locked asset is BSV, and its dollar value goes up and down while it is locked. Dollar amounts are targets, not guarantees. The price is only used inside your own wallet, at payout time.
+
+- Dates are approximate. A lock opens at a block height. If blocks come faster or slower than ten minutes on average, the day moves.
+
+- Your 12 words are the only key. Lose them and the locks are lost for good. Nobody can recover them.
+
+- Limits. Each payout must be at least 1,000 sats, because claiming one costs a small fee. One lock holds up to 520 payouts; longer percentage schedules keep the later payouts in one lock and re-split it when it opens.
+
+## Claiming
+
+When a lock opens, the Locks screen shows it as Ready to claim. One tap claims every opened piece, across all your locks, back into your wallet in a single transaction.
+
+## A public receipt, if you want one
+
+Some people lock coins to show others they can’t sell them: a founder vesting their own coins, a creator showing they aren’t about to cash out. For that, you can turn on Mint a public receipt. It is off by default.
+
+The receipt is an NFT made in the same transaction as the locks. It shows the amount, the schedule and who locked it (your handle, if you have one), and says “Verify at bwalletx.com/lock/verify”. A picture proves nothing by itself, so the check reads the transaction from the chain and confirms that its outputs really are locks with those heights and amounts, and whether they have been claimed yet.
+
+Turning it on links your identity to the amount, publicly and permanently. Only do it if you mean to.
+
+[Verify a lock](https://bwalletx.com/lock/verify)
+
+Why we built it: [023 Locks you can’t break](https://bwalletx.com/blog/023-lock-bsv).
+
+bWalletX is in beta: test with small amounts. Nothing here is investment advice. Questions: [support@bwalletx.com](mailto:support@bwalletx.com)
+
+---
+
+Source: https://bwalletx.com/lock/verify
+
+# Verify a lock.
+
+Paste the transaction id of a lock or lock receipt. This page reads it from the chain (WhatsOnChain) and checks every lock output itself. It doesn’t trust the receipt’s picture.
+
+Check
+
+## What is checked
+
+- Each output that is a lock: its unlock height and amount, read from the script the network enforces.
+
+- If the transaction has a bWalletX receipt: that every payout it lists matches a real lock output, to the same key, with the same height and amount, and that the totals add up.
+
+- Whether each lock has been spent (claimed), from WhatsOnChain. Status: Locked, Partly claimed or Fully claimed.
+
+Heights are block numbers; dates are about 144 blocks a day. [About Lock BSV](https://bwalletx.com/lock).
+
+---
+
 Source: https://bwalletx.com/lounge
 
 # bWallet Lounge
@@ -1321,6 +1401,22 @@ Your old 12 words still work. Restore or sweep any BSV wallet into bWalletX.
 0227 Oct 2026
 
 bwalletx.com/blog · post 22 of 22
+
+---
+
+Source: https://bwalletx.com/media-src/og/blog-num/og-023
+
+-
+
+Blog · 023
+
+# Locks you can’t break
+
+Lock BSV until a date, or as payouts over time. Nobody can unlock it early, not even you.
+
+0237 Oct 2026
+
+bwalletx.com/blog · post 23 of 23
 
 ---
 
@@ -1824,6 +1920,20 @@ bwalletx.com/iphone · web app · beta
 
 ---
 
+Source: https://bwalletx.com/media-src/og/og-lock
+
+-
+
+bWalletX
+
+Lock
+
+Even you can’t unlock it early.
+
+bwalletx.com/lock · Android · iPhone · Chrome · Web
+
+---
+
 Source: https://bwalletx.com/media-src/og/og-lounge
 
 -
@@ -2035,6 +2145,8 @@ bWalletX
 Subscriptions
 
 Pay from pots. Pause any time.
+
+EXAMPLE$0.01 / daypaid from a pot
 
 bwalletx.com/subscriptions · Android · iPhone · Chrome · Web
 
@@ -5456,7 +5568,87 @@ If your old wallet isn’t found, [tell us which one](mailto:support@bwalletx.co
 
 Related: [Restore into bWalletX](https://bwalletx.com/restore) · [001 Forking Yours Wallet onto phones](https://bwalletx.com/blog/001-the-fork)
 
-[← 021 Coordinate on BSV](https://bwalletx.com/blog/021-coordinate-on-bsv)[All posts →](https://bwalletx.com/blog)
+[← 021 Coordinate on BSV](https://bwalletx.com/blog/021-coordinate-on-bsv)[023 Locks you can’t break →](https://bwalletx.com/blog/023-lock-bsv)
+
+---
+
+Source: https://bwalletx.com/blog/023-lock-bsv
+
+[Development blog](https://bwalletx.com/blog) · 023 · 7 Oct 2026
+
+# Locks you can’t break
+
+Lock BSV until a date, or as payouts over time, and nobody can unlock it early, not even you. Why that is useful, how BSV enforces it with no custodian, and where the limits are.
+
+Status: built and tested, coming in the next bWalletX release. It is not in the app you can download today.
+
+## Why you would want to lose access to your own money
+
+Most of what a wallet does is make money easier to move. A lock does the opposite on purpose. You decide now, while you are calm, what you are allowed to do later. Then the decision can’t be undone.
+
+That sounds like a restriction, and it is. It is useful for the same reason a fixed-term deposit or a savings jar with no slot to get coins out is useful:
+
+- Commitment. If you can’t touch it, you can’t spend it on a bad day.
+
+- Savings discipline. Put an amount away for a year and stop thinking about it.
+
+- Paying yourself a salary. Lock a sum and have it come back as $10 a day, or 0.1 BSV a week, instead of all at once.
+
+- Vesting. A founder or a team can lock their own coins on a schedule, the way shares vest.
+
+- Proving you can’t dump. If people worry that you will sell, you can show them coins that you can’t move until a date they can check for themselves.
+
+## How BSV enforces it, with nobody holding the keys
+
+Usually, “nobody can touch it until next year” means a bank or an exchange holds the money and promises not to give it back early. You trust them to keep that promise, and to still exist.
+
+A BSV lock doesn’t need anyone in the middle. The coins stay on your own key, in an output with a small script attached. It is the same lock script Hodlocker made popular and that Yours Wallet and the 1Sat tools already use; we didn’t write a new one. To spend that output, a transaction has to show the script its own contents, and the script checks two things in it: that it is signed by your key, and that its lock time is at least a block height written into the script. The network will not accept a transaction with a lock time in the future. So the coins can’t move until that block exists, and after that only your key can move them.
+
+Every miner checks this, every time. bWalletX has no override. We tested it by running the script through an interpreter: spending one block early fails, spending with someone else’s key fails, and spending at the height with your key works.
+
+## How a schedule works
+
+You can lock everything until one date, or set up gradual payouts. For payouts, the wallet splits the amount into pieces and locks each one to a later height, all in one transaction. You choose daily, weekly, monthly or every few days, and either a number of payouts or an end date.
+
+Each payout can be sized three ways:
+
+- Dollars, the default: “$10 a day”. You still lock BSV. Each piece is sized at today’s price plus a buffer, 20% unless you change it, so that it usually still covers $10 later. When a piece opens, your wallet looks up that day’s price and pays out $10 worth. Any extra can go back into the next piece as a fresh lock, if you approve it. If the price has fallen past the buffer, you get the whole piece and the schedule says so: “paid $8.40 of $10”. If the wallet can’t get a price, it doesn’t guess. The piece stays in your wallet as BSV.
+
+- BSV: 0.1 BSV a week, say.
+
+- A percentage: of the original amount, which pays the same each time and ends after 100÷X payouts (0.01% a day takes about 27 years), or of what is left, which pays less each time and finishes the small remainder in one go.
+
+Before you lock, you see every payout in a table: the estimated date, the block height, the BSV and roughly what it is worth today. Then you type LOCK.
+
+When pieces open, the Locks screen shows them as ready. One tap claims every opened piece, across all your locks, in one transaction.
+
+## A receipt anyone can check
+
+For the “prove you can’t dump” case, you can mint a public receipt. It is an NFT, made in the same transaction as the locks, showing the amount, the schedule and who locked it. It ends with “Verify at bwalletx.com/lock/verify”.
+
+The picture on its own proves nothing. Anyone can make an image that says “100 BSV locked”. What matters is the check. The [verify page](https://bwalletx.com/lock/verify) reads the transaction from the chain, decodes every lock output, and confirms that each payout the receipt claims is a real lock with that height and that amount, all to one key. It also checks whether each piece has been claimed yet: Locked, Partly claimed or Fully claimed. A receipt that claims more than the transaction holds, or a later date than the script enforces, is flagged.
+
+The receipt is off by default. It ties your name to an amount, in public, for good, so only turn it on if that is what you want.
+
+## The limits
+
+- It is irreversible. That is the point, but it means a typo is permanent. The wallet won’t lock any piece for more than about ten years, and makes you confirm.
+
+- It is BSV, not dollars. The dollar figures are targets worked out in your own wallet. They are not guarantees, and nothing here is a promise about the price.
+
+- Dates are approximate. A lock opens at a block height, about 144 blocks a day. Blocks don’t arrive exactly every ten minutes.
+
+- Your 12 words are the only way back. If you lose them, nobody can recover the locks. Not us, not anyone.
+
+- Small pieces aren’t worth it. Claiming a piece costs a small fee, so each payout must be at least 1,000 sats. If a percentage gives smaller pieces, the wallet suggests paying out less often.
+
+- Very long schedules come in batches. One transaction holds up to 520 payouts. Beyond that, the later payouts are kept in one lock that the wallet offers to re-split when it opens.
+
+Everything about it is on [bwalletx.com/lock](https://bwalletx.com/lock).
+
+Related: [Lock BSV](https://bwalletx.com/lock) · [Verify a lock](https://bwalletx.com/lock/verify) · [016 Subscriptions, paid from pots](https://bwalletx.com/blog/016-pots)
+
+[← 022 Bring your coins home](https://bwalletx.com/blog/022-bring-your-coins-home)[All posts →](https://bwalletx.com/blog)
 
 ---
 
@@ -5467,6 +5659,10 @@ Source: https://bwalletx.com/blog/
 How bWallet and bWalletX were built, one chapter at a time. Every post is written from the git history of the wallet, this site, the chat server and the PNEEs prototype. It covers what we built, why, what broke, what we reversed and what is still not done.
 
 Newest first. Dates come from commits. bWallet is a fork of [Yours Wallet](https://github.com/yours-org/yours-wallet) (MIT licence).
+
+- [](https://bwalletx.com/blog/023-lock-bsv)023 · 7 Oct 2026
+[Locks you can’t break](https://bwalletx.com/blog/023-lock-bsv)
+Lock BSV until a date, or as payouts over time, and nobody can unlock it early, not even you. Coming in the next release.
 
 - [](https://bwalletx.com/blog/022-bring-your-coins-home)022 · 7 Oct 2026
 [Bring your coins home](https://bwalletx.com/blog/022-bring-your-coins-home)

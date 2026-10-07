@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>023 Locks you can&rsquo;t break · bWalletX blog</title>
+    <meta name="description" content="Lock BSV until a date, or as payouts over time, and nobody can unlock it early, not even you. Why that is useful, how BSV enforces it with no custodian, and where the limits are." />
+    <link rel="canonical" href="https://bwalletx.com/blog/023-lock-bsv" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://bwalletx.com/blog/023-lock-bsv" />
+    <meta property="og:site_name" content="bWalletX" />
+    <meta property="og:title" content="Locks you can&rsquo;t break" />
+    <meta property="og:description" content="Lock BSV until a date, or as payouts over time, and nobody can unlock it early, not even you. Why that is useful, how BSV enforces it with no custodian, and where the limits are." />
+    <meta property="og:image" content="https://bwalletx.com/og/og-blog-023.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@bWalletX" />
+    <meta name="twitter:title" content="Locks you can&rsquo;t break" />
+    <meta name="twitter:description" content="Lock BSV until a date, or as payouts over time, and nobody can unlock it early, not even you. Why that is useful, how BSV enforces it with no custodian, and where the limits are." />
+    <meta name="twitter:image" content="https://bwalletx.com/og/og-blog-023.png" />
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="stylesheet" href="/styles.css" />
+    <style>
+      .ext { max-width: 760px; margin: 0 auto; padding: 120px 20px 80px; }
+      .ext h1 { font-size: clamp(2rem, 6vw, 3rem); margin: 10px 0 10px; line-height: 1.15; }
+      .ext h2 { margin: 44px 0 10px; font-size: 1.4rem; }
+      .ext p, .ext li { line-height: 1.7; }
+      .ext code { background: #17191e; padding: 2px 7px; border-radius: 6px; overflow-wrap: anywhere; }
+      .ext a { overflow-wrap: anywhere; }
+      .meta { color: #8a8a86; font-size: 0.9rem; margin: 0; }
+      .num { color: #F5B800; font-weight: 700; letter-spacing: .04em; }
+      .box { background: #101114; border: 1px solid #ffffff12; border-radius: 16px; padding: 18px 22px; margin: 28px 0; }
+      .box h2 { margin: 0 0 8px; font-size: 1.1rem; }
+      .box ul { margin: 0; padding-left: 1.2em; }
+      .related { color: #a7adb8; }
+      .pn { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; margin-top: 40px; border-top: 1px solid #ffffff14; padding-top: 20px; }
+      .pn a { color: #F5B800; text-decoration: none; max-width: 100%; }
+      .posts { list-style: none; padding: 0; margin: 28px 0; }
+      .posts li { background: #101114; border: 1px solid #ffffff12; border-radius: 16px; padding: 16px 20px; margin: 12px 0; }
+      .posts a { color: #fff; text-decoration: none; font-weight: 700; font-size: 1.1rem; }
+      .posts a:hover { color: #F5B800; }
+      .posts p { margin: 4px 0 0; color: #a7adb8; line-height: 1.55; }
+      .ext .small { color: #8a8a86; font-size: 0.85rem; }
+      .ext pre { background: #17191e; padding: 14px 16px; border-radius: 10px; overflow-x: auto; }
+      .ext pre code { padding: 0; background: none; overflow-wrap: normal; white-space: pre; }
+    </style>
+  </head>
+  <body>
+    <div class="beta-banner">bWalletX is in <strong>beta</strong>: test with small amounts.</div>
+    <header class="topbar">
+      <div class="wrap topbar-in">
+        <a class="brand" href="/"><img src="/logo.svg" alt="" width="34" height="30" /><span>bWallet<span class="gold">X</span></span></a>
+        <nav aria-label="Pages">
+          <a href="/features">Features</a><a href="/exchange">Exchange</a><a href="/social">Social</a><a href="/agent">Agents</a><a href="/extension">Extension</a><a href="/developers">Developers</a>
+        </nav>
+        <span class="nav-cta"><a class="dl-btn" href="/get">Download</a><a class="web-btn" href="https://web.bwalletx.com" target="_blank" rel="noopener">Web &rarr;</a></span>
+      </div>
+    </header>
+    <script src="/nav.js"></script>
+    <main class="ext">
+      <p class="meta"><a href="/blog">Development blog</a> · <span class="num">023</span> · 7 Oct 2026</p>
+      <h1>Locks you can&rsquo;t break</h1>
+      <p class="lede">Lock BSV until a date, or as payouts over time, and nobody can unlock it early, not even you. Why that is useful, how BSV enforces it with no custodian, and where the limits are.</p>
+      <p><b>Status:</b> built and tested, coming in the next bWalletX release. It is not in the app you can download today.</p>
+
+      <h2>Why you would want to lose access to your own money</h2>
+      <p>Most of what a wallet does is make money easier to move. A lock does the opposite on purpose. You decide now, while you are calm, what you are allowed to do later. Then the decision can&rsquo;t be undone.</p>
+      <p>That sounds like a restriction, and it is. It is useful for the same reason a fixed-term deposit or a savings jar with no slot to get coins out is useful:</p>
+      <ul>
+        <li><b>Commitment.</b> If you can&rsquo;t touch it, you can&rsquo;t spend it on a bad day.</li>
+        <li><b>Savings discipline.</b> Put an amount away for a year and stop thinking about it.</li>
+        <li><b>Paying yourself a salary.</b> Lock a sum and have it come back as $10 a day, or 0.1 BSV a week, instead of all at once.</li>
+        <li><b>Vesting.</b> A founder or a team can lock their own coins on a schedule, the way shares vest.</li>
+        <li><b>Proving you can&rsquo;t dump.</b> If people worry that you will sell, you can show them coins that you can&rsquo;t move until a date they can check for themselves.</li>
+      </ul>
+
+      <h2>How BSV enforces it, with nobody holding the keys</h2>
+      <p>Usually, &ldquo;nobody can touch it until next year&rdquo; means a bank or an exchange holds the money and promises not to give it back early. You trust them to keep that promise, and to still exist.</p>
+      <p>A BSV lock doesn&rsquo;t need anyone in the middle. The coins stay on your own key, in an output with a small script attached. It is the same lock script Hodlocker made popular and that Yours Wallet and the 1Sat tools already use; we didn&rsquo;t write a new one. To spend that output, a transaction has to show the script its own contents, and the script checks two things in it: that it is signed by your key, and that its lock time is at least a block height written into the script. The network will not accept a transaction with a lock time in the future. So the coins can&rsquo;t move until that block exists, and after that only your key can move them.</p>
+      <p>Every miner checks this, every time. bWalletX has no override. We tested it by running the script through an interpreter: spending one block early fails, spending with someone else&rsquo;s key fails, and spending at the height with your key works.</p>
+
+      <h2>How a schedule works</h2>
+      <p>You can lock everything until <b>one date</b>, or set up <b>gradual payouts</b>. For payouts, the wallet splits the amount into pieces and locks each one to a later height, all in one transaction. You choose daily, weekly, monthly or every few days, and either a number of payouts or an end date.</p>
+      <p>Each payout can be sized three ways:</p>
+      <ul>
+        <li><b>Dollars</b>, the default: &ldquo;$10 a day&rdquo;. You still lock BSV. Each piece is sized at today&rsquo;s price plus a buffer, 20% unless you change it, so that it usually still covers $10 later. When a piece opens, your wallet looks up that day&rsquo;s price and pays out $10 worth. Any extra can go back into the next piece as a fresh lock, if you approve it. If the price has fallen past the buffer, you get the whole piece and the schedule says so: &ldquo;paid $8.40 of $10&rdquo;. If the wallet can&rsquo;t get a price, it doesn&rsquo;t guess. The piece stays in your wallet as BSV.</li>
+        <li><b>BSV</b>: 0.1 BSV a week, say.</li>
+        <li><b>A percentage</b>: of the original amount, which pays the same each time and ends after 100&divide;X payouts (0.01% a day takes about 27 years), or of what is left, which pays less each time and finishes the small remainder in one go.</li>
+      </ul>
+      <p>Before you lock, you see every payout in a table: the estimated date, the block height, the BSV and roughly what it is worth today. Then you type LOCK.</p>
+      <p>When pieces open, the Locks screen shows them as ready. One tap claims every opened piece, across all your locks, in one transaction.</p>
+
+      <h2>A receipt anyone can check</h2>
+      <p>For the &ldquo;prove you can&rsquo;t dump&rdquo; case, you can mint a public receipt. It is an NFT, made in the same transaction as the locks, showing the amount, the schedule and who locked it. It ends with &ldquo;Verify at bwalletx.com/lock/verify&rdquo;.</p>
+      <p>The picture on its own proves nothing. Anyone can make an image that says &ldquo;100 BSV locked&rdquo;. What matters is the check. The <a href="/lock/verify">verify page</a> reads the transaction from the chain, decodes every lock output, and confirms that each payout the receipt claims is a real lock with that height and that amount, all to one key. It also checks whether each piece has been claimed yet: Locked, Partly claimed or Fully claimed. A receipt that claims more than the transaction holds, or a later date than the script enforces, is flagged.</p>
+      <p>The receipt is off by default. It ties your name to an amount, in public, for good, so only turn it on if that is what you want.</p>
+
+      <h2>The limits</h2>
+      <ul>
+        <li><b>It is irreversible.</b> That is the point, but it means a typo is permanent. The wallet won&rsquo;t lock any piece for more than about ten years, and makes you confirm.</li>
+        <li><b>It is BSV, not dollars.</b> The dollar figures are targets worked out in your own wallet. They are not guarantees, and nothing here is a promise about the price.</li>
+        <li><b>Dates are approximate.</b> A lock opens at a block height, about 144 blocks a day. Blocks don&rsquo;t arrive exactly every ten minutes.</li>
+        <li><b>Your 12 words are the only way back.</b> If you lose them, nobody can recover the locks. Not us, not anyone.</li>
+        <li><b>Small pieces aren&rsquo;t worth it.</b> Claiming a piece costs a small fee, so each payout must be at least 1,000 sats. If a percentage gives smaller pieces, the wallet suggests paying out less often.</li>
+        <li><b>Very long schedules come in batches.</b> One transaction holds up to 520 payouts. Beyond that, the later payouts are kept in one lock that the wallet offers to re-split when it opens.</li>
+      </ul>
+      <p>Everything about it is on <a href="/lock">bwalletx.com/lock</a>.</p>
+
+      <p class="related">Related: <a href="/lock">Lock BSV</a> · <a href="/lock/verify">Verify a lock</a> · <a href="/blog/016-pots">016 Subscriptions, paid from pots</a></p>
+      <div class="pn"><a href="/blog/022-bring-your-coins-home">&larr; 022 Bring your coins home</a><a href="/blog">All posts &rarr;</a></div>
+    </main>
+  </body>
+</html>

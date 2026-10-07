@@ -21,11 +21,12 @@
     // dropdowns. Phones: a Menu button with one accordion per section. The current section's pages also show
     // as a pill row under the bar.
     full: [
-      { label: 'Wallet', href: '/features', pages: ['/features', '/subscriptions', '/pots', '/restore', '/history', '/identity', '/mint', '/get', '/download', '/android', '/iphone', '/extension', '/push-notifications', '/testers', '/privacy'],
+      { label: 'Wallet', href: '/features', pages: ['/features', '/subscriptions', '/pots', '/lock', '/lock/verify', '/restore', '/history', '/identity', '/mint', '/get', '/download', '/android', '/iphone', '/extension', '/push-notifications', '/testers', '/privacy'],
         sub: [
           { label: 'Features', href: '/features' },
           { label: 'Subscriptions', href: '/subscriptions' },
           { label: 'Pots', href: '/pots' },
+          { label: 'Lock', href: '/lock' },
           { label: 'Restore', href: '/restore' },
           { label: 'History', href: '/history' },
           { label: 'Identity', href: '/identity' },

@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Verify a lock</title>
+    <meta name="description" content="Check a bWalletX lock or lock receipt against the BSV blockchain: amounts, unlock heights and whether each lock has been claimed." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://bwalletx.com/lock/verify" />
+    <meta property="og:site_name" content="bWalletX" />
+    <meta property="og:title" content="Verify a lock: bWalletX" />
+    <meta property="og:description" content="Check a bWalletX lock or lock receipt against the BSV blockchain: amounts, unlock heights and whether each lock has been claimed." />
+    <meta property="og:image" content="https://bwalletx.com/og-lock.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Check a bWalletX lock or lock receipt against the BSV blockchain: amounts, unlock heights and whether each lock has been claimed." />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@bWalletX" />
+    <meta name="twitter:title" content="Verify a lock: bWalletX" />
+    <meta name="twitter:description" content="Check a bWalletX lock or lock receipt against the BSV blockchain: amounts, unlock heights and whether each lock has been claimed." />
+    <meta name="twitter:image" content="https://bwalletx.com/og-lock.png" />
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="stylesheet" href="/styles.css" />
+    <style>
+      .ext h1 { font-size: clamp(2.2rem, 6vw, 3.4rem); margin: 18px 0 10px; }
+      .ext h2 { margin: 48px 0 8px; font-size: 1.5rem; }
+      .ext p, .ext li { line-height: 1.7; }
+      .ext .small { color: #8a8a86; font-size: 0.85rem; }
+      .ext .row { display: flex; gap: 12px; flex-wrap: wrap; margin: 26px 0; }
+      .ggrid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 230px), 1fr)); gap: 14px; margin: 18px 0; }
+      .gcard { display: block; background: #101114; border: 1px solid #ffffff12; border-radius: 16px; padding: 14px 16px; color: inherit; text-decoration: none; min-width: 0; }
+      .gcard:hover { border-color: #F5B80066; }
+      .gcard h3 { margin: 0 0 4px; font-size: 1.05rem; }
+      .gcard p { margin: 0; color: #a7adb8; font-size: 0.92rem; line-height: 1.5; }
+      .feat { list-style: none; padding: 0; margin: 18px 0; }
+      .feat li { display: flex; gap: 12px; align-items: baseline; padding: 12px 0; border-bottom: 1px solid #ffffff10; }
+      .tag { flex: none; font-size: 0.75rem; font-weight: 700; padding: 2px 9px; border-radius: 999px; }
+      .tag.live { background: #F5B800; color: #000; }
+      .tag.soon { border: 1px solid #ffffff40; color: #a7adb8; }
+      .tw { overflow-x: auto; margin: 18px 0; }
+      table.wl { border-collapse: collapse; width: 100%; min-width: 720px; font-size: 0.92rem; }
+      table.wl th, table.wl td { text-align: left; vertical-align: top; padding: 10px 10px; border-bottom: 1px solid #ffffff14; line-height: 1.5; }
+      table.wl th { color: #F5B800; font-weight: 700; }
+      table.wl code { background: #17191e; padding: 1px 6px; border-radius: 6px; font-size: 0.85rem; white-space: nowrap; }
+      ol.steps li { margin: 6px 0; }
+    </style>
+  </head>
+  <body>
+    <div class="beta-banner">bWalletX is in <strong>beta</strong>: test with small amounts.</div>
+    <header class="topbar">
+      <div class="wrap topbar-in">
+        <a class="brand" href="/"><img src="/logo.svg" alt="" width="34" height="30" /><span>bWallet<span class="gold">X</span></span></a>
+        <nav aria-label="Pages">
+          <a href="/features">Features</a><a href="/exchange">Exchange</a><a href="/social">Social</a><a href="/agent">Agents</a><a href="/extension">Extension</a><a href="/developers">Developers</a>
+        </nav>
+        <span class="nav-cta"><a class="dl-btn" href="/get">Download</a><a class="web-btn" href="https://web.bwalletx.com" target="_blank" rel="noopener">Web &rarr;</a></span>
+      </div>
+    </header>
+    <script src="/nav.js"></script>
+    <main class="ext">
+      <h1>Verify a <span class="gold">lock.</span></h1>
+      <p class="lede">Paste the transaction id of a lock or lock receipt. This page reads it from the chain (WhatsOnChain) and checks every lock output itself. It doesn&rsquo;t trust the receipt&rsquo;s picture.</p>
+      <form id="f" class="row" style="align-items:stretch">
+        <input id="tx" placeholder="64-character transaction id" autocomplete="off" spellcheck="false" style="flex:1;min-width:0;padding:12px 14px;border-radius:12px;border:1px solid #ffffff22;background:#101114;color:#fff;font:inherit" />
+        <button class="btn btn-store" type="submit">Check</button>
+      </form>
+      <div id="out"></div>
+      <h2>What is checked</h2>
+      <ul class="feat">
+<li><span>Each output that is a lock: its unlock height and amount, read from the script the network enforces.</span></li>
+<li><span>If the transaction has a bWalletX receipt: that every payout it lists matches a real lock output, to the same key, with the same height and amount, and that the totals add up.</span></li>
+<li><span>Whether each lock has been spent (claimed), from WhatsOnChain. Status: Locked, Partly claimed or Fully claimed.</span></li>
+      </ul>
+      <p class="small">Heights are block numbers; dates are about 144 blocks a day. <a href="/lock">About Lock BSV</a>.</p>
+    </main>
+    <script src="/lock/verify.js"></script>
+    <script>
+      const out = document.getElementById('out'), input = document.getElementById('tx');
+      const esc = (s) => String(s).replace(/[&<>"]/g, (c) => '&#' + c.charCodeAt(0) + ';');
+      const bsv = (s) => (s >= 100000 ? +(s / 1e8).toFixed(8) + ' BSV' : s.toLocaleString() + ' sats');
+      async function run(tx) {
+        out.innerHTML = '<p class="small">Reading the chain&hellip;</p>';
+        try {
+          const r = await window.bwxVerifyLock(tx.trim());
+          const rc = r.receipt;
+          let h = '<div class="gcard" style="margin:18px 0"><h3>' + esc(r.status) + ' &middot; ' + bsv(r.totalSats) + '</h3>';
+          h += rc ? (r.receiptValid ? '<p style="color:#32D583">Receipt matches the lock outputs.</p>' : '<p style="color:#F97066">Receipt does NOT match the chain.</p>') : '<p>No bWalletX receipt in this transaction.</p>';
+          if (rc) h += '<p>Locked by ' + esc(rc.identity.handle || rc.identity.paymail || rc.identity.address) + (rc.mode === 'usd-target' && rc.usdPerPayout ? ' &middot; target $' + esc(rc.usdPerPayout) + ' per payout' : '') + '</p>';
+          for (const p of r.problems) h += '<p style="color:#F97066">' + esc(p) + '</p>';
+          h += '</div>';
+          if (r.locks.length) {
+            h += '<div class="tw"><table class="wl" style="min-width:0"><thead><tr><th>Output</th><th>Unlock height</th><th>Amount</th><th>State</th></tr></thead><tbody>';
+            for (const l of r.locks.slice(0, 600)) h += '<tr><td>#' + l.vout + '</td><td>' + l.height + '</td><td>' + bsv(l.sats) + '</td><td>' + (l.spent ? 'claimed' : l.matured ? 'open, not claimed' : 'locked') + '</td></tr>';
+            h += '</tbody></table></div>';
+          }
+          out.innerHTML = h;
+        } catch (e) {
+          out.innerHTML = '<p style="color:#F97066">' + esc(e && e.message ? e.message : e) + '</p>';
+        }
+      }
+      document.getElementById('f').addEventListener('submit', (e) => { e.preventDefault(); history.replaceState(null, '', '?tx=' + encodeURIComponent(input.value.trim())); run(input.value); });
+      const q = new URLSearchParams(location.search).get('tx');
+      if (q) { input.value = q; run(q); }
+    </script>
+  </body>
+</html>
