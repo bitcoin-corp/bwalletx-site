@@ -66,7 +66,7 @@ DOCS = [r for r in tracked if r.endswith('.md') and '/' not in r and r not in ('
 SECTIONS = {
     'Product': ['index', 'get', 'android', 'iphone', 'extension', 'features', 'video', 'testers', 'buy', 'restore', 'history', 'push-notifications'],
     'Wallet features': ['exchange', 'exchange/strategies', 'mint', 'pnees', 'pots', 'subscriptions', 'lock', 'lock/verify', 'identity', 'handles', 'sign', 'games'],
-    'Social': ['social', 'chat', 'friends', 'lounge', 'gmail', 'x'],
+    'Social': ['social', 'chat', 'friends', 'lounge', 'live', 'gmail', 'x'],
     'Agents & developers': ['agent', 'agents', 'strategies', 'strategies/spec', 'developers', 'connect', 'cli', 'mcp', 'apps/add'],
     'Support': ['privacy'],
 }

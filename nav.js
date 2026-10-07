@@ -45,7 +45,7 @@
           { label: 'PNEEs', href: '/pnees', also: ['/pnee'] },
           { label: 'Buy BSV', href: '/buy' }
         ] },
-      { label: 'Social', href: '/social', pages: ['/social', '/chat', '/friends', '/lounge', '/games', '/video', '/sign', '/x', '/gmail'],
+      { label: 'Social', href: '/social', pages: ['/social', '/chat', '/friends', '/lounge', '/games', '/video', '/live', '/sign', '/x', '/gmail'],
         sub: [
           { label: 'Social', href: '/social' },
           { label: 'Chat', href: '/chat' },
@@ -53,6 +53,7 @@
           { label: 'Lounge', href: '/lounge' },
           { label: 'Games', href: '/games' },
           { label: 'Video', href: '/video' },
+          { label: 'Live', href: '/live' },
           { label: 'Your signature', href: '/sign' },
           { label: 'Sign in with X', href: '/x' },
           { label: 'Sign in with Gmail', href: '/gmail' }

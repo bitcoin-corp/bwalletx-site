@@ -1262,7 +1262,9 @@ The check is run by Veriff, through bit-sign. You show an ID document and take a
 
 - In a bit-sign deal room, a host can ask a named member for a check. The member chooses to accept. The room then sees that the check was submitted, and whether it was approved or declined. It does not see your name, date of birth or documents.
 
-- bit-sign’s signed record of your check can be looked up by anyone who has your bit-sign key, so an issuer can confirm it. It shows that you passed, the check level, the type and country of your document, the sanctions result and the date. It has no name and no date of birth.
+- bit-sign’s signed record of your check is private. Only you, signed in, can see all of it: the check level, the type and country of your document, the sanctions result and the date. It has no name and no date of birth. Anyone else who looks it up with your key gets “not found”, the same answer as for a key with no check, so they can’t even tell you’ve been checked.
+
+- Sharing part of it with one person will be your choice: you sign a grant naming the fields, the person’s key and an end date, and they see only those fields until then. The sanctions result is shown to them only as pass or fail, and never to the public. This is built and will be switched on soon.
 
 ## Using it
 
@@ -1952,6 +1954,66 @@ Signing in with Google proves the name. Your 12-word recovery phrase is still th
 [Privacy](https://bwalletx.com/privacy)
 
 Sign in with Google and X are in bWalletX. The App Store and Google Play version, bWallet, doesn't have them yet. Questions: [support@bwalletx.com](mailto:support@bwalletx.com)
+
+---
+
+Source: https://bwalletx.com/live
+
+# Live. Your token is the ticket.
+
+Creators go live in a room that only their token holders can enter. Hold the token and you’re in. The token, the payment and the room all sit in one wallet.
+
+[Get bWalletX](https://bwalletx.com/get)
+
+## The idea
+
+A creator’s room is gated by the creator’s token. Holders get in and watch the creator live: one person on camera, everyone else watching, with chat alongside. Anyone who doesn’t hold the token sees a “hold 1 to join” door, not the stream.
+
+Think creator rooms and subscriber streams, except the subscription is a token you hold. You can keep it, sell it or give it away. Pay-per-minute and tips can sit on top, as options the creator chooses.
+
+## Why in the wallet
+
+bWalletX is a smart social super wallet: the things you do with your money belong in the place you keep it. Your token, your payment and the room are all in one app, so there’s no separate platform account, card or subscription to manage.
+
+Holding a token to get in costs nothing extra. Payments go wallet to wallet; you pay the network fee, plus a small indexing fee when a token moves. Any fee on paid streams will be stated up front before you pay. The full version of rooms and spaces lives in [bChat](https://bwalletx.com/chat).
+
+## How it works
+
+- 1Your token. A creator has a token, such as a personal $NAME token (see [$handles](https://bwalletx.com/handles)).
+
+- 2Your room. The room is set to “hold the token to enter”. The server checks holdings on every read and post, so selling the token closes the door.
+
+- 3Go live. The creator opens a space and turns the camera on. Holders watch and chat; the creator can bring a viewer on stage.
+
+- 4Optional extras. Pay-per-minute, tips, or burning a ticket to enter, as the creator chooses.
+
+## What works today
+
+- LiveToken rooms. Hold a token to enter a room. In bChat and in bWalletX.
+
+- LiveSpaces in bChat. A host, speakers and listeners, a raise-hand queue, and opt-in camera for people on stage. Runs on our own video server.
+
+- Live1:1 voice and video calls in bWalletX.
+
+- ComingWatching a live room inside bWalletX. Today you go live and watch in bChat.
+
+- ComingPay-per-minute watching. Paid a minute at a time, wallet to wallet, with a spending cap you set.
+
+- ComingTips during a stream.
+
+- ComingBigger audiences. Streams to more viewers than one video server can hold.
+
+## Content rules
+
+Creators are responsible for what they stream. They must follow the law where they and their viewers are, and our terms. Rooms and messages can be reported, and paid streams will need identity and age checks before they open.
+
+## bWallet (App Store and Google Play) and bWalletX
+
+- LiveBoth: 1:1 voice and video calls.
+
+- LivebWalletX only: token rooms. They aren’t available in the store edition, so token-gated live rooms won’t be either.
+
+bWalletX is in beta: test with small amounts. Questions: [support@bwalletx.com](mailto:support@bwalletx.com)
 
 ---
 
