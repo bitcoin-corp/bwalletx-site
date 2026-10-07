@@ -2030,6 +2030,79 @@ Push notifications are in development and not live yet; this page will be update
 
 ---
 
+Source: https://bwalletx.com/sign
+
+# Your signature
+
+Your wallet card has a signature strip on the back, like a bank card. In bWalletX 5.1.77 you can sign it with your finger. Next, you'll be able to use the same signature to sign contracts and seal them on Bitcoin.
+
+Flip the card→
+Sign with your finger→
+Save
+
+## Sign your card
+
+- On the Wallet tab, tap your card to flip it over.
+
+- On the back, under AUTHORISED SIGNATURE, tap the pen. Pressing and holding the strip works too.
+
+- A full-screen pad opens. Sign with your finger, or with a mouse in the Chrome extension. With the phone upright, the pad turns so you sign along the length of the phone and get more room.
+
+- Use Undo to take back the last stroke or Clear to start again, then tap Save.
+
+Your signature now shows on the back of the card. To change it, tap the pen again and choose Redraw signature or Remove signature.
+
+The card also turns more golden as your balance grows.
+
+## Where it's kept
+
+### On your device only
+
+The signature is stored on the phone or computer you drew it on. It isn't sent to a server and it isn't put on-chain. bApps and websites can't read it.
+
+### One per account
+
+Each account in your wallet has its own signature. If you have a personal and a business account, sign each one separately.
+
+### Ready for contracts
+
+It's saved in a fixed format (one SVG path in a 1000 × 250 box) with a SHA-256 fingerprint, so the same drawing always gives the same fingerprint. That's what lets it be signed and checked later.
+
+The signature isn't in your 12-word recovery phrase. If you restore your wallet on a new phone, sign again.
+
+## Sign and seal contracts Coming soon
+
+bit-sign contracts (`.nds.html` files) have signature boxes. With Sign and seal, one tap in bWalletX will:
+
+- place your drawn signature in your box in the contract;
+
+- sign a record of what you signed with your wallet's identity key;
+
+- pay for a small seal on Bitcoin. That costs the network fee only, under a penny. bit-sign charges nothing.
+
+Before anything happens, bWalletX shows its own screen with the document title, the box you're signing, a preview of your signature and the cost. Nothing is sent until you tap Sign and seal.
+
+Only fingerprints (hashes) go on-chain, never the document or your signature. Your contract stays private between the people signing it.
+
+### Anyone can check it
+
+Anyone with a copy of the sealed contract can confirm three things: its fingerprint is on-chain, the identity key's signature is valid, and the drawn signature hasn't been changed since.
+
+### Works where you are
+
+On a computer, through the bWalletX Chrome extension. On your phone, in the bWalletX in-app browser. Or scan a QR code with your phone to sign a contract open on your computer.
+
+This gives you an electronic signature backed by strong evidence of who signed, what and when. Whether a particular document can be signed electronically depends on the document and the law where you are; some documents, such as wills and deeds that need a witness, can't. This page isn't legal advice.
+
+[Get bWalletX](https://bwalletx.com/get)
+[All features](https://bwalletx.com/features)
+[Chrome extension](https://bwalletx.com/extension)
+[Privacy](https://bwalletx.com/privacy)
+
+The card signature is in bWalletX 5.1.77 (Android APK, Chrome extension, web and iPhone) and in bWallet, the App Store and Google Play version. Sign and seal is not out yet. Questions: [support@bwalletx.com](mailto:support@bwalletx.com)
+
+---
+
 Source: https://bwalletx.com/social
 
 # bWalletX Social
@@ -2154,6 +2227,8 @@ Create a wallet, back it up, keep your money in dollars, trade on the Exchange, 
 and meet b, your AI agent.
 
 Female voiceMale voice
+
+[Watch on YouTube](https://youtu.be/h5bc2DSiKYI) · [Short](https://youtube.com/shorts/-CmTGzc5iv8) · [@bWalletX](https://www.youtube.com/@bWalletX)
 
 Get bWalletXAndroid · iPhone · Chrome · WebOpen the web walletNo install
 
@@ -4111,7 +4186,7 @@ Source: https://bwalletx.com/blog/016-pots
 
 # Subscriptions, paid from pots
 
-Subscriptions in bWalletX are paid from a subscription pot: money you set aside for them. We call them pots for short. They are out now in 5.1.76, at Settings › Pots. Free, with billing off.
+Subscriptions in bWalletX are paid from a subscription pot: money you set aside for them. We call them pots for short. They are out now in 5.1.75, at Settings › Pots. Free, with billing off.
 
 ## What a pot is
 
@@ -4149,7 +4224,7 @@ Pots are free. We have written down a possible charge of 1 cent a day for later,
 
 ## Next
 
-After that, we want payments that go out on time with the app closed, still without us holding keys. The wallet would sign a few payments in advance, each locked with nLockTime so it can't be broadcast before its date. That is the next step, not part of 5.1.76.
+After that, we want payments that go out on time with the app closed, still without us holding keys. The wallet would sign a few payments in advance, each locked with nLockTime so it can't be broadcast before its date. That is the next step, not part of 5.1.75.
 
 — Richard
 
@@ -4369,7 +4444,7 @@ bChat now has one gold button to sign in with your wallet. Every account starts 
 
 - 016 · 7 Oct 2026
 [Subscriptions, paid from pots](https://bwalletx.com/blog/016-pots)
-Out in bWalletX 5.1.76: put money aside in a pot, set up regular payments from it, and pause them any time. Free, billing off.
+Out in bWalletX 5.1.75: put money aside in a pot, set up regular payments from it, and pause them any time. Free, billing off.
 
 - 015 · 7 Oct 2026
 [Launchpad, and checking what we sign](https://bwalletx.com/blog/015-launchpad)

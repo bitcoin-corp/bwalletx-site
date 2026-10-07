@@ -27,10 +27,11 @@
           { label: 'PNEEs', href: '/pnees', also: ['/pnee'] },
           { label: 'Buy BSV', href: '/buy' }
         ] },
-      { label: 'Social', href: '/social', pages: ['/social', '/friends', '/gmail', '/x'],
+      { label: 'Social', href: '/social', pages: ['/social', '/friends', '/gmail', '/x', '/sign'],
         sub: [
           { label: 'Social', href: '/social' },
           { label: 'Friends', href: '/friends' },
+          { label: 'Your signature', href: '/sign' },
           { label: 'Sign in with X', href: '/x' },
           { label: 'Sign in with Gmail', href: '/gmail' }
         ] },
