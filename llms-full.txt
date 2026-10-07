@@ -814,17 +814,19 @@ Every transaction your account has made, read from the chain. Pick a date range,
 
 - LivePDF statement. A printable statement of the range. On a phone, open it and use Print › Save as PDF.
 
+- LiveTokens and NFTs. Buys, sells, listings, cancels, transfers and mints, each showing the token or NFT and the amount. Since 5.1.82.
+
+- LiveGames, subscriptions and apps. Payments to games, pots and subscriptions, and apps you connected, each with its own label. Since 5.1.82.
+
+- LiveCategory filters. All, Payments, Tokens, NFTs, Games, Subscriptions, Apps, Social. Exports include the category, asset and app. Since 5.1.82.
+
+- LiveConnections log. Which apps used the wallet, when, what you allowed them, what each spent, and a button to revoke access. Recorded on each device from 5.1.82.
+
 Open it from the wallet: tap History on the account card. Payments from a pot show there too; see [Subscriptions and Pots](https://bwalletx.com/subscriptions).
 
 ## Coming
 
-- ComingMore kinds of transaction. Token and NFT buys, sells and transfers, and game, subscription and app payments, each with its own label.
-
-- ComingCategory filters. Show only one kind at a time.
-
-- ComingConnections log. Which apps the wallet connected to, what you allowed them to do, and how much each one spent.
-
-- ComingGains and losses. Realised gains and losses for capital gains reporting, using UK HMRC share-pooling rules by default with FIFO as an option, and historical prices in your currency.
+- ComingGains and losses. A Gains tab with realised gains and losses per tax year: UK HMRC share-pooling rules in pounds by default, FIFO in dollars elsewhere, BSV tracked as an asset, and a disposals CSV for your accountant. Built and in testing; due in the next release.
 
 No dates yet. These ship when they work.
 
@@ -1178,6 +1180,161 @@ Stuck at 2am and nobody's around? Type `/b` followed by your question and the $b
 
 ---
 
+Source: https://bwalletx.com/media-src/og/blog-num/og-014
+
+-
+
+Blog · 014
+
+# One feed for BSV
+
+Every BSV social app keeps its own feed. bChat shows all of them, credits them, and pays the people who wrote the posts.
+
+0146 Oct 2026
+
+bwalletx.com/blog · post 14 of 21
+
+---
+
+Source: https://bwalletx.com/media-src/og/blog-num/og-015
+
+-
+
+Blog · 015
+
+# Launchpad, and checking what we sign
+
+bWalletX 5.1.74 buys and sells bonding-curve coins, and checks every trade the server prepares before it signs.
+
+0157 Oct 2026
+
+bwalletx.com/blog · post 15 of 21
+
+---
+
+Source: https://bwalletx.com/media-src/og/blog-num/og-016
+
+-
+
+Blog · 016
+
+# Subscriptions, paid from pots
+
+Put money aside in a pot, set up regular payments from it, and pause them any time.
+
+0167 Oct 2026
+
+bwalletx.com/blog · post 16 of 21
+
+---
+
+Source: https://bwalletx.com/media-src/og/blog-num/og-017
+
+-
+
+Blog · 017
+
+# Sign in with bWalletX, and the Lounge
+
+bChat now has one gold button to sign in with your wallet. Every account starts in the bWallet Lounge.
+
+0177 Oct 2026
+
+bwalletx.com/blog · post 17 of 21
+
+---
+
+Source: https://bwalletx.com/media-src/og/blog-num/og-018
+
+-
+
+Blog · 018
+
+# 1 BSV for testing bWallet on Android
+
+Google needs 12 people to test bWallet for 14 days before the Play Store. We pay 1 BSV for that time.
+
+0187 Oct 2026
+
+bwalletx.com/blog · post 18 of 21
+
+---
+
+Source: https://bwalletx.com/media-src/og/blog-num/og-019
+
+-
+
+Blog · 019
+
+# Blur slurs, show swearing
+
+The bChat feed and bWalletX blur slurs behind a tap. Swearing is shown. Nothing is deleted.
+
+0197 Oct 2026
+
+bwalletx.com/blog · post 19 of 21
+
+---
+
+Source: https://bwalletx.com/media-src/og/blog-num/og-020
+
+-
+
+Blog · 020
+
+# Sign in with X
+
+Make a wallet from your X account, with your X name as a verified paymail, your picture, a token and a room.
+
+0207 Oct 2026
+
+bwalletx.com/blog · post 20 of 21
+
+---
+
+Source: https://bwalletx.com/media-src/og/blog-num/og-021
+
+-
+
+Blog · 021
+
+# Coordinate on BSV
+
+Advertise there, coordinate here. The first post in a series on chat on BSV.
+
+0217 Oct 2026
+
+bwalletx.com/blog · post 21 of 21
+
+---
+
+Source: https://bwalletx.com/media-src/og/blog/og-021
+
+bWalletX blog
+
+021 · CHAT ON BSV
+
+# Coordinate on BSV.
+Talk where the money is.
+
+Advertise there, coordinate here. Part 1 of a series on chat on BSV
+
+### COORDINATE HERE
+
+bChat
+
+Twetch
+
+Treechat
+
+Fwetch
+
+Peck
+
+Signed. Paid. On-chain.
+
+---
+
 Source: https://bwalletx.com/media-src/og/blog/og-blog-014
 
 bWalletX blog
@@ -1502,6 +1659,40 @@ bwalletx.com/friends
 
 ---
 
+Source: https://bwalletx.com/media-src/og/og-history
+
+-
+
+bWalletX
+
+# Know where every satoshi went.
+
+Tokens, NFTs, games, subscriptions and apps, all in one history. Export a statement or a spreadsheet for your accountant.
+
+### HISTORY
+
+AllTokensNFTsGamesSubscriptionsApps
+
+Bought 204 $NINJAPUNKGIRLSExchange · Tokens
+−$3.92
+
+bChat subscriptionPot · Subscriptions
+−$0.03
+
+Sold NFT · Kowry GliderExchange · NFTs
++$1.92
+
+bGames · Snakebitcoin-gaming · Games
+−$0.01
+
+CSV
+
+PDF statement
+
+bwalletx.com/history · Android · iPhone · Chrome · Web
+
+---
+
 Source: https://bwalletx.com/media-src/og/og-home-v2
 
 -
@@ -1549,6 +1740,36 @@ bWalletX
 ExchangeSocial roomsAI agentsStrategiesPNEEs
 
 bwalletx.com · Android · iPhone · Chrome · Web
+
+---
+
+Source: https://bwalletx.com/media-src/og/og-identity
+
+-
+
+bWalletX
+
+# Your name, your signature, your 12 words.
+
+Handles, on-chain identity, document signing and sign-in with your wallet. Verify who you are only when you need to.
+
+### IDENTITY
+
+$yournameHandle · numbered from $bwallet0101
+Live
+
+X · Google and more$401 linked accounts
+Live
+
+Sign and sealContracts with your signature
+Live
+
+Verify (KYC)Optional · only when needed
+Live
+
+Sign in with bWalletX
+
+bwalletx.com/identity · Android · iPhone · Chrome · Web
 
 ---
 
@@ -1758,6 +1979,38 @@ Strategies are programs
 Write it→
 Load it→
 Sell it
+
+---
+
+Source: https://bwalletx.com/media-src/og/og-subscriptions
+
+-
+
+bWalletX
+
+# Set money aside. Pay from it. Pause any time.
+
+Pots hold what you choose. Standing orders and subscriptions pay from them, and never more than is in the pot.
+
+### POTS
+
+bChat potHolds
+$12.00
+
+bChat · monthlySubscription
+$3.00
+
+Rent to $landlordStanding order · monthly
+$40.00
+
+$b agentSubscription · daily
+$0.01
+
+Pause
+
+Stop this pot
+
+bwalletx.com/subscriptions · Android · iPhone · Chrome · Web
 
 ---
 
@@ -2037,6 +2290,30 @@ Playwright Test
 
 ---
 
+Source: https://bwalletx.com/media-src/youtube/banner
+
+-
+
+bWalletX
+
+The BSV wallet with chat, games and your own token
+
+bwalletx.com
+
+---
+
+Source: https://bwalletx.com/media-src/youtube/profile
+
+
+
+---
+
+Source: https://bwalletx.com/media-src/youtube/watermark
+
+
+
+---
+
 Source: https://bwalletx.com/mint
 
 # Make something. Mint it.
@@ -2294,6 +2571,58 @@ PNEEs are an experiment. Don’t put in more than you can lose. Questions: [supp
 
 ---
 
+Source: https://bwalletx.com/pots
+
+# Pots. Set money aside. Pay from it.
+
+A pot is money you set aside inside your wallet. Regular payments come out of it, and never more than is in it. Stop it any time, without asking anyone.
+
+[Get bWalletX](https://bwalletx.com/get)
+
+## What a pot is
+
+A pot is a named account inside your wallet, like Rent or Savings. It has its own balance. You fill it from your main account and top it up whenever you like.
+
+Each pot has a Top up option, a Stop this pot switch, and its own History of every payment, with a link to each transaction on chain.
+
+## The most you can lose
+
+The pot balance is the most any payment from it can ever take. If a pot is empty, nothing more can leave it. Your main account is never touched by a pot payment.
+
+## Paying from a pot
+
+Standing orders pay a person or a paymail a fixed dollar amount, daily, weekly or monthly, from a pot. Subscriptions are the same thing paid to an app or service. Both are covered on the [Subscriptions](https://bwalletx.com/subscriptions) page.
+
+Payments go out when you open the app on or after each date. If you miss a few dates, the next open catches up, up to three payments; more than that, it asks you first. If notifications are on, the wallet tells you when a pot is running low or a payment fails.
+
+## Pause, resume, stop
+
+Open Settings › Subscriptions and tap a pot. Each payment card has Pause, Resume and Cancel. To stop everything in a pot at once, use Stop this pot; resume it the same way.
+
+## What works today
+
+- LivePots. Name, fund, top up, stop and resume. Each has its own balance and history.
+
+- LivePayments from pots. Standing orders and subscriptions, capped by the pot balance.
+
+- LiveLow-balance and failed-payment reminders.
+
+- ComingPayments while the app is closed. Future payments signed in advance (nLockTime), so the payee can collect each on its date.
+
+- ComingPots in PNEEs. Pots that hold and pay penny tokens, so a 1¢ payment stays 1¢.
+
+## bWallet (App Store and Google Play) and bWalletX
+
+- LiveBoth: pots, standing orders to a person or paymail, pause, resume, stop and reminders. Pots are free.
+
+- LivebWalletX only: subscriptions to apps and services paid from a pot. Store rules don’t allow these in the store edition.
+
+Why we are building this: [016 Pots](https://bwalletx.com/blog/016-pots).
+
+bWalletX is in beta: test with small amounts. Questions: [support@bwalletx.com](mailto:support@bwalletx.com)
+
+---
+
 Source: https://bwalletx.com/push-notifications
 
 # Push notifications
@@ -2499,17 +2828,15 @@ bWalletX is in beta and some room rules are still being rolled out. Tokens can l
 
 Source: https://bwalletx.com/subscriptions
 
-# Subscriptions and Pots. Set it, cap it, stop it.
+# Subscriptions. Set it, cap it, stop it.
 
 Put money aside in a pot. Set up regular payments from it. The pot balance is the most they can ever take. Pause or cancel any time, without asking anyone.
 
 [Get bWalletX](https://bwalletx.com/get)
 
-## Pots
+## Paid from pots
 
-A pot is a named account inside your wallet, like Rent or Savings. It has its own balance. You fill it from your main account, and regular payments come out of it. If a pot is empty, nothing more can leave it.
-
-Each pot has a Stop this pot switch, a Top up option, and its own History of every payment, with a link to each transaction on chain.
+Every subscription and standing order pays from a pot: money you set aside, whose balance is the most it can ever take. How pots work: [Pots](https://bwalletx.com/pots).
 
 ## Standing orders and subscriptions
 
@@ -2576,6 +2903,8 @@ Source: https://bwalletx.com/testers
 Test bWallet on your Android phone for 14 days and I'll pay you 1 BSV. Google won't let me publish on the Play Store until at least 12 people have tested it for 14 days in a row, so I'm paying for that time.
 
 20 places
+
+Status, 7 Oct 2026: the 14-day test hasn't started yet. Google asked us to move bWallet to an organisation developer account first, and that is being verified. The terms above still stand. If you've signed up, you keep your place and we'll email you when the test opens.
 
 Loading…
 
@@ -3908,6 +4237,8 @@ The "X" itself went back and forth. First we added a small x to the b in the log
 
 The same split shows in the tab names. In bWalletX the trading tab is called Exchange. In the store app it is called Market, and it is browse-only. One setting in the code picks the label, so the two apps share the same screens.
 
+Update, 7 Oct 2026: In the store app it is no longer called Market: the store edition, bWallet, no longer has a Market or Exchange tab at all, not even a view-only one (Apple guideline 3.1.5(iii)). Trading is only in bWalletX: see [Exchange](https://bwalletx.com/exchange).
+
 ## Was it worth it
 
 Probably, but it cost time. Every rename meant new icons, new share images, site copy and checks that old installs still update in place. One example: the private iOS channel kept its earlier bundle ID so existing installs would update to bWalletX instead of appearing as a second app. If we did it again, we would decide the store/private split before choosing any name.
@@ -4089,6 +4420,8 @@ On 3 October we found that since 2 October the indexer lists a token only once i
 
 0.1 BSV is a lot to ask from someone minting a personal token on day one. The same day, minting stopped paying for indexing. Instead the wallet remembers your token and offers "Set up $X's room": the indexer minimum plus a bCorp fee in one transaction, with a "Not now" option.
 
+Update, 7 Oct 2026: The bCorp fee now applies only to the token's issuer. Someone who holds a token they didn't create pays only the indexing cost (post [015](https://bwalletx.com/blog/015-launchpad)).
+
 ## Attempt four: say what it is
 
 On 4 October we changed the wording: the room's indexer minimum is a prepaid deposit that the indexer draws on, not a fee that disappears. That is closer to how it works.
@@ -4136,6 +4469,8 @@ A build switch turns the store rules on. Then we split into four channels with s
 ## Going back and forth on the Market
 
 The store build first had a view-only Market. Later on 2 October we let it keep the token wallet: minting, peer-to-peer trading and indexing, with no bCorp fees. On 3 October we made the store Market view-only again, citing Apple guideline 3.1.5(iii) on cryptocurrency exchanges. The store build also dropped the investor share offers we had prototyped; that panel was removed from every build.
+
+Update, 7 Oct 2026: Since then the store edition, bWallet, no longer has a Market or Exchange tab at all, not even a view-only one (Apple guideline 3.1.5(iii)). Trading is only in bWalletX: see [Exchange](https://bwalletx.com/exchange).
 
 ## What the stores require, and we built
 
@@ -4198,6 +4533,8 @@ On 4 October Sell came back, listing tokens as OrdLock v2, since v1 creation is 
 ## Exchange today
 
 In bWalletX the tab is called Exchange. It has category filters, search by ticker or token id, price charts from recent sales, and sections for Strategies (post 010) and Contracts and Bonds (post 011). Token rows have Buy, Sell, Send and Chat. In the store app it is Market and view-only.
+
+Update, 7 Oct 2026: The store app no longer has a view-only Market: the store edition, bWallet, no longer has a Market or Exchange tab at all, not even a view-only one (Apple guideline 3.1.5(iii)). Trading is only in bWalletX: see [Exchange](https://bwalletx.com/exchange).
 
 ## What's not done
 
@@ -4524,6 +4861,8 @@ bWalletX 5.1.74 can buy and sell bonding-curve coins. The wallet now checks ever
 
 Launchpad is a filter in Market. It lists BlastPad bonding-curve coins and lets you buy and sell them from inside the wallet.
 
+Update, 7 Oct 2026: In bWalletX this tab is called Exchange, so Launchpad is a filter in [Exchange](https://bwalletx.com/exchange).
+
 A bonding curve sets the price from how many coins have been sold. The server builds the transaction for each trade and the wallet signs it.
 
 Launchpad is only in bWalletX. The store builds of bWallet carry none of its code or text.
@@ -4568,6 +4907,8 @@ If you hold a token but didn't create it, you pay only the indexing cost. No fee
 
 When you mint your own handle's token and open its chat room, we add $1 on top. That is the only time we charge it. The button says the exact sats and whether the fee is included, and the confirm sheet lists each line and the network fee.
 
+Update, 7 Oct 2026: the first 1,000 rooms are free.
+
 — Richard
 
 Related: [Exchange](https://bwalletx.com/exchange) · [006 Who pays for indexing](https://bwalletx.com/blog/006-paying-for-indexing) · [008 Building the Exchange](https://bwalletx.com/blog/008-the-exchange)
@@ -4583,6 +4924,8 @@ Source: https://bwalletx.com/blog/016-pots
 # Subscriptions, paid from pots
 
 Subscriptions in bWalletX are paid from a subscription pot: money you set aside for them. We call them pots for short. They are out now in 5.1.75, at Settings › Pots. Free, with billing off.
+
+Update, 7 Oct 2026: Pots are now listed as Subscriptions in Settings, so look for Settings › Subscriptions rather than Settings › Pots. More on the [Subscriptions](https://bwalletx.com/subscriptions) page.
 
 ## What a pot is
 
@@ -4613,6 +4956,8 @@ Your keys stay on your phone. We looked at holding pot keys on a server so payme
 ## The store edition
 
 bWallet, the edition in the App Store and Play Store, has pots and regular payments to people (a $handle or paymail). Subscriptions to apps and services are in bWalletX only.
+
+Update, 7 Oct 2026: bWallet is not in the App Store or Google Play yet. What is described here is what the store edition will have when it is published.
 
 ## No charge
 
@@ -4679,6 +5024,8 @@ Source: https://bwalletx.com/blog/018-testers
 # 1 BSV for testing bWallet on Android
 
 Google needs 12 people to test bWallet for 14 days before it can go on the Play Store. We are paying 1 BSV for that time.
+
+Update, 7 Oct 2026: Google required an organisation developer account for bWallet, so the closed test has to be set up and submitted again. We have no new start date yet. The tester payments described below have not changed; the [Testers](https://bwalletx.com/testers) page has the current state.
 
 ## Why we are paying
 
@@ -4900,87 +5247,87 @@ How bWallet and bWalletX were built, one chapter at a time. Every post is writte
 
 Newest first. Dates come from commits. bWallet is a fork of [Yours Wallet](https://github.com/yours-org/yours-wallet) (MIT licence).
 
-- 021 · 7 Oct 2026
+- [](https://bwalletx.com/blog/021-coordinate-on-bsv)021 · 7 Oct 2026
 [Coordinate on BSV](https://bwalletx.com/blog/021-coordinate-on-bsv)
 Big platforms put every community in one room. BSV needs a place to plan that it controls. Chat in bWalletX is that place: the first post in a series on chat on BSV.
 
-- 020 · 7 Oct 2026
+- [](https://bwalletx.com/blog/020-sign-in-with-x)020 · 7 Oct 2026
 [Sign in with X](https://bwalletx.com/blog/020-sign-in-with-x)
 bWalletX can make a wallet from your X account. You get your X username as a verified paymail, b0asex.x@bwalletx.com for example, with your picture, a token and a room.
 
-- 019 · 7 Oct 2026
+- [](https://bwalletx.com/blog/019-language-filter)019 · 7 Oct 2026
 [Blur slurs, show swearing](https://bwalletx.com/blog/019-language-filter)
 The bChat feed and bWalletX now blur slurs behind a tap. Swearing is shown. Nothing is deleted.
 
-- 018 · 7 Oct 2026
+- [](https://bwalletx.com/blog/018-testers)018 · 7 Oct 2026
 [1 BSV for testing bWallet on Android](https://bwalletx.com/blog/018-testers)
 Google needs 12 people to test bWallet for 14 days before it can go on the Play Store. We are paying 1 BSV for that time.
 
-- 017 · 7 Oct 2026
+- [](https://bwalletx.com/blog/017-sign-in-and-lounge)017 · 7 Oct 2026
 [Sign in with bWalletX, and the Lounge](https://bwalletx.com/blog/017-sign-in-and-lounge)
 bChat now has one gold button to sign in with your wallet. Every account starts in the bWallet Lounge.
 
-- 016 · 7 Oct 2026
+- [](https://bwalletx.com/blog/016-pots)016 · 7 Oct 2026
 [Subscriptions, paid from pots](https://bwalletx.com/blog/016-pots)
 Out in bWalletX 5.1.75: put money aside in a pot, set up regular payments from it, and pause them any time. Free, billing off.
 
-- 015 · 7 Oct 2026
+- [](https://bwalletx.com/blog/015-launchpad)015 · 7 Oct 2026
 [Launchpad, and checking what we sign](https://bwalletx.com/blog/015-launchpad)
 bWalletX 5.1.74 can buy and sell bonding-curve coins. The wallet now checks every trade the server prepares before it signs anything.
 
-- 014 · 6 Oct 2026
+- [](https://bwalletx.com/blog/014-open-feed)014 · 6 Oct 2026
 [One feed for BSV](https://bwalletx.com/blog/014-open-feed)
 Every BSV social app keeps its own feed. bChat shows all of them, credits them, and pays the people who wrote the posts.
 
-- 013 · 29 Sep – 5 Oct 2026
+- [](https://bwalletx.com/blog/013-sites-and-navigation)013 · 29 Sep – 5 Oct 2026
 [Two sites from one](https://bwalletx.com/blog/013-sites-and-navigation)
 A download page became bwallet.space, then bwalletx.com became the main site, with the store site generated from it. And this blog.
 
-- 012 · 1–5 Oct 2026
+- [](https://bwalletx.com/blog/012-extension-and-web)012 · 1–5 Oct 2026
 [The extension, the web app and pairing](https://bwalletx.com/blog/012-extension-and-web)
 bWalletX also runs as a Chrome and Brave extension and as a web app. On iPhone the web app is the only way to get the full wallet, so we made backup mandatory there.
 
-- 011 · 4–5 Oct 2026
+- [](https://bwalletx.com/blog/011-pnees-pilot)011 · 4–5 Oct 2026
 [From a dollar bond to PNEEs on mainnet](https://bwalletx.com/blog/011-pnees-pilot)
 A BSV-backed dollar token went from a design note to a small, capped mainnet pilot in two days. This is what is enforced, what is not, and what went wrong.
 
-- 010 · 4–5 Oct 2026
+- [](https://bwalletx.com/blog/010-agents-strategies-cli)010 · 4–5 Oct 2026
 [Agent accounts, strategies, CLI and MCP](https://bwalletx.com/blog/010-agents-strategies-cli)
 Separate wallet accounts for agents, spending rules the wallet enforces, a market for strategies, and a command-line tool that keeps keys on the phone.
 
-- 009 · 1–5 Oct 2026
+- [](https://bwalletx.com/blog/009-the-b-agent)009 · 1–5 Oct 2026
 [The b agent: paid, or your own key](https://bwalletx.com/blog/009-the-b-agent)
 An assistant inside the wallet. It started free, became paid-only within a day, and now asks for consent before it sends anything.
 
-- 008 · 1–5 Oct 2026
+- [](https://bwalletx.com/blog/008-the-exchange)008 · 1–5 Oct 2026
 [Building the Exchange, and why buys broke](https://bwalletx.com/blog/008-the-exchange)
 Listing and buying 1Sat tokens from the wallet. Most of the work was not the screens but storage limits, double-encrypted records and slow APIs.
 
-- 007 · 2–5 Oct 2026
+- [](https://bwalletx.com/blog/007-store-and-private)007 · 2–5 Oct 2026
 [Store rules, open rooms and moderation](https://bwalletx.com/blog/007-store-and-private)
 We audited the app against App Store and Play rules, split it into four release channels and built the safety features the stores require.
 
-- 006 · 1–4 Oct 2026
+- [](https://bwalletx.com/blog/006-paying-for-indexing)006 · 1–4 Oct 2026
 [Who pays for indexing](https://bwalletx.com/blog/006-paying-for-indexing)
 A BSV-21 token only shows up in wallets once an indexer lists it. Working out who pays for that, and how much, took four attempts.
 
-- 005 · 1–5 Oct 2026
+- [](https://bwalletx.com/blog/005-personal-tokens-and-rooms)005 · 1–5 Oct 2026
 [Personal tokens and token rooms](https://bwalletx.com/blog/005-personal-tokens-and-rooms)
 Hold a token to enter its chat room. Your $NAME is a token with its own room. How rooms, tickets and issuers came together, and what we reversed.
 
-- 004 · 1–4 Oct 2026
+- [](https://bwalletx.com/blog/004-names-and-paymail)004 · 1–4 Oct 2026
 [Names, handles and paymail](https://bwalletx.com/blog/004-names-and-paymail)
 Send to $handle, name@bwalletx.com or an OpNS name. The paymail server moved domain twice, and social sign-in became a verified name.
 
-- 003 · 1–5 Oct 2026
+- [](https://bwalletx.com/blog/003-tabs-apps-feed)003 · 1–5 Oct 2026
 [Tabs, apps and a social feed](https://bwalletx.com/blog/003-tabs-apps-feed)
 The phone layout changed many times. We added an Apps home screen with 100+ BSV apps, a Media player and a feed that reads other BSV social apps.
 
-- 002 · 30 Sep – 4 Oct 2026
+- [](https://bwalletx.com/blog/002-four-names)002 · 30 Sep – 4 Oct 2026
 [Four names in a week](https://bwalletx.com/blog/002-four-names)
 Yours Wallet Mobile, bCorp Wallet, bWallet, then bWalletX. Why the name kept changing, and why there are now two apps.
 
-- 001 · 29–30 Sep 2026
+- [](https://bwalletx.com/blog/001-the-fork)001 · 29–30 Sep 2026
 [Forking Yours Wallet onto phones](https://bwalletx.com/blog/001-the-fork)
 We took the Yours Wallet browser extension and wrapped it as an iPhone and Android app with Capacitor, without rewriting its code.
 

@@ -45,6 +45,15 @@
   <url><loc>https://bwalletx.com/iphone</loc></url>
   <url><loc>https://bwalletx.com/lounge</loc></url>
   <url><loc>https://bwalletx.com/mcp</loc></url>
+  <url><loc>https://bwalletx.com/media-src/og/blog-num/og-014</loc></url>
+  <url><loc>https://bwalletx.com/media-src/og/blog-num/og-015</loc></url>
+  <url><loc>https://bwalletx.com/media-src/og/blog-num/og-016</loc></url>
+  <url><loc>https://bwalletx.com/media-src/og/blog-num/og-017</loc></url>
+  <url><loc>https://bwalletx.com/media-src/og/blog-num/og-018</loc></url>
+  <url><loc>https://bwalletx.com/media-src/og/blog-num/og-019</loc></url>
+  <url><loc>https://bwalletx.com/media-src/og/blog-num/og-020</loc></url>
+  <url><loc>https://bwalletx.com/media-src/og/blog-num/og-021</loc></url>
+  <url><loc>https://bwalletx.com/media-src/og/blog/og-021</loc></url>
   <url><loc>https://bwalletx.com/media-src/og/blog/og-blog-014</loc></url>
   <url><loc>https://bwalletx.com/media-src/og/og-agent-v2</loc></url>
   <url><loc>https://bwalletx.com/media-src/og/og-agent</loc></url>
@@ -61,8 +70,10 @@
   <url><loc>https://bwalletx.com/media-src/og/og-exstrat</loc></url>
   <url><loc>https://bwalletx.com/media-src/og/og-friends</loc></url>
   <url><loc>https://bwalletx.com/media-src/og/og-friends5</loc></url>
+  <url><loc>https://bwalletx.com/media-src/og/og-history</loc></url>
   <url><loc>https://bwalletx.com/media-src/og/og-home-v2</loc></url>
   <url><loc>https://bwalletx.com/media-src/og/og-home-v3</loc></url>
+  <url><loc>https://bwalletx.com/media-src/og/og-identity</loc></url>
   <url><loc>https://bwalletx.com/media-src/og/og-iphone</loc></url>
   <url><loc>https://bwalletx.com/media-src/og/og-lounge</loc></url>
   <url><loc>https://bwalletx.com/media-src/og/og-mcp</loc></url>
@@ -74,6 +85,7 @@
   <url><loc>https://bwalletx.com/media-src/og/og-spec</loc></url>
   <url><loc>https://bwalletx.com/media-src/og/og-strat3</loc></url>
   <url><loc>https://bwalletx.com/media-src/og/og-strategies</loc></url>
+  <url><loc>https://bwalletx.com/media-src/og/og-subscriptions</loc></url>
   <url><loc>https://bwalletx.com/media-src/og/testers/og-testers</loc></url>
   <url><loc>https://bwalletx.com/media-src/walkthrough-01/cut/tmp/cap-16x9-2</loc></url>
   <url><loc>https://bwalletx.com/media-src/walkthrough-01/cut/tmp/cap-16x9-3</loc></url>
@@ -101,9 +113,13 @@
   <url><loc>https://bwalletx.com/media-src/walkthrough-01/rec/node_modules/playwright-core/lib/vite/traceViewer/</loc></url>
   <url><loc>https://bwalletx.com/media-src/walkthrough-01/rec/node_modules/playwright-core/lib/vite/traceViewer/snapshot</loc></url>
   <url><loc>https://bwalletx.com/media-src/walkthrough-01/rec/node_modules/playwright-core/lib/vite/traceViewer/uiMode</loc></url>
+  <url><loc>https://bwalletx.com/media-src/youtube/banner</loc></url>
+  <url><loc>https://bwalletx.com/media-src/youtube/profile</loc></url>
+  <url><loc>https://bwalletx.com/media-src/youtube/watermark</loc></url>
   <url><loc>https://bwalletx.com/mint</loc></url>
   <url><loc>https://bwalletx.com/pnee</loc></url>
   <url><loc>https://bwalletx.com/pnees</loc></url>
+  <url><loc>https://bwalletx.com/pots</loc></url>
   <url><loc>https://bwalletx.com/push-notifications</loc></url>
   <url><loc>https://bwalletx.com/sign</loc></url>
   <url><loc>https://bwalletx.com/social</loc></url>

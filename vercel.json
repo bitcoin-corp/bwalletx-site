@@ -59,11 +59,6 @@
       "permanent": true
     },
     {
-      "source": "/pots",
-      "destination": "/subscriptions#pots",
-      "permanent": true
-    },
-    {
       "source": "/kyc",
       "destination": "/identity#verify",
       "permanent": true
