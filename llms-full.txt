@@ -5017,13 +5017,13 @@ The app is not directed at children under 13.
 ## Changes
 
 We'll post changes to this policy on this page, and in the source repository at
-[github.com/b0ase/yours-mobile](https://github.com/b0ase/yours-mobile).
+[github.com/bitcoin-corp/bwallet](https://github.com/bitcoin-corp/bwallet).
 
 ## Contact
 
 The Bitcoin Corporation Ltd:
 [support@bwalletx.com](mailto:support@bwalletx.com), or open an issue at
-[github.com/b0ase/yours-mobile/issues](https://github.com/b0ase/yours-mobile/issues).
+[github.com/bitcoin-corp/bwallet/issues](https://github.com/bitcoin-corp/bwallet/issues).
 
 ---
 

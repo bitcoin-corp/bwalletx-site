@@ -11,7 +11,7 @@ MONTHS = {m: i + 1 for i, m in enumerate('Jan Feb Mar Apr May Jun Jul Aug Sep Oc
 ORG = {
     '@type': 'Organization', '@id': BASE + '/#org', 'name': 'The Bitcoin Corporation Ltd',
     'url': BASE + '/', 'logo': BASE + '/icon-512.png', 'email': 'support@bwalletx.com',
-    'sameAs': ['https://x.com/bWalletX', 'https://www.youtube.com/@bWalletX', 'https://github.com/b0ase/yours-mobile'],
+    'sameAs': ['https://x.com/bWalletX', 'https://www.youtube.com/@bWalletX', 'https://github.com/bitcoin-corp/bwallet'],
 }
 APP = {
     '@type': 'SoftwareApplication', '@id': BASE + '/#app', 'name': 'bWalletX',
