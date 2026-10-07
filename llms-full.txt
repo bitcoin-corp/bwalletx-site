@@ -24,7 +24,7 @@ It isn't on Google Play yet, so install it by hand:
 
 Updating from an older version? Install over the top and your wallet stays. If Android says the app can't be updated, write down your 12 words first, then uninstall and reinstall.
 
-Version 5.1.83 beta · 20.0 MB · Android 7+ · SHA-256 7d6fd93395081f42fde0907f67ad47bd89a8909a833f62d0ea779ec567f7ad71
+Version 5.1.83 beta · 21.0 MB · Android 7+ · SHA-256 7d6fd93395081f42fde0907f67ad47bd89a8909a833f62d0ea779ec567f7ad71
 
 Also: [Chrome extension](https://bwalletx.com/extension) · [Developers](https://bwalletx.com/developers)
 
