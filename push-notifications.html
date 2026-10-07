@@ -3,14 +3,14 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Push notifications (coming soon) · bWalletX</title>
+    <title>Push notifications · bWalletX</title>
     <link rel="canonical" href="https://bwalletx.com/push-notifications" />
-    <meta name="description" content="Push notifications for bWalletX are coming soon: messages, mentions, payments and calls on iPhone, Android, web and the Chrome extension, even with the app closed. Who messaged you, not what they wrote." />
+    <meta name="description" content="Push notifications are live in bWalletX: direct messages, mentions, group messages you opt into, $b answers and signing requests on iPhone, Android, the web wallet and the Chrome extension, even with the app closed. Who messaged you, not what they wrote." />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://bwalletx.com/push-notifications" />
     <meta property="og:site_name" content="bWalletX" />
     <meta property="og:title" content="Push notifications in bWalletX: never miss a message" />
-    <meta property="og:description" content="Push notifications for bWalletX are coming soon: messages, mentions, payments and calls on iPhone, Android, web and the Chrome extension, even with the app closed. Who messaged you, not what they wrote." />
+    <meta property="og:description" content="Push notifications are live in bWalletX: direct messages, mentions, group messages you opt into, $b answers and signing requests on iPhone, Android, the web wallet and the Chrome extension, even with the app closed. Who messaged you, not what they wrote." />
     <meta property="og:image" content="https://bwalletx.com/og-push.png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
@@ -18,7 +18,7 @@
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@bWalletX" />
     <meta name="twitter:title" content="Push notifications in bWalletX: never miss a message" />
-    <meta name="twitter:description" content="Push notifications for bWalletX are coming soon: messages, mentions, payments and calls on iPhone, Android, web and the Chrome extension, even with the app closed. Who messaged you, not what they wrote." />
+    <meta name="twitter:description" content="Push notifications are live in bWalletX: direct messages, mentions, group messages you opt into, $b answers and signing requests on iPhone, Android, the web wallet and the Chrome extension, even with the app closed. Who messaged you, not what they wrote." />
     <meta name="twitter:image" content="https://bwalletx.com/og-push.png" />
     <link rel="icon" href="/favicon.ico" />
     <link rel="stylesheet" href="/styles.css" />
@@ -57,32 +57,33 @@
     <main class="ext">
       <img src="/logo.svg" alt="bWalletX" width="72" height="64" />
       <h1>Push notifications</h1>
-      <p class="lede">Never miss a message. Real push notifications for messages, mentions, payments and calls are being built now and rolling out soon, on your phone, the web wallet and the Chrome extension.</p>
+      <p class="lede">Never miss a message. Push notifications are live since version 5.1.70 and reach you even with the app closed: on your phone, the web wallet and the Chrome extension. They run through our own push server, push.bwalletx.com.</p>
       <div class="flow">
-        <span class="pill">Coming soon</span><span class="pill">iPhone</span><span class="pill">Android</span><span class="pill">Web</span><span class="pill">Chrome extension</span>
+        <span class="pill">Live</span><span class="pill">iPhone</span><span class="pill">Android</span><span class="pill">Web</span><span class="pill">Chrome extension</span>
       </div>
 
-      <h2>How it works today</h2>
-      <p>While the app is open, it checks for new messages, replies, mentions and payments every 90 seconds and shows a notification on your phone. When the app is closed, nothing arrives yet. On the web wallet and the Chrome extension you see the bell inside the app only.</p>
-
-      <h2>What's coming</h2>
-      <div class="box"><h3>iPhone</h3><p>Apple Push Notifications, so alerts arrive with the app closed.</p></div>
-      <div class="box"><h3>Android</h3><p>Firebase Cloud Messaging, so alerts arrive with the app closed.</p></div>
+      <h2>Where it works</h2>
+      <div class="box"><h3>iPhone</h3><p>Apple Push Notifications.</p></div>
+      <div class="box"><h3>Android</h3><p>Firebase Cloud Messaging.</p></div>
       <div class="box"><h3>Web wallet and Chrome extension</h3><p>Web Push, so your browser can tell you even when the tab isn't open.</p></div>
 
-      <h2>What will notify you</h2>
+      <h2>Turning it on</h2>
+      <p>Go to <b>Settings &rsaquo; Notifications &rsaquo; Push notifications</b>. In the phone apps the switch starts on. In the web wallet and the Chrome extension it starts off: turn it on there and your browser asks for permission. The switch is per device; previews and quiet hours belong to your account and follow you to every device.</p>
+
+      <h2>What notifies you</h2>
       <ul>
         <li><b>Direct messages</b> from friends, always.</li>
         <li><b>Group chats</b>: each group has a bell with <b>All</b>, <b>Mentions</b> or <b>Off</b>. Groups start on Mentions, so busy rooms don't buzz you all day.</li>
         <li><b>Mentions</b> of your <code>$name</code>.</li>
-        <li><b>Payments received</b>: BSV and tokens.</li>
+        <li><b>Photos, voice and video messages</b> sent to a room you're in.</li>
         <li><b>$b answers</b> to your <code>/b</code> questions.</li>
-        <li><b>Calls</b>.</li>
+        <li><b>Requests to sign or witness</b> a document.</li>
       </ul>
+      <p>Tapping a notification opens the room or screen it's about. Several messages in quick succession are collapsed into one.</p>
 
       <h2>Privacy</h2>
-      <p>By default a notification says who messaged you, not what they wrote, so nothing private shows on your lock screen. If you want message previews, turn them on in Settings. No message text is stored on our push server.</p>
-      <p>You can turn notifications off per group, per category, or entirely in <b>Settings &rsaquo; Notifications</b>. Your keys never leave your device; notifications don't need them.</p>
+      <p>By default a notification says who messaged you, not what they wrote, so nothing private shows on your lock screen. If you want message previews, turn on <b>Show message previews</b>. <b>Quiet hours</b> silence notifications overnight or whenever you choose. No message text is stored on our push server.</p>
+      <p>You can turn notifications off per group with the bell, or entirely in <b>Settings &rsaquo; Notifications</b>. Your keys never leave your device; notifications don't need them.</p>
 
       <h2>bWalletX and bWallet</h2>
       <p>Notifications work the same in both editions: bWalletX here, and bWallet, the App Store and Google Play version.</p>
@@ -92,7 +93,7 @@
         <a class="btn btn-store btn-ghost" href="/social">Social in bWalletX</a>
         <a class="btn btn-store btn-ghost" href="/privacy">Privacy</a>
       </div>
-      <p class="small">Push notifications are in development and not live yet; this page will be updated as they roll out. Questions: <a href="mailto:support@bwalletx.com">support@bwalletx.com</a></p>
+      <p class="small">Questions: <a href="mailto:support@bwalletx.com">support@bwalletx.com</a></p>
     </main>
   </body>
 </html>
