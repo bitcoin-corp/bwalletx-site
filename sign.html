@@ -55,7 +55,7 @@
     <main class="ext">
       <img src="/logo.svg" alt="bWalletX" width="72" height="64" />
       <h1>Your signature</h1>
-      <p class="lede">Your wallet card has a signature strip on the back, like a bank card. In bWalletX 5.1.77 you can sign it with your finger. Next, you'll be able to use the same signature to sign contracts and seal them on Bitcoin.</p>
+      <p class="lede">Your wallet card has a signature strip on the back, like a bank card. In bWalletX 5.1.77 you can sign it with your finger. You can now also sign contracts on bit-sign with bWalletX and seal them on Bitcoin.</p>
       <img class="hero-img" src="/og-sign.png" alt="The back of a gold bWalletX card with a handwritten signature in the authorised signature strip" width="1200" height="630" />
       <div class="flow">
         <span class="pill">Flip the card</span><span class="arrow">&rarr;</span>
@@ -79,17 +79,18 @@
       <div class="box"><h3>Ready for contracts</h3><p>It's saved in a fixed format (one SVG path in a 1000 &times; 250 box) with a SHA-256 fingerprint, so the same drawing always gives the same fingerprint. That's what lets it be signed and checked later.</p></div>
       <p>The signature isn't in your 12-word recovery phrase. If you restore your wallet on a new phone, sign again.</p>
 
-      <h2>Sign and seal contracts <span class="soon">Coming soon</span></h2>
-      <p>bit-sign contracts (<code>.nds.html</code> files) have signature boxes. With <b>Sign and seal</b>, one tap in bWalletX will:</p>
+      <h2>Sign and seal contracts <span class="soon">New</span></h2>
+      <p>bit-sign contracts (<code>.nds.html</code> files) have signature boxes. With <b>Sign and seal with bWalletX</b> on <a href="https://www.bit-sign.online">bit-sign</a>, you:</p>
       <ol>
-        <li>place your drawn signature in your box in the contract;</li>
-        <li>sign a record of what you signed with your wallet's identity key;</li>
-        <li>pay for a small seal on Bitcoin. That costs the network fee only, under a penny. bit-sign charges nothing.</li>
+        <li>draw your signature into your box in the contract;</li>
+        <li>approve in bWalletX, which signs a record of what you signed with your wallet's identity key;</li>
+        <li>approve the seal on Bitcoin. That costs the network fee only, under a penny. bit-sign charges nothing.</li>
       </ol>
-      <p>Before anything happens, bWalletX shows its own screen with the document title, the box you're signing, a preview of your signature and the cost. Nothing is sent until you tap <b>Sign and seal</b>.</p>
+      <p>Today that takes two approvals in your wallet: one to sign, one to pay. Nothing is sent until you approve. If anything interrupts after you've paid, reopen the document and bit-sign finishes the seal for you, for up to 24 hours. You never pay twice.</p>
+      <p><b>Coming next:</b> one tap. bWalletX will hand over the signature from your card and show its own screen with the document title, the box you're signing, your signature and the cost, then sign and pay together.</p>
       <p>Only fingerprints (hashes) go on-chain, never the document or your signature. Your contract stays private between the people signing it.</p>
       <div class="box"><h3>Anyone can check it</h3><p>Anyone with a copy of the sealed contract can confirm three things: its fingerprint is on-chain, the identity key's signature is valid, and the drawn signature hasn't been changed since.</p></div>
-      <div class="box"><h3>Works where you are</h3><p>On a computer, through the bWalletX Chrome extension. On your phone, in the bWalletX in-app browser. Or scan a QR code with your phone to sign a contract open on your computer.</p></div>
+      <div class="box"><h3>Works where you are</h3><p>On a computer, through the bWalletX Chrome extension. Or pair your phone by scanning a QR code and approve there, for a contract open on your computer.</p></div>
       <p>This gives you an electronic signature backed by strong evidence of who signed, what and when. Whether a particular document can be signed electronically depends on the document and the law where you are; some documents, such as wills and deeds that need a witness, can't. This page isn't legal advice.</p>
 
       <div class="row">
@@ -98,7 +99,7 @@
         <a class="btn btn-store btn-ghost" href="/extension">Chrome extension</a>
         <a class="btn btn-store btn-ghost" href="/privacy">Privacy</a>
       </div>
-      <p class="small">The card signature is in bWalletX 5.1.77 (Android APK, Chrome extension, web and iPhone) and in bWallet, the App Store and Google Play version. Sign and seal is not out yet. Questions: <a href="mailto:support@bwalletx.com">support@bwalletx.com</a></p>
+      <p class="small">The card signature is in bWalletX 5.1.77 and later (Android APK, Chrome extension, web and iPhone) and in bWallet, the App Store and Google Play version. Sign and seal is live on bit-sign for bWalletX users (Chrome extension or a paired phone). Questions: <a href="mailto:support@bwalletx.com">support@bwalletx.com</a></p>
     </main>
   </body>
 </html>
