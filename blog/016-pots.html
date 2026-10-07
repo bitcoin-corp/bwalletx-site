@@ -3,23 +3,21 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <!-- DRAFT: remove this noindex line when 016 is published -->
-    <meta name="robots" content="noindex" />
     <title>016 Subscriptions, paid from pots · bWalletX blog</title>
-    <meta name="description" content="Put money aside in a pot, set up regular payments from it, and pause them any time. Coming in 5.1.75." />
+    <meta name="description" content="Out in bWalletX 5.1.75: put money aside in a pot, set up regular payments from it, and pause them any time. Free, billing off." />
     <link rel="canonical" href="https://bwalletx.com/blog/016-pots" />
     <meta property="og:type" content="article" />
     <meta property="og:url" content="https://bwalletx.com/blog/016-pots" />
     <meta property="og:site_name" content="bWalletX" />
     <meta property="og:title" content="Subscriptions, paid from pots" />
-    <meta property="og:description" content="Put money aside in a pot, set up regular payments from it, and pause them any time. Coming in 5.1.75." />
+    <meta property="og:description" content="Out in bWalletX 5.1.75: put money aside in a pot, set up regular payments from it, and pause them any time. Free, billing off." />
     <meta property="og:image" content="https://bwalletx.com/og/og-blog-016.png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@bWalletX" />
     <meta name="twitter:title" content="Subscriptions, paid from pots" />
-    <meta name="twitter:description" content="Put money aside in a pot, set up regular payments from it, and pause them any time. Coming in 5.1.75." />
+    <meta name="twitter:description" content="Out in bWalletX 5.1.75: put money aside in a pot, set up regular payments from it, and pause them any time. Free, billing off." />
     <meta name="twitter:image" content="https://bwalletx.com/og/og-blog-016.png" />
     <link rel="icon" href="/favicon.ico" />
     <link rel="stylesheet" href="/styles.css" />
@@ -63,9 +61,7 @@
     <main class="ext">
       <p class="meta"><a href="/blog">Development blog</a> · <span class="num">016</span> · 7 Oct 2026</p>
       <h1>Subscriptions, paid from pots</h1>
-      <p class="lede">Subscriptions in bWalletX are paid from a subscription pot: money you set aside for them. We call them pots for short. Pause any time. Coming in 5.1.75.</p>
-
-      <p>Pots are not in the app yet. They are planned for 5.1.75. This post says what we are building so you can tell us if it's wrong.</p>
+      <p class="lede">Subscriptions in bWalletX are paid from a subscription pot: money you set aside for them. We call them pots for short. They are out now in 5.1.75, at Settings &rsaquo; Pots. Free, with billing off.</p>
 
       <h2>What a pot is</h2>
       <p>If you use Monzo you know the idea. A pot is money set aside from your main balance, with a name: "Rent", "bChat", "Netflix".</p>
@@ -73,13 +69,18 @@
 
       <h2>Regular payments</h2>
       <p>You can add a regular payment to a pot: who to pay, how much, how often, when to start and, if you like, how many times.</p>
-      <p>The first version pays what is due when you open the app. If you don't open it for a week, it catches up when you do, up to three missed payments before it asks you. Your phone reminds you the day before a payment is due, even with the app closed.</p>
-      <p>Pause takes one tap and needs no confirmation. Resume is one tap too.</p>
+      <p>Payments are made when you open the app, on or after each date. If you don't open it for a while, it catches up when you do: up to three missed payments, and it asks you before paying more than that.</p>
+      <p>Pause takes one tap and needs no confirmation. Resume is one tap too, and the payments you missed while paused are skipped, not paid. Cancel stops a payment for good.</p>
+      <p>Your phone reminds you the day before a payment is due, even with the app closed. If a pot is running low, or a payment fails, you get a notice.</p>
 
       <h2>The most you can lose</h2>
-      <p>A pot can only spend what is in it. The pot balance is the most you can ever lose to a payment, a bug or a bad payee. When you create a pot, the confirm screen says so in numbers.</p>
-      <p>There is also a daily limit on each pot, set a little above its largest payment, so a fault can't empty it in one day.</p>
+      <p>A pot can only spend what is in it. The pot balance is the most you can ever lose to a payment, a bug or a bad payee. The pot screens say so when you set one up.</p>
+      <p>Each pot also has a daily cap. By default it is set from the pot's largest payment, with room for a three-payment catch-up, so a fault can't empty it in one day.</p>
+      <p>Each payment is saved on the phone before it is sent. If the app crashes halfway, it sends the same saved payment again rather than making a new one, so nothing is paid twice.</p>
       <p>Your keys stay on your phone. We looked at holding pot keys on a server so payments could go out with the app closed, and said no. That would make us custodians of your money.</p>
+
+      <h2>The store edition</h2>
+      <p>bWallet, the edition in the App Store and Play Store, has pots and regular payments to people (a $handle or paymail). Subscriptions to apps and services are in bWalletX only.</p>
 
       <h2>No charge</h2>
       <p>Pots are free. We have written down a possible charge of 1 cent a day for later, but it is switched off, and it will never be on in the store builds. If it ever comes on, pausing, cancelling and taking your money out of a pot will still be free.</p>
