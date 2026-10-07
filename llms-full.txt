@@ -3046,7 +3046,7 @@ These are gaps today. Plan around them.
 
 - No npm package. There is no `@bwalletx/...` or `@b0ase/wallet` package. Copy the files on this page, and `protocol.ts` from the bWalletX repo.
 
-- connect.js does not sign in or pair. `https://bwalletx.com/connect.js` finds the extension only. It has no QR pairing and no sign-in helper.
+- connect.js signs in through a second file. `https://bwalletx.com/connect.js` finds the extension itself; `bWalletX.signIn(...)` and `bWalletX.pair(...)` load the @bwalletx/connect browser build (about 125 KB) from `https://bwalletx.com/connect/` on first use.
 
 - No hosted sign-in or OAuth-style redirect. There is no bwalletx.com page you can send users to and get a callback from, and no hosted verify endpoint. You run the two routes yourself. bChat's own endpoints (`/api/bitsign/auth/bwallet/*` on bit-sign) accept requests from their own pages only and are not a public API.
 

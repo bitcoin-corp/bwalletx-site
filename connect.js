@@ -4,6 +4,7 @@
  *
  *   <script src="https://bwalletx.com/connect.js"></script>
  *   const { wallet, info } = await bWalletX.connect();   // BRC-100 WalletInterface
+ *   const r = await bWalletX.signIn({ challenge, pairing }); // sign-in, see bwalletx.com/login.md
  *
  * Finds bWalletX by BRC-100 discovery (brc100:requestWallet → brc100:announceWallet, rdns
  * com.bwalletx.extension), so it is chosen by name even when another wallet (e.g. Yours) also
@@ -68,5 +69,35 @@
     return el;
   }
 
-  window.bWalletX = { connect: connect, discover: discover, button: button, RDNS: RDNS, INSTALL_URL: INSTALL };
+  // Sign-in and phone pairing live in @bwalletx/connect (about 125 KB with @bsv/sdk). It is
+  // loaded from next to this file only when one of these is first called.
+  var self = document.currentScript && document.currentScript.src;
+  var FULL = new URL('connect/bwalletx-connect.global.js', self || 'https://bwalletx.com/').href;
+  var loading = null;
+  function load() {
+    if (window.bWalletXConnect) return Promise.resolve(window.bWalletXConnect);
+    if (!loading) {
+      loading = new Promise(function (resolve, reject) {
+        var s = document.createElement('script');
+        s.src = FULL;
+        s.async = true;
+        s.onload = function () { resolve(window.bWalletXConnect); };
+        s.onerror = function () { loading = null; reject(new Error('Could not load ' + FULL)); };
+        document.head.appendChild(s);
+      });
+    }
+    return loading;
+  }
+
+  /** signInWithBwalletX from @bwalletx/connect: extension, in-app browser or QR pairing. */
+  function signIn(opts) { return load().then(function (m) { return m.signInWithBwalletX(opts); }); }
+  /** pairBwalletX from @bwalletx/connect: a wallet paired by QR or pasted link. */
+  function pair(opts) { return load().then(function (m) { return m.pairBwalletX(opts); }); }
+  /** renderButton from @bwalletx/connect: the gold "Sign in with bWalletX" button. */
+  function renderButton(el, opts) { return load().then(function (m) { return m.renderButton(el, opts); }); }
+
+  window.bWalletX = {
+    connect: connect, discover: discover, button: button, RDNS: RDNS, INSTALL_URL: INSTALL,
+    load: load, signIn: signIn, pair: pair, renderButton: renderButton,
+  };
 })();
