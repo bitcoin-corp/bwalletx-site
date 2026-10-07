@@ -192,7 +192,7 @@
 <td>The full build&#39;s exports (<code>signInWithBwalletX</code>, <code>pairBwalletX</code>, <code>restorePairing</code>, <code>clearPairing</code>, <code>findBwalletX</code>, ...).</td>
 </tr>
 </tbody></table>
-<p>Prefer to host it yourself? Copy <code>connect.js</code> and <code>connect/bwalletx-connect.global.js</code> to the same folder structure on your site; connect.js loads the full build from next to itself. It will also be on npm as <code>@bwalletx/connect</code> (coming soon).</p>
+<p>Prefer to host it yourself? Copy <code>connect.js</code> and <code>connect/bwalletx-connect.global.js</code> to the same folder structure on your site; connect.js loads the full build from next to itself. It is also on npm: <code>pnpm add @bwalletx/connect @bsv/sdk</code>.</p>
 <h2 id="the-button">The button</h2>
 <div class="bwx-preview"><button type="button" class="bwx-signin">
   <span class="bwx-mark"><img src="https://bwalletx.com/logo.svg" alt="" width="15" height="20"></span>
@@ -225,7 +225,7 @@
 </code></pre>
 <p>Put it first among your wallet options. The second line (&quot;also works with bWallet&quot;) is optional: bWallet is the store edition of the same wallet and signs in the same way.</p>
 <h2 id="2-server-issue-and-verify-challenges">2. Server: issue and verify challenges</h2>
-<p>The server half is not in the script (it must run on your server). Until the npm package is out, copy this file into your project as <code>bwalletx-server.ts</code>. Its only dependency is <code>@bsv/sdk</code> (2.2 or later, 2.x or 3.x). It is the same code as <code>@bwalletx/connect/server</code>, so later you can swap the import and change nothing else.</p>
+<p>The server half is not in the script (it must run on your server). Install <code>@bwalletx/connect</code> and import from <code>@bwalletx/connect/server</code>, or copy this file into your project as <code>bwalletx-server.ts</code>. Its only dependency is <code>@bsv/sdk</code> (2.2 or later, 2.x or 3.x). It is the same code as <code>@bwalletx/connect/server</code>, so the two are interchangeable.</p>
 <pre><code class="language-ts">import { ProtoWallet, PublicKey, type WalletProtocol } from &#39;@bsv/sdk&#39;;
 
 /** Security level 2, a protocol name used for nothing else. Keep it constant. */
@@ -493,16 +493,15 @@ Expires: 2026-10-07T12:02:00.000Z
 <h2 id="not-yet-available">Not yet available</h2>
 <p>These are gaps today. Plan around them.</p>
 <ul>
-<li><strong>No npm package yet.</strong> <code>@bwalletx/connect</code> is coming soon on npm. Today use the script tag for the browser and copy <code>bwalletx-server.ts</code> (above) for the server.</li>
 <li><strong>No hosted sign-in or OAuth-style redirect.</strong> There is no bwalletx.com page you can send users to and get a callback from, and no hosted verify endpoint. You run the two routes yourself. bChat&#39;s own endpoints (<code>/api/bitsign/auth/bwallet/*</code> on bit-sign) accept requests from their own pages only and are not a public API.</li>
 <li><strong>No user profile.</strong> You get the identity key and nothing else: no $handle, paymail, name or picture, and no proof linking the key to them.</li>
 <li><strong>The relay is ours.</strong> <code>relay.bwallet.space</code> accepts any https origin, but it is a single service run by The Bitcoin Corporation with no published uptime or rate-limit guarantees (it currently allows about 60 frames a minute per channel).</li>
 <li><strong>No test wallet.</strong> There is no testnet build or headless bWalletX for automated tests. To test your server, sign with <code>new ProtoWallet(PrivateKey.fromRandom()).createSignature(...)</code> using the same arguments; it makes exactly the signature bWalletX makes.</li>
 </ul>
 <h2 id="for-ai-agents">For AI agents</h2>
-<p>Follow these steps in order. Do not invent packages, endpoints or methods that are not on this page. Do not install <code>@bwalletx/connect</code> from npm: it is not published yet.</p>
+<p>Follow these steps in order. Do not invent packages, endpoints or methods that are not on this page. For a bundled app, install <code>@bwalletx/connect</code> and <code>@bsv/sdk</code>; for a plain HTML site, use the script tag.</p>
 <ol>
-<li>Install <code>@bsv/sdk</code> in the server project (pnpm, npm or yarn, whichever the project uses).</li>
+<li>Install <code>@bwalletx/connect</code> and <code>@bsv/sdk</code> in the server project (pnpm, npm or yarn, whichever the project uses).</li>
 <li>Create <code>bwalletx-server.ts</code> with the code in section 2, unchanged. Put your site&#39;s origin (scheme + host, no trailing slash, e.g. <code>https://example.com</code>) in config.</li>
 <li>Add two POST routes. <code>/auth/bwalletx/challenge</code>: <code>createChallenge({ origin: ORIGIN, identityKey: body.identityKey, store })</code>, return the result as JSON, 400 if it throws. <code>/auth/bwalletx/verify</code>: <code>verifySignIn({ origin: ORIGIN, store, identityKey, nonce, signature })</code> from the body. Reject both with 403 unless <code>originAllowed(request Origin header, ORIGIN)</code>.</li>
 <li>Replace <code>memoryStore()</code> with a shared store (database table or Redis) if you run more than one server process or run serverless. <code>take(nonce)</code> must read and delete in one step.</li>

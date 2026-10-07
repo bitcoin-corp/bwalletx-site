@@ -98,7 +98,7 @@ Other things on `window.bWalletX`:
 | `bWalletX.renderButton(el, { onClick, subtitle })` | The gold button. `subtitle: false` hides the second line. |
 | `bWalletX.load()` | The full build's exports (`signInWithBwalletX`, `pairBwalletX`, `restorePairing`, `clearPairing`, `findBwalletX`, ...). |
 
-Prefer to host it yourself? Copy `connect.js` and `connect/bwalletx-connect.global.js` to the same folder structure on your site; connect.js loads the full build from next to itself. It will also be on npm as `@bwalletx/connect` (coming soon).
+Prefer to host it yourself? Copy `connect.js` and `connect/bwalletx-connect.global.js` to the same folder structure on your site; connect.js loads the full build from next to itself. It is also on npm: `pnpm add @bwalletx/connect @bsv/sdk`.
 
 ## The button
 
@@ -138,7 +138,7 @@ Put it first among your wallet options. The second line ("also works with bWalle
 
 ## 2. Server: issue and verify challenges
 
-The server half is not in the script (it must run on your server). Until the npm package is out, copy this file into your project as `bwalletx-server.ts`. Its only dependency is `@bsv/sdk` (2.2 or later, 2.x or 3.x). It is the same code as `@bwalletx/connect/server`, so later you can swap the import and change nothing else.
+The server half is not in the script (it must run on your server). Install `@bwalletx/connect` and import from `@bwalletx/connect/server`, or copy this file into your project as `bwalletx-server.ts`. Its only dependency is `@bsv/sdk` (2.2 or later, 2.x or 3.x). It is the same code as `@bwalletx/connect/server`, so the two are interchangeable.
 
 ```ts
 import { ProtoWallet, PublicKey, type WalletProtocol } from '@bsv/sdk';
@@ -402,7 +402,6 @@ The signing key is derived (BRC-42) from the wallet's root identity private key 
 
 These are gaps today. Plan around them.
 
-- **No npm package yet.** `@bwalletx/connect` is coming soon on npm. Today use the script tag for the browser and copy `bwalletx-server.ts` (above) for the server.
 - **No hosted sign-in or OAuth-style redirect.** There is no bwalletx.com page you can send users to and get a callback from, and no hosted verify endpoint. You run the two routes yourself. bChat's own endpoints (`/api/bitsign/auth/bwallet/*` on bit-sign) accept requests from their own pages only and are not a public API.
 - **No user profile.** You get the identity key and nothing else: no $handle, paymail, name or picture, and no proof linking the key to them.
 - **The relay is ours.** `relay.bwallet.space` accepts any https origin, but it is a single service run by The Bitcoin Corporation with no published uptime or rate-limit guarantees (it currently allows about 60 frames a minute per channel).
@@ -410,9 +409,9 @@ These are gaps today. Plan around them.
 
 ## For AI agents
 
-Follow these steps in order. Do not invent packages, endpoints or methods that are not on this page. Do not install `@bwalletx/connect` from npm: it is not published yet.
+Follow these steps in order. Do not invent packages, endpoints or methods that are not on this page. For a bundled app, install `@bwalletx/connect` and `@bsv/sdk`; for a plain HTML site, use the script tag.
 
-1. Install `@bsv/sdk` in the server project (pnpm, npm or yarn, whichever the project uses).
+1. Install `@bwalletx/connect` and `@bsv/sdk` in the server project (pnpm, npm or yarn, whichever the project uses).
 2. Create `bwalletx-server.ts` with the code in section 2, unchanged. Put your site's origin (scheme + host, no trailing slash, e.g. `https://example.com`) in config.
 3. Add two POST routes. `/auth/bwalletx/challenge`: `createChallenge({ origin: ORIGIN, identityKey: body.identityKey, store })`, return the result as JSON, 400 if it throws. `/auth/bwalletx/verify`: `verifySignIn({ origin: ORIGIN, store, identityKey, nonce, signature })` from the body. Reject both with 403 unless `originAllowed(request Origin header, ORIGIN)`.
 4. Replace `memoryStore()` with a shared store (database table or Redis) if you run more than one server process or run serverless. `take(nonce)` must read and delete in one step.
