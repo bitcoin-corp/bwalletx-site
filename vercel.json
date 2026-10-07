@@ -24,6 +24,16 @@
   ],
   "redirects": [
     {
+      "source": "/download/:file(bwalletx-android(?!-5.1.80\\.apk$)[^/]*\\.apk)",
+      "destination": "/download/bwalletx-android-5.1.80.apk",
+      "statusCode": 302
+    },
+    {
+      "source": "/download/:file(bwalletx-extension(?!-5.1.80\\.zip$)[^/]*\\.zip)",
+      "destination": "/download/bwalletx-extension-5.1.80.zip",
+      "statusCode": 302
+    },
+    {
       "source": "/PNEE",
       "destination": "/pnees",
       "permanent": true
