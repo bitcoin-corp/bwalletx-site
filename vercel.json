@@ -42,6 +42,11 @@
       "source": "/watch",
       "destination": "/video",
       "statusCode": 301
+    },
+    {
+      "source": "/twitter",
+      "destination": "/x",
+      "permanent": true
     }
   ]
 }

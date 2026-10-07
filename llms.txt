@@ -80,6 +80,7 @@ Full text of every page: https://bwalletx.com/llms-full.txt
 - [bWalletX Social](https://bwalletx.com/social): Your handle is your paymail, your token and your chat room. Sign in with X or Google, hold friends’ tokens, chat in token rooms, post to the Feed, call and pay friends.
 - [Get 1 BSV: test bWallet on Android](https://bwalletx.com/testers): Get 1 BSV for testing bWallet on Android for 14 days. 20 places. Apply with Google; paid to your own bWallet.
 - [Watch: bWalletX in one minute](https://bwalletx.com/video): A one-minute tour of bWalletX: create a wallet, back it up, dollar balances, the Exchange, the Apps store, the Feed and group chats, and b, your AI agent.
+- [Sign in with X · bWalletX](https://bwalletx.com/x): Sign in to bWalletX with your X account and get a verified name: yourhandle.x@bwalletx.com. Your paymail, your token and your chat room, with your X picture.
 
 ## Developers and agents
 
@@ -115,6 +116,7 @@ Full text of every page: https://bwalletx.com/llms-full.txt
 - [017 Sign in with bWalletX, and the Lounge · bWalletX blog](https://bwalletx.com/blog/017-sign-in-and-lounge): bChat now has one gold button to sign in with your wallet. Every account starts in the bWallet Lounge.
 - [018 1 BSV for testing bWallet on Android · bWalletX blog](https://bwalletx.com/blog/018-testers): Google needs 12 people to test bWallet for 14 days before it can go on the Play Store. We are paying 1 BSV for that time.
 - [019 Blur slurs, show swearing · bWalletX blog](https://bwalletx.com/blog/019-language-filter): The bChat feed and bWalletX now blur slurs behind a tap. Swearing is shown. Nothing is deleted.
+- [020 Sign in with X · bWalletX blog](https://bwalletx.com/blog/020-sign-in-with-x): bWalletX can make a wallet from your X account. You get your X username as a verified paymail, b0asex.x@bwalletx.com for example, with your picture, a token and a room.
 - [bWalletX development blog](https://bwalletx.com/blog/): How bWallet and bWalletX were built from a fork of Yours Wallet: numbered posts from the git history, including what broke, what we reversed and what is still not done.
 
 ## Legal

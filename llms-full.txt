@@ -2053,7 +2053,7 @@ Prove who you are, and your name is verified:
 
 ### X → `yourhandle.x@bwalletx.com`
 
-Sign in with X and you get your exact X username, marked as verified. Nobody else can claim it.
+Sign in with X and you get your exact X username, marked as verified. Nobody else can claim it. [How X sign-in works](https://bwalletx.com/x).
 
 ### Google → `yourname.gmail@bwalletx.com`
 
@@ -2157,6 +2157,77 @@ and meet b, your AI agent.
 Female voiceMale voice
 
 Get bWalletXAndroid · iPhone · Chrome · WebOpen the web walletNo install
+
+---
+
+Source: https://bwalletx.com/x
+
+# Sign in with X
+
+Make a bWalletX wallet with your X account and it comes with a verified name: your X username. People pay you at it, hold it as a token and use it to get into your chat room.
+
+@yourhandle→
+yourhandle.x@bwalletx.com→
+$YOURHANDLE
+
+## How to do it
+
+- [Get bWalletX](https://bwalletx.com/get) on your phone or computer.
+
+- Tap Create account, then Continue with X.
+
+- Sign in on X's own page and allow access.
+
+- Back in bWalletX, your @handle and picture are filled in. Choose a password and save your 12-word recovery phrase.
+
+- Claim `yourhandle.x@bwalletx.com`. It's free.
+
+Already have a wallet? Go to Settings › Identity › Connect X or Google. The verified name becomes your wallet's main name, and your older name still receives.
+
+Moving to a new phone? Use Restore with your 12 words and Continue with X to bring the same name back. If the 12 words belong to a different wallet, bWalletX says so and stops, so your name can't end up on the wrong wallet.
+
+## Your name
+
+Your name is your X username in lower case, with `.x` on the end. X allows underscores in usernames and paymail names don't, so an underscore becomes a hyphen.
+
+@b0aseX`b0asex.x@bwalletx.com`
+
+@Jane_Doe`jane-doe.x@bwalletx.com`
+
+One X account gets one name, held by one wallet. If you change your X username later, the name you claimed stays as it was.
+
+## What you get
+
+### A verified paymail
+
+People send you BSV, tokens and messages at `yourhandle.x@bwalletx.com`. It's marked verified, and nobody else can claim it, because only the owner of the X account can sign in as it.
+
+### Your own token and room
+
+Turn the name into $YOURHANDLE, a BSV-21 token with your X picture as its icon. Hold the token, join your room. In Market › Friends it's listed with your x.com link and a tick.
+
+### Your picture
+
+Your X profile picture becomes your wallet's picture, so friends recognise you in chats, calls and payments.
+
+## How it differs from Gmail
+
+It works the same way as [Sign in with Gmail](https://bwalletx.com/gmail), with two differences. X doesn't give us an email address, so your name comes from your username, not an address. And any X account can get a `.x` name, where only `@gmail.com` addresses get a `.gmail` one.
+
+A wallet holds one verified name. If it already has a `.gmail` name, add another account for your `.x` one.
+
+## What X shares
+
+bWalletX reads three things from X: your username, your display name and your profile picture. It never sees your X password, can't post for you and doesn't read your messages. Your wallet's keys are made on your device and never leave it; X has nothing to do with them.
+
+Signing in with X proves the name. Your 12-word recovery phrase is still the only way to get your money back, so keep it safe.
+
+[Get bWalletX](https://bwalletx.com/get)
+[Sign in with Gmail](https://bwalletx.com/gmail)
+[Social in bWalletX](https://bwalletx.com/social)
+[Privacy](https://bwalletx.com/privacy)
+
+Sign in with X and Google are in bWalletX (Android APK, Chrome extension, web and iPhone). The App Store and Google Play version, bWallet, doesn't have them yet. They aren't offered for agent accounts. Questions: [support@bwalletx.com](mailto:support@bwalletx.com)
 
 ---
 
@@ -4266,7 +4337,53 @@ bWallet, the version in the App Store and Google Play, is stricter because the s
 
 Related: [Social](https://bwalletx.com/social) · [014 One feed for BSV](https://bwalletx.com/blog/014-open-feed) · [007 Store rules, open rooms and moderation](https://bwalletx.com/blog/007-store-and-private)
 
-[← 018 1 BSV for testing bWallet on Android](https://bwalletx.com/blog/018-testers)[All posts →](https://bwalletx.com/blog)
+[← 018 1 BSV for testing bWallet on Android](https://bwalletx.com/blog/018-testers)[020 Sign in with X →](https://bwalletx.com/blog/020-sign-in-with-x)
+
+---
+
+Source: https://bwalletx.com/blog/020-sign-in-with-x
+
+[Development blog](https://bwalletx.com/blog) · 020 · 7 Oct 2026
+
+# Sign in with X
+
+bWalletX can make a wallet from your X account. You get your X username as a verified paymail, b0asex.x@bwalletx.com for example, with your picture, a token and a room.
+
+## What it does
+
+On Create account there is a Continue with X button. You sign in on X's own page, come back to the wallet, and your @handle and picture are already filled in. You still choose a password and save a 12-word recovery phrase. Then you claim the name.
+
+The name is your X username in lower case with `.x` on the end. @b0aseX becomes `b0asex.x@bwalletx.com`. Underscores become hyphens, because paymail names can't have them.
+
+Wallets made before this can do the same from Settings › Identity › Connect X or Google. The verified name becomes the main name, and the old one still receives.
+
+## How the proof works
+
+We run the sign-in ourselves, on the same server as the paymail. Before the wallet opens X, it makes a random secret and sends us only its hash. When X sends you back, we seal your X account into a ticket tied to that hash. The ticket is no use without the secret, and the secret never leaves your device.
+
+To register a `.x` name, the wallet has to show both. So only the person who signed in as @b0aseX can claim `b0asex.x`, and one X account means one wallet.
+
+From X we read your username, display name and picture. We don't ask to post and we don't read messages. X has nothing to do with your keys.
+
+## What went wrong first
+
+On iPhone we first opened x.com in the browser. The X app grabbed the link, its own browser broke X's "Sign in with Google" page, and its "Open bWalletX" button did nothing. It now uses an in-app Safari sign-in sheet that returns straight to the wallet.
+
+On the web wallet, sign-in opened a new tab and ended on a "you're signed in" page with no way back. It now signs in in the same tab and returns to web.bwalletx.com.
+
+Restoring with 12 words and Continue with X could have put a verified name on the wrong wallet. Now the wallet checks the phrase against the name first, on the device, and stops if they don't match.
+
+## Where it is
+
+In bWalletX: the Android APK, the Chrome extension, the web app and iPhone. Not in bWallet, the App Store and Google Play edition, until app review is settled. Not for agent accounts either; an agent posting as someone's X account needs its own design.
+
+How-to page: [bwalletx.com/x](https://bwalletx.com/x).
+
+— Richard
+
+Related: [Sign in with X](https://bwalletx.com/x) · [Sign in with Gmail](https://bwalletx.com/gmail) · [004 Names, handles and paymail](https://bwalletx.com/blog/004-names-and-paymail) · [005 Personal tokens and token rooms](https://bwalletx.com/blog/005-personal-tokens-and-rooms)
+
+[← 019 Blur slurs, show swearing](https://bwalletx.com/blog/019-language-filter)[All posts →](https://bwalletx.com/blog)
 
 ---
 
@@ -4277,6 +4394,10 @@ Source: https://bwalletx.com/blog/
 How bWallet and bWalletX were built, one chapter at a time. Every post is written from the git history of the wallet, this site, the chat server and the PNEEs prototype. It covers what we built, why, what broke, what we reversed and what is still not done.
 
 Newest first. Dates come from commits. bWallet is a fork of [Yours Wallet](https://github.com/yours-org/yours-wallet) (MIT licence).
+
+- 020 · 7 Oct 2026
+[Sign in with X](https://bwalletx.com/blog/020-sign-in-with-x)
+bWalletX can make a wallet from your X account. You get your X username as a verified paymail, b0asex.x@bwalletx.com for example, with your picture, a token and a room.
 
 - 019 · 7 Oct 2026
 [Blur slurs, show swearing](https://bwalletx.com/blog/019-language-filter)

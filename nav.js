@@ -27,7 +27,13 @@
           { label: 'PNEEs', href: '/pnees', also: ['/pnee'] },
           { label: 'Buy BSV', href: '/buy' }
         ] },
-      { label: 'Social', href: '/social', pages: ['/social', '/friends'] },
+      { label: 'Social', href: '/social', pages: ['/social', '/friends', '/gmail', '/x'],
+        sub: [
+          { label: 'Social', href: '/social' },
+          { label: 'Friends', href: '/friends' },
+          { label: 'Sign in with X', href: '/x' },
+          { label: 'Sign in with Gmail', href: '/gmail' }
+        ] },
       { label: 'Agents', href: '/agents', pages: ['/agents', '/agent', '/strategies', '/strategies/spec', '/cli', '/mcp'],
         sub: [
           { label: 'Agent accounts', href: '/agents' },
