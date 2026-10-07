@@ -1436,3 +1436,9 @@ body {
   background: var(--grad);
   color: #1a1300;
 }
+
+/* Blog: dated update/correction note added to an older post */
+.update { background: #1a1607; border: 1px solid #F5B80040; border-left: 3px solid #F5B800; border-radius: 12px; padding: 14px 18px; margin: 24px 0; line-height: 1.6; }
+.update strong:first-child { color: #F5B800; }
+.update a { color: #F5B800; }
+.update p { margin: 0; }
