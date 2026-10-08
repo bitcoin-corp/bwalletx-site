@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>bApps: apps that run inside bWalletX</title>
+    <link rel="canonical" href="https://bwalletx.com/bapps" />
+    <meta name="description" content="bApps are Bitcoin apps that open inside bWalletX: sign in with your wallet, pay from your wallet, one bar across every app. bChat, bMovies, bMusic, bMint, bWriter and more." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://bwalletx.com/bapps" />
+    <meta property="og:site_name" content="bWalletX" />
+    <meta property="og:title" content="bApps: apps that run inside bWalletX" />
+    <meta property="og:description" content="Sign in with your wallet, pay from your wallet. bChat, bMovies, bMusic, bMint, bWriter and 20 more." />
+    <meta property="og:image" content="https://bwalletx.com/og-bapps-v1.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="bApps: apps that run inside bWalletX" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@bWalletX" />
+    <meta name="twitter:title" content="bApps: apps that run inside bWalletX" />
+    <meta name="twitter:description" content="Sign in with your wallet, pay from your wallet. bChat, bMovies, bMusic, bMint, bWriter and 20 more." />
+    <meta name="twitter:image" content="https://bwalletx.com/og-bapps-v1.png" />
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="stylesheet" href="/styles.css" />
+    <style>
+      .ext h1 { font-size: clamp(2.1rem, 6vw, 3.3rem); margin: 18px 0 10px; }
+      .ext h2 { margin: 48px 0 10px; font-size: 1.4rem; }
+      .ext li { margin: 8px 0; }
+      .ext .small { color: #8a8a86; font-size: 0.85rem; }
+      .grp { margin: 28px 0 10px; font-size: 1rem; color: #c9ced8; }
+      .bgrid { display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 12px; }
+      .bc { display: flex; flex-direction: column; gap: 6px; padding: 16px; border: 1px solid #ffffff14; border-radius: 16px; text-decoration: none; color: inherit; min-width: 0; }
+      a.bc:hover { border-color: #F5B80088; }
+      .bc.off { opacity: 0.6; }
+      .bc img { width: 48px; height: 48px; border-radius: 12px; }
+      .bt { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; font-size: 1.05rem; }
+      .bv { color: #c9ced8; font-size: 0.88rem; }
+      .go { color: #F5B800; font-size: 0.82rem; margin-top: auto; }
+      .chip { font-size: 0.7rem; font-weight: 600; border-radius: 999px; padding: 2px 9px; }
+      .c-live { background: #F5B800; color: #1a1300; }
+      .c-beta { background: #2a2b31; color: #e6e8ec; }
+      .c-coming { background: transparent; color: #9aa1ad; border: 1px solid #ffffff30; }
+      .slots { display: grid; grid-template-columns: repeat(5, 1fr); gap: 6px; margin: 14px 0; max-width: 520px; }
+      .slots span { text-align: center; padding: 10px 2px; border: 1px solid #ffffff1c; border-radius: 12px; font-size: 0.8rem; font-weight: 600; }
+      .slots span.b { border-color: #F5B800; color: #F5B800; }
+      .rules { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 14px; }
+      .rules > div { border: 1px solid #ffffff14; border-radius: 14px; padding: 4px 18px; }
+      .note { display: inline-block; font-size: 0.72rem; font-weight: 600; border-radius: 999px; padding: 2px 10px; vertical-align: middle; margin-left: 6px; background: #2a2b31; color: #c9ced8; }
+      .note.live { background: #F5B800; color: #1a1300; }
+      table.tbl { width: 100%; border-collapse: collapse; font-size: 0.9rem; }
+      table.tbl th, table.tbl td { text-align: left; padding: 8px 8px; border-top: 1px solid #ffffff14; vertical-align: top; }
+      .shot { display: flex; gap: 18px; flex-wrap: wrap; align-items: flex-start; }
+      .shot figure { margin: 0; max-width: 260px; }
+      .shot img { width: 100%; height: auto; border-radius: 18px; border: 1px solid #ffffff1c; }
+      .shot figcaption { color: #8a8a86; font-size: 0.82rem; margin-top: 6px; }
+      .ctas { display: flex; flex-wrap: wrap; gap: 12px; margin: 22px 0; }
+      .ctas a { padding: 12px 20px; border-radius: 12px; font-weight: 600; text-decoration: none; border: 1px solid #ffffff2a; color: inherit; }
+      .ctas a.p { background: #F5B800; color: #1a1300; border-color: #F5B800; }
+    </style>
+  </head>
+  <body>
+    <div class="beta-banner">bWalletX is in <strong>beta</strong>: test with small amounts.</div>
+    <header class="topbar">
+      <div class="wrap topbar-in">
+        <a class="brand" href="/"><img src="/logo.svg" alt="" width="34" height="30" /><span>bWallet<span class="gold">X</span></span></a>
+        <nav aria-label="Pages">
+          <a href="/features">Features</a><a href="/exchange">Exchange</a><a href="/social">Social</a><a href="/agent">Agents</a><a href="/extension">Extension</a><a href="/developers">Developers</a>
+        </nav>
+        <span class="nav-cta"><a class="dl-btn" href="/get">Download</a><a class="web-btn" href="https://web.bwalletx.com" target="_blank" rel="noopener">Web &rarr;</a></span>
+      </div>
+    </header>
+    <script src="/nav.js"></script>
+        <main class="ext">
+      <img src="/logo.svg" alt="bWalletX" width="72" height="64" />
+      <h1>bApps: apps that run inside bWallet<span class="gold">X</span></h1>
+      <p class="lede">bApps are Bitcoin apps from The Bitcoin Corporation. Open them from the Apps tab in bWalletX, or in any browser. You sign in with your wallet, not a password, and anything you pay comes from your wallet, after you approve it.</p>
+
+      <h2>How bApps work</h2>
+      <div class="rules">
+        <div><h3>Sign in with your wallet <span class="note live">Live</span></h3><p>One tap on "Sign in with bWalletX". No account, no password, no email.</p></div>
+        <div><h3>Pay from your wallet <span class="note live">Live</span></h3><p>When an app asks for money, bWalletX shows you what it wants. Nothing leaves without your approval.</p></div>
+        <div><h3>One bar in every app <span class="note">Coming</span></h3><p>Every bApp gets the same five buttons in the same place, each one about the app you have open:</p>
+          <div class="slots"><span>Wallet</span><span>Exchange</span><span class="b">b</span><span>Feed</span><span>Chat</span></div>
+          <p class="small">An app that doesn't use a button shows it greyed out, so the bar always looks the same. ☰ (your wallet menu) stays top left, with the app's icon next to it.</p></div>
+        <div><h3>Like = 1¢ to join the room <span class="note">Coming</span></h3><p>Each app's Feed shows what's trending. A Like is a small buy, 1¢ by default (or one <a href="/pnees">PNEE</a>), of that thing's token. It funds the thing you liked, and the token is your key to its chat room. Daily cap of $1 by default; you can change both.</p></div>
+      </div>
+
+      <h2>All bApps</h2>
+      <p class="small"><b>Live</b>: working, in daily use. <b>Beta</b>: the site works, but it's early. <b>Coming</b>: not open yet.</p>
+      <h3 class="grp">Featured</h3><div class="bgrid"><a class="bc" href="https://www.bitcoinchat.online" target="_blank" rel="noopener"><img src="/bapps/bchat.png" alt="" width="48" height="48" loading="lazy" /><span class="bt"><b>bChat</b><span class="chip c-live">Live</span></span><span class="bv">Chat, voice and video messages, tokenised group chats</span><span class="go">Open &rarr;</span></a><a class="bc" href="/bapps/bmovies"><img src="/bapps/bmovies-192.png" alt="" width="48" height="48" loading="lazy" /><span class="bt"><b>bMovies</b><span class="chip c-live">Live</span></span><span class="bv">Watch and back tokenised films</span><span class="go">Read more &rarr;</span></a><a class="bc" href="https://www.bmovies.app/bmusic" target="_blank" rel="noopener"><img src="/bapps/bmusic.png" alt="" width="48" height="48" loading="lazy" /><span class="bt"><b>bMusic</b><span class="chip c-live">Live</span></span><span class="bv">Tokenise your music; fans who hold it make the video with you</span><span class="go">Open &rarr;</span></a><a class="bc" href="https://www.bitcoin-mint.com/mint" target="_blank" rel="noopener"><img src="/bapps/bmint.png" alt="" width="48" height="48" loading="lazy" /><span class="bt"><b>bMint</b><span class="chip c-live">Live</span></span><span class="bv">Design, stamp and mint tokens, currency and media on-chain</span><span class="go">Open &rarr;</span></a><a class="bc" href="https://bitcoin-writer.com/" target="_blank" rel="noopener"><img src="/bapps/bwriter.png" alt="" width="48" height="48" loading="lazy" /><span class="bt"><b>bWriter</b><span class="chip c-live">Live</span></span><span class="bv">Write and save documents on-chain</span><span class="go">Open &rarr;</span></a></div><h3 class="grp">Work</h3><div class="bgrid"><a class="bc" href="https://bitcoin-spreadsheet.vercel.app" target="_blank" rel="noopener"><img src="/bapps/bsheets.png" alt="" width="48" height="48" loading="lazy" /><span class="bt"><b>bSheets</b><span class="chip c-live">Live</span></span><span class="bv">Spreadsheets saved on-chain</span><span class="go">Open &rarr;</span></a><a class="bc" href="https://bitcoin-email.vercel.app" target="_blank" rel="noopener"><img src="/bapps/bmail.png" alt="" width="48" height="48" loading="lazy" /><span class="bt"><b>bMail</b><span class="chip c-beta">Beta</span></span><span class="bv">Send email that pays and gets paid</span><span class="go">Open &rarr;</span></a><a class="bc" href="https://bitcoin-drive.vercel.app" target="_blank" rel="noopener"><img src="/bapps/bdrive.png" alt="" width="48" height="48" loading="lazy" /><span class="bt"><b>bDrive</b><span class="chip c-beta">Beta</span></span><span class="bv">Store and share files on-chain</span><span class="go">Open &rarr;</span></a><a class="bc" href="https://bitcoin-calendar.vercel.app" target="_blank" rel="noopener"><img src="/bapps/bcal.png" alt="" width="48" height="48" loading="lazy" /><span class="bt"><b>bCal</b><span class="chip c-beta">Beta</span></span><span class="bv">Keep a calendar on Bitcoin</span><span class="go">Open &rarr;</span></a><a class="bc" href="https://bitcoin-code.vercel.app" target="_blank" rel="noopener"><img src="/bapps/bcode.png" alt="" width="48" height="48" loading="lazy" /><span class="bt"><b>bCode</b><span class="chip c-beta">Beta</span></span><span class="bv">Build apps on Bitcoin</span><span class="go">Open &rarr;</span></a><a class="bc" href="https://bitcoin-jobs.vercel.app" target="_blank" rel="noopener"><img src="/bapps/bjobs.png" alt="" width="48" height="48" loading="lazy" /><span class="bt"><b>bJobs</b><span class="chip c-beta">Beta</span></span><span class="bv">Find work and hire, paid in BSV</span><span class="go">Open &rarr;</span></a><a class="bc" href="https://bitcoin-identity.vercel.app" target="_blank" rel="noopener"><img src="/bapps/bid.png" alt="" width="48" height="48" loading="lazy" /><span class="bt"><b>bID</b><span class="chip c-beta">Beta</span></span><span class="bv">Manage your on-chain identity</span><span class="go">Open &rarr;</span></a><a class="bc" href="https://bitcoin-search.vercel.app" target="_blank" rel="noopener"><img src="/bapps/bsearch.png" alt="" width="48" height="48" loading="lazy" /><span class="bt"><b>bSearch</b><span class="chip c-beta">Beta</span></span><span class="bv">Search what lives on-chain</span><span class="go">Open &rarr;</span></a><a class="bc" href="https://bitcoin-dns.vercel.app" target="_blank" rel="noopener"><img src="/bapps/bdns.png" alt="" width="48" height="48" loading="lazy" /><span class="bt"><b>bDNS</b><span class="chip c-beta">Beta</span></span><span class="bv">Register and trade names on Bitcoin</span><span class="go">Open &rarr;</span></a></div><h3 class="grp">Media</h3><div class="bgrid"><a class="bc" href="https://bitcoin-video-nine.vercel.app" target="_blank" rel="noopener"><img src="/bapps/bvideo.png" alt="" width="48" height="48" loading="lazy" /><span class="bt"><b>bVideo</b><span class="chip c-beta">Beta</span></span><span class="bv">Watch and publish video</span><span class="go">Open &rarr;</span></a><a class="bc" href="https://bitcoin-radio.vercel.app" target="_blank" rel="noopener"><img src="/bapps/bradio.png" alt="" width="48" height="48" loading="lazy" /><span class="bt"><b>bRadio</b><span class="chip c-beta">Beta</span></span><span class="bv">Listen to and run Bitcoin radio</span><span class="go">Open &rarr;</span></a><a class="bc" href="https://bitcoin-photos.vercel.app" target="_blank" rel="noopener"><img src="/bapps/bphotos.png" alt="" width="48" height="48" loading="lazy" /><span class="bt"><b>bPhotos</b><span class="chip c-beta">Beta</span></span><span class="bv">Turn photos into NFTs</span><span class="go">Open &rarr;</span></a><a class="bc" href="https://bitcoin-art.vercel.app" target="_blank" rel="noopener"><img src="/bapps/bart.png" alt="" width="48" height="48" loading="lazy" /><span class="bt"><b>bArt</b><span class="chip c-beta">Beta</span></span><span class="bv">Collect and show on-chain art</span><span class="go">Open &rarr;</span></a><a class="bc" href="https://bitcoin-paint.vercel.app" target="_blank" rel="noopener"><img src="/bapps/bpaint.png" alt="" width="48" height="48" loading="lazy" /><span class="bt"><b>bPaint</b><span class="chip c-beta">Beta</span></span><span class="bv">Paint and inscribe your work</span><span class="go">Open &rarr;</span></a><a class="bc" href="https://bitcoin-3d.vercel.app" target="_blank" rel="noopener"><img src="/bapps/b3d.png" alt="" width="48" height="48" loading="lazy" /><span class="bt"><b>b3D</b><span class="chip c-beta">Beta</span></span><span class="bv">Model and own 3D designs</span><span class="go">Open &rarr;</span></a><a class="bc" href="https://bitcoin-books-bay.vercel.app" target="_blank" rel="noopener"><img src="/bapps/bbooks.png" alt="" width="48" height="48" loading="lazy" /><span class="bt"><b>bBooks</b><span class="chip c-beta">Beta</span></span><span class="bv">Read and publish books</span><span class="go">Open &rarr;</span></a><div class="bc off"><img src="/bapps/bedu.png" alt="" width="48" height="48" loading="lazy" /><span class="bt"><b>bEdu</b><span class="chip c-coming">Coming</span></span><span class="bv">Learn and teach courses</span><span class="go">Coming</span></div></div><h3 class="grp">Social &amp; more</h3><div class="bgrid"><a class="bc" href="https://agents.bwalletx.com" target="_blank" rel="noopener"><img src="/bapps/bagents.png" alt="" width="48" height="48" loading="lazy" /><span class="bt"><b>bAgents</b><span class="chip c-beta">Beta</span></span><span class="bv">Run your AI agents and their budgets</span><span class="go">Open &rarr;</span></a><a class="bc" href="https://bitcoin-social.vercel.app" target="_blank" rel="noopener"><img src="/bapps/bsocial.png" alt="" width="48" height="48" loading="lazy" /><span class="bt"><b>bSocial</b><span class="chip c-beta">Beta</span></span><span class="bv">Post and follow on Bitcoin</span><span class="go">Open &rarr;</span></a><a class="bc" href="https://bitcoin-gaming.vercel.app" target="_blank" rel="noopener"><img src="/bapps/bgames.png" alt="" width="48" height="48" loading="lazy" /><span class="bt"><b>bGames</b><span class="chip c-beta">Beta</span></span><span class="bv">Play games on Bitcoin</span><span class="go">Open &rarr;</span></a><a class="bc" href="https://bitcoin-maps.vercel.app" target="_blank" rel="noopener"><img src="/bapps/bmaps.png" alt="" width="48" height="48" loading="lazy" /><span class="bt"><b>bMaps</b><span class="chip c-beta">Beta</span></span><span class="bv">Find places that take Bitcoin</span><span class="go">Open &rarr;</span></a></div>
+
+      <h2>Build your own</h2>
+      <div class="rules">
+        <div><h3><a href="/sign-in-button">Add Sign in with bWalletX</a></h3><p>Developers: one tag adds the standard button to your site. Then <a href="/apps/add">add your app</a> to the store.</p></div>
+        <div><h3><a href="/bweb">bWeb: your web on bitcoin</a> <span class="note">Coming</span></h3><p>Shape your bApps your way, and ask b to build what you want. Planned, not built yet.</p></div>
+      </div>
+      <div class="ctas"><a class="p" href="/get">Get bWalletX</a><a href="/developers">Developers</a></div>
+    </main>
+  </body>
+</html>

@@ -71,6 +71,11 @@
       "source": "/kyc",
       "destination": "/identity#verify",
       "permanent": true
+    },
+    {
+      "source": "/bmovies",
+      "destination": "/bapps/bmovies",
+      "statusCode": 308
     }
   ],
   "headers": [

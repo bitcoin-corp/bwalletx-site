@@ -30,6 +30,125 @@ Also: [Chrome extension](https://bwalletx.com/extension) · [Developers](https:/
 
 ---
 
+Source: https://bwalletx.com/bapps
+
+# bApps: apps that run inside bWalletX
+
+bApps are Bitcoin apps from The Bitcoin Corporation. Open them from the Apps tab in bWalletX, or in any browser. You sign in with your wallet, not a password, and anything you pay comes from your wallet, after you approve it.
+
+## How bApps work
+
+### Sign in with your wallet Live
+
+One tap on "Sign in with bWalletX". No account, no password, no email.
+
+### Pay from your wallet Live
+
+When an app asks for money, bWalletX shows you what it wants. Nothing leaves without your approval.
+
+### One bar in every app Coming
+
+Every bApp gets the same five buttons in the same place, each one about the app you have open:
+
+WalletExchangebFeedChat
+
+An app that doesn't use a button shows it greyed out, so the bar always looks the same. ☰ (your wallet menu) stays top left, with the app's icon next to it.
+
+### Like = 1¢ to join the room Coming
+
+Each app's Feed shows what's trending. A Like is a small buy, 1¢ by default (or one [PNEE](https://bwalletx.com/pnees)), of that thing's token. It funds the thing you liked, and the token is your key to its chat room. Daily cap of $1 by default; you can change both.
+
+## All bApps
+
+Live: working, in daily use. Beta: the site works, but it's early. Coming: not open yet.
+
+### Featured
+
+[bChatLiveChat, voice and video messages, tokenised group chatsOpen →](https://www.bitcoinchat.online)[bMoviesLiveWatch and back tokenised filmsRead more →](https://bwalletx.com/bapps/bmovies)[bMusicLiveTokenise your music; fans who hold it make the video with youOpen →](https://www.bmovies.app/bmusic)[bMintLiveDesign, stamp and mint tokens, currency and media on-chainOpen →](https://www.bitcoin-mint.com/mint)[bWriterLiveWrite and save documents on-chainOpen →](https://bitcoin-writer.com/)
+
+### Work
+
+[bSheetsLiveSpreadsheets saved on-chainOpen →](https://bitcoin-spreadsheet.vercel.app)[bMailBetaSend email that pays and gets paidOpen →](https://bitcoin-email.vercel.app)[bDriveBetaStore and share files on-chainOpen →](https://bitcoin-drive.vercel.app)[bCalBetaKeep a calendar on BitcoinOpen →](https://bitcoin-calendar.vercel.app)[bCodeBetaBuild apps on BitcoinOpen →](https://bitcoin-code.vercel.app)[bJobsBetaFind work and hire, paid in BSVOpen →](https://bitcoin-jobs.vercel.app)[bIDBetaManage your on-chain identityOpen →](https://bitcoin-identity.vercel.app)[bSearchBetaSearch what lives on-chainOpen →](https://bitcoin-search.vercel.app)[bDNSBetaRegister and trade names on BitcoinOpen →](https://bitcoin-dns.vercel.app)
+
+### Media
+
+[bVideoBetaWatch and publish videoOpen →](https://bitcoin-video-nine.vercel.app)[bRadioBetaListen to and run Bitcoin radioOpen →](https://bitcoin-radio.vercel.app)[bPhotosBetaTurn photos into NFTsOpen →](https://bitcoin-photos.vercel.app)[bArtBetaCollect and show on-chain artOpen →](https://bitcoin-art.vercel.app)[bPaintBetaPaint and inscribe your workOpen →](https://bitcoin-paint.vercel.app)[b3DBetaModel and own 3D designsOpen →](https://bitcoin-3d.vercel.app)[bBooksBetaRead and publish booksOpen →](https://bitcoin-books-bay.vercel.app)
+bEduComingLearn and teach coursesComing
+
+### Social & more
+
+[bAgentsBetaRun your AI agents and their budgetsOpen →](https://agents.bwalletx.com)[bSocialBetaPost and follow on BitcoinOpen →](https://bitcoin-social.vercel.app)[bGamesBetaPlay games on BitcoinOpen →](https://bitcoin-gaming.vercel.app)[bMapsBetaFind places that take BitcoinOpen →](https://bitcoin-maps.vercel.app)
+
+## Build your own
+
+### [Add Sign in with bWalletX](https://bwalletx.com/sign-in-button)
+
+Developers: one tag adds the standard button to your site. Then [add your app](https://bwalletx.com/apps/add) to the store.
+
+### [bWeb: your web on bitcoin](https://bwalletx.com/bweb) Coming
+
+Shape your bApps your way, and ask b to build what you want. Planned, not built yet.
+
+[Get bWalletX](https://bwalletx.com/get)[Developers](https://bwalletx.com/developers)
+
+---
+
+Source: https://bwalletx.com/bapps/bmovies
+
+[← All bApps](https://bwalletx.com/bapps)
+
+# bMovies, inside bWalletX
+
+bMovies is a film feed on Bitcoin SV. Scroll it like Instagram, watch thousands of films, and back the ones you want more of. Sign in with bWalletX and it works like part of your wallet.
+
+[Open bMovies](https://bmovies.app)[Get bWalletX](https://bwalletx.com/get)
+
+## Live today Live
+
+- A film feed syndicated from creators on X, with around 2,300 films you can play.
+
+- Sign in with bWalletX (also works with bWallet). HandCash, Metanet Desktop and Yours also work for watching, liking and commenting.
+
+- BSV only: every payment is in Bitcoin SV, from your own wallet.
+
+- Film tokens: each film can have its own token. Holding it shows you backed the film.
+
+The bMovies sign-in screen on a phone.
+
+## How it fits the bApp bar Coming
+
+Inside bWalletX, bMovies will use the same five buttons as every bApp, each one about films:
+
+ButtonIn bMovies
+
+WalletThe films you've backed. Your BSV balance stays in the wallet's own Wallet.
+
+ExchangeFilm tokens, and Mint to start a film's token.
+
+bAsk b, the wallet's assistant. Later: "make me a movie".
+
+FeedTrending films. Like = 1¢ to back a film and join its room.
+
+ChatEach film's room, for the people who backed it.
+
+## Coming next Coming
+
+- Like to fund: one tap backs a film with 1¢ (or one PNEE) and lets you into its room. Daily cap $1 by default.
+
+- Streaming that pays by the second: pay only for what you watch.
+
+- Twatch comments on films.
+
+- Friend movies: a film starring you and your friends. Everyone in it signs their own consent in their own wallet first, and it stays private to your group unless all of them agree to publish.
+
+- "b, make me a movie": ask b for a film, see the price, approve it in your wallet.
+
+A film token is a key to that film's room and a record that you backed it. It is not an investment and doesn't pay you anything.
+
+[Open bMovies](https://bmovies.app)[Get bWalletX](https://bwalletx.com/get)[All bApps](https://bwalletx.com/bapps)
+
+---
+
 Source: https://bwalletx.com/bphone
 
 # bPhone. Get paid to take the call.
@@ -274,6 +393,56 @@ Buy and sell tokens, priced in dollars.
 [All features](https://bwalletx.com/features)
 
 bWalletX is in beta: test with small amounts. Questions: [support@bwalletx.com](mailto:support@bwalletx.com)
+
+---
+
+Source: https://bwalletx.com/bweb
+
+# bWeb: your web on bitcoin Coming
+
+bWeb is a plan, not a product yet. Nothing on this page is built. Here is the idea: you start in bWalletX, and your [bApps](https://bwalletx.com/bapps) become yours. You choose how they look and what they show, and when you want more, agents like b build it for you. You pay in small amounts, from your wallet, only after you approve.
+
+## Three ways to make it yours
+
+### 1. Make it yours Free
+
+Settings for each app: the order of your bar, the theme, what the Feed shows, how much a Like costs and your daily cap. Instant. Most people never need more.
+
+### 2. Ask b Small paid job
+
+"b, add a word-count goal to bWriter." b shows you a price and what the add-on can and can't do. You approve in your wallet, and it's live in minutes. Undo any time.
+
+### 3. Your own version Paid
+
+b makes your own copy of an open-source bApp with the change you asked for, on its own web address. Good changes are offered back to the main app, so everyone gets them.
+
+## Safety promises
+
+- Add-ons never touch your keys. They run walled off from your wallet and can't send your data anywhere.
+
+- Payments only go through your wallet. bWalletX shows its own approval and your daily cap applies. Nothing pays on its own.
+
+- Your settings are private. They're encrypted to you, and the apps never see them.
+
+## bApp tokens are keys
+
+Each bApp's token (such as $bWriter) is a key to that app's rooms, including its build room, where people who hold it talk about and rank what to build next. If you paid for a change that goes into the main app, you get a record that you helped build it. A token is room access, not an investment, and it doesn't pay you anything.
+
+## Example: a movie with your friends
+
+In your group's room: "b, a heist movie starring me, Sam and Priya, in Lisbon." b gives a price. Everyone in the cast signs their own consent in their own wallet; without everyone's yes, nothing gets made. The group funds it together, and the film is delivered privately to the room. Posting it to the public [bMovies](https://bwalletx.com/bapps/bmovies) feed needs every cast member to agree again.
+
+## First apps
+
+bAppPlanned
+
+bWriterSettings, Ask b, your own version
+
+bSheetsSettings, Ask b, your own version
+
+bMoviesSettings only at first
+
+[Get bWalletX](https://bwalletx.com/get)[See the bApps](https://bwalletx.com/bapps)[For developers](https://bwalletx.com/sign-in-button)
 
 ---
 
@@ -541,9 +710,9 @@ See company share listings in the market.
 
 ## 🧩Apps and websites
 
-### bApps store
+### [bApps store](https://bwalletx.com/bapps)
 
-A built-in store of Bitcoin apps, one tap away. Desktop- or phone-sized.
+A built-in store of Bitcoin apps, one tap away. Desktop- or phone-sized. [See them all](https://bwalletx.com/bapps).
 
 ### Browser
 
@@ -831,7 +1000,7 @@ bApps
 
 ## A whole suite, one tap away.
 
-Bitcoin apps from The Bitcoin Corporation. Open any of them in your browser today.
+Bitcoin apps from The Bitcoin Corporation. Open any of them in your browser today. [See every bApp →](https://bwalletx.com/bapps)
 
 [bChatChat with keys, not accounts
 bMoviesFilms and series on-chain
