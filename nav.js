@@ -80,7 +80,18 @@
           { label: 'CLI', href: '/cli' },
           { label: 'MCP', href: '/mcp' }
         ] },
-      { label: 'Blog', href: '/blog' }
+      // Blog: when you publish a post, add it to the top of LATEST and drop the oldest (keep 5).
+      { label: 'Blog', href: '/blog', pages: ['/blog'], pills: false,
+        sub: [{ label: 'All posts', href: '/blog' }, { head: 'Latest' }].concat([
+          { label: '029 bPositive', href: '/blog/029-bpositive' },
+          { label: '028 Launch something', href: '/blog/028-launch-something' },
+          { label: '027 Airdrops, not dividends', href: '/blog/027-airdrops-not-dividends' },
+          { label: '026 Paying to be heard', href: '/blog/026-paying-to-be-heard' },
+          { label: '025 Push notifications', href: '/blog/025-push-notifications' }
+        ], [{ head: 'Series: Chat on BSV' },
+          { label: '021 Coordinate on BSV', href: '/blog/021-coordinate-on-bsv' },
+          { label: '026 Paying to be heard', href: '/blog/026-paying-to-be-heard' }
+        ]) }
     ],
     // Store edition (bWallet): browse-only Market, no trading, everything else lives on bWalletX.
     store: [
@@ -104,8 +115,10 @@
     return p || '/';
   }
   var path = norm(location.pathname);
+  var fullPath = path;
   if (/^\/blog\//.test(path)) path = '/blog'; // every post sits under Blog
   function link(it, active) {
+    if (it.head) return '<span class="nd-head">' + it.head + '</span>';
     return '<a href="' + it.href + '"' + (active ? ' aria-current="page"' : '') + '>' + it.label + '</a>';
   }
 
@@ -117,7 +130,7 @@
   var main = document.querySelector('.topbar nav[aria-label="Pages"]');
   if (!main) return;
   function subLinks(it) {
-    return it.sub.map(function (s) { return link(s, path === s.href || (s.also || []).indexOf(path) !== -1); }).join('');
+    return it.sub.map(function (s) { return link(s, (s.href && /^\/blog(\/|$)/.test(s.href) ? fullPath : path) === s.href || (s.also || []).indexOf(path) !== -1); }).join('');
   }
   // Desktop: each section is a link with a dropdown of its pages.
   main.innerHTML = items.map(function (it) {
@@ -151,7 +164,7 @@
     main.closest('.topbar').appendChild(panel);
   }
 
-  if (section && section.sub) {
+  if (section && section.sub && section.pills !== false) {
     var sub = document.createElement('nav');
     sub.className = 'section-nav sub-nav';
     sub.setAttribute('aria-label', section.label.replace(/&[a-z]+;/g, '') + ' pages');
@@ -222,6 +235,8 @@
     '.nd:hover .nd-menu,.nd:focus-within .nd-menu{display:flex}' +
     '.nd-menu a{padding:7px 10px;border-radius:8px;white-space:nowrap;font-size:.9rem!important}' +
     '.nd-menu a:hover{background:#ffffff10}' +
+    '.nd-head{display:block;padding:8px 10px 2px;font-size:.7rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:#8a8a85}' +
+    '.m-menu .nd-head{padding:8px 12px 2px}' +
     '.menu-btn{display:none;font:600 .9rem inherit;color:#fff;background:transparent;border:1px solid #ffffff40;border-radius:999px;padding:5px 12px;cursor:pointer}' +
     '.m-menu{background:#0d0e11;border-top:1px solid #ffffff14;padding:6px 16px 14px;max-height:calc(100vh - 120px);overflow-y:auto}' +
     '.m-menu details{border-bottom:1px solid #ffffff12}' +
