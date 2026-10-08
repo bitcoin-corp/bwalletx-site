@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Hold to talk to b</title>
+    <link rel="canonical" href="https://bwalletx.com/hold-to-talk" />
+    <meta name="description" content="Hold to talk to b: the wallet and CLI are MIT-licensed on GitHub. What that means for your keys, balances, tokens and locks if we ever disappear." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://bwalletx.com/hold-to-talk" />
+    <meta property="og:site_name" content="bWalletX" />
+    <meta property="og:title" content="Hold to talk to b" />
+    <meta property="og:description" content="Hold to talk to b: the wallet and CLI are MIT-licensed on GitHub. What that means for your keys, balances, tokens and locks if we ever disappear." />
+    <meta property="og:image" content="https://bwalletx.com/og-hold-to-talk-v1.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Hold to talk to b: the wallet and CLI are MIT-licensed on GitHub. What that means for your keys, balances, tokens and locks if we ever disappear." />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@bWalletX" />
+    <meta name="twitter:title" content="Hold to talk to b" />
+    <meta name="twitter:description" content="Hold to talk to b: the wallet and CLI are MIT-licensed on GitHub. What that means for your keys, balances, tokens and locks if we ever disappear." />
+    <meta name="twitter:image" content="https://bwalletx.com/og-hold-to-talk-v1.png" />
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="stylesheet" href="/styles.css" />
+    <style>
+      .ext h1 { font-size: clamp(2.2rem, 6vw, 3.4rem); margin: 18px 0 10px; }
+      .ext h2 { margin: 48px 0 8px; font-size: 1.5rem; }
+      .ext p, .ext li { line-height: 1.7; }
+      .ext .small { color: #8a8a86; font-size: 0.85rem; }
+      .ext .row { display: flex; gap: 12px; flex-wrap: wrap; margin: 26px 0; }
+      .soonpill { display: inline-block; font-size: 0.8rem; font-weight: 700; border: 1px solid #F5B80088; color: #F5B800; border-radius: 999px; padding: 3px 12px; }
+      .demo { position: relative; max-width: 360px; margin: 28px auto; height: 300px; background: #0c0d10; border: 1px solid #ffffff14; border-radius: 28px; overflow: hidden; }
+      .panel { position: absolute; left: 16px; right: 16px; bottom: 104px; background: #15161a; border: 1px solid #F5B80055; border-radius: 18px; padding: 14px; opacity: 0; animation: panel 6s infinite; }
+      .bars { display: flex; gap: 5px; align-items: center; justify-content: center; height: 40px; }
+      .bars i { width: 6px; border-radius: 3px; background: linear-gradient(#FFD84D, #E8A100); height: 8px; animation: bar 0.9s ease-in-out infinite; }
+      .bars i:nth-child(2){animation-delay:.15s}.bars i:nth-child(3){animation-delay:.3s}.bars i:nth-child(4){animation-delay:.45s}.bars i:nth-child(5){animation-delay:.6s}.bars i:nth-child(6){animation-delay:.2s}.bars i:nth-child(7){animation-delay:.35s}
+      .words { text-align: center; color: #e6e6e6; font-size: 0.95rem; margin-top: 8px; white-space: nowrap; overflow: hidden; width: 0; margin-left: auto; margin-right: auto; animation: type 6s steps(28) infinite; }
+      .dock { position: absolute; left: 0; right: 0; bottom: 0; height: 84px; background: #101114; border-top: 1px solid #ffffff12; display: flex; align-items: center; justify-content: space-around; }
+      .dock .dot { width: 22px; height: 22px; border-radius: 7px; background: #ffffff1a; }
+      .bbtn { position: relative; width: 64px; height: 64px; }
+      .bbtn svg { position: absolute; inset: 0; transform: rotate(-90deg); }
+      .bbtn .ring { fill: none; stroke: #F5B800; stroke-width: 4; stroke-dasharray: 189; stroke-dashoffset: 189; animation: ring 6s infinite; }
+      .bbtn b { position: absolute; inset: 7px; border-radius: 50%; background: #F5B800; color: #000; display: grid; place-items: center; font: 700 1.6rem 'Space Grotesk', sans-serif; }
+      .finger { position: absolute; left: 50%; bottom: 14px; width: 34px; height: 34px; margin-left: -6px; border-radius: 50%; background: #ffffff30; border: 2px solid #ffffff60; opacity: 0; animation: finger 6s infinite; }
+      @keyframes ring { 0%,8% { stroke-dashoffset: 189; } 16%,80% { stroke-dashoffset: 0; } 86%,100% { stroke-dashoffset: 189; } }
+      @keyframes panel { 0%,15% { opacity: 0; transform: translateY(10px); } 20%,80% { opacity: 1; transform: none; } 88%,100% { opacity: 0; } }
+      @keyframes type { 0%,22% { width: 0; } 70%,82% { width: 15em; } 88%,100% { width: 0; } }
+      @keyframes bar { 0%,100% { height: 8px; } 50% { height: 36px; } }
+      @keyframes finger { 0%,4% { opacity: 0; } 8%,80% { opacity: 1; } 86%,100% { opacity: 0; } }
+      @media (prefers-reduced-motion: reduce) { .panel, .words, .bbtn .ring, .finger, .bars i { animation: none; opacity: 1; width: auto; stroke-dashoffset: 0; } }
+      .steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr)); gap: 14px; margin: 18px 0; }
+      .step { background: #101114; border: 1px solid #ffffff12; border-radius: 16px; padding: 16px; min-width: 0; }
+      .step .n { color: #F5B800; font-weight: 700; font-size: 0.8rem; letter-spacing: .1em; }
+      .step h3 { margin: 4px 0 6px; font-size: 1.15rem; }
+      .step p { margin: 0; color: #a7adb8; font-size: 0.95rem; line-height: 1.55; }
+      .tip { border-left: 3px solid #F5B800; background: #F5B8000f; padding: 12px 16px; border-radius: 0 12px 12px 0; margin: 18px 0; }
+      .ext table { width: 100%; border-collapse: collapse; margin: 18px 0; font-size: 0.95rem; }
+      .ext th, .ext td { text-align: left; padding: 10px 8px; border-bottom: 1px solid #ffffff14; vertical-align: top; overflow-wrap: anywhere; }
+      .ext th { color: #a7adb8; font-weight: 600; }
+      .ext details { border-bottom: 1px solid #ffffff14; padding: 12px 0; }
+      .ext summary { cursor: pointer; font-weight: 600; }
+      @media (max-width: 560px) { .ext table, .ext tbody, .ext tr, .ext td { display: block; } .ext tr:first-child { display: none; } .ext tr { padding: 10px 0; border-bottom: 1px solid #ffffff14; } .ext td { border: 0; padding: 3px 0; overflow-wrap: normal; } }
+    </style>
+  </head>
+  <body>
+    <div class="beta-banner">bWalletX is in <strong>beta</strong>: test with small amounts.</div>
+    <header class="topbar">
+      <div class="wrap topbar-in">
+        <a class="brand" href="/"><img src="/logo.svg" alt="" width="34" height="30" /><span>bWallet<span class="gold">X</span></span></a>
+        <nav aria-label="Pages">
+          <a href="/features">Features</a><a href="/exchange">Exchange</a><a href="/social">Social</a><a href="/agent">Agents</a><a href="/extension">Extension</a><a href="/developers">Developers</a>
+        </nav>
+        <span class="nav-cta"><a class="dl-btn" href="/get">Download</a><a class="web-btn" href="https://web.bwalletx.com" target="_blank" rel="noopener">Web &rarr;</a></span>
+      </div>
+    </header>
+    <script src="/nav.js"></script>
+    <main class="ext">
+      <span class="soonpill">Coming in 5.1.89</span>
+      <h1>Hold to talk <span class="gold">to b.</span></h1>
+      <p class="lede">The big b in the middle of the bottom bar now listens. Touch and hold it, say what you want, and let go. Your words appear as you speak, and nothing is sent until you lift your finger.</p>
+
+      <div class="demo" role="img" aria-label="Animation: a finger holds the b button, a gold ring fills, sound bars move and words appear in a panel above">
+        <div class="panel"><div class="bars"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><div class="words">&ldquo;Send five dollars to Sam&rdquo;</div></div>
+        <div class="dock"><span class="dot"></span><span class="dot"></span>
+          <span class="bbtn"><svg viewBox="0 0 64 64" width="64" height="64"><circle cx="32" cy="32" r="30" fill="none" stroke="#ffffff1a" stroke-width="4"/><circle class="ring" cx="32" cy="32" r="30"/></svg><b>b</b></span>
+          <span class="dot"></span><span class="dot"></span></div>
+        <span class="finger"></span>
+      </div>
+
+      <h2>How it works</h2>
+      <div class="steps">
+        <div class="step"><div class="n">1 &middot; HOLD</div><h3>Touch and hold the b</h3><p>After half a second you feel a tick and a panel opens with gold sound bars. A quick tap still does what it always did: Home in the wallet, or opens b.</p></div>
+        <div class="step"><div class="n">2 &middot; SPEAK</div><h3>Say it</h3><p>Talk normally. Your words appear in the panel as you speak, so you can see what b will get.</p></div>
+        <div class="step"><div class="n">3 &middot; LET GO</div><h3>Lift your finger</h3><p>Letting go sends your words to b, just as if you had typed them.</p></div>
+      </div>
+      <p class="tip"><b>Changed your mind?</b> Slide your finger away from the b and the ring turns grey. Let go there and nothing is sent. Slide back onto the b to keep talking.</p>
+
+      <h2>Where it works</h2>
+      <table>
+        <tr><th>Where</th><th>Speech recognition</th><th>First time</th></tr>
+        <tr><td><b>iPhone</b></td><td>Apple speech recognition, on the device where your iPhone supports it</td><td>Asks for Speech Recognition, then Microphone</td></tr>
+        <tr><td><b>Android</b></td><td>Android speech recognition</td><td>Asks for Microphone; then hold the b again</td></tr>
+        <tr><td><b>Web wallet</b></td><td>Your browser&rsquo;s speech recognition (Chrome, Edge, Safari). Firefox falls back to typing.</td><td>The browser asks for the microphone</td></tr>
+        <tr><td><b>Chrome extension</b></td><td>Browser speech recognition</td><td>Opens a permission tab once to ask for the microphone</td></tr>
+      </table>
+      <p>The same gesture is coming to <a href="https://bchatx.com" target="_blank" rel="noopener">bChatX.com</a> too.</p>
+
+      <h2>Same rules as typing</h2>
+      <ul>
+        <li><b>Nothing is sent until you let go.</b> Slide away and let go, and it is thrown away.</li>
+        <li><b>Consent first.</b> Before your first message to each AI provider, you are asked to agree, exactly as when you type.</li>
+        <li><b>Secrets are caught.</b> If you say something that looks like a recovery phrase or private key, it is caught the same way typed secrets are.</li>
+        <li><b>Prices still show.</b> Paid messages still show the price and your daily limit before anything is spent.</li>
+      </ul>
+
+      <h2>Questions</h2>
+      <details><summary>Does it cost anything?</summary><p>Talking costs nothing extra. What you send to b is priced the same as a typed message, and paid messages show the price and your daily limit first.</p></details>
+      <details><summary>What gets sent?</summary><p>The text of what you said, once you let go. The words are turned into text by your phone or browser&rsquo;s own speech recognition, then that text goes to b like a typed message.</p></details>
+      <details><summary>Which languages?</summary><p>It listens in your device&rsquo;s language, using whatever your phone or browser&rsquo;s speech recognition supports.</p></details>
+      <details><summary>When can I use it?</summary><p>It is coming in bWalletX 5.1.89, the next release. Watch the <a href="/releases">releases page</a>.</p></details>
+
+      <div class="row"><a class="btn btn-store" href="/get">Get bWalletX</a><a class="btn btn-store btn-ghost" href="https://web.bwalletx.com" target="_blank" rel="noopener">Open the web wallet</a></div>
+      <p class="small">bWalletX is in beta: test with small amounts. Questions: <a href="mailto:support@bwalletx.com">support@bwalletx.com</a></p>
+    </main>
+  </body>
+</html>
