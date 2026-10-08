@@ -1459,6 +1459,32 @@ bWalletX. Get it free at bwalletx.com. It’s in beta, so start with small amoun
 
 ---
 
+Source: https://bwalletx.com/web
+
+# Use bWalletX in your browser.
+
+Nothing to install. Open the web wallet, restore with your 12 words or create a new wallet, and you’re in.
+
+[Open the web wallet →](https://web.bwalletx.com)
+
+## Why use the web wallet
+
+- No installIt runs in a normal browser tab. No app store, no extension.
+
+- Your keysYour keys are made and kept in your browser. They aren’t sent to us.
+
+- Any computerWorks on Windows, Mac, Linux and ChromeOS.
+
+- Same walletIt’s the same wallet as the app. Restore with your 12 words to see the same coins and tokens, or create a new wallet.
+
+## Good to know
+
+The web wallet is in beta: test with small amounts. For daily use we recommend [the app or the browser extension](https://bwalletx.com/get), which keep your wallet on your own device rather than in a browser tab.
+
+Questions: [support@bwalletx.com](mailto:support@bwalletx.com)
+
+---
+
 Source: https://bwalletx.com/exchange
 
 # bWalletX Exchange

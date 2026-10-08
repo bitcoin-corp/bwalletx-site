@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>bWalletX web wallet</title>
+    <link rel="canonical" href="https://bwalletx.com/web" />
+    <meta name="description" content="Use bWalletX in your browser: no install, your keys stay in your browser, works on any computer. The same wallet as the app. Beta." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://bwalletx.com/web" />
+    <meta property="og:site_name" content="bWalletX" />
+    <meta property="og:title" content="bWalletX in your browser, no install" />
+    <meta property="og:description" content="Use bWalletX in your browser: no install, your keys stay in your browser, works on any computer. The same wallet as the app. Beta." />
+    <meta property="og:image" content="https://bwalletx.com/og-web-v1.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Use bWalletX in your browser: no install, your keys stay in your browser, works on any computer. The same wallet as the app. Beta." />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@bWalletX" />
+    <meta name="twitter:title" content="bWalletX in your browser, no install" />
+    <meta name="twitter:description" content="Use bWalletX in your browser: no install, your keys stay in your browser, works on any computer. The same wallet as the app. Beta." />
+    <meta name="twitter:image" content="https://bwalletx.com/og-web-v1.png" />
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="stylesheet" href="/styles.css" />
+    <style>
+      .ext h1 { font-size: clamp(2.2rem, 6vw, 3.4rem); margin: 18px 0 10px; }
+      .ext h2 { margin: 44px 0 8px; font-size: 1.5rem; }
+      .ext p, .ext li { line-height: 1.7; }
+      .ext .small { color: #8a8a86; font-size: 0.85rem; }
+      .ext .row { display: flex; gap: 12px; flex-wrap: wrap; margin: 26px 0; }
+      .bigbtn { display: inline-block; background: #F5B800; color: #000; font-weight: 700; font-size: 1.2rem; padding: 16px 30px; border-radius: 14px; text-decoration: none; box-shadow: 0 0 40px rgba(245,184,0,.35); }
+      .bigbtn:hover { background: #ffc81a; }
+      .feat { list-style: none; padding: 0; margin: 18px 0; }
+      .feat li { display: flex; gap: 12px; align-items: baseline; padding: 12px 0; border-bottom: 1px solid #ffffff10; }
+      .tag { flex: none; font-size: 0.75rem; font-weight: 700; padding: 2px 9px; border-radius: 999px; background: #F5B800; color: #000; }
+    </style>
+    <script>
+      (function () {
+        try { if (new URLSearchParams(location.search).get('stay') === '1') return; } catch (e) {}
+        setTimeout(function () { location.replace('https://web.bwalletx.com'); }, 300);
+      })();
+    </script>
+  </head>
+  <body>
+    <div class="beta-banner">bWalletX is in <strong>beta</strong>: test with small amounts.</div>
+    <header class="topbar">
+      <div class="wrap topbar-in">
+        <a class="brand" href="/"><img src="/logo.svg" alt="" width="34" height="30" /><span>bWallet<span class="gold">X</span></span></a>
+        <nav aria-label="Pages">
+          <a href="/features">Features</a><a href="/exchange">Exchange</a><a href="/social">Social</a><a href="/agent">Agents</a><a href="/extension">Extension</a><a href="/developers">Developers</a>
+        </nav>
+        <span class="nav-cta"><a class="dl-btn" href="/get">Download</a><a class="web-btn" href="https://web.bwalletx.com" target="_blank" rel="noopener">Web &rarr;</a></span>
+      </div>
+    </header>
+    <script src="/nav.js"></script>
+    <main class="ext">
+      <h1>Use bWalletX <span class="gold">in your browser.</span></h1>
+      <p class="lede">Nothing to install. Open the web wallet, restore with your 12 words or create a new wallet, and you&rsquo;re in.</p>
+      <div class="row"><a class="bigbtn" href="https://web.bwalletx.com">Open the web wallet &rarr;</a></div>
+
+      <h2>Why use the web wallet</h2>
+      <ul class="feat">
+        <li><span class="tag">No install</span><span>It runs in a normal browser tab. No app store, no extension.</span></li>
+        <li><span class="tag">Your keys</span><span>Your keys are made and kept in your browser. They aren&rsquo;t sent to us.</span></li>
+        <li><span class="tag">Any computer</span><span>Works on Windows, Mac, Linux and ChromeOS.</span></li>
+        <li><span class="tag">Same wallet</span><span>It&rsquo;s the same wallet as the app. Restore with your 12 words to see the same coins and tokens, or create a new wallet.</span></li>
+      </ul>
+
+      <h2>Good to know</h2>
+      <p>The web wallet is in <strong>beta</strong>: test with small amounts. For daily use we recommend <a href="/get">the app or the browser extension</a>, which keep your wallet on your own device rather than in a browser tab.</p>
+
+      <p class="small">Questions: <a href="mailto:support@bwalletx.com">support@bwalletx.com</a></p>
+    </main>
+  </body>
+</html>
