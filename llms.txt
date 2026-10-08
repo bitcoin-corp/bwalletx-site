@@ -24,7 +24,7 @@ Full text of every page below: https://bwalletx.com/llms-full.txt
 - [bPhone](https://bwalletx.com/bphone): bPhone: charge to receive calls in bWalletX. Set a price per second, minute, hour or call in BSV, MNEE or a token; list yourself with your hours; take bookings. The caller pays your wallet as you talk.
 - [bPositive](https://bwalletx.com/bpositive): Sponsor someone’s journey in bWalletX: monthly support from pots, milestone pledges confirmed by witnesses, thank-you NFTs. Gifts only, 18+, 0% fee. Coming.
 - [bSpaces](https://bwalletx.com/bspaces): Live audio and video Spaces in token rooms in bWalletX: a stage, raise hand, token-gated entry and full screen. Live in bChat and, since 5.1.85, in bWalletX.
-- [Releases](https://bwalletx.com/releases): Every bWalletX release and what it added, newest first. Latest: 5.1.87.
+- [Releases](https://bwalletx.com/releases): Every bWalletX release and what it added, newest first. Latest: 5.1.88.
 
 ## Wallet features
 

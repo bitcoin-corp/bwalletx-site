@@ -974,6 +974,15 @@ Each release ships to the Android APK, the Chrome extension and the web wallet. 
 
 [Download bWalletX](https://bwalletx.com/download)
 
+## 5.1.88 2026-10-08
+
+- Calls redesigned: Recents, Contacts and Services tabs, a green Keypad button, and a yellow bPhone card
+- Microphone and camera fixed in Spaces and calls, with sound bars so you can see who is talking
+- New menu: your accounts right in the list, plus All accounts, Agents, Settings, and Sign out with a lock
+- Identity map screen and your identity on the wallet card; sign-in alerts and a Recent sign-ins list
+- Invite links for Spaces and rooms; rooms can keep their history; a private Lounge welcome
+- Chrome extension asks for microphone permission properly; the web wallet now looks like the app; sign out of chat per account
+
 ## 5.1.87 2026-10-08
 
 - bPhone: charge to receive calls, per second, minute, hour or call, in BSV (priced in dollars), MNEE or any BSV-21 token. New: start with small prices (not in store builds)
