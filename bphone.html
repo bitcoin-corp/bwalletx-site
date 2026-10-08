@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>bPhone</title>
+    <link rel="canonical" href="https://bwalletx.com/bphone" />
+    <meta name="description" content="bPhone: charge to receive calls in bWalletX. Set a price per second, minute, hour or call in BSV, MNEE or a token; list yourself with your hours; take bookings. The caller pays your wallet as you talk." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://bwalletx.com/bphone" />
+    <meta property="og:site_name" content="bWalletX" />
+    <meta property="og:title" content="bPhone: get paid to take the call" />
+    <meta property="og:description" content="Charge to receive calls in bWalletX. Per second, minute, hour or call, in BSV, MNEE or a token. The caller sees the price before it rings and pays your wallet as you talk." />
+    <meta property="og:image" content="https://bwalletx.com/og-bphone-v1.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="bPhone: charge to receive calls in bWalletX, per second, minute, hour or call, in BSV, MNEE or a token." />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@bWalletX" />
+    <meta name="twitter:title" content="bPhone: get paid to take the call" />
+    <meta name="twitter:description" content="Charge to receive calls in bWalletX. Per second, minute, hour or call, in BSV, MNEE or a token. The caller sees the price before it rings and pays your wallet as you talk." />
+    <meta name="twitter:image" content="https://bwalletx.com/og-bphone-v1.png" />
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="stylesheet" href="/styles.css" />
+    <style>
+      .ext h1 { font-size: clamp(2.2rem, 6vw, 3.4rem); margin: 18px 0 10px; }
+      .ext h2 { margin: 48px 0 8px; font-size: 1.5rem; }
+      .ext p, .ext li { line-height: 1.7; }
+      .ext .small { color: #8a8a86; font-size: 0.85rem; }
+      .ggrid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 230px), 1fr)); gap: 14px; margin: 18px 0; }
+      .gcard { display: block; background: #101114; border: 1px solid #ffffff12; border-radius: 16px; padding: 14px 16px; color: inherit; text-decoration: none; min-width: 0; }
+      .gcard h3 { margin: 0 0 4px; font-size: 1.05rem; }
+      .gcard p { margin: 0; color: #a7adb8; font-size: 0.92rem; line-height: 1.5; }
+      .feat { list-style: none; padding: 0; margin: 18px 0; }
+      .feat li { display: flex; gap: 12px; align-items: baseline; padding: 12px 0; border-bottom: 1px solid #ffffff10; }
+      .tag { flex: none; font-size: 0.75rem; font-weight: 700; padding: 2px 9px; border-radius: 999px; }
+      .tag.live { background: #F5B800; color: #000; }
+      .tag.soon { border: 1px solid #ffffff40; color: #a7adb8; }
+      .tw { overflow-x: auto; margin: 18px 0; }
+      table.wl { border-collapse: collapse; width: 100%; min-width: 560px; font-size: 0.92rem; }
+      table.wl th, table.wl td { text-align: left; vertical-align: top; padding: 10px 10px; border-bottom: 1px solid #ffffff14; line-height: 1.5; }
+      table.wl th { color: #F5B800; font-weight: 700; }
+      ol.steps li { margin: 6px 0; }
+      .quote { background: #101114; border: 1px solid #F5B80044; border-radius: 16px; padding: 16px 20px; margin: 18px 0; max-width: 420px; }
+      .quote .r { display: flex; justify-content: space-between; gap: 12px; padding: 6px 0; font-size: 0.95rem; }
+      .quote .r b { color: #fff; }
+      .quote .k { color: #a7adb8; }
+      .quote .cap { display: flex; gap: 8px; margin-top: 8px; }
+      .quote .cap span { flex: 1; text-align: center; border: 1px solid #ffffff22; border-radius: 10px; padding: 6px 0; font-size: 0.85rem; }
+      .quote .cap span.on { background: #F5B800; color: #1a1300; font-weight: 700; border-color: #F5B800; }
+    </style>
+  </head>
+  <body>
+    <div class="beta-banner">bWalletX is in <strong>beta</strong>: test with small amounts.</div>
+    <header class="topbar">
+      <div class="wrap topbar-in">
+        <a class="brand" href="/"><img src="/logo.svg" alt="" width="34" height="30" /><span>bWallet<span class="gold">X</span></span></a>
+        <nav aria-label="Pages">
+          <a href="/features">Features</a><a href="/exchange">Exchange</a><a href="/social">Social</a><a href="/agent">Agents</a><a href="/extension">Extension</a><a href="/developers">Developers</a>
+        </nav>
+        <span class="nav-cta"><a class="dl-btn" href="/get">Download</a><a class="web-btn" href="https://web.bwalletx.com" target="_blank" rel="noopener">Web &rarr;</a></span>
+      </div>
+    </header>
+    <script src="/nav.js"></script>
+    <main class="ext">
+      <h1>bPhone. <span class="gold">Get paid to take the call.</span></h1>
+      <p class="lede">Calls in bWalletX are free. bPhone lets you charge for yours: a price per second, minute or hour, or a one-off price per call, in BSV, MNEE or a token. The caller sees the price before your phone rings, agrees a maximum, and their wallet pays yours every few seconds while you talk. For therapists, solicitors, accountants, tutors, coaches, developers: anyone whose time is the product.</p>
+      <p><span class="tag soon">Next release</span> Built on the <code>bphone</code> branch, not yet in the released app (5.1.85). The directory and bookings need a small server update that goes out with the release.</p>
+
+      <h2>What the caller sees</h2>
+      <div class="quote" aria-label="The quote screen">
+        <div class="r"><span class="k">alice@bwalletx.com charges to receive calls</span></div>
+        <div class="r"><b>$2.00 / min, paid in BSV</b></div>
+        <div class="r"><span class="k">Paid every 10 seconds from your wallet while you talk. You can hang up any time.</span></div>
+        <div class="r"><span class="k">Max spend on this call</span></div>
+        <div class="cap"><span>$30 <small>≈ 15 min</small></span><span class="on">$60 <small>≈ 30 min</small></span><span>$120 <small>≈ 60 min</small></span></div>
+      </div>
+      <p>Nothing rings until the caller accepts. During the call both phones show the money: the caller sees what has gone out and a warning 30 seconds before their maximum, you see what has arrived and that the caller is paid up. When the call ends, both see the total.</p>
+
+      <h2>How it works</h2>
+      <ul class="feat">
+<li><span class="tag soon">Next release</span><span><b>Your price.</b> Chat &rsaquo; Calls &rsaquo; bPhone. Turn on &ldquo;Charge to receive calls&rdquo;, pick dollars paid in BSV, MNEE, or any BSV-21 token you hold (your own $NAME token included), and a price per second, minute, hour or call. Off by default: your calls stay free until you set a price.</span></li>
+<li><span class="tag soon">Next release</span><span><b>Pay as you talk.</b> The caller&rsquo;s wallet pays yours one interval ahead: every 10 seconds in BSV, every 60 seconds in MNEE or a token. Each payment is an ordinary wallet-to-wallet transaction straight to your paymail or token address. There is no middleman, no platform balance and no refunds. A one-off price is paid once, when you answer.</span></li>
+<li><span class="tag soon">Next release</span><span><b>Your phone enforces it.</b> If the caller&rsquo;s payments stop, your phone ends the call after a short grace period. If their maximum runs out, the call ends when the paid time does. A caller on an app without bPhone gets about 20 seconds and is cut off.</span></li>
+<li><span class="tag soon">Next release</span><span><b>List yourself.</b> A title, what you offer, a category, and your opening hours in your own time zone. People looking for a professional find you under Chat &rsaquo; Calls &rsaquo; Experts, see your rate and whether you are open now, and call or book. Listing is separate from charging: you can charge without being listed, or list a free consultation.</span></li>
+<li><span class="tag soon">Next release</span><span><b>Bookings.</b> Callers pick a 15, 30, 45 or 60 minute slot inside your hours; you confirm or decline. Both sides see the booking under bPhone, and from five minutes before the start a Call now button appears. The booked call is a normal bPhone call, quoted and paid the same way.</span></li>
+<li><span class="tag soon">Next release</span><span><b>Dollars in, sats out.</b> A BSV price is set in US dollars and paid in satoshis at the live rate at each payment, so you quote &ldquo;$2 a minute&rdquo; and the caller&rsquo;s wallet does the conversion. MNEE and token prices are in those units.</span></li>
+      </ul>
+
+      <h2>What a call costs</h2>
+      <div class="tw"><table class="wl">
+        <tr><th>You charge</th><th>Paid in</th><th>Payment every</th><th>A 30-minute call</th></tr>
+        <tr><td>$2.00 / min</td><td>BSV, at the live rate</td><td>10 s ($0.34, then $0.33…)</td><td>$60.00 in sats, over 180 payments</td></tr>
+        <tr><td>90 MNEE / hour</td><td>MNEE</td><td>60 s (1.50 MNEE)</td><td>45 MNEE</td></tr>
+        <tr><td>1 BOB / second</td><td>your BOB token</td><td>60 s (60 BOB)</td><td>1,800 BOB</td></tr>
+        <tr><td>$50 per call</td><td>BSV</td><td>once, when you answer</td><td>$50.00</td></tr>
+      </table></div>
+      <p class="small">Each BSV payment carries the normal network fee (about 25 sats) and is never smaller than 546 sats, so very low rates are better charged in MNEE or a token. Rounding is exact over the whole call: the caller pays what the rate says, never a cent more.</p>
+
+      <h2>Why in the wallet</h2>
+      <p>Paid consultations usually mean a platform in the middle: it takes a cut, holds the money, decides who gets paid and when, and keeps the client list. bPhone has no middle. The price is published under your own identity key, the call runs over bWalletX&rsquo;s own video server, and every payment goes from the caller&rsquo;s wallet to yours while you are still talking. bWalletX takes 0%.</p>
+      <p>Your existing names work: callers reach you at your <a href="/handles">$handle or paymail</a>, and your listing is tied to the same identity your <a href="/identity">signature</a> uses. If you have a <a href="/friends">personal token</a>, you can charge in it, which gives your holders something to spend it on.</p>
+
+      <h2>Not in the store edition</h2>
+      <p>bWallet, the App Store and Google Play edition, keeps free voice and video calls and never shows a price. Charging for calls and the directory are bWalletX only, pending the store rules on person-to-person services.</p>
+
+      <h2>Your responsibilities</h2>
+      <p>You are selling your time to people you may not know. Any licence, insurance, confidentiality or tax rule that applies to your profession applies here too; bPhone does not check qualifications, and the directory shows your own words next to your paymail. Calls are not recorded by bWalletX. Report and block work inside the call, as on every call.</p>
+      <p>More on the thinking in <a href="/blog/030-bphone">blog post 030</a>. Questions: <a href="mailto:support@bwalletx.com">support@bwalletx.com</a></p>
+      <p class="small">bWalletX is in beta: test with small amounts.</p>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>030 bPhone: charge to receive calls · bWalletX blog</title>
+    <meta name="description" content="bPhone lets you charge to receive calls in bWalletX: a price per second, minute, hour or call, in BSV, MNEE or a token, paid wallet to wallet while you talk. How the meter works, why there is no middleman, and what is still to do." />
+    <link rel="canonical" href="https://bwalletx.com/blog/030-bphone" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://bwalletx.com/blog/030-bphone" />
+    <meta property="og:site_name" content="bWalletX" />
+    <meta property="og:title" content="bPhone: charge to receive calls" />
+    <meta property="og:description" content="Charge to receive calls in bWalletX: a price per second, minute, hour or call, in BSV, MNEE or a token, paid wallet to wallet while you talk. How the meter works and why there is no middleman." />
+    <meta property="og:image" content="https://bwalletx.com/og/og-blog-030.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@bWalletX" />
+    <meta name="twitter:title" content="bPhone: charge to receive calls" />
+    <meta name="twitter:description" content="Charge to receive calls in bWalletX: a price per second, minute, hour or call, in BSV, MNEE or a token, paid wallet to wallet while you talk. How the meter works and why there is no middleman." />
+    <meta name="twitter:image" content="https://bwalletx.com/og/og-blog-030.png" />
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="stylesheet" href="/styles.css" />
+    <style>
+      .ext { max-width: 760px; margin: 0 auto; padding: 120px 20px 80px; }
+      .ext h1 { font-size: clamp(2rem, 6vw, 3rem); margin: 10px 0 10px; line-height: 1.15; }
+      .ext h2 { margin: 44px 0 10px; font-size: 1.4rem; }
+      .ext p, .ext li { line-height: 1.7; }
+      .ext code { background: #17191e; padding: 2px 7px; border-radius: 6px; overflow-wrap: anywhere; }
+      .ext a { overflow-wrap: anywhere; }
+      .meta { color: #8a8a86; font-size: 0.9rem; margin: 0; }
+      .num { color: #F5B800; font-weight: 700; letter-spacing: .04em; }
+      .box { background: #101114; border: 1px solid #ffffff12; border-radius: 16px; padding: 18px 22px; margin: 28px 0; }
+      .box h2 { margin: 0 0 8px; font-size: 1.1rem; }
+      .box ul { margin: 0; padding-left: 1.2em; }
+      .related { color: #a7adb8; }
+      .pn { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; margin-top: 40px; border-top: 1px solid #ffffff14; padding-top: 20px; }
+      .pn a { color: #F5B800; text-decoration: none; max-width: 100%; }
+      .ext .small { color: #8a8a86; font-size: 0.85rem; }
+      .ext pre { background: #17191e; padding: 14px 16px; border-radius: 10px; overflow-x: auto; }
+      .ext pre code { padding: 0; background: none; overflow-wrap: normal; white-space: pre; }
+    </style>
+      <!-- ld:start -->
+    <script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "BlogPosting",
+   "headline": "bPhone: charge to receive calls",
+   "description": "bPhone lets you charge to receive calls in bWalletX: a price per second, minute, hour or call, in BSV, MNEE or a token, paid wallet to wallet while you talk. How the meter works, why there is no middleman, and what is still to do.",
+   "url": "https://bwalletx.com/blog/030-bphone",
+   "mainEntityOfPage": "https://bwalletx.com/blog/030-bphone",
+   "image": "https://bwalletx.com/og/og-blog-030.png",
+   "inLanguage": "en",
+   "author": {
+    "@type": "Organization",
+    "name": "The Bitcoin Corporation Ltd",
+    "url": "https://bwalletx.com/"
+   },
+   "publisher": {
+    "@type": "Organization",
+    "name": "The Bitcoin Corporation Ltd",
+    "logo": {
+     "@type": "ImageObject",
+     "url": "https://bwalletx.com/icon-512.png"
+    }
+   },
+   "datePublished": "2026-10-08"
+  }
+ ]
+}
+    </script>
+    <!-- ld:end -->
+  </head>
+  <body>
+    <div class="beta-banner">bWalletX is in <strong>beta</strong>: test with small amounts.</div>
+    <header class="topbar">
+      <div class="wrap topbar-in">
+        <a class="brand" href="/"><img src="/logo.svg" alt="" width="34" height="30" /><span>bWallet<span class="gold">X</span></span></a>
+        <nav aria-label="Pages">
+          <a href="/features">Features</a><a href="/exchange">Exchange</a><a href="/social">Social</a><a href="/agent">Agents</a><a href="/extension">Extension</a><a href="/developers">Developers</a>
+        </nav>
+        <span class="nav-cta"><a class="dl-btn" href="/get">Download</a><a class="web-btn" href="https://web.bwalletx.com" target="_blank" rel="noopener">Web &rarr;</a></span>
+      </div>
+    </header>
+    <script src="/nav.js"></script>
+    <main class="ext">
+      <p class="meta"><a href="/blog">Development blog</a> · <span class="num">030</span> · 8 Oct 2026</p>
+      <h1>bPhone: charge to receive calls</h1>
+      <p class="lede">Calls in bWalletX have always been free. From the next release you can put a price on yours: per second, minute, hour or call, in BSV, MNEE or a token, paid from the caller&rsquo;s wallet to yours while you are still talking. This is how it works, and why it is built the way it is.</p>
+      <p><b>Status: built on a branch, 8 Oct 2026, not yet released.</b> The wallet code, the server routes and the tests are done; the database change and device testing with real money come before it ships. Everything below describes the branch, not the released app (5.1.85).</p>
+
+      <h2>Whose time is the product</h2>
+      <p>A therapist, a solicitor, an accountant in January, a developer who will look at your broken deploy, a language tutor, someone who has been where you are. All of them sell time, and today most of them sell it through a platform that sits in the middle: it takes 15 to 30 percent, holds the money for a week or a month, decides when to pay out, and keeps the client list. The call itself goes through the platform too, so leaving it means losing the clients.</p>
+      <p>bWalletX already has the pieces that platform provides. Calls run on our own video server. Names resolve to identity keys. Payments go wallet to wallet in under a second. The missing piece was small: a published price, and a meter.</p>
+
+      <h2>The rate card</h2>
+      <p>Under Chat &rsaquo; Calls there is a new bPhone tab. You turn on &ldquo;Charge to receive calls&rdquo; and pick three things: the asset, the amount and the unit. The asset is dollars paid in BSV, MNEE, or any BSV-21 token you hold. The unit is a second, a minute, an hour, or the whole call. That is the whole rate card:</p>
+      <pre><code>{ amount: 2, per: 'minute', asset: { kind: 'bsv' } }</code></pre>
+      <p>It is published under your identity key on the paymail server, signed the same way your paymail claim is, so anyone who is about to call you can read it first. Your phone keeps a copy, because it is the side that has to enforce it.</p>
+      <p>BSV prices are in dollars. That is the rule we set for streams last week and it holds here: you say &ldquo;$2 a minute&rdquo;, the caller&rsquo;s wallet turns each payment into satoshis at the live rate. MNEE is a dollar already. A token price is in tokens, which means a $NAME token finally has something its holders can spend it on: a call with you.</p>
+
+      <h2>Nothing rings until the caller agrees</h2>
+      <p>When someone dials you, their wallet fetches your card before it places the call. If there is one, they see it: the rate, &ldquo;paid every 10 seconds from your wallet while you talk&rdquo;, and three choices for the most they are willing to spend, worked out as 15, 30 and 60 minutes at your rate. Accept, and the call rings. Cancel, and nothing happened. There is no way to reach the ringing state without passing the quote.</p>
+      <p>We thought about charging from the moment of ringing, so a callee&rsquo;s time waiting for you to pick up is paid. We decided against it: a missed call that cost money is the kind of thing that makes people stop using a feature. The meter starts when the callee answers.</p>
+
+      <h2>The meter</h2>
+      <p>The caller&rsquo;s phone runs the meter. Every 10 seconds in BSV, every 60 in MNEE or a token (each of those transfers pays an indexing fee, so they are batched longer), it sends one ordinary payment to the callee: a paymail payment for BSV, a transfer to the address in the card for the others. It pays one interval ahead, five seconds before the paid time runs out, so the callee is never owed money and the caller&rsquo;s exposure if the callee hangs up is one interval.</p>
+      <p>Rounding was the part we got wrong first. $2 a minute is 33.3 cents per 10 seconds; round that up every time and an hour costs $122.40 instead of $120. The meter now charges exactly what the rate says is owed through the new paid-until time, minus what has been paid: 34 cents, then 33, then 33, and so on. Over any length of call the total is the rate, to the cent.</p>
+      <p>After each payment the caller&rsquo;s phone sends a small receipt to the callee over the call&rsquo;s own data channel: a sequence number, the amount, the time it pays through, the transaction id. The callee&rsquo;s screen shows &ldquo;Received $4.20 · paid 7 s ahead&rdquo;. The caller&rsquo;s shows &ldquo;Spent $4.20 of $60&rdquo;, and a warning 30 seconds before the maximum. When the call ends, both see the total.</p>
+
+      <h2>The callee enforces it</h2>
+      <p>The callee&rsquo;s phone trusts nobody. If the first receipt has not arrived within 20 seconds of answering, it hangs up. After that, if the paid-through time is more than 10 seconds in the past, it hangs up, with &ldquo;Ended: not paid&rdquo; on the screen. A caller on an older build, or on the store edition, never sees the quote and never pays, so they get about 20 seconds and are cut off. That is the intended behaviour: a callee who set a price should not be giving free calls to people whose app is out of date.</p>
+      <p>What the callee&rsquo;s phone does not yet do is check the chain for each transaction id during the call. The paymail server already verifies that every BSV payment it receives pays the exact outputs it handed out, and the wallet collects those payments as it always has, so a forged receipt buys a caller at most one grace period before the inbox shows nothing arrived. A server-side ledger that matches receipts to transactions during the call is the obvious next step, and we have written down where it goes.</p>
+
+      <h2>The directory and bookings</h2>
+      <p>Charging and being found are separate switches. You can charge without being listed, so only people who already know your name pay for your time. Or you can list yourself: a title, a few lines about what you offer, a category, and opening hours in your own time zone. The listing appears under Chat &rsaquo; Calls &rsaquo; Experts for everyone, with your rate and whether you are open right now. Outside your hours you can still be called; the directory just says &ldquo;Opens Thu 09:00&rdquo;.</p>
+      <p>Bookings came out of the same conversation. Someone who wants an hour of your time next Tuesday should not have to catch you free. They pick a slot inside your hours, 15 to 60 minutes, and you confirm it or decline. From five minutes before the start a Call now button appears on both phones. The booked call is a normal bPhone call, quoted and paid the same way; there is no deposit and no charge for a no-show in this version. We would rather see how people use it first.</p>
+
+      <h2>No middle, 0%</h2>
+      <p>The Bitcoin Corporation takes nothing from a bPhone call, as with tips and with gifts. There is no platform balance anywhere: every payment is from the caller&rsquo;s wallet to the callee&rsquo;s, and the only server involved stores the published price and the bookings. If we disappeared tomorrow, the people in your call history would still be callable and payable by name.</p>
+      <p>There are no refunds either. A payment is a payment. The maximum the caller sets is the most a call can cost, and the grace period is the most a callee can be short. Both are small on purpose.</p>
+
+      <h2>What is still to do</h2>
+      <ul>
+        <li>Apply the database change on the paymail server and ship the wallet build, then test with real money: BSV, MNEE, a token, a flat price, an old build calling a priced callee, the cap, an empty wallet.</li>
+        <li>A receipt ledger on the server, so &ldquo;received&rdquo; on the callee&rsquo;s screen means &ldquo;verified&rdquo;.</li>
+        <li>Push ringing, so a booked call rings a phone with the app closed. Calls still ring only while the app is open.</li>
+        <li>Booking reminders, and a calendar export.</li>
+        <li>Not in the store edition until the rules on person-to-person services are settled with a reviewer.</li>
+      </ul>
+      <p>The rules as they stand, and a worked table of what a call costs, are on the <a href="/bphone">bPhone page</a>.</p>
+      <p>You are selling your time to people you may not know. Any licence, confidentiality or tax rule that applies to your profession applies here too; bPhone checks none of it, and says so.</p>
+
+      <div class="pn"><a href="/blog/029-bpositive">&larr; 029 bPositive: gifts, not investments</a><a href="/blog">All posts &rarr;</a></div>
+    </main>
+  </body>
+</html>

@@ -20,6 +20,7 @@ Full text of every page below: https://bwalletx.com/llms-full.txt
 - [Restore into bWalletX](https://bwalletx.com/restore): Every wallet you can restore or sweep into bWalletX: Yours, Panda, RelayX, Twetch, SimplyCash, BIP44 wallets, private keys and xprvs, and Money Button. What each needs and what comes across.
 - [History in bWalletX](https://bwalletx.com/history): See every transaction your bWalletX account made, for any date range, and export it as CSV or a PDF statement for your accountant.
 - [Push notifications · bWalletX](https://bwalletx.com/push-notifications): Push notifications are live in bWalletX: direct messages, mentions, group messages you opt into, $b answers and signing requests on iPhone, Android, the web wallet and the Chrome extension, even with the app closed. Who messaged you, not what they wrote.
+- [bPhone](https://bwalletx.com/bphone): bPhone: charge to receive calls in bWalletX. Set a price per second, minute, hour or call in BSV, MNEE or a token; list yourself with your hours; take bookings. The caller pays your wallet as you talk.
 - [bPositive](https://bwalletx.com/bpositive): Sponsor someone’s journey in bWalletX: monthly support from pots, milestone pledges confirmed by witnesses, thank-you NFTs. Gifts only, 18+, 0% fee. Coming.
 - [bSpaces](https://bwalletx.com/bspaces): Live audio and video Spaces in token rooms in bWalletX: a stage, raise hand, token-gated entry and full screen. Live in bChat and, since 5.1.85, in bWalletX.
 - [Releases](https://bwalletx.com/releases): Every bWalletX release and what it added, newest first. Latest: 5.1.85.
@@ -97,6 +98,7 @@ Full text of every page below: https://bwalletx.com/llms-full.txt
 - [027 Airdrops, not dividends · bWalletX blog](https://bwalletx.com/blog/027-airdrops-not-dividends): Why bWalletX issuers reward holders with airdrops, not payouts: the returns-wording block, the airdrop inbox, and the security audit behind it (sandboxed NFT content, address poisoning).
 - [028 Launch something with your coin · bWalletX blog](https://bwalletx.com/blog/028-launch-something): A coin should launch with something: token links for website, app, X, Telegram and bChat; the room as the default right; “Issuer says” for the rest; no company field; advanced launch options as plans.
 - [029 bPositive: gifts, not investments · bWalletX blog](https://bwalletx.com/blog/029-bpositive): bPositive lets you sponsor someone’s journey in bWalletX: monthly support, witness-confirmed milestone pledges, thank-you NFTs. Why it is gifts only, and the decisions behind it.
+- [030 bPhone: charge to receive calls · bWalletX blog](https://bwalletx.com/blog/030-bphone): bPhone lets you charge to receive calls in bWalletX: a price per second, minute, hour or call, in BSV, MNEE or a token, paid wallet to wallet while you talk. How the meter works, why there is no middleman, and what is still to do.
 - [bWalletX development blog](https://bwalletx.com/blog/): How bWallet and bWalletX were built from a fork of Yours Wallet: numbered posts from the git history, including what broke, what we reversed and what is still not done.
 
 ## Support
