@@ -81,8 +81,8 @@
           { label: 'MCP', href: '/mcp' }
         ] },
       // Blog: when you publish a post, add it to the top of LATEST and drop the oldest (keep 5).
-      { label: 'Blog', href: '/blog', pages: ['/blog'], pills: false,
-        sub: [{ label: 'All posts', href: '/blog' }, { head: 'Latest' }].concat([
+      { label: 'Blog', href: '/blog', pages: ['/blog', '/releases'], pills: false,
+        sub: [{ label: 'All posts', href: '/blog' }, { label: 'Releases', href: '/releases' }, { head: 'Latest' }].concat([
           { label: '029 bPositive', href: '/blog/029-bpositive' },
           { label: '028 Launch something', href: '/blog/028-launch-something' },
           { label: '027 Airdrops, not dividends', href: '/blog/027-airdrops-not-dividends' },

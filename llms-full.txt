@@ -24,7 +24,7 @@ It isn't on Google Play yet, so install it by hand:
 
 Updating from an older version? Install over the top and your wallet stays. If Android says the app can't be updated, write down your 12 words first, then uninstall and reinstall.
 
-Version 5.1.85 beta · 21.0 MB · Android 7+ · SHA-256 16fe04405b78dda9c4f3c4ef8162e213b972f222232ef82a8c8a31405fa21bf3
+Version 5.1.85 beta · 21.2 MB · Android 7+ · SHA-256 2d80e4859a7d068bb6b119cb6fb327270ed7b712cfa881d2ab804e01a2c15156
 
 Also: [Chrome extension](https://bwalletx.com/extension) · [Developers](https://bwalletx.com/developers)
 
@@ -100,7 +100,7 @@ A bSpace is a live audio or video room inside a token room in bWalletX. The host
 
 - Live in bChatToken-gated. A Space lives in a token room, so only holders get in. The server checks the holding, and the video server only lets in members who have joined.
 
-- ComingSpaces in bWalletX. A “Live now” banner with Join in the room, “Start a bSpace” for the issuer or a room admin, and a full-screen Space view: the stage on top, the hand queue for the host, controls at the bottom, and the room chat sliding up from below. It is being built now and is not in the released app (5.1.85).
+- Live since 5.1.85Spaces in bWalletX. A “Live now” banner with Join in the room, “Start a bSpace” for the issuer or a room admin, and a full-screen Space view: the stage on top, the hand queue for the host, controls at the bottom, and the room chat sliding up from below.
 
 ## Paid Spaces
 
@@ -242,7 +242,7 @@ Same extension, same file. Brave runs Chrome extensions, so:
 
 - Pin bWalletX from the puzzle-piece menu, click it, and create or restore your wallet.
 
-Version 5.1.85 beta · SHA-256 ec7856c9ebc77f4ccae13362e83693acd0460723a76b1b491680bb71639e5a59 · Source: [github.com/bitcoin-corp/bwallet](https://github.com/bitcoin-corp/bwallet)
+Version 5.1.85 beta · SHA-256 b5e5c88ec72ceea808d827c424ad860174b05ab40c7806e71248ea120f1e92fd · Source: [github.com/bitcoin-corp/bwallet](https://github.com/bitcoin-corp/bwallet)
 
 ---
 
@@ -532,6 +532,8 @@ Every transaction your account has made, read from the chain. Pick a date range,
 
 - LiveCategory filters. All, Payments, Tokens, NFTs, Games, Subscriptions, Apps, Social. Exports include the category, asset and app. Since 5.1.82.
 
+- Live since 5.1.85Correct amounts. Transactions your wallet funded for an app or token trade now show the right amount.
+
 - LiveConnections log. Which apps used the wallet, when, what you allowed them, what each spent, and a button to revoke access. Recorded on each device from 5.1.82.
 
 - LiveGains and losses. A Gains tab with realised gains and losses per tax year: UK HMRC share-pooling rules in pounds by default, FIFO in dollars elsewhere, BSV tracked as an asset, and a disposals CSV for your accountant. Since 5.1.85. Gains is in beta: figures may be incomplete, so check them against your own records.
@@ -573,7 +575,7 @@ Tap Download APK (beta). If Android asks, allow your browser to install unknown 
 - Open the downloaded bwalletx-android-5.1.85.apk and tap Install.
 
 -
-Optional but recommended: check the SHA-256 checksum matches16fe04405b78dda9c4f3c4ef8162e213b972f222232ef82a8c8a31405fa21bf3
+Optional but recommended: check the SHA-256 checksum matches2d80e4859a7d068bb6b119cb6fb327270ed7b712cfa881d2ab804e01a2c15156
 
 Beta software. Use small amounts and back up your recovery phrase. Only install the APK from this site or
 the official GitHub release.
@@ -1427,13 +1429,13 @@ Live since 5.1.74 Open Exchange and tap the Launchpad bar. The wallet checks eve
 
 ## Launch your own coin
 
-Coming A Launch your own coin button at the top of the Launchpad opens TokenBlaster’s launch page inside the wallet, with your wallet connected. It is coming in the next release. You can already launch at [tokenblaster.lol/launch/new](https://www.tokenblaster.lol/launch/new).
+Live since 5.1.85 A Launch your own coin button at the top of the Launchpad opens TokenBlaster’s launch page inside the wallet, with your wallet connected. On the web you can also launch at [tokenblaster.lol/launch/new](https://www.tokenblaster.lol/launch/new).
 
 ## Launch it with something
 
 A coin should come with something people can use: a website, an app or a product, and somewhere to talk, such as X, Telegram or a bChat room. Links are encouraged, not required. The plan is that coins with them rank higher on the board.
 
-Coming Token pages in the wallet show those links as chips. Tapping one warns you first: it is an outside site, not checked by us, and you should never enter your recovery phrase there.
+Live since 5.1.85 Token pages in the wallet show those links as chips. Tapping one warns you first: it is an outside site, not checked by us, and you should never enter your recovery phrase there.
 
 ## What a coin gives you
 
@@ -1484,6 +1486,8 @@ The rule is enforced by every miner, not by us. There is no switch at bWalletX t
 • BSV per payout, for example 0.1 BSV a week.
 
 • A percentage, of the original amount (the same payout each time, ending after 100÷X payouts) or of what is left (shrinking payouts; the last small remainder is paid at once).
+
+Live since 5.1.85 Unlock curves and templates. Shape gradual payouts with a curve (front-loaded, back-loaded, S-curve, cliff, step or custom), or start from a template: pension, savings, rainy-day, allowance, coupons, tax pot, salary or spend-down.
 
 Before you lock, the wallet shows every payout: estimated date, block height, BSV, and estimated dollars at today’s price.
 
@@ -1970,13 +1974,13 @@ Source: https://bwalletx.com/airdrops
 
 An airdrop is a token or NFT that arrives in your wallet without you buying or minting it. Issuers use airdrops to reward the people who hold their token. bWalletX is getting a proper place for them, and the safety rules that go with them.
 
-Coming Nothing on this page is in the released app yet (5.1.85). It is built on a development branch and will ship in a later release.
+Live since 5.1.85 Your airdrop address and the Airdrops inbox are in the app. Items still marked Coming are not built yet.
 
 ## Your airdrop address
 
 Every bWalletX account has an ordinals address: the address that holds your tokens and NFTs. That is your airdrop address. Give it to anyone who wants to send you a token.
 
-- ComingYour airdrop address, with a QR code, in the Airdrops screen.
+- Live since 5.1.85Your airdrop address, with a QR code, in Receive › Airdrops.
 
 - ComingThe same address and QR on your public page at `bwalletx.com/bchat/u/<name>`, so issuers can find it.
 
@@ -1984,13 +1988,13 @@ Every bWalletX account has an ordinals address: the address that holds your toke
 
 Anything that turns up unasked goes to an inbox instead of mixing into your wallet. A token or NFT counts as an airdrop when it was paid to one of your addresses by a transaction you didn’t fund and didn’t start: anything you bought, minted, launched, recovered or swapped is not an airdrop.
 
-- ComingA badge counts new airdrops since you last opened the inbox.
+- Live since 5.1.85A badge counts new airdrops since you last opened the inbox.
 
-- ComingKeep moves an airdrop out of the inbox. Hide hides it, and every future airdrop from the same issuer.
+- Live since 5.1.85Keep moves an airdrop out of the inbox. Hide hides it, and every future airdrop from the same issuer.
 
 - ComingOnly from issuers I kept before: a switch that shows airdrops only from issuers you have kept something from.
 
-- ComingUnverified labels. An airdrop shows who sent it (the token’s ID, or the sending address). We don’t check what a stranger’s token is or claims to be.
+- Live since 5.1.85Unverified labels. An airdrop shows who sent it (the token’s ID, or the sending address). We don’t check what a stranger’s token is or claims to be.
 
 ## Stay safe
 
@@ -2061,7 +2065,7 @@ Each item is marked by what the code does today.
 
 - ComingOne-to-many video streams. Broadcast to a room. Not built yet.
 
-- ComingPay per message. Rooms already have a price-per-message setting. Charging it is not switched on yet.
+- Live since 5.1.85Pay per message. In token rooms the wallet now charges the room’s price per message: the message and the payment go in one transaction (50-sat minimum).
 
 - ComingPay per second. Pay for a call or stream by the second while it runs.
 
@@ -4728,7 +4732,7 @@ Source: https://bwalletx.com/blog/023-lock-bsv
 
 Lock BSV until a date, or as payouts over time, and nobody can unlock it early, not even you. Why that is useful, how BSV enforces it with no custodian, and where the limits are.
 
-Status: live since 5.1.85. Lock BSV is in the app now. It is a new feature, so start small: lock only small amounts until it has been out for a while. The app asks again above 0.01 BSV.
+Status: live since 5.1.84. Lock BSV is in the app now. It is a new feature, so start small: lock only small amounts until it has been out for a while. The app asks again above 0.01 BSV.
 
 ## Why you would want to lose access to your own money
 
@@ -5036,7 +5040,7 @@ Source: https://bwalletx.com/blog/027-airdrops-not-dividends
 
 Why bWalletX issuers reward holders with airdrops, not payouts: the returns-wording block, the airdrop inbox, and the security audit behind it (sandboxed NFT content, address poisoning).
 
-Status: built, not released. The airdrop inbox, the airdrop address, the returns-wording filter and the safety changes below are built on a development branch. They are not in the released app (5.1.85) and will ship in a later release.
+Status: built, not released. The airdrop inbox, the airdrop address, the returns-wording filter and the safety changes below are built on a development branch. They are not in the released app (5.1.84) and will ship in a later release.
 
 ## How do you thank the people who hold your token?
 
@@ -5260,7 +5264,7 @@ Out in bWalletX 5.1.72: a paid like or a tip pays the author in the same transac
 
 - [](https://bwalletx.com/blog/023-lock-bsv)023 · 7 Oct 2026
 [Locks you can’t break](https://bwalletx.com/blog/023-lock-bsv)
-Lock BSV until a date, or as payouts over time, and nobody can unlock it early, not even you. Live since 5.1.85. New feature: start small.
+Lock BSV until a date, or as payouts over time, and nobody can unlock it early, not even you. Live since 5.1.84. New feature: start small.
 
 - [](https://bwalletx.com/blog/022-bring-your-coins-home)022 · 7 Oct 2026
 [Bring your coins home](https://bwalletx.com/blog/022-bring-your-coins-home)
