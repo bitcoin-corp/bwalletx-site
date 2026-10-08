@@ -1,0 +1,56 @@
+<!doctype html><html><head><meta charset="utf-8">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+html,body{margin:0;width:1200px;height:630px;overflow:hidden;background:#000}
+.og{position:relative;width:1200px;height:630px;overflow:hidden;font-family:'IBM Plex Sans',sans-serif;color:#fff}
+.bg{position:absolute;inset:0;background:url(http://localhost:8767/media/hero-poster.jpg) center/cover;filter:brightness(.45) saturate(1.2);transform:scale(1.2) translateX(260px)}
+.shade{position:absolute;inset:0;background:radial-gradient(circle at 80% 45%,rgba(245,184,0,.25),transparent 45%),linear-gradient(90deg,#000 0%,rgba(0,0,0,.9) 45%,rgba(0,0,0,.35) 80%,rgba(0,0,0,.6) 100%)}
+.left{position:absolute;left:72px;top:58px;width:640px}
+.mark{display:flex;align-items:center;gap:14px}
+.mark img{width:54px;filter:drop-shadow(0 0 22px rgba(245,184,0,.65))}
+.mark span{font-family:'Space Grotesk';font-weight:700;font-size:40px;letter-spacing:-1px}
+.gold{color:#F5B800}
+h1{font-family:'Space Grotesk';font-weight:700;font-size:64px;line-height:1.04;letter-spacing:-2.5px;margin:26px 0 20px}
+h1 em{font-style:normal;background:linear-gradient(180deg,#FFD84D,#E8A100);-webkit-background-clip:text;color:transparent}
+.chips{display:flex;flex-wrap:wrap;gap:10px}
+.chips span{border:1.5px solid #F5B80077;color:#F5B800;border-radius:999px;padding:7px 15px;font-weight:600;font-size:18px;background:#0008}
+.url{position:absolute;left:72px;bottom:44px;font-family:'Space Grotesk';font-size:26px;color:#c9ced8}
+.url b{color:#fff}
+.room{position:absolute;right:64px;top:58px;width:400px;background:#0c0d10ee;border:1px solid #F5B80066;border-radius:24px;padding:20px;box-shadow:0 0 70px rgba(245,184,0,.3);transform:rotate(3deg)}
+.rh{display:flex;align-items:center;gap:12px;padding-bottom:14px;border-bottom:1px solid #ffffff18}
+.av{width:44px;height:44px;border-radius:50%;background:linear-gradient(180deg,#FFD84D,#E8A100);display:flex;align-items:center;justify-content:center;color:#1a1300;font-weight:800;font-family:'Space Grotesk';font-size:20px}
+.rh b{font-family:'Space Grotesk';font-size:22px;display:block}
+.rh small{color:#9aa1ad;font-size:15px}
+.msg{margin-top:14px;display:flex;flex-direction:column;gap:4px}
+.msg small{color:#F5B800;font-weight:600;font-size:14px}
+.bub{background:#1a1c22;border-radius:14px;padding:10px 14px;font-size:18px;line-height:1.3;width:fit-content;max-width:320px}
+.me{align-items:flex-end}.me .bub{background:#F5B800;color:#1a1300}
+.gate{margin-top:16px;text-align:center;border:1.5px dashed #F5B80088;border-radius:14px;padding:10px;color:#F5B800;font-weight:600;font-size:16px}
+.sub{font-size:21px;line-height:1.4;color:#d7dbe2;margin:0;max-width:590px}
+h1{font-size:54px;margin:22px 0 18px;max-width:600px}
+.hist{position:absolute;right:64px;top:58px;width:420px;background:#0c0d10ee;border:1px solid #F5B80066;border-radius:24px;padding:20px 22px;box-shadow:0 0 70px rgba(245,184,0,.3);transform:rotate(2deg)}
+.hist h3{font-family:'Space Grotesk';font-size:17px;color:#F5B800;letter-spacing:.08em;margin:0 0 10px}
+.chiprow{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px}.chiprow span{font-size:13px;font-weight:600;border-radius:999px;padding:4px 10px;background:#1b1d22;color:#c9ced8}.chiprow .on{background:#F5B800;color:#1a1300}
+.r{display:flex;justify-content:space-between;align-items:center;padding:10px 0;border-top:1px solid #ffffff14;font-size:17px}
+.r b{display:block;font-size:17px}.r small{color:#9aa1ad;font-size:13px}
+.in{color:#5fd38a;font-weight:700}.out{color:#ffb4a2;font-weight:700}
+.exp{margin-top:12px;display:flex;gap:8px}.exp div{flex:1;text-align:center;border:1.5px solid #F5B80088;color:#F5B800;border-radius:12px;padding:8px;font-weight:700;font-size:15px}
+
+.big{position:absolute;left:72px;top:150px;font-family:'Space Grotesk';font-weight:700;letter-spacing:-8px;line-height:.95;background:linear-gradient(180deg,#FFD84D,#E8A100);-webkit-background-clip:text;color:transparent;filter:drop-shadow(0 0 40px rgba(245,184,0,.35))}
+.line{position:absolute;left:78px;top:430px;font-family:'Space Grotesk';font-weight:600;font-size:44px;color:#fff;letter-spacing:-1px}
+.badge{position:absolute;right:72px;top:62px;border:1.5px solid #F5B80088;border-radius:18px;padding:12px 18px;background:#0c0d10dd;font-size:20px;color:#d7dbe2}
+.badge b{color:#F5B800;font-family:'Space Grotesk';font-size:26px;display:block}
+.k{position:absolute;left:76px;top:150px;font-family:'Space Grotesk';font-weight:600;font-size:40px;color:#fff;letter-spacing:-1px}
+.feat{position:absolute;right:60px;top:60px;width:430px;background:#0c0d10ee;border:1px solid #F5B80066;border-radius:24px;padding:22px 26px;box-shadow:0 0 70px rgba(245,184,0,.3);transform:rotate(2deg)}
+.feat h3{font-family:'Space Grotesk';font-size:17px;color:#F5B800;letter-spacing:.08em;margin:0 0 6px}
+.feat div{padding:11px 0;border-top:1px solid #ffffff14;font-size:21px;font-weight:500}
+.feat div:before{content:"+ ";color:#F5B800;font-weight:700}
+</style></head><body><div class="og">
+<div class="bg"></div><div class="shade"></div>
+<div class="left"><div class="mark"><img src="http://localhost:8767/logo.svg"><span>bWallet<span class="gold">X</span></span></div></div>
+<div class="k">What&rsquo;s new in bWalletX</div>
+<div class="big" style="font-size:200px;top:205px;letter-spacing:-6px">5.1.86</div>
+<div class="feat"><h3>NEW IN THIS RELEASE</h3>
+<div>Spaces filter in Chat</div><div>Airdrops button in the top bar</div><div>New tokens: rooms wait while indexing</div><div>Step down for bSpaces speakers</div><div>Open-source licence updated</div></div>
+<div class="url"><b>bwalletx.com/releases</b> · Android · Chrome · Web</div>
+</div></body></html>

@@ -900,6 +900,15 @@ Each release ships to the Android APK, the Chrome extension and the web wallet. 
 
 [Download bWalletX](https://bwalletx.com/download)
 
+## 5.1.86 2026-10-08
+
+- Chat: a new Spaces filter shows live spaces in your rooms (not in store builds)
+- A token you just minted: its room says “Indexing your token…” and opens by itself, with no error
+- Airdrops: a gift button with an unread count in the top bar, and the airdrops card lines up neatly above Tokens, NFTs and Friends
+- bSpaces: Step down for speakers, clearer waiting and empty states, hand-raise confirmation
+- Handle screen explains why a verified X or Google name can’t switch to a plain name (one identity per wallet)
+- Classic layout: the b agent is in the menu
+
 ## 5.1.85 2026-10-08
 
 - Airdrops inbox: see and claim tokens sent to you
