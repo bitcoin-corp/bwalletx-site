@@ -28,6 +28,11 @@
   ],
   "redirects": [
     {
+      "source": "/web",
+      "destination": "https://web.bwalletx.com",
+      "statusCode": 302
+    },
+    {
       "source": "/bPhone",
       "destination": "/bphone",
       "statusCode": 301
