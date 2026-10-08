@@ -357,7 +357,19 @@ Every transaction for any date range, with a CSV export and a PDF statement. [Mo
 
 ### Restore from anywhere
 
-12 words are enough. Import from Yours, Panda, RelayX or Twetch, a private key or a backup file.
+12 words are enough. Import from Yours, Panda, RelayX or Twetch, a private key or a backup file, or restore with X or Google. [How](https://bwalletx.com/restore).
+
+### Lock BSV
+
+Lock until a date or pay yourself out over time, shaped by a curve or a template, with optional public receipts. [More](https://bwalletx.com/lock). Live since 5.1.84.
+
+### Airdrops inbox
+
+Tokens and NFTs sent to you land in an inbox with Keep and Hide, an unread count and address-poisoning warnings. [More](https://bwalletx.com/airdrops). Live since 5.1.85.
+
+### Web wallet
+
+The same wallet in your browser, laid out like the app. [Open it](https://bwalletx.com/web).
 
 ### Sweep another wallet
 
@@ -389,6 +401,18 @@ Sign in with X or Google for a verified `name.x` or `name.gmail`, with your phot
 
 Settings lists every name your wallet receives at, with one-tap unlink.
 
+### Handles
+
+Your $handle, the name people pay and message you by. [More](https://bwalletx.com/handles).
+
+### Identity map
+
+Settings › Identity shows your identity key, the keys grown from it and every name that points at them, and flags a mix-up. [More](https://bwalletx.com/identity-map). Live since 5.1.88.
+
+### Sign-in alerts
+
+Get told when your handle signs in somewhere new, with a Recent sign-ins list. Live since 5.1.88.
+
 ### Profile and avatar
 
 An avatar and display name that follow you into chat and the market.
@@ -415,6 +439,14 @@ Create BSV-21 tokens with your own supply, icon and name.
 
 Inscribe images, music and video as 1Sat Ordinals.
 
+### Launch your own coinbWalletX
+
+A Launch your own coin button on the Launchpad, buying and selling bonding-curve coins, and shareable token links. The wallet won't sign a token that promises returns. [More](https://bwalletx.com/launchpad). Live since 5.1.85.
+
+### Token lockingComing
+
+Lock tokens the way Lock BSV locks BSV, including time-locked creator allocations. Not built yet. [The plan](https://bwalletx.com/token-locking).
+
 ### TicketsbWalletX
 
 Mint a ticket token; sending one invites someone into your room.
@@ -435,11 +467,27 @@ Private chats with your contacts.
 
 ### Voice and video calls
 
-Call friends straight from the wallet. Turn your camera on or off mid-call and flip between front and back.
+Call friends straight from the wallet. The Calls tab has Recents, Contacts, Services and a Keypad. Turn your camera on or off mid-call and flip between front and back. Redesigned in 5.1.88.
 
 ### bPhone: paid callsbWalletX
 
 Charge to receive calls: per second, minute, hour or call, in BSV, MNEE or a token, paid wallet to wallet while you talk. List yourself with your hours and take bookings. [More](https://bwalletx.com/bphone). Live since 5.1.87.
+
+### bSpacesbWalletX
+
+Live audio and video Spaces in token rooms: a stage, speakers, raise-hand and invite links. Not in the store edition. [More](https://bwalletx.com/bspaces). Live since 5.1.85.
+
+### Pay per messagebWalletX
+
+Token rooms can charge per message; the message and the payment go in one transaction. [More](https://bwalletx.com/chat). Live since 5.1.85.
+
+### Live rooms
+
+Go live in a token room or a Space; who can watch, and what is next. [More](https://bwalletx.com/live).
+
+### bChatX on the web
+
+Chat lives on the web at [bchatx.com](https://www.bchatx.com): feed, rooms and [Spaces](https://www.bchatx.com/spaces), where anyone can listen without signing in. Sign in with bWalletX.
 
 ### BountiesbWalletX
 
@@ -527,9 +575,9 @@ One tap freezes every agent; a stopped agent can't spend. Every action is logged
 
 The ghost house: see all your agents, their balances and spending today, and stop or resume them. At [agents.bwalletx.com](https://agents.bwalletx.com).
 
-### Hold to talk to bComing soon
+### Hold to talk to bComing in 5.1.89
 
-Touch and hold the b, speak, let go to send. Coming in 5.1.89. [How it works](https://bwalletx.com/hold-to-talk).
+Touch and hold the b, speak, let go to send. [How it works](https://bwalletx.com/hold-to-talk).
 
 ### CLI and MCP
 
@@ -553,11 +601,15 @@ Unlock with biometrics on your phone.
 
 Generate a strong password and change it anytime.
 
+### Open source
+
+The wallet code is public and you can check it. [What is open, and under which licence](https://bwalletx.com/open-source).
+
 ### Delete your account
 
 Remove your paymail, profile and messages from our servers whenever you like.
 
-Some features are still in beta and vary by platform. Questions: [support@bwalletx.com](mailto:support@bwalletx.com)
+Some features are still in beta and vary by platform. What shipped when: [releases](https://bwalletx.com/releases). Questions: [support@bwalletx.com](mailto:support@bwalletx.com)
 
 ---
 
@@ -695,10 +747,10 @@ Coming next · not released yet
 
 In development, not in the current release. No dates until they ship.
 
-[ComingAirdrops inboxTokens sent straight to holders, with Keep and Hide.](https://bwalletx.com/airdrops)
-[ComingLaunch your own coinToken links and a launch button inside the wallet.](https://bwalletx.com/launchpad)
-[ComingbSpaces and room chargesLive audio and video Spaces in token rooms, and per-message room charges.](https://bwalletx.com/live)
-[ComingToken lockingLock tokens the way Lock BSV locks BSV, with lock curves and templates.](https://bwalletx.com/token-locking)
+[LiveAirdrops inboxTokens sent straight to holders, with Keep and Hide.](https://bwalletx.com/airdrops)
+[LiveLaunch your own coinToken links and a launch button inside the wallet.](https://bwalletx.com/launchpad)
+[LivebSpaces and room chargesLive audio and video Spaces in token rooms (not in the store edition), and per-message room charges.](https://bwalletx.com/live)
+[ComingToken lockingLock tokens the way Lock BSV locks BSV. Lock curves and templates for BSV are already live.](https://bwalletx.com/token-locking)
 
 Wallet
 
@@ -1774,7 +1826,7 @@ That is also why the words matter so much. Anyone who has them has everything on
 
 On 8 October a room started from one of the owner’s accounts showed as started by a different one. The chat sign-in had carried over from the previous account after switching, so the chat label pointed at the wrong account’s key. Nothing was lost, but it was confusing, and it was hard to see.
 
-We fixed the sign-in so that each account keeps its own chat session. To make any mix-up visible straight away, the next release adds two things: the Identity map, which shows which key your bChat handle is tied to and flags it if that is not this account’s chat key, and sign-in alerts, which tell you when your handle is signed in somewhere new.
+We fixed the sign-in so that each account keeps its own chat session. To make any mix-up visible straight away, [5.1.88](https://bwalletx.com/releases#v5.1.88) added two things: the Identity map, which shows which key your bChat handle is tied to and flags it if that is not this account’s chat key, and sign-in alerts, which tell you when your handle is signed in somewhere new.
 
 bWalletX is in beta: test with small amounts. Only public keys and addresses appear on the Identity map; your seed and private keys never leave the wallet. Questions: [support@bwalletx.com](mailto:support@bwalletx.com)
 
@@ -1856,7 +1908,7 @@ Source: https://bwalletx.com/launchpad
 
 # Launchpad. Launch your own coin, with something behind it.
 
-The Launchpad lists bonding-curve coins made on [TokenBlaster](https://www.tokenblaster.lol). You can buy and sell them in bWalletX, and soon launch your own from the wallet.
+The Launchpad lists bonding-curve coins made on [TokenBlaster](https://www.tokenblaster.lol). You can buy and sell them in bWalletX, and launch your own from the wallet.
 
 ## Buy and sell in the wallet
 
@@ -1880,11 +1932,11 @@ By default, one thing: holders can enter the coin’s bChat room. Anything else 
 
 - ComingCreator vesting. Creators can keep 0 to 20% (default 10%), always time-locked: by default a 12-month cliff, then 24 months of linear unlocking, never less than 6 months, with a public receipt. See [Token locking](https://bwalletx.com/token-locking).
 
-- ComingAirdrops to holders. The way to reward holders is to send them tokens. See [Airdrops](https://bwalletx.com/airdrops).
+- ComingAirdrops to holders. The way to reward holders is to send them tokens. Holders can already receive and keep airdrops in the inbox (5.1.85); a send-to-all-holders tool for issuers is next. See [Airdrops](https://bwalletx.com/airdrops).
 
 ## No promises of returns
 
-Coming When you create a token in bWalletX and its description promises returns, profits, dividends or similar, the wallet warns you while you type and won’t sign until the wording is gone: “Remove wording that promises returns before publishing. Describe airdrops or room access instead.” It is a word filter, not legal advice.
+Live since 5.1.85 When you create a token in bWalletX and its description promises returns, profits, dividends or similar, the wallet warns you while you type and won’t sign until the wording is gone: “Remove wording that promises returns before publishing. Describe airdrops or room access instead.” It is a word filter, not legal advice.
 
 ## Not in the store edition
 
@@ -2427,7 +2479,7 @@ Anything that turns up unasked goes to an inbox instead of mixing into your wall
 
 - Live since 5.1.85Keep moves an airdrop out of the inbox. Hide hides it, and every future airdrop from the same issuer.
 
-- ComingOnly from issuers I kept before: a switch that shows airdrops only from issuers you have kept something from.
+- Live since 5.1.85Only from issuers I kept before: a switch that shows airdrops only from issuers you have kept something from.
 
 - Live since 5.1.85Unverified labels. An airdrop shows who sent it (the token’s ID, or the sending address). We don’t check what a stranger’s token is or claims to be.
 
@@ -2502,11 +2554,11 @@ Each item is marked by what the code does today.
 
 - Live since 5.1.85Pay per message. In token rooms the wallet now charges the room’s price per message: the message and the payment go in one transaction (50-sat minimum).
 
-- ComingPay per second. Pay for a call or stream by the second while it runs.
+- Partly livePay per second. Paid calls by the second are live in [bPhone](https://bwalletx.com/bphone) (5.1.87). Paying for a stream by the second is next.
 
-- ComingPay with tokens. Pay for messages and calls in a token instead of BSV.
+- Partly livePay with tokens. bPhone calls can already be paid in MNEE or any BSV-21 token (5.1.87). Paying for messages in a token is next.
 
-- ComingSet your price to be reached. Choose what strangers pay to message or call you. Friends stay free.
+- Partly liveSet your price to be reached. You can already charge to receive calls with [bPhone](https://bwalletx.com/bphone) (5.1.87). A price for strangers to message you, with friends free, is next.
 
 ## Start now
 
@@ -2681,11 +2733,11 @@ Holding a token to get in costs nothing extra. Payments go wallet to wallet; you
 
 - LiveToken rooms. Hold a token to enter a room. In bChat and in bWalletX.
 
-- LiveSpaces in bChat. A host, speakers and listeners, a raise-hand queue, and opt-in camera for people on stage. Runs on our own video server.
+- LiveSpaces in bChat. A host, speakers and listeners, a raise-hand queue, and opt-in camera for people on stage. On the web at [bchatx.com/spaces](https://www.bchatx.com/spaces), where anyone can listen without signing in. Runs on our own video server.
 
 - Live1:1 voice and video calls in bWalletX.
 
-- ComingWatching a live room inside bWalletX. Today you go live and watch in bChat.
+- Partly liveWatching a live room inside bWalletX. Audio and video Spaces in token rooms are live in bWalletX since 5.1.85 (not the store edition): see [bSpaces](https://bwalletx.com/bspaces). One-to-many video streams are still watched in bChat.
 
 - ComingPay-per-minute watching. Paid a minute at a time, wallet to wallet, with a spending cap you set.
 
@@ -5595,7 +5647,7 @@ And we didn’t put token rooms in the store edition. bWallet, on the App Store 
 
 ## What’s next
 
-The wallet half of this is built on a branch and goes out in the next release. After that: enforcing the per-minute, per-hour and per-day rules, paying for calls and streams by the second, and letting people set their own price to be messaged by strangers. Those are all marked Coming on the [Chat page](https://bwalletx.com/chat).
+Update, 8 Oct 2026: the wallet half shipped in [5.1.85](https://bwalletx.com/releases#v5.1.85), and paid calls by the second arrived with [bPhone](https://bwalletx.com/bphone) in 5.1.87. Still to come: enforcing the per-minute, per-hour and per-day rules, paying for streams by the second, and letting people set their own price to be messaged by strangers. Those are marked Coming on the [Chat page](https://bwalletx.com/chat).
 
 [← 025 Push notifications, from our own server](https://bwalletx.com/blog/025-push-notifications)[027 Airdrops, not dividends →](https://bwalletx.com/blog/027-airdrops-not-dividends)
 
@@ -5669,7 +5721,7 @@ Source: https://bwalletx.com/blog/028-launch-something
 
 A coin should launch with something: token links for website, app, X, Telegram and bChat; the room as the default right; “Issuer says” for the rest; no company field; advanced launch options as plans.
 
-Status: partly built. Buying and selling Launchpad coins is live (since 5.1.74). The Launch your own coin button and token links are built on a development branch, not yet released. The advanced options at the end are plans.
+Status: partly built. Buying and selling Launchpad coins is live (since 5.1.74). The Launch your own coin button and token links shipped in [5.1.85](https://bwalletx.com/releases#v5.1.85) (8 Oct 2026). The advanced options at the end are plans.
 
 ## A coin with nothing behind it
 
@@ -5679,7 +5731,7 @@ We want something different from the Launchpad. A coin should come with somethin
 
 ## The launch button
 
-The next release puts a full-width gold button at the top of the Launchpad: Launch your own coin. It opens TokenBlaster’s launch page inside the wallet’s browser, with your wallet already connected. On the web wallet and the extension it opens a new tab. The store edition, bWallet, has no Launchpad, so it has no button either.
+Since 5.1.85 there is a full-width gold button at the top of the Launchpad: Launch your own coin. It opens TokenBlaster’s launch page inside the wallet’s browser, with your wallet already connected. On the web wallet and the extension it opens a new tab. The store edition, bWallet, has no Launchpad, so it has no button either.
 
 ## Token links
 
@@ -5807,7 +5859,7 @@ Source: https://bwalletx.com/blog/030-bphone
 
 Calls in bWalletX have always been free. From 5.1.87 you can put a price on yours: per second, minute, hour or call, in BSV, MNEE or a token, paid from the caller’s wallet to yours while you are still talking. This is how it works, and why it is built the way it is.
 
-Status: built on a branch, 8 Oct 2026, not yet released. The wallet code, the server routes and the tests are done; the database change and device testing with real money come before it ships. Everything below describes the branch, not the released app (5.1.85).
+Status: live since [5.1.87](https://bwalletx.com/releases#v5.1.87) (8 Oct 2026), in bWalletX, not the store edition. It is new: start with small prices.
 
 ## Whose time is the product
 
