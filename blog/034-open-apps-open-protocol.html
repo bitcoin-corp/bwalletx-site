@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>034 Open apps, open protocol · bWalletX blog</title>
+    <meta name="description" content="Why chat on BSV should be open: MIT-licensed apps, a public bChat Protocol on GitHub, a proposal for threads across apps, and a server that stays closed for now but can&rsquo;t spend your money." />
+    <link rel="canonical" href="https://bwalletx.com/blog/034-open-apps-open-protocol" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://bwalletx.com/blog/034-open-apps-open-protocol" />
+    <meta property="og:site_name" content="bWalletX" />
+    <meta property="og:title" content="Open apps, open protocol" />
+    <meta property="og:description" content="Why chat on BSV should be open: MIT-licensed apps, a public bChat Protocol on GitHub, a proposal for threads across apps, and a server that stays closed for now but can&rsquo;t spend your money." />
+    <meta property="og:image" content="https://bwalletx.com/og/og-blog-034.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@bWalletX" />
+    <meta name="twitter:title" content="Open apps, open protocol" />
+    <meta name="twitter:description" content="Why chat on BSV should be open: MIT-licensed apps, a public bChat Protocol on GitHub, a proposal for threads across apps, and a server that stays closed for now but can&rsquo;t spend your money." />
+    <meta name="twitter:image" content="https://bwalletx.com/og/og-blog-034.png" />
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="stylesheet" href="/styles.css" />
+    <style>
+      .ext { max-width: 760px; margin: 0 auto; padding: 120px 20px 80px; }
+      .ext h1 { font-size: clamp(2rem, 6vw, 3rem); margin: 10px 0 10px; line-height: 1.15; }
+      .ext h2 { margin: 44px 0 10px; font-size: 1.4rem; }
+      .ext p, .ext li { line-height: 1.7; }
+      .ext code { background: #17191e; padding: 2px 7px; border-radius: 6px; overflow-wrap: anywhere; }
+      .ext a { overflow-wrap: anywhere; }
+      .meta { color: #8a8a86; font-size: 0.9rem; margin: 0; }
+      .num { color: #F5B800; font-weight: 700; letter-spacing: .04em; }
+      .box { background: #101114; border: 1px solid #ffffff12; border-radius: 16px; padding: 18px 22px; margin: 28px 0; }
+      .box h2 { margin: 0 0 8px; font-size: 1.1rem; }
+      .box ul { margin: 0; padding-left: 1.2em; }
+      .related { color: #a7adb8; }
+      .pn { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; margin-top: 40px; border-top: 1px solid #ffffff14; padding-top: 20px; }
+      .pn a { color: #F5B800; text-decoration: none; max-width: 100%; }
+      .ext .small { color: #8a8a86; font-size: 0.85rem; }
+      .ext pre { background: #17191e; padding: 14px 16px; border-radius: 10px; overflow-x: auto; }
+      .ext pre code { padding: 0; background: none; overflow-wrap: normal; white-space: pre; }
+    </style>
+      <!-- ld:start -->
+    <script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "BlogPosting",
+   "headline": "Open apps, open protocol",
+   "description": "Why chat on BSV should be open: MIT-licensed apps, a public bChat Protocol on GitHub, a proposal for threads across apps, and a server that stays closed for now but can’t spend your money.",
+   "url": "https://bwalletx.com/blog/034-open-apps-open-protocol",
+   "mainEntityOfPage": "https://bwalletx.com/blog/034-open-apps-open-protocol",
+   "image": "https://bwalletx.com/og/og-blog-034.png",
+   "inLanguage": "en",
+   "author": {
+    "@type": "Organization",
+    "name": "The Bitcoin Corporation Ltd",
+    "url": "https://bwalletx.com/"
+   },
+   "publisher": {
+    "@type": "Organization",
+    "name": "The Bitcoin Corporation Ltd",
+    "logo": {
+     "@type": "ImageObject",
+     "url": "https://bwalletx.com/icon-512.png"
+    }
+   },
+   "datePublished": "2026-10-08"
+  }
+ ]
+}
+    </script>
+    <!-- ld:end -->
+  </head>
+  <body>
+    <div class="beta-banner">bWalletX is in <strong>beta</strong>: test with small amounts.</div>
+    <header class="topbar">
+      <div class="wrap topbar-in">
+        <a class="brand" href="/"><img src="/logo.svg" alt="" width="34" height="30" /><span>bWallet<span class="gold">X</span></span></a>
+        <nav aria-label="Pages">
+          <a href="/features">Features</a><a href="/exchange">Exchange</a><a href="/social">Social</a><a href="/agent">Agents</a><a href="/extension">Extension</a><a href="/developers">Developers</a>
+        </nav>
+        <span class="nav-cta"><a class="dl-btn" href="/get">Download</a><a class="web-btn" href="https://web.bwalletx.com" target="_blank" rel="noopener">Web &rarr;</a></span>
+      </div>
+    </header>
+    <script src="/nav.js"></script>
+    <main class="ext">
+      <p class="meta"><a href="/blog">Development blog</a> · <span class="num">034</span> · 8 Oct 2026</p>
+      <h1>Open apps, open protocol</h1>
+      <p class="lede">If chat on BSV is going to compete with Telegram, people have to be able to trust it, and other developers have to be able to build on it. Both are easier when the code is open. This is how we are doing it, and what stays closed for now.</p>
+
+      <h2>Why open matters for chat</h2>
+      <p>Chat is where people say things they would not post publicly. You should be able to check what the app does with your messages and your keys, or ask someone you trust to check. And a chat network only gets big if more than one company can write apps for it. A protocol nobody else can read is a walled garden with extra steps.</p>
+
+      <h2>The model</h2>
+      <p>Three parts: open-source apps, an open protocol, and a server that stays closed for now.</p>
+
+      <h2>Open-source apps</h2>
+      <p>bWalletX is already open source under the MIT licence. bChat desktop and the bChatX web app will follow under the same licence. MIT means you can read the code, change it, and ship your own version.</p>
+      <p>The names and logos are trademarks. You can fork the code, but your fork needs its own name.</p>
+
+      <h2>An open protocol</h2>
+      <p>The bChat Protocol is public on GitHub at <a href="https://github.com/bitcoin-corp/bchat-protocol">github.com/bitcoin-corp/bchat-protocol</a>. It describes how messages, rooms and payments are written to the chain, so another app can read and write the same things.</p>
+      <p>Alongside it is the bChatX Protocol proposal, for threads that work across apps: a reply in Twetch, Treechat or peck.to showing up under the post it replies to, wherever that post was made. It is a proposal, not a finished standard. peck.to already threads bChat replies.</p>
+
+      <h2>Why the server stays closed for now</h2>
+      <p>The server does moderation, anti-spam and the paid features. Publishing the anti-spam rules mostly helps spammers, and the moderation tools are still changing week to week. So the server is closed for now.</p>
+      <p>What matters is what the server can&rsquo;t do. Your keys never leave your wallet. The server can&rsquo;t spend your money. Every payment is signed in your wallet, by you.</p>
+      <p>More on what is open and where to find it is on the <a href="/open-source">open source page</a>.</p>
+
+      <div class="pn"><a href="/blog/033-spaces-you-can-listen-to">&larr; 033 Spaces you can just listen to</a><a href="/blog">All posts &rarr;</a></div>
+    </main>
+  </body>
+</html>
