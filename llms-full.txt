@@ -3962,7 +3962,7 @@ Full width
 
 Point `challenge-url` and `verify-url` at the two routes from the [Sign in with bWalletX guide](https://bwalletx.com/connect) (the `@bwalletx/connect/server` helpers write them for you).
 
-``<script src="https://unpkg.com/@bwalletx/connect@0.2.0"></script>
+``<script src="https://cdn.jsdelivr.net/npm/@bwalletx/connect@0.2.0/dist/bwalletx-connect.global.js"></script>
 <bwalletx-signin
 challenge-url="/auth/bwalletx/challenge"
 verify-url="/auth/bwalletx/verify"></bwalletx-signin>
@@ -3973,7 +3973,13 @@ location.assign('/');
 });
 </script>``
 
-After 0.2.0 is published The unpkg and jsDelivr links (`https://cdn.jsdelivr.net/npm/@bwalletx/connect@0.2.0`) work once version 0.2.0 is on npm. Until then you can use our copy: `https://bwalletx.com/connect/bwalletx-connect-0.2.0.global.js`.
+The same file is on unpkg: `https://unpkg.com/@bwalletx/connect@0.2.0/dist/bwalletx-connect.global.js`. Pin the version (`@0.2.0`) so the button can’t change under you.
+
+## Install from npm
+
+``npm i @bwalletx/connect``
+
+The package is [@bwalletx/connect on npm](https://www.npmjs.com/package/@bwalletx/connect), published with npm provenance from GitHub. The source is at [github.com/bitcoin-corp/bwalletx-connect](https://github.com/bitcoin-corp/bwalletx-connect).
 
 ## React
 
@@ -3992,7 +3998,7 @@ onError={(e) => console.error(e)}
 );
 }``
 
-After 0.2.0 is published With any other bundler, `import '@bwalletx/connect/element'` registers the tag.
+With any other bundler, `import '@bwalletx/connect/element'` registers the tag.
 
 ## Options
 

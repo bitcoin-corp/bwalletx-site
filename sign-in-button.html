@@ -47,7 +47,7 @@
       .rules > div { border: 1px solid #ffffff14; border-radius: 14px; padding: 4px 18px; }
       #log { font: 12px ui-monospace, monospace; color: #8a8a86; min-height: 1.5em; }
     </style>
-    <script src="/connect/bwalletx-connect-0.2.0.global.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/@bwalletx/connect@0.2.0/dist/bwalletx-connect.global.js" defer></script>
   </head>
   <body>
     <div class="beta-banner">bWalletX is in <strong>beta</strong>: test with small amounts.</div>
@@ -104,7 +104,7 @@
 
       <h2>Add it with a script tag</h2>
       <p>Point <code>challenge-url</code> and <code>verify-url</code> at the two routes from the <a href="/connect">Sign in with bWalletX guide</a> (the <code>@bwalletx/connect/server</code> helpers write them for you).</p>
-      <pre><code>&lt;script src="https://unpkg.com/@bwalletx/connect@0.2.0"&gt;&lt;/script&gt;
+      <pre><code>&lt;script src="https://cdn.jsdelivr.net/npm/@bwalletx/connect@0.2.0/dist/bwalletx-connect.global.js"&gt;&lt;/script&gt;
 &lt;bwalletx-signin
   challenge-url="/auth/bwalletx/challenge"
   verify-url="/auth/bwalletx/verify"&gt;&lt;/bwalletx-signin&gt;
@@ -114,7 +114,11 @@
     location.assign('/');
   });
 &lt;/script&gt;</code></pre>
-      <p class="small"><span class="note soon">After 0.2.0 is published</span> The unpkg and jsDelivr links (<code>https://cdn.jsdelivr.net/npm/@bwalletx/connect@0.2.0</code>) work once version 0.2.0 is on npm. Until then you can use our copy: <code>https://bwalletx.com/connect/bwalletx-connect-0.2.0.global.js</code>.</p>
+      <p class="small">The same file is on unpkg: <code>https://unpkg.com/@bwalletx/connect@0.2.0/dist/bwalletx-connect.global.js</code>. Pin the version (<code>@0.2.0</code>) so the button can&rsquo;t change under you.</p>
+
+      <h2>Install from npm</h2>
+      <pre><code>npm i @bwalletx/connect</code></pre>
+      <p>The package is <a href="https://www.npmjs.com/package/@bwalletx/connect">@bwalletx/connect on npm</a>, published with npm provenance from GitHub. The source is at <a href="https://github.com/bitcoin-corp/bwalletx-connect">github.com/bitcoin-corp/bwalletx-connect</a>.</p>
 
       <h2>React</h2>
       <pre><code>pnpm add @bwalletx/connect @bsv/sdk
@@ -131,7 +135,7 @@ export function SignIn() {
     /&gt;
   );
 }</code></pre>
-      <p class="small"><span class="note soon">After 0.2.0 is published</span> With any other bundler, <code>import '@bwalletx/connect/element'</code> registers the tag.</p>
+      <p class="small">With any other bundler, <code>import '@bwalletx/connect/element'</code> registers the tag.</p>
 
       <h2>Options</h2>
       <table class="tbl">
