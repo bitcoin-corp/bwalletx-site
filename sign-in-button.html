@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Add Sign in with bWalletX to your site</title>
+    <link rel="canonical" href="https://bwalletx.com/sign-in-button" />
+    <meta name="description" content="The standard Sign in with bWalletX button: one tag, gold, dark or light, four sizes, React wrapper, SVG files and brand rules. Also works with bWallet." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://bwalletx.com/sign-in-button" />
+    <meta property="og:site_name" content="bWalletX" />
+    <meta property="og:title" content="Add Sign in with bWalletX to your site" />
+    <meta property="og:description" content="One tag gives you the standard gold button. Your users sign in with their own wallet: no passwords, no API keys." />
+    <meta property="og:image" content="https://bwalletx.com/og-sign-in-button-v1.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Add Sign in with bWalletX to your site: the gold, dark and light buttons" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@bWalletX" />
+    <meta name="twitter:title" content="Add Sign in with bWalletX to your site" />
+    <meta name="twitter:description" content="One tag gives you the standard gold button. Your users sign in with their own wallet: no passwords, no API keys." />
+    <meta name="twitter:image" content="https://bwalletx.com/og-sign-in-button-v1.png" />
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="stylesheet" href="/styles.css" />
+    <style>
+      .ext h1 { font-size: clamp(2.1rem, 6vw, 3.3rem); margin: 18px 0 10px; }
+      .ext h2 { margin: 44px 0 10px; font-size: 1.4rem; }
+      .ext pre { background: #101114; border: 1px solid #ffffff12; border-radius: 14px; padding: 16px; overflow-x: auto; font-size: 0.85rem; line-height: 1.55; }
+      .ext code { background: #17191e; padding: 2px 7px; border-radius: 6px; overflow-wrap: anywhere; }
+      .ext pre code { background: none; padding: 0; overflow-wrap: normal; }
+      .ext li { margin: 8px 0; }
+      .ext .small { color: #8a8a86; font-size: 0.85rem; }
+      .pv { display: flex; flex-wrap: wrap; gap: 14px; align-items: center; padding: 20px; border: 1px solid #ffffff14; border-radius: 16px; margin: 10px 0; }
+      .pv.light { background: #fafafa; border-color: #e4e4e7; }
+      .pv-cap { color: #8a8a86; font-size: 0.82rem; margin: 18px 0 4px; }
+      .pv-narrow { max-width: 380px; }
+      .note { display: inline-block; font-size: 0.75rem; font-weight: 600; color: #1a1300; background: #F5B800; border-radius: 999px; padding: 2px 10px; vertical-align: middle; margin-left: 6px; }
+      .soon { background: #2a2b31; color: #c9ced8; }
+      .dl { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 12px; margin: 12px 0; }
+      .dl a { display: flex; flex-direction: column; gap: 10px; align-items: flex-start; padding: 14px; border: 1px solid #ffffff14; border-radius: 14px; text-decoration: none; color: inherit; }
+      .dl a:hover { border-color: #F5B80088; }
+      .dl img { max-width: 100%; height: 44px; }
+      .dl span { font-size: 0.85rem; color: #c9ced8; }
+      table.tbl { width: 100%; border-collapse: collapse; font-size: 0.9rem; display: block; overflow-x: auto; }
+      table.tbl th, table.tbl td { text-align: left; padding: 8px 10px; border-top: 1px solid #ffffff14; vertical-align: top; }
+      .rules { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px; }
+      .rules > div { border: 1px solid #ffffff14; border-radius: 14px; padding: 4px 18px; }
+      #log { font: 12px ui-monospace, monospace; color: #8a8a86; min-height: 1.5em; }
+    </style>
+    <script src="/connect/bwalletx-connect-0.2.0.global.js" defer></script>
+  </head>
+  <body>
+    <div class="beta-banner">bWalletX is in <strong>beta</strong>: test with small amounts.</div>
+    <header class="topbar">
+      <div class="wrap topbar-in">
+        <a class="brand" href="/"><img src="/logo.svg" alt="" width="34" height="30" /><span>bWallet<span class="gold">X</span></span></a>
+        <nav aria-label="Pages">
+          <a href="/features">Features</a><a href="/exchange">Exchange</a><a href="/social">Social</a><a href="/agent">Agents</a><a href="/extension">Extension</a><a href="/developers">Developers</a>
+        </nav>
+        <span class="nav-cta"><a class="dl-btn" href="/get">Download</a><a class="web-btn" href="https://web.bwalletx.com" target="_blank" rel="noopener">Web &rarr;</a></span>
+      </div>
+    </header>
+    <script src="/nav.js"></script>
+    <main class="ext">
+      <img src="/logo.svg" alt="bWalletX" width="72" height="64" />
+      <h1>Add Sign in with bWallet<span class="gold">X</span> to your site</h1>
+      <p class="lede">The standard button, the same one bit-sign uses. One tag draws it, finds the user's wallet and runs the sign-in. The subtitle tells store users it also works with bWallet. You don't need an API key or an account with us.</p>
+
+      <bwalletx-signin challenge-url="/__demo/none" discover-ms="1200"></bwalletx-signin>
+      <p class="small" id="log">Click it: with no bWalletX in this browser it offers "Get bWalletX". (This page has no sign-in server, so with a wallet you'll see an error after it answers.)</p>
+
+      <h2>Every variant</h2>
+      <p class="pv-cap">Sizes: <code>lg</code> (default), <code>md</code>, <code>sm</code>, <code>icon</code></p>
+      <div class="pv">
+        <bwalletx-signin></bwalletx-signin>
+        <bwalletx-signin size="md"></bwalletx-signin>
+        <bwalletx-signin size="sm"></bwalletx-signin>
+        <bwalletx-signin size="icon"></bwalletx-signin>
+      </div>
+      <p class="pv-cap">Themes on a dark page: <code>gold</code>, <code>dark</code></p>
+      <div class="pv">
+        <bwalletx-signin theme="dark"></bwalletx-signin>
+        <bwalletx-signin theme="dark" size="md" label="continue"></bwalletx-signin>
+        <bwalletx-signin theme="dark" size="sm"></bwalletx-signin>
+        <bwalletx-signin theme="dark" size="icon"></bwalletx-signin>
+      </div>
+      <p class="pv-cap">On a light page: <code>gold</code>, <code>light</code></p>
+      <div class="pv light">
+        <bwalletx-signin></bwalletx-signin>
+        <bwalletx-signin theme="light"></bwalletx-signin>
+        <bwalletx-signin theme="light" size="sm" label="connect"></bwalletx-signin>
+        <bwalletx-signin theme="light" size="icon"></bwalletx-signin>
+      </div>
+      <p class="pv-cap">Labels, store edition, states</p>
+      <div class="pv">
+        <bwalletx-signin label="continue"></bwalletx-signin>
+        <bwalletx-signin label="connect" subtitle="off"></bwalletx-signin>
+        <bwalletx-signin brand="bWallet"></bwalletx-signin>
+        <bwalletx-signin loading></bwalletx-signin>
+        <bwalletx-signin disabled></bwalletx-signin>
+      </div>
+      <p class="pv-cap">Full width</p>
+      <div class="pv pv-narrow"><bwalletx-signin full-width></bwalletx-signin></div>
+
+      <h2>Add it with a script tag</h2>
+      <p>Point <code>challenge-url</code> and <code>verify-url</code> at the two routes from the <a href="/connect">Sign in with bWalletX guide</a> (the <code>@bwalletx/connect/server</code> helpers write them for you).</p>
+      <pre><code>&lt;script src="https://unpkg.com/@bwalletx/connect@0.2.0"&gt;&lt;/script&gt;
+&lt;bwalletx-signin
+  challenge-url="/auth/bwalletx/challenge"
+  verify-url="/auth/bwalletx/verify"&gt;&lt;/bwalletx-signin&gt;
+&lt;script&gt;
+  document.addEventListener('bwalletx-signed-in', (e) =&gt; {
+    // e.detail: { identityKey, method, response }. Your verify route has started the session.
+    location.assign('/');
+  });
+&lt;/script&gt;</code></pre>
+      <p class="small"><span class="note soon">After 0.2.0 is published</span> The unpkg and jsDelivr links (<code>https://cdn.jsdelivr.net/npm/@bwalletx/connect@0.2.0</code>) work once version 0.2.0 is on npm. Until then you can use our copy: <code>https://bwalletx.com/connect/bwalletx-connect-0.2.0.global.js</code>.</p>
+
+      <h2>React</h2>
+      <pre><code>pnpm add @bwalletx/connect @bsv/sdk
+
+import { BwalletxSignin } from '@bwalletx/connect/react';
+
+export function SignIn() {
+  return (
+    &lt;BwalletxSignin
+      challengeUrl="/auth/bwalletx/challenge"
+      verifyUrl="/auth/bwalletx/verify"
+      onSignedIn={(d) =&gt; router.push('/')}
+      onError={(e) =&gt; console.error(e)}
+    /&gt;
+  );
+}</code></pre>
+      <p class="small"><span class="note soon">After 0.2.0 is published</span> With any other bundler, <code>import '@bwalletx/connect/element'</code> registers the tag.</p>
+
+      <h2>Options</h2>
+      <table class="tbl">
+        <tr><th>Attribute</th><th>Values</th></tr>
+        <tr><td><code>size</code></td><td><code>lg</code> (default), <code>md</code>, <code>sm</code>, <code>icon</code></td></tr>
+        <tr><td><code>theme</code></td><td><code>gold</code> (default), <code>dark</code>, <code>light</code></td></tr>
+        <tr><td><code>label</code></td><td><code>signin</code> "Sign in with bWalletX", <code>continue</code> "Continue with bWalletX", <code>connect</code> "Connect bWalletX"</td></tr>
+        <tr><td><code>brand</code></td><td><code>bWalletX</code> (default) or <code>bWallet</code> for store builds</td></tr>
+        <tr><td><code>subtitle</code></td><td><code>on</code>, <code>off</code> or your own text. Shown on lg and md by default</td></tr>
+        <tr><td><code>full-width</code>, <code>loading</code>, <code>disabled</code></td><td>Flags</td></tr>
+        <tr><td><code>challenge-url</code>, <code>verify-url</code></td><td>Run the sign-in on click</td></tr>
+        <tr><td><code>get-url</code>, <code>web-url</code></td><td>Where "Get bWalletX" and the web wallet link go</td></tr>
+        <tr><td><code>href</code></td><td>Just go to this link on click</td></tr>
+        <tr><td><code>authorize-url</code> <span class="note soon">Coming</span></td><td>Start an OAuth sign-in at auth.bwalletx.com (see below)</td></tr>
+      </table>
+      <p>Events: <code>bwalletx-signin</code> on every click (call <code>preventDefault()</code> to run your own flow, such as phone pairing), <code>bwalletx-signed-in</code>, <code>bwalletx-not-found</code> and <code>bwalletx-error</code>. The button is a real <code>&lt;button&gt;</code> with a label for screen readers, a visible focus ring, and no motion when the user has asked for reduced motion.</p>
+
+      <h2>Download the files</h2>
+      <div class="dl">
+        <a href="/brand/signin-gold.svg" download><img src="/brand/signin-gold.svg" alt="" /><span>Button, gold (SVG)</span></a>
+        <a href="/brand/signin-dark.svg" download><img src="/brand/signin-dark.svg" alt="" /><span>Button, dark (SVG)</span></a>
+        <a href="/brand/signin-light.svg" download><img src="/brand/signin-light.svg" alt="" /><span>Button, light (SVG)</span></a>
+        <a href="/brand/bwalletx-mark-circle.svg" download><img src="/brand/bwalletx-mark-circle.svg" alt="" /><span>Mark in black circle (SVG)</span></a>
+        <a href="/brand/bwalletx-mark.svg" download><img src="/brand/bwalletx-mark.svg" alt="" /><span>Mark on its own (SVG)</span></a>
+      </div>
+      <p class="small">No JavaScript at all? The package's <code>assets/snippet.html</code> is the gold button in plain HTML and CSS.</p>
+
+      <h2>Brand rules</h2>
+      <div class="rules">
+        <div>
+          <h3>Do</h3>
+          <ul>
+            <li>Keep the black circle with the gold "b" on the left.</li>
+            <li>Use the text as given: "Sign in with bWalletX", "Continue with bWalletX", "Connect bWalletX".</li>
+            <li>Keep the "also works with bWallet" subtitle on the large and medium sizes.</li>
+            <li>Match the height of the other sign-in buttons beside it.</li>
+            <li>Leave clear space of half the button's height (at least 8px) around it.</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Don't</h3>
+          <ul>
+            <li>Recolour the gold or put the mark on another colour.</li>
+            <li>Stretch, rotate or outline the mark, or use it as a generic wallet icon.</li>
+            <li>Make it smaller or less visible than other providers' buttons in the same list.</li>
+            <li>Go below 36px tall (48px on touch screens), or 40px for the round icon.</li>
+            <li>Suggest that bWalletX endorses your product.</li>
+          </ul>
+        </div>
+      </div>
+      <p class="small">The code is MIT licensed. The names bWalletX and bWallet and the "b" mark are trademarks and are not covered by the MIT licence: you can use them unchanged to offer sign-in. Full rules: BRAND.md and TRADEMARKS.md in the package.</p>
+
+      <h2>Sign in with bWalletX for any app (OAuth) <span class="note soon">Coming</span></h2>
+      <p>Today the button signs the user in to your own server: the wallet signs a one-time challenge and your server checks it. We're also building a standard OAuth / OpenID Connect provider at auth.bwalletx.com, so apps that already use "Sign in with Google" can add bWalletX the same way, with the user approving each app in their wallet. When it's live, the same button starts it:</p>
+      <pre><code>&lt;bwalletx-signin authorize-url="https://auth.bwalletx.com/authorize"
+  client-id="your-client-id" redirect-uri="https://example.com/callback"&gt;&lt;/bwalletx-signin&gt;</code></pre>
+      <p class="small">Not live yet. The button already builds the request (authorization code with PKCE), so your markup won't need to change.</p>
+
+      <p class="small" style="margin-top: 48px">Questions: <a href="mailto:support@bwalletx.com">support@bwalletx.com</a> · More for developers: <a href="/developers">Developers</a> · <a href="/connect">Sign in guide</a></p>
+    </main>
+    <script>
+      var log = document.getElementById('log');
+      document.addEventListener('bwalletx-not-found', function () { log.textContent = 'No bWalletX answered in this browser, so the button offers to get it.'; });
+      document.addEventListener('bwalletx-error', function (e) { log.textContent = 'bWalletX answered. This demo has no sign-in server, so it stops here: ' + (e.detail.error && e.detail.error.message); });
+    </script>
+  </body>
+</html>

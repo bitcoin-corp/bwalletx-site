@@ -3665,6 +3665,8 @@ keyID: '1',
 
 To let people sign in to your app with bWalletX (extension, phone or web wallet), follow the [Sign in with bWalletX guide](https://bwalletx.com/connect): one script tag (connect.js), server code, and steps for AI agents.
 
+For the button itself (gold, dark or light, four sizes, React, SVG files and brand rules), see [Add Sign in with bWalletX to your site](https://bwalletx.com/sign-in-button).
+
 ## Already using window.CWI?
 
 bWalletX also sets `window.CWI`, so sites that call it directly work as they are. But if the user also has another wallet installed (such as Yours), you can't tell which one answers. `bWalletX.connect()` picks bWalletX by name (rdns `com.bwalletx.extension`) through BRC-100 wallet discovery, so it always gets the right wallet.
