@@ -452,15 +452,17 @@ Source: https://bwalletx.com/
 
 bWalletX
 
-# The BSV wallet for tokens, media and apps.
+# The smart social super wallet.
 
-Mint, trade and chat in one non-custodial app. Send to names, browse 180+ BSV-21 tokens, open the bApps
-store and play your on-chain media.
+Your token, your payments and your rooms in one place. bWalletX is a non-custodial Bitcoin SV wallet that
+holds your coins, pays and locks, and opens the chat room for every token you hold.
+
+[Get bWalletXAndroid · Chrome · iPhone web appOpen the web walletweb.bwalletx.com · no install
 
 bWalletX is the full edition (web, Chrome, Android sideload, private iPhone build);
 bWallet is the App Store / Play edition with fewer features.
 
-Android · Download APK (beta)v5.1.84 beta · sideload[iPhone · Web appInstall from Safari · no App StoreChrome · Download extensionv5.1.84 beta · zip + install steps
+Android · Download APK (beta)v5.1.84 beta · sideloadiPhone · Web appInstall from Safari · no App StoreChrome · Download extensionv5.1.84 beta · zip + install steps
 
 ▶Watch the explainer · 1 min
 
@@ -480,18 +482,47 @@ Optional but recommended: check the SHA-256 checksum matches16fe04405b78dda9c4f3
 Beta software. Use small amounts and back up your recovery phrase. Only install the APK from this site or
 the official GitHub release.
 
-Join the testing waitlist →](https://bwalletx.com/iphone)
+Join the testing waitlist →](https://bwalletx.com/get)
 
 [](#showcase)
 
 One app
 
-## Meet bWalletX. Five tabs, everything on-chain.
+## Meet bWalletX. Everything on-chain.
 
-Wallet, Exchange, Apps, Feed and Chat, with Settings tucked into the account drawer. A wallet that does
-more than hold a balance.
+Wallet, Exchange, Apps and chat in one app, laid out for your phone. A wallet that does more than hold
+a balance.
 
 The real wallet home screen (web app, test wallet).
+
+Live in 5.1.84
+
+## What you can do today.
+
+Each one is in the current bWalletX beta. Tap for how it works.
+
+[LiveLock BSVLock until a date or pay out over time. Receipts you can verify.](https://bwalletx.com/lock)
+[LiveHistoryEvery transaction by date, with Gains (beta) and CSV or PDF export.](https://bwalletx.com/history)
+[LivePots & subscriptionsSet money aside; subscriptions can never take more than the pot.](https://bwalletx.com/pots)
+[LiveRestoreBring coins home from Money Button, Yours, RelayX, Twetch and more.](https://bwalletx.com/restore)
+[LiveGames32 games on Bitcoin in bGames, inside the wallet.](https://bwalletx.com/games)
+[LiveToken rooms & chatHold a token, join its room. Private messages and push alerts too.](https://bwalletx.com/chat)
+[LiveLiveToken rooms for your holders, and 1:1 voice and video calls.](https://bwalletx.com/live)
+[LiveIdentityPrivate by default. Verify with bit-sign only when you need to.](https://bwalletx.com/identity)
+[LiveHandlesYour $handle is your paymail, your token and your room.](https://bwalletx.com/handles)
+[LiveExchangeTokens, NFTs and $HANDLE tokens wallet to wallet, plus the 3D market.](https://bwalletx.com/exchange)
+[LiveLaunchpadBuy and sell TokenBlaster coins from the Exchange.](https://bwalletx.com/launchpad)
+
+Coming next · not released yet
+
+## Coming next.
+
+In development, not in the current release. No dates until they ship.
+
+[ComingAirdrops inboxTokens sent straight to holders, with Keep and Hide.](https://bwalletx.com/airdrops)
+[ComingLaunch your own coinToken links and a launch button inside the wallet.](https://bwalletx.com/launchpad)
+[ComingbSpaces and room chargesLive audio and video Spaces in token rooms, and per-message room charges.](https://bwalletx.com/live)
+[ComingToken lockingLock tokens the way Lock BSV locks BSV, with lock curves and templates.](https://bwalletx.com/token-locking)
 
 Wallet
 

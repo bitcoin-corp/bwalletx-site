@@ -3,30 +3,30 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-    <title>bWalletX — Just b</title>
+    <title>bWalletX: the smart social super wallet</title>
     <meta
       name="description"
-      content="bWalletX: the BSV wallet for tokens, media and apps. BSV, MNEE and BSV-21 tokens, an exchange for tokens and NFTs, the bApps store, an ordinals media player and bChat. Non-custodial, by The Bitcoin Corporation Ltd."
+      content="bWalletX is the smart social super wallet: your token, your payments and your rooms in one place. Lock BSV, pots and subscriptions, history and export, token rooms, games, handles and the Exchange. Non-custodial Bitcoin SV wallet for Android, Chrome and the web."
     />
     <meta name="theme-color" content="#000000" />
     <link rel="canonical" href="https://bwalletx.com/" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://bwalletx.com/" />
     <meta property="og:site_name" content="bWalletX" />
-    <meta property="og:title" content="bWalletX — Just b. The BSV wallet for tokens, media and apps" />
+    <meta property="og:title" content="bWalletX: the wallet with your token, your payments and your rooms" />
     <meta
       property="og:description"
-      content="Non-custodial BSV wallet by The Bitcoin Corporation Ltd. Tokens, market, bApps, media and chat in one app."
+      content="Lock BSV, pots, history, token rooms, games and the Exchange in one non-custodial BSV wallet."
     />
-    <meta property="og:image" content="https://bwalletx.com/og-home-v3.png" />
+    <meta property="og:image" content="https://bwalletx.com/og-home-v4.png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
-    <meta property="og:image:alt" content="bWalletX logo: a gold b" />
+    <meta property="og:image:alt" content="bWalletX: the wallet with your token, your payments and your rooms. A wallet card showing Lock BSV, a token room and a game." />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@bWalletX" />
-    <meta name="twitter:title" content="bWalletX: the BSV wallet for tokens, media and apps" />
-    <meta name="twitter:description" content="Non-custodial BSV wallet by The Bitcoin Corporation Ltd." />
-    <meta name="twitter:image" content="https://bwalletx.com/og-home-v3.png" />
+    <meta name="twitter:title" content="bWalletX: the wallet with your token, your payments and your rooms" />
+    <meta name="twitter:description" content="Lock BSV, pots, history, token rooms, games and the Exchange in one non-custodial BSV wallet." />
+    <meta name="twitter:image" content="https://bwalletx.com/og-home-v4.png" />
     <link rel="icon" href="/favicon.ico" sizes="48x48" />
     <link rel="icon" href="/logo.svg" type="image/svg+xml" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
@@ -38,6 +38,12 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="/styles.css" />
+    <style>
+      .hero-main { margin-bottom: 14px; }
+      .tile-tag { align-self: flex-start; font: 600 0.68rem var(--hf); letter-spacing: 0.06em; text-transform: uppercase; padding: 3px 8px; border-radius: 999px; margin-bottom: 6px; }
+      .tile-tag.live { background: rgba(245, 184, 0, 0.16); color: #f5b800; border: 1px solid rgba(245, 184, 0, 0.45); }
+      .tile-tag.soon { background: transparent; color: var(--muted); border: 1px dashed var(--edge); }
+    </style>
     <link rel="preload" as="image" href="/media/hero-poster.jpg" />
       <!-- ld:start -->
     <script type="application/ld+json">
@@ -104,7 +110,7 @@
       </div>
       <nav class="section-nav" aria-label="On this page">
         <div class="wrap">
-          <a href="#wallet">Wallet</a><a href="#market">Exchange</a><a href="#apps">Apps</a><a href="#media">Media</a
+          <a href="#today">Today</a><a href="#next">Next</a><a href="#wallet">Wallet</a><a href="#market">Exchange</a><a href="#apps">Apps</a><a href="#media">Media</a
           ><a href="#chat">Chat</a><a href="#identity">Identity</a><a href="#security">Security</a>
         </div>
       </nav>
@@ -130,11 +136,17 @@
         <div class="wrap hero-in">
           <img class="hero-logo" src="/logo.svg" alt="bWalletX logo" width="109" height="96" />
           <p class="wordmark">bWallet<span class="gold">X</span></p>
-          <h1>The BSV wallet for <span class="gold">tokens, media and apps.</span></h1>
+          <h1>The smart social <span class="gold">super wallet.</span></h1>
           <p class="lede">
-            Mint, trade and chat in one non-custodial app. Send to names, browse 180+ BSV-21 tokens, open the bApps
-            store and play your on-chain media.
+            Your token, your payments and your rooms in one place. bWalletX is a non-custodial Bitcoin SV wallet that
+            holds your coins, pays and locks, and opens the chat room for every token you hold.
           </p>
+          <div class="cta-row hero-main">
+            <a class="btn btn-store" href="/get"><span>Get bWalletX</span><small>Android · Chrome · iPhone web app</small></a
+            ><a class="btn btn-store btn-ghost" href="https://web.bwalletx.com" target="_blank" rel="noopener"
+              ><span>Open the web wallet</span><small>web.bwalletx.com · no install</small></a
+            >
+          </div>
           <p class="editions">
             <strong>bWalletX</strong> is the full edition (web, Chrome, Android sideload, private iPhone build);
             <strong>bWallet</strong> is the App Store / Play edition with fewer features.
@@ -191,10 +203,10 @@
         <div class="wrap showcase-grid">
           <div class="showcase-copy reveal">
             <p class="eyebrow">One app</p>
-            <h2>Meet bWalletX. Five tabs, everything on-chain.</h2>
+            <h2>Meet bWalletX. Everything on-chain.</h2>
             <p class="lede">
-              Wallet, Exchange, Apps, Feed and Chat, with Settings tucked into the account drawer. A wallet that does
-              more than hold a balance.
+              Wallet, Exchange, Apps and chat in one app, laid out for your phone. A wallet that does more than hold
+              a balance.
             </p>
             <div class="film">
               <video
@@ -226,6 +238,43 @@
         </div>
       </section>
 
+      <section class="bapps" id="today" aria-labelledby="today-h">
+        <div class="wrap">
+          <div class="section-head reveal">
+            <p class="eyebrow">Live in 5.1.84</p>
+            <h2 id="today-h">What you can do today.</h2>
+            <p class="lede">Each one is in the current bWalletX beta. Tap for how it works.</p>
+          </div>
+          <div class="tiles">
+            <a class="tile" href="/lock"><span class="tile-tag live">Live</span><span class="tile-name">Lock BSV</span><span class="tile-verb">Lock until a date or pay out over time. Receipts you can verify.</span></a>
+            <a class="tile" href="/history"><span class="tile-tag live">Live</span><span class="tile-name">History</span><span class="tile-verb">Every transaction by date, with Gains (beta) and CSV or PDF export.</span></a>
+            <a class="tile" href="/pots"><span class="tile-tag live">Live</span><span class="tile-name">Pots &amp; subscriptions</span><span class="tile-verb">Set money aside; subscriptions can never take more than the pot.</span></a>
+            <a class="tile" href="/restore"><span class="tile-tag live">Live</span><span class="tile-name">Restore</span><span class="tile-verb">Bring coins home from Money Button, Yours, RelayX, Twetch and more.</span></a>
+            <a class="tile" href="/games"><span class="tile-tag live">Live</span><span class="tile-name">Games</span><span class="tile-verb">32 games on Bitcoin in bGames, inside the wallet.</span></a>
+            <a class="tile" href="/chat"><span class="tile-tag live">Live</span><span class="tile-name">Token rooms &amp; chat</span><span class="tile-verb">Hold a token, join its room. Private messages and push alerts too.</span></a>
+            <a class="tile" href="/live"><span class="tile-tag live">Live</span><span class="tile-name">Live</span><span class="tile-verb">Token rooms for your holders, and 1:1 voice and video calls.</span></a>
+            <a class="tile" href="/identity"><span class="tile-tag live">Live</span><span class="tile-name">Identity</span><span class="tile-verb">Private by default. Verify with bit-sign only when you need to.</span></a>
+            <a class="tile" href="/handles"><span class="tile-tag live">Live</span><span class="tile-name">Handles</span><span class="tile-verb">Your $handle is your paymail, your token and your room.</span></a>
+            <a class="tile" href="/exchange"><span class="tile-tag live">Live</span><span class="tile-name">Exchange</span><span class="tile-verb">Tokens, NFTs and $HANDLE tokens wallet to wallet, plus the 3D market.</span></a>
+            <a class="tile" href="/launchpad"><span class="tile-tag live">Live</span><span class="tile-name">Launchpad</span><span class="tile-verb">Buy and sell TokenBlaster coins from the Exchange.</span></a>
+          </div>
+        </div>
+      </section>
+      <section class="bapps" id="next" aria-labelledby="next-h">
+        <div class="wrap">
+          <div class="section-head reveal">
+            <p class="eyebrow">Coming next · not released yet</p>
+            <h2 id="next-h">Coming next.</h2>
+            <p class="lede">In development, not in the current release. No dates until they ship.</p>
+          </div>
+          <div class="tiles">
+            <a class="tile" href="/airdrops"><span class="tile-tag soon">Coming</span><span class="tile-name">Airdrops inbox</span><span class="tile-verb">Tokens sent straight to holders, with Keep and Hide.</span></a>
+            <a class="tile" href="/launchpad"><span class="tile-tag soon">Coming</span><span class="tile-name">Launch your own coin</span><span class="tile-verb">Token links and a launch button inside the wallet.</span></a>
+            <a class="tile" href="/live"><span class="tile-tag soon">Coming</span><span class="tile-name">bSpaces and room charges</span><span class="tile-verb">Live audio and video Spaces in token rooms, and per-message room charges.</span></a>
+            <a class="tile" href="/token-locking"><span class="tile-tag soon">Coming</span><span class="tile-name">Token locking</span><span class="tile-verb">Lock tokens the way Lock BSV locks BSV, with lock curves and templates.</span></a>
+          </div>
+        </div>
+      </section>
       <section class="feature" id="wallet">
         <div class="wrap feature-grid">
           <div class="feature-copy reveal">
