@@ -1288,6 +1288,50 @@ bWalletX is in beta: test with small amounts. Questions: [support@bwalletx.com](
 
 ---
 
+Source: https://bwalletx.com/launchpad
+
+# Launchpad. Launch your own coin, with something behind it.
+
+The Launchpad lists bonding-curve coins made on [TokenBlaster](https://www.tokenblaster.lol). You can buy and sell them in bWalletX, and soon launch your own from the wallet.
+
+## Buy and sell in the wallet
+
+Live since 5.1.74 Open Exchange and tap the Launchpad bar. The wallet checks every trade before you sign it.
+
+## Launch your own coin
+
+Coming A Launch your own coin button at the top of the Launchpad opens TokenBlaster’s launch page inside the wallet, with your wallet connected. It is coming in the next release. You can already launch at [tokenblaster.lol/launch/new](https://www.tokenblaster.lol/launch/new).
+
+## Launch it with something
+
+A coin should come with something people can use: a website, an app or a product, and somewhere to talk, such as X, Telegram or a bChat room. Links are encouraged, not required. The plan is that coins with them rank higher on the board.
+
+Coming Token pages in the wallet show those links as chips. Tapping one warns you first: it is an outside site, not checked by us, and you should never enter your recovery phrase there.
+
+## What a coin gives you
+
+By default, one thing: holders can enter the coin’s bChat room. Anything else is the issuer’s business. If the issuer describes other uses, the wallet shows them as “Issuer says: …”, marked as not checked by bWalletX.
+
+## Creator vesting and airdrops
+
+- ComingCreator vesting. Creators can keep 0 to 20% (default 10%), always time-locked: by default a 12-month cliff, then 24 months of linear unlocking, never less than 6 months, with a public receipt. See [Token locking](https://bwalletx.com/token-locking).
+
+- ComingAirdrops to holders. The way to reward holders is to send them tokens. See [Airdrops](https://bwalletx.com/airdrops).
+
+## No promises of returns
+
+Coming When you create a token in bWalletX and its description promises returns, profits, dividends or similar, the wallet warns you while you type and won’t sign until the wording is gone: “Remove wording that promises returns before publishing. Describe airdrops or room access instead.” It is a word filter, not legal advice.
+
+## Not in the store edition
+
+bWallet, the App Store and Google Play edition, has no Launchpad.
+
+More on how trades are checked: [015 Launchpad, and checking what we sign](https://bwalletx.com/blog/015-launchpad).
+
+bWalletX is in beta: test with small amounts. Nothing here is investment advice. Questions: [support@bwalletx.com](mailto:support@bwalletx.com)
+
+---
+
 Source: https://bwalletx.com/lock
 
 # Lock. Even you can’t unlock it early.
@@ -1756,6 +1800,90 @@ One idea is that unlocking subscriptions to apps and services costs 1¢ a day, p
 Why we are building this: [016 Pots](https://bwalletx.com/blog/016-pots).
 
 bWalletX is in beta: test with small amounts. Questions: [support@bwalletx.com](mailto:support@bwalletx.com)
+
+---
+
+Source: https://bwalletx.com/token-locking
+
+# Token locking. Lock tokens so nobody can dump early.
+
+[Lock BSV](https://bwalletx.com/lock) is live: BSV locked until a block height, and nobody can move it before then, not even you. Token locking does the same for tokens.
+
+Coming Token locking is not built yet. It needs a lock script that carries a token (the same idea as the OrdLock outputs used for listings) and a test on mainnet with a tiny amount, to check that the token indexers still show the locked tokens and accept them when the lock opens. We’ll build it once that test passes.
+
+## Creator vesting at launch: prove you won’t dump
+
+When you launch a coin, you can keep a share for yourself, locked so you can’t sell it straight away. The plan:
+
+- ComingCreator allocation: 0 to 20% of the supply, set by the creator. The default is 10%.
+
+- ComingAlways time-locked. The default is a 12-month cliff (nothing unlocks for a year), then linear unlocking over 24 months. The shortest lock allowed is 6 months.
+
+- ComingA public receipt. The coin’s page shows how much the creator locked and until when, linked to the locks on chain, so anyone can check them.
+
+## Personal token locks
+
+Coming A “Lock tokens” option next to Lock BSV, with the same date picker, the same irreversible confirmation and the same optional receipt.
+
+## Locked airdrops
+
+Coming Airdrops that unlock over time: each recipient gets their own lock that they can claim once it opens. See [Airdrops](https://bwalletx.com/airdrops).
+
+## What it isn’t
+
+A lock only stops tokens moving before a date. It says nothing about what a token is worth, now or later.
+
+bWalletX is in beta: test with small amounts. Nothing here is investment advice. Questions: [support@bwalletx.com](mailto:support@bwalletx.com)
+
+---
+
+Source: https://bwalletx.com/airdrops
+
+# Airdrops. Tokens straight to your holders.
+
+An airdrop is a token or NFT that arrives in your wallet without you buying or minting it. Issuers use airdrops to reward the people who hold their token. bWalletX is getting a proper place for them, and the safety rules that go with them.
+
+Coming Nothing on this page is in the released app yet (5.1.84). It is built on a development branch and will ship in a later release.
+
+## Your airdrop address
+
+Every bWalletX account has an ordinals address: the address that holds your tokens and NFTs. That is your airdrop address. Give it to anyone who wants to send you a token.
+
+- ComingYour airdrop address, with a QR code, in the Airdrops screen.
+
+- ComingThe same address and QR on your public page at `bwalletx.com/bchat/u/<name>`, so issuers can find it.
+
+## The Airdrops inbox
+
+Anything that turns up unasked goes to an inbox instead of mixing into your wallet. A token or NFT counts as an airdrop when it was paid to one of your addresses by a transaction you didn’t fund and didn’t start: anything you bought, minted, launched, recovered or swapped is not an airdrop.
+
+- ComingA badge counts new airdrops since you last opened the inbox.
+
+- ComingKeep moves an airdrop out of the inbox. Hide hides it, and every future airdrop from the same issuer.
+
+- ComingOnly from issuers I kept before: a switch that shows airdrops only from issuers you have kept something from.
+
+- ComingUnverified labels. An airdrop shows who sent it (the token’s ID, or the sending address). We don’t check what a stranger’s token is or claims to be.
+
+## Stay safe
+
+- Never type your 12 words on a site an airdrop points to. A token’s name, picture or link can say anything. No real airdrop needs your recovery phrase. bWalletX never asks for it outside the wallet.
+
+- NFT content is sandboxed. HTML and SVG inscriptions are shown in an empty sandbox: no scripts, and no access to the wallet. SVG thumbnails are never loaded as wallet pages.
+
+- Address-poisoning warnings. Scammers send a tiny payment or an unsolicited token from an address that looks like one you pay (same first and last characters), hoping you copy it from History. When you send to an address like that, the wallet warns you and shows the address it resembles.
+
+## For issuers: airdrops, not promises
+
+If you want to reward your holders, send them tokens. Don’t promise them returns, profits or a share of anything. A token that promises returns may be a security.
+
+When you create a token in bWalletX, the wallet warns you while you type if the description promises returns, and won’t sign until that wording is gone: “Remove wording that promises returns before publishing. Describe airdrops or room access instead.” It is a word filter, not legal advice.
+
+By default, holding a token gives you one thing: entry to that token’s bChat room. Anything else is what the issuer says, shown as “Issuer says” and not checked by bWalletX.
+
+Airdrops that unlock over time are planned too: see [Token locking](https://bwalletx.com/token-locking).
+
+bWalletX is in beta: test with small amounts. Nothing here is investment advice. Questions: [support@bwalletx.com](mailto:support@bwalletx.com)
 
 ---
 
@@ -4063,7 +4191,7 @@ If you hold a token but didn't create it, you pay only the indexing cost. No fee
 
 When you mint your own handle's token and open its chat room, we add $1 on top. That is the only time we charge it. The button says the exact sats and whether the fee is included, and the confirm sheet lists each line and the network fee.
 
-Update, 7 Oct 2026: the first 1,000 rooms are free. Since 5.1.84 the app checks how many free rooms are left and charges no $1 fee while any remain.
+Update, 7 Oct 2026: the first 1,000 rooms are free. Since 5.1.83 the app checks how many free rooms are left and charges no $1 fee while any remain.
 
 — Richard
 
@@ -4429,7 +4557,7 @@ You don’t need to know which wallet the words came from. The sweep screen take
 
 ## Which wallets
 
-The full list, with the paths and what each needs, is on [bwalletx.com/restore](https://bwalletx.com/restore). In short: bWalletX, Yours and Panda, RelayX and Twetch can be restored as accounts. SimplyCash and other 12 or 24-word wallets can be swept. Private keys and xprvs work too, and you can type a custom path for anything else. Money Button can be swept too, since 5.1.84.
+The full list, with the paths and what each needs, is on [bwalletx.com/restore](https://bwalletx.com/restore). In short: bWalletX, Yours and Panda, RelayX and Twetch can be restored as accounts. SimplyCash and other 12 or 24-word wallets can be swept. Private keys and xprvs work too, and you can type a custom path for anything else. Money Button can be swept too, since 5.1.83.
 
 ## What can’t come across
 

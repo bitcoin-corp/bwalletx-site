@@ -31,6 +31,8 @@ Full text of every page below: https://bwalletx.com/llms-full.txt
 - [Subscriptions in bWalletX](https://bwalletx.com/subscriptions): Put money aside in a pot and pay regular amounts from it. The pot balance is the most anyone can take. Pause or cancel any time.
 - [Lock BSV](https://bwalletx.com/lock): Lock BSV until a date, or as payouts over time: dollar targets, fixed BSV or a percentage. Nobody can unlock it early, not even you. Live since 5.1.84. New feature: start small.
 - [Verify a lock](https://bwalletx.com/lock/verify): Check a bWalletX lock or lock receipt against the BSV blockchain: amounts, unlock heights and whether each lock has been claimed.
+- [Token locking](https://bwalletx.com/token-locking): Lock tokens the way Lock BSV locks BSV: creator vesting at launch with a public receipt, personal token locks, and airdrops that unlock over time. Coming, pending a mainnet indexer test.
+- [Launchpad](https://bwalletx.com/launchpad): Launch your own coin, with something behind it. Buy and sell TokenBlaster coins in bWalletX, launch your own, and add a website, app and socials. Holding a coin opens its bChat room.
 - [Identity in bWalletX](https://bwalletx.com/identity): Some things need a real person behind the wallet: signing a contract, investing in a private placement, a regulated service. Verify once with bit-sign and Veriff. Your wallet holds no name or date of birth, and nothing personal goes on chain.
 - [Handles in bWalletX](https://bwalletx.com/handles): Your $handle is your paymail, and it can be your token and your room. Numbered handles from $bwallet0101, renames, linked accounts, your card signature, and Sign in with bWalletX or X.
 - [Your signature · bWalletX](https://bwalletx.com/sign): Flip your bWalletX card and sign the back with your finger. Your signature stays on your device. Next: sign bit-sign contracts with it and seal them on Bitcoin for under a penny.
@@ -43,6 +45,7 @@ Full text of every page below: https://bwalletx.com/llms-full.txt
 - [bWalletX Friends](https://bwalletx.com/friends): Your handle is your paymail, your token and your chat room. How bWalletX friends, user tokens, the market and token-gated rooms work.
 - [bWallet Lounge on bChat](https://bwalletx.com/lounge): The bWallet Lounge is where bWallet and bWalletX people talk: questions, ideas, and the team is there. Type /b to ask the $b assistant any time. Open to everyone.
 - [Live in bWalletX](https://bwalletx.com/live): Your token is your ticket. Holders get into your room in bWalletX and watch you live. What works today in bChat and the wallet, and what is coming.
+- [Airdrops](https://bwalletx.com/airdrops): Airdrops: tokens and NFTs sent straight to holders. Your airdrop address, an Airdrops inbox with Keep and Hide, and the safety rules. Coming in a future release.
 - [Sign in with Gmail · bWalletX](https://bwalletx.com/gmail): Sign in to bWalletX with your Gmail account and get a verified name: yourname.gmail@bwalletx.com. Your paymail, your token and your chat room, with your Google picture.
 - [Sign in with X · bWalletX](https://bwalletx.com/x): Sign in to bWalletX with your X account and get a verified name: yourhandle.x@bwalletx.com. Your paymail, your token and your chat room, with your X picture.
 

@@ -21,12 +21,13 @@
     // dropdowns. Phones: a Menu button with one accordion per section. The current section's pages also show
     // as a pill row under the bar.
     full: [
-      { label: 'Wallet', href: '/features', pages: ['/features', '/subscriptions', '/pots', '/lock', '/lock/verify', '/restore', '/history', '/identity', '/handles', '/mint', '/get', '/download', '/android', '/iphone', '/extension', '/push-notifications', '/testers', '/privacy'],
+      { label: 'Wallet', href: '/features', pages: ['/features', '/subscriptions', '/pots', '/lock', '/lock/verify', '/token-locking', '/restore', '/history', '/identity', '/handles', '/mint', '/get', '/download', '/android', '/iphone', '/extension', '/push-notifications', '/testers', '/privacy'],
         sub: [
           { label: 'Features', href: '/features' },
           { label: 'Subscriptions', href: '/subscriptions' },
           { label: 'Pots', href: '/pots' },
           { label: 'Lock', href: '/lock' },
+          { label: 'Token locking', href: '/token-locking' },
           { label: 'Restore', href: '/restore' },
           { label: 'History', href: '/history' },
           { label: 'Identity', href: '/identity' },
@@ -38,14 +39,15 @@
           { label: 'Android', href: '/android' },
           { label: 'Testers', href: '/testers' }
         ] },
-      { label: 'Exchange', href: '/exchange', pages: ['/exchange', '/exchange/strategies', '/pnees', '/pnee', '/buy'],
+      { label: 'Exchange', href: '/exchange', pages: ['/exchange', '/exchange/strategies', '/pnees', '/pnee', '/buy', '/launchpad'],
         sub: [
           { label: 'Exchange', href: '/exchange' },
           { label: 'Strategies', href: '/exchange/strategies' },
           { label: 'PNEEs', href: '/pnees', also: ['/pnee'] },
+          { label: 'Launchpad', href: '/launchpad' },
           { label: 'Buy BSV', href: '/buy' }
         ] },
-      { label: 'Social', href: '/social', pages: ['/social', '/chat', '/friends', '/lounge', '/games', '/video', '/live', '/sign', '/x', '/gmail'],
+      { label: 'Social', href: '/social', pages: ['/social', '/chat', '/friends', '/lounge', '/games', '/video', '/live', '/airdrops', '/sign', '/x', '/gmail'],
         sub: [
           { label: 'Social', href: '/social' },
           { label: 'Chat', href: '/chat' },
@@ -54,6 +56,7 @@
           { label: 'Games', href: '/games' },
           { label: 'Video', href: '/video' },
           { label: 'Live', href: '/live' },
+          { label: 'Airdrops', href: '/airdrops' },
           { label: 'Your signature', href: '/sign' },
           { label: 'Sign in with X', href: '/x' },
           { label: 'Sign in with Gmail', href: '/gmail' }

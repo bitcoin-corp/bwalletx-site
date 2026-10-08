@@ -2,6 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://bwalletx.com/agent</loc></url>
   <url><loc>https://bwalletx.com/agents</loc></url>
+  <url><loc>https://bwalletx.com/airdrops</loc></url>
   <url><loc>https://bwalletx.com/android</loc></url>
   <url><loc>https://bwalletx.com/apps/add</loc></url>
   <url><loc>https://bwalletx.com/blog/001-the-fork</loc></url>
@@ -48,6 +49,7 @@
   <url><loc>https://bwalletx.com/identity</loc></url>
   <url><loc>https://bwalletx.com/</loc></url>
   <url><loc>https://bwalletx.com/iphone</loc></url>
+  <url><loc>https://bwalletx.com/launchpad</loc></url>
   <url><loc>https://bwalletx.com/live</loc></url>
   <url><loc>https://bwalletx.com/lock</loc></url>
   <url><loc>https://bwalletx.com/lock/verify</loc></url>
@@ -65,6 +67,7 @@
   <url><loc>https://bwalletx.com/strategies/spec</loc></url>
   <url><loc>https://bwalletx.com/subscriptions</loc></url>
   <url><loc>https://bwalletx.com/testers</loc></url>
+  <url><loc>https://bwalletx.com/token-locking</loc></url>
   <url><loc>https://bwalletx.com/video</loc></url>
   <url><loc>https://bwalletx.com/x</loc></url>
   <url><loc>https://bwalletx.com/connect.md</loc></url>

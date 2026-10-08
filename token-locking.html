@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Token locking</title>
+    <link rel="canonical" href="https://bwalletx.com/token-locking" />
+    <meta name="description" content="Lock tokens the way Lock BSV locks BSV: creator vesting at launch with a public receipt, personal token locks, and airdrops that unlock over time. Coming, pending a mainnet indexer test." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://bwalletx.com/token-locking" />
+    <meta property="og:site_name" content="bWalletX" />
+    <meta property="og:title" content="Token locking: bWalletX" />
+    <meta property="og:description" content="Lock tokens the way Lock BSV locks BSV: creator vesting at launch with a public receipt, personal token locks, and airdrops that unlock over time. Coming, pending a mainnet indexer test." />
+    <meta property="og:image" content="https://bwalletx.com/og-token-locking-v1.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Lock tokens the way Lock BSV locks BSV: creator vesting at launch with a public receipt, personal token locks, and airdrops that unlock over time. Coming, pending a mainnet indexer test." />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@bWalletX" />
+    <meta name="twitter:title" content="Token locking: bWalletX" />
+    <meta name="twitter:description" content="Lock tokens the way Lock BSV locks BSV: creator vesting at launch with a public receipt, personal token locks, and airdrops that unlock over time. Coming, pending a mainnet indexer test." />
+    <meta name="twitter:image" content="https://bwalletx.com/og-token-locking-v1.png" />
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="stylesheet" href="/styles.css" />
+    <style>
+      .ext h1 { font-size: clamp(2.2rem, 6vw, 3.4rem); margin: 18px 0 10px; }
+      .ext h2 { margin: 48px 0 8px; font-size: 1.5rem; }
+      .ext p, .ext li { line-height: 1.7; }
+      .ext .small { color: #8a8a86; font-size: 0.85rem; }
+      .ext .row { display: flex; gap: 12px; flex-wrap: wrap; margin: 26px 0; }
+      .ggrid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 230px), 1fr)); gap: 14px; margin: 18px 0; }
+      .gcard { display: block; background: #101114; border: 1px solid #ffffff12; border-radius: 16px; padding: 14px 16px; color: inherit; text-decoration: none; min-width: 0; }
+      .gcard:hover { border-color: #F5B80066; }
+      .gcard h3 { margin: 0 0 4px; font-size: 1.05rem; }
+      .gcard p { margin: 0; color: #a7adb8; font-size: 0.92rem; line-height: 1.5; }
+      .feat { list-style: none; padding: 0; margin: 18px 0; }
+      .feat li { display: flex; gap: 12px; align-items: baseline; padding: 12px 0; border-bottom: 1px solid #ffffff10; }
+      .tag { flex: none; font-size: 0.75rem; font-weight: 700; padding: 2px 9px; border-radius: 999px; }
+      .tag.live { background: #F5B800; color: #000; }
+      .tag.soon { border: 1px solid #ffffff40; color: #a7adb8; }
+      .tw { overflow-x: auto; margin: 18px 0; }
+      table.wl { border-collapse: collapse; width: 100%; min-width: 720px; font-size: 0.92rem; }
+      table.wl th, table.wl td { text-align: left; vertical-align: top; padding: 10px 10px; border-bottom: 1px solid #ffffff14; line-height: 1.5; }
+      table.wl th { color: #F5B800; font-weight: 700; }
+      table.wl code { background: #17191e; padding: 1px 6px; border-radius: 6px; font-size: 0.85rem; white-space: nowrap; }
+      ol.steps li { margin: 6px 0; }
+    </style>
+  </head>
+  <body>
+    <div class="beta-banner">bWalletX is in <strong>beta</strong>: test with small amounts.</div>
+    <header class="topbar">
+      <div class="wrap topbar-in">
+        <a class="brand" href="/"><img src="/logo.svg" alt="" width="34" height="30" /><span>bWallet<span class="gold">X</span></span></a>
+        <nav aria-label="Pages">
+          <a href="/features">Features</a><a href="/exchange">Exchange</a><a href="/social">Social</a><a href="/agent">Agents</a><a href="/extension">Extension</a><a href="/developers">Developers</a>
+        </nav>
+        <span class="nav-cta"><a class="dl-btn" href="/get">Download</a><a class="web-btn" href="https://web.bwalletx.com" target="_blank" rel="noopener">Web &rarr;</a></span>
+      </div>
+    </header>
+    <script src="/nav.js"></script>
+    <main class="ext">
+      <h1>Token locking. <span class="gold">Lock tokens so nobody can dump early.</span></h1>
+      <p class="lede"><a href="/lock">Lock BSV</a> is live: BSV locked until a block height, and nobody can move it before then, not even you. Token locking does the same for tokens.</p>
+      <p><span class="tag soon">Coming</span> Token locking is not built yet. It needs a lock script that carries a token (the same idea as the OrdLock outputs used for listings) and a test on mainnet with a tiny amount, to check that the token indexers still show the locked tokens and accept them when the lock opens. We&rsquo;ll build it once that test passes.</p>
+
+      <h2>Creator vesting at launch: prove you won&rsquo;t dump</h2>
+      <p>When you launch a coin, you can keep a share for yourself, locked so you can&rsquo;t sell it straight away. The plan:</p>
+      <ul class="feat">
+<li><span class="tag soon">Coming</span><span><b>Creator allocation: 0 to 20%</b> of the supply, set by the creator. The default is 10%.</span></li>
+<li><span class="tag soon">Coming</span><span><b>Always time-locked.</b> The default is a 12-month cliff (nothing unlocks for a year), then linear unlocking over 24 months. The shortest lock allowed is 6 months.</span></li>
+<li><span class="tag soon">Coming</span><span><b>A public receipt.</b> The coin&rsquo;s page shows how much the creator locked and until when, linked to the locks on chain, so anyone can check them.</span></li>
+      </ul>
+
+      <h2>Personal token locks</h2>
+      <p><span class="tag soon">Coming</span> A &ldquo;Lock tokens&rdquo; option next to Lock BSV, with the same date picker, the same irreversible confirmation and the same optional receipt.</p>
+
+      <h2>Locked airdrops</h2>
+      <p><span class="tag soon">Coming</span> Airdrops that unlock over time: each recipient gets their own lock that they can claim once it opens. See <a href="/airdrops">Airdrops</a>.</p>
+
+      <h2>What it isn&rsquo;t</h2>
+      <p>A lock only stops tokens moving before a date. It says nothing about what a token is worth, now or later.</p>
+      <p class="small">bWalletX is in beta: test with small amounts. Nothing here is investment advice. Questions: <a href="mailto:support@bwalletx.com">support@bwalletx.com</a></p>
+    </main>
+  </body>
+</html>
