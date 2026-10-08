@@ -10,7 +10,7 @@ Source: https://bwalletx.com/android
 
 The full bWalletX wallet on your Android phone or tablet. Your keys stay on your device.
 
-[Download APK (beta) ↓](https://bwalletx.com/download/bwalletx-android-5.1.84.apk)
+[Download APK (beta) ↓](https://bwalletx.com/download/bwalletx-android-5.1.85.apk)
 
 It isn't on Google Play yet, so install it by hand:
 
@@ -18,13 +18,13 @@ It isn't on Google Play yet, so install it by hand:
 
 - If Android asks, allow your browser to install unknown apps (Settings › Apps › your browser › Install unknown apps).
 
-- Open `bwalletx-android-5.1.84.apk` and tap Install.
+- Open `bwalletx-android-5.1.85.apk` and tap Install.
 
 - Open bWalletX and create or restore your wallet.
 
 Updating from an older version? Install over the top and your wallet stays. If Android says the app can't be updated, write down your 12 words first, then uninstall and reinstall.
 
-Version 5.1.84 beta · 21.0 MB · Android 7+ · SHA-256 16fe04405b78dda9c4f3c4ef8162e213b972f222232ef82a8c8a31405fa21bf3
+Version 5.1.85 beta · 21.0 MB · Android 7+ · SHA-256 16fe04405b78dda9c4f3c4ef8162e213b972f222232ef82a8c8a31405fa21bf3
 
 Also: [Chrome extension](https://bwalletx.com/extension) · [Developers](https://bwalletx.com/developers)
 
@@ -36,7 +36,7 @@ Source: https://bwalletx.com/bpositive
 
 Back a person who is working towards something: a student, an athlete, someone getting sober, a developer learning a new stack, an artist finishing an album. You support them monthly, or pledge money to a milestone that witnesses confirm. It is built inside bWalletX, where the money, the proof and the people already are.
 
-Coming Nothing on this page is in the app yet. bPositive is a plan with the owner’s decisions made (8 Oct 2026). It is not in the released app (5.1.84).
+Coming Nothing on this page is in the app yet. bPositive is a plan with the owner’s decisions made (8 Oct 2026). It is not in the released app (5.1.85).
 
 ## A gift, not an investment
 
@@ -100,7 +100,7 @@ A bSpace is a live audio or video room inside a token room in bWalletX. The host
 
 - Live in bChatToken-gated. A Space lives in a token room, so only holders get in. The server checks the holding, and the video server only lets in members who have joined.
 
-- ComingSpaces in bWalletX. A “Live now” banner with Join in the room, “Start a bSpace” for the issuer or a room admin, and a full-screen Space view: the stage on top, the hand queue for the host, controls at the bottom, and the room chat sliding up from below. It is being built now and is not in the released app (5.1.84).
+- ComingSpaces in bWalletX. A “Live now” banner with Join in the room, “Start a bSpace” for the issuer or a room admin, and a full-screen Space view: the stage on top, the hand queue for the host, controls at the bottom, and the room chat sliding up from below. It is being built now and is not in the released app (5.1.85).
 
 ## Paid Spaces
 
@@ -213,12 +213,12 @@ Source: https://bwalletx.com/extension
 
 The full bWalletX wallet in Chrome's side panel, and a wallet websites like TokenBlaster can connect to. Your keys stay in the extension.
 
-[Download for Chrome (beta) ↓](https://bwalletx.com/download/bwalletx-extension-5.1.84.zip)
-[Download for Brave (beta) ↓](https://bwalletx.com/download/bwalletx-extension-5.1.84.zip)
+[Download for Chrome (beta) ↓](https://bwalletx.com/download/bwalletx-extension-5.1.85.zip)
+[Download for Brave (beta) ↓](https://bwalletx.com/download/bwalletx-extension-5.1.85.zip)
 
 It isn't on the Chrome Web Store yet, so install it by hand:
 
-- Unzip `bwalletx-extension-5.1.84.zip`.
+- Unzip `bwalletx-extension-5.1.85.zip`.
 
 - Open `chrome://extensions` in Chrome.
 
@@ -232,7 +232,7 @@ It isn't on the Chrome Web Store yet, so install it by hand:
 
 Same extension, same file. Brave runs Chrome extensions, so:
 
-- Unzip `bwalletx-extension-5.1.84.zip`.
+- Unzip `bwalletx-extension-5.1.85.zip`.
 
 - Open `brave://extensions` in Brave.
 
@@ -242,7 +242,7 @@ Same extension, same file. Brave runs Chrome extensions, so:
 
 - Pin bWalletX from the puzzle-piece menu, click it, and create or restore your wallet.
 
-Version 5.1.84 beta · SHA-256 ec7856c9ebc77f4ccae13362e83693acd0460723a76b1b491680bb71639e5a59 · Source: [github.com/bitcoin-corp/bwallet](https://github.com/bitcoin-corp/bwallet)
+Version 5.1.85 beta · SHA-256 ec7856c9ebc77f4ccae13362e83693acd0460723a76b1b491680bb71639e5a59 · Source: [github.com/bitcoin-corp/bwallet](https://github.com/bitcoin-corp/bwallet)
 
 ---
 
@@ -489,8 +489,8 @@ Source: https://bwalletx.com/get
 
 The full bWalletX on every device. Your keys stay on your device.
 
-[AndroidAPK download · v5.1.84 beta](https://bwalletx.com/android)
-[ChromeExtension · v5.1.84 beta](https://bwalletx.com/extension)
+[AndroidAPK download · v5.1.85 beta](https://bwalletx.com/android)
+[ChromeExtension · v5.1.85 beta](https://bwalletx.com/extension)
 [WebOpen in your browser](https://web.bwalletx.com)
 [iPhoneWeb app · install from Safari, no App Store](https://bwalletx.com/iphone)
 
@@ -534,7 +534,7 @@ Every transaction your account has made, read from the chain. Pick a date range,
 
 - LiveConnections log. Which apps used the wallet, when, what you allowed them, what each spent, and a button to revoke access. Recorded on each device from 5.1.82.
 
-- LiveGains and losses. A Gains tab with realised gains and losses per tax year: UK HMRC share-pooling rules in pounds by default, FIFO in dollars elsewhere, BSV tracked as an asset, and a disposals CSV for your accountant. Since 5.1.84. Gains is in beta: figures may be incomplete, so check them against your own records.
+- LiveGains and losses. A Gains tab with realised gains and losses per tax year: UK HMRC share-pooling rules in pounds by default, FIFO in dollars elsewhere, BSV tracked as an asset, and a disposals CSV for your accountant. Since 5.1.85. Gains is in beta: figures may be incomplete, so check them against your own records.
 
 Open it from the wallet: tap History on the account card. Payments from a pot show there too; see [Subscriptions and Pots](https://bwalletx.com/subscriptions).
 
@@ -558,7 +558,7 @@ holds your coins, pays and locks, and opens the chat room for every token you ho
 bWalletX is the full edition (web, Chrome, Android sideload, private iPhone build);
 bWallet is the App Store / Play edition with fewer features.
 
-Android · Download APK (beta)v5.1.84 beta · sideloadiPhone · Web appInstall from Safari · no App StoreChrome · Download extensionv5.1.84 beta · zip + install steps
+Android · Download APK (beta)v5.1.85 beta · sideloadiPhone · Web appInstall from Safari · no App StoreChrome · Download extensionv5.1.85 beta · zip + install steps
 
 ▶Watch the explainer · 1 min
 
@@ -570,7 +570,7 @@ How to sideload on Android
 Tap Download APK (beta). If Android asks, allow your browser to install unknown apps
 (Settings › Apps › your browser › Install unknown apps).
 
-- Open the downloaded bwalletx-android-5.1.84.apk and tap Install.
+- Open the downloaded bwalletx-android-5.1.85.apk and tap Install.
 
 -
 Optional but recommended: check the SHA-256 checksum matches16fe04405b78dda9c4f3c4ef8162e213b972f222232ef82a8c8a31405fa21bf3
@@ -591,7 +591,7 @@ a balance.
 
 The real wallet home screen (web app, test wallet).
 
-Live in 5.1.84
+Live in 5.1.85
 
 ## What you can do today.
 
@@ -765,7 +765,7 @@ Join the waitlist →](https://www.bitcoinchat.online)
 
 Currently in beta.
 
-Android · Download APK (beta)v5.1.84 beta · sideloadiPhone · Web appInstall from Safari · no App StoreChrome · Download extensionv5.1.84 beta · zip + install steps
+Android · Download APK (beta)v5.1.85 beta · sideloadiPhone · Web appInstall from Safari · no App StoreChrome · Download extensionv5.1.85 beta · zip + install steps
 
 Download on theApp StorebWallet · not submitted yet
 
@@ -1465,7 +1465,7 @@ Source: https://bwalletx.com/lock
 
 Lock BSV on the Bitcoin SV blockchain until a date you choose, or have it paid back to you a little at a time. Once it’s locked, nobody can move it before then: not you, not bWalletX, not anyone.
 
-Live since 5.1.84 Lock BSV is in the app: tap the lock in the top bar. It is a new feature, so start small. Lock only small amounts, a few thousand satoshis, until it has been out for a while. The app asks again if you try to lock more than 0.01 BSV.
+Live since 5.1.85 Lock BSV is in the app: tap the lock in the top bar. It is a new feature, so start small. Lock only small amounts, a few thousand satoshis, until it has been out for a while. The app asks again if you try to lock more than 0.01 BSV.
 
 ## What locking is
 
@@ -1970,7 +1970,7 @@ Source: https://bwalletx.com/airdrops
 
 An airdrop is a token or NFT that arrives in your wallet without you buying or minting it. Issuers use airdrops to reward the people who hold their token. bWalletX is getting a proper place for them, and the safety rules that go with them.
 
-Coming Nothing on this page is in the released app yet (5.1.84). It is built on a development branch and will ship in a later release.
+Coming Nothing on this page is in the released app yet (5.1.85). It is built on a development branch and will ship in a later release.
 
 ## Your airdrop address
 
@@ -3179,11 +3179,11 @@ One script gives your site a standard BRC-100 wallet. No API keys, no sign-up, a
 
 ## Get bWalletX to test with
 
-Install the wallet you'll connect to (version 5.1.84 beta). Checksums are on each download page.
+Install the wallet you'll connect to (version 5.1.85 beta). Checksums are on each download page.
 
-- [Chrome / Brave extension (zip)](https://bwalletx.com/download/bwalletx-extension-5.1.84.zip) · [install steps](https://bwalletx.com/extension)
+- [Chrome / Brave extension (zip)](https://bwalletx.com/download/bwalletx-extension-5.1.85.zip) · [install steps](https://bwalletx.com/extension)
 
-- [Android APK](https://bwalletx.com/download/bwalletx-android-5.1.84.apk) · [install steps](https://bwalletx.com/android)
+- [Android APK](https://bwalletx.com/download/bwalletx-android-5.1.85.apk) · [install steps](https://bwalletx.com/android)
 
 - [Web app](https://web.bwalletx.com) · [iPhone](https://bwalletx.com/iphone)
 
@@ -4728,7 +4728,7 @@ Source: https://bwalletx.com/blog/023-lock-bsv
 
 Lock BSV until a date, or as payouts over time, and nobody can unlock it early, not even you. Why that is useful, how BSV enforces it with no custodian, and where the limits are.
 
-Status: live since 5.1.84. Lock BSV is in the app now. It is a new feature, so start small: lock only small amounts until it has been out for a while. The app asks again above 0.01 BSV.
+Status: live since 5.1.85. Lock BSV is in the app now. It is a new feature, so start small: lock only small amounts until it has been out for a while. The app asks again above 0.01 BSV.
 
 ## Why you would want to lose access to your own money
 
@@ -5036,7 +5036,7 @@ Source: https://bwalletx.com/blog/027-airdrops-not-dividends
 
 Why bWalletX issuers reward holders with airdrops, not payouts: the returns-wording block, the airdrop inbox, and the security audit behind it (sandboxed NFT content, address poisoning).
 
-Status: built, not released. The airdrop inbox, the airdrop address, the returns-wording filter and the safety changes below are built on a development branch. They are not in the released app (5.1.84) and will ship in a later release.
+Status: built, not released. The airdrop inbox, the airdrop address, the returns-wording filter and the safety changes below are built on a development branch. They are not in the released app (5.1.85) and will ship in a later release.
 
 ## How do you thank the people who hold your token?
 
@@ -5260,7 +5260,7 @@ Out in bWalletX 5.1.72: a paid like or a tip pays the author in the same transac
 
 - [](https://bwalletx.com/blog/023-lock-bsv)023 · 7 Oct 2026
 [Locks you can’t break](https://bwalletx.com/blog/023-lock-bsv)
-Lock BSV until a date, or as payouts over time, and nobody can unlock it early, not even you. Live since 5.1.84. New feature: start small.
+Lock BSV until a date, or as payouts over time, and nobody can unlock it early, not even you. Live since 5.1.85. New feature: start small.
 
 - [](https://bwalletx.com/blog/022-bring-your-coins-home)022 · 7 Oct 2026
 [Bring your coins home](https://bwalletx.com/blog/022-bring-your-coins-home)
