@@ -28,6 +28,11 @@
   ],
   "redirects": [
     {
+      "source": "/bPhone",
+      "destination": "/bphone",
+      "statusCode": 301
+    },
+    {
       "source": "/download/:file(bwalletx-android(?!-5.1.86\\.apk$)[^/]*\\.apk)",
       "destination": "/download/bwalletx-android-5.1.86.apk",
       "statusCode": 302
