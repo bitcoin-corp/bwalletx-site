@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>026 Paying to be heard · bWalletX blog</title>
+    <meta name="description" content="Priced token rooms in bWalletX: each message burns tokens or pays the issuer, in one transaction. The wallet signs, the server checks before anything is spent. Admins exempt, 50-sat minimum." />
+    <link rel="canonical" href="https://bwalletx.com/blog/026-paying-to-be-heard" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://bwalletx.com/blog/026-paying-to-be-heard" />
+    <meta property="og:site_name" content="bWalletX" />
+    <meta property="og:title" content="Paying to be heard" />
+    <meta property="og:description" content="Priced token rooms in bWalletX: each message burns tokens or pays the issuer, in one transaction. The wallet signs, the server checks before anything is spent. Admins exempt, 50-sat minimum." />
+    <meta property="og:image" content="https://bwalletx.com/og/og-blog-026.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@bWalletX" />
+    <meta name="twitter:title" content="Paying to be heard" />
+    <meta name="twitter:description" content="Priced token rooms in bWalletX: each message burns tokens or pays the issuer, in one transaction. The wallet signs, the server checks before anything is spent. Admins exempt, 50-sat minimum." />
+    <meta name="twitter:image" content="https://bwalletx.com/og/og-blog-026.png" />
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="stylesheet" href="/styles.css" />
+    <style>
+      .ext { max-width: 760px; margin: 0 auto; padding: 120px 20px 80px; }
+      .ext h1 { font-size: clamp(2rem, 6vw, 3rem); margin: 10px 0 10px; line-height: 1.15; }
+      .ext h2 { margin: 44px 0 10px; font-size: 1.4rem; }
+      .ext p, .ext li { line-height: 1.7; }
+      .ext code { background: #17191e; padding: 2px 7px; border-radius: 6px; overflow-wrap: anywhere; }
+      .ext a { overflow-wrap: anywhere; }
+      .meta { color: #8a8a86; font-size: 0.9rem; margin: 0; }
+      .num { color: #F5B800; font-weight: 700; letter-spacing: .04em; }
+      .box { background: #101114; border: 1px solid #ffffff12; border-radius: 16px; padding: 18px 22px; margin: 28px 0; }
+      .box h2 { margin: 0 0 8px; font-size: 1.1rem; }
+      .box ul { margin: 0; padding-left: 1.2em; }
+      .related { color: #a7adb8; }
+      .pn { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; margin-top: 40px; border-top: 1px solid #ffffff14; padding-top: 20px; }
+      .pn a { color: #F5B800; text-decoration: none; max-width: 100%; }
+      .posts { list-style: none; padding: 0; margin: 28px 0; }
+      .posts li { background: #101114; border: 1px solid #ffffff12; border-radius: 16px; padding: 16px 20px; margin: 12px 0; }
+      .posts a { color: #fff; text-decoration: none; font-weight: 700; font-size: 1.1rem; }
+      .posts a:hover { color: #F5B800; }
+      .posts p { margin: 4px 0 0; color: #a7adb8; line-height: 1.55; }
+      .ext .small { color: #8a8a86; font-size: 0.85rem; }
+      .ext pre { background: #17191e; padding: 14px 16px; border-radius: 10px; overflow-x: auto; }
+      .ext pre code { padding: 0; background: none; overflow-wrap: normal; white-space: pre; }
+    </style>
+      <!-- ld:start -->
+    <script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "BlogPosting",
+   "headline": "Paying to be heard",
+   "description": "Priced token rooms in bWalletX: each message burns tokens or pays the issuer, in one transaction. The wallet signs, the server checks before anything is spent. Admins exempt, 50-sat minimum.",
+   "url": "https://bwalletx.com/blog/026-paying-to-be-heard",
+   "mainEntityOfPage": "https://bwalletx.com/blog/026-paying-to-be-heard",
+   "image": "https://bwalletx.com/og/og-blog-026.png",
+   "inLanguage": "en",
+   "author": {
+    "@type": "Organization",
+    "name": "The Bitcoin Corporation Ltd",
+    "url": "https://bwalletx.com/"
+   },
+   "publisher": {
+    "@type": "Organization",
+    "name": "The Bitcoin Corporation Ltd",
+    "logo": {
+     "@type": "ImageObject",
+     "url": "https://bwalletx.com/icon-512.png"
+    }
+   },
+   "datePublished": "2026-10-08"
+  }
+ ]
+}
+    </script>
+    <!-- ld:end -->
+  </head>
+  <body>
+    <div class="beta-banner">bWalletX is in <strong>beta</strong>: test with small amounts.</div>
+    <header class="topbar">
+      <div class="wrap topbar-in">
+        <a class="brand" href="/"><img src="/logo.svg" alt="" width="34" height="30" /><span>bWallet<span class="gold">X</span></span></a>
+        <nav aria-label="Pages">
+          <a href="/features">Features</a><a href="/exchange">Exchange</a><a href="/social">Social</a><a href="/agent">Agents</a><a href="/extension">Extension</a><a href="/developers">Developers</a>
+        </nav>
+        <span class="nav-cta"><a class="dl-btn" href="/get">Download</a><a class="web-btn" href="https://web.bwalletx.com" target="_blank" rel="noopener">Web &rarr;</a></span>
+      </div>
+    </header>
+    <script src="/nav.js"></script>
+    <main class="ext">
+      <p class="meta"><a href="/blog">Development blog</a> · <span class="num">026</span> · 8 Oct 2026</p>
+      <h1>Paying to be heard</h1>
+      <p class="lede">Priced token rooms in bWalletX: each message burns tokens or pays the issuer, in one transaction. The wallet signs, the server checks before anything is spent. Admins exempt, 50-sat minimum.</p>
+      <p><b>Status: live on the server.</b> Priced rooms are enforced by bChat&rsquo;s server now. The wallet support (paying when you post) is built and will be in the next bWalletX release. This is part 2 of the chat series, after <a href="/blog/021-coordinate-on-bsv">021 Coordinate on BSV</a>.</p>
+
+      <h2>The problem with free rooms</h2>
+      <p>A token room in bWalletX is a room only the token&rsquo;s holders can enter. That already keeps most strangers out. But holding a token is a one-off: once you&rsquo;re in, every message is free. A room that matters to people attracts the same things a busy group chat does. Someone posts thirty lines in a minute. A small group decides to bury a thread. A bot finds the door and starts talking.</p>
+      <p>Moderation helps, but it always comes after the damage. We wanted something that changes the maths before anyone types: if every message costs a little, posting thirty lines costs thirty times as much as posting one. A pile-on needs everyone in it to pay. Most people in a room post a few times a day and barely notice the cost. The people who flood a room notice it straight away.</p>
+      <p>Issuers already had a price-per-message setting in room settings. Until now it was a label. The server didn&rsquo;t check it. This change makes it real.</p>
+
+      <h2>What an issuer can set</h2>
+      <p>The issuer of a token, or an admin of its room, can set a charge per message. There are three kinds:</p>
+      <ul>
+        <li><b>Tokens, burned.</b> Each message burns some of the room&rsquo;s token. Nobody receives it: it is gone from the supply.</li>
+        <li><b>Tokens, to the issuer.</b> Each message sends some of the token to the issuer.</li>
+        <li><b>Sats, to the issuer.</b> Each message pays the issuer in BSV. The minimum is 50 sats.</li>
+      </ul>
+      <p>Why a 50-sat floor? A payment smaller than that costs more in network fees and index work than it is worth. It would make every message more expensive to process without making flooding any more expensive. A token charge has to be at least one unit of the token.</p>
+      <p>Per-message rules are enforced now. Rooms can also set rules per minute, per hour or per day, and the settings screen says plainly that those aren&rsquo;t enforced yet.</p>
+
+      <h2>One transaction, not two</h2>
+      <p>The obvious way to build this is two steps: pay, then post. That has an ugly failure. You pay, then the post is refused (you sold the token a second ago, the room changed its price, the server was down), and now you have paid for nothing. Or the reverse: the post goes through and the payment doesn&rsquo;t.</p>
+      <p>So a priced message is a single Bitcoin transaction with two parts. One part is the payment: the burn, the token transfer or the sats to the issuer. The other is a small record that says which room it is for, who wrote it, a fingerprint (a SHA-256 hash) of the message text, and which version of the room&rsquo;s rule it was paying. The payment and the message can&rsquo;t be separated, because they are the same transaction.</p>
+
+      <h2>The wallet signs, the server checks, then it is spent</h2>
+      <p>This is the decision we spent most time on. When you post in a priced room, bWalletX builds that transaction and signs it, but it does not broadcast it. It sends the signed transaction to bChat&rsquo;s server along with your message.</p>
+      <p>The server then checks everything: that you are a member, that the text matches the fingerprint, that the payment matches the room&rsquo;s current rule, and that the amounts and the destination are right. Only if all of that passes does the server broadcast the transaction and then store your message.</p>
+      <p>If the server refuses, it broadcasts nothing. The wallet then cancels the signed transaction and frees the coins it would have used. You can&rsquo;t end up paid-but-refused. If the network drops halfway, a retry sends the same signed transaction again rather than paying twice.</p>
+      <p>The wallet also counts a message towards your spending only after the server has accepted it, so a refused message doesn&rsquo;t eat into your limits.</p>
+
+      <h2>You see the price before you pay</h2>
+      <p>Nothing is charged silently. Before you send in a priced room, the wallet shows a line such as &ldquo;This message costs 5 $ACME, burned&rdquo; or &ldquo;This message costs 100 sats to the issuer&rdquo;. (Those are examples, not real room prices.) You can tell it not to ask again in that room up to an amount you choose, and there is a cap per session, so a long conversation can&rsquo;t quietly run up a bill.</p>
+
+      <h2>Admins don&rsquo;t pay</h2>
+      <p>The issuer and the room&rsquo;s admins are exempt. They are the people answering questions, pinning things and keeping the room in order, and charging them to do that would just tax moderation. Everyone else pays the same rule.</p>
+
+      <h2>Burned or paid to the issuer?</h2>
+      <p>That is the issuer&rsquo;s choice. Burning means nobody profits from your message: it just costs you something, which is all the anti-flood effect needs. Paying the issuer means the person who runs the room is paid for the attention. Some rooms will want one, some the other. We show which one applies on every send, so you know where your money goes.</p>
+
+      <h2>What we didn&rsquo;t do</h2>
+      <p>We didn&rsquo;t take a cut. The charge goes where the issuer set it: burned, or to the issuer. bWalletX adds nothing on top of the normal network fee.</p>
+      <p>We didn&rsquo;t make free rooms rarer. Most rooms will stay free. A price is a tool for rooms that need it, not a default.</p>
+      <p>And we didn&rsquo;t put token rooms in the store edition. bWallet, on the App Store and Google Play, has no token rooms, so it has no priced rooms either.</p>
+
+      <h2>What&rsquo;s next</h2>
+      <p>The wallet half of this is built on a branch and goes out in the next release. After that: enforcing the per-minute, per-hour and per-day rules, paying for calls and streams by the second, and letting people set their own price to be messaged by strangers. Those are all marked Coming on the <a href="/chat">Chat page</a>.</p>
+
+      <div class="pn"><a href="/blog/025-push-notifications">&larr; 025 Push notifications, from our own server</a><a href="/blog/027-airdrops-not-dividends">027 Airdrops, not dividends &rarr;</a></div>
+    </main>
+  </body>
+</html>

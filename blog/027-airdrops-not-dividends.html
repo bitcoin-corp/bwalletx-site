@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>027 Airdrops, not dividends · bWalletX blog</title>
+    <meta name="description" content="Why bWalletX issuers reward holders with airdrops, not payouts: the returns-wording block, the airdrop inbox, and the security audit behind it (sandboxed NFT content, address poisoning)." />
+    <link rel="canonical" href="https://bwalletx.com/blog/027-airdrops-not-dividends" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://bwalletx.com/blog/027-airdrops-not-dividends" />
+    <meta property="og:site_name" content="bWalletX" />
+    <meta property="og:title" content="Airdrops, not dividends" />
+    <meta property="og:description" content="Why bWalletX issuers reward holders with airdrops, not payouts: the returns-wording block, the airdrop inbox, and the security audit behind it (sandboxed NFT content, address poisoning)." />
+    <meta property="og:image" content="https://bwalletx.com/og/og-blog-027.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@bWalletX" />
+    <meta name="twitter:title" content="Airdrops, not dividends" />
+    <meta name="twitter:description" content="Why bWalletX issuers reward holders with airdrops, not payouts: the returns-wording block, the airdrop inbox, and the security audit behind it (sandboxed NFT content, address poisoning)." />
+    <meta name="twitter:image" content="https://bwalletx.com/og/og-blog-027.png" />
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="stylesheet" href="/styles.css" />
+    <style>
+      .ext { max-width: 760px; margin: 0 auto; padding: 120px 20px 80px; }
+      .ext h1 { font-size: clamp(2rem, 6vw, 3rem); margin: 10px 0 10px; line-height: 1.15; }
+      .ext h2 { margin: 44px 0 10px; font-size: 1.4rem; }
+      .ext p, .ext li { line-height: 1.7; }
+      .ext code { background: #17191e; padding: 2px 7px; border-radius: 6px; overflow-wrap: anywhere; }
+      .ext a { overflow-wrap: anywhere; }
+      .meta { color: #8a8a86; font-size: 0.9rem; margin: 0; }
+      .num { color: #F5B800; font-weight: 700; letter-spacing: .04em; }
+      .box { background: #101114; border: 1px solid #ffffff12; border-radius: 16px; padding: 18px 22px; margin: 28px 0; }
+      .box h2 { margin: 0 0 8px; font-size: 1.1rem; }
+      .box ul { margin: 0; padding-left: 1.2em; }
+      .related { color: #a7adb8; }
+      .pn { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; margin-top: 40px; border-top: 1px solid #ffffff14; padding-top: 20px; }
+      .pn a { color: #F5B800; text-decoration: none; max-width: 100%; }
+      .posts { list-style: none; padding: 0; margin: 28px 0; }
+      .posts li { background: #101114; border: 1px solid #ffffff12; border-radius: 16px; padding: 16px 20px; margin: 12px 0; }
+      .posts a { color: #fff; text-decoration: none; font-weight: 700; font-size: 1.1rem; }
+      .posts a:hover { color: #F5B800; }
+      .posts p { margin: 4px 0 0; color: #a7adb8; line-height: 1.55; }
+      .ext .small { color: #8a8a86; font-size: 0.85rem; }
+      .ext pre { background: #17191e; padding: 14px 16px; border-radius: 10px; overflow-x: auto; }
+      .ext pre code { padding: 0; background: none; overflow-wrap: normal; white-space: pre; }
+    </style>
+      <!-- ld:start -->
+    <script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "BlogPosting",
+   "headline": "Airdrops, not dividends",
+   "description": "Why bWalletX issuers reward holders with airdrops, not payouts: the returns-wording block, the airdrop inbox, and the security audit behind it (sandboxed NFT content, address poisoning).",
+   "url": "https://bwalletx.com/blog/027-airdrops-not-dividends",
+   "mainEntityOfPage": "https://bwalletx.com/blog/027-airdrops-not-dividends",
+   "image": "https://bwalletx.com/og/og-blog-027.png",
+   "inLanguage": "en",
+   "author": {
+    "@type": "Organization",
+    "name": "The Bitcoin Corporation Ltd",
+    "url": "https://bwalletx.com/"
+   },
+   "publisher": {
+    "@type": "Organization",
+    "name": "The Bitcoin Corporation Ltd",
+    "logo": {
+     "@type": "ImageObject",
+     "url": "https://bwalletx.com/icon-512.png"
+    }
+   },
+   "datePublished": "2026-10-08"
+  }
+ ]
+}
+    </script>
+    <!-- ld:end -->
+  </head>
+  <body>
+    <div class="beta-banner">bWalletX is in <strong>beta</strong>: test with small amounts.</div>
+    <header class="topbar">
+      <div class="wrap topbar-in">
+        <a class="brand" href="/"><img src="/logo.svg" alt="" width="34" height="30" /><span>bWallet<span class="gold">X</span></span></a>
+        <nav aria-label="Pages">
+          <a href="/features">Features</a><a href="/exchange">Exchange</a><a href="/social">Social</a><a href="/agent">Agents</a><a href="/extension">Extension</a><a href="/developers">Developers</a>
+        </nav>
+        <span class="nav-cta"><a class="dl-btn" href="/get">Download</a><a class="web-btn" href="https://web.bwalletx.com" target="_blank" rel="noopener">Web &rarr;</a></span>
+      </div>
+    </header>
+    <script src="/nav.js"></script>
+    <main class="ext">
+      <p class="meta"><a href="/blog">Development blog</a> · <span class="num">027</span> · 8 Oct 2026</p>
+      <h1>Airdrops, not dividends</h1>
+      <p class="lede">Why bWalletX issuers reward holders with airdrops, not payouts: the returns-wording block, the airdrop inbox, and the security audit behind it (sandboxed NFT content, address poisoning).</p>
+      <p><b>Status: built, not released.</b> The airdrop inbox, the airdrop address, the returns-wording filter and the safety changes below are built on a development branch. They are not in the released app (5.1.84) and will ship in a later release.</p>
+
+      <h2>How do you thank the people who hold your token?</h2>
+      <p>Anyone who launches a token in bWalletX runs into the same question sooner or later: the people holding it backed you early, so how do you thank them? The answer much of crypto reaches for is a share of the money: a cut of fees, a payout per token, &ldquo;holders earn&rdquo;. It sounds generous. It is also, in most places, the description of a security. A token that pays holders a share of income looks like a share. Shares are regulated, and selling them to the public without the paperwork is a serious problem for the issuer and for the app that helped.</p>
+      <p>So we picked a different answer and built the wallet around it: <b>issuers reward holders with airdrops.</b> An airdrop is a gift of tokens or NFTs sent to holders&rsquo; wallets. It promises nothing about the future. It is a thing you send, once, that people can keep, use or ignore.</p>
+
+      <h2>What a token gives you by default</h2>
+      <p>By default, holding a token in bWalletX gives you one thing: entry to that token&rsquo;s room. That is the only right we describe. If an issuer says their token does more, the wallet shows it as &ldquo;Issuer says: &hellip;&rdquo; and marks it as not checked by bWalletX. We don&rsquo;t verify it and we don&rsquo;t repeat it as our own claim.</p>
+
+      <h2>The returns-wording block</h2>
+      <p>Most people who write &ldquo;holders get a share of the profits&rdquo; aren&rsquo;t trying to sell securities. They are being enthusiastic. So the wallet helps them before it&rsquo;s a problem.</p>
+      <p>When you create a token in bWalletX, the wallet watches the name and description as you type. Words like profit, returns, dividends, yield, APY, ROI, &ldquo;passive income&rdquo; and &ldquo;to the moon&rdquo; bring up a warning, and the wallet won&rsquo;t sign while they are there: &ldquo;Remove wording that promises returns before publishing. Describe airdrops or room access instead.&rdquo;</p>
+      <p>It matches whole words and ignores obvious look-alikes such as &ldquo;free returns&rdquo; or &ldquo;profit and loss&rdquo;. It is a word filter, not legal review. Someone determined can get round it. But it catches the common, careless case, and it points people at the answer we want them to use.</p>
+
+      <h2>Your airdrop address</h2>
+      <p>Every bWalletX account already has an ordinals address: the address that holds your tokens and NFTs. That is your airdrop address. Receive now has two tabs, Payments and Airdrops, and the Airdrops tab shows that address with a QR code and a copy button. The plan is to show it on your public page as well, so issuers can find it.</p>
+
+      <h2>The airdrop inbox</h2>
+      <p>If issuers are going to send people things, people need a calm place to receive them. Otherwise every stranger&rsquo;s token lands in the middle of your wallet. So anything that turns up unasked goes to an inbox.</p>
+      <p>The rule for &ldquo;unasked&rdquo; is strict: a token or NFT paid to one of your addresses by a transaction you didn&rsquo;t fund and didn&rsquo;t start. Anything you bought, minted, launched, swapped or recovered leaves a record in your wallet, so it never counts as an airdrop.</p>
+      <p>A badge on the Wallet&rsquo;s Airdrops row counts what is new since you last looked. Each item has two buttons. <b>Keep</b> marks it reviewed; it already shows in your normal tokens or NFTs. <b>Hide</b> removes it, and hides everything else from the same issuer. There is also a switch to show airdrops only from issuers you have kept something from before.</p>
+      <p>We thought about putting the inbox behind the b button at the top of the screen, so it is visible from every tab. We kept the b where it is and put the badge in the Wallet instead. Airdrops are occasional, and the inbox is new. If people come to rely on it daily, we&rsquo;ll move it.</p>
+
+      <h2>The security audit</h2>
+      <p>An airdrop is, by definition, something a stranger chose to put in your wallet. Before building an inbox that invites people to look at them, we went through every place the wallet displays inscription content and asked what a hostile one could do.</p>
+      <p><b>Malicious NFT content is sandboxed.</b> An NFT can be an HTML page or an SVG with script in it. If the wallet rendered that as part of itself, the script would run with the wallet&rsquo;s access. It never does. Images are shown as images. Anything that isn&rsquo;t a plain image shows a &ldquo;tap to preview&rdquo; placeholder, and the preview opens in a frame with an empty sandbox on a separate origin: no scripts, and no access to the wallet. The audit found two places to tighten. One inherited component used a sandbox setting that was looser than it looked, and the thumbnail code turned SVGs into wallet-origin images. Both are fixed, with a test.</p>
+      <p><b>Address poisoning.</b> This scam is common on every chain. Someone sends you a tiny payment, or a worthless token, from an address that looks like one you really pay: the same first four and last four characters. Weeks later you copy an address from your history and pick theirs by mistake. Now, when you type a recipient, the wallet checks it against addresses that sent you dust or unsolicited tokens. If it matches or looks alike, and you&rsquo;ve never sent to it, you get a warning showing the address it resembles.</p>
+      <p><b>No links from the inbox.</b> A token&rsquo;s name and picture can say anything, including &ldquo;claim your reward at this site&rdquo;. The inbox never shows issuer links. Links only appear on a token&rsquo;s own page, behind a confirmation. The standing rule is printed in the inbox: never type your 12 words on a site an airdrop points to.</p>
+
+      <h2>What comes later</h2>
+      <p>Sending airdrops is next: to the followers of an account, to the holders of a token, or to the members of a room, with limits so they can&rsquo;t be used for spam. Later, airdrops that unlock over time. We have also proposed retiring a TokenBlaster launch option that would pay BSV to holders, which looks too much like a dividend, and replacing it with holder airdrops. No coin uses that option today. Everything we know about the plan is on the <a href="/airdrops">Airdrops page</a>.</p>
+
+      <div class="pn"><a href="/blog/026-paying-to-be-heard">&larr; 026 Paying to be heard</a><a href="/blog/028-launch-something">028 Launch something with your coin &rarr;</a></div>
+    </main>
+  </body>
+</html>

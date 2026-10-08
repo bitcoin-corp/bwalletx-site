@@ -47,7 +47,7 @@
           { label: 'Launchpad', href: '/launchpad' },
           { label: 'Buy BSV', href: '/buy' }
         ] },
-      { label: 'Social', href: '/social', pages: ['/social', '/chat', '/friends', '/lounge', '/games', '/video', '/live', '/airdrops', '/sign', '/x', '/gmail'],
+      { label: 'Social', href: '/social', pages: ['/social', '/chat', '/friends', '/lounge', '/games', '/video', '/live', '/bspaces', '/bpositive', '/airdrops', '/sign', '/x', '/gmail'],
         sub: [
           { label: 'Social', href: '/social' },
           { label: 'Chat', href: '/chat' },
@@ -56,6 +56,8 @@
           { label: 'Games', href: '/games' },
           { label: 'Video', href: '/video' },
           { label: 'Live', href: '/live' },
+          { label: 'bSpaces', href: '/bspaces' },
+          { label: 'bPositive', href: '/bpositive' },
           { label: 'Airdrops', href: '/airdrops' },
           { label: 'Your signature', href: '/sign' },
           { label: 'Sign in with X', href: '/x' },
