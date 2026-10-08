@@ -86,14 +86,17 @@
       // Blog: when you publish a post, add it to the top of LATEST and drop the oldest (keep 5).
       { label: 'Blog', href: '/blog', pages: ['/blog', '/releases'], pills: false,
         sub: [{ label: 'All posts', href: '/blog' }, { label: 'Releases', href: '/releases' }, { head: 'Latest' }].concat([
-          { label: '030 bPhone', href: '/blog/030-bphone' },
-          { label: '029 bPositive', href: '/blog/029-bpositive' },
-          { label: '028 Launch something', href: '/blog/028-launch-something' },
-          { label: '027 Airdrops, not dividends', href: '/blog/027-airdrops-not-dividends' },
-          { label: '026 Paying to be heard', href: '/blog/026-paying-to-be-heard' }
+          { label: '034 Open apps, open protocol', href: '/blog/034-open-apps-open-protocol' },
+          { label: '033 Spaces you can listen to', href: '/blog/033-spaces-you-can-listen-to' },
+          { label: '032 Meet bChatX.com', href: '/blog/032-meet-bchatx' },
+          { label: '031 bWalletX 5.1.88', href: '/blog/031-calls-mics-menu' },
+          { label: '030 bPhone', href: '/blog/030-bphone' }
         ], [{ head: 'Series: Chat on BSV' },
           { label: '021 Coordinate on BSV', href: '/blog/021-coordinate-on-bsv' },
-          { label: '026 Paying to be heard', href: '/blog/026-paying-to-be-heard' }
+          { label: '026 Paying to be heard', href: '/blog/026-paying-to-be-heard' },
+          { label: '032 Meet bChatX.com', href: '/blog/032-meet-bchatx' },
+          { label: '033 Spaces you can listen to', href: '/blog/033-spaces-you-can-listen-to' },
+          { label: '034 Open apps, open protocol', href: '/blog/034-open-apps-open-protocol' }
         ]) }
     ],
     // Store edition (bWallet): browse-only Market, no trading, everything else lives on bWalletX.

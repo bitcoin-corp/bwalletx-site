@@ -5873,7 +5873,189 @@ The rules as they stand, and a worked table of what a call costs, are on the [bP
 
 You are selling your time to people you may not know. Any licence, confidentiality or tax rule that applies to your profession applies here too; bPhone checks none of it, and says so.
 
-[← 029 bPositive: gifts, not investments](https://bwalletx.com/blog/029-bpositive)[All posts →](https://bwalletx.com/blog)
+[← 029 bPositive: gifts, not investments](https://bwalletx.com/blog/029-bpositive)[031 bWalletX 5.1.88 →](https://bwalletx.com/blog/031-calls-mics-menu)
+
+---
+
+Source: https://bwalletx.com/blog/031-calls-mics-menu
+
+[Development blog](https://bwalletx.com/blog) · 031 · 8 Oct 2026
+
+# bWalletX 5.1.88: a new Calls tab, working mics, a new menu
+
+bWalletX 5.1.88 shipped on 8 Oct 2026. It is on the App Store (build 82), on Play (build 76), at web.bwalletx.com, in the Chrome extension and as a direct APK. Most of it is about talking to people: a proper Calls tab, microphones that work, and a menu that handles more than one account.
+
+The full list is in the [5.1.88 release notes](https://bwalletx.com/releases?v=5.1.88#v5.1.88). This is the short version.
+
+## A Calls tab
+
+Calls now has four tabs: Recents, Contacts, Services and a green Keypad. Recents is who you called and who called you. Contacts is the people you know by name. Services is the list of people who charge for their time. Keypad lets you dial a $handle or a paymail directly.
+
+At the top sits a yellow bPhone card. That is where you set a price to receive calls, if you want one. How the price and the meter work is on the [bPhone page](https://bwalletx.com/bphone).
+
+## Microphones and cameras that work
+
+In earlier builds the mic or camera could fail to start in Spaces and in calls. That is fixed. You now see sound bars next to whoever is talking, so you can tell your mic is live without asking.
+
+The Chrome extension needs one more step, because Chrome only asks for mic permission from a normal tab. The extension now opens a small tab that asks once. After that, calls and Spaces work from the side panel.
+
+## A new menu
+
+The account menu was rebuilt. It shows up to four accounts inline, so switching is one tap. Below them: All accounts, Agents, Settings, and Sign out with a lock. If you run an agent account next to your own, it sits in the same place.
+
+You can also sign out of chat for one account without touching the others.
+
+## Identity
+
+There is a new Identity map screen. It shows the names, accounts and keys tied to your wallet, and how they connect. Your wallet card now has a line under the name saying which identity it is. The [Identity map page](https://bwalletx.com/identity-map) explains what each part means.
+
+When your account signs in somewhere new, the wallet now alerts you. Settings has a Recent sign-ins list, so you can see where and when.
+
+## Rooms and Spaces
+
+- Invite links for Spaces and rooms. Send one and the person lands in the right place.
+
+- A room history option, for chat rooms only: choose whether new members can read what was said before they joined.
+
+- A private welcome in the Lounge, so a new account gets a short hello that only they can see.
+
+More on Spaces is on the [bSpaces page](https://bwalletx.com/bspaces).
+
+## The web wallet
+
+The web wallet layout now matches the app. Same tabs, same menu, same places for things. If you use both, you no longer have to remember two layouts.
+
+[← 030 bPhone: charge to receive calls](https://bwalletx.com/blog/030-bphone)[032 Meet bChatX.com →](https://bwalletx.com/blog/032-meet-bchatx)
+
+---
+
+Source: https://bwalletx.com/blog/032-meet-bchatx
+
+[Development blog](https://bwalletx.com/blog) · 032 · 8 Oct 2026
+
+# Meet bChatX.com
+
+Chat has a new home: [www.bchatx.com](https://www.bchatx.com). It is the same chat you know from bWalletX, built for the web, and it looks like the wallet.
+
+## It looks like bWalletX
+
+bChatX uses the bWalletX colours: dark, with yellow only where it matters, such as the button you are meant to press. Along the bottom is the same kind of bar as the app: Feed, Rooms, b, Spaces and DMs.
+
+In the top bar is a wallet chip. If you are signed in it shows your $handle with a dot. If you are not, it says Get bWalletX.
+
+## Your wallet is bWalletX
+
+bChatX does not make you a second wallet. Your wallet is bWalletX. When you do something with money, such as a tip, a paid like or joining a token room, bChatX opens bWalletX and the wallet asks you to approve it. Your keys stay there.
+
+That is also why sign-in starts with Sign in with bWalletX. Google and LinkedIn are still there, under More ways, but they don’t give you a wallet. You can read and post, and when you want to pay someone you will need bWalletX anyway.
+
+## A faster feed
+
+The feed used to load after the page, so you watched it fill in. Now the posts arrive with the page itself. On a normal connection that is about half a second from opening the link to reading.
+
+## Safety in the feed
+
+The feed shows posts from other BSV apps as well as bChat. That brings in things we don’t control, so there are new switches:
+
+- Show Twetch posts. A switch to hide or show them. Twetch stays in All by default.
+
+- Language. On posts from other apps, slurs are hidden and swearing is masked.
+
+- Images. Images from other apps are blurred until you tap them.
+
+- Report. Every post has a report button.
+
+Nothing is deleted from the chain. These are choices about what bChatX shows you.
+
+## The other addresses
+
+bitcoinchat.online and bit-sign.online will point to bChatX over time. If you have bookmarks there, they will keep working and lead to the same place.
+
+[← 031 bWalletX 5.1.88](https://bwalletx.com/blog/031-calls-mics-menu)[033 Spaces you can just listen to →](https://bwalletx.com/blog/033-spaces-you-can-listen-to)
+
+---
+
+Source: https://bwalletx.com/blog/033-spaces-you-can-listen-to
+
+[Development blog](https://bwalletx.com/blog) · 033 · 8 Oct 2026
+
+# Spaces you can just listen to
+
+Spaces are live audio rooms: a few people talk, everyone else listens. They now have their own page at [www.bchatx.com/spaces](https://www.bchatx.com/spaces), and you can listen to a public one without signing in.
+
+## The Spaces page
+
+The page has three parts.
+
+- Live now. Each Space shows the host, how many speakers and listeners, and a Listen button.
+
+- Recent. Spaces that have ended. Each one keeps a page, so a link shared yesterday still goes somewhere.
+
+- Start a Space. Open your own.
+
+## Listen without signing in
+
+For a public Space, you tap Listen and you are in. No account, no wallet. You can only listen.
+
+When you want to do more, such as raise your hand to speak, react or tip a speaker, bChatX asks you to sign in. Tipping uses your bWalletX, as with everything that involves money.
+
+Some Spaces are for holders of a token. Those still need sign-in, because the server has to check you hold it. Private rooms are never listed on the page at all.
+
+## The stage
+
+A Space can have up to 12 speakers on stage at once. Everyone else is a listener until the host brings them up.
+
+## Strict networks
+
+Audio goes directly between devices where it can. Some networks block that: offices, hotels, some mobile carriers. We have added a TURN relay, which carries the audio through our server when a direct path fails. People on those networks can now join.
+
+## Coming: Game Spaces
+
+Game Spaces are coming: watch TokenBlaster matches live, with the players talking. More when it is ready.
+
+The [bSpaces page](https://bwalletx.com/bspaces) has more on how Spaces work inside bWalletX.
+
+[← 032 Meet bChatX.com](https://bwalletx.com/blog/032-meet-bchatx)[034 Open apps, open protocol →](https://bwalletx.com/blog/034-open-apps-open-protocol)
+
+---
+
+Source: https://bwalletx.com/blog/034-open-apps-open-protocol
+
+[Development blog](https://bwalletx.com/blog) · 034 · 8 Oct 2026
+
+# Open apps, open protocol
+
+If chat on BSV is going to compete with Telegram, people have to be able to trust it, and other developers have to be able to build on it. Both are easier when the code is open. This is how we are doing it, and what stays closed for now.
+
+## Why open matters for chat
+
+Chat is where people say things they would not post publicly. You should be able to check what the app does with your messages and your keys, or ask someone you trust to check. And a chat network only gets big if more than one company can write apps for it. A protocol nobody else can read is a walled garden with extra steps.
+
+## The model
+
+Three parts: open-source apps, an open protocol, and a server that stays closed for now.
+
+## Open-source apps
+
+bWalletX is already open source under the MIT licence. bChat desktop and the bChatX web app will follow under the same licence. MIT means you can read the code, change it, and ship your own version.
+
+The names and logos are trademarks. You can fork the code, but your fork needs its own name.
+
+## An open protocol
+
+The bChat Protocol is public on GitHub at [github.com/bitcoin-corp/bchat-protocol](https://github.com/bitcoin-corp/bchat-protocol). It describes how messages, rooms and payments are written to the chain, so another app can read and write the same things.
+
+Alongside it is the bChatX Protocol proposal, for threads that work across apps: a reply in Twetch, Treechat or peck.to showing up under the post it replies to, wherever that post was made. It is a proposal, not a finished standard. peck.to already threads bChat replies.
+
+## Why the server stays closed for now
+
+The server does moderation, anti-spam and the paid features. Publishing the anti-spam rules mostly helps spammers, and the moderation tools are still changing week to week. So the server is closed for now.
+
+What matters is what the server can’t do. Your keys never leave your wallet. The server can’t spend your money. Every payment is signed in your wallet, by you.
+
+More on what is open and where to find it is on the [open source page](https://bwalletx.com/open-source).
+
+[← 033 Spaces you can just listen to](https://bwalletx.com/blog/033-spaces-you-can-listen-to)[All posts →](https://bwalletx.com/blog)
 
 ---
 
@@ -5884,6 +6066,22 @@ Source: https://bwalletx.com/blog/
 How bWallet and bWalletX were built, one chapter at a time. Every post is written from the git history of the wallet, this site, the chat server and the PNEEs prototype. It covers what we built, why, what broke, what we reversed and what is still not done.
 
 Newest first. Dates come from commits. bWallet is a fork of [Yours Wallet](https://github.com/yours-org/yours-wallet) (MIT licence).
+
+- [](https://bwalletx.com/blog/034-open-apps-open-protocol)034 · 8 Oct 2026
+[Open apps, open protocol](https://bwalletx.com/blog/034-open-apps-open-protocol)
+MIT-licensed apps, a public protocol on GitHub, a proposal for threads across Twetch, Treechat and peck.to, and why the server stays closed for now.
+
+- [](https://bwalletx.com/blog/033-spaces-you-can-listen-to)033 · 8 Oct 2026
+[Spaces you can just listen to](https://bwalletx.com/blog/033-spaces-you-can-listen-to)
+Listen to public Spaces on bChatX without signing in. Live now, Recent, Start a Space, a stage for 12 speakers, and a relay for office and hotel networks.
+
+- [](https://bwalletx.com/blog/032-meet-bchatx)032 · 8 Oct 2026
+[Meet bChatX.com](https://bwalletx.com/blog/032-meet-bchatx)
+Chat’s new home at www.bchatx.com. Sign in with bWalletX, your wallet stays bWalletX, the feed arrives with the page, and posts from other apps are filtered.
+
+- [](https://bwalletx.com/blog/031-calls-mics-menu)031 · 8 Oct 2026
+[bWalletX 5.1.88: a new Calls tab, working mics, a new menu](https://bwalletx.com/blog/031-calls-mics-menu)
+Out on 8 Oct: a Calls tab with a keypad, mics and cameras that work in Spaces and calls, a menu with up to four accounts, sign-in alerts and invite links.
 
 - [](https://bwalletx.com/blog/030-bphone)030 · 8 Oct 2026
 [bPhone: charge to receive calls](https://bwalletx.com/blog/030-bphone)
