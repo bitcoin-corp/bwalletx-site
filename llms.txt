@@ -64,6 +64,7 @@ Full text of every page below: https://bwalletx.com/llms-full.txt
 - [bWalletX Strategy Spec](https://bwalletx.com/strategies/spec): The bWalletX strategy file format (bwalletx.strategy/1), the rules the wallet enforces, paper mode, and how strategies are sold as encrypted NFTs.
 - [bWalletX for Developers](https://bwalletx.com/developers): Add a Connect with bWalletX button to your site: one script, a standard BRC-100 wallet, no API keys.
 - [Sign in with bWalletX · Developer guide](https://bwalletx.com/connect): Add Sign in with bWalletX to your app: the user's wallet signs a one-time challenge with its identity key and your server checks it with @bsv/sdk. One script tag, server code, security notes, and steps for AI agents.
+- [Add Sign in with bWalletX to your site](https://bwalletx.com/sign-in-button): The standard Sign in with bWalletX button: one tag, gold, dark or light, four sizes, React wrapper, SVG files and brand rules. Also works with bWallet.
 - [bWalletX CLI](https://bwalletx.com/cli): Run your bWalletX wallet and AI agents from the command line: balances, sends, trades and strategies, on your laptop or a server.
 - [bWalletX MCP](https://bwalletx.com/mcp): Let Claude, ChatGPT, Cursor or any MCP agent use your bWalletX agent accounts: balances, sends, trades and strategies, within the budget and limits you set.
 - [Add your app to bWallet](https://bwalletx.com/apps/add): Built a BSV app? Add it to the Apps screen in bWallet and bWalletX, in front of every wallet user. Free, reviewed by a person.

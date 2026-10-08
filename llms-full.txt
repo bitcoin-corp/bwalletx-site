@@ -3886,6 +3886,139 @@ bWalletX is in beta: test with small amounts. Questions: [support@bwalletx.com](
 
 ---
 
+Source: https://bwalletx.com/sign-in-button
+
+# Add Sign in with bWalletX to your site
+
+The standard button, the same one bit-sign uses. One tag draws it, finds the user's wallet and runs the sign-in. The subtitle tells store users it also works with bWallet. You don't need an API key or an account with us.
+
+Click it: with no bWalletX in this browser it offers "Get bWalletX". (This page has no sign-in server, so with a wallet you'll see an error after it answers.)
+
+## Every variant
+
+Sizes: `lg` (default), `md`, `sm`, `icon`
+
+Themes on a dark page: `gold`, `dark`
+
+On a light page: `gold`, `light`
+
+Labels, store edition, states
+
+Full width
+
+## Add it with a script tag
+
+Point `challenge-url` and `verify-url` at the two routes from the [Sign in with bWalletX guide](https://bwalletx.com/connect) (the `@bwalletx/connect/server` helpers write them for you).
+
+``<script src="https://unpkg.com/@bwalletx/connect@0.2.0"></script>
+<bwalletx-signin
+challenge-url="/auth/bwalletx/challenge"
+verify-url="/auth/bwalletx/verify"></bwalletx-signin>
+<script>
+document.addEventListener('bwalletx-signed-in', (e) => {
+// e.detail: { identityKey, method, response }. Your verify route has started the session.
+location.assign('/');
+});
+</script>``
+
+After 0.2.0 is published The unpkg and jsDelivr links (`https://cdn.jsdelivr.net/npm/@bwalletx/connect@0.2.0`) work once version 0.2.0 is on npm. Until then you can use our copy: `https://bwalletx.com/connect/bwalletx-connect-0.2.0.global.js`.
+
+## React
+
+``pnpm add @bwalletx/connect @bsv/sdk
+
+import { BwalletxSignin } from '@bwalletx/connect/react';
+
+export function SignIn() {
+return (
+<BwalletxSignin
+challengeUrl="/auth/bwalletx/challenge"
+verifyUrl="/auth/bwalletx/verify"
+onSignedIn={(d) => router.push('/')}
+onError={(e) => console.error(e)}
+/>
+);
+}``
+
+After 0.2.0 is published With any other bundler, `import '@bwalletx/connect/element'` registers the tag.
+
+## Options
+
+AttributeValues
+
+`size``lg` (default), `md`, `sm`, `icon`
+
+`theme``gold` (default), `dark`, `light`
+
+`label``signin` "Sign in with bWalletX", `continue` "Continue with bWalletX", `connect` "Connect bWalletX"
+
+`brand``bWalletX` (default) or `bWallet` for store builds
+
+`subtitle``on`, `off` or your own text. Shown on lg and md by default
+
+`full-width`, `loading`, `disabled`Flags
+
+`challenge-url`, `verify-url`Run the sign-in on click
+
+`get-url`, `web-url`Where "Get bWalletX" and the web wallet link go
+
+`href`Just go to this link on click
+
+`authorize-url` ComingStart an OAuth sign-in at auth.bwalletx.com (see below)
+
+Events: `bwalletx-signin` on every click (call `preventDefault()` to run your own flow, such as phone pairing), `bwalletx-signed-in`, `bwalletx-not-found` and `bwalletx-error`. The button is a real `<button>` with a label for screen readers, a visible focus ring, and no motion when the user has asked for reduced motion.
+
+## Download the files
+
+[Button, gold (SVG)](https://bwalletx.com/brand/signin-gold.svg)
+[Button, dark (SVG)](https://bwalletx.com/brand/signin-dark.svg)
+[Button, light (SVG)](https://bwalletx.com/brand/signin-light.svg)
+[Mark in black circle (SVG)](https://bwalletx.com/brand/bwalletx-mark-circle.svg)
+[Mark on its own (SVG)](https://bwalletx.com/brand/bwalletx-mark.svg)
+
+No JavaScript at all? The package's `assets/snippet.html` is the gold button in plain HTML and CSS.
+
+## Brand rules
+
+### Do
+
+- Keep the black circle with the gold "b" on the left.
+
+- Use the text as given: "Sign in with bWalletX", "Continue with bWalletX", "Connect bWalletX".
+
+- Keep the "also works with bWallet" subtitle on the large and medium sizes.
+
+- Match the height of the other sign-in buttons beside it.
+
+- Leave clear space of half the button's height (at least 8px) around it.
+
+### Don't
+
+- Recolour the gold or put the mark on another colour.
+
+- Stretch, rotate or outline the mark, or use it as a generic wallet icon.
+
+- Make it smaller or less visible than other providers' buttons in the same list.
+
+- Go below 36px tall (48px on touch screens), or 40px for the round icon.
+
+- Suggest that bWalletX endorses your product.
+
+The code is MIT licensed. The names bWalletX and bWallet and the "b" mark are trademarks and are not covered by the MIT licence: you can use them unchanged to offer sign-in. Full rules: BRAND.md and TRADEMARKS.md in the package.
+
+## Sign in with bWalletX for any app (OAuth) Coming
+
+Today the button signs the user in to your own server: the wallet signs a one-time challenge and your server checks it. We're also building a standard OAuth / OpenID Connect provider at auth.bwalletx.com, so apps that already use "Sign in with Google" can add bWalletX the same way, with the user approving each app in their wallet. When it's live, the same button starts it:
+
+``<bwalletx-signin authorize-url="https://auth.bwalletx.com/authorize"
+client-id="your-client-id" redirect-uri="https://example.com/callback"></bwalletx-signin>``
+
+Not live yet. The button already builds the request (authorization code with PKCE), so your markup won't need to change.
+
+Questions: [support@bwalletx.com](mailto:support@bwalletx.com) · More for developers: [Developers](https://bwalletx.com/developers) · [Sign in guide](https://bwalletx.com/connect)
+
+---
+
 Source: https://bwalletx.com/strategies
 
 # Make strategies. Sell them on the Exchange.
