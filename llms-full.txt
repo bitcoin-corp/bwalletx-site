@@ -744,9 +744,9 @@ One tap freezes every agent; a stopped agent can't spend. Every action is logged
 
 The ghost house: see all your agents, their balances and spending today, and stop or resume them. At [agents.bwalletx.com](https://agents.bwalletx.com).
 
-### Hold to talk to bComing in 5.1.89
+### Hold to talk to b
 
-Touch and hold the b, speak, let go to send. [How it works](https://bwalletx.com/hold-to-talk).
+Touch and hold the b, speak, let go to send. [How it works](https://bwalletx.com/hold-to-talk). Live since 5.1.89.
 
 ### CLI and MCP
 
@@ -1198,6 +1198,15 @@ Every bWalletX release and what it added, newest first.
 Each release ships to the Android APK, the Chrome extension and the web wallet. Android also goes to Google Play internal testing. The App Store build is not yet submitted.
 
 [Download bWalletX](https://bwalletx.com/download)
+
+## 5.1.89 2026-10-09
+
+- Hold the b to talk to b: touch and hold, speak, let go to send. On iPhone, Android, the web wallet and the Chrome extension
+- Live balance: your balance ticks up and down as money moves, with a short ticker of recent activity
+- Airdrops arrive as a message from the issuer with their note, with Keep, Hide, Reply, Open room and Report; you can add a note when you send tokens
+- In-app browser: videos play inline, links to other sites open in your browser, and the back arrow closes it at the first page
+- Messages to b no longer fail with “not on the network yet”
+- A shorter consent sheet
 
 ## 5.1.88 2026-10-08
 
@@ -3915,7 +3924,7 @@ Questions: [support@bwalletx.com](mailto:support@bwalletx.com) · Source: [conne
 
 Source: https://bwalletx.com/hold-to-talk
 
-Coming in 5.1.89
+Live in 5.1.89
 
 # Hold to talk to b.
 
@@ -3983,7 +3992,7 @@ Which languages?
 It listens in your device’s language, using whatever your phone or browser’s speech recognition supports.
 
 When can I use it?
-It is coming in bWalletX 5.1.89, the next release. Watch the [releases page](https://bwalletx.com/releases).
+Now. It shipped in bWalletX 5.1.89 on iPhone, Android, the web wallet and the Chrome extension. See the [release notes](https://bwalletx.com/releases#v5.1.89).
 
 [Get bWalletX](https://bwalletx.com/get)[Open the web wallet](https://web.bwalletx.com)
 
