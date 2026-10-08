@@ -47,7 +47,7 @@
           { label: 'Launchpad', href: '/launchpad' },
           { label: 'Buy BSV', href: '/buy' }
         ] },
-      { label: 'Social', href: '/social', pages: ['/social', '/chat', '/friends', '/lounge', '/games', '/video', '/live', '/bspaces', '/bpositive', '/airdrops', '/sign', '/x', '/gmail'],
+      { label: 'Social', href: '/social', pages: ['/social', '/chat', '/friends', '/lounge', '/games', '/video', '/live', '/bspaces', '/bphone', '/bpositive', '/airdrops', '/sign', '/x', '/gmail'],
         sub: [
           { label: 'Social', href: '/social' },
           { label: 'Chat', href: '/chat' },
@@ -57,6 +57,7 @@
           { label: 'Video', href: '/video' },
           { label: 'Live', href: '/live' },
           { label: 'bSpaces', href: '/bspaces' },
+          { label: 'bPhone', href: '/bphone' },
           { label: 'bPositive', href: '/bpositive' },
           { label: 'Airdrops', href: '/airdrops' },
           { label: 'Your signature', href: '/sign' },
@@ -84,11 +85,11 @@
       // Blog: when you publish a post, add it to the top of LATEST and drop the oldest (keep 5).
       { label: 'Blog', href: '/blog', pages: ['/blog', '/releases'], pills: false,
         sub: [{ label: 'All posts', href: '/blog' }, { label: 'Releases', href: '/releases' }, { head: 'Latest' }].concat([
+          { label: '030 bPhone', href: '/blog/030-bphone' },
           { label: '029 bPositive', href: '/blog/029-bpositive' },
           { label: '028 Launch something', href: '/blog/028-launch-something' },
           { label: '027 Airdrops, not dividends', href: '/blog/027-airdrops-not-dividends' },
-          { label: '026 Paying to be heard', href: '/blog/026-paying-to-be-heard' },
-          { label: '025 Push notifications', href: '/blog/025-push-notifications' }
+          { label: '026 Paying to be heard', href: '/blog/026-paying-to-be-heard' }
         ], [{ head: 'Series: Chat on BSV' },
           { label: '021 Coordinate on BSV', href: '/blog/021-coordinate-on-bsv' },
           { label: '026 Paying to be heard', href: '/blog/026-paying-to-be-heard' }
