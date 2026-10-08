@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Identity map</title>
+    <link rel="canonical" href="https://bwalletx.com/identity-map" />
+    <meta name="description" content="Your identity key is who you are. Every other key in bWalletX is derived from it by purpose and by the person you deal with, and names are labels that point at those keys. Restoring 12 words brings it all back." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://bwalletx.com/identity-map" />
+    <meta property="og:site_name" content="bWalletX" />
+    <meta property="og:title" content="Identity map: bWalletX" />
+    <meta property="og:description" content="Your identity key is who you are. Every other key in bWalletX is derived from it by purpose and by the person you deal with, and names are labels that point at those keys. Restoring 12 words brings it all back." />
+    <meta property="og:image" content="https://bwalletx.com/og-identity-map-v1.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Your identity key is who you are. Every other key in bWalletX is derived from it by purpose and by the person you deal with, and names are labels that point at those keys. Restoring 12 words brings it all back." />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@bWalletX" />
+    <meta name="twitter:title" content="Identity map: bWalletX" />
+    <meta name="twitter:description" content="Your identity key is who you are. Every other key in bWalletX is derived from it by purpose and by the person you deal with, and names are labels that point at those keys. Restoring 12 words brings it all back." />
+    <meta name="twitter:image" content="https://bwalletx.com/og-identity-map-v1.png" />
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="stylesheet" href="/styles.css" />
+    <style>
+      .ext h1 { font-size: clamp(2.2rem, 6vw, 3.4rem); margin: 18px 0 10px; }
+      .ext h2 { margin: 48px 0 8px; font-size: 1.5rem; }
+      .ext p, .ext li { line-height: 1.7; }
+      .ext .small { color: #8a8a86; font-size: 0.85rem; }
+      .ext .row { display: flex; gap: 12px; flex-wrap: wrap; margin: 26px 0; }
+      .ggrid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 230px), 1fr)); gap: 14px; margin: 18px 0; }
+      .gcard { display: block; background: #101114; border: 1px solid #ffffff12; border-radius: 16px; padding: 14px 16px; color: inherit; text-decoration: none; min-width: 0; }
+      .gcard:hover { border-color: #F5B80066; }
+      .gcard h3 { margin: 0 0 4px; font-size: 1.05rem; }
+      .gcard p { margin: 0; color: #a7adb8; font-size: 0.92rem; line-height: 1.5; }
+      .feat { list-style: none; padding: 0; margin: 18px 0; }
+      .feat li { display: flex; gap: 12px; align-items: baseline; padding: 12px 0; border-bottom: 1px solid #ffffff10; }
+      .tag { flex: none; font-size: 0.75rem; font-weight: 700; padding: 2px 9px; border-radius: 999px; }
+      .tag.live { background: #F5B800; color: #000; }
+      .tag.soon { border: 1px solid #ffffff40; color: #a7adb8; }
+      .tw { overflow-x: auto; margin: 18px 0; }
+      table.wl { border-collapse: collapse; width: 100%; min-width: 720px; font-size: 0.92rem; }
+      table.wl th, table.wl td { text-align: left; vertical-align: top; padding: 10px 10px; border-bottom: 1px solid #ffffff14; line-height: 1.5; }
+      table.wl th { color: #F5B800; font-weight: 700; }
+      table.wl code { background: #17191e; padding: 1px 6px; border-radius: 6px; font-size: 0.85rem; white-space: nowrap; }
+      ol.steps li { margin: 6px 0; }
+      .idsvg { width: 100%; height: auto; display: block; margin: 22px 0; background: #0a0b0d; border: 1px solid #ffffff12; border-radius: 16px; }
+    </style>
+  </head>
+  <body>
+    <div class="beta-banner">bWalletX is in <strong>beta</strong>: test with small amounts.</div>
+    <header class="topbar">
+      <div class="wrap topbar-in">
+        <a class="brand" href="/"><img src="/logo.svg" alt="" width="34" height="30" /><span>bWallet<span class="gold">X</span></span></a>
+        <nav aria-label="Pages">
+          <a href="/features">Features</a><a href="/exchange">Exchange</a><a href="/social">Social</a><a href="/agent">Agents</a><a href="/extension">Extension</a><a href="/developers">Developers</a>
+        </nav>
+        <span class="nav-cta"><a class="dl-btn" href="/get">Download</a><a class="web-btn" href="https://web.bwalletx.com" target="_blank" rel="noopener">Web &rarr;</a></span>
+      </div>
+    </header>
+    <script src="/nav.js"></script>
+    <main class="ext">
+      <h1>Identity map. <span class="gold">One key is you. Everything else is derived.</span></h1>
+      <p class="lede">bWalletX holds many keys and addresses, but they all grow from one place. Here is how they fit together, in plain English, and where to see your own map: Settings &rsaquo; Identity &rsaquo; Identity map, coming in the next release.</p>
+
+      <svg class="idsvg" viewBox="0 0 720 470" role="img" aria-labelledby="idsvg-t" xmlns="http://www.w3.org/2000/svg" font-family="system-ui, -apple-system, Segoe UI, sans-serif">
+        <title id="idsvg-t">Seed, then identity key, then keys derived by purpose and by counterparty, then names that point at them</title>
+        <defs><marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#F5B800"/></marker></defs>
+        <g fill="none" stroke="#F5B80099" stroke-width="1.6" marker-end="url(#ar)">
+          <path d="M360 62V92"/>
+          <path d="M360 150C360 180 92 170 92 206"/><path d="M360 150C360 180 226 170 226 206"/><path d="M360 150V206"/><path d="M360 150C360 180 494 170 494 206"/><path d="M360 150C360 180 628 170 628 206"/>
+        </g>
+        <g fill="none" stroke="#ffffff55" stroke-width="1.4" stroke-dasharray="5 4" marker-end="url(#ar)">
+          <path d="M150 360C200 320 330 140 300 128"/>
+          <path d="M310 360C310 320 360 300 360 268"/>
+          <path d="M470 360C470 320 226 300 226 268"/>
+          <path d="M630 360C630 320 360 140 420 128"/>
+        </g>
+        <rect x="270" y="14" width="180" height="48" rx="12" fill="#17191E" stroke="#ffffff22"/>
+        <text x="360" y="36" text-anchor="middle" fill="#fff" font-size="15" font-weight="700">Seed (12 words)</text>
+        <text x="360" y="53" text-anchor="middle" fill="#98A2B3" font-size="11">private, never shown</text>
+        <rect x="250" y="94" width="220" height="56" rx="14" fill="#1a1500" stroke="#F5B800" stroke-width="2"/>
+        <text x="360" y="118" text-anchor="middle" fill="#F5B800" font-size="16" font-weight="800">Identity key</text>
+        <text x="360" y="137" text-anchor="middle" fill="#e6e9ee" font-size="11">public key: who you are</text>
+        <text x="360" y="186" text-anchor="middle" fill="#98A2B3" font-size="11">derived with BRC-42: purpose + key ID (+ counterparty)</text>
+        <g font-size="12" text-anchor="middle">
+          <rect x="30" y="208" width="124" height="58" rx="12" fill="#17191E" stroke="#ffffff22"/><text x="92" y="232" fill="#fff" font-weight="700">Payments</text><text x="92" y="250" fill="#98A2B3" font-size="10.5">receive addresses</text>
+          <rect x="164" y="208" width="124" height="58" rx="12" fill="#17191E" stroke="#ffffff22"/><text x="226" y="232" fill="#fff" font-weight="700">Chat sign-in</text><text x="226" y="250" fill="#98A2B3" font-size="10.5">message signing</text>
+          <rect x="298" y="208" width="124" height="58" rx="12" fill="#17191E" stroke="#ffffff22"/><text x="360" y="232" fill="#fff" font-weight="700">Ordinals</text><text x="360" y="250" fill="#98A2B3" font-size="10.5">tokens and NFTs</text>
+          <rect x="432" y="208" width="124" height="58" rx="12" fill="#17191E" stroke="#ffffff22"/><text x="494" y="232" fill="#fff" font-weight="700">Per friend</text><text x="494" y="250" fill="#98A2B3" font-size="10.5">shared key (ECDH)</text>
+          <rect x="566" y="208" width="124" height="58" rx="12" fill="#17191E" stroke="#ffffff22"/><text x="628" y="232" fill="#fff" font-weight="700">Locks, pots&#8230;</text><text x="628" y="250" fill="#98A2B3" font-size="10.5">one per purpose</text>
+        </g>
+        <text x="360" y="318" text-anchor="middle" fill="#98A2B3" font-size="11">names are labels that point at keys</text>
+        <g font-size="12" text-anchor="middle">
+          <rect x="80" y="362" width="140" height="54" rx="27" fill="none" stroke="#F5B80099"/><text x="150" y="385" fill="#F5B800" font-weight="700">Paymail</text><text x="150" y="402" fill="#98A2B3" font-size="10.5">name@bwalletx.com</text>
+          <rect x="240" y="362" width="140" height="54" rx="27" fill="none" stroke="#F5B80099"/><text x="310" y="385" fill="#F5B800" font-weight="700">OpNS name</text><text x="310" y="402" fill="#98A2B3" font-size="10.5">an on-chain name</text>
+          <rect x="400" y="362" width="140" height="54" rx="27" fill="none" stroke="#F5B80099"/><text x="470" y="385" fill="#F5B800" font-weight="700">bChat handle</text><text x="470" y="402" fill="#98A2B3" font-size="10.5">$handle in rooms</text>
+          <rect x="560" y="362" width="140" height="54" rx="27" fill="none" stroke="#F5B80099"/><text x="630" y="385" fill="#F5B800" font-weight="700">$401 identity</text><text x="630" y="402" fill="#98A2B3" font-size="10.5">verified level</text>
+        </g>
+        <text x="360" y="452" text-anchor="middle" fill="#667085" font-size="10.5">Solid arrows: derived. Dashed arrows: points at.</text>
+      </svg>
+
+      <h2>Your identity key is not an address</h2>
+      <p>Your 12 words make one main key pair. The public half is your <b>identity key</b>, a long string that starts with 02 or 03. It says who you are. When someone looks up your paymail, this is what they get back. Calls are routed to it, and contracts you sign are sealed with it.</p>
+      <p>You never receive coins at it directly. Coins go to addresses, and addresses come from keys derived from this one.</p>
+
+      <h2>One key per purpose</h2>
+      <p>Each job in the wallet asks for its own key, worked out from your identity key with a public recipe (BRC-42) and a label: the purpose and a key ID. Payments get a fresh receive address each time. Tokens and NFTs live at an ordinals address. Signing in to chat uses a message-signing key. Locks and pots have their own.</p>
+      <p>Because each purpose has its own key, using one never gives away another. Someone who sees your receive address cannot work out your chat key.</p>
+
+      <h2>One key per person you deal with</h2>
+      <p>The recipe can also take the other person&rsquo;s public key. You and a friend each work out the same shared key from your own private key and the other&rsquo;s public key, and nobody else can. That is how private payments and direct messages stay between the two of you, and why outsiders cannot link your payments to each friend.</p>
+
+      <h2>Names are labels</h2>
+      <p>A name is a pointer, not a key. Your paymail, <b>name@bwalletx.com</b>, points at your identity key. Your bChat <b>$handle</b> points at your chat sign-in key. An OpNS name is an on-chain name you own like any other token. Your <b>$401</b> identity strands, including a verified ID check, are attached to your identity key; only the level shows, never the ID data.</p>
+      <p>Change a name and the keys underneath stay the same.</p>
+
+      <h2>Why restoring 12 words brings everything back</h2>
+      <p>Every key above is worked out from your 12 words with the same public recipes, so nothing has to be backed up separately. Restore the words in any bWalletX and the same identity key, the same addresses and the same per-friend keys come back. Names come back too, because they point at those keys.</p>
+      <p>That is also why the words matter so much. Anyone who has them has everything on this map.</p>
+
+      <h2>What we learned on 8 Oct</h2>
+      <p>On 8 October a room started from one of the owner&rsquo;s accounts showed as started by a different one. The chat sign-in had carried over from the previous account after switching, so the chat label pointed at the wrong account&rsquo;s key. Nothing was lost, but it was confusing, and it was hard to see.</p>
+      <p>We fixed the sign-in so that each account keeps its own chat session. To make any mix-up visible straight away, the next release adds two things: the <b>Identity map</b>, which shows which key your bChat handle is tied to and flags it if that is not this account&rsquo;s chat key, and <b>sign-in alerts</b>, which tell you when your handle is signed in somewhere new.</p>
+
+      <p class="small">bWalletX is in beta: test with small amounts. Only public keys and addresses appear on the Identity map; your seed and private keys never leave the wallet. Questions: <a href="mailto:support@bwalletx.com">support@bwalletx.com</a></p>
+    </main>
+  </body>
+</html>

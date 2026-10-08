@@ -1697,6 +1697,50 @@ bWalletX is in beta: test with small amounts. Questions: [support@bwalletx.com](
 
 ---
 
+Source: https://bwalletx.com/identity-map
+
+# Identity map. One key is you. Everything else is derived.
+
+bWalletX holds many keys and addresses, but they all grow from one place. Here is how they fit together, in plain English, and where to see your own map: Settings › Identity › Identity map, coming in the next release.
+
+## Your identity key is not an address
+
+Your 12 words make one main key pair. The public half is your identity key, a long string that starts with 02 or 03. It says who you are. When someone looks up your paymail, this is what they get back. Calls are routed to it, and contracts you sign are sealed with it.
+
+You never receive coins at it directly. Coins go to addresses, and addresses come from keys derived from this one.
+
+## One key per purpose
+
+Each job in the wallet asks for its own key, worked out from your identity key with a public recipe (BRC-42) and a label: the purpose and a key ID. Payments get a fresh receive address each time. Tokens and NFTs live at an ordinals address. Signing in to chat uses a message-signing key. Locks and pots have their own.
+
+Because each purpose has its own key, using one never gives away another. Someone who sees your receive address cannot work out your chat key.
+
+## One key per person you deal with
+
+The recipe can also take the other person’s public key. You and a friend each work out the same shared key from your own private key and the other’s public key, and nobody else can. That is how private payments and direct messages stay between the two of you, and why outsiders cannot link your payments to each friend.
+
+## Names are labels
+
+A name is a pointer, not a key. Your paymail, name@bwalletx.com, points at your identity key. Your bChat $handle points at your chat sign-in key. An OpNS name is an on-chain name you own like any other token. Your $401 identity strands, including a verified ID check, are attached to your identity key; only the level shows, never the ID data.
+
+Change a name and the keys underneath stay the same.
+
+## Why restoring 12 words brings everything back
+
+Every key above is worked out from your 12 words with the same public recipes, so nothing has to be backed up separately. Restore the words in any bWalletX and the same identity key, the same addresses and the same per-friend keys come back. Names come back too, because they point at those keys.
+
+That is also why the words matter so much. Anyone who has them has everything on this map.
+
+## What we learned on 8 Oct
+
+On 8 October a room started from one of the owner’s accounts showed as started by a different one. The chat sign-in had carried over from the previous account after switching, so the chat label pointed at the wrong account’s key. Nothing was lost, but it was confusing, and it was hard to see.
+
+We fixed the sign-in so that each account keeps its own chat session. To make any mix-up visible straight away, the next release adds two things: the Identity map, which shows which key your bChat handle is tied to and flags it if that is not this account’s chat key, and sign-in alerts, which tell you when your handle is signed in somewhere new.
+
+bWalletX is in beta: test with small amounts. Only public keys and addresses appear on the Identity map; your seed and private keys never leave the wallet. Questions: [support@bwalletx.com](mailto:support@bwalletx.com)
+
+---
+
 Source: https://bwalletx.com/identity
 
 # Identity. Verified when you need it. Private when you don’t.
