@@ -974,6 +974,13 @@ Each release ships to the Android APK, the Chrome extension and the web wallet. 
 
 [Download bWalletX](https://bwalletx.com/download)
 
+## 5.1.87 2026-10-08
+
+- bPhone: charge to receive calls, per second, minute, hour or call, in BSV (priced in dollars), MNEE or any BSV-21 token. New: start with small prices (not in store builds)
+- See the price before it rings, with a spend cap; your phone ends the call if payments stop
+- Experts directory: list yourself with your hours and take bookings
+- Wallet to wallet, 0% fee
+
 ## 5.1.86 2026-10-08
 
 - Chat: a new Spaces filter shows live spaces in your rooms (not in store builds)
