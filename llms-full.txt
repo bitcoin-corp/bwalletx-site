@@ -30,6 +30,102 @@ Also: [Chrome extension](https://bwalletx.com/extension) · [Developers](https:/
 
 ---
 
+Source: https://bwalletx.com/bpositive
+
+# bPositive. Sponsor someone’s journey.
+
+Back a person who is working towards something: a student, an athlete, someone getting sober, a developer learning a new stack, an artist finishing an album. You support them monthly, or pledge money to a milestone that witnesses confirm. It is built inside bWalletX, where the money, the proof and the people already are.
+
+Coming Nothing on this page is in the app yet. bPositive is a plan with the owner’s decisions made (8 Oct 2026). It is not in the released app (5.1.84).
+
+## A gift, not an investment
+
+Sponsoring is a gift. Sponsors get nothing back: no share of future earnings, no equity, no repayment and no token. Every screen, receipt and thank-you NFT says so. The only money a sponsor can ever get back is their own milestone pledge that was never released, after the deadline passes.
+
+There is no bPositive token, and bPositive will never be combined with a launchpad coin on the same journey.
+
+## How it works
+
+- ComingJourney pages. The person starts a journey in bWalletX: a title, a short story, a category and, if they want, milestones such as “Pass the AWS Associate exam” or “90 days sober”. The journey is a signed record, so a milestone can’t be quietly changed after people pledge. Updates notify sponsors.
+
+- ComingMonthly support from pots. “Support monthly” is a standing order from one of your [pots](https://bwalletx.com/pots) to the person’s paymail. Pause or cancel it any time with one tap. A gift is final, so payments already made aren’t refunded.
+
+- ComingMilestone pledges. You pledge an amount to a milestone. It is paid when witnesses confirm the milestone: 2 of 3 by default, each with a verified identity. At first a pledge stays in a pot in your own wallet and is sent when the confirmations arrive, so it is labelled “Pledged”, not “Locked”.
+
+- ComingRefund after the deadline. A later version locks the pledge on chain, so it can only go to the person once witnesses confirm, or back to you after the deadline. Until then, an unconfirmed pledge simply stays with you.
+
+- ComingThank-you NFTs. Sponsors get a thank-you receipt NFT. It is a record, not a reward: it unlocks nothing in the app and has no promised value.
+
+- ComingSponsors’ room. If the person turns it on, sponsors who hold a thank-you NFT can enter a room for the journey, in bWalletX.
+
+## Witnesses
+
+The person names witnesses for each milestone, and each witness has to accept. When the person says “I’ve done it” and attaches evidence, witnesses confirm or decline with a signed, on-chain seal. Witnesses are shown on the journey page with their identity strength, need a verified identity, can’t be the person’s other accounts or a sponsor of the same milestone, and are not paid for witnessing.
+
+## The rules
+
+- Coming18+ only. Recipients, witnesses and milestone sponsors must be adults at launch.
+
+- ComingGifts only. No perks for money beyond thank-you NFTs and updates. Offering services or content for money is selling, not bPositive.
+
+- Coming0% fee. The Bitcoin Corporation takes nothing from gifts. You pay the normal network fee.
+
+- ComingSponsor count, not totals. Journey pages show how many people sponsor. Showing amounts is the person’s choice. No countdown timers and no leaderboards of totals.
+
+- ComingReport and block. Journeys can be reported. Sponsors get no contact rights by sponsoring, and recipients can block a sponsor and return a gift.
+
+Only give what you would give a friend. Gifts may have tax consequences where you live; bWalletX gives no tax advice.
+
+## Not in the store edition
+
+bWallet, the App Store and Google Play edition, won’t have bPositive at first. Person-to-person payments and standing orders still work there. bPositive lives in bWalletX: web, extension, Android direct download and iPhone.
+
+Why we built it this way: [029 bPositive: gifts, not investments](https://bwalletx.com/blog/029-bpositive).
+
+bWalletX is in beta: test with small amounts. Nothing here is investment, legal or tax advice. Questions: [support@bwalletx.com](mailto:support@bwalletx.com)
+
+---
+
+Source: https://bwalletx.com/bspaces
+
+# bSpaces. Live Spaces for your token holders.
+
+A bSpace is a live audio or video room inside a token room in bWalletX. The host is on stage, holders listen and watch, and anyone can raise a hand to be brought up. Hold the token and you’re in.
+
+## What a Space is
+
+- Live in bChatStage and audience. A host, speakers on stage and listeners. Camera is opt-in for people on stage. Runs on our own video server.
+
+- Live in bChatRaise hand. Listeners raise a hand, the host sees the queue and brings people up to speak.
+
+- Live in bChatToken-gated. A Space lives in a token room, so only holders get in. The server checks the holding, and the video server only lets in members who have joined.
+
+- ComingSpaces in bWalletX. A “Live now” banner with Join in the room, “Start a bSpace” for the issuer or a room admin, and a full-screen Space view: the stage on top, the hand queue for the host, controls at the bottom, and the room chat sliding up from below. It is being built now and is not in the released app (5.1.84).
+
+## Paid Spaces
+
+- ComingPaid tickets. Pay or burn a ticket to enter a Space.
+
+- ComingPaid speakers. Pay to come up on stage.
+
+- ComingPer-minute charges. Pay a minute at a time, wallet to wallet, with a spending cap you set.
+
+Any fee on a paid Space will be shown before you pay. Paid Spaces will need identity and age checks before they open.
+
+## Why in the wallet
+
+The token is the ticket, and the token is in your wallet. Putting the Space in the same place means no separate platform account and no card: you hold the token, you open the room, you join. It is the same room you already chat in.
+
+One-way livestreams to token holders are on [Live](https://bwalletx.com/live).
+
+## Not in the store edition
+
+bWallet, the App Store and Google Play edition, has no token rooms, so it has no Spaces either.
+
+Creators are responsible for what they say and show, and must follow the law and our terms. Rooms can be reported. bWalletX is in beta: test with small amounts. Questions: [support@bwalletx.com](mailto:support@bwalletx.com)
+
+---
+
 Source: https://bwalletx.com/buy
 
 # Buy BSV in bWalletX
@@ -4852,7 +4948,281 @@ In the phone apps the switch starts on. In the web wallet and the extension it s
 
 Related: [021 Coordinate on BSV](https://bwalletx.com/blog/021-coordinate-on-bsv) · [024 Pay the person who wrote it](https://bwalletx.com/blog/024-tips-and-paid-likes) · [Chat](https://bwalletx.com/chat) · [Privacy](https://bwalletx.com/privacy)
 
-[← 024 Pay the person who wrote it](https://bwalletx.com/blog/024-tips-and-paid-likes)[All posts →](https://bwalletx.com/blog)
+[← 024 Pay the person who wrote it](https://bwalletx.com/blog/024-tips-and-paid-likes)[026 Paying to be heard →](https://bwalletx.com/blog/026-paying-to-be-heard)
+
+---
+
+Source: https://bwalletx.com/blog/026-paying-to-be-heard
+
+[Development blog](https://bwalletx.com/blog) · 026 · 8 Oct 2026
+
+# Paying to be heard
+
+Priced token rooms in bWalletX: each message burns tokens or pays the issuer, in one transaction. The wallet signs, the server checks before anything is spent. Admins exempt, 50-sat minimum.
+
+Status: live on the server. Priced rooms are enforced by bChat’s server now. The wallet support (paying when you post) is built and will be in the next bWalletX release. This is part 2 of the chat series, after [021 Coordinate on BSV](https://bwalletx.com/blog/021-coordinate-on-bsv).
+
+## The problem with free rooms
+
+A token room in bWalletX is a room only the token’s holders can enter. That already keeps most strangers out. But holding a token is a one-off: once you’re in, every message is free. A room that matters to people attracts the same things a busy group chat does. Someone posts thirty lines in a minute. A small group decides to bury a thread. A bot finds the door and starts talking.
+
+Moderation helps, but it always comes after the damage. We wanted something that changes the maths before anyone types: if every message costs a little, posting thirty lines costs thirty times as much as posting one. A pile-on needs everyone in it to pay. Most people in a room post a few times a day and barely notice the cost. The people who flood a room notice it straight away.
+
+Issuers already had a price-per-message setting in room settings. Until now it was a label. The server didn’t check it. This change makes it real.
+
+## What an issuer can set
+
+The issuer of a token, or an admin of its room, can set a charge per message. There are three kinds:
+
+- Tokens, burned. Each message burns some of the room’s token. Nobody receives it: it is gone from the supply.
+
+- Tokens, to the issuer. Each message sends some of the token to the issuer.
+
+- Sats, to the issuer. Each message pays the issuer in BSV. The minimum is 50 sats.
+
+Why a 50-sat floor? A payment smaller than that costs more in network fees and index work than it is worth. It would make every message more expensive to process without making flooding any more expensive. A token charge has to be at least one unit of the token.
+
+Per-message rules are enforced now. Rooms can also set rules per minute, per hour or per day, and the settings screen says plainly that those aren’t enforced yet.
+
+## One transaction, not two
+
+The obvious way to build this is two steps: pay, then post. That has an ugly failure. You pay, then the post is refused (you sold the token a second ago, the room changed its price, the server was down), and now you have paid for nothing. Or the reverse: the post goes through and the payment doesn’t.
+
+So a priced message is a single Bitcoin transaction with two parts. One part is the payment: the burn, the token transfer or the sats to the issuer. The other is a small record that says which room it is for, who wrote it, a fingerprint (a SHA-256 hash) of the message text, and which version of the room’s rule it was paying. The payment and the message can’t be separated, because they are the same transaction.
+
+## The wallet signs, the server checks, then it is spent
+
+This is the decision we spent most time on. When you post in a priced room, bWalletX builds that transaction and signs it, but it does not broadcast it. It sends the signed transaction to bChat’s server along with your message.
+
+The server then checks everything: that you are a member, that the text matches the fingerprint, that the payment matches the room’s current rule, and that the amounts and the destination are right. Only if all of that passes does the server broadcast the transaction and then store your message.
+
+If the server refuses, it broadcasts nothing. The wallet then cancels the signed transaction and frees the coins it would have used. You can’t end up paid-but-refused. If the network drops halfway, a retry sends the same signed transaction again rather than paying twice.
+
+The wallet also counts a message towards your spending only after the server has accepted it, so a refused message doesn’t eat into your limits.
+
+## You see the price before you pay
+
+Nothing is charged silently. Before you send in a priced room, the wallet shows a line such as “This message costs 5 $ACME, burned” or “This message costs 100 sats to the issuer”. (Those are examples, not real room prices.) You can tell it not to ask again in that room up to an amount you choose, and there is a cap per session, so a long conversation can’t quietly run up a bill.
+
+## Admins don’t pay
+
+The issuer and the room’s admins are exempt. They are the people answering questions, pinning things and keeping the room in order, and charging them to do that would just tax moderation. Everyone else pays the same rule.
+
+## Burned or paid to the issuer?
+
+That is the issuer’s choice. Burning means nobody profits from your message: it just costs you something, which is all the anti-flood effect needs. Paying the issuer means the person who runs the room is paid for the attention. Some rooms will want one, some the other. We show which one applies on every send, so you know where your money goes.
+
+## What we didn’t do
+
+We didn’t take a cut. The charge goes where the issuer set it: burned, or to the issuer. bWalletX adds nothing on top of the normal network fee.
+
+We didn’t make free rooms rarer. Most rooms will stay free. A price is a tool for rooms that need it, not a default.
+
+And we didn’t put token rooms in the store edition. bWallet, on the App Store and Google Play, has no token rooms, so it has no priced rooms either.
+
+## What’s next
+
+The wallet half of this is built on a branch and goes out in the next release. After that: enforcing the per-minute, per-hour and per-day rules, paying for calls and streams by the second, and letting people set their own price to be messaged by strangers. Those are all marked Coming on the [Chat page](https://bwalletx.com/chat).
+
+[← 025 Push notifications, from our own server](https://bwalletx.com/blog/025-push-notifications)[027 Airdrops, not dividends →](https://bwalletx.com/blog/027-airdrops-not-dividends)
+
+---
+
+Source: https://bwalletx.com/blog/027-airdrops-not-dividends
+
+[Development blog](https://bwalletx.com/blog) · 027 · 8 Oct 2026
+
+# Airdrops, not dividends
+
+Why bWalletX issuers reward holders with airdrops, not payouts: the returns-wording block, the airdrop inbox, and the security audit behind it (sandboxed NFT content, address poisoning).
+
+Status: built, not released. The airdrop inbox, the airdrop address, the returns-wording filter and the safety changes below are built on a development branch. They are not in the released app (5.1.84) and will ship in a later release.
+
+## How do you thank the people who hold your token?
+
+Anyone who launches a token in bWalletX runs into the same question sooner or later: the people holding it backed you early, so how do you thank them? The answer much of crypto reaches for is a share of the money: a cut of fees, a payout per token, “holders earn”. It sounds generous. It is also, in most places, the description of a security. A token that pays holders a share of income looks like a share. Shares are regulated, and selling them to the public without the paperwork is a serious problem for the issuer and for the app that helped.
+
+So we picked a different answer and built the wallet around it: issuers reward holders with airdrops. An airdrop is a gift of tokens or NFTs sent to holders’ wallets. It promises nothing about the future. It is a thing you send, once, that people can keep, use or ignore.
+
+## What a token gives you by default
+
+By default, holding a token in bWalletX gives you one thing: entry to that token’s room. That is the only right we describe. If an issuer says their token does more, the wallet shows it as “Issuer says: …” and marks it as not checked by bWalletX. We don’t verify it and we don’t repeat it as our own claim.
+
+## The returns-wording block
+
+Most people who write “holders get a share of the profits” aren’t trying to sell securities. They are being enthusiastic. So the wallet helps them before it’s a problem.
+
+When you create a token in bWalletX, the wallet watches the name and description as you type. Words like profit, returns, dividends, yield, APY, ROI, “passive income” and “to the moon” bring up a warning, and the wallet won’t sign while they are there: “Remove wording that promises returns before publishing. Describe airdrops or room access instead.”
+
+It matches whole words and ignores obvious look-alikes such as “free returns” or “profit and loss”. It is a word filter, not legal review. Someone determined can get round it. But it catches the common, careless case, and it points people at the answer we want them to use.
+
+## Your airdrop address
+
+Every bWalletX account already has an ordinals address: the address that holds your tokens and NFTs. That is your airdrop address. Receive now has two tabs, Payments and Airdrops, and the Airdrops tab shows that address with a QR code and a copy button. The plan is to show it on your public page as well, so issuers can find it.
+
+## The airdrop inbox
+
+If issuers are going to send people things, people need a calm place to receive them. Otherwise every stranger’s token lands in the middle of your wallet. So anything that turns up unasked goes to an inbox.
+
+The rule for “unasked” is strict: a token or NFT paid to one of your addresses by a transaction you didn’t fund and didn’t start. Anything you bought, minted, launched, swapped or recovered leaves a record in your wallet, so it never counts as an airdrop.
+
+A badge on the Wallet’s Airdrops row counts what is new since you last looked. Each item has two buttons. Keep marks it reviewed; it already shows in your normal tokens or NFTs. Hide removes it, and hides everything else from the same issuer. There is also a switch to show airdrops only from issuers you have kept something from before.
+
+We thought about putting the inbox behind the b button at the top of the screen, so it is visible from every tab. We kept the b where it is and put the badge in the Wallet instead. Airdrops are occasional, and the inbox is new. If people come to rely on it daily, we’ll move it.
+
+## The security audit
+
+An airdrop is, by definition, something a stranger chose to put in your wallet. Before building an inbox that invites people to look at them, we went through every place the wallet displays inscription content and asked what a hostile one could do.
+
+Malicious NFT content is sandboxed. An NFT can be an HTML page or an SVG with script in it. If the wallet rendered that as part of itself, the script would run with the wallet’s access. It never does. Images are shown as images. Anything that isn’t a plain image shows a “tap to preview” placeholder, and the preview opens in a frame with an empty sandbox on a separate origin: no scripts, and no access to the wallet. The audit found two places to tighten. One inherited component used a sandbox setting that was looser than it looked, and the thumbnail code turned SVGs into wallet-origin images. Both are fixed, with a test.
+
+Address poisoning. This scam is common on every chain. Someone sends you a tiny payment, or a worthless token, from an address that looks like one you really pay: the same first four and last four characters. Weeks later you copy an address from your history and pick theirs by mistake. Now, when you type a recipient, the wallet checks it against addresses that sent you dust or unsolicited tokens. If it matches or looks alike, and you’ve never sent to it, you get a warning showing the address it resembles.
+
+No links from the inbox. A token’s name and picture can say anything, including “claim your reward at this site”. The inbox never shows issuer links. Links only appear on a token’s own page, behind a confirmation. The standing rule is printed in the inbox: never type your 12 words on a site an airdrop points to.
+
+## What comes later
+
+Sending airdrops is next: to the followers of an account, to the holders of a token, or to the members of a room, with limits so they can’t be used for spam. Later, airdrops that unlock over time. We have also proposed retiring a TokenBlaster launch option that would pay BSV to holders, which looks too much like a dividend, and replacing it with holder airdrops. No coin uses that option today. Everything we know about the plan is on the [Airdrops page](https://bwalletx.com/airdrops).
+
+[← 026 Paying to be heard](https://bwalletx.com/blog/026-paying-to-be-heard)[028 Launch something with your coin →](https://bwalletx.com/blog/028-launch-something)
+
+---
+
+Source: https://bwalletx.com/blog/028-launch-something
+
+[Development blog](https://bwalletx.com/blog) · 028 · 8 Oct 2026
+
+# Launch something with your coin
+
+A coin should launch with something: token links for website, app, X, Telegram and bChat; the room as the default right; “Issuer says” for the rest; no company field; advanced launch options as plans.
+
+Status: partly built. Buying and selling Launchpad coins is live (since 5.1.74). The Launch your own coin button and token links are built on a development branch, not yet released. The advanced options at the end are plans.
+
+## A coin with nothing behind it
+
+The Launchpad in bWalletX lists bonding-curve coins made on TokenBlaster. Anyone can launch one in a minute: a ticker, a name, a picture. That is the appeal and the problem. A coin with nothing behind it is a number that goes up and down. People buy it, the price moves, and the conversation is entirely about the price.
+
+We want something different from the Launchpad. A coin should come with something people can use: a website, an app or a product, and somewhere to talk. The owner’s brief was short: “Launch your own coin” is the point, and the coin should launch with something.
+
+## The launch button
+
+The next release puts a full-width gold button at the top of the Launchpad: Launch your own coin. It opens TokenBlaster’s launch page inside the wallet’s browser, with your wallet already connected. On the web wallet and the extension it opens a new tab. The store edition, bWallet, has no Launchpad, so it has no button either.
+
+## Token links
+
+Token pages in bWalletX (on the Exchange, on the Launchpad and in your Wallet) get room for a coin’s links, shown as chips: website, app, X, Telegram and bChat. Each chip shows the domain it goes to.
+
+Links are a way in for scammers, so they are strict. A link must be https with a real hostname, an X link must be on X and a Telegram link on Telegram. Tapping a chip shows a warning first: this is an outside site, not checked by us, and you should never enter your recovery phrase there.
+
+There is one honest catch. Today, no source publishes these links. Token deploy records don’t have the fields, TokenBlaster’s launch form doesn’t ask for them, and neither does the 1Sat index. The wallet reads them as soon as any of those sources does, and shows nothing until then. Adding them to TokenBlaster’s form, signed by the creator, is the next step. Longer term we have proposed a small on-chain “token profile” that only the issuer can sign, so any wallet or market can read it.
+
+Should links be required? We decided not, at first. A coin can launch without them, and the plan is that coins with them rank higher on the board.
+
+## The room is the default right
+
+Here is the decision underneath all of this. When someone buys a coin, what do they get? In bWalletX the answer is one thing, by default: entry to the coin’s room. Every token page says “Holders can enter the $X room”, and the room is the one place every coin has, whatever else it does or doesn’t do.
+
+Anything else is the issuer’s business. If an issuer wants to say their coin gets you a discount, early access or a vote, the wallet shows it as a single line, “Issuer says: …”, with the note “not checked by bWalletX”. It is capped at 160 characters and stripped of anything that could disguise it. We don’t verify it, endorse it or rewrite it as our own claim. That keeps us honest about what we know, and keeps the issuer responsible for what they promise.
+
+## No company field
+
+The most-requested field we left out is “company”: let an issuer say this coin is their business. We said no. A token that stands for a company is a share, and shares are regulated. bChat tried rules for this before, and they got more complicated every week. So token pages never read or show company, equity or share fields, even if a token carries them.
+
+The same goes for wording. When you create a token in bWalletX, the wallet won’t sign a description that promises returns, profits or dividends. If you want to reward your holders, send them an airdrop: see [027 Airdrops, not dividends](https://bwalletx.com/blog/027-airdrops-not-dividends).
+
+Company tokens may come one day, but as a separate product with identity checks, never as a field on ordinary coins.
+
+## Advanced options: plans
+
+Today every TokenBlaster coin launches on the same curve with the same settings. We have written up a set of advanced options for the launch form. None of this is built. It would be built in TokenBlaster, behind a collapsed Advanced panel, with the one-tap standard launch staying first.
+
+- Curve presets. A few named shapes (Standard, Gentle, Steep, Late graduation) instead of free-form numbers, with bounds so no preset can trap buyers. The wallet’s own trade check has to read each coin’s curve before any of these can launch.
+
+- Fee mix. Splitting the creator’s share of fees between the creator, a group of wallets and buybacks, fixed at launch.
+
+- Buybacks. Part of each fee buys the coin and burns it, with limits on how often and how much one buy can move the price.
+
+- Tranches. Releasing supply on a schedule instead of all at once, using the same curve shapes as [Lock BSV](https://bwalletx.com/lock), with a preview chart and each tranche time-locked on chain once token locks are proven to index correctly.
+
+- Milestones. Releases tied to events, such as the coin graduating from its curve or witnesses confirming that an app shipped, each with a deadline after which the tranche releases or burns, as the issuer chose at launch.
+
+We describe all of these as a supply schedule or a fee setting, never as rewards. A buyback isn’t a promise about the price, and a tranche isn’t a promise of anything.
+
+## Where to start
+
+Open Exchange in bWalletX and tap the Launchpad bar to trade coins today. The full picture, with what is live and what is coming, is on the [Launchpad page](https://bwalletx.com/launchpad).
+
+[← 027 Airdrops, not dividends](https://bwalletx.com/blog/027-airdrops-not-dividends)[029 bPositive: gifts, not investments →](https://bwalletx.com/blog/029-bpositive)
+
+---
+
+Source: https://bwalletx.com/blog/029-bpositive
+
+[Development blog](https://bwalletx.com/blog) · 029 · 8 Oct 2026
+
+# bPositive: gifts, not investments
+
+bPositive lets you sponsor someone’s journey in bWalletX: monthly support, witness-confirmed milestone pledges, thank-you NFTs. Why it is gifts only, and the decisions behind it.
+
+Status: plan, with the owner’s decisions made (8 Oct 2026). No bPositive code exists yet. Everything below is Coming.
+
+## Backing a person, not a coin
+
+A lot of what happens around a wallet is about tokens and prices. bPositive is about people. It lets you back someone who is working towards something: a student saving for an exam, an athlete training for a race, someone in recovery counting days, a developer learning a new stack, an artist finishing an album.
+
+People already do this informally. A friend sends money every month. A relative promises a sum if you pass. The trouble is that the promise lives in someone’s head, the proof is “trust me”, and strangers who would like to help have no way in. bPositive puts the money, the proof and the people in one place, which is bWalletX.
+
+## Gifts, not investments
+
+The first rule, before any screen was drawn: sponsoring is a gift. A sponsor gets no returns, no share of future earnings, no equity and no repayment.
+
+We could have built the other thing. “Back a young developer, get 2% of what they earn” is an obvious pitch. It is also an income-share agreement, which in many places is a regulated financial product. It puts pressure on the person in exactly the wrong way: their success becomes someone else’s return. And it pulls in the people who want a return rather than the people who want to help.
+
+So there is nothing to get back. The single exception is your own money that was never released: if you pledge to a milestone and it isn’t confirmed by the deadline, the pledge comes back to you. That is not a return. It is a gift that didn’t happen.
+
+For the same reason there is no bPositive token. A token would muddy the rule straight away. And bPositive will never be combined with a launchpad coin on the same journey. It is the same thinking as [027 Airdrops, not dividends](https://bwalletx.com/blog/027-airdrops-not-dividends).
+
+## Three building blocks
+
+bPositive is mostly made of parts bWalletX already has.
+
+Monthly support uses pots. “Support monthly” is a standing order from one of your pots to the person’s paymail, tagged to their journey. You can pause or cancel it any time. A gift that has been paid is final, but nothing more goes out once you stop.
+
+Milestones use witnesses. The person names a milestone (“Pass the AWS Associate exam”, “Run a sub-4 marathon”, “90 days sober”), what will count as evidence, and a deadline. They choose witnesses, and each witness has to accept. When the person says they’ve done it, witnesses confirm or decline with a signed seal recorded on chain. By default 2 of 3 must confirm.
+
+Recognition uses NFTs. Sponsors get a thank-you receipt NFT. Later, the person gets an achievement badge when a milestone is confirmed. Neither unlocks anything in the app, and neither has any promised value.
+
+## A pledge before a lock
+
+The hardest design question was how to hold a milestone pledge. The strong version is an on-chain lock: a script that can pay the person only when witnesses sign, and can pay the sponsor back only after the deadline. Nobody, including us, could move the money any other way. It is also new script code, and new script code holding other people’s money needs testing and an independent review before it goes anywhere near mainnet.
+
+So we are doing it in two steps, and saying so. In the first version a pledge stays in a pot in the sponsor’s own wallet. When the witnesses confirm, the sponsor’s wallet sends it the next time it is open. That is a promise, not a lock: the sponsor could cancel, and the money waits for their wallet. The app labels it honestly as “Pledged (paid when confirmed, from the sponsor’s wallet)”, never as locked.
+
+The second version is the real lock, with the release pinned to the person’s own key. Even the person plus all the witnesses couldn’t send it anywhere else. Refunds after the deadline happen automatically when the sponsor next opens the wallet.
+
+## Witnesses need to be real
+
+The obvious abuse is a fake milestone confirmed by friends. Witnesses need a verified identity, are shown publicly on the journey page with their identity strength, and can’t be the person’s other accounts or a sponsor of the same milestone. Larger amounts need stronger identities. Witnesses are not paid for witnessing: a fee for saying yes is the wrong incentive. Sponsors see who the witnesses are before they pledge, and decide for themselves.
+
+## The other decisions
+
+- 18+ at launch. Recipients, witnesses and milestone sponsors must be adults. Journeys for younger people raise problems we’d rather solve properly later than badly now.
+
+- 0% fee. The Bitcoin Corporation takes nothing from gifts, as with tips in bChat. You pay the normal network fee.
+
+- Sponsor count, not totals. Journey pages show how many people sponsor. Showing amounts is the person’s choice. No countdowns, no leaderboards: those reward urgency, which is what scams use.
+
+- Sponsors’ rooms are opt-in. The person can open a room for sponsors who hold a thank-you NFT. Sponsoring gives no right to contact the person, and they can block a sponsor.
+
+- Not in the store edition at first. A public page with a goal and a list of sponsors looks like fundraising to App Store and Google Play reviewers, which brings its own rules. bWallet, the store edition, keeps ordinary person-to-person payments and standing orders, and bPositive lives in bWalletX.
+
+## What happens next
+
+The first phase is journey pages, monthly support and thank-you NFTs, with pledges labelled as pledges. Witness-confirmed milestones with the on-chain lock come second, after the script has been tested and reviewed. The rules as they stand are on the [bPositive page](https://bwalletx.com/bpositive).
+
+Only give what you would give a friend. Gifts can have tax consequences where you live; we can’t advise on them.
+
+[← 028 Launch something with your coin](https://bwalletx.com/blog/028-launch-something)[All posts →](https://bwalletx.com/blog)
 
 ---
 
@@ -4863,6 +5233,22 @@ Source: https://bwalletx.com/blog/
 How bWallet and bWalletX were built, one chapter at a time. Every post is written from the git history of the wallet, this site, the chat server and the PNEEs prototype. It covers what we built, why, what broke, what we reversed and what is still not done.
 
 Newest first. Dates come from commits. bWallet is a fork of [Yours Wallet](https://github.com/yours-org/yours-wallet) (MIT licence).
+
+- [](https://bwalletx.com/blog/029-bpositive)029 · 8 Oct 2026
+[bPositive: gifts, not investments](https://bwalletx.com/blog/029-bpositive)
+Sponsor someone’s journey: monthly support from pots, witness-confirmed milestones and thank-you NFTs. Gifts only, 18+, 0% fee. A plan, coming to bWalletX.
+
+- [](https://bwalletx.com/blog/028-launch-something)028 · 8 Oct 2026
+[Launch something with your coin](https://bwalletx.com/blog/028-launch-something)
+Launch your own coin from bWalletX with a website, app and socials. The room is the default right, “Issuer says” covers the rest, and there’s no company field.
+
+- [](https://bwalletx.com/blog/027-airdrops-not-dividends)027 · 8 Oct 2026
+[Airdrops, not dividends](https://bwalletx.com/blog/027-airdrops-not-dividends)
+Why issuers reward holders with airdrops, the returns-wording block, the airdrop inbox, and the audit: sandboxed NFT content and address-poisoning warnings. Built, not yet released.
+
+- [](https://bwalletx.com/blog/026-paying-to-be-heard)026 · 8 Oct 2026
+[Paying to be heard](https://bwalletx.com/blog/026-paying-to-be-heard)
+Chat series part 2: per-message charges in token rooms, burned or paid to the issuer. The server checks before anything is spent. Live on the server; wallet support next release.
 
 - [](https://bwalletx.com/blog/025-push-notifications)025 · 7 Oct 2026
 [Push notifications, from our own server](https://bwalletx.com/blog/025-push-notifications)

@@ -20,6 +20,8 @@ Full text of every page below: https://bwalletx.com/llms-full.txt
 - [Restore into bWalletX](https://bwalletx.com/restore): Every wallet you can restore or sweep into bWalletX: Yours, Panda, RelayX, Twetch, SimplyCash, BIP44 wallets, private keys and xprvs, and Money Button. What each needs and what comes across.
 - [History in bWalletX](https://bwalletx.com/history): See every transaction your bWalletX account made, for any date range, and export it as CSV or a PDF statement for your accountant.
 - [Push notifications · bWalletX](https://bwalletx.com/push-notifications): Push notifications are live in bWalletX: direct messages, mentions, group messages you opt into, $b answers and signing requests on iPhone, Android, the web wallet and the Chrome extension, even with the app closed. Who messaged you, not what they wrote.
+- [bPositive](https://bwalletx.com/bpositive): Sponsor someone’s journey in bWalletX: monthly support from pots, milestone pledges confirmed by witnesses, thank-you NFTs. Gifts only, 18+, 0% fee. Coming.
+- [bSpaces](https://bwalletx.com/bspaces): Live audio and video Spaces in token rooms in bWalletX: a stage, raise hand, token-gated entry and full screen. Live in bChat today; coming to the wallet.
 
 ## Wallet features
 
@@ -89,6 +91,10 @@ Full text of every page below: https://bwalletx.com/llms-full.txt
 - [023 Locks you can’t break · bWalletX blog](https://bwalletx.com/blog/023-lock-bsv): Lock BSV until a date, or as payouts over time, and nobody can unlock it early, not even you. Why that is useful, how BSV enforces it with no custodian, and where the limits are.
 - [024 Pay the person who wrote it · bWalletX blog](https://bwalletx.com/blog/024-tips-and-paid-likes): Tips and paid likes in bWalletX 5.1.72: the payment goes to the author in the same transaction as the like. Why bChat takes 0%, why the home app gets 5% on top, and how authors can hide their own posts.
 - [025 Push notifications, from our own server · bWalletX blog](https://bwalletx.com/blog/025-push-notifications): Since bWalletX 5.1.70, phones, the web wallet and the extension get push notifications from push.bwalletx.com. What notifies you, what the server knows and doesn’t, and what it costs.
+- [026 Paying to be heard · bWalletX blog](https://bwalletx.com/blog/026-paying-to-be-heard): Priced token rooms in bWalletX: each message burns tokens or pays the issuer, in one transaction. The wallet signs, the server checks before anything is spent. Admins exempt, 50-sat minimum.
+- [027 Airdrops, not dividends · bWalletX blog](https://bwalletx.com/blog/027-airdrops-not-dividends): Why bWalletX issuers reward holders with airdrops, not payouts: the returns-wording block, the airdrop inbox, and the security audit behind it (sandboxed NFT content, address poisoning).
+- [028 Launch something with your coin · bWalletX blog](https://bwalletx.com/blog/028-launch-something): A coin should launch with something: token links for website, app, X, Telegram and bChat; the room as the default right; “Issuer says” for the rest; no company field; advanced launch options as plans.
+- [029 bPositive: gifts, not investments · bWalletX blog](https://bwalletx.com/blog/029-bpositive): bPositive lets you sponsor someone’s journey in bWalletX: monthly support, witness-confirmed milestone pledges, thank-you NFTs. Why it is gifts only, and the decisions behind it.
 - [bWalletX development blog](https://bwalletx.com/blog/): How bWallet and bWalletX were built from a fork of Yours Wallet: numbered posts from the git history, including what broke, what we reversed and what is still not done.
 
 ## Support
