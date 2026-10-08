@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>bWeb: your web on bitcoin</title>
+    <link rel="canonical" href="https://bwalletx.com/bweb" />
+    <meta name="description" content="bWeb (coming) is your own set of bApps inside bWalletX: make each app yours for free, ask b for small changes, or have b build your own version. You pay in small amounts from your wallet." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://bwalletx.com/bweb" />
+    <meta property="og:site_name" content="bWalletX" />
+    <meta property="og:title" content="bWeb: your web on bitcoin" />
+    <meta property="og:description" content="Your apps, your way. Agents build what you ask; you pay in small amounts from your wallet. Coming to bWalletX." />
+    <meta property="og:image" content="https://bwalletx.com/og-bweb-v1.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="bWeb: your web on bitcoin, coming to bWalletX" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@bWalletX" />
+    <meta name="twitter:title" content="bWeb: your web on bitcoin" />
+    <meta name="twitter:description" content="Your apps, your way. Agents build what you ask; you pay in small amounts from your wallet. Coming to bWalletX." />
+    <meta name="twitter:image" content="https://bwalletx.com/og-bweb-v1.png" />
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="stylesheet" href="/styles.css" />
+    <style>
+      .ext h1 { font-size: clamp(2.1rem, 6vw, 3.3rem); margin: 18px 0 10px; }
+      .ext h2 { margin: 48px 0 10px; font-size: 1.4rem; }
+      .ext li { margin: 8px 0; }
+      .ext .small { color: #8a8a86; font-size: 0.85rem; }
+      .grp { margin: 28px 0 10px; font-size: 1rem; color: #c9ced8; }
+      .bgrid { display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 12px; }
+      .bc { display: flex; flex-direction: column; gap: 6px; padding: 16px; border: 1px solid #ffffff14; border-radius: 16px; text-decoration: none; color: inherit; min-width: 0; }
+      a.bc:hover { border-color: #F5B80088; }
+      .bc.off { opacity: 0.6; }
+      .bc img { width: 48px; height: 48px; border-radius: 12px; }
+      .bt { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; font-size: 1.05rem; }
+      .bv { color: #c9ced8; font-size: 0.88rem; }
+      .go { color: #F5B800; font-size: 0.82rem; margin-top: auto; }
+      .chip { font-size: 0.7rem; font-weight: 600; border-radius: 999px; padding: 2px 9px; }
+      .c-live { background: #F5B800; color: #1a1300; }
+      .c-beta { background: #2a2b31; color: #e6e8ec; }
+      .c-coming { background: transparent; color: #9aa1ad; border: 1px solid #ffffff30; }
+      .slots { display: grid; grid-template-columns: repeat(5, 1fr); gap: 6px; margin: 14px 0; max-width: 520px; }
+      .slots span { text-align: center; padding: 10px 2px; border: 1px solid #ffffff1c; border-radius: 12px; font-size: 0.8rem; font-weight: 600; }
+      .slots span.b { border-color: #F5B800; color: #F5B800; }
+      .rules { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 14px; }
+      .rules > div { border: 1px solid #ffffff14; border-radius: 14px; padding: 4px 18px; }
+      .note { display: inline-block; font-size: 0.72rem; font-weight: 600; border-radius: 999px; padding: 2px 10px; vertical-align: middle; margin-left: 6px; background: #2a2b31; color: #c9ced8; }
+      .note.live { background: #F5B800; color: #1a1300; }
+      table.tbl { width: 100%; border-collapse: collapse; font-size: 0.9rem; }
+      table.tbl th, table.tbl td { text-align: left; padding: 8px 8px; border-top: 1px solid #ffffff14; vertical-align: top; }
+      .shot { display: flex; gap: 18px; flex-wrap: wrap; align-items: flex-start; }
+      .shot figure { margin: 0; max-width: 260px; }
+      .shot img { width: 100%; height: auto; border-radius: 18px; border: 1px solid #ffffff1c; }
+      .shot figcaption { color: #8a8a86; font-size: 0.82rem; margin-top: 6px; }
+      .ctas { display: flex; flex-wrap: wrap; gap: 12px; margin: 22px 0; }
+      .ctas a { padding: 12px 20px; border-radius: 12px; font-weight: 600; text-decoration: none; border: 1px solid #ffffff2a; color: inherit; }
+      .ctas a.p { background: #F5B800; color: #1a1300; border-color: #F5B800; }
+    </style>
+  </head>
+  <body>
+    <div class="beta-banner">bWalletX is in <strong>beta</strong>: test with small amounts.</div>
+    <header class="topbar">
+      <div class="wrap topbar-in">
+        <a class="brand" href="/"><img src="/logo.svg" alt="" width="34" height="30" /><span>bWallet<span class="gold">X</span></span></a>
+        <nav aria-label="Pages">
+          <a href="/features">Features</a><a href="/exchange">Exchange</a><a href="/social">Social</a><a href="/agent">Agents</a><a href="/extension">Extension</a><a href="/developers">Developers</a>
+        </nav>
+        <span class="nav-cta"><a class="dl-btn" href="/get">Download</a><a class="web-btn" href="https://web.bwalletx.com" target="_blank" rel="noopener">Web &rarr;</a></span>
+      </div>
+    </header>
+    <script src="/nav.js"></script>
+        <main class="ext">
+      <img src="/logo.svg" alt="bWalletX" width="72" height="64" />
+      <h1>bWeb: your web on bitcoin <span class="note">Coming</span></h1>
+      <p class="lede">bWeb is a plan, not a product yet. Nothing on this page is built. Here is the idea: you start in bWalletX, and your <a href="/bapps">bApps</a> become yours. You choose how they look and what they show, and when you want more, agents like b build it for you. You pay in small amounts, from your wallet, only after you approve.</p>
+
+      <h2>Three ways to make it yours</h2>
+      <div class="rules">
+        <div><h3>1. Make it yours <span class="note">Free</span></h3><p>Settings for each app: the order of your bar, the theme, what the Feed shows, how much a Like costs and your daily cap. Instant. Most people never need more.</p></div>
+        <div><h3>2. Ask b <span class="note">Small paid job</span></h3><p>"b, add a word-count goal to bWriter." b shows you a price and what the add-on can and can't do. You approve in your wallet, and it's live in minutes. Undo any time.</p></div>
+        <div><h3>3. Your own version <span class="note">Paid</span></h3><p>b makes your own copy of an open-source bApp with the change you asked for, on its own web address. Good changes are offered back to the main app, so everyone gets them.</p></div>
+      </div>
+
+      <h2>Safety promises</h2>
+      <ul>
+        <li><b>Add-ons never touch your keys.</b> They run walled off from your wallet and can't send your data anywhere.</li>
+        <li><b>Payments only go through your wallet.</b> bWalletX shows its own approval and your daily cap applies. Nothing pays on its own.</li>
+        <li><b>Your settings are private.</b> They're encrypted to you, and the apps never see them.</li>
+      </ul>
+
+      <h2>bApp tokens are keys</h2>
+      <p>Each bApp's token (such as $bWriter) is a key to that app's rooms, including its <b>build room</b>, where people who hold it talk about and rank what to build next. If you paid for a change that goes into the main app, you get a record that you helped build it. A token is room access, not an investment, and it doesn't pay you anything.</p>
+
+      <h2>Example: a movie with your friends</h2>
+      <p>In your group's room: "b, a heist movie starring me, Sam and Priya, in Lisbon." b gives a price. Everyone in the cast signs their own consent in their own wallet; without everyone's yes, nothing gets made. The group funds it together, and the film is delivered privately to the room. Posting it to the public <a href="/bapps/bmovies">bMovies</a> feed needs every cast member to agree again.</p>
+
+      <h2>First apps</h2>
+      <table class="tbl">
+        <tr><th>bApp</th><th>Planned</th></tr>
+        <tr><td>bWriter</td><td>Settings, Ask b, your own version</td></tr>
+        <tr><td>bSheets</td><td>Settings, Ask b, your own version</td></tr>
+        <tr><td>bMovies</td><td>Settings only at first</td></tr>
+      </table>
+
+      <div class="ctas"><a class="p" href="/get">Get bWalletX</a><a href="/bapps">See the bApps</a><a href="/sign-in-button">For developers</a></div>
+    </main>
+  </body>
+</html>

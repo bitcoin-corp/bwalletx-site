@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>bMovies inside bWalletX</title>
+    <link rel="canonical" href="https://bwalletx.com/bapps/bmovies" />
+    <meta name="description" content="bMovies is a film feed on Bitcoin SV: watch thousands of films, sign in with bWalletX, back the films you like with their tokens. What works today and what is coming." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://bwalletx.com/bapps/bmovies" />
+    <meta property="og:site_name" content="bWalletX" />
+    <meta property="og:title" content="bMovies: films on Bitcoin, inside bWalletX" />
+    <meta property="og:description" content="Watch, sign in with bWalletX, and back the films you like. What is live today and what is coming." />
+    <meta property="og:image" content="https://bwalletx.com/og-bapps-bmovies-v1.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="bMovies inside bWalletX" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@bWalletX" />
+    <meta name="twitter:title" content="bMovies: films on Bitcoin, inside bWalletX" />
+    <meta name="twitter:description" content="Watch, sign in with bWalletX, and back the films you like. What is live today and what is coming." />
+    <meta name="twitter:image" content="https://bwalletx.com/og-bapps-bmovies-v1.png" />
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="stylesheet" href="/styles.css" />
+    <style>
+      .ext h1 { font-size: clamp(2.1rem, 6vw, 3.3rem); margin: 18px 0 10px; }
+      .ext h2 { margin: 48px 0 10px; font-size: 1.4rem; }
+      .ext li { margin: 8px 0; }
+      .ext .small { color: #8a8a86; font-size: 0.85rem; }
+      .grp { margin: 28px 0 10px; font-size: 1rem; color: #c9ced8; }
+      .bgrid { display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 12px; }
+      .bc { display: flex; flex-direction: column; gap: 6px; padding: 16px; border: 1px solid #ffffff14; border-radius: 16px; text-decoration: none; color: inherit; min-width: 0; }
+      a.bc:hover { border-color: #F5B80088; }
+      .bc.off { opacity: 0.6; }
+      .bc img { width: 48px; height: 48px; border-radius: 12px; }
+      .bt { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; font-size: 1.05rem; }
+      .bv { color: #c9ced8; font-size: 0.88rem; }
+      .go { color: #F5B800; font-size: 0.82rem; margin-top: auto; }
+      .chip { font-size: 0.7rem; font-weight: 600; border-radius: 999px; padding: 2px 9px; }
+      .c-live { background: #F5B800; color: #1a1300; }
+      .c-beta { background: #2a2b31; color: #e6e8ec; }
+      .c-coming { background: transparent; color: #9aa1ad; border: 1px solid #ffffff30; }
+      .slots { display: grid; grid-template-columns: repeat(5, 1fr); gap: 6px; margin: 14px 0; max-width: 520px; }
+      .slots span { text-align: center; padding: 10px 2px; border: 1px solid #ffffff1c; border-radius: 12px; font-size: 0.8rem; font-weight: 600; }
+      .slots span.b { border-color: #F5B800; color: #F5B800; }
+      .rules { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 14px; }
+      .rules > div { border: 1px solid #ffffff14; border-radius: 14px; padding: 4px 18px; }
+      .note { display: inline-block; font-size: 0.72rem; font-weight: 600; border-radius: 999px; padding: 2px 10px; vertical-align: middle; margin-left: 6px; background: #2a2b31; color: #c9ced8; }
+      .note.live { background: #F5B800; color: #1a1300; }
+      table.tbl { width: 100%; border-collapse: collapse; font-size: 0.9rem; }
+      table.tbl th, table.tbl td { text-align: left; padding: 8px 8px; border-top: 1px solid #ffffff14; vertical-align: top; }
+      .shot { display: flex; gap: 18px; flex-wrap: wrap; align-items: flex-start; }
+      .shot figure { margin: 0; max-width: 260px; }
+      .shot img { width: 100%; height: auto; border-radius: 18px; border: 1px solid #ffffff1c; }
+      .shot figcaption { color: #8a8a86; font-size: 0.82rem; margin-top: 6px; }
+      .ctas { display: flex; flex-wrap: wrap; gap: 12px; margin: 22px 0; }
+      .ctas a { padding: 12px 20px; border-radius: 12px; font-weight: 600; text-decoration: none; border: 1px solid #ffffff2a; color: inherit; }
+      .ctas a.p { background: #F5B800; color: #1a1300; border-color: #F5B800; }
+    </style>
+  </head>
+  <body>
+    <div class="beta-banner">bWalletX is in <strong>beta</strong>: test with small amounts.</div>
+    <header class="topbar">
+      <div class="wrap topbar-in">
+        <a class="brand" href="/"><img src="/logo.svg" alt="" width="34" height="30" /><span>bWallet<span class="gold">X</span></span></a>
+        <nav aria-label="Pages">
+          <a href="/features">Features</a><a href="/exchange">Exchange</a><a href="/social">Social</a><a href="/agent">Agents</a><a href="/extension">Extension</a><a href="/developers">Developers</a>
+        </nav>
+        <span class="nav-cta"><a class="dl-btn" href="/get">Download</a><a class="web-btn" href="https://web.bwalletx.com" target="_blank" rel="noopener">Web &rarr;</a></span>
+      </div>
+    </header>
+    <script src="/nav.js"></script>
+        <main class="ext">
+      <p class="small"><a href="/bapps">&larr; All bApps</a></p>
+      <img src="/bapps/bmovies.png" alt="bMovies" width="72" height="72" style="border-radius:16px" />
+      <h1>bMovies, inside bWallet<span class="gold">X</span></h1>
+      <p class="lede">bMovies is a film feed on Bitcoin SV. Scroll it like Instagram, watch thousands of films, and back the ones you want more of. Sign in with bWalletX and it works like part of your wallet.</p>
+      <div class="ctas"><a class="p" href="https://bmovies.app" target="_blank" rel="noopener">Open bMovies</a><a href="/get">Get bWalletX</a></div>
+
+      <h2>Live today <span class="note live">Live</span></h2>
+      <ul>
+        <li>A film feed syndicated from creators on X, with around 2,300 films you can play.</li>
+        <li>Sign in with bWalletX (also works with bWallet). HandCash, Metanet Desktop and Yours also work for watching, liking and commenting.</li>
+        <li>BSV only: every payment is in Bitcoin SV, from your own wallet.</li>
+        <li>Film tokens: each film can have its own token. Holding it shows you backed the film.</li>
+      </ul>
+      <div class="shot">
+        <figure><img src="/images/bapps/bmovies-signin-390.png" alt="bMovies sign-in screen on a phone, with the gold Sign in with bWalletX button" width="390" height="844" loading="lazy" /><figcaption>The bMovies sign-in screen on a phone.</figcaption></figure>
+      </div>
+
+      <h2>How it fits the bApp bar <span class="note">Coming</span></h2>
+      <p>Inside bWalletX, bMovies will use the same five buttons as every bApp, each one about films:</p>
+      <table class="tbl">
+        <tr><th>Button</th><th>In bMovies</th></tr>
+        <tr><td>Wallet</td><td>The films you've backed. Your BSV balance stays in the wallet's own Wallet.</td></tr>
+        <tr><td>Exchange</td><td>Film tokens, and Mint to start a film's token.</td></tr>
+        <tr><td>b</td><td>Ask b, the wallet's assistant. Later: "make me a movie".</td></tr>
+        <tr><td>Feed</td><td>Trending films. Like = 1¢ to back a film and join its room.</td></tr>
+        <tr><td>Chat</td><td>Each film's room, for the people who backed it.</td></tr>
+      </table>
+
+      <h2>Coming next <span class="note">Coming</span></h2>
+      <ul>
+        <li><b>Like to fund</b>: one tap backs a film with 1¢ (or one PNEE) and lets you into its room. Daily cap $1 by default.</li>
+        <li><b>Streaming that pays by the second</b>: pay only for what you watch.</li>
+        <li><b>Twatch comments</b> on films.</li>
+        <li><b>Friend movies</b>: a film starring you and your friends. Everyone in it signs their own consent in their own wallet first, and it stays private to your group unless all of them agree to publish.</li>
+        <li><b>"b, make me a movie"</b>: ask b for a film, see the price, approve it in your wallet.</li>
+      </ul>
+      <p class="small">A film token is a key to that film's room and a record that you backed it. It is not an investment and doesn't pay you anything.</p>
+      <div class="ctas"><a class="p" href="https://bmovies.app" target="_blank" rel="noopener">Open bMovies</a><a href="/get">Get bWalletX</a><a href="/bapps">All bApps</a></div>
+    </main>
+  </body>
+</html>
