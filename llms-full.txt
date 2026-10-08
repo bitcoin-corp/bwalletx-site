@@ -890,6 +890,268 @@ Questions: [support@bwalletx.com](mailto:support@bwalletx.com)
 
 ---
 
+Source: https://bwalletx.com/releases
+
+# Releases. What’s new.
+
+Every bWalletX release and what it added, newest first.
+
+Each release ships to the Android APK, the Chrome extension and the web wallet. Android also goes to Google Play internal testing. The App Store build is not yet submitted.
+
+[Download bWalletX](https://bwalletx.com/download)
+
+## 5.1.85 2026-10-08
+
+- Airdrops inbox: see and claim tokens sent to you
+- Launch your own coin, plus shareable token links
+- Pay-per-message in token rooms
+- bSpaces (not in store builds)
+- Lock curves and templates
+- History fixes (correct amounts) and Gains (beta)
+- 3D featured in the Market
+
+## 5.1.84 2026-10-08
+
+- Lock BSV: lock until a date or pay yourself out over time (in dollars, BSV or a percentage), with optional public receipts. New feature: start small
+- Contact details tidied up
+- No more sideways wobble on phone screens
+
+## 5.1.83 2026-10-07
+
+- Phone layout is now the default (Classic layout in Settings › Appearance)
+- History: Gains tab (beta) with UK and FIFO tax reports
+- The first 1,000 token rooms are free to set up
+- Sweep old Money Button wallets
+- Exchange: Bonds inside Contracts, Launchpad bar
+
+## 5.1.82 2026-10-07
+
+- Repair Sync catches tokens the wallet missed being spent
+- 32 games in the Games browser
+- History: tokens, NFTs, games and app payments with filters
+- 3D models shown as pictures
+- New phone layout (behind a switch)
+
+## 5.1.81 2026-10-07
+
+- History screen: full on-chain history, summary, CSV and printable statement
+
+## 5.1.80 2026-10-07
+
+- Broadcasting fixes for Teranode
+
+## 5.1.79 2026-10-07
+
+- Market 3D: compressed models load, and you see why a model failed
+
+## 5.1.78 2026-10-07
+
+- Token validation fixes
+
+## 5.1.77 2026-10-07
+
+- Gold wallet card
+- Store edition leaves out Market and Exchange
+
+## 5.1.76 2026-10-07
+
+- Your signature on the wallet card
+- Settings tidied
+- 3D filter and pairing fixes
+
+## 5.1.75 2026-10-07
+
+- Pots: put money aside for subscriptions, with crash-safe payments
+
+## 5.1.74 2026-10-07
+
+- Sign in to bChat with bWalletX
+- Launchpad in the Market
+- Cheaper indexing for holders of tokens they did not issue
+
+## 5.1.73 2026-10-07
+
+- Feed filter: you choose what you see; slurs blurred with Show anyway
+- Sent! screen with a coin chime after every send
+
+## 5.1.72 2026-10-06
+
+- Feed: hide your own posts, bad-language filter, Treechat posts
+- Feed tips share 5% with the post's home app
+- Extension notifications use the bWalletX icon
+
+## 5.1.70 2026-10-06
+
+- Push notifications on phone, web and extension, with a bell per room
+- Feed reads bChat from bWalletX's own indexer
+- Fix for a blank wallet after unlock
+
+5.1.60 – 5.1.69 (10 releases)
+
+## 5.1.69 2026-10-06
+
+- Agent accounts page, with CLI and MCP
+- bAgents tile in bApps
+
+## 5.1.68 2026-10-06
+
+- Widescreen web wallet on desktop
+- Animated pixel ghost for agent accounts
+- Feed shows whole images
+- An error message instead of a blank screen
+
+## 5.1.67 2026-10-06
+
+- Chat: avatars on bubbles and room pictures
+
+## 5.1.66 2026-10-06
+
+- Buy BSV lists only providers that sell BSV today
+- New Android icon
+
+## 5.1.65 2026-10-06
+
+- Sign in with X or Google finishes properly on iPhone
+- Restore with X or Google
+- Pull to refresh fix; Social renamed back to Friends
+
+## 5.1.64 2026-10-05
+
+- Social and extension pairing fixes
+
+## 5.1.63 2026-10-05
+
+- Get BSV on an empty balance
+- Gold Buy card with the price
+- Scan to connect opens above every sheet
+
+## 5.1.62 2026-10-05
+
+- Scan to connect one tap away in Settings
+- Pairing can mint with a scoped permission
+
+## 5.1.61 2026-10-05
+
+- BSV price bar with Buy BSV
+- NFT detail page
+
+## 5.1.60 2026-10-05
+
+- Sweep: one box for phrase, WIF or xprv
+- Faster startup
+- VexVoid in Apps
+
+5.1.50 – 5.1.59 (10 releases)
+
+## 5.1.59 2026-10-05
+
+- Mint: 'What do you want to make?' grid
+
+## 5.1.58 2026-10-05
+
+- NFTs from other wallets show up properly
+- Add agent account in the account menu
+- b agent daily limit in dollars (default $1)
+
+## 5.1.57 2026-10-05
+
+- Linking X fills in your account name
+
+## 5.1.56 2026-10-05
+
+- 3D NFTs in Exchange and Wallet
+
+## 5.1.55 2026-10-05
+
+- Get MNEE and Get PNEEs buttons
+- Restored wallets count as backed up
+
+## 5.1.54 2026-10-05
+
+- Backup sharing fixes
+
+## 5.1.53 2026-10-05
+
+- Mandatory backup step on the web app
+- Add your own AI key for the b agent
+
+## 5.1.52 2026-10-05
+
+- Token room settings for issuers
+- b agent strategy buttons
+
+## 5.1.51 2026-10-05
+
+- PNEEs: Penny Stablecoins in the wallet
+
+## 5.1.50 2026-10-05
+
+- PNEEs naming
+
+5.1.37 – 5.1.49 (13 releases)
+
+## 5.1.49 2026-10-05
+
+- Back PNEEs: stake BSV to back pennies
+
+## 5.1.48 2026-10-05
+
+- Social tab with your own $NAME token on top
+
+## 5.1.47 2026-10-05
+
+- PNEE card: pennies backed by BSV
+
+## 5.1.46 2026-10-05
+
+- Buy MNEE under the balance
+
+## 5.1.45 2026-10-05
+
+- Penny Notes card (coming soon)
+
+## 5.1.44 2026-10-05
+
+- Exchange filters as a grid
+
+## 5.1.43 2026-10-05
+
+- BSV price on the BSV card
+
+## 5.1.42 2026-10-05
+
+- Contracts and Bonds in the Exchange
+- Web app asks for persistent storage
+
+## 5.1.41 2026-10-05
+
+- Tokens load even when the indexer hiccups
+
+## 5.1.40 2026-10-05
+
+- Pair the bWalletX CLI and MCP to an agent account
+
+## 5.1.39 2026-10-05
+
+- Strategies market: browse and buy encrypted strategies
+- TokenBlaster on Home
+
+## 5.1.38 2026-10-04
+
+- Games page in Apps
+- Export an agent account for the CLI
+
+## 5.1.37 2026-10-04
+
+- Token pages with charts
+- Strategies with wallet-enforced rules and paper mode
+- b agent can buy and send from agent accounts
+- Token search in the Exchange
+
+bWalletX is in beta: test with small amounts. Questions: [support@bwalletx.com](mailto:support@bwalletx.com)
+
+---
+
 Source: https://bwalletx.com/restore
 
 # Restore. Bring your coins home.
@@ -3312,6 +3574,62 @@ Coming: selling, listing and minting. Source: [github.com/b0ase/bwalletx-cli](ht
 [Developers](https://bwalletx.com/developers)
 
 Questions: [support@bwalletx.com](mailto:support@bwalletx.com)
+
+---
+
+Source: https://bwalletx.com/open-source
+
+# bWalletX is open source.
+
+Your keys, your coins, code anyone can read. The wallet is published under the MIT licence, so you can check what it does with your keys, build it yourself, or fork it.
+
+[Read the wallet code](https://github.com/bitcoin-corp/bwallet)
+
+## What’s open, and under which licence
+
+PartLicence todayCode
+
+The wallet (web, extension, phone apps). Forked from the open-source Yours Wallet.MIT[bitcoin-corp/bwallet](https://github.com/bitcoin-corp/bwallet)
+
+The CLI and MCP server ([bwalletx CLI](https://bwalletx.com/cli))MIT[b0ase/bwalletx-cli](https://github.com/b0ase/bwalletx-cli)
+
+The server (bit-sign)Open BSV License v4 today. A source-available licence is planned (FSL, the Functional Source License).Not public yet
+
+The wallet stays MIT.
+
+## Does it depend on us still being around?
+
+- KeysYour keys are made and kept on your device, and your recovery phrase restores them. You don’t need us to hold them.
+
+- BalancesYour BSV sits at your own addresses on the Bitcoin SV chain. Any wallet or tool that can import your keys can see and spend it.
+
+- TokensTokens and NFTs are on-chain outputs at your keys, not entries in our database. Other tools that read the same token standards can see them.
+
+- LocksLocked coins sit at your key, under a script the network enforces. Nobody can move them early, us included. The honest limit: claiming a lock without bWalletX today needs our open-source code or a developer, because ordinary wallets don’t recognise the lock script. Your payout schedule and labels are stored only on your device, but the coins don’t need them to be claimed.
+
+## Claim your locks without us
+
+A [lock](https://bwalletx.com/lock) is an on-chain lockup script: the Hodlocker (shruggr) sCrypt contract that the wider BSV ecosystem also uses. Its locking script is `PREFIX <your public key hash> <unlock height> SUFFIX`. To spend it, a transaction must:
+
+- set `nLockTime` to at least the unlock height (and a non-final `nSequence`), so the network won’t mine it any earlier;
+
+- be signed by your key, whose hash is in the script.
+
+To find your lock outputs, look for unspent outputs at your address whose script starts with the lockup prefix; the unlock height is the number pushed after your public key hash. The exact prefix and suffix are `LOCKUP_PREFIX` and `LOCKUP_SUFFIX` in [src/utils/constants.ts](https://github.com/bitcoin-corp/bwallet/blob/main/src/utils/constants.ts) in the public wallet repo.
+
+A step-by-step claim tool that works without bWalletX isn’t published yet. Until it is, a developer can build the claim from the script above.
+
+## The name is a trademark
+
+The code is open. The bWalletX name and logo are trademarks of The Bitcoin Corporation Ltd (registration in progress). Fork the code freely, but please give your fork its own name.
+
+## Contribute, or report a security issue
+
+Open an issue or a pull request on [the wallet repo](https://github.com/bitcoin-corp/bwallet) or [the CLI repo](https://github.com/b0ase/bwalletx-cli). The wallet repo has a CONTRIBUTING guide.
+
+If you find a security problem, please don’t post it publicly. Email [support@bwalletx.com](mailto:support@bwalletx.com) first.
+
+bWalletX is in beta: test with small amounts. Questions: [support@bwalletx.com](mailto:support@bwalletx.com)
 
 ---
 

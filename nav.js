@@ -72,13 +72,14 @@
           { label: 'CLI', href: '/cli' },
           { label: 'MCP', href: '/mcp' }
         ] },
-      { label: 'Developers', href: '/developers', pages: ['/developers', '/connect', '/apps/add'],
+      { label: 'Developers', href: '/developers', pages: ['/developers', '/connect', '/apps/add', '/open-source'],
         sub: [
           { label: 'Developers', href: '/developers' },
           { label: 'Sign in with bWalletX', href: '/connect' },
           { label: 'Add your app', href: '/apps/add' },
           { label: 'CLI', href: '/cli' },
-          { label: 'MCP', href: '/mcp' }
+          { label: 'MCP', href: '/mcp' },
+          { label: 'Open source', href: '/open-source' }
         ] },
       // Blog: when you publish a post, add it to the top of LATEST and drop the oldest (keep 5).
       { label: 'Blog', href: '/blog', pages: ['/blog', '/releases'], pills: false,

@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Open source bWalletX</title>
+    <link rel="canonical" href="https://bwalletx.com/open-source" />
+    <meta name="description" content="bWalletX is open source: the wallet and CLI are MIT-licensed on GitHub. What that means for your keys, balances, tokens and locks if we ever disappear." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://bwalletx.com/open-source" />
+    <meta property="og:site_name" content="bWalletX" />
+    <meta property="og:title" content="bWalletX is open source" />
+    <meta property="og:description" content="bWalletX is open source: the wallet and CLI are MIT-licensed on GitHub. What that means for your keys, balances, tokens and locks if we ever disappear." />
+    <meta property="og:image" content="https://bwalletx.com/og-open-source-v1.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="bWalletX is open source: the wallet and CLI are MIT-licensed on GitHub. What that means for your keys, balances, tokens and locks if we ever disappear." />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@bWalletX" />
+    <meta name="twitter:title" content="bWalletX is open source" />
+    <meta name="twitter:description" content="bWalletX is open source: the wallet and CLI are MIT-licensed on GitHub. What that means for your keys, balances, tokens and locks if we ever disappear." />
+    <meta name="twitter:image" content="https://bwalletx.com/og-open-source-v1.png" />
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="stylesheet" href="/styles.css" />
+    <style>
+      .ext h1 { font-size: clamp(2.2rem, 6vw, 3.4rem); margin: 18px 0 10px; }
+      .ext h2 { margin: 48px 0 8px; font-size: 1.5rem; }
+      .ext p, .ext li { line-height: 1.7; }
+      .ext .small { color: #8a8a86; font-size: 0.85rem; }
+      .ext .row { display: flex; gap: 12px; flex-wrap: wrap; margin: 26px 0; }
+      .ggrid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 230px), 1fr)); gap: 14px; margin: 18px 0; }
+      .gcard { display: block; background: #101114; border: 1px solid #ffffff12; border-radius: 16px; padding: 14px 16px; color: inherit; text-decoration: none; min-width: 0; }
+      .gcard:hover { border-color: #F5B80066; }
+      .gcard h3 { margin: 0 0 4px; font-size: 1.05rem; }
+      .gcard p { margin: 0; color: #a7adb8; font-size: 0.92rem; line-height: 1.5; }
+      .feat { list-style: none; padding: 0; margin: 18px 0; }
+      .feat li { display: flex; gap: 12px; align-items: baseline; padding: 12px 0; border-bottom: 1px solid #ffffff10; }
+      .tag { flex: none; font-size: 0.75rem; font-weight: 700; padding: 2px 9px; border-radius: 999px; }
+      .tag.live { background: #F5B800; color: #000; }
+      .tag.soon { border: 1px solid #ffffff40; color: #a7adb8; }
+      .ext table { width: 100%; border-collapse: collapse; margin: 18px 0; font-size: 0.95rem; }
+      .ext th, .ext td { text-align: left; padding: 10px 8px; border-bottom: 1px solid #ffffff14; vertical-align: top; overflow-wrap: anywhere; }
+      .ext th { color: #a7adb8; font-weight: 600; }
+      .ext code { overflow-wrap: anywhere; }
+      @media (max-width: 560px) { .ext table, .ext tbody, .ext tr, .ext td { display: block; } .ext tr:first-child { display: none; } .ext tr { padding: 10px 0; border-bottom: 1px solid #ffffff14; } .ext td { border: 0; padding: 3px 0; overflow-wrap: normal; } }
+    </style>
+  </head>
+  <body>
+    <div class="beta-banner">bWalletX is in <strong>beta</strong>: test with small amounts.</div>
+    <header class="topbar">
+      <div class="wrap topbar-in">
+        <a class="brand" href="/"><img src="/logo.svg" alt="" width="34" height="30" /><span>bWallet<span class="gold">X</span></span></a>
+        <nav aria-label="Pages">
+          <a href="/features">Features</a><a href="/exchange">Exchange</a><a href="/social">Social</a><a href="/agent">Agents</a><a href="/extension">Extension</a><a href="/developers">Developers</a>
+        </nav>
+        <span class="nav-cta"><a class="dl-btn" href="/get">Download</a><a class="web-btn" href="https://web.bwalletx.com" target="_blank" rel="noopener">Web &rarr;</a></span>
+      </div>
+    </header>
+    <script src="/nav.js"></script>
+    <main class="ext">
+      <h1>bWalletX is <span class="gold">open source.</span></h1>
+      <p class="lede">Your keys, your coins, code anyone can read. The wallet is published under the MIT licence, so you can check what it does with your keys, build it yourself, or fork it.</p>
+      <div class="row"><a class="btn btn-store" href="https://github.com/bitcoin-corp/bwallet" target="_blank" rel="noopener">Read the wallet code</a></div>
+
+      <h2>What&rsquo;s open, and under which licence</h2>
+      <table>
+        <tr><th>Part</th><th>Licence today</th><th>Code</th></tr>
+        <tr><td><b>The wallet</b> (web, extension, phone apps). Forked from the open-source Yours Wallet.</td><td>MIT</td><td><a href="https://github.com/bitcoin-corp/bwallet" target="_blank" rel="noopener">bitcoin-corp/bwallet</a></td></tr>
+        <tr><td><b>The CLI and MCP server</b> (<a href="/cli">bwalletx CLI</a>)</td><td>MIT</td><td><a href="https://github.com/b0ase/bwalletx-cli" target="_blank" rel="noopener">b0ase/bwalletx-cli</a></td></tr>
+        <tr><td><b>The server</b> (bit-sign)</td><td>Open BSV License v4 today. A source-available licence is planned (FSL, the Functional Source License).</td><td>Not public yet</td></tr>
+      </table>
+      <p>The wallet stays MIT.</p>
+
+      <h2>Does it depend on us still being around?</h2>
+      <ul class="feat">
+        <li><span class="tag live">Keys</span><span>Your keys are made and kept on your device, and your recovery phrase restores them. You don&rsquo;t need us to hold them.</span></li>
+        <li><span class="tag live">Balances</span><span>Your BSV sits at your own addresses on the Bitcoin SV chain. Any wallet or tool that can import your keys can see and spend it.</span></li>
+        <li><span class="tag live">Tokens</span><span>Tokens and NFTs are on-chain outputs at your keys, not entries in our database. Other tools that read the same token standards can see them.</span></li>
+        <li><span class="tag soon">Locks</span><span>Locked coins sit at your key, under a script the network enforces. Nobody can move them early, us included. The honest limit: claiming a lock without bWalletX today needs our open-source code or a developer, because ordinary wallets don&rsquo;t recognise the lock script. Your payout schedule and labels are stored only on your device, but the coins don&rsquo;t need them to be claimed.</span></li>
+      </ul>
+
+      <h2>Claim your locks without us</h2>
+      <p>A <a href="/lock">lock</a> is an on-chain lockup script: the Hodlocker (shruggr) sCrypt contract that the wider BSV ecosystem also uses. Its locking script is <code>PREFIX &lt;your public key hash&gt; &lt;unlock height&gt; SUFFIX</code>. To spend it, a transaction must:</p>
+      <ul>
+        <li>set <code>nLockTime</code> to at least the unlock height (and a non-final <code>nSequence</code>), so the network won&rsquo;t mine it any earlier;</li>
+        <li>be signed by your key, whose hash is in the script.</li>
+      </ul>
+      <p>To find your lock outputs, look for unspent outputs at your address whose script starts with the lockup prefix; the unlock height is the number pushed after your public key hash. The exact prefix and suffix are <code>LOCKUP_PREFIX</code> and <code>LOCKUP_SUFFIX</code> in <a href="https://github.com/bitcoin-corp/bwallet/blob/main/src/utils/constants.ts" target="_blank" rel="noopener">src/utils/constants.ts</a> in the public wallet repo.</p>
+      <p class="small">A step-by-step claim tool that works without bWalletX isn&rsquo;t published yet. Until it is, a developer can build the claim from the script above.</p>
+
+      <h2>The name is a trademark</h2>
+      <p>The code is open. The bWalletX name and logo are trademarks of The Bitcoin Corporation Ltd (registration in progress). Fork the code freely, but please give your fork its own name.</p>
+
+      <h2>Contribute, or report a security issue</h2>
+      <p>Open an issue or a pull request on <a href="https://github.com/bitcoin-corp/bwallet" target="_blank" rel="noopener">the wallet repo</a> or <a href="https://github.com/b0ase/bwalletx-cli" target="_blank" rel="noopener">the CLI repo</a>. The wallet repo has a CONTRIBUTING guide.</p>
+      <p>If you find a security problem, please don&rsquo;t post it publicly. Email <a href="mailto:support@bwalletx.com">support@bwalletx.com</a> first.</p>
+
+      <p class="small">bWalletX is in beta: test with small amounts. Questions: <a href="mailto:support@bwalletx.com">support@bwalletx.com</a></p>
+    </main>
+  </body>
+</html>

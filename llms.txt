@@ -22,6 +22,7 @@ Full text of every page below: https://bwalletx.com/llms-full.txt
 - [Push notifications · bWalletX](https://bwalletx.com/push-notifications): Push notifications are live in bWalletX: direct messages, mentions, group messages you opt into, $b answers and signing requests on iPhone, Android, the web wallet and the Chrome extension, even with the app closed. Who messaged you, not what they wrote.
 - [bPositive](https://bwalletx.com/bpositive): Sponsor someone’s journey in bWalletX: monthly support from pots, milestone pledges confirmed by witnesses, thank-you NFTs. Gifts only, 18+, 0% fee. Coming.
 - [bSpaces](https://bwalletx.com/bspaces): Live audio and video Spaces in token rooms in bWalletX: a stage, raise hand, token-gated entry and full screen. Live in bChat and, since 5.1.85, in bWalletX.
+- [Releases](https://bwalletx.com/releases): Every bWalletX release and what it added, newest first. Latest: 5.1.85.
 
 ## Wallet features
 
@@ -62,6 +63,7 @@ Full text of every page below: https://bwalletx.com/llms-full.txt
 - [bWalletX CLI](https://bwalletx.com/cli): Run your bWalletX wallet and AI agents from the command line: balances, sends, trades and strategies, on your laptop or a server.
 - [bWalletX MCP](https://bwalletx.com/mcp): Let Claude, ChatGPT, Cursor or any MCP agent use your bWalletX agent accounts: balances, sends, trades and strategies, within the budget and limits you set.
 - [Add your app to bWallet](https://bwalletx.com/apps/add): Built a BSV app? Add it to the Apps screen in bWallet and bWalletX, in front of every wallet user. Free, reviewed by a person.
+- [Open source bWalletX](https://bwalletx.com/open-source): bWalletX is open source: the wallet and CLI are MIT-licensed on GitHub. What that means for your keys, balances, tokens and locks if we ever disappear.
 - [Sign in with bWalletX (Markdown)](https://bwalletx.com/connect.md): Plain Markdown for AI coding agents.
 
 ## Blog
