@@ -527,6 +527,10 @@ One tap freezes every agent; a stopped agent can't spend. Every action is logged
 
 The ghost house: see all your agents, their balances and spending today, and stop or resume them. At [agents.bwalletx.com](https://agents.bwalletx.com).
 
+### Hold to talk to bComing soon
+
+Touch and hold the b, speak, let go to send. Coming in 5.1.89. [How it works](https://bwalletx.com/hold-to-talk).
+
 ### CLI and MCP
 
 Pair a computer or Claude to an agent account with `npx bwalletx`. [CLI](https://bwalletx.com/cli) · [MCP](https://bwalletx.com/mcp).
@@ -3683,6 +3687,84 @@ BRC-100 wallets don't hand sites the user's main receive address. `identityKey` 
 Connect with bWalletX
 
 Questions: [support@bwalletx.com](mailto:support@bwalletx.com) · Source: [connect.js](https://bwalletx.com/connect.js)
+
+---
+
+Source: https://bwalletx.com/hold-to-talk
+
+Coming in 5.1.89
+
+# Hold to talk to b.
+
+The big b in the middle of the bottom bar now listens. Touch and hold it, say what you want, and let go. Your words appear as you speak, and nothing is sent until you lift your finger.
+
+“Send five dollars to Sam”
+
+b
+
+## How it works
+
+1 · HOLD
+
+### Touch and hold the b
+
+After half a second you feel a tick and a panel opens with gold sound bars. A quick tap still does what it always did: Home in the wallet, or opens b.
+
+2 · SPEAK
+
+### Say it
+
+Talk normally. Your words appear in the panel as you speak, so you can see what b will get.
+
+3 · LET GO
+
+### Lift your finger
+
+Letting go sends your words to b, just as if you had typed them.
+
+Changed your mind? Slide your finger away from the b and the ring turns grey. Let go there and nothing is sent. Slide back onto the b to keep talking.
+
+## Where it works
+
+WhereSpeech recognitionFirst time
+
+iPhoneApple speech recognition, on the device where your iPhone supports itAsks for Speech Recognition, then Microphone
+
+AndroidAndroid speech recognitionAsks for Microphone; then hold the b again
+
+Web walletYour browser’s speech recognition (Chrome, Edge, Safari). Firefox falls back to typing.The browser asks for the microphone
+
+Chrome extensionBrowser speech recognitionOpens a permission tab once to ask for the microphone
+
+The same gesture is coming to [bChatX.com](https://bchatx.com) too.
+
+## Same rules as typing
+
+- Nothing is sent until you let go. Slide away and let go, and it is thrown away.
+
+- Consent first. Before your first message to each AI provider, you are asked to agree, exactly as when you type.
+
+- Secrets are caught. If you say something that looks like a recovery phrase or private key, it is caught the same way typed secrets are.
+
+- Prices still show. Paid messages still show the price and your daily limit before anything is spent.
+
+## Questions
+
+Does it cost anything?
+Talking costs nothing extra. What you send to b is priced the same as a typed message, and paid messages show the price and your daily limit first.
+
+What gets sent?
+The text of what you said, once you let go. The words are turned into text by your phone or browser’s own speech recognition, then that text goes to b like a typed message.
+
+Which languages?
+It listens in your device’s language, using whatever your phone or browser’s speech recognition supports.
+
+When can I use it?
+It is coming in bWalletX 5.1.89, the next release. Watch the [releases page](https://bwalletx.com/releases).
+
+[Get bWalletX](https://bwalletx.com/get)[Open the web wallet](https://web.bwalletx.com)
+
+bWalletX is in beta: test with small amounts. Questions: [support@bwalletx.com](mailto:support@bwalletx.com)
 
 ---
 

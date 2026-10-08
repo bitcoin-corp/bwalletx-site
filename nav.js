@@ -64,10 +64,11 @@
           { label: 'Sign in with X', href: '/x' },
           { label: 'Sign in with Gmail', href: '/gmail' }
         ] },
-      { label: 'Agents', href: '/agents', pages: ['/agents', '/agent', '/strategies', '/strategies/spec', '/cli', '/mcp'],
+      { label: 'Agents', href: '/agents', pages: ['/agents', '/agent', '/hold-to-talk', '/strategies', '/strategies/spec', '/cli', '/mcp'],
         sub: [
           { label: 'Agent accounts', href: '/agents' },
           { label: 'b agent', href: '/agent' },
+          { label: 'Hold to talk', href: '/hold-to-talk' },
           { label: 'Strategies', href: '/strategies' },
           { label: 'Strategy spec', href: '/strategies/spec' },
           { label: 'CLI', href: '/cli' },
