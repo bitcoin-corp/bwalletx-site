@@ -24,6 +24,7 @@ h1{position:absolute;left:72px;top:184px;width:600px;font-size:66px;line-height:
 .bar{display:flex;justify-content:space-between;margin-top:14px;padding-top:12px;border-top:1px solid #ffffff12;font-size:15px;color:#8a8f99;font-weight:600}
 .bar .on{color:#F5B800}
 .live{display:inline-block;background:#ef4444;color:#fff;font-size:13px;font-weight:700;padding:3px 9px;border-radius:8px;letter-spacing:.06em}
+.ex{position:absolute;right:22px;top:18px;font-size:13px;font-weight:700;letter-spacing:.12em;color:#8a8f99;border:1px solid #ffffff2a;border-radius:7px;padding:3px 8px}
 .mono{font-family:Menlo,monospace;font-size:17px;color:#d5d9e0}
 </style></head><body><div class="glow"></div>
 <div class="top"><img src="logo.svg"><span>bWallet<span class="g">X</span></span></div>
@@ -37,13 +38,13 @@ posts = {
          '<div class="yb">bPhone · charge to receive calls</div></div>'),
  '032': ('Meet<br>bChatX.com',
          'Chat&rsquo;s new home. Sign in with bWalletX. Your wallet is bWalletX, not a second one.',
-         '<div class="card"><h3>WWW.BCHATX.COM</h3><div class="row">bChatX<span class="g">$you &#9679;</span></div>'
+         '<div class="card"><span class="ex">EXAMPLE</span><h3>WWW.BCHATX.COM</h3><div class="row">bChatX<span class="g">$you &#9679;</span></div>'
          '<div class="row">Show Twetch posts<span>on</span></div><div class="row">Images from other apps<span>blurred</span></div>'
          '<div class="row">Feed loads<span>~0.5 s</span></div><div class="gb">Sign in with bWalletX</div>'
          '<div class="bar"><span class="on">Feed</span><span>Rooms</span><span class="on">b</span><span>Spaces</span><span>DMs</span></div></div>'),
  '033': ('Spaces you can<br>just listen to',
          'Public Spaces on bChatX need no sign-in to listen. Sign in when you want to speak.',
-         '<div class="card"><h3>SPACES</h3><div class="row"><span class="live">LIVE</span><span>8 speakers · 41 listening</span></div>'
+         '<div class="card"><span class="ex">EXAMPLE</span><h3>SPACES</h3><div class="row"><span class="live">LIVE</span><span>8 speakers · 41 listening</span></div>'
          '<div class="row">Building on BSV<span>host $alice</span></div><div class="gb">Listen</div>'
          '<div class="db">Raise hand · sign in</div><div class="row" style="margin-top:8px">Stage<span>up to 12 speakers</span></div></div>'),
  '034': ('Open apps,<br>open protocol',
