@@ -167,7 +167,7 @@
     panel.innerHTML = items.map(function (it) {
       if (!it.sub) return '<a class="m-top" href="' + it.href + '">' + it.label + '</a>';
       return '<details' + (it === section ? ' open' : '') + '><summary>' + it.label + '</summary>' + subLinks(it) + '</details>';
-    }).join('') + '<a class="m-top" href="https://web.bwalletx.com">Web wallet &rarr;</a><p class="m-follow"><a href="https://x.com/bWalletX">X</a><a href="https://github.com/bitcoin-corp/bwallet">GitHub</a><a href="https://www.youtube.com/@bWalletX">YouTube</a><a href="https://www.bitcoinchat.online/room/LOUNGE">bChat Lounge</a></p>';
+    }).join('') + '<a class="m-top" href="https://web.bwalletx.com">Web wallet &rarr;</a><p class="m-follow"><a href="https://x.com/bWalletX">X</a><a href="https://github.com/bitcoin-corp/bwallet">GitHub</a><a href="https://www.youtube.com/@bWalletX">YouTube</a><a href="https://www.bchatx.com/room/LOUNGE">bChatX Lounge</a></p>';
     mb.addEventListener('click', function () {
       var open = panel.hidden;
       panel.hidden = !open;
@@ -226,7 +226,7 @@
     // bChat instead of Telegram/Discord (owner, 6 Oct 2026): a white b, next to X and GitHub.
     var bc = document.createElement('a');
     bc.className = 'x-link bchat-link';
-    bc.href = 'https://www.bitcoinchat.online/room/LOUNGE';
+    bc.href = 'https://www.bchatx.com/room/LOUNGE';
     bc.target = '_blank';
     bc.rel = 'noopener';
     bc.setAttribute('aria-label', 'Join the bWallet Lounge on bChat');
