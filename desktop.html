@@ -9,51 +9,87 @@
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://bwalletx.com/desktop" />
     <meta property="og:site_name" content="bWalletX" />
-    <meta property="og:title" content="bWalletX Desktop: money, mail and chat in one window" />
+    <meta property="og:title" content="bWalletX Desktop: your whole Bitcoin life in one window" />
     <meta property="og:description" content="The whole wallet on a big screen. Sidebar for Money, Talk and Discover, ⌘K to ask b, install it as an app." />
-    <meta property="og:image" content="https://bwalletx.com/og-desktop-mkt-v1.png" />
+    <meta property="og:image" content="https://bwalletx.com/og-desktop-mkt-v2.png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
-    <meta property="og:image:alt" content="bWalletX Desktop: money, mail and chat in one window, with the Desktop sidebar" />
+    <meta property="og:image:alt" content="bWalletX Desktop: a real screenshot of bMail in the Desktop app, with the Money, Talk and Discover sidebar" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@bWalletX" />
-    <meta name="twitter:title" content="bWalletX Desktop: money, mail and chat in one window" />
+    <meta name="twitter:title" content="bWalletX Desktop: your whole Bitcoin life in one window" />
     <meta name="twitter:description" content="The whole wallet on a big screen. Sidebar for Money, Talk and Discover, ⌘K to ask b, install it as an app." />
-    <meta name="twitter:image" content="https://bwalletx.com/og-desktop-mkt-v1.png" />
+    <meta name="twitter:image" content="https://bwalletx.com/og-desktop-mkt-v2.png" />
     <link rel="icon" href="/favicon.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" />
     <link rel="stylesheet" href="/styles.css" />
+    <link rel="preload" as="image" href="/images/desktop/bmail.webp" imagesrcset="/images/desktop/bmail-1200.webp 1200w, /images/desktop/bmail.webp 2000w" imagesizes="(max-width: 1100px) 100vw, 1100px" />
     <style>
-      .ext h1 { font-size: clamp(2.2rem, 6vw, 3.4rem); margin: 18px 0 10px; }
-      .ext h2 { margin: 48px 0 8px; font-size: 1.5rem; }
-      .ext p, .ext li { line-height: 1.7; }
-      .ext .small { color: #8a8a86; font-size: 0.85rem; }
-      .ext .row { display: flex; gap: 12px; flex-wrap: wrap; margin: 26px 0; }
-      .ggrid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 230px), 1fr)); gap: 14px; margin: 18px 0; }
-      .gcard { display: block; background: #101114; border: 1px solid #ffffff12; border-radius: 16px; padding: 14px 16px; color: inherit; text-decoration: none; min-width: 0; }
-      .gcard h3 { margin: 0 0 4px; font-size: 1.05rem; }
-      .gcard p { margin: 0; color: #a7adb8; font-size: 0.92rem; line-height: 1.5; }
-      .feat { list-style: none; padding: 0; margin: 18px 0; }
-      .feat li { display: flex; gap: 12px; align-items: baseline; padding: 12px 0; border-bottom: 1px solid #ffffff10; }
-      .tag { flex: none; font-size: 0.75rem; font-weight: 700; padding: 2px 9px; border-radius: 999px; background: #F5B800; color: #000; }
-      kbd { background: #17191e; border: 1px solid #ffffff22; border-radius: 6px; padding: 1px 7px; font-size: 0.85rem; }
-      /* sidebar mock: labels match the real Desktop sidebar, no balances */
-      .win { display: flex; background: #0b0c0f; border: 1px solid #F5B80055; border-radius: 18px; overflow: hidden; margin: 30px 0; box-shadow: 0 0 60px rgba(245,184,0,.15); min-width: 0; }
-      .win .side { flex: none; width: 200px; border-right: 1px solid #ffffff14; padding: 14px 12px; }
-      .win .dots { display: flex; gap: 6px; margin: 0 0 6px 4px; } .win .dots i { width: 10px; height: 10px; border-radius: 50%; background: #3a3d44; display: block; }
-      .win h4 { font-size: 0.7rem; letter-spacing: .12em; color: #7d8490; margin: 12px 0 4px 8px; text-transform: uppercase; }
-      .win .side div.it { font-size: 0.9rem; padding: 4px 8px; border-radius: 8px; color: #d7dbe2; }
-      .win .side div.on { background: #F5B800; color: #1a1300; font-weight: 700; }
-      .win .side div.ex { color: #a7adb8; font-size: 0.82rem; }
-      .win .main { flex: 1; padding: 16px; min-width: 0; display: flex; flex-direction: column; gap: 12px; }
-      .win .ask { display: flex; justify-content: space-between; align-items: center; gap: 10px; background: #17191e; border-radius: 10px; padding: 10px 12px; color: #a7adb8; font-size: 0.9rem; }
-      .win .ask span { min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-      .win .install { align-self: flex-end; border: 1px solid #F5B80088; color: #F5B800; border-radius: 999px; padding: 4px 12px; font-size: 0.8rem; font-weight: 700; }
-      .win .pane { background: #101114; border: 1px solid #ffffff10; border-radius: 12px; padding: 12px; color: #c9ced8; font-size: 0.9rem; line-height: 1.5; }
-      .win .pane b { color: #fff; display: block; }
-      @media (max-width: 560px) { .win .side { width: 136px; padding: 10px 6px; } .win .side div.it { font-size: 0.8rem; padding: 3px 6px; } .win .main { padding: 10px; } .win .install { display: none; } }
+      .dk { --line: rgba(255,255,255,.08); }
+      .dk .wrap { max-width: 1200px; }
+      .dk-hero { position: relative; text-align: center; padding: 72px 0 24px; overflow: hidden; }
+      .dk-hero::before { content: ""; position: absolute; left: 50%; top: 38%; width: 1200px; height: 760px; transform: translateX(-50%);
+        background: radial-gradient(closest-side, rgba(245,184,0,.22), rgba(245,184,0,.06) 55%, transparent 80%); pointer-events: none; }
+      .pill { display: inline-flex; gap: 8px; align-items: center; font: 500 .85rem var(--bf); color: var(--muted); border: 1px solid var(--line); border-radius: 999px; padding: 6px 14px; background: rgba(255,255,255,.03); position: relative; }
+      .pill b { color: var(--gold-hi); font-weight: 600; }
+      .dk h1 { position: relative; font: 700 clamp(2.5rem, 7.2vw, 5.4rem)/1.0 var(--hf); letter-spacing: -0.035em; margin: 22px auto 20px; max-width: 13ch; }
+      .dk h1 .g { background: linear-gradient(180deg, #ffe07a, #e8a100); -webkit-background-clip: text; background-clip: text; color: transparent; }
+      .dk .sub { position: relative; color: #cfccc2; font-size: clamp(1.05rem, 2vw, 1.25rem); line-height: 1.55; max-width: 40em; margin: 0 auto; }
+      .ctas { position: relative; display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; margin: 32px 0 10px; }
+      .cta { display: inline-flex; align-items: center; gap: 8px; font: 600 1.02rem var(--hf); padding: 15px 24px; border-radius: 14px; text-decoration: none; transition: transform .18s ease-out, box-shadow .18s ease-out, background .18s ease-out; }
+      .cta-p { background: var(--grad); color: #1a1300; box-shadow: var(--glow); }
+      .cta-p:hover { transform: translateY(-1px); box-shadow: 0 0 0 1px rgba(255,210,77,.5), 0 16px 40px -8px rgba(245,184,0,.7), inset 0 1px 0 rgba(255,255,255,.55); }
+      .cta-s { color: var(--ink); background: rgba(255,255,255,.05); box-shadow: inset 0 0 0 1px rgba(255,255,255,.14); }
+      .cta-s:hover { background: rgba(255,255,255,.09); }
+      .cta:focus-visible { outline: 2px solid var(--gold-hi); outline-offset: 3px; }
+      .fine { position: relative; color: var(--dim); font-size: .88rem; margin: 6px 0 0; }
+      .hero-shot { position: relative; margin: 56px auto 0; max-width: 1140px; perspective: 1800px; }
+      .hero-shot .frame { transform: rotateX(8deg) scale(.98); transform-origin: 50% 0; transition: transform .9s cubic-bezier(.2,.7,.2,1); box-shadow: 0 0 0 1px rgba(255,210,77,.28), 0 40px 120px -20px rgba(245,184,0,.45), 0 30px 60px -30px rgba(0,0,0,.9); }
+      .hero-shot.in .frame { transform: none; }
+      .hero-shot::after { content: ""; position: absolute; left: 0; right: 0; bottom: -2px; height: 30%; background: linear-gradient(transparent, #000); pointer-events: none; }
+      .frame { margin: 0; border-radius: 14px; overflow: hidden; background: #0b0b0d; border: 1px solid rgba(255,255,255,.1); box-shadow: 0 0 0 1px rgba(255,210,77,.12), 0 30px 80px -30px rgba(245,184,0,.35), 0 20px 40px -20px rgba(0,0,0,.8); }
+      .frame .bar { display: flex; align-items: center; gap: 7px; height: 34px; padding: 0 14px; background: #141418; border-bottom: 1px solid var(--line); }
+      .frame .bar i { width: 11px; height: 11px; border-radius: 50%; background: #3a3b40; display: block; }
+      .frame .bar span { margin: 0 auto; transform: translateX(-24px); font: 500 .78rem var(--bf); color: #8d8b84; background: #0c0c0f; border-radius: 6px; padding: 3px 14px; }
+      .frame img { width: 100%; height: auto; }
+      .strip { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px 28px; color: var(--muted); font: 500 .95rem var(--hf); padding: 40px 0 8px; border-bottom: 1px solid var(--line); }
+      .strip span::before { content: ""; display: inline-block; width: 6px; height: 6px; border-radius: 50%; background: var(--gold); margin-right: 10px; vertical-align: middle; }
+      .feat { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: 56px; align-items: center; padding: 112px 0 0; }
+      .feat.flip .copy { order: 2; }
+      .kicker { font: 600 .8rem var(--hf); letter-spacing: .14em; text-transform: uppercase; color: var(--gold); margin: 0 0 14px; }
+      .feat h2 { font: 700 clamp(1.9rem, 3.6vw, 2.7rem)/1.08 var(--hf); letter-spacing: -0.025em; margin: 0 0 18px; }
+      .feat p { color: #c4c1b8; margin: 0 0 14px; max-width: 34em; }
+      .ticks { list-style: none; padding: 0; margin: 20px 0 0; display: grid; gap: 10px; }
+      .ticks li { display: flex; gap: 12px; color: #dcd9cf; font-size: .98rem; line-height: 1.5; }
+      .ticks li::before { content: ""; flex: none; width: 18px; height: 18px; margin-top: 3px; border-radius: 50%; background: rgba(245,184,0,.14) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M4 8.5l2.5 2.5L12 5.5' fill='none' stroke='%23ffd24d' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/12px no-repeat; }
+      kbd { font: 600 .82rem var(--hf); background: #17181c; border: 1px solid rgba(255,255,255,.16); border-bottom-width: 2px; border-radius: 6px; padding: 1px 7px; color: var(--ink); }
+      .cards { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 16px; margin-top: 112px; }
+      .card { border: 1px solid var(--line); border-radius: 16px; padding: 28px; background: linear-gradient(180deg, rgba(255,255,255,.035), rgba(255,255,255,.01)); }
+      .card h3 { font: 600 1.2rem var(--hf); margin: 0 0 10px; letter-spacing: -0.01em; }
+      .card p { color: #b9b6ad; margin: 0; font-size: .97rem; line-height: 1.6; }
+      .card .num { font: 700 .8rem var(--hf); color: var(--gold); letter-spacing: .12em; display: block; margin-bottom: 14px; }
+      .dk-final { text-align: center; padding: 128px 0 96px; position: relative; }
+      .dk-final::before { content: ""; position: absolute; inset: 20% 10% 0; background: radial-gradient(closest-side, rgba(245,184,0,.16), transparent); pointer-events: none; }
+      .dk-final h2 { position: relative; font: 700 clamp(2rem, 5vw, 3.6rem)/1.05 var(--hf); letter-spacing: -0.03em; margin: 0 auto 16px; max-width: 16ch; }
+      .reveal { opacity: 1; transform: none; }
+      .js .reveal { opacity: .45; transform: translateY(24px); transition: opacity .6s ease-out, transform .6s cubic-bezier(.2,.7,.2,1); }
+      .js .reveal.in { opacity: 1; transform: none; }
+      @media (prefers-reduced-motion: reduce) { .js .reveal, .hero-shot .frame { transition: none; opacity: 1; transform: none; } }
+      @media (max-width: 900px) {
+        .feat { grid-template-columns: minmax(0,1fr); gap: 32px; padding-top: 80px; }
+        .feat.flip .copy { order: 0; }
+        .cards { grid-template-columns: minmax(0,1fr); margin-top: 80px; }
+        .dk-hero { padding-top: 48px; }
+        .hero-shot { margin-top: 40px; }
+        .frame .bar { height: 26px; } .frame .bar i { width: 8px; height: 8px; } .frame .bar span { font-size: .68rem; transform: none; }
+      }
+      @media (max-width: 480px) { .cta { width: 100%; justify-content: center; } .strip { gap: 8px 18px; font-size: .88rem; } }
     </style>
   </head>
-  <body>
+  <body class="dk">
+    <script>document.documentElement.classList.add('js')</script>
     <div class="beta-banner">bWalletX is in <strong>beta</strong>: test with small amounts.</div>
     <header class="topbar">
       <div class="wrap topbar-in">
@@ -65,61 +101,109 @@
       </div>
     </header>
     <script src="/nav.js"></script>
-    <main class="ext">
-      <h1>bWallet<span class="gold">X</span> Desktop. <span class="gold">Your money, mail and chat in one window.</span></h1>
-      <p class="lede">The whole bWalletX wallet on a big screen. Everything you do on your phone sits in one sidebar, so you can pay, read bMail and talk in your rooms without switching apps. Open it in your browser, or install it as an app.</p>
-      <div class="row">
-        <a class="btn btn-store" href="https://desktop.bwalletx.com/">Open bWalletX Desktop &rarr;</a>
-        <a class="btn btn-store btn-ghost" href="/get">Get the phone apps</a>
-      </div>
-
-      <div class="win" role="img" aria-label="The bWalletX Desktop sidebar: Money, Talk and Discover sections, with Ask b and Install app">
-        <div class="side">
-          <div class="dots"><i></i><i></i><i></i></div>
-          <h4>Money</h4><div class="it on">Wallet</div><div class="it">NFTs</div><div class="it">Friends</div><div class="it">Tickets</div><div class="it">Credits</div><div class="it">Exchange</div><div class="it">Lock BSV</div>
-          <h4>Talk</h4><div class="it">bMail</div><div class="it">Chat</div><div class="it">Calls</div><div class="it">People</div><div class="it">Spaces</div>
-          <h4>Discover</h4><div class="it">Feed</div><div class="it">Media</div><div class="it">bApps</div><div class="it">Games</div><div class="it">b agent</div>
-          <h4>&nbsp;</h4><div class="it ex">Add agent account</div><div class="it ex">Connect CLI &amp; MCP</div><div class="it ex">Lock wallet (⌘L)</div>
+    <main>
+      <section class="dk-hero">
+        <div class="wrap">
+          <span class="pill"><b>New</b> bWalletX Desktop · free in your browser</span>
+          <h1>Your whole Bitcoin life. <span class="g">One window.</span></h1>
+          <p class="sub">Money, bMail, chat rooms, Spaces, bApps and the b agent, side by side on a big screen. No app store, no download. Open it and it&rsquo;s your wallet.</p>
+          <div class="ctas">
+            <a class="cta cta-p" href="https://desktop.bwalletx.com/">Open bWalletX Desktop <span aria-hidden="true">&rarr;</span></a>
+            <a class="cta cta-s" href="#install">Install it as an app</a>
+          </div>
+          <p class="fine">Chrome, Edge and Safari · your keys stay encrypted in your browser</p>
+          <div class="hero-shot reveal"><figure class="frame"><div class="bar"><i></i><i></i><i></i><span>desktop.bwalletx.com</span></div><img src="/images/desktop/bmail.webp" srcset="/images/desktop/bmail-1200.webp 1200w, /images/desktop/bmail.webp 2000w" sizes="(max-width: 1100px) 100vw, 1100px" width="2000" height="1250" alt="bWalletX Desktop showing bMail: an inbox of paid mail with postage amounts, next to the Money, Talk and Discover sidebar" fetchpriority="high" decoding="async" /></figure></div>
+          <div class="strip" aria-label="In the sidebar"><span>Wallet</span><span>bMail</span><span>Chat</span><span>Spaces</span><span>Feed</span><span>bApps</span><span>b agent</span></div>
         </div>
-        <div class="main">
-          <span class="install">Install app</span>
-          <div class="ask"><span>Ask b to do something…</span><kbd>⌘K</kbd></div>
-          <div class="pane"><b>Wallet</b>Send, receive and scan, the same as on your phone.</div>
-          <div class="pane"><b>bMail</b>Your tokenised mail in one inbox.</div>
-          <div class="pane"><b>Chat</b>Your rooms, next to your money.</div>
+      </section>
+
+      <div class="wrap">
+      <section class="feat reveal">
+        <div class="copy">
+          <p class="kicker">Money</p>
+          <h2>Send, receive and mint, at full size.</h2>
+          <p>Your balance, the BSV price chart and your full history on one screen. Send, Receive and Mint are a click away, the same wallet you carry on your phone.</p><ul class="ticks"><li>Wallet, NFTs, Friends, Tickets, Credits, Exchange and Lock BSV in the sidebar</li><li>Show amounts in USD or GBP from the top bar</li></ul>
         </div>
+        <figure class="frame"><div class="bar"><i></i><i></i><i></i><span>desktop.bwalletx.com</span></div><img src="/images/desktop/wallet.webp" srcset="/images/desktop/wallet-1200.webp 1200w, /images/desktop/wallet.webp 2000w" sizes="(max-width: 1100px) 100vw, 1100px" width="2000" height="1250" alt="The Wallet screen in bWalletX Desktop: balance card, Send, Receive and Mint buttons, a BSV price chart and transaction history" loading="lazy" decoding="async" /></figure>
+      </section>
+      <section class="feat flip reveal">
+        <div class="copy">
+          <p class="kicker">bMail</p>
+          <h2>Mail that pays its own postage.</h2>
+          <p>Every tokenised letter in one inbox. Sort by Most paid, see what it cost to reach you, and keep spam out because sending costs something.</p>
+        </div>
+        <figure class="frame"><div class="bar"><i></i><i></i><i></i><span>desktop.bwalletx.com</span></div><img src="/images/desktop/bmail.webp" srcset="/images/desktop/bmail-1200.webp 1200w, /images/desktop/bmail.webp 2000w" sizes="(max-width: 1100px) 100vw, 1100px" width="2000" height="1250" alt="bMail in bWalletX Desktop: inbox sorted by most paid, with paid letters and postage amounts" loading="lazy" decoding="async" /></figure>
+      </section>
+      <section class="feat reveal">
+        <div class="copy">
+          <p class="kicker">Chat &amp; Spaces</p>
+          <h2>Your rooms, right next to your money.</h2>
+          <p>Chatrooms, DMs and calls in one panel, with the room&rsquo;s members beside the conversation. Token rooms and live Spaces sit in the same sidebar under Talk.</p>
+        </div>
+        <figure class="frame"><div class="bar"><i></i><i></i><i></i><span>desktop.bwalletx.com</span></div><img src="/images/desktop/chat.webp" srcset="/images/desktop/chat-1200.webp 1200w, /images/desktop/chat.webp 2000w" sizes="(max-width: 1100px) 100vw, 1100px" width="2000" height="1250" alt="The bWallet Lounge chatroom open in bWalletX Desktop, with the room list and member list" loading="lazy" decoding="async" /></figure>
+      </section>
+      <section class="feat flip reveal">
+        <div class="copy">
+          <p class="kicker">Feed &amp; bApps</p>
+          <h2>The open BSV feed, and apps that run inside your wallet.</h2>
+          <p>Feed pulls posts from bChat and other BSV micro-blogs into one timeline, with Tip and Lock on every post. bApps and Games open inside the wallet, signed in, paying from the same balance.</p><p style="margin-top:22px"><a href="/bapps">See the bApps &rarr;</a></p>
+        </div>
+        <figure class="frame"><div class="bar"><i></i><i></i><i></i><span>desktop.bwalletx.com</span></div><img src="/images/desktop/feed.webp" srcset="/images/desktop/feed-1200.webp 1200w, /images/desktop/feed.webp 2000w" sizes="(max-width: 1100px) 100vw, 1100px" width="2000" height="1250" alt="The Feed in bWalletX Desktop showing bChat posts with Tip and Lock buttons" loading="lazy" decoding="async" /></figure>
+      </section>
+      <section class="feat reveal">
+        <div class="copy">
+          <p class="kicker">b agent · <kbd>⌘K</kbd></p>
+          <h2>Press ⌘K. Tell b what to do.</h2>
+          <p>The Ask b bar sits at the top of every screen. Press <kbd>⌘K</kbd> from anywhere, say what you want in plain words, and b gets it done in your wallet. Press <kbd>⌘L</kbd> to lock the wallet when you step away.</p>
+        </div>
+        <figure class="frame"><div class="bar"><i></i><i></i><i></i><span>desktop.bwalletx.com</span></div><img src="/images/desktop/agent.webp" srcset="/images/desktop/agent-1200.webp 1200w, /images/desktop/agent.webp 2000w" sizes="(max-width: 1100px) 100vw, 1100px" width="2000" height="1250" alt="The b agent in bWalletX Desktop with a request typed into the message box" loading="lazy" decoding="async" /></figure>
+      </section>
+
+        <section class="feat flip reveal">
+          <div class="copy">
+            <p class="kicker">Agents &amp; developers</p>
+            <h2>Give your AI agent its own account.</h2>
+            <p>From the sidebar, <b>Add agent account</b> gives an AI agent its own account inside your wallet. <b>Connect CLI &amp; MCP</b> links the <a href="/cli">bwalletx CLI</a> and the <a href="/mcp">MCP server</a>, so tools like Claude can use the wallet you control.</p>
+            <ul class="ticks"><li><span><a href="/cli">bwalletx CLI</a> for scripts and terminals</span></li><li><span><a href="/mcp">MCP server</a> for AI assistants</span></li></ul>
+          </div><figure class="frame"><div class="bar"><i></i><i></i><i></i><span>desktop.bwalletx.com</span></div><img src="/images/desktop/bapps.webp" srcset="/images/desktop/bapps-1200.webp 1200w, /images/desktop/bapps.webp 2000w" sizes="(max-width: 1100px) 100vw, 1100px" width="2000" height="1250" alt="Games and bApps in bWalletX Desktop: a grid of games that open inside the wallet" loading="lazy" decoding="async" /></figure>
+        </section>
+
+        <div class="cards" id="install">
+          <div class="card reveal"><span class="num">INSTALL · CHROME &amp; EDGE</span><h3>Install app</h3><p>Open desktop.bwalletx.com and click <b>Install app</b> at the top, or the install icon in the address bar. It gets its own window and a dock or taskbar icon.</p></div>
+          <div class="card reveal"><span class="num">INSTALL · SAFARI ON MAC</span><h3>File › Add to Dock</h3><p>In Safari, choose <b>File › Add to Dock</b>. bWalletX Desktop opens like any other Mac app. Nothing to download from a store.</p></div>
+          <div class="card reveal"><span class="num">YOUR KEYS</span><h3>Encrypted in your browser</h3><p>Your keys are kept encrypted in the browser on your computer. Desktop is a separate site from web.bwalletx.com, so restore an existing wallet with its recovery phrase.</p></div>
+        </div>
+
+        <section class="dk-final reveal">
+          <h2>The wallet looks better big.</h2>
+          <p class="sub">Open it now. It takes a minute to create a wallet, or restore yours with its recovery phrase.</p>
+          <div class="ctas">
+            <a class="cta cta-p" href="https://desktop.bwalletx.com/">Open bWalletX Desktop <span aria-hidden="true">&rarr;</span></a>
+            <a class="cta cta-s" href="/get">Get the phone apps</a>
+          </div>
+          <p class="fine">bWalletX is in beta: test with small amounts. Questions: <a href="mailto:support@bwalletx.com">support@bwalletx.com</a></p>
+        </section>
       </div>
-
-      <h2>Everything in one sidebar</h2>
-      <div class="ggrid">
-        <div class="gcard"><h3>Money</h3><p>Wallet, NFTs, Friends, Tickets, Credits, Exchange and Lock BSV.</p></div>
-        <div class="gcard"><h3>Talk</h3><p>bMail, Chat, Calls, People and Spaces.</p></div>
-        <div class="gcard"><h3>Discover</h3><p>Feed, Media, bApps, Games and the b agent.</p></div>
-      </div>
-
-      <h2>Built for a keyboard</h2>
-      <ul class="feat">
-        <li><span class="tag">⌘K</span><span><b>Ask b.</b> Open the b agent from anywhere and tell it what to do.</span></li>
-        <li><span class="tag">⌘L</span><span><b>Lock the wallet.</b> One shortcut when you step away.</span></li>
-        <li><span class="tag">Agents</span><span><b>Add agent account.</b> Give an AI agent its own account in your wallet, from the sidebar.</span></li>
-        <li><span class="tag">Dev</span><span><b>Connect CLI &amp; MCP.</b> Link the <a href="/cli">bwalletx CLI</a> and <a href="/mcp">MCP</a> tools from the sidebar.</span></li>
-      </ul>
-
-      <h2>Install it as an app</h2>
-      <p>Installed, it gets its own window and dock or taskbar icon. Nothing to download from a store.</p>
-      <ol class="steps">
-        <li><b>Chrome or Edge:</b> open desktop.bwalletx.com and click <b>Install app</b> at the top, or the install icon in the address bar.</li>
-        <li><b>Safari on Mac:</b> choose <b>File › Add to Dock</b>.</li>
-      </ol>
-
-      <h2>Your keys stay in your browser</h2>
-      <p>Your keys are kept encrypted in the browser on your computer. desktop.bwalletx.com is a separate site from web.bwalletx.com, so a wallet you already have does not appear by itself: restore it with its recovery phrase. Keep your recovery phrase safe and offline.</p>
-
-      <div class="row">
-        <a class="btn btn-store" href="https://desktop.bwalletx.com/">Open bWalletX Desktop &rarr;</a>
-        <a class="btn btn-store btn-ghost" href="/get">Get the phone apps</a>
-      </div>
-      <p class="small">bWalletX is in beta: test with small amounts. Questions: <a href="mailto:support@bwalletx.com">support@bwalletx.com</a></p>
     </main>
+    <footer class="foot">
+      <div class="wrap foot-in">
+        <a class="brand" href="/"><img src="/logo.svg" alt="" width="27" height="24" /><span>bWallet<span class="gold">X</span></span></a>
+        <p>
+          By The Bitcoin Corporation Ltd. Based on the open-source
+          <a href="https://github.com/yours-org/yours-wallet" rel="noopener">Yours Wallet</a> (MIT); not affiliated with
+          or endorsed by its authors.
+        </p>
+        <p><a href="https://x.com/bWalletX" target="_blank" rel="noopener">@bWalletX on X</a> · <a href="/privacy.html">Privacy policy</a></p>
+      </div>
+    </footer>
+    <script>
+      (function () {
+        var els = document.querySelectorAll('.reveal');
+        if (!('IntersectionObserver' in window)) { els.forEach(function (e) { e.classList.add('in'); }); return; }
+        var io = new IntersectionObserver(function (es) { es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }); }, { rootMargin: '0px 0px -8% 0px' });
+        els.forEach(function (e) { io.observe(e); });
+        setTimeout(function () { els.forEach(function (e) { if (e.getBoundingClientRect().top < innerHeight) e.classList.add('in'); }); }, 50);
+      })();
+    </script>
   </body>
 </html>
