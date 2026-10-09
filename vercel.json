@@ -2,6 +2,18 @@
   "cleanUrls": true,
   "rewrites": [
     {
+      "source": "/api/person/:handle",
+      "destination": "https://www.bit-sign.online/api/public/profile/:handle"
+    },
+    {
+      "source": "/u/:handle",
+      "destination": "/person"
+    },
+    {
+      "source": "/:handle(\\$[A-Za-z0-9_-]{3,30}|%24[A-Za-z0-9_-]{3,30})",
+      "destination": "/person"
+    },
+    {
       "source": "/lock/verify",
       "destination": "/lock/verify.html"
     },

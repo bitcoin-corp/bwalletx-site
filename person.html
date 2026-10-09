@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Send a bMail · bWalletX</title>
+    <meta name="description" content="Everything you can do with a person on bWalletX: send a bMail for a penny, call, pay or tip, and chat. Write your message now; bWalletX sends it." />
+    <meta name="robots" content="noindex" />
+    <meta property="og:type" content="profile" />
+    <meta property="og:site_name" content="bWalletX" />
+    <meta property="og:title" content="Send them a bMail · Penny post 1¢" />
+    <meta property="og:description" content="Write to anyone with a $handle. A bMail costs a penny, lands in their wallet, and can't be spammed. Call, pay or chat from the same page." />
+    <meta property="og:image" content="https://bwalletx.com/og-person-v1.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Send a bMail: Penny post, 1 cent, from bWalletX." />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@bWalletX" />
+    <meta name="twitter:title" content="Send them a bMail · Penny post 1¢" />
+    <meta name="twitter:description" content="Write to anyone with a $handle. A bMail costs a penny and lands in their wallet. Call, pay or chat from the same page." />
+    <meta name="twitter:image" content="https://bwalletx.com/og-person-v1.png" />
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" />
+    <link rel="stylesheet" href="/styles.css" />
+    <style>
+      .person { max-width: 640px; padding-left: 16px; padding-right: 16px; }
+      .person * { min-width: 0; }
+      .who { display: flex; gap: 16px; align-items: center; margin: 8px 0 22px; min-width: 0; }
+      .av { flex: none; width: 76px; height: 76px; border-radius: 50%; background: var(--card-a); border: 2px solid #f5b80055; object-fit: cover; display: grid; place-items: center; font: 700 1.9rem var(--hf); color: var(--gold); overflow: hidden; }
+      .who h1 { margin: 0; font-size: clamp(1.6rem, 6vw, 2.2rem); line-height: 1.15; overflow-wrap: anywhere; }
+      .who .h { color: var(--gold-hi); font: 600 1.05rem var(--hf); overflow-wrap: anywhere; }
+      .who .lvl { display: inline-block; margin-top: 6px; font-size: 0.78rem; color: var(--muted); border: 1px solid #ffffff26; border-radius: 999px; padding: 1px 9px; }
+      .person .card { box-shadow: none; background: linear-gradient(180deg, var(--card-a), var(--card-b)); border: 1px solid var(--edge); border-radius: var(--r); padding: 18px; margin: 14px 0; }
+      .person .card h2 { margin: 0 0 4px; font-size: 1.2rem; display: flex; justify-content: space-between; gap: 10px; align-items: baseline; flex-wrap: wrap; }
+      .price { font: 600 0.9rem var(--bf); color: var(--gold); }
+      .person .card p { margin: 4px 0 0; color: var(--muted); font-size: 0.93rem; line-height: 1.55; }
+      textarea, input.subj { width: 100%; box-sizing: border-box; margin-top: 12px; background: #0b0c0f; color: var(--ink); border: 1px solid #ffffff22; border-radius: 12px; padding: 12px; font: 400 1rem/1.5 var(--bf); }
+      textarea { min-height: 140px; resize: vertical; }
+      textarea:focus, input.subj:focus { outline: 2px solid #f5b80088; outline-offset: 1px; }
+      .opts { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin: 12px 0 4px; }
+      .opt { position: relative; text-align: center; border: 1px solid #ffffff22; border-radius: 12px; padding: 9px 6px; font-size: 0.88rem; cursor: pointer; background: none; color: var(--ink); font-family: inherit; }
+      .opt small { display: block; color: var(--dim); font-size: 0.72rem; }
+      .opt[aria-pressed='true'] { background: var(--gold); color: #1a1300; border-color: var(--gold); font-weight: 700; }
+      .opt[aria-pressed='true'] small { color: #3a2c00; }
+      .opt:disabled { opacity: 0.55; cursor: not-allowed; }
+      .pp-row { display: flex; gap: 10px; flex-wrap: wrap; align-items: center; margin-top: 12px; }
+      .pp-btn { display: inline-flex; align-items: center; justify-content: center; gap: 6px; border-radius: 999px; padding: 11px 18px; font: 600 0.98rem var(--hf); text-decoration: none; border: 0; cursor: pointer; }
+      .pp-btn.gold { background: var(--grad); color: #1a1300; }
+      .pp-btn.ghost { background: none; color: var(--ink); border: 1px solid #ffffff2e; }
+      .pp-btn.full { flex: 1 1 180px; }
+      .pp-note { font-size: 0.85rem; color: var(--muted); margin-top: 10px; min-height: 1.2em; }
+      .grid2 { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 260px), 1fr)); gap: 12px; }
+      .grid2 .card { margin: 0; }
+      .small { color: var(--dim); font-size: 0.82rem; }
+      .miss { text-align: center; padding: 40px 0; }
+      .miss h1 { font-size: clamp(1.6rem, 6vw, 2.2rem); overflow-wrap: anywhere; }
+      [hidden] { display: none !important; }
+    </style>
+  </head>
+  <body>
+    <div class="beta-banner">bWalletX is in <strong>beta</strong>: test with small amounts.</div>
+    <header class="topbar">
+      <div class="wrap topbar-in">
+        <a class="brand" href="/"><img src="/logo.svg" alt="" width="34" height="30" /><span>bWallet<span class="gold">X</span></span></a>
+        <nav aria-label="Pages">
+          <a href="/features">Features</a><a href="/exchange">Exchange</a><a href="/social">Social</a><a href="/agent">Agents</a><a href="/extension">Extension</a><a href="/developers">Developers</a>
+        </nav>
+        <span class="nav-cta"><a class="dl-btn" href="/get">Download</a><a class="web-btn" href="https://web.bwalletx.com" target="_blank" rel="noopener">Web &rarr;</a></span>
+      </div>
+    </header>
+    <script src="/nav.js"></script>
+
+    <main class="ext person" id="main">
+      <p class="small" id="loading">Looking them up&hellip;</p>
+
+      <!-- Unknown handle -->
+      <section class="miss" id="missing" hidden>
+        <h1>No one has <span class="gold" data-h></span> yet</h1>
+        <p class="lede">Claim it in bWalletX: a $handle is your name for payments, bMail, calls and chat.</p>
+        <div class="pp-row" style="justify-content:center">
+          <a class="pp-btn gold" href="/get">Get bWalletX</a>
+          <a class="pp-btn ghost" href="/handles">About $handles</a>
+        </div>
+      </section>
+
+      <!-- The person -->
+      <section id="found" hidden>
+        <div class="who">
+          <div class="av" id="av" aria-hidden="true"></div>
+          <div style="min-width:0">
+            <h1 id="name"></h1>
+            <div class="h" data-h></div>
+            <span class="lvl" id="lvl" hidden></span>
+          </div>
+        </div>
+
+        <div class="card" id="bmail">
+          <h2>Send a bMail <span class="price" id="mailPrice">Penny post 1¢</span></h2>
+          <p>Write now, no wallet needed yet. Your draft stays in this tab only; bWalletX sends it and pays the postage to <span data-h></span>.</p>
+          <input class="subj" id="subj" maxlength="120" placeholder="Subject (optional)" autocomplete="off" />
+          <textarea id="body" maxlength="10000" placeholder="Say hello&hellip;"></textarea>
+          <div class="opts" role="group" aria-label="Delivery">
+            <button type="button" class="opt" data-opt="standard" aria-pressed="true">Standard<small id="stdPrice">1¢</small></button>
+            <button type="button" class="opt" data-opt="signed" disabled title="Coming soon">Signed<small>coming soon</small></button>
+            <button type="button" class="opt" data-opt="pay-to-open" disabled title="Coming soon">Pay to open<small>coming soon</small></button>
+          </div>
+          <div class="pp-row">
+            <button type="button" class="pp-btn gold full" id="send">Send with bWalletX</button>
+          </div>
+          <div class="pp-note" id="sendNote" role="status" aria-live="polite"></div>
+        </div>
+
+        <div class="grid2">
+          <div class="card">
+            <h2>Call <span class="price" id="callPrice">Free</span></h2>
+            <p id="callText">Voice or video, wallet to wallet with bPhone.</p>
+            <div class="pp-row"><a class="pp-btn ghost full" data-open href="https://web.bwalletx.com" target="_blank" rel="noopener">Call in bWalletX</a></div>
+          </div>
+          <div class="card">
+            <h2>Pay or tip</h2>
+            <p>Send BSV, MNEE or a token straight to <span data-h></span>. No middleman, no fee from us.</p>
+            <div class="pp-row"><a class="pp-btn ghost full" data-open href="https://web.bwalletx.com" target="_blank" rel="noopener">Pay in bWalletX</a></div>
+          </div>
+          <div class="card">
+            <h2>Chat</h2>
+            <p>Message <span data-h></span> on bChatX. Your conversation becomes a room you both own.</p>
+            <div class="pp-row"><a class="pp-btn ghost full" id="chat" href="https://bchatx.com" rel="noopener">Open chat</a></div>
+          </div>
+          <div class="card">
+            <h2>bWalletX</h2>
+            <p>One wallet for all of it: bMail, calls, payments and chat.</p>
+            <div class="pp-row">
+              <a class="pp-btn gold full" data-open href="https://web.bwalletx.com" target="_blank" rel="noopener">Open in bWalletX</a>
+              <a class="pp-btn ghost full" href="/download">Get bWalletX</a>
+            </div>
+          </div>
+        </div>
+        <p class="small" id="lvlNote" hidden>Linked sign-ins show how many accounts this person has connected. It is not identity verification.</p>
+      </section>
+    </main>
+
+    <script>
+      (function () {
+        // ── Which handle? /$b0asex, /%24b0asex, /u/b0asex, /u/$b0asex. Case-insensitive.
+        var path = location.pathname;
+        try { path = decodeURIComponent(path); } catch (e) {}
+        var m = path.match(/^\/(?:u\/)?\$?([^\/]+)\/?$/);
+        var handle = m ? m[1].replace(/^\$/, '').toLowerCase() : '';
+        var VALID = /^[a-z0-9][a-z0-9_-]{2,29}$/;
+        var $ = function (id) { return document.getElementById(id); };
+
+        function setHandle(h) {
+          document.querySelectorAll('[data-h]').forEach(function (el) { el.textContent = '$' + h; });
+          document.title = 'Send $' + h + ' a bMail · bWalletX';
+          $('chat').href = 'https://bchatx.com/$' + encodeURIComponent(h);
+        }
+        function show(id) { $('loading').hidden = true; $(id).hidden = false; }
+        function usd(n) { return n < 1 ? Math.round(n * 100 * 100) / 100 + '¢' : '$' + n.toFixed(2); }
+
+        setHandle(handle || 'them');
+        if (!VALID.test(handle)) return show('missing');
+
+        // ── Draft: sessionStorage only (this tab, this device). ⚠ Never the URL.
+        var KEY = 'bwx-bmail-draft:' + handle;
+        function save() {
+          try { sessionStorage.setItem(KEY, JSON.stringify({ s: $('subj').value, b: $('body').value })); } catch (e) {}
+        }
+        try {
+          var d = JSON.parse(sessionStorage.getItem(KEY) || 'null');
+          if (d) { $('subj').value = d.s || ''; $('body').value = d.b || ''; }
+        } catch (e) {}
+        $('subj').addEventListener('input', save);
+        $('body').addEventListener('input', save);
+
+        // ── Send: hand off to bWalletX. There is no compose deep link in the wallet yet, so we copy the
+        // draft and open the wallet; the draft stays here until this tab closes. No payment happens on this site.
+        $('send').addEventListener('click', function () {
+          var subj = $('subj').value.trim(), body = $('body').value.trim();
+          if (!body) { $('sendNote').textContent = 'Write something first.'; $('body').focus(); return; }
+          save();
+          var text = (subj ? subj + '\n\n' : '') + body;
+          var done = function (copied) {
+            $('sendNote').textContent = (copied ? 'Copied. ' : '') + 'In bWalletX open bMail, write to $' + handle + ' and paste. Your draft stays on this page until you close the tab.';
+            window.open('https://web.bwalletx.com', '_blank', 'noopener');
+          };
+          if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(text).then(function () { done(true); }, function () { done(false); });
+          else done(false);
+        });
+
+        // ── Profile: public fields only, via /api/person (→ bit-sign /api/public/profile).
+        fetch('/api/person/' + encodeURIComponent(handle), { headers: { Accept: 'application/json' } })
+          .then(function (r) {
+            var ct = r.headers.get('content-type') || '';
+            if (ct.indexOf('application/json') < 0) return { status: 0 }; // profile service not reachable: show the basic page
+            return r.json().then(function (j) { return { status: r.status, j: j }; });
+          })
+          .catch(function () { return { status: 0 }; })
+          .then(function (res) {
+            if (res.status === 404) return show('missing');
+            var p = res.status === 200 ? res.j : { handle: handle };
+            var h = (p.handle || handle).toLowerCase();
+            if (h !== handle) { history.replaceState(null, '', '/$' + h); }
+            setHandle(h);
+            $('name').textContent = p.displayName || '$' + h;
+            var av = $('av');
+            if (p.avatarUrl && /^https:\/\//.test(p.avatarUrl)) {
+              var img = document.createElement('img');
+              img.src = p.avatarUrl; img.alt = ''; img.width = 76; img.height = 76;
+              img.style.cssText = 'width:100%;height:100%;object-fit:cover';
+              img.onerror = function () { av.textContent = h.charAt(0).toUpperCase(); };
+              av.appendChild(img);
+            } else av.textContent = h.charAt(0).toUpperCase();
+            if (p.identityStrength > 0) {
+              $('lvl').hidden = false; $('lvlNote').hidden = false;
+              $('lvl').textContent = p.identityStrength + ' linked sign-in' + (p.identityStrength === 1 ? '' : 's');
+            }
+            var mail = typeof p.mailUsd === 'number' && p.mailUsd > 0 ? p.mailUsd : 0.01;
+            $('mailPrice').textContent = mail === 0.01 ? 'Penny post 1¢' : usd(mail) + ' to reach';
+            $('stdPrice').textContent = usd(mail);
+            if (p.call) {
+              var unit = p.call.unit === 'usd' ? '$' + p.call.amount : p.call.amount + ' ' + p.call.unit;
+              $('callPrice').textContent = unit + (p.call.per === 'call' ? ' per call' : ' / ' + p.call.per);
+              $('callText').textContent = 'bPhone: you see the price before it rings and pay as you talk. Hang up any time.';
+            }
+            show('found');
+          });
+      })();
+    </script>
+  </body>
+</html>
