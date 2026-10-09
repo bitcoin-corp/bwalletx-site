@@ -3128,7 +3128,7 @@ Stuck at 2am and nobody's around? Type `/b` followed by your question and the $b
 
 ## How to join
 
-- Open [bitcoinchat.online/room/LOUNGE](https://www.bchatx.com/room/LOUNGE).
+- Open [bchatx.com/room/LOUNGE](https://www.bchatx.com/room/LOUNGE).
 
 - Sign in with bWalletX, or with X or Google.
 
@@ -5531,7 +5531,7 @@ We also fixed a rough edge. If you weren't signed in and opened an open room lik
 
 The bWallet Lounge is the room where everyone who uses the wallet can talk to each other and to us. Every account is now in it by default. If you leave, you stay left; we don't add you back.
 
-You can get there at [bitcoinchat.online/room/LOUNGE](https://www.bchatx.com/room/LOUNGE), or from the b in the middle of the bwalletx.com navbar.
+You can get there at [bchatx.com/room/LOUNGE](https://www.bchatx.com/room/LOUNGE), or from the b in the middle of the bwalletx.com navbar.
 
 — Richard
 
