@@ -40,6 +40,11 @@
   ],
   "redirects": [
     {
+      "source": "/u/bchat/:handle",
+      "destination": "https://www.bchatx.com/u/:handle",
+      "permanent": false
+    },
+    {
       "source": "/bMail",
       "destination": "/bmail",
       "statusCode": 301
