@@ -40,6 +40,11 @@
   ],
   "redirects": [
     {
+      "source": "/space",
+      "destination": "/live",
+      "permanent": false
+    },
+    {
       "source": "/bMail",
       "destination": "/bmail",
       "statusCode": 301
