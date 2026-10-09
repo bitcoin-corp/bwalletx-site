@@ -2773,6 +2773,85 @@ bWalletX is in beta: test with small amounts. Nothing here is investment advice.
 
 ---
 
+Source: https://bwalletx.com/bmail
+
+Coming in 5.1.90
+
+# bMail
+
+Email where every letter carries a stamp. Penny post: 1¢ to reach anyone.
+
+1¢Penny post
+
+3¢Priority
+
+↩Reply paid
+
+## How it works
+
+1 · WRITE
+
+### Write to a $handle
+
+Address your letter to anyone’s $handle, the same name they use for payments and chat.
+
+2 · STAMP
+
+### Add a stamp
+
+1¢ Penny post, 3¢ Priority, or Reply paid so they can answer you for free. You see the full price before anything is sent.
+
+3 · DELIVERED
+
+### It arrives sealed
+
+Only they can read it. The biggest stamps rise to the top of their inbox. Friends are always free and always on top.
+
+## Why stamps
+
+- Stamps stop spam. Sending a million letters costs real money, so nobody does it. Sending one costs a penny.
+
+- You get paid for your attention. The stamp goes to you, the person reading, not to us.
+
+- Requests holds the rest. Unstamped mail from strangers and token airdrops wait quietly in Requests, without notifications. Look when you like: some of them turn out to matter.
+
+Your price, your rules. Everyone starts at the Penny post, 1¢. You can raise your price to reach you, and mail below it goes to Requests.
+
+## Delivery options
+
+OptionWhat it does
+
+StandardYour letter, sealed and stamped, delivered to their mailbox.
+
+Signed delivery coming soonProof of who opened it and when, signed by their wallet when they open it.
+
+Pay to open coming soonThe stamp is only theirs if they open it. If they don’t, it comes back to you.
+
+## Contracts coming soon
+
+Signed, sealed, delivered, accepted. Ask b to draft an agreement, sign it with your finger, and send it. They accept in one tap, and both of you keep the signed copy in your wallet.
+
+## Your public mailbox
+
+Every bWalletX user gets a page at bwalletx.com/$you, for example [bwalletx.com/$b0asex](https://bwalletx.com/$b0asex). People without the app can find you there and write to you.
+
+## Questions
+
+Who gets the stamp?
+The person you write to. Payment goes wallet to wallet, and bMail takes no cut.
+
+Do I pay to write to friends?
+No. Friends are free and always on top of your inbox.
+
+When can I use it?
+bMail is coming in bWalletX 5.1.90. Get the app now and it will appear when you update.
+
+[Get bWalletX](https://bwalletx.com/get)[Open the web wallet](https://web.bwalletx.com)
+
+bWalletX is in beta: test with small amounts. Questions: [support@bwalletx.com](mailto:support@bwalletx.com)
+
+---
+
 Source: https://bwalletx.com/chat
 
 # Coordinate on BSV. Talk where the money is.

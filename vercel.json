@@ -40,6 +40,26 @@
   ],
   "redirects": [
     {
+      "source": "/bMail",
+      "destination": "/bmail",
+      "statusCode": 301
+    },
+    {
+      "source": "/BMAIL",
+      "destination": "/bmail",
+      "statusCode": 301
+    },
+    {
+      "source": "/BMail",
+      "destination": "/bmail",
+      "statusCode": 301
+    },
+    {
+      "source": "/Bmail",
+      "destination": "/bmail",
+      "statusCode": 301
+    },
+    {
       "source": "/bPhone",
       "destination": "/bphone",
       "statusCode": 301
