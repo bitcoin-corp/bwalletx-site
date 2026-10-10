@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Page not found · bWalletX</title>
+    <meta name="robots" content="noindex" />
+    <meta name="description" content="This page isn't here. Head back to bWalletX." />
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="stylesheet" href="/styles.css" />
+    <style>
+      .nf { min-height: 70vh; display: grid; place-items: center; text-align: center; padding: 150px 16px 60px; }
+      .nf-in { max-width: 560px; display: grid; gap: 14px; justify-items: center; }
+      .nf canvas { width: min(220px, 60vw); height: auto; aspect-ratio: 1; border-radius: 50%; box-shadow: 0 0 60px rgba(245, 184, 0, 0.25); }
+      .nf .code { font: 700 0.85rem var(--hf); letter-spacing: 0.18em; color: var(--gold); }
+      .nf h1 { margin: 0; font-size: clamp(2rem, 6vw, 3rem); }
+      .nf p { margin: 0; color: var(--muted); }
+      .nf p b { color: var(--ink); word-break: break-all; }
+      .nf-links { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-top: 10px; }
+      .nf-links a { border: 1px solid #ffffff22; border-radius: 999px; padding: 8px 16px; color: var(--ink); text-decoration: none; font: 600 0.95rem var(--hf); }
+      .nf-links a:hover, .nf-links a:focus-visible { border-color: var(--gold); color: var(--gold-hi); }
+      .nf-links a.main { background: var(--gold); color: #000; border-color: var(--gold); }
+    </style>
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="wrap topbar-in">
+        <a class="brand" href="/"><img src="/logo.svg" alt="" width="34" height="30" /><span>bWallet<span class="gold">X</span></span></a>
+        <nav aria-label="Pages">
+          <a href="/features">Features</a><a href="/exchange">Exchange</a><a href="/social">Social</a><a href="/agent">Agents</a><a href="/extension">Extension</a><a href="/developers">Developers</a>
+        </nav>
+        <span class="nav-cta"><a class="dl-btn" href="/get">Download</a><a class="web-btn" href="https://web.bwalletx.com" target="_blank" rel="noopener">Web &rarr;</a></span>
+      </div>
+    </header>
+    <script src="/nav.js"></script>
+    <main class="nf">
+      <div class="nf-in">
+        <canvas id="nf-art" width="440" height="440" role="img" aria-label="A gold bAvatar drawn from the missing address"></canvas>
+        <div class="code">404</div>
+        <h1>This page isn't here.</h1>
+        <p>We drew <b id="nf-path">this address</b> a <a href="/bavatars">bAvatar</a> anyway. Every name gets one, even the lost ones.</p>
+        <div class="nf-links">
+          <a class="main" href="/">Home</a>
+          <a href="/get">Download</a>
+          <a href="/blog">Blog</a>
+          <a href="https://www.bchatx.com" rel="noopener">bChatX</a>
+        </div>
+      </div>
+    </main>
+    <script src="/bavatars.js"></script>
+    <script>
+      (function () {
+        var path = location.pathname.replace(/^\/+|\/+$/g, '') || 'lost';
+        try { path = decodeURIComponent(path); } catch (e) {}
+        document.getElementById('nf-path').textContent = '/' + path;
+        var cv = document.getElementById('nf-art');
+        window.bAvatars.draw(cv.getContext('2d'), cv.width, 'kintsugi', path.toLowerCase());
+      })();
+    </script>
+  </body>
+</html>

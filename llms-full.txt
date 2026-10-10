@@ -1,6 +1,6 @@
 # bWalletX: full site text
 
-Generated 2026-10-09 from https://bwalletx.com. Source pages are linked above each section.
+Generated 2026-10-10 from https://bwalletx.com. Source pages are linked above each section.
 
 ---
 
@@ -446,6 +446,105 @@ bMoviesSettings only at first
 
 ---
 
+Source: https://bwalletx.com/desktop
+
+New bWalletX Desktop · free in your browser
+
+# Your whole Bitcoin life. One window.
+
+Money, bMail, chat rooms, Spaces, bApps and Agent b, side by side on a big screen. No app store, no download. Open it and it’s your wallet.
+
+[Open bWalletX Desktop →](https://desktop.bwalletx.com/)
+[Install it as an app](#install)
+
+Chrome, Edge and Safari · your keys stay encrypted in your browser
+
+desktop.bwalletx.com
+
+WalletbMailChatSpacesFeedbAppsAgent b
+
+Money
+
+## Send, receive and mint, at full size.
+
+Your balance, the BSV price chart and your full history on one screen. Send, Receive and Mint are a click away, the same wallet you carry on your phone.
+
+- Wallet, NFTs, Friends, Tickets, Credits, Exchange and Lock BSV in the sidebar
+- Show amounts in USD or GBP from the top bar
+
+desktop.bwalletx.com
+
+bMail
+
+## Mail that pays its own postage.
+
+Every tokenised letter in one inbox. Sort by Most paid, see what it cost to reach you, and keep spam out because sending costs something.
+
+desktop.bwalletx.com
+
+Chat & Spaces
+
+## Your rooms, right next to your money.
+
+Chatrooms, DMs and calls in one panel, with the room’s members beside the conversation. Token rooms and live Spaces sit in the same sidebar under Talk.
+
+desktop.bwalletx.com
+
+Feed & bApps
+
+## The open BSV feed, and apps that run inside your wallet.
+
+Feed pulls posts from bChat and other BSV micro-blogs into one timeline, with Tip and Lock on every post. bApps and Games open inside the wallet, signed in, paying from the same balance.
+
+[See the bApps →](https://bwalletx.com/bapps)
+
+desktop.bwalletx.com
+
+Agent b · ⌘K
+
+## Press ⌘K. Tell b what to do.
+
+The Ask b bar sits at the top of every screen. Press ⌘K from anywhere, say what you want in plain words, and b gets it done in your wallet. Press ⌘L to lock the wallet when you step away.
+
+desktop.bwalletx.com
+
+Agents & developers
+
+## Give your AI agent its own account.
+
+From the sidebar, Add agent account gives an AI agent its own account inside your wallet. Connect CLI & MCP links the [bwalletx CLI](https://bwalletx.com/cli) and the [MCP server](https://bwalletx.com/mcp), so tools like Claude can use the wallet you control.
+
+- [bwalletx CLI](https://bwalletx.com/cli) for scripts and terminals
+- [MCP server](https://bwalletx.com/mcp) for AI assistants
+
+desktop.bwalletx.com
+
+INSTALL · CHROME & EDGE
+### Install app
+
+Open desktop.bwalletx.com and click Install app at the top, or the install icon in the address bar. It gets its own window and a dock or taskbar icon.
+
+INSTALL · SAFARI ON MAC
+### File › Add to Dock
+
+In Safari, choose File › Add to Dock. bWalletX Desktop opens like any other Mac app. Nothing to download from a store.
+
+YOUR KEYS
+### Encrypted in your browser
+
+Your keys are kept encrypted in the browser on your computer. Desktop is a separate site from web.bwalletx.com, so restore an existing wallet with its recovery phrase.
+
+## The wallet looks better big.
+
+Open it now. It takes a minute to create a wallet, or restore yours with its recovery phrase.
+
+[Open bWalletX Desktop →](https://desktop.bwalletx.com/)
+[Get the phone apps](https://bwalletx.com/get)
+
+bWalletX is in beta: test with small amounts. Questions: [support@bwalletx.com](mailto:support@bwalletx.com)
+
+---
+
 Source: https://bwalletx.com/extension
 
 # bWalletX for Chrome and Brave
@@ -791,7 +890,10 @@ The full bWalletX on every device. Your keys stay on your device.
 [AndroidAPK download · v5.1.89 beta](https://bwalletx.com/android)
 [ChromeExtension · v5.1.89 beta](https://bwalletx.com/extension)
 [WebOpen in your browser](https://web.bwalletx.com)
+[DesktopIn your browser, or install it as an app](https://desktop.bwalletx.com)
 [iPhoneWeb app · install from Safari, no App Store](https://bwalletx.com/iphone)
+
+New to Desktop? [See what bWalletX Desktop does →](https://bwalletx.com/desktop)
 
 ## bWallet in the app stores
 
@@ -1815,6 +1917,62 @@ Nothing to install. Open the web wallet, restore with your 12 words or create a 
 The web wallet is in beta: test with small amounts. For daily use we recommend [the app or the browser extension](https://bwalletx.com/get), which keep your wallet on your own device rather than in a browser tab.
 
 Questions: [support@bwalletx.com](mailto:support@bwalletx.com)
+
+---
+
+Source: https://bwalletx.com/bavatars
+
+# Every name gets a bAvatar.
+
+A bAvatar is a picture drawn from your Bitcoin name. The same name always gets the same picture, in any app that looks it up, so $you@bwalletx.com looks like you before you upload anything.
+
+$@bwalletx.com
+
+## Pick your style
+
+Tap a style to make it yours. Each one is shown at full size, then at 40px and 24px, the sizes it appears at in chat lists and replies.
+
+### Your bAvatar
+
+Choosing a style is just a preview for now. It's coming to bWalletX: you'll pick it in Settings, and everyone who sees your name will see it.
+
+## The QR coin
+
+Your bAvatar as a real QR code in gold dots, with the b mark in the middle. It uses the highest error-correction level, so up to about 30% of the code can be covered by the mark and it still scans. Point a phone camera at it.
+
+It opens ``
+
+## Bloom × Deco × Kintsugi
+
+One avatar that mixes three favourites, then two ways to make it scannable. The art QR works in any phone camera. The code ring leaves the art untouched and stores the name in a gold bezel for the bWalletX scanner.
+
+The avatarBloom light, a deco fan and gold seams, all drawn from the name.
+
+Art QR · any cameraThe same art seen through a real QR grid. Scan it with your phone camera.
+
+Code ring · bWalletX scannerThree gold tracks hold the name. This page reads the pixels back to check it.
+
+## How it works
+
+### Same name, same picture
+
+Every style is drawn from the name itself. Nothing is stored, so any app can draw it, and it only changes if the name does.
+
+### Upload still wins
+
+Your own photo always comes first. The bAvatar is the default and the fallback, never forced.
+
+### Open to other BSV apps
+
+Planned: a public image link for every name and a small MIT package, so any BSV app can show bAvatars.
+
+### Your name
+
+Get a $name@bwalletx.com with bWalletX: it's your paymail, your handle and now your picture. See [Handles](https://bwalletx.com/handles).
+
+[Get bWalletX](https://bwalletx.com/get)
+
+bWalletX is in beta: test with small amounts. Questions: [support@bwalletx.com](mailto:support@bwalletx.com)
 
 ---
 
@@ -3112,7 +3270,7 @@ Source: https://bwalletx.com/lounge
 
 The Lounge is where bWallet and bWalletX people talk. Ask a question, share an idea, tell us what's broken. The team is in there too.
 
-[Open the Lounge on bChat](https://www.bchatx.com/room/LOUNGE)
+[Open the Lounge on bChatX](https://www.bchatx.com/room/LOUNGE)
 
 ## Already in your wallet
 
