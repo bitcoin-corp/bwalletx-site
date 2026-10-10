@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>bAvatars: every name gets a picture</title>
+    <link rel="canonical" href="https://bwalletx.com/bavatars" />
+    <meta name="description" content="bAvatars are drawn from your Bitcoin name, so the same name always gets the same picture in any app. Eight gold styles, a scannable QR coin, and your own photo still wins." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://bwalletx.com/bavatars" />
+    <meta property="og:site_name" content="bWalletX" />
+    <meta property="og:title" content="Every name gets a bAvatar" />
+    <meta property="og:description" content="bAvatars are drawn from your Bitcoin name, so the same name always gets the same picture in any app. Eight gold styles, a scannable QR coin, and your own photo still wins." />
+    <meta property="og:image" content="https://bwalletx.com/og-bavatars-v1.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="A grid of gold bAvatars drawn from Bitcoin names: Kintsugi, Bloom, Deco Fan, Sigil and a QR coin." />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@bWalletX" />
+    <meta name="twitter:title" content="Every name gets a bAvatar" />
+    <meta name="twitter:description" content="bAvatars are drawn from your Bitcoin name, so the same name always gets the same picture in any app. Eight gold styles, a scannable QR coin, and your own photo still wins." />
+    <meta name="twitter:image" content="https://bwalletx.com/og-bavatars-v1.png" />
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="stylesheet" href="/styles.css" />
+    <style>
+      .ext h1 { font-size: clamp(2.2rem, 6vw, 3.4rem); margin: 18px 0 10px; }
+      .ext h2 { margin: 48px 0 8px; font-size: 1.5rem; }
+      .ext p, .ext li { line-height: 1.7; }
+      .ext .small { color: #8a8a86; font-size: 0.85rem; }
+      .ba-controls { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; margin: 22px 0; padding: 14px; background: #101114; border: 1px solid #ffffff12; border-radius: 16px; }
+      .ba-field { display: flex; align-items: center; flex: 1 1 280px; min-width: 0; border: 1px solid #ffffff20; border-radius: 12px; background: #000; }
+      .ba-field:focus-within { border-color: var(--gold); }
+      .ba-field span { color: var(--gold); padding-left: 12px; font: 600 1.1rem var(--hf); }
+      .ba-field input { flex: 1; min-width: 0; background: transparent; border: 0; color: var(--ink); font: 500 1.1rem var(--hf); padding: 12px 6px; outline: none; }
+      .ba-field small { color: var(--muted); padding-right: 12px; font-size: 0.85rem; }
+      .ba-chips { display: flex; flex-wrap: wrap; gap: 8px; }
+      .ba-chip { font: 500 0.85rem var(--hf); background: transparent; color: var(--muted); border: 1px solid #ffffff20; border-radius: 999px; padding: 6px 12px; cursor: pointer; }
+      .ba-chip:hover, .ba-chip:focus-visible, .ba-chip[aria-pressed="true"] { color: var(--ink); border-color: var(--gold); outline: none; }
+      .ba-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 220px), 1fr)); gap: 14px; margin: 18px 0; }
+      .ba-card { position: relative; display: grid; gap: 10px; align-content: start; background: #101114; border: 1px solid #ffffff12; border-radius: 16px; padding: 16px; color: inherit; text-align: left; font: inherit; cursor: pointer; }
+      .ba-card:hover { border-color: #F5B80066; }
+      .ba-card[aria-pressed="true"] { border-color: var(--gold); box-shadow: 0 0 0 1px var(--gold), 0 0 40px rgba(245, 184, 0, 0.18); }
+      .ba-card canvas { width: 100%; aspect-ratio: 1; border-radius: 50%; display: block; }
+      .ba-sizes { display: flex; align-items: center; gap: 10px; }
+      .ba-sizes canvas { width: 40px; height: 40px; aspect-ratio: auto; }
+      .ba-sizes canvas.s { width: 24px; height: 24px; }
+      .ba-card h3 { margin: 0; font-size: 1.1rem; }
+      .ba-card p { margin: 0; color: #a7adb8; font-size: 0.9rem; line-height: 1.5; }
+      .ba-tag { font: 700 0.72rem var(--hf); padding: 2px 9px; border-radius: 999px; background: var(--gold); color: #000; justify-self: start; }
+      .ba-tag.alt { background: transparent; color: var(--gold); border: 1px solid var(--gold); }
+      .ba-fav { position: absolute; top: 12px; right: 12px; font: 700 0.7rem var(--hf); color: var(--gold); letter-spacing: 0.06em; text-transform: uppercase; }
+      .ba-pick { display: grid; grid-template-columns: 140px minmax(0, 1fr); gap: 20px; align-items: center; background: #101114; border: 1px solid #F5B80055; border-radius: 18px; padding: 18px; margin: 18px 0; }
+      .ba-pick canvas { width: 140px; height: 140px; border-radius: 50%; display: block; }
+      .ba-pick h3 { margin: 0 0 4px; font-size: 1.2rem; }
+      .ba-pick p { margin: 0; color: #a7adb8; }
+      .ba-panel { display: grid; grid-template-columns: minmax(0, 300px) minmax(0, 1fr); gap: 24px; align-items: center; background: #101114; border: 1px solid #ffffff12; border-radius: 18px; padding: 20px; margin: 18px 0; }
+      .ba-panel canvas { width: 100%; max-width: 300px; aspect-ratio: 1; border-radius: 26px; display: block; }
+      .ba-panel code { color: var(--gold); word-break: break-all; }
+      .ba-three { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr)); gap: 18px; margin: 18px 0; }
+      .ba-three figure { margin: 0; display: grid; gap: 10px; align-content: start; }
+      .ba-three canvas { width: 100%; aspect-ratio: 1; border-radius: 50%; display: block; }
+      .ba-three canvas.sq { border-radius: 18px; }
+      .ba-three figcaption { color: #a7adb8; font-size: 0.92rem; line-height: 1.5; }
+      .ba-three figcaption b { display: block; color: var(--ink); }
+      .ba-decoded { display: block; margin-top: 4px; color: var(--gold); font-size: 0.85rem; }
+      .ba-decoded.bad { color: #ff7a6b; }
+      .ba-how { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 230px), 1fr)); gap: 14px; margin: 18px 0; }
+      .ba-how div { background: #101114; border: 1px solid #ffffff12; border-radius: 16px; padding: 14px 16px; }
+      .ba-how h3 { margin: 0 0 4px; font-size: 1.05rem; }
+      .ba-how p { margin: 0; color: #a7adb8; font-size: 0.92rem; line-height: 1.5; }
+      @media (max-width: 640px) { .ba-panel, .ba-pick { grid-template-columns: 1fr; } .ba-pick canvas { width: 120px; height: 120px; } }
+    </style>
+  </head>
+  <body>
+    <div class="beta-banner">bWalletX is in <strong>beta</strong>: test with small amounts.</div>
+    <header class="topbar">
+      <div class="wrap topbar-in">
+        <a class="brand" href="/"><img src="/logo.svg" alt="" width="34" height="30" /><span>bWallet<span class="gold">X</span></span></a>
+        <nav aria-label="Pages">
+          <a href="/features">Features</a><a href="/exchange">Exchange</a><a href="/social">Social</a><a href="/agent">Agents</a><a href="/extension">Extension</a><a href="/developers">Developers</a>
+        </nav>
+        <span class="nav-cta"><a class="dl-btn" href="/get">Download</a><a class="web-btn" href="https://web.bwalletx.com" target="_blank" rel="noopener">Web &rarr;</a></span>
+      </div>
+    </header>
+    <script src="/nav.js"></script>
+    <main class="ext">
+      <h1>Every name gets a <span class="gold">bAvatar</span>.</h1>
+      <p class="lede">A bAvatar is a picture drawn from your Bitcoin name. The same name always gets the same picture, in any app that looks it up, so $you@bwalletx.com looks like you before you upload anything.</p>
+
+      <div class="ba-controls">
+        <label class="ba-field" for="ba-name"><span>$</span><input id="ba-name" value="b0asex" autocomplete="off" spellcheck="false" maxlength="40" aria-label="Bitcoin name" /><small>@bwalletx.com</small></label>
+        <div class="ba-chips" id="ba-samples" aria-label="Try a name"></div>
+      </div>
+
+      <h2>Pick your style</h2>
+      <p>Tap a style to make it yours. Each one is shown at full size, then at 40px and 24px, the sizes it appears at in chat lists and replies.</p>
+      <div class="ba-pick" aria-live="polite">
+        <canvas id="ba-mine" width="280" height="280" role="img" aria-label="Your chosen bAvatar"></canvas>
+        <div>
+          <h3 id="ba-mine-title">Your bAvatar</h3>
+          <p>Choosing a style is just a preview for now. It's coming to bWalletX: you'll pick it in Settings, and everyone who sees your name will see it.</p>
+        </div>
+      </div>
+      <section class="ba-grid" id="ba-grid" aria-label="bAvatar styles"></section>
+
+      <h2>The QR coin</h2>
+      <div class="ba-panel">
+        <canvas id="ba-qr" width="640" height="640" role="img" aria-label="Scannable bAvatar QR coin"></canvas>
+        <div>
+          <p>Your bAvatar as a real QR code in gold dots, with the b mark in the middle. It uses the highest error-correction level, so up to about 30% of the code can be covered by the mark and it still scans. Point a phone camera at it.</p>
+          <p>It opens <code id="ba-qr-url"></code></p>
+        </div>
+      </div>
+
+      <h2>Bloom &times; Deco &times; Kintsugi</h2>
+      <p>One avatar that mixes three favourites, then two ways to make it scannable. The art QR works in any phone camera. The code ring leaves the art untouched and stores the name in a gold bezel for the bWalletX scanner.</p>
+      <div class="ba-three">
+        <figure><canvas id="ba-combo" width="640" height="640" role="img" aria-label="Combined bAvatar"></canvas>
+          <figcaption><b>The avatar</b>Bloom light, a deco fan and gold seams, all drawn from the name.</figcaption></figure>
+        <figure><canvas id="ba-artqr" class="sq" width="720" height="720" role="img" aria-label="Art QR bAvatar"></canvas>
+          <figcaption><b>Art QR &middot; any camera</b>The same art seen through a real QR grid. Scan it with your phone camera.</figcaption></figure>
+        <figure><canvas id="ba-ring" width="640" height="640" role="img" aria-label="Code ring bAvatar"></canvas>
+          <figcaption><b>Code ring &middot; bWalletX scanner</b>Three gold tracks hold the name. This page reads the pixels back to check it.<span class="ba-decoded" id="ba-decoded"></span></figcaption></figure>
+      </div>
+
+      <h2>How it works</h2>
+      <div class="ba-how">
+        <div><h3>Same name, same picture</h3><p>Every style is drawn from the name itself. Nothing is stored, so any app can draw it, and it only changes if the name does.</p></div>
+        <div><h3>Upload still wins</h3><p>Your own photo always comes first. The bAvatar is the default and the fallback, never forced.</p></div>
+        <div><h3>Open to other BSV apps</h3><p>Planned: a public image link for every name and a small MIT package, so any BSV app can show bAvatars.</p></div>
+        <div><h3>Your name</h3><p>Get a $name@bwalletx.com with bWalletX: it's your paymail, your handle and now your picture. See <a href="/handles">Handles</a>.</p></div>
+      </div>
+
+      <div class="row" style="display:flex;gap:12px;flex-wrap:wrap;margin:26px 0"><a class="btn btn-store" href="/get">Get bWalletX</a></div>
+      <p class="small">bWalletX is in beta: test with small amounts. Questions: <a href="mailto:support@bwalletx.com">support@bwalletx.com</a></p>
+    </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcode-generator/1.4.4/qrcode.min.js"></script>
+    <script src="/bavatars.js"></script>
+    <script>
+      (function () {
+        var B = window.bAvatars;
+        var SAMPLES = ['b0asex', 'bwalletx', 'satchmo', 'peyton', 'bswan', 'appdaddy', 'metabails'];
+        var FAVS = ['bloom', 'deco', 'kintsugi', 'sigil'];
+        // Favourites first, then the rest.
+        var styles = FAVS.map(function (id) { return B.STYLES.find(function (s) { return s.id === id; }); })
+          .concat(B.STYLES.filter(function (s) { return FAVS.indexOf(s.id) < 0; }));
+        var input = document.getElementById('ba-name');
+        var chosen = 'bloom';
+        try { var saved = localStorage.getItem('bavatar-style'); if (saved && B.STYLES.some(function (s) { return s.id === saved; })) chosen = saved; } catch (e) {}
+
+        var grid = document.getElementById('ba-grid');
+        var cards = styles.map(function (st) {
+          var el = document.createElement('button');
+          el.type = 'button'; el.className = 'ba-card';
+          el.innerHTML = '<canvas width="440" height="440"></canvas><div class="ba-sizes"><canvas width="80" height="80"></canvas><canvas class="s" width="48" height="48"></canvas><span class="ba-tag' + (st.alt ? ' alt' : '') + '"></span></div><h3></h3><p></p>' + (FAVS.indexOf(st.id) >= 0 ? '<span class="ba-fav">Favourite</span>' : '');
+          el.querySelector('h3').textContent = st.name;
+          el.querySelector('p').textContent = st.note;
+          el.querySelector('.ba-tag').textContent = st.tag;
+          el.addEventListener('click', function () {
+            chosen = st.id;
+            try { localStorage.setItem('bavatar-style', chosen); } catch (e) {}
+            render();
+          });
+          grid.appendChild(el);
+          return { st: st, el: el, canvases: el.querySelectorAll('canvas') };
+        });
+
+        var samples = document.getElementById('ba-samples');
+        SAMPLES.forEach(function (s) {
+          var b = document.createElement('button'); b.type = 'button'; b.className = 'ba-chip'; b.textContent = '$' + s;
+          b.addEventListener('click', function () { input.value = s; render(); });
+          samples.appendChild(b);
+        });
+
+        function render() {
+          var name = B.clean(input.value);
+          cards.forEach(function (c) {
+            c.el.setAttribute('aria-pressed', String(c.st.id === chosen));
+            c.el.setAttribute('aria-label', c.st.name + ' bAvatar for $' + name);
+            c.canvases.forEach(function (cv) { B.draw(cv.getContext('2d'), cv.width, c.st.id, name); });
+          });
+          var mine = document.getElementById('ba-mine');
+          B.draw(mine.getContext('2d'), mine.width, chosen, name);
+          var st = B.STYLES.find(function (s) { return s.id === chosen; });
+          document.getElementById('ba-mine-title').textContent = '$' + name + '@bwalletx.com in ' + st.name;
+          var qr = document.getElementById('ba-qr');
+          document.getElementById('ba-qr-url').textContent = B.drawQR(qr.getContext('2d'), qr.width, name, { quiet: 3 });
+          var c1 = document.getElementById('ba-combo'), x1 = c1.getContext('2d');
+          x1.clearRect(0, 0, c1.width, c1.height); B.drawCombo(x1, c1.width, name);
+          var c2 = document.getElementById('ba-artqr'); B.drawArtQR(c2.getContext('2d'), c2.width, name);
+          var c3 = document.getElementById('ba-ring'), x3 = c3.getContext('2d'); B.drawRing(x3, c3.width, name);
+          var got = B.readRing(x3, c3.width), want = name.slice(0, B.MAXLEN), out = document.getElementById('ba-decoded');
+          out.classList.toggle('bad', got !== want);
+          out.textContent = got === want ? 'Read back: $' + got + ' ✓' : 'Read back failed' + (name.length > B.MAXLEN ? ' (names over 20 characters are cut)' : '');
+        }
+        input.addEventListener('input', render);
+        render();
+        if (document.fonts && document.fonts.ready) document.fonts.ready.then(render);
+      })();
+    </script>
+  </body>
+</html>

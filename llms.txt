@@ -27,6 +27,7 @@ Full text of every page below: https://bwalletx.com/llms-full.txt
 - [bPositive](https://bwalletx.com/bpositive): Sponsor someone’s journey in bWalletX: monthly support from pots, milestone pledges confirmed by witnesses, thank-you NFTs. Gifts only, 18+, 0% fee. Coming.
 - [bSpaces](https://bwalletx.com/bspaces): Live audio and video Spaces in token rooms in bWalletX: a stage, raise hand, token-gated entry and full screen. Live in bChat and, since 5.1.85, in bWalletX.
 - [bWeb: your web on bitcoin](https://bwalletx.com/bweb): bWeb (coming) is your own set of bApps inside bWalletX: make each app yours for free, ask b for small changes, or have b build your own version. You pay in small amounts from your wallet.
+- [bWalletX Desktop](https://bwalletx.com/desktop): bWalletX Desktop: your whole wallet on a big screen at desktop.bwalletx.com. Money, bMail, chat, Spaces, bApps and Agent b side by side. Install it as an app from Chrome, Edge or Safari.
 - [Just b. Live simply.](https://bwalletx.com/just-b): Just b. Live simply. One wallet for money, mail, calls and chat, so you can just be.
 - [Send a bMail · bWalletX](https://bwalletx.com/person): Everything you can do with a person on bWalletX: send a bMail for a penny, call, pay or tip, and chat. Write your message now; bWalletX sends it.
 - [Releases](https://bwalletx.com/releases): Every bWalletX release and what it added, newest first. Latest: 5.1.89.
@@ -46,6 +47,7 @@ Full text of every page below: https://bwalletx.com/llms-full.txt
 - [Identity in bWalletX](https://bwalletx.com/identity): Some things need a real person behind the wallet: signing a contract, investing in a private placement, a regulated service. Verify once with bit-sign and Veriff. Your wallet holds no name or date of birth, and nothing personal goes on chain.
 - [Identity map](https://bwalletx.com/identity-map): Your identity key is who you are. Every other key in bWalletX is derived from it by purpose and by the person you deal with, and names are labels that point at those keys. Restoring 12 words brings it all back.
 - [Handles in bWalletX](https://bwalletx.com/handles): Your $handle is your paymail, and it can be your token and your room. Numbered handles from $bwallet0101, renames, linked accounts, your card signature, and Sign in with bWalletX or X.
+- [bAvatars: every name gets a picture](https://bwalletx.com/bavatars): bAvatars are drawn from your Bitcoin name, so the same name always gets the same picture in any app. Eight gold styles, a scannable QR coin, and your own photo still wins.
 - [Your signature · bWalletX](https://bwalletx.com/sign): Flip your bWalletX card and sign the back with your finger. Your signature stays on your device. Next: sign bit-sign contracts with it and seal them on Bitcoin for under a penny.
 - [Games in bWalletX](https://bwalletx.com/games): Play games on Bitcoin SV, all in bGames inside bWalletX: bGames originals, the TokenBlaster arcade and more BSV games.
 
