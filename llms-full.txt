@@ -1391,7 +1391,14 @@ Each release ships to the Android APK, the Chrome extension and the web wallet. 
 
 [Download bWalletX](https://bwalletx.com/download)
 
-## 5.1.94 2026-10-10
+## 5.1.94 2026-10-11
+
+- bWallet now has free Spaces: join the bWallet Lounge and other public Spaces to listen, ask to speak, speak and chat, with report and block on every person and message
+- bChatX follows your wallet account: switch accounts in the wallet and bChatX signs in as that account. Settings › bChatX lets you use a different name or not connect at all
+- A cleaner wallet card: your identity key sits in the magnetic strip on the back with a copy icon, and a pen icon on the front flips the card
+- An interrupted sync repair now picks up again by itself the next time the wallet opens
+
+## 5.1.93 2026-10-10
 
 - Money sent to any address the wallet showed you now always counts in your balance, even if it arrived while the wallet was closed or on another device
 - A storage badge in Settings shows where this account’s records live, when it last synced, and what went wrong if a sync fails, with Repair Sync one tap away
