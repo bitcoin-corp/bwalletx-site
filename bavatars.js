@@ -82,9 +82,9 @@
     { id: 'deco', name: 'Deco Fan', tag: 'Lounge', note: 'Art-deco fans and arches, after the Lounge banner set.',
       draw(ctx, S, r) {
         ground(ctx, S, r);
-        const fans = 2 + Math.floor(r() * 2), base = S * (.7 + r() * .15);
+        const fans = 2 + Math.floor(r() * 2), base = S * (1.03 + r() * .06);
         for (let f = 0; f < fans; f++) {
-          const cx = S * (.25 + f * (.5 / Math.max(1, fans - 1))) , rays = 7 + Math.floor(r() * 6), R = S * (.35 + r() * .2);
+          const cx = S * (.25 + f * (.5 / Math.max(1, fans - 1))) , rays = 7 + Math.floor(r() * 6), R = S * (.55 + r() * .25);
           for (let i = 0; i <= rays; i++) {
             const a = Math.PI + (Math.PI * i) / rays;
             ctx.beginPath(); ctx.moveTo(cx, base); ctx.lineTo(cx + Math.cos(a) * R, base + Math.sin(a) * R);
@@ -159,9 +159,9 @@
     ctx.restore();
   }
   function drawFans(ctx, S, r) {
-    const fans = 2 + Math.floor(r() * 2), base = S * (.72 + r() * .12);
+    const fans = 2 + Math.floor(r() * 2), base = S * (1.03 + r() * .06);
     for (let f = 0; f < fans; f++) {
-      const cx = S * (.25 + f * (.5 / Math.max(1, fans - 1))), rays = 7 + Math.floor(r() * 6), R = S * (.32 + r() * .2);
+      const cx = S * (.25 + f * (.5 / Math.max(1, fans - 1))), rays = 7 + Math.floor(r() * 6), R = S * (.52 + r() * .25);
       for (let i = 0; i <= rays; i++) { const a = Math.PI + (Math.PI * i) / rays; ctx.beginPath(); ctx.moveTo(cx, base);
         ctx.lineTo(cx + Math.cos(a) * R, base + Math.sin(a) * R); ctx.strokeStyle = '#f6dc8a'; ctx.lineWidth = S * .006; ctx.stroke(); }
       ctx.beginPath(); ctx.arc(cx, base, R, Math.PI, 0); ctx.strokeStyle = '#ffd24d'; ctx.lineWidth = S * .014; ctx.stroke();
