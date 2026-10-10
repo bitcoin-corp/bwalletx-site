@@ -2847,6 +2847,62 @@ bWalletX is in beta: test with small amounts. Questions: [support@bwalletx.com](
 
 ---
 
+Source: https://bwalletx.com/swap
+
+# Swap into BSV.
+
+In bWalletX you can swap BTC, ETH, USDT, SOL and 1,000+ other coins into BSV. The BSV is paid straight into your own wallet. Nobody holds your coins along the way: you send a deposit, BSV arrives at your address.
+
+## How it works
+
+### Pick a coin and amount
+
+Choose the coin you're swapping from and how much. The app shows an estimate of the BSV you'll get, fees included.
+
+### Send the deposit
+
+bWalletX gives you a one-off deposit address. Send the coin to it from any wallet or exchange.
+
+### BSV lands in your wallet
+
+Usually within 10 to 60 minutes. Track each swap in the app until it's done.
+
+## Coins you can swap from
+
+Swap out of any of these into BSV. Popular coins come first; search by name, ticker or network.
+
+Show all coins
+
+List from ChangeNOW, refreshed when the site is built. The app always shows what's available right now.
+
+[](https://bwalletx.com/swap-coins.png)
+
+The whole list as one picture: [swap-coins.png](https://bwalletx.com/swap-coins.png).
+
+## Where to find it
+
+- bWalletX for Android: [get the app](https://bwalletx.com/android).
+
+- Desktop and web wallet: [web.bwalletx.com](https://web.bwalletx.com).
+
+- Not in the store edition (bWallet) from the App Store or Google Play.
+
+## Who runs the swap
+
+Swaps are run by ChangeNOW, not bWalletX. ChangeNOW may pause a swap for AML/KYC checks and ask for details before releasing or refunding it.
+
+Rates float: the amount shown is an estimate until your deposit arrives. We make no promises about the price of any coin.
+
+ChangeNOW [terms of use](https://changenow.io/terms-of-use) · [AML/KYC policy](https://changenow.io/aml-kyc-policy) · [privacy policy](https://changenow.io/privacy-policy)
+
+Want to buy BSV with a card instead? See [Buy BSV](https://bwalletx.com/buy).
+
+[Get bWalletX](https://bwalletx.com/get)
+
+bWalletX is in beta: test with small amounts. Questions: [support@bwalletx.com](mailto:support@bwalletx.com)
+
+---
+
 Source: https://bwalletx.com/token-locking
 
 # Token locking. Lock tokens so nobody can dump early.

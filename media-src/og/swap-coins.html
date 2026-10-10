@@ -1,0 +1,27 @@
+<!doctype html><html><head><meta charset="utf-8">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+body{margin:0;width:1200px;background:#000;color:#fff;font-family:'Space Grotesk',sans-serif}
+.wrap{padding:48px 40px 40px;background:radial-gradient(circle at 50% 0,rgba(242,194,48,.18),transparent 420px)}
+.mark{display:flex;align-items:center;gap:12px}.mark img{width:40px}.mark span{font-weight:700;font-size:28px}.gold{color:#F2C230}
+h1{margin:22px 0 4px;font-size:52px;letter-spacing:-1.5px;background:linear-gradient(180deg,#F2C230,#E6B020);-webkit-background-clip:text;color:transparent}
+p{margin:0 0 24px;color:#c9ced8;font-size:22px}
+.g{display:grid;grid-template-columns:repeat(10,1fr);gap:6px}
+.c{display:flex;align-items:center;gap:6px;background:#101114;border:1px solid #ffffff12;border-radius:9px;padding:5px 6px;min-width:0}
+.c.p{border-color:#F2C23077}
+.c img,.c i{width:20px;height:20px;border-radius:50%;flex:none}.c i{display:grid;place-items:center;background:#F2C2301f;color:#F2C230;font:700 11px sans-serif;font-style:normal}
+.c b{font-size:12px;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.c small{color:#7a7f88;font-size:9px;margin-left:auto}
+.f{margin-top:24px;color:#8a8a86;font-size:16px}.f b{color:#fff}
+</style></head><body><div class="wrap">
+<div class="mark"><img src="/logo.svg"><span>bWallet<span class="gold">X</span></span></div>
+<h1 id="h">Coins you can swap from into BSV</h1>
+<p>Swap out of any of these into BSV, straight into your own bWalletX wallet.</p>
+<div class="g" id="g"></div>
+<div class="f"><b>bwalletx.com/swap</b> · Swaps run by ChangeNOW · list as at build time</div>
+</div>
+<script>
+fetch('/swap-coins.json').then(r=>r.json()).then(d=>{document.getElementById('h').textContent=d.count.toLocaleString()+' coins you can swap from into BSV';
+var g=document.getElementById('g');d.coins.forEach(c=>{var e=document.createElement('div');e.className='c'+(c.p?' p':'');
+var ic;if(c.img){ic=new Image();ic.src=c.img;ic.onerror=()=>{var x=document.createElement('i');x.textContent=c.t[0];ic.replaceWith(x)}}else{ic=document.createElement('i');ic.textContent=c.t[0]}
+var b=document.createElement('b');b.textContent=c.t;var s=document.createElement('small');s.textContent=c.net;e.append(ic,b,s);g.appendChild(e)})});
+</script></body></html>
