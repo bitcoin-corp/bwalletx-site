@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>035 Pots &amp; Locks, and backing PNEEs · bWalletX blog</title>
+    <meta name="description" content="The Lock screen is now Pots &amp; Locks: locks grouped into pots like Pension or Savings goal, every lock feature kept, and a PNEEs pot for BSV locked to back PNEEs." />
+    <link rel="canonical" href="https://bwalletx.com/blog/035-pots-and-locks" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://bwalletx.com/blog/035-pots-and-locks" />
+    <meta property="og:site_name" content="bWalletX" />
+    <meta property="og:title" content="Pots &amp; Locks, and backing PNEEs" />
+    <meta property="og:description" content="The Lock screen is now Pots &amp; Locks: locks grouped into pots like Pension or Savings goal, every lock feature kept, and a PNEEs pot for BSV locked to back PNEEs." />
+    <meta property="og:image" content="https://bwalletx.com/og/og-blog-035.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@bWalletX" />
+    <meta name="twitter:title" content="Pots &amp; Locks, and backing PNEEs" />
+    <meta name="twitter:description" content="The Lock screen is now Pots &amp; Locks: locks grouped into pots like Pension or Savings goal, every lock feature kept, and a PNEEs pot for BSV locked to back PNEEs." />
+    <meta name="twitter:image" content="https://bwalletx.com/og/og-blog-035.png" />
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="stylesheet" href="/styles.css" />
+    <style>
+      .ext { max-width: 760px; margin: 0 auto; padding: 120px 20px 80px; }
+      .ext h1 { font-size: clamp(2rem, 6vw, 3rem); margin: 10px 0 10px; line-height: 1.15; }
+      .ext h2 { margin: 44px 0 10px; font-size: 1.4rem; }
+      .ext p, .ext li { line-height: 1.7; }
+      .ext code { background: #17191e; padding: 2px 7px; border-radius: 6px; overflow-wrap: anywhere; }
+      .ext a { overflow-wrap: anywhere; }
+      .meta { color: #8a8a86; font-size: 0.9rem; margin: 0; }
+      .num { color: #F5B800; font-weight: 700; letter-spacing: .04em; }
+      .box { background: #101114; border: 1px solid #ffffff12; border-radius: 16px; padding: 18px 22px; margin: 28px 0; }
+      .box h2 { margin: 0 0 8px; font-size: 1.1rem; }
+      .box ul { margin: 0; padding-left: 1.2em; }
+      .related { color: #a7adb8; }
+      .pn { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; margin-top: 40px; border-top: 1px solid #ffffff14; padding-top: 20px; }
+      .pn a { color: #F5B800; text-decoration: none; max-width: 100%; }
+      .ext .small { color: #8a8a86; font-size: 0.85rem; }
+      .ext pre { background: #17191e; padding: 14px 16px; border-radius: 10px; overflow-x: auto; }
+      .ext pre code { padding: 0; background: none; overflow-wrap: normal; white-space: pre; }
+    </style>
+      <!-- ld:start -->
+    <script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "BlogPosting",
+   "headline": "Pots & Locks, and backing PNEEs",
+   "description": "The Lock screen is now Pots & Locks: locks grouped into pots like Pension or Savings goal, every lock feature kept, and a PNEEs pot for BSV locked to back PNEEs.",
+   "url": "https://bwalletx.com/blog/035-pots-and-locks",
+   "mainEntityOfPage": "https://bwalletx.com/blog/035-pots-and-locks",
+   "image": "https://bwalletx.com/og/og-blog-035.png",
+   "inLanguage": "en",
+   "author": {
+    "@type": "Organization",
+    "name": "The Bitcoin Corporation Ltd",
+    "url": "https://bwalletx.com/"
+   },
+   "publisher": {
+    "@type": "Organization",
+    "name": "The Bitcoin Corporation Ltd",
+    "logo": {
+     "@type": "ImageObject",
+     "url": "https://bwalletx.com/icon-512.png"
+    }
+   },
+   "datePublished": "2026-10-10"
+  }
+ ]
+}
+    </script>
+    <!-- ld:end -->
+  </head>
+  <body>
+    <div class="beta-banner">bWalletX is in <strong>beta</strong>: test with small amounts.</div>
+    <header class="topbar">
+      <div class="wrap topbar-in">
+        <a class="brand" href="/"><img src="/logo.svg" alt="" width="34" height="30" /><span>bWallet<span class="gold">X</span></span></a>
+        <nav aria-label="Pages">
+          <a href="/features">Features</a><a href="/exchange">Exchange</a><a href="/social">Social</a><a href="/agent">Agents</a><a href="/extension">Extension</a><a href="/developers">Developers</a>
+        </nav>
+        <span class="nav-cta"><a class="dl-btn" href="/get">Download</a><a class="web-btn" href="https://web.bwalletx.com" target="_blank" rel="noopener">Web &rarr;</a></span>
+      </div>
+    </header>
+    <script src="/nav.js"></script>
+    <main class="ext">
+      <p class="meta"><a href="/blog">Development blog</a> · <span class="num">035</span> · 10 Oct 2026</p>
+      <h1>Pots &amp; Locks, and backing PNEEs</h1>
+      <p class="lede">Locking BSV until a date, or paying it out to yourself over time, has been in bWalletX since 5.1.84. Today the Lock screen becomes Pots &amp; Locks, so your locks are grouped by what they are for.</p>
+
+      <h2>What changed</h2>
+      <p>The screen opens with two buttons, <strong>Lock BSV</strong> and <strong>+ Pot</strong>, and one total for everything in your pots, with Claim when a payout is ready.</p>
+      <p>Below that, your locks are grouped into pots. A lock started from a template, such as Pension, Savings goal, Holiday fund or Rainy-day fund, goes into that pot. Locks you made before pots existed sit under <strong>Other locks</strong>. Tap a pot to see its locks and add another.</p>
+      <p>With no locks yet, you see a <strong>Start a pot</strong> card with the templates, so you can begin from a goal rather than a blank form.</p>
+
+      <h2>Nothing taken away</h2>
+      <p>Every lock feature stays: one unlock date or payouts over time, the payout curves, templates, claim, re-lock, receipts and the public check at <a href="/lock/verify">bwalletx.com/lock/verify</a>. A lock still can&rsquo;t be broken early, not even by you. The grouping is just a label in your wallet. The coins don&rsquo;t depend on it.</p>
+
+      <h2>Backing PNEEs</h2>
+      <p>PNEEs are our BSV-backed dollar token, in a small pilot since post <a href="/blog/011-pnees-pilot">011</a>. The lock button on the PNEEs card now opens a <strong>Back PNEEs</strong> card that explains what backing means, then asks how much BSV to lock.</p>
+      <p>Continue opens the normal lock builder, filled in for you: a lock called &ldquo;PNEEs backing&rdquo;, one unlock date a year out, in the PNEEs pot. You review it and type LOCK to confirm, like any other lock. The lock then shows as your PNEEs pot, at the top of Pots &amp; Locks.</p>
+
+      <div class="box"><h2>Where it is</h2><p>Live on <a href="https://web.bwalletx.com">web.bwalletx.com</a> and the desktop beta at <a href="https://beta.bwalletx.com">beta.bwalletx.com</a>.</p></div>
+
+      <div class="pn"><a href="/blog/034-open-apps-open-protocol">&larr; 034 Open apps, open protocol</a><a href="/blog/036-subscriptions-in-dollars">036 Subscriptions, priced in dollars &rarr;</a></div>
+    </main>
+  </body>
+</html>

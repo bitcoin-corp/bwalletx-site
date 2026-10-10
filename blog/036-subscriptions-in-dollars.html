@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>036 Subscriptions, priced in dollars · bWalletX blog</title>
+    <meta name="description" content="Subscriptions in bWalletX are priced in dollars and paid in BSV at that day&rsquo;s rate. Each one pays from a pot you choose. Pause or cancel any time. Nothing is paid up front." />
+    <link rel="canonical" href="https://bwalletx.com/blog/036-subscriptions-in-dollars" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://bwalletx.com/blog/036-subscriptions-in-dollars" />
+    <meta property="og:site_name" content="bWalletX" />
+    <meta property="og:title" content="Subscriptions, priced in dollars" />
+    <meta property="og:description" content="Subscriptions in bWalletX are priced in dollars and paid in BSV at that day&rsquo;s rate. Each one pays from a pot you choose. Pause or cancel any time. Nothing is paid up front." />
+    <meta property="og:image" content="https://bwalletx.com/og/og-blog-036.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@bWalletX" />
+    <meta name="twitter:title" content="Subscriptions, priced in dollars" />
+    <meta name="twitter:description" content="Subscriptions in bWalletX are priced in dollars and paid in BSV at that day&rsquo;s rate. Each one pays from a pot you choose. Pause or cancel any time. Nothing is paid up front." />
+    <meta name="twitter:image" content="https://bwalletx.com/og/og-blog-036.png" />
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="stylesheet" href="/styles.css" />
+    <style>
+      .ext { max-width: 760px; margin: 0 auto; padding: 120px 20px 80px; }
+      .ext h1 { font-size: clamp(2rem, 6vw, 3rem); margin: 10px 0 10px; line-height: 1.15; }
+      .ext h2 { margin: 44px 0 10px; font-size: 1.4rem; }
+      .ext p, .ext li { line-height: 1.7; }
+      .ext code { background: #17191e; padding: 2px 7px; border-radius: 6px; overflow-wrap: anywhere; }
+      .ext a { overflow-wrap: anywhere; }
+      .meta { color: #8a8a86; font-size: 0.9rem; margin: 0; }
+      .num { color: #F5B800; font-weight: 700; letter-spacing: .04em; }
+      .box { background: #101114; border: 1px solid #ffffff12; border-radius: 16px; padding: 18px 22px; margin: 28px 0; }
+      .box h2 { margin: 0 0 8px; font-size: 1.1rem; }
+      .box ul { margin: 0; padding-left: 1.2em; }
+      .related { color: #a7adb8; }
+      .pn { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; margin-top: 40px; border-top: 1px solid #ffffff14; padding-top: 20px; }
+      .pn a { color: #F5B800; text-decoration: none; max-width: 100%; }
+      .ext .small { color: #8a8a86; font-size: 0.85rem; }
+      .ext pre { background: #17191e; padding: 14px 16px; border-radius: 10px; overflow-x: auto; }
+      .ext pre code { padding: 0; background: none; overflow-wrap: normal; white-space: pre; }
+    </style>
+      <!-- ld:start -->
+    <script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "BlogPosting",
+   "headline": "Subscriptions, priced in dollars",
+   "description": "Subscriptions in bWalletX are priced in dollars and paid in BSV at that day’s rate. Each one pays from a pot you choose. Pause or cancel any time. Nothing is paid up front.",
+   "url": "https://bwalletx.com/blog/036-subscriptions-in-dollars",
+   "mainEntityOfPage": "https://bwalletx.com/blog/036-subscriptions-in-dollars",
+   "image": "https://bwalletx.com/og/og-blog-036.png",
+   "inLanguage": "en",
+   "author": {
+    "@type": "Organization",
+    "name": "The Bitcoin Corporation Ltd",
+    "url": "https://bwalletx.com/"
+   },
+   "publisher": {
+    "@type": "Organization",
+    "name": "The Bitcoin Corporation Ltd",
+    "logo": {
+     "@type": "ImageObject",
+     "url": "https://bwalletx.com/icon-512.png"
+    }
+   },
+   "datePublished": "2026-10-10"
+  }
+ ]
+}
+    </script>
+    <!-- ld:end -->
+  </head>
+  <body>
+    <div class="beta-banner">bWalletX is in <strong>beta</strong>: test with small amounts.</div>
+    <header class="topbar">
+      <div class="wrap topbar-in">
+        <a class="brand" href="/"><img src="/logo.svg" alt="" width="34" height="30" /><span>bWallet<span class="gold">X</span></span></a>
+        <nav aria-label="Pages">
+          <a href="/features">Features</a><a href="/exchange">Exchange</a><a href="/social">Social</a><a href="/agent">Agents</a><a href="/extension">Extension</a><a href="/developers">Developers</a>
+        </nav>
+        <span class="nav-cta"><a class="dl-btn" href="/get">Download</a><a class="web-btn" href="https://web.bwalletx.com" target="_blank" rel="noopener">Web &rarr;</a></span>
+      </div>
+    </header>
+    <script src="/nav.js"></script>
+    <main class="ext">
+      <p class="meta"><a href="/blog">Development blog</a> · <span class="num">036</span> · 10 Oct 2026</p>
+      <h1>Subscriptions, priced in dollars</h1>
+      <p class="lede">A subscription should cost what it says, whatever the BSV price does this month. So subscriptions in bWalletX are priced in dollars and paid in BSV at the day&rsquo;s rate.</p>
+
+      <h2>How a payment works</h2>
+      <p>You approve a subscription once: the service, the dollar amount and how often. Each period, when you open the wallet, it pays that period&rsquo;s dollar amount in BSV at that day&rsquo;s rate. The service can only receive the agreed amount, once per period.</p>
+      <p>Nothing is locked or paid up front. Prepaying a year at today&rsquo;s price is just paying a year in advance, and it can&rsquo;t follow the price, so we don&rsquo;t do it.</p>
+
+      <h2>Paid from a pot</h2>
+      <p>Each subscription pays from a pot you choose, such as a Subscriptions pot. Pausing the pot pauses everything paid from it. If a falling BSV price means a pot will run short, the wallet tells you.</p>
+
+      <h2>One list</h2>
+      <p>Pots &amp; Locks has a Subscriptions card showing how many are active and about what they cost a month. It opens a list of all your subscriptions, with:</p>
+      <ul>
+        <li>roughly what each costs a month, and about how much BSV the next payment is today</li>
+        <li>which pot pays for it, which you can change</li>
+        <li>Pause all and Resume all</li>
+      </ul>
+      <p>You can cancel any time.</p>
+
+      <div class="box"><h2>Where it is</h2><p>Live on <a href="https://web.bwalletx.com">web.bwalletx.com</a> and the desktop beta at <a href="https://beta.bwalletx.com">beta.bwalletx.com</a>.</p></div>
+
+      <div class="pn"><a href="/blog/035-pots-and-locks">&larr; 035 Pots &amp; Locks, and backing PNEEs</a><a href="/blog/037-portfolio-vs-market">037 Portfolio vs market &rarr;</a></div>
+    </main>
+  </body>
+</html>

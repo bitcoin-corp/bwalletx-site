@@ -95,11 +95,11 @@
       // Blog: when you publish a post, add it to the top of LATEST and drop the oldest (keep 5).
       { label: 'Blog', href: '/blog', pages: ['/blog', '/releases'], pills: false,
         sub: [{ label: 'All posts', href: '/blog' }, { label: 'Releases', href: '/releases' }, { head: 'Latest' }].concat([
-          { label: '034 Open apps, open protocol', href: '/blog/034-open-apps-open-protocol' },
-          { label: '033 Spaces you can listen to', href: '/blog/033-spaces-you-can-listen-to' },
-          { label: '032 Meet bChatX.com', href: '/blog/032-meet-bchatx' },
-          { label: '031 bWalletX 5.1.88', href: '/blog/031-calls-mics-menu' },
-          { label: '030 bPhone', href: '/blog/030-bphone' }
+          { label: '038 Swap into BSV', href: '/blog/038-swap-into-bsv' },
+          { label: '037 Portfolio vs market', href: '/blog/037-portfolio-vs-market' },
+          { label: '036 Subscriptions in dollars', href: '/blog/036-subscriptions-in-dollars' },
+          { label: '035 Pots & Locks', href: '/blog/035-pots-and-locks' },
+          { label: '034 Open apps, open protocol', href: '/blog/034-open-apps-open-protocol' }
         ], [{ head: 'Series: Chat on BSV' },
           { label: '021 Coordinate on BSV', href: '/blog/021-coordinate-on-bsv' },
           { label: '026 Paying to be heard', href: '/blog/026-paying-to-be-heard' },

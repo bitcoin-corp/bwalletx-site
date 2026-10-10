@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>037 Portfolio vs market · bWalletX blog</title>
+    <meta name="description" content="Tap the price tile in bWalletX to see how your wallet did against just holding BSV, holding BTC or keeping dollars, over a day, week, month, year or all time." />
+    <link rel="canonical" href="https://bwalletx.com/blog/037-portfolio-vs-market" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://bwalletx.com/blog/037-portfolio-vs-market" />
+    <meta property="og:site_name" content="bWalletX" />
+    <meta property="og:title" content="Portfolio vs market" />
+    <meta property="og:description" content="Tap the price tile in bWalletX to see how your wallet did against just holding BSV, holding BTC or keeping dollars, over a day, week, month, year or all time." />
+    <meta property="og:image" content="https://bwalletx.com/og/og-blog-037.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@bWalletX" />
+    <meta name="twitter:title" content="Portfolio vs market" />
+    <meta name="twitter:description" content="Tap the price tile in bWalletX to see how your wallet did against just holding BSV, holding BTC or keeping dollars, over a day, week, month, year or all time." />
+    <meta name="twitter:image" content="https://bwalletx.com/og/og-blog-037.png" />
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="stylesheet" href="/styles.css" />
+    <style>
+      .ext { max-width: 760px; margin: 0 auto; padding: 120px 20px 80px; }
+      .ext h1 { font-size: clamp(2rem, 6vw, 3rem); margin: 10px 0 10px; line-height: 1.15; }
+      .ext h2 { margin: 44px 0 10px; font-size: 1.4rem; }
+      .ext p, .ext li { line-height: 1.7; }
+      .ext code { background: #17191e; padding: 2px 7px; border-radius: 6px; overflow-wrap: anywhere; }
+      .ext a { overflow-wrap: anywhere; }
+      .meta { color: #8a8a86; font-size: 0.9rem; margin: 0; }
+      .num { color: #F5B800; font-weight: 700; letter-spacing: .04em; }
+      .box { background: #101114; border: 1px solid #ffffff12; border-radius: 16px; padding: 18px 22px; margin: 28px 0; }
+      .box h2 { margin: 0 0 8px; font-size: 1.1rem; }
+      .box ul { margin: 0; padding-left: 1.2em; }
+      .related { color: #a7adb8; }
+      .pn { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; margin-top: 40px; border-top: 1px solid #ffffff14; padding-top: 20px; }
+      .pn a { color: #F5B800; text-decoration: none; max-width: 100%; }
+      .ext .small { color: #8a8a86; font-size: 0.85rem; }
+      .ext pre { background: #17191e; padding: 14px 16px; border-radius: 10px; overflow-x: auto; }
+      .ext pre code { padding: 0; background: none; overflow-wrap: normal; white-space: pre; }
+    </style>
+      <!-- ld:start -->
+    <script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "BlogPosting",
+   "headline": "Portfolio vs market",
+   "description": "Tap the price tile in bWalletX to see how your wallet did against just holding BSV, holding BTC or keeping dollars, over a day, week, month, year or all time.",
+   "url": "https://bwalletx.com/blog/037-portfolio-vs-market",
+   "mainEntityOfPage": "https://bwalletx.com/blog/037-portfolio-vs-market",
+   "image": "https://bwalletx.com/og/og-blog-037.png",
+   "inLanguage": "en",
+   "author": {
+    "@type": "Organization",
+    "name": "The Bitcoin Corporation Ltd",
+    "url": "https://bwalletx.com/"
+   },
+   "publisher": {
+    "@type": "Organization",
+    "name": "The Bitcoin Corporation Ltd",
+    "logo": {
+     "@type": "ImageObject",
+     "url": "https://bwalletx.com/icon-512.png"
+    }
+   },
+   "datePublished": "2026-10-10"
+  }
+ ]
+}
+    </script>
+    <!-- ld:end -->
+  </head>
+  <body>
+    <div class="beta-banner">bWalletX is in <strong>beta</strong>: test with small amounts.</div>
+    <header class="topbar">
+      <div class="wrap topbar-in">
+        <a class="brand" href="/"><img src="/logo.svg" alt="" width="34" height="30" /><span>bWallet<span class="gold">X</span></span></a>
+        <nav aria-label="Pages">
+          <a href="/features">Features</a><a href="/exchange">Exchange</a><a href="/social">Social</a><a href="/agent">Agents</a><a href="/extension">Extension</a><a href="/developers">Developers</a>
+        </nav>
+        <span class="nav-cta"><a class="dl-btn" href="/get">Download</a><a class="web-btn" href="https://web.bwalletx.com" target="_blank" rel="noopener">Web &rarr;</a></span>
+      </div>
+    </header>
+    <script src="/nav.js"></script>
+    <main class="ext">
+      <p class="meta"><a href="/blog">Development blog</a> · <span class="num">037</span> · 10 Oct 2026</p>
+      <h1>Portfolio vs market</h1>
+      <p class="lede">The price tile at the top left of the wallet used to open the BSV chart. Now it opens Portfolio vs market: how your wallet is doing, compared with the obvious alternatives.</p>
+
+      <h2>What it shows</h2>
+      <ul>
+        <li>what your wallet is worth now, and your gain or loss in dollars and percent over the range you pick</li>
+        <li>ranges of 1 day, 1 week, 1 month, 1 year or all time</li>
+        <li>a <strong>vs market</strong> chart: your return against just holding BSV, holding BTC, or keeping dollars, with a line you can drag to read every line at one point</li>
+        <li>a value chart in dollars</li>
+        <li>your holdings, including locked BSV and MNEE, with each one&rsquo;s share and change, and your best and worst</li>
+        <li>today&rsquo;s BSV price and change, and a button to the full BSV chart</li>
+      </ul>
+
+      <h2>How it is worked out</h2>
+      <p>Your BSV on each day, locks included, comes from your own transaction history, priced at that day&rsquo;s rate. Money you send in or out isn&rsquo;t counted as a gain or a loss; fees are.</p>
+      <p>Some figures are estimates, and the screen says so. When it has to use a nearby day&rsquo;s price, it shows &ldquo;Estimated&rdquo;. Tokens are left out of the history line because their past prices aren&rsquo;t known, and the screen says that too. If prices can&rsquo;t be loaded, it tells you rather than showing made-up numbers.</p>
+
+      <div class="box"><h2>Where it is</h2><p>Live on <a href="https://web.bwalletx.com">web.bwalletx.com</a> and the desktop beta at <a href="https://beta.bwalletx.com">beta.bwalletx.com</a>.</p></div>
+
+      <div class="pn"><a href="/blog/036-subscriptions-in-dollars">&larr; 036 Subscriptions, priced in dollars</a><a href="/blog/038-swap-into-bsv">038 Swap into BSV &rarr;</a></div>
+    </main>
+  </body>
+</html>

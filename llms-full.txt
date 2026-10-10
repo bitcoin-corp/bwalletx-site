@@ -6809,7 +6809,149 @@ What matters is what the server can’t do. Your keys never leave your wallet. T
 
 More on what is open and where to find it is on the [open source page](https://bwalletx.com/open-source).
 
-[← 033 Spaces you can just listen to](https://bwalletx.com/blog/033-spaces-you-can-listen-to)[All posts →](https://bwalletx.com/blog)
+[← 033 Spaces you can just listen to](https://bwalletx.com/blog/033-spaces-you-can-listen-to)[035 Pots & Locks, and backing PNEEs →](https://bwalletx.com/blog/035-pots-and-locks)
+
+---
+
+Source: https://bwalletx.com/blog/035-pots-and-locks
+
+[Development blog](https://bwalletx.com/blog) · 035 · 10 Oct 2026
+
+# Pots & Locks, and backing PNEEs
+
+Locking BSV until a date, or paying it out to yourself over time, has been in bWalletX since 5.1.84. Today the Lock screen becomes Pots & Locks, so your locks are grouped by what they are for.
+
+## What changed
+
+The screen opens with two buttons, Lock BSV and + Pot, and one total for everything in your pots, with Claim when a payout is ready.
+
+Below that, your locks are grouped into pots. A lock started from a template, such as Pension, Savings goal, Holiday fund or Rainy-day fund, goes into that pot. Locks you made before pots existed sit under Other locks. Tap a pot to see its locks and add another.
+
+With no locks yet, you see a Start a pot card with the templates, so you can begin from a goal rather than a blank form.
+
+## Nothing taken away
+
+Every lock feature stays: one unlock date or payouts over time, the payout curves, templates, claim, re-lock, receipts and the public check at [bwalletx.com/lock/verify](https://bwalletx.com/lock/verify). A lock still can’t be broken early, not even by you. The grouping is just a label in your wallet. The coins don’t depend on it.
+
+## Backing PNEEs
+
+PNEEs are our BSV-backed dollar token, in a small pilot since post [011](https://bwalletx.com/blog/011-pnees-pilot). The lock button on the PNEEs card now opens a Back PNEEs card that explains what backing means, then asks how much BSV to lock.
+
+Continue opens the normal lock builder, filled in for you: a lock called “PNEEs backing”, one unlock date a year out, in the PNEEs pot. You review it and type LOCK to confirm, like any other lock. The lock then shows as your PNEEs pot, at the top of Pots & Locks.
+
+## Where it is
+
+Live on [web.bwalletx.com](https://web.bwalletx.com) and the desktop beta at [beta.bwalletx.com](https://beta.bwalletx.com).
+
+[← 034 Open apps, open protocol](https://bwalletx.com/blog/034-open-apps-open-protocol)[036 Subscriptions, priced in dollars →](https://bwalletx.com/blog/036-subscriptions-in-dollars)
+
+---
+
+Source: https://bwalletx.com/blog/036-subscriptions-in-dollars
+
+[Development blog](https://bwalletx.com/blog) · 036 · 10 Oct 2026
+
+# Subscriptions, priced in dollars
+
+A subscription should cost what it says, whatever the BSV price does this month. So subscriptions in bWalletX are priced in dollars and paid in BSV at the day’s rate.
+
+## How a payment works
+
+You approve a subscription once: the service, the dollar amount and how often. Each period, when you open the wallet, it pays that period’s dollar amount in BSV at that day’s rate. The service can only receive the agreed amount, once per period.
+
+Nothing is locked or paid up front. Prepaying a year at today’s price is just paying a year in advance, and it can’t follow the price, so we don’t do it.
+
+## Paid from a pot
+
+Each subscription pays from a pot you choose, such as a Subscriptions pot. Pausing the pot pauses everything paid from it. If a falling BSV price means a pot will run short, the wallet tells you.
+
+## One list
+
+Pots & Locks has a Subscriptions card showing how many are active and about what they cost a month. It opens a list of all your subscriptions, with:
+
+- roughly what each costs a month, and about how much BSV the next payment is today
+
+- which pot pays for it, which you can change
+
+- Pause all and Resume all
+
+You can cancel any time.
+
+## Where it is
+
+Live on [web.bwalletx.com](https://web.bwalletx.com) and the desktop beta at [beta.bwalletx.com](https://beta.bwalletx.com).
+
+[← 035 Pots & Locks, and backing PNEEs](https://bwalletx.com/blog/035-pots-and-locks)[037 Portfolio vs market →](https://bwalletx.com/blog/037-portfolio-vs-market)
+
+---
+
+Source: https://bwalletx.com/blog/037-portfolio-vs-market
+
+[Development blog](https://bwalletx.com/blog) · 037 · 10 Oct 2026
+
+# Portfolio vs market
+
+The price tile at the top left of the wallet used to open the BSV chart. Now it opens Portfolio vs market: how your wallet is doing, compared with the obvious alternatives.
+
+## What it shows
+
+- what your wallet is worth now, and your gain or loss in dollars and percent over the range you pick
+
+- ranges of 1 day, 1 week, 1 month, 1 year or all time
+
+- a vs market chart: your return against just holding BSV, holding BTC, or keeping dollars, with a line you can drag to read every line at one point
+
+- a value chart in dollars
+
+- your holdings, including locked BSV and MNEE, with each one’s share and change, and your best and worst
+
+- today’s BSV price and change, and a button to the full BSV chart
+
+## How it is worked out
+
+Your BSV on each day, locks included, comes from your own transaction history, priced at that day’s rate. Money you send in or out isn’t counted as a gain or a loss; fees are.
+
+Some figures are estimates, and the screen says so. When it has to use a nearby day’s price, it shows “Estimated”. Tokens are left out of the history line because their past prices aren’t known, and the screen says that too. If prices can’t be loaded, it tells you rather than showing made-up numbers.
+
+## Where it is
+
+Live on [web.bwalletx.com](https://web.bwalletx.com) and the desktop beta at [beta.bwalletx.com](https://beta.bwalletx.com).
+
+[← 036 Subscriptions, priced in dollars](https://bwalletx.com/blog/036-subscriptions-in-dollars)[038 Swap into BSV →](https://bwalletx.com/blog/038-swap-into-bsv)
+
+---
+
+Source: https://bwalletx.com/blog/038-swap-into-bsv
+
+[Development blog](https://bwalletx.com/blog) · 038 · 10 Oct 2026
+
+# Swap into BSV
+
+Most people arrive holding something other than BSV. The Swap into BSV card on the bWalletX home screen turns it into BSV in your own wallet.
+
+## How it works
+
+- Pick the coin you have, from a list of 1,000+ with search and the popular ones first.
+
+- Enter an amount and see about how much BSV you get.
+
+- Get a deposit address and send your coin to it from wherever it is now.
+
+- Track it: deposit seen, swapping, sending BSV, in your wallet. You can leave the screen; it carries on.
+
+The swap is run by ChangeNOW, not by bWalletX, and the BSV goes straight to your own wallet address. We never hold your coins. ChangeNOW may pause a swap for checks and ask for details before releasing or refunding it. Rates float, so the amount you get can differ a little from the first quote.
+
+## A permanent card
+
+The swap card used to have an × to hide it, and then there was no way to bring it back. It is now always on the home screen, and anyone who hid it gets it back. There is also a page about it at [bwalletx.com/swap](https://bwalletx.com/swap).
+
+Swaps are in bWalletX, not in the App Store and Google Play edition.
+
+## Where it is
+
+Live on [web.bwalletx.com](https://web.bwalletx.com) and the desktop beta at [beta.bwalletx.com](https://beta.bwalletx.com).
+
+[← 037 Portfolio vs market](https://bwalletx.com/blog/037-portfolio-vs-market)[All posts →](https://bwalletx.com/blog)
 
 ---
 
@@ -6820,6 +6962,22 @@ Source: https://bwalletx.com/blog/
 How bWallet and bWalletX were built, one chapter at a time. Every post is written from the git history of the wallet, this site, the chat server and the PNEEs prototype. It covers what we built, why, what broke, what we reversed and what is still not done.
 
 Newest first. Dates come from commits. bWallet is a fork of [Yours Wallet](https://github.com/yours-org/yours-wallet) (MIT licence).
+
+- [](https://bwalletx.com/blog/038-swap-into-bsv)038 · 10 Oct 2026
+[Swap into BSV](https://bwalletx.com/blog/038-swap-into-bsv)
+Swap BTC, ETH and 1,000+ other coins into BSV from the home screen. ChangeNOW runs the swap and the BSV comes straight to your wallet. The swap card is now permanent.
+
+- [](https://bwalletx.com/blog/037-portfolio-vs-market)037 · 10 Oct 2026
+[Portfolio vs market](https://bwalletx.com/blog/037-portfolio-vs-market)
+Tap the price tile: your wallet against just holding BSV, holding BTC or keeping dollars, over a day, week, month, year or all time. Estimates are labelled.
+
+- [](https://bwalletx.com/blog/036-subscriptions-in-dollars)036 · 10 Oct 2026
+[Subscriptions, priced in dollars](https://bwalletx.com/blog/036-subscriptions-in-dollars)
+Priced in dollars, paid in BSV at that day’s rate, from a pot you choose. One list, Pause all, cancel any time. Nothing paid up front.
+
+- [](https://bwalletx.com/blog/035-pots-and-locks)035 · 10 Oct 2026
+[Pots & Locks, and backing PNEEs](https://bwalletx.com/blog/035-pots-and-locks)
+The Lock screen is now Pots & Locks: locks grouped into pots, every lock feature kept, and a PNEEs pot for BSV locked to back PNEEs.
 
 - [](https://bwalletx.com/blog/034-open-apps-open-protocol)034 · 8 Oct 2026
 [Open apps, open protocol](https://bwalletx.com/blog/034-open-apps-open-protocol)
