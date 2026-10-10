@@ -11,7 +11,7 @@
     <meta property="og:site_name" content="bWalletX" />
     <meta property="og:title" content="Every name gets a bAvatar" />
     <meta property="og:description" content="bAvatars are drawn from your Bitcoin name, so the same name always gets the same picture in any app. Eight gold styles, a scannable QR coin, and your own photo still wins." />
-    <meta property="og:image" content="https://bwalletx.com/og-bavatars-v2.png" />
+    <meta property="og:image" content="https://bwalletx.com/og-bavatars-v3.png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
     <meta property="og:image:alt" content="A grid of gold bAvatars drawn from Bitcoin names: Kintsugi, Bloom, Deco Fan, Sigil and a QR coin." />
@@ -19,7 +19,7 @@
     <meta name="twitter:site" content="@bWalletX" />
     <meta name="twitter:title" content="Every name gets a bAvatar" />
     <meta name="twitter:description" content="bAvatars are drawn from your Bitcoin name, so the same name always gets the same picture in any app. Eight gold styles, a scannable QR coin, and your own photo still wins." />
-    <meta name="twitter:image" content="https://bwalletx.com/og-bavatars-v2.png" />
+    <meta name="twitter:image" content="https://bwalletx.com/og-bavatars-v3.png" />
     <link rel="icon" href="/favicon.ico" />
     <link rel="stylesheet" href="/styles.css" />
     <style>
@@ -88,7 +88,7 @@
       <p class="lede">A bAvatar is a picture drawn from your Bitcoin name. The same name always gets the same picture, in any app that looks it up, so $you@bwalletx.com looks like you before you upload anything.</p>
 
       <div class="ba-controls">
-        <label class="ba-field" for="ba-name"><span>$</span><input id="ba-name" value="b0asex" autocomplete="off" spellcheck="false" maxlength="40" aria-label="Bitcoin name" /><small>@bwalletx.com</small></label>
+        <label class="ba-field" for="ba-name"><span>$</span><input id="ba-name" value="alice" autocomplete="off" spellcheck="false" maxlength="40" aria-label="Bitcoin name" /><small>@bwalletx.com</small></label>
         <div class="ba-chips" id="ba-samples" aria-label="Try a name"></div>
       </div>
 
@@ -98,7 +98,7 @@
         <canvas id="ba-mine" width="280" height="280" role="img" aria-label="Your chosen bAvatar"></canvas>
         <div>
           <h3 id="ba-mine-title">Your bAvatar</h3>
-          <p>Choosing a style is just a preview for now. It's coming to bWalletX: you'll pick it in Settings, and everyone who sees your name will see it.</p>
+          <p>Pick the style you like. In bWalletX it sits in Settings, and everyone who sees your name sees it. You can always use your own photo instead.</p>
         </div>
       </div>
       <section class="ba-grid" id="ba-grid" aria-label="bAvatar styles"></section>
@@ -113,7 +113,7 @@
       </div>
 
       <h2>Bloom &times; Deco &times; Kintsugi</h2>
-      <p>One avatar that mixes three favourites, then two ways to make it scannable. The art QR works in any phone camera. The code ring leaves the art untouched and stores the name in a gold bezel for the bWalletX scanner.</p>
+      <p>One avatar that blends three styles, then two ways to make it scannable. The art QR works in any phone camera. The code ring leaves the art untouched and stores the name in a gold bezel for the bWalletX scanner.</p>
       <div class="ba-three">
         <figure><canvas id="ba-combo" width="640" height="640" role="img" aria-label="Combined bAvatar"></canvas>
           <figcaption><b>The avatar</b>Bloom light, a deco fan and gold seams, all drawn from the name.</figcaption></figure>
@@ -123,11 +123,21 @@
           <figcaption><b>Code ring &middot; bWalletX scanner</b>Three gold tracks hold the name. This page reads the pixels back to check it.<span class="ba-decoded" id="ba-decoded"></span></figcaption></figure>
       </div>
 
+
+      <h2>Your numbered card</h2>
+      <p class="small" style="margin-top:-6px">Rolling out to bWalletX accounts.</p>
+      <div class="ba-how">
+        <div><h3>bWalletX #N &middot; $you</h3><p>Every account gets a bAvatar card in its wallet: your art, a QR that opens your paymail, and your account number, in the order accounts joined.</p></div>
+        <div><h3>Yours whatever you show</h3><p>Use your bAvatar, your own photo or anything else as your picture. The card stays in your wallet either way.</p></div>
+        <div><h3>The holder shows the number</h3><p>Cards can be traded like any other item in bWalletX. Whoever holds #42 shows the #42 badge on their own profile, with their own name and history.</p></div>
+        <div><h3>Your account stays yours</h3><p>A card carries a number, not an account. Your keys, posts and name stay with you. Never share your recovery words with anyone.</p></div>
+      </div>
+
       <h2>How it works</h2>
       <div class="ba-how">
         <div><h3>Same name, same picture</h3><p>Every style is drawn from the name itself. Nothing is stored, so any app can draw it, and it only changes if the name does.</p></div>
         <div><h3>Upload still wins</h3><p>Your own photo always comes first. The bAvatar is the default and the fallback, never forced.</p></div>
-        <div><h3>Open to other BSV apps</h3><p>Planned: a public image link for every name and a small MIT package, so any BSV app can show bAvatars.</p></div>
+        <div><h3>Open to other BSV apps</h3><p>Every bAvatar is drawn from the name alone, so any BSV app can draw the same picture.</p></div>
         <div><h3>Your name</h3><p>Get a $name@bwalletx.com with bWalletX: it's your paymail, your handle and now your picture. See <a href="/handles">Handles</a>.</p></div>
       </div>
 
@@ -139,9 +149,8 @@
     <script>
       (function () {
         var B = window.bAvatars;
-        var SAMPLES = ['b0asex', 'bwalletx', 'satchmo', 'peyton', 'bswan', 'appdaddy', 'metabails'];
-        var FAVS = ['bloom', 'deco', 'kintsugi', 'sigil'];
-        // Favourites first, then the rest.
+        var SAMPLES = ['alice', 'sam', 'nova', 'kai', 'mira', 'otto', 'jun'];
+        var FAVS = ['bloom', 'deco', 'kintsugi', 'sigil']; // shown first
         var styles = FAVS.map(function (id) { return B.STYLES.find(function (s) { return s.id === id; }); })
           .concat(B.STYLES.filter(function (s) { return FAVS.indexOf(s.id) < 0; }));
         var input = document.getElementById('ba-name');
@@ -152,7 +161,7 @@
         var cards = styles.map(function (st) {
           var el = document.createElement('button');
           el.type = 'button'; el.className = 'ba-card';
-          el.innerHTML = '<canvas width="440" height="440"></canvas><div class="ba-sizes"><canvas width="80" height="80"></canvas><canvas class="s" width="48" height="48"></canvas><span class="ba-tag' + (st.alt ? ' alt' : '') + '"></span></div><h3></h3><p></p>' + (FAVS.indexOf(st.id) >= 0 ? '<span class="ba-fav">Favourite</span>' : '');
+          el.innerHTML = '<canvas width="440" height="440"></canvas><div class="ba-sizes"><canvas width="80" height="80"></canvas><canvas class="s" width="48" height="48"></canvas><span class="ba-tag' + (st.alt ? ' alt' : '') + '"></span></div><h3></h3><p></p>';
           el.querySelector('h3').textContent = st.name;
           el.querySelector('p').textContent = st.note;
           el.querySelector('.ba-tag').textContent = st.tag;

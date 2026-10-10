@@ -1,6 +1,6 @@
 # bWalletX: full site text
 
-Generated 2026-10-10 from https://bwalletx.com. Source pages are linked above each section.
+Generated 2026-10-11 from https://bwalletx.com. Source pages are linked above each section.
 
 ---
 
@@ -1958,7 +1958,7 @@ Tap a style to make it yours. Each one is shown at full size, then at 40px and 2
 
 ### Your bAvatar
 
-Choosing a style is just a preview for now. It's coming to bWalletX: you'll pick it in Settings, and everyone who sees your name will see it.
+Pick the style you like. In bWalletX it sits in Settings, and everyone who sees your name sees it. You can always use your own photo instead.
 
 ## The QR coin
 
@@ -1968,13 +1968,33 @@ It opens ``
 
 ## Bloom × Deco × Kintsugi
 
-One avatar that mixes three favourites, then two ways to make it scannable. The art QR works in any phone camera. The code ring leaves the art untouched and stores the name in a gold bezel for the bWalletX scanner.
+One avatar that blends three styles, then two ways to make it scannable. The art QR works in any phone camera. The code ring leaves the art untouched and stores the name in a gold bezel for the bWalletX scanner.
 
 The avatarBloom light, a deco fan and gold seams, all drawn from the name.
 
 Art QR · any cameraThe same art seen through a real QR grid. Scan it with your phone camera.
 
 Code ring · bWalletX scannerThree gold tracks hold the name. This page reads the pixels back to check it.
+
+## Your numbered card
+
+Rolling out to bWalletX accounts.
+
+### bWalletX #N · $you
+
+Every account gets a bAvatar card in its wallet: your art, a QR that opens your paymail, and your account number, in the order accounts joined.
+
+### Yours whatever you show
+
+Use your bAvatar, your own photo or anything else as your picture. The card stays in your wallet either way.
+
+### The holder shows the number
+
+Cards can be traded like any other item in bWalletX. Whoever holds #42 shows the #42 badge on their own profile, with their own name and history.
+
+### Your account stays yours
+
+A card carries a number, not an account. Your keys, posts and name stay with you. Never share your recovery words with anyone.
 
 ## How it works
 
@@ -1988,7 +2008,7 @@ Your own photo always comes first. The bAvatar is the default and the fallback, 
 
 ### Open to other BSV apps
 
-Planned: a public image link for every name and a small MIT package, so any BSV app can show bAvatars.
+Every bAvatar is drawn from the name alone, so any BSV app can draw the same picture.
 
 ### Your name
 
