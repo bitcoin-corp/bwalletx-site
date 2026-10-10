@@ -144,7 +144,7 @@
 
     <script>
       (function () {
-        // ── Which handle? /$b0asex, /%24b0asex, /u/b0asex, /u/$b0asex. Case-insensitive.
+        // ── Which handle? /$alice, /%24alice, /u/alice, /u/$alice. Case-insensitive.
         var path = location.pathname;
         try { path = decodeURIComponent(path); } catch (e) {}
         var m = path.match(/^\/(?:u\/)?\$?([^\/]+)\/?$/);

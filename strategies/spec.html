@@ -67,10 +67,10 @@
   "format": "bwalletx.strategy/1",
   "name": "Slow accumulator",
   "version": "1.0",
-  "goals": "Build a position in $B0ASEX slowly. Buy small amounts a few times a day, only while the price is low. Never chase a pump: if the price runs up, wait.",
+  "goals": "Build a position in $NOVA slowly. Buy small amounts a few times a day, only while the price is low. Never chase a pump: if the price runs up, wait.",
   "rules": {
     "tokens": [
-      "B0ASEX"
+      "NOVA"
     ],
     "actions": [
       "buy"
@@ -84,7 +84,7 @@
     }
   },
   "spec": {
-    "trades": "$B0ASEX; BSV-21 only",
+    "trades": "$NOVA; BSV-21 only",
     "spends": "$10/day, $200 total",
     "often": "A few times a day",
     "stops": "Holds 100k tokens",
@@ -133,7 +133,7 @@
       <p>To publish, every field must be filled in. The wallet checks only that; it doesn't judge the strategy.</p>
       <table>
         <tr><th>Field</th><th>Shown as</th><th>Example</th></tr>
-        <tr><td><code>trades</code></td><td>What it trades</td><td>$B0ASEX; BSV-21 only</td></tr>
+        <tr><td><code>trades</code></td><td>What it trades</td><td>$NOVA; BSV-21 only</td></tr>
         <tr><td><code>risk</code></td><td>Seller's risk rating</td><td>Low · Medium · High · Experimental</td></tr>
         <tr><td><code>spends</code></td><td>Most it will spend</td><td>$10/day, $200 total</td></tr>
         <tr><td><code>often</code></td><td>How often it acts</td><td>A few times a day</td></tr>

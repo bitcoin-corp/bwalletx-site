@@ -3091,7 +3091,7 @@ Signed, sealed, delivered, accepted. Ask b to draft an agreement, sign it with y
 
 ## Your public mailbox
 
-Every bWalletX user gets a page at bwalletx.com/$you, for example [bwalletx.com/$b0asex](https://bwalletx.com/$b0asex). People without the app can find you there and write to you.
+Every bWalletX user gets a page at bwalletx.com/$you, for example [bwalletx.com/$alice](https://bwalletx.com/$alice). People without the app can find you there and write to you.
 
 ## Questions
 
@@ -3494,7 +3494,7 @@ Moving to a new phone? Use Restore with your 12 words and Continue with X to bri
 
 Your name is your X username in lower case, with `.x` on the end. X allows underscores in usernames and paymail names don't, so an underscore becomes a hyphen.
 
-@b0aseX`b0asex.x@bwalletx.com`
+@alice`alice.x@bwalletx.com`
 
 @Jane_Doe`jane-doe.x@bwalletx.com`
 
@@ -4738,7 +4738,7 @@ Free to download. In bWalletX: Settings › Agents › your agent account › Lo
 
 ### Slow accumulator · Medium risk
 
-Builds a $B0ASEX position a little at a time, only while the price is low.
+Builds a $NOVA position a little at a time, only while the price is low.
 
 Buy only · $2 a trade · $10/day · $200 total · stops at 100k tokens
 
@@ -4754,7 +4754,7 @@ Buy only · $5 a trade · $5/day · $50 total · stops if down 30%
 
 ### Take profit · Low risk
 
-Sells $B0ASEX in slices once the price is above target. Never below it.
+Sells $NOVA in slices once the price is above target. Never below it.
 
 Sell / list only · at or above $0.002 · $20/day
 
@@ -4797,10 +4797,10 @@ A strategy is a JSON file loaded into an [agent account](https://bwalletx.com/ag
 "format": "bwalletx.strategy/1",
 "name": "Slow accumulator",
 "version": "1.0",
-"goals": "Build a position in $B0ASEX slowly. Buy small amounts a few times a day, only while the price is low. Never chase a pump: if the price runs up, wait.",
+"goals": "Build a position in $NOVA slowly. Buy small amounts a few times a day, only while the price is low. Never chase a pump: if the price runs up, wait.",
 "rules": {
 "tokens": [
-"B0ASEX"
+"NOVA"
 ],
 "actions": [
 "buy"
@@ -4814,7 +4814,7 @@ A strategy is a JSON file loaded into an [agent account](https://bwalletx.com/ag
 }
 },
 "spec": {
-"trades": "$B0ASEX; BSV-21 only",
+"trades": "$NOVA; BSV-21 only",
 "spends": "$10/day, $200 total",
 "often": "A few times a day",
 "stops": "Holds 100k tokens",
@@ -4882,7 +4882,7 @@ To publish, every field must be filled in. The wallet checks only that; it doesn
 
 FieldShown asExample
 
-`trades`What it trades$B0ASEX; BSV-21 only
+`trades`What it trades$NOVA; BSV-21 only
 
 `risk`Seller's risk ratingLow · Medium · High · Experimental
 
@@ -5903,13 +5903,13 @@ Source: https://bwalletx.com/blog/020-sign-in-with-x
 
 # Sign in with X
 
-bWalletX can make a wallet from your X account. You get your X username as a verified paymail, b0asex.x@bwalletx.com for example, with your picture, a token and a room.
+bWalletX can make a wallet from your X account. You get your X username as a verified paymail, alice.x@bwalletx.com for example, with your picture, a token and a room.
 
 ## What it does
 
 On Create account there is a Continue with X button. You sign in on X's own page, come back to the wallet, and your @handle and picture are already filled in. You still choose a password and save a 12-word recovery phrase. Then you claim the name.
 
-The name is your X username in lower case with `.x` on the end. @b0aseX becomes `b0asex.x@bwalletx.com`. Underscores become hyphens, because paymail names can't have them.
+The name is your X username in lower case with `.x` on the end. @alice becomes `alice.x@bwalletx.com`. Underscores become hyphens, because paymail names can't have them.
 
 Wallets made before this can do the same from Settings › Identity › Connect X or Google. The verified name becomes the main name, and the old one still receives.
 
@@ -5917,7 +5917,7 @@ Wallets made before this can do the same from Settings › Identity › Connect 
 
 We run the sign-in ourselves, on the same server as the paymail. Before the wallet opens X, it makes a random secret and sends us only its hash. When X sends you back, we seal your X account into a ticket tied to that hash. The ticket is no use without the secret, and the secret never leaves your device.
 
-To register a `.x` name, the wallet has to show both. So only the person who signed in as @b0aseX can claim `b0asex.x`, and one X account means one wallet.
+To register a `.x` name, the wallet has to show both. So only the person who signed in as @alice can claim `alice.x`, and one X account means one wallet.
 
 From X we read your username, display name and picture. We don't ask to post and we don't read messages. X has nothing to do with your keys.
 
@@ -7081,7 +7081,7 @@ Big platforms put every community in one room. BSV needs a place to plan that it
 
 - [](https://bwalletx.com/blog/020-sign-in-with-x)020 · 7 Oct 2026
 [Sign in with X](https://bwalletx.com/blog/020-sign-in-with-x)
-bWalletX can make a wallet from your X account. You get your X username as a verified paymail, b0asex.x@bwalletx.com for example, with your picture, a token and a room.
+bWalletX can make a wallet from your X account. You get your X username as a verified paymail, alice.x@bwalletx.com for example, with your picture, a token and a room.
 
 - [](https://bwalletx.com/blog/019-language-filter)019 · 7 Oct 2026
 [Blur slurs, show swearing](https://bwalletx.com/blog/019-language-filter)
