@@ -1393,6 +1393,14 @@ Each release ships to the Android APK, the Chrome extension and the web wallet. 
 
 ## 5.1.93 2026-10-10
 
+- Money sent to any address the wallet showed you now always counts in your balance, even if it arrived while the wallet was closed or on another device
+- A storage badge in Settings shows where this account’s records live, when it last synced, and what went wrong if a sync fails, with Repair Sync one tap away
+- The wallet card shows your $handle with your identity key’s fingerprint; the back of the card shows the full Identity key with Copy, and a Sign button flips it
+- Each account card shows that account’s own handle, never another account’s bChatX name
+- Missing BSV-21 tokens can be found again from Settings › Troubleshooting › Find a missing token
+
+## 5.1.92 2026-10-10
+
 - Back bWalletX: set aside a pot and support development with $5, $10, $25 or your own amount a month, paid in BSV at that day’s rate. Stop any time and the rest stays in your pot
 - Fewer approval popups in the Chrome extension: one sheet per site with Allow all, and “Don’t ask again” for sign-in and signing. Payments stay inside your monthly allowance
 - bWallet now looks like bWalletX: the same black and gold top bar, dock and home row, with Portfolio vs market one tap from the price
