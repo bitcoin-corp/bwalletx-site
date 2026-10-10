@@ -10,7 +10,7 @@ Source: https://bwalletx.com/android
 
 The full bWalletX wallet on your Android phone or tablet. Your keys stay on your device.
 
-[Download APK (beta) ↓](https://bwalletx.com/download/bwalletx-android-5.1.89.apk)
+[Download APK (beta) ↓](https://bwalletx.com/download/bwalletx-android-5.1.91.apk)
 
 It isn't on Google Play yet, so install it by hand:
 
@@ -18,13 +18,13 @@ It isn't on Google Play yet, so install it by hand:
 
 - If Android asks, allow your browser to install unknown apps (Settings › Apps › your browser › Install unknown apps).
 
-- Open `bwalletx-android-5.1.89.apk` and tap Install.
+- Open `bwalletx-android-5.1.91.apk` and tap Install.
 
 - Open bWalletX and create or restore your wallet.
 
 Updating from an older version? Install over the top and your wallet stays. If Android says the app can't be updated, write down your 12 words first, then uninstall and reinstall.
 
-Version 5.1.89 beta · 21.4 MB · Android 7+ · SHA-256 5af7258f510fa3162ef4db736b58c19b6cde3107dc013f08324e6d7bf555c23d
+Version 5.1.91 beta · 20.8 MB · Android 7+ · SHA-256 cdb83e51f952446ff2ca7149af3ee93316579d0191e899c6a89624377cde95c6
 
 Also: [Chrome extension](https://bwalletx.com/extension) · [Developers](https://bwalletx.com/developers)
 
@@ -551,12 +551,12 @@ Source: https://bwalletx.com/extension
 
 The full bWalletX wallet in Chrome's side panel, and a wallet websites like TokenBlaster can connect to. Your keys stay in the extension.
 
-[Download for Chrome (beta) ↓](https://bwalletx.com/download/bwalletx-extension-5.1.89.zip)
-[Download for Brave (beta) ↓](https://bwalletx.com/download/bwalletx-extension-5.1.89.zip)
+[Download for Chrome (beta) ↓](https://bwalletx.com/download/bwalletx-extension-5.1.91.zip)
+[Download for Brave (beta) ↓](https://bwalletx.com/download/bwalletx-extension-5.1.91.zip)
 
 It isn't on the Chrome Web Store yet, so install it by hand:
 
-- Unzip `bwalletx-extension-5.1.89.zip`.
+- Unzip `bwalletx-extension-5.1.91.zip`.
 
 - Open `chrome://extensions` in Chrome.
 
@@ -570,7 +570,7 @@ It isn't on the Chrome Web Store yet, so install it by hand:
 
 Same extension, same file. Brave runs Chrome extensions, so:
 
-- Unzip `bwalletx-extension-5.1.89.zip`.
+- Unzip `bwalletx-extension-5.1.91.zip`.
 
 - Open `brave://extensions` in Brave.
 
@@ -580,7 +580,7 @@ Same extension, same file. Brave runs Chrome extensions, so:
 
 - Pin bWalletX from the puzzle-piece menu, click it, and create or restore your wallet.
 
-Version 5.1.89 beta · SHA-256 29a513139fa16e774c897370ceed4e51dc501838c35cd8819070ae8b433fbaa0 · Source: [github.com/bitcoin-corp/bwallet](https://github.com/bitcoin-corp/bwallet)
+Version 5.1.91 beta · SHA-256 5c101f0d5468ab7ca510665472443e83a50b781e33c53ac12515c00d2865ad4d · Source: [github.com/bitcoin-corp/bwallet](https://github.com/bitcoin-corp/bwallet)
 
 ---
 
@@ -845,7 +845,7 @@ The ghost house: see all your agents, their balances and spending today, and sto
 
 ### Hold to talk to b
 
-Touch and hold the b, speak, let go to send. [How it works](https://bwalletx.com/hold-to-talk). Live since 5.1.89.
+Touch and hold the b, speak, let go to send. [How it works](https://bwalletx.com/hold-to-talk). Live since 5.1.91.
 
 ### CLI and MCP
 
@@ -887,8 +887,8 @@ Source: https://bwalletx.com/get
 
 The full bWalletX on every device. Your keys stay on your device.
 
-[AndroidAPK download · v5.1.89 beta](https://bwalletx.com/android)
-[ChromeExtension · v5.1.89 beta](https://bwalletx.com/extension)
+[AndroidAPK download · v5.1.91 beta](https://bwalletx.com/android)
+[ChromeExtension · v5.1.91 beta](https://bwalletx.com/extension)
 [WebOpen in your browser](https://web.bwalletx.com)
 [DesktopIn your browser, or install it as an app](https://desktop.bwalletx.com)
 [iPhoneWeb app · install from Safari, no App Store](https://bwalletx.com/iphone)
@@ -961,7 +961,7 @@ holds your coins, pays and locks, and opens the chat room for every token you ho
 bWalletX is the full edition (web, Chrome, Android sideload, private iPhone build);
 bWallet is the App Store / Play edition with fewer features.
 
-Android · Download APK (beta)v5.1.89 beta · sideloadiPhone · Web appInstall from Safari · no App StoreChrome · Download extensionv5.1.89 beta · zip + install steps
+Android · Download APK (beta)v5.1.91 beta · sideloadiPhone · Web appInstall from Safari · no App StoreChrome · Download extensionv5.1.91 beta · zip + install steps
 
 ▶Watch the explainer · 1 min
 
@@ -973,10 +973,10 @@ How to sideload on Android
 Tap Download APK (beta). If Android asks, allow your browser to install unknown apps
 (Settings › Apps › your browser › Install unknown apps).
 
-- Open the downloaded bwalletx-android-5.1.89.apk and tap Install.
+- Open the downloaded bwalletx-android-5.1.91.apk and tap Install.
 
 -
-Optional but recommended: check the SHA-256 checksum matches5af7258f510fa3162ef4db736b58c19b6cde3107dc013f08324e6d7bf555c23d
+Optional but recommended: check the SHA-256 checksum matchescdb83e51f952446ff2ca7149af3ee93316579d0191e899c6a89624377cde95c6
 
 Beta software. Use small amounts and back up your recovery phrase. Only install the APK from this site or
 the official GitHub release.
@@ -1168,7 +1168,7 @@ Join the waitlist →](https://www.bitcoinchat.online)
 
 Currently in beta.
 
-Android · Download APK (beta)v5.1.89 beta · sideloadiPhone · Web appInstall from Safari · no App StoreChrome · Download extensionv5.1.89 beta · zip + install steps
+Android · Download APK (beta)v5.1.91 beta · sideloadiPhone · Web appInstall from Safari · no App StoreChrome · Download extensionv5.1.91 beta · zip + install steps
 
 Download on theApp StorebWallet · not submitted yet
 
@@ -1391,7 +1391,7 @@ Each release ships to the Android APK, the Chrome extension and the web wallet. 
 
 [Download bWalletX](https://bwalletx.com/download)
 
-## 5.1.89 2026-10-09
+## 5.1.91 2026-10-09
 
 - Hold the b to talk to b: touch and hold, speak, let go to send. On iPhone, Android, the web wallet and the Chrome extension
 - Live balance: your balance ticks up and down as money moves, with a short ticker of recent activity
@@ -4231,11 +4231,11 @@ One script gives your site a standard BRC-100 wallet. No API keys, no sign-up, a
 
 ## Get bWalletX to test with
 
-Install the wallet you'll connect to (version 5.1.89 beta). Checksums are on each download page.
+Install the wallet you'll connect to (version 5.1.91 beta). Checksums are on each download page.
 
-- [Chrome / Brave extension (zip)](https://bwalletx.com/download/bwalletx-extension-5.1.89.zip) · [install steps](https://bwalletx.com/extension)
+- [Chrome / Brave extension (zip)](https://bwalletx.com/download/bwalletx-extension-5.1.91.zip) · [install steps](https://bwalletx.com/extension)
 
-- [Android APK](https://bwalletx.com/download/bwalletx-android-5.1.89.apk) · [install steps](https://bwalletx.com/android)
+- [Android APK](https://bwalletx.com/download/bwalletx-android-5.1.91.apk) · [install steps](https://bwalletx.com/android)
 
 - [Web app](https://web.bwalletx.com) · [iPhone](https://bwalletx.com/iphone)
 
@@ -4307,7 +4307,7 @@ Questions: [support@bwalletx.com](mailto:support@bwalletx.com) · Source: [conne
 
 Source: https://bwalletx.com/hold-to-talk
 
-Live in 5.1.89
+Live in 5.1.91
 
 # Hold to talk to b.
 
@@ -4375,7 +4375,7 @@ Which languages?
 It listens in your device’s language, using whatever your phone or browser’s speech recognition supports.
 
 When can I use it?
-Now. It shipped in bWalletX 5.1.89 on iPhone, Android, the web wallet and the Chrome extension. See the [release notes](https://bwalletx.com/releases#v5.1.89).
+Now. It shipped in bWalletX 5.1.91 on iPhone, Android, the web wallet and the Chrome extension. See the [release notes](https://bwalletx.com/releases#v5.1.91).
 
 [Get bWalletX](https://bwalletx.com/get)[Open the web wallet](https://web.bwalletx.com)
 
