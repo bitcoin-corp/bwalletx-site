@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Swap into BSV: 1,000+ coins, straight to your wallet</title>
+    <link rel="canonical" href="https://bwalletx.com/swap" />
+    <meta name="description" content="In bWalletX, swap BTC, ETH, USDT, SOL and 1,000+ other coins into BSV, paid straight into your own wallet. Nobody holds your coins. Swaps are run by ChangeNOW." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://bwalletx.com/swap" />
+    <meta property="og:site_name" content="bWalletX" />
+    <meta property="og:title" content="Swap 1,000+ coins into BSV" />
+    <meta property="og:description" content="In bWalletX, swap BTC, ETH, USDT, SOL and 1,000+ other coins into BSV, paid straight into your own wallet. Nobody holds your coins. Swaps are run by ChangeNOW." />
+    <meta property="og:image" content="https://bwalletx.com/og-swap-v1.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="A dense grid of coin icons (BTC, ETH, USDT, SOL and more) flowing into a gold BSV coin, with the bWalletX logo." />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@bWalletX" />
+    <meta name="twitter:title" content="Swap 1,000+ coins into BSV" />
+    <meta name="twitter:description" content="In bWalletX, swap BTC, ETH, USDT, SOL and 1,000+ other coins into BSV, paid straight into your own wallet. Nobody holds your coins. Swaps are run by ChangeNOW." />
+    <meta name="twitter:image" content="https://bwalletx.com/og-swap-v1.png" />
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="stylesheet" href="/styles.css" />
+    <style>
+      .ext h1 { font-size: clamp(2.2rem, 6vw, 3.4rem); margin: 18px 0 10px; }
+      .ext h2 { margin: 48px 0 8px; font-size: 1.5rem; }
+      .ext p, .ext li { line-height: 1.7; }
+      .ext .small { color: #8a8a86; font-size: 0.85rem; }
+      .sw-steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 230px), 1fr)); gap: 14px; margin: 18px 0; counter-reset: s; }
+      .sw-steps div { background: #101114; border: 1px solid #ffffff12; border-radius: 16px; padding: 16px; }
+      .sw-steps div::before { counter-increment: s; content: counter(s); display: inline-grid; place-items: center; width: 30px; height: 30px; border-radius: 50%; background: linear-gradient(180deg, #F2C230, #E6B020); color: #000; font: 700 0.95rem var(--hf); margin-bottom: 8px; }
+      .sw-steps h3 { margin: 0 0 4px; font-size: 1.05rem; }
+      .sw-steps p { margin: 0; color: #a7adb8; font-size: 0.92rem; line-height: 1.5; }
+      .sw-search { display: flex; align-items: center; gap: 10px; margin: 18px 0 10px; padding: 0 14px; border: 1px solid #ffffff20; border-radius: 12px; background: #000; }
+      .sw-search:focus-within { border-color: var(--gold); }
+      .sw-search input { flex: 1; min-width: 0; background: transparent; border: 0; color: var(--ink); font: 500 1.05rem var(--hf); padding: 12px 0; outline: none; }
+      .sw-search small { color: var(--muted); white-space: nowrap; }
+      .sw-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 150px), 1fr)); gap: 8px; margin: 10px 0; }
+      .sw-coin { display: flex; align-items: center; gap: 10px; min-width: 0; background: #101114; border: 1px solid #ffffff12; border-radius: 12px; padding: 8px 10px; }
+      .sw-coin.pop { border-color: #F2C23055; }
+      .sw-coin img, .sw-coin .lt { width: 28px; height: 28px; border-radius: 50%; flex: none; }
+      .sw-coin .lt { display: grid; place-items: center; background: #F2C2301f; color: #F2C230; font: 700 0.8rem var(--hf); }
+      .sw-coin b { display: block; font: 600 0.92rem var(--hf); }
+      .sw-coin span { display: block; color: #8a8a86; font-size: 0.72rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+      .sw-coin div { min-width: 0; }
+      .sw-more { font: 600 0.9rem var(--hf); background: transparent; color: var(--gold); border: 1px solid var(--gold); border-radius: 999px; padding: 8px 16px; cursor: pointer; }
+      .sw-note { background: #101114; border: 1px solid #ffffff12; border-radius: 16px; padding: 16px 18px; margin: 18px 0; }
+      .sw-note p { margin: 0 0 8px; }
+      .sw-shot { width: 100%; border-radius: 16px; border: 1px solid #ffffff12; display: block; margin: 14px 0; }
+    </style>
+  </head>
+  <body>
+    <div class="beta-banner">bWalletX is in <strong>beta</strong>: test with small amounts.</div>
+    <header class="topbar">
+      <div class="wrap topbar-in">
+        <a class="brand" href="/"><img src="/logo.svg" alt="" width="34" height="30" /><span>bWallet<span class="gold">X</span></span></a>
+        <nav aria-label="Pages">
+          <a href="/features">Features</a><a href="/exchange">Exchange</a><a href="/social">Social</a><a href="/agent">Agents</a><a href="/extension">Extension</a><a href="/developers">Developers</a>
+        </nav>
+        <span class="nav-cta"><a class="dl-btn" href="/get">Download</a><a class="web-btn" href="https://web.bwalletx.com" target="_blank" rel="noopener">Web &rarr;</a></span>
+      </div>
+    </header>
+    <script src="/nav.js"></script>
+    <main class="ext">
+      <h1>Swap into <span class="gold">BSV</span>.</h1>
+      <p class="lede">In bWalletX you can swap BTC, ETH, USDT, SOL and 1,000+ other coins into BSV. The BSV is paid straight into your own wallet. Nobody holds your coins along the way: you send a deposit, BSV arrives at your address.</p>
+
+      <h2>How it works</h2>
+      <div class="sw-steps">
+        <div><h3>Pick a coin and amount</h3><p>Choose the coin you're swapping from and how much. The app shows an estimate of the BSV you'll get, fees included.</p></div>
+        <div><h3>Send the deposit</h3><p>bWalletX gives you a one-off deposit address. Send the coin to it from any wallet or exchange.</p></div>
+        <div><h3>BSV lands in your wallet</h3><p>Usually within 10 to 60 minutes. Track each swap in the app until it's done.</p></div>
+      </div>
+
+      <h2>Coins you can swap from</h2>
+      <p>Swap out of any of these into BSV. Popular coins come first; search by name, ticker or network.</p>
+      <label class="sw-search"><input id="sw-q" type="search" placeholder="Search BTC, Tether, Solana, TRX..." aria-label="Search coins" autocomplete="off" /><small id="sw-count"></small></label>
+      <div class="sw-grid" id="sw-grid" aria-live="polite"></div>
+      <button class="sw-more" id="sw-more" type="button" hidden>Show all coins</button>
+      <p class="small">List from ChangeNOW, refreshed when the site is built. The app always shows what's available right now.</p>
+      <a href="/swap-coins.png"><img class="sw-shot" src="/swap-coins.png" alt="Every coin you can swap from into BSV in bWalletX, as one image" loading="lazy" width="1200" /></a>
+      <p class="small">The whole list as one picture: <a href="/swap-coins.png">swap-coins.png</a>.</p>
+
+      <h2>Where to find it</h2>
+      <ul>
+        <li><b>bWalletX for Android</b>: <a href="/android">get the app</a>.</li>
+        <li><b>Desktop and web wallet</b>: <a href="https://web.bwalletx.com" target="_blank" rel="noopener">web.bwalletx.com</a>.</li>
+        <li>Not in the store edition (bWallet) from the App Store or Google Play.</li>
+      </ul>
+
+      <h2>Who runs the swap</h2>
+      <div class="sw-note">
+        <p>Swaps are run by ChangeNOW, not bWalletX. ChangeNOW may pause a swap for AML/KYC checks and ask for details before releasing or refunding it.</p>
+        <p>Rates float: the amount shown is an estimate until your deposit arrives. We make no promises about the price of any coin.</p>
+        <p class="small">ChangeNOW <a href="https://changenow.io/terms-of-use" target="_blank" rel="noopener">terms of use</a> · <a href="https://changenow.io/aml-kyc-policy" target="_blank" rel="noopener">AML/KYC policy</a> · <a href="https://changenow.io/privacy-policy" target="_blank" rel="noopener">privacy policy</a></p>
+      </div>
+      <p>Want to buy BSV with a card instead? See <a href="/buy">Buy BSV</a>.</p>
+
+      <div class="row" style="display:flex;gap:12px;flex-wrap:wrap;margin:26px 0"><a class="btn btn-store" href="/get">Get bWalletX</a></div>
+      <p class="small">bWalletX is in beta: test with small amounts. Questions: <a href="mailto:support@bwalletx.com">support@bwalletx.com</a></p>
+    </main>
+    <script>
+      (function () {
+        var all = [], showAll = false, LIMIT = 120;
+        var grid = document.getElementById('sw-grid'), q = document.getElementById('sw-q'), more = document.getElementById('sw-more'), count = document.getElementById('sw-count');
+        function card(c) {
+          var d = document.createElement('div'); d.className = 'sw-coin' + (c.p ? ' pop' : '');
+          var ic;
+          function letter() { var l = document.createElement('span'); l.className = 'lt'; l.textContent = c.t.charAt(0); return l; }
+          if (c.img) { ic = document.createElement('img'); ic.src = c.img; ic.alt = ''; ic.loading = 'lazy'; ic.width = ic.height = 28; ic.onerror = function () { ic.replaceWith(letter()); }; } else ic = letter();
+          var t = document.createElement('div'), b = document.createElement('b'), s = document.createElement('span');
+          b.textContent = c.t; s.textContent = c.n + ' · ' + c.net; s.title = s.textContent;
+          t.appendChild(b); t.appendChild(s); d.appendChild(ic); d.appendChild(t); return d;
+        }
+        function render() {
+          var term = q.value.trim().toLowerCase();
+          var list = term ? all.filter(function (c) { return (c.t + ' ' + c.n + ' ' + c.net).toLowerCase().indexOf(term) >= 0; }) : all;
+          var shown = term || showAll ? list : list.slice(0, LIMIT);
+          var f = document.createDocumentFragment(); shown.forEach(function (c) { f.appendChild(card(c)); });
+          grid.replaceChildren(f);
+          count.textContent = term ? list.length + ' found' : all.length.toLocaleString() + ' coins';
+          more.hidden = !!term || showAll || list.length <= LIMIT;
+          more.textContent = 'Show all ' + all.length.toLocaleString() + ' coins';
+        }
+        more.addEventListener('click', function () { showAll = true; render(); });
+        q.addEventListener('input', render);
+        fetch('/swap-coins.json').then(function (r) { return r.json(); }).then(function (d) { all = d.coins; render(); })
+          .catch(function () { grid.textContent = 'Could not load the coin list. Open the swap in bWalletX to see every coin.'; });
+      })();
+    </script>
+  </body>
+</html>
