@@ -845,7 +845,7 @@ The ghost house: see all your agents, their balances and spending today, and sto
 
 ### Hold to talk to b
 
-Touch and hold the b, speak, let go to send. [How it works](https://bwalletx.com/hold-to-talk). Live since 5.1.91.
+Touch and hold the b, speak, let go to send. [How it works](https://bwalletx.com/hold-to-talk). Live since 5.1.89.
 
 ### CLI and MCP
 
@@ -1391,7 +1391,16 @@ Each release ships to the Android APK, the Chrome extension and the web wallet. 
 
 [Download bWalletX](https://bwalletx.com/download)
 
-## 5.1.91 2026-10-09
+## 5.1.91 2026-10-10
+
+- Pots & Locks: the Lock screen groups your locks into pots (savings, pension, bills and more), with every locking feature kept. Back PNEEs takes you from the card to the amount, the lock and a done screen
+- Subscriptions are priced in dollars and paid in BSV at that day’s rate, each from a pot you choose. See them all in one list, pause or cancel any time
+- Portfolio vs market: tap the price tile to compare your wallet with holding BSV, BTC or dollars over a day, week, month, year or all time
+- Swap other coins into BSV from the card on the home screen
+- Every error has Copy and Ask b, and Add account is one screen: new account, restore from 12 words (bWalletX, Yours, Twetch, RelayX) or import a backup
+- Chrome extension: incoming calls ring even with the side panel closed, calls open in their own window or float picture-in-picture, and approvals come one at a time
+
+## 5.1.89 2026-10-09
 
 - Hold the b to talk to b: touch and hold, speak, let go to send. On iPhone, Android, the web wallet and the Chrome extension
 - Live balance: your balance ticks up and down as money moves, with a short ticker of recent activity
@@ -4307,7 +4316,7 @@ Questions: [support@bwalletx.com](mailto:support@bwalletx.com) · Source: [conne
 
 Source: https://bwalletx.com/hold-to-talk
 
-Live in 5.1.91
+Live in 5.1.89
 
 # Hold to talk to b.
 
@@ -4375,7 +4384,7 @@ Which languages?
 It listens in your device’s language, using whatever your phone or browser’s speech recognition supports.
 
 When can I use it?
-Now. It shipped in bWalletX 5.1.91 on iPhone, Android, the web wallet and the Chrome extension. See the [release notes](https://bwalletx.com/releases#v5.1.91).
+Now. It shipped in bWalletX 5.1.89 on iPhone, Android, the web wallet and the Chrome extension. See the [release notes](https://bwalletx.com/releases#v5.1.89).
 
 [Get bWalletX](https://bwalletx.com/get)[Open the web wallet](https://web.bwalletx.com)
 
