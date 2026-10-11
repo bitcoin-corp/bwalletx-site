@@ -113,20 +113,28 @@
     <audio id="jb-music" src="/audio/just-b-echoes-of-dust.mp3" preload="none" loop></audio>
     <p class="jb-foot">bWalletX is in beta: test with small amounts. <a href="mailto:support@bwalletx.com">support@bwalletx.com</a></p>
       <script>
-      // The advert sequence: four phrases in turn, then Just, then the b (and the period), which stay.
+      // The advert sequence: four phrases in turn, then Just b, which lingers, then the loop repeats.
       (function () {
         var ph = document.querySelectorAll('.jb-stage .ph'), w = document.querySelector('.jb-stage .w'),
           b = document.querySelector('.jb-stage .b');
         var reduce = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
         if (reduce) { [w, b].forEach(function (e) { e.classList.add('on'); }); return; }
-        var t = 1200, HOLD = 3800, GAP = 2400;
-        ph.forEach(function (p) {
-          setTimeout(function () { p.classList.add('on'); }, t);
-          setTimeout(function () { p.classList.remove('on'); }, t + HOLD);
-          t += HOLD + GAP;
-        });
-        setTimeout(function () { w.classList.add('on'); }, t);
-        setTimeout(function () { b.classList.add('on'); }, t + 1500);
+        var HOLD = 3800, GAP = 2400, LINGER = 9000, OUT = 3000;
+        // Loops for as long as the page is open (and the music plays): phrases, then Just b lingers, fades, repeats.
+        function run() {
+          var t = 1200;
+          ph.forEach(function (p) {
+            setTimeout(function () { p.classList.add('on'); }, t);
+            setTimeout(function () { p.classList.remove('on'); }, t + HOLD);
+            t += HOLD + GAP;
+          });
+          setTimeout(function () { w.classList.add('on'); }, t);
+          setTimeout(function () { b.classList.add('on'); }, t + 1500);
+          t += 1500 + LINGER;
+          setTimeout(function () { w.classList.remove('on'); b.classList.remove('on'); }, t);
+          setTimeout(run, t + OUT - 1200);
+        }
+        run();
       })();
       // Desert video: play whichever one is visible; fade it in when frames are actually moving.
       (function () {
