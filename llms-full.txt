@@ -317,7 +317,8 @@ Creators are responsible for what they say and show, and must follow the law and
 
 Source: https://bwalletx.com/btrust
 
-# bTrust. Pass on what matters.
+# bTrust.
+Pass on what matters.
 
 Choose who receives your money, your keys and your important documents, and when. Quietly arranged now, so the people you love are looked after later.
 
@@ -429,6 +430,43 @@ Buy and sell tokens, priced in dollars.
 [All features](https://bwalletx.com/features)
 
 bWalletX is in beta: test with small amounts. Questions: [support@bwalletx.com](mailto:support@bwalletx.com)
+
+---
+
+Source: https://bwalletx.com/bvault
+
+# bVault.
+Keep what matters safe.
+
+Your important documents, backups and the keys to coins you keep elsewhere, encrypted in one calm place that only you can open.
+
+Coming bVault is in the works and isn’t in the app yet. This page says what we’re building.
+
+[Get bWalletX](https://bwalletx.com/get)
+
+## Everything important, in one place
+
+Passports, deeds, insurance, the letter you’d want found. Add them to bVault and they’re encrypted on your device before they go anywhere.
+
+## Your other coins, kept safe
+
+Keep the backup words for wallets you hold elsewhere, sealed in your vault. bVault can show what they hold, read-only, so you can see it all at a glance. It never sends from them.
+
+## Ready to hand on
+
+bVault works with [bTrust](https://bwalletx.com/btrust), so the people you choose can open what you leave them, when the moment comes, and not before.
+
+## What works today
+
+- LiveYour wallet backup. Back up your bWalletX words from Settings, and restore on any device. See [Restore](https://bwalletx.com/restore).
+
+- LiveLocks. Set money aside until a date you choose. See [Locks](https://bwalletx.com/lock).
+
+- ComingbVault. Encrypted documents and backups, with read-only balances for your other coins.
+
+- ComingbTrust. Choose who receives what, and when.
+
+Only you hold the key to your vault: if you lose your wallet backup, we can’t open it for you. bWalletX is in beta: test with small amounts. Questions: [support@bwalletx.com](mailto:support@bwalletx.com)
 
 ---
 
