@@ -60,21 +60,23 @@
       @keyframes drift { 0%, 100% { opacity: 0.3; } 50% { opacity: 1; } }
       @media (prefers-reduced-motion: reduce) { .jb-stage .ph, .jb-stage .l { transition: none; } .jb-stage .b.on { animation: none; } }
 
-      .jb-gate { position: absolute; inset: 0; z-index: 5; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 18px; border: 0; padding: 0; cursor: pointer; color: #fff; background: rgba(0, 0, 0, 0.45); -webkit-backdrop-filter: blur(22px) saturate(1.1); backdrop-filter: blur(22px) saturate(1.1); transition: opacity 1.6s ease, visibility 1.6s; font: 500 0.95rem var(--hf); letter-spacing: 0.12em; text-transform: uppercase; }
+      .jb-gate { position: absolute; inset: 0; z-index: 5; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 22px; border: 0; padding: 0; cursor: pointer; color: #fff; background: rgba(0, 0, 0, 0.5); -webkit-backdrop-filter: blur(24px); backdrop-filter: blur(24px); transition: opacity 1.8s ease, visibility 1.8s; font: 400 0.72rem var(--hf); letter-spacing: 0.32em; text-transform: uppercase; }
       .jb-gate.off { opacity: 0; visibility: hidden; pointer-events: none; }
-      .jb-play { width: 96px; height: 96px; border-radius: 50%; display: flex; align-items: center; justify-content: center; padding-left: 6px; box-sizing: border-box; color: #0b0a08; background: linear-gradient(180deg, #ffd24d, #f5b800); box-shadow: 0 0 60px rgba(245, 184, 0, 0.55); animation: glow-btn 3.5s ease-in-out infinite; }
-      .jb-gate:hover .jb-play, .jb-gate:focus-visible .jb-play { transform: scale(1.06); }
-      .jb-gate-l { color: #e9e1cc; }
-      @keyframes glow-btn { 0%, 100% { box-shadow: 0 0 40px rgba(245, 184, 0, 0.4); } 50% { box-shadow: 0 0 80px rgba(245, 184, 0, 0.8); } }
+      .jb-play { width: 76px; height: 76px; border-radius: 50%; display: flex; align-items: center; justify-content: center; padding-left: 4px; box-sizing: border-box; color: #fff; border: 1px solid rgba(255, 255, 255, 0.55); transition: transform 0.6s ease, border-color 0.6s ease, background 0.6s ease; }
+      .jb-gate:hover .jb-play, .jb-gate:focus-visible .jb-play { transform: scale(1.05); border-color: #fff; background: rgba(255, 255, 255, 0.06); }
+      .jb-gate-l { color: rgba(255, 255, 255, 0.55); }
       .jb-calm { max-width: 680px; margin: 0 auto; padding: 20vh 24px 18vh; text-align: center; color: #cfc6b0; font: 400 clamp(1.05rem, 2.4vw, 1.3rem) / 1.75 var(--hf); }
       .jb-calm p { margin: 0 0 2.2em; }
       .jb-calm .jb-lead { font: 700 clamp(1.9rem, 6vw, 3.2rem) / 1.15 var(--hf); letter-spacing: -0.03em; color: #fff; margin-bottom: 1.4em; }
       .jb-calm p:last-child { margin: 2.2em 0 0; }
       .jb-calm strong { color: #fff; font-weight: 600; }
       .jb-calm em { font-style: normal; color: var(--gold-hi); }
-      .jb-sound { position: fixed; right: 18px; bottom: 18px; z-index: 5; display: flex; align-items: center; gap: 8px; height: 44px; padding: 0 16px; border-radius: 999px; border: 1px solid rgba(245, 184, 0, 0.35); background: rgba(0, 0, 0, 0.45); color: #e8dcc0; font: 600 0.85rem var(--hf); letter-spacing: 0.06em; cursor: pointer; backdrop-filter: blur(6px); }
+      .jb-sound { position: fixed; right: 14px; bottom: 14px; z-index: 6; display: flex; align-items: center; justify-content: center; width: 44px; height: 44px; padding: 0; border: 0; border-radius: 50%; background: transparent; color: rgba(255, 255, 255, 0.45); cursor: pointer; opacity: 0; visibility: hidden; transition: opacity 1.6s ease, color 0.3s ease; }
+      .jb-started .jb-sound { opacity: 1; visibility: visible; }
+      .jb-sound:hover { color: rgba(255, 255, 255, 0.85); }
+      #jb-sound-label { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
       .jb-sound:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
-      .jb-sound[aria-pressed="true"] { color: var(--gold-hi); border-color: rgba(245, 184, 0, 0.7); }
+      .jb-sound[aria-pressed="true"] { color: rgba(245, 210, 120, 0.7); }
 
       .jb-end { justify-content: center; }
       .jb-end img { object-position: center 60%; }
@@ -99,7 +101,7 @@
           <span class="fin"><span class="l w">Just</span><span class="l b"><img src="/logo.svg" alt="b" /></span></span>
         </h1>
       </div>
-      <button type="button" class="jb-gate" id="jb-gate" aria-label="Play Just b with sound"><span class="jb-play"><svg viewBox="0 0 24 24" width="38" height="38" aria-hidden="true"><path d="M8 5.5v13l11-6.5z" fill="currentColor"/></svg></span><span class="jb-gate-l">Play with sound</span></button>
+      <button type="button" class="jb-gate" id="jb-gate" aria-label="Play Just b with sound"><span class="jb-play"><svg viewBox="0 0 24 24" width="26" height="26" aria-hidden="true"><path d="M8 5.5v13l11-6.5z" fill="currentColor"/></svg></span><span class="jb-gate-l">Play with sound</span></button>
     </section>
 
     <section class="jb-calm">
@@ -119,7 +121,7 @@
       </div>
     </section>
     <button type="button" class="jb-sound" id="jb-sound" aria-pressed="false" aria-label="Play ambient music">
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M11 5 6 9H3v6h3l5 4z"></path><path d="M15.5 8.5a5 5 0 0 1 0 7"></path><path d="M18.5 5.5a9 9 0 0 1 0 13"></path></svg>
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><path d="M11 5 6 9H3v6h3l5 4z"></path><path d="M15.5 8.5a5 5 0 0 1 0 7"></path><path d="M18.5 5.5a9 9 0 0 1 0 13"></path></svg>
       <span id="jb-sound-label">Sound</span>
     </button>
     <audio id="jb-music" src="/audio/just-b-echoes-of-dust.mp3" preload="none" loop></audio>
@@ -130,7 +132,7 @@
         var ph = document.querySelectorAll('.jb-stage .ph'), w = document.querySelector('.jb-stage .w'),
           b = document.querySelector('.jb-stage .b');
         var reduce = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
-        if (reduce) { [w, b].forEach(function (e) { e.classList.add('on'); }); document.getElementById('jb-gate').addEventListener('click', function () { this.classList.add('off'); document.getElementById('jb-sound').click(); }, { once: true }); return; }
+        if (reduce) { [w, b].forEach(function (e) { e.classList.add('on'); }); document.getElementById('jb-gate').addEventListener('click', function () { this.classList.add('off'); document.body.classList.add('jb-started'); document.getElementById('jb-sound').click(); }, { once: true }); return; }
         var HOLD = 3800, GAP = 2400, LINGER = 9000, OUT = 3000;
         // Loops for as long as the page is open (and the music plays): phrases, then Just b lingers, fades, repeats.
         function run() {
@@ -150,7 +152,7 @@
         // Starts behind the glass gate: the desert plays blurred until the visitor taps Play, then words and music begin together.
         var gate = document.getElementById('jb-gate');
         gate.addEventListener('click', function () {
-          gate.classList.add('off');
+          gate.classList.add('off'); document.body.classList.add('jb-started');
           var snd = document.getElementById('jb-sound');
           if (snd.getAttribute('aria-pressed') !== 'true') snd.click();
           run();
