@@ -1393,6 +1393,14 @@ Each release ships to the Android APK, the Chrome extension and the web wallet. 
 
 ## 5.1.96 2026-10-11
 
+- New approval cards: signing in, connecting, paying and minting each have their own big, clear card, so you can see what you are approving at a glance
+- Payments ask in dollars, with the sats underneath and one big Pay button
+- Anything risky, like a site asking for full control of your keys, shows a red Careful card where the safe choice is the big button
+- The wallet no longer asks you to register a handle you already have
+- Closing the handle screen after you unlock takes you back to your wallet, not Settings
+
+## 5.1.95 2026-10-11
+
 - Mint your bAvatar: Mint my bAvatar in the account menu inscribes your gold bAvatar with your name and account number. The first 1,000 accounts mint free
 - Every account without its own picture gets a gold bAvatar drawn from its name, and the back of the wallet card shows it as a QR code any phone camera can scan to reach your paymail
 - Sign in with bWalletX on bChatX asks one clear question, “Prove it’s you”, already ticked, so sign-in no longer fails with “permission denied”
@@ -1854,7 +1862,7 @@ Loading…
 
 - What the app sends while you test is in the [privacy policy](https://bwalletx.com/privacy#testers): a random install id, your tester code, whether it came from Google Play, and the app version. Nothing about your keys or money.
 
-Questions: [@bWalletX on X](https://x.com/bWalletX).
+Questions: [@bWalletX on X](https://x.com/bWalletX) · [Twetch](https://bwalletx.com/twetch).
 
 ---
 
