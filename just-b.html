@@ -140,6 +140,7 @@
             setTimeout(function () { p.classList.remove('on'); }, t + HOLD);
             t += HOLD + GAP;
           });
+          t += 2600; // breathing space after the last phrase before Just b
           setTimeout(function () { w.classList.add('on'); }, t);
           setTimeout(function () { b.classList.add('on'); }, t + 1500);
           t += 1500 + LINGER;
