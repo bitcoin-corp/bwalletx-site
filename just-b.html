@@ -29,20 +29,26 @@
       body { margin: 0; background: #000; color: #f1ead9; }
       .jb-scene { position: relative; min-height: 100svh; display: flex; flex-direction: column; overflow: hidden; }
       .jb-scene img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 70%; }
+      /* The moving desert: a slow 12 s back-and-forth loop over the still, fading in once it plays. */
+      .jb-vid { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 70%; opacity: 0; transition: opacity 2s ease; }
+      .jb-vid.playing { opacity: 1; }
+      .jb-vid-tall { display: none; }
+      @media (orientation: portrait) { .jb-vid-wide { display: none; } .jb-vid-tall { display: block; } }
+      @media (prefers-reduced-motion: reduce) { .jb-vid { display: none !important; } }
       .jb-scene::after { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(0, 0, 0, 0.35) 0%, rgba(0, 0, 0, 0) 40%, rgba(0, 0, 0, 0) 70%, #000 100%); }
       .jb-hero-in { position: relative; z-index: 1; flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: flex-start; padding: 36vh 16px 0; text-align: center; }
       /* The advert: b safe, b happy, b peaceful, b you, each at title size, then "Just", then the b, which stays. */
       .jb-stage { position: relative; margin: 0; width: 100%; height: 1.05em; font: 700 clamp(3.2rem, 15vw, 12.5rem) / 1 var(--hf); letter-spacing: -0.045em; text-shadow: 0 6px 60px rgba(0, 0, 0, 0.6); }
       .jb-stage em { font-style: normal; color: var(--gold-hi); }
       .jb-stage .ph, .jb-stage .fin { position: absolute; left: 0; right: 0; top: 0; white-space: nowrap; }
-      .jb-stage .ph { opacity: 0; filter: blur(4px); transform: translateY(0.05em); transition: opacity 1.1s ease, filter 1.1s ease, transform 1.1s ease; }
+      .jb-stage .ph { opacity: 0; filter: blur(4px); transform: translateY(0.05em); transition: opacity 2.8s ease, filter 2.8s ease, transform 2.8s ease; }
       .jb-stage .ph.on { opacity: 1; filter: blur(0); transform: none; }
       .jb-stage .l { display: inline-block; opacity: 0; filter: blur(4px); transform: translateY(0.05em); transition: opacity 2.2s cubic-bezier(0.25, 0.1, 0.25, 1), filter 2.2s ease, transform 2.2s ease; }
       .jb-stage .l.on { opacity: 1; filter: blur(0); transform: none; }
-      .jb-stage .b { margin-left: 0.32em; color: var(--gold-hi); }
-      .jb-stage .b.on { animation: glow 7s 2.4s ease-in-out infinite; }
-      .jb-stage .dot { color: var(--gold-hi); margin-left: 0.02em; }
-      @keyframes glow { 0%, 100% { text-shadow: 0 0 40px rgba(245, 184, 0, 0.35); } 50% { text-shadow: 0 0 90px rgba(245, 184, 0, 0.75); } }
+      .jb-stage .b { margin-left: 0.28em; vertical-align: top; margin-top: 0.06em; }
+      .jb-stage .b img { height: 0.86em; width: calc(0.86em * 0.74); max-width: none; display: block; filter: drop-shadow(0 0 30px rgba(245, 184, 0, 0.35)); }
+      .jb-stage .b.on img { animation: glow 7s 2.4s ease-in-out infinite; }
+      @keyframes glow { 0%, 100% { filter: drop-shadow(0 0 24px rgba(245, 184, 0, 0.35)); } 50% { filter: drop-shadow(0 0 60px rgba(245, 184, 0, 0.8)); } }
       .jb-names { margin: 28px 0 0; font: 500 clamp(0.85rem, 3vw, 1rem) var(--hf); letter-spacing: 0.08em; color: #cfc6b0; opacity: 0; animation: rise 2s 1.2s ease forwards; }
       .jb-names a { color: inherit; text-decoration: none; }
       .jb-names a:hover, .jb-names a:focus-visible { color: #fff; }
@@ -79,7 +85,7 @@
           <span class="ph">b <em>happy</em></span>
           <span class="ph">b <em>peaceful</em></span>
           <span class="ph">b <em>you</em></span>
-          <span class="fin"><span class="l w">Just</span><span class="l b">b</span><span class="l dot">.</span></span>
+          <span class="fin"><span class="l w">Just</span><span class="l b"><img src="/logo.svg" alt="b" /></span></span>
         </h1>
       </div>
       <div class="jb-down" aria-hidden="true"></div>
@@ -109,10 +115,10 @@
       // The advert sequence: four phrases in turn, then Just, then the b (and the period), which stay.
       (function () {
         var ph = document.querySelectorAll('.jb-stage .ph'), w = document.querySelector('.jb-stage .w'),
-          b = document.querySelector('.jb-stage .b'), dot = document.querySelector('.jb-stage .dot');
+          b = document.querySelector('.jb-stage .b');
         var reduce = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
-        if (reduce) { [w, b, dot].forEach(function (e) { e.classList.add('on'); }); return; }
-        var t = 600, HOLD = 1900, GAP = 900;
+        if (reduce) { [w, b].forEach(function (e) { e.classList.add('on'); }); return; }
+        var t = 1200, HOLD = 3800, GAP = 2400;
         ph.forEach(function (p) {
           setTimeout(function () { p.classList.add('on'); }, t);
           setTimeout(function () { p.classList.remove('on'); }, t + HOLD);
@@ -120,7 +126,13 @@
         });
         setTimeout(function () { w.classList.add('on'); }, t);
         setTimeout(function () { b.classList.add('on'); }, t + 1500);
-        setTimeout(function () { dot.classList.add('on'); }, t + 3300);
+      })();
+      // Desert video: play whichever one is visible; fade it in when frames are actually moving.
+      (function () {
+        document.querySelectorAll('.jb-vid').forEach(function (v) {
+          v.addEventListener('playing', function () { v.classList.add('playing'); });
+          if (getComputedStyle(v).display === 'none') { v.pause(); v.removeAttribute('autoplay'); v.preload = 'none'; }
+        });
       })();
       // Ambient music (VexVoid, "Echoes of Dust"): off until the visitor taps Sound, then fades in.
       (function () {
