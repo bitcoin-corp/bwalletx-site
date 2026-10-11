@@ -315,6 +315,42 @@ Creators are responsible for what they say and show, and must follow the law and
 
 ---
 
+Source: https://bwalletx.com/btrust
+
+# bTrust. Pass on what matters.
+
+Choose who receives your money, your keys and your important documents, and when. Quietly arranged now, so the people you love are looked after later.
+
+Coming bTrust is in the works and isn’t in the app yet. This page says what we’re building.
+
+[Get bWalletX](https://bwalletx.com/get)
+
+## Name the people
+
+Pick who should receive what: a partner, your children, a friend you trust. Add a note for each of them in your own words.
+
+## Choose the moment
+
+Set when things pass on: on a date you choose, or if you haven’t checked in for a while. Change your mind any time while you’re here.
+
+## Keep it safe in bVault
+
+bTrust works with bVault, your encrypted vault for documents and backups, including the keys to coins you keep elsewhere. Only the people you name can open what you leave them, and only when the moment comes.
+
+## What works today
+
+- LiveLocks. Set money aside until a date you choose. Nobody can touch it before then, including you. See [Locks](https://bwalletx.com/lock).
+
+- LivePots. Money set aside for a purpose. See [Pots](https://bwalletx.com/pots).
+
+- ComingbTrust. People, notes and the moment things pass on.
+
+- ComingbVault. Encrypted documents and backups, ready to hand on.
+
+bTrust is a way to arrange what you leave inside your wallet. It isn’t a legal trust or a will; for those, talk to a solicitor. bWalletX is in beta: test with small amounts. Questions: [support@bwalletx.com](mailto:support@bwalletx.com)
+
+---
+
 Source: https://bwalletx.com/buy
 
 # Buy BSV in bWalletX
