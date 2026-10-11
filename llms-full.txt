@@ -1499,6 +1499,13 @@ Each release ships to the Android APK, the Chrome extension and the web wallet. 
 
 ## 5.2.2 2026-10-11
 
+- Minting large files, like a music video, works again: the wallet no longer does its own housekeeping between the steps of a site’s multi-part mint
+- Right after the wallet moves a stuck payment, your balance shows it once, not twice
+- Steps left over from a mint that failed part-way are released when the wallet starts, so your full balance is spendable again
+- If a site’s mint does fail, it now reports the step that went wrong instead of a confusing message about cancelling
+
+## 5.2.1 2026-10-11
+
 - Money sent to your address is now always added to what you can spend, even when an earlier attempt to add it got stuck, so minting and paying sites work
 - The Choose your handle screen always opens on top of everything, with Close and Done in reach
 - If your personal token and room can’t be created yet, the wallet tells you why instead of “Already sponsored”
