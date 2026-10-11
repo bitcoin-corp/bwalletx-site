@@ -65,6 +65,11 @@
       .jb-play { width: 76px; height: 76px; border-radius: 50%; display: flex; align-items: center; justify-content: center; padding-left: 4px; box-sizing: border-box; color: #fff; border: 1px solid rgba(255, 255, 255, 0.55); transition: transform 0.6s ease, border-color 0.6s ease, background 0.6s ease; }
       .jb-gate:hover .jb-play, .jb-gate:focus-visible .jb-play { transform: scale(1.05); border-color: #fff; background: rgba(255, 255, 255, 0.06); }
       .jb-gate-l { color: rgba(255, 255, 255, 0.55); }
+      .jb-invite { margin-top: 1.6em; display: flex; flex-direction: column; align-items: center; gap: 14px; opacity: 0; transform: translateY(8px); transition: opacity 2.2s ease, transform 2.2s ease; pointer-events: none; }
+      .jb-invite.on { opacity: 1; transform: none; pointer-events: auto; }
+      .jb-invite p { margin: 0; font: 400 clamp(0.8rem, 2.2vw, 0.95rem) var(--hf); letter-spacing: 0.06em; color: rgba(255, 255, 255, 0.65); }
+      .jb-dl { display: inline-flex; align-items: center; height: 48px; padding: 0 28px; border-radius: 999px; border: 1px solid rgba(255, 255, 255, 0.6); color: #fff; text-decoration: none; font: 500 0.82rem var(--hf); letter-spacing: 0.2em; text-transform: uppercase; transition: background 0.4s ease, border-color 0.4s ease, color 0.4s ease; }
+      .jb-dl:hover, .jb-dl:focus-visible { background: var(--gold-hi); border-color: var(--gold-hi); color: #0b0a08; }
       .jb-calm { max-width: 680px; margin: 0 auto; padding: 20vh 24px 18vh; text-align: center; color: #cfc6b0; font: 400 clamp(1.05rem, 2.4vw, 1.3rem) / 1.75 var(--hf); }
       .jb-calm p { margin: 0 0 2.2em; }
       .jb-calm .jb-lead { font: 700 clamp(1.9rem, 6vw, 3.2rem) / 1.15 var(--hf); letter-spacing: -0.03em; color: #fff; margin-bottom: 1.4em; }
@@ -100,6 +105,10 @@
           <span class="ph"><span class="pb"><img src="/logo.svg" alt="b" /></span><em>happy</em></span>
           <span class="fin"><span class="l w">Just</span><span class="l b"><img src="/logo.svg" alt="b" /></span></span>
         </h1>
+        <div class="jb-invite" id="jb-invite">
+          <p>Free on Android, iPhone, Chrome and the web.</p>
+          <a class="jb-dl" href="/get?from=just-b">Download bWalletX</a>
+        </div>
       </div>
       <button type="button" class="jb-gate" id="jb-gate" aria-label="Play Just b with sound"><span class="jb-play"><svg viewBox="0 0 24 24" width="26" height="26" aria-hidden="true"><path d="M8 5.5v13l11-6.5z" fill="currentColor"/></svg></span><span class="jb-gate-l">Play with sound</span></button>
     </section>
@@ -132,7 +141,7 @@
         var ph = document.querySelectorAll('.jb-stage .ph'), w = document.querySelector('.jb-stage .w'),
           b = document.querySelector('.jb-stage .b');
         var reduce = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
-        if (reduce) { [w, b].forEach(function (e) { e.classList.add('on'); }); document.getElementById('jb-gate').addEventListener('click', function () { this.classList.add('off'); document.body.classList.add('jb-started'); document.getElementById('jb-sound').click(); }, { once: true }); return; }
+        if (reduce) { [w, b, document.getElementById('jb-invite')].forEach(function (e) { e.classList.add('on'); }); document.getElementById('jb-gate').addEventListener('click', function () { this.classList.add('off'); document.body.classList.add('jb-started'); document.getElementById('jb-sound').click(); }, { once: true }); return; }
         var HOLD = 3800, GAP = 2400, LINGER = 9000, OUT = 3000;
         // Loops for as long as the page is open (and the music plays): phrases, then Just b lingers, fades, repeats.
         function run() {
@@ -145,6 +154,7 @@
           t += 2600; // breathing space after the last phrase before Just b
           setTimeout(function () { w.classList.add('on'); }, t);
           setTimeout(function () { b.classList.add('on'); }, t + 1500);
+          setTimeout(function () { document.getElementById('jb-invite').classList.add('on'); }, t + 3200); // stays once shown
           t += 1500 + LINGER;
           setTimeout(function () { w.classList.remove('on'); b.classList.remove('on'); }, t);
           setTimeout(run, t + OUT - 1200);
