@@ -330,7 +330,7 @@
               <li><b>A QR that opens your paymail</b>Point any phone camera at it and it finds you. A business card you can keep.</li>
               <li><b>Yours to keep or pass on</b>Send it to anyone and the art and number go with it. Your account, keys and name stay with you.</li>
             </ul>
-            <div class="cost"><b>Free for the Founding 1,000.</b> A mint costs about 1,100 sats in network fees, a tiny fraction of a cent, and bWalletX pays it for accounts #1 to #1,000. After that you pay the fee yourself, at cost.</div>
+            <div class="cost"><b>Free for the Founding 1,000.</b> A mint costs about 4,000 sats in network fees, a tiny fraction of a cent, and bWalletX pays it for accounts #1 to #1,000. After that you pay the fee yourself, at cost.</div>
             <div class="cta"><a class="pri" href="/get">Mint in bWalletX</a><a class="sec" href="#try">Customize first</a></div>
             <span class="rolling">Minting rolling out</span>
           </div>
@@ -562,7 +562,7 @@
               out.appendChild(b);
               out.appendChild(document.createTextNode(d.founding
                 ? ' is #' + d.number + ' of the Founding 1,000. Your mint is on us.'
-                : ' is account #' + d.number + '. Mint at network cost, about 1,100 sats.'));
+                : ' is account #' + d.number + '. Mint at network cost, about 4,000 sats.'));
             }).catch(function () { if (my === seq) out.textContent = 'Could not look that up just now. Try again in a moment.'; });
           }
           input.addEventListener('input', function () { clearTimeout(t); t = setTimeout(look, 350); });
