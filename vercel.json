@@ -40,6 +40,26 @@
   ],
   "redirects": [
     {
+      "source": "/BTrust",
+      "destination": "/btrust",
+      "permanent": true
+    },
+    {
+      "source": "/bTrust",
+      "destination": "/btrust",
+      "permanent": true
+    },
+    {
+      "source": "/BVault",
+      "destination": "/bvault",
+      "permanent": true
+    },
+    {
+      "source": "/bVault",
+      "destination": "/bvault",
+      "permanent": true
+    },
+    {
       "source": "/twetch",
       "destination": "https://twetch.com/u/220501",
       "permanent": false
