@@ -3,72 +3,177 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>bAvatars: every name gets a picture</title>
+    <title>bAvatars: your name, as art you can scan</title>
     <link rel="canonical" href="https://bwalletx.com/bavatars" />
-    <meta name="description" content="bAvatars are drawn from your Bitcoin name, so the same name always gets the same picture in any app. Eight gold styles, a scannable QR coin, and your own photo still wins." />
+    <meta name="description" content="Every Bitcoin name gets its own bAvatar: gold art blended from Bloom, Deco, Kintsugi, Orbit and Sigil, drawn from the name. Scan it with any camera. Live on bChatX and in paymail profiles." />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://bwalletx.com/bavatars" />
     <meta property="og:site_name" content="bWalletX" />
-    <meta property="og:title" content="Every name gets a bAvatar" />
-    <meta property="og:description" content="bAvatars are drawn from your Bitcoin name, so the same name always gets the same picture in any app. Eight gold styles, a scannable QR coin, and your own photo still wins." />
-    <meta property="og:image" content="https://bwalletx.com/og-bavatars-v3.png" />
+    <meta property="og:title" content="Your name, as art you can scan" />
+    <meta property="og:description" content="Every Bitcoin name gets its own bAvatar: gold art drawn from the name, scannable with any camera." />
+    <meta property="og:image" content="https://bwalletx.com/og-bavatars-v4.png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
-    <meta property="og:image:alt" content="A grid of gold bAvatars drawn from Bitcoin names: Kintsugi, Bloom, Deco Fan, Sigil and a QR coin." />
+    <meta property="og:image:alt" content="A gallery wall of gold bAvatars, each one drawn from a different Bitcoin name." />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@bWalletX" />
-    <meta name="twitter:title" content="Every name gets a bAvatar" />
-    <meta name="twitter:description" content="bAvatars are drawn from your Bitcoin name, so the same name always gets the same picture in any app. Eight gold styles, a scannable QR coin, and your own photo still wins." />
-    <meta name="twitter:image" content="https://bwalletx.com/og-bavatars-v3.png" />
+    <meta name="twitter:title" content="Your name, as art you can scan" />
+    <meta name="twitter:description" content="Every Bitcoin name gets its own bAvatar: gold art drawn from the name, scannable with any camera." />
+    <meta name="twitter:image" content="https://bwalletx.com/og-bavatars-v4.png" />
     <link rel="icon" href="/favicon.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="/styles.css" />
     <style>
-      .ext h1 { font-size: clamp(2.2rem, 6vw, 3.4rem); margin: 18px 0 10px; }
-      .ext h2 { margin: 48px 0 8px; font-size: 1.5rem; }
-      .ext p, .ext li { line-height: 1.7; }
-      .ext .small { color: #8a8a86; font-size: 0.85rem; }
-      .ba-controls { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; margin: 22px 0; padding: 14px; background: #101114; border: 1px solid #ffffff12; border-radius: 16px; }
-      .ba-field { display: flex; align-items: center; flex: 1 1 280px; min-width: 0; border: 1px solid #ffffff20; border-radius: 12px; background: #000; }
-      .ba-field:focus-within { border-color: var(--gold); }
-      .ba-field span { color: var(--gold); padding-left: 12px; font: 600 1.1rem var(--hf); }
-      .ba-field input { flex: 1; min-width: 0; background: transparent; border: 0; color: var(--ink); font: 500 1.1rem var(--hf); padding: 12px 6px; outline: none; }
-      .ba-field small { color: var(--muted); padding-right: 12px; font-size: 0.85rem; }
-      .ba-chips { display: flex; flex-wrap: wrap; gap: 8px; }
-      .ba-chip { font: 500 0.85rem var(--hf); background: transparent; color: var(--muted); border: 1px solid #ffffff20; border-radius: 999px; padding: 6px 12px; cursor: pointer; }
-      .ba-chip:hover, .ba-chip:focus-visible, .ba-chip[aria-pressed="true"] { color: var(--ink); border-color: var(--gold); outline: none; }
-      .ba-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 220px), 1fr)); gap: 14px; margin: 18px 0; }
-      .ba-card { position: relative; display: grid; gap: 10px; align-content: start; background: #101114; border: 1px solid #ffffff12; border-radius: 16px; padding: 16px; color: inherit; text-align: left; font: inherit; cursor: pointer; }
-      .ba-card:hover { border-color: #F5B80066; }
-      .ba-card[aria-pressed="true"] { border-color: var(--gold); box-shadow: 0 0 0 1px var(--gold), 0 0 40px rgba(245, 184, 0, 0.18); }
-      .ba-card canvas { width: 100%; aspect-ratio: 1; border-radius: 50%; display: block; }
-      .ba-sizes { display: flex; align-items: center; gap: 10px; }
-      .ba-sizes canvas { width: 40px; height: 40px; aspect-ratio: auto; }
-      .ba-sizes canvas.s { width: 24px; height: 24px; }
-      .ba-card h3 { margin: 0; font-size: 1.1rem; }
-      .ba-card p { margin: 0; color: #a7adb8; font-size: 0.9rem; line-height: 1.5; }
-      .ba-tag { font: 700 0.72rem var(--hf); padding: 2px 9px; border-radius: 999px; background: var(--gold); color: #000; justify-self: start; }
-      .ba-tag.alt { background: transparent; color: var(--gold); border: 1px solid var(--gold); }
-      .ba-fav { position: absolute; top: 12px; right: 12px; font: 700 0.7rem var(--hf); color: var(--gold); letter-spacing: 0.06em; text-transform: uppercase; }
-      .ba-pick { display: grid; grid-template-columns: 140px minmax(0, 1fr); gap: 20px; align-items: center; background: #101114; border: 1px solid #F5B80055; border-radius: 18px; padding: 18px; margin: 18px 0; }
-      .ba-pick canvas { width: 140px; height: 140px; border-radius: 50%; display: block; }
-      .ba-pick h3 { margin: 0 0 4px; font-size: 1.2rem; }
-      .ba-pick p { margin: 0; color: #a7adb8; }
-      .ba-panel { display: grid; grid-template-columns: minmax(0, 300px) minmax(0, 1fr); gap: 24px; align-items: center; background: #101114; border: 1px solid #ffffff12; border-radius: 18px; padding: 20px; margin: 18px 0; }
-      .ba-panel canvas { width: 100%; max-width: 300px; aspect-ratio: 1; border-radius: 26px; display: block; }
-      .ba-panel code { color: var(--gold); word-break: break-all; }
-      .ba-three { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr)); gap: 18px; margin: 18px 0; }
-      .ba-three figure { margin: 0; display: grid; gap: 10px; align-content: start; }
-      .ba-three canvas { width: 100%; aspect-ratio: 1; border-radius: 50%; display: block; }
-      .ba-three canvas.sq { border-radius: 18px; }
-      .ba-three figcaption { color: #a7adb8; font-size: 0.92rem; line-height: 1.5; }
-      .ba-three figcaption b { display: block; color: var(--ink); }
-      .ba-decoded { display: block; margin-top: 4px; color: var(--gold); font-size: 0.85rem; }
-      .ba-decoded.bad { color: #ff7a6b; }
-      .ba-how { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 230px), 1fr)); gap: 14px; margin: 18px 0; }
-      .ba-how div { background: #101114; border: 1px solid #ffffff12; border-radius: 16px; padding: 14px 16px; }
-      .ba-how h3 { margin: 0 0 4px; font-size: 1.05rem; }
-      .ba-how p { margin: 0; color: #a7adb8; font-size: 0.92rem; line-height: 1.5; }
-      @media (max-width: 640px) { .ba-panel, .ba-pick { grid-template-columns: 1fr; } .ba-pick canvas { width: 120px; height: 120px; } }
+      .bv { --line: #ffffff14; --card: #0d0d0f; overflow-x: clip; }
+      .bv section { position: relative; padding-block: 72px; }
+      .bv .wrapx { max-width: 1120px; margin: 0 auto; padding-inline: 20px; }
+      .bv .eyebrow { font: 700 0.78rem var(--hf); letter-spacing: 0.16em; text-transform: uppercase; color: var(--gold); margin: 0 0 12px; }
+      .bv h1, .bv h2 { font-family: var(--hf); letter-spacing: -0.025em; text-wrap: balance; margin: 0; }
+      .bv h1 { font-size: clamp(2.6rem, 7vw, 5rem); line-height: 1.02; font-weight: 700; }
+      .bv h2 { font-size: clamp(1.9rem, 4.4vw, 3rem); line-height: 1.06; font-weight: 700; }
+      .bv .lede { font-size: clamp(1.05rem, 2vw, 1.25rem); color: #cfcabd; line-height: 1.6; max-width: 34em; margin: 18px 0 0; }
+      .bv .sub { color: var(--muted); line-height: 1.65; max-width: 40em; margin: 14px 0 0; }
+      .bv .gold { color: var(--gold); }
+      .bv .rolling { display: inline-block; font: 700 0.72rem var(--hf); letter-spacing: 0.08em; text-transform: uppercase; color: var(--gold); border: 1px solid #f5b80066; border-radius: 999px; padding: 4px 10px; margin-top: 14px; }
+      .cta { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 30px; }
+      .cta a { font: 700 1rem var(--hf); border-radius: 999px; padding: 14px 26px; text-decoration: none; }
+      .cta .pri { background: linear-gradient(180deg, #ffd24d, #f5b800); color: #0b0a08; box-shadow: 0 10px 40px #f5b80044; }
+      .cta .sec { border: 1px solid #ffffff2a; color: var(--ink); }
+      .cta a:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
+
+      /* hero */
+      .hero { padding-block: 64px 40px !important; }
+      .hero-bg { position: absolute; inset: 0; z-index: 0; pointer-events: none; }
+      .hero-bg canvas { width: 100%; height: 100%; display: block; }
+      .hero .wrapx { position: relative; z-index: 1; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr); gap: 40px; align-items: center; }
+      .wall { position: relative; display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; transform: rotate(-4deg); }
+      .wall figure { margin: 0; position: relative; aspect-ratio: 1; border-radius: 50%; overflow: hidden; background: #111; box-shadow: 0 0 0 1px #f5b80055, 0 0 30px #f5b80022; animation: bvglow 6s ease-in-out infinite; }
+      .wall figure:nth-child(3n) { animation-delay: -2s; } .wall figure:nth-child(4n+1) { animation-delay: -4s; }
+      .wall img { width: 100%; height: 100%; display: block; object-fit: cover; }
+      .wall figcaption { position: absolute; inset: auto 0 8% 0; text-align: center; font: 600 0.72rem var(--hf); color: #fff; text-shadow: 0 1px 6px #000; opacity: 0; transition: opacity .2s; }
+      .wall figure:hover figcaption { opacity: 1; }
+      .wall figure:nth-child(even) { transform: translateY(18px); }
+      @keyframes bvglow { 0%, 100% { box-shadow: 0 0 0 1px #f5b80055, 0 0 24px #f5b80018; } 50% { box-shadow: 0 0 0 1px #f5b800aa, 0 0 46px #f5b80044; } }
+      @media (prefers-reduced-motion: reduce) { .wall figure { animation: none; } }
+
+      /* try it */
+      .try { background: radial-gradient(60% 50% at 50% 0%, #f5b80014, transparent 70%); border-top: 1px solid var(--line); }
+      .field { display: flex; align-items: center; max-width: 520px; margin: 26px 0 14px; border: 1px solid #ffffff26; border-radius: 999px; background: #000; padding: 4px 6px 4px 18px; }
+      .field:focus-within { border-color: var(--gold); box-shadow: 0 0 0 3px #f5b80033; }
+      .field span { color: var(--gold); font: 700 1.3rem var(--hf); }
+      .field input { flex: 1; min-width: 0; background: transparent; border: 0; color: var(--ink); font: 600 1.3rem var(--hf); padding: 12px 6px; outline: none; }
+      .field small { color: var(--muted); padding-right: 12px; font-size: 0.9rem; }
+      .chips { display: flex; flex-wrap: wrap; gap: 8px; }
+      .chips button { font: 500 0.88rem var(--hf); background: transparent; color: var(--muted); border: 1px solid #ffffff20; border-radius: 999px; padding: 6px 13px; cursor: pointer; }
+      .chips button:hover, .chips button:focus-visible, .chips button[aria-pressed="true"] { color: var(--ink); border-color: var(--gold); outline: none; }
+      .trio { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 22px; margin-top: 34px; }
+      .trio figure { margin: 0; display: grid; gap: 14px; align-content: start; background: var(--card); border: 1px solid var(--line); border-radius: 24px; padding: 18px; }
+      .trio .bv-art { width: 100%; aspect-ratio: 1; border-radius: 50%; display: block; background: #111; object-fit: cover; }
+      .trio canvas.bv-art.sq, .trio img.bv-art.sq { border-radius: 18px; }
+      .trio figcaption { color: #b7b2a4; font-size: 0.95rem; line-height: 1.55; }
+      .trio figcaption b { display: block; color: var(--ink); font: 700 1.05rem var(--hf); margin-bottom: 4px; }
+      .stage { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); gap: 32px; align-items: center; margin-top: 30px; }
+      .bv [hidden] { display: none !important; }
+      .stage .big { margin: 0; display: grid; gap: 14px; }
+      .stage .big .bv-art { width: 100%; max-width: 460px; height: auto; aspect-ratio: 1; border-radius: 50%; display: block; background: #111; box-shadow: 0 0 0 1px #f5b80066, 0 0 90px #f5b80026; justify-self: center; }
+      .stage figcaption, .pair figcaption { color: #b7b2a4; font-size: 0.95rem; line-height: 1.55; }
+      .stage figcaption b, .pair figcaption b { display: block; color: var(--ink); font: 700 1.05rem var(--hf); margin-bottom: 4px; }
+      .choose { background: var(--card); border: 1px solid var(--line); border-radius: 24px; padding: 22px; display: grid; gap: 14px; }
+      .modes { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; background: #000; border: 1px solid #ffffff1c; border-radius: 999px; padding: 5px; }
+      .modes button { font: 700 1rem var(--hf); border: 0; border-radius: 999px; padding: 12px 10px; background: transparent; color: var(--muted); cursor: pointer; }
+      .modes button[aria-pressed="true"] { background: linear-gradient(180deg, #ffd24d, #f5b800); color: #0b0a08; }
+      .modes button:focus-visible, .toggles button:focus-visible, .ghost:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
+      .note { margin: 0; color: #cfcabd; line-height: 1.55; }
+      .label { margin: 0; font: 700 0.78rem var(--hf); letter-spacing: .12em; text-transform: uppercase; color: var(--gold); }
+      .toggles { display: flex; flex-wrap: wrap; gap: 8px; }
+      .toggles button { display: flex; align-items: center; gap: 8px; font: 600 0.92rem var(--hf); color: var(--muted); background: #000; border: 1px solid #ffffff22; border-radius: 999px; padding: 5px 12px 5px 5px; cursor: pointer; }
+      .toggles button canvas { width: 28px; height: 28px; border-radius: 50%; display: block; }
+      .toggles button[aria-pressed="true"] { color: var(--ink); border-color: var(--gold); box-shadow: 0 0 18px #f5b80022; }
+      .variation { display: grid; gap: 6px; color: #cfcabd; font: 600 .9rem var(--hf); }
+      .variation input { width: 100%; accent-color: #f5b800; }
+      .crow { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; }
+      .ghost { font: 700 .9rem var(--hf); color: var(--ink); background: transparent; border: 1px solid #ffffff2a; border-radius: 999px; padding: 8px 16px; cursor: pointer; }
+      .hint { margin: 0; color: var(--muted); font-size: .85rem; min-height: 1.2em; }
+      .pair { display: grid; grid-template-columns: repeat(2, minmax(0, 260px)); gap: 22px; margin-top: 34px; }
+      .pair figure { margin: 0; display: grid; gap: 12px; align-content: start; background: var(--card); border: 1px solid var(--line); border-radius: 22px; padding: 16px; }
+      .pair .bv-art { width: 100%; height: auto; aspect-ratio: 1; border-radius: 50%; display: block; background: #111; }
+      .pair .bv-art.sq { border-radius: 16px; }
+      .scanme { display: inline-block; margin-top: 6px; font: 700 0.75rem var(--hf); letter-spacing: 0.06em; text-transform: uppercase; color: #0b0a08; background: var(--gold); border-radius: 999px; padding: 3px 10px; }
+      .decoded { display: block; margin-top: 6px; color: var(--gold); font-size: 0.85rem; }
+      .decoded.bad { color: #ff7a6b; }
+      .save { justify-self: start; font: 600 0.88rem var(--hf); color: var(--gold); text-decoration: none; border: 1px solid #f5b80055; border-radius: 999px; padding: 7px 14px; }
+
+      /* styles */
+      .styles { border-top: 1px solid var(--line); }
+      .tiles { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 16px; margin-top: 32px; }
+      .tile { background: var(--card); border: 1px solid var(--line); border-radius: 20px; padding: 14px; display: grid; gap: 10px; }
+      .tile canvas { width: 100%; aspect-ratio: 1; border-radius: 50%; display: block; }
+      .tile b { font: 700 1rem var(--hf); }
+      .tile p { margin: 0; color: #a9a59a; font-size: 0.86rem; line-height: 1.5; }
+      .blend { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; margin-top: 26px; font: 600 1rem var(--hf); color: #d8d2c3; }
+      .blend i { font-style: normal; color: var(--gold); }
+
+      /* kintsugi */
+      .kin { border-top: 1px solid var(--line); background: radial-gradient(45% 60% at 25% 50%, #f5b80014, transparent 70%); }
+      .kin .wrapx { display: grid; grid-template-columns: minmax(0, 0.9fr) minmax(0, 1fr); gap: 56px; align-items: center; }
+      .kin canvas { width: 100%; max-width: 440px; height: auto; aspect-ratio: 1; border-radius: 50%; display: block; justify-self: center; box-shadow: 0 0 0 1px #f5b80055, 0 0 100px #f5b80022; }
+      .kin h2 { font-size: clamp(2.2rem, 5vw, 3.6rem); }
+      .kin .sub { font-size: 1.15rem; color: #d6d0c1; }
+
+      /* wallet card */
+      .wcard { border-top: 1px solid var(--line); background: radial-gradient(50% 60% at 80% 50%, #f5b80012, transparent 70%); }
+      .wcard .wrapx { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 0.9fr); gap: 48px; align-items: center; }
+      .phone { align-self: center; justify-self: center; width: min(100%, 330px); border-radius: 42px; padding: 14px; background: #050505; box-shadow: 0 0 0 1px #ffffff22, 0 40px 120px #000, 0 0 80px #f5b8001a; }
+      .phone .scr { border-radius: 30px; background: #0b0a08; padding: 18px 14px 22px; display: grid; gap: 12px; }
+      .phone .top { display: flex; justify-content: space-between; color: #8b877b; font: 600 0.72rem var(--hf); }
+      .bcard { position: relative; aspect-ratio: 1.586; border-radius: 18px; overflow: hidden; box-shadow: 0 0 0 1px #f5b80066, 0 18px 50px #00000099; }
+      .bcard img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+      .bcard::after { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, #000000b8 0%, #00000040 45%, #000000c8 100%); }
+      .bcard .in { position: relative; z-index: 1; height: 100%; box-sizing: border-box; padding: 14px 16px; display: flex; flex-direction: column; justify-content: space-between; color: #fff; }
+      .bcard .h { font: 700 1.05rem var(--hf); color: var(--gold-hi); }
+      .bcard .fp { font: 500 0.68rem ui-monospace, Menlo, monospace; color: #e8e2d2; opacity: .85; }
+      .bcard .bal { font: 700 1.9rem var(--hf); letter-spacing: -0.02em; text-shadow: 0 2px 12px #000; }
+      .bcard .num { position: absolute; right: 14px; top: 12px; z-index: 1; font: 700 0.72rem var(--hf); color: #0b0a08; background: var(--gold); border-radius: 999px; padding: 3px 9px; }
+      .btnrow { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
+      .btnrow span { text-align: center; font: 700 0.8rem var(--hf); color: #0b0a08; background: linear-gradient(180deg, #ffd24d, #f5b800); border-radius: 999px; padding: 9px 0; }
+      .rowx { display: grid; grid-template-columns: 34px 1fr auto; gap: 10px; align-items: center; background: #15130e; border: 1px solid #ffffff10; border-radius: 14px; padding: 10px 12px; }
+      .rowx i { font-style: normal; width: 34px; height: 34px; border-radius: 50%; display: grid; place-items: center; background: #f5b800; color: #0b0a08; font: 700 .9rem var(--hf); }
+      .rowx b { display: block; font: 700 .86rem var(--hf); } .rowx small { color: #8b877b; font-size: .72rem; } .rowx em { font-style: normal; font: 700 .86rem var(--hf); }
+      .points { display: grid; gap: 14px; margin-top: 26px; }
+      .points div { border-left: 2px solid var(--gold); padding: 2px 0 2px 16px; }
+      .points b { display: block; font: 700 1.05rem var(--hf); margin-bottom: 3px; }
+      .points p { margin: 0; color: #b4afa1; line-height: 1.55; }
+
+      /* where */
+      .where { border-top: 1px solid var(--line); }
+      .wgrid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; margin-top: 30px; }
+      .wgrid div { background: var(--card); border: 1px solid var(--line); border-radius: 20px; padding: 22px; }
+      .wgrid b { font: 700 1.1rem var(--hf); display: block; margin-bottom: 6px; }
+      .wgrid p { margin: 0; color: #a9a59a; line-height: 1.55; }
+      .wgrid .live { font: 700 0.7rem var(--hf); letter-spacing: .08em; text-transform: uppercase; color: #0b0a08; background: var(--gold); border-radius: 999px; padding: 2px 8px; margin-left: 8px; vertical-align: middle; }
+      .wgrid .soon { background: transparent; color: var(--gold); border: 1px solid #f5b80066; }
+      .wgrid code { display: block; margin-top: 4px; color: var(--gold); font-size: .8rem; }
+
+      .end { border-top: 1px solid var(--line); text-align: center; }
+      .end .cta { justify-content: center; }
+      .end .ring { width: 120px; height: 120px; border-radius: 50%; margin: 0 auto 24px; box-shadow: 0 0 0 1px #f5b80077, 0 0 60px #f5b80033; overflow: hidden; }
+      .end .ring img { width: 100%; height: 100%; display: block; }
+
+      @media (max-width: 960px) {
+        .hero .wrapx, .wcard .wrapx, .stage, .kin .wrapx { grid-template-columns: 1fr; }
+        .wall { max-width: 560px; transform: rotate(-3deg); margin-top: 10px; }
+        .tiles { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+        .wgrid { grid-template-columns: 1fr; }
+      }
+      @media (max-width: 640px) {
+        .bv section { padding-block: 52px; }
+        .pair { grid-template-columns: 1fr 1fr; gap: 12px; }
+        .tiles { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+        .wall { grid-template-columns: repeat(3, 1fr); gap: 10px; }
+        .wall figure:nth-child(n+10) { display: none; }
+      }
     </style>
   </head>
   <body>
@@ -83,124 +188,299 @@
       </div>
     </header>
     <script src="/nav.js"></script>
-    <main class="ext">
-      <h1>Every name gets a <span class="gold">bAvatar</span>.</h1>
-      <p class="lede">A bAvatar is a picture drawn from your Bitcoin name. The same name always gets the same picture, in any app that looks it up, so $you@bwalletx.com looks like you before you upload anything.</p>
 
-      <div class="ba-controls">
-        <label class="ba-field" for="ba-name"><span>$</span><input id="ba-name" value="alice" autocomplete="off" spellcheck="false" maxlength="40" aria-label="Bitcoin name" /><small>@bwalletx.com</small></label>
-        <div class="ba-chips" id="ba-samples" aria-label="Try a name"></div>
-      </div>
-
-      <h2>Pick your style</h2>
-      <p>Tap a style to make it yours. Each one is shown at full size, then at 40px and 24px, the sizes it appears at in chat lists and replies.</p>
-      <div class="ba-pick" aria-live="polite">
-        <canvas id="ba-mine" width="280" height="280" role="img" aria-label="Your chosen bAvatar"></canvas>
-        <div>
-          <h3 id="ba-mine-title">Your bAvatar</h3>
-          <p>Pick the style you like. In bWalletX it sits in Settings, and everyone who sees your name sees it. You can always use your own photo instead.</p>
+    <main class="bv">
+      <section class="hero">
+        <div class="hero-bg" aria-hidden="true"><canvas id="contours"></canvas></div>
+        <div class="wrapx">
+          <div>
+            <p class="eyebrow">bAvatars</p>
+            <h1>Your name, as <span class="gold">art you can scan</span>.</h1>
+            <p class="lede">Every Bitcoin name gets its own gold bAvatar, blended from Bloom, Deco, Kintsugi, Orbit and Sigil and drawn from the name itself. No two names look alike, and any phone camera can scan it.</p>
+            <div class="cta"><a class="pri" href="#try">Make yours</a><a class="sec" href="/get">Get bWalletX</a></div>
+          </div>
+          <div class="wall" id="wall" aria-label="bAvatars for twelve example names"></div>
         </div>
-      </div>
-      <section class="ba-grid" id="ba-grid" aria-label="bAvatar styles"></section>
+      </section>
 
-      <h2>The QR coin</h2>
-      <div class="ba-panel">
-        <canvas id="ba-qr" width="640" height="640" role="img" aria-label="Scannable bAvatar QR coin"></canvas>
-        <div>
-          <p>Your bAvatar as a real QR code in gold dots, with the b mark in the middle. It uses the highest error-correction level, so up to about 30% of the code can be covered by the mark and it still scans. Point a phone camera at it.</p>
-          <p>It opens <code id="ba-qr-url"></code></p>
+      <section class="try" id="try">
+        <div class="wrapx">
+          <p class="eyebrow">Try it</p>
+          <h2>Type a name. Meet its bAvatar.</h2>
+          <p class="sub">At sign-up, bWalletX gives you one automatically, or design your own and mint the one you love. <span class="rolling" style="margin:0 0 0 6px;vertical-align:middle">Minting rolling out</span></p>
+          <label class="field" for="bv-name"><span>$</span><input id="bv-name" value="alice" autocomplete="off" spellcheck="false" maxlength="40" aria-label="Bitcoin name" /><small>@bwalletx.com</small></label>
+          <div class="chips" id="chips" aria-label="Try a name"></div>
+
+          <div class="stage">
+            <figure class="big">
+              <img class="bv-art" id="t-avatar" alt="" width="512" height="512" />
+              <canvas class="bv-art" id="t-custom" width="720" height="720" role="img" aria-label="Your custom bAvatar" hidden></canvas>
+              <figcaption><b>The avatar</b><span id="t-cap">Bloom light, a deco fan and gold seams, all drawn from the name.</span></figcaption>
+            </figure>
+            <div class="choose">
+              <div class="modes" role="group" aria-label="Choose your bAvatar">
+                <button type="button" id="m-keep" aria-pressed="true">Keep this one</button>
+                <button type="button" id="m-custom" aria-pressed="false">Customize</button>
+              </div>
+              <p class="note" id="m-note">This is the one bWalletX gives <b id="m-name">$alice</b> at sign-up. Nothing to do: it is yours.</p>
+              <div class="custom" id="custom" hidden>
+                <p class="label">Blend 3 or 4 styles</p>
+                <div class="toggles" id="toggles"></div>
+                <div class="variation"><label for="v-slider">Variation <b id="v-val">0</b></label><input type="range" id="v-slider" min="0" max="24" value="0" /></div>
+                <div class="crow"><button type="button" id="shuffle" class="ghost">Shuffle</button><a class="save" id="t-save" href="#" target="_blank" rel="noopener">Open full size</a></div>
+                <p class="hint" id="t-hint"></p>
+              </div>
+            </div>
+          </div>
+
+          <div class="pair">
+            <figure>
+              <img class="bv-art sq" id="t-qr" alt="" width="512" height="512" />
+              <canvas class="bv-art sq" id="t-qrc" width="720" height="720" role="img" aria-label="Art QR of your custom bAvatar" hidden></canvas>
+              <figcaption><b>Art QR &middot; any camera</b>The same art seen through a real QR grid. Scan it with your phone camera.<span class="scanme">Scan me</span></figcaption>
+            </figure>
+            <figure>
+              <canvas class="bv-art" id="t-ring" width="640" height="640" role="img" aria-label="Code ring bAvatar"></canvas>
+              <figcaption><b>Code ring &middot; bWalletX scanner</b>Three gold tracks hold the name. This page reads the pixels back to check it.<span class="decoded" id="t-decoded"></span></figcaption>
+            </figure>
+          </div>
         </div>
-      </div>
+      </section>
 
-      <h2>Bloom &times; Deco &times; Kintsugi</h2>
-      <p>One avatar that blends three styles, then two ways to make it scannable. The art QR works in any phone camera. The code ring leaves the art untouched and stores the name in a gold bezel for the bWalletX scanner.</p>
-      <div class="ba-three">
-        <figure><canvas id="ba-combo" width="640" height="640" role="img" aria-label="Combined bAvatar"></canvas>
-          <figcaption><b>The avatar</b>Bloom light, a deco fan and gold seams, all drawn from the name.</figcaption></figure>
-        <figure><canvas id="ba-artqr" class="sq" width="720" height="720" role="img" aria-label="Art QR bAvatar"></canvas>
-          <figcaption><b>Art QR &middot; any camera</b>The same art seen through a real QR grid. Scan it with your phone camera.</figcaption></figure>
-        <figure><canvas id="ba-ring" width="640" height="640" role="img" aria-label="Code ring bAvatar"></canvas>
-          <figcaption><b>Code ring &middot; bWalletX scanner</b>Three gold tracks hold the name. This page reads the pixels back to check it.<span class="ba-decoded" id="ba-decoded"></span></figcaption></figure>
-      </div>
+      <section class="styles">
+        <div class="wrapx">
+          <p class="eyebrow">The styles</p>
+          <h2>Five gold styles. Your name picks the mix.</h2>
+          <p class="sub">Each bAvatar starts with Bloom light, then the name chooses two or three more styles to layer on top. Here is each style on its own, drawn for <b class="gold" id="s-name">$alice</b>.</p>
+          <div class="tiles" id="tiles"></div>
+          <div class="blend" aria-hidden="true"><span>Bloom</span><i>+</i><span>Deco</span><i>+</i><span>Kintsugi</span><i>=</i><span class="gold">one bAvatar, only yours</span></div>
+        </div>
+      </section>
 
+      <section class="kin">
+        <div class="wrapx">
+          <canvas id="k-art" width="760" height="760" role="img" aria-label="A Kintsugi bAvatar"></canvas>
+          <div>
+            <p class="eyebrow">Kintsugi</p>
+            <h2>One break. <span class="gold">Mended in gold.</span></h2>
+            <p class="sub">A plate can only break once, and no two plates break the same way. Your gold seams are drawn from a hash of your key: one break per account, never repeated, mended in gold.</p>
+          </div>
+        </div>
+      </section>
 
-      <h2>Your numbered card</h2>
-      <p class="small" style="margin-top:-6px">Rolling out to bWalletX accounts.</p>
-      <div class="ba-how">
-        <div><h3>bWalletX #N &middot; $you</h3><p>Every account gets a bAvatar card in its wallet: your art, a QR that opens your paymail, and your account number, in the order accounts joined.</p></div>
-        <div><h3>Yours whatever you show</h3><p>Use your bAvatar, your own photo or anything else as your picture. The card stays in your wallet either way.</p></div>
-        <div><h3>The holder shows the number</h3><p>Cards can be traded like any other item in bWalletX. Whoever holds #42 shows the #42 badge on their own profile, with their own name and history.</p></div>
-        <div><h3>Your account stays yours</h3><p>A card carries a number, not an account. Your keys, posts and name stay with you. Never share your recovery words with anyone.</p></div>
-      </div>
+      <section class="wcard">
+        <div class="wrapx">
+          <div>
+            <p class="eyebrow">Your wallet card</p>
+            <h2>Carry your bAvatar on your wallet card.</h2>
+            <p class="sub">In bWalletX your bAvatar becomes the background of the card on your home screen, with your $name and your fingerprint on top. Each account gets a numbered card, <b>bWalletX #N &middot; $you</b>, in the order accounts joined.</p>
+            <span class="rolling">Rolling out to bWalletX accounts</span>
+            <div class="points">
+              <div><b>The card you hold is the design you carry</b><p>Collect a card you love and your wallet card changes to its art. Trade it on and it changes again.</p></div>
+              <div><b>The holder shows the number</b><p>Whoever holds #42 shows the #42 badge on their own profile, next to their own name and history.</p></div>
+              <div><b>Your picture is your choice</b><p>Use your bAvatar, your own photo or anything else. Your card stays in your wallet either way.</p></div>
+              <div><b>Your account stays yours</b><p>A card carries a number and art, never an account. Your keys, posts and name stay with you. Never share your recovery words.</p></div>
+            </div>
+          </div>
+          <div class="phone" aria-label="Example bWalletX home screen with a bAvatar wallet card">
+            <div class="scr">
+              <div class="top"><span>9:41</span><span>bWalletX</span></div>
+              <div class="bcard">
+                <img id="w-bg" alt="" />
+                <span class="num" id="w-num">#42</span>
+                <div class="in">
+                  <div><div class="h" id="w-handle">$alice</div><div class="fp" id="w-fp">02a7c1…9e3f</div></div>
+                  <div class="bal">$128.40</div>
+                </div>
+              </div>
+              <div class="btnrow"><span>Send</span><span>Receive</span><span>Mint</span></div>
+              <div class="rowx"><i>B</i><div><b>BSV</b><small>Bitcoin SV</small></div><em>6.58</em></div>
+              <div class="rowx"><i>¢</i><div><b>PNEEs</b><small>Penny stablecoins</small></div><em>1,200</em></div>
+            </div>
+          </div>
+        </div>
+      </section>
 
-      <h2>How it works</h2>
-      <div class="ba-how">
-        <div><h3>Same name, same picture</h3><p>Every style is drawn from the name itself. Nothing is stored, so any app can draw it, and it only changes if the name does.</p></div>
-        <div><h3>Upload still wins</h3><p>Your own photo always comes first. The bAvatar is the default and the fallback, never forced.</p></div>
-        <div><h3>Open to other BSV apps</h3><p>Every bAvatar is drawn from the name alone, so any BSV app can draw the same picture.</p></div>
-        <div><h3>Your name</h3><p>Get a $name@bwalletx.com with bWalletX: it's your paymail, your handle and now your picture. See <a href="/handles">Handles</a>.</p></div>
-      </div>
+      <section class="where">
+        <div class="wrapx">
+          <p class="eyebrow">Where it shows</p>
+          <h2>One picture, everywhere your name goes.</h2>
+          <div class="wgrid">
+            <div><b>bChatX<span class="live">Live</span></b><p>Profiles, posts, the right-hand panels and Space seats show your bAvatar until you upload a photo.</p></div>
+            <div><b>Paymail apps<span class="live">Live</span></b><p>Your paymail profile offers it as your picture, so other BSV apps show it too. Image: <code>bchatx.com/api/bavatar/you.png</code></p></div>
+            <div><b>bWalletX<span class="live soon">5.1.95</span></b><p>Account cards and menus draw it on your phone, with no network call.</p></div>
+          </div>
+        </div>
+      </section>
 
-      <div class="row" style="display:flex;gap:12px;flex-wrap:wrap;margin:26px 0"><a class="btn btn-store" href="/get">Get bWalletX</a></div>
-      <p class="small">bWalletX is in beta: test with small amounts. Questions: <a href="mailto:support@bwalletx.com">support@bwalletx.com</a></p>
+      <section class="end">
+        <div class="wrapx">
+          <div class="ring"><img id="end-av" alt="" width="240" height="240" /></div>
+          <h2>Get your name. Get your <span class="gold">bAvatar</span>.</h2>
+          <p class="sub" style="margin-inline:auto">Claim $you@bwalletx.com in bWalletX and your bAvatar comes with it. See <a href="/handles">Handles</a>.</p>
+          <div class="cta"><a class="pri" href="/get">Get bWalletX</a><a class="sec" href="#try">Make yours</a></div>
+          <p class="small" style="color:var(--muted);margin-top:28px;font-size:.85rem">bWalletX is in beta: test with small amounts. Questions: <a href="mailto:support@bwalletx.com">support@bwalletx.com</a></p>
+        </div>
+      </section>
     </main>
+
+    <footer class="foot">
+      <div class="wrap foot-in">
+        <a class="brand" href="/"><img src="/logo.svg" alt="" width="27" height="24" /><span>bWallet<span class="gold">X</span></span></a>
+        <p>By The Bitcoin Corporation Ltd.</p>
+        <p><a href="https://x.com/bWalletX" target="_blank" rel="noopener">@bWalletX on X</a> · <a href="/privacy.html">Privacy policy</a></p>
+      </div>
+    </footer>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcode-generator/1.4.4/qrcode.min.js"></script>
     <script src="/bavatars.js"></script>
     <script>
       (function () {
         var B = window.bAvatars;
+        var API = 'https://www.bchatx.com/api/bavatar/';
+        var WALL = ['alice', 'sam', 'nova', 'kai', 'mira', 'otto', 'jun', 'zed', 'ivy', 'leo', 'ruby', 'max'];
         var SAMPLES = ['alice', 'sam', 'nova', 'kai', 'mira', 'otto', 'jun'];
-        var FAVS = ['bloom', 'deco', 'kintsugi', 'sigil']; // shown first
-        var styles = FAVS.map(function (id) { return B.STYLES.find(function (s) { return s.id === id; }); })
-          .concat(B.STYLES.filter(function (s) { return FAVS.indexOf(s.id) < 0; }));
-        var input = document.getElementById('ba-name');
-        var chosen = 'bloom';
-        try { var saved = localStorage.getItem('bavatar-style'); if (saved && B.STYLES.some(function (s) { return s.id === saved; })) chosen = saved; } catch (e) {}
+        var MIX = ['bloom', 'orbit', 'deco', 'kintsugi', 'sigil'];
+        var byId = function (id) { return B.STYLES.find(function (s) { return s.id === id; }); };
 
-        var grid = document.getElementById('ba-grid');
-        var cards = styles.map(function (st) {
-          var el = document.createElement('button');
-          el.type = 'button'; el.className = 'ba-card';
-          el.innerHTML = '<canvas width="440" height="440"></canvas><div class="ba-sizes"><canvas width="80" height="80"></canvas><canvas class="s" width="48" height="48"></canvas><span class="ba-tag' + (st.alt ? ' alt' : '') + '"></span></div><h3></h3><p></p>';
-          el.querySelector('h3').textContent = st.name;
-          el.querySelector('p').textContent = st.note;
-          el.querySelector('.ba-tag').textContent = st.tag;
-          el.addEventListener('click', function () {
-            chosen = st.id;
-            try { localStorage.setItem('bavatar-style', chosen); } catch (e) {}
-            render();
-          });
-          grid.appendChild(el);
-          return { st: st, el: el, canvases: el.querySelectorAll('canvas') };
+        // Hero wall: the real bAvatars, from the same service bChatX uses.
+        var wall = document.getElementById('wall');
+        WALL.forEach(function (n) {
+          var f = document.createElement('figure');
+          var img = new Image(); img.src = API + n + '.svg'; img.alt = 'bAvatar for $' + n; img.width = 160; img.height = 160;
+          var cap = document.createElement('figcaption'); cap.textContent = '$' + n;
+          f.appendChild(img); f.appendChild(cap); wall.appendChild(f);
         });
 
-        var samples = document.getElementById('ba-samples');
+        // Gold contour lines behind the hero.
+        function contours() {
+          var c = document.getElementById('contours'); var r = c.getBoundingClientRect();
+          var dpr = Math.min(2, window.devicePixelRatio || 1); c.width = r.width * dpr; c.height = r.height * dpr;
+          var x = c.getContext('2d'); x.scale(dpr, dpr); var W = r.width, H = r.height;
+          var g = x.createRadialGradient(W * 0.72, H * 0.45, 0, W * 0.72, H * 0.45, W * 0.6);
+          g.addColorStop(0, 'rgba(245,184,0,0.14)'); g.addColorStop(1, 'rgba(245,184,0,0)'); x.fillStyle = g; x.fillRect(0, 0, W, H);
+          for (var i = 0; i < 34; i++) {
+            x.beginPath(); var y0 = -30 + i * (H + 60) / 34;
+            for (var px = -10; px <= W + 10; px += 12) {
+              var t = px / W; var y = y0 + Math.sin(t * 6 + i * 0.33) * (14 + 50 * t) + Math.cos(t * 2.3 + i * 0.12) * 22;
+              px < 0 ? x.moveTo(px, y) : x.lineTo(px, y);
+            }
+            x.strokeStyle = 'rgba(226,181,62,' + (0.05 + 0.16 * Math.abs(Math.sin(i * 0.37))).toFixed(3) + ')'; x.lineWidth = 1; x.stroke();
+          }
+        }
+        contours(); var rt; window.addEventListener('resize', function () { clearTimeout(rt); rt = setTimeout(contours, 150); });
+
+        // A custom blend: the chosen styles layered with light-adding blending, seeded by name + variation.
+        var mode = 'keep', chosen = ['bloom', 'deco', 'kintsugi'], variation = 0;
+        function blendArt(ctx, S, name, x0, y0) {
+          ctx.save(); ctx.translate(x0 || 0, y0 || 0); ctx.beginPath(); ctx.rect(0, 0, S, S); ctx.clip();
+          ctx.fillStyle = '#0b0a08'; ctx.fillRect(0, 0, S, S);
+          var order = MIX.filter(function (id) { return chosen.indexOf(id) >= 0; });
+          order.forEach(function (id, i) {
+            ctx.save();
+            if (i > 0) { ctx.globalCompositeOperation = 'screen'; ctx.globalAlpha = 0.7; }
+            byId(id).draw(ctx, S, B.seedFrom(id + ':' + name + '#' + variation), name);
+            ctx.restore();
+          });
+          ctx.restore();
+        }
+
+        // Style tiles and the toggle swatches.
+        var TILE = ['bloom', 'deco', 'kintsugi', 'orbit', 'sigil'];
+        var tilesEl = document.getElementById('tiles');
+        var tiles = TILE.map(function (id) {
+          var st = byId(id); var d = document.createElement('div'); d.className = 'tile';
+          d.innerHTML = '<canvas width="360" height="360" role="img"></canvas><b></b><p></p>';
+          d.querySelector('b').textContent = st.name; d.querySelector('p').textContent = st.note;
+          tilesEl.appendChild(d); return { st: st, cv: d.querySelector('canvas') };
+        });
+        var toggles = document.getElementById('toggles');
+        var tog = MIX.map(function (id) {
+          var b = document.createElement('button'); b.type = 'button';
+          b.innerHTML = '<canvas width="56" height="56" aria-hidden="true"></canvas><span></span>';
+          b.querySelector('span').textContent = byId(id).name;
+          b.addEventListener('click', function () {
+            var on = chosen.indexOf(id) >= 0;
+            if (on && chosen.length <= 3) { hint('Keep at least 3 styles.'); return; }
+            if (!on && chosen.length >= 4) { hint('Up to 4 styles. Turn one off first.'); return; }
+            chosen = on ? chosen.filter(function (x) { return x !== id; }) : chosen.concat([id]); hint(''); render();
+          });
+          toggles.appendChild(b); return { id: id, b: b };
+        });
+        function hint(t) { document.getElementById('t-hint').textContent = t; }
+
+        var input = document.getElementById('bv-name');
+        var chips = document.getElementById('chips');
         SAMPLES.forEach(function (s) {
-          var b = document.createElement('button'); b.type = 'button'; b.className = 'ba-chip'; b.textContent = '$' + s;
+          var b = document.createElement('button'); b.type = 'button'; b.textContent = '$' + s;
           b.addEventListener('click', function () { input.value = s; render(); });
-          samples.appendChild(b);
+          chips.appendChild(b);
         });
+        var slider = document.getElementById('v-slider');
+        slider.addEventListener('input', function () { variation = +slider.value; render(); });
+        document.getElementById('shuffle').addEventListener('click', function () {
+          var pool = MIX.slice().sort(function () { return Math.random() - 0.5; });
+          chosen = pool.slice(0, 3 + (Math.random() < 0.5 ? 1 : 0)); variation = Math.floor(Math.random() * 25); slider.value = variation; hint(''); render();
+        });
+        function setMode(m) {
+          mode = m;
+          document.getElementById('m-keep').setAttribute('aria-pressed', String(m === 'keep'));
+          document.getElementById('m-custom').setAttribute('aria-pressed', String(m === 'custom'));
+          document.getElementById('custom').hidden = m !== 'custom';
+          render();
+        }
+        document.getElementById('m-keep').addEventListener('click', function () { setMode('keep'); });
+        document.getElementById('m-custom').addEventListener('click', function () { setMode('custom'); });
 
+        function fp(name) { // an example fingerprint for the card mock (not a real key)
+          var h = 0x811c9dc5; for (var i = 0; i < name.length; i++) { h ^= name.charCodeAt(i); h = Math.imul(h, 16777619) >>> 0; }
+          var hex = ('00000000' + h.toString(16)).slice(-8) + ('00000000' + (Math.imul(h, 2654435761) >>> 0).toString(16)).slice(-8);
+          return '02' + hex.slice(0, 4) + '…' + hex.slice(-4);
+        }
+
+        var timer;
         function render() {
-          var name = B.clean(input.value);
-          cards.forEach(function (c) {
-            c.el.setAttribute('aria-pressed', String(c.st.id === chosen));
-            c.el.setAttribute('aria-label', c.st.name + ' bAvatar for $' + name);
-            c.canvases.forEach(function (cv) { B.draw(cv.getContext('2d'), cv.width, c.st.id, name); });
+          var name = B.clean(input.value) || 'alice';
+          var custom = mode === 'custom';
+          [].forEach.call(chips.children, function (b) { b.setAttribute('aria-pressed', String(b.textContent === '$' + name)); });
+          document.getElementById('m-note').innerHTML = custom
+            ? 'Your own blend for <b>$' + name.replace(/[<&]/g, '') + '</b>. Pick the styles, nudge the variation, and mint the one you love when minting opens.'
+            : 'This is the one bWalletX gives <b>$' + name.replace(/[<&]/g, '') + '</b> at sign-up. Nothing to do: it is yours.';
+          document.getElementById('v-val').textContent = String(variation);
+          var img = document.getElementById('t-avatar'), cv = document.getElementById('t-custom');
+          var qimg = document.getElementById('t-qr'), qcv = document.getElementById('t-qrc');
+          img.hidden = custom; cv.hidden = !custom; qimg.hidden = custom; qcv.hidden = !custom;
+          var names = MIX.filter(function (id) { return chosen.indexOf(id) >= 0; }).map(function (id) { return byId(id).name; });
+          document.getElementById('t-cap').textContent = custom ? names.join(', ') + ', drawn from the name.' : 'Bloom light, a deco fan and gold seams, all drawn from the name.';
+          tog.forEach(function (t) {
+            t.b.setAttribute('aria-pressed', String(chosen.indexOf(t.id) >= 0));
+            B.draw(t.b.querySelector('canvas').getContext('2d'), 56, t.id, name);
           });
-          var mine = document.getElementById('ba-mine');
-          B.draw(mine.getContext('2d'), mine.width, chosen, name);
-          var st = B.STYLES.find(function (s) { return s.id === chosen; });
-          document.getElementById('ba-mine-title').textContent = '$' + name + '@bwalletx.com in ' + st.name;
-          var qr = document.getElementById('ba-qr');
-          document.getElementById('ba-qr-url').textContent = B.drawQR(qr.getContext('2d'), qr.width, name, { quiet: 3 });
-          var c1 = document.getElementById('ba-combo'), x1 = c1.getContext('2d');
-          x1.clearRect(0, 0, c1.width, c1.height); B.drawCombo(x1, c1.width, name);
-          var c2 = document.getElementById('ba-artqr'); B.drawArtQR(c2.getContext('2d'), c2.width, name);
-          var c3 = document.getElementById('ba-ring'), x3 = c3.getContext('2d'); B.drawRing(x3, c3.width, name);
-          var got = B.readRing(x3, c3.width), want = name.slice(0, B.MAXLEN), out = document.getElementById('ba-decoded');
+          if (custom) {
+            blendArt(cv.getContext('2d'), cv.width, name, 0, 0);
+            B.drawArtQR(qcv.getContext('2d'), qcv.width, name, blendArt);
+            document.getElementById('t-save').href = cv.toDataURL('image/png');
+          } else {
+            clearTimeout(timer);
+            timer = setTimeout(function () {
+              img.src = API + encodeURIComponent(name) + '.svg'; img.alt = 'bAvatar for $' + name;
+              qimg.src = API + encodeURIComponent(name) + '.png?qr=1'; qimg.alt = 'Art QR bAvatar for $' + name;
+            }, 250);
+          }
+          setTimeout(function () {
+            document.getElementById('w-bg').src = API + encodeURIComponent(name) + '.svg';
+            document.getElementById('end-av').src = API + encodeURIComponent(name) + '.svg';
+          }, 250);
+          var c3 = document.getElementById('t-ring'), x3 = c3.getContext('2d');
+          B.drawRing(x3, c3.width, name, custom ? blendArt : undefined);
+          var got = B.readRing(x3, c3.width), want = name.slice(0, B.MAXLEN), out = document.getElementById('t-decoded');
           out.classList.toggle('bad', got !== want);
           out.textContent = got === want ? 'Read back: $' + got + ' ✓' : 'Read back failed' + (name.length > B.MAXLEN ? ' (names over 20 characters are cut)' : '');
+          tiles.forEach(function (t) { B.draw(t.cv.getContext('2d'), t.cv.width, t.st.id, name); t.cv.setAttribute('aria-label', t.st.name + ' style for $' + name); });
+          var k = document.getElementById('k-art'); B.draw(k.getContext('2d'), k.width, 'kintsugi', name); k.setAttribute('aria-label', 'Kintsugi bAvatar for $' + name);
+          document.getElementById('s-name').textContent = '$' + name;
+          document.getElementById('w-handle').textContent = '$' + name;
+          document.getElementById('w-fp').textContent = fp(name);
         }
         input.addEventListener('input', render);
         render();

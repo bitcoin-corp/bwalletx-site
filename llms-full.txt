@@ -1953,75 +1953,111 @@ Questions: [support@bwalletx.com](mailto:support@bwalletx.com)
 
 Source: https://bwalletx.com/bavatars
 
-# Every name gets a bAvatar.
+bAvatars
 
-A bAvatar is a picture drawn from your Bitcoin name. The same name always gets the same picture, in any app that looks it up, so $you@bwalletx.com looks like you before you upload anything.
+# Your name, as art you can scan.
+
+Every Bitcoin name gets its own gold bAvatar, blended from Bloom, Deco, Kintsugi, Orbit and Sigil and drawn from the name itself. No two names look alike, and any phone camera can scan it.
+
+[Make yours](#try)[Get bWalletX](https://bwalletx.com/get)
+
+Try it
+
+## Type a name. Meet its bAvatar.
+
+At sign-up, bWalletX gives you one automatically, or design your own and mint the one you love. Minting rolling out
 
 $@bwalletx.com
 
-## Pick your style
-
-Tap a style to make it yours. Each one is shown at full size, then at 40px and 24px, the sizes it appears at in chat lists and replies.
-
-### Your bAvatar
-
-Pick the style you like. In bWalletX it sits in Settings, and everyone who sees your name sees it. You can always use your own photo instead.
-
-## The QR coin
-
-Your bAvatar as a real QR code in gold dots, with the b mark in the middle. It uses the highest error-correction level, so up to about 30% of the code can be covered by the mark and it still scans. Point a phone camera at it.
-
-It opens ``
-
-## Bloom × Deco × Kintsugi
-
-One avatar that blends three styles, then two ways to make it scannable. The art QR works in any phone camera. The code ring leaves the art untouched and stores the name in a gold bezel for the bWalletX scanner.
-
 The avatarBloom light, a deco fan and gold seams, all drawn from the name.
 
-Art QR · any cameraThe same art seen through a real QR grid. Scan it with your phone camera.
+Keep this one
+Customize
+
+This is the one bWalletX gives $alice at sign-up. Nothing to do: it is yours.
+
+Blend 3 or 4 styles
+
+Variation 0
+
+Shuffle[Open full size](#)
+
+Art QR · any cameraThe same art seen through a real QR grid. Scan it with your phone camera.Scan me
 
 Code ring · bWalletX scannerThree gold tracks hold the name. This page reads the pixels back to check it.
 
-## Your numbered card
+The styles
 
-Rolling out to bWalletX accounts.
+## Five gold styles. Your name picks the mix.
 
-### bWalletX #N · $you
+Each bAvatar starts with Bloom light, then the name chooses two or three more styles to layer on top. Here is each style on its own, drawn for $alice.
 
-Every account gets a bAvatar card in its wallet: your art, a QR that opens your paymail, and your account number, in the order accounts joined.
+Bloom+Deco+Kintsugi=one bAvatar, only yours
 
-### Yours whatever you show
+Kintsugi
 
-Use your bAvatar, your own photo or anything else as your picture. The card stays in your wallet either way.
+## One break. Mended in gold.
 
-### The holder shows the number
+A plate can only break once, and no two plates break the same way. Your gold seams are drawn from a hash of your key: one break per account, never repeated, mended in gold.
 
-Cards can be traded like any other item in bWalletX. Whoever holds #42 shows the #42 badge on their own profile, with their own name and history.
+Your wallet card
 
-### Your account stays yours
+## Carry your bAvatar on your wallet card.
 
-A card carries a number, not an account. Your keys, posts and name stay with you. Never share your recovery words with anyone.
+In bWalletX your bAvatar becomes the background of the card on your home screen, with your $name and your fingerprint on top. Each account gets a numbered card, bWalletX #N · $you, in the order accounts joined.
 
-## How it works
+Rolling out to bWalletX accounts
 
-### Same name, same picture
+The card you hold is the design you carry
+Collect a card you love and your wallet card changes to its art. Trade it on and it changes again.
 
-Every style is drawn from the name itself. Nothing is stored, so any app can draw it, and it only changes if the name does.
+The holder shows the number
+Whoever holds #42 shows the #42 badge on their own profile, next to their own name and history.
 
-### Upload still wins
+Your picture is your choice
+Use your bAvatar, your own photo or anything else. Your card stays in your wallet either way.
 
-Your own photo always comes first. The bAvatar is the default and the fallback, never forced.
+Your account stays yours
+A card carries a number and art, never an account. Your keys, posts and name stay with you. Never share your recovery words.
 
-### Open to other BSV apps
+9:41bWalletX
 
-Every bAvatar is drawn from the name alone, so any BSV app can draw the same picture.
+#42
 
-### Your name
+$alice
 
-Get a $name@bwalletx.com with bWalletX: it's your paymail, your handle and now your picture. See [Handles](https://bwalletx.com/handles).
+02a7c1…9e3f
 
-[Get bWalletX](https://bwalletx.com/get)
+$128.40
+
+SendReceiveMint
+
+B
+BSVBitcoin SV
+6.58
+
+¢
+PNEEsPenny stablecoins
+1,200
+
+Where it shows
+
+## One picture, everywhere your name goes.
+
+bChatXLive
+Profiles, posts, the right-hand panels and Space seats show your bAvatar until you upload a photo.
+
+Paymail appsLive
+Your paymail profile offers it as your picture, so other BSV apps show it too. Image: `bchatx.com/api/bavatar/you.png`
+
+bWalletX5.1.95
+Account cards and menus draw it on your phone, with no network call.
+
+## Get your name. Get your bAvatar.
+
+Claim $you@bwalletx.com in bWalletX and your bAvatar comes with it. See [Handles](https://bwalletx.com/handles).
+
+[Get bWalletX](https://bwalletx.com/get)[Make yours](#try)
 
 bWalletX is in beta: test with small amounts. Questions: [support@bwalletx.com](mailto:support@bwalletx.com)
 

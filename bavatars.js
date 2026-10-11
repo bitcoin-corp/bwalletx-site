@@ -179,11 +179,11 @@
   }
 
   // ── Art QR: standard polarity (dark spots on light), art visible between module centres ──
-  function drawArtQR(ctx, S, name) {
+  function drawArtQR(ctx, S, name, art = drawCombo) {
     const url = 'https://www.bchatx.com/u/' + encodeURIComponent(name);
     const q = qrModules(url), n = q.getModuleCount(), quiet = 3, cell = S / (n + quiet * 2), off = quiet * cell;
     ctx.fillStyle = '#fff3cf'; ctx.fillRect(0, 0, S, S);                       // pale gold quiet zone
-    drawCombo(ctx, n * cell, name, off, off);                                   // art fills the code area
+    art(ctx, n * cell, name, off, off);                                         // art fills the code area
     ctx.fillStyle = 'rgba(255,243,207,.18)'; ctx.fillRect(off, off, n * cell, n * cell);
     const finder = (x, y) => (x < 8 && y < 8) || (x >= n - 8 && y < 8) || (x < 8 && y >= n - 8);
     const dot = cell * .62, inset = (cell - dot) / 2;
@@ -223,10 +223,10 @@
     return crc16(body) === crc ? s : null;
   }
   const ringGeom = S => ({ inner: S * .335, step: S * .045, gapA: (Math.PI * 2) / CELLS });
-  function drawRing(ctx, S, name) {
+  function drawRing(ctx, S, name, art = drawCombo) {
     ctx.fillStyle = '#0b0a08'; ctx.fillRect(0, 0, S, S);
     ctx.save(); ctx.beginPath(); ctx.arc(S / 2, S / 2, S * .31, 0, Math.PI * 2); ctx.clip();
-    drawCombo(ctx, S * .62, name, S * .19, S * .19); ctx.restore();
+    art(ctx, S * .62, name, S * .19, S * .19); ctx.restore();
     const { inner, step, gapA } = ringGeom(S), bits = encodeName(name);
     ctx.lineCap = 'butt';
     for (let t = 0; t < TRACKS; t++) {
