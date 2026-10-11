@@ -21,13 +21,14 @@
     <meta name="twitter:description" content="bWalletX · bChatX · The Bitcoin Corporation" />
     <meta name="twitter:image" content="https://bwalletx.com/og-just-b-v2.jpg" />
     <link rel="icon" href="/favicon.ico" />
-    <link rel="preload" as="image" href="/images/just-b-desert-hero.jpg" />
+    <link rel="preload" as="image" href="/images/just-b-desert-hero.jpg" media="(orientation: landscape)" />
+    <link rel="preload" as="image" href="/images/just-b-desert-hero-tall.jpg" media="(orientation: portrait)" />
     <link rel="stylesheet" href="/styles.css" />
     <style>
       /* Just b. (owner, 11 Oct 2026): calm, simple, beautiful. A black-and-gold desert, a few words. */
       body { margin: 0; background: #000; color: #f1ead9; }
       .jb-scene { position: relative; min-height: 100svh; display: flex; flex-direction: column; overflow: hidden; }
-      .jb-scene > img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 70%; }
+      .jb-scene img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 70%; }
       .jb-scene::after { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(0, 0, 0, 0.35) 0%, rgba(0, 0, 0, 0) 40%, rgba(0, 0, 0, 0) 70%, #000 100%); }
       .jb-hero-in { position: relative; z-index: 1; flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: flex-start; padding: 16vh 16px 0; text-align: center; }
       .jb h1 { margin: 0; font: 700 clamp(5rem, 22vw, 12.5rem) / 0.9 var(--hf); letter-spacing: -0.045em; text-shadow: 0 6px 60px rgba(0, 0, 0, 0.6); opacity: 0; animation: rise 2.4s 0.3s ease forwards; }
@@ -49,7 +50,7 @@
       .jb-line p { margin: 18px 0 0; max-width: 34ch; font-size: clamp(1.05rem, 3.6vw, 1.3rem); line-height: 1.55; color: #b9b2a2; }
 
       .jb-end { justify-content: center; }
-      .jb-end > img { object-position: center 60%; }
+      .jb-end img { object-position: center 60%; }
       .jb-end::after { background: linear-gradient(180deg, #000 0%, rgba(0, 0, 0, 0.1) 30%, rgba(0, 0, 0, 0.1) 75%, #000 100%); }
       .jb-end-in { position: relative; z-index: 1; text-align: center; padding: 0 16px; }
       .jb-end-in h2 { margin: 0 0 30px; font: 700 clamp(2.6rem, 10vw, 5rem) / 1 var(--hf); letter-spacing: -0.04em; text-shadow: 0 4px 40px rgba(0, 0, 0, 0.6); }
@@ -61,7 +62,7 @@
   </head>
   <body class="jb">
     <section class="jb-scene">
-      <img src="/images/just-b-desert-hero.jpg" alt="" width="1792" height="1008" fetchpriority="high" />
+      <picture><source media="(orientation: portrait)" srcset="/images/just-b-desert-hero-tall.jpg" /><img src="/images/just-b-desert-hero.jpg" alt="" width="1792" height="1008" fetchpriority="high" /></picture>
       <div class="jb-hero-in">
         <h1>Just <span class="b">b.</span></h1>
         <p class="jb-names">
@@ -82,7 +83,7 @@
     </section>
 
     <section class="jb-scene jb-end">
-      <img src="/images/just-b-desert-ridge.jpg" alt="" width="1792" height="1008" loading="lazy" />
+      <picture><source media="(orientation: portrait)" srcset="/images/just-b-desert-ridge-tall.jpg" /><img src="/images/just-b-desert-ridge.jpg" alt="" width="1792" height="1008" loading="lazy" /></picture>
       <div class="jb-end-in">
         <h2>Just b.</h2>
         <a class="jb-go" href="/get">Get bWalletX</a>
