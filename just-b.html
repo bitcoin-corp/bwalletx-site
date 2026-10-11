@@ -33,9 +33,9 @@
       .jb-hero-in { position: relative; z-index: 1; flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: flex-start; padding: 36vh 16px 0; text-align: center; }
       .jb h1 { margin: 0; font: 700 clamp(5rem, 22vw, 12.5rem) / 0.9 var(--hf); letter-spacing: -0.045em; text-shadow: 0 6px 60px rgba(0, 0, 0, 0.6); white-space: nowrap; }
       /* A breath at dusk: "Just" fades in slowly on its own, a pause, then the b, a touch apart, and it glows. */
-      .jb h1 .l { display: inline-block; opacity: 0; filter: blur(10px); transform: translateY(0.08em); }
-      .jb h1 .w { animation: letter 3.6s 0.6s cubic-bezier(0.25, 0.1, 0.25, 1) forwards; }
-      .jb h1 .b { margin-left: 0.32em; color: var(--gold-hi); animation: letter 3.8s 3.6s cubic-bezier(0.25, 0.1, 0.25, 1) forwards, glow 7s 7.4s ease-in-out infinite; }
+      .jb h1 .l { display: inline-block; opacity: 0; filter: blur(4px); transform: translateY(0.06em); }
+      .jb h1 .w { animation: letter 2.4s 0.4s cubic-bezier(0.25, 0.1, 0.25, 1) forwards; }
+      .jb h1 .b { margin-left: 0.32em; color: var(--gold-hi); animation: letter 2.5s 2.3s cubic-bezier(0.25, 0.1, 0.25, 1) forwards, glow 7s 4.8s ease-in-out infinite; }
       @keyframes letter { to { opacity: 1; filter: blur(0); transform: none; } }
       @keyframes glow { 0%, 100% { text-shadow: 0 0 40px rgba(245, 184, 0, 0.35); } 50% { text-shadow: 0 0 90px rgba(245, 184, 0, 0.75); } }
       /* Advert line: b safe, b happy, b peaceful, b you, fading in and out under the title. */
@@ -112,7 +112,7 @@
           if (i < spans.length) spans[i].classList.add('on');
           setTimeout(next, i < spans.length ? 3000 : 2200);
         }
-        setTimeout(next, reduce ? 0 : 8200);
+        setTimeout(next, reduce ? 0 : 5400);
       })();
       // Ambient music (VexVoid, "Echoes of Dust"): off until the visitor taps Sound, then fades in.
       (function () {
