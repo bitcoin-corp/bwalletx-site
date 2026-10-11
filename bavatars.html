@@ -103,7 +103,7 @@
       .scanme { display: inline-block; margin-top: 6px; font: 700 0.75rem var(--hf); letter-spacing: 0.06em; text-transform: uppercase; color: #0b0a08; background: var(--gold); border-radius: 999px; padding: 3px 10px; }
       .decoded { display: block; margin-top: 6px; color: var(--gold); font-size: 0.85rem; }
       .decoded.bad { color: #ff7a6b; }
-      .save { justify-self: start; font: 600 0.88rem var(--hf); color: var(--gold); text-decoration: none; border: 1px solid #f5b80055; border-radius: 999px; padding: 7px 14px; }
+      .save-unused { justify-self: start; font: 600 0.88rem var(--hf); color: var(--gold); text-decoration: none; border: 1px solid #f5b80055; border-radius: 999px; padding: 7px 14px; }
 
       /* styles */
       .styles { border-top: 1px solid var(--line); }
@@ -145,6 +145,21 @@
       .points div { border-left: 2px solid var(--gold); padding: 2px 0 2px 16px; }
       .points b { display: block; font: 700 1.05rem var(--hf); margin-bottom: 3px; }
       .points p { margin: 0; color: #b4afa1; line-height: 1.55; }
+
+      /* mint */
+      .mint { border-top: 1px solid var(--line); background: radial-gradient(50% 60% at 20% 40%, #f5b80014, transparent 70%); }
+      .mint .wrapx { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 0.95fr); gap: 48px; align-items: center; }
+      .mint .bcard { width: min(100%, 420px); justify-self: center; }
+      .mint .bcard .ed { font: 600 0.74rem var(--hf); color: #e8e2d2; letter-spacing: .04em; }
+      .mint .bcard .big { font: 700 2.4rem var(--hf); letter-spacing: -0.02em; color: var(--gold-hi); text-shadow: 0 2px 14px #000; }
+      .mint-out { margin: 4px 0 0; min-height: 1.6em; color: #d6d0c1; font-size: 1.05rem; }
+      .mint-out b { color: var(--gold); }
+      .gets { list-style: none; padding: 0; margin: 22px 0 0; display: grid; gap: 12px; }
+      .gets li { border-left: 2px solid var(--gold); padding: 2px 0 2px 16px; color: #b4afa1; line-height: 1.55; }
+      .gets li b { display: block; color: var(--ink); font: 700 1.02rem var(--hf); }
+      .cost { margin-top: 22px; border: 1px solid var(--line); border-radius: 18px; background: var(--card); padding: 16px 18px; color: #b4afa1; line-height: 1.55; font-size: .95rem; }
+      .cost b { color: var(--ink); }
+      @media (max-width: 960px) { .mint .wrapx { grid-template-columns: 1fr; } }
 
       /* where */
       .where { border-top: 1px solid var(--line); }
@@ -227,7 +242,7 @@
                 <p class="label">Blend 3 or 4 styles</p>
                 <div class="toggles" id="toggles"></div>
                 <div class="variation"><label for="v-slider">Variation <b id="v-val">0</b></label><input type="range" id="v-slider" min="0" max="24" value="0" /></div>
-                <div class="crow"><button type="button" id="shuffle" class="ghost">Shuffle</button><a class="save" id="t-save" href="#" target="_blank" rel="noopener">Open full size</a></div>
+                <div class="crow"><button type="button" id="shuffle" class="ghost">Shuffle</button></div>
                 <p class="hint" id="t-hint"></p>
               </div>
             </div>
@@ -296,6 +311,35 @@
               <div class="btnrow"><span>Send</span><span>Receive</span><span>Mint</span></div>
               <div class="rowx"><i>B</i><div><b>BSV</b><small>Bitcoin SV</small></div><em>6.58</em></div>
               <div class="rowx"><i>¢</i><div><b>PNEEs</b><small>Penny stablecoins</small></div><em>1,200</em></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="mint" id="mint">
+        <div class="wrapx">
+          <div>
+            <p class="eyebrow">Mint</p>
+            <h2>The Founding 1,000.</h2>
+            <p class="sub">Every bWalletX account has a number, in the order accounts joined. Accounts #1 to #1,000 are the Founding 1,000. Mint your bAvatar and your number is inscribed with it, on chain, for good.</p>
+            <label class="field" for="mint-name"><span>$</span><input id="mint-name" autocomplete="off" spellcheck="false" maxlength="64" placeholder="yourname" aria-label="Your bWalletX name" /><small>@bwalletx.com</small></label>
+            <p class="mint-out" id="mint-out" aria-live="polite">Type your name to see your number.</p>
+            <ul class="gets">
+              <li><b>Your bAvatar, on chain</b>The gold art drawn from your name, inscribed as a 1-sat ordinal in your own wallet.</li>
+              <li><b>Your name and number</b>Inscribed with the art: <span class="gold" id="mint-line">$you &middot; bWalletX #N</span>.</li>
+              <li><b>A QR that opens your paymail</b>Point any phone camera at it and it finds you. A business card you can keep.</li>
+              <li><b>Yours to keep or pass on</b>Send it to anyone and the art and number go with it. Your account, keys and name stay with you.</li>
+            </ul>
+            <div class="cost"><b>Free for the Founding 1,000.</b> A mint costs about 1,100 sats in network fees, a tiny fraction of a cent, and bWalletX pays it for accounts #1 to #1,000. After that you pay the fee yourself, at cost.</div>
+            <div class="cta"><a class="pri" href="/get">Mint in bWalletX</a><a class="sec" href="#try">Customize first</a></div>
+            <span class="rolling">Minting rolling out</span>
+          </div>
+          <div class="bcard" aria-label="Your Founding 1,000 card">
+            <img id="mint-bg" alt="" />
+            <span class="num" id="mint-num">#&mdash;</span>
+            <div class="in">
+              <div class="ed" id="mint-ed">FOUNDING 1,000</div>
+              <div><div class="big" id="mint-big">#&mdash;</div><div class="h" id="mint-handle">$you</div></div>
             </div>
           </div>
         </div>
@@ -459,7 +503,6 @@
           if (custom) {
             blendArt(cv.getContext('2d'), cv.width, name, 0, 0);
             B.drawArtQR(qcv.getContext('2d'), qcv.width, name, blendArt);
-            document.getElementById('t-save').href = cv.toDataURL('image/png');
           } else {
             clearTimeout(timer);
             timer = setTimeout(function () {
@@ -485,6 +528,46 @@
         input.addEventListener('input', render);
         render();
         if (document.fonts && document.fonts.ready) document.fonts.ready.then(render);
+
+        // Mint: the account's edition number (signup order) from bChatX.
+        (function () {
+          var NUM = 'https://www.bchatx.com/api/public/bavatar/';
+          var input = document.getElementById('mint-name'), out = document.getElementById('mint-out');
+          var t, seq = 0;
+          function pad(n) { return n < 1000 ? ('00' + n).slice(-3) : String(n); }
+          function show(name, num, founding) {
+            var label = num ? '#' + pad(num) : '#\u2014';
+            document.getElementById('mint-num').textContent = label;
+            document.getElementById('mint-big').textContent = label;
+            document.getElementById('mint-handle').textContent = '$' + (name || 'you');
+            document.getElementById('mint-ed').textContent = num && !founding ? 'bWalletX' : 'FOUNDING 1,000';
+            document.getElementById('mint-line').textContent = '$' + (name || 'you') + ' \u00b7 bWalletX ' + (num ? '#' + pad(num) : '#N');
+            if (name) document.getElementById('mint-bg').src = API + encodeURIComponent(name) + '.svg';
+          }
+          function look() {
+            var raw = input.value.trim().replace(/^\$/, ''); var name = raw ? B.clean(raw) : '';
+            var my = ++seq;
+            if (!name) { show('', 0, true); out.textContent = 'Type your name to see your number.'; return; }
+            show(name, 0, true); out.textContent = 'Looking up $' + name + '\u2026';
+            fetch(NUM + encodeURIComponent(name)).then(function (r) {
+              if (r.status === 404) return { missing: true };
+              if (!r.ok) throw new Error(r.status);
+              return r.json();
+            }).then(function (d) {
+              if (my !== seq) return;
+              if (d.missing) { out.textContent = 'No bWalletX account is called $' + name + ' yet. Claim it in bWalletX and take the next number.'; return; }
+              show(d.handle, d.number, d.founding);
+              out.innerHTML = '';
+              var b = document.createElement('b'); b.textContent = '$' + d.handle;
+              out.appendChild(b);
+              out.appendChild(document.createTextNode(d.founding
+                ? ' is #' + d.number + ' of the Founding 1,000. Your mint is on us.'
+                : ' is account #' + d.number + '. Mint at network cost, about 1,100 sats.'));
+            }).catch(function () { if (my === seq) out.textContent = 'Could not look that up just now. Try again in a moment.'; });
+          }
+          input.addEventListener('input', function () { clearTimeout(t); t = setTimeout(look, 350); });
+          show('', 0, true);
+        })();
       })();
     </script>
   </body>
