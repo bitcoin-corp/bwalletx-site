@@ -1501,6 +1501,13 @@ Each release ships to the Android APK, the Chrome extension and the web wallet. 
 
 ## 5.2.5 2026-10-11
 
+- History has a Refresh history button when it may be incomplete, so you no longer need to pull to refresh
+- Token rooms show the owner’s photo or gold bAvatar instead of a plain letter
+- A “Set up your room” sheet opens the first time you open your own room: cover, entry, chat cost and selling tickets, with Set up later
+- A clearer token and room set-up screen, which tells you when the room is paid for and waiting for confirmation
+
+## 5.2.4 2026-10-11
+
 - Backups are named after your account: vexvoid_02cbe7_bwalletx_backup_<date>.zip, so you never have to rename the file to know whose it is
 - The backup screen shows your $handle, not “Account 1”
 
