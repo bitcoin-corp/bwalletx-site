@@ -3,94 +3,91 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Just b. Live simply.</title>
+    <title>Just b.</title>
     <link rel="canonical" href="https://bwalletx.com/just-b" />
-    <meta name="description" content="Just b. Live simply. One wallet for money, mail, calls and chat, so you can just be." />
+    <meta name="description" content="Just b. bWalletX, bChatX and The Bitcoin Corporation." />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://bwalletx.com/just-b" />
     <meta property="og:site_name" content="bWalletX" />
     <meta property="og:title" content="Just b." />
-    <meta property="og:description" content="Live simply. One wallet for money, mail, calls and chat." />
-    <meta property="og:image" content="https://bwalletx.com/og-just-b-v1.png" />
+    <meta property="og:description" content="bWalletX · bChatX · The Bitcoin Corporation" />
+    <meta property="og:image" content="https://bwalletx.com/og-just-b-v2.jpg" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
-    <meta property="og:image:alt" content="Just b. Live simply." />
+    <meta property="og:image:alt" content="Just b." />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@bWalletX" />
     <meta name="twitter:title" content="Just b." />
-    <meta name="twitter:description" content="Live simply. One wallet for money, mail, calls and chat." />
-    <meta name="twitter:image" content="https://bwalletx.com/og-just-b-v1.png" />
+    <meta name="twitter:description" content="bWalletX · bChatX · The Bitcoin Corporation" />
+    <meta name="twitter:image" content="https://bwalletx.com/og-just-b-v2.jpg" />
     <link rel="icon" href="/favicon.ico" />
+    <link rel="preload" as="image" href="/images/just-b-desert-hero.jpg" />
     <link rel="stylesheet" href="/styles.css" />
     <style>
-      .jb { max-width: 680px; margin: 0 auto; padding: 0 16px; }
-      .jb-hero { min-height: min(72vh, 560px); display: flex; flex-direction: column; justify-content: center; padding: 64px 0 48px; }
-      .jb-hero h1 { font-size: clamp(4rem, 20vw, 9rem); line-height: .95; margin: 0 0 22px; letter-spacing: -0.03em; }
-      .jb-hero h1 .b { color: var(--gold); }
-      .jb-hero p { font-size: clamp(1.15rem, 4.4vw, 1.5rem); color: #c9c9c4; margin: 0; max-width: 30ch; }
-      .jb h2 { font-size: clamp(1.6rem, 6vw, 2.2rem); margin: 0 0 22px; }
-      .jb section { padding: 56px 0; border-top: 1px solid #ffffff12; }
-      .jb-list { list-style: none; margin: 0; padding: 0; }
-      .jb-list li { padding: 18px 0; border-bottom: 1px solid #ffffff0d; }
-      .jb-list li:last-child { border-bottom: 0; }
-      .jb-list .v { font: 700 1.35rem/1.3 var(--hf); display: block; }
-      .jb-list .v em { font-style: normal; color: var(--gold); }
-      .jb-list .d { color: #a7adb8; display: block; margin-top: 4px; line-height: 1.6; }
-      .jb-hold { display: flex; gap: 24px; align-items: center; flex-wrap: wrap; }
-      .jb-bdot { flex: 0 0 auto; width: 84px; height: 84px; border-radius: 50%; background: var(--gold); color: #000; display: grid; place-items: center; font: 700 2.4rem var(--hf); box-shadow: 0 0 0 8px #f5b80022; }
-      .jb-hold p { flex: 1 1 260px; margin: 0; line-height: 1.7; color: #c9c9c4; }
-      .jb-quote { margin: 22px 0 0; color: #8a8a86; font-style: italic; }
-      .jb-cta { text-align: center; padding: 72px 0 88px; }
-      .jb-cta p { color: #a7adb8; }
-      .jb-cta .row { display: flex; gap: 12px; flex-wrap: wrap; justify-content: center; margin: 24px 0 14px; }
-      .jb .small { color: #8a8a86; font-size: 0.85rem; }
+      /* Just b. (owner, 11 Oct 2026): calm, simple, beautiful. A black-and-gold desert, a few words. */
+      body { margin: 0; background: #000; color: #f1ead9; }
+      .jb-scene { position: relative; min-height: 100svh; display: flex; flex-direction: column; overflow: hidden; }
+      .jb-scene > img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 70%; }
+      .jb-scene::after { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(0, 0, 0, 0.35) 0%, rgba(0, 0, 0, 0) 40%, rgba(0, 0, 0, 0) 70%, #000 100%); }
+      .jb-hero-in { position: relative; z-index: 1; flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: flex-start; padding: 16vh 16px 0; text-align: center; }
+      .jb h1 { margin: 0; font: 700 clamp(5rem, 22vw, 12.5rem) / 0.9 var(--hf); letter-spacing: -0.045em; text-shadow: 0 6px 60px rgba(0, 0, 0, 0.6); opacity: 0; animation: rise 2.4s 0.3s ease forwards; }
+      .jb h1 .b { color: var(--gold-hi); text-shadow: 0 0 60px rgba(245, 184, 0, 0.45); }
+      .jb-names { margin: 28px 0 0; font: 500 clamp(0.85rem, 3vw, 1rem) var(--hf); letter-spacing: 0.08em; color: #cfc6b0; opacity: 0; animation: rise 2s 1.2s ease forwards; }
+      .jb-names a { color: inherit; text-decoration: none; }
+      .jb-names a:hover, .jb-names a:focus-visible { color: #fff; }
+      .jb-down { position: relative; z-index: 1; margin: 0 auto 28px; width: 1px; height: 56px; background: linear-gradient(180deg, rgba(245, 184, 0, 0), rgba(245, 184, 0, 0.8)); animation: drift 3s ease-in-out infinite; }
+      @keyframes rise { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: none; } }
+      @keyframes drift { 0%, 100% { opacity: 0.3; } 50% { opacity: 1; } }
+      @media (prefers-reduced-motion: reduce) { .jb h1, .jb-names { animation: none; opacity: 1; } .jb-down { animation: none; } }
+
+      .jb-lines { max-width: 760px; margin: 0 auto; padding: 18vh 24px 14vh; }
+      .jb-lines h2 { margin: 0 0 9vh; font: 700 clamp(2rem, 7vw, 3.4rem) var(--hf); letter-spacing: -0.03em; color: #8a8273; }
+      .jb-line { margin: 0 0 12vh; }
+      .jb-line:last-child { margin-bottom: 0; }
+      .jb-line b { display: block; font: 700 clamp(2.4rem, 9vw, 4.6rem) / 1 var(--hf); letter-spacing: -0.035em; }
+      .jb-line b em { font-style: normal; color: var(--gold-hi); }
+      .jb-line p { margin: 18px 0 0; max-width: 34ch; font-size: clamp(1.05rem, 3.6vw, 1.3rem); line-height: 1.55; color: #b9b2a2; }
+
+      .jb-end { justify-content: center; }
+      .jb-end > img { object-position: center 60%; }
+      .jb-end::after { background: linear-gradient(180deg, #000 0%, rgba(0, 0, 0, 0.1) 30%, rgba(0, 0, 0, 0.1) 75%, #000 100%); }
+      .jb-end-in { position: relative; z-index: 1; text-align: center; padding: 0 16px; }
+      .jb-end-in h2 { margin: 0 0 30px; font: 700 clamp(2.6rem, 10vw, 5rem) / 1 var(--hf); letter-spacing: -0.04em; text-shadow: 0 4px 40px rgba(0, 0, 0, 0.6); }
+      .jb-go { display: inline-block; padding: 18px 40px; border-radius: 999px; background: linear-gradient(180deg, #ffd24d, #f5b800); color: #0b0a08; font: 700 1.1rem var(--hf); text-decoration: none; box-shadow: 0 14px 50px rgba(245, 184, 0, 0.35); }
+      .jb-go:focus-visible { outline: 2px solid var(--gold); outline-offset: 4px; }
+      .jb-foot { position: relative; z-index: 1; margin: 0; padding: 0 16px 22px; text-align: center; font-size: 0.75rem; color: #6a6458; }
+      .jb-foot a { color: #8a8273; }
     </style>
   </head>
-  <body>
-    <div class="beta-banner">bWalletX is in <strong>beta</strong>: test with small amounts.</div>
-    <header class="topbar">
-      <div class="wrap topbar-in">
-        <a class="brand" href="/"><img src="/logo.svg" alt="" width="34" height="30" /><span>bWallet<span class="gold">X</span></span></a>
-        <nav aria-label="Pages">
-          <a href="/features">Features</a><a href="/exchange">Exchange</a><a href="/social">Social</a><a href="/agent">Agents</a><a href="/extension">Extension</a><a href="/developers">Developers</a>
-        </nav>
-        <span class="nav-cta"><a class="dl-btn" href="/get">Download</a><a class="web-btn" href="https://web.bwalletx.com" target="_blank" rel="noopener">Web &rarr;</a></span>
+  <body class="jb">
+    <section class="jb-scene">
+      <img src="/images/just-b-desert-hero.jpg" alt="" width="1792" height="1008" fetchpriority="high" />
+      <div class="jb-hero-in">
+        <h1>Just <span class="b">b.</span></h1>
+        <p class="jb-names">
+          <a href="/">bWalletX</a> &middot; <a href="https://www.bchatx.com">bChatX</a> &middot;
+          <a href="https://thebitcoincorporation.website">The Bitcoin Corporation</a>
+        </p>
       </div>
-    </header>
-    <script src="/nav.js"></script>
-    <main class="jb">
-      <div class="jb-hero">
-        <h1>Just <span class="b">b</span>.</h1>
-        <p>Live simply. One wallet for money, mail, calls and chat.</p>
+      <div class="jb-down" aria-hidden="true"></div>
+    </section>
+
+    <section class="jb-lines" aria-label="Just b">
+      <h2>Just b&hellip;</h2>
+      <div class="jb-line"><b>Just b <em>paid.</em></b><p>Send and receive Bitcoin SV to a $handle, not a long address.</p></div>
+      <div class="jb-line"><b>Just b <em>reachable.</em></b><p>bMail and free calls in the wallet. Penny post: a bMail costs 1&cent;, so the inbox stays yours.</p></div>
+      <div class="jb-line"><b>Just b <em>heard.</em></b><p>Hold the b and say what you want. b, the agent in the wallet, takes it from there.</p></div>
+      <div class="jb-line"><b>Just b <em>private.</em></b><p>Your keys stay on your device. We never hold your coins.</p></div>
+      <div class="jb-line"><b>Just b <em>you.</em></b><p>One $handle and one page: bwalletx.com/$you.</p></div>
+    </section>
+
+    <section class="jb-scene jb-end">
+      <img src="/images/just-b-desert-ridge.jpg" alt="" width="1792" height="1008" loading="lazy" />
+      <div class="jb-end-in">
+        <h2>Just b.</h2>
+        <a class="jb-go" href="/get">Get bWalletX</a>
       </div>
-
-      <section>
-        <h2>Just b&hellip;</h2>
-        <ul class="jb-list">
-          <li><span class="v">Just b <em>paid.</em></span><span class="d">Send and receive Bitcoin SV to a $handle, not a long address.</span></li>
-          <li><span class="v">Just b <em>reachable.</em></span><span class="d">bMail and free calls in the wallet. Penny post: a bMail costs 1&cent;, so the inbox stays yours.</span></li>
-          <li><span class="v">Just b <em>heard.</em></span><span class="d">Hold the b and say what you want. b, the agent in the wallet, takes it from there.</span></li>
-          <li><span class="v">Just b <em>private.</em></span><span class="d">Your keys stay on your device. We never hold your coins.</span></li>
-          <li><span class="v">Just b <em>you.</em></span><span class="d">One $handle and one page: bwalletx.com/$you.</span></li>
-        </ul>
-      </section>
-
-      <section>
-        <h2>Hold the b and ask.</h2>
-        <div class="jb-hold">
-          <span class="jb-bdot" aria-hidden="true">b</span>
-          <p>The b in the middle of the bottom bar listens. Hold it, say what you want, and let go. Nothing is sent until you lift your finger.</p>
-        </div>
-        <p class="jb-quote">&ldquo;Send five dollars to Sam.&rdquo;</p>
-        <p><a href="/hold-to-talk">How hold to talk works &rarr;</a></p>
-      </section>
-
-      <section class="jb-cta">
-        <h2>Less to carry.</h2>
-        <p>One app instead of five. That&rsquo;s it.</p>
-        <div class="row"><a class="btn btn-store" href="/get">Get bWalletX</a><a class="btn btn-store btn-ghost" href="https://web.bwalletx.com" target="_blank" rel="noopener">Open the web wallet</a></div>
-        <p class="small">bWalletX is in beta: test with small amounts. Questions: <a href="mailto:support@bwalletx.com">support@bwalletx.com</a></p>
-      </section>
-    </main>
+    </section>
+    <p class="jb-foot">bWalletX is in beta: test with small amounts. <a href="mailto:support@bwalletx.com">support@bwalletx.com</a></p>
   </body>
 </html>
