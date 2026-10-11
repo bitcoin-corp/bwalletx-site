@@ -169,7 +169,7 @@
     panel.innerHTML = items.map(function (it) {
       if (!it.sub) return '<a class="m-top" href="' + it.href + '">' + it.label + '</a>';
       return '<details' + (it === section ? ' open' : '') + '><summary>' + it.label + '</summary>' + subLinks(it) + '</details>';
-    }).join('') + '<a class="m-top" href="https://web.bwalletx.com">Web wallet &rarr;</a><p class="m-follow"><a href="https://x.com/bWalletX">X</a><a href="https://github.com/bitcoin-corp/bwallet">GitHub</a><a href="https://www.youtube.com/@bWalletX">YouTube</a><a href="https://www.bchatx.com/room/LOUNGE">bChatX Lounge</a></p>';
+    }).join('') + '<a class="m-top" href="https://web.bwalletx.com">Web wallet &rarr;</a><p class="m-follow"><a href="https://x.com/bWalletX">X</a><a href="https://bwalletx.com/twetch">Twetch</a><a href="https://github.com/bitcoin-corp/bwallet">GitHub</a><a href="https://www.youtube.com/@bWalletX">YouTube</a><a href="https://www.bchatx.com/room/LOUNGE">bChatX Lounge</a></p>';
     mb.addEventListener('click', function () {
       var open = panel.hidden;
       panel.hidden = !open;
