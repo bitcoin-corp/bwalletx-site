@@ -24,7 +24,7 @@ It isn't on Google Play yet, so install it by hand:
 
 Updating from an older version? Install over the top and your wallet stays. If Android says the app can't be updated, write down your 12 words first, then uninstall and reinstall.
 
-Version 5.1.95 beta · 20.8 MB · Android 7+ · SHA-256 068d605ee37b928b833d0e55342edffdc38f88292f38c47f95f7ffa7e7344749
+Version 5.1.95 beta · 20.9 MB · Android 7+ · SHA-256 068d605ee37b928b833d0e55342edffdc38f88292f38c47f95f7ffa7e7344749
 
 Also: [Chrome extension](https://bwalletx.com/extension) · [Developers](https://bwalletx.com/developers)
 
@@ -1393,6 +1393,15 @@ Each release ships to the Android APK, the Chrome extension and the web wallet. 
 
 ## 5.1.95 2026-10-11
 
+- Mint your bAvatar: Mint my bAvatar in the account menu inscribes your gold bAvatar with your name and account number. The first 1,000 accounts mint free
+- Every account without its own picture gets a gold bAvatar drawn from its name, and the back of the wallet card shows it as a QR code any phone camera can scan to reach your paymail
+- Sign in with bWalletX on bChatX asks one clear question, “Prove it’s you”, already ticked, so sign-in no longer fails with “permission denied”
+- Approval sheets on websites always become tappable, and if one ever sticks, Open in bWalletX moves the request into the wallet
+- Money sent to your receive address is ready to spend straight away, including for minting and for websites you connect to
+- The wallet checks your addresses for new payments regularly in the background
+
+## 5.1.94 2026-10-11
+
 - bWallet now has free Spaces: join the bWallet Lounge and other public Spaces to listen, ask to speak, speak and chat, with report and block on every person and message
 - bChatX follows your wallet account: switch accounts in the wallet and bChatX signs in as that account. Settings › bChatX lets you use a different name or not connect at all
 - A cleaner wallet card: your identity key sits in the magnetic strip on the back with a copy icon, and a pen icon on the front flips the card
@@ -1980,7 +1989,7 @@ Blend 3 or 4 styles
 
 Variation 0
 
-Shuffle[Open full size](#)
+Shuffle
 
 Art QR · any cameraThe same art seen through a real QR grid. Scan it with your phone camera.Scan me
 
@@ -2039,6 +2048,38 @@ BSVBitcoin SV
 ¢
 PNEEsPenny stablecoins
 1,200
+
+Mint
+
+## The Founding 1,000.
+
+Every bWalletX account has a number, in the order accounts joined. Accounts #1 to #1,000 are the Founding 1,000. Mint your bAvatar and your number is inscribed with it, on chain, for good.
+
+$@bwalletx.com
+
+Type your name to see your number.
+
+- Your bAvatar, on chainThe gold art drawn from your name, inscribed as a 1-sat ordinal in your own wallet.
+
+- Your name and numberInscribed with the art: $you · bWalletX #N.
+
+- A QR that opens your paymailPoint any phone camera at it and it finds you. A business card you can keep.
+
+- Yours to keep or pass onSend it to anyone and the art and number go with it. Your account, keys and name stay with you.
+
+Free for the Founding 1,000. A mint costs about 4,000 sats in network fees, a tiny fraction of a cent, and bWalletX pays it for accounts #1 to #1,000. After that you pay the fee yourself, at cost.
+
+[Mint in bWalletX](https://bwalletx.com/get)[Customize first](#try)
+
+Minting rolling out
+
+#—
+
+FOUNDING 1,000
+
+#—
+
+$you
 
 Where it shows
 
