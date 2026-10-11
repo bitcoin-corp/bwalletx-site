@@ -31,25 +31,25 @@
       .jb-scene img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 70%; }
       .jb-scene::after { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(0, 0, 0, 0.35) 0%, rgba(0, 0, 0, 0) 40%, rgba(0, 0, 0, 0) 70%, #000 100%); }
       .jb-hero-in { position: relative; z-index: 1; flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: flex-start; padding: 36vh 16px 0; text-align: center; }
-      .jb h1 { margin: 0; font: 700 clamp(5rem, 22vw, 12.5rem) / 0.9 var(--hf); letter-spacing: -0.045em; text-shadow: 0 6px 60px rgba(0, 0, 0, 0.6); white-space: nowrap; }
-      /* A breath at dusk: "Just" fades in slowly on its own, a pause, then the b, a touch apart, and it glows. */
-      .jb h1 .l { display: inline-block; opacity: 0; filter: blur(4px); transform: translateY(0.06em); }
-      .jb h1 .w { animation: letter 2.4s 0.4s cubic-bezier(0.25, 0.1, 0.25, 1) forwards; }
-      .jb h1 .b { margin-left: 0.32em; color: var(--gold-hi); animation: letter 2.5s 2.3s cubic-bezier(0.25, 0.1, 0.25, 1) forwards, glow 7s 4.8s ease-in-out infinite; }
-      @keyframes letter { to { opacity: 1; filter: blur(0); transform: none; } }
+      /* The advert: b safe, b happy, b peaceful, b you, each at title size, then "Just", then the b, which stays. */
+      .jb-stage { position: relative; margin: 0; width: 100%; height: 1.05em; font: 700 clamp(3.2rem, 15vw, 12.5rem) / 1 var(--hf); letter-spacing: -0.045em; text-shadow: 0 6px 60px rgba(0, 0, 0, 0.6); }
+      .jb-stage em { font-style: normal; color: var(--gold-hi); }
+      .jb-stage .ph, .jb-stage .fin { position: absolute; left: 0; right: 0; top: 0; white-space: nowrap; }
+      .jb-stage .ph { opacity: 0; filter: blur(4px); transform: translateY(0.05em); transition: opacity 1.1s ease, filter 1.1s ease, transform 1.1s ease; }
+      .jb-stage .ph.on { opacity: 1; filter: blur(0); transform: none; }
+      .jb-stage .l { display: inline-block; opacity: 0; filter: blur(4px); transform: translateY(0.05em); transition: opacity 2.2s cubic-bezier(0.25, 0.1, 0.25, 1), filter 2.2s ease, transform 2.2s ease; }
+      .jb-stage .l.on { opacity: 1; filter: blur(0); transform: none; }
+      .jb-stage .b { margin-left: 0.32em; color: var(--gold-hi); }
+      .jb-stage .b.on { animation: glow 7s 2.4s ease-in-out infinite; }
+      .jb-stage .dot { color: var(--gold-hi); margin-left: 0.02em; }
       @keyframes glow { 0%, 100% { text-shadow: 0 0 40px rgba(245, 184, 0, 0.35); } 50% { text-shadow: 0 0 90px rgba(245, 184, 0, 0.75); } }
-      /* Advert line: b safe, b happy, b peaceful, b you, fading in and out under the title. */
-      .jb-ad { position: relative; height: 1.4em; margin-top: 30px; font: 600 clamp(1.4rem, 5vw, 2.2rem) var(--hf); letter-spacing: 0.02em; color: #e8dcc0; }
-      .jb-ad span { position: absolute; left: 50%; top: 0; transform: translate(-50%, 8px); white-space: nowrap; opacity: 0; filter: blur(8px); transition: opacity 1.2s ease, filter 1.2s ease, transform 1.2s ease; }
-      .jb-ad span.on { opacity: 1; filter: blur(0); transform: translate(-50%, 0); }
-      .jb-ad em { font-style: normal; color: var(--gold-hi); }
       .jb-names { margin: 28px 0 0; font: 500 clamp(0.85rem, 3vw, 1rem) var(--hf); letter-spacing: 0.08em; color: #cfc6b0; opacity: 0; animation: rise 2s 1.2s ease forwards; }
       .jb-names a { color: inherit; text-decoration: none; }
       .jb-names a:hover, .jb-names a:focus-visible { color: #fff; }
       .jb-down { position: relative; z-index: 1; margin: 0 auto 28px; width: 1px; height: 56px; background: linear-gradient(180deg, rgba(245, 184, 0, 0), rgba(245, 184, 0, 0.8)); animation: drift 3s ease-in-out infinite; }
       @keyframes rise { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: none; } }
       @keyframes drift { 0%, 100% { opacity: 0.3; } 50% { opacity: 1; } }
-      @media (prefers-reduced-motion: reduce) { .jb h1 .l { animation: none; opacity: 1; filter: none; transform: none; } .jb-down { animation: none; } .jb-ad span { transition: none; } }
+      @media (prefers-reduced-motion: reduce) { .jb-stage .ph, .jb-stage .l { transition: none; } .jb-stage .b.on { animation: none; } .jb-down { animation: none; } }
 
       .jb-lines { max-width: 900px; margin: 0 auto; padding: 22vh 24px 18vh; text-align: center; }
       .jb-line { margin: 0 0 22vh; font: 700 clamp(3.2rem, 14vw, 7.5rem) / 1 var(--hf); letter-spacing: -0.04em; color: #f1ead9; }
@@ -74,8 +74,13 @@
     <section class="jb-scene">
       <picture><source media="(orientation: portrait)" srcset="/images/just-b-desert-hero-tall.jpg" /><img src="/images/just-b-desert-hero.jpg" alt="" width="1792" height="1008" fetchpriority="high" /></picture>
       <div class="jb-hero-in">
-        <h1 aria-label="Just b"><span class="l w">Just</span><span class="l b">b</span></h1>
-        <p class="jb-ad" id="jb-ad" aria-live="off"><span>b <em>safe</em></span><span>b <em>happy</em></span><span>b <em>peaceful</em></span><span>b <em>you</em></span></p>
+        <h1 class="jb-stage" aria-label="Just b">
+          <span class="ph">b <em>safe</em></span>
+          <span class="ph">b <em>happy</em></span>
+          <span class="ph">b <em>peaceful</em></span>
+          <span class="ph">b <em>you</em></span>
+          <span class="fin"><span class="l w">Just</span><span class="l b">b</span><span class="l dot">.</span></span>
+        </h1>
       </div>
       <div class="jb-down" aria-hidden="true"></div>
     </section>
@@ -101,18 +106,21 @@
     <audio id="jb-music" src="/audio/just-b-echoes-of-dust.mp3" preload="none" loop></audio>
     <p class="jb-foot">bWalletX is in beta: test with small amounts. <a href="mailto:support@bwalletx.com">support@bwalletx.com</a></p>
       <script>
-      // Advert line: one phrase at a time, then a breath of silence, on a loop.
+      // The advert sequence: four phrases in turn, then Just, then the b (and the period), which stay.
       (function () {
-        var spans = document.querySelectorAll('#jb-ad span'), i = -1;
-        if (!spans.length) return;
+        var ph = document.querySelectorAll('.jb-stage .ph'), w = document.querySelector('.jb-stage .w'),
+          b = document.querySelector('.jb-stage .b'), dot = document.querySelector('.jb-stage .dot');
         var reduce = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
-        function next() {
-          spans.forEach(function (s) { s.classList.remove('on'); });
-          i = (i + 1) % (spans.length + 1);
-          if (i < spans.length) spans[i].classList.add('on');
-          setTimeout(next, i < spans.length ? 3000 : 2200);
-        }
-        setTimeout(next, reduce ? 0 : 5400);
+        if (reduce) { [w, b, dot].forEach(function (e) { e.classList.add('on'); }); return; }
+        var t = 600, HOLD = 1900, GAP = 900;
+        ph.forEach(function (p) {
+          setTimeout(function () { p.classList.add('on'); }, t);
+          setTimeout(function () { p.classList.remove('on'); }, t + HOLD);
+          t += HOLD + GAP;
+        });
+        setTimeout(function () { w.classList.add('on'); }, t);
+        setTimeout(function () { b.classList.add('on'); }, t + 1500);
+        setTimeout(function () { dot.classList.add('on'); }, t + 3300);
       })();
       // Ambient music (VexVoid, "Echoes of Dust"): off until the visitor taps Sound, then fades in.
       (function () {
