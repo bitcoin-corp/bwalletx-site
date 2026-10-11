@@ -40,6 +40,8 @@
       html, body { overflow-x: clip; }
       main.ext.bt { padding-top: 0 !important; }
       .bt-hero { position: relative; margin: 0 calc(50% - 50vw); min-height: min(78vh, 760px); display: flex; align-items: flex-start; overflow: hidden; background: #000; }
+      .bv-tall { display: none; }
+      @media (orientation: portrait) { .bv-wide { display: none; } .bv-tall { display: block; } }
       .bt-low { align-items: flex-end; }
       .bt-low .bt-hero-in { padding: 0 16px 6vh; }
       .bt-low::after { background: linear-gradient(180deg, rgba(0,0,0,.25) 0%, rgba(0,0,0,0) 30%, rgba(0,0,0,.55) 68%, #0b0b0c 100%); }
@@ -67,7 +69,7 @@
     <script src="/nav.js"></script>
     <main class="ext bt">
       <section class="bt-hero bt-low">
-<video src="/video/bvault-newyork-loop.mp4" poster="/video/bvault-newyork-loop.jpg" autoplay muted loop playsinline preload="auto" aria-hidden="true"></video>
+<video class="bv-wide" src="/video/bvault-newyork-loop.mp4" poster="/video/bvault-newyork-loop.jpg" autoplay muted loop playsinline preload="auto" aria-hidden="true"></video><video class="bv-tall" src="/video/bvault-newyork-tall.mp4" poster="/video/bvault-newyork-tall.jpg" autoplay muted loop playsinline preload="none" aria-hidden="true"></video>
         <div class="bt-hero-in">
           <h1>bVault.<br /><span class="gold">Keep what matters safe.</span></h1>
           <p class="lede">Your important documents, backups and the keys to coins you keep elsewhere, encrypted in one calm place that only you can open.</p>
@@ -95,5 +97,6 @@
 
       <p class="small">Only you hold the key to your vault: if you lose your wallet backup, we can&rsquo;t open it for you. bWalletX is in beta: test with small amounts. Questions: <a href="mailto:support@bwalletx.com">support@bwalletx.com</a></p>
     </main>
+    <script>document.querySelectorAll('.bt-hero video').forEach(function (v) { if (getComputedStyle(v).display === 'none') { v.pause(); v.removeAttribute('autoplay'); } else if (v.preload === 'none') { v.preload = 'auto'; v.play().catch(function () {}); } });</script>
   </body>
 </html>
