@@ -29,7 +29,7 @@ Full text of every page below: https://bwalletx.com/llms-full.txt
 - [bTrust: coming to bWalletX](https://bwalletx.com/btrust): bTrust, coming to bWalletX: a Lock with more than one key. Share keys with your solicitor and family, so the people you love are looked after.
 - [bWeb: your web on bitcoin](https://bwalletx.com/bweb): bWeb (coming) is your own set of bApps inside bWalletX: make each app yours for free, ask b for small changes, or have b build your own version. You pay in small amounts from your wallet.
 - [bWalletX Desktop](https://bwalletx.com/desktop): bWalletX Desktop: your whole wallet on a big screen at desktop.bwalletx.com. Money, bMail, chat, Spaces, bApps and Agent b side by side. Install it as an app from Chrome, Edge or Safari.
-- [Gigs in bWalletX](https://bwalletx.com/gigs): Gigs in bWalletX: go live on camera in your own Space, sell tickets at the door or charge by the minute, and your fans pay you directly.
+- [bGigs in bWalletX](https://bwalletx.com/gigs): bGigs in bWalletX: go live on camera in your own Space, sell tickets at the door or charge by the minute, and your fans pay you directly.
 - [Just b](https://bwalletx.com/just-b): Just b
 - [Send a bMail · bWalletX](https://bwalletx.com/person): Everything you can do with a person on bWalletX: send a bMail for a penny, call, pay or tip, and chat. Write your message now; bWalletX sends it.
 - [Releases](https://bwalletx.com/releases): Every bWalletX release and what it added, newest first. Latest: 5.2.0.
@@ -122,6 +122,7 @@ Full text of every page below: https://bwalletx.com/llms-full.txt
 - [036 Subscriptions, priced in dollars · bWalletX blog](https://bwalletx.com/blog/036-subscriptions-in-dollars): Subscriptions in bWalletX are priced in dollars and paid in BSV at that day’s rate. Each one pays from a pot you choose. Pause or cancel any time. Nothing is paid up front.
 - [037 Portfolio vs market · bWalletX blog](https://bwalletx.com/blog/037-portfolio-vs-market): Tap the price tile in bWalletX to see how your wallet did against just holding BSV, holding BTC or keeping dollars, over a day, week, month, year or all time.
 - [038 Swap into BSV · bWalletX blog](https://bwalletx.com/blog/038-swap-into-bsv): Swap BTC, ETH and 1,000+ other coins into BSV from the bWalletX home screen. ChangeNOW runs the swap; the BSV is sent straight to your wallet.
+- [039 bGigs: your stage, your fans · bWalletX blog](https://bwalletx.com/blog/039-bgigs-your-stage-your-fans): Artists can play live to their fans from anywhere, sell tickets at the door or by the minute, and get paid straight away. It works today in bWalletX.
 - [bWalletX development blog](https://bwalletx.com/blog/): How bWallet and bWalletX were built from a fork of Yours Wallet: numbered posts from the git history, including what broke, what we reversed and what is still not done.
 
 ## Support

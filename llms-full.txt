@@ -954,7 +954,7 @@ Looking for plain bWallet from the App Store or Google Play? See bwallet.space](
 
 Source: https://bwalletx.com/gigs
 
-# Gigs.
+# bGigs.
 Your stage. Your fans.
 
 Go live in your own Space, on camera, wherever you are. Sell tickets at the door or charge by the minute, and your fans pay you directly.
@@ -7211,7 +7211,45 @@ Swaps are in bWalletX, not in the App Store and Google Play edition.
 
 Live on [web.bwalletx.com](https://web.bwalletx.com) and the desktop beta at [beta.bwalletx.com](https://beta.bwalletx.com).
 
-[← 037 Portfolio vs market](https://bwalletx.com/blog/037-portfolio-vs-market)[All posts →](https://bwalletx.com/blog)
+[← 037 Portfolio vs market](https://bwalletx.com/blog/037-portfolio-vs-market)[039 bGigs: your stage, your fans →](https://bwalletx.com/blog/039-bgigs-your-stage-your-fans)
+
+---
+
+Source: https://bwalletx.com/blog/039-bgigs-your-stage-your-fans
+
+[Development blog](https://bwalletx.com/blog) · 039 · 11 Oct 2026
+
+# bGigs: your stage, your fans
+
+Artists can play live to their fans from anywhere, sell tickets at the door or by the minute, and get paid straight away. It works today in bWalletX.
+
+## Your own stage
+
+Every artist gets a Space with a link that never changes. Go live on camera and mic from your phone or the web, bring a guest up on stage, and talk to the room while you play.
+
+It works across the world: the promoter can run the room in London while the artist plays from Tokyo.
+
+## Tickets that pay you
+
+Set a door price and fans pay once to come in. Or charge by the minute, so fans pay only for what they hear and can leave whenever they like.
+
+Either way the money goes straight to the artist, as it comes in. No waiting weeks for a payout.
+
+## Featured: VexVoid
+
+VexVoid makes slow, dusky electronic music. If you pressed play on our Just b page, you have already heard him. He is the first artist in the new Featured artists panel on bChatX.
+
+## What's not done
+
+- Playing your music video into the room, in sync for everyone, on repeat if you like.
+- Album Spaces: a ticketed run of your music videos, one after another.
+- Your own banner on your Space and tile (in the next app build).
+- Splitting ticket money between promoter, label, artist and crew.
+- Tickets are in bWalletX (web, Android and Chrome), not the App Store or Google Play editions.
+
+Related: [Home](https://bwalletx.com/) · [Features](https://bwalletx.com/features) · [Developers](https://bwalletx.com/developers)
+
+[← 038 Swap into BSV](https://bwalletx.com/blog/038-swap-into-bsv)[All posts →](https://bwalletx.com/blog)
 
 ---
 
@@ -7222,6 +7260,10 @@ Source: https://bwalletx.com/blog/
 How bWallet and bWalletX were built, one chapter at a time. Every post is written from the git history of the wallet, this site, the chat server and the PNEEs prototype. It covers what we built, why, what broke, what we reversed and what is still not done.
 
 Newest first. Dates come from commits. bWallet is a fork of [Yours Wallet](https://github.com/yours-org/yours-wallet) (MIT licence).
+
+- 039 · 11 Oct 2026
+[bGigs: your stage, your fans](https://bwalletx.com/blog/039-bgigs-your-stage-your-fans)
+Artists can play live to their fans from anywhere, sell tickets at the door or by the minute, and get paid straight away. It works today in bWalletX.
 
 - [](https://bwalletx.com/blog/038-swap-into-bsv)038 · 10 Oct 2026
 [Swap into BSV](https://bwalletx.com/blog/038-swap-into-bsv)
