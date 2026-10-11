@@ -40,6 +40,11 @@
   ],
   "redirects": [
     {
+      "source": "/twetch",
+      "destination": "https://twetch.com/u/220501",
+      "permanent": false
+    },
+    {
       "source": "/u/bchat/:handle",
       "destination": "https://www.bchatx.com/u/:handle",
       "permanent": false
