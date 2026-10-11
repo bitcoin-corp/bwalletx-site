@@ -40,6 +40,11 @@
   ],
   "redirects": [
     {
+      "source": "/:g(bgigs|bGigs|BGigs)",
+      "destination": "/gigs",
+      "permanent": false
+    },
+    {
       "source": "/:v(bvault|bVault|BVault)",
       "destination": "/btrust",
       "permanent": false
