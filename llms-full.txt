@@ -1449,6 +1449,13 @@ Each release ships to the Android APK, the Chrome extension and the web wallet. 
 
 [Download bWalletX](https://bwalletx.com/download)
 
+## 5.2.0 2026-10-11
+
+- When a website asks you to pay or mint, the wallet now gathers all your money first, so mints no longer fail with “insufficient funds” while your balance shows plenty
+- If a payment still can’t go through, the message says where your money is waiting instead of a long number
+- Spaces: speakers with their camera off show their gold bAvatar art on the tile and in the circle, instead of a plain letter
+- The green room before you join shows everyone on stage with their bAvatar too
+
 ## 5.1.99 2026-10-11
 
 - A cleaner card front: the adjust icon has moved off the front of your card

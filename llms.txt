@@ -31,7 +31,7 @@ Full text of every page below: https://bwalletx.com/llms-full.txt
 - [bWalletX Desktop](https://bwalletx.com/desktop): bWalletX Desktop: your whole wallet on a big screen at desktop.bwalletx.com. Money, bMail, chat, Spaces, bApps and Agent b side by side. Install it as an app from Chrome, Edge or Safari.
 - [Just b](https://bwalletx.com/just-b): Just b
 - [Send a bMail · bWalletX](https://bwalletx.com/person): Everything you can do with a person on bWalletX: send a bMail for a penny, call, pay or tip, and chat. Write your message now; bWalletX sends it.
-- [Releases](https://bwalletx.com/releases): Every bWalletX release and what it added, newest first. Latest: 5.1.99.
+- [Releases](https://bwalletx.com/releases): Every bWalletX release and what it added, newest first. Latest: 5.2.0.
 
 ## Wallet features
 
