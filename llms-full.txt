@@ -1233,39 +1233,45 @@ Questions: [support@bwalletx.com](mailto:support@bwalletx.com)
 
 Source: https://bwalletx.com/just-b
 
-# Just b.
+Just b
 
-Live simply. One wallet for money, mail, calls and chat.
+-
 
-## Just b…
+-
 
-- Just b paid.Send and receive Bitcoin SV to a $handle, not a long address.
+-
 
-- Just b reachable.bMail and free calls in the wallet. Penny post: a bMail costs 1¢, so the inbox stays yours.
+-
 
-- Just b heard.Hold the b and say what you want. b, the agent in the wallet, takes it from there.
+-
 
-- Just b private.Your keys stay on your device. We never hold your coins.
+#
+safe
+peaceful
+happy
+Just
 
-- Just b you.One $handle and one page: bwalletx.com/$you.
+Play with sound
 
-## Hold the b and ask.
+Breathe out. It's yours.
 
-b
+Lock it away. Set some aside and let time hold it for you, untouchable until the day you chose. Future you will be grateful.
 
-The b in the middle of the bottom bar listens. Hold it, say what you want, and let go. Nothing is sent until you lift your finger.
+Pots for everything. Holidays, rent, a gift for someone you love. Money that already knows where it's going.
 
-“Send five dollars to Sam.”
+Pay only for what you need. Listen, watch or read and pay by the second, stop whenever you like. Subscriptions you can see, and end, in one tap.
 
-[How hold to talk works →](https://bwalletx.com/hold-to-talk)
+Rooms that belong to the people in them. Every room has its own token. Hold one and you're part of it: a voice, a place, a seat at the table. Keep it close-knit, or throw the doors open.
 
-## Less to carry.
+Less noise. More life. Just b.
 
-One app instead of five. That’s it.
+## Just b
 
-[Get bWalletX](https://bwalletx.com/get)[Open the web wallet](https://web.bwalletx.com)
+[Get bWalletX](https://bwalletx.com/get)
 
-bWalletX is in beta: test with small amounts. Questions: [support@bwalletx.com](mailto:support@bwalletx.com)
+Sound
+
+bWalletX is in beta: test with small amounts. [support@bwalletx.com](mailto:support@bwalletx.com)
 
 ---
 
@@ -1392,6 +1398,10 @@ Each release ships to the Android APK, the Chrome extension and the web wallet. 
 [Download bWalletX](https://bwalletx.com/download)
 
 ## 5.1.97 2026-10-11
+
+- Your wallet card now shows your gold bAvatar art on the front, under a light shade so your balance stays easy to read
+
+## 5.1.96 2026-10-11
 
 - New approval cards: signing in, connecting, paying and minting each have their own big, clear card, so you can see what you are approving at a glance
 - Payments ask in dollars, with the sats underneath and one big Pay button
