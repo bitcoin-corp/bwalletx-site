@@ -11,7 +11,7 @@
     <meta property="og:site_name" content="bWalletX" />
     <meta property="og:title" content="bTrust: coming to bWalletX" />
     <meta property="og:description" content="Pass what matters to the people you love. bTrust, coming to bWalletX: choose who inherits your money, keys and documents, and when." />
-    <meta property="og:image" content="https://bwalletx.com/og-btrust.jpg" />
+    <meta property="og:image" content="https://bwalletx.com/og-btrust-v2.jpg" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
     <meta property="og:image:alt" content="Pass what matters to the people you love. bTrust, coming to bWalletX: choose who inherits your money, keys and documents, and when." />
@@ -19,7 +19,7 @@
     <meta name="twitter:site" content="@bWalletX" />
     <meta name="twitter:title" content="bTrust: coming to bWalletX" />
     <meta name="twitter:description" content="Pass what matters to the people you love. bTrust, coming to bWalletX: choose who inherits your money, keys and documents, and when." />
-    <meta name="twitter:image" content="https://bwalletx.com/og-btrust.jpg" />
+    <meta name="twitter:image" content="https://bwalletx.com/og-btrust-v2.jpg" />
     <link rel="icon" href="/favicon.ico" />
     <link rel="stylesheet" href="/styles.css" />
     <style>
@@ -37,6 +37,14 @@
       .feat li { display: flex; gap: 12px; align-items: baseline; padding: 12px 0; border-bottom: 1px solid #ffffff10; }
       .tag { flex: none; font-size: 0.75rem; font-weight: 700; padding: 2px 9px; border-radius: 999px; }
       .tag.live { background: #F5B800; color: #000; }
+      html, body { overflow-x: clip; }
+      main.ext.bt { padding-top: 0 !important; }
+      .bt-hero { position: relative; margin: 0 calc(50% - 50vw); min-height: min(78vh, 760px); display: flex; align-items: flex-start; overflow: hidden; background: #000; }
+      .bt-hero img { position: absolute; inset: 0; width: 100%; height: 100%; max-width: none; object-fit: cover; object-position: 62% 82%; }
+      .bt-hero::after { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(0,0,0,.25) 0%, rgba(0,0,0,0) 35%, rgba(0,0,0,.35) 75%, #0b0b0c 100%); }
+      .bt-hero-in { position: relative; z-index: 1; width: 100%; max-width: 1100px; margin: 0 auto; padding: max(150px, 20vh) 16px 0; box-sizing: border-box; }
+      .bt-hero h1 { margin: 0 0 14px; font-size: clamp(2.2rem, 8vw, 5rem); overflow-wrap: break-word; letter-spacing: -0.035em; line-height: 1.02; text-shadow: 0 4px 40px rgba(0,0,0,.6); }
+      .bt-hero .lede { max-width: 640px; color: #e6dfcc; text-shadow: 0 2px 20px rgba(0,0,0,.7); }
       .tag.soon { border: 1px solid #ffffff40; color: #a7adb8; }
     </style>
   </head>
@@ -52,9 +60,14 @@
       </div>
     </header>
     <script src="/nav.js"></script>
-    <main class="ext">
-      <h1>bTrust. <span class="gold">Pass on what matters.</span></h1>
-      <p class="lede">Choose who receives your money, your keys and your important documents, and when. Quietly arranged now, so the people you love are looked after later.</p>
+    <main class="ext bt">
+      <section class="bt-hero">
+        <img src="/images/btrust-london-dawn.jpg" alt="London at dawn: St Paul's and the Thames in first gold light" width="1024" height="1024" fetchpriority="high" />
+        <div class="bt-hero-in">
+          <h1>bTrust.<br /><span class="gold">Pass on what matters.</span></h1>
+          <p class="lede">Choose who receives your money, your keys and your important documents, and when. Quietly arranged now, so the people you love are looked after later.</p>
+        </div>
+      </section>
       <p><span class="tag soon">Coming</span> bTrust is in the works and isn&rsquo;t in the app yet. This page says what we&rsquo;re building.</p>
       <div class="row"><a class="btn btn-store" href="/get">Get bWalletX</a></div>
 
