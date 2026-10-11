@@ -973,9 +973,14 @@ Set a door price and fans pay once to come in. Or charge by the minute, so they 
 
 Your Space shows your own picture and your name, so fans know exactly whose gig they’re at.
 
-## Featured artist: VexVoid
+## Featured artists
 
-VexVoid makes slow, dusky electronic music. You’ve already heard him if you’ve pressed play on [Just b](https://bwalletx.com/just-b). His music videos and live sets are coming to bWalletX Spaces. [vexvoid.com](https://vexvoid.com)
+[VexVoidEchoes in the Dust · Artist Proof](https://vexvoid.com)
+[NPGXTokyo Gutter Punk](https://npgx.website)
+[VexVoidEchoes in the Dust · Ultra](https://vexvoid.com)
+[NPGXNeon Blood Riot](https://npgx.website)
+[VexVoidEchoes in the Dust · Ultra](https://vexvoid.com)
+[VexVoidEchoes in the Dust · Rare](https://vexvoid.com)
 
 ## What works today
 
@@ -1493,6 +1498,12 @@ Each release ships to the Android APK, the Chrome extension and the web wallet. 
 [Download bWalletX](https://bwalletx.com/download)
 
 ## 5.2.1 2026-10-11
+
+- Money sent to your address is now always added to what you can spend, even when an earlier attempt to add it got stuck, so minting and paying sites work
+- The Choose your handle screen always opens on top of everything, with Close and Done in reach
+- If your personal token and room can’t be created yet, the wallet tells you why instead of “Already sponsored”
+
+## 5.2.0 2026-10-11
 
 - When a website asks you to pay or mint, the wallet now gathers all your money first, so mints no longer fail with “insufficient funds” while your balance shows plenty
 - If a payment still can’t go through, the message says where your money is waiting instead of a long number
@@ -7235,9 +7246,14 @@ Set a door price and fans pay once to come in. Or charge by the minute, so fans 
 
 Either way the money goes straight to the artist, as it comes in. No waiting weeks for a payout.
 
-## Featured: VexVoid
+## Featured artists
 
-VexVoid makes slow, dusky electronic music. If you pressed play on our Just b page, you have already heard him. He is the first artist in the new Featured artists panel on bChatX.
+[VexVoidEchoes in the Dust · Artist Proof](https://vexvoid.com)
+[NPGXTokyo Gutter Punk](https://npgx.website)
+[VexVoidEchoes in the Dust · Ultra](https://vexvoid.com)
+[NPGXNeon Blood Riot](https://npgx.website)
+[VexVoidEchoes in the Dust · Ultra](https://vexvoid.com)
+[VexVoidEchoes in the Dust · Rare](https://vexvoid.com)
 
 ## What's not done
 
