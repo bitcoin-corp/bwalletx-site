@@ -65,7 +65,7 @@
       .jb-play { width: 76px; height: 76px; border-radius: 50%; display: flex; align-items: center; justify-content: center; padding-left: 4px; box-sizing: border-box; color: #fff; border: 1px solid rgba(255, 255, 255, 0.55); transition: transform 0.6s ease, border-color 0.6s ease, background 0.6s ease; }
       .jb-gate:hover .jb-play, .jb-gate:focus-visible .jb-play { transform: scale(1.05); border-color: #fff; background: rgba(255, 255, 255, 0.06); }
       .jb-gate-l { color: rgba(255, 255, 255, 0.55); }
-      .jb-invite { margin-top: 1.6em; display: flex; flex-direction: column; align-items: center; gap: 14px; opacity: 0; transform: translateY(8px); transition: opacity 2.2s ease, transform 2.2s ease; pointer-events: none; }
+      .jb-invite { position: absolute; left: 16px; right: 16px; bottom: 9vh; display: flex; flex-direction: column; align-items: center; gap: 14px; opacity: 0; transform: translateY(8px); transition: opacity 2.2s ease, transform 2.2s ease; pointer-events: none; }
       .jb-invite.on { opacity: 1; transform: none; pointer-events: auto; }
       .jb-invite p { margin: 0; font: 400 clamp(0.8rem, 2.2vw, 0.95rem) var(--hf); letter-spacing: 0.06em; color: rgba(255, 255, 255, 0.65); }
       .jb-dl { display: inline-flex; align-items: center; height: 48px; padding: 0 28px; border-radius: 999px; border: 1px solid rgba(255, 255, 255, 0.6); color: #fff; text-decoration: none; font: 500 0.82rem var(--hf); letter-spacing: 0.2em; text-transform: uppercase; transition: background 0.4s ease, border-color 0.4s ease, color 0.4s ease; }
