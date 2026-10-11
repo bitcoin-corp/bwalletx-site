@@ -43,6 +43,17 @@
       .posts p { margin: 4px 0 0; color: #a7adb8; line-height: 1.55; }
       .ext .small { color: #8a8a86; font-size: 0.85rem; }
     </style>
+      <style>
+      .recs { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; margin: 18px 0 8px; }
+      @media (min-width: 640px) { .recs { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; } }
+      .rec { display: block; color: inherit; text-decoration: none; min-width: 0; }
+      .sleeve { display: block; aspect-ratio: 1; padding: 6px; background: linear-gradient(145deg, #2a2418, #0b0a08); border: 1px solid #f5b80055; border-radius: 6px; box-shadow: 0 14px 30px rgba(0,0,0,.55), inset 0 0 0 1px #00000080; transition: transform .35s ease, border-color .35s ease; }
+      .sleeve img { display: block; width: 100%; height: 100%; max-width: none; object-fit: cover; border-radius: 2px; }
+      .rec:hover .sleeve, .rec:focus-visible .sleeve { transform: translateY(-4px) rotate(-.6deg); border-color: #f5b800; }
+      .cap { display: block; margin-top: 8px; font-size: .85rem; line-height: 1.35; }
+      .cap b { display: block; color: #fff; }
+      .cap span { color: #a7adb8; }
+    </style>
   </head>
   <body>
     <div class="beta-banner">bWalletX is in <strong>beta</strong>: test with small amounts.</div>
@@ -66,8 +77,16 @@
       <h2>Tickets that pay you</h2>
       <p>Set a door price and fans pay once to come in. Or charge by the minute, so fans pay only for what they hear and can leave whenever they like.</p>
       <p>Either way the money goes straight to the artist, as it comes in. No waiting weeks for a payout.</p>
-      <h2>Featured: VexVoid</h2>
-      <p>VexVoid makes slow, dusky electronic music. If you pressed play on our Just b page, you have already heard him. He is the first artist in the new Featured artists panel on bChatX.</p>
+      <h2>Featured artists</h2>
+      <div class="recs">
+        <a class="rec" href="https://vexvoid.com" target="_blank" rel="noopener"><span class="sleeve"><img src="/images/covers/vexvoid-echoes-1.jpg" alt="Echoes in the Dust · Artist Proof by VexVoid, cover art" width="600" height="600" loading="lazy" /></span><span class="cap"><b>VexVoid</b><span>Echoes in the Dust · Artist Proof</span></span></a>
+        <a class="rec" href="https://npgx.website" target="_blank" rel="noopener"><span class="sleeve"><img src="/images/covers/npgx-tokyo-gutter-punk.jpg" alt="Tokyo Gutter Punk by NPGX, cover art" width="600" height="600" loading="lazy" /></span><span class="cap"><b>NPGX</b><span>Tokyo Gutter Punk</span></span></a>
+        <a class="rec" href="https://vexvoid.com" target="_blank" rel="noopener"><span class="sleeve"><img src="/images/covers/vexvoid-echoes-2.jpg" alt="Echoes in the Dust · Ultra by VexVoid, cover art" width="600" height="600" loading="lazy" /></span><span class="cap"><b>VexVoid</b><span>Echoes in the Dust · Ultra</span></span></a>
+        <a class="rec" href="https://npgx.website" target="_blank" rel="noopener"><span class="sleeve"><img src="/images/covers/npgx-neon-blood-riot.jpg" alt="Neon Blood Riot by NPGX, cover art" width="600" height="600" loading="lazy" /></span><span class="cap"><b>NPGX</b><span>Neon Blood Riot</span></span></a>
+        <a class="rec" href="https://vexvoid.com" target="_blank" rel="noopener"><span class="sleeve"><img src="/images/covers/vexvoid-echoes-3.jpg" alt="Echoes in the Dust · Ultra by VexVoid, cover art" width="600" height="600" loading="lazy" /></span><span class="cap"><b>VexVoid</b><span>Echoes in the Dust · Ultra</span></span></a>
+        <a class="rec" href="https://vexvoid.com" target="_blank" rel="noopener"><span class="sleeve"><img src="/images/covers/vexvoid-echoes-4.jpg" alt="Echoes in the Dust · Rare by VexVoid, cover art" width="600" height="600" loading="lazy" /></span><span class="cap"><b>VexVoid</b><span>Echoes in the Dust · Rare</span></span></a>
+      </div>
+
       <div class="box"><h2>What's not done</h2><ul><li>Playing your music video into the room, in sync for everyone, on repeat if you like.</li><li>Album Spaces: a ticketed run of your music videos, one after another.</li><li>Your own banner on your Space and tile (in the next app build).</li><li>Splitting ticket money between promoter, label, artist and crew.</li><li>Tickets are in bWalletX (web, Android and Chrome), not the App Store or Google Play editions.</li></ul></div>
       <p class="related">Related: <a href="/">Home</a> · <a href="/features">Features</a> · <a href="/developers">Developers</a></p>
       <div class="pn"><a href="/blog/038-swap-into-bsv">&larr; 038 Swap into BSV</a><a href="/blog">All posts &rarr;</a></div>
