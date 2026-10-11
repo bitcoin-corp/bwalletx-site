@@ -60,10 +60,11 @@
       @keyframes drift { 0%, 100% { opacity: 0.3; } 50% { opacity: 1; } }
       @media (prefers-reduced-motion: reduce) { .jb-stage .ph, .jb-stage .l { transition: none; } .jb-stage .b.on { animation: none; } }
 
-      .jb-lines { max-width: 900px; margin: 0 auto; padding: 22vh 24px 18vh; text-align: center; }
-      .jb-line { margin: 0 0 22vh; font: 700 clamp(3.2rem, 14vw, 7.5rem) / 1 var(--hf); letter-spacing: -0.04em; color: #f1ead9; }
-      .jb-line:last-child { margin-bottom: 0; }
-      .jb-line em { font-style: normal; color: var(--gold-hi); }
+      .jb-calm { max-width: 680px; margin: 0 auto; padding: 20vh 24px 18vh; text-align: center; color: #cfc6b0; font: 400 clamp(1.05rem, 2.4vw, 1.3rem) / 1.75 var(--hf); }
+      .jb-calm p { margin: 0 0 2.2em; }
+      .jb-calm .jb-lead { font: 700 clamp(1.9rem, 6vw, 3.2rem) / 1.15 var(--hf); letter-spacing: -0.03em; color: #fff; margin-bottom: 1.4em; }
+      .jb-calm p:last-child { margin: 2.2em 0 0; }
+      .jb-calm em { font-style: normal; color: var(--gold-hi); }
       .jb-sound { position: fixed; right: 18px; bottom: 18px; z-index: 5; display: flex; align-items: center; gap: 8px; height: 44px; padding: 0 16px; border-radius: 999px; border: 1px solid rgba(245, 184, 0, 0.35); background: rgba(0, 0, 0, 0.45); color: #e8dcc0; font: 600 0.85rem var(--hf); letter-spacing: 0.06em; cursor: pointer; backdrop-filter: blur(6px); }
       .jb-sound:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
       .jb-sound[aria-pressed="true"] { color: var(--gold-hi); border-color: rgba(245, 184, 0, 0.7); }
@@ -93,10 +94,12 @@
       </div>
     </section>
 
-    <section class="jb-lines" aria-label="Just b">
-      <p class="jb-line">b <em>safe</em></p>
-      <p class="jb-line">b <em>peaceful</em></p>
-      <p class="jb-line">b <em>happy</em></p>
+    <section class="jb-calm">
+      <p class="jb-lead">Breathe out. Your money is <em>yours</em> again.</p>
+      <p>bWalletX keeps your keys on your device, not on someone else's server. No account to be frozen, no middleman deciding what you may do. Just you, quietly in control.</p>
+      <p>Send to a friend across the world in a second, for a fraction of a cent. Tip a creator. Pay for exactly what you read, watch or hear, and nothing more.</p>
+      <p>One calm place for your money, your name and your conversations, connected to the open internet that is being built on Bitcoin. It moves at your pace.</p>
+      <p class="jb-lead">Less noise. More life. <em>Just b.</em></p>
     </section>
 
     <section class="jb-scene jb-end">
