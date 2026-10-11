@@ -56,10 +56,9 @@
       .jb-names { margin: 28px 0 0; font: 500 clamp(0.85rem, 3vw, 1rem) var(--hf); letter-spacing: 0.08em; color: #cfc6b0; opacity: 0; animation: rise 2s 1.2s ease forwards; }
       .jb-names a { color: inherit; text-decoration: none; }
       .jb-names a:hover, .jb-names a:focus-visible { color: #fff; }
-      .jb-down { position: relative; z-index: 1; margin: 0 auto 28px; width: 1px; height: 56px; background: linear-gradient(180deg, rgba(245, 184, 0, 0), rgba(245, 184, 0, 0.8)); animation: drift 3s ease-in-out infinite; }
       @keyframes rise { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: none; } }
       @keyframes drift { 0%, 100% { opacity: 0.3; } 50% { opacity: 1; } }
-      @media (prefers-reduced-motion: reduce) { .jb-stage .ph, .jb-stage .l { transition: none; } .jb-stage .b.on { animation: none; } .jb-down { animation: none; } }
+      @media (prefers-reduced-motion: reduce) { .jb-stage .ph, .jb-stage .l { transition: none; } .jb-stage .b.on { animation: none; } }
 
       .jb-lines { max-width: 900px; margin: 0 auto; padding: 22vh 24px 18vh; text-align: center; }
       .jb-line { margin: 0 0 22vh; font: 700 clamp(3.2rem, 14vw, 7.5rem) / 1 var(--hf); letter-spacing: -0.04em; color: #f1ead9; }
@@ -92,7 +91,6 @@
           <span class="fin"><span class="l w">Just</span><span class="l b"><img src="/logo.svg" alt="b" /></span></span>
         </h1>
       </div>
-      <div class="jb-down" aria-hidden="true"></div>
     </section>
 
     <section class="jb-lines" aria-label="Just b">
