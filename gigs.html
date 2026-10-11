@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Gigs in bWalletX</title>
+    <link rel="canonical" href="https://bwalletx.com/gigs" />
+    <meta name="description" content="Gigs in bWalletX: go live on camera in your own Space, sell tickets at the door or charge by the minute, and your fans pay you directly." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://bwalletx.com/gigs" />
+    <meta property="og:site_name" content="bWalletX" />
+    <meta property="og:title" content="Gigs: bWalletX" />
+    <meta property="og:description" content="Gigs in bWalletX: go live on camera in your own Space, sell tickets at the door or charge by the minute, and your fans pay you directly." />
+    <meta property="og:image" content="https://bwalletx.com/og-gigs.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Gigs in bWalletX: go live on camera in your own Space, sell tickets at the door or charge by the minute, and your fans pay you directly." />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@bWalletX" />
+    <meta name="twitter:title" content="Gigs: bWalletX" />
+    <meta name="twitter:description" content="Gigs in bWalletX: go live on camera in your own Space, sell tickets at the door or charge by the minute, and your fans pay you directly." />
+    <meta name="twitter:image" content="https://bwalletx.com/og-gigs.jpg" />
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="stylesheet" href="/styles.css" />
+    <style>
+      .ext h1 { font-size: clamp(2.2rem, 6vw, 3.4rem); margin: 18px 0 10px; }
+      .ext h2 { margin: 48px 0 8px; font-size: 1.5rem; }
+      .ext p, .ext li { line-height: 1.7; }
+      .ext .small { color: #8a8a86; font-size: 0.85rem; }
+      .ext .row { display: flex; gap: 12px; flex-wrap: wrap; margin: 26px 0; }
+      .ggrid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 230px), 1fr)); gap: 14px; margin: 18px 0; }
+      .gcard { display: block; background: #101114; border: 1px solid #ffffff12; border-radius: 16px; padding: 14px 16px; color: inherit; text-decoration: none; min-width: 0; }
+      .gcard:hover { border-color: #F5B80066; }
+      .gcard h3 { margin: 0 0 4px; font-size: 1.05rem; }
+      .gcard p { margin: 0; color: #a7adb8; font-size: 0.92rem; line-height: 1.5; }
+      .feat { list-style: none; padding: 0; margin: 18px 0; }
+      .feat li { display: flex; gap: 12px; align-items: baseline; padding: 12px 0; border-bottom: 1px solid #ffffff10; }
+      .tag { flex: none; font-size: 0.75rem; font-weight: 700; padding: 2px 9px; border-radius: 999px; }
+      .tag.live { background: #F5B800; color: #000; }
+      html, body { overflow-x: clip; }
+      main.ext.bt { padding-top: 0 !important; }
+      .bt-hero { position: relative; margin: 0 calc(50% - 50vw); min-height: min(78vh, 760px); display: flex; align-items: flex-start; overflow: hidden; background: #000; }
+      .bt-hero video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 50% 60%; }
+      .bt-low { align-items: flex-end; }
+      .bt-low .bt-hero-in { padding: 0 16px 6vh; }
+      .bt-low::after { background: linear-gradient(180deg, rgba(0,0,0,.25) 0%, rgba(0,0,0,0) 30%, rgba(0,0,0,.6) 66%, #0b0b0c 100%); }
+      .bv-tall { display: none; }
+      @media (orientation: portrait) { .bv-wide { display: none; } .bv-tall { display: block; } }
+      @media (prefers-reduced-motion: reduce) { .bt-hero video { display: none; } .bt-hero { background: #000 url(/video/btrust-cities-loop.jpg) 50% 60% / cover; } }
+      .bt-hero img { position: absolute; inset: 0; width: 100%; height: 100%; max-width: none; object-fit: cover; object-position: 62% 82%; }
+      .bt-hero::after { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(0,0,0,.25) 0%, rgba(0,0,0,0) 35%, rgba(0,0,0,.35) 75%, #0b0b0c 100%); }
+      .bt-hero-in { position: relative; z-index: 1; width: 100%; max-width: 1100px; margin: 0 auto; padding: max(150px, 20vh) 16px 0; box-sizing: border-box; }
+      .bt-hero h1 { margin: 0 0 14px; font-size: clamp(2.2rem, 8vw, 5rem); overflow-wrap: break-word; letter-spacing: -0.035em; line-height: 1.02; text-shadow: 0 4px 40px rgba(0,0,0,.6); }
+      .bt-hero h1 .gold { text-shadow: none; filter: drop-shadow(0 2px 14px rgba(0,0,0,.8)); }
+      .bt-hero .lede { max-width: 640px; color: #e6dfcc; text-shadow: 0 2px 20px rgba(0,0,0,.7); }
+      .tag.soon { border: 1px solid #ffffff40; color: #a7adb8; }
+    </style>
+  </head>
+  <body>
+    <div class="beta-banner">bWalletX is in <strong>beta</strong>: test with small amounts.</div>
+    <header class="topbar">
+      <div class="wrap topbar-in">
+        <a class="brand" href="/"><img src="/logo.svg" alt="" width="34" height="30" /><span>bWallet<span class="gold">X</span></span></a>
+        <nav aria-label="Pages">
+          <a href="/features">Features</a><a href="/exchange">Exchange</a><a href="/social">Social</a><a href="/agent">Agents</a><a href="/extension">Extension</a><a href="/developers">Developers</a>
+        </nav>
+        <span class="nav-cta"><a class="dl-btn" href="/get">Download</a><a class="web-btn" href="https://web.bwalletx.com" target="_blank" rel="noopener">Web &rarr;</a></span>
+      </div>
+    </header>
+    <script src="/nav.js"></script>
+    <main class="ext bt">
+      <section class="bt-hero">
+        <img src="/images/gigs-hero.jpg" alt="A solo artist on a small stage in warm gold light, the crowd's phones glowing" width="1024" height="1024" fetchpriority="high" style="object-position: 75% 60%" />
+        <div class="bt-hero-in">
+          <h1>Gigs.<br /><span class="gold">Your stage. Your fans.</span></h1>
+          <p class="lede">Go live in your own Space, on camera, wherever you are. Sell tickets at the door or charge by the minute, and your fans pay you directly.</p>
+        </div>
+      </section>
+      <div class="row"><a class="btn btn-store" href="/get">Get bWalletX</a></div>
+
+      <h2>Your own Space</h2>
+      <p>Every artist gets a Space with a link that never changes. Go live on camera and mic from your phone or the web, invite guests up on stage, and chat with the room while you play.</p>
+
+      <h2>Tickets at the door</h2>
+      <p>Set a door price and fans pay once to come in. Or charge by the minute, so they pay only for what they listen to, and stop whenever they like. Either way, the money goes straight to you.</p>
+
+      <h2>Your face, your name</h2>
+      <p>Your Space shows your own picture and your name, so fans know exactly whose gig they&rsquo;re at.</p>
+
+      <h2>Featured artist: VexVoid</h2>
+      <p>VexVoid makes slow, dusky electronic music. You&rsquo;ve already heard him if you&rsquo;ve pressed play on <a href="/just-b">Just b</a>. His music videos and live sets are coming to bWalletX Spaces. <a href="https://vexvoid.com" target="_blank" rel="noopener">vexvoid.com</a></p>
+
+      <h2>What works today</h2>
+      <ul class="feat">
+<li><span class="tag live">Live</span><span><b>Live Spaces on camera and mic</b>, on your phone and on the web.</span></li>
+<li><span class="tag live">Live</span><span><b>Pay at the door</b> and <b>pay by the minute</b>, paid straight to the artist.</span></li>
+<li><span class="tag live">Live</span><span><b>Guests on stage, room chat, moderators.</b></span></li>
+<li><span class="tag soon">Coming</span><span><b>Your banner</b> on your Space and your tile.</span></li>
+<li><span class="tag soon">Coming</span><span><b>Play your music video into the room</b>, in sync for everyone, on repeat if you like.</span></li>
+<li><span class="tag soon">Coming</span><span><b>Album Spaces:</b> a ticketed run of your music videos, one after another.</span></li>
+      </ul>
+
+      <p class="small">Tickets and paid listening are in bWalletX (web, Android download and Chrome). The App Store and Google Play editions don&rsquo;t include them. bWalletX is in beta: test with small amounts. Questions: <a href="mailto:support@bwalletx.com">support@bwalletx.com</a></p>
+    </main>
+  </body>
+</html>
