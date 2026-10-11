@@ -320,35 +320,45 @@ Source: https://bwalletx.com/btrust
 # bTrust.
 Pass on what matters.
 
-Choose who receives your money, your keys and your important documents, and when. Quietly arranged now, so the people you love are looked after later.
+A Lock with more than one key. Set money and your important papers aside, and share the keys with the people you trust, so the people you love are looked after.
 
 Coming bTrust is in the works and isn’t in the app yet. This page says what we’re building.
 
 [Get bWalletX](https://bwalletx.com/get)
 
-## Name the people
+## A Lock with more than one key
 
-Pick who should receive what: a partner, your children, a friend you trust. Add a note for each of them in your own words.
+A [Lock](https://bwalletx.com/lock) keeps money aside until a date, and only you hold the key. A bTrust shares the keys. You choose who holds one, say your solicitor and two family members, and how many it takes to open it: any two of three, for example.
 
-## Choose the moment
+Nobody can move it alone. Not one of them, and not even you.
 
-Set when things pass on: on a date you choose, or if you haven’t checked in for a while. Change your mind any time while you’re here.
+## Looked after in life
 
-## Keep it safe in bVault
+Lose your phone, and two of your key holders can help you back in. No company to call, no forms, no waiting.
 
-bTrust works with bVault, your encrypted vault for documents and backups, including the keys to coins you keep elsewhere. Only the people you name can open what you leave them, and only when the moment comes.
+## Looked after later
+
+Choose who receives what, and when: on a date, or if you haven’t checked in for a while. Leave each of them a letter in your own words. When the moment comes, your key holders open it together and carry out your wishes.
+
+## Your important papers
+
+Keep the things your family will need alongside it: deeds, insurance, the letter you’d want found, and the backup words for wallets you keep elsewhere. Everything is encrypted on your device, and only opens for the people you’ve chosen, when the time comes.
 
 ## What works today
 
-- LiveLocks. Set money aside until a date you choose. Nobody can touch it before then, including you. See [Locks](https://bwalletx.com/lock).
+- LiveLocks. Set money aside until a date you choose. See [Locks](https://bwalletx.com/lock).
 
 - LivePots. Money set aside for a purpose. See [Pots](https://bwalletx.com/pots).
 
-- ComingbTrust. People, notes and the moment things pass on.
+- LiveYour wallet backup. Back up your words and restore on any device. See [Restore](https://bwalletx.com/restore).
 
-- ComingbVault. Encrypted documents and backups, ready to hand on.
+- ComingShared keys. Choose your key holders and how many it takes to open.
 
-bTrust is a way to arrange what you leave inside your wallet. It isn’t a legal trust or a will; for those, talk to a solicitor. bWalletX is in beta: test with small amounts. Questions: [support@bwalletx.com](mailto:support@bwalletx.com)
+- ComingPassing on. People, letters, and the moment things pass on.
+
+- ComingImportant papers. Encrypted documents and backups, ready for the people you choose.
+
+bTrust is a way to arrange what you hold in your wallet. It isn’t a legal trust or a will; for those, talk to a solicitor. bWalletX is in beta: test with small amounts. Questions: [support@bwalletx.com](mailto:support@bwalletx.com)
 
 ---
 
@@ -430,43 +440,6 @@ Buy and sell tokens, priced in dollars.
 [All features](https://bwalletx.com/features)
 
 bWalletX is in beta: test with small amounts. Questions: [support@bwalletx.com](mailto:support@bwalletx.com)
-
----
-
-Source: https://bwalletx.com/bvault
-
-# bVault.
-Keep what matters safe.
-
-Your important documents, backups and the keys to coins you keep elsewhere, encrypted in one calm place that only you can open.
-
-Coming bVault is in the works and isn’t in the app yet. This page says what we’re building.
-
-[Get bWalletX](https://bwalletx.com/get)
-
-## Everything important, in one place
-
-Passports, deeds, insurance, the letter you’d want found. Add them to bVault and they’re encrypted on your device before they go anywhere.
-
-## Your other coins, kept safe
-
-Keep the backup words for wallets you hold elsewhere, sealed in your vault. bVault can show what they hold, read-only, so you can see it all at a glance. It never sends from them.
-
-## Ready to hand on
-
-bVault works with [bTrust](https://bwalletx.com/btrust), so the people you choose can open what you leave them, when the moment comes, and not before.
-
-## What works today
-
-- LiveYour wallet backup. Back up your bWalletX words from Settings, and restore on any device. See [Restore](https://bwalletx.com/restore).
-
-- LiveLocks. Set money aside until a date you choose. See [Locks](https://bwalletx.com/lock).
-
-- ComingbVault. Encrypted documents and backups, with read-only balances for your other coins.
-
-- ComingbTrust. Choose who receives what, and when.
-
-Only you hold the key to your vault: if you lose your wallet backup, we can’t open it for you. bWalletX is in beta: test with small amounts. Questions: [support@bwalletx.com](mailto:support@bwalletx.com)
 
 ---
 

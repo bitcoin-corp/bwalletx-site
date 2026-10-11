@@ -40,6 +40,11 @@
   ],
   "redirects": [
     {
+      "source": "/:v(bvault|bVault|BVault)",
+      "destination": "/btrust",
+      "permanent": false
+    },
+    {
       "source": "/BTrust",
       "destination": "/btrust",
       "permanent": true
@@ -47,16 +52,6 @@
     {
       "source": "/bTrust",
       "destination": "/btrust",
-      "permanent": true
-    },
-    {
-      "source": "/BVault",
-      "destination": "/bvault",
-      "permanent": true
-    },
-    {
-      "source": "/bVault",
-      "destination": "/bvault",
       "permanent": true
     },
     {
