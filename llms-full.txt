@@ -1499,6 +1499,12 @@ Each release ships to the Android APK, the Chrome extension and the web wallet. 
 
 ## 5.2.3 2026-10-11
 
+- Money from a transaction that went through is always counted: if the wallet had wrongly marked one as failed, it checks the proof on chain and restores it, so your balance and minting work again
+- The wallet never cancels a payment the network already has, and no longer moves money around by itself in the background
+- When a site asks you to pay or mint, the wallet only checks what you can spend; it no longer makes its own transactions in between
+
+## 5.2.2 2026-10-11
+
 - Minting large files, like a music video, works again: the wallet no longer does its own housekeeping between the steps of a site’s multi-part mint
 - Right after the wallet moves a stuck payment, your balance shows it once, not twice
 - Steps left over from a mint that failed part-way are released when the wallet starts, so your full balance is spendable again
