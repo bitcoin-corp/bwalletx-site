@@ -44,7 +44,7 @@
       .bt-low { align-items: flex-end; }
       .bt-low .bt-hero-in { padding: 0 16px 6vh; }
       .bt-low::after { background: linear-gradient(180deg, rgba(0,0,0,.25) 0%, rgba(0,0,0,0) 30%, rgba(0,0,0,.6) 66%, #0b0b0c 100%); }
-      .bt-sound { position: fixed; right: 14px; bottom: 14px; z-index: 20; width: 44px; height: 44px; display: flex; align-items: center; justify-content: center; border: 0; border-radius: 50%; background: rgba(0,0,0,.35); color: rgba(255,255,255,.55); cursor: pointer; transition: color .3s ease; }
+      .bt-sound { position: absolute; right: 14px; bottom: 14px; z-index: 2; width: 44px; height: 44px; display: flex; align-items: center; justify-content: center; border: 0; border-radius: 50%; background: rgba(0,0,0,.35); color: rgba(255,255,255,.55); cursor: pointer; transition: color .3s ease; }
       .bt-sound:hover { color: rgba(255,255,255,.9); }
       .bt-sound[aria-pressed="true"] { color: rgba(245,210,120,.8); }
       .bv-tall { display: none; }
@@ -54,6 +54,7 @@
       .bt-hero::after { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(0,0,0,.25) 0%, rgba(0,0,0,0) 35%, rgba(0,0,0,.35) 75%, #0b0b0c 100%); }
       .bt-hero-in { position: relative; z-index: 1; width: 100%; max-width: 1100px; margin: 0 auto; padding: max(150px, 20vh) 16px 0; box-sizing: border-box; }
       .bt-hero h1 { margin: 0 0 14px; font-size: clamp(2.2rem, 8vw, 5rem); overflow-wrap: break-word; letter-spacing: -0.035em; line-height: 1.02; text-shadow: 0 4px 40px rgba(0,0,0,.6); }
+      .bt-hero h1 .gold { text-shadow: 0 2px 18px rgba(0,0,0,.85), 0 0 2px rgba(0,0,0,.6); }
       .bt-hero .lede { max-width: 640px; color: #e6dfcc; text-shadow: 0 2px 20px rgba(0,0,0,.7); }
       .tag.soon { border: 1px solid #ffffff40; color: #a7adb8; }
     </style>
@@ -77,6 +78,7 @@
           <h1>bTrust.<br /><span class="gold">Pass on what matters.</span></h1>
           <p class="lede">Choose who receives your money, your keys and your important documents, and when. Quietly arranged now, so the people you love are looked after later.</p>
         </div>
+  <button type="button" class="bt-sound" id="bt-sound" aria-pressed="false" aria-label="Play music: VexVoid, Shadows &amp; Silhouettes"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><path d="M11 5 6 9H3v6h3l5 4z"></path><path d="M15.5 8.5a5 5 0 0 1 0 7"></path><path d="M18.5 5.5a9 9 0 0 1 0 13"></path></svg></button>
       </section>
       <p><span class="tag soon">Coming</span> bTrust is in the works and isn&rsquo;t in the app yet. This page says what we&rsquo;re building.</p>
       <div class="row"><a class="btn btn-store" href="/get">Get bWalletX</a></div>
@@ -101,7 +103,6 @@
       <p class="small">bTrust is a way to arrange what you leave inside your wallet. It isn&rsquo;t a legal trust or a will; for those, talk to a solicitor. bWalletX is in beta: test with small amounts. Questions: <a href="mailto:support@bwalletx.com">support@bwalletx.com</a></p>
     </main>
     <script>document.querySelectorAll('.bt-hero video').forEach(function (v) { if (getComputedStyle(v).display === 'none') { v.pause(); v.removeAttribute('autoplay'); } else if (v.preload === 'none') { v.preload = 'auto'; v.play().catch(function () {}); } });</script>
-    <button type="button" class="bt-sound" id="bt-sound" aria-pressed="false" aria-label="Play music: VexVoid, Shadows &amp; Silhouettes"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><path d="M11 5 6 9H3v6h3l5 4z"></path><path d="M15.5 8.5a5 5 0 0 1 0 7"></path><path d="M18.5 5.5a9 9 0 0 1 0 13"></path></svg></button>
     <audio id="bt-music" src="/audio/btrust-shadows-silhouettes.mp3" preload="none" loop></audio>
     <script>(function () { var b = document.getElementById('bt-sound'), a = document.getElementById('bt-music'), t; function fade(to, done) { clearInterval(t); t = setInterval(function () { var v = a.volume + (to > a.volume ? 0.04 : -0.04); if ((to > a.volume && v >= to) || (to <= a.volume && v <= to)) { a.volume = to; clearInterval(t); if (done) done(); } else a.volume = Math.max(0, Math.min(1, v)); }, 80); } b.addEventListener('click', function () { var on = b.getAttribute('aria-pressed') !== 'true'; b.setAttribute('aria-pressed', String(on)); if (on) { a.volume = 0; a.play().then(function () { fade(0.5); }).catch(function () {}); } else fade(0, function () { a.pause(); }); }); })();</script>
   </body>
