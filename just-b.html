@@ -41,13 +41,13 @@
       @keyframes drift { 0%, 100% { opacity: 0.3; } 50% { opacity: 1; } }
       @media (prefers-reduced-motion: reduce) { .jb h1, .jb-names { animation: none; opacity: 1; } .jb-down { animation: none; } }
 
-      .jb-lines { max-width: 760px; margin: 0 auto; padding: 18vh 24px 14vh; }
-      .jb-lines h2 { margin: 0 0 9vh; font: 700 clamp(2rem, 7vw, 3.4rem) var(--hf); letter-spacing: -0.03em; color: #8a8273; }
-      .jb-line { margin: 0 0 12vh; }
+      .jb-lines { max-width: 900px; margin: 0 auto; padding: 22vh 24px 18vh; text-align: center; }
+      .jb-line { margin: 0 0 22vh; font: 700 clamp(3.2rem, 14vw, 7.5rem) / 1 var(--hf); letter-spacing: -0.04em; color: #f1ead9; }
       .jb-line:last-child { margin-bottom: 0; }
-      .jb-line b { display: block; font: 700 clamp(2.4rem, 9vw, 4.6rem) / 1 var(--hf); letter-spacing: -0.035em; }
-      .jb-line b em { font-style: normal; color: var(--gold-hi); }
-      .jb-line p { margin: 18px 0 0; max-width: 34ch; font-size: clamp(1.05rem, 3.6vw, 1.3rem); line-height: 1.55; color: #b9b2a2; }
+      .jb-line em { font-style: normal; color: var(--gold-hi); }
+      .jb-sound { position: fixed; right: 18px; bottom: 18px; z-index: 5; display: flex; align-items: center; gap: 8px; height: 44px; padding: 0 16px; border-radius: 999px; border: 1px solid rgba(245, 184, 0, 0.35); background: rgba(0, 0, 0, 0.45); color: #e8dcc0; font: 600 0.85rem var(--hf); letter-spacing: 0.06em; cursor: pointer; backdrop-filter: blur(6px); }
+      .jb-sound:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
+      .jb-sound[aria-pressed="true"] { color: var(--gold-hi); border-color: rgba(245, 184, 0, 0.7); }
 
       .jb-end { justify-content: center; }
       .jb-end img { object-position: center 60%; }
@@ -70,12 +70,10 @@
     </section>
 
     <section class="jb-lines" aria-label="Just b">
-      <h2>Just b&hellip;</h2>
-      <div class="jb-line"><b>Just b <em>paid.</em></b><p>Send and receive Bitcoin SV to a $handle, not a long address.</p></div>
-      <div class="jb-line"><b>Just b <em>reachable.</em></b><p>bMail and free calls in the wallet. Penny post: a bMail costs 1&cent;, so the inbox stays yours.</p></div>
-      <div class="jb-line"><b>Just b <em>heard.</em></b><p>Hold the b and say what you want. b, the agent in the wallet, takes it from there.</p></div>
-      <div class="jb-line"><b>Just b <em>private.</em></b><p>Your keys stay on your device. We never hold your coins.</p></div>
-      <div class="jb-line"><b>Just b <em>you.</em></b><p>One $handle and one page: bwalletx.com/$you.</p></div>
+      <p class="jb-line">b <em>safe</em></p>
+      <p class="jb-line">b <em>happy</em></p>
+      <p class="jb-line">b <em>peaceful</em></p>
+      <p class="jb-line">b <em>you</em></p>
     </section>
 
     <section class="jb-scene jb-end">
@@ -85,6 +83,32 @@
         <a class="jb-go" href="/get">Get bWalletX</a>
       </div>
     </section>
+    <button type="button" class="jb-sound" id="jb-sound" aria-pressed="false" aria-label="Play ambient music">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M11 5 6 9H3v6h3l5 4z"></path><path d="M15.5 8.5a5 5 0 0 1 0 7"></path><path d="M18.5 5.5a9 9 0 0 1 0 13"></path></svg>
+      <span id="jb-sound-label">Sound</span>
+    </button>
+    <audio id="jb-music" src="/audio/just-b-echoes-of-dust.mp3" preload="none" loop></audio>
     <p class="jb-foot">bWalletX is in beta: test with small amounts. <a href="mailto:support@bwalletx.com">support@bwalletx.com</a></p>
+      <script>
+      // Ambient music (VexVoid, "Echoes of Dust"): off until the visitor taps Sound, then fades in.
+      (function () {
+        var btn = document.getElementById('jb-sound'), a = document.getElementById('jb-music'), lab = document.getElementById('jb-sound-label'), t;
+        function fade(to, done) {
+          clearInterval(t);
+          t = setInterval(function () {
+            var v = a.volume + (to > a.volume ? 0.04 : -0.04);
+            if ((to > a.volume && v >= to) || (to <= a.volume && v <= to)) { a.volume = to; clearInterval(t); if (done) done(); } else a.volume = Math.max(0, Math.min(1, v));
+          }, 80);
+        }
+        btn.addEventListener('click', function () {
+          var on = btn.getAttribute('aria-pressed') !== 'true';
+          btn.setAttribute('aria-pressed', String(on));
+          btn.setAttribute('aria-label', on ? 'Pause ambient music' : 'Play ambient music');
+          lab.textContent = on ? 'Sound on' : 'Sound';
+          if (on) { a.volume = 0; a.play().then(function () { fade(0.6); }).catch(function () {}); }
+          else fade(0, function () { a.pause(); });
+        });
+      })();
+    </script>
   </body>
 </html>
