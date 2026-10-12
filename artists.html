@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Artists on bWalletX</title>
+    <link rel="canonical" href="https://bwalletx.com/artists" />
+    <meta name="description" content="Listen to independent artists on bWalletX, paid by the second. Start with VexVoid's Echoes in the Abyss: the first 6 tracks are free." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://bwalletx.com/artists" />
+    <meta property="og:site_name" content="bWalletX" />
+    <meta property="og:title" content="Artists on bWalletX" />
+    <meta property="og:description" content="Independent music, paid by the second, straight to the artist." />
+    <meta property="og:image" content="https://bwalletx.com/og-artists-v1.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Artists on bWalletX: the VexVoid cover beside the gold b" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@bWalletX" />
+    <meta name="twitter:title" content="Artists on bWalletX" />
+    <meta name="twitter:description" content="Independent music, paid by the second, straight to the artist." />
+    <meta name="twitter:image" content="https://bwalletx.com/og-artists-v1.jpg" />
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="stylesheet" href="/styles.css" />
+    <style>
+      /* Artists (owner approved 12 Oct 2026): calm, black and gold, like /ask-b and /just-b. */
+      body { margin: 0; background: #000; color: #f1ead9; overflow-x: hidden; }
+      .ar-hero { min-height: 62svh; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 12vh 16px 6vh; text-align: center; background: radial-gradient(ellipse 60% 55% at 50% 45%, rgba(245, 184, 0, 0.10), transparent 70%), radial-gradient(circle at 50% 50%, #15130c 0%, #050506 50%, #000 85%); }
+      .ar-hero img.b { height: 56px; margin-bottom: 28px; filter: drop-shadow(0 0 30px rgba(245, 184, 0, 0.6)); }
+      .ar-hero h1 { margin: 0; font: 700 clamp(2.6rem, 10vw, 6.5rem) / 1 var(--hf); letter-spacing: -0.045em; color: #fff; }
+      .ar-hero h1 em { font-style: normal; color: var(--gold-hi); }
+      .ar-hero p { margin: 26px 0 0; max-width: 560px; font: 400 clamp(1.05rem, 2.6vw, 1.3rem) / 1.6 var(--hf); color: #cfc6b0; }
+      .ar-wrap { max-width: 980px; margin: 0 auto; padding: 0 16px; }
+      .ar-h2 { margin: 0 0 22px; font: 700 clamp(1.6rem, 5vw, 2.4rem) / 1.1 var(--hf); letter-spacing: -0.03em; color: #fff; }
+      .ar-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 18px; margin: 0 0 12vh; }
+      .ar-card { display: block; color: #fff; text-decoration: none; }
+      .ar-card img { display: block; width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 16px; box-shadow: 0 0 0 1px rgba(245, 184, 0, 0.35); transition: box-shadow 0.3s ease; }
+      .ar-card:hover img, .ar-card:focus-visible img { box-shadow: 0 0 0 2px var(--gold), 0 18px 50px rgba(245, 184, 0, 0.2); }
+      .ar-card:focus-visible { outline: none; }
+      .ar-card span { display: block; margin-top: 10px; font: 600 1.05rem var(--hf); }
+      .ar-album { position: relative; overflow: hidden; border-radius: 22px; min-height: 420px; display: flex; align-items: flex-end; margin: 0 0 12vh; background: #050506; box-shadow: 0 0 0 1px rgba(245, 184, 0, 0.3); }
+      .ar-stills img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0; transition: opacity 3s ease; }
+      .ar-stills img.on { opacity: 1; }
+      .ar-album::after { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.55) 55%, rgba(0, 0, 0, 0.92) 100%); }
+      .ar-album-in { position: relative; z-index: 1; padding: 32px 28px; }
+      .ar-kicker { margin: 0 0 8px; font: 500 0.85rem var(--hf); letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold-hi); }
+      .ar-album h2 { margin: 0; font: 700 clamp(2rem, 7vw, 3.6rem) / 1 var(--hf); letter-spacing: -0.04em; color: #fff; }
+      .ar-album .by { margin: 8px 0 0; color: #cfc6b0; font-size: 1.1rem; }
+      .ar-album .terms { margin: 16px 0 0; color: #f1ead9; font-size: 1rem; }
+      .ar-go { display: inline-block; margin-top: 24px; padding: 14px 34px; border-radius: 999px; background: linear-gradient(180deg, #ffd24d, #f5b800); color: #0b0a08; font: 700 1.05rem var(--hf); text-decoration: none; box-shadow: 0 14px 50px rgba(245, 184, 0, 0.3); }
+      .ar-go:focus-visible { outline: 2px solid var(--gold); outline-offset: 4px; }
+      .ar-how { max-width: 680px; margin: 0 auto; padding: 0 0 12vh; color: #cfc6b0; font: 400 clamp(1.05rem, 2.4vw, 1.2rem) / 1.7 var(--hf); text-align: center; }
+      .ar-how p { margin: 0 0 1.8em; }
+      .ar-how strong { display: block; margin-bottom: 0.3em; color: #fff; font-weight: 600; font-size: 1.1em; }
+      .ar-foot { margin: 0; padding: 0 16px 22px; text-align: center; font-size: 0.75rem; color: #6a6458; }
+      .ar-foot a { color: #8a8273; }
+      @media (prefers-reduced-motion: reduce) { .ar-stills img { transition: none; } }
+    </style>
+  </head>
+  <body>
+    <main>
+      <section class="ar-hero">
+        <img class="b" src="/logo.svg" alt="" />
+        <h1>Artists on <em>bWalletX</em></h1>
+        <p>Listen to independent artists, and pay them by the second, straight to their wallet.</p>
+      </section>
+
+      <div class="ar-wrap">
+        <h2 class="ar-h2">Artists</h2>
+        <div class="ar-grid">
+          <a class="ar-card" href="https://desktop.bwalletx.com/media/artist/vexvoid">
+            <img src="/images/vexvoid-cover.jpg" alt="VexVoid cover" width="600" height="600" loading="lazy" />
+            <span>VexVoid</span>
+          </a>
+        </div>
+
+        <section class="ar-album" aria-labelledby="ar-album-title">
+          <div class="ar-stills" id="ar-stills" aria-hidden="true">
+            <img class="on" src="/images/vexvoid-still-1.webp" alt="" />
+            <img data-src="/images/vexvoid-still-2.webp" alt="" />
+            <img data-src="/images/vexvoid-still-3.webp" alt="" />
+            <img data-src="/images/vexvoid-still-4.webp" alt="" />
+            <img data-src="/images/vexvoid-still-5.webp" alt="" />
+            <img data-src="/images/vexvoid-still-6.webp" alt="" />
+          </div>
+          <div class="ar-album-in">
+            <p class="ar-kicker">Featured album</p>
+            <h2 id="ar-album-title">Echoes in the Abyss</h2>
+            <p class="by">VexVoid</p>
+            <p class="terms">First 6 tracks free, sponsored by VexVoid · tracks 7–12 at 1 sat/sec</p>
+            <a class="ar-go" href="https://desktop.bwalletx.com/media/artist/vexvoid/album/echoes-in-the-abyss">Listen</a>
+          </div>
+        </section>
+
+        <section class="ar-how">
+          <h2 class="ar-h2">For artists</h2>
+          <p><strong>Add a release.</strong> Publish music or video with Add a release in bWalletX Desktop.</p>
+          <p><strong>Paid by the second.</strong> Listeners pay 1 sat a second, straight to your wallet.</p>
+          <p><strong>Sponsor your listeners.</strong> Cover their listening from a pot, so they hear you free.</p>
+          <p><strong>A listener board.</strong> Fans can opt in to a listener board with badges.</p>
+          <a class="ar-go" href="https://desktop.bwalletx.com/media">Open Media</a>
+        </section>
+      </div>
+    </main>
+    <p class="ar-foot">bWalletX is in beta: test with small amounts. <a href="mailto:support@bwalletx.com">support@bwalletx.com</a></p>
+    <script>
+      // Slow crossfade through the six VexVoid stills; off under reduced motion.
+      (function () {
+        if (window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+        var imgs = document.querySelectorAll('#ar-stills img'), i = 0;
+        imgs.forEach(function (im) { if (im.dataset.src) im.src = im.dataset.src; });
+        setInterval(function () {
+          if (document.visibilityState !== 'visible') return;
+          imgs[i].classList.remove('on'); i = (i + 1) % imgs.length; imgs[i].classList.add('on');
+        }, 7000);
+      })();
+    </script>
+  </body>
+</html>

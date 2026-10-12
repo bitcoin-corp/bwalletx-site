@@ -30,6 +30,40 @@ Also: [Chrome extension](https://bwalletx.com/extension) · [Developers](https:/
 
 ---
 
+Source: https://bwalletx.com/artists
+
+# Artists on bWalletX
+
+Listen to independent artists, and pay them by the second, straight to their wallet.
+
+## Artists
+
+[VexVoid](https://desktop.bwalletx.com/media/artist/vexvoid)
+
+Featured album
+
+## Echoes in the Abyss
+
+VexVoid
+
+First 6 tracks free, sponsored by VexVoid · tracks 7–12 at 1 sat/sec
+
+[Listen](https://desktop.bwalletx.com/media/artist/vexvoid/album/echoes-in-the-abyss)
+
+## For artists
+
+Add a release. Publish music or video with Add a release in bWalletX Desktop.
+
+Paid by the second. Listeners pay 1 sat a second, straight to your wallet.
+
+Sponsor your listeners. Cover their listening from a pot, so they hear you free.
+
+A listener board. Fans can opt in to a listener board with badges.
+
+[Open Media](https://desktop.bwalletx.com/media)
+
+---
+
 Source: https://bwalletx.com/ask-b
 
 Ask b
@@ -78,6 +112,8 @@ b runs on your own AI key, or on paid messages. Nothing is paid until you confir
 [Ask b](https://desktop.bwalletx.com/agent)
 
 bWalletX is in beta: test with small amounts. [support@bwalletx.com](mailto:support@bwalletx.com)
+
+Sound
 
 ---
 
