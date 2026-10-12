@@ -1552,6 +1552,13 @@ Each release ships to the Android APK, the Chrome extension and the web wallet. 
 
 ## 5.2.14 2026-10-12
 
+- Burn duplicate NFTs: a clear confirm, and a warning if it’s your only copy.
+- Video NFTs show their cover art and play on iPhone.
+- Media: the album Echoes in the Abyss by VexVoid, with a free headline track and pay-per-second listening on Desktop.
+- Token sends: the exact amount and a confirm before any indexer payment, and a one-tap Fix and send when the wallet is out of date.
+
+## 5.2.13 2026-10-12
+
 - Media: a new store front with big square album covers, shelves and release pages
 - Add a release: publish your music or video with a square cover, on chain
 - Agent b’s suggestions drift smoothly and read larger
