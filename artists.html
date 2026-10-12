@@ -21,98 +21,212 @@
     <meta name="twitter:description" content="Independent music, paid by the second, straight to the artist." />
     <meta name="twitter:image" content="https://bwalletx.com/og-artists-v1.jpg" />
     <link rel="icon" href="/favicon.ico" />
+    <link rel="preload" as="image" href="/images/vexvoid-still-1.webp" />
     <link rel="stylesheet" href="/styles.css" />
     <style>
-      /* Artists (owner approved 12 Oct 2026): calm, black and gold, like /ask-b and /just-b. */
+      /* Artists v2 (12 Oct 2026): premium black and gold, in the /ask-b and /just-b style. */
       body { margin: 0; background: #000; color: #f1ead9; overflow-x: hidden; }
-      .ar-hero { min-height: 62svh; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 12vh 16px 6vh; text-align: center; background: radial-gradient(ellipse 60% 55% at 50% 45%, rgba(245, 184, 0, 0.10), transparent 70%), radial-gradient(circle at 50% 50%, #15130c 0%, #050506 50%, #000 85%); }
-      .ar-hero img.b { height: 56px; margin-bottom: 28px; filter: drop-shadow(0 0 30px rgba(245, 184, 0, 0.6)); }
-      .ar-hero h1 { margin: 0; font: 700 clamp(2.6rem, 10vw, 6.5rem) / 1 var(--hf); letter-spacing: -0.045em; color: #fff; }
+      .ar-hero { position: relative; min-height: min(70svh, 720px); display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 96px 16px 72px; text-align: center; overflow: hidden; isolation: isolate; }
+      .ar-stills { position: absolute; inset: 0; z-index: -2; background: #050506; }
+      .ar-stills img { position: absolute; inset: 0; width: 100%; height: 100%; max-width: none; object-fit: cover; object-position: 50% 40%; opacity: 0; transition: opacity 2.6s ease; transform: scale(1.02); }
+      .ar-stills img.on { opacity: 1; animation: ar-kb 9s ease-out forwards; }
+      @keyframes ar-kb { from { transform: scale(1.02); } to { transform: scale(1.1); } }
+      .ar-hero::before { content: ''; position: absolute; inset: 0; z-index: -1; background: radial-gradient(ellipse 70% 60% at 50% 50%, rgba(0,0,0,0.35), rgba(0,0,0,0.75) 70%), linear-gradient(180deg, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0.25) 40%, rgba(0,0,0,0.85) 85%, #000 100%); }
+      .ar-hero img.b { width: 54px; height: 54px; margin: 0 0 26px; filter: drop-shadow(0 0 28px rgba(245, 184, 0, 0.65)); }
+      .ar-hero h1 { margin: 0; font: 700 clamp(2.6rem, 8.4vw, 6.2rem) / 1 var(--hf); letter-spacing: -0.045em; color: #fff; text-shadow: 0 4px 40px rgba(0,0,0,0.6); }
       .ar-hero h1 em { font-style: normal; color: var(--gold-hi); }
-      .ar-hero p { margin: 26px 0 0; max-width: 560px; font: 400 clamp(1.05rem, 2.6vw, 1.3rem) / 1.6 var(--hf); color: #cfc6b0; }
-      .ar-wrap { max-width: 980px; margin: 0 auto; padding: 0 16px; }
-      .ar-h2 { margin: 0 0 22px; font: 700 clamp(1.6rem, 5vw, 2.4rem) / 1.1 var(--hf); letter-spacing: -0.03em; color: #fff; }
-      .ar-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 18px; margin: 0 0 12vh; }
-      .ar-card { display: block; color: #fff; text-decoration: none; }
-      .ar-card img { display: block; width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 16px; box-shadow: 0 0 0 1px rgba(245, 184, 0, 0.35); transition: box-shadow 0.3s ease; }
-      .ar-card:hover img, .ar-card:focus-visible img { box-shadow: 0 0 0 2px var(--gold), 0 18px 50px rgba(245, 184, 0, 0.2); }
-      .ar-card:focus-visible { outline: none; }
-      .ar-card span { display: block; margin-top: 10px; font: 600 1.05rem var(--hf); }
-      .ar-album { position: relative; overflow: hidden; border-radius: 22px; min-height: 420px; display: flex; align-items: flex-end; margin: 0 0 12vh; background: #050506; box-shadow: 0 0 0 1px rgba(245, 184, 0, 0.3); }
-      .ar-stills img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0; transition: opacity 3s ease; }
-      .ar-stills img.on { opacity: 1; }
-      .ar-album::after { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.55) 55%, rgba(0, 0, 0, 0.92) 100%); }
-      .ar-album-in { position: relative; z-index: 1; padding: 32px 28px; }
-      .ar-kicker { margin: 0 0 8px; font: 500 0.85rem var(--hf); letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold-hi); }
-      .ar-album h2 { margin: 0; font: 700 clamp(2rem, 7vw, 3.6rem) / 1 var(--hf); letter-spacing: -0.04em; color: #fff; }
-      .ar-album .by { margin: 8px 0 0; color: #cfc6b0; font-size: 1.1rem; }
-      .ar-album .terms { margin: 16px 0 0; color: #f1ead9; font-size: 1rem; }
-      .ar-go { display: inline-block; margin-top: 24px; padding: 14px 34px; border-radius: 999px; background: linear-gradient(180deg, #ffd24d, #f5b800); color: #0b0a08; font: 700 1.05rem var(--hf); text-decoration: none; box-shadow: 0 14px 50px rgba(245, 184, 0, 0.3); }
-      .ar-go:focus-visible { outline: 2px solid var(--gold); outline-offset: 4px; }
-      .ar-how { max-width: 680px; margin: 0 auto; padding: 0 0 12vh; color: #cfc6b0; font: 400 clamp(1.05rem, 2.4vw, 1.2rem) / 1.7 var(--hf); text-align: center; }
-      .ar-how p { margin: 0 0 1.8em; }
-      .ar-how strong { display: block; margin-bottom: 0.3em; color: #fff; font-weight: 600; font-size: 1.1em; }
-      .ar-foot { margin: 0; padding: 0 16px 22px; text-align: center; font-size: 0.75rem; color: #6a6458; }
+      .ar-hero p { margin: 22px 0 0; max-width: 620px; font: 400 clamp(1.05rem, 2.4vw, 1.3rem) / 1.55 var(--hf); color: #e6dcc4; text-shadow: 0 2px 20px rgba(0,0,0,0.8); }
+
+      .ar-wrap { max-width: 1120px; margin: 0 auto; padding: 0 20px; }
+      .ar-eyebrow { margin: 0 0 10px; font: 600 0.78rem/1 var(--hf); letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); }
+      .ar-h2 { margin: 0 0 26px; font: 700 clamp(1.7rem, 4.4vw, 2.5rem) / 1.1 var(--hf); letter-spacing: -0.03em; color: #fff; }
+
+      .ar-feature { display: grid; grid-template-columns: minmax(0, 420px) minmax(0, 1fr); gap: 56px; align-items: start; padding: 56px 0 0; }
+      .ar-cover { position: sticky; top: 32px; }
+      .ar-cover img { width: 100%; aspect-ratio: 1 / 1; height: auto; object-fit: cover; border-radius: 14px; box-shadow: 0 0 0 1px rgba(245, 184, 0, 0.45), 0 30px 80px rgba(0,0,0,0.7), 0 0 90px rgba(245, 184, 0, 0.08); }
+      .ar-info h2 { margin: 0; font: 700 clamp(2.2rem, 5.4vw, 3.8rem) / 1 var(--hf); letter-spacing: -0.04em; color: #fff; }
+      .ar-info .by { margin: 12px 0 0; font: 500 1.25rem var(--hf); color: var(--gold-hi); }
+      .ar-pills { display: flex; flex-wrap: wrap; gap: 8px; margin: 22px 0 0; padding: 0; list-style: none; }
+      .ar-pills li { padding: 7px 14px; border-radius: 999px; border: 1px solid rgba(245, 184, 0, 0.45); background: rgba(245, 184, 0, 0.08); color: #ffe39a; font: 500 0.88rem/1.2 var(--hf); }
+      .ar-ctas { display: flex; flex-wrap: wrap; align-items: center; gap: 14px 22px; margin: 28px 0 0; }
+      .ar-go { display: inline-flex; align-items: center; gap: 10px; padding: 15px 36px; border-radius: 999px; background: linear-gradient(180deg, #ffd24d, #f5b800); color: #0b0a08; font: 700 1.08rem var(--hf); text-decoration: none; box-shadow: 0 14px 50px rgba(245, 184, 0, 0.3); transition: transform 0.2s ease, box-shadow 0.2s ease; }
+      .ar-go:hover { transform: translateY(-1px); box-shadow: 0 18px 60px rgba(245, 184, 0, 0.42); }
+      .ar-go:focus-visible, .ar-link:focus-visible, .ar-tracks a:focus-visible, .ar-card:focus-visible { outline: 2px solid var(--gold); outline-offset: 4px; }
+      .ar-go svg { width: 16px; height: 16px; }
+      .ar-link { color: #e6dcc4; font: 500 1rem var(--hf); text-decoration: none; border-bottom: 1px solid rgba(245, 184, 0, 0.5); padding-bottom: 2px; }
+      .ar-link:hover { color: var(--gold-hi); }
+
+      .ar-tracks { margin: 40px 0 0; padding: 0; list-style: none; border-top: 1px solid rgba(245, 184, 0, 0.18); }
+      .ar-tracks a { display: grid; grid-template-columns: 30px minmax(0, 1fr) auto 52px; align-items: center; gap: 14px; padding: 12px 10px; border-bottom: 1px solid rgba(255, 255, 255, 0.06); color: #f1ead9; text-decoration: none; border-radius: 8px; transition: background 0.2s ease; }
+      .ar-tracks a:hover { background: rgba(245, 184, 0, 0.06); }
+      .ar-tracks .n { color: #8a8273; font: 500 0.9rem var(--hf); font-variant-numeric: tabular-nums; }
+      .ar-tracks .t { font: 500 1rem var(--hf); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+      .ar-tracks .d { color: #8a8273; font: 400 0.9rem var(--hf); font-variant-numeric: tabular-nums; text-align: right; }
+      .ar-tag { justify-self: end; padding: 3px 9px; border-radius: 999px; font: 600 0.7rem/1.3 var(--hf); letter-spacing: 0.04em; white-space: nowrap; }
+      .ar-tag.free { background: var(--gold); color: #0b0a08; }
+      .ar-tag.spon { border: 1px solid rgba(245, 184, 0, 0.5); color: #ffd24d; }
+      .ar-tag.paid { border: 1px solid rgba(255, 255, 255, 0.18); color: #cfc6b0; }
+
+      .ar-sec { padding: 110px 0 0; }
+      .ar-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 240px)); justify-content: center; gap: 22px; }
+      .ar-card { display: block; color: #fff; text-decoration: none; text-align: center; border-radius: 16px; }
+      .ar-card img { width: 100%; aspect-ratio: 1 / 1; height: auto; object-fit: cover; border-radius: 16px; box-shadow: 0 0 0 1px rgba(245, 184, 0, 0.35), 0 20px 50px rgba(0,0,0,0.6); transition: box-shadow 0.3s ease, transform 0.3s ease; }
+      .ar-card:hover img { transform: translateY(-3px); box-shadow: 0 0 0 2px var(--gold), 0 24px 60px rgba(245, 184, 0, 0.2); }
+      .ar-card b { display: block; margin-top: 14px; font: 600 1.1rem var(--hf); }
+      .ar-card small { display: block; margin-top: 4px; color: #8a8273; font: 400 0.9rem var(--hf); }
+      .ar-center { text-align: center; }
+
+      .ar-tiles { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; margin: 0 0 34px; }
+      .ar-tile { padding: 24px 22px; border-radius: 16px; background: linear-gradient(180deg, #100e08, #070706); box-shadow: inset 0 0 0 1px rgba(245, 184, 0, 0.2); text-align: left; }
+      .ar-tile svg { width: 26px; height: 26px; color: var(--gold); }
+      .ar-tile h3 { margin: 16px 0 8px; font: 600 1.05rem/1.3 var(--hf); color: #fff; }
+      .ar-tile p { margin: 0; color: #a9a08c; font: 400 0.93rem/1.55 var(--hf); }
+
+      .ar-foot { margin: 0; padding: 90px 16px 22px; text-align: center; font-size: 0.75rem; color: #6a6458; }
       .ar-foot a { color: #8a8273; }
-      @media (prefers-reduced-motion: reduce) { .ar-stills img { transition: none; } }
+
+      @media (max-width: 900px) {
+        .ar-feature { grid-template-columns: 1fr; gap: 32px; padding-top: 40px; }
+        .ar-cover { position: static; max-width: 420px; width: 100%; margin: 0 auto; }
+        .ar-info { text-align: center; }
+        .ar-pills, .ar-ctas { justify-content: center; }
+        .ar-tracks { text-align: left; }
+        .ar-tiles { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      }
+      @media (max-width: 520px) {
+        .ar-hero { min-height: min(64svh, 560px); }
+        .ar-tiles { grid-template-columns: 1fr; }
+        .ar-tracks a { grid-template-columns: 22px minmax(0, 1fr) auto 40px; gap: 10px; padding: 12px 4px; }
+        .ar-sec { padding-top: 80px; }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        .ar-stills img { transition: none; }
+        .ar-stills img.on { animation: none; transform: none; }
+        .ar-go, .ar-card img { transition: none; }
+      }
     </style>
   </head>
   <body>
     <main>
       <section class="ar-hero">
-        <img class="b" src="/logo.svg" alt="" />
+        <div class="ar-stills" id="ar-stills" aria-hidden="true">
+          <img class="on" src="/images/vexvoid-still-1.webp" alt="" width="1280" height="720" fetchpriority="high" />
+          <img data-src="/images/vexvoid-still-2.webp" alt="" width="1280" height="720" />
+          <img data-src="/images/vexvoid-still-3.webp" alt="" width="1280" height="720" />
+          <img data-src="/images/vexvoid-still-4.webp" alt="" width="1280" height="720" />
+          <img data-src="/images/vexvoid-still-5.webp" alt="" width="1280" height="720" />
+          <img data-src="/images/vexvoid-still-6.webp" alt="" width="1280" height="720" />
+        </div>
+        <img class="b" src="/logo.svg" alt="" width="54" height="54" />
         <h1>Artists on <em>bWalletX</em></h1>
-        <p>Listen to independent artists, and pay them by the second, straight to their wallet.</p>
+        <p>Independent music. Paid by the second, straight to the artist.</p>
       </section>
 
       <div class="ar-wrap">
-        <h2 class="ar-h2">Artists</h2>
-        <div class="ar-grid">
-          <a class="ar-card" href="https://desktop.bwalletx.com/media/artist/vexvoid">
-            <img src="/images/vexvoid-cover.jpg" alt="VexVoid cover" width="600" height="600" loading="lazy" />
-            <span>VexVoid</span>
-          </a>
-        </div>
-
-        <section class="ar-album" aria-labelledby="ar-album-title">
-          <div class="ar-stills" id="ar-stills" aria-hidden="true">
-            <img class="on" src="/images/vexvoid-still-1.webp" alt="" />
-            <img data-src="/images/vexvoid-still-2.webp" alt="" />
-            <img data-src="/images/vexvoid-still-3.webp" alt="" />
-            <img data-src="/images/vexvoid-still-4.webp" alt="" />
-            <img data-src="/images/vexvoid-still-5.webp" alt="" />
-            <img data-src="/images/vexvoid-still-6.webp" alt="" />
+        <section class="ar-feature" aria-labelledby="ar-album-title">
+          <div class="ar-cover">
+            <img src="/images/vexvoid-cover.jpg" alt="Echoes in the Abyss by VexVoid, album cover" width="600" height="600" />
           </div>
-          <div class="ar-album-in">
-            <p class="ar-kicker">Featured album</p>
+          <div class="ar-info">
+            <p class="ar-eyebrow">Album</p>
             <h2 id="ar-album-title">Echoes in the Abyss</h2>
             <p class="by">VexVoid</p>
-            <p class="terms">First 6 tracks free, sponsored by VexVoid · tracks 7–12 at 1 sat/sec</p>
-            <a class="ar-go" href="https://desktop.bwalletx.com/media/artist/vexvoid/album/echoes-in-the-abyss">Listen</a>
+            <ul class="ar-pills">
+              <li>First 6 tracks free, sponsored by VexVoid</li>
+              <li>Tracks 7–12 at 1 sat/sec</li>
+            </ul>
+            <div class="ar-ctas">
+              <a class="ar-go" href="https://desktop.bwalletx.com/media/artist/vexvoid/album/echoes-in-the-abyss"><svg viewBox="0 0 16 16" aria-hidden="true"><path fill="currentColor" d="M4 2.5v11l9-5.5z"/></svg>Listen</a>
+              <a class="ar-link" href="https://desktop.bwalletx.com/media/artist/vexvoid">Artist page</a>
+            </div>
+            <ol class="ar-tracks" id="ar-tracks" aria-label="Track list">
+              <li><a href="https://desktop.bwalletx.com/media/artist/vexvoid/album/echoes-in-the-abyss"><span class="n">1</span><span class="t">Echoes in the Abyss</span><span class="ar-tag free">Free</span><span class="d">1:56</span></a></li>
+              <li><a href="https://desktop.bwalletx.com/media/artist/vexvoid/album/echoes-in-the-abyss"><span class="n">2</span><span class="t">Shadowed Depths</span><span class="ar-tag spon">Sponsored</span><span class="d">3:00</span></a></li>
+              <li><a href="https://desktop.bwalletx.com/media/artist/vexvoid/album/echoes-in-the-abyss"><span class="n">3</span><span class="t">Shadows of the Mind</span><span class="ar-tag spon">Sponsored</span><span class="d">3:29</span></a></li>
+              <li><a href="https://desktop.bwalletx.com/media/artist/vexvoid/album/echoes-in-the-abyss"><span class="n">4</span><span class="t">Echoes in the Fog</span><span class="ar-tag spon">Sponsored</span><span class="d">2:15</span></a></li>
+              <li><a href="https://desktop.bwalletx.com/media/artist/vexvoid/album/echoes-in-the-abyss"><span class="n">5</span><span class="t">Echoes in the Mist</span><span class="ar-tag spon">Sponsored</span><span class="d">3:20</span></a></li>
+              <li><a href="https://desktop.bwalletx.com/media/artist/vexvoid/album/echoes-in-the-abyss"><span class="n">6</span><span class="t">Echoes in the Dust</span><span class="ar-tag spon">Sponsored</span><span class="d">3:12</span></a></li>
+              <li><a href="https://desktop.bwalletx.com/media/artist/vexvoid/album/echoes-in-the-abyss"><span class="n">7</span><span class="t">Shadows in the Smoke</span><span class="ar-tag paid">1 sat/sec</span><span class="d">2:59</span></a></li>
+              <li><a href="https://desktop.bwalletx.com/media/artist/vexvoid/album/echoes-in-the-abyss"><span class="n">8</span><span class="t">Whispers in the Smoke</span><span class="ar-tag paid">1 sat/sec</span><span class="d">4:18</span></a></li>
+              <li><a href="https://desktop.bwalletx.com/media/artist/vexvoid/album/echoes-in-the-abyss"><span class="n">9</span><span class="t">Midnight Reverie</span><span class="ar-tag paid">1 sat/sec</span><span class="d">3:55</span></a></li>
+              <li><a href="https://desktop.bwalletx.com/media/artist/vexvoid/album/echoes-in-the-abyss"><span class="n">10</span><span class="t">Shadows and Silhouettes</span><span class="ar-tag paid">1 sat/sec</span><span class="d">4:01</span></a></li>
+              <li><a href="https://desktop.bwalletx.com/media/artist/vexvoid/album/echoes-in-the-abyss"><span class="n">11</span><span class="t">Shadowed Whispers</span><span class="ar-tag paid">1 sat/sec</span><span class="d">3:15</span></a></li>
+              <li><a href="https://desktop.bwalletx.com/media/artist/vexvoid/album/echoes-in-the-abyss"><span class="n">12</span><span class="t">Shadows of the Streets</span><span class="ar-tag paid">1 sat/sec</span><span class="d">2:15</span></a></li>
+            </ol>
           </div>
         </section>
 
-        <section class="ar-how">
-          <h2 class="ar-h2">For artists</h2>
-          <p><strong>Add a release.</strong> Publish music or video with Add a release in bWalletX Desktop.</p>
-          <p><strong>Paid by the second.</strong> Listeners pay 1 sat a second, straight to your wallet.</p>
-          <p><strong>Sponsor your listeners.</strong> Cover their listening from a pot, so they hear you free.</p>
-          <p><strong>A listener board.</strong> Fans can opt in to a listener board with badges.</p>
-          <a class="ar-go" href="https://desktop.bwalletx.com/media">Open Media</a>
+        <section class="ar-sec ar-center" aria-labelledby="ar-artists">
+          <p class="ar-eyebrow">On bWalletX</p>
+          <h2 class="ar-h2" id="ar-artists">Artists</h2>
+          <div class="ar-grid">
+            <a class="ar-card" href="https://desktop.bwalletx.com/media/artist/vexvoid">
+              <img src="/images/vexvoid-cover.jpg" alt="" width="600" height="600" loading="lazy" decoding="async" />
+              <b>VexVoid</b>
+              <small>Echoes in the Abyss · 12 tracks</small>
+            </a>
+          </div>
+        </section>
+
+        <section class="ar-sec ar-center" aria-labelledby="ar-for">
+          <p class="ar-eyebrow">For artists</p>
+          <h2 class="ar-h2" id="ar-for">Release your music in bWalletX</h2>
+          <div class="ar-tiles">
+            <div class="ar-tile">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 8v8M8 12h8"/></svg>
+              <h3>Add a release</h3>
+              <p>Publish music or video with Add a release in bWalletX Desktop.</p>
+            </div>
+            <div class="ar-tile">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2.5 2.5M10 2h4"/></svg>
+              <h3>1 sat a second to your wallet</h3>
+              <p>Listeners pay by the second, straight to you.</p>
+            </div>
+            <div class="ar-tile">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.8 5.6a5 5 0 0 0-7.1 0L12 7.3l-1.7-1.7a5 5 0 0 0-7.1 7.1L12 21.5l8.8-8.8a5 5 0 0 0 0-7.1z"/></svg>
+              <h3>Sponsor your listeners</h3>
+              <p>Cover their listening from a pot, so they hear you free.</p>
+            </div>
+            <div class="ar-tile">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="9" r="6"/><path d="M8.5 14 7 22l5-3 5 3-1.5-8"/></svg>
+              <h3>Listener board and badges</h3>
+              <p>Fans can opt in to a board with badges.</p>
+            </div>
+          </div>
+          <a class="ar-go" href="https://desktop.bwalletx.com/media">Start in bWalletX Desktop</a>
         </section>
       </div>
     </main>
     <p class="ar-foot">bWalletX is in beta: test with small amounts. <a href="mailto:support@bwalletx.com">support@bwalletx.com</a></p>
     <script>
-      // Slow crossfade through the six VexVoid stills; off under reduced motion.
+      // Hero: slow crossfade of the VexVoid stills with a gentle Ken Burns zoom; still under reduced motion.
       (function () {
         if (window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches) return;
         var imgs = document.querySelectorAll('#ar-stills img'), i = 0;
-        imgs.forEach(function (im) { if (im.dataset.src) im.src = im.dataset.src; });
+        setTimeout(function () { imgs.forEach(function (im) { if (im.dataset.src) im.src = im.dataset.src; }); }, 1500);
         setInterval(function () {
           if (document.visibilityState !== 'visible') return;
-          imgs[i].classList.remove('on'); i = (i + 1) % imgs.length; imgs[i].classList.add('on');
+          var next = (i + 1) % imgs.length;
+          if (!imgs[next].complete || !imgs[next].naturalWidth) return;
+          imgs[i].classList.remove('on'); i = next; imgs[i].classList.add('on');
         }, 7000);
+      })();
+      // Track list: live titles and durations from the stream manifest; the baked list stays if this fails.
+      (function () {
+        var album = 'https://desktop.bwalletx.com/media/artist/vexvoid/album/echoes-in-the-abyss';
+        function esc(s) { return String(s).replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); }
+        function dur(s) { s = Math.round(+s || 0); return Math.floor(s / 60) + ':' + String(s % 60).padStart(2, '0'); }
+        fetch('https://bitcoin-music.vercel.app/bmusic/streams/first-12/manifest.json')
+          .then(function (r) { return r.ok ? r.json() : null; })
+          .then(function (d) {
+            var t = d && d.tracks;
+            if (!t || t.length < 12) return;
+            document.getElementById('ar-tracks').innerHTML = t.slice(0, 12).map(function (x, k) {
+              var tag = k === 0 ? '<span class="ar-tag free">Free</span>' : k < 6 ? '<span class="ar-tag spon">Sponsored</span>' : '<span class="ar-tag paid">1 sat/sec</span>';
+              return '<li><a href="' + album + '"><span class="n">' + (k + 1) + '</span><span class="t">' + esc(x.title) + '</span>' + tag + '<span class="d">' + dur(x.seconds) + '</span></a></li>';
+            }).join('');
+          })
+          .catch(function () {});
       })();
     </script>
   </body>
