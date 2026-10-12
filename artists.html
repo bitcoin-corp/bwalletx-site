@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Artists on bWalletX</title>
     <link rel="canonical" href="https://bwalletx.com/artists" />
-    <meta name="description" content="Listen to independent artists on bWalletX, paid by the second. Start with VexVoid's Echoes in the Abyss: the first 6 tracks are free." />
+    <meta name="description" content="Listen to independent artists on bWalletX, paid by the second. Start with VexVoid's Echoes in the Abyss: tracks 1–6 are on VexVoid, 7–12 at 1 sat/sec." />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://bwalletx.com/artists" />
     <meta property="og:site_name" content="bWalletX" />
@@ -75,6 +75,13 @@
       .ar-card b { display: block; margin-top: 14px; font: 600 1.1rem var(--hf); }
       .ar-card small { display: block; margin-top: 4px; color: #8a8273; font: 400 0.9rem var(--hf); }
       .ar-center { text-align: center; }
+      .ar-vid { display: block; max-width: 760px; margin: 0 auto; color: #fff; text-decoration: none; border-radius: 16px; overflow: hidden; box-shadow: 0 0 0 1px rgba(245, 184, 0, 0.35), 0 20px 50px rgba(0,0,0,0.6); }
+      .ar-vid img { display: block; width: 100%; aspect-ratio: 16 / 9; height: auto; object-fit: cover; }
+      .ar-vid-meta { display: block; padding: 16px 18px; background: #0a0907; text-align: left; }
+      .ar-vid-meta b { display: block; font: 600 1.05rem var(--hf); }
+      .ar-vid-meta small { display: block; margin-top: 4px; color: #cfc6b0; font: 400 0.92rem var(--hf); }
+      .owned { color: var(--gold-hi); }
+      .ar-tracks .o { grid-column: 2 / -1; margin-top: -6px; color: #8a8273; font: 400 0.8rem var(--hf); }
 
       .ar-tiles { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; margin: 0 0 34px; }
       .ar-tile { padding: 24px 22px; border-radius: 16px; background: linear-gradient(180deg, #100e08, #070706); box-shadow: inset 0 0 0 1px rgba(245, 184, 0, 0.2); text-align: left; }
@@ -158,35 +165,46 @@
             <h2 id="ar-album-title">Echoes in the Abyss</h2>
             <p class="by">VexVoid</p>
             <ul class="ar-pills">
-              <li>First 6 tracks free, sponsored by VexVoid</li>
+              <li>Tracks 1–6 on VexVoid</li>
               <li>Tracks 7–12 at 1 sat/sec</li>
+              <li>Buy the original: 1 BSV per track</li>
             </ul>
             <div class="ar-ctas">
-              <a class="ar-go" href="https://desktop.bwalletx.com/media/artist/vexvoid/album/echoes-in-the-abyss"><svg viewBox="0 0 16 16" aria-hidden="true"><path fill="currentColor" d="M4 2.5v11l9-5.5z"/></svg>Listen</a>
-              <a class="ar-link" href="https://desktop.bwalletx.com/media/artist/vexvoid">Artist page</a>
+              <a class="ar-go" href="https://desktop.bwalletx.com/bmusic/artists/vexvoid"><svg viewBox="0 0 16 16" aria-hidden="true"><path fill="currentColor" d="M4 2.5v11l9-5.5z"/></svg>Listen</a>
+              <a class="ar-link" href="/artists/vexvoid">Artist page</a>
             </div>
             <ol class="ar-tracks" id="ar-tracks" aria-label="Track list">
-              <li><a href="https://desktop.bwalletx.com/media/artist/vexvoid/album/echoes-in-the-abyss"><span class="n">1</span><span class="t">Echoes in the Abyss</span><span class="ar-tag free">Free</span><span class="d">1:56</span></a></li>
-              <li><a href="https://desktop.bwalletx.com/media/artist/vexvoid/album/echoes-in-the-abyss"><span class="n">2</span><span class="t">Shadowed Depths</span><span class="ar-tag spon">Sponsored</span><span class="d">3:00</span></a></li>
-              <li><a href="https://desktop.bwalletx.com/media/artist/vexvoid/album/echoes-in-the-abyss"><span class="n">3</span><span class="t">Shadows of the Mind</span><span class="ar-tag spon">Sponsored</span><span class="d">3:29</span></a></li>
-              <li><a href="https://desktop.bwalletx.com/media/artist/vexvoid/album/echoes-in-the-abyss"><span class="n">4</span><span class="t">Echoes in the Fog</span><span class="ar-tag spon">Sponsored</span><span class="d">2:15</span></a></li>
-              <li><a href="https://desktop.bwalletx.com/media/artist/vexvoid/album/echoes-in-the-abyss"><span class="n">5</span><span class="t">Echoes in the Mist</span><span class="ar-tag spon">Sponsored</span><span class="d">3:20</span></a></li>
-              <li><a href="https://desktop.bwalletx.com/media/artist/vexvoid/album/echoes-in-the-abyss"><span class="n">6</span><span class="t">Echoes in the Dust</span><span class="ar-tag spon">Sponsored</span><span class="d">3:12</span></a></li>
-              <li><a href="https://desktop.bwalletx.com/media/artist/vexvoid/album/echoes-in-the-abyss"><span class="n">7</span><span class="t">Shadows in the Smoke</span><span class="ar-tag paid">1 sat/sec</span><span class="d">2:59</span></a></li>
-              <li><a href="https://desktop.bwalletx.com/media/artist/vexvoid/album/echoes-in-the-abyss"><span class="n">8</span><span class="t">Whispers in the Smoke</span><span class="ar-tag paid">1 sat/sec</span><span class="d">4:18</span></a></li>
-              <li><a href="https://desktop.bwalletx.com/media/artist/vexvoid/album/echoes-in-the-abyss"><span class="n">9</span><span class="t">Midnight Reverie</span><span class="ar-tag paid">1 sat/sec</span><span class="d">3:55</span></a></li>
-              <li><a href="https://desktop.bwalletx.com/media/artist/vexvoid/album/echoes-in-the-abyss"><span class="n">10</span><span class="t">Shadows and Silhouettes</span><span class="ar-tag paid">1 sat/sec</span><span class="d">4:01</span></a></li>
-              <li><a href="https://desktop.bwalletx.com/media/artist/vexvoid/album/echoes-in-the-abyss"><span class="n">11</span><span class="t">Shadowed Whispers</span><span class="ar-tag paid">1 sat/sec</span><span class="d">3:15</span></a></li>
-              <li><a href="https://desktop.bwalletx.com/media/artist/vexvoid/album/echoes-in-the-abyss"><span class="n">12</span><span class="t">Shadows of the Streets</span><span class="ar-tag paid">1 sat/sec</span><span class="d">2:15</span></a></li>
+              <li><a href="https://desktop.bwalletx.com/bmusic/artists/vexvoid"><span class="n">1</span><span class="t">Echoes in the Abyss</span><span class="ar-tag spon">On VexVoid</span><span class="d">1:56</span></a></li>
+              <li><a href="https://desktop.bwalletx.com/bmusic/artists/vexvoid"><span class="n">2</span><span class="t">Shadowed Depths</span><span class="ar-tag spon">On VexVoid</span><span class="d">3:00</span></a></li>
+              <li><a href="https://desktop.bwalletx.com/bmusic/artists/vexvoid"><span class="n">3</span><span class="t">Shadows of the Mind</span><span class="ar-tag spon">On VexVoid</span><span class="d">3:29</span></a></li>
+              <li><a href="https://desktop.bwalletx.com/bmusic/artists/vexvoid"><span class="n">4</span><span class="t">Echoes in the Fog</span><span class="ar-tag spon">On VexVoid</span><span class="d">2:15</span></a></li>
+              <li><a href="https://desktop.bwalletx.com/bmusic/artists/vexvoid"><span class="n">5</span><span class="t">Echoes in the Mist</span><span class="ar-tag spon">On VexVoid</span><span class="d">3:20</span></a></li>
+              <li><a href="https://desktop.bwalletx.com/bmusic/artists/vexvoid"><span class="n">6</span><span class="t">Echoes in the Dust</span><span class="ar-tag spon">On VexVoid</span><span class="d">3:12</span></a></li>
+              <li><a href="https://desktop.bwalletx.com/bmusic/artists/vexvoid"><span class="n">7</span><span class="t">Shadows in the Smoke</span><span class="ar-tag paid">1 sat/sec</span><span class="d">2:59</span></a></li>
+              <li><a href="https://desktop.bwalletx.com/bmusic/artists/vexvoid"><span class="n">8</span><span class="t">Whispers in the Smoke</span><span class="ar-tag paid">1 sat/sec</span><span class="d">4:18</span></a></li>
+              <li><a href="https://desktop.bwalletx.com/bmusic/artists/vexvoid"><span class="n">9</span><span class="t">Midnight Reverie</span><span class="ar-tag paid">1 sat/sec</span><span class="d">3:55</span></a></li>
+              <li><a href="https://desktop.bwalletx.com/bmusic/artists/vexvoid"><span class="n">10</span><span class="t">Shadows and Silhouettes</span><span class="ar-tag paid">1 sat/sec</span><span class="d">4:01</span></a></li>
+              <li><a href="https://desktop.bwalletx.com/bmusic/artists/vexvoid"><span class="n">11</span><span class="t">Shadowed Whispers</span><span class="ar-tag paid">1 sat/sec</span><span class="d">3:15</span></a></li>
+              <li><a href="https://desktop.bwalletx.com/bmusic/artists/vexvoid"><span class="n">12</span><span class="t">Shadows of the Streets</span><span class="ar-tag paid">1 sat/sec</span><span class="d">2:15</span></a></li>
             </ol>
           </div>
+        </section>
+
+
+        <section class="ar-sec ar-center" aria-labelledby="ar-video">
+          <p class="ar-eyebrow">Video</p>
+          <h2 class="ar-h2" id="ar-video">Four Ton Shadow</h2>
+          <a class="ar-vid" href="https://desktop.bwalletx.com/bmusic/artists/vexvoid">
+            <img src="https://bitcoin-music.vercel.app/bmusic/streams/four-ton-shadow-video/cover.jpg" alt="Four Ton Shadow by VexVoid, video poster" width="736" height="414" loading="lazy" decoding="async" />
+            <span class="ar-vid-meta"><b>VexVoid · music video</b><small>1 sat/sec · Buy the original: <span data-rel="four-ton-shadow-video-01" data-usd="100">5.14 BSV (about $100)</span></small></span>
+          </a>
         </section>
 
         <section class="ar-sec ar-center" aria-labelledby="ar-artists">
           <p class="ar-eyebrow">On bWalletX</p>
           <h2 class="ar-h2" id="ar-artists">Artists</h2>
           <div class="ar-grid">
-            <a class="ar-card" href="https://desktop.bwalletx.com/media/artist/vexvoid">
+            <a class="ar-card" href="/artists/vexvoid">
               <img src="/images/vexvoid-cover.jpg" alt="" width="600" height="600" loading="lazy" decoding="async" />
               <b>VexVoid</b>
               <small>Echoes in the Abyss · 12 tracks</small>
@@ -219,7 +237,7 @@
               <p>Fans can opt in to a board with badges.</p>
             </div>
           </div>
-          <a class="ar-go" href="https://desktop.bwalletx.com/media">Start in bWalletX Desktop</a>
+          <a class="ar-go" href="https://desktop.bwalletx.com/bmusic">Start in bWalletX Desktop</a>
         </section>
       </div>
     </main>
@@ -239,7 +257,7 @@
       })();
       // Track list: live titles and durations from the stream manifest; the baked list stays if this fails.
       (function () {
-        var album = 'https://desktop.bwalletx.com/media/artist/vexvoid/album/echoes-in-the-abyss';
+        var album = 'https://desktop.bwalletx.com/bmusic/artists/vexvoid';
         function esc(s) { return String(s).replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); }
         function dur(s) { s = Math.round(+s || 0); return Math.floor(s / 60) + ':' + String(s % 60).padStart(2, '0'); }
         fetch('https://bitcoin-music.vercel.app/bmusic/streams/first-12/manifest.json')
@@ -248,12 +266,13 @@
             var t = d && d.tracks;
             if (!t || t.length < 12) return;
             document.getElementById('ar-tracks').innerHTML = t.slice(0, 12).map(function (x, k) {
-              var tag = k === 0 ? '<span class="ar-tag free">Free</span>' : k < 6 ? '<span class="ar-tag spon">Sponsored</span>' : '<span class="ar-tag paid">1 sat/sec</span>';
+              var tag = k === 0 ? '<span class="ar-tag spon">On VexVoid</span>' : k < 6 ? '<span class="ar-tag spon">On VexVoid</span>' : '<span class="ar-tag paid">1 sat/sec</span>';
               return '<li><a href="' + album + '"><span class="n">' + (k + 1) + '</span><span class="t">' + esc(x.title) + '</span>' + tag + '<span class="d">' + dur(x.seconds) + '</span></a></li>';
             }).join('');
           })
           .catch(function () {});
       })();
     </script>
+    <script src="/artists-live.js" defer></script>
   </body>
 </html>
