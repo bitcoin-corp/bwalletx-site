@@ -21,6 +21,7 @@ Full text of every page below: https://bwalletx.com/llms-full.txt
 - [History in bWalletX](https://bwalletx.com/history): See every transaction your bWalletX account made, for any date range, and export it as CSV or a PDF statement for your accountant.
 - [Push notifications · bWalletX](https://bwalletx.com/push-notifications): Push notifications are live in bWalletX: direct messages, mentions, group messages you opt into, $b answers and signing requests on iPhone, Android, the web wallet and the Chrome extension, even with the app closed. Who messaged you, not what they wrote.
 - [bWalletX web wallet](https://bwalletx.com/web): Use bWalletX in your browser: no install, your keys stay in your browser, works on any computer. The same wallet as the app. Beta.
+- [AIVJ.TV: watch VexVoid play live](https://bwalletx.com/aivj): AIVJ.TV is VexVoid’s live channel. Watch the first three minutes without signing in, then pay 1p a minute from bWalletX, straight to the artist. Close the page to stop.
 - [Artists on bWalletX](https://bwalletx.com/artists): Listen to independent artists on bWalletX, paid by the second. Start with VexVoid's Echoes in the Abyss: tracks 1–6 are on VexVoid, 7–12 at 1 sat/sec.
 - [VexVoid on bWalletX](https://bwalletx.com/artists/vexvoid): V3XV0ID: trainyards, rooftops, the void. Listen to Echoes in the Abyss and watch Four Ton Shadow in bWalletX, paid by the second.
 - [Ask b](https://bwalletx.com/ask-b): Ask b, the assistant inside bWalletX. Type a question and b helps: send money, make a pot, explain something, fix a problem.
@@ -34,8 +35,10 @@ Full text of every page below: https://bwalletx.com/llms-full.txt
 - [bWalletX Desktop](https://bwalletx.com/desktop): bWalletX Desktop: your whole wallet on a big screen at desktop.bwalletx.com. Money, bMail, chat, Spaces, bApps and Ask b side by side. Install it as an app from Chrome, Edge or Safari.
 - [bGigs in bWalletX](https://bwalletx.com/gigs): bGigs in bWalletX: go live on camera in your own Space, sell tickets at the door or charge by the minute, and your fans pay you directly.
 - [Just b](https://bwalletx.com/just-b): Just b
+- [NFTs: everything you own, edge to edge](https://bwalletx.com/nfts): The NFT library in bWalletX Desktop: pictures, clips, music and documents in one grid, opened edge to edge with no frames. Turn a moment from a clip into your card art.
 - [Send a bMail · bWalletX](https://bwalletx.com/person): Everything you can do with a person on bWalletX: send a bMail for a penny, call, pay or tip, and chat. Write your message now; bWalletX sends it.
 - [Releases](https://bwalletx.com/releases): Every bWalletX release and what it added, newest first. Latest: 5.2.15.
+- [Tips: pay the people who make things](https://bwalletx.com/tips): In bWalletX Desktop, tip artists, NFT creators, rooms, people in chat, friends and Spaces speakers. Pick an amount, tap Allow once, and all of it goes to them.
 
 ## Wallet features
 
@@ -133,6 +136,13 @@ Full text of every page below: https://bwalletx.com/llms-full.txt
 - [044 Your token's own page and agent · bWalletX blog](https://bwalletx.com/blog/044-your-tokens-own-page-and-agent): Every token on bChatX has a full page: price, chart, holders, posts and a Buy button. Its creator can give it an agent, and holders can show a badge name.
 - [045 Your card, your art · bWalletX blog](https://bwalletx.com/blog/045-your-card-your-art): The card in bWalletX can wear your own pictures or your NFTs, with standard colour sliders. And bPics lets you mint a picture from your phone.
 - [046 Stays unlocked, sends exactly · bWalletX blog](https://bwalletx.com/blog/046-stays-unlocked-sends-exactly): bWalletX no longer locks itself after a few minutes, and fingerprint unlock on Android works again. Token sends show the exact amount before anything is paid.
+- [047 Pay the artist · bWalletX blog](https://bwalletx.com/blog/047-pay-the-artist): bMusic is on bWalletX Desktop. Anyone can open an artist page and hear the first track without signing in. The next tracks are paid for by the artist, and after that your money goes straight to them.
+- [048 Your NFTs, edge to edge · bWalletX blog](https://bwalletx.com/blog/048-your-nfts-edge-to-edge): bWalletX Desktop has an NFT library. Every picture, clip and song you own is in one grid, opens edge to edge, and a moment from a video can become the art on your card.
+- [049 The Exchange, sorted · bWalletX blog](https://bwalletx.com/blog/049-the-exchange-sorted): The Market in bWalletX Desktop is now the Exchange. Browse by category, platform and tag, swap in place, and find your friends: buy a little of someone’s own token and open their room in one go.
+- [050 AIVJ.TV: VexVoid, live · bWalletX blog](https://bwalletx.com/blog/050-aivj-tv-vexvoid-live): AIVJ.TV is where VexVoid plays live audio-visual sets. Watch the first three minutes without signing in. After that it’s 1p a minute from your bWalletX, straight to the artist.
+- [051 Spaces on a schedule, b on every page · bWalletX blog](https://bwalletx.com/blog/051-spaces-schedule-and-ask-b): Spaces in bWalletX Desktop have a weekly schedule in your own time zone, with Add to calendar. And Ask b is now a small bar at the bottom of every page.
+- [052 Tip buttons · bWalletX blog](https://bwalletx.com/blog/052-tip-buttons): bWalletX Desktop has a Tip button for artists, NFT creators, rooms, people in chat, friends and speakers in Spaces. Pick an amount, tap Allow once, and all of it goes to them.
+- [053 Friends, bPics and video in rooms · bWalletX blog](https://bwalletx.com/blog/053-friends-bpics-and-video): Friends has its own page on bWalletX Desktop, bPics looks like a photo app, and video links play inside the Feed and chat rooms.
 - [bWalletX development blog](https://bwalletx.com/blog/): How bWallet and bWalletX were built from a fork of Yours Wallet: numbered posts from the git history, including what broke, what we reversed and what is still not done.
 
 ## Support

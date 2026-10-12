@@ -21,7 +21,7 @@
     // dropdowns. Phones: a Menu button with one accordion per section. The current section's pages also show
     // as a pill row under the bar.
     full: [
-      { label: 'Wallet', href: '/features', pages: ['/features', '/subscriptions', '/pots', '/lock', '/lock/verify', '/token-locking', '/restore', '/history', '/identity', '/handles', '/bavatars', '/swap', '/mint', '/get', '/download', '/android', '/iphone', '/extension', '/push-notifications', '/testers', '/privacy'],
+      { label: 'Wallet', href: '/features', pages: ['/features', '/subscriptions', '/pots', '/lock', '/lock/verify', '/token-locking', '/restore', '/history', '/identity', '/handles', '/bavatars', '/nfts', '/swap', '/mint', '/get', '/download', '/android', '/iphone', '/extension', '/push-notifications', '/testers', '/privacy'],
         sub: [
           { label: 'Features', href: '/features' },
           { label: 'Subscriptions', href: '/subscriptions' },
@@ -33,6 +33,7 @@
           { label: 'Identity', href: '/identity' },
           { label: 'Handles', href: '/handles' },
           { label: 'bAvatars', href: '/bavatars' },
+          { label: 'NFTs', href: '/nfts' },
           { label: 'Swap into BSV', href: '/swap' },
           { label: 'Mint', href: '/mint' },
           { label: 'Notifications', href: '/push-notifications' },
@@ -49,7 +50,7 @@
           { label: 'Launchpad', href: '/launchpad' },
           { label: 'Buy BSV', href: '/buy' }
         ] },
-      { label: 'Social', href: '/social', pages: ['/social', '/chat', '/friends', '/lounge', '/games', '/video', '/live', '/bspaces', '/bphone', '/bmail', '/bpositive', '/airdrops', '/sign', '/x', '/gmail'],
+      { label: 'Social', href: '/social', pages: ['/social', '/chat', '/friends', '/lounge', '/games', '/video', '/live', '/aivj', '/tips', '/bspaces', '/bphone', '/bmail', '/bpositive', '/airdrops', '/sign', '/x', '/gmail'],
         sub: [
           { label: 'Social', href: '/social' },
           { label: 'Chat', href: '/chat' },
@@ -58,6 +59,8 @@
           { label: 'Games', href: '/games' },
           { label: 'Video', href: '/video' },
           { label: 'Live', href: '/live' },
+          { label: 'AIVJ.TV', href: '/aivj' },
+          { label: 'Tips', href: '/tips' },
           { label: 'bSpaces', href: '/bspaces' },
           { label: 'bPhone', href: '/bphone' },
           { label: 'bMail (coming)', href: '/bmail' },
