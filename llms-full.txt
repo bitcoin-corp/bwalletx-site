@@ -102,7 +102,7 @@ Listeners pay by the second, straight to you.
 
 ### Sponsor your listeners
 
-Cover their listening from a pot, so they hear you free.
+Cover their listening from a pot, so they hear you on your dime.
 
 ### Listener board and badges
 
@@ -1694,6 +1694,15 @@ Each release ships to the Android APK, the Chrome extension and the web wallet. 
 [Download bWalletX](https://bwalletx.com/download)
 
 ## 5.2.15 2026-10-12
+
+- Big NFT mints no longer fail: they show Pending while the network catches up, and a stuck send releases its coins.
+- Ask b: a chat bar with reply bubbles on every Desktop page, full of ideas to try.
+- bMusic: artist pages in the app, guest album pages that work signed out, and track 1 free to hear.
+- Desktop: a new NFT library, a Friends page, a redesigned bPics, and Calls is now bPhone.
+- Exchange replaces Market: markets, trade, swap and your orders, with categories, platforms and tags.
+- Spaces schedule, a Subscriptions tab, click-to-play videos in the Feed and rooms, and OpNS names at name@bwalletx.com.
+
+## 5.2.14 2026-10-12
 
 - Burn duplicate NFTs: a clear confirm, and a warning if it’s your only copy.
 - Video NFTs show their cover art and play on iPhone.
