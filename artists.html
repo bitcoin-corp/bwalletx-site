@@ -119,7 +119,33 @@
         </div>
         <img class="b" src="/logo.svg" alt="" width="54" height="54" />
         <h1>Artists on <em>bWalletX</em></h1>
-        <p>Independent music. Paid by the second, straight to the artist.</p>
+        <p class="ar-roll" aria-live="polite"><span id="ar-line">Independent music. Paid by the second, straight to the artist.</span></p>
+        <style>
+          .ar-roll { min-height: 1.6em; }
+          #ar-line { display: inline-block; transition: opacity .9s ease, filter .9s ease; }
+          #ar-line.off { opacity: 0; filter: blur(6px); }
+          @media (prefers-reduced-motion: reduce) { #ar-line { transition: none; } }
+        </style>
+        <script>
+          (function () {
+            // What artists can do today (live features only), drifting in and out under the title.
+            var lines = [
+              'Independent music. Paid by the second, straight to the artist.',
+              'Publish your music or video with Add a release.',
+              'Listeners pay 1 sat a second, straight to your wallet.',
+              'Sponsor your listeners from a pot, so new fans listen free.',
+              'See your top fans on your listener board, with badges.',
+              'Every track and album earns on its own, so you can see what works.'
+            ];
+            var el = document.getElementById('ar-line'), i = 0;
+            if (!el || matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+            setInterval(function () {
+              if (document.hidden) return;
+              el.classList.add('off');
+              setTimeout(function () { i = (i + 1) % lines.length; el.textContent = lines[i]; el.classList.remove('off'); }, 900);
+            }, 4500);
+          })();
+        </script>
       </section>
 
       <div class="ar-wrap">
