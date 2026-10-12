@@ -34,33 +34,73 @@ Source: https://bwalletx.com/artists
 
 # Artists on bWalletX
 
-Listen to independent artists, and pay them by the second, straight to their wallet.
+Independent music. Paid by the second, straight to the artist.
 
-## Artists
-
-[VexVoid](https://desktop.bwalletx.com/media/artist/vexvoid)
-
-Featured album
+Album
 
 ## Echoes in the Abyss
 
 VexVoid
 
-First 6 tracks free, sponsored by VexVoid · tracks 7–12 at 1 sat/sec
+- First 6 tracks free, sponsored by VexVoid
+
+- Tracks 7–12 at 1 sat/sec
 
 [Listen](https://desktop.bwalletx.com/media/artist/vexvoid/album/echoes-in-the-abyss)
+[Artist page](https://desktop.bwalletx.com/media/artist/vexvoid)
 
-## For artists
+- [1Echoes in the AbyssFree1:56](https://desktop.bwalletx.com/media/artist/vexvoid/album/echoes-in-the-abyss)
 
-Add a release. Publish music or video with Add a release in bWalletX Desktop.
+- [2Shadowed DepthsSponsored3:00](https://desktop.bwalletx.com/media/artist/vexvoid/album/echoes-in-the-abyss)
 
-Paid by the second. Listeners pay 1 sat a second, straight to your wallet.
+- [3Shadows of the MindSponsored3:29](https://desktop.bwalletx.com/media/artist/vexvoid/album/echoes-in-the-abyss)
 
-Sponsor your listeners. Cover their listening from a pot, so they hear you free.
+- [4Echoes in the FogSponsored2:15](https://desktop.bwalletx.com/media/artist/vexvoid/album/echoes-in-the-abyss)
 
-A listener board. Fans can opt in to a listener board with badges.
+- [5Echoes in the MistSponsored3:20](https://desktop.bwalletx.com/media/artist/vexvoid/album/echoes-in-the-abyss)
 
-[Open Media](https://desktop.bwalletx.com/media)
+- [6Echoes in the DustSponsored3:12](https://desktop.bwalletx.com/media/artist/vexvoid/album/echoes-in-the-abyss)
+
+- [7Shadows in the Smoke1 sat/sec2:59](https://desktop.bwalletx.com/media/artist/vexvoid/album/echoes-in-the-abyss)
+
+- [8Whispers in the Smoke1 sat/sec4:18](https://desktop.bwalletx.com/media/artist/vexvoid/album/echoes-in-the-abyss)
+
+- [9Midnight Reverie1 sat/sec3:55](https://desktop.bwalletx.com/media/artist/vexvoid/album/echoes-in-the-abyss)
+
+- [10Shadows and Silhouettes1 sat/sec4:01](https://desktop.bwalletx.com/media/artist/vexvoid/album/echoes-in-the-abyss)
+
+- [11Shadowed Whispers1 sat/sec3:15](https://desktop.bwalletx.com/media/artist/vexvoid/album/echoes-in-the-abyss)
+
+- [12Shadows of the Streets1 sat/sec2:15](https://desktop.bwalletx.com/media/artist/vexvoid/album/echoes-in-the-abyss)
+
+On bWalletX
+
+## Artists
+
+[VexVoid
+Echoes in the Abyss · 12 tracks](https://desktop.bwalletx.com/media/artist/vexvoid)
+
+For artists
+
+## Release your music in bWalletX
+
+### Add a release
+
+Publish music or video with Add a release in bWalletX Desktop.
+
+### 1 sat a second to your wallet
+
+Listeners pay by the second, straight to you.
+
+### Sponsor your listeners
+
+Cover their listening from a pot, so they hear you free.
+
+### Listener board and badges
+
+Fans can opt in to a board with badges.
+
+[Start in bWalletX Desktop](https://desktop.bwalletx.com/media)
 
 ---
 
@@ -7440,7 +7480,7 @@ Either way the money goes straight to the artist, as it comes in. No waiting wee
 
 Related: [Home](https://bwalletx.com/) · [Features](https://bwalletx.com/features) · [Developers](https://bwalletx.com/developers)
 
-[← 038 Swap into BSV](https://bwalletx.com/blog/038-swap-into-bsv)[All posts →](https://bwalletx.com/blog)
+[← 038 Swap into BSV](https://bwalletx.com/blog/038-swap-into-bsv)[040 Pay artists by the second →](https://bwalletx.com/blog/040-pay-artists-by-the-second)
 
 ---
 
@@ -7451,6 +7491,34 @@ Source: https://bwalletx.com/blog/
 How bWallet and bWalletX were built, one chapter at a time. Every post is written from the git history of the wallet, this site, the chat server and the PNEEs prototype. It covers what we built, why, what broke, what we reversed and what is still not done.
 
 Newest first. Dates come from commits. bWallet is a fork of [Yours Wallet](https://github.com/yours-org/yours-wallet) (MIT licence).
+
+- 046 · 12 Oct 2026
+[Stays unlocked, sends exactly](https://bwalletx.com/blog/046-stays-unlocked-sends-exactly)
+bWalletX no longer locks itself after a few minutes, and fingerprint unlock on Android works again. Token sends show the exact amount before anything is paid.
+
+- 045 · 12 Oct 2026
+[Your card, your art](https://bwalletx.com/blog/045-your-card-your-art)
+The card in bWalletX can wear your own pictures or your NFTs, with standard colour sliders. And bPics lets you mint a picture from your phone.
+
+- 044 · 12 Oct 2026
+[Your token's own page and agent](https://bwalletx.com/blog/044-your-tokens-own-page-and-agent)
+Every token on bChatX has a full page: price, chart, holders, posts and a Buy button. Its creator can give it an agent, and holders can show a badge name.
+
+- 043 · 12 Oct 2026
+[Ask b](https://bwalletx.com/blog/043-ask-b)
+b, the helper inside bWalletX, has a calmer home. Hold the gold b to talk, and your chats on bChatX now have their own links and are encrypted with your wallet.
+
+- 042 · 12 Oct 2026
+[Chats that feel like Telegram](https://bwalletx.com/blog/042-chats-that-feel-like-telegram)
+Chats in bWalletX open straight away and the list stays still. Swipe a chat to pin, mute, archive or mark it read.
+
+- 041 · 12 Oct 2026
+[NFTs that just work](https://bwalletx.com/blog/041-nfts-that-just-work)
+Sending an NFT is now two steps. NFTs sent to you say who sent them, open in a viewer, and wait for you to keep them. Video NFTs show their cover, and duplicates can be burned.
+
+- 040 · 12 Oct 2026
+[Pay artists by the second](https://bwalletx.com/blog/040-pay-artists-by-the-second)
+Echoes in the Abyss by VexVoid is in bWalletX. The first six tracks are free, the rest cost 1 sat a second, and the money goes straight to the artist.
 
 - 039 · 11 Oct 2026
 [bGigs: your stage, your fans](https://bwalletx.com/blog/039-bgigs-your-stage-your-fans)
