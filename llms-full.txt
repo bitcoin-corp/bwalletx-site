@@ -82,7 +82,7 @@ Ask b
 
 Ask b
 
-[Ask b](https://desktop.bwalletx.com/agent)
+[Ask b](https://desktop.bwalletx.com/ask-b)
 
 Just ask.
 b helps.
@@ -99,9 +99,9 @@ Fix problems. Something not working? b looks into it with you and helps put it r
 
 Where to find b
 
-- [desktop.bwalletx.com/agent](https://desktop.bwalletx.com/agent)
+- [desktop.bwalletx.com/ask-b](https://desktop.bwalletx.com/ask-b)
 
-- [bchatx.com/agent-b](https://www.bchatx.com/agent-b)
+- [bchatx.com/ask-b](https://www.bchatx.com/ask-b)
 
 - In the bWalletX apps: tap b. [Get bWalletX](https://bwalletx.com/get?from=ask-b)
 
@@ -109,7 +109,7 @@ b runs on your own AI key, or on paid messages. Nothing is paid until you confir
 
 ## Less noise. More life.
 
-[Ask b](https://desktop.bwalletx.com/agent)
+[Ask b](https://desktop.bwalletx.com/ask-b)
 
 bWalletX is in beta: test with small amounts. [support@bwalletx.com](mailto:support@bwalletx.com)
 
@@ -586,7 +586,7 @@ New bWalletX Desktop · free in your browser
 
 # Your whole Bitcoin life. One window.
 
-Money, bMail, chat rooms, Spaces, bApps and Agent b, side by side on a big screen. No app store, no download. Open it and it’s your wallet.
+Money, bMail, chat rooms, Spaces, bApps and Ask b, side by side on a big screen. No app store, no download. Open it and it’s your wallet.
 
 [Open bWalletX Desktop →](https://desktop.bwalletx.com/)
 [Install it as an app](#install)
@@ -634,7 +634,7 @@ Feed pulls posts from bChat and other BSV micro-blogs into one timeline, with Ti
 
 desktop.bwalletx.com
 
-Agent b · ⌘K
+Ask b · ⌘K
 
 ## Press ⌘K. Tell b what to do.
 
@@ -1597,12 +1597,12 @@ Each release ships to the Android APK, the Chrome extension and the web wallet. 
 
 - Media: a new store front with big square album covers, shelves and release pages
 - Add a release: publish your music or video with a square cover, on chain
-- Agent b’s suggestions drift smoothly and read larger
+- Ask b’s suggestions drift smoothly and read larger
 
 ## 5.2.12 2026-10-12
 
 - Hold the gold b to talk to b: your words appear in the box, nothing sends until you do
-- Agent b opens on a full black pool with gentle suggestions
+- Ask b opens on a full black pool with gentle suggestions
 - Desktop opens with just a big gold b
 
 ## 5.2.11 2026-10-12
