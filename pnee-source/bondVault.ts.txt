@@ -1,0 +1,286 @@
+// PNEE contract source as compiled for bWalletX (bwalletx-bond, 12 Oct 2026). Some comments below date from the
+// testnet prototype, when the units were $1 bonds; the deployment uses 1-cent PNEEs (see README.txt).
+
+import {
+    assert,
+    ByteString,
+    FixedArray,
+    hash160,
+    hash256,
+    int2ByteString,
+    method,
+    prop,
+    PubKey,
+    sha256,
+    Sig,
+    SmartContract,
+    toByteString,
+    Utils,
+    VarIntWriter,
+} from 'scrypt-ts'
+
+/** Number of oracle signers and the quorum the vault needs. */
+export const N_ORACLES = 5
+export const QUORUM = 3
+
+/**
+ * A quorum of oracle price signatures for ONE round timestamp.
+ * Each signer i signs msg = int2ByteString(priceCents_i, 8) || int2ByteString(ts, 8)
+ * with its Rabin key. `idx` must be strictly increasing (distinct signers).
+ */
+export type PriceProof = {
+    ts: bigint
+    prices: FixedArray<bigint, 3>
+    idx: FixedArray<bigint, 3>
+    sigs: FixedArray<bigint, 3>
+    paddings: FixedArray<ByteString, 3>
+}
+
+/**
+ * $1 Bond Vault (TESTNET prototype).
+ *
+ * Holds BSV collateral. State = outstanding debt (whole $1 bonds) and fee accrual.
+ * See README "Trust model" for what is and is not enforced on-chain.
+ */
+export class BondVault extends SmartContract {
+    static readonly SECS_PER_YEAR = 31536000n
+    static readonly SATS_PER_BSV = 100000000n
+
+    // ---- immutable params ----
+    @prop() owner: PubKey
+    /** Bond issuer / indexer co-signer: attests that burned bonds are genuine. */
+    @prop() issuer: PubKey
+    /** Rabin public keys (moduli) of the 5 price signers. */
+    @prop() oracles: FixedArray<bigint, 5>
+    /** Locking-script code part of BondToken (everything up to and incl. OP_RETURN). */
+    @prop() bondCode: ByteString
+    @prop() minRatioPct: bigint // 200
+    @prop() liqRatioPct: bigint // 150
+    @prop() liqDiscountPct: bigint // 10
+    @prop() feeBps: bigint // 200 = 2%/yr
+    @prop() minVaultCents: bigint // 5000 = $50
+    @prop() maxPriceAge: bigint // seconds
+    @prop() unitCents: bigint // value of one bond in cents: 1 = penny bonds, 100 = dollar bonds
+
+    // ---- state ----
+    @prop(true) debt: bigint // bonds outstanding (each worth unitCents)
+    @prop(true) lastTs: bigint // last oracle round used (anti-replay of older prices)
+    @prop(true) feeCents: bigint // stability fee accrued so far, in cents
+    @prop(true) feeTs: bigint // fee accrued up to this unix time
+
+    constructor(
+        owner: PubKey,
+        issuer: PubKey,
+        oracles: FixedArray<bigint, 5>,
+        bondCode: ByteString,
+        minRatioPct: bigint,
+        liqRatioPct: bigint,
+        liqDiscountPct: bigint,
+        feeBps: bigint,
+        minVaultCents: bigint,
+        maxPriceAge: bigint,
+        unitCents: bigint,
+        openTs: bigint
+    ) {
+        super(...arguments)
+        this.owner = owner
+        this.issuer = issuer
+        this.oracles = oracles
+        this.bondCode = bondCode
+        this.minRatioPct = minRatioPct
+        this.liqRatioPct = liqRatioPct
+        this.liqDiscountPct = liqDiscountPct
+        this.feeBps = feeBps
+        this.minVaultCents = minVaultCents
+        this.maxPriceAge = maxPriceAge
+        this.unitCents = unitCents
+        this.debt = 0n
+        this.lastTs = openTs
+        this.feeCents = 0n
+        this.feeTs = openTs
+    }
+
+    // ------------------------------------------------------------------ helpers
+
+    /** 1024-bit hash used for Rabin signatures (4 chained SHA-256 blocks, LE unsigned). */
+    @method()
+    static rabinHash(x: ByteString): bigint {
+        const h1 = sha256(x)
+        const h2 = sha256(h1)
+        const h3 = sha256(h2)
+        const h4 = sha256(h3)
+        return Utils.fromLEUnsigned(h1 + h2 + h3 + h4)
+    }
+
+    @method()
+    static rabinVerify(msg: ByteString, s: bigint, padding: ByteString, n: bigint): boolean {
+        const h = BondVault.rabinHash(msg + padding)
+        return (s * s) % n == h % n
+    }
+
+    @method()
+    static priceMsg(priceCents: bigint, ts: bigint): ByteString {
+        return int2ByteString(priceCents, 8n) + int2ByteString(ts, 8n)
+    }
+
+    /**
+     * Verify a 3-of-5 price proof and return the median price in cents.
+     * Freshness on-chain: ts must be newer than the vault's last oracle round, not after the
+     * tx nLockTime, and within maxPriceAge of it; nLockTime must be enforced (nSequence < max).
+     */
+    @method()
+    verifyPrice(p: PriceProof): bigint {
+        assert(p.ts > this.lastTs, 'price older than vault state')
+        assert(this.ctx.sequence < 0xffffffffn, 'nLockTime must be enforced')
+        assert(this.ctx.locktime >= 500000000n, 'nLockTime must be a unix time')
+        assert(p.ts <= this.ctx.locktime, 'price from the future')
+        assert(this.ctx.locktime - p.ts <= this.maxPriceAge, 'price stale')
+
+        let prev = -1n
+        for (let i = 0; i < 3; i++) {
+            const k = p.idx[i]
+            assert(k > prev && k < 5n, 'signers must be distinct, ascending, 0..4')
+            prev = k
+            assert(p.prices[i] > 0n, 'bad price')
+            let n = 0n
+            for (let j = 0; j < 5; j++) {
+                if (BigInt(j) == k) {
+                    n = this.oracles[j]
+                }
+            }
+            assert(
+                BondVault.rabinVerify(BondVault.priceMsg(p.prices[i], p.ts), p.sigs[i], p.paddings[i], n),
+                'oracle signature invalid'
+            )
+        }
+        const a = p.prices[0]
+        const b = p.prices[1]
+        const c = p.prices[2]
+        let hi = a
+        if (b > hi) { hi = b }
+        if (c > hi) { hi = c }
+        let lo = a
+        if (b < lo) { lo = b }
+        if (c < lo) { lo = c }
+        return a + b + c - hi - lo
+    }
+
+    @method()
+    static collateralCents(sats: bigint, priceCents: bigint): bigint {
+        return (sats * priceCents) / BondVault.SATS_PER_BSV
+    }
+
+    /** Accrue the stability fee on the current debt up to time t. */
+    @method()
+    accrue(t: bigint): void {
+        if (t > this.feeTs) {
+            this.feeCents += (this.debt * this.unitCents * this.feeBps * (t - this.feeTs)) / (10000n * BondVault.SECS_PER_YEAR)
+            this.feeTs = t
+        }
+    }
+
+    @method()
+    outpoint(): ByteString {
+        return this.ctx.utxo.outpoint.txid + int2ByteString(this.ctx.utxo.outpoint.outputIndex, 4n)
+    }
+
+    /** OP_RETURN burn receipt: 'bwxburn' || vault outpoint (36) || amount (8 LE). */
+    @method()
+    static burnReceipt(vaultOutpoint: ByteString, amount: bigint): ByteString {
+        return Utils.buildOutput(
+            Utils.buildOpreturnScript(toByteString('bwxburn', true) + vaultOutpoint + int2ByteString(amount, 8n)),
+            0n
+        )
+    }
+
+    /** Locking script of a BondToken UTXO with the given state (matches sCrypt state layout). */
+    @method()
+    static bondScript(bondCode: ByteString, holder: PubKey, amount: bigint): ByteString {
+        return (
+            bondCode +
+            VarIntWriter.serializeState(
+                VarIntWriter.writeBool(false) + VarIntWriter.writeBytes(holder) + VarIntWriter.writeInt(amount)
+            )
+        )
+    }
+
+    // ------------------------------------------------------------------ spend paths
+
+    /**
+     * Owner adds collateral. State carried forward unchanged. Output 0 is the vault with the larger value;
+     * `restOutputs` are whatever the funding wallet adds after it (its change), so any BRC-100 wallet can fund it.
+     */
+    @method()
+    public topUp(sig: Sig, addSats: bigint, restOutputs: ByteString) {
+        assert(this.checkSig(sig, this.owner), 'owner signature invalid')
+        assert(addSats > 0n, 'top up must add sats')
+        const outputs = this.buildStateOutput(this.ctx.utxo.value + addSats) + restOutputs
+        assert(hash256(outputs) == this.ctx.hashOutputs, 'hashOutputs mismatch')
+    }
+
+    /**
+     * Owner mints `amount` new bonds. Requires a 3-of-5 price proof showing the vault stays
+     * at or above minRatioPct and at least minVaultCents. Output 1 must be the bond token
+     * for exactly `amount`, held by the owner. `restOutputs` are the funding wallet's own outputs (change).
+     */
+    @method()
+    public mint(sig: Sig, amount: bigint, price: PriceProof, restOutputs: ByteString) {
+        assert(this.checkSig(sig, this.owner), 'owner signature invalid')
+        assert(amount > 0n, 'mint amount must be positive')
+        const px = this.verifyPrice(price)
+        this.accrue(price.ts)
+        this.lastTs = price.ts
+        this.debt += amount
+
+        const value = BondVault.collateralCents(this.ctx.utxo.value, px)
+        assert(value >= this.minVaultCents, 'vault below minimum size')
+        assert(value * 100n >= this.debt * this.unitCents * this.minRatioPct, 'mint would break minimum ratio')
+
+        const outputs =
+            this.buildStateOutput(this.ctx.utxo.value) +
+            Utils.buildOutput(BondVault.bondScript(this.bondCode, this.owner, amount), 1n) +
+            restOutputs
+        assert(hash256(outputs) == this.ctx.hashOutputs, 'hashOutputs mismatch')
+    }
+
+    /**
+     * Owner closes: output 0 must be a burn receipt for at least debt + ceil(fee) bonds,
+     * and the issuer must co-sign (attesting the tx really burns that many genuine bonds).
+     * The rest of the outputs are the owner's choice (collateral unlocked).
+     */
+    @method()
+    public close(ownerSig: Sig, issuerSig: Sig, burned: bigint, restOutputs: ByteString) {
+        assert(this.checkSig(ownerSig, this.owner), 'owner signature invalid')
+        assert(this.checkSig(issuerSig, this.issuer), 'issuer burn attestation invalid')
+        assert(this.ctx.sequence < 0xffffffffn, 'nLockTime must be enforced')
+        this.accrue(this.ctx.locktime)
+        const feeBonds = (this.feeCents + this.unitCents - 1n) / this.unitCents
+        assert(burned >= this.debt + feeBonds, 'must burn debt + fee')
+        const outputs = BondVault.burnReceipt(this.outpoint(), burned) + restOutputs
+        assert(hash256(outputs) == this.ctx.hashOutputs, 'hashOutputs mismatch')
+    }
+
+    /**
+     * Anyone liquidates: price proof must show ratio < liqRatioPct. Output 0 is the burn
+     * receipt for the full debt (issuer co-signs), output 1 returns any collateral beyond
+     * debt*(1+discount) at the median price to the owner. The liquidator takes the rest.
+     */
+    @method()
+    public liquidate(price: PriceProof, issuerSig: Sig, burned: bigint, restOutputs: ByteString) {
+        assert(this.debt > 0n, 'nothing to liquidate')
+        const px = this.verifyPrice(price)
+        const value = BondVault.collateralCents(this.ctx.utxo.value, px)
+        assert(value * 100n < this.debt * this.unitCents * this.liqRatioPct, 'vault is not below liquidation ratio')
+        assert(burned >= this.debt, 'must burn the full debt')
+        assert(this.checkSig(issuerSig, this.issuer), 'issuer burn attestation invalid')
+
+        const keeperSats =
+            (this.debt * this.unitCents * (100n + this.liqDiscountPct) * BondVault.SATS_PER_BSV) / (100n * px)
+        let ownerOut = toByteString('')
+        if (this.ctx.utxo.value > keeperSats) {
+            ownerOut = Utils.buildPublicKeyHashOutput(hash160(this.owner), this.ctx.utxo.value - keeperSats)
+        }
+        const outputs = BondVault.burnReceipt(this.outpoint(), burned) + ownerOut + restOutputs
+        assert(hash256(outputs) == this.ctx.hashOutputs, 'hashOutputs mismatch')
+    }
+}

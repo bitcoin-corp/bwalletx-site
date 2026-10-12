@@ -3,23 +3,23 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>PNEEs: Penny Stablecoins</title>
+    <title>PNEEs: Pennies Backed by BSV</title>
     <link rel="canonical" href="https://bwalletx.com/pnees" />
-    <meta name="description" content="PNEEs (Penny Stablecoins): digital pennies on BSV, one US cent each, backed only by BSV locked in public vaults. No bank, no co-signer on transfers, no freeze. Live mainnet pilot." />
+    <meta name="description" content="PNEEs: one US cent each, backed by BSV locked in public vaults on BSV. Lock BSV, mint PNEEs up to a tenth of its value, spend them, close by burning them. Every vault is on a public list." />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://bwalletx.com/pnee" />
     <meta property="og:site_name" content="bWalletX" />
-    <meta property="og:title" content="PNEEs: Penny Stablecoins, backed by BSV" />
-    <meta property="og:description" content="PNEEs (Penny Stablecoins): digital pennies on BSV, one US cent each, backed only by BSV locked in public vaults. No bank, no co-signer on transfers, no freeze. Live mainnet pilot." />
-    <meta property="og:image" content="https://bwalletx.com/og-pnees-v8.png" />
+    <meta property="og:title" content="PNEEs: lock BSV, mint pennies" />
+    <meta property="og:description" content="PNEEs: one US cent each, backed by BSV locked in public vaults on BSV. Lock BSV, mint PNEEs up to a tenth of its value, spend them, close by burning them. Every vault is on a public list." />
+    <meta property="og:image" content="https://bwalletx.com/og-pnee-vaults-v1.png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
-    <meta property="og:image:alt" content="PNEEs (Penny Stablecoins): digital pennies on BSV, one US cent each, backed only by BSV locked in public vaults. No bank, no co-signer on transfers, no freeze. Live mainnet pilot." />
+    <meta property="og:image:alt" content="PNEEs: lock BSV, mint PNEEs up to 10x, spend them, close by burning them" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@bWalletX" />
-    <meta name="twitter:title" content="PNEEs: Penny Stablecoins, backed by BSV" />
-    <meta name="twitter:description" content="PNEEs (Penny Stablecoins): digital pennies on BSV, one US cent each, backed only by BSV locked in public vaults. No bank, no co-signer on transfers, no freeze. Live mainnet pilot." />
-    <meta name="twitter:image" content="https://bwalletx.com/og-pnees-v8.png" />
+    <meta name="twitter:title" content="PNEEs: lock BSV, mint pennies" />
+    <meta name="twitter:description" content="PNEEs: one US cent each, backed by BSV locked in public vaults on BSV. Lock BSV, mint PNEEs up to a tenth of its value, spend them, close by burning them. Every vault is on a public list." />
+    <meta name="twitter:image" content="https://bwalletx.com/og-pnee-vaults-v1.png" />
     <link rel="icon" href="/favicon.ico" />
     <link rel="stylesheet" href="/styles.css" />
     <style>
@@ -54,42 +54,44 @@
     <script src="/nav.js"></script>
     <main class="ext">
       <img src="/pnee-icon.svg" alt="PNEE" width="72" height="72" />
-      <h1><span class="gold">PNEEs</span> · Penny Stablecoins</h1>
-      <p class="lede">Digital pennies on BSV. Each PNEE is one US cent (ticker $PNEE), backed only by BSV locked in public vaults. Notes are cash: spend them, send them, price things in them. No bank account behind them, no co-signer on your transfers, nobody who can freeze them.</p>
-      <div class="flow"><span class="pill">Lock BSV</span><span class="arrow">&rarr;</span><span class="pill">Mint PNEEs</span><span class="arrow">&rarr;</span><span class="pill">Spend them</span></div>
+      <h1><span class="gold">PNEEs</span> · pennies backed by BSV</h1>
+      <p class="lede">A PNEE is one US cent on BSV. Every PNEE was minted against BSV locked in a vault, and every vault is public. You can lock your own BSV, mint PNEEs against it, spend them, and close the vault by burning them.</p>
+      <div class="flow"><span class="pill">Lock</span><span class="arrow">&rarr;</span><span class="pill">Mint</span><span class="arrow">&rarr;</span><span class="pill">Spend</span><span class="arrow">&rarr;</span><span class="pill">Close</span></div>
+      <p><a href="/backing">See every vault and the live backing &rarr;</a></p>
 
       <h2>How it works</h2>
-      <div class="box"><h3>Notes are pennies that add up</h3><p>One PNEE unit is one cent. A $10 note is just 1,000 of them together; they split and combine like any token, and the wallet shows dollars. PNEE is an ordinary BSV-21 token, so any 1Sat-compatible wallet can hold it.</p></div>
-      <div class="box"><h3>Vaults: lock BSV, mint notes</h3><p>Anyone can lock BSV in a vault contract and mint notes against it, up to a tenth of its value to start (10x collateral). They keep their BSV and its upside; to unlock it, they hand the notes back. BSV went from $11 to $20 in three months, so we started very safe: a vault survives an 85% fall in BSV.</p></div>
-      <div class="box"><h3>Liquidation keeps every note backed</h3><p>If BSV falls so far that a vault drops below 150%, anyone may repay its notes and take its BSV at a 10% discount. The price comes from 3 of 5 signers, using the median, with fresh timestamps.</p></div>
-      <div class="box"><h3>No interest</h3><p>Notes are cash, like banknotes: holders don&rsquo;t earn interest and vault owners don&rsquo;t pay a yearly fee. The vault owner&rsquo;s reward is spendable dollars without selling their BSV.</p></div>
+      <div class="box"><h3>Lock</h3><p>In bWalletX, Wallet &rsaquo; PNEEs &rsaquo; the lock icon. You choose how much BSV to lock. It goes into a vault script on BSV that is owned by a key of your wallet. Nobody else can move it while the vault is above its floor.</p></div>
+      <div class="box"><h3>Mint</h3><p>You can mint PNEEs up to a tenth of the vault&rsquo;s value: $10 of BSV backs up to $1 of PNEEs (a ratio of 1000%). The script checks this itself against a fresh BSV price, so a mint that goes over the limit is not a valid transaction. You can mint in steps until the vault reaches 10x.</p></div>
+      <div class="box"><h3>Spend</h3><p>PNEEs move like any token: send some to another bWalletX user and the rest comes back to you. A send can&rsquo;t create or lose PNEEs: the script makes the amounts add up.</p></div>
+      <div class="box"><h3>Close</h3><p>To unlock your BSV, burn exactly the PNEEs the vault minted. The close transaction burns them and sends all the vault&rsquo;s BSV back to your wallet, less the network fee. There is no fee for the vault itself.</p></div>
+      <div class="box"><h3>Top up</h3><p>You can add BSV to a vault at any time. It raises the ratio and the amount the vault can back.</p></div>
 
-      <h2>PNEEs and MNEE</h2>
+      <h2>The safety valve: the 150% floor</h2>
+      <div class="box"><p>If the BSV price falls until a vault holds less than 150% of the value of its PNEEs, anyone may close that vault. They burn all its PNEEs and take BSV worth those PNEEs plus 10%. The rest of the vault&rsquo;s BSV goes back to its owner, paid by the script. From 1000%, the price has to fall by 85% before a vault reaches the floor. The <a href="/backing">backing page</a> shows which vaults are near it.</p></div>
       <table class="cmp">
-        <tr><th></th><th>PNEEs</th><th>MNEE</th></tr>
-        <tr><td>Backed by</td><td>BSV locked in public vaults, visible on chain</td><td>US dollars held by a company</td></tr>
-        <tr><td>Can your transfer be blocked?</td><td>No: notes move freely</td><td>Every transfer is co-signed by MNEE&rsquo;s server</td></tr>
-        <tr><td>If BSV crashes</td><td>Protected by 10x collateral and liquidations</td><td>Unaffected (dollar reserves)</td></tr>
+        <tr><th>Rule</th><th>Value</th><th>Where it lives</th></tr>
+        <tr><td>1 PNEE</td><td>1 US cent</td><td>vault script</td></tr>
+        <tr><td>Mint up to</td><td>1000% (10x)</td><td>vault script</td></tr>
+        <tr><td>Floor</td><td>150%</td><td>vault script</td></tr>
+        <tr><td>Discount below the floor</td><td>10%</td><td>vault script</td></tr>
+        <tr><td>Vault fee</td><td>none</td><td>vault script</td></tr>
+        <tr><td>Price</td><td>median of 3 of 5 signers, at most 10 minutes old</td><td>vault script</td></tr>
       </table>
 
-      <h2>The mainnet pilot (live)</h2>
-      <p>PNEEs are live on BSV mainnet in a small, capped pilot: a $5 cap per vault and $10 in total.</p>
-      <ul>
-        <li>Token: <a href="https://whatsonchain.com/tx/1599c4e49a28c7791295f50613e1545aa9246dd592ae8b8f696b81916a475ae4">1599c4e49a…_0</a> (BSV-21, 2 decimals). The whole supply sits in the issuer treasury; notes leave it only when a vault mints.</li>
-        <li>First vault: <a href="https://whatsonchain.com/tx/3a782a53ea17fdea202488c7d4e0ca335be85d1663b9a6bfb87e9435245d78f2">3a782a53…</a>, 12,500,000 sats of BSV (about $2.54) locked.</li>
-        <li>First mint: <a href="https://whatsonchain.com/tx/de18356cb0560547d68776941a921c28fe04227b7f9e892ebbefbd1e43a00980">de18356c…</a>, 25 PNEEs, checked against a 3-of-5 price of $20.32.</li>
-        <li>First release: <a href="https://whatsonchain.com/tx/913e2a786da02d21b86d4d688e25a3879879ac6e62130cfd0ebacb4657145c5a">913e2a78…</a>, 25 PNEE from the treasury to the vault owner.</li>
-        <li>First liquidation (5 Oct 2026): a small, clearly labelled demo vault (<a href="https://whatsonchain.com/tx/9f9f53438a8a2463935eadf62bc221f4d035c9e1c55e0376fad801ed6de4a727">9f9f5343…</a>, 1,000,000 sats, 2 PNEEs) whose on-chain rules allow liquidation below 1100%, so it could be shown at the real price. At a 3-of-5 median of $20.09 the vault stood at 1000%. The liquidator burned the 2 PNEEs (<a href="https://whatsonchain.com/tx/640acc972dd08f95b027d4ddc58bf39ce1c45782c73d15300b92f590dd4e0d29">640acc97…</a>) and liquidated the vault (<a href="https://whatsonchain.com/tx/7d496a59ef82e3dfbb763f52cae5063535c4273a9812ac643714da093400be4e">7d496a59…</a>): the contract paid the liquidator the debt plus the 10% discount (106,558 sats after the fee) and returned the rest, 890,493 sats, to the vault owner. Real vaults use 150%; the main pilot vault is at about 1000% and is not liquidatable.</li>
-      </ul>
+      <h2>Who runs the price signers</h2>
+      <div class="box"><p>The BSV price a vault uses is signed by five price signers; a mint or a close below the floor needs three of them on the same round, and the script takes their median. Today <strong>all five signer keys are run by The Bitcoin Corporation Ltd</strong> on the bwallet.space server, from public price sources. The same server holds the burn attester key: it co-signs a close only after checking that the PNEEs being burned were minted by a vault and add up to the vault&rsquo;s PNEEs. Both keys are fixed into each vault when it is opened, and their public values are at <a href="https://www.bwallet.space/api/pnee?op=config">bwallet.space/api/pnee?op=config</a>.</p></div>
 
-      <h2>What we haven&rsquo;t solved yet</h2>
-      <div class="box"><h3>Honest trust model</h3><p>The vault contract can&rsquo;t yet see by itself that notes were really burned, so for now the issuer (bCorp) co-signs note releases and burns, in public on chain. The five price signers are run by us during the pilot. Both are fine for a few dollars and not for real money: independent price signers and an on-chain burn check come before any meaningful amount.</p></div>
+      <h2>The contract</h2>
+      <p>The vault and the token are two sCrypt contracts, compiled to Bitcoin Script. Read them here: <a href="/pnee-source/bondVault.ts.txt">bondVault.ts</a> and <a href="/pnee-source/bondToken.ts.txt">bondToken.ts</a>. The wallet builds each vault from the compiled template whose fingerprint is listed in <a href="/pnee-source/README.txt">README.txt</a>, and checks every script byte for byte against test transactions.</p>
+
+      <h2>Earlier pilot</h2>
+      <p>Before vaults were in the wallet, a capped pilot ran on mainnet with vaults opened from the command line. Its first close below the floor was a labelled demo vault: <a href="https://whatsonchain.com/tx/7d496a59ef82e3dfbb763f52cae5063535c4273a9812ac643714da093400be4e">7d496a59&hellip;</a>, where the script paid the closer the PNEEs plus 10% and returned 890,493 sats to the owner.</p>
 
       <div class="row">
-        <a class="btn btn-store" href="/exchange">Exchange &rsaquo; Bonds</a>
+        <a class="btn btn-store" href="/backing">The live backing</a>
         <a class="btn btn-store btn-ghost" href="/get">Get bWalletX</a>
       </div>
-      <p class="small">PNEEs are an experiment. Don&rsquo;t put in more than you can lose. Questions: <a href="mailto:support@bwalletx.com">support@bwalletx.com</a></p>
+      <p class="small">PNEEs are new software. Questions: <a href="mailto:support@bwalletx.com">support@bwalletx.com</a></p>
     </main>
   </body>
 </html>

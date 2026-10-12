@@ -1,0 +1,77 @@
+// PNEE contract source as compiled for bWalletX (bwalletx-bond, 12 Oct 2026). Some comments below date from the
+// testnet prototype, when the units were $1 bonds; the deployment uses 1-cent PNEEs (see README.txt).
+
+import {
+    assert,
+    ByteString,
+    hash256,
+    method,
+    prop,
+    PubKey,
+    Sig,
+    SmartContract,
+    toByteString,
+} from 'scrypt-ts'
+
+/**
+ * $1 bond token UTXO (TESTNET prototype).
+ *
+ * State: holder + amount (whole dollars). One UTXO = one balance.
+ *
+ * On-chain rules this script enforces:
+ *  - only the holder can move it (checkSig);
+ *  - `transfer` conserves the amount: it must create exactly one token output for the
+ *    recipient and (if anything is left) one change token output back to the holder,
+ *    both with this same token code, followed by the funding wallet's own outputs (`restOutputs`);
+ *  - `burn` destroys it (no token output is required or allowed to carry the amount on).
+ *
+ * What this script can NOT enforce (back-to-genesis problem, same as BSV-21):
+ *  - that a UTXO carrying this code was actually minted by a BondVault. Anyone can deploy
+ *    this script with any amount. Authenticity = "traces back to a BondVault.mint output",
+ *    which is checked off-chain by an indexer (here: the issuer co-signer).
+ *  - merging several token UTXOs into one (each script only sees itself).
+ */
+export class BondToken extends SmartContract {
+    @prop(true)
+    holder: PubKey
+
+    @prop(true)
+    amount: bigint
+
+    constructor(holder: PubKey, amount: bigint) {
+        super(...arguments)
+        this.holder = holder
+        this.amount = amount
+    }
+
+    /** `restOutputs` are the funding wallet's own outputs after the token outputs (its change). */
+    @method()
+    public transfer(sig: Sig, to: PubKey, sendAmount: bigint, restOutputs: ByteString) {
+        assert(this.checkSig(sig, this.holder), 'holder signature invalid')
+        assert(sendAmount > 0n && sendAmount <= this.amount, 'bad amount')
+
+        const keep = this.amount - sendAmount
+        const holder = this.holder
+
+        this.holder = to
+        this.amount = sendAmount
+        let outputs: ByteString = this.buildStateOutput(1n)
+
+        if (keep > 0n) {
+            this.holder = holder
+            this.amount = keep
+            outputs += this.buildStateOutput(1n)
+        }
+        outputs += restOutputs
+        assert(hash256(outputs) == this.ctx.hashOutputs, 'hashOutputs mismatch')
+    }
+
+    @method()
+    public burn(sig: Sig) {
+        assert(this.checkSig(sig, this.holder), 'holder signature invalid')
+        // Nothing else: spending through `burn` destroys the balance. Indexers treat any
+        // `burn` spend as a burn of `amount`, and the BondVault's close/liquidate paths
+        // count it via the issuer-attested burn receipt.
+        assert(toByteString('') == toByteString(''))
+    }
+}
