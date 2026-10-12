@@ -635,7 +635,7 @@ Chrome, Edge and Safari · your keys stay encrypted in your browser
 
 desktop.bwalletx.com
 
-WalletbMailChatSpacesFeedbAppsAgent b
+WalletbMailChatSpacesFeedbAppsAsk b
 
 Money
 
@@ -1637,12 +1637,12 @@ Each release ships to the Android APK, the Chrome extension and the web wallet. 
 
 - Media: a new store front with big square album covers, shelves and release pages
 - Add a release: publish your music or video with a square cover, on chain
-- Ask b’s suggestions drift smoothly and read larger
+- Agent b’s suggestions drift smoothly and read larger
 
 ## 5.2.12 2026-10-12
 
 - Hold the gold b to talk to b: your words appear in the box, nothing sends until you do
-- Ask b opens on a full black pool with gentle suggestions
+- Agent b opens on a full black pool with gentle suggestions
 - Desktop opens with just a big gold b
 
 ## 5.2.11 2026-10-12
@@ -7481,6 +7481,200 @@ Either way the money goes straight to the artist, as it comes in. No waiting wee
 Related: [Home](https://bwalletx.com/) · [Features](https://bwalletx.com/features) · [Developers](https://bwalletx.com/developers)
 
 [← 038 Swap into BSV](https://bwalletx.com/blog/038-swap-into-bsv)[040 Pay artists by the second →](https://bwalletx.com/blog/040-pay-artists-by-the-second)
+
+---
+
+Source: https://bwalletx.com/blog/040-pay-artists-by-the-second
+
+[Development blog](https://bwalletx.com/blog) · 040 · 12 Oct 2026
+
+# Pay artists by the second
+
+Echoes in the Abyss by VexVoid is in bWalletX. The first six tracks are free, the rest cost 1 sat a second, and the money goes straight to the artist.
+
+## One album, twelve tracks
+
+Open Media in bWalletX Desktop and the album is on the front shelf, with a big square cover. Track 1 is free. Tracks 2 to 6 are sponsored: VexVoid pays for your listening from a pot, so you hear them free too.
+
+Tracks 7 to 12 cost 1 sat for each second you listen. Stop when you like and you stop paying. Every sat goes to the artist's wallet as you listen, not weeks later.
+
+## The listener board
+
+Fans can opt in to a board of top listeners, with their rank and badges. It is your choice to join, and you can opt out again at any time.
+
+## For artists
+
+Press "Add a release" in bWalletX Desktop to publish your own music or video with a square cover, on chain. Listeners pay you by the second, and you can sponsor them from a pot so they hear you free.
+
+The new page at bwalletx.com/artists shows the album and how to start.
+
+Related: [Home](https://bwalletx.com/) · [Features](https://bwalletx.com/features) · [Developers](https://bwalletx.com/developers)
+
+[← 039 bGigs: your stage, your fans](https://bwalletx.com/blog/039-bgigs-your-stage-your-fans)[041 NFTs that just work →](https://bwalletx.com/blog/041-nfts-that-just-work)
+
+---
+
+Source: https://bwalletx.com/blog/041-nfts-that-just-work
+
+[Development blog](https://bwalletx.com/blog) · 041 · 12 Oct 2026
+
+# NFTs that just work
+
+Sending an NFT is now two steps. NFTs sent to you say who sent them, open in a viewer, and wait for you to keep them. Video NFTs show their cover, and duplicates can be burned.
+
+## Send in two steps
+
+Choose "Who gets it?", then press one Send button. That's all. If a send does fail, the wallet tells you why.
+
+## When someone sends you one
+
+NFTs sent to you show who sent them. Tap one to open it in a viewer. If you want it, press Keep and it moves into your NFTs. If not, leave it where it is.
+
+## Video covers
+
+Video NFTs show their cover art in the list, and they play on iPhone too.
+
+## Burn the duplicates
+
+If you have more copies than you want, open one and choose Burn. You confirm by typing BURN or holding the button for two seconds. If it is your only copy, the wallet warns you first.
+
+Related: [Home](https://bwalletx.com/) · [Features](https://bwalletx.com/features) · [Developers](https://bwalletx.com/developers)
+
+[← 040 Pay artists by the second](https://bwalletx.com/blog/040-pay-artists-by-the-second)[042 Chats that feel like Telegram →](https://bwalletx.com/blog/042-chats-that-feel-like-telegram)
+
+---
+
+Source: https://bwalletx.com/blog/042-chats-that-feel-like-telegram
+
+[Development blog](https://bwalletx.com/blog) · 042 · 12 Oct 2026
+
+# Chats that feel like Telegram
+
+Chats in bWalletX open straight away and the list stays still. Swipe a chat to pin, mute, archive or mark it read.
+
+## Instant
+
+Tap a chat and it opens. The list no longer jumps about while it loads.
+
+## Swipe to sort
+
+Swipe a chat to pin it to the top, mute it, archive it or mark it read, the way Telegram does it.
+
+## Archived, out of the way
+
+Archived chats go into one Archived row at the top of the list. Tap it to open them, and the rest of your list stays clear.
+
+Related: [Home](https://bwalletx.com/) · [Features](https://bwalletx.com/features) · [Developers](https://bwalletx.com/developers)
+
+[← 041 NFTs that just work](https://bwalletx.com/blog/041-nfts-that-just-work)[043 Ask b →](https://bwalletx.com/blog/043-ask-b)
+
+---
+
+Source: https://bwalletx.com/blog/043-ask-b
+
+[Development blog](https://bwalletx.com/blog) · 043 · 12 Oct 2026
+
+# Ask b
+
+b, the helper inside bWalletX, has a calmer home. Hold the gold b to talk, and your chats on bChatX now have their own links and are encrypted with your wallet.
+
+## A quiet place to ask
+
+b opens on a dark pool with a few gentle suggestions drifting past: a savings pot, sending money to someone, pocket money. Or just type your own question.
+
+## Hold to talk
+
+Hold the gold b and speak. Your words appear in the box, and nothing sends until you do. b can fill in a payment for you, but nothing goes until you say so.
+
+## Your chats with b, kept private
+
+On bChatX, Ask b lives at bchatx.com/ask-b. Each chat has its own link, so you can come back to it. Pin the ones you use and hide the ones you don't; opening hidden chats asks your wallet to sign first.
+
+With bWalletX connected, your chats are encrypted by your wallet before they are saved. We store the locked copy, not the words.
+
+## What's not done
+
+- Each message you send b still goes to the AI provider to be answered, in plain text, so it can reply.
+
+Related: [Home](https://bwalletx.com/) · [Features](https://bwalletx.com/features) · [Developers](https://bwalletx.com/developers)
+
+[← 042 Chats that feel like Telegram](https://bwalletx.com/blog/042-chats-that-feel-like-telegram)[044 Your token's own page and agent →](https://bwalletx.com/blog/044-your-tokens-own-page-and-agent)
+
+---
+
+Source: https://bwalletx.com/blog/044-your-tokens-own-page-and-agent
+
+[Development blog](https://bwalletx.com/blog) · 044 · 12 Oct 2026
+
+# Your token's own page and agent
+
+Every token on bChatX has a full page: price, chart, holders, posts and a Buy button. Its creator can give it an agent, and holders can show a badge name.
+
+## A page for every token
+
+Open a token, like bchatx.com/t/VEXVOID, to see the token's price and chart, its holders, whether its Space is live, its posts and a Buy button. Tap any avatar to see it full screen. The pages also have their own share cards.
+
+## Token agents
+
+A token's creator can give it an agent with a name ending in .agent, like vexvoid.agent. It greets people, welcomes new holders and answers questions about the token in its room, using what was said there recently. It never talks about price.
+
+Names with a dot are reserved for these, so nobody can claim a lookalike.
+
+## Badge names and members
+
+In a token room your name shows with the token beside it, like john.frogger, while you hold it. Holders can choose to appear in the token's members list, and choose who may message them: any holder, only people they've chatted with, or nobody. A first message arrives as a request you can accept.
+
+Related: [Home](https://bwalletx.com/) · [Features](https://bwalletx.com/features) · [Developers](https://bwalletx.com/developers)
+
+[← 043 Ask b](https://bwalletx.com/blog/043-ask-b)[045 Your card, your art →](https://bwalletx.com/blog/045-your-card-your-art)
+
+---
+
+Source: https://bwalletx.com/blog/045-your-card-your-art
+
+[Development blog](https://bwalletx.com/blog) · 045 · 12 Oct 2026
+
+# Your card, your art
+
+The card in bWalletX can wear your own pictures or your NFTs, with standard colour sliders. And bPics lets you mint a picture from your phone.
+
+## Design your card
+
+The card designer now has standard colour sliders. Pick "My pictures" to use a photo, or "My NFTs" to put one of your NFTs on your card. A swivel icon on the back flips it round again.
+
+## bPics
+
+bPics is new. Take or choose a picture and mint it, so it is yours on chain. You can share it in a public library, or keep it to yourself. Sharing is your choice, picture by picture.
+
+Related: [Home](https://bwalletx.com/) · [Features](https://bwalletx.com/features) · [Developers](https://bwalletx.com/developers)
+
+[← 044 Your token's own page and agent](https://bwalletx.com/blog/044-your-tokens-own-page-and-agent)[046 Stays unlocked, sends exactly →](https://bwalletx.com/blog/046-stays-unlocked-sends-exactly)
+
+---
+
+Source: https://bwalletx.com/blog/046-stays-unlocked-sends-exactly
+
+[Development blog](https://bwalletx.com/blog) · 046 · 12 Oct 2026
+
+# Stays unlocked, sends exactly
+
+bWalletX no longer locks itself after a few minutes, and fingerprint unlock on Android works again. Token sends show the exact amount before anything is paid.
+
+## No more surprise locks
+
+Auto-lock now defaults to Never. You can still lock the wallet yourself, or set a timer in Settings if you prefer one.
+
+## Fingerprint on Android
+
+Fingerprint unlock works again on Android. If it ever needs setting up again, the wallet asks you.
+
+## Token sends you can check
+
+Before a token send pays the indexer, you see the exact amount and confirm it. If your wallet is out of date for that token, one tap on "Fix and send" puts it right and sends.
+
+Related: [Home](https://bwalletx.com/) · [Features](https://bwalletx.com/features) · [Developers](https://bwalletx.com/developers)
+
+[← 045 Your card, your art](https://bwalletx.com/blog/045-your-card-your-art)[All posts →](https://bwalletx.com/blog)
 
 ---
 
