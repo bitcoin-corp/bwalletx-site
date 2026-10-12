@@ -1,0 +1,21 @@
+{
+  "name": "bWalletX",
+  "short_name": "bWalletX",
+  "description": "The BSV wallet for tokens, media and apps, by The Bitcoin Corporation Ltd. Paymail and on-chain names at bwalletx.com.",
+  "start_url": "https://bwalletx.com/",
+  "icons": [
+    { "src": "https://bwalletx.com/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "https://bwalletx.com/icon-512.png", "sizes": "512x512", "type": "image/png" }
+  ],
+  "metanet": {
+    "groupPermissions": {
+      "description": "bWalletX needs your identity public key to show your name and paymail at bwalletx.com. Spending always requires a separate approval.",
+      "protocolPermissions": [
+        {
+          "protocolID": [1, "identity key retrieval"],
+          "description": "Read your wallet identity public key"
+        }
+      ]
+    }
+  }
+}
