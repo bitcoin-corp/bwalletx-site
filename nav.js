@@ -98,11 +98,11 @@
       // Blog: when you publish a post, add it to the top of LATEST and drop the oldest (keep 5).
       { label: 'Blog', href: '/blog', pages: ['/blog', '/releases'], pills: false,
         sub: [{ label: 'All posts', href: '/blog' }, { label: 'Releases', href: '/releases' }, { head: 'Latest' }].concat([
-          { label: '038 Swap into BSV', href: '/blog/038-swap-into-bsv' },
-          { label: '037 Portfolio vs market', href: '/blog/037-portfolio-vs-market' },
-          { label: '036 Subscriptions in dollars', href: '/blog/036-subscriptions-in-dollars' },
-          { label: '035 Pots & Locks', href: '/blog/035-pots-and-locks' },
-          { label: '034 Open apps, open protocol', href: '/blog/034-open-apps-open-protocol' }
+          { label: '053 Friends, bPics, video', href: '/blog/053-friends-bpics-and-video' },
+          { label: '052 Tip buttons', href: '/blog/052-tip-buttons' },
+          { label: '051 Spaces on a schedule', href: '/blog/051-spaces-schedule-and-ask-b' },
+          { label: '050 AIVJ.TV: VexVoid, live', href: '/blog/050-aivj-tv-vexvoid-live' },
+          { label: '049 The Exchange, sorted', href: '/blog/049-the-exchange-sorted' }
         ], [{ head: 'Series: Chat on BSV' },
           { label: '021 Coordinate on BSV', href: '/blog/021-coordinate-on-bsv' },
           { label: '026 Paying to be heard', href: '/blog/026-paying-to-be-heard' },
