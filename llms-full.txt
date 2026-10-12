@@ -1501,6 +1501,13 @@ Each release ships to the Android APK, the Chrome extension and the web wallet. 
 
 ## 5.2.9 2026-10-12
 
+- Sending an NFT is simpler: choose “Who gets it?”, then press one Send button
+- The wallet no longer locks itself after a few minutes: auto-lock now defaults to Never
+- NFTs sent to you show who sent them, and open in a viewer
+- Press Keep to move them into your NFTs
+
+## 5.2.8 2026-10-12
+
 - bWalletX Desktop at desktop.bwalletx.com: your whole wallet on a big screen, with bMail, bChat, Spaces, bGames and bFeed in the side menu
 - If an NFT send fails, the wallet now tells you why instead of “unknown error, try again”
 - Only NFTs that are really on the blockchain are listed, and a Refresh NFTs button is at the bottom of the list
