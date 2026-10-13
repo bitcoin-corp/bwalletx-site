@@ -1,0 +1,307 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Get your name on Bitcoin</title>
+    <link rel="canonical" href="https://bwalletx.com/names" />
+    <meta name="description" content="Your own name on Bitcoin, yours forever. One payment, no renewals: $1 for five letters or more, $5 for four, $15 for three. Search it, buy it or claim it, and give one to a friend, in bWalletX." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://bwalletx.com/names" />
+    <meta property="og:site_name" content="bWalletX" />
+    <meta property="og:title" content="Get your name on Bitcoin" />
+    <meta property="og:description" content="Yours forever. One payment, no renewals. $1 for five letters or more, $5 for four, $15 for three. Search, buy or claim it in bWalletX." />
+    <meta property="og:image" content="https://bwalletx.com/og-names-v1.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Get your name on Bitcoin: alice, alice@bwalletx.com, $1.00, Buy alice." />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@bWalletX" />
+    <meta name="twitter:title" content="Get your name on Bitcoin" />
+    <meta name="twitter:description" content="Yours forever. One payment, no renewals. $1 for five letters or more, $5 for four, $15 for three. Search, buy or claim it in bWalletX." />
+    <meta name="twitter:image" content="https://bwalletx.com/og-names-v1.png" />
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="stylesheet" href="/styles.css" />
+    <style>
+      /* The Name Store's look (desktop.bwalletx.com/names), on the site: gold pool behind, dark cards on top. */
+      .nm-wrap { position: relative; isolation: isolate; }
+      .nm-pool { position: fixed; inset: 0; z-index: -1; pointer-events: none; background: radial-gradient(circle at 50% 40%, #3a2a08 0%, #170f04 45%, #050403 80%); }
+      .nm-pool canvas { position: absolute; inset: 0; width: 100%; height: 100%; }
+      .nm-pool .dim { position: absolute; inset: 0; background: rgba(0,0,0,.58); }
+      .nm { max-width: 1040px; margin: 0 auto; padding: 56px 16px 120px; color: #f4f1e8; }
+      .nm-kicker { display: block; text-align: center; font-size: 11px; font-weight: 600; letter-spacing: .18em; text-transform: uppercase; color: #F5B800; }
+      .nm h1 { text-align: center; font-size: clamp(2.3rem, 7vw, 3.6rem); line-height: 1.05; letter-spacing: -.035em; margin: 14px auto 12px; max-width: 16ch; }
+      .nm .lede { text-align: center; color: rgba(244,241,232,.82); margin: 0 auto 30px; max-width: 46ch; }
+      .nm-search { display: flex; gap: 8px; max-width: 640px; margin: 0 auto; background: #0b0c0f; border: 1px solid rgba(244,241,232,.14); border-radius: 18px; padding: 8px 8px 8px 18px; align-items: center; }
+      .nm-search input { flex: 1; min-width: 0; background: transparent; border: 0; outline: 0; color: #fff; font-size: 1.05rem; padding: 10px 0; }
+      .nm-search button { background: linear-gradient(180deg, #FFD84D, #E8A100); color: #111; border: 0; border-radius: 12px; font-weight: 700; padding: 12px 18px; cursor: pointer; white-space: nowrap; }
+      .nm-tiers { display: flex; flex-wrap: wrap; justify-content: center; gap: 6px 18px; margin: 12px auto 0; font-size: .78rem; color: rgba(244,241,232,.64); }
+      .nm-tiers b { color: #f4f1e8; font-weight: 600; }
+      .nm-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 36px; }
+      @media (max-width: 760px) { .nm-grid { grid-template-columns: 1fr; } }
+      .nm-card { background: rgba(7,8,10,.72); border: 1px solid rgba(244,241,232,.14); border-radius: 24px; padding: 28px; min-height: 240px; display: flex; flex-direction: column; justify-content: center; }
+      .nm-card h2 { margin: 0 0 6px; font-size: 1.5rem; letter-spacing: -.02em; }
+      .nm-card h2 .gold { color: #F5B800; }
+      .nm-card p { margin: 0; color: rgba(244,241,232,.82); line-height: 1.55; }
+      .nm-card .muted { color: rgba(244,241,232,.64); font-size: .9rem; }
+      .nm-cta { display: inline-block; margin-top: 18px; background: linear-gradient(180deg, #FFD84D, #E8A100); color: #111 !important; text-decoration: none; font-weight: 700; border-radius: 12px; padding: 12px 18px; }
+      .nm-cta.ghost { background: transparent; color: #F5B800 !important; border: 1px solid rgba(245,184,0,.5); }
+      .nm-sugg { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
+      .nm-sugg button { background: #17191E; color: #f4f1e8; border: 1px solid rgba(244,241,232,.14); border-radius: 999px; padding: 6px 12px; font-size: .85rem; cursor: pointer; }
+      .nm-prev { background: linear-gradient(160deg, rgba(245,184,0,.10), rgba(245,184,0,.02) 55%), rgba(7,8,10,.74); }
+      .nm-prev .tag { font-size: 11px; letter-spacing: .18em; text-transform: uppercase; color: rgba(244,241,232,.64); margin-bottom: 18px; }
+      .nm-prev .who { display: flex; align-items: center; gap: 14px; margin-bottom: 18px; }
+      .nm-prev .who img { width: 52px; height: 52px; border-radius: 50%; background: #17191E; }
+      .nm-prev .who b { display: block; font-size: 1.25rem; }
+      .nm-prev .who span { color: rgba(244,241,232,.64); font-size: .9rem; }
+      .nm-prev dl { display: grid; grid-template-columns: 70px 1fr; gap: 8px 14px; margin: 0; font-size: .92rem; }
+      .nm-prev dt { color: #F5B800; font-weight: 600; }
+      .nm-prev dd { margin: 0; color: rgba(244,241,232,.82); }
+      .nm-rail { margin-top: 44px; }
+      .nm-rail h3 { margin: 0 0 12px; font-size: 1.15rem; }
+      .nm-rail h3 span { color: rgba(244,241,232,.64); font-weight: 400; font-size: .9rem; margin-left: 10px; }
+      .nm-tiles { display: grid; grid-template-columns: repeat(auto-fill, minmax(118px, 1fr)); gap: 10px; }
+      .nm-tiles a { display: block; background: rgba(7,8,10,.72); border: 1px solid rgba(244,241,232,.14); border-radius: 14px; padding: 12px; text-decoration: none; color: #f4f1e8; }
+      .nm-tiles a b { display: block; font-weight: 600; overflow: hidden; text-overflow: ellipsis; }
+      .nm-tiles a span { display: block; color: rgba(244,241,232,.64); font-size: .85rem; margin-top: 2px; }
+      .nm-tiles a i { display: block; color: #F5B800; font-style: normal; font-size: .8rem; margin-top: 8px; }
+      .nm-what { margin-top: 56px; max-width: 760px; margin-left: auto; margin-right: auto; background: rgba(7,8,10,.72); border: 1px solid rgba(244,241,232,.14); border-radius: 18px; padding: 6px 20px; }
+      .nm-what summary { cursor: pointer; padding: 12px 0; font-weight: 600; }
+      .nm-what p { color: rgba(244,241,232,.82); line-height: 1.6; }
+      .nm .small { color: rgba(244,241,232,.5); font-size: .85rem; text-align: center; margin-top: 40px; }
+    </style>
+  </head>
+  <body>
+    <div class="beta-banner">bWalletX is in <strong>beta</strong>: test with small amounts.</div>
+    <header class="topbar">
+      <div class="wrap topbar-in">
+        <a class="brand" href="/"><img src="/logo.svg" alt="" width="34" height="30" /><span>bWallet<span class="gold">X</span></span></a>
+        <nav aria-label="Pages">
+          <a href="/features">Features</a><a href="/exchange">Exchange</a><a href="/social">Social</a><a href="/agent">Agents</a><a href="/extension">Extension</a><a href="/developers">Developers</a>
+        </nav>
+        <span class="nav-cta"><a class="dl-btn" href="/get">Download</a><a class="web-btn" href="https://web.bwalletx.com" target="_blank" rel="noopener">Web &rarr;</a></span>
+      </div>
+    </header>
+    <script src="/nav.js"></script>
+    <div class="nm-wrap">
+      <div class="nm-pool" aria-hidden="true"><canvas id="nm-canvas"></canvas><div class="dim"></div></div>
+      <main class="ext nm">
+        <span class="nm-kicker">Names</span>
+        <h1>Get your name on Bitcoin.</h1>
+        <p class="lede">Yours forever. One payment, no renewals.</p>
+
+        <form class="nm-search" id="nm-form" role="search">
+          <input id="nm-q" type="text" placeholder="Find your name" autocomplete="off" autocapitalize="none" spellcheck="false" maxlength="64" aria-label="Find your name" />
+          <button type="submit">Search &rarr;</button>
+        </form>
+        <div class="nm-tiers"><span>5+ characters <b>$1.00</b></span><span>4 characters <b>$5.00</b></span><span>3 characters <b>$15.00</b></span><span>Shorter or special names: make an offer</span></div>
+
+        <div class="nm-grid">
+          <section class="nm-card" id="nm-result" aria-live="polite">
+            <h2>Type a name to start.</h2>
+            <p class="muted">Letters, numbers and dashes. First come, first served.</p>
+          </section>
+          <aside class="nm-card nm-prev">
+            <div class="tag">What it becomes</div>
+            <div class="who"><img id="nm-avatar" alt="" /><div><b id="nm-pv-name">yourname</b><span id="nm-pv-mail">yourname@bwalletx.com</span></div></div>
+            <dl>
+              <dt>Pay me</dt><dd>Anyone with bWalletX pays you by typing <span class="nm-pv">yourname</span>.</dd>
+              <dt>Profile</dt><dd><span class="nm-pv">yourname</span>@bwalletx.com shows your name and picture.</dd>
+              <dt>Yours</dt><dd>One payment. No renewals, no expiry.</dd>
+            </dl>
+          </aside>
+        </div>
+
+        <div id="nm-rails"></div>
+
+        <details class="nm-what">
+          <summary>What is this?</summary>
+          <p>These are on-chain names (OpNS) on Bitcoin SV. Each name is a 1-sat ordinal inscription held by your wallet, not an account we can take back. Once it&rsquo;s yours it stays yours: no renewals and no expiry.</p>
+          <p>New names are first come, first served: claiming one mines it on your device and pays a small network fee. Names already claimed can only be bought if their owner lists them.</p>
+          <p>Prices are set in US dollars and paid in BSV at the live rate when you buy, plus a small network fee. Purchases are final; there are no refunds.</p>
+          <p>Your name takes payments in bWalletX once you set it as your name in Settings &rsaquo; Identity.</p>
+        </details>
+
+        <p class="small">Buying, claiming and giving happen in bWalletX: <a href="https://desktop.bwalletx.com/names">desktop.bwalletx.com/names</a> or <a href="https://web.bwalletx.com/names">web.bwalletx.com/names</a>. Questions: <a href="mailto:support@bwalletx.com">support@bwalletx.com</a></p>
+      </main>
+    </div>
+
+    <script>
+      // Same mechanics as the Name Store in bWalletX (src/mobile/names/store): availability from the 1Sat name
+      // tree, listings from the 1Sat market feed, tier prices by length, offer-only names, and the wallet for the
+      // buy / claim / give step (desktop.bwalletx.com/names?q=<name>).
+      (function () {
+        var STORE = 'https://desktop.bwalletx.com/names';
+        var HOUSE = { '1A3SPh9TwVAwmBv9d8VTczwKq761s1byt7': 1, '12EZT8mTDNsnCzW7XqvMwfLV44fcA2AWg4': 1, '14rHQU9DHjQhbtXMmnNc6M943XjZBF9oWs': 1, '1F4J9KkMoqtznXPJuCgb98LRymssc8MFfd': 1 };
+        var PREMIUM = ["1shot","401","402","academy","aibc","aibuildersclub","aigf","aigirlfriends","airdrop","airdrops","aitr","aitribes","aivj","aivjs","anthropic","arweave","audex","auth0","b0-x","b0ase","b0asecom","b0asex","b0s","b3d","bbooks","bbrowser","bcal","bchat","bchatx","bcode","bcorp","bdesktop","bdns","bdrive","beautyqueen","beautyqueenai","bedu","bexchange","bfile","bgame","bgit","billion","bit-sign","bit-trust","bitcdn","bitcoin-os","bitcoin3d","bitcoinapps","bitcoinart","bitcoinbooks","bitcoinbrowser","bitcoincalendar","bitcoinchat","bitcoincode","bitcoincorp","bitcoincorporation","bitcoindns","bitcoindrive","bitcoineducation","bitcoinemail","bitcoinfile","bitcoingaming","bitcoinidentity","bitcoinjobs","bitcoinmail","bitcoinmaps","bitcoinmarketplace","bitcoinmovies","bitcoinmusic","bitcoinos","bitcoinpaint","bitcoinphotos","bitcoinradio","bitcoinsheets","bitcoinsocial","bitcoinspreadsheet","bitcoinwriter","bitdns","bitgit","bitgold","bitpension","bitsign","bittrust","bjobs","bluesky","bmail","bmailx","bmaps","bmarket","bmint","bmoney","bmoneyx","bmovie","bmovies","bmoviesx","bmusic","bmusicx","boase","bpaint","bphotos","bpic","bpics","bradio","brc100","bsearch","bsheet","bsheets","bsocial","bspace","bspaces","bsv21","bsvapi","btrust","btv","bvid","bvideo","bwallet","bwalletx","bwrite","bwriter","cashback","cashboard","cashflow","cashhandle","cashhandletoken","cboard","cherry","cherry-x","cherryx","claude","clawminer","cloudflare","coinbase-tx","copilot","cortana","coursekings","cryptography","custody","cyber","cypherpunk","cypherpunks","debian","deepseek","digital-cash","digitalgold","divvy","dns-dex","docker","docusign","dropbox","e-cash","empire","encryption","escrow","etrade","fanclub","faucet","fediverse","ffnews","fidelity","firebase","floop","floopwallet","fnews","ftse","gateway","genius","giggle","gitlab","goldmine","grok","hardmoney","hashcash","hctoken","heroku","hflix","hodler","hubspot","huggingface","hyperflix","indextoken","interiordesignpro","interiorvision","ipfs","jackpot","jira","justb","kintsugi","kintsugiai","klarna","kubernetes","kweg","kwegwong","launchpad","launchpads","libertas","libertascoffee","liberty","lightning","lilithtattoo","llama","lucky7","macbook","macos","mainnet","marina3d","mars3d","masterclass","mastodon","mcpy","memecoin","mempool","merkle","metagraph","micropay","micropayment","midjourney","mikro","mikrocosm","minecraftparty","minted","minter","minting","missvoid","mistral","money-button","moneybutton","mongodb","monzo","multisig","mysql","netlify","ninjapunk","ninjapunkgirls","nostr","notion","npg","npgred","npgx","nyse","okta","oneshot","oneshotcomics","opensource","oracles","osinka","osinkakalaso","overlay","overnerd","path-402","path40","path401","path402","path403","pathfouroone","payday","paymail","payment","payments","pennypics","penshun","permissionless","perplexity","phoenix","platinum","postgres","pow20","proofofwork","pytorch","quantum","quickbooks","rafs","rafskitchen","redis","repo-dex","repodex","repotokeniser","richardboase","robust-ae","robustae","robustengineering","rockstar","santander","satsback","satstack","schwab","scrollpay","selfcustody","sensei","senseii","shopify","siri","slack","sound-money","spotlight","square","squarespace","stablecoins","stacksats","stargate","stripe","studio","substack","supabase","superstar","tensorflow","teranode","timelock","tinycapital","tinycapitalpartners","tips","titan","tokenomics","treasure","trello","tribe","tribeswallet","tribify","trustless","twall","tweettoken","twilio","twittertokeniser","ubuntu","university","v01d","v3x","v3xv0id","venmo","vercel","vex","vexvoid","victory","wealth","websitestrategy","websitestrategypro","weight","wordpressdesignlondon","worldwide","wpldn","wspro","yhc","yourcash","yourname","zapier","zelle","zerodice","zeus"];
+        var premium = {}; for (var i = 0; i < PREMIUM.length; i++) premium[PREMIUM[i]] = 1;
+        var API = {
+          origin: 'https://api.1sat.app/1sat/opns/origin/',
+          mine: 'https://api.1sat.app/1sat/opns/mine/',
+          latest: 'https://ordinals.gorillapool.io/api/inscriptions/',
+          listings: 'https://api.1sat.app/1sat/market/listings?status=active&type=application/op-ns&limit=1000',
+          rate: 'https://api.whatsonchain.com/v1/bsv/main/exchangerate'
+        };
+        var RE = /^[a-z0-9-]{1,64}$/;
+        var clean = function (s) { return String(s || '').trim().toLowerCase().replace(/^[@$]+/, ''); };
+        var tierUsd = function (n) { return n.length >= 5 ? 1 : n.length === 4 ? 5 : 15; };
+        var isPremium = function (n) { return !!premium[n] || n.length < 3; };
+        var usd = function (x) { return '$' + x.toFixed(2); };
+        var esc = function (s) { return String(s).replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); };
+        var storeHref = function (n) { return STORE + '?q=' + encodeURIComponent(n); };
+        var offerHref = function (n) {
+          return 'mailto:support@bwalletx.com?subject=' + encodeURIComponent('Offer for the name ' + n) +
+            '&body=' + encodeURIComponent('Hi, I\'d like to make an offer for "' + n + '".\n\nMy offer: $\nMy $handle or paymail: ');
+        };
+        var getJson = function (url) {
+          return fetch(url, { signal: AbortSignal.timeout ? AbortSignal.timeout(12000) : undefined })
+            .then(function (r) { return r.ok ? r.json() : null; }).catch(function () { return null; });
+        };
+        var rate = null;
+        getJson(API.rate).then(function (r) { rate = r && Number(r.rate) > 0 ? Number(r.rate) : null; });
+        var listings = null;
+        var listingsReady = getJson(API.listings).then(function (rows) {
+          var out = [], seen = {};
+          (Array.isArray(rows) ? rows : []).forEach(function (r) {
+            var l = r && r.data && r.data.ordlock; if (!l) return;
+            var name = clean(l.name), price = Number(l.price);
+            if (!r.outpoint || !name || !(price > 0) || seen[name]) return;
+            if (l.content_type && l.content_type !== 'application/op-ns') return;
+            seen[name] = 1;
+            out.push({ name: name, priceSats: price, seller: l.seller || '' });
+          });
+          listings = out;
+          return out;
+        });
+
+        // Preview card follows the search box.
+        var q = document.getElementById('nm-q');
+        var pvName = document.getElementById('nm-pv-name'), pvMail = document.getElementById('nm-pv-mail'), pvs = document.querySelectorAll('.nm-pv');
+        var avatar = document.getElementById('nm-avatar');
+        var setAvatar = function (n) {
+          // A gold ring on obsidian keyed to the name (the wallet draws a richer bAvatar from the same seed).
+          var h = 0; for (var i = 0; i < n.length; i++) h = (h * 31 + n.charCodeAt(i)) >>> 0;
+          var a = h % 360;
+          avatar.src = 'data:image/svg+xml;utf8,' + encodeURIComponent(
+            '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52"><circle cx="26" cy="26" r="26" fill="#17191E"/>' +
+            '<circle cx="26" cy="26" r="16" fill="none" stroke="#F5B800" stroke-width="5" transform="rotate(' + a + ' 26 26)" stroke-dasharray="70 30"/>' +
+            '<circle cx="26" cy="26" r="7" fill="#F5B800" opacity=".85"/></svg>');
+        };
+        var preview = function (n) {
+          var v = n || 'yourname';
+          pvName.textContent = v; pvMail.textContent = v + '@bwalletx.com';
+          for (var i = 0; i < pvs.length; i++) pvs[i].textContent = v;
+          setAvatar(v);
+        };
+        preview('');
+        q.addEventListener('input', function () { preview(clean(q.value).replace(/[^a-z0-9-]/g, '')); });
+
+        var result = document.getElementById('nm-result');
+        var show = function (html) { result.innerHTML = html; };
+        var sugg = function (n) {
+          var s = [n + '-bsv', n + '1', 'the-' + n, n + 'x', n + '-hq'];
+          var seen = {}; var cand = (listings || []).filter(function (l) { return HOUSE[l.seller] && !isPremium(l.name) && l.name !== n && (l.name.indexOf(n) >= 0 || n.indexOf(l.name) >= 0 || l.name.slice(0, 2) === n.slice(0, 2)); }).map(function (l) { return l.name; });
+          return cand.concat(s).filter(function (x) { if (seen[x]) return false; seen[x] = 1; return true; }).slice(0, 6);
+        };
+        var render = function (r) {
+          var n = r.name;
+          if (r.kind === 'invalid') return show('<h2>' + esc(n) + '</h2><p class="muted">Letters, numbers and dashes only.</p>');
+          if (r.kind === 'premium') return show('<h2>' + esc(n) + '</h2><p>A special name. It isn&rsquo;t sold at a set price, but we&rsquo;re happy to hear an offer.</p><a class="nm-cta" href="' + offerHref(n) + '">Make an offer</a>');
+          if (r.kind === 'house') return show('<h2><span class="gold">' + esc(n) + '</span> is ' + usd(tierUsd(n)) + '.</h2><p>Paid in BSV at today&rsquo;s price, plus a small network fee. Yours forever, or give it to someone.</p><a class="nm-cta" href="' + storeHref(n) + '">Buy ' + esc(n) + ' in bWalletX</a>');
+          if (r.kind === 'listed') return show('<h2>' + esc(n) + '</h2><p>Taken, and its owner is selling it' + (r.usd ? ' for ' + usd(r.usd) : '') + '.</p><a class="nm-cta" href="' + storeHref(n) + '">See it in bWalletX</a>');
+          if (r.kind === 'free') return show('<h2><span class="gold">' + esc(n) + '</span> is available.</h2><p>Claim it for a small network fee, usually a few cents. Your device does the work; keep the page open until it&rsquo;s done.</p><a class="nm-cta" href="' + storeHref(n) + '">Claim ' + esc(n) + ' in bWalletX</a>');
+          var s = sugg(n);
+          return show('<h2>' + esc(n) + '</h2><p>Taken.</p>' + (s.length ? '<p class="muted" style="margin-top:14px">Try instead</p><div class="nm-sugg">' + s.map(function (x) { return '<button type="button" data-n="' + esc(x) + '">' + esc(x) + '</button>'; }).join('') + '</div>' : ''));
+        };
+        result.addEventListener('click', function (e) {
+          var b = e.target.closest && e.target.closest('button[data-n]');
+          if (b) { q.value = b.getAttribute('data-n'); preview(q.value); lookup(q.value); }
+        });
+        var seq = 0;
+        var lookup = function (raw) {
+          var n = clean(raw); var my = ++seq;
+          if (!n) return;
+          preview(n);
+          if (!RE.test(n)) return render({ kind: 'invalid', name: n });
+          if (isPremium(n)) return render({ kind: 'premium', name: n });
+          show('<h2>Checking&hellip;</h2><p class="muted">Letters, numbers and dashes. First come, first served.</p>');
+          Promise.all([getJson(API.origin + encodeURIComponent(n)), listingsReady]).then(function (res) {
+            if (my !== seq) return;
+            var o = res[0], book = (listings || []).filter(function (l) { return l.name === n; })[0];
+            var origin = o && o.outpoint;
+            if (!origin) return render({ kind: 'free', name: n });
+            var finish = function (listing) {
+              if (!listing) return render({ kind: 'taken', name: n });
+              if (HOUSE[listing.seller] || (book && HOUSE[book.seller])) return render({ kind: 'house', name: n });
+              return render({ kind: 'listed', name: n, usd: rate ? listing.priceSats / 1e8 * rate : 0 });
+            };
+            if (book) return finish(book);
+            getJson(API.latest + encodeURIComponent(String(origin).replace('.', '_')) + '/latest?script=false').then(function (latest) {
+              if (my !== seq) return;
+              var l = latest && latest.data && latest.data.list, price = l ? Number(l.price) : 0;
+              finish(price > 0 && !latest.spend ? { priceSats: price, seller: (l && l.payout_address) || '' } : null);
+            });
+          });
+        };
+        document.getElementById('nm-form').addEventListener('submit', function (e) { e.preventDefault(); lookup(q.value); });
+        var initial = new URLSearchParams(location.search).get('q');
+        if (initial) { q.value = clean(initial); lookup(initial); }
+
+        // Browse: our listed names, shortest first.
+        listingsReady.then(function (all) {
+          var ours = all.filter(function (l) { return HOUSE[l.seller] && !isPremium(l.name); }).sort(function (a, b) { return a.name.length - b.name.length || (a.name < b.name ? -1 : 1); });
+          if (!ours.length) return;
+          var rails = [
+            { title: 'Short names', sub: '3 and 4 letters', pick: function (l) { return l.name.length <= 4; } },
+            { title: 'Names', sub: 'Five letters and up, $1 each', pick: function (l) { return l.name.length >= 5; } }
+          ];
+          var html = rails.map(function (r) {
+            var items = ours.filter(r.pick).slice(0, 24);
+            if (!items.length) return '';
+            return '<section class="nm-rail"><h3>' + r.title + '<span>' + r.sub + '</span></h3><div class="nm-tiles">' + items.map(function (l) {
+              return '<a href="' + storeHref(l.name) + '"><b>' + esc(l.name) + '</b><span>' + usd(tierUsd(l.name)) + '</span><i>View &rarr;</i></a>';
+            }).join('') + '</div></section>';
+          }).join('');
+          document.getElementById('nm-rails').innerHTML = html;
+        });
+
+        // The gold pool: the Name Store's shader (bWalletX src/mobile/ui/obsidianPool.ts GOLD_FRAG), half resolution, 30 fps.
+        try {
+          if (matchMedia('(prefers-reduced-motion: reduce)').matches) throw 0;
+          var c = document.getElementById('nm-canvas');
+          var gl = c.getContext('webgl', { antialias: false, alpha: false, powerPreference: 'low-power' });
+          if (!gl) throw 0;
+          var V = 'attribute vec2 p;void main(){gl_Position=vec4(p,0.,1.);}';
+          var F = 'precision mediump float;uniform vec2 r;uniform float t;' +
+            'float h(vec2 p){return fract(sin(dot(p,vec2(127.1,311.7)))*43758.5453);}' +
+            'float n(vec2 p){vec2 i=floor(p),f=fract(p);f=f*f*(3.-2.*f);return mix(mix(h(i),h(i+vec2(1,0)),f.x),mix(h(i+vec2(0,1)),h(i+vec2(1,1)),f.x),f.y);}' +
+            'float fbm(vec2 p){float v=0.,a=.5;for(int i=0;i<5;i++){v+=a*n(p);p=p*2.03+vec2(1.7,9.2);a*=.5;}return v;}' +
+            'float H(vec2 p){vec2 q=vec2(fbm(p+t*.04),fbm(p+vec2(5.2,1.3)-t*.03));return fbm(p+2.2*q);}' +
+            'void main(){vec2 uv=(gl_FragCoord.xy-.5*r)/min(r.x,r.y);vec2 p=uv*1.6;float e=.004;' +
+            'float c=H(p);vec3 N=normalize(vec3(c-H(p+vec2(e,0)),c-H(p+vec2(0,e)),.012));vec3 L=normalize(vec3(-.4,.6,.7));' +
+            'float spec=pow(max(dot(reflect(-L,N),vec3(0,0,1)),0.),38.);float sheen=pow(max(dot(N,normalize(vec3(.3,.2,1.))),0.),6.);float d=length(uv);' +
+            'vec3 col=vec3(.13,.085,.02)+vec3(.78,.56,.12)*sheen*.55+vec3(1.,.93,.72)*spec*.8;' +
+            'float dust=pow(h(floor(p*260.)+floor(t*1.5)),120.)*smoothstep(.2,.6,c);col+=vec3(1.,.9,.6)*dust*.6;' +
+            'col+=vec3(.96,.72,.0)*.16*exp(-d*d*4.)*(.6+.4*sheen);col*=smoothstep(1.35,.2,d);gl_FragColor=vec4(col,1.);}';
+          var sh = function (ty, src) { var s = gl.createShader(ty); gl.shaderSource(s, src); gl.compileShader(s); return s; };
+          var pr = gl.createProgram(); gl.attachShader(pr, sh(gl.VERTEX_SHADER, V)); gl.attachShader(pr, sh(gl.FRAGMENT_SHADER, F)); gl.linkProgram(pr);
+          if (!gl.getProgramParameter(pr, gl.LINK_STATUS)) throw 0;
+          gl.useProgram(pr); gl.bindBuffer(gl.ARRAY_BUFFER, gl.createBuffer());
+          gl.bufferData(gl.ARRAY_BUFFER, new Float32Array([-1, -1, 3, -1, -1, 3]), gl.STATIC_DRAW);
+          var loc = gl.getAttribLocation(pr, 'p'); gl.enableVertexAttribArray(loc); gl.vertexAttribPointer(loc, 2, gl.FLOAT, false, 0, 0);
+          var uR = gl.getUniformLocation(pr, 'r'), uT = gl.getUniformLocation(pr, 't');
+          var size = function () { var s = Math.min(devicePixelRatio || 1, 1.5) * 0.5; c.width = Math.max(1, Math.round(c.clientWidth * s)); c.height = Math.max(1, Math.round(c.clientHeight * s)); gl.viewport(0, 0, c.width, c.height); };
+          size(); addEventListener('resize', size);
+          var start = performance.now(), prev = 0;
+          var draw = function (now) {
+            requestAnimationFrame(draw);
+            if (document.visibilityState !== 'visible' || now - prev < 33 || document.activeElement === q) return;
+            prev = now; gl.uniform2f(uR, c.width, c.height); gl.uniform1f(uT, 8 + (performance.now() - start) / 1000); gl.drawArrays(gl.TRIANGLES, 0, 3);
+          };
+          gl.uniform2f(uR, c.width, c.height); gl.uniform1f(uT, 8); gl.drawArrays(gl.TRIANGLES, 0, 3);
+          requestAnimationFrame(draw);
+        } catch (e) { /* the gradient stays */ }
+      })();
+    </script>
+  </body>
+</html>
