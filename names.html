@@ -69,6 +69,22 @@
       .nm-what summary { cursor: pointer; padding: 12px 0; font-weight: 600; }
       .nm-what p { color: rgba(244,241,232,.82); line-height: 1.6; }
       .nm .small { color: rgba(244,241,232,.5); font-size: .85rem; text-align: center; margin-top: 40px; }
+      /* "Where is your bWalletX?" (owner, 14 Oct 2026: the link jumped straight to Desktop; people expected a choice). */
+      .nm-modal { position: fixed; inset: 0; z-index: 60; background: rgba(0,0,0,.6); display: flex; align-items: flex-end; justify-content: center; padding: 0; }
+      @media (min-width: 640px) { .nm-modal { align-items: center; padding: 20px; } }
+      .nm-sheet { width: 100%; max-width: 460px; max-height: 92vh; overflow: auto; background: #0f1013; color: #f4f1e8; border: 1px solid rgba(244,241,232,.14); border-radius: 24px 24px 0 0; padding: 22px 20px 18px; }
+      @media (min-width: 640px) { .nm-sheet { border-radius: 24px; } }
+      .nm-sheet h3 { margin: 0 0 4px; font-size: 1.3rem; letter-spacing: -.02em; }
+      .nm-sheet .muted { color: rgba(244,241,232,.64); font-size: .9rem; margin: 0 0 14px; }
+      .nm-opt { display: block; background: rgba(244,241,232,.04); border: 1px solid rgba(244,241,232,.14); border-radius: 16px; padding: 14px 16px; margin-top: 10px; color: #f4f1e8; text-decoration: none; }
+      a.nm-opt:hover { border-color: rgba(245,184,0,.6); }
+      .nm-opt b { display: block; font-size: 1rem; }
+      .nm-opt span { display: block; color: rgba(244,241,232,.64); font-size: .85rem; margin-top: 2px; line-height: 1.45; }
+      .nm-opt .qr { margin: 12px auto 2px; width: 172px; height: 172px; background: #fff; border-radius: 12px; padding: 6px; box-sizing: border-box; display: grid; place-items: center; }
+      .nm-opt .qr svg { width: 100%; height: 100%; display: block; }
+      .nm-sheet .foot { display: flex; justify-content: space-between; align-items: center; margin-top: 16px; font-size: .88rem; color: rgba(244,241,232,.64); }
+      .nm-sheet .foot a { color: #F5B800; }
+      .nm-sheet .close { background: transparent; color: #f4f1e8; border: 1px solid rgba(244,241,232,.2); border-radius: 10px; padding: 8px 14px; cursor: pointer; font-weight: 600; }
     </style>
   </head>
   <body>
@@ -149,6 +165,51 @@
         var usd = function (x) { return '$' + x.toFixed(2); };
         var esc = function (s) { return String(s).replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); };
         var storeHref = function (n) { return STORE + '?q=' + encodeURIComponent(n); };
+        var WEB = 'https://web.bwalletx.com/names';
+        var webHref = function (n) { return WEB + '?q=' + encodeURIComponent(n); };
+        // The buy / get / see step: ask where their bWalletX is (desktop, web, phone, extension) instead of
+        // jumping to Desktop (owner, 14 Oct 2026). The href stays the Desktop store for middle-click and no-JS.
+        var openBtn = function (n, label) { return '<a class="nm-cta" href="' + storeHref(n) + '" data-open="' + esc(n) + '">' + label + '</a>'; };
+        var qrLib = null;
+        var loadQr = function () {
+          if (window.qrcode) return Promise.resolve();
+          if (!qrLib) qrLib = new Promise(function (res, rej) {
+            var sc = document.createElement('script');
+            sc.src = 'https://cdnjs.cloudflare.com/ajax/libs/qrcode-generator/1.4.4/qrcode.min.js';
+            sc.onload = res; sc.onerror = rej; document.head.appendChild(sc);
+          });
+          return qrLib;
+        };
+        var closeOpen = function () { var m = document.getElementById('nm-modal'); if (m) m.remove(); };
+        var openIn = function (n) {
+          closeOpen();
+          var phone = matchMedia('(max-width: 639px)').matches && navigator.maxTouchPoints > 0;
+          var ext = !!window.CWI;
+          var m = document.createElement('div');
+          m.className = 'nm-modal'; m.id = 'nm-modal'; m.setAttribute('role', 'dialog'); m.setAttribute('aria-modal', 'true'); m.setAttribute('aria-label', 'Where is your bWalletX?');
+          m.innerHTML = '<div class="nm-sheet">' +
+            '<h3>Where is your bWalletX?</h3><p class="muted"><b>' + esc(n) + '</b> will be waiting on the Names page.</p>' +
+            (phone ? '' : '<a class="nm-opt" href="' + storeHref(n) + '"><b>Desktop</b><span>desktop.bwalletx.com: the installed Desktop app, or the wide layout in this browser.</span></a>') +
+            '<a class="nm-opt" href="' + webHref(n) + '"><b>' + (phone ? 'Open it here' : 'Web wallet') + '</b><span>web.bwalletx.com' + (phone ? ', in this browser.' : ': the phone layout, in this browser.') + '</span></a>' +
+            (phone ? '' : '<div class="nm-opt"><b>Phone</b><span>Point your phone\u2019s camera at this. It opens web.bwalletx.com on the phone, signed in as you if you have used it there.</span><div class="qr" id="nm-qr"></div></div>') +
+            (ext ? '<div class="nm-opt"><b>Browser extension</b><span>This browser has a wallet extension. Open bWalletX from the toolbar, choose Names and search <b>' + esc(n) + '</b>.</span></div>' : '') +
+            '<div class="foot"><span>Don\u2019t have it yet? <a href="/get">Get bWalletX</a></span><button type="button" class="close">Close</button></div>' +
+            '</div>';
+          document.body.appendChild(m);
+          m.addEventListener('click', function (e) { if (e.target === m || (e.target.closest && e.target.closest('.close'))) closeOpen(); });
+          var qrBox = document.getElementById('nm-qr');
+          if (qrBox) loadQr().then(function () {
+            var qr = window.qrcode(0, 'M'); qr.addData(webHref(n)); qr.make();
+            qrBox.innerHTML = qr.createSvgTag({ cellSize: 4, margin: 0, scalable: true });
+          }).catch(function () { qrBox.textContent = webHref(n); qrBox.style.fontSize = '11px'; qrBox.style.color = '#111'; });
+        };
+        document.addEventListener('click', function (e) {
+          var a = e.target.closest && e.target.closest('[data-open]');
+          if (!a) return;
+          e.preventDefault();
+          openIn(a.getAttribute('data-open'));
+        });
+        document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeOpen(); });
         var offerHref = function (n) {
           return 'mailto:support@bwalletx.com?subject=' + encodeURIComponent('Offer for the name ' + n) +
             '&body=' + encodeURIComponent('Hi, I\'d like to make an offer for "' + n + '".\n\nMy offer: $\nMy $handle or paymail: ');
@@ -207,9 +268,9 @@
           var n = r.name;
           if (r.kind === 'invalid') return show('<h2>' + esc(n) + '</h2><p class="muted">Letters, numbers and dashes only.</p>');
           if (r.kind === 'premium') return show('<h2>' + esc(n) + '</h2><p>A special name. It isn&rsquo;t sold at a set price, but we&rsquo;re happy to hear an offer.</p><a class="nm-cta" href="' + offerHref(n) + '">Make an offer</a>');
-          if (r.kind === 'house') return show('<h2><span class="gold">' + esc(n) + '</span> is ' + usd(tierUsd(n)) + '.</h2><p>Paid in BSV at today&rsquo;s price, plus a small network fee. Yours forever, or give it to someone.</p><a class="nm-cta" href="' + storeHref(n) + '">Buy ' + esc(n) + ' in bWalletX</a>');
-          if (r.kind === 'listed') return show('<h2>' + esc(n) + '</h2><p>Taken, and its owner is selling it' + (r.usd ? ' for ' + usd(r.usd) : '') + '.</p><a class="nm-cta" href="' + storeHref(n) + '">See it in bWalletX</a>');
-          if (r.kind === 'free') return show('<h2><span class="gold">' + esc(n) + '</span> is available: ' + usd(tierUsd(n)) + '.</h2><p>Paid in BSV at today&rsquo;s price. Yours forever, or give it to someone.</p><a class="nm-cta" href="' + storeHref(n) + '">Get ' + esc(n) + ' in bWalletX</a>');
+          if (r.kind === 'house') return show('<h2><span class="gold">' + esc(n) + '</span> is ' + usd(tierUsd(n)) + '.</h2><p>Paid in BSV at today&rsquo;s price, plus a small network fee. Yours forever, or give it to someone.</p>' + openBtn(n, 'Buy ' + esc(n) + ' in bWalletX'));
+          if (r.kind === 'listed') return show('<h2>' + esc(n) + '</h2><p>Taken, and its owner is selling it' + (r.usd ? ' for ' + usd(r.usd) : '') + '.</p>' + openBtn(n, 'See it in bWalletX'));
+          if (r.kind === 'free') return show('<h2><span class="gold">' + esc(n) + '</span> is available: ' + usd(tierUsd(n)) + '.</h2><p>Paid in BSV at today&rsquo;s price. Yours forever, or give it to someone.</p>' + openBtn(n, 'Get ' + esc(n) + ' in bWalletX'));
           var s = sugg(n);
           return show('<h2>' + esc(n) + '</h2><p>Taken.</p>' + (s.length ? '<p class="muted" style="margin-top:14px">Try instead</p><div class="nm-sugg">' + s.map(function (x) { return '<button type="button" data-n="' + esc(x) + '">' + esc(x) + '</button>'; }).join('') + '</div>' : ''));
         };
@@ -259,7 +320,7 @@
             var items = ours.filter(r.pick).slice(0, 24);
             if (!items.length) return '';
             return '<section class="nm-rail"><h3>' + r.title + '<span>' + r.sub + '</span></h3><div class="nm-tiles">' + items.map(function (l) {
-              return '<a href="' + storeHref(l.name) + '"><b>' + esc(l.name) + '</b><span>' + usd(tierUsd(l.name)) + '</span><i>View &rarr;</i></a>';
+              return '<a href="' + storeHref(l.name) + '" data-open="' + esc(l.name) + '"><b>' + esc(l.name) + '</b><span>' + usd(tierUsd(l.name)) + '</span><i>View &rarr;</i></a>';
             }).join('') + '</div></section>';
           }).join('');
           document.getElementById('nm-rails').innerHTML = html;
