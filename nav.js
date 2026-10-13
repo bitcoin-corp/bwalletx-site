@@ -43,10 +43,11 @@
           { label: 'Android', href: '/android' },
           { label: 'Testers', href: '/testers' }
         ] },
-      { label: 'Exchange', href: '/exchange', pages: ['/exchange', '/exchange/strategies', '/pnees', '/pnee', '/buy', '/launchpad'],
+      { label: 'Exchange', href: '/exchange', pages: ['/exchange', '/exchange/strategies', '/token-curves', '/pnees', '/pnee', '/buy', '/launchpad'],
         sub: [
           { label: 'Exchange', href: '/exchange' },
           { label: 'Strategies', href: '/exchange/strategies' },
+          { label: 'Token curves', href: '/token-curves' },
           { label: 'PNEEs', href: '/pnees', also: ['/pnee'] },
           { label: 'Launchpad', href: '/launchpad' },
           { label: 'Buy BSV', href: '/buy' }

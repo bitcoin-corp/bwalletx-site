@@ -1,6 +1,6 @@
 # bWalletX: full site text
 
-Generated 2026-10-13 from https://bwalletx.com. Source pages are linked above each section.
+Generated 2026-10-14 from https://bwalletx.com. Source pages are linked above each section.
 
 ---
 
@@ -2471,6 +2471,92 @@ If the network is slow, the wallet says the tip is on its way, so you don’t pa
 - bWalletX Desktop: [desktop.bwalletx.com](https://desktop.bwalletx.com).
 
 [Get bWalletX](https://bwalletx.com/get)
+
+bWalletX is in beta: test with small amounts. Questions: [support@bwalletx.com](mailto:support@bwalletx.com)
+
+---
+
+Source: https://bwalletx.com/token-curves
+
+# Token curves. One price rule for every person.
+
+In bWalletX your $handle can be a token, and holding one token gets you into that person's room. This page is the whole pricing rule in plain words, with the numbers.
+
+[Open the Friends market](https://desktop.bwalletx.com/exchange?people=1)[Get bWalletX](https://bwalletx.com/get)
+
+## The rule
+
+The first join costs 1¢. The price doubles every 10,000 supporters.
+
+price = 1¢ × 2supporters ÷ 10,000
+
+A supporter is a person who has bought from the curve, counted once however many tokens they bought. One join per person, up to 100 tokens in that join, all at the same price. The person who owns the token cannot buy from their own curve, and neither can wallets linked to them. So buying a lot yourself moves nothing: only new people move the price.
+
+## What that looks like
+
+Price of one token against the number of supporters, 0 to 100,000. The vertical scale is logarithmic (each gridline is ten times the one below), which is why the doubling shows as a straight line.
+
+SupportersPrice to joinPaid to the person so far
+
+01¢—
+
+1,0001.07¢≈ $10.35
+
+5,0001.41¢≈ $59.76
+
+10,0002¢≈ $144.26
+
+20,0004¢≈ $432.79
+
+30,0008¢≈ $1,010
+
+50,00032¢≈ $4,472
+
+70,000$1.28≈ $18,322
+
+100,000$10.24≈ $147,583
+
+150,000$327.68≈ $4,727,115
+
+"Paid so far" assumes each supporter bought one token. Someone who buys more in their one join pays the same price for each, and that goes to the person too.
+
+For a normal room the curve is barely there: the first 10,000 supporters all pay between 1¢ and 2¢. It becomes a real price only for the rare person with a very large following, and by then tens of thousands of holders can sell to you instead.
+
+## Where the money goes
+
+- LiveTo the person, in full. Their own wallet holds the tokens on offer, and your payment goes to them on chain the moment you buy. bWalletX never holds their tokens or your money, and they don't need to be online.
+
+- LiveNothing held back. No reserve, no pool, no treasury, no buy-back. The curve is a rule for joining, not a promise about leaving.
+
+- LiveLeaving is between people. Any holder can list their token on the Exchange at whatever price they choose, and anyone can buy it there. That price is theirs to set and has nothing to do with the curve.
+
+- LiveFees. The network fee is a fraction of a cent. The full edition of bWalletX adds its usual 1% Exchange fee to a buy; the store edition, bWallet, adds none.
+
+## Supporter numbers
+
+The first 100 people to join a person's room get a number, Supporter #1 to #100, shown next to their name in the room. After that, no number. That is the whole game: be early, get a low number.
+
+## The person's choices
+
+- DefaultGentle price. The curve above. Starts at 1¢ and doubles every 10,000 supporters.
+
+- OptionFixed price. One price for a join, from 1¢ to $1,000, chosen by the person.
+
+- OptionAsk to join. No sales. People request, the person approves.
+
+- OptionOpen or close sales, and how many joins to keep on offer at a time (1 to 50). Closing sales returns the unsold tokens to their wallet.
+
+Set under Exchange › Friends › Your token · Sales. Launching your token is under Settings › Identity.
+
+## Why a curve, and why this slope
+
+A flat price treats the tenth person and the ten-thousandth the same, and gives nobody a reason to turn up early. A steep curve turns a room into a bet. The gentle curve sits between: early supporters pay a little less and get a number, late ones pay a little more, and no normal room ever notices the difference.
+
+Counting supporters rather than tokens is what keeps it honest. If the price rose with tokens sold, a person could buy their own supply, or one buyer could bid the price up alone. Neither moves this curve.
+
+## What this is not
+
+It is not an investment and we don't describe it as one. You are paying a person to join their room. The token is your key to that room, and if you ever want to pass it on, you sell it to another person at a price you both agree.
 
 bWalletX is in beta: test with small amounts. Questions: [support@bwalletx.com](mailto:support@bwalletx.com)
 

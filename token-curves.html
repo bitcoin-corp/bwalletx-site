@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Token curves: how a person's token is priced</title>
+    <link rel="canonical" href="https://bwalletx.com/token-curves" />
+    <meta name="description" content="Every person's token in bWalletX sells on the same gentle curve: 1 cent to join their room, doubling every 10,000 supporters. The money goes to the person. Nothing is held back, there is no reserve and no buy-back, and resale is between people on the Exchange." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://bwalletx.com/token-curves" />
+    <meta property="og:site_name" content="bWalletX" />
+    <meta property="og:title" content="Token curves: one price rule for every person" />
+    <meta property="og:description" content="Join anyone's room from 1 cent. The price doubles every 10,000 supporters and goes to the person, not to us. No reserve, no buy-back. Resale is between people." />
+    <meta property="og:image" content="https://bwalletx.com/og-token-curves-v1.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Join anyone's room from 1 cent. One price rule for every person's token: doubles every 10,000 supporters, paid to them. Example card: $kim, 12,400 supporters, join price 2.36 cents." />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@bWalletX" />
+    <meta name="twitter:title" content="Token curves: one price rule for every person" />
+    <meta name="twitter:description" content="Join anyone's room from 1 cent. The price doubles every 10,000 supporters and goes to the person, not to us. No reserve, no buy-back. Resale is between people." />
+    <meta name="twitter:image" content="https://bwalletx.com/og-token-curves-v1.png" />
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="stylesheet" href="/styles.css" />
+    <style>
+      .ext h1 { font-size: clamp(2.2rem, 6vw, 3.4rem); margin: 18px 0 10px; }
+      .ext h2 { margin: 48px 0 8px; font-size: 1.5rem; }
+      .ext p, .ext li { line-height: 1.7; }
+      .ext .small { color: #8a8a86; font-size: 0.85rem; }
+      .ext .row { display: flex; gap: 12px; flex-wrap: wrap; margin: 26px 0; }
+      .rule { background: #101114; border: 1px solid #ffffff12; border-radius: 18px; padding: 22px 24px; margin: 18px 0; }
+      .rule p { margin: 0; font-size: 1.25rem; line-height: 1.5; }
+      .rule b { color: #F5B800; }
+      .rule .formula { margin-top: 12px; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 1rem; color: #a7adb8; }
+      .rule .formula sup { font-size: 0.75em; }
+      figure.chart { margin: 18px 0 6px; background: #101114; border: 1px solid #ffffff12; border-radius: 18px; padding: 16px 12px 10px; }
+      figure.chart svg { width: 100%; height: auto; display: block; }
+      figure.chart .grid line { stroke: #ffffff14; stroke-width: 1; }
+      figure.chart .lab text { fill: #a7adb8; font-size: 12px; font-family: inherit; }
+      figure.chart .lab .axis { fill: #8a8a86; font-size: 11px; }
+      figure.chart .line { fill: none; stroke: #F5B800; stroke-width: 3; stroke-linecap: round; }
+      figure.chart .dots circle { fill: #F5B800; }
+      figure.chart .dots .pl { fill: #f4f1e8; font-size: 12px; font-weight: 600; font-family: inherit; }
+      figure.chart figcaption { color: #8a8a86; font-size: 0.85rem; padding: 8px 6px 0; line-height: 1.5; }
+      table.sched { width: 100%; border-collapse: collapse; margin: 14px 0 6px; font-size: 0.95rem; }
+      table.sched th, table.sched td { text-align: right; padding: 9px 10px; border-bottom: 1px solid #ffffff10; font-variant-numeric: tabular-nums; }
+      table.sched th:first-child, table.sched td:first-child { text-align: left; }
+      table.sched th { color: #a7adb8; font-weight: 600; font-size: 0.8rem; letter-spacing: 0.04em; text-transform: uppercase; }
+      table.sched td:nth-child(2) { color: #F5B800; font-weight: 600; }
+      .feat { list-style: none; padding: 0; margin: 18px 0; }
+      .feat li { display: flex; gap: 12px; align-items: baseline; padding: 12px 0; border-bottom: 1px solid #ffffff10; }
+      .tag { flex: none; font-size: 0.75rem; font-weight: 700; padding: 2px 9px; border-radius: 999px; }
+      .tag.live { background: #F5B800; color: #000; }
+      .tag.opt { border: 1px solid #ffffff40; color: #a7adb8; }
+    </style>
+  </head>
+  <body>
+    <div class="beta-banner">bWalletX is in <strong>beta</strong>: test with small amounts.</div>
+    <header class="topbar">
+      <div class="wrap topbar-in">
+        <a class="brand" href="/"><img src="/logo.svg" alt="" width="34" height="30" /><span>bWallet<span class="gold">X</span></span></a>
+        <nav aria-label="Pages">
+          <a href="/features">Features</a><a href="/exchange">Exchange</a><a href="/social">Social</a><a href="/agent">Agents</a><a href="/extension">Extension</a><a href="/developers">Developers</a>
+        </nav>
+        <span class="nav-cta"><a class="dl-btn" href="/get">Download</a><a class="web-btn" href="https://web.bwalletx.com" target="_blank" rel="noopener">Web &rarr;</a></span>
+      </div>
+    </header>
+    <script src="/nav.js"></script>
+    <main class="ext">
+      <h1>Token curves. <span class="gold">One price rule for every person.</span></h1>
+      <p class="lede">In bWalletX your $handle can be a token, and holding one token gets you into that person's room. This page is the whole pricing rule in plain words, with the numbers.</p>
+      <div class="row"><a class="btn btn-store" href="https://desktop.bwalletx.com/exchange?people=1">Open the Friends market</a><a class="btn btn-ghost" href="/get">Get bWalletX</a></div>
+
+      <h2>The rule</h2>
+      <div class="rule">
+        <p>The first join costs <b>1¢</b>. The price doubles every <b>10,000 supporters</b>.</p>
+        <p class="formula">price = 1¢ &times; 2<sup>supporters &divide; 10,000</sup></p>
+      </div>
+      <p>A supporter is a person who has bought from the curve, counted once however many tokens they bought. One join per person, up to 100 tokens in that join, all at the same price. The person who owns the token cannot buy from their own curve, and neither can wallets linked to them. So buying a lot yourself moves nothing: only new people move the price.</p>
+
+      <h2>What that looks like</h2>
+      <figure class="chart">
+        <svg viewBox="0 0 720 360" role="img" aria-label="Price of one token against the number of supporters: 1 cent at 0, 2 cents at 10,000, 4 cents at 20,000, 32 cents at 50,000, 10 dollars 24 at 100,000. The vertical scale is logarithmic: each gridline is ten times the one below.">
+  <g class="grid"><line x1="70" x2="700" y1="314.0" y2="314.0"/><line x1="70" x2="700" y1="216.3" y2="216.3"/><line x1="70" x2="700" y1="118.7" y2="118.7"/><line x1="70" x2="700" y1="21.0" y2="21.0"/></g>
+  <g class="lab"><text x="60" y="318.0" text-anchor="end">1¢</text><text x="60" y="220.3" text-anchor="end">10¢</text><text x="60" y="122.7" text-anchor="end">$1</text><text x="60" y="25.0" text-anchor="end">$10</text><text x="70.0" y="346" text-anchor="middle">0k</text><text x="196.0" y="346" text-anchor="middle">20k</text><text x="322.0" y="346" text-anchor="middle">40k</text><text x="448.0" y="346" text-anchor="middle">60k</text><text x="574.0" y="346" text-anchor="middle">80k</text><text x="700.0" y="346" text-anchor="middle">100k</text><text x="385" y="359" text-anchor="middle" class="axis">supporters</text></g>
+  <polyline class="line" points="70.0,314.0 85.8,306.6 101.5,299.3 117.2,291.9 133.0,284.6 148.8,277.2 164.5,269.9 180.2,262.5 196.0,255.2 211.8,247.8 227.5,240.5 243.2,233.2 259.0,225.8 274.8,218.5 290.5,211.1 306.2,203.8 322.0,196.4 337.8,189.0 353.5,181.7 369.2,174.3 385.0,167.0 400.8,159.7 416.5,152.3 432.2,145.0 448.0,137.6 463.8,130.2 479.5,122.9 495.2,115.5 511.0,108.2 526.8,100.9 542.5,93.5 558.2,86.1 574.0,78.8 589.8,71.5 605.5,64.1 621.2,56.8 637.0,49.4 652.8,42.0 668.5,34.7 684.2,27.4 700.0,20.0"/>
+  <g class="dots"><circle cx="70.0" cy="314.0" r="4"/><text x="70.0" y="304.0" text-anchor="middle" class="pl">1¢</text><circle cx="133.0" cy="284.6" r="4"/><text x="133.0" y="274.6" text-anchor="middle" class="pl">2¢</text><circle cx="196.0" cy="255.2" r="4"/><text x="196.0" y="245.2" text-anchor="middle" class="pl">4¢</text><circle cx="259.0" cy="225.8" r="4"/><text x="259.0" y="215.8" text-anchor="middle" class="pl">8¢</text><circle cx="385.0" cy="167.0" r="4"/><text x="385.0" y="157.0" text-anchor="middle" class="pl">32¢</text><circle cx="511.0" cy="108.2" r="4"/><text x="511.0" y="98.2" text-anchor="middle" class="pl">$1.28</text><circle cx="700.0" cy="20.0" r="4"/><text x="700.0" y="10.0" text-anchor="middle" class="pl">$10.24</text></g>
+</svg>
+        <figcaption>Price of one token against the number of supporters, 0 to 100,000. The vertical scale is logarithmic (each gridline is ten times the one below), which is why the doubling shows as a straight line.</figcaption>
+      </figure>
+      <table class="sched">
+        <thead><tr><th>Supporters</th><th>Price to join</th><th>Paid to the person so far</th></tr></thead>
+        <tbody><tr><td>0</td><td>1¢</td><td>—</td></tr><tr><td>1,000</td><td>1.07¢</td><td>≈ $10.35</td></tr><tr><td>5,000</td><td>1.41¢</td><td>≈ $59.76</td></tr><tr><td>10,000</td><td>2¢</td><td>≈ $144.26</td></tr><tr><td>20,000</td><td>4¢</td><td>≈ $432.79</td></tr><tr><td>30,000</td><td>8¢</td><td>≈ $1,010</td></tr><tr><td>50,000</td><td>32¢</td><td>≈ $4,472</td></tr><tr><td>70,000</td><td>$1.28</td><td>≈ $18,322</td></tr><tr><td>100,000</td><td>$10.24</td><td>≈ $147,583</td></tr><tr><td>150,000</td><td>$327.68</td><td>≈ $4,727,115</td></tr></tbody>
+      </table>
+      <p class="small">"Paid so far" assumes each supporter bought one token. Someone who buys more in their one join pays the same price for each, and that goes to the person too.</p>
+      <p>For a normal room the curve is barely there: the first 10,000 supporters all pay between 1¢ and 2¢. It becomes a real price only for the rare person with a very large following, and by then tens of thousands of holders can sell to you instead.</p>
+
+      <h2>Where the money goes</h2>
+      <ul class="feat">
+        <li><span class="tag live">Live</span><span><b>To the person, in full.</b> Their own wallet holds the tokens on offer, and your payment goes to them on chain the moment you buy. bWalletX never holds their tokens or your money, and they don't need to be online.</span></li>
+        <li><span class="tag live">Live</span><span><b>Nothing held back.</b> No reserve, no pool, no treasury, no buy-back. The curve is a rule for joining, not a promise about leaving.</span></li>
+        <li><span class="tag live">Live</span><span><b>Leaving is between people.</b> Any holder can list their token on the Exchange at whatever price they choose, and anyone can buy it there. That price is theirs to set and has nothing to do with the curve.</span></li>
+        <li><span class="tag live">Live</span><span><b>Fees.</b> The network fee is a fraction of a cent. The full edition of bWalletX adds its usual 1% Exchange fee to a buy; the store edition, bWallet, adds none.</span></li>
+      </ul>
+
+      <h2>Supporter numbers</h2>
+      <p>The first 100 people to join a person's room get a number, Supporter #1 to #100, shown next to their name in the room. After that, no number. That is the whole game: be early, get a low number.</p>
+
+      <h2>The person's choices</h2>
+      <ul class="feat">
+        <li><span class="tag live">Default</span><span><b>Gentle price.</b> The curve above. Starts at 1¢ and doubles every 10,000 supporters.</span></li>
+        <li><span class="tag opt">Option</span><span><b>Fixed price.</b> One price for a join, from 1¢ to $1,000, chosen by the person.</span></li>
+        <li><span class="tag opt">Option</span><span><b>Ask to join.</b> No sales. People request, the person approves.</span></li>
+        <li><span class="tag opt">Option</span><span><b>Open or close sales,</b> and how many joins to keep on offer at a time (1 to 50). Closing sales returns the unsold tokens to their wallet.</span></li>
+      </ul>
+      <p>Set under Exchange &rsaquo; Friends &rsaquo; <b>Your token &middot; Sales</b>. Launching your token is under Settings &rsaquo; Identity.</p>
+
+      <h2>Why a curve, and why this slope</h2>
+      <p>A flat price treats the tenth person and the ten-thousandth the same, and gives nobody a reason to turn up early. A steep curve turns a room into a bet. The gentle curve sits between: early supporters pay a little less and get a number, late ones pay a little more, and no normal room ever notices the difference.</p>
+      <p>Counting supporters rather than tokens is what keeps it honest. If the price rose with tokens sold, a person could buy their own supply, or one buyer could bid the price up alone. Neither moves this curve.</p>
+
+      <h2>What this is not</h2>
+      <p>It is not an investment and we don't describe it as one. You are paying a person to join their room. The token is your key to that room, and if you ever want to pass it on, you sell it to another person at a price you both agree.</p>
+      <p class="small">bWalletX is in beta: test with small amounts. Questions: <a href="mailto:support@bwalletx.com">support@bwalletx.com</a></p>
+    </main>
+  </body>
+</html>
