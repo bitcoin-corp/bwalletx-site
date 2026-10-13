@@ -1633,13 +1633,13 @@ What is this?
 
 These are on-chain names (OpNS) on Bitcoin SV. Each name is a 1-sat ordinal inscription held by your wallet, not an account we can take back. Once it’s yours it stays yours: no renewals and no expiry.
 
-New names are first come, first served: claiming one mines it on your device and pays a small network fee. Names already claimed can only be bought if their owner lists them.
+New names are first come, first served. Names already taken can only be bought if their owner lists them.
 
 Prices are set in US dollars and paid in BSV at the live rate when you buy, plus a small network fee. Purchases are final; there are no refunds.
 
 Your name takes payments in bWalletX once you set it as your name in Settings › Identity.
 
-Buying, claiming and giving happen in bWalletX: [desktop.bwalletx.com/names](https://desktop.bwalletx.com/names) or [web.bwalletx.com/names](https://web.bwalletx.com/names). Questions: [support@bwalletx.com](mailto:support@bwalletx.com)
+Buying and giving happen in bWalletX: [desktop.bwalletx.com/names](https://desktop.bwalletx.com/names) or [web.bwalletx.com/names](https://web.bwalletx.com/names). Questions: [support@bwalletx.com](mailto:support@bwalletx.com)
 
 ---
 

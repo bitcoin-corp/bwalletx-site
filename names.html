@@ -117,12 +117,12 @@
         <details class="nm-what">
           <summary>What is this?</summary>
           <p>These are on-chain names (OpNS) on Bitcoin SV. Each name is a 1-sat ordinal inscription held by your wallet, not an account we can take back. Once it&rsquo;s yours it stays yours: no renewals and no expiry.</p>
-          <p>New names are first come, first served: claiming one mines it on your device and pays a small network fee. Names already claimed can only be bought if their owner lists them.</p>
+          <p>New names are first come, first served. Names already taken can only be bought if their owner lists them.</p>
           <p>Prices are set in US dollars and paid in BSV at the live rate when you buy, plus a small network fee. Purchases are final; there are no refunds.</p>
           <p>Your name takes payments in bWalletX once you set it as your name in Settings &rsaquo; Identity.</p>
         </details>
 
-        <p class="small">Buying, claiming and giving happen in bWalletX: <a href="https://desktop.bwalletx.com/names">desktop.bwalletx.com/names</a> or <a href="https://web.bwalletx.com/names">web.bwalletx.com/names</a>. Questions: <a href="mailto:support@bwalletx.com">support@bwalletx.com</a></p>
+        <p class="small">Buying and giving happen in bWalletX: <a href="https://desktop.bwalletx.com/names">desktop.bwalletx.com/names</a> or <a href="https://web.bwalletx.com/names">web.bwalletx.com/names</a>. Questions: <a href="mailto:support@bwalletx.com">support@bwalletx.com</a></p>
       </main>
     </div>
 
@@ -209,7 +209,7 @@
           if (r.kind === 'premium') return show('<h2>' + esc(n) + '</h2><p>A special name. It isn&rsquo;t sold at a set price, but we&rsquo;re happy to hear an offer.</p><a class="nm-cta" href="' + offerHref(n) + '">Make an offer</a>');
           if (r.kind === 'house') return show('<h2><span class="gold">' + esc(n) + '</span> is ' + usd(tierUsd(n)) + '.</h2><p>Paid in BSV at today&rsquo;s price, plus a small network fee. Yours forever, or give it to someone.</p><a class="nm-cta" href="' + storeHref(n) + '">Buy ' + esc(n) + ' in bWalletX</a>');
           if (r.kind === 'listed') return show('<h2>' + esc(n) + '</h2><p>Taken, and its owner is selling it' + (r.usd ? ' for ' + usd(r.usd) : '') + '.</p><a class="nm-cta" href="' + storeHref(n) + '">See it in bWalletX</a>');
-          if (r.kind === 'free') return show('<h2><span class="gold">' + esc(n) + '</span> is available.</h2><p>Claim it for a small network fee, usually a few cents. Your device does the work; keep the page open until it&rsquo;s done.</p><a class="nm-cta" href="' + storeHref(n) + '">Claim ' + esc(n) + ' in bWalletX</a>');
+          if (r.kind === 'free') return show('<h2><span class="gold">' + esc(n) + '</span> is available: ' + usd(tierUsd(n)) + '.</h2><p>Paid in BSV at today&rsquo;s price. Yours forever, or give it to someone.</p><a class="nm-cta" href="' + storeHref(n) + '">Get ' + esc(n) + ' in bWalletX</a>');
           var s = sugg(n);
           return show('<h2>' + esc(n) + '</h2><p>Taken.</p>' + (s.length ? '<p class="muted" style="margin-top:14px">Try instead</p><div class="nm-sugg">' + s.map(function (x) { return '<button type="button" data-n="' + esc(x) + '">' + esc(x) + '</button>'; }).join('') + '</div>' : ''));
         };
