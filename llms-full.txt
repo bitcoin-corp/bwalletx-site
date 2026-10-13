@@ -1771,7 +1771,16 @@ Each release ships to the Android APK, the Chrome extension and the web wallet. 
 
 [Download bWalletX](https://bwalletx.com/download)
 
-## 5.2.16 2026-10-12
+## 5.2.16 2026-10-13
+
+- Tip buttons everywhere: one tap to tip the person behind a post, track or room.
+- People tokens: sell from your own supply with Sales settings, and friends get a Buy & chat quote and a Supporter number.
+- Card designer: your video NFTs appear in My NFTs, with a frame picker for the still.
+- Very large transactions go out in the background, and queued sends retry every 5 minutes until they land.
+- Artist rank now counts money paid to the artist over 30 days; Back this artist pays the artist directly.
+- A full-screen NFT viewer, the album shown once in Media, an eye to reveal every password field, and the copy button now sits left of your identity key.
+
+## 5.2.15 2026-10-12
 
 - Big NFT mints no longer fail: they show Pending while the network catches up, and a stuck send releases its coins.
 - Ask b: a chat bar with reply bubbles on every Desktop page, full of ideas to try.
