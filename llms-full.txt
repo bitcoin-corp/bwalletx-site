@@ -8,7 +8,7 @@ Source: https://bwalletx.com/aivj
 
 # Watch VexVoid play live.
 
-AIVJ.TV is VexVoid’s live channel: audio-visual sets mixed live in the browser. Watch the first three minutes without signing in. After that it’s 1p a minute from your bWalletX, straight to the artist.
+bTV: AIVJ is VexVoid’s live channel: audio-visual sets mixed live in the browser. Watch the first three minutes without signing in. After that it’s 1p a minute from your bWalletX, straight to the artist.
 
 ## How it works
 
@@ -30,7 +30,7 @@ Fans who hold 100 or more $VEXVOID pay 0.8p a minute.
 
 When there’s no set on, the page shows the schedule.
 
-[Open AIVJ.TV Live](https://aivj.website/live)[Get bWalletX](https://bwalletx.com/get)
+[Open bTV: AIVJ Live](https://aivj.website/live)[Get bWalletX](https://bwalletx.com/get)
 
 More from VexVoid: [the VexVoid artist page](https://bwalletx.com/artists/vexvoid). Thank them any time with a [tip](https://bwalletx.com/tips).
 
@@ -7997,7 +7997,7 @@ Your friend page shows their token too. New personal tokens start with a supply 
 
 Related: [Exchange](https://bwalletx.com/exchange) · [Friends](https://bwalletx.com/friends) · [Swap into BSV](https://bwalletx.com/swap)
 
-[← 048 Your NFTs, edge to edge](https://bwalletx.com/blog/048-your-nfts-edge-to-edge)[050 AIVJ.TV: VexVoid, live →](https://bwalletx.com/blog/050-aivj-tv-vexvoid-live)
+[← 048 Your NFTs, edge to edge](https://bwalletx.com/blog/048-your-nfts-edge-to-edge)[050 bTV: AIVJ: VexVoid, live →](https://bwalletx.com/blog/050-aivj-tv-vexvoid-live)
 
 ---
 
@@ -8005,9 +8005,9 @@ Source: https://bwalletx.com/blog/050-aivj-tv-vexvoid-live
 
 [Development blog](https://bwalletx.com/blog) · 050 · 13 Oct 2026
 
-# AIVJ.TV: VexVoid, live
+# bTV: AIVJ: VexVoid, live
 
-AIVJ.TV is where VexVoid plays live audio-visual sets. Watch the first three minutes without signing in. After that it’s 1p a minute from your bWalletX, straight to the artist.
+bTV: AIVJ is where VexVoid plays live audio-visual sets. Watch the first three minutes without signing in. After that it’s 1p a minute from your bWalletX, straight to the artist.
 
 ## Live sets in the browser
 
@@ -8023,7 +8023,7 @@ When your three minutes are up, carry on with bWalletX. It’s 1p a minute, paid
 
 No bWalletX yet? The same screen has a Get bWalletX button.
 
-Related: [AIVJ.TV](https://bwalletx.com/aivj) · [VexVoid](https://bwalletx.com/artists/vexvoid) · [047 Pay the artist](https://bwalletx.com/blog/047-pay-the-artist)
+Related: [bTV: AIVJ](https://bwalletx.com/aivj) · [VexVoid](https://bwalletx.com/artists/vexvoid) · [047 Pay the artist](https://bwalletx.com/blog/047-pay-the-artist)
 
 [← 049 The Exchange, sorted](https://bwalletx.com/blog/049-the-exchange-sorted)[051 Spaces on a schedule, b on every page →](https://bwalletx.com/blog/051-spaces-schedule-and-ask-b)
 
@@ -8057,7 +8057,7 @@ Calls has a new name on Desktop: bPhone, at [/bphone](https://desktop.bwalletx.c
 
 Related: [bSpaces](https://bwalletx.com/bspaces) · [Ask b](https://bwalletx.com/ask-b) · [bPhone](https://bwalletx.com/bphone)
 
-[← 050 AIVJ.TV: VexVoid, live](https://bwalletx.com/blog/050-aivj-tv-vexvoid-live)[052 Tip buttons →](https://bwalletx.com/blog/052-tip-buttons)
+[← 050 bTV: AIVJ: VexVoid, live](https://bwalletx.com/blog/050-aivj-tv-vexvoid-live)[052 Tip buttons →](https://bwalletx.com/blog/052-tip-buttons)
 
 ---
 
@@ -8146,8 +8146,8 @@ bWalletX Desktop has a Tip button for artists, NFT creators, rooms, people in ch
 Spaces in bWalletX Desktop have a weekly schedule in your own time zone, with Add to calendar. And Ask b is now a small bar at the bottom of every page.
 
 - 050 · 13 Oct 2026
-[AIVJ.TV: VexVoid, live](https://bwalletx.com/blog/050-aivj-tv-vexvoid-live)
-AIVJ.TV is where VexVoid plays live audio-visual sets. Watch the first three minutes without signing in. After that it’s 1p a minute from your bWalletX, straight to the artist.
+[bTV: AIVJ: VexVoid, live](https://bwalletx.com/blog/050-aivj-tv-vexvoid-live)
+bTV: AIVJ is where VexVoid plays live audio-visual sets. Watch the first three minutes without signing in. After that it’s 1p a minute from your bWalletX, straight to the artist.
 
 - 049 · 13 Oct 2026
 [The Exchange, sorted](https://bwalletx.com/blog/049-the-exchange-sorted)

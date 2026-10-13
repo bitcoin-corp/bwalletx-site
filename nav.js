@@ -59,7 +59,7 @@
           { label: 'Games', href: '/games' },
           { label: 'Video', href: '/video' },
           { label: 'Live', href: '/live' },
-          { label: 'AIVJ.TV', href: '/aivj' },
+          { label: 'bTV: AIVJ', href: '/aivj' },
           { label: 'Tips', href: '/tips' },
           { label: 'bSpaces', href: '/bspaces' },
           { label: 'bPhone', href: '/bphone' },
@@ -101,7 +101,7 @@
           { label: '053 Friends, bPics, video', href: '/blog/053-friends-bpics-and-video' },
           { label: '052 Tip buttons', href: '/blog/052-tip-buttons' },
           { label: '051 Spaces on a schedule', href: '/blog/051-spaces-schedule-and-ask-b' },
-          { label: '050 AIVJ.TV: VexVoid, live', href: '/blog/050-aivj-tv-vexvoid-live' },
+          { label: '050 bTV: AIVJ: VexVoid, live', href: '/blog/050-aivj-tv-vexvoid-live' },
           { label: '049 The Exchange, sorted', href: '/blog/049-the-exchange-sorted' }
         ], [{ head: 'Series: Chat on BSV' },
           { label: '021 Coordinate on BSV', href: '/blog/021-coordinate-on-bsv' },
