@@ -38,7 +38,7 @@ Full text of every page below: https://bwalletx.com/llms-full.txt
 - [Get your name on Bitcoin](https://bwalletx.com/names): Your own name on Bitcoin, yours forever. One payment, no renewals: $1 for five letters or more, $5 for four, $15 for three. Search it, buy it or claim it, and give one to a friend, in bWalletX.
 - [NFTs: everything you own, edge to edge](https://bwalletx.com/nfts): The NFT library in bWalletX Desktop: pictures, clips, music and documents in one grid, opened edge to edge with no frames. Turn a moment from a clip into your card art.
 - [Send a bMail · bWalletX](https://bwalletx.com/person): Everything you can do with a person on bWalletX: send a bMail for a penny, call, pay or tip, and chat. Write your message now; bWalletX sends it.
-- [Releases](https://bwalletx.com/releases): Every bWalletX release and what it added, newest first. Latest: 5.2.16.
+- [Releases](https://bwalletx.com/releases): Every bWalletX release and what it added, newest first. Latest: 5.2.17.
 - [Tips: pay the people who make things](https://bwalletx.com/tips): In bWalletX Desktop, tip artists, NFT creators, rooms, people in chat, friends and Spaces speakers. Pick an amount, tap Allow once, and all of it goes to them.
 
 ## Wallet features
