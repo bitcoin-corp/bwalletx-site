@@ -1605,6 +1605,44 @@ bWalletX is in beta: test with small amounts. [support@bwalletx.com](mailto:supp
 
 ---
 
+Source: https://bwalletx.com/names
+
+Names
+
+# Get your name on Bitcoin.
+
+Yours forever. One payment, no renewals.
+
+Search →
+
+5+ characters $1.004 characters $5.003 characters $15.00Shorter or special names: make an offer
+
+## Type a name to start.
+
+Letters, numbers and dashes. First come, first served.
+
+What it becomes
+
+yournameyourname@bwalletx.com
+
+Pay meAnyone with bWalletX pays you by typing yourname.
+Profileyourname@bwalletx.com shows your name and picture.
+YoursOne payment. No renewals, no expiry.
+
+What is this?
+
+These are on-chain names (OpNS) on Bitcoin SV. Each name is a 1-sat ordinal inscription held by your wallet, not an account we can take back. Once it’s yours it stays yours: no renewals and no expiry.
+
+New names are first come, first served: claiming one mines it on your device and pays a small network fee. Names already claimed can only be bought if their owner lists them.
+
+Prices are set in US dollars and paid in BSV at the live rate when you buy, plus a small network fee. Purchases are final; there are no refunds.
+
+Your name takes payments in bWalletX once you set it as your name in Settings › Identity.
+
+Buying, claiming and giving happen in bWalletX: [desktop.bwalletx.com/names](https://desktop.bwalletx.com/names) or [web.bwalletx.com/names](https://web.bwalletx.com/names). Questions: [support@bwalletx.com](mailto:support@bwalletx.com)
+
+---
+
 Source: https://bwalletx.com/nfts
 
 # Everything you own, edge to edge.
