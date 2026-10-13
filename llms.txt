@@ -143,6 +143,7 @@ Full text of every page below: https://bwalletx.com/llms-full.txt
 - [051 Spaces on a schedule, b on every page · bWalletX blog](https://bwalletx.com/blog/051-spaces-schedule-and-ask-b): Spaces in bWalletX Desktop have a weekly schedule in your own time zone, with Add to calendar. And Ask b is now a small bar at the bottom of every page.
 - [052 Tip buttons · bWalletX blog](https://bwalletx.com/blog/052-tip-buttons): bWalletX Desktop has a Tip button for artists, NFT creators, rooms, people in chat, friends and speakers in Spaces. Pick an amount, tap Allow once, and all of it goes to them.
 - [053 Friends, bPics and video in rooms · bWalletX blog](https://bwalletx.com/blog/053-friends-bpics-and-video): Friends has its own page on bWalletX Desktop, bPics looks like a photo app, and video links play inside the Feed and chat rooms.
+- [054 Mint a list of names · bWalletX blog](https://bwalletx.com/blog/054-mint-a-list-of-names): bMint on bWalletX Desktop now mints OpNS names. Drop in a list, see which names are free, approve the whole batch once, and each name is mined straight into your own wallet.
 - [bWalletX development blog](https://bwalletx.com/blog/): How bWallet and bWalletX were built from a fork of Yours Wallet: numbered posts from the git history, including what broke, what we reversed and what is still not done.
 
 ## Support

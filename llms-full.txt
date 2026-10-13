@@ -30,7 +30,7 @@ Fans who hold 100 or more $VEXVOID pay 0.8p a minute.
 
 When there’s no set on, the page shows the schedule.
 
-[Open bTV: AIVJ Live](https://aivj.website/live)[Get bWalletX](https://bwalletx.com/get)
+[Open bTV: AIVJ Live](https://aivj.website/live)[VexVoid on bChatX](https://www.bchatx.com/u/vexvoid)[Get bWalletX](https://bwalletx.com/get)
 
 More from VexVoid: [the VexVoid artist page](https://bwalletx.com/artists/vexvoid). Thank them any time with a [tip](https://bwalletx.com/tips).
 
@@ -8005,6 +8005,8 @@ Source: https://bwalletx.com/blog/050-aivj-tv-vexvoid-live
 
 [Development blog](https://bwalletx.com/blog) · 050 · 13 Oct 2026
 
+Watch and chat with VexVoid on bChatX: [bchatx.com/u/vexvoid](https://www.bchatx.com/u/vexvoid). When the Space is live it plays at the top of the profile.
+
 # bTV: AIVJ — VexVoid, live
 
 bTV: AIVJ is where VexVoid plays live audio-visual sets. Watch the first three minutes without signing in. After that it’s 1p a minute from your bWalletX, straight to the artist.
@@ -8121,7 +8123,43 @@ YouTube, Vimeo and video file links now play inside the Feed and chat rooms. Not
 
 Related: [Friends](https://bwalletx.com/friends) · [Chat](https://bwalletx.com/chat) · [Video](https://bwalletx.com/video)
 
-[← 052 Tip buttons](https://bwalletx.com/blog/052-tip-buttons)[All posts →](https://bwalletx.com/blog)
+[← 052 Tip buttons](https://bwalletx.com/blog/052-tip-buttons)[054 Mint a list of names →](https://bwalletx.com/blog/054-mint-a-list-of-names)
+
+---
+
+Source: https://bwalletx.com/blog/054-mint-a-list-of-names
+
+[Development blog](https://bwalletx.com/blog) · 054 · 13 Oct 2026
+
+# Mint a list of names
+
+bMint on bWalletX Desktop now mints OpNS names. Drop in a list, see which names are free, approve the whole batch once, and each name is mined straight into your own wallet.
+
+## What an OpNS name is
+
+An OpNS name is a short name, like `b0ase`, written on the BSV blockchain as a 1Sat item. Whoever holds it owns it, in their own wallet, like any other thing you own there. Anyone can claim a free name, and the first to claim it gets it.
+
+## Drop in a list
+
+Open [bMint → OpNS](https://desktop.bwalletx.com/bmint/opns) on bWalletX Desktop. Drop in a .txt file with one name per line, or paste the names in. Each name is checked live and marked free, taken or yours.
+
+## See the bill first
+
+Before anything is paid you get an itemised invoice: the network fee for each name in sats and roughly in dollars, the total, how long mining should take, and your balance. Then one approval covers the whole batch. No popup per name.
+
+## Mined into your own wallet
+
+Each name is mined straight into your wallet, one after another, with a progress bar and a link to each transaction. You can pause and pick up again later. Names that start the same way reuse what was just minted, so a list of related names goes faster.
+
+## A real batch
+
+We minted 40 names in one go, including b0ase, bchatx, bwalletx, bmoviesx, vexvoid and npg, for about 0.002 BSV in network fees.
+
+Network fees go to the miners and can’t be refunded, even if a name turns out to be taken by someone who got there first.
+
+Related: [bMint OpNS](https://desktop.bwalletx.com/bmint/opns) · [Mint](https://bwalletx.com/mint) · [Handles](https://bwalletx.com/handles) · [Desktop](https://bwalletx.com/desktop)
+
+[← 053 Friends, bPics and video in rooms](https://bwalletx.com/blog/053-friends-bpics-and-video)[All posts →](https://bwalletx.com/blog)
 
 ---
 
@@ -8132,6 +8170,10 @@ Source: https://bwalletx.com/blog/
 How bWallet and bWalletX were built, one chapter at a time. Every post is written from the git history of the wallet, this site, the chat server and the PNEEs prototype. It covers what we built, why, what broke, what we reversed and what is still not done.
 
 Newest first. Dates come from commits. bWallet is a fork of [Yours Wallet](https://github.com/yours-org/yours-wallet) (MIT licence).
+
+- 054 · 13 Oct 2026
+[Mint a list of names](https://bwalletx.com/blog/054-mint-a-list-of-names)
+bMint on bWalletX Desktop now mints OpNS names. Drop in a list, see which names are free, approve the whole batch once, and each name is mined straight into your own wallet.
 
 - 053 · 13 Oct 2026
 [Friends, bPics and video in rooms](https://bwalletx.com/blog/053-friends-bpics-and-video)

@@ -98,11 +98,11 @@
       // Blog: when you publish a post, add it to the top of LATEST and drop the oldest (keep 5).
       { label: 'Blog', href: '/blog', pages: ['/blog', '/releases'], pills: false,
         sub: [{ label: 'All posts', href: '/blog' }, { label: 'Releases', href: '/releases' }, { head: 'Latest' }].concat([
+          { label: '054 Mint a list of names', href: '/blog/054-mint-a-list-of-names' },
           { label: '053 Friends, bPics, video', href: '/blog/053-friends-bpics-and-video' },
           { label: '052 Tip buttons', href: '/blog/052-tip-buttons' },
           { label: '051 Spaces on a schedule', href: '/blog/051-spaces-schedule-and-ask-b' },
-          { label: '050 bTV: AIVJ — VexVoid, live', href: '/blog/050-aivj-tv-vexvoid-live' },
-          { label: '049 The Exchange, sorted', href: '/blog/049-the-exchange-sorted' }
+          { label: '050 bTV: AIVJ — VexVoid, live', href: '/blog/050-aivj-tv-vexvoid-live' }
         ], [{ head: 'Series: Chat on BSV' },
           { label: '021 Coordinate on BSV', href: '/blog/021-coordinate-on-bsv' },
           { label: '026 Paying to be heard', href: '/blog/026-paying-to-be-heard' },
