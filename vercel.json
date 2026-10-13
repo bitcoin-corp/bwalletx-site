@@ -40,6 +40,11 @@
   ],
   "redirects": [
     {
+      "source": "/names",
+      "destination": "https://desktop.bwalletx.com/names",
+      "permanent": false
+    },
+    {
       "source": "/:g(bgigs|bGigs|BGigs)",
       "destination": "/gigs",
       "permanent": false
