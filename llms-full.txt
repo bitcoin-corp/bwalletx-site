@@ -590,6 +590,32 @@ bTrust is a way to arrange what you hold in your wallet. It isn’t a legal trus
 
 ---
 
+Source: https://bwalletx.com/bugs
+
+# Bugs, fixed in the open.
+
+Bugs people reported to b, and where each fix stands. Tell b what broke in the app; a short summary appears here after review.
+
+AllNewPlannedFixingFixed
+
+- Loading…
+
+## How this list works
+
+- Tell b in bWalletX. b passes it to the team.
+
+- Each entry is a short summary, written without names, handles or addresses. Reports about keys, payments, sign-in or personal data stay private.
+
+- A person reads every entry before it appears here.
+
+See also: [Ideas](https://bwalletx.com/ideas) · [Ask b](https://bwalletx.com/ask-b)
+
+[Get bWalletX](https://bwalletx.com/get)
+
+Found a security problem? Email [support@bwalletx.com](mailto:support@bwalletx.com) and don’t post details anywhere public.
+
+---
+
 Source: https://bwalletx.com/buy
 
 # Buy BSV in bWalletX
@@ -1272,6 +1298,32 @@ bWalletX is in beta: test with small amounts. Questions: [support@bwalletx.com](
 
 ---
 
+Source: https://bwalletx.com/ideas
+
+# Your ideas, in the open.
+
+Ideas people sent to b, and where each one stands. Tell b what you want in the app; a short summary appears here after review.
+
+AllNewPlannedBuildingShipped
+
+- Loading…
+
+## How this list works
+
+- Tell b in bWalletX. b passes it to the team.
+
+- Each entry is a short summary, written without names, handles or addresses. Reports about keys, payments, sign-in or personal data stay private.
+
+- A person reads every entry before it appears here.
+
+See also: [Bugs](https://bwalletx.com/bugs) · [Ask b](https://bwalletx.com/ask-b)
+
+[Get bWalletX](https://bwalletx.com/get)
+
+Found a security problem? Email [support@bwalletx.com](mailto:support@bwalletx.com) and don’t post details anywhere public.
+
+---
+
 Source: https://bwalletx.com/
 
 bWalletX
@@ -1477,12 +1529,6 @@ Verify once with bit-sign, powered by Veriff. You get a private certificate that
 ### You choose what to reveal
 
 Apps only see the details you approve. Nothing is shared by default.
-
-Contributors · Coming soon
-
-## Build bApps with your agents.
-
-Point your coding agents at open bApp tasks and earn bounties for work that gets merged. Coming soon.
 
 ## Join the testing waitlist
 
@@ -2522,7 +2568,7 @@ By email: [support@bwalletx.com](mailto:support@bwalletx.com), with your phone m
 
 - No Exchange, Market or Swap: trading is only in bWalletX. That is by design for the Play Store edition.
 
-- b, the assistant, needs your own AI key in this edition (Settings › b agent). Without one it cannot answer yet.
+- Tell b about bugs and ideas any time, no key needed; add your own AI key in Settings › b agent and b will answer too.
 
 - It is a beta: keep small amounts in it, and keep your 12 words safe. Your keys stay on your phone.
 
@@ -2595,7 +2641,7 @@ In TestFlight: take a screenshot while the app is open, tap it, and choose Share
 
 - No Exchange, Market or Swap: trading is only in bWalletX. That is by design for the App Store edition.
 
-- b, the assistant, needs your own AI key in this edition (Settings › b agent). Without one it cannot answer yet.
+- Tell b about bugs and ideas any time, no key needed; add your own AI key in Settings › b agent and b will answer too.
 
 - It is a beta: keep small amounts in it, and keep your 12 words safe. Your keys stay on your phone.
 
@@ -4191,7 +4237,7 @@ bWalletX is in beta: test with small amounts. Nothing here is investment advice.
 
 Source: https://bwalletx.com/bmail
 
-Coming in 5.1.90
+In bWalletX now
 
 # bMail
 
@@ -4239,14 +4285,6 @@ OptionWhat it does
 
 StandardYour letter, sealed and stamped, delivered to their mailbox.
 
-Signed delivery coming soonProof of who opened it and when, signed by their wallet when they open it.
-
-Pay to open coming soonThe stamp is only theirs if they open it. If they don’t, it comes back to you.
-
-## Contracts coming soon
-
-Signed, sealed, delivered, accepted. Ask b to draft an agreement, sign it with your finger, and send it. They accept in one tap, and both of you keep the signed copy in your wallet.
-
 ## Your public mailbox
 
 Every bWalletX user gets a page at bwalletx.com/$you, for example [bwalletx.com/$alice](https://bwalletx.com/$alice). People without the app can find you there and write to you.
@@ -4260,7 +4298,7 @@ Do I pay to write to friends?
 No. Friends are free and always on top of your inbox.
 
 When can I use it?
-bMail is coming in bWalletX 5.1.90. Get the app now and it will appear when you update.
+Now. bMail is in bWalletX: tap the mailbox icon at the top of the app.
 
 [Get bWalletX](https://bwalletx.com/get)[Open the web wallet](https://web.bwalletx.com)
 

@@ -78,10 +78,12 @@
           { label: 'bMovies', href: '/bapps/bmovies' },
           { label: 'bWeb (coming)', href: '/bweb' }
         ] },
-      { label: 'Agents', href: '/agents', pages: ['/agents', '/agent', '/hold-to-talk', '/strategies', '/strategies/spec', '/cli', '/mcp'],
+      { label: 'Agents', href: '/agents', pages: ['/agents', '/agent', '/ideas', '/bugs', '/hold-to-talk', '/strategies', '/strategies/spec', '/cli', '/mcp'],
         sub: [
           { label: 'Agent accounts', href: '/agents' },
           { label: 'b agent', href: '/agent' },
+          { label: 'Ideas', href: '/ideas' },
+          { label: 'Bugs', href: '/bugs' },
           { label: 'Hold to talk', href: '/hold-to-talk' },
           { label: 'Strategies', href: '/strategies' },
           { label: 'Strategy spec', href: '/strategies/spec' },
