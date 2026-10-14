@@ -5,144 +5,126 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>b cool</title>
     <link rel="canonical" href="https://bwalletx.com/b-cool" />
-    <meta name="description" content="b cool. Less noise. More life. Just b." />
+    <meta name="description" content="One day bitcoin will just be called b. Just b. Just be. b cool." />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://bwalletx.com/b-cool" />
     <meta property="og:site_name" content="bWalletX" />
     <meta property="og:title" content="b cool." />
-    <meta property="og:description" content="Less noise. More life. Just b." />
-    <meta property="og:image" content="https://bwalletx.com/og-b-cool-v1.png" />
+    <meta property="og:description" content="One day bitcoin will just be called b." />
+    <meta property="og:image" content="https://bwalletx.com/og-b-cool-v2.jpg" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
-    <meta property="og:image:alt" content="The gold b in sunglasses on an ice floe under the northern lights" />
+    <meta property="og:image:alt" content="b cool. The gold b over a polar snow plain at twilight" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@bWalletX" />
     <meta name="twitter:title" content="b cool." />
-    <meta name="twitter:description" content="Less noise. More life. Just b." />
-    <meta name="twitter:image" content="https://bwalletx.com/og-b-cool-v1.png" />
-    <meta name="theme-color" content="#0b2a4a" />
+    <meta name="twitter:description" content="One day bitcoin will just be called b." />
+    <meta name="twitter:image" content="https://bwalletx.com/og-b-cool-v2.jpg" />
+    <meta name="theme-color" content="#05080f" />
     <link rel="icon" href="/favicon.ico" />
+    <link rel="preload" as="image" href="/images/b-cool-hero.jpg" media="(orientation: landscape)" />
+    <link rel="preload" as="image" href="/images/b-cool-hero-tall.jpg" media="(orientation: portrait)" />
     <link rel="stylesheet" href="/styles.css" />
     <style>
-      /* b cool (owner, 14 Oct 2026): b in the arctic with sunglasses on. The scene is its own background in light and dark. */
-      html, body { margin: 0; background: #0b2a4a; }
-      .bc { display: block; max-width: none; width: 100%; margin: 0; padding: 0; box-sizing: border-box; position: relative; min-height: 100svh; overflow: hidden; color: #fff; }
-      .bc-scene { position: absolute; inset: 0; width: 100%; height: 100%; display: block; }
-      .bc-copy { box-sizing: border-box; width: 100%; position: relative; z-index: 2; display: flex; flex-direction: column; align-items: center; text-align: center; padding: 9svh 16px 0; }
-      .bc-copy h1 { margin: 0; font: 700 clamp(3.4rem, 14vw, 8.5rem) / 1 var(--hf, 'Space Grotesk', system-ui, sans-serif); letter-spacing: -0.045em; color: #fff; text-shadow: 0 4px 40px rgba(6, 30, 60, 0.45); }
-      .bc-copy p { margin: 14px 0 26px; font: 500 clamp(1rem, 3.6vw, 1.25rem) var(--hf, system-ui, sans-serif); color: #eaf6ff; text-shadow: 0 2px 18px rgba(6, 30, 60, 0.5); }
-      .bc-btn { display: inline-block; padding: 14px 28px; border-radius: 999px; background: linear-gradient(180deg, #ffe58a, #ffd24d 55%, #c98f00); color: #1a1200; font: 700 1.05rem var(--hf, system-ui, sans-serif); text-decoration: none; box-shadow: 0 8px 30px rgba(201, 143, 0, 0.45); }
-      .bc-btn:hover, .bc-btn:focus-visible { filter: brightness(1.07); outline: none; box-shadow: 0 0 0 3px #fff, 0 8px 30px rgba(201, 143, 0, 0.5); }
-      .bc-home { position: absolute; z-index: 3; top: 14px; left: 16px; color: #fff; font: 600 0.95rem var(--hf, system-ui, sans-serif); text-decoration: none; opacity: 0.85; }
-      /* motion */
-      .bob { animation: bob 4.5s ease-in-out infinite; transform-box: fill-box; transform-origin: 50% 100%; }
-      @keyframes bob { 0%, 100% { transform: translateY(0) rotate(-1deg); } 50% { transform: translateY(-10px) rotate(1deg); } }
-      .floe { animation: floe 4.5s ease-in-out infinite; }
-      @keyframes floe { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(4px); } }
-      .glint { animation: glint 5s ease-in-out infinite; }
-      @keyframes glint { 0%, 70% { transform: translateX(-60px); opacity: 0; } 75% { opacity: 1; } 90%, 100% { transform: translateX(60px); opacity: 0; } }
-      .aur { animation: aur 9s ease-in-out infinite; transform-box: fill-box; transform-origin: 50% 50%; }
-      .aur.a2 { animation-duration: 13s; animation-delay: -4s; }
-      .aur.a3 { animation-duration: 11s; animation-delay: -7s; }
-      @keyframes aur { 0%, 100% { opacity: 0.55; transform: translateX(0) scaleY(1); } 50% { opacity: 0.95; transform: translateX(30px) scaleY(1.12); } }
-      .snow { position: absolute; inset: 0; z-index: 1; pointer-events: none; width: 100%; height: 100%; }
-      @media (prefers-reduced-motion: reduce) { .bob, .floe, .glint, .aur { animation: none; } .glint { opacity: 0; } .snow { display: none; } }
+      /* b cool (owner, 14 Oct 2026): the Just b campaign, gone north. Photoreal arctic, calm, a little wit. */
+      html, body { margin: 0; background: #05080f; color: #e6edf5; overflow-x: hidden; }
+      .bc-scene { position: relative; min-height: 100svh; display: flex; flex-direction: column; overflow: hidden; }
+      .bc-scene img { position: absolute; inset: 0; width: 100%; height: 100%; max-width: none; object-fit: cover; object-position: center 60%; }
+      .bc-scene::after { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(5, 8, 15, 0.35) 0%, rgba(5, 8, 15, 0) 35%, rgba(5, 8, 15, 0) 70%, #05080f 100%); }
+      .bc-hero-in { position: relative; z-index: 1; flex: 1; display: flex; flex-direction: column; align-items: center; padding: 26vh 16px 0; text-align: center; }
+      .bc-h1 { margin: 0; display: flex; justify-content: center; align-items: flex-start; gap: 0.16em; font: 700 clamp(3.4rem, 16vw, 11rem) / 1 var(--hf); letter-spacing: -0.045em; color: #fff; text-shadow: 0 6px 60px rgba(0, 0, 0, 0.6); }
+      .bc-h1 img { position: static; height: 0.86em; width: calc(0.86em * 0.74); margin-top: 0.08em; filter: drop-shadow(0 0 30px rgba(245, 184, 0, 0.4)); animation: glow 7s 2.6s ease-in-out infinite; }
+      @keyframes glow { 0%, 100% { filter: drop-shadow(0 0 24px rgba(245, 184, 0, 0.35)); } 50% { filter: drop-shadow(0 0 56px rgba(245, 184, 0, 0.75)); } }
+      .bc-sub { margin: 26px 0 0; font: 500 clamp(0.9rem, 3vw, 1.05rem) var(--hf); letter-spacing: 0.08em; color: #b9c6d6; }
+      .bc-rise { opacity: 0; animation: rise 2.4s ease forwards; }
+      .bc-rise.d1 { animation-delay: 0.6s; } .bc-rise.d2 { animation-delay: 1.8s; }
+      @keyframes rise { from { opacity: 0; transform: translateY(14px); filter: blur(4px); } to { opacity: 1; transform: none; filter: blur(0); } }
+      @media (prefers-reduced-motion: reduce) { .bc-rise { opacity: 1; animation: none; } .bc-h1 img { animation: none; } }
+
+      .bc-line { max-width: 760px; margin: 0 auto; padding: 22vh 24px; text-align: center; }
+      .bc-line p { margin: 0; font: 700 clamp(1.9rem, 6vw, 3.4rem) / 1.15 var(--hf); letter-spacing: -0.03em; color: #fff; }
+      .bc-line em { font-style: normal; color: var(--gold-hi, #ffd24d); }
+      .bc-line small { display: block; margin-top: 1.4em; font: 400 clamp(1rem, 2.4vw, 1.2rem) / 1.7 var(--hf); color: #9fb0c4; }
+
+      .bc-plate { margin: 0; }
+      .bc-plate img { display: block; width: 100%; height: auto; max-width: none; }
+      .bc-pair { display: grid; grid-template-columns: 1fr 1fr; }
+      .bc-pair img { display: block; width: 100%; height: auto; max-width: none; aspect-ratio: 1; object-fit: cover; }
+      @media (max-width: 640px) { .bc-pair { grid-template-columns: 1fr; } .bc-plate img { aspect-ratio: 4 / 5; object-fit: cover; } }
+
+      .bc-tick { justify-content: center; }
+      .bc-tick::after { background: linear-gradient(180deg, #05080f 0%, rgba(5, 8, 15, 0.25) 30%, rgba(5, 8, 15, 0.45) 75%, #05080f 100%); }
+      .bc-tick-in { position: relative; z-index: 1; text-align: center; padding: 0 16px; }
+      .bc-tick-in h2 { margin: 0; font: 700 clamp(5rem, 26vw, 15rem) / 1 var(--hf); letter-spacing: -0.06em; color: #fff; text-shadow: 0 6px 60px rgba(0, 0, 0, 0.6); }
+      .bc-tick-in h2 span { color: var(--gold-hi, #ffd24d); }
+      .bc-tick-in p { margin: 18px 0 0; font: 500 clamp(1.1rem, 3.4vw, 1.5rem) / 1.5 var(--hf); color: #dfe7f0; }
+      .bc-tick-in p + p { margin-top: 4px; color: #9fb0c4; font-size: clamp(0.95rem, 2.6vw, 1.1rem); letter-spacing: 0.04em; }
+
+      .bc-end { justify-content: flex-end; }
+      .bc-end img { object-position: center 70%; }
+      .bc-end::after { background: linear-gradient(180deg, #05080f 0%, rgba(5, 8, 15, 0) 25%, rgba(5, 8, 15, 0.1) 60%, #05080f 100%); }
+      .bc-end-in { position: relative; z-index: 1; text-align: center; padding: 0 16px 12vh; }
+      .bc-end-in h2 { margin: 0 0 30px; font: 700 clamp(2.6rem, 10vw, 5rem) / 1 var(--hf); letter-spacing: -0.04em; text-shadow: 0 4px 40px rgba(0, 0, 0, 0.6); color: #fff; }
+      .bc-go { display: inline-block; padding: 18px 40px; border-radius: 999px; background: linear-gradient(180deg, #ffd24d, #f5b800); color: #0b0a08; font: 700 1.1rem var(--hf); text-decoration: none; box-shadow: 0 14px 50px rgba(245, 184, 0, 0.35); }
+      .bc-go:hover { filter: brightness(1.06); }
+      .bc-go:focus-visible { outline: 2px solid #fff; outline-offset: 4px; }
+      .bc-foot { margin: 0; padding: 0 16px 22px; text-align: center; font-size: 0.75rem; color: #5d6878; }
+      .bc-foot a { color: #7f8b9b; }
     </style>
   </head>
-  <body>
-    <main class="bc">
-      <svg class="bc-scene" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMax slice" role="img" aria-label="The gold b wearing black sunglasses and a red scarf, standing on an ice floe under the northern lights">
-        <defs>
-          <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0b2a4a"/><stop offset="0.45" stop-color="#2f6f9e"/><stop offset="0.8" stop-color="#a9d8ef"/><stop offset="1" stop-color="#e6f6ff"/></linearGradient>
-          <linearGradient id="au1" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#5df2c0" stop-opacity="0"/><stop offset="0.5" stop-color="#5df2c0" stop-opacity="0.75"/><stop offset="1" stop-color="#2bd6d0" stop-opacity="0"/></linearGradient>
-          <linearGradient id="au2" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#b48cff" stop-opacity="0"/><stop offset="0.5" stop-color="#9b7bff" stop-opacity="0.6"/><stop offset="1" stop-color="#4fd1c5" stop-opacity="0"/></linearGradient>
-          <linearGradient id="sea" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3f86b5"/><stop offset="1" stop-color="#0f3a63"/></linearGradient>
-          <linearGradient id="ice" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#cfeaf8"/></linearGradient>
-          <linearGradient id="iceside" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#8fd0ee"/><stop offset="1" stop-color="#3f93c4"/></linearGradient>
-          <linearGradient id="peak" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f4fbff"/><stop offset="1" stop-color="#9ccbe6"/></linearGradient>
-          <linearGradient id="gold" gradientUnits="userSpaceOnUse" x1="0" y1="12" x2="0" y2="105"><stop offset="0" stop-color="#FFE58A"/><stop offset="0.55" stop-color="#FFD24D"/><stop offset="1" stop-color="#C98F00"/></linearGradient>
-          <linearGradient id="lens" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2a2f3a"/><stop offset="1" stop-color="#05070a"/></linearGradient>
-          <mask id="hole"><rect x="0" y="0" width="140" height="140" fill="#fff"/><circle cx="60" cy="72" r="15" fill="#000"/></mask>
-          <clipPath id="lensclip"><path d="M30 55 h26 q2 0 2 2 v6 q-1 11 -14 11 q-13 0 -14 -11 v-6 q0 -2 2 -2z M64 55 h26 q2 0 2 2 v6 q-1 11 -14 11 q-13 0 -14 -11 v-6 q0 -2 2 -2z"/></clipPath>
-          <filter id="soft"><feGaussianBlur stdDeviation="14"/></filter>
-          <radialGradient id="halo" cx="0.5" cy="0.5" r="0.5"><stop offset="0" stop-color="#ffd24d" stop-opacity="0.35"/><stop offset="1" stop-color="#ffd24d" stop-opacity="0"/></radialGradient>
-        </defs>
-        <rect width="1200" height="800" fill="url(#sky)"/>
-        <!-- stars -->
-        <g fill="#fff" opacity="0.7"><circle cx="90" cy="60" r="1.6"/><circle cx="240" cy="120" r="1.2"/><circle cx="410" cy="40" r="1.4"/><circle cx="690" cy="90" r="1.1"/><circle cx="880" cy="50" r="1.6"/><circle cx="1050" cy="130" r="1.3"/><circle cx="1150" cy="40" r="1.1"/><circle cx="560" cy="150" r="1"/><circle cx="330" cy="200" r="1"/><circle cx="980" cy="210" r="1"/></g>
-        <!-- aurora -->
-        <g filter="url(#soft)">
-          <path class="aur" d="M-50 210 C 150 120, 300 300, 520 190 S 900 110, 1250 230 L 1250 330 C 900 220, 760 300, 520 300 S 150 230, -50 320Z" fill="url(#au1)"/>
-          <path class="aur a2" d="M-50 120 C 200 60, 380 200, 640 120 S 1000 60, 1250 150 L 1250 220 C 1000 140, 820 230, 640 200 S 220 130, -50 210Z" fill="url(#au2)"/>
-          <path class="aur a3" d="M200 280 C 400 220, 600 340, 820 260 S 1100 230, 1250 290 L 1250 340 C 1050 300, 900 340, 820 330 S 450 290, 200 350Z" fill="url(#au1)" opacity="0.6"/>
-        </g>
-        <!-- far peaks -->
-        <path d="M0 560 L120 430 L190 490 L300 380 L420 500 L520 440 L610 520 L0 520Z" fill="#cfe6f4" opacity="0.7"/>
-        <path d="M560 560 L700 420 L780 480 L880 360 L1010 490 L1100 430 L1200 500 L1200 560Z" fill="#cfe6f4" opacity="0.7"/>
-        <path d="M-20 580 L90 470 L160 520 L260 420 L360 520 L440 480 L560 580Z" fill="url(#peak)"/>
-        <path d="M260 420 L235 448 L252 445 L268 456 L282 440Z" fill="#fff"/>
-        <path d="M640 580 L760 470 L840 520 L940 400 L1060 520 L1140 470 L1220 580Z" fill="url(#peak)"/>
-        <path d="M940 400 L912 432 L930 428 L946 440 L962 426Z" fill="#fff"/>
-        <!-- sea -->
-        <rect y="575" width="1200" height="225" fill="url(#sea)"/>
-        <g stroke="#cdeeff" stroke-width="2" stroke-linecap="round" opacity="0.35"><path d="M80 620 h70"/><path d="M300 660 h50"/><path d="M880 640 h90"/><path d="M1040 700 h60"/><path d="M180 740 h80"/><path d="M960 760 h50"/></g>
-        <!-- icebergs -->
-        <g><path d="M90 590 L130 545 L170 560 L200 590Z" fill="url(#ice)"/><path d="M90 590 L200 590 L185 612 L105 612Z" fill="url(#iceside)" opacity="0.8"/></g>
-        <g><path d="M960 592 L1000 530 L1030 548 L1060 520 L1110 592Z" fill="url(#ice)"/><path d="M960 592 L1110 592 L1090 622 L980 622Z" fill="url(#iceside)" opacity="0.8"/></g>
-        <!-- far polar bear on the right berg -->
-        <path d="M1040 528 q4 -10 16 -10 h14 q6 -6 12 -2 q3 3 0 6 l-3 2 v10 h-4 v-6 h-18 v6 h-4 v-6 q-6 2 -9 0z" fill="#f7fbff" opacity="0.95"/>
-        <!-- the floe and b -->
-        <g class="floe">
-          <ellipse cx="600" cy="700" rx="260" ry="26" fill="#0b2f52" opacity="0.35"/>
-          <path d="M370 662 L420 640 L780 636 L840 660 L820 690 L380 692Z" fill="url(#ice)"/>
-          <path d="M380 692 L820 690 L800 720 L410 722Z" fill="url(#iceside)"/>
-          <ellipse cx="600" cy="560" rx="180" ry="150" fill="url(#halo)"/>
-          <g transform="translate(600 650) scale(3.1) translate(-60 -105)">
-            <g class="bob">
-              <ellipse cx="60" cy="105" rx="34" ry="3" fill="#0b2f52" opacity="0.25"/>
-              <g fill="url(#gold)" mask="url(#hole)"><polygon points="45,12 45,76 27,76 27,30"/><circle cx="60" cy="72" r="33"/></g>
-              <!-- scarf -->
-              <path d="M24 40 L48 34 L49 42 L25 48Z" fill="#e0353b"/>
-              <path d="M27 46 l-7 22 l7 1 l5 -21z" fill="#c42a30"/>
-              <path d="M26 41 L48 36 M26 45 L48 40" stroke="#fff" stroke-width="1" opacity="0.6"/>
-              <!-- sunglasses -->
-              <path d="M20 55 h80" stroke="#0a0c10" stroke-width="2.6" stroke-linecap="round"/>
-              <path d="M30 55 h26 q2 0 2 2 v6 q-1 11 -14 11 q-13 0 -14 -11 v-6 q0 -2 2 -2z M64 55 h26 q2 0 2 2 v6 q-1 11 -14 11 q-13 0 -14 -11 v-6 q0 -2 2 -2z" fill="url(#lens)" stroke="#000" stroke-width="1.2"/>
-              <path d="M56 58 q4 -3 8 0" stroke="#0a0c10" stroke-width="2.4" fill="none"/>
-              <g clip-path="url(#lensclip)"><rect class="glint" x="40" y="48" width="7" height="34" fill="#fff" opacity="0.8" transform="skewX(-25)"/></g>
-              <path d="M34 58 h10" stroke="#fff" stroke-width="1.4" stroke-linecap="round" opacity="0.35"/>
-              <path d="M68 58 h10" stroke="#fff" stroke-width="1.4" stroke-linecap="round" opacity="0.35"/>
-            </g>
-          </g>
-        </g>
-      </svg>
-      <canvas class="snow" id="bc-snow" aria-hidden="true"></canvas>
-      <a class="bc-home" href="/">bWalletX</a>
-      <div class="bc-copy">
-        <h1>b cool.</h1>
-        <p>Less noise. More life. Just b.</p>
-        <a class="bc-btn" href="https://web.bwalletx.com">Open bWalletX</a>
+  <body class="bc">
+    <section class="bc-scene">
+      <picture><source media="(orientation: portrait)" srcset="/images/b-cool-hero-tall.jpg" /><img src="/images/b-cool-hero.jpg" alt="A polar snow plain at twilight, a thin gold line on the horizon" width="1280" height="720" fetchpriority="high" /></picture>
+      <div class="bc-hero-in">
+        <h1 class="bc-h1 bc-rise d1" aria-label="b cool."><img src="/logo.svg" alt="" />cool.</h1>
+        <p class="bc-sub bc-rise d2">Just b. Just be.</p>
       </div>
-    </main>
-    <script>
-      // Gentle snowfall. Off for reduced motion.
-      (function () {
-        if (window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-        var c = document.getElementById('bc-snow'), x = c.getContext('2d'), f = [], w, h, d;
-        function size() { d = Math.min(window.devicePixelRatio || 1, 2); w = c.clientWidth; h = c.clientHeight; c.width = w * d; c.height = h * d; x.setTransform(d, 0, 0, d, 0, 0); }
-        size(); addEventListener('resize', size);
-        var n = Math.round(Math.min(140, w * h / 9000));
-        for (var i = 0; i < n; i++) f.push({ x: Math.random() * w, y: Math.random() * h, r: 0.8 + Math.random() * 2.2, s: 0.3 + Math.random() * 0.9, p: Math.random() * 6.28 });
-        (function tick() {
-          x.clearRect(0, 0, w, h); x.fillStyle = 'rgba(255,255,255,0.85)';
-          for (var i = 0; i < f.length; i++) {
-            var o = f[i]; o.y += o.s; o.p += 0.01; o.x += Math.sin(o.p) * 0.4;
-            if (o.y > h + 4) { o.y = -4; o.x = Math.random() * w; }
-            x.beginPath(); x.arc(o.x, o.y, o.r, 0, 6.283); x.fill();
-          }
-          requestAnimationFrame(tick);
-        })();
-      })();
-    </script>
+    </section>
+
+    <section class="bc-line">
+      <p>One day, bitcoin will just be called <em>b</em>.</p>
+      <small>Nobody says electronic mail any more.</small>
+    </section>
+
+    <figure class="bc-plate">
+      <img src="/images/b-cool-aurora.jpg" alt="Aurora over a frozen lake at polar night" width="1280" height="720" loading="lazy" />
+    </figure>
+
+    <section class="bc-line">
+      <p>Just b.<br /><em>Just be.</em></p>
+      <small>Settle down. Breathe out. Nothing to prove.</small>
+    </section>
+
+    <div class="bc-pair">
+      <img src="/images/b-cool-ice-cave.jpg" alt="Blue light inside a glacier ice cave" width="1024" height="1024" loading="lazy" />
+      <img src="/images/b-cool-shades.jpg" alt="Mirrored sunglasses on snow reflecting the aurora" width="1024" height="1024" loading="lazy" />
+    </div>
+
+    <section class="bc-line">
+      <p>No noise. No hurry.<br /><em>b cool.</em></p>
+      <small>Pay by the second. Lock some away. Tip the people who make the things you love.</small>
+    </section>
+
+    <figure class="bc-plate">
+      <img src="/images/b-cool-gold-b.jpg" alt="The gold b standing alone on a snow plain at golden hour" width="1280" height="720" loading="lazy" />
+    </figure>
+
+    <section class="bc-scene bc-tick">
+      <img src="/images/b-cool-iceberg.jpg" alt="" width="1280" height="720" loading="lazy" />
+      <div class="bc-tick-in">
+        <h2><span>$</span>b</h2>
+        <p>Just b.</p>
+        <p>$b = bitcoin.</p>
+      </div>
+    </section>
+
+    <section class="bc-scene bc-end">
+      <img src="/images/b-cool-figure.jpg" alt="A lone figure on sea ice watching a gold horizon under a faint aurora" width="1280" height="720" loading="lazy" />
+      <div class="bc-end-in">
+        <h2>b cool.</h2>
+        <a class="bc-go" href="https://web.bwalletx.com">Open bWalletX</a>
+      </div>
+    </section>
+    <p class="bc-foot">bWalletX is in beta: test with small amounts. <a href="/just-b">Just b</a> · <a href="mailto:support@bwalletx.com">support@bwalletx.com</a></p>
   </body>
 </html>
