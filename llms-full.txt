@@ -2440,6 +2440,79 @@ Questions: [@bWalletX on X](https://x.com/bWalletX) · [Twetch](https://bwalletx
 
 ---
 
+Source: https://bwalletx.com/testers/bwallet/iphone
+
+# Test bWallet on iPhone.
+
+bWallet is the App Store edition of bWalletX: send, receive, tokens, names, chat and calls, with no exchange. It is in beta on Apple’s TestFlight. This page says how to join, exactly what to test, and how to tell us what you find.
+
+[Join the beta on TestFlight](https://testflight.apple.com/join/1TTnQNKm)
+
+The link: [https://testflight.apple.com/join/1TTnQNKm](https://testflight.apple.com/join/1TTnQNKm)
+
+## On what
+
+DeviceiPhone
+
+SystemiOS 15 or later
+
+ViaTestFlight
+
+EditionbWallet (App Store)
+
+Not iPad in this beta. Android testers: the paid 14-day test is on [/testers](https://bwalletx.com/testers). For the full bWalletX on iPhone, use the [web app](https://bwalletx.com/iphone).
+
+## Join (two minutes)
+
+- Install TestFlight from the App Store if you don’t have it.
+
+- Open the link above on your iPhone, tap Accept, then Install.
+
+- New builds arrive through TestFlight on their own. Beta builds expire after 90 days; the next one replaces them.
+
+## What to test, in this order
+
+-
+First run.Create a wallet, write down the 12 words, set a device password. Then delete and restore it from the words on the same phone. Does everything come back?
+
+-
+Receive.Open Receive, copy the address or show the QR, and send yourself a few pence of BSV from another wallet. How long until it shows?
+
+-
+Send.Pay a $handle, a name@bwalletx.com and a plain address. Does the fee shown match what left the wallet?
+
+-
+Names.Search a name in Names. If it is free, get it. Give one to a friend. Did it take about a minute, and did they receive it?
+
+-
+Chat.Open a room, send a message, open a DM. Scroll both lists past the top: both should bounce.
+
+-
+Calls.Call another bWallet user. Try mute and speaker, and hanging up from both ends.
+
+-
+Lock and accounts.Lock and unlock the app. Add a second account, switch to it and back. Does the right balance show each time?
+
+## What to tell us
+
+Anything that felt slow, stuck, unclear, or cost more than you expected. The best report says what you did, what you expected, what happened, and the iPhone model and iOS version.
+
+### Two ways to send it
+
+In TestFlight: take a screenshot while the app is open, tap it, and choose Share Beta Feedback. It arrives with your device and iOS version attached. By email: [support@bwalletx.com](mailto:support@bwalletx.com).
+
+## Known in this build
+
+- No Exchange, Market or Swap: trading is only in bWalletX. That is by design for the App Store edition.
+
+- b, the assistant, needs your own AI key in this edition (Settings › b agent). Without one it cannot answer yet.
+
+- It is a beta: keep small amounts in it, and keep your 12 words safe. Your keys stay on your phone.
+
+Questions: [support@bwalletx.com](mailto:support@bwalletx.com)
+
+---
+
 Source: https://bwalletx.com/tips
 
 # Tip the people who make things.
