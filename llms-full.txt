@@ -46,7 +46,7 @@ The full bWalletX wallet on your Android phone or tablet. Your keys stay on your
 
 [Download APK (beta) ↓](https://bwalletx.com/download/bwalletx-android-5.2.17.apk)
 
-It isn't on Google Play yet, so install it by hand:
+It isn't on Google Play yet, so install it by hand. (The store edition, bWallet, is in a Google Play internal test: see [/testers/bwallet/android](https://bwalletx.com/testers/bwallet/android).)
 
 - Tap Download APK on your Android device.
 
@@ -1174,7 +1174,7 @@ New to Desktop? [See what bWalletX Desktop does →](https://bwalletx.com/deskto
 
 ## bWallet in the app stores
 
-The store edition, bWallet, is in beta. On iPhone you can join it now through TestFlight: [testflight.apple.com/join/1TTnQNKm](https://testflight.apple.com/join/1TTnQNKm) (install TestFlight first, then open the link on your iPhone). On Google Play it is in internal testing; the wider closed test waits on Google verifying our organisation account. It hasn’t been submitted to the App Store itself yet; that waits on converting our Apple developer account to an organisation account. [Join the waitlist](https://bwalletx.com/#waitlist) to hear when either opens.
+The store edition, bWallet, is in beta. On iPhone you can join it now through TestFlight: [testflight.apple.com/join/1TTnQNKm](https://testflight.apple.com/join/1TTnQNKm) (install TestFlight first, then open the link on your iPhone). On Android it is in internal testing on Google Play: apply on [/testers](https://bwalletx.com/testers), and once your Google account is added, join at [play.google.com/apps/internaltest/4701646815257978169](https://play.google.com/apps/internaltest/4701646815257978169). The wider closed test waits on Google verifying our organisation account. It hasn’t been submitted to the App Store itself yet; that waits on converting our Apple developer account to an organisation account. [Join the waitlist](https://bwalletx.com/#waitlist) to hear when either opens.
 
 [Download on theApp StorebWallet · not submitted yetGET IT ONGoogle PlaybWallet · Play internal testing
 
@@ -2400,6 +2400,10 @@ Status, 7 Oct 2026: the 14-day test hasn't started yet. Google asked us to move 
 
 Loading…
 
+## The Android test link
+
+Once your Google account is on the list, join here on your phone: [play.google.com/apps/internaltest/4701646815257978169](https://play.google.com/apps/internaltest/4701646815257978169), then install bWallet from Google Play. What to test and how to report is on [/testers/bwallet/android](https://bwalletx.com/testers/bwallet/android). The link does nothing for an account that isn’t on the list, so apply first.
+
 ## On iPhone?
 
 The iPhone beta is open through TestFlight and has no application step: install TestFlight from the App Store, then open [testflight.apple.com/join/1TTnQNKm](https://testflight.apple.com/join/1TTnQNKm) on your iPhone. What to test and how to report is on [/testers/bwallet/iphone](https://bwalletx.com/testers/bwallet/iphone). The paid 14-day test below is Android only, because it is Google’s requirement.
@@ -2437,6 +2441,79 @@ The iPhone beta is open through TestFlight and has no application step: install 
 - What the app sends while you test is in the [privacy policy](https://bwalletx.com/privacy#testers): a random install id, your tester code, whether it came from Google Play, and the app version. Nothing about your keys or money.
 
 Questions: [@bWalletX on X](https://x.com/bWalletX) · [Twetch](https://bwalletx.com/twetch).
+
+---
+
+Source: https://bwalletx.com/testers/bwallet/android
+
+# Test bWallet on Android.
+
+bWallet is the Play Store edition of bWalletX: send, receive, tokens, names, chat and calls, with no exchange. It is in internal testing on Google Play. This page says how to join, exactly what to test, and how to tell us what you find.
+
+[Join the beta on Google Play](https://play.google.com/apps/internaltest/4701646815257978169)
+
+The link: [https://play.google.com/apps/internaltest/4701646815257978169](https://play.google.com/apps/internaltest/4701646815257978169). It only works for a Google account we have added to the tester list, so [apply on /testers](https://bwalletx.com/testers) first if you haven’t.
+
+## On what
+
+DeviceAndroid phone or tablet
+
+SystemAndroid 7.0 or later
+
+ViaGoogle Play, internal test
+
+EditionbWallet (Play Store)
+
+iPhone testers: see [/testers/bwallet/iphone](https://bwalletx.com/testers/bwallet/iphone). For the full bWalletX on Android, install the [direct APK](https://bwalletx.com/android); it is a separate app and the two can live side by side.
+
+## Join (two minutes)
+
+- Make sure the Google account on your phone is the one you gave us on [/testers](https://bwalletx.com/testers). The test is limited to 100 accounts and only listed accounts can join.
+
+- Open the link above on your phone, tap Become a tester, then Download it on Google Play.
+
+- Updates arrive through Google Play like any app. Until Google reviews the app, the Play listing shows the package name, com.bitcoincorp.bwallet, instead of bWallet. That is normal for an internal test.
+
+## What to test, in this order
+
+-
+First run.Create a wallet, write down the 12 words, set a device password. Then delete and restore it from the words on the same phone. Does everything come back?
+
+-
+Receive.Open Receive, copy the address or show the QR, and send yourself a few pence of BSV from another wallet. How long until it shows?
+
+-
+Send.Pay a $handle, a name@bwalletx.com and a plain address. Does the fee shown match what left the wallet?
+
+-
+Names.Search a name in Names. If it is free, get it. Give one to a friend. Did it take about a minute, and did they receive it?
+
+-
+Chat.Open a room, send a message, open a DM. Scroll both lists past the top: both should bounce.
+
+-
+Calls.Call another bWallet user. Try mute and speaker, and hanging up from both ends.
+
+-
+Lock and accounts.Lock and unlock the app. Add a second account, switch to it and back. Does the right balance show each time?
+
+## What to tell us
+
+Anything that felt slow, stuck, unclear, or cost more than you expected. The best report says what you did, what you expected, what happened, and the iPhone model and iOS version.
+
+### Two ways to send it
+
+By email: [support@bwalletx.com](mailto:support@bwalletx.com), with your phone model and Android version, a screenshot if you have one, and what you did, expected and got. Paid testers: the 14-day check-in and payments are explained on [/testers](https://bwalletx.com/testers).
+
+## Known in this build
+
+- No Exchange, Market or Swap: trading is only in bWalletX. That is by design for the Play Store edition.
+
+- b, the assistant, needs your own AI key in this edition (Settings › b agent). Without one it cannot answer yet.
+
+- It is a beta: keep small amounts in it, and keep your 12 words safe. Your keys stay on your phone.
+
+Questions: [support@bwalletx.com](mailto:support@bwalletx.com)
 
 ---
 
