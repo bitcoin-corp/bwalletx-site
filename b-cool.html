@@ -39,6 +39,15 @@
       .bc-rise { opacity: 0; animation: rise 2.4s ease forwards; }
       .bc-rise.d1 { animation-delay: 0.6s; } .bc-rise.d2 { animation-delay: 1.8s; }
       @keyframes rise { from { opacity: 0; transform: translateY(14px); filter: blur(4px); } to { opacity: 1; transform: none; filter: blur(0); } }
+      /* The water: soft moving glints over the lower half, a slow drift of the photo, and a gold shimmer on the horizon line. */
+      .bc-water { position: absolute; inset: 0; pointer-events: none; z-index: 0; -webkit-mask-image: linear-gradient(180deg, transparent 42%, #000 62%, #000 100%); mask-image: linear-gradient(180deg, transparent 42%, #000 62%, #000 100%); }
+      .bc-water i { inset: 40% -10% auto; height: 18%; background: radial-gradient(60% 40% at 50% 0%, rgba(255, 200, 90, 0.35), rgba(255, 200, 90, 0) 70%); animation: bcGlow 6s ease-in-out infinite; }
+      .bc-water i { position: absolute; mix-blend-mode: screen; }
+      .bc-water img.bc-ripple { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 60%; filter: url(#bcRipple); }
+      @keyframes bcGlow { 0%, 100% { opacity: 0.55; transform: scaleX(1); } 50% { opacity: 1; transform: scaleX(1.06); } }
+      .bc-scene.bc-hero img { animation: bcDrift 24s ease-in-out infinite alternate; transform-origin: 50% 60%; }
+      @keyframes bcDrift { from { transform: scale(1.02) translate3d(0, 0, 0); } to { transform: scale(1.06) translate3d(-1.2%, 0.6%, 0); } }
+      @media (prefers-reduced-motion: reduce) { .bc-water { display: none; } .bc-scene.bc-hero img { animation: none; } }
       @media (prefers-reduced-motion: reduce) { .bc-rise { opacity: 1; animation: none; } .bc-h1 img { animation: none; } }
 
       .bc-line { max-width: 760px; margin: 0 auto; padding: 22vh 24px; text-align: center; }
@@ -73,8 +82,10 @@
     </style>
   </head>
   <body class="bc">
-    <section class="bc-scene">
+    <section class="bc-scene bc-hero">
       <picture><source media="(orientation: portrait)" srcset="/images/b-cool-hero-tall.jpg" /><img src="/images/b-cool-hero.jpg" alt="A polar snow plain at twilight, a thin gold line on the horizon" width="1280" height="720" fetchpriority="high" /></picture>
+      <svg width="0" height="0" style="position:absolute" aria-hidden="true"><filter id="bcRipple" x="0" y="0" width="100%" height="100%"><feTurbulence type="fractalNoise" baseFrequency="0.004 0.06" numOctaves="2" seed="3" result="n"><animate attributeName="baseFrequency" dur="14s" values="0.004 0.06;0.005 0.075;0.004 0.06" repeatCount="indefinite" /></feTurbulence><feDisplacementMap in="SourceGraphic" in2="n" scale="9" xChannelSelector="R" yChannelSelector="G" /></filter></svg>
+      <div class="bc-water" aria-hidden="true"><picture><source media="(orientation: portrait)" srcset="/images/b-cool-hero-tall.jpg" /><img class="bc-ripple" src="/images/b-cool-hero.jpg" alt="" /></picture><i></i></div>
       <div class="bc-hero-in">
         <h1 class="bc-h1 bc-rise d1" aria-label="b cool."><img src="/logo.svg" alt="" />cool.</h1>
       </div>
