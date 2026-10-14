@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bugs: what people told b and what we fixed</title>
+    <link rel="canonical" href="https://bwalletx.com/bugs" />
+    <meta name="description" content="Bugs people reported to b, the assistant in bWalletX, and where each fix stands: new, planned, fixing or fixed. Entries appear after review." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://bwalletx.com/bugs" />
+    <meta property="og:site_name" content="bWalletX" />
+    <meta property="og:title" content="Bugs in bWalletX, fixed in the open" />
+    <meta property="og:description" content="Bugs people reported to b, the assistant in bWalletX, and where each fix stands: new, planned, fixing or fixed. Entries appear after review." />
+    <meta property="og:image" content="https://bwalletx.com/og-bugs-v1.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="A list of bugs reported to b in bWalletX, each with a status: fixing, planned, fixed or new." />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@bWalletX" />
+    <meta name="twitter:title" content="Bugs in bWalletX, fixed in the open" />
+    <meta name="twitter:description" content="Bugs people reported to b, the assistant in bWalletX, and where each fix stands: new, planned, fixing or fixed. Entries appear after review." />
+    <meta name="twitter:image" content="https://bwalletx.com/og-bugs-v1.png" />
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="stylesheet" href="/styles.css" />
+    <style>
+      .ext h1 { font-size: clamp(2.2rem, 6vw, 3.4rem); margin: 18px 0 10px; }
+      .ext h2 { margin: 40px 0 8px; font-size: 1.5rem; }
+      .ext p, .ext li { line-height: 1.7; }
+      .ext .small { color: #8a8a86; font-size: 0.85rem; }
+      .fb-filters { display: flex; gap: 8px; flex-wrap: wrap; margin: 18px 0 6px; }
+      .fb-filters button { background: #101114; color: #d8dbe0; border: 1px solid #ffffff1f; border-radius: 999px; padding: 7px 14px; font: 600 0.88rem inherit; cursor: pointer; }
+      .fb-filters button[aria-pressed="true"] { background: linear-gradient(180deg, #F2C230, #E6B020); color: #000; border-color: transparent; }
+      .fb-list { list-style: none; padding: 0; margin: 14px 0; display: grid; gap: 12px; }
+      .fb-item { background: #101114; border: 1px solid #ffffff12; border-radius: 16px; padding: 16px 18px; }
+      .fb-top { display: flex; justify-content: space-between; gap: 12px; align-items: flex-start; }
+      .fb-item h3 { margin: 0; font-size: 1.05rem; line-height: 1.4; overflow-wrap: anywhere; }
+      .fb-item p { margin: 6px 0 0; color: #a7adb8; font-size: 0.93rem; line-height: 1.55; overflow-wrap: anywhere; }
+      .fb-meta { margin-top: 8px; color: #8a8a86; font-size: 0.8rem; }
+      .fb-st { flex: none; font-size: 0.72rem; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; border-radius: 999px; padding: 4px 10px; white-space: nowrap; }
+      .st-new { background: #ffffff14; color: #d8dbe0; } .st-planned { background: #F5B80022; color: #F5B800; }
+      .st-fixing { background: #3b82f622; color: #7fb0ff; } .st-shipped { background: #22c55e22; color: #5fe08f; }
+      .fb-empty { background: #101114; border: 1px dashed #ffffff26; border-radius: 16px; padding: 22px 18px; color: #d8dbe0; }
+      .fb-empty b { color: #F5B800; }
+    </style>
+  </head>
+  <body>
+    <div class="beta-banner">bWalletX is in <strong>beta</strong>: test with small amounts.</div>
+    <header class="topbar">
+      <div class="wrap topbar-in">
+        <a class="brand" href="/"><img src="/logo.svg" alt="" width="34" height="30" /><span>bWallet<span class="gold">X</span></span></a>
+        <nav aria-label="Pages">
+          <a href="/features">Features</a><a href="/exchange">Exchange</a><a href="/social">Social</a><a href="/agent">Agents</a><a href="/extension">Extension</a><a href="/developers">Developers</a>
+        </nav>
+        <span class="nav-cta"><a class="dl-btn" href="/get">Download</a><a class="web-btn" href="https://web.bwalletx.com" target="_blank" rel="noopener">Web &rarr;</a></span>
+      </div>
+    </header>
+    <script src="/nav.js"></script>
+    <main class="ext">
+      <h1>Bugs, <span class="gold">fixed</span> in the open.</h1>
+      <p class="lede">Bugs people reported to b, and where each fix stands. Tell b what broke in the app; a short summary appears here after review.</p>
+      <div class="fb-filters" role="group" aria-label="Filter by status">
+        <button type="button" data-st="" aria-pressed="true">All</button><button type="button" data-st="new" aria-pressed="false">New</button><button type="button" data-st="planned" aria-pressed="false">Planned</button><button type="button" data-st="fixing" aria-pressed="false">Fixing</button><button type="button" data-st="shipped" aria-pressed="false">Fixed</button>
+      </div>
+      <ul class="fb-list" id="fb-list" aria-live="polite"><li class="fb-empty">Loading&hellip;</li></ul>
+      <h2>How this list works</h2>
+      <ul>
+        <li>Tell <b>b</b> in bWalletX. b passes it to the team.</li>
+        <li>Each entry is a short summary, written without names, handles or addresses. Reports about keys, payments, sign-in or personal data stay private.</li>
+        <li>A person reads every entry before it appears here.</li>
+      </ul>
+      <p>See also: <a href="/ideas">Ideas</a> &middot; <a href="/ask-b">Ask b</a></p>
+      <div class="row" style="display:flex;gap:12px;flex-wrap:wrap;margin:26px 0"><a class="btn btn-store" href="/get">Get bWalletX</a></div>
+      <p class="small">Found a security problem? Email <a href="mailto:support@bwalletx.com">support@bwalletx.com</a> and don&rsquo;t post details anywhere public.</p>
+    </main>
+    <script>
+      (function () {
+        var KIND = 'bug';
+        var API = 'https://www.bchatx.com/api/public/feedback?kind=' + KIND;
+        var LABEL = { new: 'New', planned: 'Planned', fixing: KIND === 'idea' ? 'Building' : 'Fixing', shipped: KIND === 'idea' ? 'Shipped' : 'Fixed' };
+        var list = document.getElementById('fb-list');
+        var all = [], filter = '';
+        function el(tag, cls, text) { var e = document.createElement(tag); if (cls) e.className = cls; if (text != null) e.textContent = text; return e; }
+        function empty(msg) {
+          list.innerHTML = '';
+          var li = el('li', 'fb-empty');
+          if (msg) li.textContent = msg;
+          else { li.appendChild(document.createTextNode('Tell ')); li.appendChild(el('b', '', 'b')); li.appendChild(document.createTextNode(' in the app: your bug appears here after review.')); }
+          list.appendChild(li);
+        }
+        function render() {
+          var rows = all.filter(function (r) { return !filter || r.status === filter; });
+          if (!rows.length) return empty(all.length ? 'Nothing here with that status yet.' : '');
+          list.innerHTML = '';
+          rows.forEach(function (r) {
+            var li = el('li', 'fb-item'), top = el('div', 'fb-top');
+            top.appendChild(el('h3', '', r.title));
+            var st = LABEL[r.status] || 'New';
+            if (r.status === 'shipped' && r.version) st += ' ' + r.version;
+            top.appendChild(el('span', 'fb-st st-' + (LABEL[r.status] ? r.status : 'new'), st));
+            li.appendChild(top);
+            li.appendChild(el('p', '', r.summary));
+            var d = new Date(r.updated_at);
+            li.appendChild(el('div', 'fb-meta', (r.area && r.area !== 'other' ? r.area.charAt(0).toUpperCase() + r.area.slice(1) + ' · ' : '') + (isNaN(d) ? '' : 'Updated ' + d.toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' }))));
+            list.appendChild(li);
+          });
+        }
+        document.querySelectorAll('.fb-filters button').forEach(function (b) {
+          b.addEventListener('click', function () {
+            filter = b.getAttribute('data-st');
+            document.querySelectorAll('.fb-filters button').forEach(function (x) { x.setAttribute('aria-pressed', x === b ? 'true' : 'false'); });
+            render();
+          });
+        });
+        fetch(API, { headers: { accept: 'application/json' } })
+          .then(function (r) { return r.ok ? r.json() : { entries: [] }; })
+          .then(function (j) { all = Array.isArray(j && j.entries) ? j.entries.filter(function (r) { return r && r.kind === KIND; }) : []; render(); })
+          .catch(function () { all = []; render(); });
+      })();
+    </script>
+  </body>
+</html>
