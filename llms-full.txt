@@ -2413,6 +2413,10 @@ Loading…
 
 Once your Google account is on the list, join here on your phone: [play.google.com/apps/internaltest/4701646815257978169](https://play.google.com/apps/internaltest/4701646815257978169), then install bWallet from Google Play. What to test and how to report is on [/testers/bwallet/android](https://bwalletx.com/testers/bwallet/android). The link does nothing for an account that isn’t on the list, so apply first.
 
+## Testing bWalletX, the full edition?
+
+No application needed: [Chrome extension](https://bwalletx.com/testers/bwalletx/chrome-extension) · [web](https://bwalletx.com/testers/bwalletx/web) · [Desktop](https://bwalletx.com/testers/bwalletx/desktop). Each page says what to test and how to report.
+
 ## On iPhone?
 
 The iPhone beta is open through TestFlight and has no application step: install TestFlight from the App Store, then open [testflight.apple.com/join/1TTnQNKm](https://testflight.apple.com/join/1TTnQNKm) on your iPhone. What to test and how to report is on [/testers/bwallet/iphone](https://bwalletx.com/testers/bwallet/iphone). The paid 14-day test below is Android only, because it is Google’s requirement.
@@ -2594,6 +2598,183 @@ In TestFlight: take a screenshot while the app is open, tap it, and choose Share
 - b, the assistant, needs your own AI key in this edition (Settings › b agent). Without one it cannot answer yet.
 
 - It is a beta: keep small amounts in it, and keep your 12 words safe. Your keys stay on your phone.
+
+Questions: [support@bwalletx.com](mailto:support@bwalletx.com)
+
+---
+
+Source: https://bwalletx.com/testers/bwalletx/chrome-extension
+
+# Test bWalletX in Chrome.
+
+bWalletX is the full edition: wallet, Exchange, names, chat, calls and apps. This page says how to join, exactly what to test, and how to tell us what you find.
+
+## On what
+
+DeviceChrome on a computer
+
+SystemChrome 116 or later (also Brave, Edge)
+
+ViaChrome Web Store, or the zip
+
+EditionbWalletX (full edition)
+
+Other tests: [Chrome extension](https://bwalletx.com/testers/bwalletx/chrome-extension) · [web](https://bwalletx.com/testers/bwalletx/web) · [Desktop](https://bwalletx.com/testers/bwalletx/desktop) · bWallet on [iPhone](https://bwalletx.com/testers/bwallet/iphone) and [Android](https://bwalletx.com/testers/bwallet/android).
+
+## Join
+
+- Install from the Chrome Web Store once it is approved (review is under way). Until then, download [the zip](https://bwalletx.com/download/bwalletx-extension-5.2.18.zip) and follow [/extension](https://bwalletx.com/extension) to load it.
+- Pin bWalletX in the toolbar; it opens in the side panel.
+- The Web Store version and the zip are separate installs: restore your 12 words in whichever you keep.
+
+## What to test, in this order
+
+-
+First run.Create a wallet, write down the 12 words, set a password. Then restore it from the words. Does everything come back?
+
+-
+Receive and send.Send yourself a few pence of BSV, then pay a $handle and a plain address. Does the fee shown match what left?
+
+-
+Names.Search a name. Get a free one, sell one you hold, give one to a friend.
+
+-
+Exchange.Use the gold filter button, open a token, look at the Launchpad and Names tabs.
+
+-
+Chat and calls.Send a message in a room and a DM; call another user.
+
+-
+Tell b.Open Ask b and report anything odd. It is logged for the team with a reference, even without an AI key.
+
+-
+Connect a site.Open [bwalletx.com/sign-in-button](https://bwalletx.com/sign-in-button) and press Sign in with bWalletX. Does the approval show beside the page, and does Decline really decline?
+
+## What to tell us
+
+Anything slow, stuck, unclear, or that cost more than you expected: what you did, what you expected, what happened, and your browser and device.
+
+### Two ways to send it
+
+Tell b in the wallet, or email [support@bwalletx.com](mailto:support@bwalletx.com). Keep small amounts in a test wallet and never send anyone your 12 words.
+
+Questions: [support@bwalletx.com](mailto:support@bwalletx.com)
+
+---
+
+Source: https://bwalletx.com/testers/bwalletx/desktop
+
+# Test bWalletX Desktop.
+
+bWalletX is the full edition: wallet, Exchange, names, chat, calls and apps. This page says how to join, exactly what to test, and how to tell us what you find.
+
+## On what
+
+DeviceMac, Windows, Linux or ChromeOS
+
+SystemChrome or Edge, a wide window
+
+Viadesktop.bwalletx.com (installable)
+
+EditionbWalletX Desktop
+
+Other tests: [Chrome extension](https://bwalletx.com/testers/bwalletx/chrome-extension) · [web](https://bwalletx.com/testers/bwalletx/web) · [Desktop](https://bwalletx.com/testers/bwalletx/desktop) · bWallet on [iPhone](https://bwalletx.com/testers/bwallet/iphone) and [Android](https://bwalletx.com/testers/bwallet/android).
+
+## Join
+
+- Open [desktop.bwalletx.com](https://desktop.bwalletx.com) in Chrome or Edge.
+- Install it as an app from the install icon in the address bar, so it gets its own window.
+- Create a wallet or restore from your 12 words.
+
+## What to test, in this order
+
+-
+First run.Create a wallet, write down the 12 words, set a password. Then restore it from the words. Does everything come back?
+
+-
+Receive and send.Send yourself a few pence of BSV, then pay a $handle and a plain address. Does the fee shown match what left?
+
+-
+Names.Search a name. Get a free one, sell one you hold, give one to a friend.
+
+-
+Exchange.Use the gold filter button, open a token, look at the Launchpad and Names tabs.
+
+-
+Chat and calls.Send a message in a room and a DM; call another user.
+
+-
+Tell b.Open Ask b and report anything odd. It is logged for the team with a reference, even without an AI key.
+
+-
+Wide layout.Resize the window from narrow to full screen. Does every page use the space, with nothing cut off?
+
+## What to tell us
+
+Anything slow, stuck, unclear, or that cost more than you expected: what you did, what you expected, what happened, and your browser and device.
+
+### Two ways to send it
+
+Tell b in the wallet, or email [support@bwalletx.com](mailto:support@bwalletx.com). Keep small amounts in a test wallet and never send anyone your 12 words.
+
+Questions: [support@bwalletx.com](mailto:support@bwalletx.com)
+
+---
+
+Source: https://bwalletx.com/testers/bwalletx/web
+
+# Test bWalletX on the web.
+
+bWalletX is the full edition: wallet, Exchange, names, chat, calls and apps. This page says how to join, exactly what to test, and how to tell us what you find.
+
+## On what
+
+DeviceAny phone or computer
+
+SystemA current browser (Safari, Chrome, Firefox, Edge)
+
+Viaweb.bwalletx.com
+
+EditionbWalletX (full edition)
+
+Other tests: [Chrome extension](https://bwalletx.com/testers/bwalletx/chrome-extension) · [web](https://bwalletx.com/testers/bwalletx/web) · [Desktop](https://bwalletx.com/testers/bwalletx/desktop) · bWallet on [iPhone](https://bwalletx.com/testers/bwallet/iphone) and [Android](https://bwalletx.com/testers/bwallet/android).
+
+## Join
+
+- Open [web.bwalletx.com](https://web.bwalletx.com). On iPhone, Share › Add to Home Screen keeps its storage safe.
+- Create a wallet or restore from your 12 words.
+- Updates arrive by reloading; there is nothing to install.
+
+## What to test, in this order
+
+-
+First run.Create a wallet, write down the 12 words, set a password. Then restore it from the words. Does everything come back?
+
+-
+Receive and send.Send yourself a few pence of BSV, then pay a $handle and a plain address. Does the fee shown match what left?
+
+-
+Names.Search a name. Get a free one, sell one you hold, give one to a friend.
+
+-
+Exchange.Use the gold filter button, open a token, look at the Launchpad and Names tabs.
+
+-
+Chat and calls.Send a message in a room and a DM; call another user.
+
+-
+Tell b.Open Ask b and report anything odd. It is logged for the team with a reference, even without an AI key.
+
+-
+Reload and return.Close the tab, come back tomorrow. Are you still signed in and is everything there?
+
+## What to tell us
+
+Anything slow, stuck, unclear, or that cost more than you expected: what you did, what you expected, what happened, and your browser and device.
+
+### Two ways to send it
+
+Tell b in the wallet, or email [support@bwalletx.com](mailto:support@bwalletx.com). Keep small amounts in a test wallet and never send anyone your 12 words.
 
 Questions: [support@bwalletx.com](mailto:support@bwalletx.com)
 

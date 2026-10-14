@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Test bWalletX in Chrome</title>
+    <link rel="canonical" href="https://bwalletx.com/testers/bwalletx/chrome-extension" />
+    <meta name="description" content="Join the bWalletX Chrome extension test: install, what to test in order (wallet, receive and send, names, Exchange, chat, connecting a site), and how to report." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://bwalletx.com/testers/bwalletx/chrome-extension" />
+    <meta property="og:site_name" content="bWalletX" />
+    <meta property="og:title" content="Test bWalletX in Chrome" />
+    <meta property="og:description" content="Join the bWalletX Chrome extension test: install, what to test in order (wallet, receive and send, names, Exchange, chat, connecting a site), and how to report." />
+    <meta property="og:image" content="https://bwalletx.com/og-testers-bwalletx-chrome-extension-v1.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Test bWalletX in Chrome. Join the bWalletX Chrome extension test: install, what to test in order (wallet, receive and send, names, Exchange, chat, connecting a site), and how to report." />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@bWalletX" />
+    <meta name="twitter:title" content="Test bWalletX in Chrome" />
+    <meta name="twitter:description" content="Join the bWalletX Chrome extension test: install, what to test in order (wallet, receive and send, names, Exchange, chat, connecting a site), and how to report." />
+    <meta name="twitter:image" content="https://bwalletx.com/og-testers-bwalletx-chrome-extension-v1.png" />
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="stylesheet" href="/styles.css" />
+    <style>
+      .ext h1 { font-size: clamp(2.2rem, 6vw, 3.4rem); margin: 18px 0 10px; }
+      .ext h2 { margin: 44px 0 8px; font-size: 1.5rem; }
+      .ext p, .ext li { line-height: 1.7; }
+      .ext .small { color: #8a8a86; font-size: 0.85rem; }
+      .ext .row { display: flex; gap: 12px; flex-wrap: wrap; margin: 22px 0; }
+      .device { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 10px; margin: 18px 0 6px; }
+      .device div { background: #101114; border: 1px solid #ffffff12; border-radius: 14px; padding: 12px 14px; }
+      .device b { display: block; color: #F5B800; font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 4px; }
+      .device span { color: #f4f1e8; font-weight: 600; }
+      ol.test { counter-reset: t; list-style: none; padding: 0; margin: 14px 0; }
+      ol.test li { counter-increment: t; display: grid; grid-template-columns: 34px 1fr; gap: 12px; padding: 12px 0; border-bottom: 1px solid #ffffff10; }
+      ol.test li::before { content: counter(t); width: 28px; height: 28px; border-radius: 999px; background: #F5B800; color: #000; font-weight: 700; display: grid; place-items: center; font-size: 0.9rem; margin-top: 2px; }
+      ol.test b { color: #fff; }
+      ol.test span { display: block; color: #a7adb8; font-size: 0.95rem; }
+      .box { background: #101114; border: 1px solid #ffffff12; border-radius: 16px; padding: 16px 18px; margin: 18px 0; }
+      .box h3 { margin: 0 0 6px; font-size: 1.05rem; }
+      .box p { margin: 0; color: #a7adb8; }
+      .link { word-break: break-all; }
+    </style>
+  </head>
+  <body>
+    <div class="beta-banner">bWalletX is in <strong>beta</strong>: test with small amounts.</div>
+    <header class="topbar">
+      <div class="wrap topbar-in">
+        <a class="brand" href="/"><img src="/logo.svg" alt="" width="34" height="30" /><span>bWallet<span class="gold">X</span></span></a>
+        <nav aria-label="Pages">
+          <a href="/features">Features</a><a href="/exchange">Exchange</a><a href="/social">Social</a><a href="/agent">Agents</a><a href="/extension">Extension</a><a href="/developers">Developers</a>
+        </nav>
+        <span class="nav-cta"><a class="dl-btn" href="/get">Download</a><a class="web-btn" href="https://web.bwalletx.com" target="_blank" rel="noopener">Web &rarr;</a></span>
+      </div>
+    </header>
+    <script src="/nav.js"></script>
+    <main class="ext">
+      <h1>Test bWalletX <span class="gold">in Chrome.</span></h1>
+      <p class="lede">bWalletX is the full edition: wallet, Exchange, names, chat, calls and apps. This page says how to join, exactly what to test, and how to tell us what you find.</p>
+      <h2>On what</h2>
+      <div class="device"><div><b>Device</b><span>Chrome on a computer</span></div><div><b>System</b><span>Chrome 116 or later (also Brave, Edge)</span></div><div><b>Via</b><span>Chrome Web Store, or the zip</span></div><div><b>Edition</b><span>bWalletX (full edition)</span></div></div>
+      <p class="small">Other tests: <a href="/testers/bwalletx/chrome-extension">Chrome extension</a> · <a href="/testers/bwalletx/web">web</a> · <a href="/testers/bwalletx/desktop">Desktop</a> · bWallet on <a href="/testers/bwallet/iphone">iPhone</a> and <a href="/testers/bwallet/android">Android</a>.</p>
+      <h2>Join</h2>
+      <ol><li>Install from the Chrome Web Store once it is approved (review is under way). Until then, download <a href="/download/bwalletx-extension-5.2.18.zip">the zip</a> and follow <a href="/extension">/extension</a> to load it.</li><li>Pin bWalletX in the toolbar; it opens in the side panel.</li><li>The Web Store version and the zip are separate installs: restore your 12 words in whichever you keep.</li></ol>
+      <h2>What to test, in this order</h2>
+      <ol class="test">
+        <li><div><b>First run.</b><span>Create a wallet, write down the 12 words, set a password. Then restore it from the words. Does everything come back?</span></div></li>
+        <li><div><b>Receive and send.</b><span>Send yourself a few pence of BSV, then pay a $handle and a plain address. Does the fee shown match what left?</span></div></li>
+        <li><div><b>Names.</b><span>Search a name. Get a free one, sell one you hold, give one to a friend.</span></div></li>
+        <li><div><b>Exchange.</b><span>Use the gold filter button, open a token, look at the Launchpad and Names tabs.</span></div></li>
+        <li><div><b>Chat and calls.</b><span>Send a message in a room and a DM; call another user.</span></div></li>
+        <li><div><b>Tell b.</b><span>Open Ask b and report anything odd. It is logged for the team with a reference, even without an AI key.</span></div></li>
+        <li><div><b>Connect a site.</b><span>Open <a href="/sign-in-button">bwalletx.com/sign-in-button</a> and press Sign in with bWalletX. Does the approval show beside the page, and does Decline really decline?</span></div></li>
+      </ol>
+      <h2>What to tell us</h2>
+      <p>Anything slow, stuck, unclear, or that cost more than you expected: what you did, what you expected, what happened, and your browser and device.</p>
+      <div class="box"><h3>Two ways to send it</h3><p><strong>Tell b</strong> in the wallet, or email <a href="mailto:support@bwalletx.com">support@bwalletx.com</a>. Keep small amounts in a test wallet and never send anyone your 12 words.</p></div>
+      <p class="small">Questions: <a href="mailto:support@bwalletx.com">support@bwalletx.com</a></p>
+    </main>
+  </body>
+</html>
