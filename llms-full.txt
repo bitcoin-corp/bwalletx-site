@@ -2402,7 +2402,7 @@ Loading…
 
 ## On iPhone?
 
-The iPhone beta is open through TestFlight and has no application step: install TestFlight from the App Store, then open [testflight.apple.com/join/1TTnQNKm](https://testflight.apple.com/join/1TTnQNKm) on your iPhone. The paid 14-day test below is Android only, because it is Google’s requirement.
+The iPhone beta is open through TestFlight and has no application step: install TestFlight from the App Store, then open [testflight.apple.com/join/1TTnQNKm](https://testflight.apple.com/join/1TTnQNKm) on your iPhone. What to test and how to report is on [/testers/bwallet/iphone](https://bwalletx.com/testers/bwallet/iphone). The paid 14-day test below is Android only, because it is Google’s requirement.
 
 ## How it works
 
