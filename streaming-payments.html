@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Streaming payments: pay as you go</title>
+    <link rel="canonical" href="https://bwalletx.com/streaming-payments" />
+    <meta name="description" content="Pay as you go in bWalletX: listen to a paid Space, take a paid call or stream music by the second. Set a limit once, stop any time, and the money goes straight to the people you hear." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://bwalletx.com/streaming-payments" />
+    <meta property="og:site_name" content="bWalletX" />
+    <meta property="og:title" content="Pay as you listen. Stop any time." />
+    <meta property="og:description" content="Pay as you go in bWalletX: listen to a paid Space, take a paid call or stream music by the second. Set a limit once, stop any time, and the money goes straight to the people you hear." />
+    <meta property="og:image" content="https://bwalletx.com/og-streaming-payments-v1.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="A bWalletX listening meter: 1 sat a second to the artist, budget left, and a Stop and return budget button." />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@bWalletX" />
+    <meta name="twitter:title" content="Pay as you listen. Stop any time." />
+    <meta name="twitter:description" content="Pay as you go in bWalletX: listen to a paid Space, take a paid call or stream music by the second. Set a limit once, stop any time, and the money goes straight to the people you hear." />
+    <meta name="twitter:image" content="https://bwalletx.com/og-streaming-payments-v1.png" />
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="stylesheet" href="/styles.css" />
+    <style>
+      .ext h1 { font-size: clamp(2.2rem, 6vw, 3.4rem); margin: 18px 0 10px; }
+      .ext h2 { margin: 48px 0 8px; font-size: 1.5rem; }
+      .ext p, .ext li { line-height: 1.7; }
+      .ext .small { color: #8a8a86; font-size: 0.85rem; }
+      .ft-steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 230px), 1fr)); gap: 14px; margin: 18px 0; counter-reset: s; }
+      .ft-steps div { background: #101114; border: 1px solid #ffffff12; border-radius: 16px; padding: 16px; }
+      .ft-steps div::before { counter-increment: s; content: counter(s); display: inline-grid; place-items: center; width: 30px; height: 30px; border-radius: 50%; background: linear-gradient(180deg, #F2C230, #E6B020); color: #000; font: 700 0.95rem var(--hf); margin-bottom: 8px; }
+      .ft-steps h3 { margin: 0 0 4px; font-size: 1.05rem; }
+      .ft-steps p { margin: 0; color: #a7adb8; font-size: 0.92rem; line-height: 1.5; }
+      .ft-note { background: #101114; border: 1px solid #ffffff12; border-radius: 16px; padding: 16px 18px; margin: 18px 0; }
+      .ft-note p { margin: 0 0 8px; }
+    </style>
+  </head>
+  <body>
+    <div class="beta-banner">bWalletX is in <strong>beta</strong>: test with small amounts.</div>
+    <header class="topbar">
+      <div class="wrap topbar-in">
+        <a class="brand" href="/"><img src="/logo.svg" alt="" width="34" height="30" /><span>bWallet<span class="gold">X</span></span></a>
+        <nav aria-label="Pages">
+          <a href="/features">Features</a><a href="/exchange">Exchange</a><a href="/social">Social</a><a href="/agent">Agents</a><a href="/extension">Extension</a><a href="/developers">Developers</a>
+        </nav>
+        <span class="nav-cta"><a class="dl-btn" href="/get">Download</a><a class="web-btn" href="https://web.bwalletx.com" target="_blank" rel="noopener">Web &rarr;</a></span>
+      </div>
+    </header>
+    <script src="/nav.js"></script>
+    <main class="ext">
+      <h1>Pay as you listen. <span class="gold">Stop any time.</span></h1>
+      <p class="lede">Some things are worth a little, for as long as they last. In bWalletX you pay by the second or the minute for a Space, a call or a song. You set a limit once. The money goes straight to the people you hear.</p>
+      <h2>How it works</h2>
+      <div class="ft-steps">
+        <div><h3>See the price</h3><p>The rate is shown before you start: per second, per minute or per hour.</p></div>
+        <div><h3>Set your limit</h3><p>Approve once, with the most you&rsquo;ll spend. No popup for each payment.</p></div>
+        <div><h3>Stop when you like</h3><p>Leave, hang up or tap Stop. Payments end there.</p></div>
+      </div>
+      <h2>Paid Spaces</h2>
+      <p>A host can ask listeners to pay for a live Space. They set the price per second, minute or hour, in BSV (priced in dollars) or in a token.</p>
+      <ul>
+        <li>The money is split between the people on stage, or paid to the token&rsquo;s issuer, as the host chooses.</li>
+        <li>The first minute is usually free, so you can hear it first.</li>
+        <li>You choose &ldquo;Most I&rsquo;ll spend this session&rdquo;. Or take just the free minute.</li>
+        <li>Your wallet pays each minute directly to the speakers. bChatX takes nothing.</li>
+        <li>It stops at your limit, or when you leave.</li>
+      </ul>
+      <p>See <a href="/bspaces">bSpaces</a>.</p>
+      <h2>Paid calls</h2>
+      <p>With bPhone, people can charge to take a call: a coach, a tutor, an adviser. They set a rate per second, minute, hour or per call, in BSV, MNEE or a token.</p>
+      <ul>
+        <li>You see the rate and your most you&rsquo;ll spend before the call rings.</li>
+        <li>You pay as you talk, wallet to wallet. In BSV, a small payment goes every 10 seconds.</li>
+        <li>Hang up and the payments stop.</li>
+      </ul>
+      <p>See <a href="/bphone">bPhone</a>.</p>
+      <h2>Music by the second</h2>
+      <p>On VexVoid&rsquo;s album <i>Echoes in the Abyss</i>, the headline track is free. Pay-to-play tracks cost 1 sat a second to the artist, plus the network fee.</p>
+      <ul>
+        <li>One approval sets a budget. After that, every second is its own small payment, with no popups.</li>
+        <li>You see what&rsquo;s gone to the artist, the network fees and the budget left.</li>
+        <li>Tap Stop, leave, or hide the page for a minute, and what&rsquo;s left comes back to your wallet.</li>
+      </ul>
+      <p>See <a href="/artists">Artists</a>.</p>
+      <h2>Your money, your limit</h2>
+      <div class="ft-note">
+        <p>You never pay more than the limit you set.</p>
+        <p>Each payment is made out to the speakers, the person you&rsquo;re calling, or the artist.</p>
+      </div>
+      <h2>Where to find it</h2>
+      <ul>
+        <li><b>bWalletX</b>: on the web at <a href="https://web.bwalletx.com" target="_blank" rel="noopener">web.bwalletx.com</a>, <a href="https://desktop.bwalletx.com" target="_blank" rel="noopener">Desktop</a>, the <a href="/extension">Chrome extension</a> and the <a href="/android">Android download</a>.</li>
+        <li>Not in bWallet, the App Store and Google Play edition. Free Spaces and free calls are there.</li>
+      </ul>
+      <div class="row" style="display:flex;gap:12px;flex-wrap:wrap;margin:26px 0"><a class="btn btn-store" href="/get">Get bWalletX</a></div>
+      <p class="small">bWalletX is in beta: test with small amounts. Questions: <a href="mailto:support@bwalletx.com">support@bwalletx.com</a></p>
+    </main>
+  </body>
+</html>

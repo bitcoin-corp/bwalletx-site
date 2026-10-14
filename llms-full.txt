@@ -2458,6 +2458,84 @@ bWalletX is in beta: test with small amounts. Questions: [support@bwalletx.com](
 
 ---
 
+Source: https://bwalletx.com/streaming-payments
+
+# Pay as you listen. Stop any time.
+
+Some things are worth a little, for as long as they last. In bWalletX you pay by the second or the minute for a Space, a call or a song. You set a limit once. The money goes straight to the people you hear.
+
+## How it works
+
+### See the price
+
+The rate is shown before you start: per second, per minute or per hour.
+
+### Set your limit
+
+Approve once, with the most you’ll spend. No popup for each payment.
+
+### Stop when you like
+
+Leave, hang up or tap Stop. Payments end there.
+
+## Paid Spaces
+
+A host can ask listeners to pay for a live Space. They set the price per second, minute or hour, in BSV (priced in dollars) or in a token.
+
+- The money is split between the people on stage, or paid to the token’s issuer, as the host chooses.
+
+- The first minute is usually free, so you can hear it first.
+
+- You choose “Most I’ll spend this session”. Or take just the free minute.
+
+- Your wallet pays each minute directly to the speakers. bChatX takes nothing.
+
+- It stops at your limit, or when you leave.
+
+See [bSpaces](https://bwalletx.com/bspaces).
+
+## Paid calls
+
+With bPhone, people can charge to take a call: a coach, a tutor, an adviser. They set a rate per second, minute, hour or per call, in BSV, MNEE or a token.
+
+- You see the rate and your most you’ll spend before the call rings.
+
+- You pay as you talk, wallet to wallet. In BSV, a small payment goes every 10 seconds.
+
+- Hang up and the payments stop.
+
+See [bPhone](https://bwalletx.com/bphone).
+
+## Music by the second
+
+On VexVoid’s album Echoes in the Abyss, the headline track is free. Pay-to-play tracks cost 1 sat a second to the artist, plus the network fee.
+
+- One approval sets a budget. After that, every second is its own small payment, with no popups.
+
+- You see what’s gone to the artist, the network fees and the budget left.
+
+- Tap Stop, leave, or hide the page for a minute, and what’s left comes back to your wallet.
+
+See [Artists](https://bwalletx.com/artists).
+
+## Your money, your limit
+
+You never pay more than the limit you set.
+
+Each payment is made out to the speakers, the person you’re calling, or the artist.
+
+## Where to find it
+
+- bWalletX: on the web at [web.bwalletx.com](https://web.bwalletx.com), [Desktop](https://desktop.bwalletx.com), the [Chrome extension](https://bwalletx.com/extension) and the [Android download](https://bwalletx.com/android).
+
+- Not in bWallet, the App Store and Google Play edition. Free Spaces and free calls are there.
+
+[Get bWalletX](https://bwalletx.com/get)
+
+bWalletX is in beta: test with small amounts. Questions: [support@bwalletx.com](mailto:support@bwalletx.com)
+
+---
+
 Source: https://bwalletx.com/testers
 
 # Get 1 BSV for testing bWallet
