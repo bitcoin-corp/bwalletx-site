@@ -821,6 +821,94 @@ bMoviesSettings only at first
 
 ---
 
+Source: https://bwalletx.com/credits
+
+# Credits. Prepaid, per service.
+
+Credits are prepaid credit that a service issues for its own service. Any service can issue its own credits and choose what it accepts: BSV, MNEE or PNEEs. bWalletX holds them and spends them for you.
+
+Credits are in testing. bCredits for b come first. Nobody can buy or spend credits yet.
+
+## bCredits, for b
+
+The first issuer is The Bitcoin Corporation Ltd. Its credits, bCredits, pay for b, the agent in bWalletX. These terms are decided:
+
+- You buy bCredits with BSV. 1 bCredit = 1p.
+
+- b charges its running cost × 1.35 for each reply.
+
+- Top up as little as you like, up to £20 at a time.
+
+- bCredits don’t expire.
+
+- They’re non-refundable, except where the law says otherwise.
+
+- They can’t be transferred or cashed out. They’re only for b.
+
+- Your unspent BSV stays in your own wallet. Only what you top up sits with the issuer.
+
+## For services
+
+Any service can issue its own credits. For example, a compute service like [Mandala](https://mandala.computer) could issue credits for its compute.
+
+### Issue credits
+
+Credits for your service, under your name and your terms.
+
+### Set your price
+
+Choose the rate, and what you accept: BSV, MNEE or PNEEs.
+
+### Users top up
+
+From bWalletX, in a tap.
+
+### Charge per use
+
+Debit per request, per minute or per job. No card processor. No monthly billing.
+
+Want to issue credits for your service? Email [support@bwalletx.com](mailto:support@bwalletx.com?subject=Issuing%20credits).
+
+## In the wallet
+
+- Each balance has its own card.
+
+- The card being spent comes to the front and ticks down as you use it, with a chip like b · 2 bCredits/reply.
+
+- Tap a card to flip it. The back shows the contract: who issued it, what it’s for, the rate and what you’ve spent so far.
+
+- Stop ends payment and ends the service.
+
+- Contact the issuer is on the back of every card.
+
+## Built and coming
+
+### Built IN TESTING
+
+- The wallet’s credits row, history and top-up screens.
+
+- The ledger server, with debits that can’t be charged twice.
+
+- The balance cards, swipe and flip, as a prototype.
+
+None of this is live for users yet.
+
+### Coming NOT LIVE
+
+- bCredits for b, going live.
+
+- Credits from other issuers.
+
+- The card row in the release app.
+
+Related: [Streaming payments](https://bwalletx.com/streaming-payments), [Ask b](https://bwalletx.com/ask-b).
+
+[Get bWalletX](https://bwalletx.com/get)
+
+bWalletX is in beta: test with small amounts. Questions: [support@bwalletx.com](mailto:support@bwalletx.com)
+
+---
+
 Source: https://bwalletx.com/desktop
 
 New bWalletX Desktop · free in your browser
