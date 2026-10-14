@@ -52,7 +52,7 @@
           { label: 'Launchpad', href: '/launchpad' },
           { label: 'Buy BSV', href: '/buy' }
         ] },
-      { label: 'Social', href: '/social', pages: ['/social', '/chat', '/friends', '/lounge', '/games', '/video', '/live', '/aivj', '/tips', '/streaming-payments', '/bspaces', '/bphone', '/bmail', '/bpositive', '/airdrops', '/sign', '/x', '/gmail'],
+      { label: 'Social', href: '/social', pages: ['/social', '/chat', '/friends', '/lounge', '/games', '/video', '/live', '/aivj', '/tips', '/streaming-payments', '/credits', '/bspaces', '/bphone', '/bmail', '/bpositive', '/airdrops', '/sign', '/x', '/gmail'],
         sub: [
           { label: 'Social', href: '/social' },
           { label: 'Chat', href: '/chat' },
@@ -64,6 +64,7 @@
           { label: 'bTV: AIVJ', href: '/aivj' },
           { label: 'Tips', href: '/tips' },
           { label: 'Streaming payments', href: '/streaming-payments' },
+          { label: 'Credits (in testing)', href: '/credits' },
           { label: 'bSpaces', href: '/bspaces' },
           { label: 'bPhone', href: '/bphone' },
           { label: 'bMail (coming)', href: '/bmail' },
@@ -73,10 +74,11 @@
           { label: 'Sign in with X', href: '/x' },
           { label: 'Sign in with Gmail', href: '/gmail' }
         ] },
-      { label: 'bApps', href: '/bapps', pages: ['/bapps', '/bapps/bmovies', '/bweb'],
+      { label: 'bApps', href: '/bapps', pages: ['/bapps', '/bapps/bmovies', '/bshares', '/bweb'],
         sub: [
           { label: 'All bApps', href: '/bapps' },
           { label: 'bMovies', href: '/bapps/bmovies' },
+          { label: 'bShares (in testing)', href: '/bshares' },
           { label: 'bWeb (coming)', href: '/bweb' }
         ] },
       { label: 'Agents', href: '/agents', pages: ['/agents', '/agent', '/ideas', '/bugs', '/hold-to-talk', '/strategies', '/strategies/spec', '/cli', '/mcp'],

@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>bShares: share registers for companies</title>
+    <link rel="canonical" href="https://bwalletx.com/bshares" />
+    <meta name="description" content="bShares is a bWalletX bApp for companies: keep your register of members, tokenise your shares and lock each holding on chain in multisig. In testing with The Bitcoin Corporation Ltd." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://bwalletx.com/bshares" />
+    <meta property="og:site_name" content="bWalletX" />
+    <meta property="og:title" content="Your register of members, on chain." />
+    <meta property="og:description" content="bShares is a bWalletX bApp for companies: keep your register of members, tokenise your shares and lock each holding on chain in multisig. In testing with The Bitcoin Corporation Ltd." />
+    <meta property="og:image" content="https://bwalletx.com/og-bshares-v1.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="A bShares holding card: Restricted, not for sale, locked 2-of-2 with a holder recovery path." />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@bWalletX" />
+    <meta name="twitter:title" content="Your register of members, on chain." />
+    <meta name="twitter:description" content="bShares is a bWalletX bApp for companies: keep your register of members, tokenise your shares and lock each holding on chain in multisig. In testing with The Bitcoin Corporation Ltd." />
+    <meta name="twitter:image" content="https://bwalletx.com/og-bshares-v1.png" />
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="stylesheet" href="/styles.css" />
+    <style>
+      .ext h1 { font-size: clamp(2.2rem, 6vw, 3.4rem); margin: 18px 0 10px; }
+      .ext h2 { margin: 48px 0 8px; font-size: 1.5rem; }
+      .ext p, .ext li { line-height: 1.7; }
+      .ext .small { color: #8a8a86; font-size: 0.85rem; }
+      .ft-steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 230px), 1fr)); gap: 14px; margin: 18px 0; counter-reset: s; }
+      .ft-steps div { background: #101114; border: 1px solid #ffffff12; border-radius: 16px; padding: 16px; }
+      .ft-steps div::before { counter-increment: s; content: counter(s); display: inline-grid; place-items: center; width: 30px; height: 30px; border-radius: 50%; background: linear-gradient(180deg, #F2C230, #E6B020); color: #000; font: 700 0.95rem var(--hf); margin-bottom: 8px; }
+      .ft-steps h3 { margin: 0 0 4px; font-size: 1.05rem; }
+      .ft-steps p { margin: 0; color: #a7adb8; font-size: 0.92rem; line-height: 1.5; }
+      .ft-note { background: #101114; border: 1px solid #ffffff12; border-radius: 16px; padding: 16px 18px; margin: 18px 0; }
+      .ft-note p { margin: 0 0 8px; }
+      .ft-tag { display:inline-block; font: 700 0.75rem var(--hf); letter-spacing: .08em; text-transform: uppercase; padding: 3px 10px; border-radius: 999px; margin-left: 8px; vertical-align: middle; }
+      .ft-built { background: #F2C23022; color: #F2C230; border: 1px solid #F2C23066; }
+      .ft-coming { background: #ffffff10; color: #a7adb8; border: 1px solid #ffffff22; }
+    </style>
+  </head>
+  <body>
+    <div class="beta-banner">bWalletX is in <strong>beta</strong>: test with small amounts.</div>
+    <header class="topbar">
+      <div class="wrap topbar-in">
+        <a class="brand" href="/"><img src="/logo.svg" alt="" width="34" height="30" /><span>bWallet<span class="gold">X</span></span></a>
+        <nav aria-label="Pages">
+          <a href="/features">Features</a><a href="/exchange">Exchange</a><a href="/social">Social</a><a href="/agent">Agents</a><a href="/extension">Extension</a><a href="/developers">Developers</a>
+        </nav>
+        <span class="nav-cta"><a class="dl-btn" href="/get">Download</a><a class="web-btn" href="https://web.bwalletx.com" target="_blank" rel="noopener">Web &rarr;</a></span>
+      </div>
+    </header>
+    <script src="/nav.js"></script>
+    <main class="ext">
+      <h1>Your register of members, <span class="gold">on chain.</span></h1>
+      <p class="lede">bShares is a bApp in bWalletX for companies. Keep your register of members. Issue shares as tokens. Lock each holding on chain, so the company and the holder both have a say.</p>
+      <div class="ft-note">
+        <p><b>Status:</b> bShares is in testing with The Bitcoin Corporation Ltd. Not yet available to other companies.</p>
+        <p class="small">Nothing on this page is live for users yet. Shares are not sold here. Holdings are restricted and not for sale.</p>
+      </div>
+      <h2>How it works</h2>
+      <div class="ft-steps">
+        <div><h3>The company keeps the register</h3><p>The register of members is the legal title. bShares reads holdings from it, never from a list in the app.</p></div>
+        <div><h3>Directors approve each allotment</h3><p>A board minute is drafted in the company&rsquo;s own format. A director approves it before any share is issued.</p></div>
+        <div><h3>The holding is locked in multisig</h3><p>The share token sits in the holder&rsquo;s wallet, locked 2-of-2: one key for the director, one for the holder.</p></div>
+      </div>
+      <h2>Built <span class="ft-tag ft-built">in testing</span></h2>
+      <p>This is in code and being tested with The Bitcoin Corporation Ltd. It is not live for users.</p>
+      <ul>
+        <li><b>Register of members.</b> Kept by the company in bit-sign. Certificate numbers are never reused.</li>
+        <li><b>Allotment with a board minute.</b> The minute is generated in the company&rsquo;s format. A director approves it.</li>
+        <li><b>Payment to a treasury multisig.</b> A member pays in BSV to a 2-of-3 company treasury. The director keys live on separate devices.</li>
+        <li><b>Share token, locked 2-of-2.</b> Issued into the holder&rsquo;s wallet, locked to the director and the holder together.</li>
+        <li><b>Holders never depend on us.</b> After a set block height, the holder can move their token alone, from their own seed. No server, no director needed.</li>
+        <li><b>Overpayment, your choice.</b> Pay too much and you choose: a refund within 14 days, or treat it as share premium.</li>
+        <li><b>Authorised share ceiling.</b> An allotment that would go over the company&rsquo;s authorised shares is refused.</li>
+        <li><b>Marked restricted.</b> In the wallet, holdings show as &ldquo;Restricted&rdquo; and not for sale, in the Lock vault and under the Exchange &ldquo;Shares&rdquo; filter. There are no buy or sell buttons.</li>
+        <li><b>Not in the store edition.</b> bShares is left out of bWallet, the App Store and Google Play builds.</li>
+      </ul>
+      <h2>Coming <span class="ft-tag ft-coming">planned</span></h2>
+      <p>These are plans. They are not built yet.</p>
+      <ul>
+        <li><b>Set-up for any company.</b> Your own name and ticker, import your register, add director keys, use your minute template.</li>
+        <li><b>Share certificate cards.</b> A card in the wallet for each holding. The multisig lock and hand-drawn signatures from bit-sign on the back, with the real contracts listed.</li>
+        <li><b>One card per company.</b> Many holdings shown together, for holders with large portfolios.</li>
+        <li><b>Re-issue in the app.</b> If a director key is lost, re-issue the holding to a new key under a board minute.</li>
+      </ul>
+      <h2>What bShares is not</h2>
+      <div class="ft-note">
+        <p>It is not a place to buy shares. No shares are offered or sold on this site or in bWalletX.</p>
+        <p>bShares is a tool for a company to keep its own records and lock its members&rsquo; holdings.</p>
+      </div>
+      <h2>Run a company?</h2>
+      <p>If you&rsquo;d like to keep your register this way once it opens, write to us.</p>
+      <div class="row" style="display:flex;gap:12px;flex-wrap:wrap;margin:26px 0"><a class="btn btn-store" href="mailto:support@bwalletx.com?subject=bShares%20for%20my%20company">Ask about bShares</a></div>
+      <p class="small">bWalletX is in beta: test with small amounts. Questions: <a href="mailto:support@bwalletx.com">support@bwalletx.com</a></p>
+    </main>
+  </body>
+</html>

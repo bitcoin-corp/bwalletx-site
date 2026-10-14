@@ -503,6 +503,80 @@ bWalletX is in beta: test with small amounts. Nothing here is investment, legal 
 
 ---
 
+Source: https://bwalletx.com/bshares
+
+# Your register of members, on chain.
+
+bShares is a bApp in bWalletX for companies. Keep your register of members. Issue shares as tokens. Lock each holding on chain, so the company and the holder both have a say.
+
+Status: bShares is in testing with The Bitcoin Corporation Ltd. Not yet available to other companies.
+
+Nothing on this page is live for users yet. Shares are not sold here. Holdings are restricted and not for sale.
+
+## How it works
+
+### The company keeps the register
+
+The register of members is the legal title. bShares reads holdings from it, never from a list in the app.
+
+### Directors approve each allotment
+
+A board minute is drafted in the company’s own format. A director approves it before any share is issued.
+
+### The holding is locked in multisig
+
+The share token sits in the holder’s wallet, locked 2-of-2: one key for the director, one for the holder.
+
+## Built in testing
+
+This is in code and being tested with The Bitcoin Corporation Ltd. It is not live for users.
+
+- Register of members. Kept by the company in bit-sign. Certificate numbers are never reused.
+
+- Allotment with a board minute. The minute is generated in the company’s format. A director approves it.
+
+- Payment to a treasury multisig. A member pays in BSV to a 2-of-3 company treasury. The director keys live on separate devices.
+
+- Share token, locked 2-of-2. Issued into the holder’s wallet, locked to the director and the holder together.
+
+- Holders never depend on us. After a set block height, the holder can move their token alone, from their own seed. No server, no director needed.
+
+- Overpayment, your choice. Pay too much and you choose: a refund within 14 days, or treat it as share premium.
+
+- Authorised share ceiling. An allotment that would go over the company’s authorised shares is refused.
+
+- Marked restricted. In the wallet, holdings show as “Restricted” and not for sale, in the Lock vault and under the Exchange “Shares” filter. There are no buy or sell buttons.
+
+- Not in the store edition. bShares is left out of bWallet, the App Store and Google Play builds.
+
+## Coming planned
+
+These are plans. They are not built yet.
+
+- Set-up for any company. Your own name and ticker, import your register, add director keys, use your minute template.
+
+- Share certificate cards. A card in the wallet for each holding. The multisig lock and hand-drawn signatures from bit-sign on the back, with the real contracts listed.
+
+- One card per company. Many holdings shown together, for holders with large portfolios.
+
+- Re-issue in the app. If a director key is lost, re-issue the holding to a new key under a board minute.
+
+## What bShares is not
+
+It is not a place to buy shares. No shares are offered or sold on this site or in bWalletX.
+
+bShares is a tool for a company to keep its own records and lock its members’ holdings.
+
+## Run a company?
+
+If you’d like to keep your register this way once it opens, write to us.
+
+[Ask about bShares](mailto:support@bwalletx.com?subject=bShares%20for%20my%20company)
+
+bWalletX is in beta: test with small amounts. Questions: [support@bwalletx.com](mailto:support@bwalletx.com)
+
+---
+
 Source: https://bwalletx.com/bspaces
 
 # bSpaces. Live Spaces for your token holders.
