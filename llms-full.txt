@@ -1074,7 +1074,7 @@ Back a post by time-locking your own BSV against it, plus a most-locked leaderbo
 
 ### Push notifications
 
-DMs always reach you; groups only when you're mentioned, or set each room's bell to All, Mentions or Off. Previews off by default, plus quiet hours. On iPhone, Android, the web and Chrome. [More](https://bwalletx.com/push).
+DMs always reach you; groups only when you're mentioned, or set each room's bell to All, Mentions or Off. Previews off by default, plus quiet hours. On iPhone, Android, the web and Chrome. [More](https://bwalletx.com/push-notifications).
 
 ### $b in every room
 
@@ -1761,8 +1761,6 @@ Claim it in bWalletX: a $handle is your name for payments, bMail, calls and chat
 Write now, no wallet needed yet. Your draft stays in this tab only; bWalletX sends it and pays the postage to .
 
 Standard1¢
-Signedcoming soon
-Pay to opencoming soon
 
 Send with bWalletX
 
@@ -1866,6 +1864,15 @@ Each release ships to the Android APK, the Chrome extension and the web wallet. 
 [Download bWalletX](https://bwalletx.com/download)
 
 ## 5.2.19 2026-10-14
+
+- Calls: share your screen from the web wallet, Desktop or the Chrome extension, and everyone on the call can watch it, on any device.
+- bNews in the Feed: news headlines open as threads you can discuss on chain, and swipe to close.
+- Launch your own coin inside bWalletX: name, ticker, icon and one approval, with a flat 100,000-sat fee, a holders’ room and a Launched in bWalletX board. Ask b can walk you through it, and through listing an app.
+- Tap your bAvatar to flip it over to your pay code. The card back now shows “ID KEY: fingerprint” beside its copy button.
+- Safer 12-word backup: download an encrypted backup right on the 12-words screen, with a strength check, and copied words wipe after 60 seconds.
+- Payments are no longer blocked by a stale transaction, and 3D NFTs show their model, with a Picture/3D toggle.
+
+## 5.2.18 2026-10-14
 
 - Names: your names show in the Name Store with Sell, Take it off sale and Give, so anyone can buy and sell names. A free name is got in one screen, and the store shows which account is paying, with a Switch.
 - Exchange: one gold filter button opens a 4×4 grid (All, People and 14 categories, Games and Apps among them), a Launchpad tab lives in the app, and OpNS names is now Names.
@@ -2669,7 +2676,7 @@ Other tests: [Chrome extension](https://bwalletx.com/testers/bwalletx/chrome-ext
 
 ## Join
 
-- Install from the Chrome Web Store once it is approved (review is under way). Until then, download [the zip](https://bwalletx.com/download/bwalletx-extension-5.2.19.zip) and follow [/extension](https://bwalletx.com/extension) to load it.
+- Install from the Chrome Web Store once it is approved (review is under way). Until then, download [the zip](https://bwalletx.com/download/bwalletx-extension-5.2.18.zip) and follow [/extension](https://bwalletx.com/extension) to load it.
 - Pin bWalletX in the toolbar; it opens in the side panel.
 - The Web Store version and the zip are separate installs: restore your 12 words in whichever you keep.
 
