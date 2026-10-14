@@ -1174,7 +1174,7 @@ New to Desktop? [See what bWalletX Desktop does →](https://bwalletx.com/deskto
 
 ## bWallet in the app stores
 
-The store edition, bWallet, is in internal testing on Google Play; the wider closed test waits on Google verifying our organisation account. It hasn’t been submitted to the App Store yet; that waits on converting our Apple developer account to an organisation account. [Join the waitlist](https://bwalletx.com/#waitlist) to hear when either opens.
+The store edition, bWallet, is in beta. On iPhone you can join it now through TestFlight: [testflight.apple.com/join/1TTnQNKm](https://testflight.apple.com/join/1TTnQNKm) (install TestFlight first, then open the link on your iPhone). On Google Play it is in internal testing; the wider closed test waits on Google verifying our organisation account. It hasn’t been submitted to the App Store itself yet; that waits on converting our Apple developer account to an organisation account. [Join the waitlist](https://bwalletx.com/#waitlist) to hear when either opens.
 
 [Download on theApp StorebWallet · not submitted yetGET IT ONGoogle PlaybWallet · Play internal testing
 
@@ -1545,9 +1545,19 @@ Tokens, the Exchange and Strategies, names, chat rooms, agent accounts and the b
 
 No Face ID unlock: you use your password. Pairing the [CLI](https://bwalletx.com/cli) works while the app is open on screen.
 
-## Prefer the App Store?
+## The native app: join the TestFlight beta
 
-bWallet is our App Store edition: send, receive, tokens, names and rooms. It has no Market or Exchange; trading is only in bWalletX. It hasn’t been submitted to the App Store yet: that waits on converting our Apple developer account to an organisation account. [Join the waitlist](https://www.bwallet.space/#waitlist) to hear when it’s out.
+bWallet is our native iPhone app, the App Store edition: send, receive, tokens, names, chat and calls. It has no Market or Exchange; trading is only in bWalletX. You can run it today through Apple’s TestFlight beta.
+
+[Join the iPhone beta on TestFlight](https://testflight.apple.com/join/1TTnQNKm)
+
+- Install TestFlight from the App Store if you don’t have it.
+
+- Open the link above on your iPhone and tap Accept, then Install.
+
+- New versions arrive through TestFlight automatically. Beta builds expire after 90 days; the next one replaces them.
+
+It hasn’t been submitted to the App Store itself yet: that waits on converting our Apple developer account to an organisation account. [Join the waitlist](https://www.bwallet.space/#waitlist) to hear when it’s out.
 
 [Open web.bwalletx.com](https://web.bwalletx.com)
 [Other devices](https://bwalletx.com/get)
@@ -2389,6 +2399,10 @@ Test bWallet on your Android phone for 14 days and I'll pay you 1 BSV. Google wo
 Status, 7 Oct 2026: the 14-day test hasn't started yet. Google asked us to move bWallet to an organisation developer account first, and that is being verified. The terms above still stand. If you've signed up, you keep your place and we'll email you when the test opens.
 
 Loading…
+
+## On iPhone?
+
+The iPhone beta is open through TestFlight and has no application step: install TestFlight from the App Store, then open [testflight.apple.com/join/1TTnQNKm](https://testflight.apple.com/join/1TTnQNKm) on your iPhone. The paid 14-day test below is Android only, because it is Google’s requirement.
 
 ## How it works
 
