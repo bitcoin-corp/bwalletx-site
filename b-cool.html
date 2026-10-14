@@ -112,7 +112,8 @@
       .bc-tick::after { background: linear-gradient(180deg, #05080f 0%, rgba(5, 8, 15, 0.25) 30%, rgba(5, 8, 15, 0.45) 75%, #05080f 100%); }
       .bc-tick-in { position: relative; z-index: 1; text-align: center; padding: 0 16px; }
       .bc-tick-in h2 { margin: 0; font: 700 clamp(5rem, 26vw, 15rem) / 1 var(--hf); letter-spacing: -0.06em; color: #fff; text-shadow: 0 6px 60px rgba(0, 0, 0, 0.6); }
-      .bc-tick-in h2 span { color: var(--gold-hi, #ffd24d); }
+      .bc-tick-in h2 { display: flex; justify-content: center; align-items: flex-start; gap: 0.06em; }
+      .bc-tick-in h2 img { display: block; height: 0.86em; width: calc(0.86em * 0.74); margin-top: 0.08em; filter: drop-shadow(0 0 40px rgba(245, 184, 0, 0.45)); }
       .bc-tick-in p { margin: 18px 0 0; font: 500 clamp(1.1rem, 3.4vw, 1.5rem) / 1.5 var(--hf); color: #dfe7f0; }
       .jb-series a { color: #b9c6d6; }
       .jb-series span { color: #3e4756; }
@@ -149,8 +150,7 @@
     <section class="jb-scene bc-tick">
       <img src="/images/b-cool-iceberg.jpg" alt="" width="1280" height="720" loading="lazy" />
       <div class="bc-tick-in">
-        <h2><span>$</span>b</h2>
-        <p>$b = bitcoin.</p>
+        <h2 aria-label="$b"><span>$</span><img src="/logo.svg" alt="" /></h2>
       </div>
     </section>
 
