@@ -27,7 +27,7 @@
       .ext h2 { margin: 48px 0 8px; font-size: 1.5rem; }
       .ext p, .ext li { line-height: 1.7; }
       .ext .small { color: #8a8a86; font-size: 0.85rem; }
-      .ft-steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 230px), 1fr)); gap: 14px; margin: 18px 0; counter-reset: s; }
+      .ft-steps { display: grid; grid-template-columns: repeat(6, minmax(150px, 1fr)); overflow-x: auto; scroll-snap-type: x mandatory; gap: 12px; margin: 18px 0; counter-reset: s; }
       .ft-steps div { background: #101114; border: 1px solid #ffffff12; border-radius: 16px; padding: 16px; }
       .ft-steps div::before { counter-increment: s; content: counter(s); display: inline-grid; place-items: center; width: 30px; height: 30px; border-radius: 50%; background: linear-gradient(180deg, #F2C230, #E6B020); color: #000; font: 700 0.95rem var(--hf); margin-bottom: 8px; }
       .ft-steps h3 { margin: 0 0 4px; font-size: 1.05rem; }
@@ -38,7 +38,7 @@
       .ft-built { background: #F2C23022; color: #F2C230; border: 1px solid #F2C23066; }
       .ft-coming { background: #ffffff10; color: #a7adb8; border: 1px solid #ffffff22; }
     
-      .path { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin: 22px 0; }
+      .path { display: flex; flex-wrap: nowrap; overflow-x: auto; align-items: center; gap: 8px; margin: 22px 0; }
       .path span { background: #101114; border: 1px solid #ffffff1a; border-radius: 999px; padding: 8px 14px; font: 600 0.95rem var(--hf); white-space: nowrap; }
       .path span.here { border-color: #F2C230; color: #F2C230; background: #F2C23014; }
       .path span.later { color: #8a8a86; border-style: dashed; }
@@ -47,6 +47,7 @@
       .split div { display: grid; place-items: center; background: #F2C230; border-right: 2px solid #000; min-width: 0; }
       .split div:nth-child(2) { background: #E6B020; } .split div:nth-child(3) { background: #FFD24D; } .split div:nth-child(4) { background: #a7adb8; }
       @media (max-width: 560px) { .path { flex-direction: column; align-items: flex-start; } .path i { transform: rotate(90deg); margin-left: 18px; } }
+          .ft-steps > * { scroll-snap-align: start; }
     </style>
   </head>
   <body>
