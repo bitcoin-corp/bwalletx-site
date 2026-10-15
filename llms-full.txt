@@ -1022,6 +1022,64 @@ bWalletX is in beta: test with small amounts. Questions: [support@bwalletx.com](
 
 ---
 
+Source: https://bwalletx.com/culture
+
+# Culture, made on BSV.
+
+A token isn’t just a ticker. Anything people make can gather around it: a game, pictures, films, songs, a room to talk in and a stage to go live on. In bWalletX all of that sits in one wallet, on a chain that keeps the fees tiny and the content itself on chain.
+
+[Get bWalletX](https://bwalletx.com/get)[Launch your own coin](https://bwalletx.com/launchpad)
+
+## One token, many kinds of media
+
+Take $FROGGER Example. It’s a made-up coin for this page, not a real token. Here’s what its people could do with it today:
+
+- A gameBuild a Frogger game and list it as a bApp that runs inside bWalletX. [bApps](https://bwalletx.com/bapps)
+
+- PicturesMint frog art from your phone with bPics, so it’s yours on chain, and share it or keep it. [Mint](https://bwalletx.com/mint)
+
+- FilmsPost a Frogger film to the bMovies feed; each film can have its own token that backers hold. [bMovies](https://bwalletx.com/bapps/bmovies)
+
+- MusicAn album on bMusic, where listeners pay the artist directly, a sat a second. [Artists](https://bwalletx.com/artists)
+
+- A roomHold $FROGGER and its chat room appears in your list. Sell it and the room goes. [Token rooms](https://bwalletx.com/chat)
+
+- A stageGo live in a Space for holders: speakers, raise-hand, and anyone can listen. [bSpaces](https://bwalletx.com/bspaces)
+
+Each piece gives people another reason to find the token, hold it and back the people making things for it.
+
+## Pay the people who make it
+
+Wherever there’s someone to thank there’s a Tip button: artists, NFT creators, rooms, people in chat and speakers in Spaces. All of it goes to them. On bMusic, listening is paying the artist. [Tips](https://bwalletx.com/tips)
+
+## How a culture grows
+
+- Launch a coin
+- Open its room
+- Make things
+- Go live
+- Tip the makers
+
+Launch a coin from the [Launchpad](https://bwalletx.com/launchpad), give it something people can use, and its room is there for holders. The wallet won’t sign a token description that promises returns: describe the room and the things you make instead.
+
+## Why BSV
+
+- Tiny fees. A photo costs a fraction of a cent to put on chain; a song can be paid for a sat a second.
+
+- Scale. Bitcoin SV is built for large blocks, so lots of small payments and posts fit.
+
+- The content itself is on chain. Pictures, music and video can be stored on chain, not just a link to somewhere else.
+
+## Your keys, your culture
+
+bWalletX is non-custodial: the tokens, the art and the tips are held by your own keys. Spaces, bMovies and the Launchpad are not in bWallet, the App Store and Google Play edition.
+
+[Get bWalletX](https://bwalletx.com/get)
+
+$FROGGER is an example made up for this page. Tokens can lose all their value. No returns are promised. Nothing here is investment advice. bWalletX is in beta: test with small amounts. Questions: [support@bwalletx.com](mailto:support@bwalletx.com)
+
+---
+
 Source: https://bwalletx.com/desktop
 
 New bWalletX Desktop · free in your browser
