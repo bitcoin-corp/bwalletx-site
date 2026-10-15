@@ -1034,7 +1034,7 @@ A token isn’t just a ticker. Anything people make can gather around it: a game
 
 Take $FROGGER Example. It’s a made-up coin for this page, not a real token. Here’s what its people could do with it today:
 
-- A gameBuild a Frogger game and list it as a bApp that runs inside bWalletX. [bApps](https://bwalletx.com/bapps)
+- A gameGames run inside bWalletX as bApps, so a Frogger game can sit right next to its token. [bApps](https://bwalletx.com/bapps)
 
 - PicturesMint frog art from your phone with bPics, so it’s yours on chain, and share it or keep it. [Mint](https://bwalletx.com/mint)
 
