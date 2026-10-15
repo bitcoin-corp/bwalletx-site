@@ -1931,6 +1931,50 @@ GET IT ONGoogle PlaybWallet · Play internal testing
 
 ---
 
+Source: https://bwalletx.com/invite
+
+# Invites. The token is the ticket.
+
+Bring your people into a Space. Each invite carries a small amount of the room’s token, and holding it is what lets them in.
+
+[Get bWalletX](https://bwalletx.com/get)[About Spaces](https://bwalletx.com/bspaces)
+
+## For the host
+
+- Pick peopleChoose from the people you follow on X, your HandCash friends, or paste a list of names.
+
+- Attach a tokenEach invite carries some of the room’s token. That token is their ticket into the Space.
+
+- SendInvites arrive as airdrops in [bMail](https://bwalletx.com/bmail), like any other airdrop.
+
+## For the person invited
+
+- Open the linkTap the invite link.
+
+- Sign inSign in with X, or with HandCash, and get bWalletX.
+
+- The token arrivesIt lands in your new wallet.
+
+- You’re inYou’re let into the room’s chat straight away.
+
+## Friends find each other
+
+As the people in your contacts join, they’re matched to their paymails and show up as friends. You don’t have to look anyone up.
+
+## Keep it safe
+
+- The link carries the token. Don’t forward it. Whoever opens it first can claim it.
+
+- Room entry is tied to the invited X account. Someone else holding the link can’t walk into the room as you.
+
+- We never hold the tokens. They go from the host’s wallet to yours.
+
+Related: [bSpaces](https://bwalletx.com/bspaces) · [bMail](https://bwalletx.com/bmail) · [Airdrops](https://bwalletx.com/airdrops) · [Friends](https://bwalletx.com/friends) · [Sign in with X](https://bwalletx.com/x)
+
+bWalletX is in beta: test with small amounts. Questions: [support@bwalletx.com](mailto:support@bwalletx.com)
+
+---
+
 Source: https://bwalletx.com/iphone
 
 # bWalletX on iPhone
@@ -9394,6 +9438,54 @@ Related: [bShares](https://bwalletx.com/bshares) · [Partnership shares](https:/
 
 ---
 
+Source: https://bwalletx.com/blog/057-handcash-and-invites
+
+[Development blog](https://bwalletx.com/blog) · 057 · 15 Oct 2026
+
+# Sign in with HandCash, and invites with tokens
+
+New accounts can now start with HandCash as well as X. Your HandCash handle carries over as name@bwalletx.com, your friends can come with you, and invites with tokens bring people into Spaces.
+
+## Sign in with HandCash
+
+“Sign in with HandCash” now sits next to “Sign in with X” when you make a new account. If you already use HandCash, you don’t need to start from nothing.
+
+- Your handle carries over. Your HandCash handle becomes your paymail: name@bwalletx.com.
+
+- Your friends can come too. Bring your HandCash friends into your bWalletX address book.
+
+Your bWalletX keys are your own, made on your device, as with any other account.
+
+## Your address book, in and out
+
+You can import an address book and export yours. It’s your list, and you can take it with you. This is in bWalletX 5.2.25.
+
+## Invites with tokens
+
+A host picks people, from the people they follow on X, their HandCash friends or a pasted list, and sends each one an invite with some of the room’s token attached. Invites arrive as airdrops in bMail. The token is the ticket into the Space.
+
+The person invited opens the link, signs in with X or HandCash, and gets bWalletX. The token arrives in their wallet and they’re let into the room’s chat straight away. As their contacts join, they’re matched to paymails and show up as friends.
+
+## Keep it safe
+
+- The link carries the token, so don’t forward it.
+
+- Room entry is tied to the invited X account.
+
+- We never hold the tokens. They go from the host’s wallet to yours.
+
+More on the [Invites](https://bwalletx.com/invite) page.
+
+## The first room: The Scammer Cartel
+
+The first room to use invites is The Scammer Cartel. Its people will come in through invites, straight into the room’s chat and its Space: [bchatx.com/s/scammerscartel](https://www.bchatx.com/s/scammerscartel).
+
+Related: [Invites](https://bwalletx.com/invite) · [bSpaces](https://bwalletx.com/bspaces) · [bMail](https://bwalletx.com/bmail) · [Sign in with X](https://bwalletx.com/x)
+
+[← 056 bShares](https://bwalletx.com/blog/056-bshares)[All posts →](https://bwalletx.com/blog)
+
+---
+
 Source: https://bwalletx.com/blog/
 
 # Development blog
@@ -9401,6 +9493,10 @@ Source: https://bwalletx.com/blog/
 How bWallet and bWalletX were built, one chapter at a time. Every post is written from the git history of the wallet, this site, the chat server and the PNEEs prototype. It covers what we built, why, what broke, what we reversed and what is still not done.
 
 Newest first. Dates come from commits. bWallet is a fork of [Yours Wallet](https://github.com/yours-org/yours-wallet) (MIT licence).
+
+- 057 · 15 Oct 2026
+[Sign in with HandCash, and invites with tokens](https://bwalletx.com/blog/057-handcash-and-invites)
+New accounts can now start with HandCash as well as X. Your HandCash handle carries over as name@bwalletx.com, your friends can come with you, and invites with tokens bring people into Spaces.
 
 - 056 · 15 Oct 2026
 [bShares: a register for companies](https://bwalletx.com/blog/056-bshares)
