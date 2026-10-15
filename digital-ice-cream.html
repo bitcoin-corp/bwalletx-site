@@ -1,0 +1,550 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Digital Ice-Cream: three friends, one token</title>
+    <link rel="canonical" href="https://bwalletx.com/digital-ice-cream" />
+    <meta name="description" content="A cartoon story: Fred, Joe and You start an ice-cream stall with a $ICECREAM token split 30/30/40. Every cone sold splits itself, shares stay locked, b helps them agree, and one day they incorporate." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://bwalletx.com/digital-ice-cream" />
+    <meta property="og:site_name" content="bWalletX" />
+    <meta property="og:title" content="Digital Ice-Cream: three friends, one token" />
+    <meta property="og:description" content="Fred, Joe and You split $ICECREAM 30/30/40. Every cone sold splits itself. Shares stay locked. b helps them agree. One day: Digital Ice-Cream Inc." />
+    <meta property="og:image" content="https://bwalletx.com/og-digital-ice-cream-v1.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="A cartoon ice-cream van with a giant cone on the roof, three cones, and the gold b saying 'Digital Ice-Cream'." />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@bWalletX" />
+    <meta name="twitter:title" content="Digital Ice-Cream: three friends, one token" />
+    <meta name="twitter:description" content="Fred, Joe and You split $ICECREAM 30/30/40. Every cone sold splits itself. Shares stay locked. b helps them agree. One day: Digital Ice-Cream Inc." />
+    <meta name="twitter:image" content="https://bwalletx.com/og-digital-ice-cream-v1.png" />
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="stylesheet" href="/styles.css" />
+    <style>
+      .ice { --cream: #fff8ee; } .ice main { --ink: #2b2140; --cream: #fff8ee; --fred: #7cc7ff; --joe: #6fdcaa; --you: #ff8fbf; --max: #b39cff; --goldc: #f2c230; }
+      body.ice { background: linear-gradient(#000 0 112px, var(--cream) 112px) no-repeat, var(--cream); overflow-x: hidden; }
+      .ice main { color: var(--ink); }
+      .ice main { max-width: 1080px; margin: 0 auto; padding: 150px 16px 48px; }
+      @media (max-width: 859px) { .ice main { padding-top: 172px; } body.ice { background: linear-gradient(#000 0 118px, var(--cream) 118px) no-repeat, var(--cream); } }
+      .ice h1, .ice h2, .ice h3 { font-family: var(--hf); color: var(--ink); }
+      .ice main a { color: #c2185b; }
+      .ice-hero { position: relative; overflow: hidden; margin: 18px -16px 0; padding: 56px 16px 10px; background: radial-gradient(120% 90% at 50% 0%, #ffe3f0 0%, #e6f6ff 55%, var(--cream) 100%); border-bottom: 3px dashed #ffc2dc; text-align: center; }
+      .ice-hero h1 { font-size: clamp(2.6rem, 9vw, 5.2rem); line-height: 0.95; margin: 6px 0 12px; letter-spacing: -0.02em; }
+      .ice-hero h1 .pop { display: inline-block; color: #ff5c9a; text-shadow: 3px 3px 0 var(--ink); -webkit-text-stroke: 1.5px var(--ink); }
+      .ice-hero .kick { display: inline-block; font: 700 0.85rem/1 var(--hf); letter-spacing: 0.08em; text-transform: uppercase; background: #fff; border: 2.5px solid var(--ink); border-radius: 99px; padding: 8px 14px; box-shadow: 3px 3px 0 var(--ink); }
+      .ice-hero .lede { max-width: 620px; margin: 0 auto; font-size: 1.12rem; line-height: 1.55; color: #4a3f60; }
+      .hero-art { position: relative; max-width: 760px; margin: 10px auto 0; }
+      .hero-art svg { width: 100%; height: auto; display: block; }
+      .van-wobble { transform-origin: 50% 90%; animation: wobble 2.4s ease-in-out infinite; }
+      .float { animation: float 4s ease-in-out infinite; }
+      .float.d2 { animation-delay: -1.3s; } .float.d3 { animation-delay: -2.6s; }
+      .bob { animation: float 3s ease-in-out infinite; }
+      @keyframes wobble { 0%,100% { transform: rotate(0deg) translateY(0); } 25% { transform: rotate(-1.2deg) translateY(-2px); } 75% { transform: rotate(1.2deg) translateY(-1px); } }
+      @keyframes float { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
+      @keyframes pulse { 0%,100% { transform: scale(1); } 50% { transform: scale(1.12); } }
+      .pulse { transform-box: fill-box; transform-origin: center; animation: pulse 1.8s ease-in-out infinite; }
+
+      .strip-h { text-align: center; margin: 44px 0 6px; font-size: clamp(1.6rem, 5vw, 2.3rem); }
+      .strip-sub { text-align: center; margin: 0 auto 22px; color: #5d5373; max-width: 560px; }
+      .strip { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
+      .panel { margin: 0; background: #fff; border: 3px solid var(--ink); border-radius: 18px; box-shadow: 6px 6px 0 var(--ink); overflow: hidden; display: flex; flex-direction: column; }
+      .panel:nth-child(odd) { transform: rotate(-0.5deg); } .panel:nth-child(even) { transform: rotate(0.5deg); }
+      .panel svg { display: block; width: 100%; height: auto; border-bottom: 3px solid var(--ink); }
+      .panel figcaption { padding: 14px 16px 16px; font-size: 1rem; line-height: 1.5; color: #3d3354; }
+      .panel figcaption b { font-family: var(--hf); font-size: 1.12rem; color: var(--ink); display: block; margin-bottom: 2px; }
+      .num { display: inline-grid; place-items: center; width: 28px; height: 28px; border-radius: 50%; background: var(--goldc); border: 2.5px solid var(--ink); font: 700 0.85rem var(--hf); margin-right: 6px; vertical-align: 2px; }
+
+      .scoops { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; margin: 18px 0 0; }
+      .scoop { background: #fff; border: 3px solid var(--ink); border-radius: 18px; padding: 16px; box-shadow: 4px 4px 0 var(--ink); }
+      .scoop h3 { margin: 0 0 4px; font-size: 1.1rem; }
+      .scoop p { margin: 0; color: #4a3f60; line-height: 1.5; font-size: 0.95rem; }
+      .scoop:nth-child(1) { background: #e8f5ff; } .scoop:nth-child(2) { background: #e6fbf1; } .scoop:nth-child(3) { background: #ffeef6; }
+      .cta { display: flex; gap: 12px; flex-wrap: wrap; justify-content: center; margin: 34px 0 10px; }
+      .cta a { font: 700 1.02rem var(--hf); text-decoration: none; padding: 14px 22px; border-radius: 99px; border: 3px solid var(--ink); box-shadow: 4px 4px 0 var(--ink); color: var(--ink); background: #fff; transition: transform .12s, box-shadow .12s; }
+      .ice main .cta a { color: var(--ink); }
+      .cta a.gold { background: linear-gradient(180deg, #ffe58a, #f2c230); }
+      .cta a:hover { transform: translate(-2px, -2px); box-shadow: 6px 6px 0 var(--ink); }
+      .fine { max-width: 720px; margin: 34px auto 0; padding: 14px 16px; border: 2px dashed #cbbfdc; border-radius: 14px; color: #6a6080; font-size: 0.86rem; line-height: 1.6; background: #fffdf9; }
+      .fine p { margin: 0 0 6px; }
+      @media (max-width: 720px) {
+        .strip, .scoops { grid-template-columns: minmax(0, 1fr); }
+        .panel:nth-child(odd), .panel:nth-child(even) { transform: none; }
+        .panel { box-shadow: 4px 4px 0 var(--ink); }
+      }
+
+      .ice-hero > *:not(.sky) { position: relative; z-index: 1; }
+      .sky { position: absolute; inset: 0; z-index: 0; pointer-events: none; overflow: hidden; }
+      .sky .sun { position: absolute; right: 6%; top: 18px; width: 120px; height: 120px; border-radius: 50%; background: radial-gradient(circle, #fff3b0 0 30%, rgba(255,226,140,.55) 46%, rgba(255,214,120,0) 70%); animation: breathe 6s ease-in-out infinite; }
+      .sky .sun::after { content: ""; position: absolute; inset: 38px; border-radius: 50%; background: #ffe58a; box-shadow: 0 0 0 3px rgba(43,33,64,.12); }
+      .sky .cloud { position: absolute; left: 0; width: 150px; opacity: .9; animation: drift 70s linear infinite; will-change: transform; }
+      .sky .cloud svg { display: block; width: 100%; height: auto; }
+      .sky canvas { position: absolute; inset: 0; width: 100%; height: 100%; }
+      @keyframes breathe { 0%,100% { transform: scale(.92); opacity: .8; } 50% { transform: scale(1.08); opacity: 1; } }
+      @keyframes drift { from { transform: translateX(-200px); } to { transform: translateX(calc(100vw + 40px)); } }
+      .ice-hero.idle .sky *, .ice-hero.idle .float, .ice-hero.idle .bob, .ice-hero.idle .van-wobble, .ice-hero.idle .drip { animation-play-state: paused; }
+      .drip { transform-box: fill-box; transform-origin: 50% 0; animation: drip 5s ease-in-out infinite; }
+      .drip.d2 { animation-delay: -2.2s; animation-duration: 6.5s; }
+      @keyframes drip { 0%,100% { transform: scaleY(.35); } 55% { transform: scaleY(1.15); } 70% { transform: scaleY(.9); } }
+      .split-live .static-split { display: none; }
+      #wavebg { position: fixed; inset: 0; width: 100%; height: 100%; z-index: 0; pointer-events: none; }
+      .ice main { position: relative; z-index: 1; }
+      .burst { position: fixed; width: 5px; height: 12px; border-radius: 3px; pointer-events: none; z-index: 60; transition: transform .7s cubic-bezier(.15,.7,.3,1), opacity .7s ease-in; }
+      @media (prefers-reduced-motion: reduce) {
+        .van-wobble, .float, .bob, .pulse, .sky *, .drip { animation: none !important; }
+        .sky .cloud:nth-child(2) { transform: translateX(8vw); } .sky .cloud:nth-child(3) { transform: translateX(60vw); } .sky .cloud:nth-child(4) { transform: translateX(32vw); }
+      }
+    </style>
+  </head>
+  <body class="ice">
+    <div class="beta-banner">bWalletX is in <strong>beta</strong>: test with small amounts.</div>
+    <header class="topbar">
+      <div class="wrap topbar-in">
+        <a class="brand" href="/"><img src="/logo.svg" alt="" width="34" height="30" /><span>bWallet<span class="gold">X</span></span></a>
+        <nav aria-label="Pages">
+          <a href="/features">Features</a><a href="/exchange">Exchange</a><a href="/social">Social</a><a href="/agent">Agents</a><a href="/extension">Extension</a><a href="/developers">Developers</a>
+        </nav>
+        <span class="nav-cta"><a class="dl-btn" href="/get">Download</a><a class="web-btn" href="https://web.bwalletx.com" target="_blank" rel="noopener">Web &rarr;</a></span>
+      </div>
+    </header>
+    <script src="/nav.js"></script>
+
+    <!-- Shared cartoon parts. Hand-drawn inline SVG, reused with <use>. -->
+    <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+      <defs>
+        <linearGradient id="gGold" gradientUnits="userSpaceOnUse" x1="0" y1="12" x2="0" y2="105"><stop offset="0" stop-color="#FFE58A"/><stop offset="0.55" stop-color="#FFD24D"/><stop offset="1" stop-color="#C98F00"/></linearGradient>
+        <filter id="melt" x="-15%" y="-10%" width="130%" height="135%"><feTurbulence type="fractalNoise" baseFrequency="0.012 0.035" numOctaves="1" seed="7"><animate attributeName="baseFrequency" dur="9s" values="0.012 0.035;0.015 0.045;0.012 0.035" repeatCount="indefinite"/></feTurbulence><feDisplacementMap in="SourceGraphic" scale="4" xChannelSelector="R" yChannelSelector="G"/></filter>
+        <g id="drips"><path class="drip" d="M15 45 q2 9 0 15 a3.4 3.4 0 0 0 6.8 0 q-2 -6 0 -15z" fill="var(--scoop)" stroke="#2b2140" stroke-width="2.4"/><path class="drip d2" d="M39 47 q1.6 7 0 11 a3 3 0 0 0 6 0 q-1.6 -4 0 -11z" fill="var(--scoop)" stroke="#2b2140" stroke-width="2.4"/></g>
+        <g id="face">
+          <circle cx="40" cy="60" r="4.2" fill="#2b2140"/><circle cx="60" cy="60" r="4.2" fill="#2b2140"/>
+          <circle cx="41.4" cy="58.4" r="1.4" fill="#fff"/><circle cx="61.4" cy="58.4" r="1.4" fill="#fff"/>
+          <ellipse cx="32" cy="70" rx="5.5" ry="3.2" fill="#ff7aa2" opacity=".55"/><ellipse cx="68" cy="70" rx="5.5" ry="3.2" fill="#ff7aa2" opacity=".55"/>
+          <path d="M41 71 Q50 80 59 71" fill="none" stroke="#2b2140" stroke-width="3" stroke-linecap="round"/>
+        </g>
+        <!-- Fred: sky-blue tee, swoopy brown hair -->
+        <g id="fred">
+          <path d="M16 150 C16 108 30 94 50 94 C70 94 84 108 84 150Z" fill="#7cc7ff" stroke="#2b2140" stroke-width="3"/>
+          <circle cx="50" cy="60" r="30" fill="#f6cfae" stroke="#2b2140" stroke-width="3"/>
+          <path d="M20 58 C16 30 38 22 54 24 C72 26 82 38 80 56 C72 44 60 38 46 40 C36 42 28 48 20 58Z" fill="#7a4a24" stroke="#2b2140" stroke-width="3" stroke-linejoin="round"/>
+          <use href="#face"/>
+        </g>
+        <!-- Joe: mint tee, big curly hair -->
+        <g id="joe">
+          <g fill="#2a1d18" stroke="#2b2140" stroke-width="3"><circle cx="25" cy="50" r="13"/><circle cx="33" cy="34" r="14"/><circle cx="50" cy="27" r="15"/><circle cx="67" cy="34" r="14"/><circle cx="75" cy="50" r="13"/></g>
+          <path d="M16 150 C16 108 30 94 50 94 C70 94 84 108 84 150Z" fill="#6fdcaa" stroke="#2b2140" stroke-width="3"/>
+          <circle cx="50" cy="62" r="29" fill="#8d5a3b" stroke="#2b2140" stroke-width="3"/>
+          <g fill="#2a1d18"><circle cx="34" cy="40" r="9"/><circle cx="50" cy="36" r="10"/><circle cx="66" cy="40" r="9"/></g>
+          <use href="#face" transform="translate(0 2)"/>
+        </g>
+        <!-- You: pink tee, ponytail, driver's cap -->
+        <g id="you">
+          <ellipse cx="20" cy="70" rx="8" ry="17" fill="#3a2618" stroke="#2b2140" stroke-width="3"/>
+          <path d="M16 150 C16 108 30 94 50 94 C70 94 84 108 84 150Z" fill="#ff8fbf" stroke="#2b2140" stroke-width="3"/>
+          <circle cx="50" cy="60" r="30" fill="#c98e62" stroke="#2b2140" stroke-width="3"/>
+          <path d="M21 52 C21 24 79 24 79 52Z" fill="#ff5c9a" stroke="#2b2140" stroke-width="3" stroke-linejoin="round"/>
+          <path d="M48 52 L94 52 Q95 59 84 60 L48 58Z" fill="#ff5c9a" stroke="#2b2140" stroke-width="3" stroke-linejoin="round"/>
+          <circle cx="50" cy="40" r="5" fill="#fff" stroke="#2b2140" stroke-width="2"/>
+          <use href="#face"/>
+          <text x="50" y="132" text-anchor="middle" font-family="Space Grotesk, system-ui" font-weight="700" font-size="15" fill="#2b2140">YOU</text>
+        </g>
+        <!-- Max: lavender tee, bobble hat -->
+        <g id="max">
+          <path d="M16 150 C16 108 30 94 50 94 C70 94 84 108 84 150Z" fill="#b39cff" stroke="#2b2140" stroke-width="3"/>
+          <circle cx="50" cy="60" r="30" fill="#ffe0c7" stroke="#2b2140" stroke-width="3"/>
+          <path d="M21 54 C20 20 80 20 79 54Z" fill="#ff9d5c" stroke="#2b2140" stroke-width="3"/>
+          <rect x="18" y="46" width="64" height="12" rx="6" fill="#ffd166" stroke="#2b2140" stroke-width="3"/>
+          <circle cx="50" cy="22" r="8" fill="#ffd166" stroke="#2b2140" stroke-width="3"/>
+          <path d="M34 78 Q50 92 66 78" fill="#c0703a" opacity=".55"/>
+          <use href="#face"/>
+        </g>
+        <!-- Cone: scoop colour via CSS var -->
+        <g id="cone">
+          <path d="M8 44 L52 44 L30 108Z" fill="#f4c27a" stroke="#2b2140" stroke-width="3" stroke-linejoin="round"/>
+          <path d="M16 50 L36 90 M27 46 L43 76 M39 46 L47 60 M44 50 L24 90 M33 46 L17 76 M21 46 L13 60" stroke="#c98a3c" stroke-width="2"/>
+          <path d="M6 42 C6 14 54 14 54 42 C50 50 44 44 40 50 C36 56 32 46 26 50 C20 54 16 46 6 42Z" fill="var(--scoop, #ffb3d1)" stroke="#2b2140" stroke-width="3" stroke-linejoin="round"/>
+          <g stroke-width="3" stroke-linecap="round"><path d="M18 28 l4 -3" stroke="#ff5c9a"/><path d="M30 22 l4 2" stroke="#3aa0ff"/><path d="M40 30 l3 -3" stroke="#ffd166"/><path d="M24 38 l4 1" stroke="#6fdcaa"/><path d="M36 39 l3 -3" stroke="#b39cff"/></g>
+          <circle cx="32" cy="12" r="5" fill="#ff4d6d" stroke="#2b2140" stroke-width="2.5"/>
+        </g>
+        <!-- b, the gold agent, with a face in the bowl -->
+        <g id="bee">
+          <polygon points="45,12 45,76 27,76 27,30" fill="url(#gGold)" stroke="#8a6200" stroke-width="2" stroke-linejoin="round"/>
+          <circle cx="60" cy="72" r="33" fill="url(#gGold)" stroke="#8a6200" stroke-width="2"/>
+          <circle cx="60" cy="72" r="16" fill="#2b2140"/>
+          <circle cx="54" cy="69" r="3.6" fill="#fff"/><circle cx="66" cy="69" r="3.6" fill="#fff"/>
+          <circle cx="54.8" cy="69.6" r="1.7" fill="#2b2140"/><circle cx="66.8" cy="69.6" r="1.7" fill="#2b2140"/>
+          <path d="M54 77 Q60 83 66 77" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round"/>
+        </g>
+        <g id="coin">
+          <circle r="13" fill="#ffd24d" stroke="#2b2140" stroke-width="3"/><circle r="8" fill="none" stroke="#c98f00" stroke-width="2"/>
+          <text y="5" text-anchor="middle" font-family="Space Grotesk, system-ui" font-weight="700" font-size="13" fill="#7a5600">b</text>
+        </g>
+        <!-- Ice-cream van -->
+        <g id="van">
+          <ellipse cx="165" cy="190" rx="140" ry="9" fill="#2b2140" opacity=".12"/>
+          <rect x="20" y="60" width="232" height="112" rx="20" fill="#c9f2e3" stroke="#2b2140" stroke-width="4"/>
+          <path d="M250 88 L286 88 Q302 90 307 120 L309 160 Q309 172 297 172 L250 172Z" fill="#c9f2e3" stroke="#2b2140" stroke-width="4" stroke-linejoin="round"/>
+          <path d="M258 97 L283 97 Q294 99 297 126 L258 126Z" fill="#dff4ff" stroke="#2b2140" stroke-width="3" stroke-linejoin="round"/>
+          <rect x="50" y="80" width="134" height="52" rx="6" fill="#fff6e3" stroke="#2b2140" stroke-width="3"/>
+          <use href="#you" transform="translate(96 72) scale(.42)"/>
+          <rect x="44" y="127" width="146" height="10" rx="3" fill="#ff8fbf" stroke="#2b2140" stroke-width="3"/>
+          <g stroke="#2b2140" stroke-width="3"><rect x="44" y="64" width="146" height="18" fill="#fff"/>
+            <rect x="44" y="64" width="18.25" height="18" fill="#ff8fbf" stroke="none"/><rect x="80.5" y="64" width="18.25" height="18" fill="#ff8fbf" stroke="none"/><rect x="117" y="64" width="18.25" height="18" fill="#ff8fbf" stroke="none"/><rect x="153.5" y="64" width="18.25" height="18" fill="#ff8fbf" stroke="none"/>
+            <rect x="44" y="64" width="146" height="18" fill="none"/></g>
+          <g fill="#fff" stroke="#2b2140" stroke-width="3"><path d="M44 82 a9 7 0 0 0 18 0Z" fill="#ff8fbf"/><path d="M62 82 a9 7 0 0 0 18 0Z"/><path d="M80 82 a9 7 0 0 0 18 0Z" fill="#ff8fbf"/><path d="M98 82 a9 7 0 0 0 19 0Z"/><path d="M117 82 a9 7 0 0 0 18 0Z" fill="#ff8fbf"/><path d="M135 82 a9 7 0 0 0 18 0Z"/><path d="M153 82 a9 7 0 0 0 19 0Z" fill="#ff8fbf"/><path d="M172 82 a9 7 0 0 0 18 0Z"/></g>
+          <text x="166" y="160" text-anchor="middle" font-family="Space Grotesk, system-ui" font-weight="700" font-size="19" fill="#2b2140">$ICECREAM</text>
+          <circle cx="303" cy="146" r="5" fill="#ffe58a" stroke="#2b2140" stroke-width="2"/>
+          <g><circle cx="82" cy="172" r="21" fill="#2b2140"/><circle cx="82" cy="172" r="9" fill="#e9e3f5"/><circle cx="258" cy="172" r="21" fill="#2b2140"/><circle cx="258" cy="172" r="9" fill="#e9e3f5"/></g>
+          <use href="#cone" transform="translate(112 -24) scale(.8)" style="--scoop:#ffb3d1"/>
+        </g>
+      </defs>
+    </svg>
+
+    <canvas id="wavebg" aria-hidden="true"></canvas>
+    <main>
+      <section class="ice-hero">
+        <div class="sky" aria-hidden="true">
+          <div class="sun"></div>
+          <div class="cloud" style="top:24px;animation-delay:-12s"><svg viewBox="0 0 150 70"><path d="M24 62 C6 62 4 40 22 38 C20 18 46 12 56 26 C64 6 98 8 100 30 C118 22 140 34 132 50 C146 54 140 64 128 62Z" fill="#fff" stroke="#2b2140" stroke-opacity=".18" stroke-width="3"/></svg></div>
+          <div class="cloud" style="top:120px;width:96px;opacity:.75;animation-duration:95s;animation-delay:-60s"><svg viewBox="0 0 150 70"><path d="M24 62 C6 62 4 40 22 38 C20 18 46 12 56 26 C64 6 98 8 100 30 C118 22 140 34 132 50 C146 54 140 64 128 62Z" fill="#fff" stroke="#2b2140" stroke-opacity=".18" stroke-width="3"/></svg></div>
+          <div class="cloud" style="top:64px;width:120px;opacity:.85;animation-duration:82s;animation-delay:-40s"><svg viewBox="0 0 150 70"><path d="M24 62 C6 62 4 40 22 38 C20 18 46 12 56 26 C64 6 98 8 100 30 C118 22 140 34 132 50 C146 54 140 64 128 62Z" fill="#fff" stroke="#2b2140" stroke-opacity=".18" stroke-width="3"/></svg></div>
+          <canvas id="skyfx"></canvas>
+        </div>
+        <span class="kick">A story about Partnership shares</span>
+        <h1>Digital <span class="pop">Ice-Cream</span></h1>
+        <p class="lede">Three friends, one van, real ice cream paid for in digital cash, and a token called <b>$ICECREAM</b>. Every cone splits the money fairly. Nobody runs off with the freezer.</p>
+        <div class="hero-art">
+          <svg viewBox="0 0 760 330" role="img" aria-label="An ice-cream van with a giant cone on the roof, cones floating around it, and the gold b saying: two scoops, split three ways.">
+            <ellipse cx="380" cy="318" rx="330" ry="10" fill="#bfe6ff" opacity=".7"/>
+            <g class="float"><g filter="url(#melt)" transform="translate(40 70) scale(1.05)" style="--scoop:#9fd8ff"><use href="#cone"/><use href="#drips"/></g></g>
+            <g class="float d2"><use href="#cone" transform="translate(110 170) scale(.8)" style="--scoop:#b8f0d6"/></g>
+            <g class="float d3"><g filter="url(#melt)" transform="translate(660 60) scale(.95)" style="--scoop:#d7c8ff"><use href="#cone"/><use href="#drips"/></g></g>
+            <g class="van-wobble"><use href="#van" transform="translate(205 110) scale(1.12)"/></g>
+            <g class="bob">
+              <use href="#bee" transform="translate(588 168) scale(1.05)"/>
+              <path d="M520 112 h196 a14 14 0 0 1 14 14 v34 a14 14 0 0 1 -14 14 h-130 l-14 16 l-2 -16 h-50 a14 14 0 0 1 -14 -14 v-34 a14 14 0 0 1 14 -14Z" fill="#fff" stroke="#2b2140" stroke-width="3"/>
+              <text x="618" y="141" text-anchor="middle" font-family="Space Grotesk, system-ui" font-weight="700" font-size="16" fill="#2b2140">Two scoops,</text>
+              <text x="618" y="162" text-anchor="middle" font-family="Space Grotesk, system-ui" font-weight="700" font-size="16" fill="#2b2140">split three ways!</text>
+            </g>
+          </svg>
+        </div>
+      </section>
+
+      <h2 class="strip-h">The story, in eight scoops</h2>
+      <p class="strip-sub">How a stall becomes a partnership, and a partnership one day becomes a company.</p>
+
+      <div class="strip">
+        <!-- 1 -->
+        <figure class="panel">
+          <svg viewBox="0 0 400 250" role="img" aria-label="Fred, Joe and You standing together. You says: let's sell ice cream!">
+            <rect width="400" height="250" fill="#e6f5ff"/><rect y="214" width="400" height="36" fill="#bfe8cf"/>
+            <circle cx="350" cy="44" r="22" fill="#ffe58a" stroke="#2b2140" stroke-width="3"/>
+            <use href="#fred" transform="translate(28 76) scale(.92)"/>
+            <use href="#joe" transform="translate(132 76) scale(.92)"/>
+            <use href="#you" transform="translate(240 70) scale(.96)"/>
+            <path d="M200 18 h170 a12 12 0 0 1 12 12 v26 a12 12 0 0 1 -12 12 h-74 l-10 14 l-4 -14 h-82 a12 12 0 0 1 -12 -12 v-26 a12 12 0 0 1 12 -12Z" fill="#fff" stroke="#2b2140" stroke-width="3"/>
+            <text x="285" y="49" text-anchor="middle" font-family="Space Grotesk, system-ui" font-weight="700" font-size="17" fill="#2b2140">Let&rsquo;s sell ice cream!</text>
+            <g font-family="Space Grotesk, system-ui" font-weight="700" font-size="14" fill="#2b2140" text-anchor="middle"><text x="74" y="240">Fred</text><text x="178" y="240">Joe</text></g>
+          </svg>
+          <figcaption><b><span class="num">1</span>Meet Fred, Joe and You.</b>Three friends. One dream. Ice cream.</figcaption>
+        </figure>
+        <!-- 2 -->
+        <figure class="panel">
+          <svg viewBox="0 0 400 250" role="img" aria-label="A pie chart of the $ICECREAM token: Fred 30%, Joe 30%, You 40%.">
+            <rect width="400" height="250" fill="#fff3e0"/>
+            <text x="200" y="34" text-anchor="middle" font-family="Space Grotesk, system-ui" font-weight="700" font-size="22" fill="#2b2140">$ICECREAM</text>
+            <g transform="translate(120 140)">
+              <circle r="72" fill="#fff" stroke="#2b2140" stroke-width="3"/>
+              <g fill="none" stroke-width="44">
+                <circle r="47" pathLength="100" stroke="#7cc7ff" stroke-dasharray="30 70" stroke-dashoffset="25"/>
+                <circle r="47" pathLength="100" stroke="#6fdcaa" stroke-dasharray="30 70" stroke-dashoffset="-5"/>
+                <circle r="47" pathLength="100" stroke="#ff8fbf" stroke-dasharray="40 60" stroke-dashoffset="-35"/>
+              </g>
+              <circle r="72" fill="none" stroke="#2b2140" stroke-width="3"/><circle r="25" fill="#fff" stroke="#2b2140" stroke-width="3"/>
+              <use href="#cone" transform="translate(-11 -24) scale(.38)" style="--scoop:#ffb3d1"/>
+            </g>
+            <g font-family="Space Grotesk, system-ui" font-weight="700" fill="#2b2140" font-size="17">
+              <circle cx="232" cy="92" r="10" fill="#7cc7ff" stroke="#2b2140" stroke-width="2.5"/><text x="250" y="98">Fred 30%</text>
+              <circle cx="232" cy="132" r="10" fill="#6fdcaa" stroke="#2b2140" stroke-width="2.5"/><text x="250" y="138">Joe 30%</text>
+              <circle cx="232" cy="172" r="10" fill="#ff8fbf" stroke="#2b2140" stroke-width="2.5"/><text x="250" y="178">You 40%</text>
+              <text x="250" y="198" font-size="12" font-weight="500" fill="#5d5373">drives the van</text>
+            </g>
+          </svg>
+          <figcaption><b><span class="num">2</span>They make a token: $ICECREAM.</b>Fred 30, Joe 30, You 40. You drive the van and put in more, so you hold more.</figcaption>
+        </figure>
+        <!-- 3 -->
+        <figure class="panel">
+          <svg viewBox="0 0 400 250" role="img" id="splitfx" aria-label="A coin from a sale splits into three cones: 30%, 30% and 40%. When Max joins it splits four ways: 27, 27, 36 and 10.">
+            <rect width="400" height="250" fill="#eafbf3"/>
+            <use href="#van" transform="translate(6 70) scale(.5)"/>
+            <g class="static-split"><g class="pulse"><use href="#coin" transform="translate(250 50) scale(1.5)"/></g>
+            <g fill="none" stroke="#2b2140" stroke-width="3" stroke-dasharray="6 6" stroke-linecap="round"><path d="M240 74 Q215 110 214 140"/><path d="M250 76 L270 140"/><path d="M262 72 Q320 100 332 140"/></g></g>
+            <path d="M180 52 Q205 44 228 50" fill="none" stroke="#2b2140" stroke-width="3" stroke-linecap="round"/><path d="M222 42 L230 50 L220 56" fill="none" stroke="#2b2140" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+            <g class="sc"><use href="#cone" transform="translate(196 140) scale(.6)" style="--scoop:#7cc7ff"/></g>
+            <g class="sc"><use href="#cone" transform="translate(254 140) scale(.6)" style="--scoop:#6fdcaa"/></g>
+            <g class="sc"><use href="#cone" transform="translate(310 134) scale(.72)" style="--scoop:#ff8fbf"/></g>
+            <g class="sc" opacity="0"><use href="#cone" transform="translate(352 146) scale(.5)" style="--scoop:#b39cff"/></g>
+            <g class="coins"><use href="#coin" opacity="0"/><use href="#coin" opacity="0"/><use href="#coin" opacity="0"/><use href="#coin" opacity="0"/></g>
+            <g class="pct" font-family="Space Grotesk, system-ui" font-weight="700" font-size="15" fill="#2b2140" text-anchor="middle"><text x="214" y="226">30%</text><text x="272" y="226">30%</text><text x="332" y="236">40%</text><text x="368" y="236" font-size="13" opacity="0">10%</text></g>
+          </svg>
+          <figcaption><b><span class="num">3</span>Every cone splits itself.</b>Each sale pays out 30/30/40 (then 27/27/36/10 when Max joins), straight into each friend&rsquo;s wallet. No spreadsheet. No arguments.</figcaption>
+        </figure>
+        <!-- 4 -->
+        <figure class="panel">
+          <svg viewBox="0 0 400 250" role="img" aria-label="A padlock that needs all three keys: Fred's, Joe's and yours.">
+            <rect width="400" height="250" fill="#f3eeff"/>
+            <path d="M160 112 V86 a40 40 0 0 1 80 0 V112" fill="none" stroke="#2b2140" stroke-width="14" stroke-linecap="round"/>
+            <path d="M160 112 V86 a40 40 0 0 1 80 0 V112" fill="none" stroke="#cfd3e0" stroke-width="7" stroke-linecap="round"/>
+            <rect x="136" y="108" width="128" height="104" rx="18" fill="#ffd24d" stroke="#2b2140" stroke-width="4"/>
+            <g fill="#2b2140"><circle cx="172" cy="150" r="7"/><circle cx="200" cy="150" r="7"/><circle cx="228" cy="150" r="7"/><rect x="169" y="150" width="6" height="16" rx="2"/><rect x="197" y="150" width="6" height="16" rx="2"/><rect x="225" y="150" width="6" height="16" rx="2"/></g>
+            <text x="200" y="196" text-anchor="middle" font-family="Space Grotesk, system-ui" font-weight="700" font-size="15" fill="#2b2140">3 keys to open</text>
+            <g stroke="#2b2140" stroke-width="3" stroke-linejoin="round">
+              <g transform="translate(40 120) rotate(-20)"><circle r="18" fill="#7cc7ff"/><circle r="6" fill="#f3eeff"/><path d="M17 -4 H66 V4 H58 V14 H50 V4 H17Z" fill="#7cc7ff"/></g>
+              <g transform="translate(330 70) rotate(200)"><circle r="18" fill="#6fdcaa"/><circle r="6" fill="#f3eeff"/><path d="M17 -4 H66 V4 H58 V14 H50 V4 H17Z" fill="#6fdcaa"/></g>
+              <g transform="translate(345 200) rotate(160)"><circle r="18" fill="#ff8fbf"/><circle r="6" fill="#f3eeff"/><path d="M17 -4 H66 V4 H58 V14 H50 V4 H17Z" fill="#ff8fbf"/></g>
+            </g>
+            <g font-family="Space Grotesk, system-ui" font-weight="700" font-size="13" fill="#2b2140" text-anchor="middle"><text x="40" y="160">Fred</text><text x="352" y="44">Joe</text><text x="352" y="240">You</text></g>
+          </svg>
+          <figcaption><b><span class="num">4</span>Locked together.</b>Their shares are locked, so nobody can sell without the others agreeing. Three keys, one lock.</figcaption>
+        </figure>
+        <!-- 5 -->
+        <figure class="panel">
+          <svg viewBox="0 0 400 250" role="img" aria-label="Max fixes the freezer and joins for 10%. The new split: Fred 27, Joe 27, You 36, Max 10.">
+            <rect width="400" height="250" fill="#fff0f6"/>
+            <rect x="18" y="128" width="96" height="98" rx="10" fill="#e3f4ff" stroke="#2b2140" stroke-width="3"/><rect x="18" y="128" width="96" height="22" rx="8" fill="#bfe3ff" stroke="#2b2140" stroke-width="3"/>
+            <g stroke="#3aa0ff" stroke-width="3" stroke-linecap="round" transform="translate(66 190)"><path d="M0 -20 V20 M-17 -10 L17 10 M-17 10 L17 -10"/></g>
+            <use href="#max" transform="translate(100 82) scale(.9)"/>
+            <path d="M24 30 h150 a12 12 0 0 1 12 12 v26 a12 12 0 0 1 -12 12 h-34 l-6 14 l-8 -14 h-102 a12 12 0 0 1 -12 -12 v-26 a12 12 0 0 1 12 -12Z" fill="#fff" stroke="#2b2140" stroke-width="3"/>
+            <text x="99" y="53" text-anchor="middle" font-family="Space Grotesk, system-ui" font-weight="700" font-size="14" fill="#2b2140">Freezers fixed.</text>
+            <text x="99" y="71" text-anchor="middle" font-family="Space Grotesk, system-ui" font-weight="700" font-size="14" fill="#2b2140">Can I join?</text>
+            <g transform="translate(300 118)">
+              <g fill="none" stroke-width="36">
+                <circle r="40" pathLength="100" stroke="#7cc7ff" stroke-dasharray="27 73" stroke-dashoffset="25"/>
+                <circle r="40" pathLength="100" stroke="#6fdcaa" stroke-dasharray="27 73" stroke-dashoffset="-2"/>
+                <circle r="40" pathLength="100" stroke="#ff8fbf" stroke-dasharray="36 64" stroke-dashoffset="-29"/>
+                <circle r="40" pathLength="100" stroke="#b39cff" stroke-dasharray="10 90" stroke-dashoffset="-65"/>
+              </g>
+              <circle r="58" fill="none" stroke="#2b2140" stroke-width="3"/><circle r="22" fill="#fff" stroke="#2b2140" stroke-width="3"/>
+              <text y="6" text-anchor="middle" font-family="Space Grotesk, system-ui" font-weight="700" font-size="15" fill="#2b2140">+10</text>
+            </g>
+            <g font-family="Space Grotesk, system-ui" font-weight="700" font-size="13" fill="#2b2140" text-anchor="middle"><text x="300" y="200">Fred 27 · Joe 27</text><text x="300" y="218">You 36 · Max 10</text></g>
+          </svg>
+          <figcaption><b><span class="num">5</span>Max fixes the freezers.</b>Everyone agrees Max should join for 10%. The others scale down a little, and the split updates itself.</figcaption>
+        </figure>
+        <!-- 6 -->
+        <figure class="panel">
+          <svg viewBox="0 0 400 250" role="img" aria-label="The partners' private chat. b says: here's the draft agreement, Max joins with 10%. Fred, Joe, You and Max each sign with their own wallet.">
+            <rect width="400" height="250" fill="#fff8d6"/>
+            <rect x="96" y="12" width="208" height="232" rx="26" fill="#2b2140"/>
+            <rect x="104" y="22" width="192" height="214" rx="19" fill="#fff"/>
+            <text x="200" y="42" text-anchor="middle" font-family="Space Grotesk, system-ui" font-weight="700" font-size="12" fill="#5d5373">Partners &middot; $ICECREAM &middot; private</text>
+            <line x1="112" y1="50" x2="288" y2="50" stroke="#eee6f5" stroke-width="2"/>
+            <use href="#bee" transform="translate(104 58) scale(.32)"/>
+            <rect x="136" y="58" width="150" height="62" rx="12" fill="#fff4cc" stroke="#e6b020" stroke-width="2"/>
+            <g font-family="Space Grotesk, system-ui" font-size="11.5" fill="#2b2140"><text x="145" y="76" font-weight="700">Draft agreement ready.</text><text x="145" y="93">Max joins with 10%,</text><text x="145" y="109">everyone scales a bit. OK?</text></g>
+            <g font-family="Space Grotesk, system-ui" font-weight="700" font-size="12" fill="#2b2140">
+              <rect x="150" y="130" width="136" height="22" rx="11" fill="#7cc7ff"/><text x="160" y="145">Fred &#10003; signed</text>
+              <rect x="150" y="156" width="136" height="22" rx="11" fill="#6fdcaa"/><text x="160" y="171">Joe &#10003; signed</text>
+              <rect x="150" y="182" width="136" height="22" rx="11" fill="#ff8fbf"/><text x="160" y="197">You &#10003; signed</text>
+              <rect x="150" y="208" width="136" height="22" rx="11" fill="#b39cff"/><text x="160" y="223">Max &#10003; signed</text>
+            </g>
+            <g class="float"><use href="#cone" transform="translate(22 90) scale(.8)" style="--scoop:#ffe58a"/></g>
+            <g class="float d2"><use href="#cone" transform="translate(326 110) scale(.75)" style="--scoop:#b39cff"/></g>
+          </svg>
+          <figcaption><b><span class="num">6</span>b keeps the peace.</b>b sits in their private partners&rsquo; chat, drafts the agreement and helps them agree. Each partner signs with their own wallet.</figcaption>
+        </figure>
+        <!-- 7 -->
+        <figure class="panel">
+          <svg viewBox="0 0 400 250" role="img" aria-label="Business booms: a bar chart shooting up behind the van, coins flying.">
+            <rect width="400" height="250" fill="#e9f7ff"/>
+            <g stroke="#2b2140" stroke-width="3"><rect x="40" y="150" width="40" height="70" rx="6" fill="#7cc7ff"/><rect x="100" y="110" width="40" height="110" rx="6" fill="#6fdcaa"/><rect x="160" y="74" width="40" height="146" rx="6" fill="#ff8fbf"/><rect x="220" y="40" width="40" height="180" rx="6" fill="#b39cff"/></g>
+            <path d="M40 140 L120 100 L180 64 L272 22" fill="none" stroke="#ff5c9a" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/><path d="M256 18 L274 20 L268 38" fill="none" stroke="#ff5c9a" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+            <use href="#van" transform="translate(196 118) scale(.6)"/>
+            <g class="float"><use href="#coin" transform="translate(320 40)"/></g><g class="float d2"><use href="#coin" transform="translate(356 70)"/></g><g class="float d3"><use href="#coin" transform="translate(300 84)"/></g>
+            <rect x="16" y="14" width="150" height="34" rx="8" fill="#ff5c9a" stroke="#2b2140" stroke-width="3" transform="rotate(-6 90 31)"/>
+            <text x="90" y="38" text-anchor="middle" font-family="Space Grotesk, system-ui" font-weight="700" font-size="17" fill="#fff" transform="rotate(-6 90 31)">SOLD OUT!</text>
+          </svg>
+          <figcaption><b><span class="num">7</span>Business booms.</b>More vans, more flavours, more cones. Every sale still splits itself, to the penny.</figcaption>
+        </figure>
+        <!-- 8 -->
+        <figure class="panel">
+          <svg viewBox="0 0 400 250" role="img" aria-label="A building called Digital Ice-Cream Inc. Each token becomes one share. Maybe one day, an IPO.">
+            <rect width="400" height="250" fill="#f6f0ff"/><rect y="222" width="400" height="28" fill="#d9ccf5"/>
+            <path d="M70 92 L190 46 L310 92Z" fill="#ffd24d" stroke="#2b2140" stroke-width="3.5" stroke-linejoin="round"/>
+            <rect x="80" y="92" width="220" height="22" fill="#fff" stroke="#2b2140" stroke-width="3"/>
+            <text x="190" y="108" text-anchor="middle" font-family="Space Grotesk, system-ui" font-weight="700" font-size="12.5" fill="#2b2140">DIGITAL ICE-CREAM INC.</text>
+            <g fill="#fff" stroke="#2b2140" stroke-width="3"><rect x="94" y="114" width="20" height="96"/><rect x="138" y="114" width="20" height="96"/><rect x="222" y="114" width="20" height="96"/><rect x="266" y="114" width="20" height="96"/></g>
+            <rect x="172" y="150" width="36" height="60" rx="18" fill="#ff8fbf" stroke="#2b2140" stroke-width="3"/>
+            <rect x="74" y="210" width="232" height="14" fill="#fff" stroke="#2b2140" stroke-width="3"/>
+            <use href="#cone" transform="translate(174 -6) scale(.5)" style="--scoop:#ffb3d1"/>
+            <g transform="translate(336 90)"><rect x="-44" y="-26" width="88" height="52" rx="10" fill="#fff" stroke="#2b2140" stroke-width="3"/>
+              <text y="-4" text-anchor="middle" font-family="Space Grotesk, system-ui" font-weight="700" font-size="14" fill="#2b2140">1 token</text>
+              <text y="15" text-anchor="middle" font-family="Space Grotesk, system-ui" font-weight="700" font-size="14" fill="#c2185b">= 1 share</text></g>
+            <g transform="translate(340 172) rotate(8)"><rect x="-36" y="-18" width="72" height="36" rx="8" fill="#6fdcaa" stroke="#2b2140" stroke-width="3" stroke-dasharray="6 4"/>
+              <text y="6" text-anchor="middle" font-family="Space Grotesk, system-ui" font-weight="700" font-size="15" fill="#2b2140">IPO?</text></g>
+            <use href="#bee" transform="translate(6 134) scale(.62)"/>
+          </svg>
+          <figcaption><b><span class="num">8</span>One day: Digital Ice-Cream Inc.</b>They incorporate. Partnership shares convert 1:1 into company shares. Private placements bring in backers. Maybe, one day, a regulated IPO.</figcaption>
+        </figure>
+      </div>
+
+      <h2 class="strip-h">The recipe, in three scoops</h2>
+      <div class="scoops">
+        <div class="scoop"><h3>Split</h3><p>The token says who owns what. Money in splits by holding, automatically.</p></div>
+        <div class="scoop"><h3>Lock</h3><p>Partnership shares stay locked until the partners agree to move them.</p></div>
+        <div class="scoop"><h3>Agree</h3><p>b drafts the paperwork in your partners&rsquo; chat. Everyone signs with their own wallet.</p></div>
+      </div>
+
+      <div class="cta">
+        <a href="/partnership-shares">How Partnership shares work &rarr;</a>
+        <a class="gold" href="/get">Get bWalletX</a>
+      </div>
+
+      <div class="fine">
+        <p>Partnership shares are for partners, never sold to the public. Until you incorporate you&rsquo;re a partnership: profits are shared and each partner is personally liable. b drafts, you decide &mdash; b isn&rsquo;t a lawyer.</p>
+        <p>bWalletX is in beta: test with small amounts. Questions: <a href="mailto:support@bwalletx.com">support@bwalletx.com</a></p>
+      </div>
+    </main>
+    <script>
+      (function () {
+        var RM = matchMedia('(prefers-reduced-motion: reduce)').matches;
+        var COLS = ['#ff5c9a', '#3aa0ff', '#ffd166', '#6fdcaa', '#b39cff', '#ff9d5c'];
+        function rng(a) { return function () { a |= 0; a = (a + 0x6d2b79f5) | 0; var t = Math.imul(a ^ (a >>> 15), 1 | a); t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t; return ((t ^ (t >>> 14)) >>> 0) / 4294967296; }; }
+        function loop(fn) {
+          var on = false, vis = !document.hidden, id = 0, last = 0;
+          function tick(now) { var dt = Math.min(0.05, (now - (last || now)) / 1000); last = now; fn(dt); id = requestAnimationFrame(tick); }
+          function sync() { var go = on && vis; if (go && !id) { last = 0; id = requestAnimationFrame(tick); } else if (!go && id) { cancelAnimationFrame(id); id = 0; } }
+          document.addEventListener('visibilitychange', function () { vis = !document.hidden; sync(); });
+          return function (v) { on = v; sync(); };
+        }
+        function watch(el, cb) { new IntersectionObserver(function (e) { cb(e[0].isIntersecting); }, { rootMargin: '60px' }).observe(el); }
+
+        /* 1. Hero sky: sprinkles and tiny cones floating upward, three depths */
+        var hero = document.querySelector('.ice-hero'), cv = document.getElementById('skyfx');
+        if (hero && cv && cv.getContext) {
+          var ctx = cv.getContext('2d'), W = 0, H = 0, dpr = Math.min(2, devicePixelRatio || 1), R = rng(20261015), P = [], sprites = {};
+          var SC = [0.6, 0.85, 1.15], AL = [0.45, 0.7, 0.92], SP = [10, 18, 30];
+          function sprite(kind, col, L) {
+            var k = kind + col + L; if (sprites[k]) return sprites[k];
+            var s = SC[L] * dpr, w = Math.ceil((kind ? 18 : 8) * s) + 6, h = Math.ceil((kind ? 26 : 16) * s) + 6, c = document.createElement('canvas');
+            c.width = w; c.height = h; var g = c.getContext('2d');
+            if (L === 0 && 'filter' in g) g.filter = 'blur(' + dpr + 'px)';
+            g.translate(w / 2, h / 2); g.scale(s, s); g.lineWidth = 1.6; g.strokeStyle = 'rgba(43,33,64,.55)'; g.lineJoin = 'round';
+            if (kind) {
+              g.fillStyle = '#f4c27a'; g.beginPath(); g.moveTo(-6, -2); g.lineTo(6, -2); g.lineTo(0, 12); g.closePath(); g.fill(); g.stroke();
+              g.fillStyle = col; g.beginPath(); g.arc(0, -4, 7, Math.PI * 0.95, Math.PI * 2.05); g.closePath(); g.fill(); g.stroke();
+            } else {
+              g.fillStyle = col; g.beginPath(); if (g.roundRect) g.roundRect(-2.5, -6, 5, 12, 2.5); else g.rect(-2.5, -6, 5, 12); g.fill();
+            }
+            return (sprites[k] = c);
+          }
+          function size() {
+            var r = hero.getBoundingClientRect(), n = r.width < 520 ? 22 : 36;
+            W = r.width; H = r.height; cv.width = W * dpr; cv.height = H * dpr;
+            while (P.length < n) { var L = R() < 0.4 ? 0 : R() < 0.6 ? 1 : 2; P.push({ L: L, x: R(), y: R() * H, a: R() * 6.3, sw: 6 + R() * 14, f: 0.3 + R() * 0.6, r: R() * 6.3, vr: (R() - 0.5) * 1.6, k: R() < 0.2 ? 1 : 0, c: COLS[(R() * COLS.length) | 0] }); }
+            P.length = n; P.sort(function (a, b) { return a.L - b.L; });
+          }
+          function draw(dt) {
+            ctx.setTransform(1, 0, 0, 1, 0, 0); ctx.clearRect(0, 0, cv.width, cv.height);
+            for (var i = 0; i < P.length; i++) {
+              var p = P[i]; p.y -= SP[p.L] * dt; p.a += p.f * dt; p.r += p.vr * dt;
+              if (p.y < -30) { p.y = H + 20; p.x = R(); }
+              var im = sprite(p.k, p.c, p.L), x = (p.x * W + Math.sin(p.a) * p.sw) * dpr, y = p.y * dpr;
+              ctx.globalAlpha = AL[p.L]; ctx.setTransform(1, 0, 0, 1, x, y); ctx.rotate(p.k ? Math.sin(p.a) * 0.3 : p.r);
+              ctx.drawImage(im, -im.width / 2, -im.height / 2);
+            }
+          }
+          size(); addEventListener('resize', size); draw(0);
+          if (!RM) {
+            var run = loop(draw), svg = hero.querySelector('.hero-art svg');
+            watch(hero, function (v) { run(v); hero.classList.toggle('idle', !v); if (svg && svg.pauseAnimations) v ? svg.unpauseAnimations() : svg.pauseAnimations(); });
+          } else { var hs = hero.querySelector('.hero-art svg'); if (hs && hs.pauseAnimations) hs.pauseAnimations(); }
+        }
+
+        /* 3. Every sale splits: coin drops, bounces, splits into 3 cones, then 4 once Max joins */
+        var sv = document.getElementById('splitfx');
+        if (sv && !RM) {
+          var fig = sv.closest('figure'); fig.classList.add('split-live');
+          var coins = sv.querySelectorAll('.coins use'), cones = sv.querySelectorAll('.sc'), txt = sv.querySelectorAll('.pct text');
+          var TG = [[214, 152], [272, 152], [332, 148], [367, 156]], T = 0, labA = ['30%', '30%', '40%'], labB = ['27%', '27%', '36%'];
+          for (var c = 0; c < 4; c++) { cones[c].style.transformBox = 'fill-box'; cones[c].style.transformOrigin = '50% 100%'; }
+          function ease(k) { return k < 0 ? 0 : k > 1 ? 1 : k * k * (3 - 2 * k); }
+          function setLabels(b) { for (var i = 0; i < 3; i++) txt[i].textContent = (b ? labB : labA)[i]; txt[3].setAttribute('opacity', b ? 1 : 0); }
+          function cycle(n, t) {
+            var i, x, y, s, k;
+            for (i = 0; i < 4; i++) { coins[i].setAttribute('opacity', 0); if (i < 3 || n === 4) cones[i].style.transform = ''; }
+            if (t < 1) {
+              y = t < 0.6 ? -20 + 120 * (t / 0.6) * (t / 0.6) : 100 - 26 * Math.sin(Math.PI * (t - 0.6) / 0.4);
+              s = t > 0.6 && t < 0.7 ? 1.3 * (1 + 0.25 * Math.sin(Math.PI * (t - 0.6) / 0.1)) : 1.3;
+              coins[0].setAttribute('opacity', 1); coins[0].setAttribute('transform', 'translate(262 ' + y + ') scale(' + s + ' ' + (2.6 - s) + ')');
+            } else if (t < 2.1) {
+              k = Math.min(1, (t - 1) / 0.8);
+              for (i = 0; i < n; i++) {
+                var tx = TG[i][0], ty = TG[i][1], e = ease(k);
+                x = 262 + (tx - 262) * e; y = 100 + (ty - 100) * e - 44 * Math.sin(Math.PI * k);
+                s = t < 1.8 ? 1.3 - 0.45 * k : 0.85 * (1 - (t - 1.8) / 0.3);
+                coins[i].setAttribute('opacity', 1);
+                coins[i].setAttribute('transform', 'translate(' + x + ' ' + y + ') rotate(' + (tx - 262) * 3 * e + ') scale(' + Math.max(0, s) + ')');
+                if (t > 1.8) cones[i].style.transform = 'scale(' + (1 + 0.14 * Math.sin(Math.PI * (t - 1.8) / 0.3)) + ')';
+              }
+            }
+          }
+          function frame(dt) {
+            T = (T + dt) % 9.6; var t = T, mx = cones[3];
+            if (t < 4) { cycle(3, t); mx.setAttribute('opacity', 0); setLabels(0); }
+            else if (t < 4.6) { var k = (t - 4) / 0.6; cycle(3, 9); mx.setAttribute('opacity', 1); mx.style.transform = 'scale(' + (ease(k) + 0.25 * Math.sin(Math.PI * k)) + ')'; setLabels(t > 4.3); }
+            else if (t < 8.6) { mx.setAttribute('opacity', 1); cycle(4, t - 4.6); setLabels(1); }
+            else { cycle(3, 9); var f = Math.max(0, 1 - (t - 8.6) / 0.6); mx.setAttribute('opacity', f); mx.style.transform = 'scale(' + f + ')'; setLabels(t < 8.9); }
+          }
+          frame(0); var run2 = loop(frame); watch(sv, run2);
+        }
+
+
+        /* Page background: pastel ice-cream ribbons (low-res canvas, 30 fps) */
+        var wb = document.getElementById('wavebg');
+        if (wb && wb.getContext) {
+          var wc = wb.getContext('2d'), WS = 4, BW = 0, BH = 0, wt = 0, acc = 0, NAV = function () { return innerWidth < 860 ? 118 : 112; };
+          var HUES = [335, 155, 48, 200, 265];
+          function wsize() { BW = Math.ceil(innerWidth / WS); BH = Math.ceil(innerHeight / WS); wb.width = BW; wb.height = BH; }
+          function wdraw(dt) {
+            acc += dt; if (dt && acc < 1 / 30) return; wt += acc; acc = 0;
+            var top = Math.max(0, NAV() - scrollY) / WS;
+            wc.fillStyle = '#fff8ee'; wc.fillRect(0, 0, BW, BH); wc.clearRect(0, 0, BW, top);
+            for (var i = 0; i < 5; i++) {
+              var base = BH * (0.12 + i * 0.2), h = (HUES[i] + Math.sin(wt * 0.05 + i) * 12) | 0;
+              wc.beginPath(); wc.moveTo(0, BH);
+              for (var x = 0; x <= BW; x += 3) {
+                var u = x / BW * 6.283;
+                wc.lineTo(x, base + Math.sin(u * 1.2 + wt * 0.35 + i * 1.7) * BH * 0.04 + Math.sin(u * 2.3 - wt * 0.22 + i) * BH * 0.02 + Math.sin(u * 0.5 + wt * 0.12 + i * 2.1) * BH * 0.03);
+              }
+              wc.lineTo(BW, BH); wc.closePath(); wc.fillStyle = 'hsla(' + h + ',90%,85%,.32)'; wc.fill();
+            }
+            wc.clearRect(0, 0, BW, top);
+          }
+          wsize(); addEventListener('resize', function () { wsize(); wdraw(0); }); wdraw(0);
+          if (!RM) loop(wdraw)(true); else addEventListener('scroll', function () { wdraw(0); }, { passive: true });
+        }
+
+        /* 4. Sprinkle burst on the CTA buttons */
+        if (!RM) document.querySelectorAll('.cta a').forEach(function (a) {
+          var lastB = 0;
+          function burst() {
+            var now = Date.now(); if (now - lastB < 500) return; lastB = now;
+            var r = a.getBoundingClientRect(), cx = r.left + r.width / 2, cy = r.top + r.height / 2;
+            for (var i = 0; i < 16; i++) (function (i) {
+              var el = document.createElement('i'), ang = (i / 16) * 6.283 + Math.random() * 0.4, d = r.width / 2 + 10 + Math.random() * 40;
+              el.className = 'burst'; el.style.background = COLS[i % COLS.length]; el.style.left = cx + 'px'; el.style.top = cy + 'px';
+              document.body.appendChild(el);
+              requestAnimationFrame(function () { requestAnimationFrame(function () {
+                el.style.transform = 'translate(' + Math.cos(ang) * d + 'px,' + Math.sin(ang) * d * 0.7 + 'px) rotate(' + (ang * 57 + 200) + 'deg)'; el.style.opacity = 0;
+              }); });
+              setTimeout(function () { el.remove(); }, 800);
+            })(i);
+          }
+          a.addEventListener('pointerenter', function (e) { if (e.pointerType === 'mouse') burst(); });
+          a.addEventListener('pointerdown', burst);
+        });
+      })();
+    </script>
+  </body>
+</html>
