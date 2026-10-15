@@ -40,8 +40,8 @@
   ],
   "redirects": [
     {
-      "source": "/:i(invite|Invite|INVITE|Invites|INVITES)",
-      "destination": "/invites",
+      "source": "/:i(invites|Invites|INVITES|Invite|INVITE)",
+      "destination": "/invite",
       "permanent": false
     },
     {
