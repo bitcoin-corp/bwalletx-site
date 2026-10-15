@@ -23,13 +23,13 @@
     <link rel="icon" href="/favicon.ico" />
     <link rel="stylesheet" href="/styles.css" />
     <style>
-      :root { --ink: #2b2140; --cream: #fff8ee; --fred: #7cc7ff; --joe: #6fdcaa; --you: #ff8fbf; --max: #b39cff; --goldc: #f2c230; }
-      .ice .topbar { background: #14121c; }
-      body.ice { background: var(--cream); color: var(--ink); overflow-x: hidden; }
+      .ice { --cream: #fff8ee; } .ice main { --ink: #2b2140; --cream: #fff8ee; --fred: #7cc7ff; --joe: #6fdcaa; --you: #ff8fbf; --max: #b39cff; --goldc: #f2c230; }
+      body.ice { background: linear-gradient(#000 0 112px, var(--cream) 112px) no-repeat, var(--cream); overflow-x: hidden; }
+      .ice main { color: var(--ink); }
       .ice main { max-width: 1080px; margin: 0 auto; padding: 150px 16px 48px; }
-      @media (max-width: 859px) { .ice main { padding-top: 172px; } }
+      @media (max-width: 859px) { .ice main { padding-top: 172px; } body.ice { background: linear-gradient(#000 0 118px, var(--cream) 118px) no-repeat, var(--cream); } }
       .ice h1, .ice h2, .ice h3 { font-family: var(--hf); color: var(--ink); }
-      .ice a { color: #c2185b; }
+      .ice main a { color: #c2185b; }
       .ice-hero { position: relative; overflow: hidden; margin: 18px -16px 0; padding: 56px 16px 10px; background: radial-gradient(120% 90% at 50% 0%, #ffe3f0 0%, #e6f6ff 55%, var(--cream) 100%); border-bottom: 3px dashed #ffc2dc; text-align: center; }
       .ice-hero h1 { font-size: clamp(2.6rem, 9vw, 5.2rem); line-height: 0.95; margin: 6px 0 12px; letter-spacing: -0.02em; }
       .ice-hero h1 .pop { display: inline-block; color: #ff5c9a; text-shadow: 3px 3px 0 var(--ink); -webkit-text-stroke: 1.5px var(--ink); }
@@ -41,11 +41,8 @@
       .float { animation: float 4s ease-in-out infinite; }
       .float.d2 { animation-delay: -1.3s; } .float.d3 { animation-delay: -2.6s; }
       .bob { animation: float 3s ease-in-out infinite; }
-      .sprinkles { position: absolute; inset: 0; pointer-events: none; }
-      .sprinkles i { position: absolute; top: -20px; width: 5px; height: 14px; border-radius: 3px; animation: rain 6s linear infinite; opacity: 0.85; }
       @keyframes wobble { 0%,100% { transform: rotate(0deg) translateY(0); } 25% { transform: rotate(-1.2deg) translateY(-2px); } 75% { transform: rotate(1.2deg) translateY(-1px); } }
       @keyframes float { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
-      @keyframes rain { 0% { transform: translateY(-20px) rotate(0deg); } 100% { transform: translateY(560px) rotate(360deg); } }
       @keyframes pulse { 0%,100% { transform: scale(1); } 50% { transform: scale(1.12); } }
       .pulse { transform-box: fill-box; transform-origin: center; animation: pulse 1.8s ease-in-out infinite; }
 
@@ -66,6 +63,7 @@
       .scoop:nth-child(1) { background: #e8f5ff; } .scoop:nth-child(2) { background: #e6fbf1; } .scoop:nth-child(3) { background: #ffeef6; }
       .cta { display: flex; gap: 12px; flex-wrap: wrap; justify-content: center; margin: 34px 0 10px; }
       .cta a { font: 700 1.02rem var(--hf); text-decoration: none; padding: 14px 22px; border-radius: 99px; border: 3px solid var(--ink); box-shadow: 4px 4px 0 var(--ink); color: var(--ink); background: #fff; transition: transform .12s, box-shadow .12s; }
+      .ice main .cta a { color: var(--ink); }
       .cta a.gold { background: linear-gradient(180deg, #ffe58a, #f2c230); }
       .cta a:hover { transform: translate(-2px, -2px); box-shadow: 6px 6px 0 var(--ink); }
       .fine { max-width: 720px; margin: 34px auto 0; padding: 14px 16px; border: 2px dashed #cbbfdc; border-radius: 14px; color: #6a6080; font-size: 0.86rem; line-height: 1.6; background: #fffdf9; }
@@ -75,9 +73,25 @@
         .panel:nth-child(odd), .panel:nth-child(even) { transform: none; }
         .panel { box-shadow: 4px 4px 0 var(--ink); }
       }
+
+      .ice-hero > *:not(.sky) { position: relative; z-index: 1; }
+      .sky { position: absolute; inset: 0; z-index: 0; pointer-events: none; overflow: hidden; }
+      .sky .sun { position: absolute; right: 6%; top: 18px; width: 120px; height: 120px; border-radius: 50%; background: radial-gradient(circle, #fff3b0 0 30%, rgba(255,226,140,.55) 46%, rgba(255,214,120,0) 70%); animation: breathe 6s ease-in-out infinite; }
+      .sky .sun::after { content: ""; position: absolute; inset: 38px; border-radius: 50%; background: #ffe58a; box-shadow: 0 0 0 3px rgba(43,33,64,.12); }
+      .sky .cloud { position: absolute; left: 0; width: 150px; opacity: .9; animation: drift 70s linear infinite; will-change: transform; }
+      .sky .cloud svg { display: block; width: 100%; height: auto; }
+      .sky canvas { position: absolute; inset: 0; width: 100%; height: 100%; }
+      @keyframes breathe { 0%,100% { transform: scale(.92); opacity: .8; } 50% { transform: scale(1.08); opacity: 1; } }
+      @keyframes drift { from { transform: translateX(-200px); } to { transform: translateX(calc(100vw + 40px)); } }
+      .ice-hero.idle .sky *, .ice-hero.idle .float, .ice-hero.idle .bob, .ice-hero.idle .van-wobble, .ice-hero.idle .drip { animation-play-state: paused; }
+      .drip { transform-box: fill-box; transform-origin: 50% 0; animation: drip 5s ease-in-out infinite; }
+      .drip.d2 { animation-delay: -2.2s; animation-duration: 6.5s; }
+      @keyframes drip { 0%,100% { transform: scaleY(.35); } 55% { transform: scaleY(1.15); } 70% { transform: scaleY(.9); } }
+      .split-live .static-split { display: none; }
+      .burst { position: fixed; width: 5px; height: 12px; border-radius: 3px; pointer-events: none; z-index: 60; transition: transform .7s cubic-bezier(.15,.7,.3,1), opacity .7s ease-in; }
       @media (prefers-reduced-motion: reduce) {
-        .van-wobble, .float, .bob, .pulse, .sprinkles i { animation: none !important; }
-        .sprinkles { display: none; }
+        .van-wobble, .float, .bob, .pulse, .sky *, .drip { animation: none !important; }
+        .sky .cloud:nth-child(2) { transform: translateX(8vw); } .sky .cloud:nth-child(3) { transform: translateX(60vw); } .sky .cloud:nth-child(4) { transform: translateX(32vw); }
       }
     </style>
   </head>
@@ -98,6 +112,8 @@
     <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
       <defs>
         <linearGradient id="gGold" gradientUnits="userSpaceOnUse" x1="0" y1="12" x2="0" y2="105"><stop offset="0" stop-color="#FFE58A"/><stop offset="0.55" stop-color="#FFD24D"/><stop offset="1" stop-color="#C98F00"/></linearGradient>
+        <filter id="melt" x="-15%" y="-10%" width="130%" height="135%"><feTurbulence type="fractalNoise" baseFrequency="0.012 0.035" numOctaves="1" seed="7"><animate attributeName="baseFrequency" dur="9s" values="0.012 0.035;0.015 0.045;0.012 0.035" repeatCount="indefinite"/></feTurbulence><feDisplacementMap in="SourceGraphic" scale="4" xChannelSelector="R" yChannelSelector="G"/></filter>
+        <g id="drips"><path class="drip" d="M15 45 q2 9 0 15 a3.4 3.4 0 0 0 6.8 0 q-2 -6 0 -15z" fill="var(--scoop)" stroke="#2b2140" stroke-width="2.4"/><path class="drip d2" d="M39 47 q1.6 7 0 11 a3 3 0 0 0 6 0 q-1.6 -4 0 -11z" fill="var(--scoop)" stroke="#2b2140" stroke-width="2.4"/></g>
         <g id="face">
           <circle cx="40" cy="60" r="4.2" fill="#2b2140"/><circle cx="60" cy="60" r="4.2" fill="#2b2140"/>
           <circle cx="41.4" cy="58.4" r="1.4" fill="#fff"/><circle cx="61.4" cy="58.4" r="1.4" fill="#fff"/>
@@ -184,8 +200,12 @@
 
     <main>
       <section class="ice-hero">
-        <div class="sprinkles" aria-hidden="true">
-          <i style="left:6%;background:#ff5c9a;animation-delay:-0.5s"></i><i style="left:14%;background:#3aa0ff;animation-delay:-3s"></i><i style="left:23%;background:#ffd166;animation-delay:-1.8s"></i><i style="left:31%;background:#6fdcaa;animation-delay:-4.6s"></i><i style="left:42%;background:#b39cff;animation-delay:-2.4s"></i><i style="left:55%;background:#ff5c9a;animation-delay:-5.2s"></i><i style="left:63%;background:#ffd166;animation-delay:-0.9s"></i><i style="left:71%;background:#3aa0ff;animation-delay:-3.7s"></i><i style="left:80%;background:#6fdcaa;animation-delay:-1.2s"></i><i style="left:88%;background:#b39cff;animation-delay:-4.1s"></i><i style="left:95%;background:#ff5c9a;animation-delay:-2.9s"></i>
+        <div class="sky" aria-hidden="true">
+          <div class="sun"></div>
+          <div class="cloud" style="top:24px;animation-delay:-12s"><svg viewBox="0 0 150 70"><path d="M24 62 C6 62 4 40 22 38 C20 18 46 12 56 26 C64 6 98 8 100 30 C118 22 140 34 132 50 C146 54 140 64 128 62Z" fill="#fff" stroke="#2b2140" stroke-opacity=".18" stroke-width="3"/></svg></div>
+          <div class="cloud" style="top:120px;width:96px;opacity:.75;animation-duration:95s;animation-delay:-60s"><svg viewBox="0 0 150 70"><path d="M24 62 C6 62 4 40 22 38 C20 18 46 12 56 26 C64 6 98 8 100 30 C118 22 140 34 132 50 C146 54 140 64 128 62Z" fill="#fff" stroke="#2b2140" stroke-opacity=".18" stroke-width="3"/></svg></div>
+          <div class="cloud" style="top:64px;width:120px;opacity:.85;animation-duration:82s;animation-delay:-40s"><svg viewBox="0 0 150 70"><path d="M24 62 C6 62 4 40 22 38 C20 18 46 12 56 26 C64 6 98 8 100 30 C118 22 140 34 132 50 C146 54 140 64 128 62Z" fill="#fff" stroke="#2b2140" stroke-opacity=".18" stroke-width="3"/></svg></div>
+          <canvas id="skyfx"></canvas>
         </div>
         <span class="kick">A story about Partnership shares</span>
         <h1>Digital <span class="pop">Ice-Cream</span></h1>
@@ -193,9 +213,9 @@
         <div class="hero-art">
           <svg viewBox="0 0 760 330" role="img" aria-label="An ice-cream van with a giant cone on the roof, cones floating around it, and the gold b saying: two scoops, split three ways.">
             <ellipse cx="380" cy="318" rx="330" ry="10" fill="#bfe6ff" opacity=".7"/>
-            <g class="float"><use href="#cone" transform="translate(40 70) scale(1.05)" style="--scoop:#9fd8ff"/></g>
+            <g class="float"><g filter="url(#melt)" transform="translate(40 70) scale(1.05)" style="--scoop:#9fd8ff"><use href="#cone"/><use href="#drips"/></g></g>
             <g class="float d2"><use href="#cone" transform="translate(110 170) scale(.8)" style="--scoop:#b8f0d6"/></g>
-            <g class="float d3"><use href="#cone" transform="translate(660 60) scale(.95)" style="--scoop:#d7c8ff"/></g>
+            <g class="float d3"><g filter="url(#melt)" transform="translate(660 60) scale(.95)" style="--scoop:#d7c8ff"><use href="#cone"/><use href="#drips"/></g></g>
             <g class="van-wobble"><use href="#van" transform="translate(205 110) scale(1.12)"/></g>
             <g class="bob">
               <use href="#bee" transform="translate(588 168) scale(1.05)"/>
@@ -251,16 +271,18 @@
         </figure>
         <!-- 3 -->
         <figure class="panel">
-          <svg viewBox="0 0 400 250" role="img" aria-label="A coin from a sale splits into three cones: 30%, 30% and 40%.">
+          <svg viewBox="0 0 400 250" role="img" id="splitfx" aria-label="A coin from a sale splits into three cones: 30%, 30% and 40%. When Max joins it splits four ways: 27, 27, 36 and 10.">
             <rect width="400" height="250" fill="#eafbf3"/>
             <use href="#van" transform="translate(6 70) scale(.5)"/>
-            <g class="pulse"><use href="#coin" transform="translate(250 50) scale(1.5)"/></g>
-            <g fill="none" stroke="#2b2140" stroke-width="3" stroke-dasharray="6 6" stroke-linecap="round"><path d="M240 74 Q215 110 214 140"/><path d="M250 76 L270 140"/><path d="M262 72 Q320 100 332 140"/></g>
-            <path d="M180 52 Q205 44 228 50" fill="none" stroke="#2b2140" stroke-width="3" stroke-linecap="round" marker-end="url(#none)"/><path d="M222 42 L230 50 L220 56" fill="none" stroke="#2b2140" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-            <use href="#cone" transform="translate(196 140) scale(.6)" style="--scoop:#7cc7ff"/>
-            <use href="#cone" transform="translate(254 140) scale(.6)" style="--scoop:#6fdcaa"/>
-            <use href="#cone" transform="translate(310 134) scale(.72)" style="--scoop:#ff8fbf"/>
-            <g font-family="Space Grotesk, system-ui" font-weight="700" font-size="15" fill="#2b2140" text-anchor="middle"><text x="214" y="226">30%</text><text x="272" y="226">30%</text><text x="332" y="236">40%</text></g>
+            <g class="static-split"><g class="pulse"><use href="#coin" transform="translate(250 50) scale(1.5)"/></g>
+            <g fill="none" stroke="#2b2140" stroke-width="3" stroke-dasharray="6 6" stroke-linecap="round"><path d="M240 74 Q215 110 214 140"/><path d="M250 76 L270 140"/><path d="M262 72 Q320 100 332 140"/></g></g>
+            <path d="M180 52 Q205 44 228 50" fill="none" stroke="#2b2140" stroke-width="3" stroke-linecap="round"/><path d="M222 42 L230 50 L220 56" fill="none" stroke="#2b2140" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+            <g class="sc"><use href="#cone" transform="translate(196 140) scale(.6)" style="--scoop:#7cc7ff"/></g>
+            <g class="sc"><use href="#cone" transform="translate(254 140) scale(.6)" style="--scoop:#6fdcaa"/></g>
+            <g class="sc"><use href="#cone" transform="translate(310 134) scale(.72)" style="--scoop:#ff8fbf"/></g>
+            <g class="sc" opacity="0"><use href="#cone" transform="translate(352 146) scale(.5)" style="--scoop:#b39cff"/></g>
+            <g class="coins"><use href="#coin" opacity="0"/><use href="#coin" opacity="0"/><use href="#coin" opacity="0"/><use href="#coin" opacity="0"/></g>
+            <g class="pct" font-family="Space Grotesk, system-ui" font-weight="700" font-size="15" fill="#2b2140" text-anchor="middle"><text x="214" y="226">30%</text><text x="272" y="226">30%</text><text x="332" y="236">40%</text><text x="368" y="236" font-size="13" opacity="0">10%</text></g>
           </svg>
           <figcaption><b><span class="num">3</span>Every cone splits itself.</b>Each sale pays out 30/30/40, straight into each friend&rsquo;s wallet. No spreadsheet. No arguments.</figcaption>
         </figure>
@@ -380,5 +402,120 @@
         <p>bWalletX is in beta: test with small amounts. Questions: <a href="mailto:support@bwalletx.com">support@bwalletx.com</a></p>
       </div>
     </main>
+    <script>
+      (function () {
+        var RM = matchMedia('(prefers-reduced-motion: reduce)').matches;
+        var COLS = ['#ff5c9a', '#3aa0ff', '#ffd166', '#6fdcaa', '#b39cff', '#ff9d5c'];
+        function rng(a) { return function () { a |= 0; a = (a + 0x6d2b79f5) | 0; var t = Math.imul(a ^ (a >>> 15), 1 | a); t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t; return ((t ^ (t >>> 14)) >>> 0) / 4294967296; }; }
+        function loop(fn) {
+          var on = false, vis = !document.hidden, id = 0, last = 0;
+          function tick(now) { var dt = Math.min(0.05, (now - (last || now)) / 1000); last = now; fn(dt); id = requestAnimationFrame(tick); }
+          function sync() { var go = on && vis; if (go && !id) { last = 0; id = requestAnimationFrame(tick); } else if (!go && id) { cancelAnimationFrame(id); id = 0; } }
+          document.addEventListener('visibilitychange', function () { vis = !document.hidden; sync(); });
+          return function (v) { on = v; sync(); };
+        }
+        function watch(el, cb) { new IntersectionObserver(function (e) { cb(e[0].isIntersecting); }, { rootMargin: '60px' }).observe(el); }
+
+        /* 1. Hero sky: sprinkles and tiny cones floating upward, three depths */
+        var hero = document.querySelector('.ice-hero'), cv = document.getElementById('skyfx');
+        if (hero && cv && cv.getContext) {
+          var ctx = cv.getContext('2d'), W = 0, H = 0, dpr = Math.min(2, devicePixelRatio || 1), R = rng(20261015), P = [], sprites = {};
+          var SC = [0.6, 0.85, 1.15], AL = [0.45, 0.7, 0.92], SP = [10, 18, 30];
+          function sprite(kind, col, L) {
+            var k = kind + col + L; if (sprites[k]) return sprites[k];
+            var s = SC[L] * dpr, w = Math.ceil((kind ? 18 : 8) * s) + 6, h = Math.ceil((kind ? 26 : 16) * s) + 6, c = document.createElement('canvas');
+            c.width = w; c.height = h; var g = c.getContext('2d');
+            if (L === 0 && 'filter' in g) g.filter = 'blur(' + dpr + 'px)';
+            g.translate(w / 2, h / 2); g.scale(s, s); g.lineWidth = 1.6; g.strokeStyle = 'rgba(43,33,64,.55)'; g.lineJoin = 'round';
+            if (kind) {
+              g.fillStyle = '#f4c27a'; g.beginPath(); g.moveTo(-6, -2); g.lineTo(6, -2); g.lineTo(0, 12); g.closePath(); g.fill(); g.stroke();
+              g.fillStyle = col; g.beginPath(); g.arc(0, -4, 7, Math.PI * 0.95, Math.PI * 2.05); g.closePath(); g.fill(); g.stroke();
+            } else {
+              g.fillStyle = col; g.beginPath(); if (g.roundRect) g.roundRect(-2.5, -6, 5, 12, 2.5); else g.rect(-2.5, -6, 5, 12); g.fill();
+            }
+            return (sprites[k] = c);
+          }
+          function size() {
+            var r = hero.getBoundingClientRect(), n = r.width < 520 ? 22 : 36;
+            W = r.width; H = r.height; cv.width = W * dpr; cv.height = H * dpr;
+            while (P.length < n) { var L = R() < 0.4 ? 0 : R() < 0.6 ? 1 : 2; P.push({ L: L, x: R(), y: R() * H, a: R() * 6.3, sw: 6 + R() * 14, f: 0.3 + R() * 0.6, r: R() * 6.3, vr: (R() - 0.5) * 1.6, k: R() < 0.2 ? 1 : 0, c: COLS[(R() * COLS.length) | 0] }); }
+            P.length = n; P.sort(function (a, b) { return a.L - b.L; });
+          }
+          function draw(dt) {
+            ctx.setTransform(1, 0, 0, 1, 0, 0); ctx.clearRect(0, 0, cv.width, cv.height);
+            for (var i = 0; i < P.length; i++) {
+              var p = P[i]; p.y -= SP[p.L] * dt; p.a += p.f * dt; p.r += p.vr * dt;
+              if (p.y < -30) { p.y = H + 20; p.x = R(); }
+              var im = sprite(p.k, p.c, p.L), x = (p.x * W + Math.sin(p.a) * p.sw) * dpr, y = p.y * dpr;
+              ctx.globalAlpha = AL[p.L]; ctx.setTransform(1, 0, 0, 1, x, y); ctx.rotate(p.k ? Math.sin(p.a) * 0.3 : p.r);
+              ctx.drawImage(im, -im.width / 2, -im.height / 2);
+            }
+          }
+          size(); addEventListener('resize', size); draw(0);
+          if (!RM) {
+            var run = loop(draw), svg = hero.querySelector('.hero-art svg');
+            watch(hero, function (v) { run(v); hero.classList.toggle('idle', !v); if (svg && svg.pauseAnimations) v ? svg.unpauseAnimations() : svg.pauseAnimations(); });
+          } else { var hs = hero.querySelector('.hero-art svg'); if (hs && hs.pauseAnimations) hs.pauseAnimations(); }
+        }
+
+        /* 3. Every sale splits: coin drops, bounces, splits into 3 cones, then 4 once Max joins */
+        var sv = document.getElementById('splitfx');
+        if (sv && !RM) {
+          var fig = sv.closest('figure'); fig.classList.add('split-live');
+          var coins = sv.querySelectorAll('.coins use'), cones = sv.querySelectorAll('.sc'), txt = sv.querySelectorAll('.pct text');
+          var TG = [[214, 152], [272, 152], [332, 148], [367, 156]], T = 0, labA = ['30%', '30%', '40%'], labB = ['27%', '27%', '36%'];
+          for (var c = 0; c < 4; c++) { cones[c].style.transformBox = 'fill-box'; cones[c].style.transformOrigin = '50% 100%'; }
+          function ease(k) { return k < 0 ? 0 : k > 1 ? 1 : k * k * (3 - 2 * k); }
+          function setLabels(b) { for (var i = 0; i < 3; i++) txt[i].textContent = (b ? labB : labA)[i]; txt[3].setAttribute('opacity', b ? 1 : 0); }
+          function cycle(n, t) {
+            var i, x, y, s, k;
+            for (i = 0; i < 4; i++) { coins[i].setAttribute('opacity', 0); if (i < 3 || n === 4) cones[i].style.transform = ''; }
+            if (t < 1) {
+              y = t < 0.6 ? -20 + 120 * (t / 0.6) * (t / 0.6) : 100 - 26 * Math.sin(Math.PI * (t - 0.6) / 0.4);
+              s = t > 0.6 && t < 0.7 ? 1.3 * (1 + 0.25 * Math.sin(Math.PI * (t - 0.6) / 0.1)) : 1.3;
+              coins[0].setAttribute('opacity', 1); coins[0].setAttribute('transform', 'translate(262 ' + y + ') scale(' + s + ' ' + (2.6 - s) + ')');
+            } else if (t < 2.1) {
+              k = Math.min(1, (t - 1) / 0.8);
+              for (i = 0; i < n; i++) {
+                var tx = TG[i][0], ty = TG[i][1], e = ease(k);
+                x = 262 + (tx - 262) * e; y = 100 + (ty - 100) * e - 44 * Math.sin(Math.PI * k);
+                s = t < 1.8 ? 1.3 - 0.45 * k : 0.85 * (1 - (t - 1.8) / 0.3);
+                coins[i].setAttribute('opacity', 1);
+                coins[i].setAttribute('transform', 'translate(' + x + ' ' + y + ') rotate(' + (tx - 262) * 3 * e + ') scale(' + Math.max(0, s) + ')');
+                if (t > 1.8) cones[i].style.transform = 'scale(' + (1 + 0.14 * Math.sin(Math.PI * (t - 1.8) / 0.3)) + ')';
+              }
+            }
+          }
+          function frame(dt) {
+            T = (T + dt) % 9.6; var t = T, mx = cones[3];
+            if (t < 4) { cycle(3, t); mx.setAttribute('opacity', 0); setLabels(0); }
+            else if (t < 4.6) { var k = (t - 4) / 0.6; cycle(3, 9); mx.setAttribute('opacity', 1); mx.style.transform = 'scale(' + (ease(k) + 0.25 * Math.sin(Math.PI * k)) + ')'; setLabels(t > 4.3); }
+            else if (t < 8.6) { mx.setAttribute('opacity', 1); cycle(4, t - 4.6); setLabels(1); }
+            else { cycle(3, 9); var f = Math.max(0, 1 - (t - 8.6) / 0.6); mx.setAttribute('opacity', f); mx.style.transform = 'scale(' + f + ')'; setLabels(t < 8.9); }
+          }
+          frame(0); var run2 = loop(frame); watch(sv, run2);
+        }
+
+        /* 4. Sprinkle burst on the CTA buttons */
+        if (!RM) document.querySelectorAll('.cta a').forEach(function (a) {
+          var lastB = 0;
+          function burst() {
+            var now = Date.now(); if (now - lastB < 500) return; lastB = now;
+            var r = a.getBoundingClientRect(), cx = r.left + r.width / 2, cy = r.top + r.height / 2;
+            for (var i = 0; i < 16; i++) (function (i) {
+              var el = document.createElement('i'), ang = (i / 16) * 6.283 + Math.random() * 0.4, d = r.width / 2 + 10 + Math.random() * 40;
+              el.className = 'burst'; el.style.background = COLS[i % COLS.length]; el.style.left = cx + 'px'; el.style.top = cy + 'px';
+              document.body.appendChild(el);
+              requestAnimationFrame(function () { requestAnimationFrame(function () {
+                el.style.transform = 'translate(' + Math.cos(ang) * d + 'px,' + Math.sin(ang) * d * 0.7 + 'px) rotate(' + (ang * 57 + 200) + 'deg)'; el.style.opacity = 0;
+              }); });
+              setTimeout(function () { el.remove(); }, 800);
+            })(i);
+          }
+          a.addEventListener('pointerenter', function (e) { if (e.pointerType === 'mouse') burst(); });
+          a.addEventListener('pointerdown', burst);
+        });
+      })();
+    </script>
   </body>
 </html>
