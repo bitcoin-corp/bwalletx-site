@@ -74,11 +74,12 @@
           { label: 'Sign in with X', href: '/x' },
           { label: 'Sign in with Gmail', href: '/gmail' }
         ] },
-      { label: 'bApps', href: '/bapps', pages: ['/bapps', '/bapps/bmovies', '/bshares', '/bweb'],
+      { label: 'bApps', href: '/bapps', pages: ['/bapps', '/bapps/bmovies', '/bshares', '/partnership-shares', '/bweb'],
         sub: [
           { label: 'All bApps', href: '/bapps' },
           { label: 'bMovies', href: '/bapps/bmovies' },
           { label: 'bShares (in testing)', href: '/bshares' },
+          { label: 'Partnership shares (coming)', href: '/partnership-shares' },
           { label: 'bWeb (coming)', href: '/bweb' }
         ] },
       { label: 'Agents', href: '/agents', pages: ['/agents', '/agent', '/ideas', '/bugs', '/hold-to-talk', '/strategies', '/strategies/spec', '/cli', '/mcp'],
