@@ -42,6 +42,9 @@
       .bc { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 230px), 1fr)); gap: 14px; }
       .bc h3 { margin: 0 0 6px; font-size: 1rem; }
       .bc ul { margin: 0; padding-left: 18px; }
+      .px { width: 100%; border-collapse: collapse; margin: 14px 0 4px; font-size: 0.92rem; }
+      .px th, .px td { text-align: left; padding: 8px 10px; border-bottom: 1px solid #ffffff14; }
+      .px th { color: #a7adb8; font-weight: 600; }
     </style>
   </head>
   <body>
@@ -67,9 +70,19 @@
       <p>Every paid podcast starts with something free: the first minute, or a clip the host picks. Hosts choose it with simple tools, like trimming a clip on YouTube: drag a start, drag an end, done.</p>
       <h2>Two ways to listen</h2>
       <div class="ft-steps">
-        <div><h3>Ticket</h3><p>One price, shown up front. Pay once and listen in full, as often as you like.</p></div>
-        <div><h3>Pay as you listen</h3><p>A tiny payment every 30 to 60 seconds while it plays. Pause or leave and the payments stop.</p></div>
+        <div><h3>Pay as you listen</h3><p>1p a minute. The first minute is free. Pause or leave and the payments stop.</p></div>
+        <div><h3>Ticket</h3><p>Buy the whole episode up front for less: usually 40% of the full streaming cost.</p></div>
       </div>
+      <p>Streaming stops charging once your payments reach the ticket price, so you never pay more than a ticket. Hosts can also make an episode completely free.</p>
+      <table class="px">
+        <thead><tr><th>Episode</th><th>Full stream at 1p/min</th><th>Ticket</th><th>Most streaming can cost</th></tr></thead>
+        <tbody>
+          <tr><td>10 min</td><td>10p</td><td>4p</td><td>4p</td></tr>
+          <tr><td>30 min</td><td>30p</td><td>12p</td><td>12p</td></tr>
+          <tr><td>60 min</td><td>60p</td><td>24p</td><td>24p</td></tr>
+        </tbody>
+      </table>
+      <p class="small">Default prices. Hosts can set their own.</p>
       <h2>Your Listening budget</h2>
       <div class="ft-note">
         <p>Paying by the minute uses bWalletX&rsquo;s <a href="/streaming-payments">streaming payments</a>. You set a Listening budget once, and nothing goes over it.</p>
@@ -78,7 +91,7 @@
       <h2>For hosts</h2>
       <ul>
         <li>Recording is opt-in. A Space only becomes a podcast if the host says so.</li>
-        <li>Pick a ticket price, a per-minute rate, or both.</li>
+        <li>Default: 1p a minute, ticket at 40% of the full stream. Change either, or make an episode free.</li>
         <li>Choose the free preview: the first minute, or your own clip.</li>
         <li>Payments go to you, wallet to wallet.</li>
       </ul>
