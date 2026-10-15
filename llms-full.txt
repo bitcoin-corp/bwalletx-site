@@ -561,71 +561,124 @@ bWalletX is in beta: test with small amounts. Nothing here is investment, legal 
 
 ---
 
+Source: https://bwalletx.com/bradio
+
+# bRadio.
+Talk live. Keep it.
+
+Live audio Spaces inside bWalletX. Host a conversation, bring people up on stage, and turn the best ones into podcast episodes.
+
+[Join the Lounge](https://www.bchatx.com/chat?room=BRADIO)[Get bWalletX](https://bwalletx.com/get)
+
+## Host a Space
+
+Start a Space from your wallet and talk. Listeners raise a hand; you bring them up on stage when you’re ready. Your followers get a quiet “is hosting” notification, and a gold ring on your avatar shows you’re in a Space.
+
+A live bar and a mini player keep the Space with you while you move around the wallet.
+
+## The bRadio Lounge
+
+An open stage that’s always there. Drop in, listen, raise a hand. [Join the Lounge](https://www.bchatx.com/chat?room=BRADIO).
+
+## Keep the good ones
+
+If you choose to record (it’s off unless you turn it on), your Space becomes a podcast episode with a title and credits for your guests. Episodes appear in the [@bradio](https://www.bchatx.com/u/bradio) feed on bChatX and in the wallet’s bRadio feed.
+
+Anyone can listen to a free preview: the first minute, unless you set a different window.
+
+## Own an episode
+
+An episode can be owned as a Podcast NFT. Owners listen in full for free, and can sell it on the [Exchange](https://bwalletx.com/exchange).
+
+## Paid straight to the host
+
+Every payment is a real, tiny payment that goes straight to the host. No middle account, no waiting for a payout.
+
+Spaces are free in every edition. Paid listening is in bWalletX: the [direct download](https://bwalletx.com/get), web and desktop.
+
+## What’s live
+
+- LiveSpaces. Host, raise a hand, come up on stage.
+
+- LiveThe Lounge. An open stage, always on.
+
+- LivePodcast episodes. Record by choice, with titles, guest credits and a free preview.
+
+- LivePodcast NFTs. Own an episode, listen in full, sell it on the Exchange.
+
+[Join the Lounge](https://www.bchatx.com/chat?room=BRADIO)[Get bWalletX](https://bwalletx.com/get)
+
+bWalletX is in beta: test with small amounts. Questions: [support@bwalletx.com](mailto:support@bwalletx.com)
+
+---
+
 Source: https://bwalletx.com/bshares
 
-# Your register of members, on chain.
+# bShares.
+Your company, on chain.
 
-bShares is a bApp in bWalletX for companies. Keep your register of members. Issue shares as tokens. Lock each holding on chain, so the company and the holder both have a say.
+A register of members, kept by the company. Shares issued as tokens, approved by your directors, and locked in each holder’s wallet so the company and the holder both have a say.
 
-Status: bShares is in testing with The Bitcoin Corporation Ltd. Not yet available to other companies.
+In testing bShares is a record-keeping tool for companies. It isn’t open to companies yet. Nothing on this page is an offer of shares, and no shares are sold here or to the public.
 
-Nothing on this page is live for users yet. Shares are not sold here. Holdings are restricted and not for sale.
+[Ask about bShares](mailto:support@bwalletx.com?subject=bShares%20for%20my%20company)
 
 Before a company: [Partnership shares](https://bwalletx.com/partnership-shares), for friends starting something together.
 
-## How it works
+## For any company
 
-### The company keeps the register
+bShares is a bApp in bWalletX for companies of any size. The same tools are being shaped so any company can keep its register, its directors and its members’ holdings here.
 
-The register of members is the legal title. bShares reads holdings from it, never from a list in the app.
+## The register is the record
 
-### Directors approve each allotment
+The register of members is the legal title. bShares reads holdings from it, never from a list in the app. Certificate numbers are never reused.
 
-A board minute is drafted in the company’s own format. A director approves it before any share is issued.
+## Directors approve every allotment
 
-### The holding is locked in multisig
+A board minute is drafted in the company’s own format, and a director approves it before any share is issued. An allotment that would go over the company’s authorised shares is refused.
 
-The share token sits in the holder’s wallet, locked 2-of-2: one key for the director, one for the holder.
+## A share with two keys
 
-## Built in testing
+Each holding is a token in the holder’s wallet, locked 2-of-2: one key for the director, one for the holder. Nobody can move it alone.
 
-This is in code and being tested with The Bitcoin Corporation Ltd. It is not live for users.
+And holders never depend on us. After a set block height, the holder can move their token alone, from their own seed. No server, no director needed.
 
-- Register of members. Kept by the company in bit-sign. Certificate numbers are never reused.
+## Private placements
 
-- Allotment with a board minute. The minute is generated in the company’s format. A director approves it.
+A company can invite people it already knows to buy shares privately, under its own rules and the law where it is registered; bShares only keeps the record. A member pays in BSV to a 2-of-3 company treasury, with director keys on separate devices. Pay too much and you choose: a refund within 14 days, or treat it as share premium.
 
-- Payment to a treasury multisig. A member pays in BSV to a 2-of-3 company treasury. The director keys live on separate devices.
+## From a token to a company
 
-- Share token, locked 2-of-2. Issued into the holder’s wallet, locked to the director and the holder together.
+Most things start small. bShares is one step on a longer path:
 
-- Holders never depend on us. After a set block height, the holder can move their token alone, from their own seed. No server, no director needed.
+- Token
+- Rooms
+- [Partnership shares](https://bwalletx.com/partnership-shares)
+- Company
+- Private placements
+- IPO
 
-- Overpayment, your choice. Pay too much and you choose: a refund within 14 days, or treat it as share premium.
+## What works today
 
-- Authorised share ceiling. An allotment that would go over the company’s authorised shares is refused.
+- BuiltRegister of members, phase 1. A company’s register and its directors’ approvals, in private testing.
 
-- Marked restricted. In the wallet, holdings show as “Restricted” and not for sale, in the Lock vault and under the Exchange “Shares” filter. There are no buy or sell buttons.
+- BuiltTwo kinds of lock. The company’s money sits in a 2-of-3 treasury on its directors’ keys (for one director: phone, desktop and an offline backup). Each member’s shares are locked 2-of-2 to the company and the member, with a timed way out the member can use alone.
 
-- Not in the store edition. bShares is left out of bWallet, the App Store and Google Play builds.
+- BuiltIn the Vault. Holdings show in the Lock vault as Restricted, not for sale.
 
-## Coming planned
+- BuiltExchange “Shares” filter. Holdings appear marked Restricted. There are no buy or sell buttons.
 
-These are plans. They are not built yet.
+- ComingSet-up for any company. Your own name and ticker, import your register, add director keys, use your minute template.
 
-- Set-up for any company. Your own name and ticker, import your register, add director keys, use your minute template.
+- ComingPartnership shares stage. Friends start something together before there’s a company. See [Partnership shares](https://bwalletx.com/partnership-shares).
 
-- Share certificate cards. A card in the wallet for each holding. The multisig lock and hand-drawn signatures from bit-sign on the back, with the real contracts listed.
+- Comingb drafts in partner chats. Ask b in the partners’ chat to draft the minutes and paperwork.
 
-- One card per company. Many holdings shown together, for holders with large portfolios.
-
-- Re-issue in the app. If a director key is lost, re-issue the holding to a new key under a board minute.
+- ComingIncorporate 1:1. Turn partnership shares into company shares, one for one.
 
 ## What bShares is not
 
-It is not a place to buy shares. No shares are offered or sold on this site or in bWalletX.
-
-bShares is a tool for a company to keep its own records and lock its members’ holdings.
+It isn’t a place to buy shares. No shares are offered or sold on this site or in bWalletX, and bShares is left out of bWallet, the App Store and Google Play builds. It’s a tool for a company to keep its own records and lock its members’ holdings.
 
 ## Run a company?
 
@@ -633,7 +686,7 @@ If you’d like to keep your register this way once it opens, write to us.
 
 [Ask about bShares](mailto:support@bwalletx.com?subject=bShares%20for%20my%20company)
 
-bWalletX is in beta: test with small amounts. Questions: [support@bwalletx.com](mailto:support@bwalletx.com)
+bShares is a record-keeping tool, not an offer of shares or investment advice. bWalletX is in beta: test with small amounts. Questions: [support@bwalletx.com](mailto:support@bwalletx.com)
 
 ---
 
@@ -2011,7 +2064,7 @@ A regulated public offering. Only then can shares trade in public.
 
 ## An ice-cream story
 
-Fred, Joe and you decide to sell ice cream. You set up Partnership shares: Fred 30%, Joe 30%, you 40%.
+Fred, Joe and you decide to sell ice cream, paid for in digital cash. You set up Partnership shares: Fred 30%, Joe 30%, you 40%.
 
 Fred 27
 
