@@ -105,7 +105,12 @@
         if (window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches) return;
         var el = document.getElementById('ab-pool'), gl = el.getContext('webgl', { antialias: false, alpha: false, powerPreference: 'low-power' });
         if (!gl) return;
-        var FRAG = `precision mediump float;
+        var FRAG = `#ifdef GL_FRAGMENT_PRECISION_HIGH
+precision highp float;
+#else
+precision mediump float;
+#endif
+
 uniform vec2 r;uniform float t;
 float h(vec2 p){return fract(sin(dot(p,vec2(127.1,311.7)))*43758.5453);}
 float n(vec2 p){vec2 i=floor(p),f=fract(p);f=f*f*(3.-2.*f);
