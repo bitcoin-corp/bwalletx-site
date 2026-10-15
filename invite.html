@@ -30,6 +30,11 @@
       .steps { list-style: none; padding: 0; margin: 18px 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px; }
       .steps li { border: 1px solid #ffffff1f; border-radius: 14px; padding: 16px; }
       .steps b { color: #F5B800; display: block; margin-bottom: 4px; }
+      .feat { list-style: none; padding: 0; margin: 18px 0; }
+      .feat li { display: flex; gap: 12px; align-items: baseline; padding: 12px 0; border-bottom: 1px solid #ffffff10; }
+      .tag { flex: none; font-size: 0.75rem; font-weight: 700; padding: 2px 9px; border-radius: 999px; }
+      .tag.live { background: #F5B800; color: #000; }
+      .tag.soon { border: 1px solid #ffffff40; color: #a7adb8; }
     </style>
   </head>
   <body>
@@ -49,29 +54,43 @@
       <p class="lede">Bring your people into a Space. Each invite carries a small amount of the room&rsquo;s token, and holding it is what lets them in.</p>
       <div class="row"><a class="btn btn-store" href="/get">Get bWalletX</a><a class="btn" href="/bspaces">About Spaces</a></div>
 
-      <h2>For the host</h2>
+      <p>There are two kinds of invite. They do different jobs.</p>
+
+      <h2>Open Drops</h2>
+      <p>A link holding some of a token. The first person to open it claims it. Good for a post or a group chat, where you don&rsquo;t know exactly who will come.</p>
       <ul class="steps">
-        <li><b>Pick people</b>Choose from the people you follow on X, your HandCash friends, or paste a list of names.</li>
-        <li><b>Attach a token</b>Each invite carries some of the room&rsquo;s token. That token is their ticket into the Space.</li>
-        <li><b>Send</b>Invites arrive as airdrops in <a href="/bmail">bMail</a>, like any other airdrop.</li>
+        <li><b>Make a drop</b>Put some of the room&rsquo;s token into a link.</li>
+        <li><b>Share it</b>Post it anywhere.</li>
+        <li><b>First to open claims it</b>They sign in with X or HandCash, get bWalletX, and the token lands in their wallet.</li>
       </ul>
 
-      <h2>For the person invited</h2>
+      <h2>Named Invites</h2>
+      <p>An invite for one person. Only the X account you name can claim it, and the token is sent to them automatically when they do.</p>
       <ul class="steps">
-        <li><b>Open the link</b>Tap the invite link.</li>
-        <li><b>Sign in</b>Sign in with X, or with HandCash, and get bWalletX.</li>
-        <li><b>The token arrives</b>It lands in your new wallet.</li>
-        <li><b>You&rsquo;re in</b>You&rsquo;re let into the room&rsquo;s chat straight away.</li>
+        <li><b>Pick people</b>Choose X accounts, from the people you follow, your HandCash friends or a pasted list.</li>
+        <li><b>Attach a token</b>Each invite carries some of the room&rsquo;s token. That token is their ticket into the Space.</li>
+        <li><b>They sign in</b>The named person signs in with that X account, gets bWalletX, and the token arrives. They&rsquo;re let into the room&rsquo;s chat.</li>
       </ul>
 
       <h2>Friends find each other</h2>
-      <p>As the people in your contacts join, they&rsquo;re matched to their paymails and show up as friends. You don&rsquo;t have to look anyone up.</p>
+      <p>Planned: as the people in your contacts join, they&rsquo;ll be matched to their paymails and show up as friends. You won&rsquo;t have to look anyone up.</p>
 
       <h2>Keep it safe</h2>
       <ul>
-        <li><b>The link carries the token.</b> Don&rsquo;t forward it. Whoever opens it first can claim it.</li>
-        <li><b>Room entry is tied to the invited X account.</b> Someone else holding the link can&rsquo;t walk into the room as you.</li>
+        <li><b>An Open Drop link carries the token.</b> Whoever opens it first claims it, so share it only where you mean to.</li>
+        <li><b>A Named Invite works only for the X account it names.</b> Someone else holding the link can&rsquo;t claim it.</li>
         <li><b>We never hold the tokens.</b> They go from the host&rsquo;s wallet to yours.</li>
+      </ul>
+
+      <h2>Where this stands</h2>
+      <ul class="feat">
+<li><span class="tag live">&check; Live</span><span><b>Address book import</b> (CSV, contact cards, JSON, pasted lists) and export to CSV: in the app, shipping in 5.2.25.</span></li>
+<li><span class="tag live">&check; Live</span><span><b>Sign in with HandCash</b> on bchatx.com: switched on; first real sign-in being tested.</span></li>
+<li><span class="tag live">&check; Live</span><span><b>HandCash friends into your address book:</b> the server side is live; the wallet button is coming.</span></li>
+<li><span class="tag soon">Coming</span><span><b>Open Drops:</b> a link holding a token that the first person to open it claims. Being built.</span></li>
+<li><span class="tag soon">Coming</span><span><b>Named Invites:</b> an invite only one X account can claim, with the token sent automatically. Planned.</span></li>
+<li><span class="tag soon">Coming</span><span><b>Import the people you follow on X:</b> planned.</span></li>
+<li><span class="tag soon">Coming</span><span><b>Contacts auto-match to paymails</b> as friends join: planned.</span></li>
       </ul>
 
       <p class="related">Related: <a href="/bspaces">bSpaces</a> · <a href="/bmail">bMail</a> · <a href="/airdrops">Airdrops</a> · <a href="/friends">Friends</a> · <a href="/x">Sign in with X</a></p>
