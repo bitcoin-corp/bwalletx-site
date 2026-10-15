@@ -39,14 +39,14 @@
       .ft-coming { background: #ffffff10; color: #a7adb8; border: 1px solid #ffffff22; }
     
       .path { display: flex; flex-wrap: nowrap; overflow-x: auto; align-items: center; gap: 8px; margin: 22px 0; }
-      .path span { background: #101114; border: 1px solid #ffffff1a; border-radius: 999px; padding: 8px 14px; font: 600 0.95rem var(--hf); white-space: nowrap; }
+      .path span { background: #101114; border: 1px solid #ffffff1a; border-radius: 999px; padding: 7px 11px; font: 600 clamp(0.62rem, 1.6vw, 0.88rem) var(--hf); white-space: nowrap; }
       .path span.here { border-color: #F2C230; color: #F2C230; background: #F2C23014; }
       .path span.later { color: #8a8a86; border-style: dashed; }
       .path i { color: #F2C230; font-style: normal; }
       .split { display: flex; height: 40px; border-radius: 12px; overflow: hidden; margin: 14px 0 6px; font: 700 0.9rem var(--hf); color: #000; }
       .split div { display: grid; place-items: center; background: #F2C230; border-right: 2px solid #000; min-width: 0; }
       .split div:nth-child(2) { background: #E6B020; } .split div:nth-child(3) { background: #FFD24D; } .split div:nth-child(4) { background: #a7adb8; }
-      @media (max-width: 560px) { .path { gap: 4px; font-size: 0.72rem; justify-content: flex-start; } }
+      @media (max-width: 560px) { .path { gap: 3px; } .path span { padding: 5px 7px; } }
         </style>
   </head>
   <body>
