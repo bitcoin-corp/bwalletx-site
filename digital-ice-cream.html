@@ -88,6 +88,8 @@
       .drip.d2 { animation-delay: -2.2s; animation-duration: 6.5s; }
       @keyframes drip { 0%,100% { transform: scaleY(.35); } 55% { transform: scaleY(1.15); } 70% { transform: scaleY(.9); } }
       .split-live .static-split { display: none; }
+      #wavebg { position: fixed; inset: 0; width: 100%; height: 100%; z-index: 0; pointer-events: none; }
+      .ice main { position: relative; z-index: 1; }
       .burst { position: fixed; width: 5px; height: 12px; border-radius: 3px; pointer-events: none; z-index: 60; transition: transform .7s cubic-bezier(.15,.7,.3,1), opacity .7s ease-in; }
       @media (prefers-reduced-motion: reduce) {
         .van-wobble, .float, .bob, .pulse, .sky *, .drip { animation: none !important; }
@@ -198,6 +200,7 @@
       </defs>
     </svg>
 
+    <canvas id="wavebg" aria-hidden="true"></canvas>
     <main>
       <section class="ice-hero">
         <div class="sky" aria-hidden="true">
@@ -494,6 +497,32 @@
             else { cycle(3, 9); var f = Math.max(0, 1 - (t - 8.6) / 0.6); mx.setAttribute('opacity', f); mx.style.transform = 'scale(' + f + ')'; setLabels(t < 8.9); }
           }
           frame(0); var run2 = loop(frame); watch(sv, run2);
+        }
+
+
+        /* Page background: pastel ice-cream ribbons (low-res canvas, 30 fps) */
+        var wb = document.getElementById('wavebg');
+        if (wb && wb.getContext) {
+          var wc = wb.getContext('2d'), WS = 4, BW = 0, BH = 0, wt = 0, acc = 0, NAV = function () { return innerWidth < 860 ? 118 : 112; };
+          var HUES = [335, 155, 48, 200, 265];
+          function wsize() { BW = Math.ceil(innerWidth / WS); BH = Math.ceil(innerHeight / WS); wb.width = BW; wb.height = BH; }
+          function wdraw(dt) {
+            acc += dt; if (dt && acc < 1 / 30) return; wt += acc; acc = 0;
+            var top = Math.max(0, NAV() - scrollY) / WS;
+            wc.fillStyle = '#fff8ee'; wc.fillRect(0, 0, BW, BH); wc.clearRect(0, 0, BW, top);
+            for (var i = 0; i < 5; i++) {
+              var base = BH * (0.12 + i * 0.2), h = (HUES[i] + Math.sin(wt * 0.05 + i) * 12) | 0;
+              wc.beginPath(); wc.moveTo(0, BH);
+              for (var x = 0; x <= BW; x += 3) {
+                var u = x / BW * 6.283;
+                wc.lineTo(x, base + Math.sin(u * 1.2 + wt * 0.35 + i * 1.7) * BH * 0.04 + Math.sin(u * 2.3 - wt * 0.22 + i) * BH * 0.02 + Math.sin(u * 0.5 + wt * 0.12 + i * 2.1) * BH * 0.03);
+              }
+              wc.lineTo(BW, BH); wc.closePath(); wc.fillStyle = 'hsla(' + h + ',90%,85%,.32)'; wc.fill();
+            }
+            wc.clearRect(0, 0, BW, top);
+          }
+          wsize(); addEventListener('resize', function () { wsize(); wdraw(0); }); wdraw(0);
+          if (!RM) loop(wdraw)(true); else addEventListener('scroll', function () { wdraw(0); }, { passive: true });
         }
 
         /* 4. Sprinkle burst on the CTA buttons */
