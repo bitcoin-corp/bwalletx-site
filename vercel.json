@@ -40,6 +40,11 @@
   ],
   "redirects": [
     {
+      "source": "/:i(invite|Invite|INVITE|Invites|INVITES)",
+      "destination": "/invites",
+      "permanent": false
+    },
+    {
       "source": "/:g(bgigs|bGigs|BGigs)",
       "destination": "/gigs",
       "permanent": false
