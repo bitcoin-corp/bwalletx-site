@@ -2011,7 +2011,7 @@ A regulated public offering. Only then can shares trade in public.
 
 ## An ice-cream story
 
-Fred, Joe and you decide to sell ice cream. You set up Partnership shares: Fred 30%, Joe 30%, you 40%.
+Fred, Joe and you decide to sell ice cream, paid for in digital cash. You set up Partnership shares: Fred 30%, Joe 30%, you 40%.
 
 Fred 27
 
@@ -2084,6 +2084,68 @@ Everything here lives in bWalletX.
 [Get bWalletX](https://bwalletx.com/get)
 
 bWalletX is in beta: test with small amounts. Questions: [support@bwalletx.com](mailto:support@bwalletx.com)
+
+---
+
+Source: https://bwalletx.com/pay-to-stream
+
+# Hear it first. Then pay as you listen.
+
+When a host keeps a recorded Space as a podcast, you can always hear the start for free. If you want the rest, buy a ticket, or pay by the minute and stop whenever you like. The money goes to the host.
+
+Free
+
+Ticket or pay as you listen
+
+0:00end
+
+## A free preview, always
+
+Every paid podcast starts with something free: the first minute, or a clip the host picks. Hosts choose it with simple tools, like trimming a clip on YouTube: drag a start, drag an end, done.
+
+## Two ways to listen
+
+### Ticket
+
+One price, shown up front. Pay once and listen in full, as often as you like.
+
+### Pay as you listen
+
+A tiny payment every 30 to 60 seconds while it plays. Pause or leave and the payments stop.
+
+## Your Listening budget
+
+Paying by the minute uses bWalletX’s [streaming payments](https://bwalletx.com/streaming-payments). You set a Listening budget once, and nothing goes over it.
+
+No popup for every payment. Stop any time and you stop paying.
+
+## For hosts
+
+- Recording is opt-in. A Space only becomes a podcast if the host says so.
+
+- Pick a ticket price, a per-minute rate, or both.
+
+- Choose the free preview: the first minute, or your own clip.
+
+- Payments go to you, wallet to wallet.
+
+## Built and coming
+
+### Built
+
+- Streaming payments
+- Listening budget
+- Recorded Spaces (host opt-in)
+
+### Coming
+
+- Podcast tickets
+- Pay-to-stream for podcasts
+- Host free-clip picker
+
+[Get bWalletX](https://bwalletx.com/get)
+
+Less noise. More life. Just b. · bWalletX is in beta: test with small amounts. Questions: [support@bwalletx.com](mailto:support@bwalletx.com)
 
 ---
 
