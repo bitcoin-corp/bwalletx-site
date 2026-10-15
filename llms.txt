@@ -30,7 +30,7 @@ Full text of every page below: https://bwalletx.com/llms-full.txt
 - [bMovies inside bWalletX](https://bwalletx.com/bapps/bmovies): bMovies is a film feed on Bitcoin SV: watch thousands of films, sign in with bWalletX, back the films you like with their tokens. What works today and what is coming.
 - [bPhone](https://bwalletx.com/bphone): bPhone: charge to receive calls in bWalletX. Set a price per second, minute, hour or call in BSV, MNEE or a token; list yourself with your hours; take bookings. The caller pays your wallet as you talk.
 - [bPositive](https://bwalletx.com/bpositive): Sponsor someone’s journey in bWalletX: monthly support from pots, milestone pledges confirmed by witnesses, thank-you NFTs. Gifts only, 18+, 0% fee. Coming.
-- [bShares: share registers for companies](https://bwalletx.com/bshares): bShares is a bWalletX bApp for companies: keep your register of members, tokenise your shares and lock each holding on chain in multisig. In testing with The Bitcoin Corporation Ltd.
+- [bShares: share registers for companies](https://bwalletx.com/bshares): bShares is a bWalletX bApp for companies: keep your register of members, tokenise your shares and lock each holding on chain in multisig. A tool for companies to keep their own records. Nothing is offered or sold on this page.
 - [bSpaces](https://bwalletx.com/bspaces): Live audio and video Spaces in token rooms in bWalletX: a stage, raise hand, token-gated entry and full screen. Live in bChat and, since 5.1.85, in bWalletX.
 - [bTrust: coming to bWalletX](https://bwalletx.com/btrust): bTrust, coming to bWalletX: a Lock with more than one key. Share keys with your solicitor and family, so the people you love are looked after.
 - [Bugs: what people told b and what we fixed](https://bwalletx.com/bugs): Bugs people reported to b, the assistant in bWalletX, and where each fix stands: new, planned, fixing or fixed. Entries appear after review.
@@ -158,6 +158,9 @@ Full text of every page below: https://bwalletx.com/llms-full.txt
 - [051 Spaces on a schedule, b on every page · bWalletX blog](https://bwalletx.com/blog/051-spaces-schedule-and-ask-b): Spaces in bWalletX Desktop have a weekly schedule in your own time zone, with Add to calendar. And Ask b is now a small bar at the bottom of every page.
 - [052 Tip buttons · bWalletX blog](https://bwalletx.com/blog/052-tip-buttons): bWalletX Desktop has a Tip button for artists, NFT creators, rooms, people in chat, friends and speakers in Spaces. Pick an amount, tap Allow once, and all of it goes to them.
 - [053 Friends, bPics and video in rooms · bWalletX blog](https://bwalletx.com/blog/053-friends-bpics-and-video): Friends has its own page on bWalletX Desktop, bPics looks like a photo app, and video links play inside the Feed and chat rooms.
+- [054 bRadio: live audio in bWalletX · bWalletX blog](https://bwalletx.com/blog/054-bradio-live-audio): Host a live audio Space, bring people up to speak, and keep listening while you use the rest of the wallet. Recorded Spaces can become podcast episodes.
+- [055 Digital Ice-Cream · bWalletX blog](https://bwalletx.com/blog/055-digital-ice-cream): A story about three friends, an ice-cream stand and digital cash, and where we’re taking bWalletX next.
+- [056 bShares: a register for companies · bWalletX blog](https://bwalletx.com/blog/056-bshares): bShares keeps a company’s register of members, lets directors approve new shares, and locks shares so they can’t move without the right people. It’s in private testing.
 - [bWalletX development blog](https://bwalletx.com/blog/): How bWallet and bWalletX were built from a fork of Yours Wallet: numbered posts from the git history, including what broke, what we reversed and what is still not done.
 
 ## Support
