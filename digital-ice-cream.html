@@ -26,7 +26,8 @@
       :root { --ink: #2b2140; --cream: #fff8ee; --fred: #7cc7ff; --joe: #6fdcaa; --you: #ff8fbf; --max: #b39cff; --goldc: #f2c230; }
       .ice .topbar { background: #14121c; }
       body.ice { background: var(--cream); color: var(--ink); overflow-x: hidden; }
-      .ice main { max-width: 1080px; margin: 0 auto; padding: 0 16px 48px; }
+      .ice main { max-width: 1080px; margin: 0 auto; padding: 150px 16px 48px; }
+      @media (max-width: 859px) { .ice main { padding-top: 172px; } }
       .ice h1, .ice h2, .ice h3 { font-family: var(--hf); color: var(--ink); }
       .ice a { color: #c2185b; }
       .ice-hero { position: relative; overflow: hidden; margin: 18px -16px 0; padding: 56px 16px 10px; background: radial-gradient(120% 90% at 50% 0%, #ffe3f0 0%, #e6f6ff 55%, var(--cream) 100%); border-bottom: 3px dashed #ffc2dc; text-align: center; }
