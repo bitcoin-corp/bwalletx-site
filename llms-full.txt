@@ -2115,13 +2115,15 @@ Buy the whole episode up front for less: usually 40% of the full streaming cost.
 
 Streaming stops charging once your payments reach the ticket price, so you never pay more than a ticket. Hosts can also make an episode completely free.
 
-EpisodeFull stream at 1p/minTicketMost streaming can cost
+Episode lengthTicket (buy upfront)Pay as you listen (1p/min after the free minute, never more than the ticket)
 
-10 min10p4p4p
+10 min4pstops at 4p (after 4 paid minutes)
 
-30 min30p12p12p
+30 min12pstops at 12p
 
-60 min60p24p24p
+60 min24pstops at 24p
+
+Listen for a few minutes and stop, and you pay only for those minutes.
 
 Default prices. Hosts can set their own.
 
