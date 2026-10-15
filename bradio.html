@@ -38,7 +38,8 @@
       .tag { flex: none; font-size: 0.75rem; font-weight: 700; padding: 2px 9px; border-radius: 999px; }
       .tag.live { background: #F5B800; color: #000; }
       html, body { overflow-x: clip; }
-      main.ext.bt { padding-top: 0 !important; }
+      main.ext.bt { padding-top: 112px !important; }
+      @media (max-width: 859px) { main.ext.bt { padding-top: 118px !important; } }
       .bt-hero { position: relative; margin: 0 calc(50% - 50vw); min-height: min(78vh, 760px); display: flex; align-items: flex-start; overflow: hidden; background: #000; }
       .bt-hero video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 50% 60%; }
       .bt-low { align-items: flex-end; }
@@ -52,7 +53,7 @@
       @media (prefers-reduced-motion: reduce) { .bt-hero video { display: none; } .bt-hero { background: #000 url(/video/bradio-cities-loop.jpg) 50% 60% / cover; } }
       .bt-hero img { position: absolute; inset: 0; width: 100%; height: 100%; max-width: none; object-fit: cover; object-position: 62% 82%; }
       .bt-hero::after { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(0,0,0,.25) 0%, rgba(0,0,0,0) 35%, rgba(0,0,0,.35) 75%, #0b0b0c 100%); }
-      .bt-hero-in { position: relative; z-index: 1; width: 100%; max-width: 1100px; margin: 0 auto; padding: max(150px, 20vh) 16px 0; box-sizing: border-box; }
+      .bt-hero-in { position: relative; z-index: 1; width: 100%; max-width: 1100px; margin: 0 auto; padding: max(48px, 8vh) 16px 0; box-sizing: border-box; }
       .bt-hero h1 { margin: 0 0 14px; font-size: clamp(2.2rem, 8vw, 5rem); overflow-wrap: break-word; letter-spacing: -0.035em; line-height: 1.02; text-shadow: 0 4px 40px rgba(0,0,0,.6); }
       .bt-hero h1 .gold { text-shadow: none; filter: drop-shadow(0 2px 14px rgba(0,0,0,.8)); }
       .bt-hero .lede { max-width: 640px; color: #e6dfcc; text-shadow: 0 2px 20px rgba(0,0,0,.7); }
