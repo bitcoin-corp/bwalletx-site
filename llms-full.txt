@@ -708,11 +708,11 @@ A bSpace is a live audio or video room inside a token room in bWalletX. The host
 
 ## Paid Spaces
 
-- ComingPaid tickets. Pay or burn a ticket to enter a Space.
+- Live since 5.1.91Paid tickets. Pay at the door: you pay the host and the host’s wallet sends you the ticket. Not in the store edition.
 
 - ComingPaid speakers. Pay to come up on stage.
 
-- ComingPer-minute charges. Pay a minute at a time, wallet to wallet, with a spending cap you set.
+- Live since 5.1.95Per-minute charges. Paid listening: the host sets a price, you approve a spending cap, and your wallet pays the people on stage a minute at a time. Not in the store edition.
 
 Any fee on a paid Space will be shown before you pay. Paid Spaces will need identity and age checks before they open.
 
@@ -1002,17 +1002,15 @@ Want to issue credits for your service? Email [support@bwalletx.com](mailto:supp
 
 - The ledger server, with debits that can’t be charged twice.
 
-- The balance cards, swipe and flip, as a prototype.
+- The balance cards: swipe is in the release app since 5.2.23; flip to the contract is still a prototype.
 
-None of this is live for users yet.
+Top-ups are not open to users yet: they switch on when the treasury address is set on the server. Until then the wallet shows bCredits as coming.
 
 ### Coming NOT LIVE
 
 - bCredits for b, going live.
 
 - Credits from other issuers.
-
-- The card row in the release app.
 
 Related: [Streaming payments](https://bwalletx.com/streaming-payments), [Ask b](https://bwalletx.com/ask-b).
 
@@ -1755,7 +1753,7 @@ a balance.
 
 The real wallet home screen (web app, test wallet).
 
-Live in 5.1.85
+Live in 5.2.24
 
 ## What you can do today.
 
@@ -1773,11 +1771,11 @@ Each one is in the current bWalletX beta. Tap for how it works.
 [LiveExchangeTokens, NFTs and $HANDLE tokens wallet to wallet, plus the 3D market.](https://bwalletx.com/exchange)
 [LiveLaunchpadBuy and sell TokenBlaster coins from the Exchange.](https://bwalletx.com/launchpad)
 
-Coming next · not released yet
+Shipped in 5.1.85, and next
 
 ## Coming next.
 
-In development, not in the current release. No dates until they ship.
+Three of these shipped in 5.1.85. Token locking is in development, not in the current release. No dates until it ships.
 
 [LiveAirdrops inboxTokens sent straight to holders, with Keep and Hide.](https://bwalletx.com/airdrops)
 [LiveLaunch your own coinToken links and a launch button inside the wallet.](https://bwalletx.com/launchpad)
@@ -2217,9 +2215,9 @@ These pieces are in bWalletX today, or in testing where marked.
 
 - Token-gated rooms. A token works as a ticket to a chat room.
 
-- Multisig locks. Lock holdings so more than one person has to agree to move them.
+- Multisig locks (in testing). Shares locked so more than one person has to agree to move them. Today only on The Bitcoin Corporation’s own register; partner locks are being built.
 
-- Automatic splits. Payments split between people by set shares.
+- Automatic splits. Paid Spaces split each payment equally between the speakers on stage. Splits by set shares between partners are not built yet.
 
 - Ask b. The built-in assistant, in the wallet and in chat.
 
@@ -4060,7 +4058,7 @@ Need to prove who you are in the real world, privately? See [Identity](https://b
 
 - LiveYour token and your room. In bWalletX your $handle can be a personal token, with a room named after you. See [Features](https://bwalletx.com/features).
 
-- ComingMore than one handle per account. The groundwork is in; adding a second handle is not.
+- ComingMore than one handle per account. Built and merged: up to five names, one main. It ships in the next release, 5.2.25.
 
 - ComingHandle NFTs. Own your handle as an NFT you can hold or sell, separate from your account.
 
@@ -4092,7 +4090,7 @@ Source: https://bwalletx.com/identity-map
 
 # Identity map. One key is you. Everything else is derived.
 
-bWalletX holds many keys and addresses, but they all grow from one place. Here is how they fit together, in plain English, and where to see your own map: Settings › Identity › Identity map, coming in the next release.
+bWalletX holds many keys and addresses, but they all grow from one place. Here is how they fit together, in plain English, and where to see your own map: Settings › Identity › Identity map, in bWalletX since 5.1.88.
 
 ## Your identity key is not an address
 
@@ -4825,7 +4823,7 @@ Every bWalletX account has an ordinals address: the address that holds your toke
 
 - Live since 5.1.85Your airdrop address, with a QR code, in Receive › Airdrops.
 
-- ComingThe same address and QR on your public page at `bwalletx.com/bchat/u/<name>`, so issuers can find it.
+- ComingThe same address and QR on your public bChatX page at `bchatx.com/u/<name>`, so issuers can find it.
 
 ## The Airdrops inbox
 
@@ -4977,7 +4975,7 @@ Each item is marked by what the code does today.
 
 - LiveTips. Tip the author of a post in BSV, paid to their own verified address.
 
-- ComingOne-to-many video streams. Broadcast to a room. Not built yet.
+- LiveBroadcast into a Space. The host or a speaker shares a tab or screen, with its sound, to everyone in the Space (since 5.2.17). Not in the store edition.
 
 - Live since 5.1.85Pay per message. In token rooms the wallet now charges the room’s price per message: the message and the payment go in one transaction (50-sat minimum).
 
@@ -5166,9 +5164,9 @@ Holding a token to get in costs nothing extra. Payments go wallet to wallet; you
 
 - Partly liveWatching a live room inside bWalletX. Audio and video Spaces in token rooms are live in bWalletX since 5.1.85 (not the store edition): see [bSpaces](https://bwalletx.com/bspaces). One-to-many video streams are still watched in bChat.
 
-- ComingPay-per-minute watching. Paid a minute at a time, wallet to wallet, with a spending cap you set.
+- LivePay-per-minute Spaces. Paid a minute at a time, wallet to wallet, with a spending cap you set (bWalletX since 5.1.95, not the store edition).
 
-- ComingTips during a stream.
+- LiveTips during a Space. Tip a speaker on stage from their tile (since 5.2.16).
 
 - ComingBigger audiences. Streams to more viewers than one video server can hold.
 
@@ -5588,7 +5586,7 @@ Paired (`bwalletx login`): the phone checks and signs every request, so bWalletX
 
 ### Coming
 
-Selling, listing and minting from the CLI.
+Minting is built in the source on GitHub and comes to npm with the next published version. Selling and listing from the CLI are not built yet.
 
 ## Your keys stay safe
 
@@ -6217,7 +6215,7 @@ Web walletYour browser’s speech recognition (Chrome, Edge, Safari). Firefox fa
 
 Chrome extensionBrowser speech recognitionOpens a permission tab once to ask for the microphone
 
-The same gesture is coming to [bChatX.com](https://bchatx.com) too.
+The same gesture works on [bChatX.com](https://www.bchatx.com/ask-b) too, in Ask b.
 
 ## Same rules as typing
 
@@ -6300,7 +6298,7 @@ Claude Desktop, Cursor and others (MCP config file):
 
 The passphrase unlocks the agent account's key file on your machine. Use a separate agent account with a small balance for AI agents. Leave the passphrase out and the server stays paper-only: it can read and practise, but never send.
 
-Coming: selling, listing and minting. Source: [github.com/b0ase/bwalletx-cli](https://github.com/b0ase/bwalletx-cli).
+Coming: selling and listing. Minting is built in the source and comes to npm with the next published version. Source: [github.com/b0ase/bwalletx-cli](https://github.com/b0ase/bwalletx-cli).
 
 [Agent wallet](https://bwalletx.com/agent)
 [Developers](https://bwalletx.com/developers)
@@ -6991,6 +6989,8 @@ Token rooms got a Bounties sheet: work posted in a room, paid in the room's toke
 - Token rooms are hidden in the store build.
 - Chat polls the server every few seconds; it is not live yet (see the bChat plan in post 007).
 - Numbered accounts and tradeable handles are specified but not built.
+
+Update, 15 Oct 2026: chats now update live (5.2.24), and numbered handles are live (see [Handles](https://bwalletx.com/handles)). Handles you can trade as NFTs are still not built.
 
 Related: [Social](https://bwalletx.com/social) · [Exchange](https://bwalletx.com/exchange)
 
@@ -8217,6 +8217,8 @@ And we didn’t put token rooms in the store edition. bWallet, on the App Store 
 
 Update, 8 Oct 2026: the wallet half shipped in [5.1.85](https://bwalletx.com/releases#v5.1.85), and paid calls by the second arrived with [bPhone](https://bwalletx.com/bphone) in 5.1.87. Still to come: enforcing the per-minute, per-hour and per-day rules, paying for streams by the second, and letting people set their own price to be messaged by strangers. Those are marked Coming on the [Chat page](https://bwalletx.com/chat).
 
+Update, 15 Oct 2026: paying by the minute arrived in Spaces (paid listening, 5.1.95), music pays by the second on bWalletX Desktop (5.2.14), and bMail lets you set your own price to be reached. Still not built: enforcing per-minute, per-hour and per-day message limits in token rooms. The current release is [5.2.24](https://bwalletx.com/releases#v5.2.24).
+
 [← 025 Push notifications, from our own server](https://bwalletx.com/blog/025-push-notifications)[027 Airdrops, not dividends →](https://bwalletx.com/blog/027-airdrops-not-dividends)
 
 ---
@@ -8230,6 +8232,8 @@ Source: https://bwalletx.com/blog/027-airdrops-not-dividends
 Why bWalletX issuers reward holders with airdrops, not payouts: the returns-wording block, the airdrop inbox, and the security audit behind it (sandboxed NFT content, address poisoning).
 
 Status: built, not released. The airdrop inbox, the airdrop address, the returns-wording filter and the safety changes below are built on a development branch. They are not in the released app (5.1.84) and will ship in a later release.
+
+Update, 15 Oct 2026: all of this shipped in [5.1.85](https://bwalletx.com/releases#v5.1.85) and is in the current release, 5.2.24. Sending airdrops to holders, followers or room members is still not built, and airdrops that unlock over time wait on token locking, which is in development.
 
 ## How do you thank the people who hold your token?
 
@@ -8359,6 +8363,8 @@ bPositive lets you sponsor someone’s journey in bWalletX: monthly support, wit
 
 Status: plan, with the owner’s decisions made (8 Oct 2026). No bPositive code exists yet. Everything below is Coming.
 
+Update, 15 Oct 2026: still a plan. No bPositive code exists, and nothing below is in the current release (5.2.24). To go live it needs journey records, pledges held in pots, witness confirmation with verified identities, and thank-you NFTs, all built and tested.
+
 ## Backing a person, not a coin
 
 A lot of what happens around a wallet is about tokens and prices. bPositive is about people. It lets you back someone who is working towards something: a student saving for an exam, an athlete training for a race, someone in recovery counting days, a developer learning a new stack, an artist finishing an album.
@@ -8464,6 +8470,8 @@ After each payment the caller’s phone sends a small receipt to the callee over
 The callee’s phone trusts nobody. If the first receipt has not arrived within 20 seconds of answering, it hangs up. After that, if the paid-through time is more than 10 seconds in the past, it hangs up, with “Ended: not paid” on the screen. A caller on an older build, or on the store edition, never sees the quote and never pays, so they get about 20 seconds and are cut off. That is the intended behaviour: a callee who set a price should not be giving free calls to people whose app is out of date.
 
 What the callee’s phone does not yet do is check the chain for each transaction id during the call. The paymail server already verifies that every BSV payment it receives pays the exact outputs it handed out, and the wallet collects those payments as it always has, so a forged receipt buys a caller at most one grace period before the inbox shows nothing arrived. A server-side ledger that matches receipts to transactions during the call is the obvious next step, and we have written down where it goes.
+
+Update, 15 Oct 2026: bPhone shipped in [5.1.87](https://bwalletx.com/releases#v5.1.87). The per-transaction chain check during a call described above is still not built.
 
 ## The directory and bookings
 
@@ -8632,6 +8640,8 @@ Audio goes directly between devices where it can. Some networks block that: offi
 ## Coming: Game Spaces
 
 Game Spaces are coming: watch TokenBlaster matches live, with the players talking. More when it is ready.
+
+Update, 15 Oct 2026: Game Spaces are not built yet. Since this post, Spaces gained pay at the door, paid listening and Broadcast (share a tab or screen) in bWalletX.
 
 The [bSpaces page](https://bwalletx.com/bspaces) has more on how Spaces work inside bWalletX.
 
@@ -9352,6 +9362,8 @@ One day the stand may become a proper company. The same record carries over, so 
 
 Coming: Partnership shares, which tie these together. They aren’t built yet.
 
+Update, 15 Oct 2026: partnership shares are being built and tested on a development branch, not in the current release (5.2.24) and not open to anyone. They need the partner lock finished and tested with real keys, the server changes deployed, and the owner’s sign-off.
+
 Related: [Digital Ice-Cream](https://bwalletx.com/digital-ice-cream) · [Partnership shares](https://bwalletx.com/partnership-shares)
 
 [← 054 bRadio: live audio in bWalletX](https://bwalletx.com/blog/054-bradio-live-audio)[056 bShares: a register for companies →](https://bwalletx.com/blog/056-bshares)
@@ -9508,11 +9520,11 @@ Out on 8 Oct: a Calls tab with a keypad, mics and cameras that work in Spaces an
 
 - [](https://bwalletx.com/blog/030-bphone)030 · 8 Oct 2026
 [bPhone: charge to receive calls](https://bwalletx.com/blog/030-bphone)
-Put a price on your calls: per second, minute, hour or call, in BSV, MNEE or a token, paid wallet to wallet while you talk. How the meter works, why there is no middleman. Built, next release.
+Put a price on your calls: per second, minute, hour or call, in BSV, MNEE or a token, paid wallet to wallet while you talk. How the meter works, why there is no middleman. Live since 5.1.87.
 
 - [](https://bwalletx.com/blog/029-bpositive)029 · 8 Oct 2026
 [bPositive: gifts, not investments](https://bwalletx.com/blog/029-bpositive)
-Sponsor someone’s journey: monthly support from pots, witness-confirmed milestones and thank-you NFTs. Gifts only, 18+, 0% fee. A plan, coming to bWalletX.
+Sponsor someone’s journey: monthly support from pots, witness-confirmed milestones and thank-you NFTs. Gifts only, 18+, 0% fee. A plan: not built yet.
 
 - [](https://bwalletx.com/blog/028-launch-something)028 · 8 Oct 2026
 [Launch something with your coin](https://bwalletx.com/blog/028-launch-something)
@@ -9520,11 +9532,11 @@ Launch your own coin from bWalletX with a website, app and socials. The room is 
 
 - [](https://bwalletx.com/blog/027-airdrops-not-dividends)027 · 8 Oct 2026
 [Airdrops, not dividends](https://bwalletx.com/blog/027-airdrops-not-dividends)
-Why issuers reward holders with airdrops, the returns-wording block, the airdrop inbox, and the audit: sandboxed NFT content and address-poisoning warnings. Built, not yet released.
+Why issuers reward holders with airdrops, the returns-wording block, the airdrop inbox, and the audit: sandboxed NFT content and address-poisoning warnings. Live since 5.1.85.
 
 - [](https://bwalletx.com/blog/026-paying-to-be-heard)026 · 8 Oct 2026
 [Paying to be heard](https://bwalletx.com/blog/026-paying-to-be-heard)
-Chat series part 2: per-message charges in token rooms, burned or paid to the issuer. The server checks before anything is spent. Live on the server; wallet support next release.
+Chat series part 2: per-message charges in token rooms, burned or paid to the issuer. The server checks before anything is spent. Live; wallet support since 5.1.85.
 
 - [](https://bwalletx.com/blog/025-push-notifications)025 · 7 Oct 2026
 [Push notifications, from our own server](https://bwalletx.com/blog/025-push-notifications)
