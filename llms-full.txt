@@ -1,6 +1,6 @@
 # bWalletX: full site text
 
-Generated 2026-10-15 from https://bwalletx.com. Source pages are linked above each section.
+Generated 2026-10-16 from https://bwalletx.com. Source pages are linked above each section.
 
 ---
 
@@ -58,7 +58,7 @@ It isn't on Google Play yet, so install it by hand. (The store edition, bWallet,
 
 Updating from an older version? Install over the top and your wallet stays. If Android says the app can't be updated, write down your 12 words first, then uninstall and reinstall.
 
-Version 5.2.25 beta · 33.5 MB · Android 7+ · SHA-256 2105d442c1064672772dcf418bd5bceee0bec1b64da426ef1aa326e643a2d7ba
+Version 5.2.25 beta · 33.6 MB · Android 7+ · SHA-256 2105d442c1064672772dcf418bd5bceee0bec1b64da426ef1aa326e643a2d7ba
 
 Also: [Chrome extension](https://bwalletx.com/extension) · [Developers](https://bwalletx.com/developers)
 
@@ -1937,35 +1937,55 @@ Bring your people into a Space. Each invite carries a small amount of the room�
 
 [Get bWalletX](https://bwalletx.com/get)[About Spaces](https://bwalletx.com/bspaces)
 
-## For the host
+There are two kinds of invite. They do different jobs.
 
-- Pick peopleChoose from the people you follow on X, your HandCash friends, or paste a list of names.
+## Open Drops
+
+A link holding some of a token. The first person to open it claims it. Good for a post or a group chat, where you don’t know exactly who will come.
+
+- Make a dropPut some of the room’s token into a link.
+
+- Share itPost it anywhere.
+
+- First to open claims itThey sign in with X or HandCash, get bWalletX, and the token lands in their wallet.
+
+## Named Invites
+
+An invite for one person. Only the X account you name can claim it, and the token is sent to them automatically when they do.
+
+- Pick peopleChoose X accounts, from the people you follow, your HandCash friends or a pasted list.
 
 - Attach a tokenEach invite carries some of the room’s token. That token is their ticket into the Space.
 
-- SendInvites arrive as airdrops in [bMail](https://bwalletx.com/bmail), like any other airdrop.
-
-## For the person invited
-
-- Open the linkTap the invite link.
-
-- Sign inSign in with X, or with HandCash, and get bWalletX.
-
-- The token arrivesIt lands in your new wallet.
-
-- You’re inYou’re let into the room’s chat straight away.
+- They sign inThe named person signs in with that X account, gets bWalletX, and the token arrives. They’re let into the room’s chat.
 
 ## Friends find each other
 
-As the people in your contacts join, they’re matched to their paymails and show up as friends. You don’t have to look anyone up.
+Planned: as the people in your contacts join, they’ll be matched to their paymails and show up as friends. You won’t have to look anyone up.
 
 ## Keep it safe
 
-- The link carries the token. Don’t forward it. Whoever opens it first can claim it.
+- An Open Drop link carries the token. Whoever opens it first claims it, so share it only where you mean to.
 
-- Room entry is tied to the invited X account. Someone else holding the link can’t walk into the room as you.
+- A Named Invite works only for the X account it names. Someone else holding the link can’t claim it.
 
 - We never hold the tokens. They go from the host’s wallet to yours.
+
+## Where this stands
+
+- ✓ LiveAddress book import (CSV, contact cards, JSON, pasted lists) and export to CSV: in the app, shipping in 5.2.25.
+
+- ✓ LiveSign in with HandCash on bchatx.com: switched on; first real sign-in being tested.
+
+- ✓ LiveHandCash friends into your address book: the server side is live; the wallet button is coming.
+
+- ComingOpen Drops: a link holding a token that the first person to open it claims. Being built.
+
+- ComingNamed Invites: an invite only one X account can claim, with the token sent automatically. Planned.
+
+- ComingImport the people you follow on X: planned.
+
+- ComingContacts auto-match to paymails as friends join: planned.
 
 Related: [bSpaces](https://bwalletx.com/bspaces) · [bMail](https://bwalletx.com/bmail) · [Airdrops](https://bwalletx.com/airdrops) · [Friends](https://bwalletx.com/friends) · [Sign in with X](https://bwalletx.com/x)
 
@@ -2411,7 +2431,16 @@ Each release ships to the Android APK, the Chrome extension and the web wallet. 
 
 [Download bWalletX](https://bwalletx.com/download)
 
-## 5.2.25 2026-10-15
+## 5.2.25 2026-10-16
+
+- Fixed a black screen after unlock: if something goes wrong you now see a safety screen instead of a blank page.
+- Open Drops: invite links carry a room token, so the person you invite lands straight in the room.
+- Address book: import and export your contacts, and bring in your HandCash friends.
+- Spaces: every camera and screen share now shows on stage.
+- Multiple paymails: add extra names in Settings › Identity.
+- Red unread dots on Chat, Feed and bMail; encrypted backups are named for the account and download properly in Chrome; Android direct downloads get an in-app update button; and the BSV price no longer fails under load.
+
+## 5.2.24 2026-10-15
 
 - Themes: new Mono, Duo and Tri looks, and your wallet cards now follow the theme you pick.
 - All cards: a new icon opens a browser of every card, including Addresses and bCal, your calendar.
@@ -7034,7 +7063,7 @@ Token rooms got a Bounties sheet: work posted in a room, paid in the room's toke
 - Chat polls the server every few seconds; it is not live yet (see the bChat plan in post 007).
 - Numbered accounts and tradeable handles are specified but not built.
 
-Update, 15 Oct 2026: chats now update live (5.2.25), and numbered handles are live (see [Handles](https://bwalletx.com/handles)). Handles you can trade as NFTs are still not built.
+Update, 15 Oct 2026: chats now update live (5.2.24), and numbered handles are live (see [Handles](https://bwalletx.com/handles)). Handles you can trade as NFTs are still not built.
 
 Related: [Social](https://bwalletx.com/social) · [Exchange](https://bwalletx.com/exchange)
 
@@ -8261,7 +8290,7 @@ And we didn’t put token rooms in the store edition. bWallet, on the App Store 
 
 Update, 8 Oct 2026: the wallet half shipped in [5.1.85](https://bwalletx.com/releases#v5.1.85), and paid calls by the second arrived with [bPhone](https://bwalletx.com/bphone) in 5.1.87. Still to come: enforcing the per-minute, per-hour and per-day rules, paying for streams by the second, and letting people set their own price to be messaged by strangers. Those are marked Coming on the [Chat page](https://bwalletx.com/chat).
 
-Update, 15 Oct 2026: paying by the minute arrived in Spaces (paid listening, 5.1.95), music pays by the second on bWalletX Desktop (5.2.14), and bMail lets you set your own price to be reached. Still not built: enforcing per-minute, per-hour and per-day message limits in token rooms. The current release is [5.2.25](https://bwalletx.com/releases#v5.2.25).
+Update, 15 Oct 2026: paying by the minute arrived in Spaces (paid listening, 5.1.95), music pays by the second on bWalletX Desktop (5.2.14), and bMail lets you set your own price to be reached. Still not built: enforcing per-minute, per-hour and per-day message limits in token rooms. The current release is [5.2.24](https://bwalletx.com/releases#v5.2.24).
 
 [← 025 Push notifications, from our own server](https://bwalletx.com/blog/025-push-notifications)[027 Airdrops, not dividends →](https://bwalletx.com/blog/027-airdrops-not-dividends)
 
@@ -8277,7 +8306,7 @@ Why bWalletX issuers reward holders with airdrops, not payouts: the returns-word
 
 Status: built, not released. The airdrop inbox, the airdrop address, the returns-wording filter and the safety changes below are built on a development branch. They are not in the released app (5.1.84) and will ship in a later release.
 
-Update, 15 Oct 2026: all of this shipped in [5.1.85](https://bwalletx.com/releases#v5.1.85) and is in the current release, 5.2.25. Sending airdrops to holders, followers or room members is still not built, and airdrops that unlock over time wait on token locking, which is in development.
+Update, 15 Oct 2026: all of this shipped in [5.1.85](https://bwalletx.com/releases#v5.1.85) and is in the current release, 5.2.24. Sending airdrops to holders, followers or room members is still not built, and airdrops that unlock over time wait on token locking, which is in development.
 
 ## How do you thank the people who hold your token?
 
@@ -8407,7 +8436,7 @@ bPositive lets you sponsor someone’s journey in bWalletX: monthly support, wit
 
 Status: plan, with the owner’s decisions made (8 Oct 2026). No bPositive code exists yet. Everything below is Coming.
 
-Update, 15 Oct 2026: still a plan. No bPositive code exists, and nothing below is in the current release (5.2.25). To go live it needs journey records, pledges held in pots, witness confirmation with verified identities, and thank-you NFTs, all built and tested.
+Update, 15 Oct 2026: still a plan. No bPositive code exists, and nothing below is in the current release (5.2.24). To go live it needs journey records, pledges held in pots, witness confirmation with verified identities, and thank-you NFTs, all built and tested.
 
 ## Backing a person, not a coin
 
@@ -9406,7 +9435,7 @@ One day the stand may become a proper company. The same record carries over, so 
 
 Coming: Partnership shares, which tie these together. They aren’t built yet.
 
-Update, 15 Oct 2026: partnership shares are being built and tested on a development branch, not in the current release (5.2.25) and not open to anyone. They need the partner lock finished and tested with real keys, the server changes deployed, and the owner’s sign-off.
+Update, 15 Oct 2026: partnership shares are being built and tested on a development branch, not in the current release (5.2.24) and not open to anyone. They need the partner lock finished and tested with real keys, the server changes deployed, and the owner’s sign-off.
 
 Related: [Digital Ice-Cream](https://bwalletx.com/digital-ice-cream) · [Partnership shares](https://bwalletx.com/partnership-shares)
 
@@ -9474,17 +9503,33 @@ You can import an address book and export yours. It’s your list, and you can t
 
 ## Invites with tokens
 
-A host picks people, from the people they follow on X, their HandCash friends or a pasted list, and sends each one an invite with some of the room’s token attached. Invites arrive as airdrops in bMail. The token is the ticket into the Space.
+Invites come in two kinds. An Open Drop is a link holding some of a room’s token: the first person to open it claims it. A Named Invite is for one person: only the X account you name can claim it, and the token is sent to them automatically.
 
-The person invited opens the link, signs in with X or HandCash, and gets bWalletX. The token arrives in their wallet and they’re let into the room’s chat straight away. As their contacts join, they’re matched to paymails and show up as friends.
+Either way, the person signs in with X or HandCash, gets bWalletX, and the token is their ticket into the Space.
 
 ## Keep it safe
 
-- The link carries the token, so don’t forward it.
+- An Open Drop link carries the token: whoever opens it first claims it.
 
-- Room entry is tied to the invited X account.
+- A Named Invite works only for the X account it names.
 
 - We never hold the tokens. They go from the host’s wallet to yours.
+
+## Status, 15 Oct 2026
+
+- ✓ Address book import (CSV, contact cards, JSON, pasted lists) and export to CSV: in the app, shipping in 5.2.25
+
+- ✓ Sign in with HandCash on bchatx.com: switched on; first real sign-in being tested
+
+- ✓ HandCash friends into your address book: the server side is live; the wallet button is coming
+
+- ◻ Open Drops: a link holding a token that the first person to open it claims. Being built
+
+- ◻ Named Invites: an invite only one X account can claim, with the token sent automatically. Planned
+
+- ◻ Import the people you follow on X: planned
+
+- ◻ Contacts auto-match to paymails as friends join: planned
 
 More on the [Invites](https://bwalletx.com/invite) page.
 
