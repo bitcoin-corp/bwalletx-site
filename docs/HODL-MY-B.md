@@ -10,5 +10,12 @@ Weekly glossy round-up of everything shipped that week. White architect theme. L
 5. `python3 scripts/hodl-my-b.py && python3 scripts/seo-head.py && python3 scripts/gen-llms.py`
 6. Screenshot 430px and 1440px, Read them, commit, push, check 200s.
 
+## Look
+Full-screen glossy brochure: every page fills the viewport (two-page spread on desktop >= 900px, one page on phones). Scenes are classes on each page: s-cover, s-black, s-back (gold on black), s-cream, s-yellow, s-pink, s-lime, s-paper, s-orange, s-peach, s-gold. Children with r1..r4 and .media rise in as the page turns in; a sheen sweeps across.
+
+## Media slots
+Each slot is `<div class="media" data-media="NAME">`. To use the owner's photo or video, set `MEDIA = {"cover": "/media/hodl/cover.jpg", "bbrand": "/media/hodl/bbrand.mp4"}` in `scripts/hodl-my-b.py` and rebuild. A .mp4 plays muted and loops; anything else is an image (object-fit: cover). Leave a slot out to keep the built-in art.
+Issue 1 slots: cover, bbrand, checkout, allowance, sms, receipts, release, next.
+
 ## Rules
 Funny, consumer-facing, fait accompli. No real people's names, no competitor names, no investment wording. og images keep 1200:630 (object-fit: cover).
