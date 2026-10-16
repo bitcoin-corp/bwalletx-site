@@ -2,6 +2,10 @@
   "cleanUrls": true,
   "rewrites": [
     {
+      "source": "/themes/custom",
+      "destination": "/themes-custom"
+    },
+    {
       "source": "/themes/:colour(white|pink|blue|yellow|vexvoid)",
       "destination": "/themes"
     },
