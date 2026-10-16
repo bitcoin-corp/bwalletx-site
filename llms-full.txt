@@ -619,7 +619,7 @@ Your company, on chain.
 
 A register of members, kept by the company. Shares issued as tokens, approved by your directors, and locked in each holder’s wallet so the company and the holder both have a say.
 
-In testing bShares is a record-keeping tool for companies. It isn’t open to companies yet. Nothing on this page is an offer of shares, and no shares are sold here or to the public.
+In testing bShares is a record-keeping tool for any company. It’s in testing; the first register is our own company, The Bitcoin Corporation Ltd. It isn’t open to other companies yet. Nothing on this page is an offer of shares, and no shares are sold here or to the public.
 
 [Ask about bShares](mailto:support@bwalletx.com?subject=bShares%20for%20my%20company)
 
@@ -2285,7 +2285,7 @@ These pieces are in bWalletX today, or in testing where marked.
 
 - Ask b. The built-in assistant, in the wallet and in chat.
 
-- bShares register. A company register of members, [in testing](https://bwalletx.com/bshares) with The Bitcoin Corporation Ltd.
+- bShares register. A register of members for any company, [in testing](https://bwalletx.com/bshares); the first register is our own company.
 
 ## Coming planned
 
@@ -9487,7 +9487,7 @@ Update, 15 Oct 2026: partnership shares are being built and tested on a developm
 
 Related: [Digital Ice-Cream](https://bwalletx.com/digital-ice-cream) · [Partnership shares](https://bwalletx.com/partnership-shares)
 
-[← 054 bRadio: live audio in bWalletX](https://bwalletx.com/blog/054-bradio-live-audio)[056 bShares: a register for companies →](https://bwalletx.com/blog/056-bshares)
+[← 054 bRadio: live audio in bWalletX](https://bwalletx.com/blog/054-bradio-live-audio)[056 bShares: a register for any company →](https://bwalletx.com/blog/056-bshares)
 
 ---
 
@@ -9495,11 +9495,11 @@ Source: https://bwalletx.com/blog/056-bshares
 
 [Development blog](https://bwalletx.com/blog) · 056 · 15 Oct 2026
 
-# bShares: a register for companies
+# bShares: a register for any company
 
-bShares keeps a company’s register of members, lets directors approve new shares, and locks shares so they can’t move without the right people. It’s in private testing.
+bShares keeps a company’s register of members, lets directors approve new shares, and locks shares so they can’t move without the right people. It’s in testing; the first register is our own company.
 
-bShares is a record-keeping tool for companies. It’s in private testing.
+bShares is a record-keeping tool for any company. It’s in testing; the first register is our own company, The Bitcoin Corporation Ltd.
 
 ## The register
 
@@ -9604,8 +9604,8 @@ Newest first. Dates come from commits. bWallet is a fork of [Yours Wallet](https
 New accounts can now start with HandCash as well as X. Your HandCash handle carries over as name@bwalletx.com, your friends can come with you, and invites with tokens bring people into Spaces.
 
 - 056 · 15 Oct 2026
-[bShares: a register for companies](https://bwalletx.com/blog/056-bshares)
-bShares keeps a company’s register of members, lets directors approve new shares, and locks shares so they can’t move without the right people. It’s in private testing.
+[bShares: a register for any company](https://bwalletx.com/blog/056-bshares)
+bShares keeps a company’s register of members, lets directors approve new shares, and locks shares so they can’t move without the right people. It’s in testing; the first register is our own company.
 
 - 055 · 15 Oct 2026
 [Digital Ice-Cream](https://bwalletx.com/blog/055-digital-ice-cream)

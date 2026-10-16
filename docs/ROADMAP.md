@@ -59,7 +59,7 @@ When an item changes, update its page and this file in the same PR.
 - Push notifications (5.1.70). push-notifications.html
 - Token curves (people tokens sold from own supply, 5.2.16). token-curves.html
 - bMail price-to-reach ("Penny post"). bmail.html
-- bShares: The Bitcoin Corporation register only, for members and the director (private testing). bshares.html, blog 056
+- bShares: share registers for any company (register of members, director approvals, locked shares). In testing; the first register is our own company. bshares.html, blog 056
 - CLI/MCP: pair, balance, send, buy, strategies (npm 0.2.0). cli.html, mcp.html
 - bApps: sign in and pay with the wallet. bapps.html
 
@@ -81,7 +81,7 @@ When an item changes, update its page and this file in the same PR.
 ## IN-TESTING
 
 - bCredits top-up (needs the treasury address + VAT answer). credits.html
-- bShares register, Bitcoin Corp only. bshares.html
+- bShares: share registers for any company; in testing, the first register is our own company. bshares.html
 - 19 bApps marked Beta on bapps.html.
 - bWallet store editions (TestFlight, Play internal).
 

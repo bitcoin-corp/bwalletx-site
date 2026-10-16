@@ -79,7 +79,7 @@
         sub: [
           { label: 'All bApps', href: '/bapps' },
           { label: 'bMovies', href: '/bapps/bmovies' },
-          { label: 'bShares (in testing)', href: '/bshares' },
+          { label: 'bShares: registers for any company', href: '/bshares' },
           { label: 'Partnership shares (coming)', href: '/partnership-shares' },
           { label: 'bWeb (coming)', href: '/bweb' }
         ] },
