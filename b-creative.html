@@ -192,7 +192,7 @@
           el.style.setProperty('--bg', s.bg); if (s.ink) el.style.setProperty('--ink', s.ink); if (s.card) el.style.setProperty('--card', s.card);
           var h = s.clip ? '<video muted playsinline loop preload="none" src="' + s.clip + '"></video>' : '';
           if (s.type === 'mark') h += '<img src="/logo.svg" alt="b">';
-          else if (s.type === 'end') h += '<h1>b creative.</h1><p>Your brand&rsquo;s own wallet. From $99.</p><p class="url">bwalletx.com/themes/custom</p><a class="go" href="/themes/custom">Order your edition</a>';
+          else if (s.type === 'end') h += '<h1>b creative.</h1><p>Your community&rsquo;s own wallet. We make it. From $99 a year.</p><p style="font-size:.85rem;opacity:.7">Or pick a theme in the app.</p><p class="url">bwalletx.com/themes/custom</p><a class="go" href="/themes/custom">Order your edition</a>';
           else {
             h += '<p class="cap">' + s.line.replace(/^b /, '<span class="capb">b</span> ') + '</p>' + pops.map(function (p, i) { return '<span class="pop" style="left:' + p[0] + '%;top:' + p[1] + '%;animation-delay:' + (0.6 + i * 0.18) + 's">' + emo(s.emoji) + '</span>'; }).join('') +
               (s.id === 'duck' || s.id === 'icecream' || s.id === 'rocket' ? '<span class="stk"><img alt="" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f4c8.svg"></span>' : '') + (s.id === 'rocket' ? '<span class="stk lbl">number go up</span>' : '') +
