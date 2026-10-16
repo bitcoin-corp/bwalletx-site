@@ -95,6 +95,23 @@
         .van-wobble, .float, .bob, .pulse, .sky *, .drip { animation: none !important; }
         .sky .cloud:nth-child(2) { transform: translateX(8vw); } .sky .cloud:nth-child(3) { transform: translateX(60vw); } .sky .cloud:nth-child(4) { transform: translateX(32vw); }
       }
+      /* Jazz: drip dividers, springy cards, scroll reveal */
+      .drip-div { display: block; width: calc(100% + 32px); height: 46px; margin: 36px -16px -18px; }
+      .drip-div path { stroke: #2b2140; stroke-width: 3; }
+      .panel, .scoop { transition: transform .45s cubic-bezier(.34,1.56,.64,1), box-shadow .45s cubic-bezier(.34,1.56,.64,1); }
+      .panel:hover, .scoop:hover, .js-reveal .rv.in.panel:hover, .js-reveal .rv.in.scoop:hover { transform: translate(-3px,-5px) rotate(-1deg) scale(1.02); box-shadow: 10px 10px 0 var(--ink); }
+      .scoop { position: relative; padding-top: 34px; }
+      .scoop::before { content: ""; position: absolute; top: -16px; left: 16px; width: 40px; height: 34px; border-radius: 20px 20px 10px 10px; border: 3px solid var(--ink); background: var(--sc, #ffb3d1); box-shadow: inset -6px -5px 0 rgba(0,0,0,.08); }
+      .scoop:nth-child(1) { --sc: #9fd8ff; } .scoop:nth-child(2) { --sc: #8fe7c0; } .scoop:nth-child(3) { --sc: #ff9cc6; }
+      .scoops { margin-top: 30px; }
+      .js-reveal .rv { opacity: 0; transform: translateY(28px) scale(.97); }
+      .js-reveal .rv.in { opacity: 1; transform: none; transition: opacity .6s ease, transform .6s cubic-bezier(.34,1.56,.64,1), box-shadow .45s ease; }
+      .js-reveal .rv.in.panel:nth-child(odd) { transform: rotate(-0.5deg); } .js-reveal .rv.in.panel:nth-child(even) { transform: rotate(0.5deg); }
+      @media (max-width: 720px) { .js-reveal .rv.in.panel:nth-child(n) { transform: none; } }
+      @media (prefers-reduced-motion: reduce) {
+        .js-reveal .rv { opacity: 1 !important; transform: none !important; }
+        .panel, .scoop { transition: none; } .panel:hover, .scoop:hover { transform: none; }
+      }
     </style>
   </head>
   <body class="ice">
@@ -230,6 +247,7 @@
         </div>
       </section>
 
+      <svg class="drip-div" viewBox="0 0 1000 46" preserveAspectRatio="none" aria-hidden="true"><path d="M0 0 H1000 V10 C960 10 955 30 930 30 C905 30 905 14 870 14 C835 14 840 40 805 40 C770 40 780 12 740 12 C700 12 700 26 660 26 C620 26 625 10 590 10 C555 10 560 36 520 36 C480 36 490 14 450 14 C410 14 410 30 370 30 C330 30 340 12 300 12 C260 12 265 38 225 38 C185 38 195 14 155 14 C115 14 115 28 80 28 C45 28 45 10 0 10Z" fill="#ffe3f0"/></svg>
       <h2 class="strip-h">The story, in eight scoops</h2>
       <p class="strip-sub">How a stall becomes a partnership, and a partnership one day becomes a company.</p>
 
@@ -388,6 +406,7 @@
         </figure>
       </div>
 
+      <svg class="drip-div" viewBox="0 0 1000 46" preserveAspectRatio="none" aria-hidden="true"><path d="M0 0 H1000 V10 C960 10 955 30 930 30 C905 30 905 14 870 14 C835 14 840 40 805 40 C770 40 780 12 740 12 C700 12 700 26 660 26 C620 26 625 10 590 10 C555 10 560 36 520 36 C480 36 490 14 450 14 C410 14 410 30 370 30 C330 30 340 12 300 12 C260 12 265 38 225 38 C185 38 195 14 155 14 C115 14 115 28 80 28 C45 28 45 10 0 10Z" fill="#c9f2e3"/></svg>
       <h2 class="strip-h">The recipe, in three scoops</h2>
       <div class="scoops">
         <div class="scoop"><h3>Split</h3><p>The token says who owns what. Money in splits by holding, automatically.</p></div>
@@ -544,6 +563,16 @@
           a.addEventListener('pointerenter', function (e) { if (e.pointerType === 'mouse') burst(); });
           a.addEventListener('pointerdown', burst);
         });
+      })();
+    </script>
+    <script>
+      (function () {
+        if (matchMedia('(prefers-reduced-motion: reduce)').matches || !('IntersectionObserver' in window)) return;
+        var els = document.querySelectorAll('.strip-h, .strip-sub, .panel, .scoop, .cta, .fine');
+        document.documentElement.classList.add('js-reveal');
+        els.forEach(function (el, i) { el.classList.add('rv'); el.style.transitionDelay = ((i % 2) * 90) + 'ms'; });
+        var io = new IntersectionObserver(function (es) { es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); setTimeout(function(){ e.target.style.transitionDelay=''; }, 900); } }); }, { rootMargin: '0px 0px -8% 0px' });
+        els.forEach(function (el) { io.observe(el); });
       })();
     </script>
   </body>
