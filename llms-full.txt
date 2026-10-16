@@ -1979,9 +1979,9 @@ Planned: as the people in your contacts join, they’ll be matched to their paym
 
 - ✓ LiveHandCash friends into your address book: the server side is live; the wallet button is coming.
 
-- ComingOpen Drops: a link holding a token that the first person to open it claims. Planned.
+- LiveOpen Drops: live in bWalletX 5.2.25 (first run pending). Each link is made for an @handle and pre-funded with the room token; whoever opens it first gets the token, and room entry is tied to that X account.
 
-- LiveNamed Invites: a room host invites X accounts by @handle; each link holds the room token and only that X account can claim it (5.2.25, bWalletX only).
+- ComingNamed Invites: the token delivered automatically to the X account you name. Planned; depends on pre-signed payments.
 
 - ComingImport the people you follow on X: planned.
 
@@ -2434,8 +2434,8 @@ Each release ships to the Android APK, the Chrome extension and the web wallet. 
 ## 5.2.25 2026-10-16
 
 - Fixed a black screen after unlock: if something goes wrong you now see a safety screen instead of a blank page.
-- Open Drops: invite links carry a room token, so the person you invite lands straight in the room.
-- Address book: import and export your contacts, and bring in your HandCash friends.
+- Open Drops (bWalletX): each invite link is made for an @handle and carries a room token, so the person you invite lands straight in the room.
+- Address book: import and export your contacts.
 - Spaces: every camera and screen share now shows on stage.
 - Multiple paymails: add extra names in Settings › Identity.
 - Red unread dots on Chat, Feed and bMail; encrypted backups are named for the account and download properly in Chrome; Android direct downloads get an in-app update button; and the BSV price no longer fails under load.
@@ -9523,9 +9523,9 @@ Either way, the person signs in with X or HandCash, gets bWalletX, and the token
 
 - ✓ HandCash friends into your address book: the server side is live; the wallet button is coming
 
-- ◻ Open Drops: a link holding a token that the first person to open it claims. Being built
+- ✓ Open Drops: live in bWalletX 5.2.25 (first run pending). Each link is made for an @handle; whoever opens it first gets the token, and room entry is tied to that X account
 
-- ◻ Named Invites: an invite only one X account can claim, with the token sent automatically. Planned
+- ◻ Named Invites: the token sent automatically to the X account you name. Planned; depends on pre-signed payments
 
 - ◻ Import the people you follow on X: planned
 
