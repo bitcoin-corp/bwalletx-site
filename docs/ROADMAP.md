@@ -115,7 +115,7 @@ When an item changes, update its page and this file in the same PR.
 - Per-transaction chain check during bPhone calls. blog 030
 - Room message limits per minute/hour/day. blog 026
 - Self-serve deletion of an ID check. identity.html
-- OAuth "Sign in with bWalletX for any app" (auth.bwalletx.com doesn't resolve). sign-in-button.html, connect.html
+- OAuth "Sign in with bWalletX for any app": server and wallet sheet built (yours-mobile PR #129); waits for deploy, DNS for auth.bwalletx.com and a wallet release. sign-in-button.html, connect.html
 - CLI selling and listing. cli.html, mcp.html
 - Credits from other issuers. credits.html
 - bTrust: shared keys, passing on, important papers. btrust.html

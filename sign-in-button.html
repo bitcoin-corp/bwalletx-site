@@ -188,11 +188,36 @@ export function SignIn() {
       </div>
       <p class="small">The code is MIT licensed. The names bWalletX and bWallet and the "b" mark are trademarks and are not covered by the MIT licence: you can use them unchanged to offer sign-in. Full rules: BRAND.md and TRADEMARKS.md in the package.</p>
 
-      <h2>Sign in with bWalletX for any app (OAuth) <span class="note soon">Coming</span></h2>
-      <p>Today the button signs the user in to your own server: the wallet signs a one-time challenge and your server checks it. We're also building a standard OAuth / OpenID Connect provider at auth.bwalletx.com, so apps that already use "Sign in with Google" can add bWalletX the same way, with the user approving each app in their wallet. When it's live, the same button starts it:</p>
+      <h2 id="oauth">Sign in with bWalletX for any app (OAuth) <span class="note soon">Coming</span></h2>
+      <p>The button can also start a standard OAuth 2.1 / OpenID Connect sign-in at auth.bwalletx.com, the same way "Sign in with Google" works. Your app sends the user to <code>/authorize</code>. They tap <strong>Open bWalletX</strong> (phone), the web wallet or the Chrome extension, and approve your app on one sheet. Their wallet signs the request with their identity key. You get back a code, swap it for an <code>id_token</code>, and read their identity key and $name. There's no password, nothing is paid, and you run no sign-in routes of your own.</p>
       <pre><code>&lt;bwalletx-signin authorize-url="https://auth.bwalletx.com/authorize"
-  client-id="your-client-id" redirect-uri="https://example.com/callback"&gt;&lt;/bwalletx-signin&gt;</code></pre>
-      <p class="small">Not live yet. The button already builds the request (authorization code with PKCE), so your markup won't need to change.</p>
+  client-id="your-client-id" redirect-uri="https://example.com/callback"
+  scope="openid profile"&gt;&lt;/bwalletx-signin&gt;</code></pre>
+      <p>On click, the button makes the PKCE verifier, <code>state</code> and <code>nonce</code>, keeps them in <code>sessionStorage</code> under <code>bwalletx:oauth</code>, and goes to <code>/authorize</code>. On your callback page:</p>
+      <pre><code>const q = new URLSearchParams(location.search);
+const { verifier, state } = JSON.parse(sessionStorage.getItem('bwalletx:oauth') || '{}');
+if (q.get('state') !== state) throw new Error('state mismatch');
+const tokens = await (await fetch('https://auth.bwalletx.com/token', {
+  method: 'POST',
+  headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+  body: new URLSearchParams({
+    grant_type: 'authorization_code', code: q.get('code'),
+    client_id: 'your-client-id', redirect_uri: 'https://example.com/callback',
+    code_verifier: verifier,
+  }),
+})).json();
+const me = await (await fetch('https://auth.bwalletx.com/userinfo', {
+  headers: { Authorization: 'Bearer ' + tokens.access_token },
+})).json();
+// me.sub = identity key (use it as the user id), me.handle = "$alice", me.paymail</code></pre>
+      <p class="small">Scopes: <code>openid</code> (identity key), <code>profile</code> ($name and paymail), <code>bitsign</code> (bit-sign verified level). Tokens are ES256, last 10 minutes, and verify against <code>https://auth.bwalletx.com/.well-known/jwks.json</code>. Codes work once. Apps are on an allowlist for now: ask at <a href="mailto:support@bwalletx.com">support@bwalletx.com</a>. Try it locally with <code>client-id="local-dev"</code> and <code>redirect-uri="http://localhost:3000/callback"</code>.</p>
+      <ul class="small">
+        <li><span class="note live">Live</span> The button builds the request (authorization code + PKCE S256)</li>
+        <li><span class="note soon">Coming</span> auth.bwalletx.com server: built and tested, waiting for deploy and DNS</li>
+        <li><span class="note soon">Coming</span> The approval sheet in bWalletX: phone, web wallet and Chrome extension, in the next release</li>
+        <li><span class="note soon">Coming</span> Self-serve app registration</li>
+        <li><span class="note soon">Coming</span> A QR code so your phone can approve a sign-in on a desktop</li>
+      </ul>
 
       <p class="small" style="margin-top: 48px">Questions: <a href="mailto:support@bwalletx.com">support@bwalletx.com</a> · More for developers: <a href="/developers">Developers</a> · <a href="/connect">Sign in guide</a></p>
     </main>
