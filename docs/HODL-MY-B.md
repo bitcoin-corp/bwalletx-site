@@ -1,17 +1,14 @@
 # Hodl my b — weekly magazine
 
-Weekly glossy round-up of everything shipped that week. White architect theme. Landing: `/hodl-my-b` (hodl-my-b.html). Issues: `/hodl-my-b/<n>` (hodl-my-b/<n>.html). Shared page-turn: `hodl-my-b/mag.css` + `mag.js` (arrows, swipe, buttons, `#p<n>`; no JS / reduced motion = pages stacked).
+Weekly glossy round-up of everything shipped that week. White architect theme. Landing: `/hodl-my-b` (hodl-my-b.html). Issues: `/hodl-my-b/<n>` (hodl-my-b/<n>.html). Built by `scripts/hodl-my-b.py`: a page-flip book (page-flip@2.0.7 from jsDelivr, same lib as npgx's MagazineFlipReader). /hodl-my-b = latest issue. Two-page spreads on desktop, one page on phones; swipe/drag/arrows; `#p<n>` deep links; no JS or reduced motion = stacked pages.
 
 ## Make issue N
-1. Copy `hodl-my-b/<N-1>.html` to `hodl-my-b/<N>.html`. Update title, canonical, og/twitter url, description, image (`og-hodl-my-b-<N>.png`), alt.
-2. Cover (`.pg.cover`): masthead, `Issue N · week of <Monday date>`, cover story line, 4–5 teaser lines.
-3. Cover story: 3–5 `.pg` spreads. Each feature carries a pill: `Live` / `Next release` / `Coming`. Only what is true today.
-4. "This week": bullets from `/releases` for the week (skip anything naming a competitor wallet).
-5. "Also this week": `.grid4` of the pages' existing `og-*.png` cards, each linking to its page.
-6. Update each `.folio` (Issue N, p.X) and the last page.
-7. OG: copy `media-src/og/og-hodl-my-b-1.html` → `-N.html`, edit text, screenshot to `og-hodl-my-b-N.png` (Twemoji only). Read the PNG before committing.
-8. Landing: add the new issue at the top of `.issues`.
-9. `python3 scripts/seo-head.py && python3 scripts/gen-llms.py`, check 390px width has no horizontal scroll, commit, push, curl for 200s.
+1. In `scripts/hodl-my-b.py` add the issue to `ISSUES` (n, week = Monday date, story, og, blurb) and write `pages_issue_N(back)`, copying `pages_issue_1`. Keep an even page count; first and last are hard covers (back cover lists past issues).
+2. Cover: masthead, dateline, cover story, cover lines. Then cover-story pages, "New in <release>" from /releases, "Also this week" grids of existing og-*.png cards (each linking to its page), Where things stand, Next week.
+3. Every feature gets a pill: Live / Next release / Coming. Only what is true today. Each page must fit its page (check screenshots).
+4. OG: copy `media-src/og/og-hodl-my-b-1.html` to `-N.html`, edit, screenshot to `og-hodl-my-b-N.png` (Twemoji only). Read the PNG.
+5. `python3 scripts/hodl-my-b.py && python3 scripts/seo-head.py && python3 scripts/gen-llms.py`
+6. Screenshot 430px and 1440px, Read them, commit, push, check 200s.
 
 ## Rules
-Funny, consumer-facing, fait accompli. No real people's names, no competitor names, no investment wording.
+Funny, consumer-facing, fait accompli. No real people's names, no competitor names, no investment wording. og images keep 1200:630 (object-fit: cover).

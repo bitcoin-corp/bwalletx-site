@@ -1880,13 +1880,177 @@ Source: https://bwalletx.com/hodl-my-b
 
 Hodl my b
 
-WeeklyThe bWalletX magazineFree
+WeeklyIssue 1Week of 12 Oct 2026
 
-Everything we shipped this week, nicely presented.
+Don’t be bland. Get bBranded.
 
-A new issue every week. Each feature says plainly whether it is Live, in the Next release, or Coming.
+Got the sticker pack?
 
-- [Issue 1 · week of 12 Oct 2026Don’t be bland. Get bBranded. Business agents, plus the week’s round-up.](https://bwalletx.com/hodl-my-b/1)
+Yes! 1,500 sats. Tap to pay.
+
+Paid ✔
+
+Receipt on chain
+
+- Theme Store
+- Credits card
+- bChatX rooms
+- All 19 bApps
+
+Inside
+
+## This week
+
+- Paste a link, get a shopkeeper3
+- The till is the chat4
+
+- An agent with pocket money5
+- Bitcoin by text6
+
+- Receipts anyone can check7
+- New in 5.2.268
+
+- Also this week9
+- Where things stand11
+
+Every feature says plainly: Live, Next release, or Coming. Swipe, drag a corner, or use the arrow keys.
+
+Hodl my b · Issue 1 · 2
+
+Cover story · bBrand
+
+## Paste a link. Get a shopkeeper.
+
+Give b your website. b reads it and drafts an agent that knows your menu, prices and hours, then answers customers in chat.
+
+Next release Agent from a link. [Business agents](https://bwalletx.com/business-agents)
+
+It never calls in sick. It does ask for a logo.
+
+Hodl my b · Issue 1 · 3
+
+Cover story · checkout
+
+## The till is the chat.
+
+Customer asks, agent quotes, customer taps Pay. Sats move, the chat says Paid, and both sides keep the same receipt.
+
+Next release Chat checkout for business agents.
+
+No card machine. No “it’s gone through twice”.
+
+Two flat whites?
+
+900 sats. Tap to pay.
+
+Paid ✔
+
+Hodl my b · Issue 1 · 4
+
+Cover story · pocket money
+
+## An agent with a daily allowance.
+
+Agents get their own capped account: a daily limit, and a big Stop button for when it gets ideas above its station.
+
+Coming Capped agent account inside the app.
+
+Live Today on your computer: the `bwalletx` CLI agent wallet, with a daily cap and Stop. [CLI](https://bwalletx.com/cli)
+
+Hodl my b · Issue 1 · 5
+
+Cover story · SMS
+
+## Bitcoin by text.
+
+Customers text a business’s agent like they text a friend. The agent replies, quotes and takes payment.
+
+Coming SMS for agents. [Bitcoin by text](https://bwalletx.com/sms)
+
+Finally, a good reason to reply to a text.
+
+Hodl my b · Issue 1 · 6
+
+Cover story · receipts
+
+## Receipts anyone can check.
+
+Every bWalletX payment settles on chain. You, your customer and anyone else see the same record. Arguments about who paid what get very short.
+
+Live On-chain receipts.
+
+Hodl my b · Issue 1 · 7
+
+This week · 5.2.26
+
+## New in the wallet.
+
+- LiveA White paper theme with minimalist bApp icons
+- LiveYour bAvatar is the menu
+- LiveLike · 1¢ on token cards buys a little of that token
+- LiveAlbum Spaces, synced video, pay to speak
+- LiveAll 19 bApps sign in and pay with bWalletX
+- Next releaseAsk b sends error reports for you
+
+[All releases](https://bwalletx.com/releases)
+
+Hodl my b · Issue 1 · 8
+
+Also this week
+
+[EditionsLive · your branded wallet](https://bwalletx.com/themes/custom)[Theme StoreLive · new looks](https://bwalletx.com/themes)[Credits cardComing · prepay](https://bwalletx.com/credits)[bSharesShare registers](https://bwalletx.com/bshares)
+
+Hodl my b · Issue 1 · 9
+
+Also this week
+
+[bChatX roomsLive · a token per room](https://www.bchatx.com/room/new/invite/b-creative)[b creativeThe spot](https://bwalletx.com/b-creative)[Digital Ice-CreamThree friends, one token](https://bwalletx.com/digital-ice-cream)[bAppsLive · all 19](https://bwalletx.com/bapps)
+
+Hodl my b · Issue 1 · 10
+
+Where things stand
+
+## Live today.
+
+- LiveOn-chain receipts for every payment
+- LiveBRC-100: any site or agent can ask bWalletX to pay or sign. [Developers](https://bwalletx.com/developers)
+- LiveCLI + MCP agent wallet with cap, Stop, rate limit. [CLI](https://bwalletx.com/cli)
+- LiveAsk b, the assistant inside the wallet
+- LiveYour own theme for $99 a year. [Editions](https://bwalletx.com/themes/custom)
+- LiveA bChatX room with its own token
+
+Hodl my b · Issue 1 · 11
+
+Where things stand
+
+## On the way.
+
+- Next releaseAgent from a link
+- Next releaseError reports from Ask b
+- ComingCapped agent account in the app
+- ComingSMS for agents. [Bitcoin by text](https://bwalletx.com/sms)
+- ComingbCredits: prepay for b. [Credits](https://bwalletx.com/credits)
+- ComingShare one fact, such as over 18. [Identity](https://bwalletx.com/identity)
+
+Hodl my b · Issue 1 · 12
+
+Next week
+
+## Same time, same beer.
+
+A new issue every week: everything we shipped, nicely presented.
+[Get bWalletX →](https://bwalletx.com/get)
+Less noise. More life. Just b.
+
+Hodl my b · Issue 1 · 13
+
+Back cover
+
+## Past issues
+[Issue 1 · week of 12 Oct 2026Business agents, plus the week’s round-up.](https://bwalletx.com/hodl-my-b/1)
+By The Bitcoin Corporation Ltd · Beer emoji: Twemoji, CC-BY 4.0
+
+← PrevNext →
 
 ---
 
