@@ -34,6 +34,21 @@
       body.paper[data-theme="blue"] { --paper: #edf2f9; --sheet: #f8fbff; --ink: #0c1f3d; --muted: #3c5170; --dim: #7c8ca6; --hair: #cfdbec; --hover: #e0e9f5; }
       body.paper[data-theme="yellow"] { --paper: #fbf5dc; --sheet: #fffcef; --ink: #2e2304; --muted: #63562b; --dim: #9a8c5c; --hair: #ebe0b4; --hover: #f5ecc6; }
       body.paper { color-scheme: light; }
+      body.paper[data-theme="vexvoid"] { --paper: #000000; --sheet: #050505; --ink: #f2f2f2; --muted: #a6a6a6; --dim: #6e6e6e; --hair: #2b2b2b; --hover: #141414; color-scheme: dark;
+        background-image: linear-gradient(rgba(255,255,255,.07) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.07) 1px, transparent 1px), linear-gradient(rgba(255,255,255,.03) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.03) 1px, transparent 1px); }
+      .tp section.hero { position: relative; }
+      .tp section.hero > .wrapx { position: relative; z-index: 1; }
+      .vxbg, .vxcard, .vxcredit { display: none; }
+      body.paper[data-theme="vexvoid"] .vxbg { display: block; position: absolute; inset: 0; width: 100%; height: 100%; opacity: .5; pointer-events: none; z-index: 0; }
+      body.paper[data-theme="vexvoid"] .vxcard { display: block; position: absolute; inset: 0; width: 100%; height: 100%; opacity: .32; }
+      body.paper[data-theme="vexvoid"] .vxcredit { display: block; }
+      body.paper[data-theme="vexvoid"] .card .art { display: none; }
+      body.paper[data-theme="vexvoid"] .card, body.paper[data-theme="vexvoid"] .tile { box-shadow: 0 0 0 .5px #fff; }
+      body.paper[data-theme="vexvoid"] .tblock svg g { stroke: #f2f2f2; }
+      .vxcredit { margin: 18px 0 0; font: 500 .7rem var(--mono); letter-spacing: .14em; text-transform: uppercase; color: var(--muted); }
+      .vxcredit a { color: var(--ink); }
+      .card .row1, .card .bal, .card .sats, .card .addr, .card .chip, .card .bm { z-index: 1; }
+      .card .bm { color: var(--ink); }
       .tcell { font: inherit; text-align: left; color: inherit; background: rgba(247,246,242,.0); border: 0; cursor: pointer; }
       .tcell:hover, .tcell:focus-visible, .tcell[aria-pressed="true"] { outline: 2px solid var(--ink); outline-offset: -6px; }
       .tcell[aria-pressed="true"] h3::before { content: "\25A0  "; }
@@ -236,19 +251,21 @@
     <main class="tp">
       <div class="ruler" aria-hidden="true"><span style="left:3px">0</span><span style="left:43px">10</span><span style="left:83px">20</span><span style="left:123px">30</span><span style="left:163px">40</span><span style="left:203px">50</span><span style="left:243px">60</span><span style="left:283px">70</span><span style="left:323px">80</span><span style="left:363px">90</span><span style="left:403px">100</span><span style="left:443px">110</span><span style="left:483px">120</span><span style="left:523px">130</span><span style="left:563px">140</span><span style="left:603px">150</span><span style="left:643px">160</span><span style="left:683px">170</span><span style="left:723px">180</span><span style="left:763px">190</span><span style="left:803px">200</span><span style="left:843px">210</span><span style="left:883px">220</span><span style="left:923px">230</span><span style="left:963px">240</span><span style="left:1003px">250</span><span style="left:1043px">260</span><span style="left:1083px">270</span><span style="left:1123px">280</span><span style="left:1163px">290</span><span style="left:1203px">300</span><span style="left:1243px">310</span><span style="left:1283px">320</span><span style="left:1323px">330</span><span style="left:1363px">340</span><span style="left:1403px">350</span><span style="left:1443px">360</span><span style="left:1483px">370</span><span style="left:1523px">380</span><span style="left:1563px">390</span></div>
       <section class="hero">
+        <canvas class="vxbg" id="vxbg" aria-hidden="true"></canvas>
         <div class="wrapx split">
           <div>
             <p class="num">Themes <b>Sheet 00 / 05</b></p>
             <h1>Make bWallet yours.</h1>
             <p class="lede">Pick the colours of the app and the art on your card. Here are the new paper themes: tinted paper, dark ink of the same hue, thin lines and lots of room.</p>
+            <p class="vxcredit">Artist theme by <a href="https://bchatx.com/u/vexvoid" target="_blank" rel="noopener">VexVoid &middot; bTV: AIVJ</a></p>
             <div class="cta"><a class="pri" href="#how">How to change it</a><a class="sec" href="/get">Get bWalletX</a></div>
           </div>
           <div>
             <div class="dwg"><span class="dim w" aria-hidden="true"><span>85.6 mm</span></span><span class="dim h" aria-hidden="true"><span>54 mm</span></span><div class="obj">
             <div class="card" role="img" aria-label="A white bWallet card with black type and a faint wave">
-              <svg class="art" style="opacity:.12"><use href="#wave" /></svg>
+              <svg class="art" style="opacity:.12"><use href="#wave" /></svg><canvas class="vxcard" id="vxcard" aria-hidden="true"></canvas>
               <div class="row1"><i></i>you@bwalletx.com</div>
-              <svg class="bm" viewBox="0 0 104 124" style="color:#111"><use href="#b-outline" /></svg>
+              <svg class="bm" viewBox="0 0 104 124"><use href="#b-outline" /></svg>
               <div class="bal">$656.32</div>
               <div class="sats">3,509,735,414 sats</div>
               <div class="addr">19McRWSz9i8…2dUa39S</div>
@@ -256,7 +273,7 @@
             </div>
             </div></div>
             <div class="tblock" aria-label="Title block">
-              <div class="t"><span>bWallet &middot; <span id="tname">White</span> theme</span><svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><g fill="none" stroke="#d6202a" stroke-width="1"><circle cx="7" cy="7" r="4"/><path d="M7 0V14M0 7H14"/></g></svg></div>
+              <div class="t"><span id="ttitle">bWallet &middot; White theme</span><svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><g fill="none" stroke="#d6202a" stroke-width="1"><circle cx="7" cy="7" r="4"/><path d="M7 0V14M0 7H14"/></g></svg></div>
               <div><em>Sheet</em>01</div><div><em>Scale</em>1:1</div>
               <div class="opt"><em>Date</em>16.10.2026</div><div class="opt"><em>Drawn</em>bWalletX</div>
             </div>
@@ -274,6 +291,7 @@
             <button type="button" class="tcell" data-t="pink"><div class="sw" style="background:#f3c9d4"></div><h3>Pink <span class="pill soon">Coming</span></h3><p>Blush paper, deep rose ink.</p></button>
             <button type="button" class="tcell" data-t="blue"><div class="sw" style="background:#c3d4ee"></div><h3>Blue <span class="pill soon">Coming</span></h3><p>Blueprint paper, navy ink.</p></button>
             <button type="button" class="tcell" data-t="yellow"><div class="sw" style="background:#f1df8f"></div><h3>Yellow <span class="pill soon">Coming</span></h3><p>Legal-pad paper, umber ink.</p></button>
+            <button type="button" class="tcell" data-t="vexvoid"><div class="sw" style="background:#000 radial-gradient(circle at 35% 40%,#fff 0 1px,transparent 1.5px) 0 0/9px 9px;border-color:#000"></div><h3>VexVoid <span class="pill soon">Coming</span></h3><p>Artist edition: black, stark white, point field.</p></button>
             <div><div class="sw" style="background:linear-gradient(135deg,#ffd24d,#eab300);border-color:#d9a400"></div><h3>Gold <span class="pill live">Live</span></h3><p>The default. Gold on black.</p></div>
             <div><div class="sw" style="background:#111;border-color:#111"></div><h3>Dark <span class="pill live">Live</span></h3><p>Quiet black for night use.</p></div>
           </div>
@@ -364,6 +382,8 @@
             <li><span class="pill soon">Coming</span><span><b>White card art set</b>: plain paper, the washed-out wave and more.</span></li>
             <li><span class="pill soon">Coming</span><span><b>More pure-colour themes.</b></span></li>
             <li><span class="pill live">Live</span><span><b>This page in four papers</b>: White, Pink, Blue and Yellow, hover to preview, click for its own page (/themes/pink etc.).</span></li>
+            <li><span class="pill live">Live</span><span><b>VexVoid artist theme</b> preview at /themes/vexvoid: black, stark white and the live point field from the VexVoid AV set.</span></li>
+            <li><span class="pill soon">Coming</span><span><b>VexVoid artist theme in the app</b>: artist edition, in-app theme coming.</span></li>
             <li><span class="pill soon">Coming</span><span><b>Pink, Blue and Yellow</b>: preview only &mdash; in-app theme coming.</span></li>
             <li><span class="pill soon">Coming</span><span><b>Install a colour edition</b> of the web wallet to your home screen (the web wallet doesn&rsquo;t read the theme yet, so no install button until it does).</span></li>
           </ul>
@@ -389,15 +409,77 @@
       </div>
     </footer>
     <script>
+      /* VexVoid point field, a small port of bwalletX src/mobile/media/vexvoid/pointField.ts (after the hero of
+         b0ase.github.io/vexvoid-AV-client). Starts only when the VexVoid theme is shown; pauses off-screen. */
       (function () {
-        var T = { white: '#f7f6f2', pink: '#fbeef1', blue: '#edf2f9', yellow: '#fbf5dc' };
-        var N = { white: 'White', pink: 'Pink', blue: 'Blue', yellow: 'Yellow' };
+        var S = Math.sin, C = Math.cos, A = Math.atan2, M = function (x, y) { return Math.sqrt(x * x + y * y); };
+        function field(cv, bud) {
+          var g = cv.getContext('2d', { alpha: false }); if (!g) return null;
+          var W = 2, H = 2, cx = 1, cy = 1, sc = 1, t = 0, cur = 0, nx = 1, tr = 0, m1 = 1, m2 = 1, m3 = 1, m4 = 1;
+          var F = [
+            { n: 15000, dv: 120, f: function (x, y) { var k = (4 + S(y * 2 * m4 - t) * 3) * C(x / (29 * m1)), e = y / 8 - 13, d = M(k, e), q = 3 * S(k * 2 * m2) + .3 / k + S(y / 25) * k * (9 + 4 * S(e * 9 * m3 - d * 3 + t * 2)), c = d - t; return [q + 30 * C(c), q * S(c) + d * 39 * m4 - 220]; } },
+            { n: 12000, dv: 35, f: function (x, y) { var k = 9 * C(x / (8 * m1)), e = y / 8 - 12.5, d = M(k, e) * M(k, e) / 99 + S(t) / 6 + .5, q = 99 - e * S(A(k, e) * ((7 * m2) | 0 || 7)) / d + k * (3 + C(d * d * m3 - t) * 2), c = d / 2 + e / 69 - t / 16; return [q * S(c), (q + 19 * d) * C(c)]; } },
+            { n: 22000, dv: 200, mi: 1, f: function (x, y) { var k = x / 12 - 12.5, d = 2 * Math.abs(C(k / (2 * m1)) + S(y / 4 * m3) + C(k / 8)), q = x / 4 + 90 + d * k * C(d - t * 2 + y / 24), c = y / 79 - t / 8 + d / 8 * m2; return [q * .7 * C(c) + q / 8 * S(c * 4 * m4), q * .7 * S(c)]; } }
+          ];
+          var base = F.map(function (a) { return a.n; });
+          function lfo() { m1 = 1 + .35 * S(t * .071); m2 = 1 + .25 * S(t * .113 + 1); m3 = 1 + .5 * S(t * .047 + 2) * S(t * .19); m4 = 1 + .2 * C(t * .089 + 3); }
+          function resize() {
+            var r = cv.getBoundingClientRect(), d = Math.min(window.devicePixelRatio || 1, 1.5);
+            W = cv.width = Math.max(2, r.width * d | 0); H = cv.height = Math.max(2, r.height * d | 0);
+            cx = W / 2; cy = H / 2; sc = Math.min(W, H) / 520;
+            var b = Math.min(1, Math.max(bud, r.width * r.height / 1296000));
+            F.forEach(function (a, i) { a.n = Math.round(base[i] * b); });
+            g.fillStyle = '#000'; g.fillRect(0, 0, W, H);
+          }
+          function one(a, al) {
+            if (al <= .01) return; g.fillStyle = 'rgba(255,255,255,' + (.5 * al).toFixed(3) + ')';
+            var st = base[F.indexOf(a)] / a.n;
+            for (var j = a.n; j--;) { var i = j * st | 0, p = a.f(i % 300, i / a.dv | 0); if (p[0] !== p[0] || p[1] !== p[1]) continue;
+              var x = cx + p[0] * sc, y = cy + p[1] * sc; g.fillRect(x, y, 1, 1); if (a.mi) g.fillRect(2 * cx - x, y, 1, 1); }
+          }
+          function frame(dt) {
+            g.fillStyle = 'rgba(0,0,0,.32)'; g.fillRect(0, 0, W, H);
+            t += Math.PI / 240 * dt; tr += .004 * dt; lfo();
+            if (tr >= 1) { tr = 0; cur = nx; nx = Math.random() * F.length | 0; if (nx === cur) nx = (cur + 1) % F.length; }
+            one(F[cur], 1 - tr); one(F[nx], tr);
+            if (Math.random() < .05) { var bh = 2 + Math.random() * 14 | 0, by = Math.random() * (H - bh) | 0; g.drawImage(cv, 0, by, W, bh, (Math.random() - .5) * 40 | 0, by, W, bh); }
+            for (var i = W * H / 9000; i-- > 0;) { var a = Math.random(); g.fillStyle = 'rgba(255,255,255,' + (.08 + a * a * .35).toFixed(2) + ')'; g.fillRect(Math.random() * W | 0, Math.random() * H | 0, 1, 1 + (Math.random() * 3 | 0)); }
+          }
+          function still(k) { g.fillStyle = '#000'; g.fillRect(0, 0, W, H); t = 2; lfo(); one(F[k || 0], 1); }
+          return { resize: resize, frame: frame, still: still };
+        }
+        var started = false;
+        window.vxStart = function () {
+          if (started) return; started = true;
+          var bg = document.getElementById('vxbg'), cd = document.getElementById('vxcard');
+          var c = cd && field(cd, .3); if (c) { c.resize(); c.still(2); }
+          var f = bg && field(bg, .22); if (!f) return;
+          f.resize();
+          var reduce = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
+          if (reduce) { f.still(); return; }
+          var vis = true, raf = 0, last = 0;
+          function loop(now) { raf = 0; if (!vis || document.body.dataset.theme !== 'vexvoid' || document.hidden) return;
+            var dt = last ? Math.min(3, (now - last) / 16.67) : 1; last = now; f.frame(dt); raf = requestAnimationFrame(loop); }
+          function kick() { if (!raf) { last = 0; raf = requestAnimationFrame(loop); } }
+          if ('IntersectionObserver' in window) new IntersectionObserver(function (e) { vis = e[0].isIntersecting; if (vis) kick(); }).observe(bg);
+          new MutationObserver(kick).observe(document.body, { attributes: true, attributeFilter: ['data-theme'] });
+          document.addEventListener('visibilitychange', kick);
+          window.addEventListener('resize', function () { f.resize(); if (c) { c.resize(); c.still(2); } });
+          kick();
+        };
+      })();
+    </script>
+    <script>
+      (function () {
+        var T = { white: '#f7f6f2', pink: '#fbeef1', blue: '#edf2f9', yellow: '#fbf5dc', vexvoid: '#000000' };
+        var N = { white: 'White', pink: 'Pink', blue: 'Blue', yellow: 'Yellow', vexvoid: 'VexVoid' };
         var cells = document.querySelectorAll('.tcell');
-        function fromPath() { var m = location.pathname.match(/^\/themes\/(white|pink|blue|yellow)\/?$/); return m ? m[1] : 'white'; }
+        function fromPath() { var m = location.pathname.match(/^\/themes\/(white|pink|blue|yellow|vexvoid)\/?$/); return m ? m[1] : 'white'; }
         var sel = fromPath();
         function paint(t) {
           document.body.setAttribute('data-theme', t);
-          var n = document.getElementById('tname'); if (n) n.textContent = N[t];
+          var n = document.getElementById('ttitle'); if (n) n.textContent = 'bWallet \u00b7 ' + N[t] + (t === 'vexvoid' ? ' edition' : ' theme');
+          if (t === 'vexvoid' && window.vxStart) window.vxStart();
         }
         function select(t) {
           sel = t; paint(t);
@@ -405,8 +487,8 @@
           document.getElementById('tico').href = '/theme-apps/icon-' + t + '-180.png';
           document.getElementById('tcol').content = T[t];
           document.getElementById('iicon').src = '/theme-apps/icon-' + t + '-192.png';
-          document.getElementById('ititle').textContent = 'Install the ' + N[t] + ' edition';
-          document.getElementById('inote').textContent = t === 'white'
+          document.getElementById('ititle').textContent = t === 'vexvoid' ? 'VexVoid artist edition' : 'Install the ' + N[t] + ' edition';
+          document.getElementById('inote').textContent = t === 'vexvoid' ? 'Artist edition: in-app theme coming. No install button until the VexVoid pack ships in the app.' : t === 'white'
             ? 'Coming: the web wallet doesn\u2019t read ?theme=white yet, so there\u2019s no install button until it does.'
             : 'Preview: in-app theme coming. No install button until the ' + N[t] + ' pack ships in the app.';
           cells.forEach(function (c) { c.setAttribute('aria-pressed', c.dataset.t === t ? 'true' : 'false'); });

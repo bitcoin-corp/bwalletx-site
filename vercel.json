@@ -2,7 +2,7 @@
   "cleanUrls": true,
   "rewrites": [
     {
-      "source": "/themes/:colour(white|pink|blue|yellow)",
+      "source": "/themes/:colour(white|pink|blue|yellow|vexvoid)",
       "destination": "/themes"
     },
     {
@@ -43,6 +43,16 @@
     }
   ],
   "redirects": [
+    {
+      "source": "/theme/:colour(white|pink|blue|yellow|vexvoid)",
+      "destination": "/themes/:colour",
+      "permanent": false
+    },
+    {
+      "source": "/theme",
+      "destination": "/themes",
+      "permanent": false
+    },
     {
       "source": "/:i(invites|Invites|INVITES|Invite|INVITE)",
       "destination": "/invite",
