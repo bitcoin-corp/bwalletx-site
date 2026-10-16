@@ -92,6 +92,23 @@ def cover_art():
             + '<div class="bigb">b</div>' + emo(['beer', 'spark', 'beer', 'spark', 'beer', 'spark'], 11, 'all')
             + '<div class="cchat">' + CHAT('Got the sticker pack?', 'Yes! 1,500 sats. Tap to pay.', 'Paid &#x2714;') + '</div></div>')
 
+def qr_svg(url='https://bwalletx.com/get'):
+    import qrcode
+    q = qrcode.QRCode(border=4, error_correction=qrcode.constants.ERROR_CORRECT_M); q.add_data(url); q.make(fit=True)
+    m = q.get_matrix(); n = len(m)
+    d = ''.join(f'M{x} {y}h1v1h-1z' for y, row in enumerate(m) for x, v in enumerate(row) if v)
+    return f'<svg viewBox="0 0 {n} {n}" shape-rendering="crispEdges" role="img" aria-label="QR code for bwalletx.com/get"><rect width="{n}" height="{n}" fill="#fff"/><path d="{d}" fill="#000"/></svg>'
+
+def getqr():
+    return ('<div class="getqr r4"><a class="qrf" href="/get">' + qr_svg() + '</a><div class="qrl"><b>Scan to get bWallet</b><span>bwalletx.com/get</span></div>'
+            '<a class="getbtn" href="/get">Get bWallet &rarr;</a></div>')
+
+STAMP = '<div class="flt"><div class="stamp" aria-hidden="true">LIVE<small>&#x2713; today</small></div></div>'
+
+RECEIPT = ('<div class="flt"><div class="rcpt" aria-hidden="true"><b class="rb">b</b><p class="rt">bWalletX RECEIPT</p><p>Table for 2 &middot; deposit</p>'
+           '<p class="ra">500 sats</p><p>txid 3f9a&hellip;c21e</p><p class="rok">&#x2713; on chain</p></div></div>')
+SMSFLOAT = ('<div class="note" aria-hidden="true"><img src="' + TW + '1f4e9.svg" alt="" /><div><b>New text</b><span>Paid 500 sats &#x2713;</span></div></div>')
+
 def pages_issue_1(back):
     P = []
     P.append(page(media('cover', cover_art())
@@ -112,23 +129,23 @@ def pages_issue_1(back):
         deco=bg('stripes', BLOB('#fff', 60, 30, 80) + RING('#111', -10, 70, 50), emo(['card', 'receipt', 'cart', 'burger', 'coffee', 'ok'], 4), wv=('rgba(255,122,61,.35)', 'rgba(255,255,255,.5)'))))
     P.append(page(f'<p class="k r1">Cover story &middot; pocket money</p><h2 class="r2">An agent with a daily allowance.</h2><p class="r3">Its own capped account: a daily limit, and a big Stop button for when it gets ideas above its station.</p><p class="r3">{N} Capped agent account inside the app.</p><p class="r3">{L} Today on your computer: the <code>bwalletx</code> CLI agent wallet, with a daily cap and Stop. <a href="/cli">CLI</a></p>' + media('allowance', '<div class="big stopb">STOP</div>'), 's-pink', 5,
         deco=bg('dots', BLOB('#ff6b9e', 65, 55, 90) + RING('#fff', 5, 5, 40), emo(['moneybag', 'coin', 'stop', 'robot', 'cal'], 5))))
-    P.append(page(f'<p class="k r1">Cover story &middot; SMS</p><h2 class="r2">Bitcoin by text.</h2><p class="r3">Customers text a business&rsquo;s agent like they text a friend. It replies, quotes and takes payment.</p><p class="r3">{C} SMS for agents. <a href="/sms">Bitcoin by text</a></p>' + media('sms', CHAT('Table for 2 at 8?', 'Booked. 500 sats deposit?', 'Y')) + '<p class="q r4">Finally, a good reason to reply to a text.</p>', 's-lime', 6,
+    P.append(page(f'<p class="k r1">Cover story &middot; SMS</p><h2 class="r2">Bitcoin by text.</h2><p class="r3">Customers text a business&rsquo;s agent like they text a friend. It replies, quotes and takes payment.</p><p class="r3">{C} SMS for agents. <a href="/sms">Bitcoin by text</a></p>' + media('sms', '<div class="duo">' + CHAT('Table for 2 at 8?', 'Booked. 500 sats deposit?', 'Y') + SMSFLOAT + '</div>') + '<p class="q r4">Finally, a good reason to reply to a text.</p>', 's-lime', 6,
         deco=bg('stripes', BLOB('#7ee0a1', 60, 50, 90), emo(['phone', 'chat', 'env', 'signal'], 6), wv=('rgba(17,17,17,.12)', 'rgba(126,224,161,.6)'))))
-    P.append(page(f'<p class="k r1">Cover story &middot; receipts</p><h2 class="r2">Receipts <span class="gd">anyone can check.</span></h2><p class="r3">Every bWalletX payment settles on chain. You, your customer and anyone else see the same record.</p><p class="r3">{L} On-chain receipts.</p>' + media('receipts', '<div class="big gd">&#x2714;</div>') + '<p class="q r4">Arguments about who paid what get very short.</p>', 's-black', 7,
+    P.append(page(f'<p class="k r1">Cover story &middot; receipts</p><h2 class="r2">Receipts <span class="gd">anyone can check.</span></h2><p class="r3">Every bWalletX payment settles on chain. You, your customer and anyone else see the same record.</p><p class="r3">{L} On-chain receipts.</p>' + media('receipts', '<div class="big gd">&#x2714;</div>') + RECEIPT + '<p class="q r4">Arguments about who paid what get very short.</p>', 's-black', 7,
         deco=bg('grid', RING('rgba(255,210,77,.4)', 50, 40, 90) + RING('rgba(255,210,77,.2)', 40, 30, 120), emo(['receipt', 'link', 'search', 'ok'], 7))))
     P.append(page(f'<p class="k r1">This week &middot; 5.2.26</p><h2 class="r2">New in the wallet.</h2>' + media('release', '<div class="big gd">5.2.26</div>') + f'<ul class="st r3"><li>{L}White paper theme, minimalist bApp icons</li><li>{L}Your bAvatar is the menu</li><li>{L}Like &middot; 1&cent; buys a little of that token</li><li>{L}Album Spaces, synced video, pay to speak</li><li>{L}All 19 bApps sign in and pay</li><li>{N}Ask b sends error reports for you</li></ul><p class="r4"><a href="/releases">All releases</a></p>', 's-paper', 8,
         deco=bg('grid', BLOB('#ffd24d', 72, -12, 60), emo(['gift', 'rocket', 'party'], 8))))
     P.append(page('<p class="k r1">Also this week</p><h2 class="r2">Make it yours.</h2><div class="g r3">' + card('/themes/custom','og-themes-custom.png','Editions','Live &middot; your branded wallet') + card('/themes','og-themes-v2.png','Theme Store','Live &middot; new looks') + card('/credits','og-credits-v1.png','Credits card','Coming &middot; prepay') + card('/bshares','og-bshares-v3.jpg','bShares','Share registers') + '</div>', 's-orange', 9,
         deco=bg('dots', BLOB('#ffd24d', 65, 60, 80) + RING('#111', -8, -6, 50), emo(['art', 'gem', 'card', 'spark'], 9), wv=('rgba(255,210,77,.4)', 'rgba(255,255,255,.3)'))))
     P.append(page('<p class="k r1">Also this week</p><h2 class="r2">Rooms, spots, ice-cream.</h2><div class="g r3">' + card('https://www.bchatx.com/room/new/invite/b-creative','og-chat-v2.png','bChatX rooms','Live &middot; a token per room',True) + card('/b-creative','og-b-creative.png','b creative','The spot') + card('/digital-ice-cream','og-digital-ice-cream-v1.png','Digital Ice-Cream','Three friends, one token') + card('/bapps','og-bapps-v1.png','bApps','Live &middot; all 19') + '</div>', 's-peach', 10,
-        deco=bg('dots', BLOB('#ffb347', 70, 70, 70) + BLOB('#ff9ec4', -10, 20, 50), emo(['ice', 'cake', 'berry', 'donut', 'party', 'balloon', 'note', 'head', 'art', 'rainbow', 'heart', 'spark', 'sun', 'flower', 'cool', 'ball'], 10, 'all'))))
-    P.append(page(f'<p class="k r1">Where things stand</p><h2 class="r2">Live today.</h2><ul class="st r3"><li>{L}On-chain receipts for every payment</li><li>{L}BRC-100: any site or agent can ask bWalletX to pay or sign. <a href="/developers">Developers</a></li><li>{L}CLI + MCP agent wallet with cap, Stop, rate limit. <a href="/cli">CLI</a></li><li>{L}Ask b, the assistant inside the wallet</li><li>{L}Your own theme for $99 a year. <a href="/themes/custom">Editions</a></li><li>{L}A bChatX room with its own token</li></ul>', 's-cream', 11,
+        deco=bg('dots', BLOB('#ffb347', 70, 70, 70) + BLOB('#ff9ec4', -10, 20, 50), emo(['ice', 'cake', 'berry', 'donut', 'party', 'balloon', 'note', 'head', 'art', 'rainbow', 'heart', 'spark', 'sun', 'flower', 'cool', 'ball'], 10))))
+    P.append(page(f'<p class="k r1">Where things stand</p><h2 class="r2">Live today.</h2><ul class="st r3"><li>{L}On-chain receipts for every payment</li><li>{L}BRC-100: any site or agent can ask bWalletX to pay or sign. <a href="/developers">Developers</a></li><li>{L}CLI + MCP agent wallet with cap, Stop, rate limit. <a href="/cli">CLI</a></li><li>{L}Ask b, the assistant inside the wallet</li><li>{L}Your own theme for $99 a year. <a href="/themes/custom">Editions</a></li><li>{L}A bChatX room with its own token</li></ul>' + STAMP, 's-cream', 11,
         deco=bg('grid', BLOB('#7ee0a1', 75, 70, 60), emo(['ok', 'link', 'rocket'], 11))))
     P.append(page(f'<p class="k r1">Where things stand</p><h2 class="r2">On the way.</h2><ul class="st r3"><li>{N}Agent from a link</li><li>{N}Error reports from Ask b</li><li>{N}Capped agent account in the app</li><li>{C}SMS for agents. <a href="/sms">Bitcoin by text</a></li><li>{C}bCredits: prepay for b. <a href="/credits">Credits</a></li><li>{C}Share one fact, such as over 18. <a href="/identity">Identity</a></li></ul>', 's-black', 12,
         deco=bg('grid', RING('rgba(255,210,77,.35)', 60, 55, 80), emo(['soon', 'rocket', 'cal'], 12))))
-    P.append(page('<p class="k r1">Next week</p><h2 class="r2">Same time, same beer.</h2><p class="r3">A new issue every week: everything we shipped, nicely presented.</p>' + media('next', '<img class="beer2" src="/images/twemoji-beer.svg" alt="" />') + '<a class="btn r4" href="/get">Get bWalletX &rarr;</a><p class="q r4">Less noise. More life. Just b.</p>', 's-gold', 13,
+    P.append(page('<p class="k r1">Next week</p><h2 class="r2">Same time, same beer.</h2><p class="r3">A new issue every week: everything we shipped, nicely presented.</p>' + media('next', '<img class="beer2" src="/images/twemoji-beer.svg" alt="" />') + getqr() + '<p class="q r4">Less noise. More life. Just b.</p>', 's-gold', 13,
         deco=bg('dots', RING('#111', 60, 40, 80), emo(['soon', 'sunrise', 'gift'], 13), wv=('rgba(255,255,255,.35)', 'rgba(17,17,17,.12)'))))
-    P.append(page('<p class="k r1">Back cover</p><h2 class="r2">Just b.</h2>' + media('lifestyle', '<div class="big gd">b</div>') + '<p class="k r3">Past issues</p><div class="r3">' + back + '</div><p class="foot2">By The Bitcoin Corporation Ltd &middot; Emoji: Twemoji, CC-BY 4.0 &middot; Music: original, made in your browser</p>', 's-back', hard=True,
+    P.append(page('<p class="k r1">Back cover</p><h2 class="r2">Just b.</h2>' + media('lifestyle', '<div class="big gd">b</div>') + '<p class="k r3">Past issues</p><div class="r3">' + back + '</div>' + getqr() + '<p class="foot2">By The Bitcoin Corporation Ltd &middot; Emoji: Twemoji, CC-BY 4.0 &middot; Music: original, made in your browser</p>', 's-back', hard=True,
         deco=bg('grid', BLOB('radial-gradient(circle,#f5b800,transparent 70%)', 40, 50, 100), emo(['beer', 'clink', 'notes', 'cool'], 14))))
     return P
 
@@ -245,6 +262,28 @@ img.og{width:100%;height:auto;aspect-ratio:1200/630;object-fit:cover;display:blo
 .spacer{flex:1}
 .s-cover>.wash{background:linear-gradient(180deg,rgba(11,10,8,.85) 0%,rgba(11,10,8,.2) 32%,rgba(11,10,8,0) 55%,rgba(11,10,8,.85) 100%)}
 .book{transition:transform .7s cubic-bezier(.2,.8,.2,1)}
+.spacer:has(+.flt){display:none}.flt{flex:1;min-height:0;display:flex;align-items:center;justify-content:center}
+.rcpt{width:min(240px,46cqw);background:#fffdf7;color:#111;font:500 clamp(11px,1.5cqh,14px)/1.5 var(--mono);letter-spacing:.06em;padding:16px 16px 26px;text-align:center;transform:rotate(-4deg);
+ -webkit-mask:linear-gradient(#000,#000) top/100% calc(100% - 10px) no-repeat,conic-gradient(from -45deg at bottom,#0000,#000 1deg 89deg,#0000 90deg) bottom/16px 10px repeat-x;
+ mask:linear-gradient(#000,#000) top/100% calc(100% - 10px) no-repeat,conic-gradient(from -45deg at bottom,#0000,#000 1deg 89deg,#0000 90deg) bottom/16px 10px repeat-x;
+ filter:drop-shadow(0 20px 30px rgba(0,0,0,.5));animation:rbob 3s ease-in-out infinite}
+.rcpt p{margin:2px 0;max-width:none}.rcpt .rb{display:inline-grid;place-items:center;width:28px;height:28px;border-radius:50%;background:linear-gradient(160deg,#fff3b0,#f5b800);font:700 18px var(--hf);margin-bottom:6px}
+.rcpt .rt{font-weight:600;border-bottom:1px dashed #999;padding-bottom:6px}.rcpt .ra{font:700 1.8em var(--hf);letter-spacing:-.02em}.rcpt .rok{color:#127a3a;font-weight:600;border-top:1px dashed #999;padding-top:6px}
+@keyframes rbob{0%,100%{transform:translateY(-10px) rotate(-6deg)}50%{transform:translateY(10px) rotate(-2deg)}}
+.duo{display:flex;align-items:center;gap:4cqw;width:100%}.duo .chat{flex:1 1 60%}
+.note{flex:0 1 40%;display:flex;gap:10px;align-items:center;background:rgba(255,255,255,.92);border:2px solid #111;border-radius:18px;padding:12px 14px;box-shadow:0 20px 40px -18px rgba(0,0,0,.5);transform:rotate(5deg);animation:rbob2 3.4s ease-in-out infinite;font-size:.9em}
+.note img{width:36px}.note b{display:block;font:700 1em var(--hf)}.note span{font:500 .8em var(--mono)}
+@keyframes rbob2{50%{transform:translateY(-8px) rotate(3deg)}}
+@container (max-width:600px){.duo{flex-direction:column;align-items:stretch}.note{align-self:flex-end;flex:none}}
+@media (prefers-reduced-motion:reduce){.rcpt,.note{animation:none}}
+.stamp{font:700 min(10cqh,16cqw)/1 var(--hf);letter-spacing:-.03em;color:#127a3a;border:6px solid #127a3a;border-radius:18px;padding:10px 26px 14px;transform:rotate(-8deg);text-align:center;background:rgba(255,255,255,.55);box-shadow:0 20px 40px -20px rgba(0,0,0,.4);animation:rbob 3.4s ease-in-out infinite}
+.stamp small{display:block;font:600 .22em var(--mono);letter-spacing:.2em;text-transform:uppercase}
+.getqr{display:flex;align-items:center;gap:18px;flex-wrap:wrap}
+.qrf{display:block;width:clamp(140px,22cqh,200px);padding:10px;background:#fff;border-radius:18px;border:4px solid #f5b800;box-shadow:0 0 0 2px #111,0 20px 40px -20px rgba(0,0,0,.5)}.qrf svg{display:block;width:100%;height:auto}
+.qrl b{display:block;font:700 1.15em var(--hf)}.qrl span{font:500 .75em var(--mono);letter-spacing:.08em;opacity:.75}
+.getbtn{display:none;flex:1 1 100%;text-align:center;background:#111;color:#ffd24d!important;text-decoration:none;font:700 1.25em var(--hf);padding:16px;border-radius:99px}
+@media (pointer:coarse),(max-width:899px){.getbtn{display:block}.qrf{width:120px}}
+.s-back .getbtn{background:#ffd24d;color:#111!important}.s-back .qrl,.s-back .cd>b,.s-back .cd>span{background:rgba(11,10,8,.72);padding:6px 10px;border-radius:8px}
 .foot2{margin-top:auto!important;font:400 11px var(--mono);letter-spacing:.1em;text-transform:uppercase;opacity:.6}
 .s-back .cd{display:grid;grid-template-columns:44% 1fr;gap:16px;align-items:center}
 /* turn-in motion */
