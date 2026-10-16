@@ -11,6 +11,7 @@ ISSUES = [  # newest last
 ]
 
 MEDIA = {  # slot name -> '/media/hodl/<file>.jpg' or '.mp4' (muted loop). Empty = built-in art. See docs/HODL-MY-B.md.
+    "allowance": "/media/hodl/",
 }
 TW = 'https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/'
 E = dict(beer='1f37a', spark='2728', heart='1f49b', bag='1f6cd', coffee='2615', ice='1f366', art='1f3a8', head='1f3a7', palm='1f334',
