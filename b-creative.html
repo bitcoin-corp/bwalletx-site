@@ -108,7 +108,7 @@
       .tv.poster .sc, .tv.poster .sc *, .tv.poster .sc::before { animation: none !important; }
       .tv.poster .sc.on { clip-path: none; }
       .ej { position: absolute; width: clamp(1.8rem, 6vw, 3rem); height: auto; pointer-events: none; opacity: 0; }
-      .wv { position: absolute; left: 0; bottom: 0; width: 200%; height: 55%; pointer-events: none; }
+      .wv { position: absolute; z-index: -1; left: 0; bottom: 0; width: 200%; height: 55%; pointer-events: none; }
       .wv path { animation-name: wvx, wvy; animation-timing-function: linear, ease-in-out; animation-iteration-count: infinite; animation-direction: normal, alternate; }
       .wv path:nth-child(even) { animation-direction: reverse, alternate; }
       @keyframes wvx { to { transform: translateX(-50%); } }
