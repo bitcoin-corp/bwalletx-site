@@ -332,7 +332,7 @@ b creative
 
 -
 
-▶  Play with sound
+Watch the ad0:41 · SOUND ON
 
 ## Make it yours.
 
@@ -386,16 +386,16 @@ Live: working, in daily use. Beta: the site works, but it's early. Coming: not o
 
 ### Work
 
-[bSheetsLiveSpreadsheets saved on-chainOpen →](https://bitcoin-spreadsheet.vercel.app)[bMailLiveSend email that pays and gets paidOpen →](https://web.bwalletx.com/m/bmail)[bDriveLiveStore and share files on-chainOpen →](https://bitcoin-drive.vercel.app)[bCalLiveKeep a calendar on BitcoinOpen →](https://bitcoin-calendar.vercel.app)[bCodeLiveBuild apps on BitcoinOpen →](https://bitcoin-code.vercel.app)[bJobsBetaFind work and hire, paid in BSVOpen →](https://bitcoin-jobs.vercel.app)[bIDLiveManage your on-chain identityOpen →](https://bitcoin-identity.vercel.app)[bSearchBetaSearch what lives on-chainOpen →](https://bitcoin-search.vercel.app)[bDNSBetaRegister and trade names on BitcoinOpen →](https://bitcoin-dns.vercel.app)
+[bSheetsLiveSpreadsheets saved on-chainOpen →](https://bitcoin-spreadsheet.vercel.app)[bMailLiveSend email that pays and gets paidOpen →](https://web.bwalletx.com/m/bmail)[bDriveLiveStore and share files on-chainOpen →](https://bitcoin-drive.vercel.app)[bCalLiveKeep a calendar on BitcoinOpen →](https://bitcoin-calendar.vercel.app)[bCodeLiveBuild apps on BitcoinOpen →](https://bitcoin-code.vercel.app)[bJobsLiveFind work and hire, paid in BSVOpen →](https://bitcoin-jobs.vercel.app)[bIDLiveManage your on-chain identityOpen →](https://bitcoin-identity.vercel.app)[bSearchLiveSearch what lives on-chainOpen →](https://bitcoin-search.vercel.app)[bDNSLiveRegister and trade names on BitcoinOpen →](https://bitcoin-dns.vercel.app)
 
 ### Media
 
-[bVideoBetaWatch and publish videoOpen →](https://bitcoin-video-nine.vercel.app)[bRadioBetaListen to and run Bitcoin radioOpen →](https://bitcoin-radio.vercel.app)[bPhotosBetaTurn photos into NFTsOpen →](https://bitcoin-photos.vercel.app)[bArtBetaCollect and show on-chain artOpen →](https://bitcoin-art.vercel.app)[bPaintBetaPaint and inscribe your workOpen →](https://bitcoin-paint.vercel.app)[b3DBetaModel and own 3D designsOpen →](https://bitcoin-3d.vercel.app)[bBooksBetaRead and publish booksOpen →](https://bitcoin-books-bay.vercel.app)
+[bVideoLiveWatch and publish videoOpen →](https://bitcoin-video-nine.vercel.app)[bRadioLiveListen to and run Bitcoin radioOpen →](https://bitcoin-radio.vercel.app)[bPhotosLiveTurn photos into NFTsOpen →](https://bitcoin-photos.vercel.app)[bArtLiveCollect and show on-chain artOpen →](https://bitcoin-art.vercel.app)[bPaintLivePaint and inscribe your workOpen →](https://bitcoin-paint.vercel.app)[b3DLiveModel and own 3D designsOpen →](https://bitcoin-3d.vercel.app)[bBooksLiveRead and publish booksOpen →](https://bitcoin-books-bay.vercel.app)
 bEduComingLearn and teach coursesComing
 
 ### Social & more
 
-[bAgentsBetaRun your AI agents and their budgetsOpen →](https://agents.bwalletx.com)[bSocialLivePost and follow on BitcoinOpen →](https://bitcoin-social.vercel.app)[bGamesBetaPlay games on BitcoinOpen →](https://bitcoin-gaming.vercel.app)[bMapsBetaFind places that take BitcoinOpen →](https://bitcoin-maps.vercel.app)
+[bAgentsLiveRun your AI agents and their budgetsOpen →](https://agents.bwalletx.com)[bSocialLivePost and follow on BitcoinOpen →](https://bitcoin-social.vercel.app)[bGamesLivePlay games on BitcoinOpen →](https://bitcoin-gaming.vercel.app)[bMapsLiveFind places that take BitcoinOpen →](https://bitcoin-maps.vercel.app)
 
 ## Build your own
 
@@ -543,7 +543,7 @@ Source: https://bwalletx.com/bpositive
 
 Back a person who is working towards something: a student, an athlete, someone getting sober, a developer learning a new stack, an artist finishing an album. You support them monthly, or pledge money to a milestone that witnesses confirm. It is built inside bWalletX, where the money, the proof and the people already are.
 
-Coming Nothing on this page is in the app yet. bPositive is a plan with the owner’s decisions made (8 Oct 2026). It is not in the released app (5.1.85).
+Live bPositive is in bWalletX 5.2.26: journeys, monthly support, milestone pledges, witnesses and thank-you NFTs.
 
 ## A gift, not an investment
 
@@ -553,17 +553,17 @@ There is no bPositive token, and bPositive will never be combined with a launchp
 
 ## How it works
 
-- ComingJourney pages. The person starts a journey in bWalletX: a title, a short story, a category and, if they want, milestones such as “Pass the AWS Associate exam” or “90 days sober”. The journey is a signed record, so a milestone can’t be quietly changed after people pledge. Updates notify sponsors.
+- LiveJourney pages. The person starts a journey in bWalletX: a title, a short story, a category and, if they want, milestones such as “Pass the AWS Associate exam” or “90 days sober”. The journey is a signed record, so a milestone can’t be quietly changed after people pledge. Updates notify sponsors.
 
-- ComingMonthly support from pots. “Support monthly” is a standing order from one of your [pots](https://bwalletx.com/pots) to the person’s paymail. Pause or cancel it any time with one tap. A gift is final, so payments already made aren’t refunded.
+- LiveMonthly support from pots. “Support monthly” is a standing order from one of your [pots](https://bwalletx.com/pots) to the person’s paymail. Pause or cancel it any time with one tap. A gift is final, so payments already made aren’t refunded.
 
-- ComingMilestone pledges. You pledge an amount to a milestone. It is paid when witnesses confirm the milestone: 2 of 3 by default, each with a verified identity. At first a pledge stays in a pot in your own wallet and is sent when the confirmations arrive, so it is labelled “Pledged”, not “Locked”.
+- LiveMilestone pledges. You pledge an amount to a milestone. It is paid when witnesses confirm the milestone: 2 of 3 by default, each with a verified identity. At first a pledge stays in a pot in your own wallet and is sent when the confirmations arrive, so it is labelled “Pledged”, not “Locked”.
 
 - ComingRefund after the deadline. A later version locks the pledge on chain, so it can only go to the person once witnesses confirm, or back to you after the deadline. Until then, an unconfirmed pledge simply stays with you.
 
-- ComingThank-you NFTs. Sponsors get a thank-you receipt NFT. It is a record, not a reward: it unlocks nothing in the app and has no promised value.
+- LiveThank-you NFTs. Sponsors get a thank-you receipt NFT. It is a record, not a reward: it unlocks nothing in the app and has no promised value.
 
-- ComingSponsors’ room. If the person turns it on, sponsors who hold a thank-you NFT can enter a room for the journey, in bWalletX.
+- LiveSponsors’ room. If the person turns it on, sponsors who hold a thank-you NFT can enter a room for the journey, in bWalletX.
 
 ## Witnesses
 
@@ -571,15 +571,15 @@ The person names witnesses for each milestone, and each witness has to accept. W
 
 ## The rules
 
-- Coming18+ only. Recipients, witnesses and milestone sponsors must be adults at launch.
+- Live18+ only. Recipients, witnesses and milestone sponsors must be adults at launch.
 
-- ComingGifts only. No perks for money beyond thank-you NFTs and updates. Offering services or content for money is selling, not bPositive.
+- LiveGifts only. No perks for money beyond thank-you NFTs and updates. Offering services or content for money is selling, not bPositive.
 
-- Coming0% fee. The Bitcoin Corporation takes nothing from gifts. You pay the normal network fee.
+- Live0% fee. The Bitcoin Corporation takes nothing from gifts. You pay the normal network fee.
 
-- ComingSponsor count, not totals. Journey pages show how many people sponsor. Showing amounts is the person’s choice. No countdown timers and no leaderboards of totals.
+- LiveSponsor count, not totals. Journey pages show how many people sponsor. Showing amounts is the person’s choice. No countdown timers and no leaderboards of totals.
 
-- ComingReport and block. Journeys can be reported. Sponsors get no contact rights by sponsoring, and recipients can block a sponsor and return a gift.
+- LiveReport and block. Journeys can be reported. Sponsors get no contact rights by sponsoring, and recipients can block a sponsor and return a gift.
 
 Only give what you would give a friend. Gifts may have tax consequences where you live; bWalletX gives no tax advice.
 
@@ -1680,6 +1680,36 @@ Touch and hold the b, speak, let go to send. [How it works](https://bwalletx.com
 ### CLI and MCP
 
 Pair a computer or Claude to an agent account with `npx bwalletx`. [CLI](https://bwalletx.com/cli) · [MCP](https://bwalletx.com/mcp).
+
+## 🍺Agents that pay on chain
+
+### [Hodl my b](https://bwalletx.com/hodl-my-b)
+
+Agents paying from their own wallet, in sats, with receipts anyone can check. What is live and what is next.
+
+### [Business agents](https://bwalletx.com/business-agents)
+
+Paste a website, b drafts a shop that takes BSV in chat. Coming in the next release.
+
+### [Bitcoin by text](https://bwalletx.com/sms)
+
+SMS for agents and claim links. Coming.
+
+### [bCredits](https://bwalletx.com/credits)
+
+Prepay for b. Coming.
+
+### [Themes](https://bwalletx.com/themes) and [editions](https://bwalletx.com/themes/custom)
+
+Your own theme for $99 a year, or a branded edition. Live.
+
+### [bChatX rooms](https://bwalletx.com/b-creative)
+
+Start a room with its own token. Live.
+
+### [Identity](https://bwalletx.com/identity)
+
+ID check and certificate live; sharing one fact is coming.
 
 ## 🔐Security
 
@@ -3817,7 +3847,7 @@ Meme wallets for memecoin communities Sheet 00 / 05
 
 A frog-themed wallet for a frog coin. Your colours, card art, icon and name, on a self-custody wallet your community already trusts to work.
 
-Every user still gets bWallet free. This is for brands who want their own.
+Every user still gets bWallet free. This is for brands and token communities who want their own: $99 a year, made by us. Anyone holding your token gets its theme free, automatically (coming).
 
 [Order yours](#order)[See prices](#tiers)
 
@@ -3964,6 +3994,8 @@ Tell us your brand, what you have in mind and any art you already have, and we�
 - ComingPay in the wallet
 
 - LiveBranded edition, by enquiry
+
+- ComingHolders get your edition’s theme free, automatically
 
 - QuoteNative app, by quote
 
@@ -5434,7 +5466,7 @@ The same calm, self-custody wallet underneath.
 
 ## An edition of your own.
 
-We design a theme around your brand or token: colours, card art, name. Your holders install it and feel at home. Order by message today; ordering inside the wallet is coming.
+Three ways to theme a wallet. Free: colours, ready-made themes and emoji cards for your own wallet. Premium themes (about $1, in the app): animated, limited-edition and creator themes you own; the money goes to the creator, whether an artist or a token issuer. Editions ($99 a year, made by us): for businesses and token communities, a shareable branded wallet for every holder with its own address (wallet.yourcoin.com), name, card art, icon and your token shown first, featured in Editions and your token’s room. Hold a token and its community theme unlocks free. Every user still gets bWallet free. Editions are ordered by message today; ordering inside the wallet is coming.
 
 $99Branded editions from
 
@@ -5514,6 +5546,12 @@ White app tile
 
 ## Status.
 
+- LiveFree themes and theme packs for your own wallet.
+
+- ComingPremium themes (about $1, in the app): the money goes to the creator.
+
+- ComingHolder themes: hold a token and its community theme unlocks free.
+
 - LiveTheme picker with gold, dark, mono, duo and tri colour schemes.
 
 - ComingWhite paper theme in the next app release (the change is in progress).
@@ -5546,7 +5584,7 @@ White app tile
 
 - ComingPink, Blue, Yellow, VexVoid, NPG and NPGX installs: no install button until each pack ships.
 
-- LiveBranded editions from $99, ordered by message ([/themes/custom](https://bwalletx.com/themes/custom)).
+- LiveEditions from $99 a year, ordered by message ([/themes/custom](https://bwalletx.com/themes/custom)).
 
 - ComingOrder your edition inside the wallet.
 
