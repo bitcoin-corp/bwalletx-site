@@ -58,7 +58,7 @@ It isn't on Google Play yet, so install it by hand. (The store edition, bWallet,
 
 Updating from an older version? Install over the top and your wallet stays. If Android says the app can't be updated, write down your 12 words first, then uninstall and reinstall.
 
-Version 5.2.26 beta · 33.6 MB · Android 7+ · SHA-256 ad092a5e4b8c88a73642bec7a8089b04bd3d31e0cecea16bd90c52244e7bf2d4
+Version 5.2.26 beta · 33.7 MB · Android 7+ · SHA-256 ad092a5e4b8c88a73642bec7a8089b04bd3d31e0cecea16bd90c52244e7bf2d4
 
 Also: [Chrome extension](https://bwalletx.com/extension) · [Developers](https://bwalletx.com/developers)
 
@@ -354,7 +354,7 @@ Live: working, in daily use. Beta: the site works, but it's early. Coming: not o
 
 ### Work
 
-[bSheetsLiveSpreadsheets saved on-chainOpen →](https://bitcoin-spreadsheet.vercel.app)[bMailBetaSend email that pays and gets paidOpen →](https://bitcoin-email.vercel.app)[bDriveBetaStore and share files on-chainOpen →](https://bitcoin-drive.vercel.app)[bCalBetaKeep a calendar on BitcoinOpen →](https://bitcoin-calendar.vercel.app)[bCodeBetaBuild apps on BitcoinOpen →](https://bitcoin-code.vercel.app)[bJobsBetaFind work and hire, paid in BSVOpen →](https://bitcoin-jobs.vercel.app)[bIDBetaManage your on-chain identityOpen →](https://bitcoin-identity.vercel.app)[bSearchBetaSearch what lives on-chainOpen →](https://bitcoin-search.vercel.app)[bDNSBetaRegister and trade names on BitcoinOpen →](https://bitcoin-dns.vercel.app)
+[bSheetsLiveSpreadsheets saved on-chainOpen →](https://bitcoin-spreadsheet.vercel.app)[bMailLiveSend email that pays and gets paidOpen →](https://web.bwalletx.com/m/bmail)[bDriveLiveStore and share files on-chainOpen →](https://bitcoin-drive.vercel.app)[bCalLiveKeep a calendar on BitcoinOpen →](https://bitcoin-calendar.vercel.app)[bCodeLiveBuild apps on BitcoinOpen →](https://bitcoin-code.vercel.app)[bJobsBetaFind work and hire, paid in BSVOpen →](https://bitcoin-jobs.vercel.app)[bIDLiveManage your on-chain identityOpen →](https://bitcoin-identity.vercel.app)[bSearchBetaSearch what lives on-chainOpen →](https://bitcoin-search.vercel.app)[bDNSBetaRegister and trade names on BitcoinOpen →](https://bitcoin-dns.vercel.app)
 
 ### Media
 
@@ -363,7 +363,7 @@ bEduComingLearn and teach coursesComing
 
 ### Social & more
 
-[bAgentsBetaRun your AI agents and their budgetsOpen →](https://agents.bwalletx.com)[bSocialBetaPost and follow on BitcoinOpen →](https://bitcoin-social.vercel.app)[bGamesBetaPlay games on BitcoinOpen →](https://bitcoin-gaming.vercel.app)[bMapsBetaFind places that take BitcoinOpen →](https://bitcoin-maps.vercel.app)
+[bAgentsBetaRun your AI agents and their budgetsOpen →](https://agents.bwalletx.com)[bSocialLivePost and follow on BitcoinOpen →](https://bitcoin-social.vercel.app)[bGamesBetaPlay games on BitcoinOpen →](https://bitcoin-gaming.vercel.app)[bMapsBetaFind places that take BitcoinOpen →](https://bitcoin-maps.vercel.app)
 
 ## Build your own
 
@@ -672,7 +672,7 @@ Most things start small. bShares is one step on a longer path:
 
 - ComingPartnership shares stage. Friends start something together before there’s a company. See [Partnership shares](https://bwalletx.com/partnership-shares).
 
-- Comingb drafts in partner chats. Ask b in the partners’ chat to draft the minutes and paperwork.
+- Liveb drafts in partner chats. Ask b in the partners’ chat to draft an agreement or summarise the terms; every partner accepts before it counts.
 
 - ComingIncorporate 1:1. Turn partnership shares into company shares, one for one.
 
@@ -886,9 +886,31 @@ bWalletX is in beta: test with small amounts. Questions: [support@bwalletx.com](
 
 Source: https://bwalletx.com/bweb
 
-# bWeb: your web on bitcoin Coming
+# bWeb: your web on bitcoin First settings live
 
-bWeb is a plan, not a product yet. Nothing on this page is built. Here is the idea: you start in bWalletX, and your [bApps](https://bwalletx.com/bapps) become yours. You choose how they look and what they show, and when you want more, agents like b build it for you. You pay in small amounts, from your wallet, only after you approve.
+The first part of bWeb is live: a bWeb page in bWalletX Settings and optional Ask b add-ons. The rest is still a plan, and the list below says exactly what works today. Here is the idea: you start in bWalletX, and your [bApps](https://bwalletx.com/bapps) become yours. You choose how they look and what they show, and when you want more, agents like b build it for you. You pay in small amounts, from your wallet, only after you approve.
+
+## What works today
+
+- Live Settings › bWeb in bWalletX: choose which bApps show in your desktop dock
+
+- Live Choose which bApps show in the Feed's bApps reel
+
+- Live What b can see: switch off telling b the screen you're on; choose whether b knows your bWeb setup
+
+- Live Linked identities: open your Identity map from bWeb
+
+- Live Ask b add-ons, each with its own switch: Names, Exchange search, bMail drafting, Feed summaries. No extra charge: each message costs your normal Ask b price
+
+- Live Your bWeb settings stay on your phone, and apps never see them
+
+- Coming Your home page and default search
+
+- Coming Settings encrypted to you and synced between your devices
+
+- Coming Paid add-ons b builds for you (price shown first, approved in your wallet)
+
+- Coming Your own version of a bApp on its own web address
 
 ## Three ways to make it yours
 
@@ -910,7 +932,7 @@ b makes your own copy of an open-source bApp with the change you asked for, on i
 
 - Payments only go through your wallet. bWalletX shows its own approval and your daily cap applies. Nothing pays on its own.
 
-- Your settings are private. They're encrypted to you, and the apps never see them.
+- Your settings are private. They stay on your device, and the apps never see them. (Encryption and sync are coming.)
 
 ## bApp tokens are keys
 
@@ -1632,7 +1654,7 @@ Your Space shows your own picture and your name, so fans know exactly whose gig 
 
 - ComingPlay your music video into the room, in sync for everyone, on repeat if you like.
 
-- ComingAlbum Spaces: a ticketed run of your music videos, one after another.
+- LiveAlbum Spaces in bWalletX: a ticketed run of your music videos, one after another.
 
 Tickets and paid listening are in bWalletX (web, Android download and Chrome). The App Store and Google Play editions don’t include them. bWalletX is in beta: test with small amounts. Questions: [support@bwalletx.com](mailto:support@bwalletx.com)
 
@@ -2432,6 +2454,15 @@ Each release ships to the Android APK, the Chrome extension and the web wallet. 
 [Download bWalletX](https://bwalletx.com/download)
 
 ## 5.2.26 2026-10-16
+
+- Themes: a new White paper look, with white cards everywhere, and minimalist bApp icons.
+- Your bAvatar is now the menu: tap it to get to everything.
+- Sign in with HandCash, and find the contacts and people you follow on X who already use bWalletX.
+- Like · 1¢ on token cards: a Like buys a little of that token.
+- Spaces: Album Spaces, a Space video that stays in sync for everyone, and pay to speak.
+- bWeb settings and Ask b add-ons, b drafts replies in partner chats, bPositive journeys (bWalletX), and token sends that had stalled now go through.
+
+## 5.2.25 2026-10-16
 
 - Fixed a black screen after unlock: if something goes wrong you now see a safety screen instead of a blank page.
 - Open Drops (bWalletX): each invite link is made for an @handle and carries a room token, so the person you invite lands straight in the room.
@@ -3568,6 +3599,122 @@ Anything slow, stuck, unclear, or that cost more than you expected: what you did
 Tell b in the wallet, or email [support@bwalletx.com](mailto:support@bwalletx.com). Keep small amounts in a test wallet and never send anyone your 12 words.
 
 Questions: [support@bwalletx.com](mailto:support@bwalletx.com)
+
+---
+
+Source: https://bwalletx.com/themes-custom
+
+Custom editions Sheet 00 / 04
+
+# Your own bWallet.
+
+Your colours, your card art, your icon, and a page for your fans. We build it with you; you approve it before it goes live.
+
+VexVoid is the first artist edition. [See the VexVoid theme](https://bwalletx.com/themes/vexvoid).
+
+[Message us](#order)[See the options](#tiers)
+
+85.6 mm54 mm
+
+fans@yourname
+
+Your art here
+
+Colours · card · icon
+
+bwalletx.com/themes/yourname
+
+Custom
+
+bWallet · Custom editions
+
+Sheet00
+
+Scale1:1
+
+Date16.10.2026
+
+DrawnbWalletX
+
+01 / 04  Three ways to do it
+
+## Pick how far you want to go.
+
+Spec A · Theme
+
+### Theme
+
+$99 a year
+
+- Custom colours, card art and app icon
+
+- A page at bwalletx.com/themes/<name>
+
+- An install link your fans add to their home screen
+
+- Built for you; you approve it
+
+Renews yearly
+
+Spec B · Branded edition
+
+### Branded edition
+
+from $999 set-up + monthly fee
+
+- Your own domain, e.g. wallet.yourbrand.com
+
+- Your name on it
+
+- Still runs on bWalletX: self-custody, keys stay with each user
+
+By enquiry
+
+Spec C · Native app
+
+### Native app
+
+Custom quote
+
+- Published under your own App Store and Google Play accounts
+
+- Same wallet underneath, your listing on top
+
+By quote
+
+02 / 04  The rules, in short
+
+## Fair for you, safe for your fans.
+
+- 01Brand themes are only for the verified owner of the brand. We check.
+
+- 02The wallet stays bWalletX underneath: self-custody, and a small “powered by bWalletX”.
+
+- 03We can decline a theme that impersonates someone or misleads people.
+
+03 / 04  How to order
+
+## Send us a message.
+
+There is no payment form yet. Tell us your name, what you have in mind and any art you already have, and we’ll reply with next steps. Ordering inside the wallet is coming.
+
+[Message us on bChatX](https://www.bchatx.com/u/bwalletx)[Message @bWalletX on X](https://x.com/bWalletX)
+
+04 / 04  What’s live
+
+## Where things stand.
+
+- LiveTheme orders, handled by us
+
+- ComingSelf-serve theme builder in the wallet
+
+- ComingPay in the wallet
+
+- LiveBranded edition, by enquiry
+
+- QuoteNative app, by quote
+
+[← Back to themes](https://bwalletx.com/themes)
 
 ---
 
@@ -4898,13 +5045,25 @@ bWalletX is in beta: test with small amounts. Questions: [support@bwalletx.com](
 
 Source: https://bwalletx.com/themes
 
-Themes
+0102030405060708090100110120130140150160170180190200210220230240250260270280290300310320330340350360370380390
+
+Themes Sheet 00 / 05
 
 # Make bWallet yours.
 
-Pick the colours of the app and the art on your card. Here is the new white “paper” theme: black type, thin lines and lots of room.
+Pick the colours of the app and the art on your card. Here are the paper themes: solid coloured paper, black ink, thin lines and lots of room.An artist edition by VexVoid: black, white and moving, taken from their live AV set.The Ninja Punk Girls edition: hot-pink neon on black, cut up like the NPG live mix. Girls vs bots, on your wallet.NPGX: black and red, the red X and tech type, harder cuts and more motion. The wild one.Gold: the bWalletX default. Gold ink on near-black, gold hairlines. Already in the app.Dark: neutral grey and white for night use. Already in the app.
+
+Artist theme by [VexVoid · bTV: AIVJ](https://bchatx.com/u/vexvoid)
+
+Ninja Punk Girls edition · [ninjapunkgirls.com](https://www.ninjapunkgirls.com)
+
+NPGX edition · [npg-x.com](https://npg-x.com)
+
+NPGX live mix: coming. The slopcore video mix is not built yet; watch [npg-x.com](https://npg-x.com/live).
 
 [How to change it](#how)[Get bWalletX](https://bwalletx.com/get)
+
+85.6 mm54 mm
 
 you@bwalletx.com
 
@@ -4916,7 +5075,17 @@ $656.32
 
 BSV
 
-01 — App colours
+bWallet · White theme
+
+Sheet01
+
+Scale1:1
+
+Date16.10.2026
+
+DrawnbWalletX
+
+01 / 05  App colours
 
 ## One tap changes the whole app.
 
@@ -4924,25 +5093,71 @@ A theme sets the colour of every screen: buttons, cards, the menu bar. Gold is t
 
 ### White Coming
 
-Paper: off-white, black type, hairlines.
+Paper: off-white, black ink, hairlines.
+
+[Open page](https://bwalletx.com/themes/white)[Install](https://web.bwalletx.com/white)
+
+### Pink Coming
+
+Bubblegum paper, black ink.
+
+[Open page](https://bwalletx.com/themes/pink)Install: coming
+
+### Blue Coming
+
+Sky paper, black ink.
+
+[Open page](https://bwalletx.com/themes/blue)Install: coming
+
+### Yellow Coming
+
+Sunflower paper, black ink.
+
+[Open page](https://bwalletx.com/themes/yellow)Install: coming
 
 ### Gold Live
 
 The default. Gold on black.
 
+[Open page](https://bwalletx.com/themes/gold)[Open bWalletX](https://web.bwalletx.com/)
+
 ### Dark Live
 
-Quiet black for night use.
+Neutral grey and white for night use.
 
-### Pure colours Coming
+[Open page](https://bwalletx.com/themes/dark)[Open bWalletX](https://web.bwalletx.com/)
 
-Red, blue, green, violet and more.
+Artist editions
 
-02 — Design your card
+### VexVoid Coming
+
+Artist edition: black, stark white, point field.
+
+[Open page](https://bwalletx.com/themes/vexvoid)Install: coming
+
+### NPG Coming
+
+Ninja Punk Girls: hot-pink neon, glitch cuts.
+
+[Open page](https://bwalletx.com/themes/npg)Install: coming
+
+### NPGX Coming
+
+The wild one: black and red, hard glitch.
+
+[Open page](https://bwalletx.com/themes/npgx)Install: coming
+
+[Get your own edition →](https://bwalletx.com/themes/custom)
+
+Hover (or tap) a card to preview this page in that theme · use its links to open the page or install
+
+02 / 05  Design your card
 
 ## Your card, your art.
 
 The card at the top of your wallet can carry any art you like. The white set keeps it minimal: a white card, black type, and art washed back so your balance stays easy to read. The wave is Hokusai’s Great Wave off Kanagawa (1831), which is in the public domain.
+
+85.654
 
 you@bwalletx.com
 
@@ -4956,6 +5171,8 @@ BSV
 
 Plain paperNothing but your name and balance.
 
+85.654
+
 you@bwalletx.com
 
 $42.00
@@ -4967,6 +5184,8 @@ $42.00
 BSV
 
 The Great Wave, washed outPublic-domain Hokusai, faded to a whisper.
+
+85.654
 
 you@bwalletx.com
 
@@ -4980,17 +5199,21 @@ BSV
 
 ModernistA circle and three hairlines.
 
-03 — The mark
+03 / 05  The mark
 
 ## One clean outline b.
 
 In the white theme the b is drawn as a single outline: the stem and the bowl are joined into one shape, and the hole in the middle is its own ring. No lines cross inside it. It sits on a white app tile to match.
 
+Construction
+
 Outline b
+
+1024 px1024
 
 White app tile
 
-04 — What’s live
+04 / 05  What’s live
 
 ## Status.
 
@@ -5002,7 +5225,31 @@ White app tile
 
 - ComingMore pure-colour themes.
 
-05 — How to change it
+- LiveThis page in four papers: White, Pink, Blue and Yellow, hover to preview, click for its own page (/themes/pink etc.).
+
+- LiveVexVoid artist theme preview at /themes/vexvoid: black, stark white and the live point field from the VexVoid AV set.
+
+- ComingVexVoid artist theme in the app: artist edition, in-app theme coming.
+
+- LiveGold and Dark previews at /themes/gold and /themes/dark: built in, already in bWalletX.
+
+- LiveNPG page preview at /themes/npg: Ninja Punk Girls neon with glitch slices over official art.
+
+- ComingNPG in-app theme.
+
+- LiveNPGX page preview at /themes/npgx: black and red, harder glitch.
+
+- ComingNPGX in-app theme.
+
+- ComingNPGX live mix: the slopcore video mix at npg-x.com/live is not built yet.
+
+- ComingPink, Blue and Yellow: preview only — in-app theme coming.
+
+- LiveWhite edition install: add the white web wallet to your home screen from [web.bwalletx.com/white](https://web.bwalletx.com/white).
+
+- ComingPink, Blue, Yellow, VexVoid, NPG and NPGX installs: no install button until each pack ships.
+
+05 / 05  How to change it
 
 ## Three taps.
 
@@ -9665,7 +9912,7 @@ Your bWalletX keys are your own, made on your device, as with any other account.
 
 ## Your address book, in and out
 
-You can import an address book and export yours. It’s your list, and you can take it with you. This is in bWalletX 5.2.26.
+You can import an address book and export yours. It’s your list, and you can take it with you. This is in bWalletX 5.2.25.
 
 ## Invites with tokens
 
@@ -9683,13 +9930,13 @@ Either way, the person signs in with X or HandCash, gets bWalletX, and the token
 
 ## Status, 15 Oct 2026
 
-- ✓ Address book import (CSV, contact cards, JSON, pasted lists) and export to CSV: in the app, shipping in 5.2.26
+- ✓ Address book import (CSV, contact cards, JSON, pasted lists) and export to CSV: in the app, shipping in 5.2.25
 
 - ✓ Sign in with HandCash on bchatx.com: switched on; first real sign-in being tested
 
 - ✓ HandCash friends into your address book: the server side is live; the wallet button is coming
 
-- ✓ Open Drops: live in bWalletX 5.2.26 (first run pending). Each link is made for an @handle; whoever opens it first gets the token, and room entry is tied to that X account
+- ✓ Open Drops: live in bWalletX 5.2.25 (first run pending). Each link is made for an @handle; whoever opens it first gets the token, and room entry is tied to that X account
 
 - ◻ Named Invites: the token sent automatically to the X account you name. Planned; depends on pre-signed payments
 
