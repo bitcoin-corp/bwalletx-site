@@ -2,6 +2,10 @@
   "cleanUrls": true,
   "rewrites": [
     {
+      "source": "/themes/:colour(white|pink|blue|yellow)",
+      "destination": "/themes"
+    },
+    {
       "source": "/api/person/:handle",
       "destination": "https://www.bit-sign.online/api/public/profile/:handle"
     },
