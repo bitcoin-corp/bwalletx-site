@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Restore SimplyCash in bWalletX</title>
+    <link rel="canonical" href="https://bwalletx.com/restore-simplycash" />
+    <meta name="description" content="Moving from SimplyCash? Sweep your coins and tokens into bWalletX with your SimplyCash 12-word phrase or recovery string. Typed on your device, never sent to us." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://bwalletx.com/restore-simplycash" />
+    <meta property="og:site_name" content="bWalletX" />
+    <meta property="og:title" content="Restore SimplyCash in bWalletX" />
+    <meta property="og:description" content="Moving from SimplyCash? Sweep your coins and tokens into bWalletX with your SimplyCash 12-word phrase or recovery string. Typed on your device, never sent to us." />
+    <meta property="og:image" content="https://bwalletx.com/og-restore-simplycash.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Moving from SimplyCash? Sweep your coins and tokens into bWalletX with your SimplyCash 12-word phrase or recovery string. Typed on your device, never sent to us." />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@bWalletX" />
+    <meta name="twitter:title" content="Restore SimplyCash in bWalletX" />
+    <meta name="twitter:description" content="Moving from SimplyCash? Sweep your coins and tokens into bWalletX with your SimplyCash 12-word phrase or recovery string. Typed on your device, never sent to us." />
+    <meta name="twitter:image" content="https://bwalletx.com/og-restore-simplycash.png" />
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="stylesheet" href="/styles.css" />
+    <style>
+      html, body { overflow-x: clip; }
+      body { background: #f7f5ef; color: #111; }
+      main.rs { max-width: 760px; margin: 0 auto; padding: 40px 16px 80px; box-sizing: border-box; color: #111; }
+      .rs h1 { font-size: clamp(2.2rem, 7vw, 3.6rem); letter-spacing: -0.03em; line-height: 1.05; margin: 8px 0 14px; color: #111; }
+      .rs h2 { margin: 48px 0 10px; font-size: 1.5rem; color: #111; }
+      .rs h3 { margin: 0 0 4px; font-size: 1.08rem; color: #111; }
+      .rs p, .rs li { line-height: 1.7; color: #222; }
+      .rs .gold { color: #9a6c00; }
+      .rs a { color: #7a5400; }
+      .rs .kicker { text-transform: uppercase; letter-spacing: .12em; font-size: .8rem; font-weight: 700; color: #9a6c00; margin: 0; }
+      .rs .lede { font-size: 1.15rem; color: #333; }
+      .rs code { background: #ece7da; padding: 1px 6px; border-radius: 6px; font-size: .92em; color: #111; }
+      .rs .row { display: flex; gap: 12px; flex-wrap: wrap; margin: 24px 0; }
+      .rs .btn { display: inline-block; padding: 12px 20px; border-radius: 999px; font-weight: 700; text-decoration: none; }
+      .rs .btn-gold { background: #F5B800; color: #000; }
+      .rs .btn-line { border: 1px solid #11111140; color: #111; }
+      .steps { list-style: none; padding: 0; margin: 16px 0; display: grid; gap: 12px; }
+      .steps li { display: flex; gap: 14px; background: #fff; border: 1px solid #0000001a; border-radius: 16px; padding: 16px; }
+      .steps .n { flex: none; width: 34px; height: 34px; border-radius: 50%; background: #F5B800; color: #000; font-weight: 800; display: flex; align-items: center; justify-content: center; }
+      .steps p { margin: 0; }
+      .tips { padding-left: 20px; }
+      details { background: #fff; border: 1px solid #0000001a; border-radius: 12px; padding: 12px 16px; margin: 10px 0; }
+      summary { font-weight: 700; cursor: pointer; color: #111; }
+      .feat { list-style: none; padding: 0; margin: 18px 0; }
+      .feat li { display: flex; gap: 12px; align-items: baseline; padding: 12px 0; border-bottom: 1px solid #00000014; }
+      .tag { flex: none; font-size: 0.75rem; font-weight: 700; padding: 2px 9px; border-radius: 999px; }
+      .tag.live { background: #F5B800; color: #000; }
+      .rs .small { color: #555; font-size: 0.85rem; }
+    </style>
+  </head>
+  <body>
+    <div class="beta-banner">bWalletX is in <strong>beta</strong>: test with small amounts.</div>
+    <header class="topbar">
+      <div class="wrap topbar-in">
+        <a class="brand" href="/"><img src="/logo.svg" alt="" width="34" height="30" /><span>bWallet<span class="gold">X</span></span></a>
+        <nav aria-label="Pages">
+          <a href="/features">Features</a><a href="/exchange">Exchange</a><a href="/social">Social</a><a href="/agent">Agents</a><a href="/extension">Extension</a><a href="/developers">Developers</a>
+        </nav>
+        <span class="nav-cta"><a class="dl-btn" href="/get">Download</a><a class="web-btn" href="https://web.bwalletx.com" target="_blank" rel="noopener">Web &rarr;</a></span>
+      </div>
+    </header>
+    <script src="/nav.js"></script>
+
+    <main class="ext rs">
+      <p class="kicker">Restore</p>
+      <h1>Bring your SimplyCash coins <span class="gold">home.</span></h1>
+      <p class="lede">Had a SimplyCash wallet? bWalletX can find what&rsquo;s in it from your recovery phrase and sweep it into your own bWalletX account. A few taps, on your own phone.</p>
+      <div class="row"><a class="btn btn-gold" href="/get">Get bWalletX</a><a class="btn btn-line" href="#steps">How it works</a></div>
+
+      <h2 id="steps">Four steps</h2>
+      <ol class="steps">
+        <li><span class="n">1</span><div><h3>Open the sweep screen</h3><p>In bWalletX go to <b>Settings &rsaquo; Account &amp; safety &rsaquo; Sweep from another wallet</b>. Setting up a new wallet? <b>Restore &rsaquo; SimplyCash</b> starts the same thing.</p></div></li>
+        <li><span class="n">2</span><div><h3>Paste your SimplyCash backup</h3><p>Your 12-word recovery phrase, or SimplyCash&rsquo;s full recovery string (words, path and passphrase joined by colons). A private key (WIF) or an xprv works too. Add a passphrase if you set one.</p></div></li>
+        <li><span class="n">3</span><div><h3>Let it look</h3><p>bWalletX walks SimplyCash&rsquo;s path <code>m/44'/145'/0'</code> and the other common Bitcoin SV layouts, receive and change addresses, until 20 in a row are unused. It also tries the older derivation early SimplyCash wallets used, automatically. It shows the coins, NFTs and tokens it finds, in dollars.</p></div></li>
+        <li><span class="n">4</span><div><h3>Sweep it home</h3><p>Tick what to bring over and tap sweep. Your coins move into your bWalletX account in a few transactions (BSV, NFTs, then each token), paying the normal small network fee. The old phrase isn&rsquo;t kept: from then on, your coins are protected by your bWalletX words.</p></div></li>
+      </ol>
+
+      <h2>Where&rsquo;s my SimplyCash phrase?</h2>
+      <p>Look for the backup you made when you set up SimplyCash: your 12-word recovery phrase or recovery string from your SimplyCash backup. People often wrote it on paper, saved it in a password manager or kept a screenshot. If you still have the SimplyCash app, its backup or settings area may show it again.</p>
+
+      <h2>Stay safe</h2>
+      <ul class="tips">
+        <li><b>Never share your phrase.</b> Not with b, not in any chat, not with support. We will never ask for it.</li>
+        <li><b>Type it only into the sweep screen</b>, on your own device. The phrase stays on your phone and is cleared when you leave the screen; only public addresses are looked up online to find your coins.</li>
+        <li><b>Unsure? Test first.</b> For larger amounts (over about &pound;500) bWalletX offers to sweep a small test amount first. Check it arrived, then scan again to sweep the rest.</li>
+      </ul>
+
+      <h2>Questions</h2>
+      <details><summary>It says nothing was found.</summary><p>Check every word, and add your passphrase if your SimplyCash wallet had one (or paste the full recovery string, which carries it). The older SimplyCash derivation is tried automatically. You can also try a custom path under Advanced, or ask b in the app.</p></details>
+      <details><summary>Does bWalletX keep my SimplyCash phrase?</summary><p>No. It is held in memory only for the scan and the sweep, never stored and never sent to our servers.</p></details>
+      <details><summary>Can I sweep other wallets?</summary><p>Yes. The same screen takes recovery phrases from other Bitcoin SV wallets, private keys (WIF) and xprvs.</p></details>
+      <details><summary>Is it in the App Store and Play versions?</summary><p>Yes. Sweep from another wallet is in every bWalletX and bWallet build.</p></details>
+
+      <h2>What works today</h2>
+      <ul class="feat">
+<li><span class="tag live">Live</span><span><b>SimplyCash 12-word phrase sweep</b> (path m/44'/145'/0').</span></li>
+<li><span class="tag live">Live</span><span><b>SimplyCash recovery string</b> (words:path:passphrase).</span></li>
+<li><span class="tag live">Live</span><span><b>Older SimplyCash derivation</b>, tried automatically.</span></li>
+<li><span class="tag live">Live</span><span><b>Coins, NFTs and tokens</b> found and swept.</span></li>
+<li><span class="tag live">Live</span><span><b>Other BSV wallets</b>: BIP44 phrases (coin types 236 and 0), private keys (WIF), xprvs and custom paths.</span></li>
+<li><span class="tag live">Live</span><span><b>Test sweep</b> for amounts over about &pound;500.</span></li>
+      </ul>
+      <div class="row"><a class="btn btn-gold" href="/get">Get bWalletX</a><a class="btn btn-line" href="/restore">Restore a bWalletX backup</a></div>
+      <p class="small">SimplyCash is named only to describe compatibility; bWalletX isn&rsquo;t affiliated with it. bWalletX is in beta: test with small amounts. Questions: <a href="mailto:support@bwalletx.com">support@bwalletx.com</a></p>
+    </main>
+  </body>
+</html>

@@ -1928,6 +1928,14 @@ Customer asks, agent quotes, customer taps Pay. Both sides keep the same receipt
 
 Next release Chat checkout for business agents.
 
+Two flat whites?
+
+900 sats. Tap to pay.
+
+Paid ✔
+
+Receipt on chain
+
 No card machine. No “it’s gone through twice”.
 
 Hodl my b · Issue 1 · 4
@@ -1960,6 +1968,8 @@ Y
 
 Receipt on chain
 
+New textPaid 500 sats ✓
+
 Finally, a good reason to reply to a text.
 
 Hodl my b · Issue 1 · 6
@@ -1971,6 +1981,17 @@ Cover story · receipts
 Every bWalletX payment settles on chain. You, your customer and anyone else see the same record.
 
 Live On-chain receipts.
+
+b
+bWalletX RECEIPT
+
+Table for 2 · deposit
+
+500 sats
+
+txid 3f9a…c21e
+
+✓ on chain
 
 Arguments about who paid what get very short.
 
@@ -2018,6 +2039,8 @@ Where things stand
 - LiveYour own theme for $99 a year. [Editions](https://bwalletx.com/themes/custom)
 - LiveA bChatX room with its own token
 
+LIVE✓ today
+
 Hodl my b · Issue 1 · 11
 
 Where things stand
@@ -2039,7 +2062,10 @@ Next week
 
 A new issue every week: everything we shipped, nicely presented.
 
-[Get bWalletX →](https://bwalletx.com/get)
+[](https://bwalletx.com/get)
+Scan to get bWalletbwalletx.com/get
+[Get bWallet →](https://bwalletx.com/get)
+
 Less noise. More life. Just b.
 
 Hodl my b · Issue 1 · 13
