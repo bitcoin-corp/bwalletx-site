@@ -41,7 +41,6 @@
       .sc::before { content: ""; position: absolute; inset: -10%; background-image: radial-gradient(circle, color-mix(in srgb, var(--ink) 16%, transparent) 2px, transparent 2.5px); background-size: 34px 34px; animation: drift 12s linear infinite; }
       @keyframes drift { to { transform: translate(34px, 34px); } }
       .cap { position: absolute; left: 0; right: 0; top: 15vh; margin: 0; text-align: center; font: 700 clamp(3rem, 13vw, 10.5rem) / 1 'Space Grotesk', sans-serif; letter-spacing: -0.05em; white-space: nowrap; }
-      .cap .capb { color: #F5B800; text-shadow: 0 0 18px rgba(245,184,0,.45); }
       .on .cap { animation: capIn .9s .35s cubic-bezier(.2,1.4,.4,1) both; }
       @keyframes capIn { from { opacity: 0; transform: translateY(0.3em) scale(.9); } to { opacity: 1; transform: none; } }
       .card { position: absolute; left: 50%; top: 62%; width: min(78vw, 420px); aspect-ratio: 1.586; box-sizing: border-box; border-radius: 22px; padding: 22px 24px; display: flex; flex-direction: column; justify-content: space-between;
@@ -161,7 +160,7 @@
           }
           el.innerHTML = h; tv.insertBefore(el, tv.firstChild); return el;
         });
-        // FX layer: glossy bubble bursts, circular wipes and a zig-zag "number go up" line, on one canvas that moves into the live scene (behind caption and card).
+        // FX layer: circular wipes and a zig-zag "number go up" line, on one canvas that moves into the live scene (behind caption and card).
         var SX = spot.scenes[0].ms / 1000 / 32; // one sixteenth: two bars of music per 4.6 s scene
         var fx = document.createElement('canvas'); fx.className = 'fx'; var g2 = fx.getContext('2d'), W = 0, H = 0, DPR = Math.min(window.devicePixelRatio || 1, 1.5);
         var parts = [], wipes = [], charts = [], BRIGHT = ['#ff3da5', '#22e4ff', '#a6ff2e', '#ff8a1f', '#ffe14d'], beatT, countRaf, dirty = false;
@@ -174,17 +173,15 @@
           if (!bright && Math.random() < 0.5) for (i = 0; i < 5; i++) out.push('hsl(' + Math.round(c[0] + rnd(-12, 12)) + ',' + Math.round(Math.min(100, c[1] + 10)) + '%,' + (28 + i * 12) + '%)'); // tints and shades of the scene
           else { out.push('hsl(' + Math.round((c[0] + 180) % 360) + ',90%,55%)', 'hsl(' + Math.round((c[0] + 150) % 360) + ',90%,62%)'); out = out.concat(BRIGHT.slice().sort(function () { return Math.random() - 0.5; }).slice(0, 3)); } // clashing brights
           return out; }
-        function burst(bright) { var pal = palette(bright), snappy = Math.random() < 0.5, big = Math.random() < 0.4, x = rnd(0.08, 0.92) * W, y = rnd(0.3, 0.95) * H, n = Math.round(rnd(snappy ? 10 : 6, snappy ? 22 : 14) * (reduce ? 0.4 : 1));
-          for (var i = 0; i < n && parts.length < 60; i++) { var a = Math.random() * 6.283, v = snappy ? rnd(380, 900) : rnd(50, 170);
-            parts.push({ x: x, y: y, vx: Math.cos(a) * v, vy: Math.sin(a) * v - (snappy ? 0 : 40), r: big ? rnd(14, 46) : rnd(5, 22), c: pal[i % pal.length], t: 0, life: (snappy ? rnd(0.7, 1.1) : rnd(2, 3.2)) * (reduce ? 1.6 : 1), drag: snappy ? 3.2 : 0.5 }); } }
-        function wipe() { var pal = palette(false), n = Math.random() < 0.35 ? 3 : Math.random() < 0.5 ? 2 : 1, fast = Math.random() < 0.5;
-          for (var i = 0; i < n && wipes.length < 5; i++) wipes.push({ x: rnd(0, 1) * W, y: rnd(0.25, 1) * H, R: Math.hypot(W, H) * rnd(0.3, 0.75), c: pal[(Math.random() * pal.length) | 0], t: -i * 0.14, life: fast ? rnd(0.6, 0.9) : rnd(1.6, 2.4) }); }
+        // In-scene wipes build across the spot: one slow swell in scene 1, then more, faster, more overlapping, trending to the next scene's colour.
+        function wipe(k, l, n, fast) { for (var i = 0; i < n && wipes.length < 8; i++) { var h = hsl(Math.random() < 0.1 + 0.9 * l / 32 ? spot.scenes[k + 1].bg : spot.scenes[k].bg);
+            wipes.push({ x: rnd(0, 1) * W, y: rnd(0.25, 1) * H, R: Math.hypot(W, H) * rnd(0.3, 0.75), c: 'hsl(' + Math.round(h[0]) + ',' + Math.round(h[1]) + '%,' + Math.round(Math.max(15, Math.min(85, h[2] + rnd(-12, 12)))) + '%)', t: -i * (fast ? 0.06 : 0.14), life: fast ? rnd(0.5, 0.8) : rnd(1.6, 2.4) }); } }
         function chart() { var p = [], n = 7; for (var i = 0; i <= n; i++) p.push([W * (0.06 + 0.86 * i / n), H * (0.92 - 0.62 * i / n) + (i && i < n ? (i % 2 ? -1 : 1) * H * 0.05 : 0)]); charts.push({ t: 0, pts: p }); }
         function frame(now) { requestAnimationFrame(frame); var dt = Math.min(0.05, (now - (frame.last || now)) / 1000); frame.last = now;
           if (!parts.length && !wipes.length && !charts.length) { if (dirty) { g2.setTransform(1, 0, 0, 1, 0, 0); g2.clearRect(0, 0, fx.width, fx.height); dirty = false; } return; }
           dirty = true; g2.setTransform(DPR, 0, 0, DPR, 0, 0); g2.clearRect(0, 0, W, H);
-          wipes = wipes.filter(function (w) { w.t += dt; if (w.t < 0) return true; var p = w.t / w.life; if (p >= 1) return false; var e = 1 - Math.pow(1 - Math.min(1, p * 1.6), 3);
-            g2.globalAlpha = 0.7 * (1 - p); g2.fillStyle = w.c; g2.beginPath(); g2.arc(w.x, w.y, w.R * e, 0, 6.283); g2.fill(); return true; });
+          wipes = wipes.filter(function (w) { w.t += dt; if (w.t < 0) return true; var p = w.t / w.life; if (p >= 1) { if (!w.hold) return false; p = 1; } var e = w.hold ? 1 - Math.pow(1 - p, 3) : 1 - Math.pow(1 - Math.min(1, p * 1.6), 3);
+            g2.globalAlpha = w.hold ? 1 : 0.7 * (1 - p); g2.fillStyle = w.c; g2.beginPath(); g2.arc(w.x, w.y, w.R * e, 0, 6.283); g2.fill(); return true; });
           charts = charts.filter(function (c) { c.t += dt; if (c.t > 2.2) return false; var pts = c.pts, seg = Math.min(1, c.t / 0.8) * (pts.length - 1), j = Math.floor(seg), hx = pts[j][0], hy = pts[j][1], i;
             if (j < pts.length - 1) { hx += (pts[j + 1][0] - hx) * (seg - j); hy += (pts[j + 1][1] - hy) * (seg - j); }
             g2.globalAlpha = c.t > 1.6 ? (2.2 - c.t) / 0.6 : 1; g2.strokeStyle = g2.fillStyle = '#18b955'; g2.lineWidth = 9; g2.lineJoin = g2.lineCap = 'round'; g2.beginPath(); g2.moveTo(pts[0][0], pts[0][1]);
@@ -200,22 +197,21 @@
           cancelAnimationFrame(countRaf); (function f(now) { var p = Math.max(0, Math.min(1, (now - t0) / dur)), e = 1 - (1 - p) * (1 - p); v.textContent = '$' + (from + (end - from) * e).toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 }); if (p < 1) countRaf = requestAnimationFrame(f); })(t0); }
         // One visual beat every 2 sixteenths of a coin scene (l = 2..30). Driven by the audio clock when sound is on, a timer otherwise.
         function vbeat(k, l) { var el = els[k]; if (!el || cur !== k || spot.scenes[k].type) return;
-          if (l % 8 === 4 && (!reduce || l === 12)) burst(false);
-          if ((l === 8 || l === 24) && Math.random() < 0.75) wipe();
+          if (k === 6 && l === 24) wipes.push({ x: W / 2, y: H * 0.62, R: Math.hypot(W, H), c: '#111111', t: 0, life: SX * 8, hold: 1 }); // black from the card: becomes the b-mark scene
+          else if (!(k === 6 && l > 24) && (k === 0 ? l === 8 : k === 1 ? l % 16 === 8 : l % [0, 0, 8, 4, 4, 2, 2][k] === (k === 2 ? 4 : 0))) wipe(k, l, k < 3 ? 1 : k < 5 ? 2 : 3, Math.random() < k / 6);
           if (l === 16 && k % 2 === 1) chart();
           if (l === 6 || l === 22) ticker(el);
-          if (l === 28 && Math.random() < 0.5) burst(false); }
+          }
         var cur = -1, timer;
         function show(i) {
           var prev = els[cur]; els.forEach(function (e) { e.classList.remove('was'); });
           if (prev) { prev.classList.remove('on'); prev.classList.add('was'); var pv = prev.querySelector('video'); if (pv) pv.pause(); }
-          var el = els[i]; el.style.setProperty('--ox', (20 + Math.random() * 60) + '%'); el.style.setProperty('--oy', (20 + Math.random() * 60) + '%');
+          var el = els[i], mk = spot.scenes[i].type === 'mark'; el.style.setProperty('--ox', mk ? '50%' : (20 + Math.random() * 60) + '%'); el.style.setProperty('--oy', mk ? '62%' : (20 + Math.random() * 60) + '%');
           void el.offsetWidth; el.classList.add('on'); var v = el.querySelector('video'); if (v) { v.currentTime = 0; v.play().catch(function () {}); }
           cur = i; var s = spot.scenes[i]; clearInterval(beatT); if (stillM) return;
           if (!s.type) { el.insertBefore(fx, el.querySelector('.cap')); countUp(el, s);
             if (!playing) { var l = 0; beatT = setInterval(function () { l += 2; if (l > 30) clearInterval(beatT); else vbeat(i, l); }, SX * 2000); } }
-          else if (s.type === 'mark') { el.insertBefore(fx, el.firstChild); burst(true); burst(true); }
-          else if (fx.parentNode) fx.parentNode.removeChild(fx);
+          else { wipes.length = 0; if (fx.parentNode) fx.parentNode.removeChild(fx); }
         }
         function step() { var n = (cur + 1) % els.length; show(n); timer = setTimeout(step, spot.scenes[n].ms); }
         var reduce = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
