@@ -87,7 +87,7 @@
       .end .url { margin-top: 14px; font: 500 clamp(.8rem, 2.4vw, 1rem) 'IBM Plex Mono', monospace; letter-spacing: .08em; color: #5d5b56; }
       .end a.go { display: inline-block; margin-top: 26px; padding: 15px 30px; border-radius: 999px; background: #111; color: #f7f6f2; text-decoration: none; font: 600 1rem 'Space Grotesk', sans-serif; }
       .on.end > * { animation: capIn .9s cubic-bezier(.2,1.4,.4,1) both; }
-      .on.end > :nth-child(2) { animation-delay: .5s; } .on.end > :nth-child(3) { animation-delay: .9s; } .on.end > :nth-child(4) { animation-delay: 1.2s; }
+      .on.end > :nth-child(3) { animation-delay: .5s; } .on.end > :nth-child(4) { animation-delay: .9s; } .on.end > :nth-child(5) { animation-delay: 1.2s; } .on.end > .wv { animation: none; }
       /* Sound controls: visuals run muted; the button starts the funk. */
       .snd { position: absolute; z-index: 5; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 18px; border: 0; padding: 0; cursor: pointer;
         background: rgba(0,0,0,.55); -webkit-backdrop-filter: blur(3px); backdrop-filter: blur(3px); color: #fff; transition: opacity .5s ease, visibility 0s .5s; }
@@ -108,6 +108,11 @@
       .tv.poster .sc, .tv.poster .sc *, .tv.poster .sc::before { animation: none !important; }
       .tv.poster .sc.on { clip-path: none; }
       .ej { position: absolute; width: clamp(1.8rem, 6vw, 3rem); height: auto; pointer-events: none; opacity: 0; }
+      .wv { position: absolute; left: 0; bottom: 0; width: 200%; height: 55%; pointer-events: none; }
+      .wv path { animation-name: wvx, wvy; animation-timing-function: linear, ease-in-out; animation-iteration-count: infinite; animation-direction: normal, alternate; }
+      .wv path:nth-child(even) { animation-direction: reverse, alternate; }
+      @keyframes wvx { to { transform: translateX(-50%); } }
+      @keyframes wvy { from { translate: 0 0; } to { translate: 0 -3px; } }
       .fx { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; }
       .tick { position: absolute; z-index: 3; padding: 4px 10px; border-radius: 999px; background: #17a84d; color: #fff; font: 700 clamp(.9rem, 3.4vw, 1.3rem) 'IBM Plex Mono', monospace; white-space: nowrap; box-shadow: 0 6px 16px rgba(0,0,0,.2); animation: tick 1.7s ease-out forwards; }
       @keyframes tick { 0% { opacity: 0; transform: translateY(10px) scale(.6); } 15% { opacity: 1; transform: scale(1.1); } 70% { opacity: 1; } 100% { opacity: 0; transform: translateY(-70px); } }
@@ -175,6 +180,12 @@
           return '<img alt="' + e + '" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/' + cp + '.svg">';
         }
         var pops = [[8, 30], [84, 26], [12, 78], [88, 74], [50, 92]];
+        var SX = spot.scenes[0].ms / 1000 / 32; // one sixteenth: two bars of music per 4.6 s scene
+        // Duo-tone waves: 4 sine bands in two tones of the scene colour across the lower half, drifting and bobbing on a 2-beat swing.
+        function waves() { var h = '<svg class="wv" viewBox="0 0 400 100" preserveAspectRatio="none" aria-hidden="true">';
+          for (var b = 0; b < 4; b++) { var y = 18 + b * 20, a = 7 - b, d = 'M0 100 L0 ' + y; for (var x = 0; x <= 400; x += 10) d += ' L' + x + ' ' + (y + a * Math.sin((x / 200) * 2 * Math.PI + b * 1.3)).toFixed(1); d += ' L400 100Z';
+            h += '<path d="' + d + '" style="fill:color-mix(in srgb, var(--bg) ' + (b % 2 ? 78 : 88) + '%, ' + (b % 2 ? '#000' : '#fff') + ');animation-duration:' + (14 + b * 5) + 's,' + (SX * 8).toFixed(3) + 's"/>'; }
+          return h + '</svg>'; }
         var els = spot.scenes.map(function (s) {
           var el = document.createElement('div');
           el.className = 'sc' + (s.type ? ' ' + s.type : '');
@@ -187,10 +198,10 @@
               (s.id === 'duck' || s.id === 'icecream' || s.id === 'rocket' ? '<span class="stk"><img alt="" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f4c8.svg"></span>' : '') + (s.id === 'rocket' ? '<span class="stk lbl">number go up</span>' : '') +
               '<div class="card meme" style="--mi:' + s.ink + ';--ms:' + s.ink + ';--mc:' + s.card + ';--msh:rgba(0,0,0,.45);--mbg:radial-gradient(circle at 78% 18%,#fffdf0 0,' + s.card + ' 26%,' + s.bg + ' 62%,color-mix(in srgb,' + s.bg + ' 70%,#000) 100%)"><span class="frogart" aria-hidden="true">' + s.emoji + '</span><div class="row1"><span class="froglogo" aria-hidden="true">' + s.emoji + '</span>$' + s.coin + ' wallet</div><svg class="bm" viewBox="0 0 104 124"><use href="#b-outline" /></svg><div class="bal">$' + s.value + '</div><div class="sats">' + s.balance + ' ' + s.coin + '</div><div class="addr">wallet.yourcoin.com</div><div class="chip">From $99</div></div>';
           }
+          if (s.type !== 'mark') h = waves() + h;
           el.innerHTML = h; tv.insertBefore(el, tv.firstChild); return el;
         });
         // FX layer: circular wipes and a zig-zag "number go up" line, on one canvas that moves into the live scene (behind caption and card).
-        var SX = spot.scenes[0].ms / 1000 / 32; // one sixteenth: two bars of music per 4.6 s scene
         var fx = document.createElement('canvas'); fx.className = 'fx'; var g2 = fx.getContext('2d'), W = 0, H = 0, DPR = Math.min(window.devicePixelRatio || 1, 1.5);
         var parts = [], wipes = [], charts = [], BRIGHT = ['#ff3da5', '#22e4ff', '#a6ff2e', '#ff8a1f', '#ffe14d'], beatT, countRaf, dirty = false;
         function size() { W = tv.clientWidth; H = tv.clientHeight; fx.width = W * DPR; fx.height = H * DPR; }
