@@ -310,7 +310,7 @@ Music: [Echoes in the Fog by VexVoid](https://www.bchatx.com/u/vexvoid)
 
 Sound
 
-[just b](https://bwalletx.com/just-b) · [b cool](https://bwalletx.com/b-cool)
+[just b](https://bwalletx.com/just-b) · [b cool](https://bwalletx.com/b-cool) · [b creative](https://bwalletx.com/b-creative)
 
 bWalletX is in beta: test with small amounts. [support@bwalletx.com](mailto:support@bwalletx.com)
 
@@ -2224,6 +2224,8 @@ Music: [Echoes of Dust by VexVoid](https://www.bchatx.com/u/vexvoid)
 
 Sound
 
+[just b](https://bwalletx.com/just-b) · [b cool](https://bwalletx.com/b-cool) · [b creative](https://bwalletx.com/b-creative)
+
 bWalletX is in beta: test with small amounts. [support@bwalletx.com](mailto:support@bwalletx.com)
 
 ---
@@ -3773,6 +3775,10 @@ Questions: [support@bwalletx.com](mailto:support@bwalletx.com)
 
 Source: https://bwalletx.com/themes-custom
 
+Free · bWalletYour brand →
+
+Meme-themed wallets
+
 Meme wallets for memecoin communities Sheet 00 / 05
 
 # Your brand’s own wallet. From $99.
@@ -3785,7 +3791,17 @@ Every user still gets bWallet free. This is for brands who want their own.
 
 85.6 mm54 mm
 
-$FROG wallet
+bWallet
+
+0.00 BSV
+
+you@bwalletx.com
+
+Free
+
+🐸
+
+🐸$FROG wallet
 
 Ribbit.
 
@@ -3807,7 +3823,16 @@ DrawnbWalletX
 
 01 / 05  Who it’s for
 
-## Built for communities with a brand.
+## Built for token owners.
+
+Own a token? Give your holders a wallet with its name on. Use it to promote the token, build a product around it, or start a business on chain.
+
+Token owners
+
+### Promote, build, start up
+
+- Promote your token with a wallet in its colours
+- Build a product on it, or start a business on chain
 
 Memecoin communities
 
