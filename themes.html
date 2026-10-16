@@ -45,6 +45,12 @@
       body.paper[data-theme="vexvoid"] .card .art { display: none; }
       body.paper[data-theme="vexvoid"] .card, body.paper[data-theme="vexvoid"] .tile { box-shadow: 0 0 0 .5px #fff; }
       body.paper[data-theme="vexvoid"] .tblock svg g { stroke: #f2f2f2; }
+      .artlbl { margin: 40px 0 0; font-size: .72rem; color: var(--muted); }
+      .themes.artists { margin-top: 14px; grid-template-columns: minmax(0,1fr); width: calc(100% / 3); }
+      @media (max-width: 820px) { .themes.artists { width: 50%; } }
+      .vxlede { display: none; }
+      body.paper[data-theme="vexvoid"] .vxlede { display: inline; }
+      body.paper[data-theme="vexvoid"] .plede { display: none; }
       .vxcredit { margin: 18px 0 0; font: 500 .7rem var(--mono); letter-spacing: .14em; text-transform: uppercase; color: var(--muted); }
       .vxcredit a { color: var(--ink); }
       .card .row1, .card .bal, .card .sats, .card .addr, .card .chip, .card .bm { z-index: 1; }
@@ -256,7 +262,7 @@
           <div>
             <p class="num">Themes <b>Sheet 00 / 05</b></p>
             <h1>Make bWallet yours.</h1>
-            <p class="lede">Pick the colours of the app and the art on your card. Here are the new paper themes: tinted paper, dark ink of the same hue, thin lines and lots of room.</p>
+            <p class="lede"><span class="plede">Pick the colours of the app and the art on your card. Here are the new paper themes: tinted paper, dark ink of the same hue, thin lines and lots of room.</span><span class="vxlede">An artist edition by VexVoid: black, white and moving, taken from their live AV set.</span></p>
             <p class="vxcredit">Artist theme by <a href="https://bchatx.com/u/vexvoid" target="_blank" rel="noopener">VexVoid &middot; bTV: AIVJ</a></p>
             <div class="cta"><a class="pri" href="#how">How to change it</a><a class="sec" href="/get">Get bWalletX</a></div>
           </div>
@@ -291,9 +297,12 @@
             <button type="button" class="tcell" data-t="pink"><div class="sw" style="background:#f3c9d4"></div><h3>Pink <span class="pill soon">Coming</span></h3><p>Blush paper, deep rose ink.</p></button>
             <button type="button" class="tcell" data-t="blue"><div class="sw" style="background:#c3d4ee"></div><h3>Blue <span class="pill soon">Coming</span></h3><p>Blueprint paper, navy ink.</p></button>
             <button type="button" class="tcell" data-t="yellow"><div class="sw" style="background:#f1df8f"></div><h3>Yellow <span class="pill soon">Coming</span></h3><p>Legal-pad paper, umber ink.</p></button>
-            <button type="button" class="tcell" data-t="vexvoid"><div class="sw" style="background:#000 radial-gradient(circle at 35% 40%,#fff 0 1px,transparent 1.5px) 0 0/9px 9px;border-color:#000"></div><h3>VexVoid <span class="pill soon">Coming</span></h3><p>Artist edition: black, stark white, point field.</p></button>
             <div><div class="sw" style="background:linear-gradient(135deg,#ffd24d,#eab300);border-color:#d9a400"></div><h3>Gold <span class="pill live">Live</span></h3><p>The default. Gold on black.</p></div>
             <div><div class="sw" style="background:#111;border-color:#111"></div><h3>Dark <span class="pill live">Live</span></h3><p>Quiet black for night use.</p></div>
+          </div>
+          <p class="lbl artlbl">Artist editions</p>
+          <div class="themes artists">
+            <button type="button" class="tcell" data-t="vexvoid"><div class="sw" style="background:#000 radial-gradient(circle at 35% 40%,#fff 0 1px,transparent 1.5px) 0 0/9px 9px;border-color:#000"></div><h3>VexVoid <span class="pill soon">Coming</span></h3><p>Artist edition: black, stark white, point field.</p></button>
           </div>
           <p class="hint lbl">Hover (or tap once) to preview this page in a paper &middot; click (tap again) to open its page</p>
           <div class="install" id="install" aria-live="polite">
