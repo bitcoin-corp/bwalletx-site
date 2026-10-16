@@ -90,7 +90,7 @@ def cover_art():
     return ('<div class="hero">' + BLOB('radial-gradient(circle at 30% 30%,#fff3b0,#f5b800 55%,#8a5d00)', 52, 30, 95)
             + RING('rgba(255,210,77,.5)', 8, 50, 70) + RING('rgba(255,210,77,.3)', 60, 8, 50)
             + '<div class="bigb">b</div>' + emo(['beer', 'spark', 'beer', 'spark', 'beer', 'spark'], 11, 'all')
-            + '<div class="cchat">' + CHAT('Got the sticker pack?', 'Yes! 1,500 sats. Tap to pay.', 'Paid &#x2714;') + '</div></div>')
+            + '<div class="cchat">' + CHAT('Got the sticker pack?', 'Yes! $15 (15,000 sats). Tap to pay.', 'Paid &#x2714;') + '</div></div>')
 
 def qr_svg(url='https://bwalletx.com/get'):
     import qrcode
@@ -106,8 +106,8 @@ def getqr():
 STAMP = '<div class="flt"><div class="stamp" aria-hidden="true">LIVE<small>&#x2713; today</small></div></div>'
 
 RECEIPT = ('<div class="flt"><div class="rcpt" aria-hidden="true"><b class="rb">b</b><p class="rt">bWalletX RECEIPT</p><p>Table for 2 &middot; deposit</p>'
-           '<p class="ra">500 sats</p><p>txid 3f9a&hellip;c21e</p><p class="rok">&#x2713; on chain</p></div></div>')
-SMSFLOAT = ('<div class="note" aria-hidden="true"><img src="' + TW + '1f4e9.svg" alt="" /><div><b>New text</b><span>Paid 500 sats &#x2713;</span></div></div>')
+           '<p class="ra">$5.00</p><p class="rs">5,000 sats</p><p>txid 3f9a&hellip;c21e</p><p class="rok">&#x2713; settled on chain</p></div></div>')
+SMSFLOAT = ('<div class="note" aria-hidden="true"><img src="' + TW + '1f4e9.svg" alt="" /><div><b>New text</b><span>Paid $5 (5,000 sats) &#x2713;</span></div></div>')
 
 def pages_issue_1(back):
     P = []
@@ -125,11 +125,11 @@ def pages_issue_1(back):
         deco=bg('dots', BLOB('#ffd24d', 70, -10, 70) + RING('#111', 75, 60, 40), emo(['book', 'spark', 'beer'], 2), wv=('rgba(255,179,71,.35)', 'rgba(255,210,77,.5)'))))
     P.append(page(f'<p class="k r1">Cover story &middot; bRand</p><h2 class="r2">Paste a link. <span class="gd">Get a shopkeeper.</span></h2><p class="r3">Give b your website. b drafts an agent that knows your menu, prices and hours, and answers customers in chat.</p><p class="r3">{N} Agent from a link. <a href="/business-agents">bRand business agents</a></p>' + media('brand', og('og-business-agents-brand.png', 'bRand business agents')) + '<p class="q r4">It never calls in sick. It does ask for a logo.</p>', 's-black', 3,
         deco=bg('grid', BLOB('radial-gradient(circle,#f5b800,transparent 70%)', 55, 45, 110), emo(['bag', 'store', 'label', 'spark'], 3), img='og-themes-custom.png')))
-    P.append(page(f'<p class="k r1">Cover story &middot; checkout</p><h2 class="r2">The till is the chat.</h2><p class="r3">Customer asks, agent quotes, customer taps Pay. Both sides keep the same receipt.</p><p class="r3">{N} Chat checkout for business agents.</p>' + media('checkout', CHAT('Two flat whites?', '900 sats. Tap to pay.', 'Paid &#x2714;')) + '<div class="flt">' + CHAT('Two flat whites?', '900 sats. Tap to pay.', 'Paid &#x2714;') + '</div><p class="q r4">No card machine. No &ldquo;it&rsquo;s gone through twice&rdquo;.</p>', 's-yellow', 4,
+    P.append(page(f'<p class="k r1">Cover story &middot; checkout</p><h2 class="r2">The till is the chat.</h2><p class="r3">Customer asks, agent quotes, customer taps Pay. Both sides keep the same receipt.</p><p class="r3">{N} Chat checkout for business agents.</p>' + media('checkout', CHAT('Two flat whites?', '$9 (9,000 sats). Tap to pay.', 'Paid &#x2714;')) + '<div class="flt">' + CHAT('Two flat whites?', '$9 (9,000 sats). Tap to pay.', 'Paid &#x2714;') + '</div><p class="q r4">No card machine. No &ldquo;it&rsquo;s gone through twice&rdquo;.</p>', 's-yellow', 4,
         deco=bg('stripes', BLOB('#fff', 60, 30, 80) + RING('#111', -10, 70, 50), emo(['card', 'receipt', 'cart', 'burger', 'coffee', 'ok'], 4), wv=('rgba(255,122,61,.35)', 'rgba(255,255,255,.5)'))))
     P.append(page(f'<p class="k r1">Cover story &middot; pocket money</p><h2 class="r2">An agent with a daily allowance.</h2><p class="r3">Its own capped account: a daily limit, and a big Stop button for when it gets ideas above its station.</p><p class="r3">{N} Capped agent account inside the app.</p><p class="r3">{L} Today on your computer: the <code>bwalletx</code> CLI agent wallet, with a daily cap and Stop. <a href="/cli">CLI</a></p>' + media('allowance', '<div class="big stopb">STOP</div>'), 's-pink', 5,
         deco=bg('dots', BLOB('#ff6b9e', 65, 55, 90) + RING('#fff', 5, 5, 40), emo(['moneybag', 'coin', 'stop', 'robot', 'cal'], 5))))
-    P.append(page(f'<p class="k r1">Cover story &middot; SMS</p><h2 class="r2">Bitcoin by text.</h2><p class="r3">Customers text a business&rsquo;s agent like they text a friend. It replies, quotes and takes payment.</p><p class="r3">{C} SMS for agents. <a href="/sms">Bitcoin by text</a></p>' + media('sms', '<div class="duo">' + CHAT('Table for 2 at 8?', 'Booked. 500 sats deposit?', 'Y') + SMSFLOAT + '</div>') + '<p class="q r4">Finally, a good reason to reply to a text.</p>', 's-lime', 6,
+    P.append(page(f'<p class="k r1">Cover story &middot; SMS</p><h2 class="r2">Bitcoin by text.</h2><p class="r3">Customers text a business&rsquo;s agent like they text a friend. It replies, quotes and takes payment.</p><p class="r3">{C} SMS for agents. <a href="/sms">Bitcoin by text</a></p>' + media('sms', '<div class="duo">' + CHAT('Table for 2 at 8?', 'Booked. $5 deposit? (5,000 sats)', 'Y') + SMSFLOAT + '</div>') + '<p class="q r4">Finally, a good reason to reply to a text.</p>', 's-lime', 6,
         deco=bg('stripes', BLOB('#7ee0a1', 60, 50, 90), emo(['phone', 'chat', 'env', 'signal'], 6), wv=('rgba(17,17,17,.12)', 'rgba(126,224,161,.6)'))))
     P.append(page(f'<p class="k r1">Cover story &middot; receipts</p><h2 class="r2">Receipts <span class="gd">anyone can check.</span></h2><p class="r3">Every bWalletX payment settles on chain. You, your customer and anyone else see the same record.</p><p class="r3">{L} On-chain receipts.</p>' + media('receipts', '<div class="big gd">&#x2714;</div>') + RECEIPT + '<p class="q r4">Arguments about who paid what get very short.</p>', 's-black', 7,
         deco=bg('grid', RING('rgba(255,210,77,.4)', 50, 40, 90) + RING('rgba(255,210,77,.2)', 40, 30, 120), emo(['receipt', 'link', 'search', 'ok'], 7))))
@@ -268,7 +268,7 @@ img.og{width:100%;height:auto;aspect-ratio:1200/630;object-fit:cover;display:blo
  mask:linear-gradient(#000,#000) top/100% calc(100% - 10px) no-repeat,conic-gradient(from -45deg at bottom,#0000,#000 1deg 89deg,#0000 90deg) bottom/16px 10px repeat-x;
  filter:drop-shadow(0 20px 30px rgba(0,0,0,.5));animation:rbob 3s ease-in-out infinite}
 .rcpt p{margin:2px 0;max-width:none}.rcpt .rb{display:inline-grid;place-items:center;width:28px;height:28px;border-radius:50%;background:linear-gradient(160deg,#fff3b0,#f5b800);font:700 18px var(--hf);margin-bottom:6px}
-.rcpt .rt{font-weight:600;border-bottom:1px dashed #999;padding-bottom:6px}.rcpt .ra{font:700 1.8em var(--hf);letter-spacing:-.02em}.rcpt .rok{color:#127a3a;font-weight:600;border-top:1px dashed #999;padding-top:6px}
+.rcpt .rt{font-weight:600;border-bottom:1px dashed #999;padding-bottom:6px}.rcpt .rs{font-size:.85em;opacity:.65;margin-top:-2px}.rcpt .ra{font:700 1.8em var(--hf);letter-spacing:-.02em}.rcpt .rok{color:#127a3a;font-weight:600;border-top:1px dashed #999;padding-top:6px}
 @keyframes rbob{0%,100%{transform:translateY(-10px) rotate(-6deg)}50%{transform:translateY(10px) rotate(-2deg)}}
 .duo{display:flex;align-items:center;gap:4cqw;width:100%}.duo .chat{flex:1 1 60%}
 .note{flex:0 1 40%;display:flex;gap:10px;align-items:center;background:rgba(255,255,255,.92);border:2px solid #111;border-radius:18px;padding:12px 14px;box-shadow:0 20px 40px -18px rgba(0,0,0,.5);transform:rotate(5deg);animation:rbob2 3.4s ease-in-out infinite;font-size:.9em}
