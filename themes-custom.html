@@ -11,7 +11,7 @@
     <meta property="og:site_name" content="bWalletX" />
     <meta property="og:title" content="Meme wallets for memecoin communities. From $99." />
     <meta property="og:description" content="Your brand's own self-custody wallet: Theme edition $99/yr, Branded edition from $999, Native app by quote." />
-    <meta property="og:image" content="https://bwalletx.com/og-themes-custom.png" />
+    <meta property="og:image" content="https://bwalletx.com/og-themes-custom.png?v=2" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
     <meta property="og:image:alt" content="A diagonal split: the free black-and-white bWallet card on white, cut through to a frog-green $FROG wallet card, headed Your brand&rsquo;s own wallet. From $99." />
@@ -19,7 +19,7 @@
     <meta name="twitter:site" content="@bWalletX" />
     <meta name="twitter:title" content="Meme wallets for memecoin communities. From $99." />
     <meta name="twitter:description" content="Your brand's own self-custody wallet: Theme edition $99/yr, Branded edition from $999, Native app by quote." />
-    <meta name="twitter:image" content="https://bwalletx.com/og-themes-custom.png" />
+    <meta name="twitter:image" content="https://bwalletx.com/og-themes-custom.png?v=2" />
     <link rel="icon" href="/favicon.ico" />
     <meta name="theme-color" content="#f7f6f2" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -222,7 +222,7 @@
       .cut .tag.a { left: 20px; top: 120px; color: var(--muted); border: .5px solid var(--hair); background: var(--sheet); }
       .cut .tag.b { right: 20px; top: 120px; color: #0b2e12; background: #e8ff7a; }
       .tp section.hero .num b { color: var(--ink); }
-      .card.frog { border: 2px solid #0b2e12; color: #0b2e12; border-radius: 22px;
+      .card.frog { container-type: inline-size; border: 2px solid #0b2e12; color: #0b2e12; border-radius: 22px;
         background: radial-gradient(circle at 78% 18%, #fffbd0 0, #e8ff7a 26%, #9be34c 62%, #4fb33a 100%);
         box-shadow: 0 30px 60px -20px rgba(6,40,14,.55), 0 2px 0 #0b2e12; transform: rotate(-4deg); }
       .card.frog .row1 i { border-color: #0b2e12; background: #0b2e12; box-shadow: inset 0 0 0 5px #e8ff7a; }
@@ -231,6 +231,8 @@
       .card.frog .sats { color: #1d5a24; }
       .card.frog .addr { color: #0b2e12; }
       .card.frog .chip { background: #0b2e12 !important; color: #e8ff7a !important; border-color: #0b2e12 !important; }
+      .card.frog .frogart { position: absolute; z-index: 0; right: -10%; top: 54%; font-family: "Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji", sans-serif; font-size: 62cqw; line-height: 1; opacity: .48; transform: translateY(-50%) rotate(-12deg) skewX(-6deg); pointer-events: none; }
+      .card.frog .froglogo { font-family: "Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji", sans-serif; font-size: 26px; line-height: 1; width: 30px; height: 30px; display: inline-grid; place-items: center; }
       .hero .obj { isolation: isolate; }
       .card.mono { position: absolute !important; inset: 0; transform: translate(-30%, -34%) rotate(3deg) scale(.86); z-index: -1; border-radius: 22px; box-shadow: 0 1px 0 rgba(0,0,0,.08); }
       .card.mono .bal { font-size: clamp(1.4rem, 3.6vw, 2.2rem); }
@@ -283,7 +285,8 @@
               <div class="chip">Free</div>
             </div>
             <div class="card frog" role="img" aria-label="An example frog-themed wallet card for a frog coin">
-              <div class="row1"><i></i>$FROG wallet</div>
+              <span class="frogart" aria-hidden="true">🐸</span>
+              <div class="row1"><span class="froglogo" aria-hidden="true">🐸</span>$FROG wallet</div>
               <svg class="bm" viewBox="0 0 104 124"><use href="#b-outline" /></svg>
               <div class="bal">Ribbit.</div>
               <div class="sats">Example: a frog wallet for a frog coin</div>
