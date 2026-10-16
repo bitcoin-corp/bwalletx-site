@@ -82,6 +82,7 @@
       .card .t { padding-left: 14%; align-items: center; }
       .tv.poster .sc, .tv.poster .sc *, .tv.poster .sc::before { animation: none !important; }
       .tv.poster .sc.on { clip-path: none; }
+      .ej { position: absolute; width: clamp(1.8rem, 6vw, 3rem); height: auto; pointer-events: none; opacity: 0; }
       .fx { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; }
       .tick { position: absolute; z-index: 3; padding: 4px 10px; border-radius: 999px; background: #17a84d; color: #fff; font: 700 clamp(.9rem, 3.4vw, 1.3rem) 'IBM Plex Mono', monospace; white-space: nowrap; box-shadow: 0 6px 16px rgba(0,0,0,.2); animation: tick 1.7s ease-out forwards; }
       @keyframes tick { 0% { opacity: 0; transform: translateY(10px) scale(.6); } 15% { opacity: 1; transform: scale(1.1); } 70% { opacity: 1; } 100% { opacity: 0; transform: translateY(-70px); } }
@@ -197,10 +198,20 @@
         function ticker(el) { var s = document.createElement('span'); s.className = 'tick'; s.textContent = '▲ +' + rnd(1.2, 5.2).toFixed(1) + '%'; s.style.left = rnd(56, 78) + '%'; s.style.top = rnd(40, 48) + '%'; el.appendChild(s); setTimeout(function () { s.remove(); }, 1700); }
         function countUp(el, s) { var v = el.querySelector('.card .v'), end = parseFloat(s.value.replace(/,/g, '')), from = end * 0.9, t0 = performance.now(), dur = s.ms * 0.9; if (!v) return;
           cancelAnimationFrame(countRaf); (function f(now) { var p = Math.max(0, Math.min(1, (now - t0) / dur)), e = 1 - (1 - p) * (1 - p); v.textContent = '$' + (from + (end - from) * e).toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 }); if (p < 1) countRaf = requestAnimationFrame(f); })(t0); }
+        // Emoji bursts: copies of the scene's Twemoji fly out from around the card, growing as they go (sideways/down, never up into the caption).
+        var sprites = 0;
+        function twUrl(e) { return 'https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/' + Array.from(e).map(function (c) { return c.codePointAt(0).toString(16); }).filter(function (c) { return c !== 'fe0f'; }).join('-') + '.svg'; }
+        function emojiBurst(el, k) { var card = el.querySelector('.card'), sc = spot.scenes[k], n = 3 + Math.min(k, 3), ox = rnd(30, 70), oy = rnd(55, 70);
+          for (var i = 0; i < n && sprites < 30; i++) { var im = document.createElement('img'), a = rnd(-0.3, Math.PI + 0.3), d = rnd(16, 34), dur = rnd(1300, 1900);
+            im.className = 'ej'; im.alt = ''; im.src = twUrl(sc.emoji); im.style.left = ox + '%'; im.style.top = oy + '%'; el.insertBefore(im, card); sprites++;
+            var an = im.animate([{ transform: 'translate(-50%,-50%) scale(.6)', opacity: 0 }, { opacity: 1, offset: 0.15 }, { opacity: 1, offset: 0.6 },
+              { transform: 'translate(calc(-50% + ' + Math.cos(a) * d + 'vmin), calc(-50% + ' + Math.sin(a) * d + 'vmin)) scale(1.8) rotate(' + rnd(-40, 40) + 'deg)', opacity: 0 }], { duration: dur, easing: 'cubic-bezier(.2,.7,.3,1)', fill: 'forwards' });
+            an.onfinish = (function (x) { return function () { x.remove(); sprites--; }; })(im); } }
         // One visual beat every 2 sixteenths of a coin scene (l = 2..30). Driven by the audio clock when sound is on, a timer otherwise.
         function vbeat(k, l) { var el = els[k]; if (!el || cur !== k || spot.scenes[k].type) return;
           if (k === 6 && l === 24) wipes.push({ x: W / 2, y: H * 0.62, R: Math.hypot(W, H), c: '#111111', t: 0, life: SX * 8, hold: 1 }); // black from the card: becomes the b-mark scene
           else if (k === 0 ? l === 8 : k === 1 ? l % 16 === 8 : k === 6 ? (l === 6 || l === 14) : (l === 6 || l === 16 || l === 26)) wipe(k, l, 1, k >= 4); // calm: at most 3 per scene
+          if (l === 4 || l === 20 || (k >= 3 && l === 12) || (k >= 5 && k < 6 && l === 28)) emojiBurst(el, k);
           if (l === 16 && k % 2 === 1) chart();
           if (l === 6 || l === 22) ticker(el);
           }
