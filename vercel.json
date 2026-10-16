@@ -88,6 +88,11 @@
       "permanent": false
     },
     {
+      "source": "/room/:path*",
+      "destination": "https://www.bchatx.com/room/:path*",
+      "permanent": false
+    },
+    {
       "source": "/u/bchat/:handle",
       "destination": "https://www.bchatx.com/u/:handle",
       "permanent": false
