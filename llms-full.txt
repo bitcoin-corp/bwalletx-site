@@ -837,58 +837,75 @@ Found a security problem? Email [support@bwalletx.com](mailto:support@bwalletx.c
 
 Source: https://bwalletx.com/business-agents
 
-Business agents In build
+bBrand  Business agents
 
-# Your business agent, from a link.
+# Your shop’s agent, paid in sats, in chat.
 
-Paste your website. b drafts an agent that knows your products, prices and FAQs, then answers your customers and takes payment in chat.
+Don’t be bland. Get bBranded.
 
-It lives in your bChatX room or your branded bWallet. This is in build: the list at the bottom shows exactly what works today.
+Paste your website. b drafts an agent that knows your products, prices and FAQs. It answers customers and takes payment right in the chat, on Bitcoin, with a receipt anyone can check.
+
+Chat agents that take money today mostly hand off to a card checkout. bBrand doesn’t: the agent works from a capped account with a daily limit and a Stop button, and the payment settles on chain.
 
 [How it works](#how)[What’s live](#status)
 
-Customer
+b
+YourshopAgent · bBranded
 
-Do you have the large bag in black?
+Got the gold sticker pack?
 
-Your agent
-
-Yes. The large black bag is £40, ships in two days. Want it?
+Yes: gold sticker pack, 12,000 sats. Ships today. Want it?
 
 Yes please.
 
-Pay £40 to yourshopAllow
+Pay Yourshop
+12,000 satsNetwork fee under 1p · from your walletAllow
 
-Paid. Your receipt is on chain. Thank you.
+Paid · receipt on chain ↗
 
-01 / 04  How it works
+01 / 05  How it works
 
-## Three steps.
+## Paste a link. b drafts your shop. Take sats in chat.
 
 Step 1
 
-### Paste your link
+### Paste a link
 
-- Give b your website address
-- b reads your products, prices and FAQs and drafts the agent
-- You check it and edit anything before it goes live
+Give b your website. It reads your products, prices and FAQs.
 
 Step 2
 
-### Put it where customers are
+### b drafts your shop
 
-- Your bChatX room, or your branded bWallet
-- It answers questions in your words, day and night
+You check the agent, edit anything, then put it in your bChatX room or your branded bWallet.
 
 Step 3
 
-### Take payment in chat
+### Take sats in chat
 
-- Customers pay in sats or PNEEs
-- One tap on their own approval sheet, inside their wallet
-- No cards, no card rails, no forms
+Customers tap Allow on their own approval sheet. No cards, no forms.
 
-02 / 04  Kept on a short leash
+02 / 05  Card rails vs bBrand
+
+## Same chat. Different money.
+
+Card railsbBrand
+
+FeesA percentage of each sale, often plus a fixed chargeBitcoin network fee, usually well under 1p
+
+SettlementTypically days to reach your bankOn chain in seconds, in your wallet
+
+Who holds the moneyThe processor, until it pays outYou. Your keys, your wallet
+
+ChargebacksCan be reversed weeks laterFinal once paid; refunds are yours to give
+
+ReceiptA private record at the processorA public transaction anyone can check
+
+Agent spendingUsually a card or API key with wide accessA capped account with a daily limit and Stop
+
+Card fees vary by provider and country. Sat prices move with the BSV price; the sheet shows the amount before you allow it.
+
+03 / 05  Kept on a short leash
 
 ## You stay in charge of the money.
 
@@ -902,7 +919,7 @@ Step 3
 
 - 05Customers approve every payment themselves. The agent can ask; it can’t take.
 
-03 / 04  Price
+04 / 05  Price
 
 ## Included with Branded editions.
 
@@ -910,19 +927,23 @@ Business agents come with a [Branded edition](https://bwalletx.com/themes/custom
 
 [See editions](https://bwalletx.com/themes/custom)[Message us on bChatX](https://www.bchatx.com/u/bwalletx)
 
-04 / 04  What’s live
+05 / 05  What’s live
 
 ## Where things stand.
 
-- ComingAgent from a link (in build)
+- Next releaseAgent from a link: merged, ships in the next bWalletX release
 
-- ComingChat checkout with the approval sheet
+- Next releaseChat checkout with the approval sheet: merged, ships in the next bWalletX release
 
-- ComingCapped agent account with a daily limit and Stop button
+- LiveCapped agent account with a daily limit and Stop, in the [bwalletx CLI and MCP server](https://bwalletx.com/cli)
+
+- ComingCapped account with daily limit and Stop for in-app business agents
 
 - LiveReceipts on chain: every bWalletX payment already has one
 
 - ComingSMS for your agent: customers text it. [Bitcoin by text](https://bwalletx.com/sms)
+
+Want to hold sats yourself first? [Hodl my b](https://bwalletx.com/hodl-my-b). Building your own agent? [The bwalletx CLI](https://bwalletx.com/cli).
 
 ---
 
@@ -1852,6 +1873,85 @@ Open it from the wallet: tap History on the account card. Payments from a pot sh
 History and its exports are records, not tax advice. Check with an accountant before you file.
 
 bWalletX is in beta: test with small amounts. Questions: [support@bwalletx.com](mailto:support@bwalletx.com)
+
+---
+
+Source: https://bwalletx.com/hodl-my-b
+
+Agents that pay on chain
+
+# Hodl my b.
+
+Agents should pay on the Bitcoin base layer: from their own wallet, in sats, with fees below a penny and a receipt anyone can check.
+
+This page answers the call for agents that pay on chain. Some of it already works in bWalletX today. The rest is built and on its way. The list below says which is which.
+
+[What’s live](#status)[Get bWalletX](https://bwalletx.com/get)
+
+01 / 03  Why the base layer
+
+## Card rails were built for people at tills.
+
+An AI-agent company recently showed iMessage agents that learn a business from a link and take payment in chat. It is a good idea. Their payments still go over cards. An agent paying over cards borrows a person’s card, pays card fees, and leaves a receipt only the card network can see.
+
+Own wallet
+
+### A wallet of its own
+
+- An agent account, separate from your main wallet
+- Its balance is its budget
+
+Small fees
+
+### Fees below a penny
+
+- Pay in sats on Bitcoin SV
+- Tiny payments stay worth making
+
+Open receipts
+
+### Receipts anyone can check
+
+- Every payment settles on chain
+- You, your customer and anyone else see the same record
+
+02 / 03  What’s live
+
+## Where things stand today.
+
+- LiveOn-chain receipts: every bWalletX payment settles on chain with a public receipt.
+
+- LiveAn open wallet interface: bWalletX speaks BRC-100, so any site or agent can ask it to pay or sign. [For developers](https://bwalletx.com/developers)
+
+- LiveAll 19 bApps sign in and pay with bWalletX. [See the bApps](https://bwalletx.com/bapps)
+
+- LiveAgent wallet on your computer: the `bwalletx` CLI and MCP server, with a daily cap, a Stop switch and a rate limit on every spend. `bwalletx serve` runs a BRC-100 wallet on localhost. [CLI](https://bwalletx.com/cli) · [MCP](https://bwalletx.com/mcp)
+
+- LiveAsk b, the assistant inside the wallet.
+
+- LiveYour own theme for $99 a year, and branded editions. [Themes](https://bwalletx.com/themes) · [Editions](https://bwalletx.com/themes/custom)
+
+- LiveA bChatX room with its own token. [Start a room](https://www.bchatx.com/room/new/invite/b-creative) · [b creative](https://bwalletx.com/b-creative)
+
+- Next releaseAgent from a link: paste a website, b drafts a shop that takes BSV in chat. [Business agents](https://bwalletx.com/business-agents)
+
+- Next releaseBug reports from errors: when something breaks, Ask b sends the error for you.
+
+- ComingCapped agent account in the app for business agents, with a daily limit and a Stop button.
+
+- ComingSMS for agents: customers text a business’s agent. [Bitcoin by text](https://bwalletx.com/sms)
+
+- ComingbCredits: prepay for b. [Credits](https://bwalletx.com/credits)
+
+- ComingShare one fact, such as over 18, from your wallet. [Identity](https://bwalletx.com/identity)
+
+03 / 03  Everything else
+
+## Less noise. More life. Just b.
+
+Every feature, with what is live and what is coming: [all features](https://bwalletx.com/features).
+
+[Get bWalletX](https://bwalletx.com/get)[All features](https://bwalletx.com/features)
 
 ---
 

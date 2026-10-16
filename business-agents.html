@@ -3,23 +3,23 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Business agents from a link</title>
+    <title>bBrand business agents</title>
     <link rel="canonical" href="https://bwalletx.com/business-agents" />
-    <meta name="description" content="Paste your website and b drafts an agent that knows your products, prices and FAQs. It answers customers in your bChatX room or branded bWallet and takes payment in chat, with an approval sheet, a capped account and on-chain receipts. In build." />
+    <meta name="description" content="bBrand: paste your website and b drafts an agent that answers customers and takes sats in chat, from a capped account, with a receipt on chain. Don't be bland. Get bBranded." />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://bwalletx.com/business-agents" />
     <meta property="og:site_name" content="bWalletX" />
-    <meta property="og:title" content="Your business agent, from a link." />
-    <meta property="og:description" content="Paste your website. b drafts an agent that answers customers and takes payment in chat. Included with Branded editions. In build." />
-    <meta property="og:image" content="https://bwalletx.com/og-business-agents-v1.png" />
+    <meta property="og:title" content="Don't be bland. Get bBranded." />
+    <meta property="og:description" content="Paste a link. b drafts your shop. Take sats in chat, with a receipt on chain." />
+    <meta property="og:image" content="https://bwalletx.com/og-business-agents-bbrand.png?v=1" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
-    <meta property="og:image:alt" content="A drafting sheet headed Your business agent, from a link, with a chat showing an agent quoting a price and a customer approving the payment." />
+    <meta property="og:image:alt" content="bBrand: a phone chat where an agent sells a sticker pack for sats and shows Paid, receipt on chain. Tagline: Don\'t be bland. Get bBranded." />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@bWalletX" />
-    <meta name="twitter:title" content="Your business agent, from a link." />
-    <meta name="twitter:description" content="Paste your website. b drafts an agent that answers customers and takes payment in chat. Included with Branded editions. In build." />
-    <meta name="twitter:image" content="https://bwalletx.com/og-business-agents-v1.png" />
+    <meta name="twitter:title" content="Don't be bland. Get bBranded." />
+    <meta name="twitter:description" content="Paste a link. b drafts your shop. Take sats in chat, with a receipt on chain." />
+    <meta name="twitter:image" content="https://bwalletx.com/og-business-agents-bbrand.png?v=1" />
     <link rel="icon" href="/favicon.ico" />
     <meta name="theme-color" content="#f7f6f2" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -228,32 +228,62 @@
     <svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs><symbol id="b-outline" viewBox="20 6 80 104"><g fill="none" stroke="currentColor" stroke-width="4" stroke-linejoin="round" stroke-linecap="round"><path d="M29 28 L45 12 L45 44.87 A31 31 0 1 1 29 72 Z" /><path d="M74 72 A14 14 0 1 1 46 72 A14 14 0 1 1 74 72 Z" /></g></symbol></defs></svg>
     <main class="tp">
       <style>
-        .chatx { border: 1px solid var(--ink); background: var(--sheet); padding: 18px; display: grid; gap: 10px; font-size: .92rem; }
-        .chatx .bub { max-width: 85%; padding: 10px 14px; border: .5px solid var(--ink); line-height: 1.45; }
-        .chatx .a { justify-self: start; background: var(--paper); }
-        .chatx .u { justify-self: end; background: var(--ink); color: var(--paper); }
-        .chatx .who { font: 500 .62rem var(--mono); letter-spacing: .14em; text-transform: uppercase; color: var(--muted); }
-        .chatx .sheet { border: 1px solid var(--ink); padding: 12px 14px; display: flex; justify-content: space-between; align-items: center; gap: 12px; font: 500 .72rem var(--mono); letter-spacing: .1em; text-transform: uppercase; }
-        .chatx .sheet b { background: var(--ink); color: var(--paper); padding: 6px 12px; font-weight: 500; }
+        .bbtag { font: 600 clamp(1.1rem, 2.6vw, 1.5rem) var(--hf); letter-spacing: -.02em; margin: 18px 0 0; }
+        .bbtag span { background: #111; color: #e6b422; padding: 2px 10px; }
+        .phone { width: min(340px, 100%); margin: 0 auto; border: 1.5px solid var(--ink); border-radius: 38px; background: #111; padding: 12px; box-shadow: 0 30px 60px -30px rgba(0,0,0,.45); }
+        .phone .scr { background: var(--paper); border-radius: 28px; padding: 16px 14px 18px; min-height: 470px; display: flex; flex-direction: column; gap: 10px; font-size: .9rem; overflow: hidden; }
+        .phone .bar { display: flex; align-items: center; gap: 10px; padding-bottom: 10px; border-bottom: .5px solid var(--hair); }
+        .phone .av { width: 32px; height: 32px; border-radius: 50%; background: #111; color: #e6b422; display: grid; place-items: center; font: 700 .95rem var(--hf); }
+        .phone .bar b { font: 600 .9rem var(--hf); display: block; }
+        .phone .bar small { font: 400 .62rem var(--mono); color: var(--muted); letter-spacing: .08em; text-transform: uppercase; }
+        .phone .m { max-width: 82%; padding: 9px 13px; border-radius: 16px; line-height: 1.4; opacity: 0; transform: translateY(8px); animation: pin .45s ease forwards; }
+        .phone .c { align-self: flex-end; background: #111; color: #f7f6f2; border-bottom-right-radius: 4px; }
+        .phone .a { align-self: flex-start; background: var(--sheet); border: .5px solid var(--ink); border-bottom-left-radius: 4px; }
+        .phone .sh { border: 1px solid var(--ink); border-radius: 16px; background: var(--sheet); padding: 12px; opacity: 0; transform: translateY(30px); animation: pin .5s ease forwards; }
+        .phone .sh p { margin: 0; font: 500 .62rem var(--mono); letter-spacing: .12em; text-transform: uppercase; color: var(--muted); }
+        .phone .sh h4 { margin: 6px 0 2px; font: 600 1.2rem var(--hf); color: var(--ink); }
+        .phone .sh small { color: var(--muted); font-size: .75rem; }
+        .phone .sh .al { margin-top: 10px; display: block; text-align: center; background: #111; color: #e6b422; border-radius: 999px; padding: 9px; font: 600 .9rem var(--hf); }
+        .phone .ok { align-self: flex-start; font: 500 .72rem var(--mono); letter-spacing: .06em; padding: 7px 11px; border-radius: 999px; background: #111; color: #e6b422; opacity: 0; animation: pin .45s ease forwards; }
+        .phone .d1 { animation-delay: .4s } .phone .d2 { animation-delay: 1.4s } .phone .d3 { animation-delay: 2.4s } .phone .d4 { animation-delay: 3.4s } .phone .d5 { animation-delay: 4.6s }
+        @keyframes pin { to { opacity: 1; transform: none; } }
+        @media (prefers-reduced-motion: reduce) { .phone .m, .phone .sh, .phone .ok { animation: none; opacity: 1; transform: none; } }
+        .strip { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 0; margin-top: 36px; border: 1px solid var(--ink); }
+        .strip > div { padding: 22px 20px; border-right: 1px solid var(--ink); background: var(--sheet); }
+        .strip > div:last-child { border-right: 0; background: #111; color: #f7f6f2; }
+        .strip > div:last-child h3, .strip > div:last-child .lbl { color: #e6b422; }
+        .strip .em { width: 34px; height: 34px; display: block; margin-bottom: 12px; }
+        .strip p { margin: 8px 0 0; font-size: .9rem; }
+        @media (max-width: 820px) { .strip { grid-template-columns: 1fr; } .strip > div { border-right: 0; border-bottom: 1px solid var(--ink); } .strip > div:last-child { border-bottom: 0; } }
+        .vs { width: 100%; border-collapse: collapse; margin-top: 32px; font-size: .92rem; }
+        .vs th, .vs td { text-align: left; padding: 14px 12px; border-bottom: .5px solid var(--ink); vertical-align: top; }
+        .vs thead th { font: 500 .68rem var(--mono); letter-spacing: .14em; text-transform: uppercase; }
+        .vs thead th:last-child, .vs td:last-child { background: #111; color: #f7f6f2; }
+        .vs thead th:last-child { color: #e6b422; }
+        .vs td:first-child { font-weight: 600; width: 26%; }
+        @media (max-width: 560px) { .vs { font-size: .82rem; } .vs th, .vs td { padding: 10px 8px; } }
+        .note { font-size: .78rem; color: var(--muted); margin-top: 14px; }
       </style>
       <section class="hero">
         <div class="wrapx split">
           <div>
-            <p class="num">Business agents <b>In build</b></p>
-            <h1>Your business agent, from a link.</h1>
-            <p class="lede">Paste your website. b drafts an agent that knows your products, prices and FAQs, then answers your customers and takes payment in chat.</p>
-            <p class="sub">It lives in your bChatX room or your branded bWallet. This is in build: the list at the bottom shows exactly what works today.</p>
+            <p class="num">bBrand &nbsp;<b>Business agents</b></p>
+            <h1>Your shop&rsquo;s agent, paid in sats, in chat.</h1>
+            <p class="bbtag"><span>Don&rsquo;t be bland. Get bBranded.</span></p>
+            <p class="lede">Paste your website. b drafts an agent that knows your products, prices and FAQs. It answers customers and takes payment right in the chat, on Bitcoin, with a receipt anyone can check.</p>
+            <p class="sub">Chat agents that take money today mostly hand off to a card checkout. bBrand doesn&rsquo;t: the agent works from a capped account with a daily limit and a Stop button, and the payment settles on chain.</p>
             <div class="cta"><a class="pri" href="#how">How it works</a><a class="sec" href="#status">What&rsquo;s live</a></div>
           </div>
           <div>
-            <div class="chatx" role="img" aria-label="An example chat: a customer asks for a price, the agent answers, and the customer approves payment on their own approval sheet">
-              <span class="who">Customer</span>
-              <div class="bub u">Do you have the large bag in black?</div>
-              <span class="who">Your agent</span>
-              <div class="bub a">Yes. The large black bag is &pound;40, ships in two days. Want it?</div>
-              <div class="bub u">Yes please.</div>
-              <div class="sheet"><span>Pay &pound;40 to yourshop</span><b>Allow</b></div>
-              <div class="bub a">Paid. Your receipt is on chain. Thank you.</div>
+            <div class="phone" role="img" aria-label="Animated chat: a customer asks for a price, the agent answers, a checkout sheet slides up, and the chat shows Paid, receipt on chain.">
+              <div class="scr">
+                <div class="bar"><span class="av">b</span><div><b>Yourshop</b><small>Agent &middot; bBranded</small></div></div>
+                <div class="m c d1">Got the gold sticker pack?</div>
+                <div class="m a d2">Yes: gold sticker pack, 12,000 sats. Ships today. Want it?</div>
+                <div class="m c d3">Yes please.</div>
+                <div class="sh d4"><p>Pay Yourshop</p><h4>12,000 sats</h4><small>Network fee under 1p &middot; from your wallet</small><span class="al">Allow</span></div>
+                <div class="ok d5">Paid &middot; receipt on chain &#8599;</div>
+              </div>
             </div>
           </div>
         </div>
@@ -261,19 +291,37 @@
 
       <section id="how">
         <div class="wrapx">
-          <p class="num">01 / 04 &nbsp;How it works</p>
-          <h2>Three steps.</h2>
-          <div class="specs">
-            <article class="spec"><p class="lbl sno">Step 1</p><h3>Paste your link</h3><ul><li>Give b your website address</li><li>b reads your products, prices and FAQs and drafts the agent</li><li>You check it and edit anything before it goes live</li></ul></article>
-            <article class="spec"><p class="lbl sno">Step 2</p><h3>Put it where customers are</h3><ul><li>Your bChatX room, or your branded bWallet</li><li>It answers questions in your words, day and night</li></ul></article>
-            <article class="spec"><p class="lbl sno">Step 3</p><h3>Take payment in chat</h3><ul><li>Customers pay in sats or PNEEs</li><li>One tap on their own approval sheet, inside their wallet</li><li>No cards, no card rails, no forms</li></ul></article>
+          <p class="num">01 / 05 &nbsp;How it works</p>
+          <h2>Paste a link. b drafts your shop. Take sats in chat.</h2>
+          <div class="strip">
+            <div><img class="em" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f517.svg" alt="" /><p class="lbl">Step 1</p><h3>Paste a link</h3><p>Give b your website. It reads your products, prices and FAQs.</p></div>
+            <div><img class="em" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/270d.svg" alt="" /><p class="lbl">Step 2</p><h3>b drafts your shop</h3><p>You check the agent, edit anything, then put it in your bChatX room or your branded bWallet.</p></div>
+            <div><img class="em" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/26a1.svg" alt="" /><p class="lbl">Step 3</p><h3>Take sats in chat</h3><p>Customers tap Allow on their own approval sheet. No cards, no forms.</p></div>
           </div>
         </div>
       </section>
 
+      <section id="compare">
+        <div class="wrapx">
+          <p class="num">02 / 05 &nbsp;Card rails vs bBrand</p>
+          <h2>Same chat. Different money.</h2>
+          <table class="vs">
+            <thead><tr><th></th><th>Card rails</th><th>bBrand</th></tr></thead>
+            <tbody>
+              <tr><td>Fees</td><td>A percentage of each sale, often plus a fixed charge</td><td>Bitcoin network fee, usually well under 1p</td></tr>
+              <tr><td>Settlement</td><td>Typically days to reach your bank</td><td>On chain in seconds, in your wallet</td></tr>
+              <tr><td>Who holds the money</td><td>The processor, until it pays out</td><td>You. Your keys, your wallet</td></tr>
+              <tr><td>Chargebacks</td><td>Can be reversed weeks later</td><td>Final once paid; refunds are yours to give</td></tr>
+              <tr><td>Receipt</td><td>A private record at the processor</td><td>A public transaction anyone can check</td></tr>
+              <tr><td>Agent spending</td><td>Usually a card or API key with wide access</td><td>A capped account with a daily limit and Stop</td></tr>
+            </tbody>
+          </table>
+          <p class="note">Card fees vary by provider and country. Sat prices move with the BSV price; the sheet shows the amount before you allow it.</p>
+        </div>
+      </section>
       <section id="safety">
         <div class="wrapx">
-          <p class="num">02 / 04 &nbsp;Kept on a short leash</p>
+          <p class="num">03 / 05 &nbsp;Kept on a short leash</p>
           <h2>You stay in charge of the money.</h2>
           <ul class="status">
             <li><span class="pill nums">01</span><span>The agent has its own capped account with a daily limit you set. It never touches your main wallet.</span></li>
@@ -287,7 +335,7 @@
 
       <section id="price">
         <div class="wrapx">
-          <p class="num">03 / 04 &nbsp;Price</p>
+          <p class="num">04 / 05 &nbsp;Price</p>
           <h2>Included with Branded editions.</h2>
           <p class="sub">Business agents come with a <a href="/themes/custom">Branded edition</a> (from $999). The Theme edition is $99 a year. Ask us if you want to be one of the first businesses to try it.</p>
           <div class="cta"><a class="pri" href="/themes/custom">See editions</a><a class="sec" href="https://www.bchatx.com/u/bwalletx" target="_blank" rel="noopener">Message us on bChatX</a></div>
@@ -296,14 +344,17 @@
 
       <section id="status">
         <div class="wrapx">
-          <p class="num">04 / 04 &nbsp;What&rsquo;s live</p>
+          <p class="num">05 / 05 &nbsp;What&rsquo;s live</p>
           <h2>Where things stand.</h2>
           <ul class="status">
-            <li><span class="pill soon">Coming</span><span>Agent from a link (in build)</span></li>
-            <li><span class="pill soon">Coming</span><span>Chat checkout with the approval sheet</span></li>
-            <li><span class="pill soon">Coming</span><span>Capped agent account with a daily limit and Stop button</span></li>
+            <li><span class="pill soon">Next release</span><span>Agent from a link: merged, ships in the next bWalletX release</span></li>
+            <li><span class="pill soon">Next release</span><span>Chat checkout with the approval sheet: merged, ships in the next bWalletX release</span></li>
+            <li><span class="pill live">Live</span><span>Capped agent account with a daily limit and Stop, in the <a href="/cli">bwalletx CLI and MCP server</a></span></li>
+            <li><span class="pill soon">Coming</span><span>Capped account with daily limit and Stop for in-app business agents</span></li>
             <li><span class="pill live">Live</span><span>Receipts on chain: every bWalletX payment already has one</span></li>
             <li><span class="pill soon">Coming</span><span>SMS for your agent: customers text it. <a href="/sms">Bitcoin by text</a></span></li>
+          </ul>
+          <p class="sub" style="margin-top:24px">Want to hold sats yourself first? <a href="/hodl-my-b">Hodl my b</a>. Building your own agent? <a href="/cli">The bwalletx CLI</a>.</p>
           </ul>
         </div>
       </section>
