@@ -63,6 +63,9 @@
       .install img { border: .5px solid var(--ink); flex: none; }
       .install p { margin: 4px 0 0; font-size: .9rem; color: var(--muted); }
       .install .lbl { color: var(--ink); font-size: .74rem; margin: 0; }
+      .install .ibtn { display: inline-block; margin-top: 10px; padding: 10px 16px; background: var(--ink); color: var(--paper); text-decoration: none; font-size: .9rem; }
+      .install ol { margin: 10px 0 0; padding-left: 18px; font-size: .85rem; color: var(--muted); }
+      .install [hidden] { display: none; }
       .picker { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 28px; }
       .picker button { font: 500 .72rem var(--mono); letter-spacing: .14em; text-transform: uppercase; padding: 9px 14px 9px 10px; border: 1px solid var(--ink); background: var(--sheet); color: var(--ink); border-radius: 0; cursor: pointer; display: inline-flex; align-items: center; gap: 8px; }
       .picker button i { width: 14px; height: 14px; border: 1px solid var(--ink); display: inline-block; }
@@ -307,8 +310,10 @@
           <p class="hint lbl">Hover (or tap once) to preview this page in a paper &middot; click (tap again) to open its page</p>
           <div class="install" id="install" aria-live="polite">
             <img id="iicon" src="/theme-apps/icon-white-192.png" alt="" width="72" height="72" />
-            <div><p class="lbl"><span id="ititle">Install the White edition</span> <span class="pill soon">Coming</span></p>
-            <p id="inote">Preview: the web wallet doesn&rsquo;t read this theme yet, so there&rsquo;s no install button until it does.</p></div>
+            <div><p class="lbl"><span id="ititle">Install the White edition</span> <span id="ipill" class="pill live">Live</span></p>
+            <p id="inote">The web wallet in white paper, on your home screen.</p>
+            <div id="iwhite"><a class="ibtn" href="https://web.bwalletx.com/white">Install the White edition</a>
+            <ol><li><b>iPhone:</b> open it in Safari &rsaquo; Share &rsaquo; Add to Home Screen.</li><li><b>Android / Chrome:</b> open it &rsaquo; menu &rsaquo; Install app.</li></ol></div></div>
           </div>
         </div>
       </section>
@@ -394,7 +399,8 @@
             <li><span class="pill live">Live</span><span><b>VexVoid artist theme</b> preview at /themes/vexvoid: black, stark white and the live point field from the VexVoid AV set.</span></li>
             <li><span class="pill soon">Coming</span><span><b>VexVoid artist theme in the app</b>: artist edition, in-app theme coming.</span></li>
             <li><span class="pill soon">Coming</span><span><b>Pink, Blue and Yellow</b>: preview only &mdash; in-app theme coming.</span></li>
-            <li><span class="pill soon">Coming</span><span><b>Install a colour edition</b> of the web wallet to your home screen (the web wallet doesn&rsquo;t read the theme yet, so no install button until it does).</span></li>
+            <li><span class="pill live">Live</span><span><b>White edition install</b>: add the white web wallet to your home screen from <a href="https://web.bwalletx.com/white">web.bwalletx.com/white</a>.</span></li>
+            <li><span class="pill soon">Coming</span><span><b>Pink, Blue, Yellow and VexVoid installs</b>: no install button until each pack ships.</span></li>
           </ul>
         </div>
       </section>
@@ -498,8 +504,10 @@
           document.getElementById('iicon').src = '/theme-apps/icon-' + t + '-192.png';
           document.getElementById('ititle').textContent = t === 'vexvoid' ? 'VexVoid artist edition' : 'Install the ' + N[t] + ' edition';
           document.getElementById('inote').textContent = t === 'vexvoid' ? 'Artist edition: in-app theme coming. No install button until the VexVoid pack ships in the app.' : t === 'white'
-            ? 'Coming: the web wallet doesn\u2019t read ?theme=white yet, so there\u2019s no install button until it does.'
+            ? 'The web wallet in white paper, on your home screen.'
             : 'Preview: in-app theme coming. No install button until the ' + N[t] + ' pack ships in the app.';
+          document.getElementById('iwhite').hidden = t !== 'white';
+          var ip = document.getElementById('ipill'); ip.className = 'pill ' + (t === 'white' ? 'live' : 'soon'); ip.textContent = t === 'white' ? 'Live' : 'Coming';
           cells.forEach(function (c) { c.setAttribute('aria-pressed', c.dataset.t === t ? 'true' : 'false'); });
         }
         var touchArmed = null;
