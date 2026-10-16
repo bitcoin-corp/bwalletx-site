@@ -93,6 +93,12 @@
       .bc-end h2 { margin: 0; font: 700 clamp(2.4rem, 9vw, 5rem) / 1 'Space Grotesk', sans-serif; letter-spacing: -0.045em; }
       .bc-end .cta { justify-content: center; }
       .bc-end .tag { margin: 26px 0 0; font: 500 1.05rem 'Space Grotesk', sans-serif; color: var(--muted); }
+      #free { transition: background-color .5s ease, color .5s ease; }
+      #free.tinted { background: var(--paper) !important; color: var(--ink); }
+      #free.tinted h2, #free.tinted .lbl { color: var(--ink) !important; }
+      #free .sw { color: var(--ink); text-decoration: none; cursor: pointer; }
+      #free .sw:hover, #free .sw:focus-visible { outline: 2px solid var(--ink); outline-offset: 2px; }
+      @media (prefers-reduced-motion: reduce) { #free { transition: none; } }
       .jb-foot { margin: 0; padding: 0 16px 22px; text-align: center; font: 400 .75rem 'Space Grotesk', sans-serif; color: var(--dim); }
       .jb-foot a { color: var(--muted); }
       @media (prefers-reduced-motion: reduce) { .mc, .bc-hero::before { transition: none; } .mc.flip { animation: none; } }
@@ -133,14 +139,12 @@
         </div>
       </section>
 
-      <section class="bc-sec">
+      <section class="bc-sec" id="free">
         <div class="bc-wrap">
           <p class="lbl">02 / 05 &nbsp;Free for everyone</p>
           <h2>Free themes, in bWalletX.</h2>
           <p class="lead">Everyone gets the quiet white sheet, the paper colours and the artist editions. Pick one in Settings › Theme.</p>
-          <div class="swatches">
-            <span class="sw"><i style="background:#fff"></i>White</span><span class="sw"><i style="background:#f4a7c0"></i>Pink</span><span class="sw"><i style="background:#8ec5f0"></i>Blue</span><span class="sw"><i style="background:#f7da4a"></i>Yellow</span><span class="sw"><i style="background:#000"></i>VexVoid</span><span class="sw"><i style="background:#ff3b9a"></i>NPG</span><span class="sw"><i style="background:#ff0040"></i>NPGX</span>
-          </div>
+          <div class="swatches" id="swatches"><a class="sw" href="/themes/white" data-p="#f7f6f2" data-i="#111" data-s="#fff" data-m="#3d3b37"><i style="background:#fff"></i>White</a><a class="sw" href="/themes/pink" data-p="#f4a7c0" data-i="#111" data-s="#fff" data-m="#2e1a21"><i style="background:#f4a7c0"></i>Pink</a><a class="sw" href="/themes/blue" data-p="#8ec5f0" data-i="#111" data-s="#fff" data-m="#13263a"><i style="background:#8ec5f0"></i>Blue</a><a class="sw" href="/themes/yellow" data-p="#f7da4a" data-i="#111" data-s="#fff" data-m="#2e2604"><i style="background:#f7da4a"></i>Yellow</a><a class="sw" href="/themes/vexvoid" data-p="#000" data-i="#fff" data-s="#0a0a0a" data-m="#c4c4c4"><i style="background:#000"></i>VexVoid</a><a class="sw" href="/themes/npg" data-p="#000" data-i="#ff2e93" data-s="#0d020a" data-m="#f7a8cf"><i style="background:#ff2e93"></i>NPG</a><a class="sw" href="/themes/npgx" data-p="#000" data-i="#ff2d3a" data-s="#0a0a0a" data-m="#e0e0e0"><i style="background:#ff2d3a"></i>NPGX</a></div>
           <div class="cta"><a class="sec" href="/themes">See the themes</a></div>
         </div>
       </section>
@@ -234,6 +238,27 @@
           front = (front + 1) % n; lay();
           var f = cards[front]; f.classList.remove('flip'); void f.offsetWidth; f.classList.add('flip');
         }, 2600);
+      })();
+    </script>
+    <script>
+      // Free themes: hover, focus or tap a swatch to see the section in that theme; moving away reverts; a click opens /themes/<id>.
+      (function () {
+        var sec = document.getElementById('free'), box = document.getElementById('swatches'), touched = null;
+        function set(a) {
+          if (!a) { sec.classList.remove('tinted'); ['--paper', '--ink', '--sheet', '--muted', '--hair'].forEach(function (k) { sec.style.removeProperty(k); }); return; }
+          sec.classList.add('tinted');
+          sec.style.setProperty('--paper', a.dataset.p); sec.style.setProperty('--ink', a.dataset.i);
+          sec.style.setProperty('--sheet', a.dataset.s); sec.style.setProperty('--muted', a.dataset.m); sec.style.setProperty('--hair', a.dataset.i);
+        }
+        box.querySelectorAll('.sw').forEach(function (a) {
+          a.addEventListener('mouseenter', function () { set(a); });
+          a.addEventListener('focus', function () { set(a); });
+          a.addEventListener('blur', function () { set(null); });
+          // Touch: first tap previews, second tap opens.
+          a.addEventListener('touchend', function (e) { if (touched !== a) { e.preventDefault(); touched = a; set(a); } });
+        });
+        box.addEventListener('mouseleave', function () { set(null); });
+        document.addEventListener('touchstart', function (e) { if (!box.contains(e.target)) { touched = null; set(null); } }, { passive: true });
       })();
     </script>
   </body>
