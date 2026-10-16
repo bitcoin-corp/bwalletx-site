@@ -43,17 +43,35 @@
       .cap { position: absolute; left: 0; right: 0; top: 15vh; margin: 0; text-align: center; font: 700 clamp(3rem, 13vw, 10.5rem) / 1 'Space Grotesk', sans-serif; letter-spacing: -0.05em; white-space: nowrap; }
       .on .cap { animation: capIn .9s .35s cubic-bezier(.2,1.4,.4,1) both; }
       @keyframes capIn { from { opacity: 0; transform: translateY(0.3em) scale(.9); } to { opacity: 1; transform: none; } }
-      .card { position: absolute; left: 50%; top: 62%; width: min(78vw, 420px); aspect-ratio: 1.586; box-sizing: border-box; border-radius: 22px; padding: 22px 24px; display: flex; flex-direction: column; justify-content: space-between;
-        background: linear-gradient(140deg, color-mix(in srgb, var(--card) 80%, #fff), var(--card)); color: var(--ink); border: 2px solid var(--ink); box-shadow: 0 30px 60px rgba(0,0,0,.25); transform: translate(-50%, -50%) rotate(-4deg); }
+      /* Card: copied from themes-custom.html so the spot shows the real edition card. */
+      .card .row1, .card .bal, .card .sats, .card .addr, .card .chip, .card .bm { z-index: 1; }
+      .card .bm { color: var(--ink); }
+      .card { position: relative; aspect-ratio: 1.586; border-radius: 22px; background: var(--sheet); border: 1px solid var(--ink); box-shadow: 0 1px 0 rgba(0,0,0,.06); overflow: hidden; color: var(--ink); font-family: var(--hf); }
+      .card { padding: 0 !important; }
+      .card .row1 { position: absolute; left: 6%; top: 9%; display: flex; align-items: center; gap: 10px; font-size: clamp(.72rem, 1.6vw, .95rem); font-weight: 600; }
+      .card .row1 i { width: 26px; height: 26px; border-radius: 50%; border: 1.5px solid var(--ink); display: inline-block; }
+      .card .bal { position: absolute; left: 6%; top: 25%; line-height: 1; font-size: clamp(1.8rem, 5vw, 3rem); font-weight: 700; letter-spacing: -0.03em; }
+      .card .sats { position: absolute; left: 6%; top: calc(25% + clamp(2.1rem, 5.6vw, 3.4rem)); font: 400 clamp(.68rem, 1.4vw, .82rem) var(--bf); color: var(--muted); }
+      .card .addr { position: absolute; left: 6%; bottom: 8%; font: 400 clamp(.62rem, 1.3vw, .78rem) ui-monospace, Menlo, monospace; color: var(--ink); letter-spacing: .02em; }
+      .card .chip { position: absolute; right: 6%; bottom: 7%; font-size: .72rem; font-weight: 600; border: 1px solid var(--ink); border-radius: 999px; padding: 3px 10px; }
+      .card .bm { position: absolute; right: 6%; top: 8%; width: 30px; }
+      .card.meme { container-type: inline-size; border: 2px solid var(--mi); color: var(--mi); border-radius: 22px;
+        background: var(--mbg); box-shadow: 0 30px 60px -20px var(--msh), 0 2px 0 var(--mi); transform: rotate(-4deg); }
+      .card.meme .bm, .card.meme .bal, .card.meme .addr { color: var(--mi); }
+      .card.meme .bal { font-size: clamp(2.2rem, 5.6vw, 3.6rem); }
+      .card.meme .sats { color: var(--ms); font: 600 clamp(.75rem, 1.6vw, .95rem) var(--mono); letter-spacing: .04em; }
+      .card.meme .chip { background: var(--mi) !important; color: var(--mc) !important; border-color: var(--mi) !important; }
+      .m-frog { --mi: #0b2e12; --ms: #1d5a24; --mc: #e8ff7a; --msh: rgba(6,40,14,.55); --mbg: radial-gradient(circle at 78% 18%, #fffbd0 0, #e8ff7a 26%, #9be34c 62%, #4fb33a 100%); }
+      .card.meme.alt { position: absolute !important; inset: 0; }
+      .card.meme { transition: opacity .9s ease; }
+      .card.meme.off { opacity: 0; pointer-events: none; }
+      .card.meme .frogart { position: absolute; z-index: 0; right: -10%; top: 54%; font-family: "Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji", sans-serif; font-size: 62cqw; line-height: 1; opacity: .48; transform: translateY(-50%) rotate(-12deg) skewX(-6deg); pointer-events: none; }
+      .card.meme .froglogo { font-family: "Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji", sans-serif; font-size: 26px; line-height: 1; width: 30px; height: 30px; display: inline-grid; place-items: center; }
+      .tv .card.meme { position: absolute; left: 50%; top: 62%; width: min(78vw, 420px); box-sizing: border-box; --mono: 'IBM Plex Mono', ui-monospace, Menlo, monospace; --muted: #5d5b56; --sheet: #fff; --ink: var(--mi); transform: translate(-50%, -50%) rotate(-4deg); }
+      .pop img { width: 1em; height: 1em; display: block; }
       .on .card { animation: bounce 1.3s .2s cubic-bezier(.3,1.6,.5,1) both, bob 3s 1.5s ease-in-out infinite; }
       @keyframes bounce { from { transform: translate(-50%, -260%) rotate(-30deg); } to { transform: translate(-50%, -50%) rotate(-4deg); } }
       @keyframes bob { 0%, 100% { transform: translate(-50%, -50%) rotate(-4deg); } 50% { transform: translate(-50%, -54%) rotate(2deg); } }
-      .card .t { display: flex; justify-content: space-between; font: 500 .78rem 'IBM Plex Mono', monospace; letter-spacing: .14em; text-transform: uppercase; opacity: .8; }
-      .card .r { display: flex; justify-content: space-between; align-items: flex-end; }
-      .card .v { font: 700 clamp(1.4rem, 6vw, 2.4rem) / 1 'Space Grotesk', sans-serif; letter-spacing: -0.03em; }
-      .card .b { font: 500 .8rem 'IBM Plex Mono', monospace; opacity: .75; margin-top: 8px; }
-      .card .e { font-size: clamp(3.4rem, 13vw, 5.4rem); line-height: 1; }
-      .card .e img, .pop img { width: 1em; height: 1em; display: block; }
       .pop { position: absolute; font-size: clamp(2rem, 6vw, 3.4rem); opacity: 0; }
       .on .pop { animation: pop 2.4s ease-out both; }
       @keyframes pop { 0% { opacity: 0; transform: scale(.2) rotate(-20deg); } 25% { opacity: 1; transform: scale(1.15) rotate(8deg); } 100% { opacity: 1; transform: translateY(-30px) scale(1) rotate(0); } }
@@ -82,18 +100,9 @@
       .mute.show { display: grid; place-items: center; }
       .snd:focus-visible, .mute:focus-visible { outline: 3px solid #f5b800; outline-offset: 3px; }
       .tv.still .snd, .tv.still .mute { display: none; }
-      .card .bm { flex-shrink: 0; width: clamp(28px, 9vw, 44px); aspect-ratio: 1; opacity: .9; background: var(--ink); -webkit-mask: url(/logo.svg) center / contain no-repeat; mask: url(/logo.svg) center / contain no-repeat; }
-      .card .t { align-items: center; gap: 10px; opacity: 1; }
-      .card .tk { display: flex; align-items: center; gap: .3em; min-width: 0; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; font: 700 clamp(1rem, 4.4vw, 1.5rem) 'Space Grotesk', sans-serif; letter-spacing: -0.01em; text-transform: none; opacity: 1; }
-      .card .tk img { height: 1.4em; width: auto; flex-shrink: 0; }
-      .card .foot { text-align: right; font: 500 .72rem 'IBM Plex Mono', monospace; letter-spacing: .14em; text-transform: uppercase; opacity: .7; }
       .tv.poster .sc, .tv.poster .sc *, .tv.poster .sc::before { animation: none !important; }
       .tv.poster .sc.on { clip-path: none; }
       .ej { position: absolute; width: clamp(1.8rem, 6vw, 3rem); height: auto; pointer-events: none; opacity: 0; }
-      .card { container-type: inline-size; overflow: hidden; background: radial-gradient(circle at 78% 18%, color-mix(in srgb, var(--card) 35%, #fff) 0, var(--card) 30%, color-mix(in srgb, var(--card) 55%, var(--bg)) 100%); }
-      .card .memeart { position: absolute; z-index: 0; right: -10%; top: 54%; width: 62cqw; height: auto; opacity: .48; transform: translateY(-50%) rotate(-12deg) skewX(-6deg); pointer-events: none; }
-      .card .t, .card .v { position: relative; z-index: 1; }
-      .card .v { margin-top: auto; }
       .fx { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; }
       .tick { position: absolute; z-index: 3; padding: 4px 10px; border-radius: 999px; background: #17a84d; color: #fff; font: 700 clamp(.9rem, 3.4vw, 1.3rem) 'IBM Plex Mono', monospace; white-space: nowrap; box-shadow: 0 6px 16px rgba(0,0,0,.2); animation: tick 1.7s ease-out forwards; }
       @keyframes tick { 0% { opacity: 0; transform: translateY(10px) scale(.6); } 15% { opacity: 1; transform: scale(1.1); } 70% { opacity: 1; } 100% { opacity: 0; transform: translateY(-70px); } }
@@ -116,6 +125,7 @@
     </style>
   </head>
   <body>
+    <svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs><symbol id="b-outline" viewBox="20 6 80 104"><g fill="none" stroke="currentColor" stroke-width="4" stroke-linejoin="round" stroke-linecap="round"><path d="M29 28 L45 12 L45 44.87 A31 31 0 1 1 29 72 Z" /><path d="M74 72 A14 14 0 1 1 46 72 A14 14 0 1 1 74 72 Z" /></g></symbol></defs></svg>
     <section class="tv" id="tv" aria-label="b creative: a short animated advert for branded bWalletX editions">
       <button type="button" class="snd" id="snd" aria-label="Play with sound"><span class="pc"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z" fill="#111"/></svg></span><span class="pl">Play with sound</span></button>
       <button type="button" class="mute" id="mute" aria-pressed="false" aria-label="Mute music">
@@ -170,7 +180,7 @@
           else {
             h += '<p class="cap">' + s.line.replace(/^b /, '<span class="capb">b</span> ') + '</p>' + pops.map(function (p, i) { return '<span class="pop" style="left:' + p[0] + '%;top:' + p[1] + '%;animation-delay:' + (0.6 + i * 0.18) + 's">' + emo(s.emoji) + '</span>'; }).join('') +
               (s.id === 'duck' || s.id === 'icecream' || s.id === 'rocket' ? '<span class="stk"><img alt="" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f4c8.svg"></span>' : '') + (s.id === 'rocket' ? '<span class="stk lbl">number go up</span>' : '') +
-              '<div class="card"><div class="t"><span class="tk"><img alt="" src="' + twUrl(s.emoji) + '">$' + s.coin + '</span><i class="bm"></i></div><div class="v">$' + s.value + '</div><img class="memeart" alt="" src="' + twUrl(s.emoji) + '"></div>';
+              '<div class="card meme" style="--mi:' + s.ink + ';--ms:' + s.ink + ';--mc:' + s.card + ';--msh:rgba(0,0,0,.45);--mbg:radial-gradient(circle at 78% 18%,#fffdf0 0,' + s.card + ' 26%,' + s.bg + ' 62%,color-mix(in srgb,' + s.bg + ' 70%,#000) 100%)"><span class="frogart" aria-hidden="true">' + s.emoji + '</span><div class="row1"><span class="froglogo" aria-hidden="true">' + s.emoji + '</span>$' + s.coin + ' wallet</div><svg class="bm" viewBox="0 0 104 124"><use href="#b-outline" /></svg><div class="bal">$' + s.value + '</div><div class="sats">' + s.balance + ' ' + s.coin + '</div><div class="addr">wallet.yourcoin.com</div><div class="chip">From $99</div></div>';
           }
           el.innerHTML = h; tv.insertBefore(el, tv.firstChild); return el;
         });
@@ -207,7 +217,7 @@
           g2.globalAlpha = 1; }
         requestAnimationFrame(frame);
         function ticker(el) { var s = document.createElement('span'); s.className = 'tick'; s.textContent = '▲ +' + rnd(1.2, 5.2).toFixed(1) + '%'; s.style.left = rnd(56, 78) + '%'; s.style.top = rnd(40, 48) + '%'; el.appendChild(s); setTimeout(function () { s.remove(); }, 1700); }
-        function countUp(el, s) { var v = el.querySelector('.card .v'), end = parseFloat(s.value.replace(/,/g, '')), from = end * 0.9, t0 = performance.now(), dur = s.ms * 0.9; if (!v) return;
+        function countUp(el, s) { var v = el.querySelector('.card .bal'), end = parseFloat(s.value.replace(/,/g, '')), from = end * 0.9, t0 = performance.now(), dur = s.ms * 0.9; if (!v) return;
           cancelAnimationFrame(countRaf); (function f(now) { var p = Math.max(0, Math.min(1, (now - t0) / dur)), e = 1 - (1 - p) * (1 - p); v.textContent = '$' + (from + (end - from) * e).toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 }); if (p < 1) countRaf = requestAnimationFrame(f); })(t0); }
         // Emoji bursts: copies of the scene's Twemoji fly out from around the card, growing as they go (sideways/down, never up into the caption).
         var sprites = 0;
