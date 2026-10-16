@@ -11,15 +11,15 @@
     <meta property="og:site_name" content="bWalletX" />
     <meta property="og:title" content="Meme wallets for memecoin communities. From $99." />
     <meta property="og:description" content="Your brand's own self-custody wallet: Theme edition $99/yr, Branded edition from $999, Native app by quote." />
-    <meta property="og:image" content="https://bwalletx.com/og-themes-custom.png?v=3" />
+    <meta property="og:image" content="https://bwalletx.com/og-themes-custom.png?v=4" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
-    <meta property="og:image:alt" content="A diagonal split: the free black-and-white bWallet card on white, cut through to a frog-green $FROG wallet card, headed Your brand&rsquo;s own wallet. From $99." />
+    <meta property="og:image:alt" content="Three fanned meme-themed wallet cards, $FROG, $DUCK and $ICECREAM, on a diagonal split, headed Your brand&rsquo;s own wallet. From $99." />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@bWalletX" />
     <meta name="twitter:title" content="Meme wallets for memecoin communities. From $99." />
     <meta name="twitter:description" content="Your brand's own self-custody wallet: Theme edition $99/yr, Branded edition from $999, Native app by quote." />
-    <meta name="twitter:image" content="https://bwalletx.com/og-themes-custom.png?v=3" />
+    <meta name="twitter:image" content="https://bwalletx.com/og-themes-custom.png?v=4" />
     <link rel="icon" href="/favicon.ico" />
     <meta name="theme-color" content="#f7f6f2" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -201,7 +201,7 @@
         .tblock { grid-template-columns: 1fr 1fr; }
       }
       .card .bal { font-size: clamp(1.3rem, 3.6vw, 2.2rem); }
-      .specs { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); margin-top: 48px; border-top: .5px solid var(--ink); border-left: .5px solid var(--ink); }
+      .specs { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); margin-top: 48px; border-top: .5px solid var(--ink); border-left: .5px solid var(--ink); }
       .spec { border-right: .5px solid var(--ink); border-bottom: .5px solid var(--ink); background: var(--sheet); padding: 26px 24px; display: flex; flex-direction: column; }
       .spec .sno { margin: 0 0 18px; font-size: .66rem; color: var(--muted); border-bottom: .5px solid var(--ink); padding-bottom: 10px; }
       .spec .price { font: 600 2rem var(--hf); letter-spacing: -.03em; margin: 10px 0 0; }
@@ -222,17 +222,30 @@
       .cut .tag.a { left: 20px; top: 120px; color: var(--muted); border: .5px solid var(--hair); background: var(--sheet); }
       .cut .tag.b { right: 20px; top: 120px; color: #0b2e12; background: #e8ff7a; }
       .tp section.hero .num b { color: var(--ink); }
-      .card.frog { container-type: inline-size; border: 2px solid #0b2e12; color: #0b2e12; border-radius: 22px;
-        background: radial-gradient(circle at 78% 18%, #fffbd0 0, #e8ff7a 26%, #9be34c 62%, #4fb33a 100%);
-        box-shadow: 0 30px 60px -20px rgba(6,40,14,.55), 0 2px 0 #0b2e12; transform: rotate(-4deg); }
-      .card.frog .row1 i { border-color: #0b2e12; background: #0b2e12; box-shadow: inset 0 0 0 5px #e8ff7a; }
-      .card.frog .bm { color: #0b2e12; }
-      .card.frog .bal { font-size: clamp(2.2rem, 5.6vw, 3.6rem); color: #0b2e12; }
-      .card.frog .sats { color: #1d5a24; }
-      .card.frog .addr { color: #0b2e12; }
-      .card.frog .chip { background: #0b2e12 !important; color: #e8ff7a !important; border-color: #0b2e12 !important; }
-      .card.frog .frogart { position: absolute; z-index: 0; right: -10%; top: 54%; font-family: "Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji", sans-serif; font-size: 62cqw; line-height: 1; opacity: .48; transform: translateY(-50%) rotate(-12deg) skewX(-6deg); pointer-events: none; }
-      .card.frog .froglogo { font-family: "Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji", sans-serif; font-size: 26px; line-height: 1; width: 30px; height: 30px; display: inline-grid; place-items: center; }
+      .card.meme { container-type: inline-size; border: 2px solid var(--mi); color: var(--mi); border-radius: 22px;
+        background: var(--mbg); box-shadow: 0 30px 60px -20px var(--msh), 0 2px 0 var(--mi); transform: rotate(-4deg); }
+      .card.meme .bm, .card.meme .bal, .card.meme .addr { color: var(--mi); }
+      .card.meme .bal { font-size: clamp(2.2rem, 5.6vw, 3.6rem); }
+      .card.meme .sats { color: var(--ms); }
+      .card.meme .chip { background: var(--mi) !important; color: var(--mc) !important; border-color: var(--mi) !important; }
+      .m-frog { --mi: #0b2e12; --ms: #1d5a24; --mc: #e8ff7a; --msh: rgba(6,40,14,.55); --mbg: radial-gradient(circle at 78% 18%, #fffbd0 0, #e8ff7a 26%, #9be34c 62%, #4fb33a 100%); }
+      .m-duck { --mi: #3a2a00; --ms: #6b4e00; --mc: #ffe14d; --msh: rgba(80,55,0,.5); --mbg: radial-gradient(circle at 78% 18%, #fffdf0 0, #fff27a 26%, #ffd12e 62%, #f2a900 100%); }
+      .m-koala { --mi: #2b2620; --ms: #4d4438; --mc: #dfe8d6; --msh: rgba(40,34,26,.55); --mbg: radial-gradient(circle at 78% 18%, #f3f5ee 0, #cfd8c4 26%, #a59a86 64%, #7d705e 100%); }
+      .m-ice { --mi: #2b2140; --ms: #4a3f60; --mc: #ffb3d1; --msh: rgba(43,33,64,.45); --mbg: radial-gradient(circle at 78% 18%, #fff8ee 0, #ffd6e8 26%, #ff8fbf 64%, #b39cff 100%); }
+      .card.meme.alt { position: absolute !important; inset: 0; }
+      .card.meme { transition: opacity .9s ease; }
+      .card.meme.off { opacity: 0; pointer-events: none; }
+      .cut .col { transition: opacity .9s ease; }
+      .cut .col.off { opacity: 0; }
+      .cut .col.c-duck { background: radial-gradient(circle at 82% 30%, #fff27a 0, #ffd12e 34%, #e09a00 78%, #8a5a00 100%); }
+      .cut .col.c-koala { background: radial-gradient(circle at 82% 30%, #dfe6d4 0, #a9b39a 34%, #7d705e 78%, #4a4034 100%); }
+      .cut .col.c-ice { background: radial-gradient(circle at 82% 30%, #ffd6e8 0, #ff8fbf 34%, #b39cff 78%, #6a55b8 100%); }
+      .mdots { position: absolute; left: 50%; bottom: -40px; transform: translateX(-50%); display: flex; gap: 10px; z-index: 3; }
+      .mdots button { width: 12px; height: 12px; border-radius: 50%; border: 1.5px solid var(--ink); background: var(--sheet); padding: 0; cursor: pointer; }
+      .mdots button[aria-current="true"] { background: var(--ink); }
+      .kicker { font: 500 .72rem var(--mono); letter-spacing: .18em; text-transform: uppercase; margin: 0 0 10px; }
+      .card.meme .frogart { position: absolute; z-index: 0; right: -10%; top: 54%; font-family: "Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji", sans-serif; font-size: 62cqw; line-height: 1; opacity: .48; transform: translateY(-50%) rotate(-12deg) skewX(-6deg); pointer-events: none; }
+      .card.meme .froglogo { font-family: "Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji", sans-serif; font-size: 26px; line-height: 1; width: 30px; height: 30px; display: inline-grid; place-items: center; }
       .hero .obj { isolation: isolate; }
       .card.mono { position: absolute !important; inset: 0; transform: translate(-30%, -34%) rotate(3deg) scale(.86); z-index: -1; border-radius: 22px; box-shadow: 0 1px 0 rgba(0,0,0,.08); }
       .card.mono .bal { font-size: clamp(1.4rem, 3.6vw, 2.2rem); }
@@ -244,7 +257,7 @@
         .cut .tag { display: none; }
         .hero .split > div:last-child { padding-top: 64px; }
         .card.mono { transform: translate(-4%, -30%) rotate(3deg) scale(.9); }
-        .card.frog { transform: rotate(-2deg); }
+        .card.meme { transform: rotate(-2deg); }
         .cut .dsk { display: none; } .cut .mob { display: inline; }
       }
     </style>
@@ -264,11 +277,12 @@
     <svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs><symbol id="b-outline" viewBox="20 6 80 104"><g fill="none" stroke="currentColor" stroke-width="4" stroke-linejoin="round" stroke-linecap="round"><path d="M29 28 L45 12 L45 44.87 A31 31 0 1 1 29 72 Z" /><path d="M74 72 A14 14 0 1 1 46 72 A14 14 0 1 1 74 72 Z" /></g></symbol></defs></svg>
     <main class="tp">
       <section class="hero">
-        <div class="cut" aria-hidden="true"><div class="col"></div>
+        <div class="cut" aria-hidden="true"><div class="col"></div><div class="col c-duck off"></div><div class="col c-koala off"></div><div class="col c-ice off"></div>
           <svg class="dl" viewBox="0 0 100 100" preserveAspectRatio="none"><line class="dsk" x1="64" y1="0" x2="46" y2="100" stroke="#111" stroke-width="1" vector-effect="non-scaling-stroke"/><line class="mob" x1="0" y1="60" x2="100" y2="52" stroke="#111" stroke-width="1" vector-effect="non-scaling-stroke"/></svg>
           <span class="tag a">Free &middot; bWallet</span><span class="tag b">Your brand &rarr;</span></div>
         <div class="wrapx split">
           <div>
+            <p class="kicker">Meme-themed wallets</p>
             <p class="num">Meme wallets for memecoin communities <b>Sheet 00 / 05</b></p>
             <h1>Your brand&rsquo;s own wallet. From $99.</h1>
             <p class="lede">A frog-themed wallet for a frog coin. Your colours, card art, icon and name, on a self-custody wallet your community already trusts to work.</p>
@@ -284,7 +298,8 @@
               <div class="addr">you@bwalletx.com</div>
               <div class="chip">Free</div>
             </div>
-            <div class="card frog" role="img" aria-label="An example frog-themed wallet card for a frog coin">
+            <!-- Generic example themes only. Real exchange tokens appear here only via a future opt-in "featured editions" feed, with the token owner's consent. -->
+            <div class="card meme m-frog" role="img" aria-label="An example frog-themed wallet card">
               <span class="frogart" aria-hidden="true">🐸</span>
               <div class="row1"><span class="froglogo" aria-hidden="true">🐸</span>$FROG wallet</div>
               <svg class="bm" viewBox="0 0 104 124"><use href="#b-outline" /></svg>
@@ -293,6 +308,34 @@
               <div class="addr">wallet.yourcoin.com</div>
               <div class="chip">From $99</div>
             </div>
+            <div class="card meme m-duck alt off" role="img" aria-label="An example duck-themed wallet card">
+              <span class="frogart" aria-hidden="true">🦆</span>
+              <div class="row1"><span class="froglogo" aria-hidden="true">🦆</span>$DUCK wallet</div>
+              <svg class="bm" viewBox="0 0 104 124"><use href="#b-outline" /></svg>
+              <div class="bal">Quack.</div>
+              <div class="sats">Example: a duck wallet for a duck coin</div>
+              <div class="addr">wallet.yourcoin.com</div>
+              <div class="chip">From $99</div>
+            </div>
+            <div class="card meme m-koala alt off" role="img" aria-label="An example koala-themed wallet card">
+              <span class="frogart" aria-hidden="true">🐨</span>
+              <div class="row1"><span class="froglogo" aria-hidden="true">🐨</span>$KOALA wallet</div>
+              <svg class="bm" viewBox="0 0 104 124"><use href="#b-outline" /></svg>
+              <div class="bal">G&rsquo;day.</div>
+              <div class="sats">Example: a koala wallet for a koala coin</div>
+              <div class="addr">wallet.yourcoin.com</div>
+              <div class="chip">From $99</div>
+            </div>
+            <div class="card meme m-ice alt off" role="img" aria-label="An example ice-cream-themed wallet card">
+              <span class="frogart" aria-hidden="true">🍦</span>
+              <div class="row1"><span class="froglogo" aria-hidden="true">🍦</span>$ICECREAM wallet</div>
+              <svg class="bm" viewBox="0 0 104 124"><use href="#b-outline" /></svg>
+              <div class="bal">Three scoops.</div>
+              <div class="sats">Example: three friends, one token</div>
+              <div class="addr">wallet.yourcoin.com</div>
+              <div class="chip">From $99</div>
+            </div>
+            <div class="mdots" role="group" aria-label="Example wallets"><button type="button" aria-label="$FROG" aria-current="true"></button><button type="button" aria-label="$DUCK"></button><button type="button" aria-label="$KOALA"></button><button type="button" aria-label="$ICECREAM"></button></div>
             </div></div>
             <div class="tblock" aria-label="Title block">
               <div class="t"><span>bWallet &middot; Custom editions</span><svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><g fill="none" stroke="#d6202a" stroke-width="1"><circle cx="7" cy="7" r="4"/><path d="M7 0V14M0 7H14"/></g></svg></div>
@@ -306,8 +349,10 @@
       <section id="who">
         <div class="wrapx">
           <p class="num">01 / 05 &nbsp;Who it&rsquo;s for</p>
-          <h2>Built for communities with a brand.</h2>
+          <h2>Built for token owners.</h2>
+          <p class="lede">Own a token? Give your holders a wallet with its name on. Use it to promote the token, build a product around it, or start a business on chain.</p>
           <div class="specs">
+            <article class="spec"><p class="lbl sno">Token owners</p><h3>Promote, build, start up</h3><ul><li>Promote your token with a wallet in its colours</li><li>Build a product on it, or start a business on chain</li></ul></article>
             <article class="spec"><p class="lbl sno">Memecoin communities</p><h3>Meme wallets</h3><ul><li>A wallet themed on your meme, for your holders</li><li>A frog-themed wallet for a frog coin, a dog wallet for a dog coin</li></ul></article>
             <article class="spec"><p class="lbl sno">Businesses</p><h3>Your user base, your culture</h3><ul><li>Give customers a wallet in your colours and name</li><li>Grow a community around what you sell</li></ul></article>
             <article class="spec"><p class="lbl sno">Artists &amp; creators</p><h3>An edition for your fans</h3><ul><li>VexVoid is the showcase. <a href="/themes/vexvoid">See the VexVoid edition</a></li><li>Your art on every card</li></ul></article>
@@ -402,5 +447,18 @@
         <p style="font-size:.72rem;opacity:.7">Frog emoji: <a href="https://github.com/jdecked/twemoji" target="_blank" rel="noopener">Twemoji</a>, <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener">CC-BY 4.0</a></p>
       </div>
     </footer>
+    <script>
+    (function () {
+      var cards = document.querySelectorAll('.hero .card.meme'), cols = document.querySelectorAll('.cut .col'), dots = document.querySelectorAll('.mdots button');
+      if (!cards.length) return;
+      var i = 0, t = null, hover = false, reduce = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
+      function show(n) { i = n; for (var k = 0; k < cards.length; k++) { cards[k].classList.toggle('off', k !== n); cols[k] && cols[k].classList.toggle('off', k !== n); dots[k] && dots[k].setAttribute('aria-current', k === n ? 'true' : 'false'); } }
+      function start() { if (reduce || t) return; t = setInterval(function () { if (!hover) show((i + 1) % cards.length); }, 3500); }
+      var obj = document.querySelector('.hero .obj');
+      obj.addEventListener('mouseenter', function () { hover = true; }); obj.addEventListener('mouseleave', function () { hover = false; });
+      dots.forEach(function (d, k) { d.addEventListener('click', function () { show(k); }); });
+      if (reduce) { show(0); var g = document.querySelector('.mdots'); if (g) g.hidden = true; } else start();
+    })();
+    </script>
   </body>
 </html>
