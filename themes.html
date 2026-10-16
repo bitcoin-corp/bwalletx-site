@@ -30,12 +30,39 @@
     <link rel="stylesheet" href="/styles.css" />
     <style>
       body.paper, body.paper[data-theme="white"] { --paper: #f7f6f2; --sheet: #ffffff; --ink: #111111; --muted: #5d5b56; --dim: #8a8780; --hair: #d9d6ce; --hover: #f0eee8; }
-      body.paper[data-theme="pink"] { --paper: #fbeef1; --sheet: #fff7f9; --ink: #3a0f1d; --muted: #6e3a4a; --dim: #a07a86; --hair: #ecd0d8; --hover: #f6e0e6; }
-      body.paper[data-theme="blue"] { --paper: #edf2f9; --sheet: #f8fbff; --ink: #0c1f3d; --muted: #3c5170; --dim: #7c8ca6; --hair: #cfdbec; --hover: #e0e9f5; }
-      body.paper[data-theme="yellow"] { --paper: #fbf5dc; --sheet: #fffcef; --ink: #2e2304; --muted: #63562b; --dim: #9a8c5c; --hair: #ebe0b4; --hover: #f5ecc6; }
+      body.paper[data-theme="pink"] { --paper: #f4a7c0; --sheet: #ffffff; --ink: #111111; --muted: #2e1a21; --dim: #4a2c37; --hair: #e08aa6; --hover: #ef97b3; }
+      body.paper[data-theme="blue"] { --paper: #8ec5f0; --sheet: #ffffff; --ink: #111111; --muted: #13263a; --dim: #24405c; --hair: #6eaee0; --hover: #7fbbe9; }
+      body.paper[data-theme="yellow"] { --paper: #f7da4a; --sheet: #ffffff; --ink: #111111; --muted: #2e2604; --dim: #4a3d08; --hair: #e0c22e; --hover: #f0d03a; }
       body.paper { color-scheme: light; }
       body.paper[data-theme="vexvoid"] { --paper: #000000; --sheet: #050505; --ink: #f2f2f2; --muted: #a6a6a6; --dim: #6e6e6e; --hair: #2b2b2b; --hover: #141414; color-scheme: dark;
         background-image: linear-gradient(rgba(255,255,255,.07) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.07) 1px, transparent 1px), linear-gradient(rgba(255,255,255,.03) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.03) 1px, transparent 1px); }
+
+      body.paper[data-theme="gold"] { --paper: #0b0a08; --sheet: #12100c; --ink: #f2c84b; --muted: #c9ad62; --dim: #8a7748; --hair: #3a3122; --hover: #1a160f; color-scheme: dark; }
+      body.paper[data-theme="dark"] { --paper: #161616; --sheet: #1e1e1e; --ink: #f4f4f4; --muted: #b0b0b0; --dim: #7a7a7a; --hair: #3a3a3a; --hover: #232323; color-scheme: dark; }
+      body.paper[data-theme="npg"] { --paper: #050005; --sheet: #0d020a; --ink: #ff3b9a; --muted: #f7a8cf; --dim: #a05a80; --hair: #4a0f32; --hover: #1a0612; color-scheme: dark; }
+      body.paper[data-theme="npgx"] { --paper: #030303; --sheet: #0a0a06; --ink: #c6ff00; --muted: #ff4fd8; --dim: #8c7aa8; --hair: #3b2a55; --hover: #14101c; color-scheme: dark; }
+      body.paper[data-theme="npg"] h1, body.paper[data-theme="npg"] h2 { text-shadow: 0 0 18px rgba(255,59,154,.55); }
+      body.paper[data-theme="npgx"] h1, body.paper[data-theme="npgx"] h2 { text-shadow: 2px 0 #ff2bd6, -2px 0 #00f0ff; }
+      .slop, .npgcredit, .npgxcredit, .npglede, .npgxlede, .glede, .dlede, .npgcard, .npgxlive { display: none; }
+      body.paper[data-theme="npg"] .slop, body.paper[data-theme="npgx"] .slop { display: block; position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; z-index: 0; opacity: .55; }
+      body.paper[data-theme="npgx"] .slop { opacity: .7; }
+      body.paper[data-theme="npg"] .npgcredit, body.paper[data-theme="npgx"] .npgxcredit, body.paper[data-theme="npgx"] .npgxlive { display: block; }
+      body.paper[data-theme="npg"] .npglede, body.paper[data-theme="npgx"] .npgxlede, body.paper[data-theme="gold"] .glede, body.paper[data-theme="dark"] .dlede { display: inline; }
+      body.paper[data-theme="npg"] .plede, body.paper[data-theme="npgx"] .plede, body.paper[data-theme="gold"] .plede, body.paper[data-theme="dark"] .plede { display: none; }
+      .npgcredit, .npgxcredit { margin: 18px 0 0; font: 500 .7rem var(--mono); letter-spacing: .14em; text-transform: uppercase; color: var(--muted); }
+      .npgcredit a, .npgxcredit a { color: var(--ink); }
+      .npgxlive { margin: 14px 0 0; padding: 10px 12px; border: 1px dashed var(--ink); font: 500 .74rem var(--mono); letter-spacing: .08em; color: var(--ink); max-width: 420px; }
+      .npgxlive a { color: #ff4fd8; }
+      body.paper[data-theme="npg"] .npgcard, body.paper[data-theme="npgx"] .npgcard { display: block; position: absolute; inset: 0; width: 100%; height: 100%; background: center/62% no-repeat; }
+      body.paper[data-theme="npg"] .npgcard { background-image: url(/images/themes/npg-tag.png); opacity: .9; filter: drop-shadow(0 0 6px #ff3b9a); }
+      body.paper[data-theme="npgx"] .npgcard { background: url(/images/themes/npgx-logo.png) right 8% center/34% no-repeat, linear-gradient(120deg, #2a0038, #000 55%, #1d2b00); }
+      body.paper[data-theme="npg"] .card .art, body.paper[data-theme="npgx"] .card .art { display: none; }
+      body.paper[data-theme="npg"] .card { box-shadow: 0 0 0 1px #ff3b9a, 0 0 24px rgba(255,59,154,.45); }
+      body.paper[data-theme="npgx"] .card { box-shadow: 3px 0 0 #ff2bd6, -3px 0 0 #00f0ff, 0 0 0 1px #c6ff00; }
+      body.paper[data-theme="npg"] .card .bal, body.paper[data-theme="npg"] .card .sats, body.paper[data-theme="npg"] .card .addr, body.paper[data-theme="npg"] .card .row1 { text-shadow: 0 1px 3px #000; color: #fff; }
+      body.paper[data-theme="gold"] .card, body.paper[data-theme="gold"] .tile { box-shadow: 0 0 0 .5px #f2c84b; }
+      body.paper[data-theme="gold"] .tblock svg g, body.paper[data-theme="dark"] .tblock svg g, body.paper[data-theme="npg"] .tblock svg g, body.paper[data-theme="npgx"] .tblock svg g { stroke: var(--ink); }
+      @media (prefers-reduced-motion: reduce) { body.paper[data-theme="npgx"] h1 { text-shadow: none; } }
       .tp section.hero { position: relative; }
       .tp section.hero > .wrapx { position: relative; z-index: 1; }
       .vxbg, .vxcard, .vxcredit { display: none; }
@@ -46,8 +73,7 @@
       body.paper[data-theme="vexvoid"] .card, body.paper[data-theme="vexvoid"] .tile { box-shadow: 0 0 0 .5px #fff; }
       body.paper[data-theme="vexvoid"] .tblock svg g { stroke: #f2f2f2; }
       .artlbl { margin: 40px 0 0; font-size: .72rem; color: var(--muted); }
-      .themes.artists { margin-top: 14px; grid-template-columns: minmax(0,1fr); width: calc(100% / 3); }
-      @media (max-width: 820px) { .themes.artists { width: 50%; } }
+      .themes.artists { margin-top: 14px; }
       .vxlede { display: none; }
       body.paper[data-theme="vexvoid"] .vxlede { display: inline; }
       body.paper[data-theme="vexvoid"] .plede { display: none; }
@@ -260,19 +286,22 @@
     <main class="tp">
       <div class="ruler" aria-hidden="true"><span style="left:3px">0</span><span style="left:43px">10</span><span style="left:83px">20</span><span style="left:123px">30</span><span style="left:163px">40</span><span style="left:203px">50</span><span style="left:243px">60</span><span style="left:283px">70</span><span style="left:323px">80</span><span style="left:363px">90</span><span style="left:403px">100</span><span style="left:443px">110</span><span style="left:483px">120</span><span style="left:523px">130</span><span style="left:563px">140</span><span style="left:603px">150</span><span style="left:643px">160</span><span style="left:683px">170</span><span style="left:723px">180</span><span style="left:763px">190</span><span style="left:803px">200</span><span style="left:843px">210</span><span style="left:883px">220</span><span style="left:923px">230</span><span style="left:963px">240</span><span style="left:1003px">250</span><span style="left:1043px">260</span><span style="left:1083px">270</span><span style="left:1123px">280</span><span style="left:1163px">290</span><span style="left:1203px">300</span><span style="left:1243px">310</span><span style="left:1283px">320</span><span style="left:1323px">330</span><span style="left:1363px">340</span><span style="left:1403px">350</span><span style="left:1443px">360</span><span style="left:1483px">370</span><span style="left:1523px">380</span><span style="left:1563px">390</span></div>
       <section class="hero">
-        <canvas class="vxbg" id="vxbg" aria-hidden="true"></canvas>
+        <canvas class="vxbg" id="vxbg" aria-hidden="true"></canvas><canvas class="slop" id="slop" aria-hidden="true"></canvas>
         <div class="wrapx split">
           <div>
             <p class="num">Themes <b>Sheet 00 / 05</b></p>
             <h1>Make bWallet yours.</h1>
-            <p class="lede"><span class="plede">Pick the colours of the app and the art on your card. Here are the new paper themes: tinted paper, dark ink of the same hue, thin lines and lots of room.</span><span class="vxlede">An artist edition by VexVoid: black, white and moving, taken from their live AV set.</span></p>
+            <p class="lede"><span class="plede">Pick the colours of the app and the art on your card. Here are the paper themes: solid coloured paper, black ink, thin lines and lots of room.</span><span class="vxlede">An artist edition by VexVoid: black, white and moving, taken from their live AV set.</span><span class="npglede">The Ninja Punk Girls edition: hot-pink neon on black, cut up like the NPG live mix. Girls vs bots, on your wallet.</span><span class="npgxlede">NPGX, louder: acid green, ultraviolet, harder cuts and more motion. The wild one.</span><span class="glede">Gold: the bWalletX default. Gold ink on near-black, gold hairlines. Already in the app.</span><span class="dlede">Dark: neutral grey and white for night use. Already in the app.</span></p>
             <p class="vxcredit">Artist theme by <a href="https://bchatx.com/u/vexvoid" target="_blank" rel="noopener">VexVoid &middot; bTV: AIVJ</a></p>
+            <p class="npgcredit">Ninja Punk Girls edition &middot; <a href="https://www.ninjapunkgirls.com" target="_blank" rel="noopener">ninjapunkgirls.com</a></p>
+            <p class="npgxcredit">NPGX edition &middot; <a href="https://npg-x.com" target="_blank" rel="noopener">npg-x.com</a></p>
+            <p class="npgxlive">NPGX live mix: <b>coming</b>. The slopcore video mix is not built yet; watch <a href="https://npg-x.com/live" target="_blank" rel="noopener">npg-x.com</a>.</p>
             <div class="cta"><a class="pri" href="#how">How to change it</a><a class="sec" href="/get">Get bWalletX</a></div>
           </div>
           <div>
             <div class="dwg"><span class="dim w" aria-hidden="true"><span>85.6 mm</span></span><span class="dim h" aria-hidden="true"><span>54 mm</span></span><div class="obj">
             <div class="card" role="img" aria-label="A white bWallet card with black type and a faint wave">
-              <svg class="art" style="opacity:.12"><use href="#wave" /></svg><canvas class="vxcard" id="vxcard" aria-hidden="true"></canvas>
+              <svg class="art" style="opacity:.12"><use href="#wave" /></svg><canvas class="vxcard" id="vxcard" aria-hidden="true"></canvas><div class="npgcard" aria-hidden="true"></div>
               <div class="row1"><i></i>you@bwalletx.com</div>
               <svg class="bm" viewBox="0 0 104 124"><use href="#b-outline" /></svg>
               <div class="bal">$656.32</div>
@@ -297,22 +326,25 @@
           <p class="sub">A theme sets the colour of every screen: buttons, cards, the menu bar. Gold is the default. White is new. More pure colours are on the way.</p>
           <div class="themes">
             <button type="button" class="tcell" data-t="white"><div class="sw" style="background:#f7f6f2"></div><h3>White <span class="pill soon">Coming</span></h3><p>Paper: off-white, black ink, hairlines.</p></button>
-            <button type="button" class="tcell" data-t="pink"><div class="sw" style="background:#f3c9d4"></div><h3>Pink <span class="pill soon">Coming</span></h3><p>Blush paper, deep rose ink.</p></button>
-            <button type="button" class="tcell" data-t="blue"><div class="sw" style="background:#c3d4ee"></div><h3>Blue <span class="pill soon">Coming</span></h3><p>Blueprint paper, navy ink.</p></button>
-            <button type="button" class="tcell" data-t="yellow"><div class="sw" style="background:#f1df8f"></div><h3>Yellow <span class="pill soon">Coming</span></h3><p>Legal-pad paper, umber ink.</p></button>
-            <div><div class="sw" style="background:linear-gradient(135deg,#ffd24d,#eab300);border-color:#d9a400"></div><h3>Gold <span class="pill live">Live</span></h3><p>The default. Gold on black.</p></div>
-            <div><div class="sw" style="background:#111;border-color:#111"></div><h3>Dark <span class="pill live">Live</span></h3><p>Quiet black for night use.</p></div>
+            <button type="button" class="tcell" data-t="pink"><div class="sw" style="background:#f4a7c0"></div><h3>Pink <span class="pill soon">Coming</span></h3><p>Bubblegum paper, black ink.</p></button>
+            <button type="button" class="tcell" data-t="blue"><div class="sw" style="background:#8ec5f0"></div><h3>Blue <span class="pill soon">Coming</span></h3><p>Sky paper, black ink.</p></button>
+            <button type="button" class="tcell" data-t="yellow"><div class="sw" style="background:#f7da4a"></div><h3>Yellow <span class="pill soon">Coming</span></h3><p>Sunflower paper, black ink.</p></button>
+            <button type="button" class="tcell" data-t="gold"><div class="sw" style="background:linear-gradient(135deg,#ffd24d,#eab300);border-color:#d9a400"></div><h3>Gold <span class="pill live">Live</span></h3><p>The default. Gold on black.</p></button>
+            <button type="button" class="tcell" data-t="dark"><div class="sw" style="background:#1c1c1c;border-color:#111"></div><h3>Dark <span class="pill live">Live</span></h3><p>Neutral grey and white for night use.</p></button>
           </div>
           <p class="lbl artlbl">Artist editions</p>
           <div class="themes artists">
             <button type="button" class="tcell" data-t="vexvoid"><div class="sw" style="background:#000 radial-gradient(circle at 35% 40%,#fff 0 1px,transparent 1.5px) 0 0/9px 9px;border-color:#000"></div><h3>VexVoid <span class="pill soon">Coming</span></h3><p>Artist edition: black, stark white, point field.</p></button>
+            <button type="button" class="tcell" data-t="npg"><div class="sw" style="background:url(/images/themes/npg-tag.png) center/80% no-repeat,#000;border-color:#ff3b9a;box-shadow:0 0 10px #ff3b9a"></div><h3>NPG <span class="pill soon">Coming</span></h3><p>Ninja Punk Girls: hot-pink neon, glitch cuts.</p></button>
+            <button type="button" class="tcell" data-t="npgx"><div class="sw" style="background:linear-gradient(90deg,#c6ff00 0 25%,#ff2bd6 25% 50%,#00f0ff 50% 75%,#000 75%);border-color:#000"></div><h3>NPGX <span class="pill soon">Coming</span></h3><p>The wild one: acid colours, hard glitch.</p></button>
           </div>
           <p class="cta"><a class="sec" href="/themes/custom">Get your own edition &rarr;</a></p>
-          <p class="hint lbl">Hover (or tap once) to preview this page in a paper &middot; click (tap again) to open its page</p>
+          <p class="hint lbl">Hover (or tap once) to preview this page in any theme &middot; click (tap again) to open its page</p>
           <div class="install" id="install" aria-live="polite">
             <img id="iicon" src="/theme-apps/icon-white-192.png" alt="" width="72" height="72" />
             <div><p class="lbl"><span id="ititle">Install the White edition</span> <span id="ipill" class="pill live">Live</span></p>
             <p id="inote">The web wallet in white paper, on your home screen.</p>
+            <div id="ibuilt" hidden><a class="ibtn" href="https://web.bwalletx.com/">Open bWalletX</a></div>
             <div id="iwhite"><a class="ibtn" href="https://web.bwalletx.com/white">Install the White edition</a>
             <ol><li><b>iPhone:</b> open it in Safari &rsaquo; Share &rsaquo; Add to Home Screen.</li><li><b>Android / Chrome:</b> open it &rsaquo; menu &rsaquo; Install app.</li></ol></div></div>
           </div>
@@ -399,9 +431,15 @@
             <li><span class="pill live">Live</span><span><b>This page in four papers</b>: White, Pink, Blue and Yellow, hover to preview, click for its own page (/themes/pink etc.).</span></li>
             <li><span class="pill live">Live</span><span><b>VexVoid artist theme</b> preview at /themes/vexvoid: black, stark white and the live point field from the VexVoid AV set.</span></li>
             <li><span class="pill soon">Coming</span><span><b>VexVoid artist theme in the app</b>: artist edition, in-app theme coming.</span></li>
+            <li><span class="pill live">Live</span><span><b>Gold and Dark previews</b> at /themes/gold and /themes/dark: built in, already in bWalletX.</span></li>
+            <li><span class="pill live">Live</span><span><b>NPG page preview</b> at /themes/npg: Ninja Punk Girls neon with glitch slices over official art.</span></li>
+            <li><span class="pill soon">Coming</span><span><b>NPG in-app theme</b>.</span></li>
+            <li><span class="pill live">Live</span><span><b>NPGX page preview</b> at /themes/npgx: acid colours, harder glitch.</span></li>
+            <li><span class="pill soon">Coming</span><span><b>NPGX in-app theme</b>.</span></li>
+            <li><span class="pill soon">Coming</span><span><b>NPGX live mix</b>: the slopcore video mix at npg-x.com/live is not built yet.</span></li>
             <li><span class="pill soon">Coming</span><span><b>Pink, Blue and Yellow</b>: preview only &mdash; in-app theme coming.</span></li>
             <li><span class="pill live">Live</span><span><b>White edition install</b>: add the white web wallet to your home screen from <a href="https://web.bwalletx.com/white">web.bwalletx.com/white</a>.</span></li>
-            <li><span class="pill soon">Coming</span><span><b>Pink, Blue, Yellow and VexVoid installs</b>: no install button until each pack ships.</span></li>
+            <li><span class="pill soon">Coming</span><span><b>Pink, Blue, Yellow, VexVoid, NPG and NPGX installs</b>: no install button until each pack ships.</span></li>
           </ul>
         </div>
       </section>
@@ -486,16 +524,61 @@
       })();
     </script>
     <script>
+      /* NPG / NPGX slop mix: glitch slices over still official art (after the NPG live mix). No video.
+         Runs only while an NPG theme is shown and the hero is on screen; one still frame under reduced motion. */
       (function () {
-        var T = { white: '#f7f6f2', pink: '#fbeef1', blue: '#edf2f9', yellow: '#fbf5dc', vexvoid: '#000000' };
-        var N = { white: 'White', pink: 'Pink', blue: 'Blue', yellow: 'Yellow', vexvoid: 'VexVoid' };
+        var cv = document.getElementById('slop'); if (!cv) return;
+        var g = cv.getContext('2d'), imgs = {}, raf = 0, vis = true, last = 0, W = 0, H = 0;
+        var reduce = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
+        function img(k, src) { if (!imgs[k]) { imgs[k] = new Image(); imgs[k].onload = function () { frame(performance.now(), 1); }; imgs[k].src = src; } return imgs[k]; }
+        function size() { var r = cv.getBoundingClientRect(), d = Math.min(devicePixelRatio || 1, 1.5); W = cv.width = Math.max(2, r.width * d | 0); H = cv.height = Math.max(2, r.height * d | 0); }
+        function mode() { var t = document.body.dataset.theme; return t === 'npg' || t === 'npgx' ? t : ''; }
+        function cover(im, x) { var s = Math.max(W / im.width, H / im.height), w = im.width * s, h = im.height * s; return [x + (W - w) / 2, (H - h) / 2, w, h]; }
+        function frame(now, force) {
+          var m = mode(); if (!m) return;
+          var wild = m === 'npgx', R = Math.random;
+          g.globalCompositeOperation = 'source-over'; g.globalAlpha = 1; g.fillStyle = '#000'; g.fillRect(0, 0, W, H);
+          var im = wild ? img('x', '/images/themes/npgx-logo.png') : img('a', '/images/themes/npg-art.jpg');
+          if (!im.complete || !im.width) return;
+          var b = wild ? [W * .55, H * .05, H * .9, H * .9] : cover(im, W * .18);
+          var n = wild ? 22 : 12, sh = H / n;
+          for (var i = 0; i < n; i++) {
+            var off = (R() < (wild ? .5 : .3) ? (R() - .5) * (wild ? 160 : 70) : 0), y = i * sh;
+            var sy = (y - b[1]) / b[3] * im.height, shh = sh / b[3] * im.height;
+            if (sy + shh < 0 || sy > im.height) continue;
+            g.drawImage(im, 0, Math.max(0, sy), im.width, shh, b[0] + off, y, b[2], sh);
+          }
+          g.globalCompositeOperation = wild ? 'screen' : 'multiply';
+          var cols = wild ? ['#c6ff00', '#ff2bd6', '#00f0ff'] : ['#ff3b9a'];
+          g.fillStyle = cols[0]; g.globalAlpha = wild ? .18 : .55; g.fillRect(0, 0, W, H);
+          g.globalCompositeOperation = 'source-over';
+          for (var k = 0; k < (wild ? 9 : 3); k++) { g.globalAlpha = wild ? .5 : .35; g.fillStyle = cols[k % cols.length]; g.fillRect(R() * W, R() * H, R() * W * (wild ? .5 : .3), 2 + R() * (wild ? 18 : 6)); }
+          if (wild && R() < .25) { g.globalAlpha = .25; g.fillStyle = cols[(R() * 3) | 0]; g.fillRect(0, 0, W, H); }
+          g.globalAlpha = .22; g.fillStyle = '#000'; for (var y2 = 0; y2 < H; y2 += 4) g.fillRect(0, y2, W, 1);
+          g.globalAlpha = 1;
+        }
+        function loop(now) { raf = 0; if (!vis || !mode() || document.hidden || reduce) return; if (now - last > (mode() === 'npgx' ? 70 : 110)) { last = now; frame(now); } raf = requestAnimationFrame(loop); }
+        function kick() { if (!mode()) return; size(); frame(performance.now(), 1); if (!raf && !reduce) raf = requestAnimationFrame(loop); }
+        if ('IntersectionObserver' in window) new IntersectionObserver(function (e) { vis = e[0].isIntersecting; if (vis) kick(); }).observe(cv);
+        new MutationObserver(kick).observe(document.body, { attributes: true, attributeFilter: ['data-theme'] });
+        document.addEventListener('visibilitychange', kick);
+        window.addEventListener('resize', kick);
+        window.slopStart = kick;
+      })();
+    </script>
+    <script>
+      (function () {
+        var T = { white: '#f7f6f2', pink: '#f4a7c0', blue: '#8ec5f0', yellow: '#f7da4a', vexvoid: '#000000', gold: '#0b0a08', dark: '#161616', npg: '#050005', npgx: '#030303' };
+        var N = { white: 'White', pink: 'Pink', blue: 'Blue', yellow: 'Yellow', vexvoid: 'VexVoid', gold: 'Gold', dark: 'Dark', npg: 'Ninja Punk Girls', npgx: 'NPGX' };
+        var ART = { vexvoid: 1, npg: 1, npgx: 1 }, BUILT = { gold: 1, dark: 1 };
         var cells = document.querySelectorAll('.tcell');
-        function fromPath() { var m = location.pathname.match(/^\/themes\/(white|pink|blue|yellow|vexvoid)\/?$/); return m ? m[1] : 'white'; }
+        function fromPath() { var m = location.pathname.match(/^\/themes\/(white|pink|blue|yellow|vexvoid|gold|dark|npg|npgx)\/?$/); return m ? m[1] : 'white'; }
         var sel = fromPath();
         function paint(t) {
           document.body.setAttribute('data-theme', t);
-          var n = document.getElementById('ttitle'); if (n) n.textContent = 'bWallet \u00b7 ' + N[t] + (t === 'vexvoid' ? ' edition' : ' theme');
+          var n = document.getElementById('ttitle'); if (n) n.textContent = 'bWallet \u00b7 ' + N[t] + (ART[t] ? ' edition' : ' theme');
           if (t === 'vexvoid' && window.vxStart) window.vxStart();
+          if ((t === 'npg' || t === 'npgx') && window.slopStart) window.slopStart();
         }
         function select(t) {
           sel = t; paint(t);
@@ -503,12 +586,13 @@
           document.getElementById('tico').href = '/theme-apps/icon-' + t + '-180.png';
           document.getElementById('tcol').content = T[t];
           document.getElementById('iicon').src = '/theme-apps/icon-' + t + '-192.png';
-          document.getElementById('ititle').textContent = t === 'vexvoid' ? 'VexVoid artist edition' : 'Install the ' + N[t] + ' edition';
-          document.getElementById('inote').textContent = t === 'vexvoid' ? 'Artist edition: in-app theme coming. No install button until the VexVoid pack ships in the app.' : t === 'white'
+          document.getElementById('ititle').textContent = ART[t] ? N[t] + ' edition' : BUILT[t] ? N[t] + ': built in' : 'Install the ' + N[t] + ' edition';
+          document.getElementById('inote').textContent = BUILT[t] ? 'Built in: already in bWalletX. Wallet › ☰ › Theme › ' + N[t] + '.' : t === 'npgx' ? 'NPGX edition: in-app theme coming. NPGX live mix: coming. No install button until the pack ships in the app.' : ART[t] ? N[t] + ' edition: in-app theme coming. No install button until the pack ships in the app.' : t === 'white'
             ? 'The web wallet in white paper, on your home screen.'
             : 'Preview: in-app theme coming. No install button until the ' + N[t] + ' pack ships in the app.';
           document.getElementById('iwhite').hidden = t !== 'white';
-          var ip = document.getElementById('ipill'); ip.className = 'pill ' + (t === 'white' ? 'live' : 'soon'); ip.textContent = t === 'white' ? 'Live' : 'Coming';
+          document.getElementById('ibuilt').hidden = !BUILT[t];
+          var ip = document.getElementById('ipill'); var lv = t === 'white' || BUILT[t]; ip.className = 'pill ' + (lv ? 'live' : 'soon'); ip.textContent = lv ? 'Live' : 'Coming';
           cells.forEach(function (c) { c.setAttribute('aria-pressed', c.dataset.t === t ? 'true' : 'false'); });
         }
         var touchArmed = null;

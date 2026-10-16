@@ -1,0 +1,23 @@
+{
+  "id": "/bwallet-gold",
+  "name": "bWallet Gold",
+  "short_name": "bWallet",
+  "start_url": "https://web.bwalletx.com/?theme=gold",
+  "scope": "https://web.bwalletx.com/",
+  "display": "standalone",
+  "background_color": "#0b0a08",
+  "theme_color": "#0b0a08",
+  "icons": [
+    {
+      "src": "https://bwalletx.com/theme-apps/icon-gold-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "https://bwalletx.com/theme-apps/icon-gold-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

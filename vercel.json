@@ -6,7 +6,7 @@
       "destination": "/themes-custom"
     },
     {
-      "source": "/themes/:colour(white|pink|blue|yellow|vexvoid)",
+      "source": "/themes/:colour(white|pink|blue|yellow|vexvoid|gold|dark|npg|npgx)",
       "destination": "/themes"
     },
     {
@@ -48,7 +48,7 @@
   ],
   "redirects": [
     {
-      "source": "/theme/:colour(white|pink|blue|yellow|vexvoid)",
+      "source": "/theme/:colour(white|pink|blue|yellow|vexvoid|gold|dark|npg|npgx)",
       "destination": "/themes/:colour",
       "permanent": false
     },
