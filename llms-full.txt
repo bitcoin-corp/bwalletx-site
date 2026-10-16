@@ -803,6 +803,97 @@ Found a security problem? Email [support@bwalletx.com](mailto:support@bwalletx.c
 
 ---
 
+Source: https://bwalletx.com/business-agents
+
+Business agents In build
+
+# Your business agent, from a link.
+
+Paste your website. b drafts an agent that knows your products, prices and FAQs, then answers your customers and takes payment in chat.
+
+It lives in your bChatX room or your branded bWallet. This is in build: the list at the bottom shows exactly what works today.
+
+[How it works](#how)[What’s live](#status)
+
+Customer
+
+Do you have the large bag in black?
+
+Your agent
+
+Yes. The large black bag is £40, ships in two days. Want it?
+
+Yes please.
+
+Pay £40 to yourshopAllow
+
+Paid. Your receipt is on chain. Thank you.
+
+01 / 04  How it works
+
+## Three steps.
+
+Step 1
+
+### Paste your link
+
+- Give b your website address
+- b reads your products, prices and FAQs and drafts the agent
+- You check it and edit anything before it goes live
+
+Step 2
+
+### Put it where customers are
+
+- Your bChatX room, or your branded bWallet
+- It answers questions in your words, day and night
+
+Step 3
+
+### Take payment in chat
+
+- Customers pay in sats or PNEEs
+- One tap on their own approval sheet, inside their wallet
+- No cards, no card rails, no forms
+
+02 / 04  Kept on a short leash
+
+## You stay in charge of the money.
+
+- 01The agent has its own capped account with a daily limit you set. It never touches your main wallet.
+
+- 02A Stop button pauses it at once.
+
+- 03Every sale gets a receipt on chain, so you and your customer have the same record.
+
+- 04Refunds come from your own wallet, by you.
+
+- 05Customers approve every payment themselves. The agent can ask; it can’t take.
+
+03 / 04  Price
+
+## Included with Branded editions.
+
+Business agents come with a [Branded edition](https://bwalletx.com/themes/custom) (from $999). The Theme edition is $99 a year. Ask us if you want to be one of the first businesses to try it.
+
+[See editions](https://bwalletx.com/themes/custom)[Message us on bChatX](https://www.bchatx.com/u/bwalletx)
+
+04 / 04  What’s live
+
+## Where things stand.
+
+- ComingAgent from a link (in build)
+
+- ComingChat checkout with the approval sheet
+
+- ComingCapped agent account with a daily limit and Stop button
+
+- LiveReceipts on chain: every bWalletX payment already has one
+
+- ComingSMS for your agent: customers text it. [Bitcoin by text](https://bwalletx.com/sms)
+
+---
+
 Source: https://bwalletx.com/buy
 
 # Buy BSV in bWalletX
@@ -3141,6 +3232,84 @@ bWalletX is in beta: test with small amounts. Questions: [support@bwalletx.com](
 
 ---
 
+Source: https://bwalletx.com/sms
+
+SMS In build
+
+# Bitcoin by text.
+
+Send money to any phone number. They tap a link to claim it. If they don’t, it comes back to you.
+
+This is in build and not live yet. The list at the bottom shows where it stands.
+
+[How it works](#how)[What’s live](#status)
+
+Text message
+
+Sam sent you £5 with bWalletX. Tap to claim: bwalletx.com/c/…
+
+Claimed, thanks!
+
+01 / 04  How it works
+
+## Phone number in, money out.
+
+Step 1
+
+### Verify your number
+
+- We text you a code
+- Your number links to your wallet as a private fingerprint, not stored in plain text
+
+Step 2
+
+### Send by text
+
+- Pick any phone number and an amount
+- They get a text with a claim link
+
+Step 3
+
+### They claim, or it comes back
+
+- Tap the link and claim into a wallet
+- Unclaimed funds return to you
+- We never hold the money
+
+02 / 04  For businesses
+
+## Customers can text your agent.
+
+A [business agent](https://bwalletx.com/business-agents) can answer by text too: customers ask questions and pay without installing anything first.
+
+03 / 04  Privacy
+
+## Your number stays yours.
+
+- 01Your number is stored as a private fingerprint, never shown to other users.
+
+- 02We only text people you choose to send to.
+
+- 03Reply STOP to any of our texts to opt out.
+
+- 04You can unlink your number from the wallet at any time.
+
+04 / 04  What’s live
+
+## Where things stand.
+
+- ComingVerify your phone number (in build)
+
+- ComingSend by text with a claim link
+
+- ComingUnclaimed funds return to you
+
+- ComingText a business’s agent
+
+- ComingSTOP to opt out
+
+---
+
 Source: https://bwalletx.com/streaming-payments
 
 # Pay as you listen. Stop any time.
@@ -3604,27 +3773,27 @@ Questions: [support@bwalletx.com](mailto:support@bwalletx.com)
 
 Source: https://bwalletx.com/themes-custom
 
-Custom editions Sheet 00 / 04
+Meme wallets for memecoin communities Sheet 00 / 05
 
-# Your own bWallet.
+# Your brand’s own wallet. From $99.
 
-Your colours, your card art, your icon, and a page for your fans. We build it with you; you approve it before it goes live.
+A frog-themed wallet for a frog coin. Your colours, card art, icon and name, on a self-custody wallet your community already trusts to work.
 
-VexVoid is the first artist edition. [See the VexVoid theme](https://bwalletx.com/themes/vexvoid).
+Every user still gets bWallet free. This is for brands who want their own.
 
-[Message us](#order)[See the options](#tiers)
+[Order yours](#order)[See prices](#tiers)
 
 85.6 mm54 mm
 
-fans@yourname
+$FROG wallet
 
-Your art here
+Ribbit.
 
-Colours · card · icon
+Example: a frog wallet for a frog coin
 
-bwalletx.com/themes/yourname
+wallet.yourcoin.com
 
-Custom
+From $99
 
 bWallet · Custom editions
 
@@ -3636,45 +3805,72 @@ Date16.10.2026
 
 DrawnbWalletX
 
-01 / 04  Three ways to do it
+01 / 05  Who it’s for
 
-## Pick how far you want to go.
+## Built for communities with a brand.
 
-Spec A · Theme
+Memecoin communities
 
-### Theme
+### Meme wallets
+
+- A wallet themed on your meme, for your holders
+- A frog-themed wallet for a frog coin, a dog wallet for a dog coin
+
+Businesses
+
+### Your user base, your culture
+
+- Give customers a wallet in your colours and name
+- Grow a community around what you sell
+
+Artists & creators
+
+### An edition for your fans
+
+- VexVoid is the showcase. [See the VexVoid edition](https://bwalletx.com/themes/vexvoid)
+- Your art on every card
+
+Run a wallet brand, or want to bring one back? Relaunch it on bWallet: a modern self-custody base, your name on top.
+
+02 / 05  Prices
+
+## Three editions. Price first.
+
+Spec A
 
 $99 a year
+
+### Theme edition
 
 - Custom colours, card art and app icon
 
 - A page at bwalletx.com/themes/<name>
 
-- An install link your fans add to their home screen
+- An install link your community adds to their home screen
 
 - Built for you; you approve it
 
 Renews yearly
 
-Spec B · Branded edition
+Spec B
+
+from $999 set-up + monthly
 
 ### Branded edition
 
-from $999 set-up + monthly fee
-
 - Your own domain, e.g. wallet.yourbrand.com
 
-- Your name on it
+- Your name and brand throughout
 
 - Still runs on bWalletX: self-custody, keys stay with each user
 
 By enquiry
 
-Spec C · Native app
+Spec C
+
+By quote
 
 ### Native app
-
-Custom quote
 
 - Published under your own App Store and Google Play accounts
 
@@ -3682,9 +3878,9 @@ Custom quote
 
 By quote
 
-02 / 04  The rules, in short
+03 / 05  The rules, in short
 
-## Fair for you, safe for your fans.
+## Fair for you, safe for your users.
 
 - 01Brand themes are only for the verified owner of the brand. We check.
 
@@ -3692,21 +3888,21 @@ By quote
 
 - 03We can decline a theme that impersonates someone or misleads people.
 
-03 / 04  How to order
+04 / 05  How to order
 
 ## Send us a message.
 
-There is no payment form yet. Tell us your name, what you have in mind and any art you already have, and we’ll reply with next steps. Ordering inside the wallet is coming.
+Tell us your brand, what you have in mind and any art you already have, and we’ll reply with next steps. Ordering inside the wallet (Settings › Theme › “Get your own edition”) is built and goes live soon.
 
 [Message us on bChatX](https://www.bchatx.com/u/bwalletx)[Message @bWalletX on X](https://x.com/bWalletX)
 
-04 / 04  What’s live
+05 / 05  What’s live
 
 ## Where things stand.
 
 - LiveTheme orders, handled by us
 
-- ComingSelf-serve theme builder in the wallet
+- SoonOrder in the wallet: Settings › Theme › Get your own edition (built, going live)
 
 - ComingPay in the wallet
 
