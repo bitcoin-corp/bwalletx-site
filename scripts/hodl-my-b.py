@@ -53,7 +53,7 @@ def pages_issue_1(back):
     P.append(page(f'<p class="k r1">Cover story &middot; pocket money</p><h2 class="r2">An agent with a daily allowance.</h2><p class="r3">Its own capped account: a daily limit, and a big Stop button for when it gets ideas above its station.</p><p class="r3">{C} Capped agent account inside the app.</p><p class="r3">{L} Today on your computer: the <code>bwalletx</code> CLI agent wallet, with a daily cap and Stop. <a href="/cli">CLI</a></p>' + media('allowance', '<div class="big">STOP</div>'), 's-pink', 5))
     P.append(page(f'<p class="k r1">Cover story &middot; SMS</p><h2 class="r2">Bitcoin by text.</h2><p class="r3">Customers text a business&rsquo;s agent like they text a friend. It replies, quotes and takes payment.</p><p class="r3">{C} SMS for agents. <a href="/sms">Bitcoin by text</a></p>' + media('sms', CHAT('Table for 2 at 8?', 'Booked. 500 sats deposit?', 'Y')) + '<p class="q r4">Finally, a good reason to reply to a text.</p>', 's-lime', 6))
     P.append(page(f'<p class="k r1">Cover story &middot; receipts</p><h2 class="r2">Receipts <span class="gd">anyone can check.</span></h2><p class="r3">Every bWalletX payment settles on chain. You, your customer and anyone else see the same record.</p><p class="r3">{L} On-chain receipts.</p>' + media('receipts', '<div class="big gd">&#x2714;</div>') + '<p class="q r4">Arguments about who paid what get very short.</p>', 's-black', 7))
-    P.append(page(f'<p class="k r1">This week &middot; 5.2.26</p><h2 class="r2">New in the wallet.</h2>' + media('release', og('og-releases-5.2.26.png', 'bWalletX 5.2.26')) + f'<ul class="st r3"><li>{L}White paper theme, minimalist bApp icons</li><li>{L}Your bAvatar is the menu</li><li>{L}Like &middot; 1&cent; buys a little of that token</li><li>{L}Album Spaces, synced video, pay to speak</li><li>{L}All 19 bApps sign in and pay</li><li>{N}Ask b sends error reports for you</li></ul><p class="r4"><a href="/releases">All releases</a></p>', 's-paper', 8))
+    P.append(page(f'<p class="k r1">This week &middot; 5.2.26</p><h2 class="r2">New in the wallet.</h2>' + media('release', '<div class="big gd">5.2.26</div>') + f'<ul class="st r3"><li>{L}White paper theme, minimalist bApp icons</li><li>{L}Your bAvatar is the menu</li><li>{L}Like &middot; 1&cent; buys a little of that token</li><li>{L}Album Spaces, synced video, pay to speak</li><li>{L}All 19 bApps sign in and pay</li><li>{N}Ask b sends error reports for you</li></ul><p class="r4"><a href="/releases">All releases</a></p>', 's-paper', 8))
     P.append(page('<p class="k r1">Also this week</p><h2 class="r2">Make it yours.</h2><div class="g r3">' + card('/themes/custom','og-themes-custom.png','Editions','Live &middot; your branded wallet') + card('/themes','og-themes-v2.png','Theme Store','Live &middot; new looks') + card('/credits','og-credits-v1.png','Credits card','Coming &middot; prepay') + card('/bshares','og-bshares-v3.jpg','bShares','Share registers') + '</div>', 's-orange', 9))
     P.append(page('<p class="k r1">Also this week</p><h2 class="r2">Rooms, spots, ice-cream.</h2><div class="g r3">' + card('https://www.bchatx.com/room/new/invite/b-creative','og-b-creative.png','bChatX rooms','Live &middot; a token per room',True) + card('/b-creative','og-b-creative.png','b creative','The spot') + card('/digital-ice-cream','og-digital-ice-cream-v1.png','Digital Ice-Cream','Three friends, one token') + card('/bapps','og-bapps-v1.png','bApps','Live &middot; all 19') + '</div>', 's-peach', 10))
     P.append(page(f'<p class="k r1">Where things stand</p><h2 class="r2">Live today.</h2><ul class="st r3"><li>{L}On-chain receipts for every payment</li><li>{L}BRC-100: any site or agent can ask bWalletX to pay or sign. <a href="/developers">Developers</a></li><li>{L}CLI + MCP agent wallet with cap, Stop, rate limit. <a href="/cli">CLI</a></li><li>{L}Ask b, the assistant inside the wallet</li><li>{L}Your own theme for $99 a year. <a href="/themes/custom">Editions</a></li><li>{L}A bChatX room with its own token</li></ul>', 's-cream', 11))
@@ -64,7 +64,7 @@ def pages_issue_1(back):
 
 CSS = r'''
 :root{--ink:#111;--gold:#f5b800;--gold2:#ffd24d;--hf:'Space Grotesk',sans-serif;--bf:'IBM Plex Sans',sans-serif;--mono:'IBM Plex Mono',ui-monospace,monospace;color-scheme:light}
-*{box-sizing:border-box}html,body{margin:0;background:#0b0a08;color:var(--ink);font-family:var(--bf)}
+*{box-sizing:border-box}html,body{margin:0;background:#0b0a08;color:var(--ink);font-family:var(--bf);overflow-x:hidden;max-width:100vw}
 body{overflow:hidden;height:100dvh}body.stack{overflow:auto;height:auto}
 .tb{position:fixed;inset:0 0 auto;height:44px;display:flex;align-items:center;justify-content:space-between;padding:0 16px;z-index:50;pointer-events:none}
 .tb>*{pointer-events:auto}
@@ -81,7 +81,7 @@ body{overflow:hidden;height:100dvh}body.stack{overflow:auto;height:auto}
 .dots button.cur{background:var(--gold2);width:20px;border-radius:4px}
 .page{overflow:hidden;container-type:size}
 body.stack .page{width:100vw;height:100dvh;min-height:640px}
-.pin{position:relative;height:100%;padding:max(64px,8cqh) 8cqw 10cqh;display:flex;flex-direction:column;gap:2.2cqh;font-size:clamp(15px,min(2.4cqh,4.2cqw),22px);line-height:1.45;overflow:hidden}
+.pin{position:relative;height:100%;padding:max(64px,8cqh) max(16px,8cqw) 10cqh;display:flex;flex-direction:column;gap:2.2cqh;font-size:clamp(15px,min(2.4cqh,4.2cqw),22px);line-height:1.45;overflow:hidden}
 .pin p{margin:0;max-width:34em}.pin a{color:inherit;text-underline-offset:3px}
 .sheen{position:absolute;inset:0;pointer-events:none;background:linear-gradient(120deg,rgba(255,255,255,0) 30%,rgba(255,255,255,.22) 45%,rgba(255,255,255,0) 60%);background-size:250% 100%;background-position:100% 0}
 .in .sheen{animation:sheen 1.6s ease-out .2s}
@@ -146,7 +146,7 @@ JS = r'''<script src="https://cdn.jsdelivr.net/npm/page-flip@2.0.7/dist/js/page-
 (function(){var el=document.getElementById('book');
 if(!window.St||matchMedia('(prefers-reduced-motion: reduce)').matches){document.body.classList.add('stack');return}
 document.body.classList.add('on');
-var pages=[].slice.call(el.querySelectorAll('.page')),W=innerWidth,H=innerHeight,two=W>=900;
+var pages=[].slice.call(el.querySelectorAll('.page')),W=document.documentElement.clientWidth,H=document.documentElement.clientHeight,two=W>=900;
 var pf=new St.PageFlip(el,{width:two?Math.floor(W/2):W,height:H,size:'fixed',showCover:false,usePortrait:!two,mobileScrollSupport:false,flippingTime:700,drawShadow:true,maxShadowOpacity:.5,startZIndex:0,autoSize:false});
 pf.loadFromHTML(pages);
 var dots=document.querySelector('.dots'),step=two?2:1;
@@ -158,7 +158,7 @@ document.querySelector('.arw.prev').disabled=c===0;document.querySelector('.arw.
 pf.on('flip',function(){ui();history.replaceState(null,'','#p'+(pf.getCurrentPageIndex()+1))});setTimeout(ui,60);
 document.querySelector('.arw.prev').onclick=function(){pf.flipPrev()};document.querySelector('.arw.next').onclick=function(){pf.flipNext()};
 addEventListener('keydown',function(e){if(e.key==='ArrowRight')pf.flipNext();if(e.key==='ArrowLeft')pf.flipPrev()});
-var t;addEventListener('resize',function(){clearTimeout(t);t=setTimeout(function(){if(Math.abs(innerWidth-W)>60||Math.abs(innerHeight-H)>120)location.reload()},400)});
+var t;addEventListener('resize',function(){clearTimeout(t);t=setTimeout(function(){if(Math.abs(document.documentElement.clientWidth-W)>60||Math.abs(document.documentElement.clientHeight-H)>120)location.reload()},400)});
 })();</script>'''
 
 def head(url, title, desc, img, alt):
