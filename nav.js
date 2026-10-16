@@ -52,7 +52,7 @@
           { label: 'Launchpad', href: '/launchpad' },
           { label: 'Buy BSV', href: '/buy' }
         ] },
-      { label: 'Social', href: '/social', pages: ['/social', '/chat', '/friends', '/lounge', '/games', '/video', '/live', '/aivj', '/tips', '/streaming-payments', '/credits', '/bspaces', '/bphone', '/bmail', '/bpositive', '/airdrops', '/sign', '/x', '/gmail'],
+      { label: 'Social', href: '/social', pages: ['/social', '/chat', '/friends', '/lounge', '/games', '/video', '/live', '/aivj', '/tips', '/streaming-payments', '/credits', '/bspaces', '/bphone', '/bmail', '/bpositive', '/airdrops', '/sign', '/x', '/sign-in-with-handcash', '/gmail'],
         sub: [
           { label: 'Social', href: '/social' },
           { label: 'Chat', href: '/chat' },
@@ -72,6 +72,7 @@
           { label: 'Airdrops', href: '/airdrops' },
           { label: 'Your signature', href: '/sign' },
           { label: 'Sign in with X', href: '/x' },
+          { label: 'Sign in with HandCash', href: '/sign-in-with-handcash' },
           { label: 'Sign in with Gmail', href: '/gmail' }
         ] },
       { label: 'bApps', href: '/bapps', pages: ['/bapps', '/bapps/bmovies', '/bshares', '/partnership-shares', '/bweb'],

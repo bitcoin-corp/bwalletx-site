@@ -3062,6 +3062,54 @@ bWalletX is in beta: test with small amounts. Questions: [support@bwalletx.com](
 
 ---
 
+Source: https://bwalletx.com/sign-in-with-handcash
+
+# Sign in with HandCash. Bring your name with you.
+
+Already have a HandCash account? Use it to sign in to bChatX. You keep your name and your friends, and you get your own bWalletX address.
+
+[Open bChatX](https://bchatx.com)[Get bWalletX](https://bwalletx.com/get)
+
+## How it works
+
+- Tap More waysOn bchatx.com, under the gold bWalletX button.
+
+- Approve in HandCashHandCash confirms it’s really you. We use your verified account, never a name you type.
+
+- You’re inYour account is linked to that HandCash id, and you get first claim on the same name at bwalletx.com.
+
+## What you get
+
+- First claim on your name. If you’re $alice on HandCash, alice@bwalletx.com is held for you first.
+
+- A new bWalletX address. It’s your own wallet, not a forward to HandCash. Payments to name@bwalletx.com land in bWalletX.
+
+- Your HandCash friends. Bring them into your bWalletX address book, so the people you already know are there from day one.
+
+## Keep it safe
+
+- Your HandCash login stays on your phone. The token is kept in the phone’s secure storage.
+
+- It expires. When it does, you simply sign in with HandCash again.
+
+- We never see your HandCash password. HandCash checks who you are; we only get the verified id.
+
+## Where this stands
+
+- ✓ LiveSign in with HandCash on bchatx.com, under “More ways” below the gold bWalletX button. Uses your verified HandCash account, not a typed name. First run pending.
+
+- ✓ LiveHandCash friends into your bWalletX address book: the server side is live; the wallet button ships in bWalletX 5.2.26.
+
+- ComingSign in with HandCash inside the bWalletX app on iPhone and Android (bWalletX edition): Settings › Connect › HandCash, in 5.2.26.
+
+- ComingThe store edition (bWallet on the App Store and Google Play): planned, once Sign in with Apple is added.
+
+Related: [Invites](https://bwalletx.com/invite) · [057 Sign in with HandCash and invites](https://bwalletx.com/blog/057-handcash-and-invites) · [Sign in with X](https://bwalletx.com/x) · [Handles](https://bwalletx.com/handles) · [Friends](https://bwalletx.com/friends)
+
+bWalletX is in beta: test with small amounts. Questions: [support@bwalletx.com](mailto:support@bwalletx.com)
+
+---
+
 Source: https://bwalletx.com/streaming-payments
 
 # Pay as you listen. Stop any time.
