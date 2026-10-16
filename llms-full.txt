@@ -1878,80 +1878,15 @@ bWalletX is in beta: test with small amounts. Questions: [support@bwalletx.com](
 
 Source: https://bwalletx.com/hodl-my-b
 
-Agents that pay on chain
+Hodl my b
 
-# Hodl my b.
+WeeklyThe bWalletX magazineFree
 
-Agents should pay on the Bitcoin base layer: from their own wallet, in sats, with fees below a penny and a receipt anyone can check.
+Everything we shipped this week, nicely presented.
 
-This page answers the call for agents that pay on chain. Some of it already works in bWalletX today. The rest is built and on its way. The list below says which is which.
+A new issue every week. Each feature says plainly whether it is Live, in the Next release, or Coming.
 
-[What’s live](#status)[Get bWalletX](https://bwalletx.com/get)
-
-01 / 03  Why the base layer
-
-## Card rails were built for people at tills.
-
-An AI-agent company recently showed iMessage agents that learn a business from a link and take payment in chat. It is a good idea. Their payments still go over cards. An agent paying over cards borrows a person’s card, pays card fees, and leaves a receipt only the card network can see.
-
-Own wallet
-
-### A wallet of its own
-
-- An agent account, separate from your main wallet
-- Its balance is its budget
-
-Small fees
-
-### Fees below a penny
-
-- Pay in sats on Bitcoin SV
-- Tiny payments stay worth making
-
-Open receipts
-
-### Receipts anyone can check
-
-- Every payment settles on chain
-- You, your customer and anyone else see the same record
-
-02 / 03  What’s live
-
-## Where things stand today.
-
-- LiveOn-chain receipts: every bWalletX payment settles on chain with a public receipt.
-
-- LiveAn open wallet interface: bWalletX speaks BRC-100, so any site or agent can ask it to pay or sign. [For developers](https://bwalletx.com/developers)
-
-- LiveAll 19 bApps sign in and pay with bWalletX. [See the bApps](https://bwalletx.com/bapps)
-
-- LiveAgent wallet on your computer: the `bwalletx` CLI and MCP server, with a daily cap, a Stop switch and a rate limit on every spend. `bwalletx serve` runs a BRC-100 wallet on localhost. [CLI](https://bwalletx.com/cli) · [MCP](https://bwalletx.com/mcp)
-
-- LiveAsk b, the assistant inside the wallet.
-
-- LiveYour own theme for $99 a year, and branded editions. [Themes](https://bwalletx.com/themes) · [Editions](https://bwalletx.com/themes/custom)
-
-- LiveA bChatX room with its own token. [Start a room](https://www.bchatx.com/room/new/invite/b-creative) · [b creative](https://bwalletx.com/b-creative)
-
-- Next releaseAgent from a link: paste a website, b drafts a shop that takes BSV in chat. [Business agents](https://bwalletx.com/business-agents)
-
-- Next releaseBug reports from errors: when something breaks, Ask b sends the error for you.
-
-- ComingCapped agent account in the app for business agents, with a daily limit and a Stop button.
-
-- ComingSMS for agents: customers text a business’s agent. [Bitcoin by text](https://bwalletx.com/sms)
-
-- ComingbCredits: prepay for b. [Credits](https://bwalletx.com/credits)
-
-- ComingShare one fact, such as over 18, from your wallet. [Identity](https://bwalletx.com/identity)
-
-03 / 03  Everything else
-
-## Less noise. More life. Just b.
-
-Every feature, with what is live and what is coming: [all features](https://bwalletx.com/features).
-
-[Get bWalletX](https://bwalletx.com/get)[All features](https://bwalletx.com/features)
+- [Issue 1 · week of 12 Oct 2026Don’t be bland. Get bBranded. Business agents, plus the week’s round-up.](https://bwalletx.com/hodl-my-b/1)
 
 ---
 

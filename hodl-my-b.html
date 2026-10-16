@@ -5,12 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Hodl my b</title>
     <link rel="canonical" href="https://bwalletx.com/hodl-my-b" />
-    <meta name="description" content="Agents should pay from their own wallet on the Bitcoin base layer: sats, fees below a penny, receipts anyone can check. What bWalletX does today, and what is next." />
+    <meta name="description" content="Hodl my b: the weekly bWalletX magazine. Everything shipped each week, with what is live and what is coming." />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://bwalletx.com/hodl-my-b" />
     <meta property="og:site_name" content="bWalletX" />
     <meta property="og:title" content="Hodl my b." />
-    <meta property="og:description" content="Agents that pay on chain, from their own wallet. What works in bWalletX today, and what ships next." />
+    <meta property="og:description" content="Hodl my b: the weekly bWalletX magazine. Everything shipped each week, with what is live and what is coming." />
     <meta property="og:image" content="https://bwalletx.com/og-hodl-my-b.png?v=1" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
@@ -18,7 +18,7 @@
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@bWalletX" />
     <meta name="twitter:title" content="Hodl my b." />
-    <meta name="twitter:description" content="Agents that pay on chain, from their own wallet. What works in bWalletX today, and what ships next." />
+    <meta name="twitter:description" content="Hodl my b: the weekly bWalletX magazine. Everything shipped each week, with what is live and what is coming." />
     <meta name="twitter:image" content="https://bwalletx.com/og-hodl-my-b.png?v=1" />
     <link rel="icon" href="/favicon.ico" />
     <meta name="theme-color" content="#f7f6f2" />
@@ -212,6 +212,7 @@
       .status .pill { min-width: 84px; }
       .faq dt { font-weight: 600; margin-top: 20px; } .faq dd { margin: 6px 0 0; color: var(--muted); line-height: 1.6; }
     </style>
+    <link rel="stylesheet" href="/hodl-my-b/mag.css" />
   </head>
   <body class="paper">
     <div class="beta-banner">bWalletX is in <strong>beta</strong>: test with small amounts.</div>
@@ -226,69 +227,8 @@
     </header>
     <script src="/nav.js"></script>
     <svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs><symbol id="b-outline" viewBox="20 6 80 104"><g fill="none" stroke="currentColor" stroke-width="4" stroke-linejoin="round" stroke-linecap="round"><path d="M29 28 L45 12 L45 44.87 A31 31 0 1 1 29 72 Z" /><path d="M74 72 A14 14 0 1 1 46 72 A14 14 0 1 1 74 72 Z" /></g></symbol></defs></svg>
-    <main class="tp">
-      <style>
-        .beer { width: min(260px, 60vw); display: block; margin: 0 auto; }
-        .status a { color: var(--ink); }
-        .status small { display: block; color: var(--muted); font-size: .86rem; margin-top: 4px; }
-      </style>
-      <section class="hero">
-        <div class="wrapx split">
-          <div>
-            <p class="num">Agents that pay on chain</p>
-            <h1>Hodl my b.</h1>
-            <p class="lede">Agents should pay on the Bitcoin base layer: from their own wallet, in sats, with fees below a penny and a receipt anyone can check.</p>
-            <p class="sub">This page answers the call for agents that pay on chain. Some of it already works in bWalletX today. The rest is built and on its way. The list below says which is which.</p>
-            <div class="cta"><a class="pri" href="#status">What&rsquo;s live</a><a class="sec" href="/get">Get bWalletX</a></div>
-          </div>
-          <div><img class="beer" src="/images/twemoji-beer.svg" alt="A mug of beer" width="260" height="260" /></div>
-        </div>
-      </section>
-
-      <section id="why">
-        <div class="wrapx">
-          <p class="num">01 / 03 &nbsp;Why the base layer</p>
-          <h2>Card rails were built for people at tills.</h2>
-          <p class="sub">An AI-agent company recently showed iMessage agents that learn a business from a link and take payment in chat. It is a good idea. Their payments still go over cards. An agent paying over cards borrows a person&rsquo;s card, pays card fees, and leaves a receipt only the card network can see.</p>
-          <div class="specs">
-            <article class="spec"><p class="lbl sno">Own wallet</p><h3>A wallet of its own</h3><ul><li>An agent account, separate from your main wallet</li><li>Its balance is its budget</li></ul></article>
-            <article class="spec"><p class="lbl sno">Small fees</p><h3>Fees below a penny</h3><ul><li>Pay in sats on Bitcoin SV</li><li>Tiny payments stay worth making</li></ul></article>
-            <article class="spec"><p class="lbl sno">Open receipts</p><h3>Receipts anyone can check</h3><ul><li>Every payment settles on chain</li><li>You, your customer and anyone else see the same record</li></ul></article>
-          </div>
-        </div>
-      </section>
-
-      <section id="status">
-        <div class="wrapx">
-          <p class="num">02 / 03 &nbsp;What&rsquo;s live</p>
-          <h2>Where things stand today.</h2>
-          <ul class="status">
-            <li><span class="pill live">Live</span><span>On-chain receipts: every bWalletX payment settles on chain with a public receipt.</span></li>
-            <li><span class="pill live">Live</span><span>An open wallet interface: bWalletX speaks BRC-100, so any site or agent can ask it to pay or sign. <a href="/developers">For developers</a></span></li>
-            <li><span class="pill live">Live</span><span>All 19 bApps sign in and pay with bWalletX. <a href="/bapps">See the bApps</a></span></li>
-            <li><span class="pill live">Live</span><span>Agent wallet on your computer: the <code>bwalletx</code> CLI and MCP server, with a daily cap, a Stop switch and a rate limit on every spend. <code>bwalletx serve</code> runs a BRC-100 wallet on localhost. <a href="/cli">CLI</a> · <a href="/mcp">MCP</a></span></li>
-            <li><span class="pill live">Live</span><span>Ask b, the assistant inside the wallet.</span></li>
-            <li><span class="pill live">Live</span><span>Your own theme for $99 a year, and branded editions. <a href="/themes">Themes</a> · <a href="/themes/custom">Editions</a></span></li>
-            <li><span class="pill live">Live</span><span>A bChatX room with its own token. <a href="https://www.bchatx.com/room/new/invite/b-creative" target="_blank" rel="noopener">Start a room</a> · <a href="/b-creative">b creative</a></span></li>
-            <li><span class="pill soon">Next release</span><span>Agent from a link: paste a website, b drafts a shop that takes BSV in chat. <a href="/business-agents">Business agents</a></span></li>
-            <li><span class="pill soon">Next release</span><span>Bug reports from errors: when something breaks, Ask b sends the error for you.</span></li>
-            <li><span class="pill soon">Coming</span><span>Capped agent account in the app for business agents, with a daily limit and a Stop button.</span></li>
-            <li><span class="pill soon">Coming</span><span>SMS for agents: customers text a business&rsquo;s agent. <a href="/sms">Bitcoin by text</a></span></li>
-            <li><span class="pill soon">Coming</span><span>bCredits: prepay for b. <a href="/credits">Credits</a></span></li>
-            <li><span class="pill soon">Coming</span><span>Share one fact, such as over 18, from your wallet. <a href="/identity">Identity</a></span></li>
-          </ul>
-        </div>
-      </section>
-
-      <section id="more">
-        <div class="wrapx">
-          <p class="num">03 / 03 &nbsp;Everything else</p>
-          <h2>Less noise. More life. Just b.</h2>
-          <p class="sub">Every feature, with what is live and what is coming: <a href="/features">all features</a>.</p>
-          <div class="cta"><a class="pri" href="/get">Get bWalletX</a><a class="sec" href="/features">All features</a></div>
-        </div>
-      </section>
-    </main>
+    <main class="tp"><div class="mag-wrap"><article class="pg cover"><div><p class="mast">Hodl my b <img src="/images/twemoji-beer.svg" alt="" width="120" height="120" /></p><p class="issue"><span>Weekly</span><span>The bWalletX magazine</span><span>Free</span></p><p class="story">Everything we shipped this week, nicely presented.</p><p class="deck">A new issue every week. Each feature says plainly whether it is Live, in the Next release, or Coming.</p></div>
+<ul class="issues"><li><a href="/hodl-my-b/1"><img src="/og-hodl-my-b-1.png" alt="" width="1200" height="630" /><span><b>Issue 1 &middot; week of 12 Oct 2026</b><br />Don&rsquo;t be bland. Get bBranded. Business agents, plus the week&rsquo;s round-up.</span></a></li></ul></article></div></main>
 
     <footer class="foot">
       <div class="wrap foot-in">
