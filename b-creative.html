@@ -78,8 +78,11 @@
       .mute.show { display: grid; place-items: center; }
       .snd:focus-visible, .mute:focus-visible { outline: 3px solid #f5b800; outline-offset: 3px; }
       .tv.still .snd, .tv.still .mute { display: none; }
-      .card .bm { position: absolute; left: 20px; top: 16px; height: 18%; aspect-ratio: 1; opacity: .9; background: var(--ink); -webkit-mask: url(/logo.svg) center / contain no-repeat; mask: url(/logo.svg) center / contain no-repeat; }
-      .card .t { padding-left: 14%; align-items: center; }
+      .card .bm { flex-shrink: 0; width: clamp(28px, 9vw, 44px); aspect-ratio: 1; opacity: .9; background: var(--ink); -webkit-mask: url(/logo.svg) center / contain no-repeat; mask: url(/logo.svg) center / contain no-repeat; }
+      .card .t { align-items: center; gap: 10px; opacity: 1; }
+      .card .tk { display: flex; align-items: center; gap: .3em; min-width: 0; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; font: 700 clamp(1rem, 4.4vw, 1.5rem) 'Space Grotesk', sans-serif; letter-spacing: -0.01em; text-transform: none; opacity: 1; }
+      .card .tk img { height: 1.4em; width: auto; flex-shrink: 0; }
+      .card .foot { text-align: right; font: 500 .72rem 'IBM Plex Mono', monospace; letter-spacing: .14em; text-transform: uppercase; opacity: .7; }
       .tv.poster .sc, .tv.poster .sc *, .tv.poster .sc::before { animation: none !important; }
       .tv.poster .sc.on { clip-path: none; }
       .ej { position: absolute; width: clamp(1.8rem, 6vw, 3rem); height: auto; pointer-events: none; opacity: 0; }
@@ -159,7 +162,7 @@
           else {
             h += '<p class="cap">' + s.line.replace(/^b /, '<span class="capb">b</span> ') + '</p>' + pops.map(function (p, i) { return '<span class="pop" style="left:' + p[0] + '%;top:' + p[1] + '%;animation-delay:' + (0.6 + i * 0.18) + 's">' + emo(s.emoji) + '</span>'; }).join('') +
               (s.id === 'duck' || s.id === 'icecream' || s.id === 'rocket' ? '<span class="stk"><img alt="" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f4c8.svg"></span>' : '') + (s.id === 'rocket' ? '<span class="stk lbl">number go up</span>' : '') +
-              '<div class="card"><i class="bm"></i><div class="t"><span>$' + s.coin + '</span><span>bWalletX</span></div><div class="r"><div><div class="v">$' + s.value + '</div><div class="b">' + s.balance + ' ' + s.coin + '</div></div><div class="e">' + emo(s.emoji) + '</div></div></div>';
+              '<div class="card"><div class="t"><span class="tk"><img alt="" src="' + twUrl(s.emoji) + '">$' + s.coin + '</span><i class="bm"></i></div><div class="mid"><div class="v">$' + s.value + '</div><div class="b">' + s.balance + ' ' + s.coin + '</div></div><div class="foot">bWalletX</div></div>';
           }
           el.innerHTML = h; tv.insertBefore(el, tv.firstChild); return el;
         });
