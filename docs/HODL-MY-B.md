@@ -14,8 +14,11 @@ Weekly glossy round-up of everything shipped that week. White architect theme. L
 Full-screen glossy brochure: every page fills the viewport (two-page spread on desktop >= 900px, one page on phones). Scenes are classes on each page: s-cover, s-black, s-back (gold on black), s-cream, s-yellow, s-pink, s-lime, s-paper, s-orange, s-peach, s-gold. Children with r1..r4 and .media rise in as the page turns in; a sheen sweeps across.
 
 ## Media slots
-Each slot is `<div class="media" data-media="NAME">`. To use the owner's photo or video, set `MEDIA = {"cover": "/media/hodl/cover.jpg", "bbrand": "/media/hodl/bbrand.mp4"}` in `scripts/hodl-my-b.py` and rebuild. A .mp4 plays muted and loops; anything else is an image (object-fit: cover). Leave a slot out to keep the built-in art.
-Issue 1 slots: cover, bbrand, checkout, allowance, sms, receipts, release, next.
+Each slot is `<div class="media" data-media="NAME">`. Slots for Issue 1: cover, brand, checkout, allowance, sms, receipts, release, next, lifestyle (back cover). The Grok prompts and filenames are in ~/Desktop/hodl-my-b-grok-prompts.txt (`<slot>-4x5.jpg`, `<slot>-16x9.jpg`, optional `cover-loop.mp4`).
+To use them, put the files in `media/hodl/` and set `MEDIA` in `scripts/hodl-my-b.py`: `"cover": "/media/hodl/"` (a folder: 4x5 on phones, 16x9 on wide screens), or one file such as `"/media/hodl/cover-loop.mp4"` (plays muted and loops). Leave a slot out to keep the built-in art. The cover image runs full bleed, with fades top and bottom so the masthead reads.
+
+## Open gate and music
+The book opens behind a gate with an Open button. Tapping it starts an original Web Audio lounge loop (`Lounge` in the script, adapted from the b-creative engine) and turns to page 2. Nothing plays before the tap; the bottom-right button mutes. Deep links (`#p3`) skip the gate.
 
 ## Rules
 Funny, consumer-facing, fait accompli. No real people's names, no competitor names, no investment wording. og images keep 1200:630 (object-fit: cover).

@@ -837,20 +837,20 @@ Found a security problem? Email [support@bwalletx.com](mailto:support@bwalletx.c
 
 Source: https://bwalletx.com/business-agents
 
-bBrand  Business agents
+bRand  Business agents
 
 # Your shop’s agent, paid in sats, in chat.
 
-Don’t be bland. Get bBranded.
+Don’t be bland. Get bRanded.
 
 Paste your website. b drafts an agent that knows your products, prices and FAQs. It answers customers and takes payment right in the chat, on Bitcoin, with a receipt anyone can check.
 
-Chat agents that take money today mostly hand off to a card checkout. bBrand doesn’t: the agent works from a capped account with a daily limit and a Stop button, and the payment settles on chain.
+Chat agents that take money today mostly hand off to a card checkout. bRand doesn’t: the agent works from a capped account with a daily limit and a Stop button, and the payment settles on chain.
 
 [How it works](#how)[What’s live](#status)
 
 b
-YourshopAgent · bBranded
+YourshopAgent · bRanded
 
 Got the gold sticker pack?
 
@@ -885,11 +885,11 @@ Step 3
 
 Customers tap Allow on their own approval sheet. No cards, no forms.
 
-02 / 05  Card rails vs bBrand
+02 / 05  Card rails vs bRand
 
 ## Same chat. Different money.
 
-Card railsbBrand
+Card railsbRand
 
 FeesA percentage of each sale, often plus a fixed chargeBitcoin network fee, usually well under 1p
 
@@ -1878,11 +1878,7 @@ bWalletX is in beta: test with small amounts. Questions: [support@bwalletx.com](
 
 Source: https://bwalletx.com/hodl-my-b
 
-Hodl my b
-
-WeeklyIssue 1Week of 12 Oct 2026
-
-Don’t be bland. Get bBranded.
+b
 
 Got the sticker pack?
 
@@ -1892,10 +1888,18 @@ Paid ✔
 
 Receipt on chain
 
-- Theme Store
-- Credits card
-- bChatX rooms
-- All 19 bApps
+Hodl my b
+
+WeeklyIssue 1Week of 12 Oct 2026
+
+Don’t be bland. Get bRanded.
+
+- Theme StoreNew looks, live
+- Credits cardPrepay, coming
+- bChatX roomsA token per room
+- All 19 bAppsSign in and pay
+
+Issue 1Free · weekly
 
 Inside
 
@@ -1910,17 +1914,17 @@ Inside
 - Also this week9
 - Where things stand11
 
-Every feature says plainly: Live, Next release, or Coming.
+Just b. Every feature says plainly: Live, Next release, or Coming.
 
 Hodl my b · Issue 1 · 2
 
-Cover story · bBrand
+Cover story · bRand
 
 ## Paste a link. Get a shopkeeper.
 
 Give b your website. b drafts an agent that knows your menu, prices and hours, and answers customers in chat.
 
-Next release Agent from a link. [Business agents](https://bwalletx.com/business-agents)
+Next release Agent from a link. [bRand business agents](https://bwalletx.com/business-agents)
 
 It never calls in sick. It does ask for a logo.
 
@@ -1998,6 +2002,8 @@ This week · 5.2.26
 
 ## New in the wallet.
 
+5.2.26
+
 - LiveWhite paper theme, minimalist bApp icons
 - LiveYour bAvatar is the menu
 - LiveLike · 1¢ buys a little of that token
@@ -2064,13 +2070,17 @@ Hodl my b · Issue 1 · 13
 
 Back cover
 
-## Past issues.
+## Just b.
+
+b
+
+Past issues
 
 [Issue 1 · week of 12 Oct 2026Business agents, plus the week’s round-up.](https://bwalletx.com/hodl-my-b/1)
 
-By The Bitcoin Corporation Ltd · Beer emoji: Twemoji, CC-BY 4.0
+By The Bitcoin Corporation Ltd · Emoji: Twemoji, CC-BY 4.0 · Music: original, made in your browser
 
-←→
+←→♫
 
 ---
 
