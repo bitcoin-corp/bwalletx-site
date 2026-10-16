@@ -226,7 +226,7 @@
         background: var(--mbg); box-shadow: 0 30px 60px -20px var(--msh), 0 2px 0 var(--mi); transform: rotate(-4deg); }
       .card.meme .bm, .card.meme .bal, .card.meme .addr { color: var(--mi); }
       .card.meme .bal { font-size: clamp(2.2rem, 5.6vw, 3.6rem); }
-      .card.meme .sats { color: var(--ms); }
+      .card.meme .sats { color: var(--ms); font: 600 clamp(.75rem, 1.6vw, .95rem) var(--mono); letter-spacing: .04em; }
       .card.meme .chip { background: var(--mi) !important; color: var(--mc) !important; border-color: var(--mi) !important; }
       .m-frog { --mi: #0b2e12; --ms: #1d5a24; --mc: #e8ff7a; --msh: rgba(6,40,14,.55); --mbg: radial-gradient(circle at 78% 18%, #fffbd0 0, #e8ff7a 26%, #9be34c 62%, #4fb33a 100%); }
       .card.meme.alt { position: absolute !important; inset: 0; }
@@ -307,10 +307,10 @@
             <!-- Generic example themes only. Real exchange tokens appear here only via a future opt-in "featured editions" feed, with the token owner's consent. -->
             <div class="card meme m-frog" role="img" aria-label="An example frog-themed wallet card">
               <span class="frogart" aria-hidden="true">🐸</span>
-              <div class="row1"><span class="froglogo" aria-hidden="true">🐸</span>$FROG wallet</div>
+              <div class="row1"><span class="froglogo" aria-hidden="true">🐸</span>$FROG wallet &middot; Ribbit.</div>
               <svg class="bm" viewBox="0 0 104 124"><use href="#b-outline" /></svg>
-              <div class="bal">Ribbit.</div>
-              <div class="sats">Example: a frog wallet for a frog coin</div>
+              <div class="bal">$1,284.50</div>
+              <div class="sats">4,200,000 FROG</div>
               <div class="addr">wallet.yourcoin.com</div>
               <div class="chip">From $99</div>
             </div>
@@ -430,13 +430,13 @@
       // One list drives the avatar row, the cycling card and the panel colour.
       // Generic example themes only: real exchange tokens join via a future opt-in "featured editions" feed, with the owner's consent.
       var B = [
-        { t: '$FROG', m: ['🪷','💧','🪷','💧','🪷'], e: '🐸', line: 'Ribbit.', sub: 'Example: a frog wallet for a frog coin', av: '#7fd14a' },
-        { t: '$DUCK', m: ['🫧','🌊','🫧','🫧','🌊'], e: '🦆', line: 'Quack.', sub: 'Example: a duck wallet for a duck coin', av: '#ffd12e', i: '#3a2a00', s: '#6b4e00', c: '#ffe14d', sh: 'rgba(80,55,0,.5)', g: ['#fffdf0', '#fff27a', '#ffd12e', '#f2a900'], p: ['#fff27a', '#ffd12e', '#e09a00', '#8a5a00'] },
-        { t: '$KOALA', m: ['🌿','🍃','🌿','🍃','🌿'], e: '🐨', line: 'G’day.', sub: 'Example: a koala wallet for a koala coin', av: '#a59a86', i: '#2b2620', s: '#4d4438', c: '#dfe8d6', sh: 'rgba(40,34,26,.55)', g: ['#f3f5ee', '#cfd8c4', '#a59a86', '#7d705e'], p: ['#dfe6d4', '#a9b39a', '#7d705e', '#4a4034'] },
-        { t: '$ICECREAM', m: ['🍬','✨','🍬','🍒','✨'], e: '🍦', line: 'Three scoops.', sub: 'Example: three friends, one token', av: '#ff8fbf', i: '#2b2140', s: '#4a3f60', c: '#ffb3d1', sh: 'rgba(43,33,64,.45)', g: ['#fff8ee', '#ffd6e8', '#ff8fbf', '#b39cff'], p: ['#ffd6e8', '#ff8fbf', '#b39cff', '#6a55b8'] },
-        { t: '$CAT', m: ['🐾','🐾','🧶','🐾','🐾'], e: '🐱', line: 'Meow.', sub: 'Example: a cat wallet for a cat coin', av: '#ff9a3c', i: '#3b1a00', s: '#6a3405', c: '#ffd9a8', sh: 'rgba(90,40,0,.5)', g: ['#fff4e6', '#ffd9a8', '#ff9a3c', '#e2661a'], p: ['#ffd9a8', '#ff9a3c', '#d4581a', '#7a2e08'] },
-        { t: '$ROCKET', m: ['⭐','✨','🌙','⭐','✨'], e: '🚀', line: 'Liftoff.', sub: 'Example: a rocket wallet for a rocket coin', av: '#5b7cff', i: '#0b1240', s: '#28306b', c: '#bfe0ff', sh: 'rgba(10,20,80,.55)', g: ['#eef4ff', '#bfe0ff', '#7d9bff', '#4a4fd6'], p: ['#bfe0ff', '#6f8cff', '#3b3fc0', '#141a5c'] },
-        { t: '$TACO', m: ['🌶️','🍋','🌶️','🥑','🍋'], e: '🌮', line: 'Taco time.', sub: 'Example: a taco wallet for a taco coin', av: '#e8463a', i: '#3a0a06', s: '#6b1d14', c: '#ffe08a', sh: 'rgba(90,15,10,.5)', g: ['#fff6dc', '#ffe08a', '#ff8a5c', '#d8382c'], p: ['#ffe08a', '#ff8a5c', '#d8382c', '#7a160e'] }
+        { t: '$FROG', v: '$1,284.50', n: '4,200,000 FROG', m: ['🪷','💧','🪷','💧','🪷'], e: '🐸', line: 'Ribbit.', sub: 'Example: a frog wallet for a frog coin', av: '#7fd14a' },
+        { t: '$DUCK', v: '$642.18', n: '1,850,000 DUCK', m: ['🫧','🌊','🫧','🫧','🌊'], e: '🦆', line: 'Quack.', sub: 'Example: a duck wallet for a duck coin', av: '#ffd12e', i: '#3a2a00', s: '#6b4e00', c: '#ffe14d', sh: 'rgba(80,55,0,.5)', g: ['#fffdf0', '#fff27a', '#ffd12e', '#f2a900'], p: ['#fff27a', '#ffd12e', '#e09a00', '#8a5a00'] },
+        { t: '$KOALA', v: '$2,316.04', n: '920,000 KOALA', m: ['🌿','🍃','🌿','🍃','🌿'], e: '🐨', line: 'G’day.', sub: 'Example: a koala wallet for a koala coin', av: '#a59a86', i: '#2b2620', s: '#4d4438', c: '#dfe8d6', sh: 'rgba(40,34,26,.55)', g: ['#f3f5ee', '#cfd8c4', '#a59a86', '#7d705e'], p: ['#dfe6d4', '#a9b39a', '#7d705e', '#4a4034'] },
+        { t: '$ICECREAM', v: '$318.75', n: '3,333,333 ICECREAM', m: ['🍬','✨','🍬','🍒','✨'], e: '🍦', line: 'Three scoops.', sub: 'Example: three friends, one token', av: '#ff8fbf', i: '#2b2140', s: '#4a3f60', c: '#ffb3d1', sh: 'rgba(43,33,64,.45)', g: ['#fff8ee', '#ffd6e8', '#ff8fbf', '#b39cff'], p: ['#ffd6e8', '#ff8fbf', '#b39cff', '#6a55b8'] },
+        { t: '$CAT', v: '$977.40', n: '6,900,000 CAT', m: ['🐾','🐾','🧶','🐾','🐾'], e: '🐱', line: 'Meow.', sub: 'Example: a cat wallet for a cat coin', av: '#ff9a3c', i: '#3b1a00', s: '#6a3405', c: '#ffd9a8', sh: 'rgba(90,40,0,.5)', g: ['#fff4e6', '#ffd9a8', '#ff9a3c', '#e2661a'], p: ['#ffd9a8', '#ff9a3c', '#d4581a', '#7a2e08'] },
+        { t: '$ROCKET', v: '$4,120.00', n: '250,000 ROCKET', m: ['⭐','✨','🌙','⭐','✨'], e: '🚀', line: 'Liftoff.', sub: 'Example: a rocket wallet for a rocket coin', av: '#5b7cff', i: '#0b1240', s: '#28306b', c: '#bfe0ff', sh: 'rgba(10,20,80,.55)', g: ['#eef4ff', '#bfe0ff', '#7d9bff', '#4a4fd6'], p: ['#bfe0ff', '#6f8cff', '#3b3fc0', '#141a5c'] },
+        { t: '$TACO', v: '$156.92', n: '12,000,000 TACO', m: ['🌶️','🍋','🌶️','🥑','🍋'], e: '🌮', line: 'Taco time.', sub: 'Example: a taco wallet for a taco coin', av: '#e8463a', i: '#3a0a06', s: '#6b1d14', c: '#ffe08a', sh: 'rgba(90,15,10,.5)', g: ['#fff6dc', '#ffe08a', '#ff8a5c', '#d8382c'], p: ['#ffe08a', '#ff8a5c', '#d8382c', '#7a160e'] }
       ];
       var obj = document.querySelector('.hero .obj'), first = obj && obj.querySelector('.card.meme'), cut = document.querySelector('.cut'), firstCol = cut && cut.querySelector('.col'), row = document.querySelector('.brands');
       if (!first || !row) return;
@@ -448,8 +448,8 @@
           c.setAttribute('aria-label', 'An example ' + b.t + ' themed wallet card');
           c.style.cssText = '--mi:' + b.i + ';--ms:' + b.s + ';--mc:' + b.c + ';--msh:' + b.sh + ';--mbg:radial-gradient(circle at 78% 18%,' + b.g[0] + ' 0,' + b.g[1] + ' 26%,' + b.g[2] + ' 62%,' + b.g[3] + ' 100%)';
           c.querySelector('.frogart').textContent = b.e; c.querySelector('.froglogo').textContent = b.e;
-          c.querySelector('.row1').lastChild.textContent = b.t + ' wallet';
-          c.querySelector('.bal').textContent = b.line; c.querySelector('.sats').textContent = b.sub;
+          c.querySelector('.row1').lastChild.textContent = b.t + ' wallet \u00b7 ' + b.line;
+          c.querySelector('.bal').textContent = b.v; c.querySelector('.sats').textContent = b.n;
           obj.appendChild(c); cards.push(c);
           var col = document.createElement('div'); col.className = 'col off';
           col.style.background = 'radial-gradient(circle at 82% 30%,' + b.p[0] + ' 0,' + b.p[1] + ' 34%,' + b.p[2] + ' 78%,' + b.p[3] + ' 100%)';
