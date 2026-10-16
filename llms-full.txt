@@ -1628,7 +1628,7 @@ Your Space shows your own picture and your name, so fans know exactly whose gig 
 
 - LiveGuests on stage, room chat, moderators.
 
-- ComingYour banner on your Space and your tile.
+- LiveYour banner on your Space page and your stage tile.
 
 - ComingPlay your music video into the room, in sync for everyone, on repeat if you like.
 
@@ -1979,9 +1979,9 @@ Planned: as the people in your contacts join, they’ll be matched to their paym
 
 - ✓ LiveHandCash friends into your address book: the server side is live; the wallet button is coming.
 
-- ComingOpen Drops: a link holding a token that the first person to open it claims. Being built.
+- ComingOpen Drops: a link holding a token that the first person to open it claims. Planned.
 
-- ComingNamed Invites: an invite only one X account can claim, with the token sent automatically. Planned.
+- LiveNamed Invites: a room host invites X accounts by @handle; each link holds the room token and only that X account can claim it (5.2.25, bWalletX only).
 
 - ComingImport the people you follow on X: planned.
 
@@ -4131,7 +4131,7 @@ Need to prove who you are in the real world, privately? See [Identity](https://b
 
 - LiveYour token and your room. In bWalletX your $handle can be a personal token, with a room named after you. See [Features](https://bwalletx.com/features).
 
-- ComingMore than one handle per account. Built and merged: up to five names, one main. It ships in the next release, 5.2.25.
+- LiveMore than one handle per account. Up to five names, one main. Add extra names in Settings › Identity (5.2.25).
 
 - ComingHandle NFTs. Own your handle as an NFT you can hold or sell, separate from your account.
 

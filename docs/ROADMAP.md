@@ -1,6 +1,6 @@
 # bWalletX roadmap: the one checklist
 
-Checked 15 Oct 2026 against the code. Released build: **5.2.24** (`e66af734` in bwalletX `bwallet`). Live web: bwalletx.com, web.bwalletx.com, desktop.bwalletx.com, www.bchatx.com.
+Checked 15 Oct 2026 against the code; updated 16 Oct for **5.2.25** (`5dad3cde` in bwalletX `bwallet`). Live web: bwalletx.com, web.bwalletx.com, desktop.bwalletx.com, www.bchatx.com.
 
 Status key:
 - **LIVE**: a user can do it today, in 5.2.24 or on the live web.
@@ -63,28 +63,39 @@ When an item changes, update its page and this file in the same PR.
 - CLI/MCP: pair, balance, send, buy, strategies (npm 0.2.0). cli.html, mcp.html
 - bApps: sign in and pay with the wallet. bapps.html
 
-## MERGED-UNRELEASED (ships in 5.2.25)
+## SHIPPED IN 5.2.25 (16 Oct; pages flipped to Live)
+
+- More than one handle per account (yours-mobile#91, bit-sign #272). handles.html
+- Named Invites: room host invites X @handles with pre-funded one-time keys (yours-mobile#106, bit-sign #282; bWalletX only). invite.html. *Note:* the 5.2.25 release note calls this "Open Drops"; first-opener Open Drops are not built.
+- Android in-app updater, address book import/export, every screen share/camera on stage, backup naming, tab badges, price fix.
+- Space banner on stage tiles (SpeakerGrid `bannerUrl`, already in 5.2.24). gigs.html
+- bMail nav label "(coming)" removed (price-to-reach is live).
+
+## MERGED-UNRELEASED
 
 | Item | Page | Evidence |
 |---|---|---|
-| More than one handle per account (up to 5, one main) | handles.html (updated) | yours-mobile#91 merged; bit-sign #272 merged |
-| Android direct-APK in-app updater | android.html | yours-mobile#102 |
-| Address book import/export | — | yours-mobile#105 |
-| Spaces show every screen share and camera | — | yours-mobile#107; bit-sign #281 (web side still open) |
-| Backup file named per account; desktop download | — | yours-mobile#103 |
-| CLI/MCP minting (needs an npm publish, not a wallet release) | cli.html, mcp.html | bwalletx-cli 0.5.0 `src/mint.ts` |
+| Sign in with HandCash + HandCash friends button (5.2.26) | invite.html | yours-mobile#110. The 5.2.25 release note mentions HandCash friends early. |
+| CLI/MCP minting (needs an npm publish) | cli.html, mcp.html | bwalletx-cli 0.5.0; npm 0.2.0 |
+
+## IN-TESTING
+
+- bCredits top-up (needs the treasury address + VAT answer). credits.html
+- bShares register, Bitcoin Corp only. bshares.html
+- 19 bApps marked Beta on bapps.html.
+- bWallet store editions (TestFlight, Play internal).
 
 ## IN-PROGRESS, ranked by how close each is to done
 
 1. **bCredits top-up.** The code is in 5.2.23/5.2.24 and on the server. Missing: the owner sets `BCREDITS_TREASURY_ADDRESS` (an offline key); VAT answer from the accountant. credits.html. *Can deliver as soon as the owner acts.*
 2. **CLI/MCP minting on npm.** Built at 0.5.0. Missing: `npm publish`. cli.html, mcp.html. *Can deliver soon.*
 3. **Token locking (BSV-21).** yours-mobile#61 (lock until a date, receipt, verifier). Missing: the owner's tiny mainnet test that indexers still show locked tokens, then merge. Unblocks **creator vesting** (launchpad.html) and **airdrops that unlock over time** (airdrops.html). features.html, token-locking.html, index.html.
-4. **Branded Space banner.** Live on bchatx.com Space pages and share cards (bit-sign #274/#275). Missing: the banner on wallet Space tiles. gigs.html
+4. ~~**Branded Space banner.**~~ Done (wallet stage tiles, 5.2.24). Live on bchatx.com Space pages and share cards (bit-sign #274/#275). Missing: the banner on wallet Space tiles. gigs.html
 5. **Selective disclosure ("show one fact", e.g. over 18).** bit-sign `identity/cert/grants` route exists (503 until the table is migrated). Missing: the migration and a wallet UI. identity.html
 6. **bShares for any company, and partnership shares.** yours-mobile#46/#47, bit-sign #242/#244 (migrations not run). Missing: review, migrations, a real-key test of the partner lock, owner sign-off. bshares.html, partnership-shares.html, blog 055, blog 056. *To go live:* merge #46→#47 and #242→#244, run the migrations, test the partner lock end to end with recovery from seed, then release.
 7. **PNEE pots.** Types and UI exist, but the wallet says "PNEE pots aren't available yet" (`pots/pots.ts`). Missing: pricing and paying PNEE amounts from a pot. pots.html, subscriptions.html
 8. **bApp five-button bar.** Desktop prototype, bMovies only (`wide/bapps.ts`). Missing: the phone shell, more bApps and greyed slots. bapps.html, bapps/bmovies.html
-9. **Invites: Open Drops and Named Invites** (two products). *Open Drops*: a link holding a token, first to open claims it (being built: yours-mobile#106, pre-funded link keys). *Named Invites*: only one named X account can claim, token sent automatically (planned; depends on the pre-signed payments design under way; no PR yet). invite.html, blog 057.
+9. **Invites: Open Drops** (Named Invites shipped in 5.2.25). *Open Drops*: a link holding a token, first to open claims it (being built: yours-mobile#106, pre-funded link keys). *Named Invites*: only one named X account can claim, token sent automatically (planned; depends on the pre-signed payments design under way; no PR yet). invite.html, blog 057.
 10. **bPics market.** yours-mobile#38, bit-sign #233 (moderation pipeline).
 11. **Play your music video into a Space.** Possible today by sharing a tab with Broadcast. Missing: a built-in synced player and repeat. gigs.html
 12. **Investor journey.** bShares placement (restricted) exists. Missing: one-tap pay from the wallet and a single flow. identity.html
