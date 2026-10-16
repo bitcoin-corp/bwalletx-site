@@ -336,6 +336,8 @@ def head(url, title, desc, img, alt):
   </head>
 '''
 
+OG_COVER = 'og-hodl-my-b-cover.png?v=2'  # share image for the landing and the latest issue
+
 def build():
     back = ''.join(card(f'/hodl-my-b/{i["n"]}', i['og'], f'Issue {i["n"]} &middot; week of {i["week"]}', i['blurb']) for i in reversed(ISSUES))
     menu = ''.join(f'<li><a href="/hodl-my-b/{i["n"]}">Issue {i["n"]} &middot; {i["week"]}</a></li>' for i in reversed(ISSUES))
@@ -354,8 +356,8 @@ def build():
         title = f'Hodl my b, Issue {i["n"]}: {i["story"]}'
         desc = f'Hodl my b, the weekly bWalletX magazine. Issue {i["n"]}, week of {i["week"]}: {i["blurb"]}'
         alt = f'Magazine cover: Hodl my b, Weekly, Issue {i["n"]}. {i["story"]}'
-        open(os.path.join(ROOT, f'hodl-my-b/{i["n"]}.html'), 'w').write(head(f'/hodl-my-b/{i["n"]}', title, desc, i['og'] + '?v=1', alt) + body)
+        open(os.path.join(ROOT, f'hodl-my-b/{i["n"]}.html'), 'w').write(head(f'/hodl-my-b/{i["n"]}', title, desc, OG_COVER, alt) + body)
         if i is ISSUES[-1]:
-            open(os.path.join(ROOT, 'hodl-my-b.html'), 'w').write(head('/hodl-my-b', 'Hodl my b', 'Hodl my b: the weekly bWalletX magazine. Everything shipped each week, with what is live and what is coming.', 'og-hodl-my-b.png?v=1', 'A mug of beer beside the words Hodl my b.') + body)
+            open(os.path.join(ROOT, 'hodl-my-b.html'), 'w').write(head('/hodl-my-b', 'Hodl my b', 'Hodl my b: the weekly bWalletX magazine. Everything shipped each week, with what is live and what is coming.', OG_COVER, 'Magazine cover: Hodl my b, Weekly, Issue 1. Don&#39;t be bland. Get bRanded.') + body)
 
 build()

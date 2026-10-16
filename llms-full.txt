@@ -1878,16 +1878,6 @@ bWalletX is in beta: test with small amounts. Questions: [support@bwalletx.com](
 
 Source: https://bwalletx.com/hodl-my-b
 
-b
-
-Got the sticker pack?
-
-Yes! 1,500 sats. Tap to pay.
-
-Paid ✔
-
-Receipt on chain
-
 Hodl my b
 
 WeeklyIssue 1Week of 12 Oct 2026
@@ -1938,14 +1928,6 @@ Customer asks, agent quotes, customer taps Pay. Both sides keep the same receipt
 
 Next release Chat checkout for business agents.
 
-Two flat whites?
-
-900 sats. Tap to pay.
-
-Paid ✔
-
-Receipt on chain
-
 No card machine. No “it’s gone through twice”.
 
 Hodl my b · Issue 1 · 4
@@ -1956,11 +1938,9 @@ Cover story · pocket money
 
 Its own capped account: a daily limit, and a big Stop button for when it gets ideas above its station.
 
-Coming Capped agent account inside the app.
+Next release Capped agent account inside the app.
 
 Live Today on your computer: the `bwalletx` CLI agent wallet, with a daily cap and Stop. [CLI](https://bwalletx.com/cli)
-
-STOP
 
 Hodl my b · Issue 1 · 5
 
@@ -1992,8 +1972,6 @@ Every bWalletX payment settles on chain. You, your customer and anyone else see 
 
 Live On-chain receipts.
 
-✔
-
 Arguments about who paid what get very short.
 
 Hodl my b · Issue 1 · 7
@@ -2001,8 +1979,6 @@ Hodl my b · Issue 1 · 7
 This week · 5.2.26
 
 ## New in the wallet.
-
-5.2.26
 
 - LiveWhite paper theme, minimalist bApp icons
 - LiveYour bAvatar is the menu
@@ -2050,7 +2026,7 @@ Where things stand
 
 - Next releaseAgent from a link
 - Next releaseError reports from Ask b
-- ComingCapped agent account in the app
+- Next releaseCapped agent account in the app
 - ComingSMS for agents. [Bitcoin by text](https://bwalletx.com/sms)
 - ComingbCredits: prepay for b. [Credits](https://bwalletx.com/credits)
 - ComingShare one fact, such as over 18. [Identity](https://bwalletx.com/identity)
@@ -2071,8 +2047,6 @@ Hodl my b · Issue 1 · 13
 Back cover
 
 ## Just b.
-
-b
 
 Past issues
 
