@@ -34,6 +34,14 @@
       body.paper[data-theme="blue"] { --paper: #edf2f9; --sheet: #f8fbff; --ink: #0c1f3d; --muted: #3c5170; --dim: #7c8ca6; --hair: #cfdbec; --hover: #e0e9f5; }
       body.paper[data-theme="yellow"] { --paper: #fbf5dc; --sheet: #fffcef; --ink: #2e2304; --muted: #63562b; --dim: #9a8c5c; --hair: #ebe0b4; --hover: #f5ecc6; }
       body.paper { color-scheme: light; }
+      .tcell { font: inherit; text-align: left; color: inherit; background: rgba(247,246,242,.0); border: 0; cursor: pointer; }
+      .tcell:hover, .tcell:focus-visible, .tcell[aria-pressed="true"] { outline: 2px solid var(--ink); outline-offset: -6px; }
+      .tcell[aria-pressed="true"] h3::before { content: "\25A0  "; }
+      .hint { font-size: .66rem; color: var(--muted); margin: 14px 0 0; }
+      .install { display: flex; gap: 18px; align-items: center; margin-top: 28px; padding: 18px; border: 1px solid var(--ink); background: var(--sheet); max-width: 560px; }
+      .install img { border: .5px solid var(--ink); flex: none; }
+      .install p { margin: 4px 0 0; font-size: .9rem; color: var(--muted); }
+      .install .lbl { color: var(--ink); font-size: .74rem; margin: 0; }
       .picker { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 28px; }
       .picker button { font: 500 .72rem var(--mono); letter-spacing: .14em; text-transform: uppercase; padding: 9px 14px 9px 10px; border: 1px solid var(--ink); background: var(--sheet); color: var(--ink); border-radius: 0; cursor: pointer; display: inline-flex; align-items: center; gap: 8px; }
       .picker button i { width: 14px; height: 14px; border: 1px solid var(--ink); display: inline-block; }
@@ -93,8 +101,8 @@
       @media (max-width: 820px) { .cards { grid-template-columns: 1fr; } }
 
       /* swatches */
-      .themes { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0; margin-top: 48px; border-top: 1px solid var(--hair); border-left: 1px solid var(--hair); }
-      .themes > div { border-right: 1px solid var(--hair); border-bottom: 1px solid var(--hair); padding: 22px; }
+      .themes { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0; margin-top: 48px; border-top: 1px solid var(--hair); border-left: 1px solid var(--hair); }
+      .themes > * { border-right: 1px solid var(--hair); border-bottom: 1px solid var(--hair); padding: 22px; }
       .sw { aspect-ratio: 1; border-radius: 50%; width: 72px; margin-bottom: 18px; border: 1px solid var(--ink); }
       .themes p { margin: 6px 0 0; font-size: .92rem; color: var(--muted); }
       .pill { display: inline-block; font: 600 .68rem var(--hf); letter-spacing: .1em; text-transform: uppercase; border-radius: 999px; padding: 3px 9px; margin-left: 8px; vertical-align: middle; }
@@ -141,8 +149,8 @@
       .marks small { font-size: .66rem; }
       .pill { font-family: var(--mono); font-weight: 500; border-radius: 0; }
       .pill.soon { background: var(--paper); }
-      .themes, .themes > div { border-color: var(--ink) !important; border-width: .5px !important; }
-      .themes > div { background: rgba(247,246,242,.85); }
+      .themes, .themes > * { border-color: var(--ink) !important; border-width: .5px !important; }
+      .themes > * { background: var(--paper); }
       .status, .status li { border-color: var(--ink) !important; border-width: .5px !important; }
       .steps span { border-radius: 0; font-family: var(--mono); font-weight: 500; text-transform: uppercase; letter-spacing: .1em; font-size: .8em; }
       .cta a { border-radius: 0; font: 500 .82rem var(--mono); text-transform: uppercase; letter-spacing: .12em; }
@@ -233,9 +241,6 @@
             <p class="num">Themes <b>Sheet 00 / 05</b></p>
             <h1>Make bWallet yours.</h1>
             <p class="lede">Pick the colours of the app and the art on your card. Here are the new paper themes: tinted paper, dark ink of the same hue, thin lines and lots of room.</p>
-            <div class="picker" role="group" aria-label="Paper theme">
-              <button type="button" data-t="white"><i style="background:#f7f6f2"></i>White</button><button type="button" data-t="pink"><i style="background:#f3c9d4"></i>Pink</button><button type="button" data-t="blue"><i style="background:#c3d4ee"></i>Blue</button><button type="button" data-t="yellow"><i style="background:#f1df8f"></i>Yellow</button>
-            </div>
             <div class="cta"><a class="pri" href="#how">How to change it</a><a class="sec" href="/get">Get bWalletX</a></div>
           </div>
           <div>
@@ -265,10 +270,18 @@
           <h2>One tap changes the whole app.</h2>
           <p class="sub">A theme sets the colour of every screen: buttons, cards, the menu bar. Gold is the default. White is new. More pure colours are on the way.</p>
           <div class="themes">
-            <div><div class="sw" style="background:#f7f6f2"></div><h3>White <span class="pill soon">Coming</span></h3><p>Paper: off-white, black type, hairlines.</p></div>
+            <button type="button" class="tcell" data-t="white"><div class="sw" style="background:#f7f6f2"></div><h3>White <span class="pill soon">Coming</span></h3><p>Paper: off-white, black ink, hairlines.</p></button>
+            <button type="button" class="tcell" data-t="pink"><div class="sw" style="background:#f3c9d4"></div><h3>Pink <span class="pill soon">Coming</span></h3><p>Blush paper, deep rose ink.</p></button>
+            <button type="button" class="tcell" data-t="blue"><div class="sw" style="background:#c3d4ee"></div><h3>Blue <span class="pill soon">Coming</span></h3><p>Blueprint paper, navy ink.</p></button>
+            <button type="button" class="tcell" data-t="yellow"><div class="sw" style="background:#f1df8f"></div><h3>Yellow <span class="pill soon">Coming</span></h3><p>Legal-pad paper, umber ink.</p></button>
             <div><div class="sw" style="background:linear-gradient(135deg,#ffd24d,#eab300);border-color:#d9a400"></div><h3>Gold <span class="pill live">Live</span></h3><p>The default. Gold on black.</p></div>
             <div><div class="sw" style="background:#111;border-color:#111"></div><h3>Dark <span class="pill live">Live</span></h3><p>Quiet black for night use.</p></div>
-            <div><div class="sw" style="background:conic-gradient(#e63946 0 25%,#2a6fdb 0 50%,#2bb673 0 75%,#7b4fd6 0)"></div><h3>Pure colours <span class="pill soon">Coming</span></h3><p>Red, blue, green, violet and more.</p></div>
+          </div>
+          <p class="hint lbl">Hover (or tap once) to preview this page in a paper &middot; click (tap again) to open its page</p>
+          <div class="install" id="install" aria-live="polite">
+            <img id="iicon" src="/theme-apps/icon-white-192.png" alt="" width="72" height="72" />
+            <div><p class="lbl"><span id="ititle">Install the White edition</span> <span class="pill soon">Coming</span></p>
+            <p id="inote">Preview: the web wallet doesn&rsquo;t read this theme yet, so there&rsquo;s no install button until it does.</p></div>
           </div>
         </div>
       </section>
@@ -350,7 +363,7 @@
             <li><span class="pill soon">Coming</span><span><b>White paper theme</b> in the next app release (the change is in progress).</span></li>
             <li><span class="pill soon">Coming</span><span><b>White card art set</b>: plain paper, the washed-out wave and more.</span></li>
             <li><span class="pill soon">Coming</span><span><b>More pure-colour themes.</b></span></li>
-            <li><span class="pill live">Live</span><span><b>This page in four papers</b>: White, Pink, Blue and Yellow, switchable above (links like /themes/pink).</span></li>
+            <li><span class="pill live">Live</span><span><b>This page in four papers</b>: White, Pink, Blue and Yellow, hover to preview, click for its own page (/themes/pink etc.).</span></li>
             <li><span class="pill soon">Coming</span><span><b>Pink, Blue and Yellow</b>: preview only &mdash; in-app theme coming.</span></li>
             <li><span class="pill soon">Coming</span><span><b>Install a colour edition</b> of the web wallet to your home screen (the web wallet doesn&rsquo;t read the theme yet, so no install button until it does).</span></li>
           </ul>
@@ -379,20 +392,42 @@
       (function () {
         var T = { white: '#f7f6f2', pink: '#fbeef1', blue: '#edf2f9', yellow: '#fbf5dc' };
         var N = { white: 'White', pink: 'Pink', blue: 'Blue', yellow: 'Yellow' };
+        var cells = document.querySelectorAll('.tcell');
         function fromPath() { var m = location.pathname.match(/^\/themes\/(white|pink|blue|yellow)\/?$/); return m ? m[1] : 'white'; }
-        function apply(t) {
+        var sel = fromPath();
+        function paint(t) {
           document.body.setAttribute('data-theme', t);
+          var n = document.getElementById('tname'); if (n) n.textContent = N[t];
+        }
+        function select(t) {
+          sel = t; paint(t);
           document.getElementById('tman').href = '/theme-apps/manifest-' + t + '.json';
           document.getElementById('tico').href = '/theme-apps/icon-' + t + '-180.png';
           document.getElementById('tcol').content = T[t];
-          var n = document.getElementById('tname'); if (n) n.textContent = N[t];
-          document.querySelectorAll('.picker button').forEach(function (b) { b.setAttribute('aria-pressed', b.dataset.t === t ? 'true' : 'false'); });
+          document.getElementById('iicon').src = '/theme-apps/icon-' + t + '-192.png';
+          document.getElementById('ititle').textContent = 'Install the ' + N[t] + ' edition';
+          document.getElementById('inote').textContent = t === 'white'
+            ? 'Coming: the web wallet doesn\u2019t read ?theme=white yet, so there\u2019s no install button until it does.'
+            : 'Preview: in-app theme coming. No install button until the ' + N[t] + ' pack ships in the app.';
+          cells.forEach(function (c) { c.setAttribute('aria-pressed', c.dataset.t === t ? 'true' : 'false'); });
         }
-        document.querySelectorAll('.picker button').forEach(function (b) {
-          b.addEventListener('click', function () { var t = b.dataset.t; if (location.pathname !== '/themes/' + t) history.pushState({ t: t }, '', '/themes/' + t); apply(t); });
+        var touchArmed = null;
+        cells.forEach(function (c) {
+          var t = c.dataset.t;
+          c.addEventListener('mouseenter', function () { paint(t); });
+          c.addEventListener('mouseleave', function () { paint(sel); });
+          c.addEventListener('focus', function () { paint(t); });
+          c.addEventListener('blur', function () { paint(sel); });
+          c.addEventListener('touchstart', function () { if (touchArmed !== t) { touchArmed = t; paint(t); c.dataset.armed = '1'; } }, { passive: true });
+          c.addEventListener('click', function (e) {
+            if (c.dataset.armed === '1') { delete c.dataset.armed; if (sel !== t) { e.preventDefault(); return; } }
+            touchArmed = null;
+            if (location.pathname !== '/themes/' + t) history.pushState({ t: t }, '', '/themes/' + t);
+            select(t);
+          });
         });
-        window.addEventListener('popstate', function () { apply(fromPath()); });
-        apply(fromPath());
+        window.addEventListener('popstate', function () { select(fromPath()); });
+        select(sel);
       })();
     </script>
   </body>
