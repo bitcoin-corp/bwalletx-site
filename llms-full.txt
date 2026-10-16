@@ -1930,7 +1930,7 @@ Next release Chat checkout for business agents.
 
 Two flat whites?
 
-900 sats. Tap to pay.
+$9 (9,000 sats). Tap to pay.
 
 Paid ✔
 
@@ -1962,13 +1962,13 @@ Coming SMS for agents. [Bitcoin by text](https://bwalletx.com/sms)
 
 Table for 2 at 8?
 
-Booked. 500 sats deposit?
+Booked. $5 deposit? (5,000 sats)
 
 Y
 
 Receipt on chain
 
-New textPaid 500 sats ✓
+New textPaid $5 (5,000 sats) ✓
 
 Finally, a good reason to reply to a text.
 
@@ -1987,11 +1987,13 @@ bWalletX RECEIPT
 
 Table for 2 · deposit
 
-500 sats
+$5.00
+
+5,000 sats
 
 txid 3f9a…c21e
 
-✓ on chain
+✓ settled on chain
 
 Arguments about who paid what get very short.
 
@@ -3381,6 +3383,88 @@ Each release ships to the Android APK, the Chrome extension and the web wallet. 
 - Token search in the Exchange
 
 bWalletX is in beta: test with small amounts. Questions: [support@bwalletx.com](mailto:support@bwalletx.com)
+
+---
+
+Source: https://bwalletx.com/restore-simplycash
+
+Restore
+
+# Bring your SimplyCash coins home.
+
+Had a SimplyCash wallet? bWalletX can find what’s in it from your recovery phrase and sweep it into your own bWalletX account. A few taps, on your own phone.
+
+[Get bWalletX](https://bwalletx.com/get)[How it works](#steps)
+
+## Four steps
+
+- 1
+
+### Open the sweep screen
+
+In bWalletX go to Settings › Account & safety › Sweep from another wallet. Setting up a new wallet? Restore › SimplyCash starts the same thing.
+
+- 2
+
+### Paste your SimplyCash backup
+
+Your 12-word recovery phrase, or SimplyCash’s full recovery string (words, path and passphrase joined by colons). A private key (WIF) or an xprv works too. Add a passphrase if you set one.
+
+- 3
+
+### Let it look
+
+bWalletX walks SimplyCash’s path `m/44'/145'/0'` and the other common Bitcoin SV layouts, receive and change addresses, until 20 in a row are unused. It also tries the older derivation early SimplyCash wallets used, automatically. It shows the coins, NFTs and tokens it finds, in dollars.
+
+- 4
+
+### Sweep it home
+
+Tick what to bring over and tap sweep. Your coins move into your bWalletX account in a few transactions (BSV, NFTs, then each token), paying the normal small network fee. The old phrase isn’t kept: from then on, your coins are protected by your bWalletX words.
+
+## Where’s my SimplyCash phrase?
+
+Look for the backup you made when you set up SimplyCash: your 12-word recovery phrase or recovery string from your SimplyCash backup. People often wrote it on paper, saved it in a password manager or kept a screenshot. If you still have the SimplyCash app, its backup or settings area may show it again.
+
+## Stay safe
+
+- Never share your phrase. Not with b, not in any chat, not with support. We will never ask for it.
+
+- Type it only into the sweep screen, on your own device. The phrase stays on your phone and is cleared when you leave the screen; only public addresses are looked up online to find your coins.
+
+- Unsure? Test first. For larger amounts (over about £500) bWalletX offers to sweep a small test amount first. Check it arrived, then scan again to sweep the rest.
+
+## Questions
+
+It says nothing was found.
+Check every word, and add your passphrase if your SimplyCash wallet had one (or paste the full recovery string, which carries it). The older SimplyCash derivation is tried automatically. You can also try a custom path under Advanced, or ask b in the app.
+
+Does bWalletX keep my SimplyCash phrase?
+No. It is held in memory only for the scan and the sweep, never stored and never sent to our servers.
+
+Can I sweep other wallets?
+Yes. The same screen takes recovery phrases from other Bitcoin SV wallets, private keys (WIF) and xprvs.
+
+Is it in the App Store and Play versions?
+Yes. Sweep from another wallet is in every bWalletX and bWallet build.
+
+## What works today
+
+- LiveSimplyCash 12-word phrase sweep (path m/44'/145'/0').
+
+- LiveSimplyCash recovery string (words:path:passphrase).
+
+- LiveOlder SimplyCash derivation, tried automatically.
+
+- LiveCoins, NFTs and tokens found and swept.
+
+- LiveOther BSV wallets: BIP44 phrases (coin types 236 and 0), private keys (WIF), xprvs and custom paths.
+
+- LiveTest sweep for amounts over about £500.
+
+[Get bWalletX](https://bwalletx.com/get)[Restore a bWalletX backup](https://bwalletx.com/restore)
+
+SimplyCash is named only to describe compatibility; bWalletX isn’t affiliated with it. bWalletX is in beta: test with small amounts. Questions: [support@bwalletx.com](mailto:support@bwalletx.com)
 
 ---
 
