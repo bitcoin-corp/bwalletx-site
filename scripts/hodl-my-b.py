@@ -145,7 +145,7 @@ def pages_issue_1(back):
         deco=bg('grid', RING('rgba(255,210,77,.35)', 60, 55, 80), emo(['soon', 'rocket', 'cal'], 12))))
     P.append(page('<p class="k r1">Next week</p><h2 class="r2">Same time, same beer.</h2><p class="r3">A new issue every week: everything we shipped, nicely presented.</p>' + media('next', '<img class="beer2" src="/images/twemoji-beer.svg" alt="" />') + getqr() + '<p class="q r4">Less noise. More life. Just b.</p>', 's-gold', 13,
         deco=bg('dots', RING('#111', 60, 40, 80), emo(['soon', 'sunrise', 'gift'], 13), wv=('rgba(255,255,255,.35)', 'rgba(17,17,17,.12)'))))
-    P.append(page('<p class="k r1">Back cover</p><h2 class="r2">Just b.</h2>' + media('lifestyle', '<div class="big gd">b</div>') + '<p class="k r3">Past issues</p><div class="r3">' + back + '</div>' + getqr() + '<p class="foot2">By The Bitcoin Corporation Ltd &middot; Emoji: Twemoji, CC-BY 4.0 &middot; Music: original, made in your browser</p>', 's-back', hard=True,
+    P.append(page('<p class="k r1">Back cover</p><h2 class="r2">Just b.</h2>' + media('lifestyle', '<div class="big gd">b</div>') + '<p class="k r3">Past issues</p><div class="r3">' + back + '</div><p class="foot2">By The Bitcoin Corporation Ltd &middot; Emoji: Twemoji, CC-BY 4.0 &middot; Music: original, made in your browser</p>', 's-back', hard=True,
         deco=bg('grid', BLOB('radial-gradient(circle,#f5b800,transparent 70%)', 40, 50, 100), emo(['beer', 'clink', 'notes', 'cool'], 14))))
     return P
 
