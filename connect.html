@@ -494,7 +494,7 @@ Expires: 2026-10-07T12:02:00.000Z
 <h2 id="not-yet-available">Not yet available</h2>
 <p>These are gaps today. Plan around them.</p>
 <ul>
-<li><strong>No hosted sign-in or OAuth-style redirect.</strong> There is no bwalletx.com page you can send users to and get a callback from, and no hosted verify endpoint. You run the two routes yourself. bChat&#39;s own endpoints (<code>/api/bitsign/auth/bwallet/*</code> on bit-sign) accept requests from their own pages only and are not a public API.</li>
+<li><strong>No hosted sign-in or OAuth-style redirect yet.</strong> An OAuth 2.1 / OpenID Connect provider at auth.bwalletx.com is built and waiting for deploy (see <a href="/sign-in-button#oauth">Sign in with bWalletX for any app</a>). Until it is live there is no bwalletx.com page you can send users to and get a callback from, and no hosted verify endpoint. You run the two routes yourself. bChat&#39;s own endpoints (<code>/api/bitsign/auth/bwallet/*</code> on bit-sign) accept requests from their own pages only and are not a public API.</li>
 <li><strong>No user profile.</strong> You get the identity key and nothing else: no $handle, paymail, name or picture, and no proof linking the key to them.</li>
 <li><strong>The relay is ours.</strong> <code>relay.bwallet.space</code> accepts any https origin, but it is a single service run by The Bitcoin Corporation with no published uptime or rate-limit guarantees (it currently allows about 60 frames a minute per channel).</li>
 <li><strong>No test wallet.</strong> There is no testnet build or headless bWalletX for automated tests. To test your server, sign with <code>new ProtoWallet(PrivateKey.fromRandom()).createSignature(...)</code> using the same arguments; it makes exactly the signature bWalletX makes.</li>
