@@ -1,0 +1,258 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Themes: make bWallet yours</title>
+    <link rel="canonical" href="https://bwalletx.com/themes" />
+    <meta name="description" content="Change the look of your wallet. App colours (gold, dark and the new white paper theme), your own card art, and a clean outline b mark. Wallet › ☰ › Theme." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://bwalletx.com/themes" />
+    <meta property="og:site_name" content="bWalletX" />
+    <meta property="og:title" content="Make bWallet yours" />
+    <meta property="og:description" content="App colours, your own card art and the white paper theme. Wallet › ☰ › Theme." />
+    <meta property="og:image" content="https://bwalletx.com/og-themes-v1.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="A white paper bWallet card with a faint wave and the outline b mark." />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@bWalletX" />
+    <meta name="twitter:title" content="Make bWallet yours" />
+    <meta name="twitter:description" content="App colours, your own card art and the white paper theme. Wallet › ☰ › Theme." />
+    <meta name="twitter:image" content="https://bwalletx.com/og-themes-v1.png" />
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/styles.css" />
+    <style>
+      body.paper { --bg: #f7f6f2; --ink: #111111; --muted: #5d5b56; --dim: #8a8780; --card-a: #ffffff; --card-b: #ffffff; --edge: #dcd9d1; --hair: #d9d6ce; background: var(--bg); color: var(--ink); }
+      body.paper .beta-banner { background: #f7f6f2; color: #5d5b56; border-bottom: 1px solid var(--hair); }
+      body.paper .topbar { background: rgba(247, 246, 242, 0.92); border-bottom: 1px solid var(--hair); }
+      body.paper .topbar a, body.paper .brand { color: #111; }
+      body.paper .topbar nav a { color: #5d5b56; }
+      body.paper .dl-btn, body.paper .web-btn { background: #111 !important; color: #f7f6f2 !important; box-shadow: none !important; border: 0 !important; }
+      body.paper .foot { background: var(--bg); border-top: 1px solid var(--hair); color: #5d5b56; }
+      body.paper .foot a { color: #111; }
+      body.paper .gold { color: inherit; }
+      .tp { overflow-x: clip; padding-top: 64px; }
+      .tp .wrapx { max-width: 1080px; margin: 0 auto; padding-inline: 20px; }
+      .tp section { padding-block: 88px; border-top: 1px solid var(--hair); }
+      .tp section.hero { border-top: 0; padding-block: 96px 80px; }
+      .tp .num { font: 500 0.78rem var(--hf); letter-spacing: 0.18em; text-transform: uppercase; color: var(--muted); margin: 0 0 18px; }
+      .tp h1, .tp h2, .tp h3 { font-family: var(--hf); letter-spacing: -0.03em; text-wrap: balance; margin: 0; color: #111; }
+      .tp h1 { font-size: clamp(3rem, 9vw, 6.6rem); line-height: 0.98; font-weight: 600; }
+      .tp h2 { font-size: clamp(2rem, 4.6vw, 3.2rem); line-height: 1.04; font-weight: 600; }
+      .tp h3 { font-size: 1.15rem; font-weight: 600; letter-spacing: -0.01em; }
+      .tp p { line-height: 1.65; }
+      .tp .lede { font-size: clamp(1.1rem, 2vw, 1.3rem); color: #333; max-width: 32em; margin: 28px 0 0; }
+      .tp .sub { color: var(--muted); max-width: 38em; margin: 16px 0 0; }
+      .tp a { color: #111; text-underline-offset: 3px; }
+      .split { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 56px; align-items: center; }
+      @media (max-width: 820px) { .split { grid-template-columns: 1fr; gap: 40px; } .tp section { padding-block: 64px; } }
+
+      /* cards */
+      .card { position: relative; aspect-ratio: 1.586; border-radius: 22px; background: #fff; border: 1px solid #e3e0d8; box-shadow: 0 1px 0 #fff inset, 0 24px 60px -30px rgba(0,0,0,.25); overflow: hidden; color: #111; font-family: var(--hf); }
+      .card .art { position: absolute; inset: 0; width: 100%; height: 100%; }
+      .card .row1 { position: absolute; left: 6%; top: 8%; display: flex; align-items: center; gap: 10px; font-size: clamp(.72rem, 1.6vw, .95rem); font-weight: 600; }
+      .card .row1 i { width: 26px; height: 26px; border-radius: 50%; border: 1.5px solid #111; display: inline-block; }
+      .card .bal { position: absolute; left: 6%; top: 38%; font-size: clamp(1.8rem, 5vw, 3rem); font-weight: 700; letter-spacing: -0.03em; }
+      .card .sats { position: absolute; left: 6%; top: 60%; font: 400 clamp(.68rem, 1.4vw, .82rem) var(--bf); color: #555; }
+      .card .addr { position: absolute; left: 6%; bottom: 8%; font: 400 clamp(.62rem, 1.3vw, .78rem) ui-monospace, Menlo, monospace; color: #444; letter-spacing: .02em; }
+      .card .chip { position: absolute; right: 6%; bottom: 7%; font-size: .72rem; font-weight: 600; border: 1px solid #111; border-radius: 999px; padding: 3px 10px; }
+      .card .bm { position: absolute; right: 6%; top: 8%; width: 30px; }
+      .cards { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; margin-top: 48px; }
+      .cards figure { margin: 0; }
+      .cards figcaption { margin-top: 14px; font-size: .9rem; color: var(--muted); }
+      .cards figcaption b { color: #111; font-weight: 600; display: block; }
+      @media (max-width: 820px) { .cards { grid-template-columns: 1fr; } }
+
+      /* swatches */
+      .themes { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0; margin-top: 48px; border-top: 1px solid var(--hair); border-left: 1px solid var(--hair); }
+      .themes > div { border-right: 1px solid var(--hair); border-bottom: 1px solid var(--hair); padding: 22px; }
+      .sw { aspect-ratio: 1; border-radius: 50%; width: 72px; margin-bottom: 18px; border: 1px solid #d0cdc4; }
+      .themes p { margin: 6px 0 0; font-size: .92rem; color: var(--muted); }
+      .pill { display: inline-block; font: 600 .68rem var(--hf); letter-spacing: .1em; text-transform: uppercase; border-radius: 999px; padding: 3px 9px; margin-left: 8px; vertical-align: middle; }
+      .pill.live { background: #111; color: #f7f6f2; }
+      .pill.soon { border: 1px solid #111; color: #111; }
+      @media (max-width: 820px) { .themes { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+
+      /* mark */
+      .marks { display: flex; gap: 40px; align-items: center; flex-wrap: wrap; }
+      .tile { width: 150px; height: 150px; border-radius: 34px; background: #fff; border: 1px solid #e3e0d8; box-shadow: 0 24px 50px -28px rgba(0,0,0,.3); display: grid; place-items: center; }
+      .tile svg { width: 84px; }
+      .bigb svg { width: 180px; }
+      .marks small { display: block; text-align: center; margin-top: 14px; color: var(--muted); font-size: .85rem; }
+
+      /* status */
+      .status { list-style: none; padding: 0; margin: 36px 0 0; border-top: 1px solid var(--hair); }
+      .status li { display: flex; gap: 18px; align-items: baseline; padding: 18px 0; border-bottom: 1px solid var(--hair); }
+      .status .pill { margin: 0; flex: none; min-width: 74px; text-align: center; }
+      .status span:last-child { color: #333; }
+
+      .steps { display: flex; flex-wrap: wrap; align-items: center; gap: 14px; margin-top: 32px; font: 600 clamp(1.2rem, 3vw, 1.8rem) var(--hf); letter-spacing: -.02em; }
+      .steps em { font-style: normal; color: var(--dim); font-weight: 400; }
+      .steps span { border: 1px solid #111; border-radius: 14px; padding: 10px 18px; background: #fff; }
+      .cta { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 36px; }
+      .cta a { font: 600 1rem var(--hf); border-radius: 999px; padding: 13px 24px; text-decoration: none; }
+      .cta .pri { background: #111; color: #f7f6f2; }
+      .cta .sec { border: 1px solid #111; color: #111; }
+    </style>
+  </head>
+  <body class="paper">
+    <div class="beta-banner">bWalletX is in <strong>beta</strong>: test with small amounts.</div>
+    <header class="topbar">
+      <div class="wrap topbar-in">
+        <a class="brand" href="/"><img src="/logo.svg" alt="" width="34" height="30" /><span>bWallet<span class="gold">X</span></span></a>
+        <nav aria-label="Pages">
+          <a href="/features">Features</a><a href="/exchange">Exchange</a><a href="/social">Social</a><a href="/agent">Agents</a><a href="/extension">Extension</a><a href="/developers">Developers</a>
+        </nav>
+        <span class="nav-cta"><a class="dl-btn" href="/get">Download</a><a class="web-btn" href="https://web.bwalletx.com" target="_blank" rel="noopener">Web &rarr;</a></span>
+      </div>
+    </header>
+    <script src="/nav.js"></script>
+
+    <!-- Hidden defs: the outline b (one unified path: stem ∪ bowl, counter as its own path) and a faint wave -->
+    <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+      <defs>
+        <symbol id="b-outline" viewBox="0 0 104 124">
+          <g fill="none" stroke="currentColor" stroke-width="4.5" stroke-linejoin="round">
+            <path d="M12 82 L12 32 L28 8 L28 50 A40 40 0 1 1 12 82 Z" />
+            <circle cx="52" cy="82" r="20" />
+          </g>
+        </symbol>
+        <symbol id="wave" viewBox="0 0 400 252" preserveAspectRatio="xMidYMid slice">
+          <g fill="none" stroke="#2c3e63" stroke-linecap="round">
+            <path d="M-10 200 C60 150 90 60 170 40 C230 26 270 70 250 110 C236 138 200 132 204 110 C208 92 232 96 228 112" stroke-width="3" />
+            <path d="M-10 222 C70 180 110 100 180 78 C220 66 246 84 240 104" stroke-width="2" />
+            <path d="M-10 244 C80 210 130 140 200 118 C260 100 300 150 330 190 C350 216 380 226 410 222" stroke-width="2" />
+            <path d="M170 40 C186 30 198 22 214 26 M190 34 C200 20 214 16 226 24 M210 30 C222 20 236 22 242 34" stroke-width="1.6" />
+            <path d="M-10 262 C100 236 200 200 300 214 C350 220 380 236 410 240" stroke-width="1.4" />
+          </g>
+          <path d="M300 200 L330 168 L344 176 L360 200 Z" fill="none" stroke="#2c3e63" stroke-width="1.6" />
+          <path d="M322 177 L330 168 L338 173" fill="#2c3e63" opacity=".4" />
+          <g fill="#2c3e63"><circle cx="182" cy="36" r="2"/><circle cx="204" cy="24" r="1.6"/><circle cx="228" cy="22" r="1.8"/><circle cx="246" cy="36" r="1.5"/><circle cx="150" cy="54" r="1.4"/></g>
+        </symbol>
+      </defs>
+    </svg>
+
+    <main class="tp">
+      <section class="hero">
+        <div class="wrapx split">
+          <div>
+            <p class="num">Themes</p>
+            <h1>Make bWallet yours.</h1>
+            <p class="lede">Pick the colours of the app and the art on your card. Here is the new white &ldquo;paper&rdquo; theme: black type, thin lines and lots of room.</p>
+            <div class="cta"><a class="pri" href="#how">How to change it</a><a class="sec" href="/get">Get bWalletX</a></div>
+          </div>
+          <div>
+            <div class="card" role="img" aria-label="A white bWallet card with black type and a faint wave">
+              <svg class="art" style="opacity:.12"><use href="#wave" /></svg>
+              <div class="row1"><i></i>you@bwalletx.com</div>
+              <svg class="bm" viewBox="0 0 104 124" style="color:#111"><use href="#b-outline" /></svg>
+              <div class="bal">$656.32</div>
+              <div class="sats">3,509,735,414 sats</div>
+              <div class="addr">19McRWSz9i8…2dUa39S</div>
+              <div class="chip">BSV</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="colours">
+        <div class="wrapx">
+          <p class="num">01 &mdash; App colours</p>
+          <h2>One tap changes the whole app.</h2>
+          <p class="sub">A theme sets the colour of every screen: buttons, cards, the menu bar. Gold is the default. White is new. More pure colours are on the way.</p>
+          <div class="themes">
+            <div><div class="sw" style="background:#f7f6f2"></div><h3>White <span class="pill soon">Coming</span></h3><p>Paper: off-white, black type, hairlines.</p></div>
+            <div><div class="sw" style="background:linear-gradient(135deg,#ffd24d,#eab300);border-color:#d9a400"></div><h3>Gold <span class="pill live">Live</span></h3><p>The default. Gold on black.</p></div>
+            <div><div class="sw" style="background:#111;border-color:#111"></div><h3>Dark <span class="pill live">Live</span></h3><p>Quiet black for night use.</p></div>
+            <div><div class="sw" style="background:conic-gradient(#e63946 0 25%,#2a6fdb 0 50%,#2bb673 0 75%,#7b4fd6 0)"></div><h3>Pure colours <span class="pill soon">Coming</span></h3><p>Red, blue, green, violet and more.</p></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="cards">
+        <div class="wrapx">
+          <p class="num">02 &mdash; Design your card</p>
+          <h2>Your card, your art.</h2>
+          <p class="sub">The card at the top of your wallet can carry any art you like. The white set keeps it minimal: a white card, black type, and art washed back so your balance stays easy to read. The wave is Hokusai&rsquo;s <em>Great Wave off Kanagawa</em> (1831), which is in the public domain.</p>
+          <div class="cards">
+            <figure>
+              <div class="card" role="img" aria-label="Plain white card">
+                <div class="row1"><i></i>you@bwalletx.com</div>
+                <svg class="bm" viewBox="0 0 104 124"><use href="#b-outline" /></svg>
+                <div class="bal">$42.00</div><div class="sats">225,000,000 sats</div><div class="addr">1BwX…paper</div><div class="chip">BSV</div>
+              </div>
+              <figcaption><b>Plain paper</b>Nothing but your name and balance.</figcaption>
+            </figure>
+            <figure>
+              <div class="card" role="img" aria-label="White card with a faint wave">
+                <svg class="art" style="opacity:.14"><use href="#wave" /></svg>
+                <div class="row1"><i></i>you@bwalletx.com</div>
+                <svg class="bm" viewBox="0 0 104 124"><use href="#b-outline" /></svg>
+                <div class="bal">$42.00</div><div class="sats">225,000,000 sats</div><div class="addr">1BwX…wave</div><div class="chip">BSV</div>
+              </div>
+              <figcaption><b>The Great Wave, washed out</b>Public-domain Hokusai, faded to a whisper.</figcaption>
+            </figure>
+            <figure>
+              <div class="card" role="img" aria-label="White card with fine ruled lines">
+                <svg class="art" viewBox="0 0 400 252" preserveAspectRatio="none" style="opacity:.18"><g stroke="#111" stroke-width=".6"><line x1="0" y1="60" x2="400" y2="60"/><line x1="0" y1="190" x2="400" y2="190"/><line x1="300" y1="0" x2="300" y2="252"/></g><circle cx="300" cy="125" r="70" fill="none" stroke="#111" stroke-width=".8"/></svg>
+                <div class="row1"><i></i>you@bwalletx.com</div>
+                <svg class="bm" viewBox="0 0 104 124"><use href="#b-outline" /></svg>
+                <div class="bal">$42.00</div><div class="sats">225,000,000 sats</div><div class="addr">1BwX…grid</div><div class="chip">BSV</div>
+              </div>
+              <figcaption><b>Modernist</b>A circle and three hairlines.</figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <section id="mark">
+        <div class="wrapx split">
+          <div>
+            <p class="num">03 &mdash; The mark</p>
+            <h2>One clean outline b.</h2>
+            <p class="sub">In the white theme the b is drawn as a single outline: the stem and the bowl are joined into one shape, and the hole in the middle is its own ring. No lines cross inside it. It sits on a white app tile to match.</p>
+          </div>
+          <div class="marks">
+            <div class="bigb"><svg viewBox="0 0 104 124" role="img" aria-label="Outline b mark"><use href="#b-outline" /></svg><small>Outline b</small></div>
+            <div><div class="tile"><svg viewBox="0 0 104 124" role="img" aria-label="White app tile"><use href="#b-outline" /></svg></div><small>White app tile</small></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="status">
+        <div class="wrapx">
+          <p class="num">04 &mdash; What&rsquo;s live</p>
+          <h2>Status.</h2>
+          <ul class="status">
+            <li><span class="pill live">Live</span><span><b>Theme picker</b> with gold, dark, mono, duo and tri colour schemes.</span></li>
+            <li><span class="pill soon">Coming</span><span><b>White paper theme</b> in the next app release (the change is in progress).</span></li>
+            <li><span class="pill soon">Coming</span><span><b>White card art set</b>: plain paper, the washed-out wave and more.</span></li>
+            <li><span class="pill soon">Coming</span><span><b>More pure-colour themes.</b></span></li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="how">
+        <div class="wrapx">
+          <p class="num">05 &mdash; How to change it</p>
+          <h2>Three taps.</h2>
+          <div class="steps"><span>Wallet</span><em>&rsaquo;</em><span>&#9776;</span><em>&rsaquo;</em><span>Theme</span></div>
+          <p class="sub">Open your wallet, tap the menu at the top left, then Theme. Pick app colours, then design your card. See also <a href="/bavatars">bAvatars</a> for your profile art.</p>
+          <div class="cta"><a class="pri" href="/get">Get bWalletX</a><a class="sec" href="https://web.bwalletx.com" target="_blank" rel="noopener">Open the web wallet</a></div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="foot">
+      <div class="wrap foot-in">
+        <a class="brand" href="/"><img src="/logo.svg" alt="" width="27" height="24" /><span>bWallet<span class="gold">X</span></span></a>
+        <p>By The Bitcoin Corporation Ltd.</p>
+        <p><a href="https://x.com/bWalletX" target="_blank" rel="noopener">@bWalletX on X</a> · <a href="https://bwalletx.com/twetch" target="_blank" rel="noopener">Twetch</a> · <a href="/privacy.html">Privacy policy</a></p>
+      </div>
+    </footer>
+  </body>
+</html>

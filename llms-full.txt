@@ -615,7 +615,7 @@ bWalletX is in beta: test with small amounts. Questions: [support@bwalletx.com](
 Source: https://bwalletx.com/bshares
 
 # bShares.
-Your company, on chain.
+Any company’s register, on chain.
 
 A register of members, kept by the company. Shares issued as tokens, approved by your directors, and locked in each holder’s wallet so the company and the holder both have a say.
 
@@ -1985,7 +1985,7 @@ Planned: as the people in your contacts join, they’ll be matched to their paym
 
 - ComingImport the people you follow on X: planned.
 
-- ComingContacts auto-match to paymails as friends join: planned.
+- ComingContacts auto-match to paymails as friends join: built, arrives in the next app release.
 
 Related: [bSpaces](https://bwalletx.com/bspaces) · [bMail](https://bwalletx.com/bmail) · [Airdrops](https://bwalletx.com/airdrops) · [Friends](https://bwalletx.com/friends) · [Sign in with X](https://bwalletx.com/x)
 
@@ -4893,6 +4893,124 @@ Want to buy BSV with a card instead? See [Buy BSV](https://bwalletx.com/buy).
 [Get bWalletX](https://bwalletx.com/get)
 
 bWalletX is in beta: test with small amounts. Questions: [support@bwalletx.com](mailto:support@bwalletx.com)
+
+---
+
+Source: https://bwalletx.com/themes
+
+Themes
+
+# Make bWallet yours.
+
+Pick the colours of the app and the art on your card. Here is the new white “paper” theme: black type, thin lines and lots of room.
+
+[How to change it](#how)[Get bWalletX](https://bwalletx.com/get)
+
+you@bwalletx.com
+
+$656.32
+
+3,509,735,414 sats
+
+19McRWSz9i8…2dUa39S
+
+BSV
+
+01 — App colours
+
+## One tap changes the whole app.
+
+A theme sets the colour of every screen: buttons, cards, the menu bar. Gold is the default. White is new. More pure colours are on the way.
+
+### White Coming
+
+Paper: off-white, black type, hairlines.
+
+### Gold Live
+
+The default. Gold on black.
+
+### Dark Live
+
+Quiet black for night use.
+
+### Pure colours Coming
+
+Red, blue, green, violet and more.
+
+02 — Design your card
+
+## Your card, your art.
+
+The card at the top of your wallet can carry any art you like. The white set keeps it minimal: a white card, black type, and art washed back so your balance stays easy to read. The wave is Hokusai’s Great Wave off Kanagawa (1831), which is in the public domain.
+
+you@bwalletx.com
+
+$42.00
+
+225,000,000 sats
+
+1BwX…paper
+
+BSV
+
+Plain paperNothing but your name and balance.
+
+you@bwalletx.com
+
+$42.00
+
+225,000,000 sats
+
+1BwX…wave
+
+BSV
+
+The Great Wave, washed outPublic-domain Hokusai, faded to a whisper.
+
+you@bwalletx.com
+
+$42.00
+
+225,000,000 sats
+
+1BwX…grid
+
+BSV
+
+ModernistA circle and three hairlines.
+
+03 — The mark
+
+## One clean outline b.
+
+In the white theme the b is drawn as a single outline: the stem and the bowl are joined into one shape, and the hole in the middle is its own ring. No lines cross inside it. It sits on a white app tile to match.
+
+Outline b
+
+White app tile
+
+04 — What’s live
+
+## Status.
+
+- LiveTheme picker with gold, dark, mono, duo and tri colour schemes.
+
+- ComingWhite paper theme in the next app release (the change is in progress).
+
+- ComingWhite card art set: plain paper, the washed-out wave and more.
+
+- ComingMore pure-colour themes.
+
+05 — How to change it
+
+## Three taps.
+
+Wallet›☰›Theme
+
+Open your wallet, tap the menu at the top left, then Theme. Pick app colours, then design your card. See also [bAvatars](https://bwalletx.com/bavatars) for your profile art.
+
+[Get bWalletX](https://bwalletx.com/get)[Open the web wallet](https://web.bwalletx.com)
 
 ---
 
