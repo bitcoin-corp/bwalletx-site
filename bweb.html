@@ -47,6 +47,7 @@
       .rules > div { border: 1px solid #ffffff14; border-radius: 14px; padding: 4px 18px; }
       .note { display: inline-block; font-size: 0.72rem; font-weight: 600; border-radius: 999px; padding: 2px 10px; vertical-align: middle; margin-left: 6px; background: #2a2b31; color: #c9ced8; }
       .note.live { background: #F5B800; color: #1a1300; }
+      ul.status { list-style: none; padding: 0; } ul.status li { margin: 8px 0; } ul.status .chip { margin-right: 8px; }
       table.tbl { width: 100%; border-collapse: collapse; font-size: 0.9rem; }
       table.tbl th, table.tbl td { text-align: left; padding: 8px 8px; border-top: 1px solid #ffffff14; vertical-align: top; }
       .shot { display: flex; gap: 18px; flex-wrap: wrap; align-items: flex-start; }
@@ -72,8 +73,22 @@
     <script src="/nav.js"></script>
         <main class="ext">
       <img src="/logo.svg" alt="bWalletX" width="72" height="64" />
-      <h1>bWeb: your web on bitcoin <span class="note">Coming</span></h1>
-      <p class="lede">bWeb is a plan, not a product yet. Nothing on this page is built. Here is the idea: you start in bWalletX, and your <a href="/bapps">bApps</a> become yours. You choose how they look and what they show, and when you want more, agents like b build it for you. You pay in small amounts, from your wallet, only after you approve.</p>
+      <h1>bWeb: your web on bitcoin <span class="note live">First settings live</span></h1>
+      <p class="lede">The first part of bWeb is live: a bWeb page in bWalletX Settings and optional Ask b add-ons. The rest is still a plan, and the list below says exactly what works today. Here is the idea: you start in bWalletX, and your <a href="/bapps">bApps</a> become yours. You choose how they look and what they show, and when you want more, agents like b build it for you. You pay in small amounts, from your wallet, only after you approve.</p>
+
+      <h2>What works today</h2>
+      <ul class="status">
+        <li><span class="chip c-live">Live</span> Settings › bWeb in bWalletX: choose which bApps show in your desktop dock</li>
+        <li><span class="chip c-live">Live</span> Choose which bApps show in the Feed's bApps reel</li>
+        <li><span class="chip c-live">Live</span> What b can see: switch off telling b the screen you're on; choose whether b knows your bWeb setup</li>
+        <li><span class="chip c-live">Live</span> Linked identities: open your Identity map from bWeb</li>
+        <li><span class="chip c-live">Live</span> Ask b add-ons, each with its own switch: Names, Exchange search, bMail drafting, Feed summaries. No extra charge: each message costs your normal Ask b price</li>
+        <li><span class="chip c-live">Live</span> Your bWeb settings stay on your phone, and apps never see them</li>
+        <li><span class="chip c-coming">Coming</span> Your home page and default search</li>
+        <li><span class="chip c-coming">Coming</span> Settings encrypted to you and synced between your devices</li>
+        <li><span class="chip c-coming">Coming</span> Paid add-ons b builds for you (price shown first, approved in your wallet)</li>
+        <li><span class="chip c-coming">Coming</span> Your own version of a bApp on its own web address</li>
+      </ul>
 
       <h2>Three ways to make it yours</h2>
       <div class="rules">
