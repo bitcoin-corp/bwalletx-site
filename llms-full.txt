@@ -318,85 +318,33 @@ bWalletX is in beta: test with small amounts. [support@bwalletx.com](mailto:supp
 
 Source: https://bwalletx.com/b-creative
 
-SHEET B-C / 01SCALE 1:1
+b creative
 
-# b creative.
+-
 
-Your token, your colours, your wallet. Make it yours.
+-
 
-EXAMPLE THEMES · INVENTED COINS, FOR FUN
+-
 
-01 / 05  Your token, your wallet
+-
 
-## Bring your people home.
+-
 
-Promoting a token, or building a product or a business on chain? Give your community a wallet that looks like you, says your name, and opens on your token.
+-
 
-A
+▶  Play with sound
 
-### Your look
+## Make it yours.
 
-Your colours, art and card, from the first screen.
+Free themes for everyone, artist editions, and branded editions for your token or business from $99.
 
-B
-
-### Your token first
-
-The balance your people care about, front and centre.
-
-C
-
-### Still bWalletX
-
-The same calm, self-custody wallet underneath.
-
-02 / 05  Free for everyone
-
-## Free themes, in bWalletX.
-
-Everyone gets the quiet white sheet, the paper colours and the artist editions. Pick one in Settings › Theme.
-
-WhitePinkBlueYellowVexVoidNPGNPGX
-
-[See the themes](https://bwalletx.com/themes)
-
-03 / 05  Branded editions
-
-## An edition of your own.
-
-We design a theme around your brand or token: colours, card art, name. Your holders install it and feel at home.
-
-$99Branded editions from
-
-[How editions work](https://bwalletx.com/themes/custom)
-
-04 / 05  Business agents
-
-## An agent that runs the room.
-
-For businesses on chain: an agent that welcomes your people, answers questions and keeps your token’s room going.
-
-[Business agents](https://bwalletx.com/business-agents)
-
-05 / 05  What’s live
-
-## Where things stand.
-
-- LiveFree themes and artist editions, in bWalletX
-
-- LiveBranded editions, ordered by message
-
-- ComingOrder your edition inside the wallet
-
-- ComingBusiness agents
-
-## Order your edition.
-
-[Order your edition](https://bwalletx.com/themes/custom)
-[Message us on bChatX](https://www.bchatx.com/u/bwalletx)
-[Message @bWalletX on X](https://x.com/bWalletX)
+[Order your edition](https://bwalletx.com/themes/custom)[See all themes](https://bwalletx.com/themes)
 
 Less noise. More life. Just b.
+
+[just b](https://bwalletx.com/just-b) · [b cool](https://bwalletx.com/b-cool) · [b creative](https://bwalletx.com/b-creative)
+
+Example coins are invented. Music is generated live in your browser. Share-image emoji: [Twemoji](https://github.com/jdecked/twemoji), CC-BY 4.0. [support@bwalletx.com](mailto:support@bwalletx.com)
 
 ---
 
@@ -3885,11 +3833,11 @@ Free
 
 🐸
 
-🐸$FROG wallet
+🐸$FROG wallet · Ribbit.
 
-Ribbit.
+$1,284.50
 
-Example: a frog wallet for a frog coin
+4,200,000 FROG
 
 wallet.yourcoin.com
 
@@ -5352,7 +5300,7 @@ Source: https://bwalletx.com/themes
 
 0102030405060708090100110120130140150160170180190200210220230240250260270280290300310320330340350360370380390
 
-Themes Sheet 00 / 05
+Themes Sheet 00 / 08
 
 # Make bWallet yours.
 
@@ -5390,7 +5338,7 @@ Date16.10.2026
 
 DrawnbWalletX
 
-01 / 05  App colours
+01 / 08  App colours
 
 ## One tap changes the whole app.
 
@@ -5456,7 +5404,51 @@ The wild one: black and red, hard glitch.
 
 Hover (or tap) a card to preview this page in that theme · use its links to open the page or install
 
-02 / 05  Design your card
+02 / 08  Your token, your wallet
+
+## Bring your people home.
+
+Promoting a token, or building a product or a business on chain? Give your community a wallet that looks like you, says your name, and opens on your token.
+
+EXAMPLE EDITIONS · INVENTED COINS, FOR FUN
+
+A
+
+### Your look
+
+Your colours, art and card, from the first screen.
+
+B
+
+### Your token first
+
+The balance your people care about, front and centre.
+
+C
+
+### Still bWalletX
+
+The same calm, self-custody wallet underneath.
+
+03 / 08  Branded editions
+
+## An edition of your own.
+
+We design a theme around your brand or token: colours, card art, name. Your holders install it and feel at home. Order by message today; ordering inside the wallet is coming.
+
+$99Branded editions from
+
+[Order your edition](https://bwalletx.com/themes/custom)[Message us on bChatX](https://www.bchatx.com/u/bwalletx)[Message @bWalletX on X](https://x.com/bWalletX)
+
+04 / 08  Business agents
+
+## An agent that runs the room.
+
+For businesses on chain: an agent that welcomes your people, answers questions and keeps your token’s room going.
+
+[Business agents](https://bwalletx.com/business-agents)
+
+05 / 08  Design your card
 
 ## Your card, your art.
 
@@ -5504,7 +5496,7 @@ BSV
 
 ModernistA circle and three hairlines.
 
-03 / 05  The mark
+06 / 08  The mark
 
 ## One clean outline b.
 
@@ -5518,7 +5510,7 @@ Outline b
 
 White app tile
 
-04 / 05  What’s live
+07 / 08  What’s live
 
 ## Status.
 
@@ -5554,7 +5546,13 @@ White app tile
 
 - ComingPink, Blue, Yellow, VexVoid, NPG and NPGX installs: no install button until each pack ships.
 
-05 / 05  How to change it
+- LiveBranded editions from $99, ordered by message ([/themes/custom](https://bwalletx.com/themes/custom)).
+
+- ComingOrder your edition inside the wallet.
+
+- ComingBusiness agents ([/business-agents](https://bwalletx.com/business-agents)).
+
+08 / 08  How to change it
 
 ## Three taps.
 

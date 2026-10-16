@@ -249,6 +249,24 @@
         .construct .ann, .ruler span, .tblock .opt { display: none; }
         .tblock { grid-template-columns: 1fr 1fr; }
       }
+      /* Sheets 02-04 (from /b-creative, 16 Oct 2026): token owners, branded editions, business agents. */
+      .bcx-stage { position: relative; height: clamp(300px, 50vw, 500px); margin: 40px auto 0; max-width: 900px; }
+      .bcx { --c: #6fdc8c; --t: #0c2a12; position: absolute; left: 50%; top: 50%; width: clamp(200px, 32vw, 320px); aspect-ratio: 1.586; border-radius: 18px; box-sizing: border-box; background: linear-gradient(140deg, color-mix(in srgb, var(--c) 82%, #fff), var(--c)); color: var(--t); border: 1px solid #111; box-shadow: 0 18px 40px rgba(17,17,17,.16); padding: 6% 7%; display: flex; flex-direction: column; justify-content: space-between; transform: translate(-50%, -50%) rotate(var(--r, 0deg)) translateX(var(--x, 0)) translateY(var(--y, 0)) scale(var(--s, 1)); z-index: var(--z, 1); transition: transform 1.1s cubic-bezier(.2,.8,.2,1); font-family: var(--hf); }
+      .bcx .t { display: flex; justify-content: space-between; font: 500 clamp(.55rem, 1.2vw, .7rem) var(--mono); letter-spacing: .14em; text-transform: uppercase; opacity: .8; }
+      .bcx .r { display: flex; justify-content: space-between; align-items: flex-end; }
+      .bcx .v { font: 700 clamp(1.2rem, 2.8vw, 1.8rem) / 1 var(--hf); letter-spacing: -0.02em; }
+      .bcx .b { font: 400 clamp(.6rem, 1.3vw, .78rem) var(--mono); opacity: .75; margin-top: 6px; }
+      .bcx .e { font-size: clamp(2.4rem, 5.6vw, 3.8rem); line-height: 1; }
+      .bcx-note { margin: 70px 0 0; text-align: center; font: 400 .7rem var(--mono); letter-spacing: .12em; color: var(--muted); }
+      .bcx-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); margin-top: 36px; border-top: .5px solid var(--ink); border-left: .5px solid var(--ink); }
+      .bcx-grid > div { border-right: .5px solid var(--ink); border-bottom: .5px solid var(--ink); background: var(--sheet); padding: 22px; }
+      .bcx-grid .sno { font: 400 .66rem var(--mono); letter-spacing: .14em; color: var(--dim); margin: 0 0 10px; }
+      .bcx-grid p:last-child { margin: 6px 0 0; color: var(--muted); }
+      @media (max-width: 760px) { .bcx-grid { grid-template-columns: 1fr; } }
+      .bcx-price { display: inline-flex; align-items: baseline; gap: 10px; margin-top: 28px; padding: 14px 18px; border: 1px solid var(--ink); background: var(--sheet); }
+      .bcx-price b { font: 700 2.2rem var(--hf); letter-spacing: -0.03em; color: var(--ink); }
+      .bcx-price span { font: 400 .72rem var(--mono); letter-spacing: .12em; color: var(--muted); text-transform: uppercase; }
+      @media (prefers-reduced-motion: reduce) { .bcx { transition: none; } }
     </style>
   </head>
   <body class="paper">
@@ -294,7 +312,7 @@
         <canvas class="vxbg" id="vxbg" aria-hidden="true"></canvas><canvas class="slop" id="slop" aria-hidden="true"></canvas>
         <div class="wrapx split">
           <div>
-            <p class="num">Themes <b>Sheet 00 / 05</b></p>
+            <p class="num">Themes <b>Sheet 00 / 08</b></p>
             <h1>Make bWallet yours.</h1>
             <p class="lede"><span class="plede">Pick the colours of the app and the art on your card. Here are the paper themes: solid coloured paper, black ink, thin lines and lots of room.</span><span class="vxlede">An artist edition by VexVoid: black, white and moving, taken from their live AV set.</span><span class="npglede">The Ninja Punk Girls edition: hot-pink neon on black, cut up like the NPG live mix. Girls vs bots, on your wallet.</span><span class="npgxlede">NPGX: black and red, the red X and tech type, harder cuts and more motion. The wild one.</span><span class="glede">Gold: the bWalletX default. Gold ink on near-black, gold hairlines. Already in the app.</span><span class="dlede">Dark: neutral grey and white for night use. Already in the app.</span></p>
             <p class="vxcredit">Artist theme by <a href="https://bchatx.com/u/vexvoid" target="_blank" rel="noopener">VexVoid &middot; bTV: AIVJ</a></p>
@@ -326,7 +344,7 @@
 
       <section id="colours">
         <div class="wrapx">
-          <p class="num">01 / 05 &nbsp;App colours</p>
+          <p class="num">01 / 08 &nbsp;App colours</p>
           <h2>One tap changes the whole app.</h2>
           <p class="sub">A theme sets the colour of every screen: buttons, cards, the menu bar. Gold is the default. White is new. More pure colours are on the way.</p>
           <div class="themes">
@@ -348,9 +366,43 @@
         </div>
       </section>
 
+      <section id="your-token">
+        <div class="wrapx">
+          <p class="num">02 / 08 &nbsp;Your token, your wallet</p>
+          <h2>Bring your people home.</h2>
+          <p class="sub">Promoting a token, or building a product or a business on chain? Give your community a wallet that looks like you, says your name, and opens on your token.</p>
+          <div class="bcx-stage" id="bcx-stage" role="img" aria-label="A changing fan of example wallet editions for invented coins: FROG, DUCK, KOALA, ICECREAM, CAT, ROCKET, TACO and PIZZA"></div>
+          <p class="bcx-note">EXAMPLE EDITIONS &middot; INVENTED COINS, FOR FUN</p>
+          <div class="bcx-grid">
+            <div><p class="sno">A</p><h3>Your look</h3><p>Your colours, art and card, from the first screen.</p></div>
+            <div><p class="sno">B</p><h3>Your token first</h3><p>The balance your people care about, front and centre.</p></div>
+            <div><p class="sno">C</p><h3>Still bWalletX</h3><p>The same calm, self-custody wallet underneath.</p></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="editions">
+        <div class="wrapx">
+          <p class="num">03 / 08 &nbsp;Branded editions</p>
+          <h2>An edition of your own.</h2>
+          <p class="sub">We design a theme around your brand or token: colours, card art, name. Your holders install it and feel at home. Order by message today; ordering inside the wallet is coming.</p>
+          <div class="bcx-price"><b>$99</b><span>Branded editions from</span></div>
+          <div class="cta"><a class="pri" href="/themes/custom">Order your edition</a><a class="sec" href="https://www.bchatx.com/u/bwalletx" target="_blank" rel="noopener">Message us on bChatX</a><a class="sec" href="https://x.com/bWalletX" target="_blank" rel="noopener">Message @bWalletX on X</a></div>
+        </div>
+      </section>
+
+      <section id="agents">
+        <div class="wrapx">
+          <p class="num">04 / 08 &nbsp;Business agents</p>
+          <h2>An agent that runs the room.</h2>
+          <p class="sub">For businesses on chain: an agent that welcomes your people, answers questions and keeps your token&rsquo;s room going.</p>
+          <div class="cta"><a class="sec" href="/business-agents">Business agents</a></div>
+        </div>
+      </section>
+
       <section id="cards">
         <div class="wrapx">
-          <p class="num">02 / 05 &nbsp;Design your card</p>
+          <p class="num">05 / 08 &nbsp;Design your card</p>
           <h2>Your card, your art.</h2>
           <p class="sub">The card at the top of your wallet can carry any art you like. The white set keeps it minimal: a white card, black type, and art washed back so your balance stays easy to read. The wave is Hokusai&rsquo;s <em>Great Wave off Kanagawa</em> (1831), which is in the public domain.</p>
           <div class="cards">
@@ -387,7 +439,7 @@
       <section id="mark">
         <div class="wrapx split">
           <div>
-            <p class="num">03 / 05 &nbsp;The mark</p>
+            <p class="num">06 / 08 &nbsp;The mark</p>
             <h2>One clean outline b.</h2>
             <p class="sub">In the white theme the b is drawn as a single outline: the stem and the bowl are joined into one shape, and the hole in the middle is its own ring. No lines cross inside it. It sits on a white app tile to match.</p>
           </div>
@@ -418,7 +470,7 @@
 
       <section id="status">
         <div class="wrapx">
-          <p class="num">04 / 05 &nbsp;What&rsquo;s live</p>
+          <p class="num">07 / 08 &nbsp;What&rsquo;s live</p>
           <h2>Status.</h2>
           <ul class="status">
             <li><span class="pill live">Live</span><span><b>Theme picker</b> with gold, dark, mono, duo and tri colour schemes.</span></li>
@@ -437,13 +489,16 @@
             <li><span class="pill soon">Coming</span><span><b>Pink, Blue and Yellow</b>: preview only &mdash; in-app theme coming.</span></li>
             <li><span class="pill live">Live</span><span><b>White edition install</b>: add the white web wallet to your home screen from <a href="https://web.bwalletx.com/white">web.bwalletx.com/white</a>.</span></li>
             <li><span class="pill soon">Coming</span><span><b>Pink, Blue, Yellow, VexVoid, NPG and NPGX installs</b>: no install button until each pack ships.</span></li>
+            <li><span class="pill live">Live</span><span><b>Branded editions</b> from $99, ordered by message (<a href="/themes/custom">/themes/custom</a>).</span></li>
+            <li><span class="pill soon">Coming</span><span><b>Order your edition inside the wallet.</b></span></li>
+            <li><span class="pill soon">Coming</span><span><b>Business agents</b> (<a href="/business-agents">/business-agents</a>).</span></li>
           </ul>
         </div>
       </section>
 
       <section id="how">
         <div class="wrapx">
-          <p class="num">05 / 05 &nbsp;How to change it</p>
+          <p class="num">08 / 08 &nbsp;How to change it</p>
           <h2>Three taps.</h2>
           <div class="steps"><span>Wallet</span><em>&rsaquo;</em><span>&#9776;</span><em>&rsaquo;</em><span>Theme</span></div>
           <p class="sub">Open your wallet, tap the menu at the top left, then Theme. Pick app colours, then design your card. See also <a href="/bavatars">bAvatars</a> for your profile art.</p>
@@ -600,6 +655,23 @@
         });
         window.addEventListener('popstate', function () { select(fromPath()); });
         select(sel);
+      })();
+    </script>
+    <script>
+      // Sheet 02: invented coins fan out; every few seconds the next flips to the front. Static under reduced motion.
+      (function () {
+        var coins = [['FROG','🐸','#6fdc8c','#0c2a12','1,284.50','4,200,000'],['DUCK','🦆','#ffd84d','#3a2c00','642.10','1,850,000'],['KOALA','🐨','#a77b5a','#fff6ec','2,019.75','7,300,000'],['ICECREAM','🍦','#ff8fbf','#2b2140','318.40','960,000'],['CAT','🐱','#b39cff','#1d1340','877.25','2,640,000'],['ROCKET','🚀','#7cc7ff','#0a2235','4,150.00','12,500,000'],['TACO','🌮','#ffb347','#3a1e00','96.80','410,000'],['PIZZA','🍕','#ff6b5a','#fff4ee','1,512.30','5,080,000']];
+        var stage = document.getElementById('bcx-stage'); if (!stage) return;
+        var cards = coins.map(function (c) { var el = document.createElement('div'); el.className = 'bcx'; el.style.setProperty('--c', c[2]); el.style.setProperty('--t', c[3]);
+          el.innerHTML = '<div class="t"><span>$' + c[0] + '</span><span>Edition</span></div><div class="r"><div><div class="v">$' + c[4] + '</div><div class="b">' + c[5] + ' ' + c[0] + '</div></div><div class="e">' + c[1] + '</div></div>'; stage.appendChild(el); return el; });
+        var n = cards.length, front = 0;
+        function lay() { var nw = innerWidth < 620, spread = nw ? 9 : 8, step = nw ? 8 : 6;
+          cards.forEach(function (el, i) { var k = (i - front + n) % n, side = k === 0 ? 0 : (k % 2 ? 1 : -1) * Math.ceil(k / 2);
+            el.style.setProperty('--r', side * spread + 'deg'); el.style.setProperty('--x', side * step + 'vw'); el.style.setProperty('--y', Math.abs(side) * 4 + 'px'); el.style.setProperty('--s', k === 0 ? 1.04 : 1 - Math.abs(side) * 0.05); el.style.setProperty('--z', 20 - k); }); }
+        lay(); addEventListener('resize', lay);
+        if (window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+        var paused = false; stage.addEventListener('mouseenter', function () { paused = true; }); stage.addEventListener('mouseleave', function () { paused = false; });
+        setInterval(function () { if (!paused && !document.hidden) { front = (front + 1) % n; lay(); } }, 2600);
       })();
     </script>
   </body>
