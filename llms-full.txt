@@ -3386,7 +3386,7 @@ bWalletX is in beta: test with small amounts. Questions: [support@bwalletx.com](
 
 ---
 
-Source: https://bwalletx.com/restore-simplycash
+Source: https://bwalletx.com/sweep-simplycash
 
 Restore
 

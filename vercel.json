@@ -88,6 +88,11 @@
       "permanent": false
     },
     {
+      "source": "/restore-simplycash",
+      "destination": "/sweep-simplycash",
+      "permanent": true
+    },
+    {
       "source": "/room/:path*",
       "destination": "https://www.bchatx.com/room/:path*",
       "permanent": false
