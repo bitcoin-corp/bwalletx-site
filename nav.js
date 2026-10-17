@@ -21,7 +21,7 @@
     // dropdowns. Phones: a Menu button with one accordion per section. The current section's pages also show
     // as a pill row under the bar.
     full: [
-      { label: 'Wallet', href: '/features', pages: ['/names', '/features', '/subscriptions', '/pots', '/lock', '/lock/verify', '/token-locking', '/restore', '/history', '/identity', '/handles', '/bavatars', '/themes', '/themes/custom', '/business-agents', '/sms', '/nfts', '/swap', '/mint', '/get', '/download', '/android', '/iphone', '/extension', '/push-notifications', '/testers', '/privacy'],
+      { label: 'Wallet', href: '/features', pages: ['/names', '/name-bindings', '/features', '/subscriptions', '/pots', '/lock', '/lock/verify', '/token-locking', '/restore', '/history', '/identity', '/handles', '/bavatars', '/themes', '/themes/custom', '/business-agents', '/sms', '/nfts', '/swap', '/mint', '/get', '/download', '/android', '/iphone', '/extension', '/push-notifications', '/testers', '/privacy'],
         sub: [
           { label: 'Features', href: '/features' },
           { label: 'Subscriptions', href: '/subscriptions' },
@@ -33,6 +33,7 @@
           { label: 'Identity', href: '/identity' },
           { label: 'Handles', href: '/handles' },
           { label: 'Names', href: '/names' },
+          { label: 'Signed names', href: '/name-bindings' },
           { label: 'bAvatars', href: '/bavatars' },
           { label: 'Themes', href: '/themes' },
           { label: 'Custom editions', href: '/themes/custom' },

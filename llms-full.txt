@@ -10808,6 +10808,10 @@ How bWallet and bWalletX were built, one chapter at a time. Every post is writte
 
 Newest first. Dates come from commits. bWallet is a fork of [Yours Wallet](https://github.com/yours-org/yours-wallet) (MIT licence).
 
+- 058 · 17 Oct 2026
+[We could move your name. Now you can see if we do.](https://bwalletx.com/blog/058-signed-names)
+A bWalletX name is a row in our database, so we could point it at another key. On 17 Oct we did, for the owner’s own names. Now names are signed by their owners, and every change goes in a public log.
+
 - 057 · 15 Oct 2026
 [Sign in with HandCash, and invites with tokens](https://bwalletx.com/blog/057-handcash-and-invites)
 New accounts can now start with HandCash as well as X. Your HandCash handle carries over as name@bwalletx.com, your friends can come with you, and invites with tokens bring people into Spaces.

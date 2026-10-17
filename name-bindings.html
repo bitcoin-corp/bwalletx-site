@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Signed names and the public name log · bWalletX</title>
+    <link rel="canonical" href="https://bwalletx.com/name-bindings" />
+    <meta name="description" content="A bWalletX name is a row in our database. Now each name is signed by the wallet that owns it, every wallet checks that before paying, and every change of who a name points to goes in a public log anyone can read." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://bwalletx.com/name-bindings" />
+    <meta property="og:site_name" content="bWalletX" />
+    <meta property="og:title" content="Names you can check: bWalletX" />
+    <meta property="og:description" content="A bWalletX name is a row in our database. Now each name is signed by the wallet that owns it, every wallet checks that before paying, and every change of who a name points to goes in a public log anyone can read." />
+    <meta property="og:image" content="https://bwalletx.com/og-name-bindings-v1.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="A bWalletX name is a row in our database. Now each name is signed by the wallet that owns it, every wallet checks that before paying, and every change of who a name points to goes in a public log anyone can read." />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@bWalletX" />
+    <meta name="twitter:title" content="Names you can check: bWalletX" />
+    <meta name="twitter:description" content="A bWalletX name is a row in our database. Now each name is signed by the wallet that owns it, every wallet checks that before paying, and every change of who a name points to goes in a public log anyone can read." />
+    <meta name="twitter:image" content="https://bwalletx.com/og-name-bindings-v1.png" />
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="stylesheet" href="/styles.css" />
+    <style>
+      .ext h1 { font-size: clamp(2.2rem, 6vw, 3.4rem); margin: 18px 0 10px; }
+      .ext h2 { margin: 48px 0 8px; font-size: 1.5rem; }
+      .ext p, .ext li { line-height: 1.7; }
+      .ext .small { color: #8a8a86; font-size: 0.85rem; }
+      .ext .row { display: flex; gap: 12px; flex-wrap: wrap; margin: 26px 0; }
+      .ggrid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 230px), 1fr)); gap: 14px; margin: 18px 0; }
+      .gcard { display: block; background: #101114; border: 1px solid #ffffff12; border-radius: 16px; padding: 14px 16px; color: inherit; text-decoration: none; min-width: 0; }
+      .gcard:hover { border-color: #F5B80066; }
+      .gcard h3 { margin: 0 0 4px; font-size: 1.05rem; }
+      .gcard p { margin: 0; color: #a7adb8; font-size: 0.92rem; line-height: 1.5; }
+      .feat { list-style: none; padding: 0; margin: 18px 0; }
+      .feat li { display: flex; gap: 12px; align-items: baseline; padding: 12px 0; border-bottom: 1px solid #ffffff10; }
+      .tag { flex: none; font-size: 0.75rem; font-weight: 700; padding: 2px 9px; border-radius: 999px; }
+      .tag.live { background: #F5B800; color: #000; }
+      .ext pre { background: #101114; border: 1px solid #ffffff12; border-radius: 12px; padding: 14px 16px; overflow-x: auto; font-size: 0.85rem; line-height: 1.5; }
+      .ext code { background: #17191e; padding: 2px 6px; border-radius: 6px; overflow-wrap: anywhere; }
+      .ext pre code { background: none; padding: 0; overflow-wrap: normal; }
+      .box { background: #101114; border: 1px solid #ffffff12; border-radius: 16px; padding: 18px 22px; margin: 28px 0; }
+      .ext h3 { margin: 26px 0 6px; font-size: 1.1rem; }
+      .tag.soon { border: 1px solid #ffffff40; color: #a7adb8; }
+    </style>
+  </head>
+  <body>
+    <div class="beta-banner">bWalletX is in <strong>beta</strong>: test with small amounts.</div>
+    <header class="topbar">
+      <div class="wrap topbar-in">
+        <a class="brand" href="/"><img src="/logo.svg" alt="" width="34" height="30" /><span>bWallet<span class="gold">X</span></span></a>
+        <nav aria-label="Pages">
+          <a href="/features">Features</a><a href="/exchange">Exchange</a><a href="/social">Social</a><a href="/agent">Agents</a><a href="/extension">Extension</a><a href="/developers">Developers</a>
+        </nav>
+        <span class="nav-cta"><a class="dl-btn" href="/get">Download</a><a class="web-btn" href="https://web.bwalletx.com" target="_blank" rel="noopener">Web &rarr;</a></span>
+      </div>
+    </header>
+    <script src="/nav.js"></script>
+    <main class="ext">
+      <h1>Names you can check. <span class="gold">Even against us.</span></h1>
+      <p class="lede">Your bWalletX name is signed by your own wallet. Every wallet checks that signature before it pays. And every change to who a name points to goes in a public log that anyone can read, including changes we make ourselves.</p>
+      <div class="row"><a class="btn btn-store" href="/get">Get bWalletX</a><a class="btn btn-ghost" href="https://pay.bwallet.space/api/paymail/name-log" target="_blank" rel="noopener">Read the name log &rarr;</a></div>
+
+      <h2>What a name is</h2>
+      <p>A bWalletX name is <code>alice@bwalletx.com</code>, or <code>$alice</code> for short. It points to one wallet&rsquo;s identity key. When someone pays <code>$alice</code>, their wallet asks our name server which key the name points to, then pays that key directly.</p>
+      <p>We never hold your keys or your coins. Payments go wallet to wallet. But the name itself is a row in our database.</p>
+
+      <h2>The risk, plainly</h2>
+      <p>Whoever controls the name directory could point a name at a different key. Payments already made are safe. But future payments to that name would go to the new key. That is a real power, and we hold it. On 17 October 2026 we used it: at the owner&rsquo;s request we moved two of his own names between his own two wallets by editing the database directly. Nobody lost anything. But it showed how easy it was, and that nobody else could have seen it. So we built limits, and we made every use of the power public. The story is in <a href="/blog/058-signed-names">blog 058</a>.</p>
+
+      <h2>Three layers</h2>
+      <h3>1. Signed bindings</h3>
+      <p>The wallet that owns a name signs a short statement: &ldquo;this name points to my key, version N&rdquo;. Our name server hands that signature out with the key. We can&rsquo;t make that signature for a key we don&rsquo;t hold. Before every payment to a bWalletX name, the paying wallet checks it and shows one of three things:</p>
+      <ul>
+        <li><b>Signed by its owner.</b> The key&rsquo;s holder put this name on this key.</li>
+        <li><b>Not signed by its owner yet.</b> A grey note. The payment still works. Wallets sign their names when they next open, so this fades out.</li>
+        <li><b>Bad signature.</b> The signature doesn&rsquo;t match. The payment is blocked.</li>
+      </ul>
+      <h3>2. A public name log</h3>
+      <p>Every change of who a name points to is written to a log. Each entry includes the hash of the one before, so entries can&rsquo;t be quietly changed or removed. A database trigger writes the entries, so a direct database edit by us is logged too, marked <code>admin</code>. The first three entries are exactly that: our own edits on 17 October.</p>
+      <p>Each entry says who made the change: <code>owner</code> (the name&rsquo;s owner signed it), <code>server</code> (our server made it for a request the owner signed) or <code>admin</code> (anything else, which means us).</p>
+      <h3>3. On chain (coming)</h3>
+      <p>Next, the log&rsquo;s latest hash goes into a Bitcoin transaction once a day, so the log can&rsquo;t be rewritten after the fact. And for names that must never depend on us at all, there are <a href="/names">OpNS names</a>: names held on chain, in your own wallet.</p>
+
+      <h2>Standing on others&rsquo; work</h2>
+      <p>We did not invent signed names. Others got there first, and we are building toward their work:</p>
+      <ul>
+        <li><a href="https://github.com/bsv-blockchain/BRCs/blob/master/peer-to-peer/0169.md" target="_blank" rel="noopener">BRC-169</a> binds a handle to a key with a certificate signed by the host, and tells wallets to warn before paying when a name&rsquo;s key changes. Ours is signed by the owner instead, and fits inside ordinary paymail. Our wallet now has that key-change warning too.</li>
+        <li><a href="https://github.com/bsv-blockchain/BRCs/blob/master/tokens/0174.md" target="_blank" rel="noopener">BRC-174</a> is the formal spec for on-chain names (OpNS) bound to a key. That is where bWalletX names are headed.</li>
+        <li>The <a href="https://tsc.bsvblockchain.org/standards/paymail/" target="_blank" rel="noopener">paymail standard</a> already names this risk: &ldquo;Alias Reassignment (server &amp; database access)&rdquo;.</li>
+        <li><a href="https://www.rfc-editor.org/rfc/rfc9162" target="_blank" rel="noopener">Certificate Transparency</a> showed how public, append-only logs keep operators honest. Our log is a simple version of that idea.</li>
+      </ul>
+      <p>What we add is small: the owner&rsquo;s signature inside the paymail answer that wallets already fetch, and a log that records our own database edits.</p>
+
+      <h2>Check a name yourself</h2>
+      <p>You don&rsquo;t need our app. Ask the name server for a name&rsquo;s key and binding:</p>
+<pre><code>curl https://pay.bwallet.space/api/paymail/id/npg@bwalletx.com</code></pre>
+      <p>The answer has <code>pubkey</code> and, once the owner&rsquo;s wallet has signed, a <code>binding</code> with <code>alias</code>, <code>seq</code>, <code>timestamp</code> and <code>signature</code>. Read the log, whole or for one name:</p>
+<pre><code>curl https://pay.bwallet.space/api/paymail/name-log
+curl "https://pay.bwallet.space/api/paymail/name-log?alias=npg"</code></pre>
+      <p>Then check the signature with <code>@bsv/sdk</code>. The signed message is these fields, in this order:</p>
+<pre><code>bwallet-paymail|v1|bind|alias=&lt;alias&gt;|identityKey=&lt;key&gt;|seq=&lt;n&gt;|timestamp=&lt;ms&gt;</code></pre>
+<pre><code>import { ProtoWallet, Utils } from '@bsv/sdk';
+
+const r = await fetch('https://pay.bwallet.space/api/paymail/id/npg@bwalletx.com').then((x) =&gt; x.json());
+const b = r.binding; // undefined = not signed by its owner yet
+const msg = `bwallet-paymail|v1|bind|alias=${b.alias}|identityKey=${r.pubkey}|seq=${b.seq}|timestamp=${b.timestamp}`;
+const { valid } = await new ProtoWallet('anyone').verifySignature({
+  data: Utils.toArray(msg, 'utf8'),
+  signature: Utils.toArray(b.signature, 'hex'),
+  protocolID: [2, 'bwallet paymail'],
+  keyID: '1',
+  counterparty: r.pubkey,
+});
+console.log(valid ? 'Signed by its owner' : 'Bad signature');</code></pre>
+      <p class="small">The log&rsquo;s hash rule: <code>entry_hash = sha256(prev_hash|alias|identity_key|prev_identity_key|action|actor|seq|signature|note|created_at)</code>, with empty strings for missing fields and <code>created_at</code> in UTC as <code>YYYY-MM-DDTHH:MM:SS.ffffffZ</code>. The first entry&rsquo;s <code>prev_hash</code> is 64 zeros. The full write-up is in our <a href="https://github.com/bitcoin-corp/bwallet/blob/main/docs/brc-draft-paymail-name-bindings.md">draft standard</a>.</p>
+
+      <h2>The limits</h2>
+      <ul>
+        <li><b>We still serve the bindings and the log.</b> We could hold back a binding. The name would then show &ldquo;not signed&rdquo;, which you can see.</li>
+        <li><b>We could serve an older genuine binding.</b> Its version number would be lower than the one in the log, which you can see.</li>
+        <li><b>The log is in our database until it is anchored on chain.</b> The hash chain shows edits to past entries, but only once someone has kept a copy to compare. Keep one if you like.</li>
+        <li><b>A name with no binding yet</b> can&rsquo;t be checked by signature, only by the log.</li>
+      </ul>
+      <p>Only layer 3 takes us out of the picture. We will say so on this page until it ships.</p>
+
+      <div class="box">
+        <h2 style="margin-top:0">Status, 17 Oct 2026</h2>
+        <ul class="feat">
+<li><span class="tag live">&check; Live</span><span><b>Signed bindings.</b> Wallets sign their own names and check names before paying.</span></li>
+<li><span class="tag live">&check; Live</span><span><b>Bad signatures block payment.</b></span></li>
+<li><span class="tag live">&check; Live</span><span><b>Public name log.</b> Hash-chained, append-only, every change logged by the database itself, including ours.</span></li>
+<li><span class="tag live">&check; Live</span><span><b>Our 17 Oct edits in the log</b> as its first three entries, marked <code>admin</code>.</span></li>
+<li><span class="tag live">&check; Live</span><span><b>Handovers need both wallets.</b> A name moves only when its owner releases it and the new wallet accepts. No one, us included, can move it any other way.</span></li>
+<li><span class="tag live">&check; Live</span><span><b>No back door for lost keys.</b> A name stays with its key. Recovery is yours, set up in advance.</span></li>
+<li><span class="tag live">&check; Live</span><span><b>Key-change warning.</b> If a name you&rsquo;ve paid before points somewhere new without a handover, Send stops.</span></li>
+<li><span class="tag live">&check; Live</span><span><b>Proposed to the BRC authors</b> in <a href="https://github.com/bsv-blockchain/BRCs/issues/329" target="_blank" rel="noopener">BRCs issue #329</a>.</span></li>
+<li><span class="tag soon">&#9723; Coming</span><span><b>Daily on-chain anchor</b> of the log&rsquo;s latest hash.</span></li>
+<li><span class="tag soon">&#9723; Coming</span><span><b>OpNS names in the wallet</b> as the name that never depends on us.</span></li>
+        </ul>
+      </div>
+
+      <h2>Questions</h2>
+      <h3>Are you custodial?</h3>
+      <p>No. Your keys are made on your device and never reach us. We can&rsquo;t spend your coins or sign for you. The name directory is the one thing we control, and this page is about limiting it.</p>
+      <h3>Can you change my name?</h3>
+      <p>Technically, yes. Anyone who runs a name directory can. What we can&rsquo;t do is make your wallet&rsquo;s signature for a different key, or change past log entries without it showing to anyone who kept a copy. Once the daily anchor ships, it will show to everyone.</p>
+      <h3>What happens if you do?</h3>
+      <p>Payers&rsquo; wallets stop showing &ldquo;Signed by its owner&rdquo; for that name, because the new key has no signature from you. A forged signature blocks payment. And the change appears in the public log, with who made it.</p>
+      <h3>How does a name move to a new wallet properly?</h3>
+      <p>The old owner releases it, then the new wallet signs its own binding for the name. Both steps are in the log.</p>
+      <h3>Why not just use OpNS?</h3>
+      <p>We will, for names that matter most. OpNS names are held on chain in your wallet, so they don&rsquo;t depend on us at all. But a paymail like <code>alice@bwalletx.com</code> works with every paymail wallet today, and it&rsquo;s free and instant to claim. Signed bindings make that kind of name checkable while OpNS grows.</p>
+
+      <p class="related">Related: <a href="/names">Names</a> · <a href="/handles">Handles</a> · <a href="/identity">Identity</a> · <a href="/blog/058-signed-names">058 We could move your name</a></p>
+      <p class="small">bWalletX is in beta: test with small amounts. Questions: <a href="mailto:support@bwalletx.com">support@bwalletx.com</a></p>
+    </main>
+  </body>
+</html>
