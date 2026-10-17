@@ -50,6 +50,7 @@
       .steps li::before { content: counter(s); position: absolute; left: 0; top: 10px; width: 30px; height: 30px; border-radius: 50%; background: #F5B800; color: #000; font-weight: 700; display: flex; align-items: center; justify-content: center; font-size: 0.9rem; }
       .shots { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 220px), 1fr)); gap: 16px; margin: 22px 0; }
       .shot { margin: 0; }
+      .shot img { display: block; width: 100%; height: auto; border-radius: 26px; border: 1px solid #ffffff1f; }
       .shot .ph { aspect-ratio: 390 / 844; border-radius: 26px; border: 1px dashed #ffffff40; background: #101114; display: flex; align-items: center; justify-content: center; text-align: center; padding: 18px; color: #8a8a86; font-size: 0.85rem; }
       .shot figcaption { margin-top: 8px; color: #a7adb8; font-size: 0.85rem; text-align: center; }
       .feat { list-style: none; padding: 0; margin: 18px 0; }
@@ -105,23 +106,22 @@
         <li>Tap one to see it large: its number, collection, and the address that holds it.</li>
       </ol>
       <div class="shots">
-        <!-- TODO(screenshot): recover screen, word entry. Replace the .ph div with <img src="/relayx/shot-words.webp" …>. -->
-        <figure class="shot"><div class="ph">Screenshot: entering your RelayX words</div><figcaption>Your words stay on your phone.</figcaption></figure>
-        <!-- TODO(screenshot): gallery of found NFTs. -->
-        <figure class="shot"><div class="ph">Screenshot: your collections, found</div><figcaption>Grouped by collection, each girl by number.</figcaption></figure>
-        <!-- TODO(screenshot): detail card with Melt. -->
-        <figure class="shot"><div class="ph">Screenshot: one girl, with Melt</div><figcaption>Nothing moves unless you melt.</figcaption></figure>
+        <figure class="shot"><img src="/relayx/shot-words.webp" alt="The Recover RelayX collections screen, with a box for your 12 RelayX words" width="620" height="1342" loading="lazy" decoding="async"><figcaption>Your words stay on your phone.</figcaption></figure>
+        <figure class="shot"><img src="/relayx/shot-gallery.webp" alt="Ninja Punk Girls Series 2 cards appearing in a gallery as the search counts up" width="620" height="1342" loading="lazy" decoding="async"><figcaption>Your NFTs appear as they are found.</figcaption></figure>
+        <figure class="shot"><img src="/relayx/shot-melt.webp" alt="Melting NPG #1049 Koura: her 13 element cards and avatar badge, with fees" width="620" height="1342" loading="lazy" decoding="async"><figcaption>Melt: see every part before you allow it.</figcaption></figure>
+        <figure class="shot"><img src="/relayx/shot-minted.webp" alt="After the melt: the element cards minted as 1Sat Ordinals, with Use her as your avatar" width="620" height="1342" loading="lazy" decoding="async"><figcaption>Done: her parts are now 1Sat Ordinals.</figcaption></figure>
       </div>
 
       <h2>Ninja Punk Girls</h2>
       <p>Ninja Punk Girls was one of the largest collections on RelayX. Every one of them is now identified:</p>
       <ul>
-        <li><b>Series 2:</b> all 3,333 NFTs, each matched to her card number and picture. RelayX stored the pictures encrypted, so most were matched by the exact size of each minted file, and the rest by mint order between those matches.</li>
+        <li><b>Series 2:</b> all 3,333 NFTs, each matched to her card number and shown with NPG&rsquo;s card art. RelayX stored the pictures encrypted (they can&rsquo;t be shown from the chain), so most were matched by the exact size of each minted file, and the rest by mint order between those matches.</li>
         <li><b>Series 1:</b> all 25 NFTs, identified by name (13 girls).</li>
         <li><b>Single-girl collections</b> such as KAZUYO and AIKA are named from the collection itself.</li>
       </ul>
       <h3>Melting a girl into her element cards</h3>
       <p>Each NPG is built from layered element cards: hair, face, outfit, weapon and more. If you hold one, you can melt her into those cards for the NPG games, plus her round avatar badge, which only someone who melted an original can hold.</p>
+      <p><b>What melting really does:</b> your RelayX NFT is a <b>Run token</b>, a format almost no wallet reads any more. Melting <b>destroys that Run token</b> on chain (it can&rsquo;t be undone) and <b>mints each of her parts fresh as a 1Sat Ordinal</b>, the NFT standard bWalletX and today&rsquo;s BSV wallets and markets use. You see every part, and the fees, before you allow it.</p>
       <ul>
         <li><b>One approval.</b> A single sheet shows her, the cards she becomes, and the fees.</li>
         <li><b>Fees at cost.</b> About 1&cent; for the network and minting. No melt fee.</li>
