@@ -2983,7 +2983,7 @@ Available in bWalletX 5.2.30
 
 # Your RelayX NFTs are still yours.
 
-RelayX has closed. The NFTs you bought or minted there didn’t go with it: they are on chain, held by the keys in your RelayX 12 words. bWalletX can now find them for you. Your words stay on your phone, and nothing moves unless you choose to melt one.
+RelayX has closed, but the NFTs you bought or minted there are still on chain, held by the keys in your RelayX 12 words. bWalletX finds them and shows you your whole collection again, picture by picture. Your words stay on your phone, and finding them moves nothing.
 
 [Get bWalletX](https://bwalletx.com/get)[Read the guide →](https://docs.bwalletx.com/recover-relayx-collections/)
 
@@ -2992,12 +2992,6 @@ RECOVER
 ## Recover RelayX collections
 
 A screen in bWalletX made for one job: finding the NFTs your RelayX words still hold.
-
-#2709
-
-#2710
-
-#2730
 
 RelayX and its logo belong to their owners, shown here to identify the wallet. bWalletX is not affiliated with RelayX.
 
@@ -3015,30 +3009,27 @@ RelayX and its logo belong to their owners, shown here to identify the wallet. b
 
 - Tap one to see it large: its number, collection, and the address that holds it.
 
-. -->
-
-Screenshot: entering your RelayX words
 Your words stay on your phone.
-
-Screenshot: your collections, found
-Grouped by collection, each girl by number.
-
-Screenshot: one girl, with Melt
-Nothing moves unless you melt.
+Your NFTs appear as they are found.
 
 ## Ninja Punk Girls
 
 Ninja Punk Girls was one of the largest collections on RelayX. Every one of them is now identified:
 
-- Series 2: all 3,333 NFTs, each matched to her card number and picture. RelayX stored the pictures encrypted, so most were matched by the exact size of each minted file, and the rest by mint order between those matches.
+- Series 2: all 3,333 NFTs, each matched to her card number and shown with NPG’s card art. RelayX stored the pictures encrypted (they can’t be shown from the chain), so most were matched by the exact size of each minted file, and the rest by mint order between those matches.
 
 - Series 1: all 25 NFTs, identified by name (13 girls).
 
 - Single-girl collections such as KAZUYO and AIKA are named from the collection itself.
 
-### Melting a girl into her element cards
+### Optional, NPG only: melt a girl into her element cards
 
 Each NPG is built from layered element cards: hair, face, outfit, weapon and more. If you hold one, you can melt her into those cards for the NPG games, plus her round avatar badge, which only someone who melted an original can hold.
+
+What melting really does: your RelayX NFT is a Run token, a format almost no wallet reads any more. Melting destroys that Run token on chain (it can’t be undone) and mints each of her parts fresh as a 1Sat Ordinal, the NFT standard bWalletX and today’s BSV wallets and markets use. You see every part, and the fees, before you allow it.
+
+Melt: see every part before you allow it.
+Done: her parts are now 1Sat Ordinals.
 
 - One approval. A single sheet shows her, the cards she becomes, and the fees.
 
@@ -3054,7 +3045,7 @@ Each NPG is built from layered element cards: hair, face, outfit, weapon and mor
 
 - Finding is read-only. The scan moves nothing.
 
-- Melting is the only action, and it is one deliberate tap on one NFT.
+- Nothing moves unless you choose. The only action today is the optional NPG melt: one deliberate tap on one NFT.
 
 - RelayX NFTs are never swept. bWalletX recognises them before anything else and won’t spend them as coins.
 
@@ -3062,9 +3053,11 @@ Each NPG is built from layered element cards: hair, face, outfit, weapon and mor
 
 - ✓ 5.2.30Find RelayX NFTs from your 12 words, read-only.
 
-- ✓ 5.2.30NPG Series 2 identified by number, with picture. Series 1 and single-girl collections by name.
+- ✓ 5.2.30NPG Series 2 identified by card number (matched by mint order), shown with NPG's card art; the on-chain image is encrypted. Series 1 and single-girl collections by name.
 
-- ✓ 5.2.30Melt an NPG into her element cards and avatar badge.
+- ✓ 5.2.30Optional for NPG holders: melt a girl into her element cards and avatar badge.
+
+- ◻ ComingBring them into bWalletX: your RelayX NFTs in your wallet’s NFTs, kept as they are.
 
 - ◻ ComingNFTs that were listed for sale on RelayX when it closed.
 
@@ -3091,6 +3084,15 @@ Each release ships to the Android APK, the Chrome extension and the web wallet. 
 [Download bWalletX](https://bwalletx.com/download)
 
 ## 5.2.30 2026-10-17
+
+- Recover RelayX collections: enter your RelayX 12 words and bWalletX finds the NFTs they still hold, showing them as they’re found. Your words stay on your phone and nothing moves. [How it works](https://bwalletx.com/recover-relayx).
+- Ninja Punk Girls show as their full cards, and your last search is kept, so it opens straight away next time.
+- Optional for NPG holders: melt a girl into her element cards and avatar badge, minted as 1Sat Ordinals. You see every part and the fees first.
+- NFTs open whole and fitted to the screen; pinch to zoom.
+- Your bAvatar turns over in place to your pay code, and My code sits between the top and bottom bars.
+- Nothing scrolls up under the clock any more on any screen.
+
+## 5.2.29 2026-10-17
 
 - Your $name is signed by your own wallet, so nobody (us included) can quietly point it at someone else’s wallet. Paying a name shows “Signed by its owner”.
 - Every change to who a name points to goes into a public, append-only log, including any change we make.
