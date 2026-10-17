@@ -43,7 +43,8 @@ if (!prev) throw new Error('no earlier media-src/og/og-releases-*.html to copy')
 const esc = (s) => s.replace(/&/g, '&amp;').replace(/</g, '&lt;');
 const html = readFileSync(join(OG, `og-releases-${prev}.html`), 'utf8')
   .replace(new RegExp(`>${prev.replace(/\./g, '\\.')}<`), `>${ver}<`)
-  .replace(/(<h3>NEW IN THIS RELEASE<\/h3>\s*)[\s\S]*?(<\/div>\s*<div class="url">)/, `$1\n${feats.map((f) => `<div>${esc(f)}</div>`).join('')}$2`);
+  // A function, not a string: a feature like "$1 each" must not be read as a back-reference.
+  .replace(/(<h3>NEW IN THIS RELEASE<\/h3>\s*)[\s\S]*?(<\/div>\s*<div class="url">)/, (_m, a, b) => `${a}\n${feats.map((f) => `<div>${esc(f)}</div>`).join('')}${b}`);
 if (!html.includes(`>${ver}<`)) throw new Error('template version slot not found');
 if (!feats.every((f) => html.includes(`<div>${esc(f)}</div>`))) throw new Error('template feature list not found');
 const src = join(OG, `og-releases-${ver}.html`);

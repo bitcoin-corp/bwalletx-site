@@ -2839,6 +2839,15 @@ Each release ships to the Android APK, the Chrome extension and the web wallet. 
 
 [Download bWalletX](https://bwalletx.com/download)
 
+## 5.2.28 2026-10-17
+
+- The Store (Exchange › Store) is now a mall: shops with their own banner and logo, and departments to browse by kind of thing.
+- Buy the NPG, NPGX and VexVoid themes for $1 each, paid in BSV with one approval. They switch on straight away and are yours to keep.
+- Open your own shop: a guide to what you can sell and what a good shop needs (shops open soon).
+- Old RelayX (Run) NFTs are never swept or spent as BSV when you restore or migrate an old wallet.
+- Chat rooms: the header sits on two rows, so the room name never gets squeezed out.
+- NFTs open full screen on phones, Close sits between Address book and Calendar on All cards, VexVoid buttons are black, and Strategies lives inside Exchange › Contracts.
+
 ## 5.2.27 2026-10-17
 
 - Themes: new Pink, Blue and Yellow paper looks, VexVoid, NPG and NPGX packs, and fixes to White.
@@ -3611,6 +3620,147 @@ A [business agent](https://bwalletx.com/business-agents) can answer by text too:
 - ComingText a business’s agent
 
 - ComingSTOP to opt out
+
+---
+
+Source: https://bwalletx.com/store
+
+# The Store. Inside your wallet.
+
+Themes and digital goods, inside your wallet. Paid in BSV, yours to keep. Open it from Exchange › Store in bWalletX.
+
+[Open bWalletX](https://web.bwalletx.com)[Get bWalletX](https://bwalletx.com/download)
+
+NPG · $1Ninja Punk Girls
+
+NPGX · $1NPGX
+
+VexVoid · $1VexVoid
+
+Pink paperFree theme
+
+Blue paperFree theme
+
+Demo screens with made-up numbers. Free themes (Gold, White, Pink, Blue, Yellow, Mono, Duo, Tri and more) stay free in Wallet › ☰ › Theme.
+
+## How it works
+
+The Store is a mall. Each shop has its own banner, logo and items. Each item also sits in a department, so you can browse by shop or by kind of thing. Pick an item, approve one payment sheet, and it’s yours. A theme switches on straight away and stays yours to keep. The first sale went through on 17 October 2026.
+
+The Store is in bWalletX (web, Chrome extension, Android and iPhone). It is not in the App Store and Google Play edition, bWallet.
+
+## Shops
+
+### Ninja Punk Girls
+
+Hot-pink neon on black, with NPG card art.
+
+NPG theme$1
+
+### NPGX
+
+Black and red, with the NPGX logo on your card.
+
+NPGX theme$1
+
+### VexVoid
+
+White ink on black, with a point field on the card.
+
+VexVoid theme$1
+
+These three editions are now only available by buying them in the Store; they are no longer free in the Theme picker.
+
+## Departments
+
+- Themes. App colours and card art for your wallet.
+
+- Subscriptions. Regular access to apps, rooms and services.
+
+- Stickers & emoji. Packs to use in chat and posts.
+
+- Art & editions. Pictures and numbered editions.
+
+- Music & video. Tracks, albums, films and clips.
+
+- Courses & books. Things to read and learn from.
+
+- Rooms & memberships. Entry to token rooms and clubs.
+
+- Services. Work done for you by people or agents.
+
+Today the Themes department has items; the others fill up as shops open.
+
+## Sell in the Store
+
+Coming · shops open soon
+
+You will be able to open your own shop. Here is what you’ll need, so you can get ready now.
+
+### What you can sell
+
+- Anything that fits a department: themes, subscriptions, stickers and emoji, art and editions, music and video, courses and books, rooms and memberships, services.
+
+### What a good shop needs
+
+- A shop name.
+
+- A logo: 512 × 512 PNG.
+
+- A banner: 1500 × 500.
+
+- A short blurb about you or your shop.
+
+- At least 3 products, each with a title, a 1–2 line description, a price in $ and a preview image.
+
+- For a theme: its colours (accent, background, surface, text) and the card art.
+
+### Rules
+
+- Digital goods only.
+
+- Your own work, or work you have the rights to sell.
+
+- No pretending to be a brand or person you are not.
+
+- b reviews every shop and every listing before it goes live.
+
+### Money
+
+- Buyers pay in BSV from their wallet.
+
+- 80% to the seller, 20% to the Store.
+
+- Your share is paid to your bWalletX.
+
+## Status
+
+- ✓ LiveThe Store in bWalletX: Exchange › Store, with shops and departments.
+
+- ✓ LiveNPG, NPGX and VexVoid themes, $1 each, paid in BSV with one approval, yours to keep.
+
+- ✓ LiveFree built-in themes in Wallet › ☰ › Theme.
+
+- ◻ ComingOpen your own shop, reviewed by b before it goes live.
+
+- ◻ ComingSell your own themes.
+
+- ◻ ComingSell other digital goods in the departments, 80% to the seller.
+
+## Questions
+
+Is a theme mine for good?
+Yes. Pay once and it’s yours to keep. Switch between it and the free themes whenever you like.
+How do I pay?
+In BSV, from your bWalletX balance. You see one sheet with the price, tap Allow, and the theme switches on.
+Why can’t I see the Store in bWallet?
+The Store is in bWalletX only: web, Chrome extension, Android and iPhone. It isn’t in the App Store and Google Play edition.
+When can I sell?
+Shops open soon. Get your logo, banner and three products ready using the list above.
+
+[Open bWalletX](https://web.bwalletx.com)[See all themes](https://bwalletx.com/themes)
+
+bWalletX is in beta: test with small amounts. Questions: [support@bwalletx.com](mailto:support@bwalletx.com)
 
 ---
 
@@ -5758,19 +5908,19 @@ Neutral grey and white for night use.
 
 Artist editions
 
-### VexVoid Coming
+### VexVoid $1 in the Store
 
 Artist edition: black, stark white, point field.
 
 [Open page](https://bwalletx.com/themes/vexvoid)Install: coming
 
-### NPG Coming
+### NPG $1 in the Store
 
 Ninja Punk Girls: hot-pink neon, glitch cuts.
 
 [Open page](https://bwalletx.com/themes/npg)Install: coming
 
-### NPGX Coming
+### NPGX $1 in the Store
 
 The wild one: black and red, hard glitch.
 
@@ -5810,7 +5960,7 @@ The same calm, self-custody wallet underneath.
 
 ## An edition of your own.
 
-Three ways to theme a wallet. Free: colours, ready-made themes and emoji cards for your own wallet. Premium themes (about $1, in the app): animated, limited-edition and creator themes you own; the money goes to the creator, whether an artist or a token issuer. Editions ($99 a year, made by us): for businesses and token communities, a shareable branded wallet for every holder with its own address (wallet.yourcoin.com), name, card art, icon and your token shown first, featured in Editions and your token’s room. Hold a token and its community theme unlocks free. Every user still gets bWallet free. Editions are ordered by message today; ordering inside the wallet is coming.
+Three ways to theme a wallet. Free: colours, ready-made themes and emoji cards for your own wallet. Premium themes ($1 each in the [Store](https://bwalletx.com/store); NPG, NPGX and VexVoid today): animated, limited-edition and creator themes you own; the money goes to the creator, whether an artist or a token issuer. Editions ($99 a year, made by us): for businesses and token communities, a shareable branded wallet for every holder with its own address (wallet.yourcoin.com), name, card art, icon and your token shown first, featured in Editions and your token’s room. Hold a token and its community theme unlocks free. Every user still gets bWallet free. Editions are ordered by message today; ordering inside the wallet is coming.
 
 $99Branded editions from
 
@@ -5892,7 +6042,9 @@ White app tile
 
 - LiveFree themes and theme packs for your own wallet.
 
-- ComingPremium themes (about $1, in the app): the money goes to the creator.
+- LivePremium themes in the [Store](https://bwalletx.com/store): NPG, NPGX and VexVoid, $1 each, paid in BSV, yours to keep (bWalletX).
+
+- ComingCreators sell their own themes in the Store, 80% to the seller.
 
 - ComingHolder themes: hold a token and its community theme unlocks free.
 
@@ -5908,17 +6060,17 @@ White app tile
 
 - LiveVexVoid artist theme preview at /themes/vexvoid: black, stark white and the live point field from the VexVoid AV set.
 
-- ComingVexVoid artist theme in the app: artist edition, in-app theme coming.
+- LiveVexVoid artist theme in the app: $1 in the [Store](https://bwalletx.com/store).
 
 - LiveGold and Dark previews at /themes/gold and /themes/dark: built in, already in bWalletX.
 
 - LiveNPG page preview at /themes/npg: Ninja Punk Girls neon with glitch slices over official art.
 
-- ComingNPG in-app theme.
+- LiveNPG in-app theme: $1 in the [Store](https://bwalletx.com/store).
 
 - LiveNPGX page preview at /themes/npgx: black and red, harder glitch.
 
-- ComingNPGX in-app theme.
+- LiveNPGX in-app theme: $1 in the [Store](https://bwalletx.com/store).
 
 - ComingNPGX live mix: the slopcore video mix at npg-x.com/live is not built yet.
 

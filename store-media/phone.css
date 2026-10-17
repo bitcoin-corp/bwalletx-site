@@ -1,0 +1,43 @@
+/* Clean wallet home-screen mockups for /store and its share image. Demo numbers only, no real addresses. */
+.ph { --a:#F5B800; --bg:#000; --s:#111; --t:#fff; --m:#aaa; --l:#333; --bt:#000;
+  position: relative; width: 230px; aspect-ratio: 9 / 19.2; flex: none; border-radius: 36px; padding: 10px;
+  background: #1c1c1e; box-shadow: 0 0 0 1px #ffffff22, 0 24px 60px -18px rgba(0,0,0,.8); font-family: 'IBM Plex Sans', system-ui, sans-serif; }
+.ph .scr { position: relative; height: 100%; border-radius: 28px; overflow: hidden; background: var(--bg); color: var(--t);
+  display: flex; flex-direction: column; gap: 9px; padding: 26px 12px 0; }
+.ph .scr::before { content: ''; position: absolute; top: 8px; left: 50%; width: 64px; height: 16px; margin-left: -32px; border-radius: 10px; background: #000; }
+.ph .ic { display: flex; justify-content: space-between; }
+.ph .ic i { width: 24px; height: 24px; border-radius: 50%; border: 1.5px solid var(--l); background: var(--s); }
+.ph .ic i:first-child { border-color: var(--a); }
+.ph .cd { position: relative; aspect-ratio: 85.6 / 54; border-radius: 12px; background: var(--s); border: 1px solid var(--l); padding: 9px 10px; overflow: hidden; }
+.ph .cd .art { position: absolute; right: -6px; top: 50%; width: 58%; transform: translateY(-50%); opacity: .9; }
+.ph .cd > b, .ph .cd > span, .ph .cd > small { position: relative; display: block; }
+.ph .cd small { font-size: 8.5px; color: var(--m); letter-spacing: .02em; }
+.ph .cd b { font: 700 20px/1.1 'Space Grotesk', system-ui, sans-serif; margin-top: 12px; }
+.ph .cd span { font-size: 9px; color: var(--m); }
+.ph .cd .ad { position: absolute; left: 10px; bottom: 8px; font: 500 8px 'IBM Plex Mono', monospace; color: var(--m); }
+.ph .bt { display: flex; gap: 6px; }
+.ph .bt span { flex: 1; text-align: center; font: 600 10.5px 'Space Grotesk', system-ui, sans-serif; padding: 7px 0; border-radius: 9px; background: var(--a); color: var(--bt); }
+.ph .tk { font: 600 9px 'Space Grotesk', sans-serif; letter-spacing: .12em; text-transform: uppercase; color: var(--m); margin-top: 2px; }
+.ph .row { display: flex; align-items: center; gap: 8px; padding: 7px 8px; border-radius: 10px; background: var(--s); border: 1px solid var(--l); font-size: 10.5px; }
+.ph .row i { width: 20px; height: 20px; border-radius: 50%; background: var(--a); flex: none; }
+.ph .row em { font-style: normal; margin-left: auto; color: var(--m); }
+.ph .dock { margin-top: auto; display: flex; justify-content: space-around; padding: 9px 0 14px; border-top: 1px solid var(--l); font-size: 8.5px; color: var(--m); }
+.ph .dock span { display: flex; flex-direction: column; align-items: center; gap: 3px; }
+.ph .dock span::before { content: ''; width: 14px; height: 14px; border-radius: 4px; border: 1.5px solid currentColor; }
+.ph .dock span.on { color: var(--a); }
+.ph .dock span.b::before { border-radius: 50%; }
+
+.ph.npg { --a:#FF2E93; --bg:#000; --s:#12060D; --t:#fff; --m:#E0B3CB; --l:#4A1834; --bt:#000; }
+.ph.npg .bt span, .ph.npg .row i { box-shadow: 0 0 12px rgba(255,46,147,.75); }
+.ph.npg .cd { box-shadow: 0 0 0 1px #FF2E93, 0 0 18px rgba(255,46,147,.4); }
+.ph.npgx { --a:#FF2D3A; --bg:#000; --s:#0D0506; --t:#fff; --m:#C9C9C9; --l:#5A1A1E; --bt:#000; }
+.ph.npgx .cd { background: #000; border-color: #FF2D3A; }
+.ph.vexvoid { --a:#FFFFFF; --bg:#000; --s:#000; --t:#fff; --m:#B3B3B3; --l:#5C5C5C; }
+.ph.vexvoid .bt span { background: #000; color: #fff; box-shadow: inset 0 0 0 1.2px #fff; }
+.ph.vexvoid .cd { border-color: #fff; background-color: #000;
+  background-image: radial-gradient(circle, rgba(255,255,255,.55) .7px, transparent 1.1px), radial-gradient(circle, rgba(255,255,255,.25) .6px, transparent 1px);
+  background-size: 7px 7px, 4px 4px; background-position: 0 0, 2px 3px; }
+.ph.vexvoid .row i { background: #000; box-shadow: inset 0 0 0 1.2px #fff; }
+.ph.pink { --a:#111; --bg:#F4A7C0; --s:#F7C2D3; --t:#111; --m:#3a2530; --l:#e08aa6; --bt:#F4A7C0; }
+.ph.blue { --a:#111; --bg:#8EC5F0; --s:#A9D3F4; --t:#111; --m:#1d3348; --l:#6eaee0; --bt:#8EC5F0; }
+.ph.pink .scr::before, .ph.blue .scr::before { background: #111; }
