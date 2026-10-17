@@ -2841,6 +2841,13 @@ Each release ships to the Android APK, the Chrome extension and the web wallet. 
 
 ## 5.2.29 2026-10-17
 
+- Your $name is signed by your own wallet, so nobody (us included) can quietly point it at someone else’s wallet. Paying a name shows “Signed by its owner”.
+- Every change to who a name points to goes into a public, append-only log, including any change we make.
+- Hand a name to another wallet in Settings › Identity: it moves only when the other wallet accepts.
+- If a name you’ve paid before now points to a different wallet without a proper handover, Send stops and asks you to check with the person first.
+
+## 5.2.28 2026-10-17
+
 - The Store (Exchange › Store) is now a mall: shops with their own banner and logo, and departments to browse by kind of thing.
 - Buy the NPG, NPGX and VexVoid themes for $1 each, paid in BSV with one approval. They switch on straight away and are yours to keep.
 - Open your own shop: a guide to what you can sell and what a good shop needs (shops open soon).
