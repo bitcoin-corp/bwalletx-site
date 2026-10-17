@@ -44,7 +44,7 @@ Source: https://bwalletx.com/android
 
 The full bWalletX wallet on your Android phone or tablet. Your keys stay on your device.
 
-[Download APK (beta) ↓](https://bwalletx.com/download/bwalletx-android-5.2.26.apk)
+[Download APK (beta) ↓](https://bwalletx.com/download/bwalletx-android-5.2.27.apk)
 
 It isn't on Google Play yet, so install it by hand. (The store edition, bWallet, is in a Google Play internal test: see [/testers/bwallet/android](https://bwalletx.com/testers/bwallet/android).)
 
@@ -52,13 +52,13 @@ It isn't on Google Play yet, so install it by hand. (The store edition, bWallet,
 
 - If Android asks, allow your browser to install unknown apps (Settings › Apps › your browser › Install unknown apps).
 
-- Open `bwalletx-android-5.2.26.apk` and tap Install.
+- Open `bwalletx-android-5.2.27.apk` and tap Install.
 
 - Open bWalletX and create or restore your wallet.
 
 Updating from an older version? Install over the top and your wallet stays. If Android says the app can't be updated, write down your 12 words first, then uninstall and reinstall.
 
-Version 5.2.26 beta · 33.7 MB · Android 7+ · SHA-256 ad092a5e4b8c88a73642bec7a8089b04bd3d31e0cecea16bd90c52244e7bf2d4
+Version 5.2.27 beta · 34.0 MB · Android 7+ · SHA-256 0c25f3ebc79abec0a8aa47b378b93ae80288b61b3c580a944fda8a068155d870
 
 Also: [Chrome extension](https://bwalletx.com/extension) · [Developers](https://bwalletx.com/developers)
 
@@ -543,7 +543,7 @@ Source: https://bwalletx.com/bpositive
 
 Back a person who is working towards something: a student, an athlete, someone getting sober, a developer learning a new stack, an artist finishing an album. You support them monthly, or pledge money to a milestone that witnesses confirm. It is built inside bWalletX, where the money, the proof and the people already are.
 
-Live bPositive is in bWalletX 5.2.26: journeys, monthly support, milestone pledges, witnesses and thank-you NFTs.
+Live bPositive is in bWalletX 5.2.27: journeys, monthly support, milestone pledges, witnesses and thank-you NFTs.
 
 ## A gift, not an investment
 
@@ -1400,14 +1400,14 @@ Source: https://bwalletx.com/extension
 
 The full bWalletX wallet in Chrome's side panel, and a wallet websites like TokenBlaster can connect to. Your keys stay in the extension.
 
-[Download for Chrome (beta) ↓](https://bwalletx.com/download/bwalletx-extension-5.2.26.zip)
-[Download for Brave (beta) ↓](https://bwalletx.com/download/bwalletx-extension-5.2.26.zip)
+[Download for Chrome (beta) ↓](https://bwalletx.com/download/bwalletx-extension-5.2.27.zip)
+[Download for Brave (beta) ↓](https://bwalletx.com/download/bwalletx-extension-5.2.27.zip)
 
 Updating? Use the ↻ reload button on `chrome://extensions`, or replace the files in the same folder. Never click Remove — removing the extension deletes your wallet's records.
 
 It isn't on the Chrome Web Store yet, so install it by hand:
 
-- Unzip `bwalletx-extension-5.2.26.zip`.
+- Unzip `bwalletx-extension-5.2.27.zip`.
 
 - Open `chrome://extensions` in Chrome.
 
@@ -1421,7 +1421,7 @@ It isn't on the Chrome Web Store yet, so install it by hand:
 
 Same extension, same file. Brave runs Chrome extensions, so:
 
-- Unzip `bwalletx-extension-5.2.26.zip`.
+- Unzip `bwalletx-extension-5.2.27.zip`.
 
 - Open `brave://extensions` in Brave.
 
@@ -1431,7 +1431,7 @@ Same extension, same file. Brave runs Chrome extensions, so:
 
 - Pin bWalletX from the puzzle-piece menu, click it, and create or restore your wallet.
 
-Version 5.2.26 beta · SHA-256 97fdc9252ac24b2a4ec2b845cfdcc368a79f603f7d56e43c0ce21d053a2eb216 · Source: [github.com/bitcoin-corp/bwallet](https://github.com/bitcoin-corp/bwallet)
+Version 5.2.27 beta · SHA-256 5f7772862bf3cf2dc818bcd95ff5eafaafcbaa532625edd7ec47b723a9295b70 · Source: [github.com/bitcoin-corp/bwallet](https://github.com/bitcoin-corp/bwallet)
 
 ---
 
@@ -1768,8 +1768,8 @@ Source: https://bwalletx.com/get
 
 The full bWalletX on every device. Your keys stay on your device.
 
-[AndroidAPK download · v5.2.26 beta](https://bwalletx.com/android)
-[ChromeExtension · v5.2.26 beta](https://bwalletx.com/extension)
+[AndroidAPK download · v5.2.27 beta](https://bwalletx.com/android)
+[ChromeExtension · v5.2.27 beta](https://bwalletx.com/extension)
 [WebOpen in your browser](https://web.bwalletx.com)
 [DesktopIn your browser, or install it as an app](https://desktop.bwalletx.com)
 [iPhoneWeb app · install from Safari, no App Store](https://bwalletx.com/iphone)
@@ -1900,7 +1900,7 @@ Inside
 - An agent with pocket money5
 - Bitcoin by text6
 - Receipts anyone can check7
-- New in 5.2.268
+- New in 5.2.278
 - Also this week9
 - Where things stand11
 
@@ -1999,7 +1999,7 @@ Arguments about who paid what get very short.
 
 Hodl my b · Issue 1 · 7
 
-This week · 5.2.26
+This week · 5.2.27
 
 ## New in the wallet.
 
@@ -2126,7 +2126,7 @@ holds your coins, pays and locks, and opens the chat room for every token you ho
 bWalletX is the full edition (web, Chrome, Android sideload, private iPhone build);
 bWallet is the App Store / Play edition with fewer features.
 
-Android · Download APK (beta)v5.2.26 beta · sideloadiPhone · Web appInstall from Safari · no App StoreChrome · Download extensionv5.2.26 beta · zip + install steps
+Android · Download APK (beta)v5.2.27 beta · sideloadiPhone · Web appInstall from Safari · no App StoreChrome · Download extensionv5.2.27 beta · zip + install steps
 
 ▶Watch the explainer · 1 min
 
@@ -2138,10 +2138,10 @@ How to sideload on Android
 Tap Download APK (beta). If Android asks, allow your browser to install unknown apps
 (Settings › Apps › your browser › Install unknown apps).
 
-- Open the downloaded bwalletx-android-5.2.26.apk and tap Install.
+- Open the downloaded bwalletx-android-5.2.27.apk and tap Install.
 
 -
-Optional but recommended: check the SHA-256 checksum matchesad092a5e4b8c88a73642bec7a8089b04bd3d31e0cecea16bd90c52244e7bf2d4
+Optional but recommended: check the SHA-256 checksum matches0c25f3ebc79abec0a8aa47b378b93ae80288b61b3c580a944fda8a068155d870
 
 Beta software. Use small amounts and back up your recovery phrase. Only install the APK from this site or
 the official GitHub release.
@@ -2159,7 +2159,7 @@ a balance.
 
 The real wallet home screen (web app, test wallet).
 
-Live in 5.2.26
+Live in 5.2.27
 
 ## What you can do today.
 
@@ -2327,7 +2327,7 @@ Join the waitlist →](https://www.bitcoinchat.online)
 
 Currently in beta.
 
-Android · Download APK (beta)v5.2.26 beta · sideloadiPhone · Web appInstall from Safari · no App StoreChrome · Download extensionv5.2.26 beta · zip + install steps
+Android · Download APK (beta)v5.2.27 beta · sideloadiPhone · Web appInstall from Safari · no App StoreChrome · Download extensionv5.2.27 beta · zip + install steps
 
 Download on theApp StorebWallet · not submitted yet
 
@@ -2379,13 +2379,13 @@ Planned: as the people in your contacts join, they’ll be matched to their paym
 
 ## Where this stands
 
-- ✓ LiveAddress book import (CSV, contact cards, JSON, pasted lists) and export to CSV: in the app, shipping in 5.2.26.
+- ✓ LiveAddress book import (CSV, contact cards, JSON, pasted lists) and export to CSV: in the app, shipping in 5.2.27.
 
 - ✓ LiveSign in with HandCash on bchatx.com: switched on; first real sign-in being tested.
 
 - ✓ LiveHandCash friends into your address book: the server side is live; the wallet button is coming.
 
-- LiveOpen Drops: live in bWalletX 5.2.26 (first run pending). Each link is made for an @handle and pre-funded with the room token; whoever opens it first gets the token, and room entry is tied to that X account.
+- LiveOpen Drops: live in bWalletX 5.2.27 (first run pending). Each link is made for an @handle and pre-funded with the room token; whoever opens it first gets the token, and room entry is tied to that X account.
 
 - ComingNamed Invites: the token delivered automatically to the X account you name. Planned; depends on pre-signed payments.
 
@@ -2839,7 +2839,7 @@ Each release ships to the Android APK, the Chrome extension and the web wallet. 
 
 [Download bWalletX](https://bwalletx.com/download)
 
-## 5.2.26 2026-10-16
+## 5.2.27 2026-10-16
 
 - Themes: a new White paper look, with white cards everywhere, and minimalist bApp icons.
 - Your bAvatar is now the menu: tap it to get to everything.
@@ -2848,7 +2848,7 @@ Each release ships to the Android APK, the Chrome extension and the web wallet. 
 - Spaces: Album Spaces, a Space video that stays in sync for everyone, and pay to speak.
 - bWeb settings and Ask b add-ons, b drafts replies in partner chats, bPositive journeys (bWalletX), and token sends that had stalled now go through.
 
-## 5.2.25 2026-10-16
+## 5.2.25.2.27-10-16
 
 - Fixed a black screen after unlock: if something goes wrong you now see a safety screen instead of a blank page.
 - Open Drops (bWalletX): each invite link is made for an @handle and carries a room token, so the person you invite lands straight in the room.
@@ -2928,7 +2928,7 @@ Each release ships to the Android APK, the Chrome extension and the web wallet. 
 - Artist rank now counts money paid to the artist over 30 days; Back this artist pays the artist directly.
 - A full-screen NFT viewer, the album shown once in Media, an eye to reveal every password field, and the copy button now sits left of your identity key.
 
-## 5.2.15 2026-10-12
+## 5.2.15.2.27-10-12
 
 - Big NFT mints no longer fail: they show Pending while the network catches up, and a stuck send releases its coins.
 - Ask b: a chat bar with reply bubbles on every Desktop page, full of ideas to try.
@@ -2998,7 +2998,7 @@ Each release ships to the Android APK, the Chrome extension and the web wallet. 
 - The wallet won’t let you pay twice for the same mint while the first is still going out
 - A slow network now says “Sent, your wallet will keep trying” instead of an error
 
-## 5.2.5 2026-10-11
+## 5.2.5.2.27-10-11
 
 - History has a Refresh history button when it may be incomplete, so you no longer need to pull to refresh
 - Token rooms show the owner’s photo or gold bAvatar instead of a plain letter
@@ -3060,7 +3060,7 @@ Each release ships to the Android APK, the Chrome extension and the web wallet. 
 - The wallet no longer asks you to register a handle you already have
 - Closing the handle screen after you unlock takes you back to your wallet, not Settings
 
-## 5.1.95 2026-10-11
+## 5.1.95.2.27-10-11
 
 - Mint your bAvatar: Mint my bAvatar in the account menu inscribes your gold bAvatar with your name and account number. The first 1,000 accounts mint free
 - Every account without its own picture gets a gold bAvatar drawn from its name, and the back of the wallet card shows it as a QR code any phone camera can scan to reach your paymail
@@ -3134,7 +3134,7 @@ Each release ships to the Android APK, the Chrome extension and the web wallet. 
 - Handle screen explains why a verified X or Google name can’t switch to a plain name (one identity per wallet)
 - Classic layout: the b agent is in the menu
 
-## 5.1.85 2026-10-08
+## 5.1.85.2.27-10-08
 
 - Airdrops inbox: see and claim tokens sent to you
 - Launch your own coin, plus shareable token links
@@ -3193,7 +3193,7 @@ Each release ships to the Android APK, the Chrome extension and the web wallet. 
 - Settings tidied
 - 3D filter and pairing fixes
 
-## 5.1.75 2026-10-07
+## 5.1.75.2.27-10-07
 
 - Pots: put money aside for subscriptions, with crash-safe payments
 
@@ -3243,7 +3243,7 @@ Each release ships to the Android APK, the Chrome extension and the web wallet. 
 - Buy BSV lists only providers that sell BSV today
 - New Android icon
 
-## 5.1.65 2026-10-06
+## 5.1.65.2.27-10-06
 
 - Sign in with X or Google finishes properly on iPhone
 - Restore with X or Google
@@ -3295,7 +3295,7 @@ Each release ships to the Android APK, the Chrome extension and the web wallet. 
 
 - 3D NFTs in Exchange and Wallet
 
-## 5.1.55 2026-10-05
+## 5.1.55.2.27-10-05
 
 - Get MNEE and Get PNEEs buttons
 - Restored wallets count as backed up
@@ -3340,7 +3340,7 @@ Each release ships to the Android APK, the Chrome extension and the web wallet. 
 
 - Buy MNEE under the balance
 
-## 5.1.45 2026-10-05
+## 5.1.45.2.27-10-05
 
 - Penny Notes card (coming soon)
 
@@ -3597,9 +3597,9 @@ Already have a HandCash account? Use it to sign in to bChatX. You keep your name
 
 - ✓ LiveSign in with HandCash on bchatx.com, under “More ways” below the gold bWalletX button. Uses your verified HandCash account, not a typed name. First run pending.
 
-- ✓ LiveHandCash friends into your bWalletX address book: the server side is live; the wallet button ships in bWalletX 5.2.26.
+- ✓ LiveHandCash friends into your bWalletX address book: the server side is live; the wallet button ships in bWalletX 5.2.27.
 
-- ComingSign in with HandCash inside the bWalletX app on iPhone and Android (bWalletX edition): Settings › Connect › HandCash, in 5.2.26.
+- ComingSign in with HandCash inside the bWalletX app on iPhone and Android (bWalletX edition): Settings › Connect › HandCash, in 5.2.27.
 
 - ComingThe store edition (bWallet on the App Store and Google Play): planned, once Sign in with Apple is added.
 
@@ -4924,7 +4924,7 @@ Need to prove who you are in the real world, privately? See [Identity](https://b
 
 - LiveYour token and your room. In bWalletX your $handle can be a personal token, with a room named after you. See [Features](https://bwalletx.com/features).
 
-- LiveMore than one handle per account. Up to five names, one main. Add extra names in Settings › Identity (5.2.26).
+- LiveMore than one handle per account. Up to five names, one main. Add extra names in Settings › Identity (5.2.27).
 
 - ComingHandle NFTs. Own your handle as an NFT you can hold or sell, separate from your account.
 
@@ -7235,11 +7235,11 @@ One script gives your site a standard BRC-100 wallet. No API keys, no sign-up, a
 
 ## Get bWalletX to test with
 
-Install the wallet you'll connect to (version 5.2.26 beta). Checksums are on each download page.
+Install the wallet you'll connect to (version 5.2.27 beta). Checksums are on each download page.
 
-- [Chrome / Brave extension (zip)](https://bwalletx.com/download/bwalletx-extension-5.2.26.zip) · [install steps](https://bwalletx.com/extension)
+- [Chrome / Brave extension (zip)](https://bwalletx.com/download/bwalletx-extension-5.2.27.zip) · [install steps](https://bwalletx.com/extension)
 
-- [Android APK](https://bwalletx.com/download/bwalletx-android-5.2.26.apk) · [install steps](https://bwalletx.com/android)
+- [Android APK](https://bwalletx.com/download/bwalletx-android-5.2.27.apk) · [install steps](https://bwalletx.com/android)
 
 - [Web app](https://web.bwalletx.com) · [iPhone](https://bwalletx.com/iphone)
 
