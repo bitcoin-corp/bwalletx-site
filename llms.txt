@@ -47,10 +47,12 @@ Full text of every page below: https://bwalletx.com/llms-full.txt
 - [Ideas: what people asked b for](https://bwalletx.com/ideas): Ideas people sent to b, the assistant in bWalletX, and where each one stands: new, planned, building or shipped. Entries appear after review.
 - [Invites: bring people into your Space](https://bwalletx.com/invite): Invite people into a Space with a token attached. They sign in with X or HandCash, get bWalletX, and the token lets them straight into the room's chat.
 - [Just b](https://bwalletx.com/just-b): Just b
+- [Signed names and the public name log · bWalletX](https://bwalletx.com/name-bindings): A bWalletX name is a row in our database. Now each name is signed by the wallet that owns it, every wallet checks that before paying, and every change of who a name points to goes in a public log anyone can read.
 - [Get your name on Bitcoin](https://bwalletx.com/names): Your own name on Bitcoin, yours forever. One payment, no renewals: $1 for five letters or more, $5 for four, $15 for three. Search it, buy it or claim it, and give one to a friend, in bWalletX.
 - [NFTs: everything you own, edge to edge](https://bwalletx.com/nfts): The NFT library in bWalletX Desktop: pictures, clips, music and documents in one grid, opened edge to edge with no frames. Turn a moment from a clip into your card art.
 - [Partnership shares: start with friends, incorporate later](https://bwalletx.com/partnership-shares): Start something with friends. Share it fairly with Partnership shares in bWalletX. b drafts the agreement in a chat only the partners are in. Incorporate when you're ready.
 - [Send a bMail · bWalletX](https://bwalletx.com/person): Everything you can do with a person on bWalletX: send a bMail for a penny, call, pay or tip, and chat. Write your message now; bWalletX sends it.
+- [Your RelayX NFTs are still yours · bWalletX](https://bwalletx.com/recover-relayx): RelayX has closed, but the NFTs bought and minted there are still on chain at their owners' keys. bWalletX finds them from your RelayX 12 words. Your words stay on your phone, and nothing moves unless you melt one.
 - [Releases](https://bwalletx.com/releases): Every bWalletX release and what it added, newest first. Latest: 5.2.29.
 - [Sign in with HandCash](https://bwalletx.com/sign-in-with-handcash): Sign in to bChatX with your verified HandCash account. You get a new bWalletX address and first claim on the same name as name@bwalletx.com.
 - [Bitcoin by text](https://bwalletx.com/sms): Link your phone number to your bWalletX wallet and send money by text. The recipient gets a claim link; unclaimed funds come back to you. Customers can text a business agent too. In build.
@@ -174,6 +176,7 @@ Full text of every page below: https://bwalletx.com/llms-full.txt
 - [055 Digital Ice-Cream · bWalletX blog](https://bwalletx.com/blog/055-digital-ice-cream): A story about three friends, an ice-cream stand and digital cash, and where we’re taking bWalletX next.
 - [056 bShares: a register for any company · bWalletX blog](https://bwalletx.com/blog/056-bshares): bShares keeps a company’s register of members, lets directors approve new shares, and locks shares so they can’t move without the right people. It’s in testing; the first register is our own company.
 - [057 Sign in with HandCash, and invites with tokens · bWalletX blog](https://bwalletx.com/blog/057-handcash-and-invites): New accounts can now start with HandCash as well as X. Your HandCash handle carries over as name@bwalletx.com, your friends can come with you, and invites with tokens bring people into Spaces.
+- [058 We could move your name. Now you can see if we do. · bWalletX blog](https://bwalletx.com/blog/058-signed-names): A bWalletX name is a row in our database, so we could point it at another key. On 17 Oct we did, for the owner’s own names. Now names are signed by their owners, and every change goes in a public log.
 - [bWalletX development blog](https://bwalletx.com/blog/): How bWallet and bWalletX were built from a fork of Yours Wallet: numbered posts from the git history, including what broke, what we reversed and what is still not done.
 
 ## Support

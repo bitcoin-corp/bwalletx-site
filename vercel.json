@@ -47,6 +47,8 @@
     }
   ],
   "redirects": [
+    { "source": "/recover-relayX", "destination": "/recover-relayx", "permanent": true },
+    { "source": "/relayx-nfts", "destination": "/recover-relayx", "permanent": true },
     {
       "source": "/theme/:colour(white|pink|blue|yellow|vexvoid|gold|dark|npg|npgx)",
       "destination": "/themes/:colour",
