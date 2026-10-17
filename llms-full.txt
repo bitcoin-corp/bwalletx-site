@@ -1,6 +1,6 @@
 # bWalletX: full site text
 
-Generated 2026-10-16 from https://bwalletx.com. Source pages are linked above each section.
+Generated 2026-10-17 from https://bwalletx.com. Source pages are linked above each section.
 
 ---
 
@@ -543,7 +543,7 @@ Source: https://bwalletx.com/bpositive
 
 Back a person who is working towards something: a student, an athlete, someone getting sober, a developer learning a new stack, an artist finishing an album. You support them monthly, or pledge money to a milestone that witnesses confirm. It is built inside bWalletX, where the money, the proof and the people already are.
 
-Live bPositive is in bWalletX 5.2.27: journeys, monthly support, milestone pledges, witnesses and thank-you NFTs.
+Live bPositive is in bWalletX 5.2.26: journeys, monthly support, milestone pledges, witnesses and thank-you NFTs.
 
 ## A gift, not an investment
 
@@ -1900,7 +1900,7 @@ Inside
 - An agent with pocket money5
 - Bitcoin by text6
 - Receipts anyone can check7
-- New in 5.2.278
+- New in 5.2.268
 - Also this week9
 - Where things stand11
 
@@ -1999,7 +1999,7 @@ Arguments about who paid what get very short.
 
 Hodl my b · Issue 1 · 7
 
-This week · 5.2.27
+This week · 5.2.26
 
 ## New in the wallet.
 
@@ -2159,7 +2159,7 @@ a balance.
 
 The real wallet home screen (web app, test wallet).
 
-Live in 5.2.27
+Live in 5.2.26
 
 ## What you can do today.
 
@@ -2379,13 +2379,13 @@ Planned: as the people in your contacts join, they’ll be matched to their paym
 
 ## Where this stands
 
-- ✓ LiveAddress book import (CSV, contact cards, JSON, pasted lists) and export to CSV: in the app, shipping in 5.2.27.
+- ✓ LiveAddress book import (CSV, contact cards, JSON, pasted lists) and export to CSV: in the app, shipping in 5.2.26.
 
 - ✓ LiveSign in with HandCash on bchatx.com: switched on; first real sign-in being tested.
 
 - ✓ LiveHandCash friends into your address book: the server side is live; the wallet button is coming.
 
-- LiveOpen Drops: live in bWalletX 5.2.27 (first run pending). Each link is made for an @handle and pre-funded with the room token; whoever opens it first gets the token, and room entry is tied to that X account.
+- LiveOpen Drops: live in bWalletX 5.2.26 (first run pending). Each link is made for an @handle and pre-funded with the room token; whoever opens it first gets the token, and room entry is tied to that X account.
 
 - ComingNamed Invites: the token delivered automatically to the X account you name. Planned; depends on pre-signed payments.
 
@@ -2839,16 +2839,25 @@ Each release ships to the Android APK, the Chrome extension and the web wallet. 
 
 [Download bWalletX](https://bwalletx.com/download)
 
-## 5.2.27 2026-10-16
+## 5.2.27 2026-10-17
+
+- Themes: new Pink, Blue and Yellow paper looks, VexVoid, NPG and NPGX packs, and fixes to White.
+- bStore: see each theme as a mini wallet before you pick it, with an In use badge (buying themes is coming).
+- Send opens on “Who are you paying?”, and the Sent! screen follows your theme.
+- A Credits card in the card row, and token amounts on every card.
+- A Calendar button on the wallet, and My code flips your bAvatar over to your QR.
+- A business agent from a single link with checkout in chat, a capped agent account, Ask b turns errors into bug reports, red unread badges, Help Desk is now “Ask b”, bShares for more than one company plus partnership locks, eight example trading strategies, and Exchange gets a Games filter.
+
+## 5.2.26 2026-10-16
 
 - Themes: a new White paper look, with white cards everywhere, and minimalist bApp icons.
 - Your bAvatar is now the menu: tap it to get to everything.
 - Sign in with HandCash, and find the contacts and people you follow on X who already use bWalletX.
 - Like · 1¢ on token cards: a Like buys a little of that token.
-- Spaces: Album Spaces, a Space video that stays in sync for everyone, and pay to speak.
+- Spaces: Album Spaces, and a Space video that stays in sync for everyone.
 - bWeb settings and Ask b add-ons, b drafts replies in partner chats, bPositive journeys (bWalletX), and token sends that had stalled now go through.
 
-## 5.2.25.2.27-10-16
+## 5.2.25 2026-10-16
 
 - Fixed a black screen after unlock: if something goes wrong you now see a safety screen instead of a blank page.
 - Open Drops (bWalletX): each invite link is made for an @handle and carries a room token, so the person you invite lands straight in the room.
@@ -2928,7 +2937,7 @@ Each release ships to the Android APK, the Chrome extension and the web wallet. 
 - Artist rank now counts money paid to the artist over 30 days; Back this artist pays the artist directly.
 - A full-screen NFT viewer, the album shown once in Media, an eye to reveal every password field, and the copy button now sits left of your identity key.
 
-## 5.2.15.2.27-10-12
+## 5.2.15 2026-10-12
 
 - Big NFT mints no longer fail: they show Pending while the network catches up, and a stuck send releases its coins.
 - Ask b: a chat bar with reply bubbles on every Desktop page, full of ideas to try.
@@ -2998,7 +3007,7 @@ Each release ships to the Android APK, the Chrome extension and the web wallet. 
 - The wallet won’t let you pay twice for the same mint while the first is still going out
 - A slow network now says “Sent, your wallet will keep trying” instead of an error
 
-## 5.2.5.2.27-10-11
+## 5.2.5 2026-10-11
 
 - History has a Refresh history button when it may be incomplete, so you no longer need to pull to refresh
 - Token rooms show the owner’s photo or gold bAvatar instead of a plain letter
@@ -3060,7 +3069,7 @@ Each release ships to the Android APK, the Chrome extension and the web wallet. 
 - The wallet no longer asks you to register a handle you already have
 - Closing the handle screen after you unlock takes you back to your wallet, not Settings
 
-## 5.1.95.2.27-10-11
+## 5.1.95 2026-10-11
 
 - Mint your bAvatar: Mint my bAvatar in the account menu inscribes your gold bAvatar with your name and account number. The first 1,000 accounts mint free
 - Every account without its own picture gets a gold bAvatar drawn from its name, and the back of the wallet card shows it as a QR code any phone camera can scan to reach your paymail
@@ -3134,7 +3143,7 @@ Each release ships to the Android APK, the Chrome extension and the web wallet. 
 - Handle screen explains why a verified X or Google name can’t switch to a plain name (one identity per wallet)
 - Classic layout: the b agent is in the menu
 
-## 5.1.85.2.27-10-08
+## 5.1.85 2026-10-08
 
 - Airdrops inbox: see and claim tokens sent to you
 - Launch your own coin, plus shareable token links
@@ -3193,7 +3202,7 @@ Each release ships to the Android APK, the Chrome extension and the web wallet. 
 - Settings tidied
 - 3D filter and pairing fixes
 
-## 5.1.75.2.27-10-07
+## 5.1.75 2026-10-07
 
 - Pots: put money aside for subscriptions, with crash-safe payments
 
@@ -3243,7 +3252,7 @@ Each release ships to the Android APK, the Chrome extension and the web wallet. 
 - Buy BSV lists only providers that sell BSV today
 - New Android icon
 
-## 5.1.65.2.27-10-06
+## 5.1.65 2026-10-06
 
 - Sign in with X or Google finishes properly on iPhone
 - Restore with X or Google
@@ -3295,7 +3304,7 @@ Each release ships to the Android APK, the Chrome extension and the web wallet. 
 
 - 3D NFTs in Exchange and Wallet
 
-## 5.1.55.2.27-10-05
+## 5.1.55 2026-10-05
 
 - Get MNEE and Get PNEEs buttons
 - Restored wallets count as backed up
@@ -3340,7 +3349,7 @@ Each release ships to the Android APK, the Chrome extension and the web wallet. 
 
 - Buy MNEE under the balance
 
-## 5.1.45.2.27-10-05
+## 5.1.45 2026-10-05
 
 - Penny Notes card (coming soon)
 
@@ -3383,88 +3392,6 @@ Each release ships to the Android APK, the Chrome extension and the web wallet. 
 - Token search in the Exchange
 
 bWalletX is in beta: test with small amounts. Questions: [support@bwalletx.com](mailto:support@bwalletx.com)
-
----
-
-Source: https://bwalletx.com/sweep-simplycash
-
-Restore
-
-# Bring your SimplyCash coins home.
-
-Had a SimplyCash wallet? bWalletX can find what’s in it from your recovery phrase and sweep it into your own bWalletX account. A few taps, on your own phone.
-
-[Get bWalletX](https://bwalletx.com/get)[How it works](#steps)
-
-## Four steps
-
-- 1
-
-### Open the sweep screen
-
-In bWalletX go to Settings › Account & safety › Sweep from another wallet. Setting up a new wallet? Restore › SimplyCash starts the same thing.
-
-- 2
-
-### Paste your SimplyCash backup
-
-Your 12-word recovery phrase, or SimplyCash’s full recovery string (words, path and passphrase joined by colons). A private key (WIF) or an xprv works too. Add a passphrase if you set one.
-
-- 3
-
-### Let it look
-
-bWalletX walks SimplyCash’s path `m/44'/145'/0'` and the other common Bitcoin SV layouts, receive and change addresses, until 20 in a row are unused. It also tries the older derivation early SimplyCash wallets used, automatically. It shows the coins, NFTs and tokens it finds, in dollars.
-
-- 4
-
-### Sweep it home
-
-Tick what to bring over and tap sweep. Your coins move into your bWalletX account in a few transactions (BSV, NFTs, then each token), paying the normal small network fee. The old phrase isn’t kept: from then on, your coins are protected by your bWalletX words.
-
-## Where’s my SimplyCash phrase?
-
-Look for the backup you made when you set up SimplyCash: your 12-word recovery phrase or recovery string from your SimplyCash backup. People often wrote it on paper, saved it in a password manager or kept a screenshot. If you still have the SimplyCash app, its backup or settings area may show it again.
-
-## Stay safe
-
-- Never share your phrase. Not with b, not in any chat, not with support. We will never ask for it.
-
-- Type it only into the sweep screen, on your own device. The phrase stays on your phone and is cleared when you leave the screen; only public addresses are looked up online to find your coins.
-
-- Unsure? Test first. For larger amounts (over about £500) bWalletX offers to sweep a small test amount first. Check it arrived, then scan again to sweep the rest.
-
-## Questions
-
-It says nothing was found.
-Check every word, and add your passphrase if your SimplyCash wallet had one (or paste the full recovery string, which carries it). The older SimplyCash derivation is tried automatically. You can also try a custom path under Advanced, or ask b in the app.
-
-Does bWalletX keep my SimplyCash phrase?
-No. It is held in memory only for the scan and the sweep, never stored and never sent to our servers.
-
-Can I sweep other wallets?
-Yes. The same screen takes recovery phrases from other Bitcoin SV wallets, private keys (WIF) and xprvs.
-
-Is it in the App Store and Play versions?
-Yes. Sweep from another wallet is in every bWalletX and bWallet build.
-
-## What works today
-
-- LiveSimplyCash 12-word phrase sweep (path m/44'/145'/0').
-
-- LiveSimplyCash recovery string (words:path:passphrase).
-
-- LiveOlder SimplyCash derivation, tried automatically.
-
-- LiveCoins, NFTs and tokens found and swept.
-
-- LiveOther BSV wallets: BIP44 phrases (coin types 236 and 0), private keys (WIF), xprvs and custom paths.
-
-- LiveTest sweep for amounts over about £500.
-
-[Get bWalletX](https://bwalletx.com/get)[Restore a bWalletX backup](https://bwalletx.com/restore)
-
-SimplyCash is named only to describe compatibility; bWalletX isn’t affiliated with it. bWalletX is in beta: test with small amounts. Questions: [support@bwalletx.com](mailto:support@bwalletx.com)
 
 ---
 
@@ -3597,9 +3524,9 @@ Already have a HandCash account? Use it to sign in to bChatX. You keep your name
 
 - ✓ LiveSign in with HandCash on bchatx.com, under “More ways” below the gold bWalletX button. Uses your verified HandCash account, not a typed name. First run pending.
 
-- ✓ LiveHandCash friends into your bWalletX address book: the server side is live; the wallet button ships in bWalletX 5.2.27.
+- ✓ LiveHandCash friends into your bWalletX address book: the server side is live; the wallet button ships in bWalletX 5.2.26.
 
-- ComingSign in with HandCash inside the bWalletX app on iPhone and Android (bWalletX edition): Settings › Connect › HandCash, in 5.2.27.
+- ComingSign in with HandCash inside the bWalletX app on iPhone and Android (bWalletX edition): Settings › Connect › HandCash, in 5.2.26.
 
 - ComingThe store edition (bWallet on the App Store and Google Play): planned, once Sign in with Apple is added.
 
@@ -3762,6 +3689,88 @@ Each payment is made out to the speakers, the person you’re calling, or the ar
 [Get bWalletX](https://bwalletx.com/get)
 
 bWalletX is in beta: test with small amounts. Questions: [support@bwalletx.com](mailto:support@bwalletx.com)
+
+---
+
+Source: https://bwalletx.com/sweep-simplycash
+
+Restore
+
+# Bring your SimplyCash coins home.
+
+Had a SimplyCash wallet? bWalletX can find what’s in it from your recovery phrase and sweep it into your own bWalletX account. A few taps, on your own phone.
+
+[Get bWalletX](https://bwalletx.com/get)[How it works](#steps)
+
+## Four steps
+
+- 1
+
+### Open the sweep screen
+
+In bWalletX go to Settings › Account & safety › Sweep from another wallet. Setting up a new wallet? Restore › SimplyCash starts the same thing.
+
+- 2
+
+### Paste your SimplyCash backup
+
+Your 12-word recovery phrase, or SimplyCash’s full recovery string (words, path and passphrase joined by colons). A private key (WIF) or an xprv works too. Add a passphrase if you set one.
+
+- 3
+
+### Let it look
+
+bWalletX walks SimplyCash’s path `m/44'/145'/0'` and the other common Bitcoin SV layouts, receive and change addresses, until 20 in a row are unused. It also tries the older derivation early SimplyCash wallets used, automatically. It shows the coins, NFTs and tokens it finds, in dollars.
+
+- 4
+
+### Sweep it home
+
+Tick what to bring over and tap sweep. Your coins move into your bWalletX account in a few transactions (BSV, NFTs, then each token), paying the normal small network fee. The old phrase isn’t kept: from then on, your coins are protected by your bWalletX words.
+
+## Where’s my SimplyCash phrase?
+
+Look for the backup you made when you set up SimplyCash: your 12-word recovery phrase or recovery string from your SimplyCash backup. People often wrote it on paper, saved it in a password manager or kept a screenshot. If you still have the SimplyCash app, its backup or settings area may show it again.
+
+## Stay safe
+
+- Never share your phrase. Not with b, not in any chat, not with support. We will never ask for it.
+
+- Type it only into the sweep screen, on your own device. The phrase stays on your phone and is cleared when you leave the screen; only public addresses are looked up online to find your coins.
+
+- Unsure? Test first. For larger amounts (over about £500) bWalletX offers to sweep a small test amount first. Check it arrived, then scan again to sweep the rest.
+
+## Questions
+
+It says nothing was found.
+Check every word, and add your passphrase if your SimplyCash wallet had one (or paste the full recovery string, which carries it). The older SimplyCash derivation is tried automatically. You can also try a custom path under Advanced, or ask b in the app.
+
+Does bWalletX keep my SimplyCash phrase?
+No. It is held in memory only for the scan and the sweep, never stored and never sent to our servers.
+
+Can I sweep other wallets?
+Yes. The same screen takes recovery phrases from other Bitcoin SV wallets, private keys (WIF) and xprvs.
+
+Is it in the App Store and Play versions?
+Yes. Sweep from another wallet is in every bWalletX and bWallet build.
+
+## What works today
+
+- LiveSimplyCash 12-word phrase sweep (path m/44'/145'/0').
+
+- LiveSimplyCash recovery string (words:path:passphrase).
+
+- LiveOlder SimplyCash derivation, tried automatically.
+
+- LiveCoins, NFTs and tokens found and swept.
+
+- LiveOther BSV wallets: BIP44 phrases (coin types 236 and 0), private keys (WIF), xprvs and custom paths.
+
+- LiveTest sweep for amounts over about £500.
+
+[Get bWalletX](https://bwalletx.com/get)[Restore a bWalletX backup](https://bwalletx.com/restore)
+
+SimplyCash is named only to describe compatibility; bWalletX isn’t affiliated with it. bWalletX is in beta: test with small amounts. Questions: [support@bwalletx.com](mailto:support@bwalletx.com)
 
 ---
 
@@ -4609,7 +4618,7 @@ Your wallet card
 
 In bWalletX your bAvatar becomes the background of the card on your home screen, with your $name and your fingerprint on top. Each account gets a numbered card, bWalletX #N · $you, in the order accounts joined.
 
-Rolling out to bWalletX accounts
+Live in bWalletX 5.2.26: the back of your card is your bAvatar art QR, and any phone camera reads it as $you@bwalletx.com
 
 The card you hold is the design you carry
 Collect a card you love and your wallet card changes to its art. Trade it on and it changes again.
@@ -4665,7 +4674,7 @@ Free for the Founding 1,000. A mint costs about 4,000 sats in network fees, a ti
 
 [Mint in bWalletX](https://bwalletx.com/get)[Customize first](#try)
 
-Minting rolling out
+Live in bWalletX 5.2.26: two-sided mint, art on the front, pay QR on the back
 
 #—
 
@@ -4685,8 +4694,30 @@ Profiles, posts, the right-hand panels and Space seats show your bAvatar until y
 Paymail appsLive
 Your paymail profile offers it as your picture, so other BSV apps show it too. Image: `bchatx.com/api/bavatar/you.png`
 
-bWalletX5.1.97
-Account cards and menus draw it on your phone, with no network call.
+bWalletX5.2.26
+Account cards, the top-bar menu, DMs, feed authors and the Send confirm screen draw it on your phone, with no network call.
+
+Status
+
+## What works today, and what is next.
+
+Gold bAvatarsLive
+Every name gets its art, drawn from its identity key. Same picture in the wallet, on bChatX and in paymail apps.
+
+Art QR on your cardLive
+The back of your wallet card is your bAvatar seen through a real QR grid. Tested: 48 of 48 reads across 12 names and 4 sizes.
+
+Flip bAvatarLive
+Tap to flip. The back is a clean QR with a `bitcoin:` pay link or your paymail. Public data only; the app refuses anything key-like.
+
+MintLive
+A 1-sat ordinal in your own wallet with your $name and number. Fees paid for the Founding 1,000.
+
+CustomiseLive
+Pick styles above, tint it to your theme, or upload your own photo or animated picture.
+
+Animated QR codesComing
+Animated QR codes using [BRC-141](https://bsv.brc.dev/peer-to-peer/0141) (fountain-coded air-gap transport, by Darren Kellenschwiler) for passing more than fits in one QR: bAvatar cards, tap-to-pay, sweeps.
 
 ## Get your name. Get your bAvatar.
 
@@ -4924,7 +4955,7 @@ Need to prove who you are in the real world, privately? See [Identity](https://b
 
 - LiveYour token and your room. In bWalletX your $handle can be a personal token, with a room named after you. See [Features](https://bwalletx.com/features).
 
-- LiveMore than one handle per account. Up to five names, one main. Add extra names in Settings › Identity (5.2.27).
+- LiveMore than one handle per account. Up to five names, one main. Add extra names in Settings › Identity (5.2.26).
 
 - ComingHandle NFTs. Own your handle as an NFT you can hold or sell, separate from your account.
 
