@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Your RelayX NFTs are still yours · bWalletX</title>
+    <link rel="canonical" href="https://bwalletx.com/relayx-nfts" />
+    <meta name="description" content="RelayX has closed, but the NFTs bought and minted there are still on chain at their owners' keys. bWalletX finds them from your RelayX 12 words. Your words stay on your phone, and nothing moves unless you melt one." />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://bwalletx.com/relayx-nfts" />
+    <meta property="og:site_name" content="bWalletX" />
+    <meta property="og:title" content="Your RelayX NFTs are still yours: bWalletX" />
+    <meta property="og:description" content="RelayX has closed. Your NFTs are still on chain. Find them in bWalletX with your RelayX words. Nothing moves unless you melt one." />
+    <meta property="og:image" content="https://bwalletx.com/og-relayx-nfts-v1.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Your RelayX NFTs are still yours. A RelayX-branded card in bWalletX showing three Ninja Punk Girls found from RelayX words." />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@bWalletX" />
+    <meta name="twitter:title" content="Your RelayX NFTs are still yours: bWalletX" />
+    <meta name="twitter:description" content="RelayX has closed. Your NFTs are still on chain. Find them in bWalletX with your RelayX words. Nothing moves unless you melt one." />
+    <meta name="twitter:image" content="https://bwalletx.com/og-relayx-nfts-v1.png" />
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="stylesheet" href="/styles.css" />
+    <style>
+      .ext h1 { font-size: clamp(2.2rem, 6vw, 3.4rem); margin: 18px 0 10px; }
+      .ext h2 { margin: 48px 0 8px; font-size: 1.5rem; }
+      .ext h3 { margin: 26px 0 6px; font-size: 1.1rem; }
+      .ext p, .ext li { line-height: 1.7; }
+      .ext .small { color: #8a8a86; font-size: 0.85rem; }
+      .ext .row { display: flex; gap: 12px; flex-wrap: wrap; margin: 26px 0; }
+      .dateline { color: #a7adb8; font-size: 0.9rem; letter-spacing: 0.02em; }
+      .release { display: inline-block; margin-top: 6px; font-size: 0.8rem; font-weight: 700; padding: 3px 10px; border-radius: 999px; border: 1px solid #F5B80088; color: #F5B800; }
+      /* RelayX-branded cover: RelayX blue, their own logo, clearly marked as theirs. */
+      .rx { margin: 30px 0; border-radius: 20px; overflow: hidden; border: 1px solid #2669FF66; background: radial-gradient(circle at 85% 30%, rgba(38, 105, 255, 0.35), transparent 55%), #0b0f1c; }
+      .rx-top { display: flex; align-items: center; gap: 12px; padding: 18px 22px; border-bottom: 1px solid #ffffff14; background: #0f1630; }
+      .rx-top .ic { width: 40px; height: 40px; }
+      .rx-top .wm { height: 30px; width: auto; }
+      .rx-top .t { margin-left: auto; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.14em; color: #8fb0ff; border: 1px solid #2669FF66; border-radius: 999px; padding: 3px 10px; }
+      .rx-body { padding: 22px; }
+      .rx-body h2 { margin: 0 0 6px; }
+      .rx-body p { margin: 0; color: #c9d3ef; }
+      .rx-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-top: 18px; max-width: 520px; }
+      .rx-g { position: relative; background: linear-gradient(180deg, #16204a, #0e1430); border: 1px solid #2669FF44; border-radius: 14px; aspect-ratio: 3 / 4; display: flex; align-items: flex-end; justify-content: center; overflow: hidden; }
+      .rx-g img { max-width: 90%; max-height: 82%; object-fit: contain; margin-bottom: 14%; }
+      .rx-g b { position: absolute; left: 10px; bottom: 7px; font-family: ui-monospace, Menlo, monospace; font-size: 0.8rem; }
+      .rx-note { margin: 14px 22px 18px; color: #8a93ad; font-size: 0.78rem; }
+      .steps { counter-reset: s; list-style: none; padding: 0; margin: 18px 0; }
+      .steps li { counter-increment: s; position: relative; padding: 10px 0 10px 46px; border-bottom: 1px solid #ffffff10; }
+      .steps li::before { content: counter(s); position: absolute; left: 0; top: 10px; width: 30px; height: 30px; border-radius: 50%; background: #F5B800; color: #000; font-weight: 700; display: flex; align-items: center; justify-content: center; font-size: 0.9rem; }
+      .shots { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 220px), 1fr)); gap: 16px; margin: 22px 0; }
+      .shot { margin: 0; }
+      .shot .ph { aspect-ratio: 390 / 844; border-radius: 26px; border: 1px dashed #ffffff40; background: #101114; display: flex; align-items: center; justify-content: center; text-align: center; padding: 18px; color: #8a8a86; font-size: 0.85rem; }
+      .shot figcaption { margin-top: 8px; color: #a7adb8; font-size: 0.85rem; text-align: center; }
+      .feat { list-style: none; padding: 0; margin: 18px 0; }
+      .feat li { display: flex; gap: 12px; align-items: baseline; padding: 12px 0; border-bottom: 1px solid #ffffff10; }
+      .tag { flex: none; font-size: 0.75rem; font-weight: 700; padding: 2px 9px; border-radius: 999px; }
+      .tag.live { background: #F5B800; color: #000; }
+      .tag.soon { border: 1px solid #ffffff40; color: #a7adb8; }
+      .box { background: #101114; border: 1px solid #ffffff12; border-radius: 16px; padding: 18px 22px; margin: 28px 0; }
+      .ext code { background: #17191e; padding: 2px 6px; border-radius: 6px; overflow-wrap: anywhere; }
+    </style>
+  </head>
+  <body>
+    <div class="beta-banner">bWalletX is in <strong>beta</strong>: test with small amounts.</div>
+    <header class="topbar">
+      <div class="wrap topbar-in">
+        <a class="brand" href="/"><img src="/logo.svg" alt="" width="34" height="30" /><span>bWallet<span class="gold">X</span></span></a>
+        <nav aria-label="Pages">
+          <a href="/features">Features</a><a href="/exchange">Exchange</a><a href="/social">Social</a><a href="/agent">Agents</a><a href="/extension">Extension</a><a href="/developers">Developers</a>
+        </nav>
+        <span class="nav-cta"><a class="dl-btn" href="/get">Download</a><a class="web-btn" href="https://web.bwalletx.com" target="_blank" rel="noopener">Web &rarr;</a></span>
+      </div>
+    </header>
+    <script src="/nav.js"></script>
+    <main class="ext">
+      <p class="dateline">17 October 2026</p>
+      <!-- TODO(owner): confirm the release number before publishing. -->
+      <span class="release">Available in bWalletX 5.2.30</span>
+      <h1>Your RelayX NFTs are <span class="gold">still yours.</span></h1>
+      <p class="lede">RelayX has closed. The NFTs you bought or minted there didn&rsquo;t go with it: they are on chain, held by the keys in your RelayX 12 words. bWalletX can now find them for you. Your words stay on your phone, and nothing moves unless you choose to melt one.</p>
+      <div class="row"><a class="btn btn-store" href="/get">Get bWalletX</a><a class="btn btn-ghost" href="https://docs.bwalletx.com/recover-relayx-collections/" target="_blank" rel="noopener">Read the guide &rarr;</a></div>
+
+      <section class="rx" aria-label="Recover RelayX collections">
+        <div class="rx-top"><img class="ic" src="/relayx/relayx-icon.svg" alt="" width="40" height="40" /><img class="wm" src="/relayx/relayx-wordmark.png" alt="RelayX" width="108" height="30" /><span class="t">RECOVER</span></div>
+        <div class="rx-body">
+          <h2>Recover RelayX collections</h2>
+          <p>A screen in bWalletX made for one job: finding the NFTs your RelayX words still hold.</p>
+          <div class="rx-grid">
+            <div class="rx-g"><img src="/relayx/npg-2709.webp" alt="Ninja Punk Girl #2709" loading="lazy" /><b>#2709</b></div>
+            <div class="rx-g"><img src="/relayx/npg-2710.webp" alt="Ninja Punk Girl #2710" loading="lazy" /><b>#2710</b></div>
+            <div class="rx-g"><img src="/relayx/npg-2730.webp" alt="Ninja Punk Girl #2730" loading="lazy" /><b>#2730</b></div>
+          </div>
+        </div>
+        <p class="rx-note">RelayX and its logo belong to their owners, shown here to identify the wallet. bWalletX is not affiliated with RelayX.</p>
+      </section>
+
+      <h2>How to find them</h2>
+      <ol class="steps">
+        <li>Open bWalletX and scroll to the <b>bottom</b> of your wallet.</li>
+        <li>Under <b>Bring in old assets</b>, tap <b>Recover RelayX collections</b>.</li>
+        <li>Enter your RelayX <b>12 words</b>. Paste them however you saved them: spaces, commas or a numbered list all work.</li>
+        <li>Tap <b>Find my NFTs</b>. bWalletX reads the chain for each of your RelayX addresses and counts up what it finds.</li>
+        <li>Your NFTs appear as a gallery, grouped by collection.</li>
+        <li>Tap one to see it large: its number, collection, and the address that holds it.</li>
+      </ol>
+      <div class="shots">
+        <!-- TODO(screenshot): recover screen, word entry. Replace the .ph div with <img src="/relayx/shot-words.webp" …>. -->
+        <figure class="shot"><div class="ph">Screenshot: entering your RelayX words</div><figcaption>Your words stay on your phone.</figcaption></figure>
+        <!-- TODO(screenshot): gallery of found NFTs. -->
+        <figure class="shot"><div class="ph">Screenshot: your collections, found</div><figcaption>Grouped by collection, each girl by number.</figcaption></figure>
+        <!-- TODO(screenshot): detail card with Melt. -->
+        <figure class="shot"><div class="ph">Screenshot: one girl, with Melt</div><figcaption>Nothing moves unless you melt.</figcaption></figure>
+      </div>
+
+      <h2>Ninja Punk Girls</h2>
+      <p>Ninja Punk Girls was one of the largest collections on RelayX. Every one of them is now identified:</p>
+      <ul>
+        <li><b>Series 2:</b> all 3,333 NFTs, each matched to her card number and picture. RelayX stored the pictures encrypted, so most were matched by the exact size of each minted file, and the rest by mint order between those matches.</li>
+        <li><b>Series 1:</b> all 25 NFTs, identified by name (13 girls).</li>
+        <li><b>Single-girl collections</b> such as KAZUYO and AIKA are named from the collection itself.</li>
+      </ul>
+      <h3>Melting a girl into her element cards</h3>
+      <p>Each NPG is built from layered element cards: hair, face, outfit, weapon and more. If you hold one, you can melt her into those cards for the NPG games, plus her round avatar badge, which only someone who melted an original can hold.</p>
+      <ul>
+        <li><b>One approval.</b> A single sheet shows her, the cards she becomes, and the fees.</li>
+        <li><b>Fees at cost.</b> About 1&cent; for the network and minting. No melt fee.</li>
+        <li><b>The old NFT is burned on chain,</b> in a way anyone can check. That is what makes the new cards hers and nobody else&rsquo;s.</li>
+        <li><b>Series 1</b> melts into the redrawn element set for that girl: the same girl, redrawn as parts, not the original artwork.</li>
+      </ul>
+
+      <h2>Safety</h2>
+      <ul>
+        <li><b>Your words never leave your phone.</b> bWalletX reads public chain data only. Nothing about your keys is sent to us or to anyone.</li>
+        <li><b>Finding is read-only.</b> The scan moves nothing.</li>
+        <li><b>Melting is the only action,</b> and it is one deliberate tap on one NFT.</li>
+        <li><b>RelayX NFTs are never swept.</b> bWalletX recognises them before anything else and won&rsquo;t spend them as coins.</li>
+      </ul>
+
+      <div class="box">
+        <h2 style="margin-top:0">Status, 17 Oct 2026</h2>
+        <ul class="feat">
+          <li><span class="tag live">&check; 5.2.30</span><span><b>Find RelayX NFTs</b> from your 12 words, read-only.</span></li>
+          <li><span class="tag live">&check; 5.2.30</span><span><b>NPG Series 2</b> identified by number, with picture. <b>Series 1</b> and single-girl collections by name.</span></li>
+          <li><span class="tag live">&check; 5.2.30</span><span><b>Melt</b> an NPG into her element cards and avatar badge.</span></li>
+          <li><span class="tag soon">&#9723; Coming</span><span><b>NFTs that were listed for sale</b> on RelayX when it closed.</span></li>
+          <li><span class="tag soon">&#9723; Coming</span><span><b>Other Run collections</b> shown with their pictures, not only their names.</span></li>
+        </ul>
+      </div>
+
+      <h2>For developers</h2>
+      <p>How RelayX NFTs are traced and identified, including the encrypted pictures: <a href="https://docs.bwalletx.com/developers/relayx-recovery/" target="_blank" rel="noopener">Identifying RelayX NFTs</a>. How an NPG is built from her element cards: <a href="https://docs.bwalletx.com/developers/stack-recipes/" target="_blank" rel="noopener">Stack recipes</a>.</p>
+
+      <p class="related">Related: <a href="https://docs.bwalletx.com/recover-relayx-collections/">Recover RelayX collections (guide)</a> · <a href="/restore">Restore</a> · <a href="/nfts">NFTs</a></p>
+      <p class="small">bWalletX is in beta: test with small amounts. Questions: <a href="mailto:support@bwalletx.com">support@bwalletx.com</a></p>
+    </main>
+  </body>
+</html>

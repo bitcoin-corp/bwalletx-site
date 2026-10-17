@@ -2523,6 +2523,152 @@ bWalletX is in beta: test with small amounts. [support@bwalletx.com](mailto:supp
 
 ---
 
+Source: https://bwalletx.com/name-bindings
+
+# Names you can check. Even against us.
+
+Your bWalletX name is signed by your own wallet. Every wallet checks that signature before it pays. And every change to who a name points to goes in a public log that anyone can read, including changes we make ourselves.
+
+[Get bWalletX](https://bwalletx.com/get)[Read the name log →](https://pay.bwallet.space/api/paymail/name-log)
+
+## What a name is
+
+A bWalletX name is `alice@bwalletx.com`, or `$alice` for short. It points to one wallet’s identity key. When someone pays `$alice`, their wallet asks our name server which key the name points to, then pays that key directly.
+
+We never hold your keys or your coins. Payments go wallet to wallet. But the name itself is a row in our database.
+
+## The risk, plainly
+
+Whoever controls the name directory could point a name at a different key. Payments already made are safe. But future payments to that name would go to the new key. That is a real power, and we hold it. On 17 October 2026 we used it: at the owner’s request we moved two of his own names between his own two wallets by editing the database directly. Nobody lost anything. But it showed how easy it was, and that nobody else could have seen it. So we built limits, and we made every use of the power public. The story is in [blog 058](https://bwalletx.com/blog/058-signed-names).
+
+## Three layers
+
+### 1. Signed bindings
+
+The wallet that owns a name signs a short statement: “this name points to my key, version N”. Our name server hands that signature out with the key. We can’t make that signature for a key we don’t hold. Before every payment to a bWalletX name, the paying wallet checks it and shows one of three things:
+
+- Signed by its owner. The key’s holder put this name on this key.
+
+- Not signed by its owner yet. A grey note. The payment still works. Wallets sign their names when they next open, so this fades out.
+
+- Bad signature. The signature doesn’t match. The payment is blocked.
+
+### 2. A public name log
+
+Every change of who a name points to is written to a log. Each entry includes the hash of the one before, so entries can’t be quietly changed or removed. A database trigger writes the entries, so a direct database edit by us is logged too, marked `admin`. The first three entries are exactly that: our own edits on 17 October.
+
+Each entry says who made the change: `owner` (the name’s owner signed it), `server` (our server made it for a request the owner signed) or `admin` (anything else, which means us).
+
+### 3. On chain (coming)
+
+Next, the log’s latest hash goes into a Bitcoin transaction once a day, so the log can’t be rewritten after the fact. And for names that must never depend on us at all, there are [OpNS names](https://bwalletx.com/names): names held on chain, in your own wallet.
+
+## Standing on others’ work
+
+We did not invent signed names. Others got there first, and we are building toward their work:
+
+- [BRC-169](https://github.com/bsv-blockchain/BRCs/blob/master/peer-to-peer/0169.md) binds a handle to a key with a certificate signed by the host, and tells wallets to warn before paying when a name’s key changes. Ours is signed by the owner instead, and fits inside ordinary paymail. Our wallet now has that key-change warning too.
+
+- [BRC-174](https://github.com/bsv-blockchain/BRCs/blob/master/tokens/0174.md) is the formal spec for on-chain names (OpNS) bound to a key. That is where bWalletX names are headed.
+
+- The [paymail standard](https://tsc.bsvblockchain.org/standards/paymail/) already names this risk: “Alias Reassignment (server & database access)”.
+
+- [Certificate Transparency](https://www.rfc-editor.org/rfc/rfc9162) showed how public, append-only logs keep operators honest. Our log is a simple version of that idea.
+
+What we add is small: the owner’s signature inside the paymail answer that wallets already fetch, and a log that records our own database edits.
+
+## Check a name yourself
+
+You don’t need our app. Ask the name server for a name’s key and binding:
+
+``curl https://pay.bwallet.space/api/paymail/id/npg@bwalletx.com``
+
+The answer has `pubkey` and, once the owner’s wallet has signed, a `binding` with `alias`, `seq`, `timestamp` and `signature`. Read the log, whole or for one name:
+
+``curl https://pay.bwallet.space/api/paymail/name-log
+curl "https://pay.bwallet.space/api/paymail/name-log?alias=npg"``
+
+Then check the signature with `@bsv/sdk`. The signed message is these fields, in this order:
+
+``bwallet-paymail|v1|bind|alias=<alias>|identityKey=<key>|seq=<n>|timestamp=<ms>``
+``import { ProtoWallet, Utils } from '@bsv/sdk';
+
+const r = await fetch('https://pay.bwallet.space/api/paymail/id/npg@bwalletx.com').then((x) => x.json());
+const b = r.binding; // undefined = not signed by its owner yet
+const msg = `bwallet-paymail|v1|bind|alias=${b.alias}|identityKey=${r.pubkey}|seq=${b.seq}|timestamp=${b.timestamp}`;
+const { valid } = await new ProtoWallet('anyone').verifySignature({
+data: Utils.toArray(msg, 'utf8'),
+signature: Utils.toArray(b.signature, 'hex'),
+protocolID: [2, 'bwallet paymail'],
+keyID: '1',
+counterparty: r.pubkey,
+});
+console.log(valid ? 'Signed by its owner' : 'Bad signature');``
+
+The log’s hash rule: `entry_hash = sha256(prev_hash|alias|identity_key|prev_identity_key|action|actor|seq|signature|note|created_at)`, with empty strings for missing fields and `created_at` in UTC as `YYYY-MM-DDTHH:MM:SS.ffffffZ`. The first entry’s `prev_hash` is 64 zeros. The full write-up is in our [draft standard](https://github.com/bitcoin-corp/bwallet/blob/main/docs/brc-draft-paymail-name-bindings.md).
+
+## The limits
+
+- We still serve the bindings and the log. We could hold back a binding. The name would then show “not signed”, which you can see.
+
+- We could serve an older genuine binding. Its version number would be lower than the one in the log, which you can see.
+
+- The log is in our database until it is anchored on chain. The hash chain shows edits to past entries, but only once someone has kept a copy to compare. Keep one if you like.
+
+- A name with no binding yet can’t be checked by signature, only by the log.
+
+Only layer 3 takes us out of the picture. We will say so on this page until it ships.
+
+## Status, 17 Oct 2026
+
+- ✓ LiveSigned bindings. Wallets sign their own names and check names before paying.
+
+- ✓ LiveBad signatures block payment.
+
+- ✓ LivePublic name log. Hash-chained, append-only, every change logged by the database itself, including ours.
+
+- ✓ LiveOur 17 Oct edits in the log as its first three entries, marked `admin`.
+
+- ✓ LiveHandovers need both wallets. A name moves only when its owner releases it and the new wallet accepts. No one, us included, can move it any other way.
+
+- ✓ LiveNo back door for lost keys. A name stays with its key. Recovery is yours, set up in advance.
+
+- ✓ LiveKey-change warning. If a name you’ve paid before points somewhere new without a handover, Send stops.
+
+- ✓ LiveProposed to the BRC authors in [BRCs issue #329](https://github.com/bsv-blockchain/BRCs/issues/329).
+
+- ◻ ComingDaily on-chain anchor of the log’s latest hash.
+
+- ◻ ComingOpNS names in the wallet as the name that never depends on us.
+
+## Questions
+
+### Are you custodial?
+
+No. Your keys are made on your device and never reach us. We can’t spend your coins or sign for you. The name directory is the one thing we control, and this page is about limiting it.
+
+### Can you change my name?
+
+Technically, yes. Anyone who runs a name directory can. What we can’t do is make your wallet’s signature for a different key, or change past log entries without it showing to anyone who kept a copy. Once the daily anchor ships, it will show to everyone.
+
+### What happens if you do?
+
+Payers’ wallets stop showing “Signed by its owner” for that name, because the new key has no signature from you. A forged signature blocks payment. And the change appears in the public log, with who made it.
+
+### How does a name move to a new wallet properly?
+
+The old owner releases it, then the new wallet signs its own binding for the name. Both steps are in the log.
+
+### Why not just use OpNS?
+
+We will, for names that matter most. OpNS names are held on chain in your wallet, so they don’t depend on us at all. But a paymail like `alice@bwalletx.com` works with every paymail wallet today, and it’s free and instant to claim. Signed bindings make that kind of name checkable while OpNS grows.
+
+Related: [Names](https://bwalletx.com/names) · [Handles](https://bwalletx.com/handles) · [Identity](https://bwalletx.com/identity) · [058 We could move your name](https://bwalletx.com/blog/058-signed-names)
+
+bWalletX is in beta: test with small amounts. Questions: [support@bwalletx.com](mailto:support@bwalletx.com)
+
+---
+
 Source: https://bwalletx.com/names
 
 Names
@@ -2826,6 +2972,111 @@ Notifications work the same in both editions: bWalletX here, and bWallet, the Ap
 [Privacy](https://bwalletx.com/privacy)
 
 Questions: [support@bwalletx.com](mailto:support@bwalletx.com)
+
+---
+
+Source: https://bwalletx.com/relayx-nfts
+
+17 October 2026
+
+Available in bWalletX 5.2.30
+
+# Your RelayX NFTs are still yours.
+
+RelayX has closed. The NFTs you bought or minted there didn’t go with it: they are on chain, held by the keys in your RelayX 12 words. bWalletX can now find them for you. Your words stay on your phone, and nothing moves unless you choose to melt one.
+
+[Get bWalletX](https://bwalletx.com/get)[Read the guide →](https://docs.bwalletx.com/recover-relayx-collections/)
+
+RECOVER
+
+## Recover RelayX collections
+
+A screen in bWalletX made for one job: finding the NFTs your RelayX words still hold.
+
+#2709
+
+#2710
+
+#2730
+
+RelayX and its logo belong to their owners, shown here to identify the wallet. bWalletX is not affiliated with RelayX.
+
+## How to find them
+
+- Open bWalletX and scroll to the bottom of your wallet.
+
+- Under Bring in old assets, tap Recover RelayX collections.
+
+- Enter your RelayX 12 words. Paste them however you saved them: spaces, commas or a numbered list all work.
+
+- Tap Find my NFTs. bWalletX reads the chain for each of your RelayX addresses and counts up what it finds.
+
+- Your NFTs appear as a gallery, grouped by collection.
+
+- Tap one to see it large: its number, collection, and the address that holds it.
+
+. -->
+
+Screenshot: entering your RelayX words
+Your words stay on your phone.
+
+Screenshot: your collections, found
+Grouped by collection, each girl by number.
+
+Screenshot: one girl, with Melt
+Nothing moves unless you melt.
+
+## Ninja Punk Girls
+
+Ninja Punk Girls was one of the largest collections on RelayX. Every one of them is now identified:
+
+- Series 2: all 3,333 NFTs, each matched to her card number and picture. RelayX stored the pictures encrypted, so most were matched by the exact size of each minted file, and the rest by mint order between those matches.
+
+- Series 1: all 25 NFTs, identified by name (13 girls).
+
+- Single-girl collections such as KAZUYO and AIKA are named from the collection itself.
+
+### Melting a girl into her element cards
+
+Each NPG is built from layered element cards: hair, face, outfit, weapon and more. If you hold one, you can melt her into those cards for the NPG games, plus her round avatar badge, which only someone who melted an original can hold.
+
+- One approval. A single sheet shows her, the cards she becomes, and the fees.
+
+- Fees at cost. About 1¢ for the network and minting. No melt fee.
+
+- The old NFT is burned on chain, in a way anyone can check. That is what makes the new cards hers and nobody else’s.
+
+- Series 1 melts into the redrawn element set for that girl: the same girl, redrawn as parts, not the original artwork.
+
+## Safety
+
+- Your words never leave your phone. bWalletX reads public chain data only. Nothing about your keys is sent to us or to anyone.
+
+- Finding is read-only. The scan moves nothing.
+
+- Melting is the only action, and it is one deliberate tap on one NFT.
+
+- RelayX NFTs are never swept. bWalletX recognises them before anything else and won’t spend them as coins.
+
+## Status, 17 Oct 2026
+
+- ✓ 5.2.30Find RelayX NFTs from your 12 words, read-only.
+
+- ✓ 5.2.30NPG Series 2 identified by number, with picture. Series 1 and single-girl collections by name.
+
+- ✓ 5.2.30Melt an NPG into her element cards and avatar badge.
+
+- ◻ ComingNFTs that were listed for sale on RelayX when it closed.
+
+- ◻ ComingOther Run collections shown with their pictures, not only their names.
+
+## For developers
+
+How RelayX NFTs are traced and identified, including the encrypted pictures: [Identifying RelayX NFTs](https://docs.bwalletx.com/developers/relayx-recovery/). How an NPG is built from her element cards: [Stack recipes](https://docs.bwalletx.com/developers/stack-recipes/).
+
+Related: [Recover RelayX collections (guide)](https://docs.bwalletx.com/recover-relayx-collections/) · [Restore](https://bwalletx.com/restore) · [NFTs](https://bwalletx.com/nfts)
+
+bWalletX is in beta: test with small amounts. Questions: [support@bwalletx.com](mailto:support@bwalletx.com)
 
 ---
 
@@ -10797,6 +11048,95 @@ The first room to use invites is The Scammer Cartel. Its people will come in thr
 Related: [Invites](https://bwalletx.com/invite) · [bSpaces](https://bwalletx.com/bspaces) · [bMail](https://bwalletx.com/bmail) · [Sign in with X](https://bwalletx.com/x)
 
 [← 056 bShares](https://bwalletx.com/blog/056-bshares)[All posts →](https://bwalletx.com/blog)
+
+---
+
+Source: https://bwalletx.com/blog/058-signed-names
+
+[Development blog](https://bwalletx.com/blog) · 058 · 17 Oct 2026
+
+# We could move your name. Now you can see if we do.
+
+A bWalletX name is a row in our database, so we could point it at another key. On 17 Oct we did, for the owner’s own names. Now names are signed by their owners, and every change goes in a public log.
+
+## What happened
+
+Our owner, Richard, has two wallets. Two of his names, `npg@bwalletx.com` and `ninjapunkgirls@bwalletx.com`, were on the wrong one. Early on 17 October he asked us to move them. We did it the quick way: we edited the name directory in our database by hand. A few minutes later we gave a third name, `npgx`, to his NPGX wallet the same way.
+
+Nothing else changed hands. No coins moved. Nobody lost anything. The names were his, on his wallets, at his request.
+
+But it took one line of SQL. And no one outside could have seen it.
+
+## Why that matters
+
+bWalletX never holds your keys or your coins. Payments go from one wallet to another. That part is true and stays true.
+
+Your name is different. `alice@bwalletx.com` is a row in our database that says which key the name points to. If we, or someone who broke into our server, pointed that row at another key, future payments to `$alice` would go there instead. Past payments are safe. Future ones are not.
+
+Every paymail service works this way. We had not said it out loud. Moving the owner’s names made it obvious, so we fixed what we could the same day, and we are saying it now.
+
+## What we built
+
+Signed names. Your wallet now signs a short statement: “this name points to my key, version 1”. Our name server hands that out with your key. We can’t make that signature for a key we don’t hold. Before any payment to a bWalletX name, the paying wallet checks it:
+
+- Signed by its owner: all good.
+
+- Not signed by its owner yet: a grey note; the payment still goes. Wallets sign their own names the next time they open.
+
+- Bad signature: the payment is blocked.
+
+A public name log. Every change of who a name points to is written to a log that can only be added to. Each entry carries the hash of the one before. The database writes the entries itself, so even a hand edit by us is logged, marked `admin`. Anyone can read it:
+
+``curl https://pay.bwallet.space/api/paymail/name-log
+curl "https://pay.bwallet.space/api/paymail/name-log?alias=npg"``
+
+The first three entries are our edits from 17 October: two moves and one new name, all marked `admin`, each with a note saying why.
+
+## Standing on others’ work
+
+Signed names are not our idea. [BRC-169](https://github.com/bsv-blockchain/BRCs/blob/master/peer-to-peer/0169.md) already binds handles to keys with a certificate from the host, and warns before paying a name whose key has changed; we plan to adopt that warning too. [BRC-174](https://github.com/bsv-blockchain/BRCs/blob/master/tokens/0174.md) specifies on-chain names held in your wallet, which is where we are headed. The [paymail standard](https://tsc.bsvblockchain.org/standards/paymail/) already lists “alias reassignment” by whoever has the server and database. And public logs that keep operators honest come from [Certificate Transparency](https://www.rfc-editor.org/rfc/rfc9162).
+
+Our part is small: the owner signs, not the host; the signature rides in the paymail answer wallets already fetch; and the log catches our own database edits.
+
+## What this doesn’t fix yet
+
+- We still serve the signatures and the log. We could hold a signature back; the name would then show “not signed”.
+
+- We could serve an older genuine signature; its version number would give it away against the log.
+
+- Until the log is anchored on chain, it lives in our database. The hash chain shows tampering only to someone who kept an earlier copy.
+
+## What’s next
+
+Once a day, the log’s latest hash goes into a Bitcoin transaction, so no one can rewrite it after the fact, us included. And for names that must never depend on us, OpNS names live on chain in your own wallet.
+
+We have also written the scheme up as a draft, so any paymail service could sign its names the same way. We have raised it with the authors of BRC-169 and BRC-174 in [BRCs issue #329](https://github.com/bsv-blockchain/BRCs/issues/329), asking whether it belongs inside their work.
+
+## Status, 17 Oct 2026
+
+- ✓ Signed names: wallets sign their own names and check names before paying
+
+- ✓ Bad signatures block payment
+
+- ✓ Public name log, hash-chained, with our 17 Oct edits as its first entries
+
+- ✓ Handovers need both wallets: the owner releases, the new wallet accepts
+
+- ✓ No back door for lost keys
+
+- ✓ Key-change warning before paying
+
+- ✓ Proposed to the BRC authors ([issue #329](https://github.com/bsv-blockchain/BRCs/issues/329))
+
+- ◻ Daily on-chain anchor of the log
+
+- ◻ OpNS names in the wallet
+
+How to check a name yourself, with code: [Signed names](https://bwalletx.com/name-bindings).
+
+Related: [Signed names](https://bwalletx.com/name-bindings) · [Names](https://bwalletx.com/names) · [Handles](https://bwalletx.com/handles) · [Identity](https://bwalletx.com/identity)
+
+[← 057 HandCash and invites](https://bwalletx.com/blog/057-handcash-and-invites)[All posts →](https://bwalletx.com/blog)
 
 ---
 
