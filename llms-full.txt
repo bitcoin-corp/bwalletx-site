@@ -1036,73 +1036,107 @@ bWalletX is in beta: test with small amounts. Questions: [support@bwalletx.com](
 
 Source: https://bwalletx.com/bweb
 
-# bWeb: your web on bitcoin First settings live
+# bWeb: ask b to build your website Planned
 
-The first part of bWeb is live: a bWeb page in bWalletX Settings and optional Ask b add-ons. The rest is still a plan, and the list below says exactly what works today. Here is the idea: you start in bWalletX, and your [bApps](https://bwalletx.com/bapps) become yours. You choose how they look and what they show, and when you want more, agents like b build it for you. You pay in small amounts, from your wallet, only after you approve.
+You tell b what you need: a page for your band, a site for your café, a small shop. You get one fixed price in BSV and approve it once. An agent builds it and shows you previews in the chat. When you're happy, the site is published on bitcoin, and the code is yours. This isn't open yet. We're running one real paid pilot first, and this page says exactly what works today.
 
-## What works today
+[Tell b you're interested](https://bwalletx.com/ask-b)[Be a pilot (email us)](mailto:support@bwalletx.com?subject=bWeb%20pilot)
 
-- Live Settings › bWeb in bWalletX: choose which bApps show in your desktop dock
+## How it will work
 
-- Live Choose which bApps show in the Feed's bApps reel
+### 1. Ask b
 
-- Live What b can see: switch off telling b the screen you're on; choose whether b knows your bWeb setup
+Say what you want in bWalletX. b asks a few questions and writes a one-page brief for you to check.
 
-- Live Linked identities: open your Identity map from bWeb
+### 2. One fixed price
 
-- Live Ask b add-ons, each with its own switch: Names, Exchange search, bMail drafting, Feed summaries. No extra charge: each message costs your normal Ask b price
+A tier and a price in dollars, paid in BSV at the rate of the moment. One approval in your wallet. No meter running.
 
-- Live Your bWeb settings stay on your phone, and apps never see them
+### 3. b builds it
 
-- Coming Your home page and default search
+An agent builds your site in a walled-off sandbox. You see progress and screenshots in your chat with b.
 
-- Coming Settings encrypted to you and synced between your devices
+### 4. Preview and tweak
 
-- Coming Paid add-ons b builds for you (price shown first, approved in your wallet)
+You get a private preview link. Small changes are included. Bigger ones get a new price before any work starts.
 
-- Coming Your own version of a bApp on its own web address
+### 5. Launch on chain
 
-## Three ways to make it yours
+The files are published on BSV. You get a permanent link, and the site sits in your own wallet, so only you can update it. A shop takes payments through your bWalletX Store.
 
-### 1. Make it yours Free
+### 6. Upkeep, if you want it
 
-Settings for each app: the order of your bar, the theme, what the Feed shows, how much a Like costs and your daily cap. Instant. Most people never need more.
+A small monthly plan for edits and re-publishing. Stop any time: the site stays up because it's on chain.
 
-### 2. Ask b Small paid job
+## What you could ask for
 
-"b, add a word-count goal to bWriter." b shows you a price and what the add-on can and can't do. You approve in your wallet, and it's live in minutes. Undo any time.
+- “A one-page site for my band: photo, next gigs, a link to our music, and a way to tip us.”
 
-### 3. Your own version Paid
+- “Five pages for my café: menu, opening hours, a map link, and a contact button that messages my $name.”
 
-b makes your own copy of an open-source bApp with the change you asked for, on its own web address. Good changes are offered back to the main app, so everyone gets them.
+- “A small shop for my prints, 20 products, paid in BSV to my Store.”
 
-## Safety promises
+## Yours, on chain
 
-- Add-ons never touch your keys. They run walled off from your wallet and can't send your data anywhere.
+Your site is written to bitcoin as a set of files, and served from there by gateways such as ORDFS. Nobody can take it down by closing an account, and you hold the piece that controls updates. Each update is a new version; old versions stay readable. You can point your own domain at it.
 
-- Payments only go through your wallet. bWalletX shows its own approval and your daily cap applies. Nothing pays on its own.
+What that means in practice: sites are pages, styles, scripts and pictures, with no server behind them. Forms, sign-ins and payments go through bWalletX on the page. Anything published stays public for good, so we never put secrets or other people's personal details in a site.
 
-- Your settings are private. They stay on your device, and the apps never see them. (Encryption and sync are coming.)
+## Planned prices
 
-## bApp tokens are keys
+These are a draft and may change after the pilot. Paid in BSV at the rate when you get your quote.
 
-Each bApp's token (such as $bWriter) is a key to that app's rooms, including its build room, where people who hold it talk about and rank what to build next. If you paid for a change that goes into the main app, you get a record that you helped build it. A token is room access, not an investment, and it doesn't pay you anything.
+TierPlanned priceIncludes
 
-## Example: a movie with your friends
+One page$49One page, your words and photos, a contact button, one round of small changes
 
-In your group's room: "b, a heist movie starring me, Sam and Priya, in Lisbon." b gives a price. Everyone in the cast signs their own consent in their own wallet; without everyone's yes, nothing gets made. The group funds it together, and the film is delivered privately to the room. Posting it to the public [bMovies](https://bwalletx.com/bapps/bmovies) feed needs every cast member to agree again.
+Site$149Up to 5 pages, up to 25 photos, two rounds of small changes, help with your own domain
 
-## First apps
+Site + shop$299The Site tier plus up to 30 products paid through your bWalletX Store
 
-bAppPlanned
+Upkeep$9 a monthUp to 3 small edits a month and re-publishing
 
-bWriterSettings, Ask b, your own version
+Publishing on chain costs a few cents or less for most sites, shown before you approve. If we can't build what your brief says, you get your BSV back.
 
-bSheetsSettings, Ask b, your own version
+## Status
 
-bMoviesSettings only at first
+- Live b in chat inside bWalletX ([Ask b](https://bwalletx.com/ask-b))
 
-[Get bWalletX](https://bwalletx.com/get)[See the bApps](https://bwalletx.com/bapps)[For developers](https://bwalletx.com/sign-in-button)
+- Live bWalletX [Store](https://bwalletx.com/store)
+
+- Live On-chain web pages served by ORDFS (ordfs.network), which bWeb will use
+
+- Live bWeb settings in bWalletX: choose your dock and Feed bApps, what b can see, Ask b add-ons
+
+- Coming b writes your brief
+
+- Coming Fixed quote in BSV with one approval
+
+- Coming Agent builds your site, with progress in chat
+
+- Coming Private preview link and small changes
+
+- Coming Launch on chain, site held in your wallet
+
+- Coming Your own domain pointing at your site
+
+- Coming Shops paid through your bWalletX Store
+
+- Coming Upkeep plan
+
+- Coming First paid pilot
+
+## Safety
+
+- We never ask for passwords or keys. The building agent can't reach your wallet.
+
+- You pay only through your wallet, once, after you've seen the price.
+
+- No fakes. We don't build sites that pretend to be other people or brands, or that trick people.
+
+For the details, read the [bWeb build plan](https://docs.bwalletx.com/plans/bweb-build-plan/).
+
+[Tell b you're interested](https://bwalletx.com/ask-b)[Be a pilot](mailto:support@bwalletx.com?subject=bWeb%20pilot)[Get bWalletX](https://bwalletx.com/get)
 
 ---
 
