@@ -4229,6 +4229,20 @@ Status, 7 Oct 2026: the 14-day test hasn't started yet. Google asked us to move 
 
 Loading…
 
+## Where each version is
+
+We ship small updates often, usually several a week. A new version reaches each place at a different speed, because Apple and Google check some of them first. Latest: 5.2.31 (18 Oct 2026), [what’s new](https://bwalletx.com/releases#v5.2.31).
+
+- Web, Chrome extension, Android download (APK): the same day. Now on 5.2.31.
+
+- Android, Google Play test: the same day. Now on 5.2.31.
+
+- iPhone, TestFlight: about a day later, after Apple’s beta review. 5.2.31 is with Apple now; until it clears, TestFlight still offers an older build.
+
+- App Store and Play Store: not out yet. bWallet’s first store release is being prepared; testers will hear first.
+
+Every release is listed on [/releases](https://bwalletx.com/releases), newest first.
+
 ## The Android test link
 
 Once your Google account is on the list, join here on your phone: [play.google.com/apps/internaltest/4701646815257978169](https://play.google.com/apps/internaltest/4701646815257978169), then install bWallet from Google Play. What to test and how to report is on [/testers/bwallet/android](https://bwalletx.com/testers/bwallet/android). The link does nothing for an account that isn’t on the list, so apply first.
