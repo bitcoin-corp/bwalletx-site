@@ -831,11 +831,25 @@ Source: https://bwalletx.com/bugs
 
 # Bugs, fixed in the open.
 
-Bugs people reported to b, and where each fix stands. Tell b what broke in the app; a short summary appears here after review.
+Tell b what broke and it goes straight to the team with a reference number. Bugs that are safe to show appear here as short summaries once a person has reviewed them. Anything touching keys, payments, sign-in or personal data stays private.
 
 AllNewPlannedFixingFixed
 
 - Loading…
+
+## Where this stands
+
+- LiveTell b in Ask b, or tap Report to b on any error. You get a reference like F-12.
+
+- LiveEvery report reaches the team, grouped with others like it, in a daily summary.
+
+- LivePrivate by default: nothing appears here until a person approves it.
+
+- ComingYour reports in bWalletX: each one’s status, from received to fixed in a named release.
+
+- ComingFixed bugs linked to the [release notes](https://bwalletx.com/releases).
+
+- Coming“Me too” votes from signed-in bWalletX users.
 
 ## How this list works
 
@@ -2148,11 +2162,25 @@ Source: https://bwalletx.com/ideas
 
 # Your ideas, in the open.
 
-Ideas people sent to b, and where each one stands. Tell b what you want in the app; a short summary appears here after review.
+Tell b what you want in the app and it goes straight to the team with a reference number. Ideas appear here as short summaries once a person has reviewed them.
 
 AllNewPlannedBuildingShipped
 
 - Loading…
+
+## Where this stands
+
+- LiveTell b in Ask b, or tap Report to b on any error. You get a reference like F-12.
+
+- LiveEvery report reaches the team, grouped with others like it, in a daily summary.
+
+- LivePrivate by default: nothing appears here until a person approves it.
+
+- ComingYour reports in bWalletX: each one’s status, from received to shipped in a named release.
+
+- ComingShipped ideas linked to the [release notes](https://bwalletx.com/releases).
+
+- Coming“Me too” votes from signed-in bWalletX users.
 
 ## How this list works
 
@@ -3154,6 +3182,15 @@ Each release ships to the Android APK, the Chrome extension and the web wallet. 
 [Download bWalletX](https://bwalletx.com/download)
 
 ## 5.2.32 2026-10-18
+
+- RelayX NFTs still listed for sale on RelayX are found too, and one tap cancels the listing back to your own address. [How it works](https://bwalletx.com/recover-relayx).
+- Airdrop tokens or BSV to every holder of a token with one approval, and BSV drops now show in your airdrop inbox.
+- Launching a coin: keep 0–20% for yourself, time-locked (by default a 12-month cliff, then monthly unlocks) with a public receipt. The real launch cost is shown: a 0.1 BSV indexing deposit, paid under the same Allow.
+- Partnership shares: set up partners, b drafts the agreement, everyone signs it in their wallet, and payments to the partnership split by share.
+- Token sends no longer fail with “OP_DUP”: the wallet repairs the token record and retries once.
+- Exchange rows swipe to Buy · Sell · Chat and Pin · Hide; a Themes tab for themes you bought, with NPGX, VexVoid and NPG art on your card; theme install links; mint screen fixes; “Your reports” shows what happened to each bug report you sent b; and agent spending limits hold when requests arrive at once.
+
+## 5.2.31 2026-10-18
 
 - Restore your RelayX wallet into bWalletX and a blue Your RelayX collection card appears at the top: one tap finds its NFTs, with no words to type again. [How it works](https://bwalletx.com/recover-relayx).
 - The NFTs tab has an All · 1Sat · Run filter, so your RelayX NFTs sit next to your other NFTs.
@@ -11978,7 +12015,7 @@ Source: https://bwalletx.com/connect.md
 
 # Add Sign in with bWalletX to your app
 
-Source: https://bwalletx.com/connect (this file: https://bwalletx.com/connect.md). Last checked against bWalletX 5.2.32, connect.js and @bwalletx/connect 0.5.0 on 18 Oct 2026. Full docs: https://docs.bwalletx.com/developers/connect/
+Source: https://bwalletx.com/connect (this file: https://bwalletx.com/connect.md). Last checked against bWalletX 5.2.31, connect.js and @bwalletx/connect 0.5.0 on 18 Oct 2026. Full docs: https://docs.bwalletx.com/developers/connect/
 
 ## In 30 seconds
 
