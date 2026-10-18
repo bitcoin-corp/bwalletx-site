@@ -100,7 +100,7 @@ def pages(h, back):
         deco=bg('grid', RING('rgba(255,210,77,.35)', 60, 55, 80), emo(['soon', 'cal'], 33))))
     P.append(page(media('e0-get') + '<p class="k r1">Get it</p><h2 class="r2">Start in a minute.</h2>'
         '<ul class="st r3"><li><a href="https://web.bwalletx.com">Web &middot; web.bwalletx.com</a></li><li><a href="/android">Android &middot; download</a></li><li><a href="/extension">Chrome extension</a></li><li><a href="https://desktop.bwalletx.com">Desktop &middot; desktop.bwalletx.com</a></li><li><a href="/iphone">iPhone web app</a> &middot; <a href="https://testflight.apple.com/join/1TTnQNKm">TestFlight beta</a></li></ul>'
-        + getqr() + '<p class="r4">Beta: test with small amounts. <a href="/hodl-my-b/hodl-my-b-edition-0.pdf" download>PDF of this edition</a></p>', 's-paper', 17, issue=0,
+        + getqr() + '<p class="r4 getnote">Beta: test with small amounts. <a href="/hodl-my-b/hodl-my-b-edition-0.pdf" download>PDF of this edition</a></p>', 's-paper', 17, issue=0,
         deco=bg('grid', BLOB('#ffd24d', 72, -12, 60), emo(['gift', 'rocket'], 34))))
     P.append(page('<p class="k r1">Back cover</p><h2 class="r2">Just <span class="gd">b.</span></h2><p class="q r3">Less noise. More life.</p><p class="k r3">Every edition</p><div class="g r3">' + back
         + '</div><p class="foot2">By The Bitcoin Corporation Ltd &middot; Emoji: Twemoji, CC-BY 4.0 &middot; Screens from the live apps, 18 Oct 2026</p>', 's-back', hard=True,

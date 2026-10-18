@@ -237,6 +237,7 @@ img.og{width:100%;height:auto;aspect-ratio:1200/630;object-fit:cover;display:blo
 .media>img:not(.og):not(.beer2),.media>video,.media>picture,.media>picture>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border-radius:14px}
 .media .og{max-height:100%;width:auto;max-width:100%}
 .folio{position:absolute;left:max(16px,8cqw);bottom:max(3cqh,54px);font:400 11px var(--mono);letter-spacing:.14em;text-transform:uppercase;opacity:.55;margin:0}
+.getnote{margin-bottom:34px!important}
 .st{list-style:none;padding:0;margin:0}
 .st li{padding:1.4cqh 0;border-bottom:1px solid rgba(127,127,127,.4)}
 .toc{list-style:none;padding:0;margin:0}
