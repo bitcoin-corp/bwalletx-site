@@ -664,7 +664,7 @@
     <script>
       // Sheet 02: invented coins fan out; every few seconds the next flips to the front. Static under reduced motion.
       (function () {
-        var coins = [['FROG','🐸','#6fdc8c','#0c2a12','1,284.50','4,200,000'],['DUCK','🦆','#ffd84d','#3a2c00','642.10','1,850,000'],['KOALA','🐨','#a77b5a','#fff6ec','2,019.75','7,300,000'],['ICECREAM','🍦','#ff8fbf','#2b2140','318.40','960,000'],['CAT','🐱','#b39cff','#1d1340','877.25','2,640,000'],['ROCKET','🚀','#7cc7ff','#0a2235','4,150.00','12,500,000'],['TACO','🌮','#ffb347','#3a1e00','96.80','410,000'],['PIZZA','🍕','#ff6b5a','#fff4ee','1,512.30','5,080,000']];
+        var coins = [['FROG','🐸','#6fdc8c','#0c2a12','1,284.50','4,200,000'],['DUCK','🦆','#ffd84d','#3a2c00','642.10','1,850,000'],['KOALA','🐨','#a77b5a','#fff6ec','2,019.75','7,300,000'],['ICECREAM','🍦','#ff8fbf','#2b2140','318.40','960,000'],['CAT','🐱','#b39cff','#1d1340','877.25','2,640,000'],['ROCKET','🚀','#7cc7ff','#0a2235','4,150.00','12,500,000'],['TACO','🌮','#ffb347','#3a1e00','96.80','410,000'],['PIZZA','🍕','#ff6b5a','#fff4ee','1,5.2.31','5,080,000']];
         var stage = document.getElementById('bcx-stage'); if (!stage) return;
         var cards = coins.map(function (c) { var el = document.createElement('div'); el.className = 'bcx'; el.style.setProperty('--c', c[2]); el.style.setProperty('--t', c[3]);
           el.innerHTML = '<div class="t"><span>$' + c[0] + '</span><span>Edition</span></div><div class="r"><div><div class="v">$' + c[4] + '</div><div class="b">' + c[5] + ' ' + c[0] + '</div></div><div class="e">' + c[1] + '</div></div>'; stage.appendChild(el); return el; });
