@@ -443,8 +443,10 @@ def sticker():
     p = os.path.join(ROOT, 'index.html'); s = open(p).read(); a, b = '<!-- hodl-sticker:start -->', '<!-- hodl-sticker:end -->'
     if a not in s: return
     t = STICKER
-    html = (f'{a}<a class="hodl-sticker" href="{t["href"]}" aria-label="{t["label"]}"><span class="hs-k">{t["kicker"]}</span>'
-            f'<span class="hs-t">{t["title"]}</span><span class="hs-s">{t["sub"]}</span></a>{b}')
+    # A die-cut beer-emoji sticker (owner, 18 Oct 2026) with a small label tab. Twemoji only (CC BY 4.0).
+    html = (f'{a}<a class="hodl-sticker" href="{t["href"]}" aria-label="{t["label"]}">'
+            f'<img class="hs-e" src="/media/emoji/1f37a.svg" alt="" width="96" height="96" />'
+            f'<span class="hs-tab"><span class="hs-t">{t["title"]}</span><span class="hs-s">{t["sub"]}</span></span></a>{b}')
     s = s[:s.index(a)] + html + s[s.index(b) + len(b):]
     open(p, 'w').write(s)
 
