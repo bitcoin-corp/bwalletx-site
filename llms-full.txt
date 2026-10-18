@@ -2158,7 +2158,8 @@ Privacy
 - LiveNo ads, no tracking, no selling your data
 - LiveNo analytics or crash reports
 
-- ComingTranscripts only when the host turns it on and each speaker agrees, with a visible badge. Transcription audio is deleted after. Hosts can keep a recording if everyone on stage agrees; paid storage on bStoreX is coming.
+- LiveSpace transcripts only when the host turns it on and each speaker agrees, with a visible badge; transcription audio is deleted after. In bWalletX.
+- ComingHosts can keep a recording if everyone agrees; paid storage on bStoreX is coming
 - ComingEnd-to-end encrypted DMs
 
 [Privacy policy](https://bwalletx.com/privacy)
@@ -2198,7 +2199,6 @@ Coming
 - ComingA real email inbox at name@bmailx.com
 - ComingbCredits top-up
 - ComingShare one fact, such as over 18
-- ComingSpace transcription, with consent
 
 When it ships, it moves to Live. Not before.
 
