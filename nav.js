@@ -108,29 +108,27 @@
           { label: 'CLI', href: '/cli' },
           { label: 'MCP', href: '/mcp' }
         ] },
-      { label: 'Developers', href: '/developers', pages: ['/developers', '/connect', '/apps/add', '/open-source'],
+      // Developers holds the Blog too (owner, 18 Oct 2026). When you publish a post, add it to the top of
+      // Latest and drop the oldest (keep 5).
+      { label: 'Developers', href: '/developers', pages: ['/developers', '/connect', '/apps/add', '/open-source', '/blog', '/releases'],
+        // The pill row under the bar shows these only (not the post list in the menu).
+        pills: ['/developers', '/connect', '/apps/add', '/cli', '/mcp', '/open-source', '/blog', '/releases'],
         sub: [
           { label: 'Developers', href: '/developers' },
           { label: 'Sign in with bWalletX', href: '/connect' },
           { label: 'Add your app', href: '/apps/add' },
           { label: 'CLI', href: '/cli' },
           { label: 'MCP', href: '/mcp' },
-          { label: 'Open source', href: '/open-source' }
-        ] },
-      // Blog: when you publish a post, add it to the top of LATEST and drop the oldest (keep 5).
-      { label: 'Blog', href: '/blog', pages: ['/blog', '/releases'], pills: false,
-        sub: [{ label: 'All posts', href: '/blog' }, { label: 'Releases', href: '/releases' }, { head: 'Latest' }].concat([
+          { label: 'Open source', href: '/open-source' },
+          { label: 'Blog', href: '/blog' },
+          { label: 'Releases', href: '/releases' },
+          { head: 'Latest' }
+        ].concat([
           { label: '053 Friends, bPics, video', href: '/blog/053-friends-bpics-and-video' },
           { label: '052 Tip buttons', href: '/blog/052-tip-buttons' },
           { label: '051 Spaces on a schedule', href: '/blog/051-spaces-schedule-and-ask-b' },
           { label: '050 bTV: AIVJ — VexVoid, live', href: '/blog/050-aivj-tv-vexvoid-live' },
           { label: '049 The Exchange, sorted', href: '/blog/049-the-exchange-sorted' }
-        ], [{ head: 'Series: Chat on BSV' },
-          { label: '021 Coordinate on BSV', href: '/blog/021-coordinate-on-bsv' },
-          { label: '026 Paying to be heard', href: '/blog/026-paying-to-be-heard' },
-          { label: '032 Meet bChatX.com', href: '/blog/032-meet-bchatx' },
-          { label: '033 Spaces you can listen to', href: '/blog/033-spaces-you-can-listen-to' },
-          { label: '034 Open apps, open protocol', href: '/blog/034-open-apps-open-protocol' }
         ]) }
     ],
     // Store edition (bWallet): browse-only Market, no trading, everything else lives on bWalletX.
@@ -208,7 +206,10 @@
     var sub = document.createElement('nav');
     sub.className = 'section-nav sub-nav';
     sub.setAttribute('aria-label', section.label.replace(/&[a-z]+;/g, '') + ' pages');
-    sub.innerHTML = '<div class="wrap">' + section.sub.map(function (it) {
+    var pillItems = Array.isArray(section.pills)
+      ? section.sub.filter(function (it) { return section.pills.indexOf(it.href) !== -1; })
+      : section.sub;
+    sub.innerHTML = '<div class="wrap">' + pillItems.map(function (it) {
       return link(it, path === it.href || (it.also || []).indexOf(path) !== -1);
     }).join('') + '</div>';
     var bar = main.closest('.topbar');
