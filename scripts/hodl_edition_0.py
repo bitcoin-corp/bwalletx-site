@@ -71,7 +71,7 @@ def pages(h, back):
         deco=bg('grid', BLOB('#7ee0a1', 75, 70, 60), emo(['lock', 'book', 'ok'], 31))))
     P.append(page('<p class="k r1">Privacy</p><h2 class="r2">Plainly.</h2>'
         f'<ul class="st r3"><li>{L}Your keys and recovery phrase never leave your device</li><li>{L}No ads, no tracking, no selling your data</li><li>{L}No analytics or crash reports</li></ul>'
-        f'<ul class="st r3"><li>{L}Space transcripts only when the host turns it on and each speaker agrees, with a visible badge; transcription audio is deleted after. In bWalletX.</li><li>{C}Hosts can keep a recording if everyone agrees; paid storage on bStoreX is coming</li><li>{C}End-to-end encrypted DMs</li></ul>'
+        f'<ul class="st r3"><li>{L}Space transcripts only when the host turns it on and each speaker agrees, with a visible badge; transcription audio is deleted after. In bWalletX.</li><li>{C}Hosts can keep a recording if everyone agrees; paid storage on <a href="https://bdrivex.com">bDriveX</a> is coming</li><li>{C}End-to-end encrypted DMs</li></ul>'
         '<p class="r3"><a href="/privacy">Privacy policy</a></p>', 's-gold', 13, issue=0,
         deco=bg('dots', RING('#111', 60, 40, 80), emo(['lock', 'shades'], 32))))
     def SITE(name, dom, line, img, href=None):
