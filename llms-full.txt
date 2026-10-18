@@ -2015,7 +2015,8 @@ Inside
 - Agents with pocket money11
 - Yours, really12
 - Privacy, plainly13
-- Coming, and how to get it14
+- One wallet, every site14
+- Coming, and how to get it16
 
 Everything in here is Live today, unless it says Coming.
 
@@ -2134,6 +2135,8 @@ It can only spend what you gave it.
 
 Hodl my b · Edition 0 · 11
 
+[](https://github.com/bitcoin-corp/bwallet)
+
 Open source
 
 ## Yours, really.
@@ -2154,12 +2157,37 @@ Privacy
 - LiveNo ads, no tracking, no selling your data
 - LiveNo analytics or crash reports
 
-- ComingSpace transcripts only when the host turns them on and each speaker agrees, with a visible badge; audio deleted after
+- ComingTranscripts only when the host turns it on and each speaker agrees, with a visible badge. Transcription audio is deleted after. Hosts can keep a recording if everyone on stage agrees; paid storage on bStoreX is coming.
 - ComingEnd-to-end encrypted DMs
 
 [Privacy policy](https://bwalletx.com/privacy)
 
 Hodl my b · Edition 0 · 13
+
+The family
+
+## One wallet. Every site.
+
+Claim one name in bWalletX and every site below already knows you. No new account, no new password: all roads lead back to your wallet.
+
+- [bWalletXbwalletx.comLive The wallet: web, Android, Chrome, Desktop](https://bwalletx.com)
+- [bChatXbchatx.comLive Rooms, DMs and live Spaces](https://bchatx.com)
+- [bMailXbmailx.comLive Sealed letters with a stamp that pays](https://bmailx.com)
+- [bRadioXbradiox.comLive Live shows you can join on air](https://bradiox.com)
+
+Hodl my b · Edition 0 · 14
+
+The family · continued
+
+- [bCalXbcalx.comLive What’s on: every scheduled Space](https://bcalx.com)
+- [bJobsXbjobsx.comLive Get paid to your name, person to person](https://bjobsx.com)
+- [bNewsXbnewsx.comLive Headlines as threads; tip the writer](https://bnewsx.com)
+- [bStoreXbstorex.comLive Buy with one tap; yours to keep](https://bstorex.com)
+- [bMusicXbmusicx.comLive Pay by the second, straight to the artist](https://bmusicx.com)
+
+One name. Every site.
+
+Hodl my b · Edition 0 · 15
 
 Coming
 
@@ -2174,7 +2202,7 @@ Coming
 
 When it ships, it moves to Live. Not before.
 
-Hodl my b · Edition 0 · 14
+Hodl my b · Edition 0 · 16
 
 Get it
 
@@ -2192,7 +2220,7 @@ Scan to get bWalletbwalletx.com/get
 
 Beta: test with small amounts. [PDF of this edition](https://bwalletx.com/hodl-my-b/hodl-my-b-edition-0.pdf)
 
-Hodl my b · Edition 0 · 15
+Hodl my b · Edition 0 · 17
 
 Back cover
 
@@ -4777,7 +4805,7 @@ items in the Store; send and receive bMail (letters that can carry a paid stamp 
 audio Spaces; list and buy tokens and NFTs wallet to wallet; time-lock coins; launch your own token; run agent
 accounts with their own spending limits; ask our AI assistant, b; and swap other coins into BSV through a
 third-party partner. bWalletX also runs as a desktop app and in your browser. Related sites such as bchatx.com,
-bmailx.com, bcalx.com, bradiox.com, bjobsx.com and bnewsx.com are part of bWalletX and covered by these terms.
+bmailx.com, bcalx.com, bradiox.com, bjobsx.com, bnewsx.com and bstorex.com are part of bWalletX and covered by these terms.
 bWalletX is software. We are not a bank, an exchange, a broker or a payment service, and we don't hold money for
 you.
 
