@@ -4705,6 +4705,254 @@ SimplyCash is named only to describe compatibility; bWalletX isn’t affiliated 
 
 ---
 
+Source: https://bwalletx.com/terms
+
+[← bWalletX](https://bwalletx.com/)
+
+# Terms of Service
+
+bWalletX (Beta) · Effective 18 October 2026
+
+Please read these terms before using bWalletX. The short version: it's your wallet and your 12 words. We can't
+see them, recover them or move your money. Keep your words safe, start with small amounts while we're in beta,
+and remember that coin prices go up and down.
+
+## 1. Who we are
+
+bWalletX is published by The Bitcoin Corporation Ltd, a company registered in England and Wales (company number
+16735102), registered office Flat 6, 315 Barking Road, London, E13 8EE ("we", "us"). These terms cover bWalletX (the web
+wallet at `web.bwalletx.com`, the Chrome extension and the phone apps), bWallet (the edition on the App
+Store and Google Play), and this website, together "bWalletX".
+
+By using bWalletX you agree to these terms. If you don't agree, please don't use it. Our
+[Privacy Policy](https://bwalletx.com/privacy) explains what data we handle and why.
+
+## 2. Who can use it
+
+You must be at least 18, or the age of majority where you live if that is higher, and able to make a binding
+contract. You must not use bWalletX if you are subject to sanctions, or where using a Bitcoin wallet, swapping
+coins or any feature you use is against the law where you are. You are responsible for following the laws that
+apply to you, including on tax.
+
+## 3. Self-custody: your keys, your responsibility
+
+bWalletX is non-custodial. Your wallet is created on your device from a recovery phrase (your 12 words). Your
+private keys and 12 words stay on your device; we never receive or hold them, and we can't move, freeze or
+reverse your coins, tokens or NFTs.
+
+-
+Lost words can't be recovered. If you lose your 12 words and your device, or forget your password
+without your 12 words, we cannot get your wallet back for you. Nobody can.
+
+-
+Never share your 12 words. Anyone who has them controls your money. We will never ask for them.
+
+-
+Transactions are final. Payments on the blockchain can't be cancelled or reversed once sent. Check the
+address, handle and amount before you approve.
+
+-
+Your device is your vault. You are responsible for keeping your device, password and backups secure.
+
+## 4. What bWalletX does
+
+bWalletX lets you hold and send Bitcoin SV (BSV), tokens and 1Sat Ordinal NFTs; use a paymail handle such as
+`name@bwalletx.com`; connect to apps through the open BRC-100 wallet interface; chat; buy digital
+items in the Store; send and receive bMail (letters that can carry a paid stamp or payment); join and host live
+audio Spaces; list and buy tokens and NFTs wallet to wallet; time-lock coins; launch your own token; run agent
+accounts with their own spending limits; ask our AI assistant, b; and swap other coins into BSV through a
+third-party partner. bWalletX also runs as a desktop app and in your browser. Related sites such as bchatx.com,
+bmailx.com, bcalx.com, bradiox.com, bjobsx.com and bnewsx.com are part of bWalletX and covered by these terms.
+bWalletX is software. We are not a bank, an exchange, a broker or a payment service, and we don't hold money for
+you.
+
+## 5. Handles and names
+
+A handle (for example `$name`, which is `name@bwalletx.com` and also
+`name@bmailx.com`) lets people pay you. You must
+not claim a handle that impersonates someone else, infringes a trademark or is offensive. We may refuse, reserve,
+suspend or reassign a handle that breaks these terms or that a rights holder can show belongs to them. Because
+the paymail service is run by us, a handle depends on that service: it isn't the same as owning your keys, and
+your money stays in your wallet whatever happens to a handle.
+
+## 6. No financial advice
+
+Nothing in bWalletX, on this website or from b (our AI assistant) is financial, investment, legal or tax advice,
+or a recommendation to buy, sell or hold anything. Prices, rates and balances shown are for information and may
+be delayed or wrong. Cryptoassets are high risk: their value can fall to zero, and they are not protected by
+the Financial Services Compensation Scheme or the Financial Ombudsman Service. Only use money you can afford to
+lose.
+
+b is an AI. It can make mistakes, and it can't approve or send a payment for you: you always approve
+transactions yourself. Check anything important before you rely on it.
+
+## 7. Third-party services
+
+Some features are provided by other companies, under their own terms and privacy policies, which you accept
+with them when you use those features. We don't control them and aren't responsible for them.
+
+-
+Swaps (ChangeNOW). Swaps into BSV inside bWalletX are run by ChangeNOW, not by us. ChangeNOW is the
+exchange: it quotes the rate, receives your deposit, sends the BSV to your wallet and carries out its own
+AML/KYC checks. It may pause a swap, ask you for information, or refund or decline it. Rates float, and the
+amount shown is an estimate until your deposit arrives. Questions about a swap's status, refunds or checks are
+handled by ChangeNOW. See ChangeNOW's
+[terms of use](https://changenow.io/terms-of-use),
+[AML/KYC policy](https://changenow.io/aml-kyc-policy) and
+[privacy policy](https://changenow.io/privacy-policy). We will help you
+find a swap's details where we can.
+
+-
+Blockchain and wallet services such as 1Sat indexers and wallet storage, WhatsOnChain and price feeds.
+
+- Identity checks through our identity service and Veriff, if you choose to verify.
+
+- AI providers (for example Anthropic, OpenAI or OpenRouter) when you use b.
+
+-
+Apps and websites you open from bWalletX, including bApps and anything you connect your wallet to. Only
+approve requests you understand.
+
+We may be paid a share of fees by partners such as ChangeNOW. Where that applies, it is included in the rate you see.
+
+## 8. Fees
+
+bWalletX is free to download and use. When you send a transaction you pay the BSV network fee, shown before you
+approve. Swaps include the partner's fees, and may include a fee for us, within the estimate shown. Paid
+features, such as Store items or pay-per-message use of b, show their price before you pay. We may change
+prices for the future; a change never affects something you have already paid for.
+
+## 9. Store purchases and refunds
+
+The Store sells digital items, such as themes, paid in BSV from your wallet. The price is shown before you
+approve the payment. Each item is a licence to use it in bWalletX for your own, non-commercial use; it doesn't
+give you any ownership of the design or our intellectual property unless the item's page says otherwise (for
+example an NFT sent to your wallet, which you own and can transfer).
+
+Because items are digital and delivered straight away, when you buy you ask us to deliver immediately and
+accept that you lose the usual 14-day right to cancel once delivery starts. This doesn't affect your legal
+rights: if an item is faulty, not as described or not delivered, contact us and we will repair or replace it or
+give you a refund in BSV to your wallet. Items bought through the App Store or Google Play are handled under
+Apple's or Google's refund rules.
+
+## 9A. Payments, locks, tokens and agents
+
+- bMail stamps and payments. A stamp or payment on a letter is a payment to the person you write to.
+Once sent it is theirs; we can't refund it. Setting a price to reach you is your choice; letters below it go to
+your Requests.
+
+- Paid Spaces. If a host charges to listen or to book a slot, you pay the people on stage or the room
+owner directly, as shown before you approve. We don't hold or refund these payments.
+
+- Locks. Coins you time-lock can't be spent until the lock ends, by you or anyone else, including us.
+You can always recover them from your 12 words once the lock ends.
+
+- Tokens and the Exchange. Tokens and NFTs are listed and bought wallet to wallet; we don't hold them
+or set their prices. If you launch a token you are its issuer: you are responsible for what you say about it,
+and you must not offer it as an investment or promise returns. A token's indexing deposit is paid to the
+indexer and can't be refunded.
+
+- Agent accounts. An agent account spends only from its own wallet, within the limits you set, and you
+can stop it at any time. You are responsible for what your agents do with the money you give them.
+
+- Agreements. Agreements you send, sign and seal in bMail are between the people who sign them. We
+provide the tools, not legal advice, and we aren't a party to them.
+
+## 10. Acceptable use
+
+You must not use bWalletX to:
+
+- break the law, including money laundering, terrorist financing, fraud or evading sanctions;
+
+- scam, impersonate, harass, threaten or exploit anyone, or share content that sexually exploits children;
+
+- infringe anyone's copyright, trademark or other rights;
+
+- send spam, malware or phishing links, or attack, overload or probe our services without permission;
+
+- get around limits, payments or safety filters, or access accounts or data that aren't yours.
+
+If you break these rules we may remove content, suspend your handle, chat or other features run on our servers,
+and report illegal activity to the authorities. We can't take your coins: those stay in your wallet.
+
+## 11. Open-source licence and trademarks
+
+The bWalletX client is open source under the MIT licence, at
+[github.com/bitcoin-corp/bwallet](https://github.com/bitcoin-corp/bwallet), and is based on the open-source
+Yours Wallet. The MIT licence covers the code: you may use, copy, change and share it on its terms. It does not
+give you rights to our names, logos or brand: "bWalletX", "bWallet", the gold b and related marks belong to The
+Bitcoin Corporation Ltd. If you publish your own build, give it a different name and logo so people don't
+mistake it for ours. Our servers and services (such as the paymail, chat and push services) are not open source
+and are provided under these terms.
+
+Content you post stays yours. You give us a licence to store, show and send it as needed to run the features you
+use. Posts you put on the public blockchain are public and permanent, and neither you nor we can delete them.
+
+## 12. Beta, availability and no warranty
+
+bWalletX is in beta. It may have bugs, change, or be unavailable at times, and features may be added or removed.
+Test with small amounts. Your keys and coins stay on your device and on the blockchain whether or not our
+services are running, and you can restore your wallet from your 12 words in any compatible wallet.
+
+To the extent the law allows, bWalletX is provided "as is" and "as available", without promises that it will
+be error-free, secure or uninterrupted, or fit for any particular purpose. Nothing in these terms takes away
+rights you have as a consumer that can't be excluded by law, including under the Consumer Rights Act 2015.
+
+## 13. Our liability
+
+Nothing in these terms limits or excludes our liability for death or personal injury caused by our negligence,
+for fraud or fraudulent misrepresentation, or for anything else that cannot be limited or excluded under the
+law of England and Wales.
+
+Subject to that, we are not responsible for loss or damage:
+
+- caused by losing, sharing or failing to back up your 12 words, password or device;
+
+- from transactions you approve, including payments to a wrong address or handle;
+
+- from changes in the price or value of any cryptoasset;
+
+- caused by third-party services, apps, websites or the blockchain network itself;
+
+- that was not reasonably foreseeable, or loss of business or profit if you use bWalletX for business.
+
+Otherwise, our total liability to you for anything connected with bWalletX is limited to the greater of the
+amount you paid us in the 12 months before the claim and £100.
+
+## 14. Ending
+
+You can stop using bWalletX at any time and delete your account from Settings. We may suspend or end your access
+to services we run if you break these terms or if we have to by law, and we may stop offering bWalletX, giving
+notice where we reasonably can. Either way, your coins remain yours and recoverable with your 12 words.
+
+## 15. Changes to these terms
+
+We may update these terms, for example when we add features or the law changes. We'll post the new version on
+this page with a new effective date, and in the source repository. For important changes we'll tell you in the
+app before they take effect. If you keep using bWalletX after that, the new terms apply.
+
+## 16. Law and disputes
+
+These terms are governed by the law of England and Wales, and the courts of England and Wales have jurisdiction.
+If you are a consumer living in Scotland or Northern Ireland you may also bring proceedings there, and if you
+live elsewhere you keep any protections the law of your country gives you. Please contact us first: most
+problems can be sorted out quickly.
+
+## 17. General
+
+If any part of these terms is found invalid, the rest still applies. If we don't enforce a term straight away,
+we can still enforce it later. You may not transfer these terms to anyone else; we may transfer them to another
+company that takes over bWalletX, without affecting your rights. These terms are in English, and the English
+version applies.
+
+## Contact
+
+The Bitcoin Corporation Ltd, Flat 6, 315 Barking Road, London, E13 8EE:
+[support@bwalletx.com](mailto:support@bwalletx.com), or open an issue at
+[github.com/bitcoin-corp/bwallet/issues](https://github.com/bitcoin-corp/bwallet/issues).
+
+---
+
 Source: https://bwalletx.com/testers
 
 # Get 1 BSV for testing bWallet
