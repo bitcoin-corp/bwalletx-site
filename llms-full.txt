@@ -3708,8 +3708,9 @@ LiveRestore as an account12 words`m/44'/236'/0'/1/0` payment
 `m/0'/236'/0'/0/0` identityEverything: BSV, ordinals, BSV-20 and BSV-21 tokens, names. Coins on Yours' older payment key (`m/44'/236'/0'/0/0`) are moved across automatically.
 
 RelayX
-LiveRestore as an account12 words`m/44'/236'/0'/0/0` payment
-`m/44'/236'/0'/2/0` ordinalsEverything on those two keys.
+LiveRestore as an account12 words`m/44'/236'/0'/1/0` payment
+`m/44'/236'/0'/2/0` ordinals
+`m/44'/236'/0'/0/0` swept onceEverything on those keys, plus your RelayX NFTs (Run) via [Your RelayX collection](#relayx).
 
 Twetch
 LiveRestore as an account12 words`m/0/0` paymentEverything on that key.
@@ -3734,6 +3735,18 @@ LiveRestore a whole walletThe backup file or USB key, and its passwordAll accoun
 
 Money Button
 LiveSweep into an account12 words, passphrase if it had one`m/44'/0'/0'`, receive chainBSV and anything else on those addresses. Money Button tokens (SFP) are found, listed and left where they are.
+
+## RelayX wallets
+
+RelayX has closed, but everything your RelayX words hold is still on chain. bWalletX brings it back in two ways:
+
+- Restore it as an account. On the welcome screen (or Add account), choose Restore, pick RelayX and enter your 12 words. Your BSV and 1Sat ordinals come across straight away.
+
+- Your RelayX NFTs. RelayX NFTs are Run tokens, which spread across many addresses. On the restored account a blue Your RelayX collection card appears at the top: tap it once and bWalletX finds them all. They then show in the NFTs tab under Run, kept exactly as they are.
+
+- BSV on older RelayX addresses. If the search finds coins outside the account’s main address, tap Move it into this account.
+
+- Just want to look first? [Recover RelayX collections](https://bwalletx.com/recover-relayx) finds and shows your NFTs from your words without adding an account. Nothing moves.
 
 ## What stays behind, and why
 

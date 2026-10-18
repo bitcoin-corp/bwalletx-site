@@ -72,7 +72,7 @@
         <thead><tr><th>Wallet</th><th>How</th><th>You need</th><th>Derivation path</th><th>What comes across</th></tr></thead>
         <tbody>
 <tr><td><b>bWalletX, Yours, Panda</b><br><span class="tag live">Live</span></td><td>Restore as an account</td><td>12 words</td><td><code>m/44'/236'/0'/1/0</code> payment<br><code>m/44'/236'/1'/0/0</code> ordinals<br><code>m/0'/236'/0'/0/0</code> identity</td><td>Everything: BSV, ordinals, BSV-20 and BSV-21 tokens, names. Coins on Yours' older payment key (<code>m/44'/236'/0'/0/0</code>) are moved across automatically.</td></tr>
-<tr><td><b>RelayX</b><br><span class="tag live">Live</span></td><td>Restore as an account</td><td>12 words</td><td><code>m/44'/236'/0'/0/0</code> payment<br><code>m/44'/236'/0'/2/0</code> ordinals</td><td>Everything on those two keys.</td></tr>
+<tr><td><b>RelayX</b><br><span class="tag live">Live</span></td><td>Restore as an account</td><td>12 words</td><td><code>m/44'/236'/0'/1/0</code> payment<br><code>m/44'/236'/0'/2/0</code> ordinals<br><code>m/44'/236'/0'/0/0</code> swept once</td><td>Everything on those keys, plus your RelayX NFTs (Run) via <a href="#relayx">Your RelayX collection</a>.</td></tr>
 <tr><td><b>Twetch</b><br><span class="tag live">Live</span></td><td>Restore as an account</td><td>12 words</td><td><code>m/0/0</code> payment</td><td>Everything on that key.</td></tr>
 <tr><td><b>SimplyCash</b><br><span class="tag live">Live</span></td><td>New wallet, then sweep</td><td>12 words, or SimplyCash&rsquo;s recovery string (words:path:passphrase)</td><td><code>m/44'/145'/0'</code>, receive and change chains, gap limit 20. Early SimplyCash wallets&rsquo; older derivation is tried too.</td><td>BSV, ordinals, BSV-21 tokens. SimplyCash spreads coins over many addresses, so it can&rsquo;t be one account; it is swept instead.</td></tr>
 <tr><td><b>Other BIP44 wallets</b><br><span class="tag live">Live</span></td><td>Sweep into an account</td><td>12 or 24 words, passphrase if it had one</td><td><code>m/44'/236'/0'</code> and <code>m/44'/0'/0'</code>, plus any custom path you type</td><td>BSV, ordinals, BSV-21 tokens.</td></tr>
@@ -83,6 +83,15 @@
 <tr><td><b>Money Button</b><br><span class="tag live">Live</span></td><td>Sweep into an account</td><td>12 words, passphrase if it had one</td><td><code>m/44'/0'/0'</code>, receive chain</td><td>BSV and anything else on those addresses. Money Button tokens (SFP) are found, listed and left where they are.</td></tr>
         </tbody>
       </table></div>
+
+      <h2 id="relayx">RelayX wallets</h2>
+      <p>RelayX has closed, but everything your RelayX words hold is still on chain. bWalletX brings it back in two ways:</p>
+      <ul class="feat">
+<li><span><b>Restore it as an account.</b> On the welcome screen (or Add account), choose <b>Restore</b>, pick <b>RelayX</b> and enter your 12 words. Your BSV and 1Sat ordinals come across straight away.</span></li>
+<li><span><b>Your RelayX NFTs.</b> RelayX NFTs are Run tokens, which spread across many addresses. On the restored account a blue <b>Your RelayX collection</b> card appears at the top: tap it once and bWalletX finds them all. They then show in the <b>NFTs</b> tab under <b>Run</b>, kept exactly as they are.</span></li>
+<li><span><b>BSV on older RelayX addresses.</b> If the search finds coins outside the account&rsquo;s main address, tap <b>Move it into this account</b>.</span></li>
+<li><span><b>Just want to look first?</b> <a href="/recover-relayx">Recover RelayX collections</a> finds and shows your NFTs from your words without adding an account. Nothing moves.</span></li>
+      </ul>
 
       <h2>What stays behind, and why</h2>
       <ul class="feat">
