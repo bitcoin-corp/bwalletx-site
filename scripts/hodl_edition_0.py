@@ -1,5 +1,5 @@
 """Hodl my b, Edition 0: the whole story of bWalletX and the suite. Imported by hodl-my-b.py.
-Every Live pill must be true today (checked 18 Oct 2026 against /releases 5.2.24-5.2.32, docs/ROADMAP.md,
+Every Live pill must be true today (checked 18 Oct 2026 against /releases 5.2.24-5.2.33, docs/ROADMAP.md,
 bmailx.com status list, /desktop, /open-source, /privacy, /get). Anything else goes on the Coming page."""
 
 
@@ -49,7 +49,7 @@ def pages(h, back):
         + SHOT('helpdesk.jpg', 'The bWallet Help Desk Space on bChatX, open 24/7'), 's-lime', 7, issue=0,
         deco=bg('dots', BLOB('#7ee0a1', 70, 70, 80), emo(['robot', 'chat', 'heart'], 26))))
     P.append(page(media('e0-bmail') + '<p class="k r1">bMail &middot; bMailX</p><h2 class="r2">Mail that pays you.</h2>'
-        f'<ul class="st r3"><li>{L}Sealed letters: only the person you write to can open them</li><li>{L}Each stamp is a real payment to the reader. Penny post: 1&cent;</li><li>{L}Set your price to reach you. Friends free, always on top</li><li>{L}Reply paid, so they can answer for free</li></ul>'
+        f'<ul class="st r3"><li>{L}Sealed letters: only the person you write to can open them</li><li>{L}Each stamp is a real payment to the reader. Penny post: 1&cent;</li><li>{L}Set your price to reach you. Friends free, always on top</li><li>{L}Reply paid, so they can answer for free</li><li>{L}Agreements: send, both sign, sealed on chain</li></ul>'
         + SHOT('bmailx-top.jpg', 'bmailx.com: Email that pays', 'wide') + '<p class="q r4">Spam pays you now.</p>', 's-pink', 8, issue=0,
         deco=bg('dots', BLOB('#ff6b9e', 65, 55, 90), emo(['env', 'mail', 'coin'], 27))))
     P.append(page(media('e0-exchange') + '<p class="k r1">Exchange</p><h2 class="r2">Buy, sell, launch.</h2>'
@@ -95,7 +95,7 @@ def pages(h, back):
         + '</ul><p class="q r4">One name. Every site.</p>', 's-paper', 15, issue=0,
         deco=bg('grid', BLOB('#ffd24d', 10, 90, 60), emo(['note', 'cart'], 37, n=3))))
     P.append(page('<p class="k r1">Coming</p><h2 class="r2">Not live yet.</h2>'
-        f'<ul class="st r3"><li>{C}bWallet on the App Store and Google Play (beta testing today)</li><li>{C}A real email inbox at name@bmailx.com</li><li>{C}Agreements in bMail: send, both sign, sealed</li><li>{C}bCredits top-up</li><li>{C}Share one fact, such as over 18</li><li>{C}Space transcription, with consent</li></ul>'
+        f'<ul class="st r3"><li>{C}bWallet on the App Store and Google Play (beta testing today)</li><li>{C}A real email inbox at name@bmailx.com</li><li>{C}bCredits top-up</li><li>{C}Share one fact, such as over 18</li><li>{C}Space transcription, with consent</li></ul>'
         '<p class="q r4">When it ships, it moves to Live. Not before.</p>', 's-black', 16, issue=0,
         deco=bg('grid', RING('rgba(255,210,77,.35)', 60, 55, 80), emo(['soon', 'cal'], 33))))
     P.append(page(media('e0-get') + '<p class="k r1">Get it</p><h2 class="r2">Start in a minute.</h2>'
