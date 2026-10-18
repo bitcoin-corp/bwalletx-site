@@ -5,21 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Add your app to bWallet</title>
     <link rel="canonical" href="https://bwalletx.com/apps/add" />
-    <meta name="description" content="Built a BSV app? Add it to the Apps screen in bWallet and bWalletX, in front of every wallet user. Free, reviewed by a person." />
+    <meta name="description" content="Built a BSV app? Add it to the Apps screen in bWallet and bWalletX: one tap from the wallet, with wallet sign-in and BSV payments built in. Free, reviewed by a person." />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://bwalletx.com/apps/add" />
     <meta property="og:site_name" content="bWalletX" />
     <meta property="og:title" content="Add your app to bWallet" />
-    <meta property="og:description" content="Built a BSV app? Add it to the Apps screen in bWallet and bWalletX, in front of every wallet user. Free, reviewed by a person." />
-    <meta property="og:image" content="https://bwalletx.com/og-apps-add.png" />
+    <meta property="og:description" content="Built a BSV app? Add it to the Apps screen in bWallet and bWalletX: one tap from the wallet, with wallet sign-in and BSV payments built in. Free, reviewed by a person." />
+    <meta property="og:image" content="https://bwalletx.com/og-apps-add-v2.png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
-    <meta property="og:image:alt" content="Add your apps to bWallet at bwalletx.com/apps/add" />
+    <meta property="og:image:alt" content="Add your app to bWallet: a phone showing the bWalletX Apps screen, with bwalletx.com/apps/add" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@bWalletX" />
     <meta name="twitter:title" content="Add your app to bWallet" />
-    <meta name="twitter:description" content="Built a BSV app? Add it to the Apps screen in bWallet and bWalletX, in front of every wallet user. Free, reviewed by a person." />
-    <meta name="twitter:image" content="https://bwalletx.com/og-apps-add.png" />
+    <meta name="twitter:description" content="Built a BSV app? Add it to the Apps screen in bWallet and bWalletX: one tap from the wallet, with wallet sign-in and BSV payments built in. Free, reviewed by a person." />
+    <meta name="twitter:image" content="https://bwalletx.com/og-apps-add-v2.png" />
     <link rel="icon" href="/favicon.ico" />
     <link rel="stylesheet" href="/styles.css" />
     <style>
@@ -42,6 +42,27 @@
       form.add button { background: #F5B800; color: #000; border: 0; border-radius: 999px; padding: 14px 22px; font-weight: 800; font-size: 1rem; cursor: pointer; }
       .hp { position: absolute; left: -9999px; }
       #msg { font-weight: 700; }
+      .hero { display: grid; grid-template-columns: 1fr; gap: 28px; align-items: center; }
+      @media (min-width: 820px) { .hero { grid-template-columns: 1.2fr 0.8fr; } }
+      .hero .btns { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 20px; }
+      .hero .btns a { display: inline-flex; align-items: center; min-height: 46px; padding: 0 22px; border-radius: 999px; font-weight: 800; text-decoration: none; }
+      .hero .btns a.pri { background: #F5B800; color: #000; }
+      .hero .btns a.sec { border: 1px solid #ffffff33; color: #fff; }
+      .phone { margin: 0 auto; max-width: 300px; width: 100%; }
+      .phone img { width: 100%; height: auto; display: block; border-radius: 28px; border: 1px solid #ffffff22; }
+      .phone figcaption { color: #8a8a86; font-size: 0.85rem; margin-top: 8px; text-align: center; }
+      .why { display: grid; grid-template-columns: 1fr; gap: 12px; margin: 18px 0; }
+      @media (min-width: 720px) { .why { grid-template-columns: 1fr 1fr; } }
+      .why .box { margin: 0; }
+      .need { padding-left: 1.2em; }
+      .steps { counter-reset: s; list-style: none; padding: 0; display: grid; gap: 10px; }
+      .steps li { counter-increment: s; background: #101114; border: 1px solid #ffffff12; border-radius: 14px; padding: 14px 16px 14px 52px; position: relative; }
+      .steps li::before { content: counter(s); position: absolute; left: 16px; top: 13px; width: 24px; height: 24px; border-radius: 50%; background: #F5B800; color: #000; font-weight: 800; display: grid; place-items: center; font-size: 0.85rem; }
+      .status { list-style: none; padding: 0; margin: 16px 0; display: grid; gap: 8px; }
+      .status li { display: flex; gap: 10px; align-items: baseline; color: #d7dbe2; line-height: 1.5; }
+      .status li span { flex: none; width: 1.4em; font-weight: 700; color: #3ecf8e; }
+      .status li.no span { color: #8a8a86; }
+      .ext { overflow-wrap: anywhere; }
     </style>
   </head>
   <body>
@@ -57,14 +78,43 @@
     </header>
     <script src="/nav.js"></script>
     <main class="ext">
-      <img src="/logo.svg" alt="bWalletX" width="72" height="64" />
-      <h1>Add your app to <span class="gold">bWallet</span></h1>
-      <p class="lede">Built something on BSV? Put it on the Apps screen of bWallet and bWalletX, one tap away for every wallet user. It's free.</p>
-      <div class="flow">
-        <span class="pill">Submit</span><span class="arrow">&rarr;</span>
-        <span class="pill">We review it</span><span class="arrow">&rarr;</span>
-        <span class="pill">Live in Apps</span>
+      <section class="hero">
+        <div>
+          <img src="/logo.svg" alt="bWalletX" width="72" height="64" />
+          <h1>Add your app to <span class="gold">bWallet</span></h1>
+          <p class="lede">Built something on BSV? Put it on the Apps screen of bWallet and bWalletX, one tap away for everyone who opens the wallet. It's free, and a person reviews every app.</p>
+          <div class="btns"><a class="pri" href="#submit">Submit your app</a><a class="sec" href="/developers">Developer docs</a></div>
+        </div>
+        <figure class="phone"><img src="/images/apps-add/apps-your-apps.webp" alt="The Apps screen in bWalletX on a phone: Your apps with an Add app button, then rows of BSV app icons" width="600" height="1246" /><figcaption>The Apps screen in bWalletX today.</figcaption></figure>
+      </section>
+
+      <h2>Why add it</h2>
+      <div class="why">
+        <div class="box"><h3>One tap from the wallet</h3><p>Your icon sits in Apps beside the other BSV apps. People open it without typing an address.</p></div>
+        <div class="box"><h3>Sign-in is already there</h3><p>Apps open in the wallet's own browser with the wallet connected (BRC-100). Ask for the user's identity key and you have a login, with no passwords to store.</p></div>
+        <div class="box"><h3>Payments in BSV</h3><p>Ask the wallet to pay and the user sees one approval sheet with the amount. No card forms, no accounts to set up.</p></div>
+        <div class="box"><h3>Free</h3><p>No listing fee and no cut of your sales. We check the app is safe, then add it.</p></div>
       </div>
+
+      <h2>What you need</h2>
+      <ul class="need">
+        <li>Your app's address, served over <code>https://</code></li>
+        <li>A name (up to 40 characters) and a category</li>
+        <li>An email address, so we can tell you when it's live (never shown)</li>
+        <li>An icon: we take it from your site. An <code>apple-touch-icon</code> gives the sharpest tile.</li>
+        <li>Optional: a one-line description and a BSV address</li>
+      </ul>
+
+      <h2>What happens after you submit</h2>
+      <ol class="steps">
+        <li>Your submission is saved for review. Nothing is listed straight away.</li>
+        <li>A person opens your app and checks it against the list below.</li>
+        <li>If it passes, we add it with your site's name, tagline and icon, and it ships in the next wallet release.</li>
+        <li>We email you when it's in bWallet.</li>
+      </ol>
+      <p class="small">Want it on your own phone today? In the wallet, open Apps and tap <b>+ Add app</b>. That adds any website to your own Apps screen straight away, saved to your wallet. It doesn't list it for anyone else.</p>
+
+      <h2 id="submit">Submit your app</h2>
       <form class="add" method="post" action="/api/apps-submit" id="add">
         <label>App address <input name="url" type="url" required placeholder="https://yourapp.com" inputmode="url" autocapitalize="none" /></label>
         <label>Name <input name="name" required maxlength="40" placeholder="Your App" /></label>
@@ -78,7 +128,7 @@
         </label>
         <label>One-line description <input name="description" maxlength="140" placeholder="What it does, in a sentence" /></label>
         <label>Your email <small>Only to tell you when it's live. Never shown.</small><input name="email" type="email" required placeholder="you@example.com" /></label>
-        <label>BSV address <small>Optional: for future tips and revenue share.</small><input name="bsv_address" maxlength="40" placeholder="1…" autocapitalize="none" /></label>
+        <label>BSV address <small>Optional. Not used yet; kept for tips and revenue share later.</small><input name="bsv_address" maxlength="40" placeholder="1…" autocapitalize="none" /></label>
         <input class="hp" name="company" tabindex="-1" autocomplete="off" aria-hidden="true" />
         <button type="submit">Submit my app</button>
         <p id="msg" role="status"></p>
@@ -87,6 +137,18 @@
       <div class="box"><h3>It works and it's yours</h3><p>The site loads over https, does what it says, and you made it or run it.</p></div>
       <div class="box"><h3>It's safe</h3><p>No scams, no phishing, nothing asking for seed phrases or private keys, nothing illegal. Payments go through the wallet's approval screen, so users always see what they're paying.</p></div>
       <div class="box"><h3>Icon and name</h3><p>We use your site's own icon and title. Add an <code>apple-touch-icon</code> for the best tile.</p></div>
+      <h2>Status</h2>
+      <ul class="status">
+        <li><span>&#10003;</span>This form saves your app for review</li>
+        <li><span>&#10003;</span>Every app is reviewed by a person before it's listed</li>
+        <li><span>&#10003;</span>Approved apps appear in Apps in bWalletX (web, extension, Android, iPhone) from the next release</li>
+        <li><span>&#10003;</span>Apps open in the wallet's browser with BRC-100 sign-in and payments</li>
+        <li><span>&#10003;</span>+ Add app in the wallet adds any site to your own Apps screen, instantly</li>
+        <li class="no"><span>&#9723;</span>Not yet: tips or revenue share to the BSV address you give us</li>
+        <li class="no"><span>&#9723;</span>Not yet: listing without waiting for a release</li>
+      </ul>
+      <p class="small">The App Store and Google Play edition (bWallet) may leave out some apps, such as exchanges and real-money games.</p>
+
       <h2>Connect to the wallet</h2>
       <p>Apps open in bWallet's built-in browser with the wallet available to them. See <a href="/developers">Developers</a> to request payments, sign in with a wallet and read tokens.</p>
       <p class="small">Questions: <a href="mailto:support@bwalletx.com">support@bwalletx.com</a></p>

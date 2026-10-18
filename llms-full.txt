@@ -342,6 +342,24 @@ Free themes for everyone, artist editions, and branded editions for your token o
 
 Less noise. More life. Just b.
 
+Made an app?
+
+## Put it in the wallet.
+
+If you've built something on BSV, add it to the Apps screen of bWallet and bWalletX. It's free, and a person reviews every app.
+
+- One tap away. Your icon sits in Apps beside the other BSV apps.
+
+- Sign-in built in. Apps open in the wallet's browser, connected over BRC-100. The user's identity key is the login.
+
+- Paid in BSV. Ask for a payment and the user approves it on one sheet.
+
+- What happens next. We review it, add it with your site's own name and icon, ship it in the next wallet release and email you.
+
+[Add your app](https://bwalletx.com/apps/add)[Developer docs](https://bwalletx.com/developers)
+
+The Apps screen in bWalletX.
+
 [just b](https://bwalletx.com/just-b) · [b cool](https://bwalletx.com/b-cool) · [b creative](https://bwalletx.com/b-creative)
 
 Example coins are invented. Music is generated live in your browser. Share-image emoji: [Twemoji](https://github.com/jdecked/twemoji), CC-BY 4.0. [support@bwalletx.com](mailto:support@bwalletx.com)
@@ -7338,11 +7356,55 @@ Source: https://bwalletx.com/apps/add
 
 # Add your app to bWallet
 
-Built something on BSV? Put it on the Apps screen of bWallet and bWalletX, one tap away for every wallet user. It's free.
+Built something on BSV? Put it on the Apps screen of bWallet and bWalletX, one tap away for everyone who opens the wallet. It's free, and a person reviews every app.
 
-Submit→
-We review it→
-Live in Apps
+[Submit your app](#submit)[Developer docs](https://bwalletx.com/developers)
+
+The Apps screen in bWalletX today.
+
+## Why add it
+
+### One tap from the wallet
+
+Your icon sits in Apps beside the other BSV apps. People open it without typing an address.
+
+### Sign-in is already there
+
+Apps open in the wallet's own browser with the wallet connected (BRC-100). Ask for the user's identity key and you have a login, with no passwords to store.
+
+### Payments in BSV
+
+Ask the wallet to pay and the user sees one approval sheet with the amount. No card forms, no accounts to set up.
+
+### Free
+
+No listing fee and no cut of your sales. We check the app is safe, then add it.
+
+## What you need
+
+- Your app's address, served over `https://`
+
+- A name (up to 40 characters) and a category
+
+- An email address, so we can tell you when it's live (never shown)
+
+- An icon: we take it from your site. An `apple-touch-icon` gives the sharpest tile.
+
+- Optional: a one-line description and a BSV address
+
+## What happens after you submit
+
+- Your submission is saved for review. Nothing is listed straight away.
+
+- A person opens your app and checks it against the list below.
+
+- If it passes, we add it with your site's name, tagline and icon, and it ships in the next wallet release.
+
+- We email you when it's in bWallet.
+
+Want it on your own phone today? In the wallet, open Apps and tap + Add app. That adds any website to your own Apps screen straight away, saved to your wallet. It doesn't list it for anyone else.
+
+## Submit your app
 
 App address
 Name
@@ -7355,7 +7417,7 @@ ExploreLearn
 
 One-line description
 Your email Only to tell you when it's live. Never shown.
-BSV address Optional: for future tips and revenue share.
+BSV address Optional. Not used yet; kept for tips and revenue share later.
 
 Submit my app
 
@@ -7372,6 +7434,24 @@ No scams, no phishing, nothing asking for seed phrases or private keys, nothing 
 ### Icon and name
 
 We use your site's own icon and title. Add an `apple-touch-icon` for the best tile.
+
+## Status
+
+- ✓This form saves your app for review
+
+- ✓Every app is reviewed by a person before it's listed
+
+- ✓Approved apps appear in Apps in bWalletX (web, extension, Android, iPhone) from the next release
+
+- ✓Apps open in the wallet's browser with BRC-100 sign-in and payments
+
+- ✓+ Add app in the wallet adds any site to your own Apps screen, instantly
+
+- ◻Not yet: tips or revenue share to the BSV address you give us
+
+- ◻Not yet: listing without waiting for a release
+
+The App Store and Google Play edition (bWallet) may leave out some apps, such as exchanges and real-money games.
 
 ## Connect to the wallet
 
