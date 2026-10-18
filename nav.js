@@ -92,6 +92,11 @@
         sub: [
           { label: 'All bApps', href: '/bapps' },
           { label: 'bMovies', href: '/bapps/bmovies' },
+          { label: 'bChatX', href: 'https://www.bchatx.com' },
+          { label: 'bMailX', href: 'https://bmailx.com' },
+          { label: 'bRadioX', href: 'https://bradiox.com' },
+          { label: 'bCalX', href: 'https://bcalx.com' },
+          { label: 'bMusicX', href: 'https://bmusicx.com' },
           { label: 'bShares: registers for any company', href: '/bshares' },
           { label: 'Partnership shares (coming)', href: '/partnership-shares' },
           { label: 'bWeb (coming)', href: '/bweb' }
