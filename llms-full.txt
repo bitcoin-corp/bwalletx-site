@@ -2090,6 +2090,7 @@ bMail · bMailX
 - LiveEach stamp is a real payment to the reader. Penny post: 1¢
 - LiveSet your price to reach you. Friends free, always on top
 - LiveReply paid, so they can answer for free
+- LiveAgreements: send, both sign, sealed on chain
 
 Spam pays you now.
 
@@ -2195,7 +2196,6 @@ Coming
 
 - ComingbWallet on the App Store and Google Play (beta testing today)
 - ComingA real email inbox at name@bmailx.com
-- ComingAgreements in bMail: send, both sign, sealed
 - ComingbCredits top-up
 - ComingShare one fact, such as over 18
 - ComingSpace transcription, with consent
@@ -3491,6 +3491,15 @@ Each release ships to the Android APK, the Chrome extension and the web wallet. 
 [Download bWalletX](https://bwalletx.com/download)
 
 ## 5.2.33 2026-10-18
+
+- Claim your name, then link your accounts: X and Google today (GitHub and LinkedIn soon). Each link is proved by the provider and signed by your wallet; Google shows a verified tick and your email is never stored or shown.
+- Agreements live in bMail: sign with your card signature and identity key, and the signed copy gets a seal receipt on chain.
+- bMail delivery fixes: postage is signed first and broadcast after delivery, and a retry reuses the same stamp, so a stamp is never lost or paid twice.
+- Twelve emoji themes in the [Store](https://bwalletx.com/store), $1 each: the emoji’s colour through the app and the emoji on your card. [See them](https://bwalletx.com/themes#emoji).
+- A calendar of scheduled Spaces in the wallet (All · Following · Mine) with Remind me and .ics, and Spaces can be transcribed only with the host’s choice and each speaker’s consent.
+- Chat filters Rooms · Spaces · bApps; your name also works as name@bmailx.com; and Desktop fixes: page title in the top bar, no floating Ask b bar over composers.
+
+## 5.2.32 2026-10-18
 
 - bWalletX Desktop for Mac: a signed, notarised Mac app (Apple silicon and Intel, macOS 11+). [Download it](https://bwalletx.com/get). It updates by downloading the new version for now; auto-update is coming.
 - RelayX NFTs still listed for sale on RelayX are found too, and one tap cancels the listing back to your own address. [How it works](https://bwalletx.com/recover-relayx).
@@ -7085,55 +7094,55 @@ The wild one: black and red, hard glitch.
 
 Emoji collection
 
-### Frog Next release
+### Frog $1 in the Store
 
 Pond green on black.
 
-### Fire Next release
+### Fire $1 in the Store
 
 Flame orange on charcoal.
 
-### Wave Next release
+### Wave $1 in the Store
 
 Ocean blue, deep water.
 
-### Blossom Next release
+### Blossom $1 in the Store
 
 Cherry blossom pink at night.
 
-### Spark Next release
+### Spark $1 in the Store
 
 Lightning yellow on indigo.
 
-### Moon Next release
+### Moon $1 in the Store
 
 Moonlight on a navy sky.
 
-### Pizza Next release
+### Pizza $1 in the Store
 
 Tomato red, a slice of fun.
 
-### Headphones Next release
+### Headphones $1 in the Store
 
 Neon pink for music lovers.
 
-### Pup Next release
+### Pup $1 in the Store
 
 Warm puppy tan.
 
-### Rainbow Next release
+### Rainbow $1 in the Store
 
 Every colour, violet first.
 
-### Clover Next release
+### Clover $1 in the Store
 
 Lucky emerald.
 
-### Cool Next release
+### Cool $1 in the Store
 
 Ice blue on true black.
 
-Twelve emoji themes, $1 each in the Store, paid in BSV: the emoji’s colour through the whole app and the emoji on your card. Nobody owns an emoji; you buy the look. In bWalletX from the next release (not in the App Store or Google Play edition).
+Twelve emoji themes, $1 each in the Store, paid in BSV: the emoji’s colour through the whole app and the emoji on your card. Nobody owns an emoji; you buy the look. In bWalletX from 5.2.33 (not in the App Store or Google Play edition).
 
 Emoji art: [Twemoji](https://github.com/jdecked/twemoji) by X Corp and contributors, [CC-BY 4.0](https://creativecommons.org/licenses/by/4.0/), self-hosted.
 
@@ -7265,13 +7274,13 @@ White app tile
 
 - LiveArtist editions in the [Store](https://bwalletx.com/store): VexVoid, NPG and NPGX, $1 each, paid in BSV, yours to keep (bWalletX only).
 
+- LiveEmoji collection: twelve emoji themes (Frog, Fire, Wave, Blossom, Spark, Moon, Pizza, Headphones, Pup, Rainbow, Clover, Cool), $1 each in the [Store](https://bwalletx.com/store), in bWalletX 5.2.33 (bWalletX only).
+
 - LiveTheme previews on this page and at /themes/<name> for every theme above.
 
 - LiveOrder your own edition inside bWalletX: Theme › Get your own edition, $99 a year, paid in BSV.
 
 - LiveBranded editions: [order form](https://bwalletx.com/themes/custom/orderform), we reply with a quote.
-
-- ComingEmoji collection: twelve emoji themes (Frog, Fire, Wave, Blossom, Spark, Moon, Pizza, Headphones, Pup, Rainbow, Clover, Cool), $1 each in the Store, in the next bWalletX release.
 
 - ComingOne-tap install links for the phone apps (bwalletx://theme/<name>): built, in the next app release.
 
