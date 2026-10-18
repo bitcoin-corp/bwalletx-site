@@ -3830,11 +3830,11 @@ Already have a HandCash account? Use it to sign in to bChatX. You keep your name
 
 ## Where this stands
 
-- ✓ LiveSign in with HandCash on bchatx.com, under “More ways” below the gold bWalletX button. Uses your verified HandCash account, not a typed name. First run pending.
+- In testingSign in with HandCash on bchatx.com, under “More ways” below the gold bWalletX button. Uses your verified HandCash account, not a typed name. Built; not yet tried end to end.
 
-- ✓ LiveHandCash friends into your bWalletX address book: the server side is live; the wallet button ships in bWalletX 5.2.26.
+- In testingHandCash friends into your bWalletX address book: in the bWalletX phone apps since 5.2.26; not yet tried end to end.
 
-- ComingSign in with HandCash inside the bWalletX app on iPhone and Android (bWalletX edition): Settings › Connect › HandCash, in 5.2.26.
+- In testingSign in with HandCash inside the bWalletX app: phone apps only (Android download and iPhone beta), Settings › Connect › HandCash, since 5.2.26. Not in the web wallet or the Chrome extension. Not yet tried end to end.
 
 - ComingThe store edition (bWallet on the App Store and Google Play): planned, once Sign in with Apple is added.
 
@@ -4634,7 +4634,7 @@ A frog-themed wallet for a frog coin. Your colours, card art, icon and name, on 
 
 Every user still gets bWallet free. This is for brands and token communities who want their own: $99 a year, made by us. Anyone holding your token gets its theme free, automatically (coming).
 
-[Order yours](#order)[See prices](#tiers)
+[Order yours](https://bwalletx.com/themes/custom/orderform)[See prices](#tiers)
 
 85.6 mm54 mm
 
@@ -4762,21 +4762,21 @@ By quote
 
 04 / 05  How to order
 
-## Send us a message.
+## Fill in the order form.
 
-Tell us your brand, what you have in mind and any art you already have, and we’ll reply with next steps. Ordering inside the wallet (Settings › Theme › “Get your own edition”) is built and goes live soon.
+Tell us your brand, your colours, a link to your logo and which edition you want, and we’ll reply with next steps. A Theme edition can also be ordered and paid inside bWalletX: ☰ › Settings › Theme › Get your own edition.
 
-[Message us on bChatX](https://www.bchatx.com/u/bwalletx)[Message @bWalletX on X](https://x.com/bWalletX)
+[Open the order form](https://bwalletx.com/themes/custom/orderform)[Message us on bChatX](https://www.bchatx.com/u/bwalletx)[Message @bWalletX on X](https://x.com/bWalletX)
 
 05 / 05  What’s live
 
 ## Where things stand.
 
-- LiveTheme orders, handled by us
+- Live[Order form](https://bwalletx.com/themes/custom/orderform): send your brief, we reply with next steps
 
-- SoonOrder in the wallet: Settings › Theme › Get your own edition (built, going live)
+- LiveTheme edition ordered and paid in bWalletX: Settings › Theme › Get your own edition
 
-- ComingPay in the wallet
+- ComingPay a deposit for a Branded edition or Native app on the order form
 
 - LiveBranded edition, by enquiry
 
@@ -6143,7 +6143,7 @@ Themes Sheet 00 / 08
 
 # Make bWallet yours.
 
-Pick the colours of the app and the art on your card. Here are the paper themes: solid coloured paper, black ink, thin lines and lots of room.An artist edition by VexVoid: black, white and moving, taken from their live AV set.The Ninja Punk Girls edition: hot-pink neon on black, cut up like the NPG live mix. Girls vs bots, on your wallet.NPGX: black and red, the red X and tech type, harder cuts and more motion. The wild one.Gold: the bWalletX default. Gold ink on near-black, gold hairlines. Already in the app.Dark: neutral grey and white for night use. Already in the app.
+Pick the colours of the app and the art on your card. Here are the paper themes: solid coloured paper, black ink, thin lines and lots of room.An artist edition by VexVoid: black, white and moving, taken from their live AV set.The Ninja Punk Girls edition: hot-pink neon on black, cut up like the NPG live mix. Girls vs bots, on your wallet.NPGX: black and red, the red X and tech type, harder cuts and more motion. The wild one.Gold: the bWalletX default. Gold ink on near-black, gold hairlines. Already in the app.Dark: black and white for night use. In the app as Black/White.
 
 Artist theme by [VexVoid · bTV: AIVJ](https://bchatx.com/u/vexvoid)
 
@@ -6181,43 +6181,43 @@ DrawnbWalletX
 
 ## One tap changes the whole app.
 
-A theme sets the colour of every screen: buttons, cards, the menu bar. Gold is the default. White is new. More pure colours are on the way.
+A theme sets the colour of every screen: buttons, cards, the menu bar. Gold is the default. White, Pink, Blue and Yellow are paper themes: solid colour, black ink.
 
-### White Coming
+### White Live
 
 Paper: off-white, black ink, hairlines.
 
-[Open page](https://bwalletx.com/themes/white)[Install](https://web.bwalletx.com/white)
+[Open page](https://bwalletx.com/themes/white)[Install (web)](https://web.bwalletx.com/white)
 
-### Pink Coming
+### Pink Live
 
 Bubblegum paper, black ink.
 
-[Open page](https://bwalletx.com/themes/pink)Install: coming
+[Open page](https://bwalletx.com/themes/pink)[Install (web)](https://web.bwalletx.com/pink)
 
-### Blue Coming
+### Blue Live
 
 Sky paper, black ink.
 
-[Open page](https://bwalletx.com/themes/blue)Install: coming
+[Open page](https://bwalletx.com/themes/blue)[Install (web)](https://web.bwalletx.com/blue)
 
-### Yellow Coming
+### Yellow Live
 
 Sunflower paper, black ink.
 
-[Open page](https://bwalletx.com/themes/yellow)Install: coming
+[Open page](https://bwalletx.com/themes/yellow)[Install (web)](https://web.bwalletx.com/yellow)
 
 ### Gold Live
 
 The default. Gold on black.
 
-[Open page](https://bwalletx.com/themes/gold)[Open bWalletX](https://web.bwalletx.com/)
+[Open page](https://bwalletx.com/themes/gold)[Use it (web)](https://web.bwalletx.com/?theme=gold)
 
 ### Dark Live
 
-Neutral grey and white for night use.
+Black and white for night use. In the app it is called Black/White.
 
-[Open page](https://bwalletx.com/themes/dark)[Open bWalletX](https://web.bwalletx.com/)
+[Open page](https://bwalletx.com/themes/dark)[Use it (web)](https://web.bwalletx.com/?theme=blackwhite)
 
 Artist editions
 
@@ -6225,23 +6225,29 @@ Artist editions
 
 Artist edition: black, stark white, point field.
 
-[Open page](https://bwalletx.com/themes/vexvoid)Install: coming
+[Open page](https://bwalletx.com/themes/vexvoid)[How to buy](#buy)
 
 ### NPG $1 in the Store
 
 Ninja Punk Girls: hot-pink neon, glitch cuts.
 
-[Open page](https://bwalletx.com/themes/npg)Install: coming
+[Open page](https://bwalletx.com/themes/npg)[How to buy](#buy)
 
 ### NPGX $1 in the Store
 
 The wild one: black and red, hard glitch.
 
-[Open page](https://bwalletx.com/themes/npgx)Install: coming
+[Open page](https://bwalletx.com/themes/npgx)[How to buy](#buy)
 
 [Get your own edition →](https://bwalletx.com/themes/custom)
 
 Hover (or tap) a card to preview this page in that theme · use its links to open the page or install
+
+On your phone: open bWalletX or bWallet, then ☰ › Settings › Theme and tap the colour. On the web: the Install link opens the web wallet in that theme, and Add to Home Screen keeps it. One-tap install links for the phone apps come with the next app release.
+
+Buying an artist edition
+
+VexVoid, NPG and NPGX are $1 each, paid in BSV, and the money goes to the artist. In bWalletX (web, Chrome extension or the Android download): ☰ › Settings › Theme › get them in the Store, pick the edition, tap Buy and approve once. It then sits under Theme › Your themes. Paid themes are not in the App Store or Google Play edition (bWallet).
 
 02 / 08  Your token, your wallet
 
@@ -6273,11 +6279,11 @@ The same calm, self-custody wallet underneath.
 
 ## An edition of your own.
 
-Three ways to theme a wallet. Free: colours, ready-made themes and emoji cards for your own wallet. Premium themes ($1 each in the [Store](https://bwalletx.com/store); NPG, NPGX and VexVoid today): animated, limited-edition and creator themes you own; the money goes to the creator, whether an artist or a token issuer. Editions ($99 a year, made by us): for businesses and token communities, a shareable branded wallet for every holder with its own address (wallet.yourcoin.com), name, card art, icon and your token shown first, featured in Editions and your token’s room. Hold a token and its community theme unlocks free. Every user still gets bWallet free. Editions are ordered by message today; ordering inside the wallet is coming.
+Three ways to theme a wallet. Free: colours, ready-made themes and emoji cards for your own wallet. Premium themes ($1 each in the [Store](https://bwalletx.com/store); NPG, NPGX and VexVoid today): animated, limited-edition and creator themes you own; the money goes to the creator, whether an artist or a token issuer. Editions ($99 a year, made by us): for businesses and token communities, a shareable branded wallet for every holder with its own address (wallet.yourcoin.com), name, card art, icon and your token shown first, featured in Editions and your token’s room. Hold a token and its community theme unlocks free. Every user still gets bWallet free. Theme editions can be ordered inside bWalletX (Theme › Get your own edition); for a branded edition, use the order form.
 
 $99Branded editions from
 
-[Order your edition](https://bwalletx.com/themes/custom)[Message us on bChatX](https://www.bchatx.com/u/bwalletx)[Message @bWalletX on X](https://x.com/bWalletX)
+[Order your edition](https://bwalletx.com/themes/custom/orderform)[Message us on bChatX](https://www.bchatx.com/u/bwalletx)[Message @bWalletX on X](https://x.com/bWalletX)
 
 04 / 08  Business agents
 
@@ -6353,49 +6359,29 @@ White app tile
 
 ## Status.
 
-- LiveFree themes and theme packs for your own wallet.
+- LiveWhite, Pink, Blue and Yellow paper themes in the app (5.2.31): ☰ › Settings › Theme.
 
-- LivePremium themes in the [Store](https://bwalletx.com/store): NPG, NPGX and VexVoid, $1 each, paid in BSV, yours to keep (bWalletX).
+- LiveGold (the default) and Black/White (our dark theme), plus the Mono, Duo and Tri packs and Mix your own.
+
+- LiveWeb installs: web.bwalletx.com/white, /pink, /blue and /yellow open the web wallet in that theme; Add to Home Screen keeps it.
+
+- LiveArtist editions in the [Store](https://bwalletx.com/store): VexVoid, NPG and NPGX, $1 each, paid in BSV, yours to keep (bWalletX only).
+
+- LiveTheme previews on this page and at /themes/<name> for every theme above.
+
+- LiveOrder your own edition inside bWalletX: Theme › Get your own edition, $99 a year, paid in BSV.
+
+- LiveBranded editions: [order form](https://bwalletx.com/themes/custom/orderform), we reply with a quote.
+
+- ComingOne-tap install links for the phone apps (bwalletx://theme/<name>): built, in the next app release.
 
 - ComingCreators sell their own themes in the Store, 80% to the seller.
 
 - ComingHolder themes: hold a token and its community theme unlocks free.
 
-- LiveTheme picker with gold, dark, mono, duo and tri colour schemes.
-
-- ComingWhite paper theme in the next app release (the change is in progress).
-
 - ComingWhite card art set: plain paper, the washed-out wave and more.
 
-- ComingMore pure-colour themes.
-
-- LiveThis page in four papers: White, Pink, Blue and Yellow, hover to preview, click for its own page (/themes/pink etc.).
-
-- LiveVexVoid artist theme preview at /themes/vexvoid: black, stark white and the live point field from the VexVoid AV set.
-
-- LiveVexVoid artist theme in the app: $1 in the [Store](https://bwalletx.com/store).
-
-- LiveGold and Dark previews at /themes/gold and /themes/dark: built in, already in bWalletX.
-
-- LiveNPG page preview at /themes/npg: Ninja Punk Girls neon with glitch slices over official art.
-
-- LiveNPG in-app theme: $1 in the [Store](https://bwalletx.com/store).
-
-- LiveNPGX page preview at /themes/npgx: black and red, harder glitch.
-
-- LiveNPGX in-app theme: $1 in the [Store](https://bwalletx.com/store).
-
 - ComingNPGX live mix: the slopcore video mix at npg-x.com/live is not built yet.
-
-- ComingPink, Blue and Yellow: preview only — in-app theme coming.
-
-- LiveWhite edition install: add the white web wallet to your home screen from [web.bwalletx.com/white](https://web.bwalletx.com/white).
-
-- ComingPink, Blue, Yellow, VexVoid, NPG and NPGX installs: no install button until each pack ships.
-
-- LiveEditions from $99 a year, ordered by message ([/themes/custom](https://bwalletx.com/themes/custom)).
-
-- ComingOrder your edition inside the wallet.
 
 - ComingBusiness agents ([/business-agents](https://bwalletx.com/business-agents)).
 
@@ -6403,9 +6389,9 @@ White app tile
 
 ## Three taps.
 
-Wallet›☰›Theme
+☰›Settings›Theme
 
-Open your wallet, tap the menu at the top left, then Theme. Pick app colours, then design your card. See also [bAvatars](https://bwalletx.com/bavatars) for your profile art.
+Open your wallet, tap the menu at the top left, then Settings › Theme. Pick app colours, then design your card. See also [bAvatars](https://bwalletx.com/bavatars) for your profile art.
 
 [Get bWalletX](https://bwalletx.com/get)[Open the web wallet](https://web.bwalletx.com)
 

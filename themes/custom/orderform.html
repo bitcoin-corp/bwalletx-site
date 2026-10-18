@@ -1,0 +1,312 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Order a branded wallet</title>
+    <link rel="canonical" href="https://bwalletx.com/themes/custom/orderform" />
+    <meta name="description" content="Order your own wallet edition: tell us your brand, colours and logo, pick Theme edition ($99 a year), Branded edition (from $999) or Native app (by quote), and we reply with next steps." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://bwalletx.com/themes/custom/orderform" />
+    <meta property="og:site_name" content="bWalletX" />
+    <meta property="og:title" content="Order a branded wallet" />
+    <meta property="og:description" content="Your brand, your colours, your logo. One short form and we reply with next steps." />
+    <meta property="og:image" content="https://bwalletx.com/og-themes-orderform.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="A paper order form beside a green frog-themed wallet card, headed Order a branded wallet." />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@bWalletX" />
+    <meta name="twitter:title" content="Order a branded wallet" />
+    <meta name="twitter:description" content="Your brand, your colours, your logo. One short form and we reply with next steps." />
+    <meta name="twitter:image" content="https://bwalletx.com/og-themes-orderform.png" />
+    <link rel="icon" href="/favicon.ico" />
+    <meta name="theme-color" content="#f7f6f2" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/styles.css" />
+    <script src="https://cdn.jsdelivr.net/npm/@bwalletx/connect@0.2.0/dist/bwalletx-connect.global.js" defer></script>
+    <style>
+      body.paper { --paper: #f7f6f2; --sheet: #ffffff; --ink: #111111; --muted: #5d5b56; --dim: #8a8780; --hair: #d9d6ce; --hover: #f0eee8; --mono: 'IBM Plex Mono', ui-monospace, Menlo, monospace;
+        color-scheme: light; background-color: var(--paper); color: var(--ink);
+        background-image: linear-gradient(rgba(17,17,17,.055) 1px, transparent 1px), linear-gradient(90deg, rgba(17,17,17,.055) 1px, transparent 1px);
+        background-size: 40px 40px, 40px 40px; }
+      body.paper .beta-banner { background: var(--paper); color: var(--muted); border-bottom: 1px solid var(--hair); }
+      body.paper .topbar { background: var(--paper) !important; border-bottom: 1px solid var(--hair); }
+      body.paper .topbar a, body.paper .brand { color: var(--ink); }
+      body.paper .topbar nav a { color: var(--muted); }
+      body.paper .dl-btn, body.paper .web-btn { background: var(--ink) !important; color: var(--paper) !important; box-shadow: none !important; border: 0 !important; }
+      body.paper .topbar, body.paper * { backdrop-filter: none !important; -webkit-backdrop-filter: none !important; text-shadow: none !important; }
+      body.paper .nd-menu { background: var(--sheet) !important; border: 1px solid var(--ink) !important; }
+      body.paper .nd-menu a, body.paper .m-menu summary, body.paper .m-menu a, body.paper .m-menu a.m-top { color: var(--ink) !important; }
+      body.paper .m-menu { background: var(--paper) !important; border-top: 1px solid var(--ink) !important; }
+      body.paper .menu-btn, body.paper .nav-cta .x-link { color: var(--ink) !important; border-color: var(--ink) !important; }
+      body.paper .foot { background: var(--paper); border-top: 1px solid var(--hair); color: var(--muted); }
+      body.paper .foot a { color: var(--ink); }
+      body.paper .gold { color: inherit; }
+      .tp { overflow-x: clip; padding-top: 64px; }
+      .tp .wrapx { max-width: 880px; margin: 0 auto; padding-inline: 16px; }
+      .tp section { padding-block: 64px; border-top: .5px solid var(--ink); }
+      .tp section.intro { border-top: 0; padding-block: 56px 40px; }
+      .tp .num { font: 500 .72rem var(--mono); letter-spacing: .16em; text-transform: uppercase; display: flex; align-items: center; gap: 14px; margin: 0 0 18px; }
+      .tp .num::after { content: ""; flex: 1; border-top: .5px solid var(--ink); }
+      .tp h1, .tp h2, .tp h3 { font-family: var(--hf); letter-spacing: -0.03em; margin: 0; color: var(--ink); text-wrap: balance; }
+      .tp h1 { font-size: clamp(2.4rem, 6vw, 4.2rem); line-height: 1; font-weight: 600; }
+      .tp h2 { font-size: clamp(1.7rem, 4vw, 2.4rem); line-height: 1.05; font-weight: 600; }
+      .tp .lede { font-size: clamp(1.05rem, 2vw, 1.25rem); max-width: 34em; margin: 22px 0 0; line-height: 1.6; }
+      .tp .sub { color: var(--muted); max-width: 40em; margin: 14px 0 0; line-height: 1.6; }
+      .tp a { color: var(--ink); text-underline-offset: 3px; }
+      form.of { margin-top: 32px; background: var(--sheet); border: 1px solid var(--ink); }
+      .of fieldset { border: 0; border-bottom: .5px solid var(--ink); margin: 0; padding: 22px 20px; min-width: 0; }
+      .of fieldset:last-of-type { border-bottom: 0; }
+      .of legend { float: left; width: 100%; padding: 0; margin: 0 0 14px; font: 500 .7rem var(--mono); letter-spacing: .14em; text-transform: uppercase; color: var(--muted); }
+      .of label { display: block; font-weight: 600; margin: 0 0 6px; }
+      .of label small { font-weight: 400; color: var(--muted); }
+      .of .f { margin-top: 16px; clear: both; }
+      .of .f:first-of-type { margin-top: 0; }
+      .of input[type=text], .of input[type=email], .of input[type=url], .of textarea { width: 100%; box-sizing: border-box; font: 400 1rem var(--bf); color: var(--ink); background: var(--paper); border: 1px solid var(--ink); border-radius: 0; padding: 12px; min-height: 46px; }
+      .of textarea { min-height: 120px; resize: vertical; }
+      .of input:focus-visible, .of textarea:focus-visible, .of .tier input:focus-visible + span { outline: 2px solid var(--ink); outline-offset: 2px; }
+      .tiers { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0; border-top: .5px solid var(--ink); border-left: .5px solid var(--ink); clear: both; }
+      .tier { position: relative; display: block; margin: 0; cursor: pointer; border-right: .5px solid var(--ink); border-bottom: .5px solid var(--ink); }
+      .tier input { position: absolute; opacity: 0; inset: 0; margin: 0; cursor: pointer; }
+      .tier span { display: block; padding: 16px; font-weight: 400; height: 100%; box-sizing: border-box; }
+      .tier b { display: block; font: 600 1.05rem var(--hf); }
+      .tier i { display: block; font: 600 1.5rem var(--hf); font-style: normal; letter-spacing: -.02em; margin-top: 6px; }
+      .tier em { display: block; font-style: normal; color: var(--muted); font-size: .88rem; margin-top: 6px; }
+      .tier input:checked + span { background: var(--ink); color: var(--paper); }
+      .tier input:checked + span em { color: #d9d6ce; }
+      @media (max-width: 640px) { .tiers { grid-template-columns: 1fr; } }
+      .cols { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; }
+      .cols label { display: flex; align-items: center; gap: 8px; font-weight: 400; margin: 0; }
+      .cols input[type=color] { width: 48px; height: 44px; border: 1px solid var(--ink); background: var(--sheet); padding: 2px; border-radius: 0; cursor: pointer; }
+      .cols input[type=checkbox] { width: 20px; height: 20px; }
+      .ofacts { clear: both; display: flex; flex-wrap: wrap; gap: 10px; margin-top: 4px; }
+      .ofacts button, .ofacts a { font: 500 .8rem var(--mono); text-transform: uppercase; letter-spacing: .12em; padding: 0 18px; min-height: 48px; display: inline-flex; align-items: center; border: 1px solid var(--ink); background: var(--sheet); color: var(--ink); text-decoration: none; cursor: pointer; border-radius: 0; }
+      .ofacts .pri { background: var(--ink); color: var(--paper); }
+      .ofacts button[disabled] { opacity: .45; cursor: not-allowed; }
+      .msg { margin: 14px 0 0; min-height: 1.4em; font-size: .95rem; }
+      .msg.err { color: #8a1010; }
+      .note { margin-top: 14px; padding: 14px 16px; border: 1px dashed var(--ink); color: var(--muted); font-size: .92rem; line-height: 1.55; }
+      .note b { color: var(--ink); }
+      [hidden] { display: none !important; }
+      .status { list-style: none; padding: 0; margin: 28px 0 0; border-top: .5px solid var(--ink); }
+      .status li { display: flex; gap: 16px; align-items: baseline; padding: 16px 0; border-bottom: .5px solid var(--ink); }
+      .pill { flex: none; min-width: 74px; text-align: center; font: 500 .68rem var(--mono); letter-spacing: .1em; text-transform: uppercase; padding: 3px 9px; }
+      .pill.live { background: var(--ink); color: var(--paper); }
+      .pill.soon { border: 1px solid var(--ink); color: var(--ink); background: var(--paper); }
+    </style>
+  </head>
+  <body class="paper">
+    <div class="beta-banner">bWalletX is in <strong>beta</strong>: test with small amounts.</div>
+    <header class="topbar">
+      <div class="wrap topbar-in">
+        <a class="brand" href="/"><img src="/logo.svg" alt="" width="34" height="30" /><span>bWallet<span class="gold">X</span></span></a>
+        <nav aria-label="Pages">
+          <a href="/features">Features</a><a href="/exchange">Exchange</a><a href="/social">Social</a><a href="/agent">Agents</a><a href="/extension">Extension</a><a href="/developers">Developers</a>
+        </nav>
+        <span class="nav-cta"><a class="dl-btn" href="/get">Download</a><a class="web-btn" href="https://web.bwalletx.com" target="_blank" rel="noopener">Web &rarr;</a></span>
+      </div>
+    </header>
+    <script src="/nav.js"></script>
+
+    <main class="tp">
+      <section class="intro">
+        <div class="wrapx">
+          <p class="num">Order form &middot; Branded wallets</p>
+          <h1>Order a branded wallet.</h1>
+          <p class="lede">Tell us who you are and what you want. We read every brief and reply with next steps.</p>
+          <p class="sub">Prices are on <a href="/themes/custom#tiers">the custom editions page</a>. Your users still get a self-custody wallet: their keys stay with them.</p>
+        </div>
+      </section>
+
+      <section id="form">
+        <div class="wrapx">
+          <p class="num">01 / 02 &nbsp;Your brief</p>
+          <h2>One short form.</h2>
+          <form class="of" id="of" novalidate>
+            <fieldset>
+              <legend>What you want</legend>
+              <div class="tiers" role="radiogroup" aria-label="Edition">
+                <label class="tier"><input type="radio" name="tier" value="theme" checked /><span><b>Theme edition</b><i>$99</i><em>A year. Your colours, card art and icon, a page and an install link.</em></span></label>
+                <label class="tier"><input type="radio" name="tier" value="branded" /><span><b>Branded edition</b><i>from $999</i><em>Set-up plus monthly. Your own domain and your name throughout.</em></span></label>
+                <label class="tier"><input type="radio" name="tier" value="native" /><span><b>Native app</b><i>By quote</i><em>Listed under your own App Store and Google Play accounts.</em></span></label>
+              </div>
+              <p class="note" id="themeNote"><b>Fastest for a Theme edition:</b> order and pay inside bWalletX. Open &#9776; &rsaquo; Settings &rsaquo; Theme &rsaquo; Get your own edition. Or send this form and we&rsquo;ll help.</p>
+            </fieldset>
+            <fieldset>
+              <legend>About you</legend>
+              <div class="f"><label for="brand">Brand or token name</label><input type="text" id="brand" name="brand" maxlength="60" autocomplete="organization" required /></div>
+              <div class="f"><label for="contact">How we reach you <small>(email, or a $handle / @handle)</small></label><input type="text" id="contact" name="contact" maxlength="200" autocomplete="email" required /></div>
+              <div class="f"><label for="link">Website or social link <small>(optional)</small></label><input type="url" id="link" name="link" maxlength="300" placeholder="https://" /></div>
+            </fieldset>
+            <fieldset>
+              <legend>Your look</legend>
+              <div class="f"><label for="logo">Link to your logo or art <small>(optional: a public https link; we&rsquo;ll ask for files later)</small></label><input type="url" id="logo" name="logo" maxlength="300" placeholder="https://" /></div>
+              <div class="f">
+                <label id="colLbl">Colours <small>(tick up to three)</small></label>
+                <div class="cols" role="group" aria-labelledby="colLbl">
+                  <label><input type="checkbox" class="cu" checked aria-label="Use colour 1" /><input type="color" class="cv" value="#7fd14a" aria-label="Colour 1" /></label>
+                  <label><input type="checkbox" class="cu" checked aria-label="Use colour 2" /><input type="color" class="cv" value="#0b2e12" aria-label="Colour 2" /></label>
+                  <label><input type="checkbox" class="cu" aria-label="Use colour 3" /><input type="color" class="cv" value="#e8ff7a" aria-label="Colour 3" /></label>
+                </div>
+              </div>
+              <div class="f"><label for="note">Anything else <small>(optional)</small></label><textarea id="note" name="note" maxlength="1000" placeholder="Who it is for, dates, the feel you want..."></textarea></div>
+            </fieldset>
+            <fieldset>
+              <legend>Send it</legend>
+              <div class="ofacts">
+                <button type="submit" class="pri">Email the brief</button>
+                <button type="button" id="copy">Copy the brief</button>
+                <a href="https://www.bchatx.com/u/bwalletx" target="_blank" rel="noopener">Message us on bChatX</a>
+              </div>
+              <p style="clear:both" class="msg" id="msg" role="status" aria-live="polite"></p>
+              <div id="depositBox" hidden>
+                <p class="note"><b>Deposit:</b> <span id="depAmt"></span>, paid in BSV from your own wallet with one approval. It is taken off your first invoice, and refunded in full if we can&rsquo;t take the job on.</p>
+                <div class="ofacts" style="margin-top:14px"><button type="button" class="pri" id="payDep">Pay deposit with bWalletX</button></div>
+              </div>
+            </fieldset>
+          </form>
+        </div>
+      </section>
+
+      <section id="status">
+        <div class="wrapx">
+          <p class="num">02 / 02 &nbsp;What&rsquo;s live</p>
+          <h2>Where things stand.</h2>
+          <ul class="status">
+            <li><span class="pill live">Live</span><span>This form: email or copy your brief, and we reply with next steps.</span></li>
+            <li><span class="pill live">Live</span><span>Theme edition ($99 a year), ordered and paid inside bWalletX: Settings &rsaquo; Theme &rsaquo; Get your own edition.</span></li>
+            <li><span class="pill live">Live</span><span>Branded edition and Native app, quoted by reply.</span></li>
+            <li><span class="pill soon">Coming</span><span>Pay a deposit for a Branded edition or Native app here, with Sign in with bWalletX.</span></li>
+          </ul>
+          <p class="sub"><a href="/themes/custom">&larr; Back to custom editions</a> &middot; <a href="/themes">All themes</a></p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="foot">
+      <div class="wrap foot-in">
+        <a class="brand" href="/"><img src="/logo.svg" alt="" width="27" height="24" /><span>bWallet<span class="gold">X</span></span></a>
+        <p>By The Bitcoin Corporation Ltd.</p>
+        <p><a href="https://x.com/bWalletX" target="_blank" rel="noopener">@bWalletX on X</a> · <a href="https://www.bchatx.com/u/bwalletx" target="_blank" rel="noopener">bChatX</a> · <a href="mailto:support@bwalletx.com">support@bwalletx.com</a> · <a href="/privacy.html">Privacy policy</a></p>
+      </div>
+    </footer>
+    <script>
+      (function () {
+        // Deposits stay off until the server change is reviewed and live (theme-orders deposit-quote/claim).
+        // Then set DEPOSITS_LIVE = true; the button still only shows when the server says deposits are configured.
+        var DEPOSITS_LIVE = false;
+        var API = 'https://www.bwallet.space/api/theme-orders/';
+        var TIERS = { theme: 'Theme edition ($99 a year)', branded: 'Branded edition (from $999)', native: 'Native app (by quote)' };
+        var form = document.getElementById('of'), msg = document.getElementById('msg');
+        var $ = function (id) { return document.getElementById(id); };
+        function say(t, err) { msg.textContent = t; msg.className = 'msg' + (err ? ' err' : ''); }
+        function tier() { var c = form.querySelector('input[name=tier]:checked'); return c ? c.value : 'theme'; }
+        function colours() {
+          var out = [], us = form.querySelectorAll('.cu'), vs = form.querySelectorAll('.cv');
+          for (var i = 0; i < us.length; i++) if (us[i].checked) out.push(vs[i].value.toLowerCase());
+          return out.slice(0, 3);
+        }
+        function httpsOk(v) { if (!v) return true; try { return new URL(v).protocol === 'https:'; } catch (e) { return false; } }
+        function check() {
+          var b = $('brand').value.trim(), c = $('contact').value.trim();
+          if (b.length < 2) return ['brand', 'Add your brand or token name.'];
+          if (!/^[^\s@]+@[^\s@]+\.[a-z]{2,}$/i.test(c) && !/^[@$]?[a-z0-9_.-]{2,40}$/i.test(c)) return ['contact', 'Add an email address or a handle so we can reply.'];
+          if (!httpsOk($('link').value.trim())) return ['link', 'The website link should start with https://'];
+          if (!httpsOk($('logo').value.trim())) return ['logo', 'The logo link should start with https://'];
+          return null;
+        }
+        function brief() {
+          return [
+            'Edition: ' + TIERS[tier()],
+            'Brand: ' + $('brand').value.trim(),
+            'Contact: ' + $('contact').value.trim(),
+            'Link: ' + ($('link').value.trim() || '-'),
+            'Logo: ' + ($('logo').value.trim() || '-'),
+            'Colours: ' + (colours().join(', ') || '-'),
+            '',
+            $('note').value.trim()
+          ].join('\n');
+        }
+        function bad() { var e = check(); if (!e) return false; say(e[1], true); $(e[0]).focus(); return true; }
+        form.addEventListener('change', function () { $('themeNote').hidden = tier() !== 'theme'; showDeposit(); });
+        form.addEventListener('submit', function (e) {
+          e.preventDefault();
+          if (bad()) return;
+          var subject = 'Branded wallet: ' + $('brand').value.trim() + ' (' + TIERS[tier()] + ')';
+          location.href = 'mailto:support@bwalletx.com?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(brief());
+          say('Your email app should open with the brief filled in. If it doesn’t, copy the brief and send it to support@bwalletx.com.');
+        });
+        $('copy').addEventListener('click', function () {
+          if (bad()) return;
+          var t = brief();
+          (navigator.clipboard ? navigator.clipboard.writeText(t) : Promise.reject()).then(
+            function () { say('Copied. Paste it into an email to support@bwalletx.com or a message to us on bChatX.'); },
+            function () { say('Copy didn’t work here. Select the fields and send them to support@bwalletx.com.', true); }
+          );
+        });
+
+        // Deposit (Branded edition / Native app): Sign in with bWalletX, then the theme-order quote → one approval →
+        // claim flow. The wallet builds the payment without sending it; our server checks it and broadcasts.
+        var depUsd = 0;
+        function showDeposit() { $('depositBox').hidden = !(depUsd && tier() !== 'theme'); }
+        if (DEPOSITS_LIVE) {
+          fetch(API + 'deposit-config').then(function (r) { return r.json(); }).then(function (j) {
+            if (j && j.configured && j.usd) { depUsd = j.usd; $('depAmt').textContent = '$' + j.usd; showDeposit(); }
+          }).catch(function () {});
+        }
+        var enc = new TextEncoder();
+        function hex(a) { return Array.prototype.map.call(a, function (x) { return ('0' + (x & 255).toString(16)).slice(-2); }).join(''); }
+        function message(action, fields) {
+          var k = Object.keys(fields).sort();
+          return ['bwallet-paymail', 'v1', action].concat(k.map(function (x) { return x + '=' + (fields[x] == null ? '' : fields[x]); })).join('|');
+        }
+        async function signed(wallet, identityKey, action, fields) {
+          var ts = Date.now(), all = Object.assign({}, fields, { identityKey: identityKey, timestamp: String(ts) });
+          var r = await wallet.createSignature({ data: Array.from(enc.encode(message(action, all))), protocolID: [2, 'bwallet paymail'], keyID: '1', counterparty: 'anyone' });
+          return { identityKey: identityKey, timestamp: ts, fields: fields, signature: hex(r.signature) };
+        }
+        async function post(op, body) {
+          var r = await fetch(API + op, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(body) });
+          var j = await r.json().catch(function () { return {}; });
+          if (!r.ok) throw Object.assign(new Error(j.error || ('Error ' + r.status)), { status: r.status, code: j.error });
+          return j;
+        }
+        $('payDep').addEventListener('click', async function () {
+          if (bad()) return;
+          var btn = this; btn.disabled = true;
+          try {
+            say('Opening bWalletX…');
+            var C = window.bWalletXConnect;
+            if (!C) throw new Error('The bWalletX button didn’t load. Refresh and try again.');
+            var wallet = (await C.connectBwalletX({})).wallet;
+            var identityKey = (await wallet.getPublicKey({ identityKey: true })).publicKey;
+            var fields = { tier: tier(), brand: $('brand').value.trim(), contact: $('contact').value.trim(), link: $('link').value.trim(), logo: $('logo').value.trim(), colours: JSON.stringify(colours()), note: $('note').value.trim() };
+            say('Getting the price…');
+            var q = await post('deposit-quote', await signed(wallet, identityKey, 'theme-deposit-quote', fields));
+            say('Approve $' + q.usd + ' (' + q.sats.toLocaleString() + ' sats) in your wallet.');
+            var outs = q.outputs.map(function (o) { return { lockingScript: o.script, satoshis: o.satoshis, outputDescription: 'Branded wallet deposit' }; });
+            outs.push({ lockingScript: q.memo_hex, satoshis: 0, outputDescription: 'Deposit reference' });
+            var a = await wallet.createAction({ description: 'bWalletX branded wallet deposit', outputs: outs, options: { randomizeOutputs: false, noSend: true } });
+            if (!a || !a.tx || !a.txid) throw new Error('The wallet did not return the payment.');
+            try {
+              await post('deposit-claim', Object.assign(await signed(wallet, identityKey, 'theme-deposit-claim', { quote_id: q.quote_id, txid: a.txid }), { rawtx: hex(a.tx) }));
+            } catch (e) {
+              // Drop the unsent payment only when the server surely didn't broadcast it; on a 5xx it may be out.
+              if (e.status && (e.status < 500 || e.code === 'broadcast_failed')) {
+                try { await wallet.abortAction({ reference: a.txid }); } catch (x) { /* already gone */ }
+              }
+              throw e;
+            }
+            say('Deposit paid. Thank you: we’ll be in touch at ' + fields.contact + '.');
+          } catch (e) {
+            var m = (e && e.code === 'NOT_FOUND') ? 'Open this page in bWalletX, or add the bWalletX extension, then try again.' : (e && e.message) || 'Something went wrong. Nothing was paid.';
+            say(m, true);
+          } finally { btn.disabled = false; }
+        });
+      })();
+    </script>
+  </body>
+</html>
