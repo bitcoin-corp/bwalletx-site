@@ -129,6 +129,23 @@
       .after .cta a { display: inline-flex; align-items: center; min-height: 46px; padding: 0 22px; border-radius: 999px; text-decoration: none; font: 600 .95rem 'Space Grotesk', sans-serif; border: 1px solid #111; color: #111; }
       .after .cta a.pri { background: #111; color: #f7f6f2; }
       .after .tag { margin-top: 30px; font-weight: 500; color: #111; }
+      /* Add your app (18 Oct 2026): builders' half of b creative. */
+      .addapp { background: #111; color: #f7f6f2; padding: 72px 16px; }
+      .addapp .in { max-width: 980px; margin: 0 auto; display: grid; grid-template-columns: 1fr; gap: 32px; align-items: center; }
+      @media (min-width: 800px) { .addapp .in { grid-template-columns: 1.15fr 0.85fr; } }
+      .addapp .kick { font: 500 .8rem 'IBM Plex Mono', monospace; letter-spacing: .12em; text-transform: uppercase; color: #F5B800; margin: 0; }
+      .addapp h2 { margin: 10px 0 0; font: 700 clamp(2rem, 6vw, 3.2rem) / 1.05 'Space Grotesk', sans-serif; letter-spacing: -0.04em; }
+      .addapp p { color: #c9c7c0; font: 400 1.05rem / 1.6 'Space Grotesk', sans-serif; margin: 14px 0 0; }
+      .addapp ul { list-style: none; padding: 0; margin: 20px 0 0; display: grid; gap: 12px; }
+      .addapp li { font: 400 1rem / 1.5 'Space Grotesk', sans-serif; color: #e9e7e1; padding-left: 28px; position: relative; }
+      .addapp li::before { content: "b"; position: absolute; left: 0; top: -1px; font-weight: 700; color: #F5B800; }
+      .addapp li b { color: #fff; }
+      .addapp .cta { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 26px; }
+      .addapp .cta a { display: inline-flex; align-items: center; min-height: 46px; padding: 0 22px; border-radius: 999px; text-decoration: none; font: 600 .95rem 'Space Grotesk', sans-serif; border: 1px solid #f7f6f2; color: #f7f6f2; }
+      .addapp .cta a.pri { background: #F5B800; border-color: #F5B800; color: #111; }
+      .addapp figure { margin: 0 auto; max-width: 300px; width: 100%; }
+      .addapp figure img { width: 100%; height: auto; display: block; border-radius: 28px; border: 1px solid #ffffff22; }
+      .addapp figcaption { margin-top: 8px; text-align: center; font-size: .82rem; color: #8a8a86; }
       .jb-foot { margin: 0; padding: 0 16px 22px; text-align: center; font-size: .75rem; color: #6e6c66; background: #f7f6f2; }
       .jb-foot a { color: #4a4843; }
       @media (prefers-reduced-motion: reduce) { .sc, .sc *, .sc::before { animation: none !important; } .sc.end { clip-path: none; } }
@@ -166,6 +183,23 @@
       <p>Free themes for everyone, artist editions, and branded editions for your token or business from $99.</p>
       <div class="cta"><a class="pri" href="/themes/custom">Order your edition</a><a href="/themes">See all themes</a></div>
       <p class="tag">Less noise. More life. Just b.</p>
+    </section>
+    <section class="addapp" id="add-your-app">
+      <div class="in">
+        <div>
+          <p class="kick">Made an app?</p>
+          <h2>Put it in the wallet.</h2>
+          <p>If you've built something on BSV, add it to the Apps screen of bWallet and bWalletX. It's free, and a person reviews every app.</p>
+          <ul>
+            <li><b>One tap away.</b> Your icon sits in Apps beside the other BSV apps.</li>
+            <li><b>Sign-in built in.</b> Apps open in the wallet's browser, connected over BRC-100. The user's identity key is the login.</li>
+            <li><b>Paid in BSV.</b> Ask for a payment and the user approves it on one sheet.</li>
+            <li><b>What happens next.</b> We review it, add it with your site's own name and icon, ship it in the next wallet release and email you.</li>
+          </ul>
+          <div class="cta"><a class="pri" href="/apps/add">Add your app</a><a href="/developers">Developer docs</a></div>
+        </div>
+        <figure><img src="/images/apps-add/apps-bapps.webp" alt="The Apps screen in bWalletX on a phone: Home and bApps rows of app icons" width="600" height="1246" loading="lazy" /><figcaption>The Apps screen in bWalletX.</figcaption></figure>
+      </div>
     </section>
     <p class="jb-foot"><a href="/just-b">just b</a> · <a href="/b-cool">b cool</a> · <a href="/b-creative" aria-current="page">b creative</a></p>
     <p class="jb-foot">Example coins are invented. Music is generated live in your browser. Share-image emoji: <a href="https://github.com/jdecked/twemoji">Twemoji</a>, CC-BY 4.0. <a href="mailto:support@bwalletx.com">support@bwalletx.com</a></p>
