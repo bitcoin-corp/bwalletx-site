@@ -44,7 +44,7 @@ Source: https://bwalletx.com/android
 
 The full bWalletX wallet on your Android phone or tablet. Your keys stay on your device.
 
-[Download APK (beta) ↓](https://bwalletx.com/download/bwalletx-android-5.2.31.apk)
+[Download APK (beta) ↓](https://bwalletx.com/download/bwalletx-android-5.2.32.apk)
 
 It isn't on Google Play yet, so install it by hand. (The store edition, bWallet, is in a Google Play internal test: see [/testers/bwallet/android](https://bwalletx.com/testers/bwallet/android).)
 
@@ -52,13 +52,13 @@ It isn't on Google Play yet, so install it by hand. (The store edition, bWallet,
 
 - If Android asks, allow your browser to install unknown apps (Settings › Apps › your browser › Install unknown apps).
 
-- Open `bwalletx-android-5.2.31.apk` and tap Install.
+- Open `bwalletx-android-5.2.32.apk` and tap Install.
 
 - Open bWalletX and create or restore your wallet.
 
 Updating from an older version? Install over the top and your wallet stays. If Android says the app can't be updated, write down your 12 words first, then uninstall and reinstall.
 
-Version 5.2.31 beta · 34.0 MB · Android 7+ · SHA-256 bb16f3011307569fdd6f72c32a99dccdff15d8b674f86148b5d695adbdbb2f29
+Version 5.2.32 beta · 34.2 MB · Android 7+ · SHA-256 4a00e27934e7f054318df3e4b97b356ae04783b0e31367dba2561a548932928c
 
 Also: [Chrome extension](https://bwalletx.com/extension) · [Developers](https://bwalletx.com/developers)
 
@@ -1458,14 +1458,14 @@ Source: https://bwalletx.com/extension
 
 The full bWalletX wallet in Chrome's side panel, and a wallet websites like TokenBlaster can connect to. Your keys stay in the extension.
 
-[Download for Chrome (beta) ↓](https://bwalletx.com/download/bwalletx-extension-5.2.31.zip)
-[Download for Brave (beta) ↓](https://bwalletx.com/download/bwalletx-extension-5.2.31.zip)
+[Download for Chrome (beta) ↓](https://bwalletx.com/download/bwalletx-extension-5.2.32.zip)
+[Download for Brave (beta) ↓](https://bwalletx.com/download/bwalletx-extension-5.2.32.zip)
 
 Updating? Use the ↻ reload button on `chrome://extensions`, or replace the files in the same folder. Never click Remove — removing the extension deletes your wallet's records.
 
 It isn't on the Chrome Web Store yet, so install it by hand:
 
-- Unzip `bwalletx-extension-5.2.31.zip`.
+- Unzip `bwalletx-extension-5.2.32.zip`.
 
 - Open `chrome://extensions` in Chrome.
 
@@ -1479,7 +1479,7 @@ It isn't on the Chrome Web Store yet, so install it by hand:
 
 Same extension, same file. Brave runs Chrome extensions, so:
 
-- Unzip `bwalletx-extension-5.2.31.zip`.
+- Unzip `bwalletx-extension-5.2.32.zip`.
 
 - Open `brave://extensions` in Brave.
 
@@ -1489,7 +1489,7 @@ Same extension, same file. Brave runs Chrome extensions, so:
 
 - Pin bWalletX from the puzzle-piece menu, click it, and create or restore your wallet.
 
-Version 5.2.31 beta · SHA-256 030ce394e9f2a7361457b24ec2c99add6481ab47aa61435758eb525622ae168f · Source: [github.com/bitcoin-corp/bwallet](https://github.com/bitcoin-corp/bwallet)
+Version 5.2.32 beta · SHA-256 51810d85f6412fd37c0b7e47875036927e02602af9084c7033e8580c2d16e4d7 · Source: [github.com/bitcoin-corp/bwallet](https://github.com/bitcoin-corp/bwallet)
 
 ---
 
@@ -1826,8 +1826,8 @@ Source: https://bwalletx.com/get
 
 The full bWalletX on every device. Your keys stay on your device.
 
-[AndroidAPK download · v5.2.31 beta](https://bwalletx.com/android)
-[ChromeExtension · v5.2.31 beta](https://bwalletx.com/extension)
+[AndroidAPK download · v5.2.32 beta](https://bwalletx.com/android)
+[ChromeExtension · v5.2.32 beta](https://bwalletx.com/extension)
 [WebOpen in your browser](https://web.bwalletx.com)
 [DesktopIn your browser, or install it as an app](https://desktop.bwalletx.com)
 [iPhoneWeb app · install from Safari, no App Store](https://bwalletx.com/iphone)
@@ -2184,7 +2184,7 @@ holds your coins, pays and locks, and opens the chat room for every token you ho
 bWalletX is the full edition (web, Chrome, Android sideload, private iPhone build);
 bWallet is the App Store / Play edition with fewer features.
 
-Android · Download APK (beta)v5.2.31 beta · sideloadiPhone · Web appInstall from Safari · no App StoreChrome · Download extensionv5.2.31 beta · zip + install steps
+Android · Download APK (beta)v5.2.32 beta · sideloadiPhone · Web appInstall from Safari · no App StoreChrome · Download extensionv5.2.32 beta · zip + install steps
 
 ▶Watch the explainer · 1 min
 
@@ -2196,10 +2196,10 @@ How to sideload on Android
 Tap Download APK (beta). If Android asks, allow your browser to install unknown apps
 (Settings › Apps › your browser › Install unknown apps).
 
-- Open the downloaded bwalletx-android-5.2.31.apk and tap Install.
+- Open the downloaded bwalletx-android-5.2.32.apk and tap Install.
 
 -
-Optional but recommended: check the SHA-256 checksum matchesbb16f3011307569fdd6f72c32a99dccdff15d8b674f86148b5d695adbdbb2f29
+Optional but recommended: check the SHA-256 checksum matches4a00e27934e7f054318df3e4b97b356ae04783b0e31367dba2561a548932928c
 
 Beta software. Use small amounts and back up your recovery phrase. Only install the APK from this site or
 the official GitHub release.
@@ -2385,7 +2385,7 @@ Join the waitlist →](https://www.bitcoinchat.online)
 
 Currently in beta.
 
-Android · Download APK (beta)v5.2.31 beta · sideloadiPhone · Web appInstall from Safari · no App StoreChrome · Download extensionv5.2.31 beta · zip + install steps
+Android · Download APK (beta)v5.2.32 beta · sideloadiPhone · Web appInstall from Safari · no App StoreChrome · Download extensionv5.2.32 beta · zip + install steps
 
 Download on theApp StorebWallet · not submitted yet
 
@@ -3037,7 +3037,7 @@ Source: https://bwalletx.com/recover-relayx
 
 17 October 2026
 
-Available in bWalletX 5.2.31
+Available in bWalletX 5.2.32
 
 # Your RelayX NFTs are still yours.
 
@@ -3125,9 +3125,9 @@ Done: her parts are now 1Sat Ordinals.
 
 - ✓ 5.2.30Optional for NPG holders: melt a girl into her element cards and avatar badge.
 
-- ✓ 5.2.31Keep them in bWalletX: restore your RelayX wallet and your RelayX NFTs show in the wallet’s NFTs tab under Run, kept as they are.
+- ✓ 5.2.32Keep them in bWalletX: restore your RelayX wallet and your RelayX NFTs show in the wallet’s NFTs tab under Run, kept as they are.
 
-- ✓ 5.2.31BSV left on old RelayX addresses moved into your account in one tap.
+- ✓ 5.2.32BSV left on old RelayX addresses moved into your account in one tap.
 
 - ◻ ComingNFTs that were listed for sale on RelayX when it closed.
 
@@ -3153,7 +3153,7 @@ Each release ships to the Android APK, the Chrome extension and the web wallet. 
 
 [Download bWalletX](https://bwalletx.com/download)
 
-## 5.2.31 2026-10-18
+## 5.2.32 2026-10-18
 
 - Restore your RelayX wallet into bWalletX and a blue Your RelayX collection card appears at the top: one tap finds its NFTs, with no words to type again. [How it works](https://bwalletx.com/recover-relayx).
 - The NFTs tab has an All · 1Sat · Run filter, so your RelayX NFTs sit next to your other NFTs.
@@ -4415,13 +4415,13 @@ Loading…
 
 ## Where each version is
 
-We ship small updates often, usually several a week. A new version reaches each place at a different speed, because Apple and Google check some of them first. Latest: 5.2.31 (18 Oct 2026), [what’s new](https://bwalletx.com/releases#v5.2.31).
+We ship small updates often, usually several a week. A new version reaches each place at a different speed, because Apple and Google check some of them first. Latest: 5.2.32 (18 Oct 2026), [what’s new](https://bwalletx.com/releases#v5.2.32).
 
-- Web, Chrome extension, Android download (APK): the same day. Now on 5.2.31.
+- Web, Chrome extension, Android download (APK): the same day. Now on 5.2.32.
 
-- Android, Google Play test: the same day. Now on 5.2.31.
+- Android, Google Play test: the same day. Now on 5.2.32.
 
-- iPhone, TestFlight: about a day later, after Apple’s beta review. 5.2.31 is with Apple now; until it clears, TestFlight still offers an older build.
+- iPhone, TestFlight: about a day later, after Apple’s beta review. 5.2.32 is with Apple now; until it clears, TestFlight still offers an older build.
 
 - App Store and Play Store: not out yet. bWallet’s first store release is being prepared; testers will hear first.
 
@@ -6594,7 +6594,7 @@ White app tile
 
 ## Status.
 
-- LiveWhite, Pink, Blue and Yellow paper themes in the app (5.2.31): ☰ › Settings › Theme.
+- LiveWhite, Pink, Blue and Yellow paper themes in the app (5.2.32): ☰ › Settings › Theme.
 
 - LiveGold (the default) and Black/White (our dark theme), plus the Mono, Duo and Tri packs and Mix your own.
 
@@ -7531,7 +7531,7 @@ Source: https://bwalletx.com/connect
 
 How to let people sign in to your site or app with their bWalletX: one script tag, two routes on your server, and no API keys.
 
-Also as plain Markdown for AI coding agents: [bwalletx.com/connect.md](https://bwalletx.com/connect.md). Checked against bWalletX 5.2.31, connect.js and @bwalletx/connect 0.5.0 on 18 Oct 2026. Full docs: [docs.bwalletx.com/developers/connect](https://docs.bwalletx.com/developers/connect/).
+Also as plain Markdown for AI coding agents: [bwalletx.com/connect.md](https://bwalletx.com/connect.md). Checked against bWalletX 5.2.32, connect.js and @bwalletx/connect 0.5.0 on 18 Oct 2026. Full docs: [docs.bwalletx.com/developers/connect](https://docs.bwalletx.com/developers/connect/).
 
 ## In 30 seconds
 
@@ -8017,11 +8017,11 @@ The full developer guides live at [docs.bwalletx.com](https://docs.bwalletx.com/
 
 ## Get bWalletX to test with
 
-Install the wallet you'll connect to (version 5.2.31 beta). Checksums are on each download page.
+Install the wallet you'll connect to (version 5.2.32 beta). Checksums are on each download page.
 
-- [Chrome / Brave extension (zip)](https://bwalletx.com/download/bwalletx-extension-5.2.31.zip) · [install steps](https://bwalletx.com/extension)
+- [Chrome / Brave extension (zip)](https://bwalletx.com/download/bwalletx-extension-5.2.32.zip) · [install steps](https://bwalletx.com/extension)
 
-- [Android APK](https://bwalletx.com/download/bwalletx-android-5.2.31.apk) · [install steps](https://bwalletx.com/android)
+- [Android APK](https://bwalletx.com/download/bwalletx-android-5.2.32.apk) · [install steps](https://bwalletx.com/android)
 
 - [Web app](https://web.bwalletx.com) · [iPhone](https://bwalletx.com/iphone)
 
@@ -11978,7 +11978,7 @@ Source: https://bwalletx.com/connect.md
 
 # Add Sign in with bWalletX to your app
 
-Source: https://bwalletx.com/connect (this file: https://bwalletx.com/connect.md). Last checked against bWalletX 5.2.31, connect.js and @bwalletx/connect 0.5.0 on 18 Oct 2026. Full docs: https://docs.bwalletx.com/developers/connect/
+Source: https://bwalletx.com/connect (this file: https://bwalletx.com/connect.md). Last checked against bWalletX 5.2.32, connect.js and @bwalletx/connect 0.5.0 on 18 Oct 2026. Full docs: https://docs.bwalletx.com/developers/connect/
 
 ## In 30 seconds
 
