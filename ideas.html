@@ -57,11 +57,20 @@
     <script src="/nav.js"></script>
     <main class="ext">
       <h1>Your <span class="gold">ideas</span>, in the open.</h1>
-      <p class="lede">Ideas people sent to b, and where each one stands. Tell b what you want in the app; a short summary appears here after review.</p>
+      <p class="lede">Tell b what you want in the app and it goes straight to the team with a reference number. Ideas appear here as short summaries once a person has reviewed them.</p>
       <div class="fb-filters" role="group" aria-label="Filter by status">
         <button type="button" data-st="" aria-pressed="true">All</button><button type="button" data-st="new" aria-pressed="false">New</button><button type="button" data-st="planned" aria-pressed="false">Planned</button><button type="button" data-st="fixing" aria-pressed="false">Building</button><button type="button" data-st="shipped" aria-pressed="false">Shipped</button>
       </div>
       <ul class="fb-list" id="fb-list" aria-live="polite"><li class="fb-empty">Loading&hellip;</li></ul>
+      <h2>Where this stands</h2>
+      <ul class="status">
+        <li><span class="pill live">Live</span><span>Tell b in Ask b, or tap Report to b on any error. You get a reference like F-12.</span></li>
+        <li><span class="pill live">Live</span><span>Every report reaches the team, grouped with others like it, in a daily summary.</span></li>
+        <li><span class="pill live">Live</span><span>Private by default: nothing appears here until a person approves it.</span></li>
+        <li><span class="pill soon">Coming</span><span>Your reports in bWalletX: each one&rsquo;s status, from received to shipped in a named release.</span></li>
+        <li><span class="pill soon">Coming</span><span>Shipped ideas linked to the <a href="/releases">release notes</a>.</span></li>
+        <li><span class="pill soon">Coming</span><span>&ldquo;Me too&rdquo; votes from signed-in bWalletX users.</span></li>
+      </ul>
       <h2>How this list works</h2>
       <ul>
         <li>Tell <b>b</b> in bWalletX. b passes it to the team.</li>
@@ -84,7 +93,7 @@
           list.innerHTML = '';
           var li = el('li', 'fb-empty');
           if (msg) li.textContent = msg;
-          else { li.appendChild(document.createTextNode('Tell ')); li.appendChild(el('b', '', 'b')); li.appendChild(document.createTextNode(' in the app: your idea appears here after review.')); }
+          else { li.appendChild(document.createTextNode('Tell ')); li.appendChild(el('b', '', 'b')); li.appendChild(document.createTextNode(' in the app. Nothing has been approved for this list yet; reports still reach the team.')); }
           list.appendChild(li);
         }
         function render() {
