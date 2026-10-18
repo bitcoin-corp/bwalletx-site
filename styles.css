@@ -1475,12 +1475,12 @@ body {
 }
 
 /* Hodl my b sticker on the home hero. Text comes from STICKER in scripts/hodl-my-b.py. */
-.hodl-sticker{position:absolute;z-index:3;top:clamp(150px,19vh,210px);right:clamp(16px,6vw,96px);width:clamp(104px,11vw,140px);aspect-ratio:1;border-radius:50%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;text-align:center;text-decoration:none;color:#111;background:radial-gradient(circle at 32% 28%,#fff3b0,#ffd24d 42%,#f5b800 70%,#b98500);box-shadow:0 0 0 3px rgba(11,10,8,.9),0 0 0 4px rgba(255,210,77,.55),0 18px 40px -12px rgba(245,184,0,.6);transform:rotate(-12deg);transition:transform .24s cubic-bezier(.2,.8,.2,1)}
-.hodl-sticker::before{content:"";position:absolute;inset:7px;border-radius:50%;border:1px dashed rgba(17,17,17,.45)}
-.hodl-sticker:hover{transform:rotate(-6deg) scale(1.05)}
-.hodl-sticker:focus-visible{outline:2px solid #ffd24d;outline-offset:6px}
-.hodl-sticker .hs-k{font:600 9px/1 var(--mono,ui-monospace,monospace);letter-spacing:.2em;text-transform:uppercase}
-.hodl-sticker .hs-t{font:700 clamp(15px,1.6vw,19px)/1 'Space Grotesk',sans-serif;letter-spacing:-.03em}
-.hodl-sticker .hs-s{font:600 10px/1 var(--mono,ui-monospace,monospace);letter-spacing:.1em;text-transform:uppercase}
-@media (max-width:640px){.hodl-sticker{top:150px;right:16px;width:92px}.hodl-sticker .hs-t{font-size:14px}}
-@media (prefers-reduced-motion:reduce){.hodl-sticker{transition:none}.hodl-sticker:hover{transform:rotate(-12deg)}}
+.hodl-sticker{position:absolute;z-index:3;top:clamp(140px,18vh,200px);right:clamp(16px,6vw,96px);width:clamp(112px,11vw,150px);display:flex;flex-direction:column;align-items:center;gap:6px;text-decoration:none;transform:rotate(-10deg);transition:transform .2s cubic-bezier(.2,.8,.2,1)}
+.hodl-sticker .hs-e{width:100%;height:auto;filter:drop-shadow(0 0 0 #fff) drop-shadow(3px 0 0 #fbf6e9) drop-shadow(-3px 0 0 #fbf6e9) drop-shadow(0 3px 0 #fbf6e9) drop-shadow(0 -3px 0 #fbf6e9) drop-shadow(0 14px 22px rgba(0,0,0,.55))}
+.hodl-sticker .hs-tab{display:flex;flex-direction:column;align-items:center;gap:3px;background:linear-gradient(180deg,#ffe58a,#ffd24d 55%,#f5b800);color:#111;border-radius:10px;padding:6px 10px 7px;box-shadow:0 8px 20px -6px rgba(245,184,0,.6)}
+.hodl-sticker:hover{transform:rotate(-4deg) scale(1.06)}
+.hodl-sticker:focus-visible{outline:2px solid #ffd24d;outline-offset:6px;border-radius:12px}
+.hodl-sticker .hs-t{font:700 clamp(14px,1.4vw,17px)/1 'Space Grotesk',sans-serif;letter-spacing:-.02em;white-space:nowrap}
+.hodl-sticker .hs-s{font:600 10px/1 var(--mono,ui-monospace,monospace);letter-spacing:.12em;text-transform:uppercase}
+@media (max-width:640px){.hodl-sticker{top:140px;right:12px;width:92px}.hodl-sticker .hs-t{font-size:13px}}
+@media (prefers-reduced-motion:reduce){.hodl-sticker{transition:none}.hodl-sticker:hover{transform:rotate(-10deg)}}
