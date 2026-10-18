@@ -7276,7 +7276,7 @@ Only agent accounts can be exported, never your main wallet. The key file is enc
 
 The agent account's balance is the budget. Every spend is checked first: the kill switch, the daily cap, at most 30 spends an hour, then the strategy's rules. Every action is logged.
 
-Free example strategies and the file format: [Strategies](https://bwalletx.com/strategies) · [spec](https://bwalletx.com/strategies/spec). Source: [github.com/b0ase/bwalletx-cli](https://github.com/b0ase/bwalletx-cli) · [npm](https://www.npmjs.com/package/bwalletx).
+Free example strategies and the file format: [Strategies](https://bwalletx.com/strategies) · [spec](https://bwalletx.com/strategies/spec). Source: [github.com/bitcoin-corp/bwalletx-cli](https://github.com/bitcoin-corp/bwalletx-cli) · [npm](https://www.npmjs.com/package/bwalletx).
 
 [Agent wallet](https://bwalletx.com/agent)
 [Developers](https://bwalletx.com/developers)
@@ -7976,7 +7976,7 @@ Claude Desktop, Cursor and others (MCP config file):
 
 The passphrase unlocks the agent account's key file on your machine. Use a separate agent account with a small balance for AI agents. Leave the passphrase out and the server stays paper-only: it can read and practise, but never send.
 
-Coming: selling and listing. Minting is built in the source and comes to npm with the next published version. Source: [github.com/b0ase/bwalletx-cli](https://github.com/b0ase/bwalletx-cli).
+Coming: selling and listing. Minting is built in the source and comes to npm with the next published version. Source: [github.com/bitcoin-corp/bwalletx-cli](https://github.com/bitcoin-corp/bwalletx-cli).
 
 [Agent wallet](https://bwalletx.com/agent)
 [Developers](https://bwalletx.com/developers)
@@ -7999,7 +7999,7 @@ PartLicence todayCode
 
 The wallet (web, extension, phone apps). Forked from the open-source Yours Wallet.MIT[bitcoin-corp/bwallet](https://github.com/bitcoin-corp/bwallet)
 
-The CLI and MCP server ([bwalletx CLI](https://bwalletx.com/cli))MIT[b0ase/bwalletx-cli](https://github.com/b0ase/bwalletx-cli)
+The CLI and MCP server ([bwalletx CLI](https://bwalletx.com/cli))MIT[b0ase/bwalletx-cli](https://github.com/bitcoin-corp/bwalletx-cli)
 
 The server (bit-sign)Open BSV License v4 today. A source-available licence is planned (FSL, the Functional Source License).Not public yet
 
@@ -8033,7 +8033,7 @@ The code is open. The bWalletX name and logo are trademarks of The Bitcoin Corpo
 
 ## Contribute, or report a security issue
 
-Open an issue or a pull request on [the wallet repo](https://github.com/bitcoin-corp/bwallet) or [the CLI repo](https://github.com/b0ase/bwalletx-cli). The wallet repo has a CONTRIBUTING guide.
+Open an issue or a pull request on [the wallet repo](https://github.com/bitcoin-corp/bwallet) or [the CLI repo](https://github.com/bitcoin-corp/bwalletx-cli). The wallet repo has a CONTRIBUTING guide.
 
 If you find a security problem, please don’t post it publicly. Email [support@bwalletx.com](mailto:support@bwalletx.com) first.
 
@@ -8425,7 +8425,7 @@ Strategies are programs written and sold by users. bWalletX doesn't review, rate
 [Strategies](https://bwalletx.com/strategies)
 [CLI](https://bwalletx.com/cli)
 
-The CLI uses the same format: `bwalletx strategy load file.json`. Source: [github.com/b0ase/bwalletx-cli](https://github.com/b0ase/bwalletx-cli). Questions: [support@bwalletx.com](mailto:support@bwalletx.com)
+The CLI uses the same format: `bwalletx strategy load file.json`. Source: [github.com/bitcoin-corp/bwalletx-cli](https://github.com/bitcoin-corp/bwalletx-cli). Questions: [support@bwalletx.com](mailto:support@bwalletx.com)
 
 ---
 
