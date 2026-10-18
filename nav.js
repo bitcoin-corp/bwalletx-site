@@ -59,7 +59,7 @@
           { label: 'Store', href: '/store' },
           { label: 'Buy BSV', href: '/buy' }
         ] },
-      { label: 'Social', href: '/social', pages: ['/social', '/chat', '/friends', '/lounge', '/games', '/video', '/live', '/aivj', '/tips', '/streaming-payments', '/credits', '/bspaces', '/bphone', '/bmail', '/bpositive', '/airdrops', '/sign', '/x', '/sign-in-with-handcash', '/gmail'],
+      { label: 'Social', href: '/social', pages: ['/social', '/chat', '/friends', '/lounge', '/games', '/video', '/live', '/tips', '/streaming-payments', '/credits', '/bspaces', '/bphone', '/bmail', '/bpositive', '/airdrops', '/sign', '/x', '/sign-in-with-handcash', '/gmail'],
         sub: [
           { label: 'Social', href: '/social' },
           { label: 'Chat', href: '/chat' },
@@ -68,7 +68,6 @@
           { label: 'Games', href: '/games' },
           { label: 'Video', href: '/video' },
           { label: 'Live', href: '/live' },
-          { label: 'bTV: AIVJ', href: '/aivj' },
           { label: 'Tips', href: '/tips' },
           { label: 'Streaming payments', href: '/streaming-payments' },
           { label: 'Credits (in testing)', href: '/credits' },
@@ -81,6 +80,13 @@
           { label: 'Sign in with X', href: '/x' },
           { label: 'Sign in with HandCash', href: '/sign-in-with-handcash' },
           { label: 'Sign in with Gmail', href: '/gmail' }
+        ] },
+      { label: 'Artists', href: '/artists', pages: ['/artists', '/artists/vexvoid', '/vexvoid', '/aivj', '/b-creative'],
+        sub: [
+          { label: 'Artists', href: '/artists' },
+          { label: 'VexVoid', href: '/artists/vexvoid', also: ['/vexvoid'] },
+          { label: 'bTV: AIVJ', href: '/aivj' },
+          { label: 'b creative', href: '/b-creative' }
         ] },
       { label: 'bApps', href: '/bapps', pages: ['/bapps', '/bapps/bmovies', '/bshares', '/partnership-shares', '/bweb'],
         sub: [
