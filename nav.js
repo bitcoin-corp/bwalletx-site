@@ -110,9 +110,9 @@
         ] },
       // Developers holds the Blog too (owner, 18 Oct 2026). When you publish a post, add it to the top of
       // Latest and drop the oldest (keep 5).
-      { label: 'Developers', href: '/developers', pages: ['/developers', '/connect', '/apps/add', '/open-source', '/blog', '/releases'],
+      { label: 'Developers', href: '/developers', pages: ['/developers', '/connect', '/apps/add', '/open-source', '/blog', '/releases', '/hodl-my-b'],
         // The pill row under the bar shows these only (not the post list in the menu).
-        pills: ['/developers', '/connect', '/apps/add', '/cli', '/mcp', '/open-source', '/blog', '/releases'],
+        pills: ['/developers', '/connect', '/apps/add', '/cli', '/mcp', '/open-source', '/blog', '/releases', '/hodl-my-b'],
         sub: [
           { label: 'Developers', href: '/developers' },
           { label: 'Sign in with bWalletX', href: '/connect' },
@@ -122,6 +122,7 @@
           { label: 'Open source', href: '/open-source' },
           { label: 'Blog', href: '/blog' },
           { label: 'Releases', href: '/releases' },
+          { label: 'Hodl my b · weekly', href: '/hodl-my-b' },
           { head: 'Latest' }
         ].concat([
           { label: '053 Friends, bPics, video', href: '/blog/053-friends-bpics-and-video' },

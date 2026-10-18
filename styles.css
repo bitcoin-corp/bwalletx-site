@@ -1473,3 +1473,14 @@ body {
   color: var(--muted);
   font-size: 0.9rem;
 }
+
+/* Hodl my b sticker on the home hero. Text comes from STICKER in scripts/hodl-my-b.py. */
+.hodl-sticker{position:absolute;z-index:3;top:clamp(150px,19vh,210px);right:clamp(16px,6vw,96px);width:clamp(104px,11vw,140px);aspect-ratio:1;border-radius:50%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;text-align:center;text-decoration:none;color:#111;background:radial-gradient(circle at 32% 28%,#fff3b0,#ffd24d 42%,#f5b800 70%,#b98500);box-shadow:0 0 0 3px rgba(11,10,8,.9),0 0 0 4px rgba(255,210,77,.55),0 18px 40px -12px rgba(245,184,0,.6);transform:rotate(-12deg);transition:transform .24s cubic-bezier(.2,.8,.2,1)}
+.hodl-sticker::before{content:"";position:absolute;inset:7px;border-radius:50%;border:1px dashed rgba(17,17,17,.45)}
+.hodl-sticker:hover{transform:rotate(-6deg) scale(1.05)}
+.hodl-sticker:focus-visible{outline:2px solid #ffd24d;outline-offset:6px}
+.hodl-sticker .hs-k{font:600 9px/1 var(--mono,ui-monospace,monospace);letter-spacing:.2em;text-transform:uppercase}
+.hodl-sticker .hs-t{font:700 clamp(15px,1.6vw,19px)/1 'Space Grotesk',sans-serif;letter-spacing:-.03em}
+.hodl-sticker .hs-s{font:600 10px/1 var(--mono,ui-monospace,monospace);letter-spacing:.1em;text-transform:uppercase}
+@media (max-width:640px){.hodl-sticker{top:150px;right:16px;width:92px}.hodl-sticker .hs-t{font-size:14px}}
+@media (prefers-reduced-motion:reduce){.hodl-sticker{transition:none}.hodl-sticker:hover{transform:rotate(-12deg)}}

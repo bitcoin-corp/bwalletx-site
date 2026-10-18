@@ -975,7 +975,7 @@ Business agents come with a [Branded edition](https://bwalletx.com/themes/custom
 
 - ComingSMS for your agent: customers text it. [Bitcoin by text](https://bwalletx.com/sms)
 
-Want to hold sats yourself first? [Hodl my b](https://bwalletx.com/hodl-my-b). Building your own agent? [The bwalletx CLI](https://bwalletx.com/cli).
+Read the whole story in [Hodl my b, Edition 0](https://bwalletx.com/hodl-my-b/0), our magazine. Building your own agent? [The bwalletx CLI](https://bwalletx.com/cli).
 
 ---
 
@@ -1778,7 +1778,7 @@ Pair a computer or Claude to an agent account with `npx bwalletx`. [CLI](https:/
 
 ### [Hodl my b](https://bwalletx.com/hodl-my-b)
 
-Agents paying from their own wallet, in sats, with receipts anyone can check. What is live and what is next.
+The weekly bWalletX magazine: everything shipped each week, live and coming. [Read this week’s issue](https://bwalletx.com/hodl-my-b) or [start with Edition 0](https://bwalletx.com/hodl-my-b/0).
 
 ### [Business agents](https://bwalletx.com/business-agents)
 
@@ -1950,9 +1950,253 @@ bWalletX is in beta: test with small amounts. Questions: [support@bwalletx.com](
 
 Source: https://bwalletx.com/hodl-my-b
 
+The bWalletX magazine
+
+# Hodl my b
+
+A glossy round-up of everything we ship, every week, with what is live and what is coming. New here? Start with Edition 0, the whole story.
+
+[New here? Start hereEdition 0 · The whole storyThe whole story. bWalletX and the whole suite, start to finish. New here? Start here.](https://bwalletx.com/hodl-my-b/0)[This weekEdition 1 · Week of 12 Oct 2026Don’t be bland. Get bRanded. Business agents, plus the week’s round-up.](https://bwalletx.com/hodl-my-b/1)
+
+[Download Edition 0 (PDF)](https://bwalletx.com/hodl-my-b/hodl-my-b-edition-0.pdf)[All releases](https://bwalletx.com/releases)[Get bWalletX](https://bwalletx.com/get)
+
+## Weekly editions
+
+- [Edition 1 · Week of 12 Oct 2026](https://bwalletx.com/hodl-my-b/1) · Don’t be bland. Get bRanded.
+
+---
+
+Source: https://bwalletx.com/hodl-my-b/0
+
+b
+
 Hodl my b
 
-WeeklyIssue 1Week of 12 Oct 2026
+Edition 0The whole storyOctober 2026
+
+One wallet. Your whole Bitcoin life.
+
+- Every devicePhone, web, Chrome, Desktop
+- One nameTwo addresses
+- bChatXRooms, Spaces, b
+- bMailMail that pays
+
+Edition 0Free · pass it on
+
+Inside
+
+## The whole story.
+
+- One wallet, every device3
+- Desktop: the big screen4
+- One name, two addresses5
+- bChatX: rooms and Spaces6
+- Ask b, open all hours7
+- bMail: mail that pays8
+- Exchange, coins, the Store9
+- NFTs: old wallets welcome10
+- Agents with pocket money11
+- Yours, really12
+- Privacy, plainly13
+- Coming14
+- Get it15
+
+Everything in here is Live today, unless it says Coming.
+
+Hodl my b · Edition 0 · 2
+
+The wallet
+
+## One wallet. Every device.
+
+- LiveWeb: web.bwalletx.com
+- LiveAndroid: direct download
+- LiveChrome extension
+- LiveDesktop, in your browser
+- LiveiPhone: web app, or the TestFlight beta
+
+Your keys are made and kept on your device. We can’t move your money.
+
+Hodl my b · Edition 0 · 3
+
+The wallet · Desktop
+
+## The big screen.
+
+Money, bMail, chat rooms, Spaces, bApps and Ask b side by side. Free in your browser, or install it as an app. Press ⌘K and tell b what to do.
+
+Live [desktop.bwalletx.com](https://bwalletx.com/desktop)
+
+Hodl my b · Edition 0 · 4
+
+Names
+
+## One name. Two addresses.
+
+$youyou@bwalletx.comyou@bmailx.com
+
+- LiveClaim a $name: it works at both addresses, same wallet
+- LiveSigned by your own wallet, so nobody (us included) can quietly re-point it
+- LiveEvery change goes into a public log
+- LiveHand a name on: it moves only when the other wallet accepts
+
+Pay $you. It lands with you. That’s it.
+
+Hodl my b · Edition 0 · 5
+
+bChatX
+
+## Rooms and Spaces, owned by you.
+
+- LiveRooms with their own token: hold it to get in
+- LiveDMs, voice and video calls, tips
+- LiveSpaces: live talks with a stage; pay at the door or by the minute
+- LiveGuests can listen without signing in
+
+Hodl my b · Edition 0 · 6
+
+Ask b
+
+## Help that never closes.
+
+b is the assistant inside the wallet. Ask in plain words in the app, at bchatx.com/ask-b, or hold to talk. b also sits in the Help Desk Space, open 24/7.
+
+Live Send b a bug report in one tap, then see what happened to it under Your reports.
+
+Hodl my b · Edition 0 · 7
+
+bMail · bMailX
+
+## Mail that pays you.
+
+- LiveSealed letters: only the person you write to can open them
+- LiveEach stamp is a real payment to the reader. Penny post: 1¢
+- LiveSet your price to reach you. Friends free, always on top
+- LiveReply paid, so they can answer for free
+
+Spam pays you now.
+
+Hodl my b · Edition 0 · 8
+
+Exchange
+
+## Buy, sell, launch.
+
+- LiveBuy and sell tokens and NFTs wallet to wallet; we never hold them
+- LiveLaunch your own coin, your share time-locked with a public receipt
+- LiveAirdrop to every holder with one approval
+- LiveThe Store: themes for $1, yours to keep
+
+[ExchangeLive](https://bwalletx.com/exchange)[ThemesLive](https://bwalletx.com/themes)
+
+Hodl my b · Edition 0 · 9
+
+NFTs
+
+## Old wallets welcome.
+
+- LiveOne library: pictures, video, music, documents
+- LiveRestore a RelayX wallet and its NFTs appear
+- LiveNFTs still listed on RelayX are found; one tap cancels the listing
+- LiveRestore from Yours, Panda, Twetch, SimplyCash, Money Button and more
+
+[Recover RelayXLive](https://bwalletx.com/recover-relayx)[NFTsLive](https://bwalletx.com/nfts)
+
+Hodl my b · Edition 0 · 10
+
+Agents
+
+## An AI with pocket money.
+
+- LiveAgent accounts: own keys, own budget, a daily cap, and Stop
+- LiveThe `bwalletx` CLI and MCP server for your own agents
+- LiveAny site or agent can ask bWalletX to pay or sign (BRC-100)
+
+STOP
+
+It can only spend what you gave it.
+
+Hodl my b · Edition 0 · 11
+
+Open source
+
+## Yours, really.
+
+- LiveThe wallet is open source (MIT): read it, build it, fork it
+- LiveYour coins sit at your own addresses; your 12 words restore them
+- LiveLocks are enforced by the network: nobody can move them early, us included
+
+[What’s open, and under which licence](https://bwalletx.com/open-source)
+
+Hodl my b · Edition 0 · 12
+
+Privacy
+
+## Plainly.
+
+- LiveYour keys and recovery phrase never leave your device
+- LiveNo ads, no tracking, no selling your data
+- LiveNo analytics or crash reports
+
+- ComingSpace transcripts only when the host turns them on and each speaker agrees, with a visible badge; audio deleted after
+- ComingEnd-to-end encrypted DMs
+
+[Privacy policy](https://bwalletx.com/privacy)
+
+Hodl my b · Edition 0 · 13
+
+Coming
+
+## Not live yet.
+
+- ComingbWallet on the App Store and Google Play (beta testing today)
+- ComingA real email inbox at name@bmailx.com
+- ComingAgreements in bMail: send, both sign, sealed
+- ComingbCredits top-up
+- ComingShare one fact, such as over 18
+- ComingSpace transcription, with consent
+
+When it ships, it moves to Live. Not before.
+
+Hodl my b · Edition 0 · 14
+
+Get it
+
+## Start in a minute.
+
+- [Web · web.bwalletx.com](https://web.bwalletx.com)
+- [Android · download](https://bwalletx.com/android)
+- [Chrome extension](https://bwalletx.com/extension)
+- [Desktop · desktop.bwalletx.com](https://desktop.bwalletx.com)
+- [iPhone web app](https://bwalletx.com/iphone) · [TestFlight beta](https://testflight.apple.com/join/1TTnQNKm)
+
+[](https://bwalletx.com/get)
+Scan to get bWalletbwalletx.com/get
+[Get bWallet →](https://bwalletx.com/get)
+
+bWalletX is in beta: test with small amounts.
+
+Hodl my b · Edition 0 · 15
+
+Back cover
+
+## Less noise. More life. Just b.
+
+Every week
+
+[Edition 1 · Week of 12 Oct 2026Business agents, plus the week’s round-up.](https://bwalletx.com/hodl-my-b/1)
+
+By The Bitcoin Corporation Ltd · Emoji: Twemoji, CC-BY 4.0 · Screens from the live apps, 18 Oct 2026
+
+←→♫
+
+---
+
+Source: https://bwalletx.com/hodl-my-b/1
+
+Hodl my b
+
+WeeklyEdition 1Week of 12 Oct 2026
 
 Don’t be bland. Get bRanded.
 
@@ -1961,7 +2205,7 @@ Don’t be bland. Get bRanded.
 - bChatX roomsA token per room
 - All 19 bAppsSign in and pay
 
-Issue 1Free · weekly
+Edition 1Free · weekly
 
 Inside
 
@@ -1978,7 +2222,7 @@ Inside
 
 Just b. Every feature says plainly: Live, Next release, or Coming.
 
-Hodl my b · Issue 1 · 2
+Hodl my b · Edition 1 · 2
 
 Cover story · bRand
 
@@ -1990,7 +2234,7 @@ Next release Agent from a link. [bRand business agents](https://bwalletx.com/bus
 
 It never calls in sick. It does ask for a logo.
 
-Hodl my b · Issue 1 · 3
+Hodl my b · Edition 1 · 3
 
 Cover story · checkout
 
@@ -2010,7 +2254,7 @@ Receipt on chain
 
 No card machine. No “it’s gone through twice”.
 
-Hodl my b · Issue 1 · 4
+Hodl my b · Edition 1 · 4
 
 Cover story · pocket money
 
@@ -2022,7 +2266,7 @@ Next release Capped agent account inside the app.
 
 Live Today on your computer: the `bwalletx` CLI agent wallet, with a daily cap and Stop. [CLI](https://bwalletx.com/cli)
 
-Hodl my b · Issue 1 · 5
+Hodl my b · Edition 1 · 5
 
 Cover story · SMS
 
@@ -2044,7 +2288,7 @@ New textPaid $5 (5,000 sats) ✓
 
 Finally, a good reason to reply to a text.
 
-Hodl my b · Issue 1 · 6
+Hodl my b · Edition 1 · 6
 
 Cover story · receipts
 
@@ -2069,7 +2313,7 @@ txid 3f9a…c21e
 
 Arguments about who paid what get very short.
 
-Hodl my b · Issue 1 · 7
+Hodl my b · Edition 1 · 7
 
 This week · 5.2.26
 
@@ -2084,7 +2328,7 @@ This week · 5.2.26
 
 [All releases](https://bwalletx.com/releases)
 
-Hodl my b · Issue 1 · 8
+Hodl my b · Edition 1 · 8
 
 Also this week
 
@@ -2092,7 +2336,7 @@ Also this week
 
 [EditionsLive · your branded wallet](https://bwalletx.com/themes/custom)[Theme StoreLive · new looks](https://bwalletx.com/themes)[Credits cardComing · prepay](https://bwalletx.com/credits)[bSharesShare registers](https://bwalletx.com/bshares)
 
-Hodl my b · Issue 1 · 9
+Hodl my b · Edition 1 · 9
 
 Also this week
 
@@ -2100,7 +2344,7 @@ Also this week
 
 [bChatX roomsLive · a token per room](https://www.bchatx.com/room/new/invite/b-creative)[b creativeThe spot](https://bwalletx.com/b-creative)[Digital Ice-CreamThree friends, one token](https://bwalletx.com/digital-ice-cream)[bAppsLive · all 19](https://bwalletx.com/bapps)
 
-Hodl my b · Issue 1 · 10
+Hodl my b · Edition 1 · 10
 
 Where things stand
 
@@ -2115,7 +2359,7 @@ Where things stand
 
 LIVE✓ today
 
-Hodl my b · Issue 1 · 11
+Hodl my b · Edition 1 · 11
 
 Where things stand
 
@@ -2128,7 +2372,7 @@ Where things stand
 - ComingbCredits: prepay for b. [Credits](https://bwalletx.com/credits)
 - ComingShare one fact, such as over 18. [Identity](https://bwalletx.com/identity)
 
-Hodl my b · Issue 1 · 12
+Hodl my b · Edition 1 · 12
 
 Next week
 
@@ -2142,7 +2386,7 @@ Scan to get bWalletbwalletx.com/get
 
 Less noise. More life. Just b.
 
-Hodl my b · Issue 1 · 13
+Hodl my b · Edition 1 · 13
 
 Back cover
 
@@ -2150,7 +2394,7 @@ Back cover
 
 Past issues
 
-[Issue 1 · week of 12 Oct 2026Business agents, plus the week’s round-up.](https://bwalletx.com/hodl-my-b/1)
+[Edition 1 · Week of 12 Oct 2026Business agents, plus the week’s round-up.](https://bwalletx.com/hodl-my-b/1)[Edition 0 · The whole storybWalletX and the whole suite, start to finish. New here? Start here.](https://bwalletx.com/hodl-my-b/0)
 
 By The Bitcoin Corporation Ltd · Emoji: Twemoji, CC-BY 4.0 · Music: original, made in your browser
 
@@ -2199,6 +2443,8 @@ Found a security problem? Email [support@bwalletx.com](mailto:support@bwalletx.c
 ---
 
 Source: https://bwalletx.com/
+
+[NewHodl my bEdition 0](https://bwalletx.com/hodl-my-b/0)
 
 bWalletX
 
@@ -3174,6 +3420,8 @@ bWalletX is in beta: test with small amounts. Questions: [support@bwalletx.com](
 Source: https://bwalletx.com/releases
 
 # Releases. What’s new.
+
+[This week: Hodl my b →](https://bwalletx.com/hodl-my-b) · [New here? Edition 0, the whole story](https://bwalletx.com/hodl-my-b/0)
 
 Every bWalletX release and what it added, newest first.
 
