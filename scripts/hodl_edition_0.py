@@ -11,10 +11,10 @@ def pages(h, back):
         return f'<figure class="shot {cls} r3"><img src="/media/hodl/e0/{src}" alt="{alt}" /></figure>'
 
     P = []
-    P.append(page('<div class="hero">' + BLOB('radial-gradient(circle at 30% 30%,#fff3b0,#f5b800 55%,#8a5d00)', 52, 34, 95)
-        + RING('rgba(255,210,77,.5)', 8, 50, 70) + RING('rgba(255,210,77,.3)', 60, 8, 50) + '<div class="bigb">b</div></div>'
-        + '<p class="mh r1">Hodl my <em>b</em></p><p class="dl r2"><span>Edition 0</span><span>The whole story</span><span>October 2026</span></p>'
-        + '<p class="hl r3">One wallet. <span class="gd">Your whole Bitcoin life.</span></p>'
+    P.append(page('<div class="hero e0h">' + BLOB('radial-gradient(circle at 30% 30%,#fff3b0,#f5b800 55%,#8a5d00)', 78, 74, 70)
+        + RING('rgba(255,210,77,.45)', 78, 74, 92) + RING('rgba(255,210,77,.22)', 78, 74, 118) + '<div class="bigb">b</div></div>'
+        + '<p class="mh e0mh r1">Hodl my <em>b</em></p><p class="dl r2"><span>Edition 0</span><span>The whole story</span><span>October 2026</span></p>'
+        + '<p class="hl e0hl r3">One wallet. <span class="gd">Your whole Bitcoin life.</span></p>'
         + '<ul class="cl r4"><li><b>Every device</b>Phone, web, Chrome, Desktop</li><li><b>One name</b>Two addresses</li><li><b>bChatX</b>Rooms, Spaces, b</li><li><b>bMail</b>Mail that pays</li></ul>'
         + '<div class="bc r4"><div class="pr"><b>Edition 0</b><span>Free &middot; pass it on</span></div>' + barcode() + '</div>', 's-cover', hard=True))
     P.append(page('<p class="k r1">Inside</p><h2 class="r2">The whole story.</h2><ol class="toc r3">'
@@ -29,7 +29,7 @@ def pages(h, back):
     P.append(page('<p class="k r1">The wallet</p><h2 class="r2">One wallet. <span class="gd">Every device.</span></h2>'
         f'<ul class="st r3"><li>{L}Web: web.bwalletx.com</li><li>{L}Android: direct download</li><li>{L}Chrome extension</li><li>{L}Desktop, in your browser</li><li>{L}iPhone: web app, or the TestFlight beta</li></ul>'
         '<p class="r3">Your keys are made and kept on your device. We can&rsquo;t move your money.</p>'
-        + SHOT('web.jpg', 'The bWalletX web wallet start screen', 'tall'), 's-black', 3, issue=0,
+        + SHOT('web-top.jpg', 'The bWalletX web wallet start screen', 'wide'), 's-black', 3, issue=0,
         deco=bg('grid', RING('rgba(255,210,77,.35)', 70, 60, 80), emo(['phone', 'lock', 'spark'], 22))))
     P.append(page('<p class="k r1">The wallet &middot; Desktop</p><h2 class="r2">The big screen.</h2>'
         '<p class="r3">Money, bMail, chat rooms, Spaces, bApps and Ask b side by side. Free in your browser, or install it as an app. Press &#8984;K and tell b what to do.</p>'
@@ -43,7 +43,7 @@ def pages(h, back):
         deco=bg('stripes', BLOB('#fff', 70, 30, 70), emo(['label', 'link', 'ok'], 24))))
     P.append(page('<p class="k r1">bChatX</p><h2 class="r2">Rooms and Spaces, <span class="gd">owned by you.</span></h2>'
         f'<ul class="st r3"><li>{L}Rooms with their own token: hold it to get in</li><li>{L}DMs, voice and video calls, tips</li><li>{L}Spaces: live talks with a stage; pay at the door or by the minute</li><li>{L}Guests can listen without signing in</li></ul>'
-        + SHOT('bchatx.jpg', 'bchatx.com sign-in screen', 'tall'), 's-black', 6, issue=0,
+        + SHOT('bchatx-top.jpg', 'bchatx.com sign-in screen', 'wide'), 's-black', 6, issue=0,
         deco=bg('grid', RING('rgba(255,210,77,.35)', 60, 55, 80), emo(['chat', 'head', 'note'], 25))))
     P.append(page('<p class="k r1">Ask b</p><h2 class="r2">Help that never closes.</h2>'
         '<p class="r3">b is the assistant inside the wallet. Ask in plain words in the app, at bchatx.com/ask-b, or hold to talk. b also sits in the Help Desk Space, open 24/7.</p>'
@@ -52,7 +52,7 @@ def pages(h, back):
         deco=bg('dots', BLOB('#7ee0a1', 70, 70, 80), emo(['robot', 'chat', 'heart'], 26))))
     P.append(page('<p class="k r1">bMail &middot; bMailX</p><h2 class="r2">Mail that pays you.</h2>'
         f'<ul class="st r3"><li>{L}Sealed letters: only the person you write to can open them</li><li>{L}Each stamp is a real payment to the reader. Penny post: 1&cent;</li><li>{L}Set your price to reach you. Friends free, always on top</li><li>{L}Reply paid, so they can answer for free</li></ul>'
-        + SHOT('bmailx.jpg', 'bmailx.com: Email that pays', 'tall') + '<p class="q r4">Spam pays you now.</p>', 's-pink', 8, issue=0,
+        + SHOT('bmailx-top.jpg', 'bmailx.com: Email that pays', 'wide') + '<p class="q r4">Spam pays you now.</p>', 's-pink', 8, issue=0,
         deco=bg('dots', BLOB('#ff6b9e', 65, 55, 90), emo(['env', 'mail', 'coin'], 27))))
     P.append(page('<p class="k r1">Exchange</p><h2 class="r2">Buy, sell, launch.</h2>'
         f'<ul class="st r3"><li>{L}Buy and sell tokens and NFTs wallet to wallet; we never hold them</li><li>{L}Launch your own coin, your share time-locked with a public receipt</li><li>{L}Airdrop to every holder with one approval</li><li>{L}The Store: themes for $1, yours to keep</li></ul>'
@@ -83,7 +83,7 @@ def pages(h, back):
         '<ul class="st r3"><li><a href="https://web.bwalletx.com">Web &middot; web.bwalletx.com</a></li><li><a href="/android">Android &middot; download</a></li><li><a href="/extension">Chrome extension</a></li><li><a href="https://desktop.bwalletx.com">Desktop &middot; desktop.bwalletx.com</a></li><li><a href="/iphone">iPhone web app</a> &middot; <a href="https://testflight.apple.com/join/1TTnQNKm">TestFlight beta</a></li></ul>'
         + getqr() + '<p class="r4">Beta: test with small amounts. <a href="/hodl-my-b/hodl-my-b-edition-0.pdf" download>PDF of this edition</a></p>', 's-paper', 15, issue=0,
         deco=bg('grid', BLOB('#ffd24d', 72, -12, 60), emo(['gift', 'rocket'], 34))))
-    P.append(page('<p class="k r1">Back cover</p><h2 class="r2">Just <span class="gd">b.</span></h2><p class="q r3">Less noise. More life.</p><p class="k r3">Every week</p><div class="g r3">' + back
+    P.append(page('<p class="k r1">Back cover</p><h2 class="r2">Just <span class="gd">b.</span></h2><p class="q r3">Less noise. More life.</p><p class="k r3">Every edition</p><div class="g r3">' + back
         + '</div><p class="foot2">By The Bitcoin Corporation Ltd &middot; Emoji: Twemoji, CC-BY 4.0 &middot; Screens from the live apps, 18 Oct 2026</p>', 's-back', hard=True,
         deco=bg('grid', BLOB('radial-gradient(circle,#f5b800,transparent 70%)', 40, 50, 100), emo(['beer', 'clink', 'cool'], 35))))
     return P
