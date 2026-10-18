@@ -1843,8 +1843,16 @@ The full bWalletX on every device. Your keys stay on your device.
 [AndroidAPK download · v5.2.32 beta](https://bwalletx.com/android)
 [ChromeExtension · v5.2.32 beta](https://bwalletx.com/extension)
 [WebOpen in your browser](https://web.bwalletx.com)
-[DesktopIn your browser, or install it as an app](https://desktop.bwalletx.com)
 [iPhoneWeb app · install from Safari, no App Store](https://bwalletx.com/iphone)
+
+DesktopbWalletX on a big screen: money, bMail, chat and Spaces side by side.
+
+[Open in your browser](https://desktop.bwalletx.com)
+Mac app · coming soon
+
+Install it as an app
+
+Open [desktop.bwalletx.com](https://desktop.bwalletx.com) in Chrome, Edge or Brave, then click the install icon at the right of the address bar (or menu › Install bWalletX). It gets its own window and a dock icon. Your keys stay on your device.
 
 New to Desktop? [See what bWalletX Desktop does →](https://bwalletx.com/desktop)
 
@@ -2442,7 +2450,7 @@ Found a security problem? Email [support@bwalletx.com](mailto:support@bwalletx.c
 
 Source: https://bwalletx.com/
 
-[NewHodl my bEdition 0](https://bwalletx.com/hodl-my-b/0)
+[Hodl my bEdition 0](https://bwalletx.com/hodl-my-b/0)
 
 bWalletX
 
