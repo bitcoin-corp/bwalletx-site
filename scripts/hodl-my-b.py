@@ -6,7 +6,7 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 L = '<i class="p l">Live</i>'; N = '<i class="p">Next release</i>'; C = '<i class="p">Coming</i>'
 BEER = '<img class="beer" src="/images/twemoji-beer.svg" alt="" width="72" height="72" />'
 ISSUES = [  # n=0 is Edition 0, the whole story (evergreen); weekly editions follow, newest last
-    dict(n=0, week='18 Oct 2026', story='The whole story.', og='og-hodl-my-b-0-v2.png',
+    dict(n=0, week='18 Oct 2026', story='The whole story.', og='og-hodl-my-b-0-v3.png',
          blurb='bWalletX and the whole suite, start to finish. New here? Start here.'),
     dict(n=1, week='12 Oct 2026', story='Don&rsquo;t be bland. Get bRanded.', og='og-hodl-my-b-1-v2.png',
          blurb='Business agents, plus the week&rsquo;s round-up.'),
