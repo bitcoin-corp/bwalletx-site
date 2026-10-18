@@ -4188,7 +4188,7 @@ What works today and what’s still coming. We tick these off as they ship.
 
 - ✓ LiveShop preview on this page: your banner, logo, name and colours, shown as a shop.
 
-- ◻ ComingSign in and save your draft shop on this page.
+- ✓ LiveSign in and save your draft shop on this page.
 
 - ◻ ComingYour shop opens in the Store, after b has reviewed it.
 

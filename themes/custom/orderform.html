@@ -179,7 +179,7 @@
             <li><span class="pill live">Live</span><span>This form: email or copy your brief, and we reply with next steps.</span></li>
             <li><span class="pill live">Live</span><span>Theme edition ($99 a year), ordered and paid inside bWalletX: Settings &rsaquo; Theme &rsaquo; Get your own edition.</span></li>
             <li><span class="pill live">Live</span><span>Branded edition and Native app, quoted by reply.</span></li>
-            <li><span class="pill soon">Coming</span><span>Pay a deposit for a Branded edition or Native app here, with Sign in with bWalletX.</span></li>
+            <li><span class="pill live">Live</span><span>Pay a $99 deposit for a Branded edition or Native app here, with Sign in with bWalletX.</span></li>
           </ul>
           <p class="sub"><a href="/themes/custom">&larr; Back to custom editions</a> &middot; <a href="/themes">All themes</a></p>
         </div>
@@ -197,7 +197,7 @@
       (function () {
         // Deposits stay off until the server change is reviewed and live (theme-orders deposit-quote/claim).
         // Then set DEPOSITS_LIVE = true; the button still only shows when the server says deposits are configured.
-        var DEPOSITS_LIVE = false;
+        var DEPOSITS_LIVE = true;
         var API = 'https://www.bwallet.space/api/theme-orders/';
         var TIERS = { theme: 'Theme edition ($99 a year)', branded: 'Branded edition (from $999)', native: 'Native app (by quote)' };
         var form = document.getElementById('of'), msg = document.getElementById('msg');
