@@ -96,6 +96,8 @@
           { label: 'bMailX', href: 'https://bmailx.com' },
           { label: 'bRadioX', href: 'https://bradiox.com' },
           { label: 'bCalX', href: 'https://bcalx.com' },
+          { label: 'bJobsX', href: 'https://bjobsx.com' },
+          { label: 'bNewsX', href: 'https://bnewsx.com' },
           { label: 'bMusicX', href: 'https://bmusicx.com' },
           { label: 'bShares: registers for any company', href: '/bshares' },
           { label: 'Partnership shares (coming)', href: '/partnership-shares' },
