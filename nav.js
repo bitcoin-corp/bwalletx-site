@@ -99,6 +99,7 @@
           { label: 'bJobsX', href: 'https://bjobsx.com' },
           { label: 'bNewsX', href: 'https://bnewsx.com' },
           { label: 'bMusicX', href: 'https://bmusicx.com' },
+          { label: 'bStoreX', href: 'https://bstorex.com' },
           { label: 'bShares: registers for any company', href: '/bshares' },
           { label: 'Partnership shares (coming)', href: '/partnership-shares' },
           { label: 'bWeb (coming)', href: '/bweb' }
