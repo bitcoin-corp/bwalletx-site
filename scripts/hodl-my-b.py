@@ -45,9 +45,9 @@ def emo(names, seed, area='edge', n=None):
     for k, nm in enumerate(names[:n or len(names)]):
         side = k % 4
         if area == 'edge':
-            x, y = [(r.uniform(82, 96), r.uniform(2, 20)), (r.uniform(84, 97), r.uniform(30, 92)), (r.uniform(30, 80), r.uniform(88, 97)), (r.uniform(-3, 5), r.uniform(55, 95))][side]
+            x, y = [(r.uniform(82, 96), r.uniform(2, 20)), (r.uniform(84, 97), r.uniform(30, 74)), (r.uniform(30, 80), r.uniform(66, 74)), (r.uniform(-3, 5), r.uniform(50, 74))][side]  # bottom ~20% is the footer band: no stickers
         else:
-            x, y = r.uniform(-2, 96), r.uniform(-2, 96)
+            x, y = r.uniform(-2, 96), r.uniform(-2, 74)
         sz = r.uniform(5, 11) if area == 'edge' else r.uniform(6, 14); rot = r.uniform(-30, 30); d = r.uniform(0, 3)
         out.append(f'<img class="em" src="{TW}{E[nm]}.svg" alt="" style="left:{x:.1f}%;top:{y:.1f}%;width:{sz:.1f}cqmin;--r:{rot:.0f}deg;animation-delay:-{d:.1f}s" />')
     return ''.join(out)
@@ -237,11 +237,13 @@ img.og{width:100%;height:auto;aspect-ratio:1200/630;object-fit:cover;display:blo
 .media>img:not(.og):not(.beer2),.media>video,.media>picture,.media>picture>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border-radius:14px}
 .media .og{max-height:100%;width:auto;max-width:100%}
 .folio{position:absolute;left:max(16px,8cqw);bottom:max(3cqh,54px);font:400 11px var(--mono);letter-spacing:.14em;text-transform:uppercase;opacity:.55;margin:0}
+.getnote{margin-bottom:34px!important}
 .st{list-style:none;padding:0;margin:0}
 .st li{padding:1.4cqh 0;border-bottom:1px solid rgba(127,127,127,.4)}
 .toc{list-style:none;padding:0;margin:0}
 .toc li{display:flex;justify-content:space-between;gap:12px;padding:1.3cqh 0;border-bottom:1px solid rgba(0,0,0,.25);font:600 1.15em var(--hf)}
 .toc b{font:500 .8em var(--mono)}
+.toc:has(li:nth-child(12)) li{padding:.75cqh 0;font-size:1.02em}
 .g{display:grid;grid-template-columns:1fr 1fr;gap:3cqh 4cqw;min-height:0}
 .cd{text-decoration:none;color:inherit}.cd b{display:block;margin-top:8px;font:700 1.05em var(--hf)}.cd span{display:block;font:400 .7em var(--mono);letter-spacing:.08em;text-transform:uppercase;opacity:.7}
 .btn{display:block;text-align:center;background:#111;color:#ffd24d!important;text-decoration:none;font:700 1.3em var(--hf);padding:18px;border-radius:99px;max-width:420px}
@@ -333,6 +335,12 @@ img.og{width:100%;height:auto;aspect-ratio:1200/630;object-fit:cover;display:blo
 .shot{min-height:30cqh}.s-cover:has(.e0h) .cl,.s-cover:has([data-media="e0-cover"]) .cl{top:46%}.s-back .g{display:grid;grid-template-columns:1fr 1fr;gap:12px;max-width:none}.s-back .g .cd span{display:none}
 .e0h{background:radial-gradient(70% 55% at 78% 78%,#4a3700,#0b0a08 72%)}.e0h .bigb{top:auto;bottom:-6%;right:2%;font-size:min(42cqh,62cqw);opacity:.9;color:#0b0a08;background:none;-webkit-text-fill-color:#0b0a08;filter:none;z-index:1;text-align:right}
 .e0h .blob{left:78%!important;top:76%!important}
+.ghc{display:block;flex:0 1 auto;min-height:0;margin:0 0 2.4cqh;max-width:min(100%,560px)}.ghc img{display:block;width:100%;height:auto;max-height:34cqh;object-fit:contain;object-position:left top;border-radius:14px;border:1px solid rgba(0,0,0,.12);box-shadow:0 24px 50px -24px rgba(0,0,0,.45);background:#fff}
+.ghc+.spacer{display:none}
+.sites{list-style:none;margin:1.5cqh 0 0;padding:0;display:flex;flex-direction:column;gap:.6cqh;min-height:0}
+.sites a{display:grid;grid-template-columns:min(30%,150px) 1fr;gap:3cqw;align-items:center;text-decoration:none;color:inherit;padding:.9cqh 0;border-top:1px solid rgba(0,0,0,.12)}
+.sites img{width:100%!important;height:auto!important;max-height:none!important;aspect-ratio:1200/630;object-fit:cover;border-radius:10px;border:1px solid rgba(0,0,0,.12);background:#fff}
+.sites .sx{display:flex;flex-direction:column;gap:.3cqh;min-width:0}.sites .sx b{font:700 clamp(17px,2.6cqh,26px) var(--hf);letter-spacing:-.02em}.sites .sx i{font:500 clamp(10px,1.3cqh,13px) var(--mono);font-style:normal;letter-spacing:.08em;opacity:.7}.sites .sx>span{font-size:clamp(13px,1.7cqh,17px);line-height:1.35}
 .e0mh{color:#fffaf0;text-shadow:none}.e0mh em{color:#ffd24d}.e0hl{color:#fffaf0}.s-cover:has(.e0h) .dl{border-color:rgba(255,250,240,.8);color:#fffaf0}.s-back .g{display:block;max-width:360px}.s-back .g .cd{display:flex;flex-direction:column;gap:6px}
 .pdfb{position:fixed;left:14px;bottom:12px;z-index:45;padding:9px 14px;border-radius:99px;background:rgba(0,0,0,.6);color:#ffd24d;font:600 .68rem var(--mono);letter-spacing:.12em;text-transform:uppercase;text-decoration:none;backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}
 @media print{@page{size:A4;margin:0}html,body{background:#fff}body.stack .page{width:210mm;height:297mm;min-height:0;break-after:page}.tb,.ctl,.gate,.pdfb{display:none!important}.em{animation:none}}

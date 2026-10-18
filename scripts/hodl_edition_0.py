@@ -21,7 +21,7 @@ def pages(h, back):
         '<li><span>Ask b, open all hours</span><b>7</b></li><li><span>bMail: mail that pays</span><b>8</b></li>'
         '<li><span>Exchange, coins, the Store</span><b>9</b></li><li><span>NFTs: old wallets welcome</span><b>10</b></li>'
         '<li><span>Agents with pocket money</span><b>11</b></li><li><span>Yours, really</span><b>12</b></li>'
-        '<li><span>Privacy, plainly</span><b>13</b></li><li><span>Coming, and how to get it</span><b>14</b></li></ol>'
+        '<li><span>Privacy, plainly</span><b>13</b></li><li><span>One wallet, every site</span><b>14</b></li><li><span>Coming, and how to get it</span><b>16</b></li></ol>'
         f'<p class="q r4">Everything in here is {L} today, unless it says {C}.</p>', 's-cream', 2, issue=0,
         deco=bg('dots', BLOB('#ffd24d', 70, -10, 70), emo(['book', 'spark', 'beer'], 21))))
     P.append(page(media('e0-devices') + '<p class="k r1">The wallet</p><h2 class="r2">One wallet. <span class="gd">Every device.</span></h2>'
@@ -64,22 +64,43 @@ def pages(h, back):
         f'<ul class="st r3"><li>{L}Agent accounts: own keys, own budget, a daily cap, and Stop</li><li>{L}The <code>bwalletx</code> CLI and MCP server for your own agents</li><li>{L}Any site or agent can ask bWalletX to pay or sign (BRC-100)</li></ul>'
         '<div class="flt"><div class="big stopb">STOP</div></div><p class="q r4">It can only spend what you gave it.</p>', 's-black', 11, issue=0,
         deco=bg('grid', RING('rgba(255,210,77,.35)', 60, 55, 80), emo(['robot', 'moneybag', 'stop'], 30))))
-    P.append(page(media('e0-open') + '<p class="k r1">Open source</p><h2 class="r2">Yours, really.</h2>'
+    P.append(page('<a class="ghc r1" href="https://github.com/bitcoin-corp/bwallet" target="_blank" rel="noopener"><img src="/media/hodl/e0/github-bwallet.jpg" alt="bitcoin-corp/bwallet on GitHub: the open-source bWalletX code" width="1200" height="600" /></a>'
+        + media('e0-open') + '<p class="k r1">Open source</p><h2 class="r2">Yours, really.</h2>'
         f'<ul class="st r3"><li>{L}The wallet is open source (MIT): read it, build it, fork it</li><li>{L}Your coins sit at your own addresses; your 12 words restore them</li><li>{L}Locks are enforced by the network: nobody can move them early, us included</li></ul>'
         '<p class="r3"><a href="/open-source">What&rsquo;s open, and under which licence</a></p>', 's-cream', 12, issue=0,
         deco=bg('grid', BLOB('#7ee0a1', 75, 70, 60), emo(['lock', 'book', 'ok'], 31))))
     P.append(page('<p class="k r1">Privacy</p><h2 class="r2">Plainly.</h2>'
         f'<ul class="st r3"><li>{L}Your keys and recovery phrase never leave your device</li><li>{L}No ads, no tracking, no selling your data</li><li>{L}No analytics or crash reports</li></ul>'
-        f'<ul class="st r3"><li>{C}Space transcripts only when the host turns them on and each speaker agrees, with a visible badge; audio deleted after</li><li>{C}End-to-end encrypted DMs</li></ul>'
+        f'<ul class="st r3"><li>{C}Transcripts only when the host turns it on and each speaker agrees, with a visible badge. Transcription audio is deleted after. Hosts can keep a recording if everyone on stage agrees; paid storage on bStoreX is coming.</li><li>{C}End-to-end encrypted DMs</li></ul>'
         '<p class="r3"><a href="/privacy">Privacy policy</a></p>', 's-gold', 13, issue=0,
         deco=bg('dots', RING('#111', 60, 40, 80), emo(['lock', 'shades'], 32))))
+    def SITE(name, dom, line, img, href=None):
+        href = href or f'https://{dom}'
+        return (f'<li><a href="{href}" target="_blank" rel="noopener"><img src="/media/hodl/e0/sites/{img}.jpg" alt="{name} share card" width="480" height="252" loading="lazy" />'
+                f'<span class="sx"><b>{name}</b><i>{dom}</i><span>{L} {line}</span></span></a></li>')
+    P.append(page('<p class="k r1">The family</p><h2 class="r2">One wallet. <span class="gd">Every site.</span></h2>'
+        '<p class="r3">Claim one name in bWalletX and every site here knows you. No new accounts: all roads lead to your wallet.</p><ul class="sites r3">'
+        + SITE('bWalletX', 'bwalletx.com', 'The wallet: web, Android, Chrome, Desktop', 'bwalletx')
+        + SITE('bChatX', 'bchatx.com', 'Rooms, DMs and live Spaces', 'bchatx')
+        + SITE('bMailX', 'bmailx.com', 'Sealed letters with a stamp that pays', 'bmailx')
+        + SITE('bRadioX', 'bradiox.com', 'Live shows you can join on air', 'bradiox')
+        + '</ul>', 's-paper', 14, issue=0,
+        deco=bg('grid', BLOB('#ffd24d', 80, 85, 60), emo(['link', 'spark'], 36, n=3))))
+    P.append(page('<p class="k r1">The family &middot; continued</p><ul class="sites r3">'
+        + SITE('bCalX', 'bcalx.com', 'What&rsquo;s on: every scheduled Space', 'bcalx')
+        + SITE('bJobsX', 'bjobsx.com', 'Get paid to your name, person to person', 'bjobsx')
+        + SITE('bNewsX', 'bnewsx.com', 'Headlines as threads; tip the writer', 'bnewsx')
+        + SITE('bStoreX', 'bstorex.com', 'Buy with one tap; yours to keep', 'bstorex')
+        + SITE('bMusicX', 'bmusicx.com', 'Pay by the second, straight to the artist', 'bmusicx')
+        + '</ul><p class="q r4">One name. Every site.</p>', 's-paper', 15, issue=0,
+        deco=bg('grid', BLOB('#ffd24d', 10, 90, 60), emo(['note', 'cart'], 37, n=3))))
     P.append(page('<p class="k r1">Coming</p><h2 class="r2">Not live yet.</h2>'
         f'<ul class="st r3"><li>{C}bWallet on the App Store and Google Play (beta testing today)</li><li>{C}A real email inbox at name@bmailx.com</li><li>{C}Agreements in bMail: send, both sign, sealed</li><li>{C}bCredits top-up</li><li>{C}Share one fact, such as over 18</li><li>{C}Space transcription, with consent</li></ul>'
-        '<p class="q r4">When it ships, it moves to Live. Not before.</p>', 's-black', 14, issue=0,
+        '<p class="q r4">When it ships, it moves to Live. Not before.</p>', 's-black', 16, issue=0,
         deco=bg('grid', RING('rgba(255,210,77,.35)', 60, 55, 80), emo(['soon', 'cal'], 33))))
     P.append(page(media('e0-get') + '<p class="k r1">Get it</p><h2 class="r2">Start in a minute.</h2>'
         '<ul class="st r3"><li><a href="https://web.bwalletx.com">Web &middot; web.bwalletx.com</a></li><li><a href="/android">Android &middot; download</a></li><li><a href="/extension">Chrome extension</a></li><li><a href="https://desktop.bwalletx.com">Desktop &middot; desktop.bwalletx.com</a></li><li><a href="/iphone">iPhone web app</a> &middot; <a href="https://testflight.apple.com/join/1TTnQNKm">TestFlight beta</a></li></ul>'
-        + getqr() + '<p class="r4">Beta: test with small amounts. <a href="/hodl-my-b/hodl-my-b-edition-0.pdf" download>PDF of this edition</a></p>', 's-paper', 15, issue=0,
+        + getqr() + '<p class="r4 getnote">Beta: test with small amounts. <a href="/hodl-my-b/hodl-my-b-edition-0.pdf" download>PDF of this edition</a></p>', 's-paper', 17, issue=0,
         deco=bg('grid', BLOB('#ffd24d', 72, -12, 60), emo(['gift', 'rocket'], 34))))
     P.append(page('<p class="k r1">Back cover</p><h2 class="r2">Just <span class="gd">b.</span></h2><p class="q r3">Less noise. More life.</p><p class="k r3">Every edition</p><div class="g r3">' + back
         + '</div><p class="foot2">By The Bitcoin Corporation Ltd &middot; Emoji: Twemoji, CC-BY 4.0 &middot; Screens from the live apps, 18 Oct 2026</p>', 's-back', hard=True,
