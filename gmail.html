@@ -3,23 +3,23 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Sign in with Gmail · bWalletX</title>
+    <title>Sign in with Google · bWalletX</title>
     <link rel="canonical" href="https://bwalletx.com/gmail" />
-    <meta name="description" content="Sign in to bWalletX with your Gmail account and get a verified name: yourname.gmail@bwalletx.com. Your paymail, your token and your chat room, with your Google picture." />
+    <meta name="description" content="Connect your Google account to bWalletX: a Google badge and your Google picture on your wallet. You choose your own handle; your email address never becomes part of it." />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://bwalletx.com/gmail" />
     <meta property="og:site_name" content="bWalletX" />
-    <meta property="og:title" content="Sign in with Gmail: get yourname.gmail@bwalletx.com" />
-    <meta property="og:description" content="Sign in to bWalletX with your Gmail account and get a verified name: yourname.gmail@bwalletx.com. Your paymail, your token and your chat room, with your Google picture." />
-    <meta property="og:image" content="https://bwalletx.com/og-gmail-v2.png" />
+    <meta property="og:title" content="Sign in with Google: verified, with your photo" />
+    <meta property="og:description" content="Connect your Google account to bWalletX: a Google badge and your Google picture on your wallet. You choose your own handle; your email address never becomes part of it." />
+    <meta property="og:image" content="https://bwalletx.com/og-gmail-v3.png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
-    <meta property="og:image:alt" content="Sign in to bWalletX with Gmail and get yourname.gmail@bwalletx.com" />
+    <meta property="og:image:alt" content="Sign in to bWalletX with Google: Google badge, your photo, and you choose your handle" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@bWalletX" />
-    <meta name="twitter:title" content="Sign in with Gmail: get yourname.gmail@bwalletx.com" />
-    <meta name="twitter:description" content="Sign in to bWalletX with your Gmail account and get a verified name: yourname.gmail@bwalletx.com. Your paymail, your token and your chat room, with your Google picture." />
-    <meta name="twitter:image" content="https://bwalletx.com/og-gmail-v2.png" />
+    <meta name="twitter:title" content="Sign in with Google: verified, with your photo" />
+    <meta name="twitter:description" content="Connect your Google account to bWalletX: a Google badge and your Google picture on your wallet. You choose your own handle; your email address never becomes part of it." />
+    <meta name="twitter:image" content="https://bwalletx.com/og-gmail-v3.png" />
     <link rel="icon" href="/favicon.ico" />
     <link rel="stylesheet" href="/styles.css" />
     <style>
@@ -40,6 +40,10 @@
       .examples td:first-child { color: #a7adb8; }
       .ext .small { color: #8a8a86; font-size: 0.85rem; }
       .ext .row { display: flex; gap: 12px; flex-wrap: wrap; margin: 26px 0; }
+          .feat { list-style: none; padding: 0; margin: 18px 0; }
+      .feat li { display: flex; gap: 12px; align-items: baseline; padding: 12px 0; border-bottom: 1px solid #ffffff10; }
+      .tag { flex: none; font-size: 0.75rem; font-weight: 700; padding: 2px 9px; border-radius: 999px; }
+      .tag.live { background: #F5B800; color: #000; }
     </style>
   </head>
   <body>
@@ -56,44 +60,47 @@
     <script src="/nav.js"></script>
     <main class="ext">
       <img src="/logo.svg" alt="bWalletX" width="72" height="64" />
-      <h1>Sign in with Gmail</h1>
-      <p class="lede">Make a bWalletX wallet with your Gmail account and it comes with a verified name. People pay you at it, hold it as a token and use it to get into your chat room.</p>
+      <h1>Sign in with Google</h1>
+      <p class="lede">Connect your Google account to bWalletX to show it's really you. Your wallet gets a Google badge and your Google picture. You choose your own handle, and your email address never becomes part of it.</p>
       <div class="flow">
-        <span class="pill">you@gmail.com</span><span class="arrow">&rarr;</span>
-        <span class="pill">you.gmail@bwalletx.com</span><span class="arrow">&rarr;</span>
-        <span class="pill">$YOU.GMAIL</span>
+        <span class="pill">Google account</span><span class="arrow">&rarr;</span>
+        <span class="pill">Google badge + photo</span><span class="arrow">&rarr;</span>
+        <span class="pill">yourname@bwalletx.com</span>
       </div>
 
       <h2>How to do it</h2>
       <ol>
         <li><a href="/get">Get bWalletX</a> on your phone or computer.</li>
         <li>Tap <b>Create account</b>, then <b>Continue with Google</b>.</li>
-        <li>Pick your Gmail account on Google's own sign-in page.</li>
-        <li>Back in bWalletX, your name and picture are filled in. Choose a password and save your 12-word recovery phrase.</li>
-        <li>Claim <code>yourname.gmail@bwalletx.com</code>. It's free.</li>
+        <li>Pick your account on Google's own sign-in page.</li>
+        <li>Back in bWalletX, your picture is filled in. Choose a password and save your 12-word recovery phrase.</li>
+        <li>Choose your handle. It's free.</li>
       </ol>
-      <p>Already have a wallet? Use <b>Restore</b> with your 12 words and <b>Continue with Google</b> to bring the same name back.</p>
+      <p>Already have a wallet? Go to <b>Settings &rsaquo; Identity &rsaquo; Connect X or Google</b>. Your handle stays as it is.</p>
 
       <h2>Your name</h2>
-      <p>Your name comes from your Gmail address. Dots don't count and anything after a <code>+</code> is ignored, the same way Gmail treats them.</p>
-      <table class="examples">
-        <tr><td>jane.doe@gmail.com</td><td><code>janedoe.gmail@bwalletx.com</code></td></tr>
-        <tr><td>janedoe+shop@gmail.com</td><td><code>janedoe.gmail@bwalletx.com</code></td></tr>
-        <tr><td>jane_doe@googlemail.com</td><td><code>jane-doe.gmail@bwalletx.com</code></td></tr>
-      </table>
-      <p>Only <code>@gmail.com</code> and <code>@googlemail.com</code> addresses get a <code>.gmail</code> name, because only Google can prove who owns them. Work or school Google accounts can still sign in, then pick an ordinary name.</p>
+      <p>Signing in with Google doesn't make a name for you. Your handle is a plain <code>yourname@bwalletx.com</code> that you choose. We stopped making names from Gmail addresses because they showed your email address to anyone who saw the name.</p>
+      <p>Older <code>yourname.gmail@bwalletx.com</code> names, made before October 2026, keep receiving, and the app hides most of the name where others can see it. New ones aren't given out.</p>
 
       <h2>What you get</h2>
-      <div class="box"><h3>A verified paymail</h3><p>People send you BSV, tokens and messages at <code>yourname.gmail@bwalletx.com</code>. It's marked verified, and nobody else can claim it.</p></div>
-      <div class="box"><h3>Your own token and room</h3><p>Turn the name into <b>$YOURNAME.GMAIL</b>, a BSV-21 token with your Google picture as its icon. Hold the token, join your room.</p></div>
+      <div class="box"><h3>A Google badge</h3><p>Your listing shows that a Google account is linked, so people know a real account stands behind your wallet.</p></div>
       <div class="box"><h3>Your picture</h3><p>Your Google profile picture becomes your wallet's picture, so friends recognise you in chats, calls and payments.</p></div>
+      <div class="box"><h3>Your own token and room</h3><p>Turn your handle into <b>$YOURNAME</b>, a BSV-21 token with your picture as its icon. Hold the token, join your room.</p></div>
 
       <h2>What Google shares</h2>
       <p>bWalletX asks Google for three things only: your email address, your name and your profile picture. It never sees your Google password and can't read your email, contacts or files. Your wallet's keys are made on your device and never leave it; Google has nothing to do with them.</p>
-      <p>Signing in with Google proves the name. Your 12-word recovery phrase is still the only way to get your money back, so keep it safe.</p>
+      <p>Your 12-word recovery phrase is still the only way to get your money back, so keep it safe.</p>
+
+      <h2>Status</h2>
+      <ul class="feat">
+<li><span class="tag live">Live</span><span><b>Continue with Google</b> on Create account, and Connect Google in Settings &rsaquo; Identity.</span></li>
+<li><span class="tag live">Live</span><span><b>Google picture and badge</b> on your wallet and listing.</span></li>
+<li><span class="tag live">Live</span><span><b>No email in your name.</b> New Gmail-based names are no longer given out.</span></li>
+      </ul>
 
       <div class="row">
         <a class="btn btn-store" href="/get">Get bWalletX</a>
+        <a class="btn btn-store btn-ghost" href="/x">Sign in with X</a>
         <a class="btn btn-store btn-ghost" href="/social">Social in bWalletX</a>
         <a class="btn btn-store btn-ghost" href="/privacy">Privacy</a>
       </div>
