@@ -36,7 +36,16 @@
       .get-card.soon { border-style: dashed; }
           @media (max-width: 640px) { .get-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
     </style>
-  </head>
+  <style>
+.get-desk{grid-column:1/-1;display:flex;flex-direction:column;gap:10px;text-align:left}
+.get-desk .desk-actions{display:flex;flex-wrap:wrap;align-items:center;gap:10px}
+.get-desk .desk-btn{display:inline-block;background:linear-gradient(180deg,#ffe58a,#ffd24d 55%,#f5b800);color:#111;font-weight:700;text-decoration:none;padding:.6rem 1.1rem;border-radius:999px}
+.get-desk .desk-btn:focus-visible{outline:2px solid #ffd24d;outline-offset:3px}
+.get-desk .desk-soon{font-size:.85rem;padding:.45rem .9rem;border:1px dashed rgba(255,255,255,.3);border-radius:999px;opacity:.8}
+.get-desk .desk-how summary{cursor:pointer;font-size:.9rem;color:#ffd24d}
+.get-desk .desk-how p{font-size:.9rem;margin:.5rem 0 0;opacity:.85}
+</style>
+</head>
   <body>
     <div class="beta-banner">bWalletX is in <strong>beta</strong>: test with small amounts.</div>
     <header class="topbar">
@@ -57,8 +66,17 @@
         <a class="get-card" href="/android"><b>Android</b><span>APK download · v5.2.32 beta</span></a>
         <a class="get-card" href="/extension"><b>Chrome</b><span>Extension · v5.2.32 beta</span></a>
         <a class="get-card" href="https://web.bwalletx.com"><b>Web</b><span>Open in your browser</span></a>
-        <a class="get-card" href="https://desktop.bwalletx.com"><b>Desktop</b><span>In your browser, or install it as an app</span></a>
         <a class="get-card" href="/iphone"><b>iPhone</b><span>Web app · install from Safari, no App Store</span></a>
+        <div class="get-card get-desk" role="group" aria-labelledby="desk-h">
+          <b id="desk-h">Desktop</b><span>bWalletX on a big screen: money, bMail, chat and Spaces side by side.</span>
+          <div class="desk-actions">
+            <a class="desk-btn" href="https://desktop.bwalletx.com">Open in your browser</a>
+            <span class="desk-soon" title="The native Mac app is waiting on Apple signing">Mac app &middot; coming soon</span>
+          </div>
+          <details class="desk-how"><summary>Install it as an app</summary>
+            <p>Open <a href="https://desktop.bwalletx.com">desktop.bwalletx.com</a> in Chrome, Edge or Brave, then click the install icon at the right of the address bar (or menu &rsaquo; <i>Install bWalletX</i>). It gets its own window and a dock icon. Your keys stay on your device.</p>
+          </details>
+        </div>
       </div>
       <p class="small" style="word-break:normal">New to Desktop? <a href="/desktop">See what bWalletX Desktop does &rarr;</a></p>
       <h2 style="font-size:1.2rem;margin:28px 0 0">bWallet in the app stores</h2>
