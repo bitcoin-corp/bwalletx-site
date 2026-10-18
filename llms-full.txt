@@ -4335,6 +4335,8 @@ A bWalletX store is a shop front that lives inside the wallet itself. Your banne
 
 Free to start. Shops open after b has had a look. [What’s live today](#status)
 
+Selling files, downloads or storage? [bStoreX](https://bstorex.com) is the Store’s home on the web: sell it, store it, get paid. →
+
 ‹ Store
 
 Ninja Punk GirlsThemes and art from the NPG universe
@@ -7081,6 +7083,60 @@ The wild one: black and red, hard glitch.
 
 [Open page](https://bwalletx.com/themes/npgx)[How to buy](#buy)
 
+Emoji collection
+
+### Frog Next release
+
+Pond green on black.
+
+### Fire Next release
+
+Flame orange on charcoal.
+
+### Wave Next release
+
+Ocean blue, deep water.
+
+### Blossom Next release
+
+Cherry blossom pink at night.
+
+### Spark Next release
+
+Lightning yellow on indigo.
+
+### Moon Next release
+
+Moonlight on a navy sky.
+
+### Pizza Next release
+
+Tomato red, a slice of fun.
+
+### Headphones Next release
+
+Neon pink for music lovers.
+
+### Pup Next release
+
+Warm puppy tan.
+
+### Rainbow Next release
+
+Every colour, violet first.
+
+### Clover Next release
+
+Lucky emerald.
+
+### Cool Next release
+
+Ice blue on true black.
+
+Twelve emoji themes, $1 each in the Store, paid in BSV: the emoji’s colour through the whole app and the emoji on your card. Nobody owns an emoji; you buy the look. In bWalletX from the next release (not in the App Store or Google Play edition).
+
+Emoji art: [Twemoji](https://github.com/jdecked/twemoji) by X Corp and contributors, [CC-BY 4.0](https://creativecommons.org/licenses/by/4.0/), self-hosted.
+
 [Get your own edition →](https://bwalletx.com/themes/custom)
 
 Hover (or tap) a card to preview this page in that theme · use its links to open the page or install
@@ -7214,6 +7270,8 @@ White app tile
 - LiveOrder your own edition inside bWalletX: Theme › Get your own edition, $99 a year, paid in BSV.
 
 - LiveBranded editions: [order form](https://bwalletx.com/themes/custom/orderform), we reply with a quote.
+
+- ComingEmoji collection: twelve emoji themes (Frog, Fire, Wave, Blossom, Spark, Moon, Pizza, Headphones, Pup, Rainbow, Clover, Cool), $1 each in the Store, in the next bWalletX release.
 
 - ComingOne-tap install links for the phone apps (bwalletx://theme/<name>): built, in the next app release.
 
