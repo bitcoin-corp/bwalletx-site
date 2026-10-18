@@ -7325,7 +7325,7 @@ Source: https://bwalletx.com/connect
 
 How to let people sign in to your site or app with their bWalletX: one script tag, two routes on your server, and no API keys.
 
-Also as plain Markdown for AI coding agents: [bwalletx.com/connect.md](https://bwalletx.com/connect.md). Checked against bWalletX 5.1.82, connect.js and @bsv/sdk 2.8.11 on 7 Oct 2026.
+Also as plain Markdown for AI coding agents: [bwalletx.com/connect.md](https://bwalletx.com/connect.md). Checked against bWalletX 5.2.31, connect.js and @bwalletx/connect 0.5.0 on 18 Oct 2026. Full docs: [docs.bwalletx.com/developers/connect](https://docs.bwalletx.com/developers/connect/).
 
 ## In 30 seconds
 
@@ -7805,6 +7805,10 @@ Source: https://bwalletx.com/developers
 
 One script gives your site a standard BRC-100 wallet. No API keys, no sign-up, and nothing passes through our servers: your page talks straight to the user's wallet.
 
+[Read the docs →](https://docs.bwalletx.com/)
+
+The full developer guides live at [docs.bwalletx.com](https://docs.bwalletx.com/): [connect your site](https://docs.bwalletx.com/developers/connect/), [payments](https://docs.bwalletx.com/developers/payments/), [public APIs](https://docs.bwalletx.com/developers/public-apis/), [name bindings](https://docs.bwalletx.com/developers/name-bindings/), [strategy format](https://docs.bwalletx.com/developers/strategy-format/), [store receipts](https://docs.bwalletx.com/developers/store-receipts/), [stack recipes](https://docs.bwalletx.com/developers/stack-recipes/), [open source](https://docs.bwalletx.com/developers/open-source/) and [error codes](https://docs.bwalletx.com/errors/). This page is the quick start.
+
 ## Get bWalletX to test with
 
 Install the wallet you'll connect to (version 5.2.31 beta). Checksums are on each download page.
@@ -7816,6 +7820,8 @@ Install the wallet you'll connect to (version 5.2.31 beta). Checksums are on eac
 - [Web app](https://web.bwalletx.com) · [iPhone](https://bwalletx.com/iphone)
 
 - [bWalletX CLI](https://bwalletx.com/cli) and [MCP server](https://bwalletx.com/mcp) for scripts and AI agents
+
+Docs: [Which edition to test with](https://docs.bwalletx.com/use/editions/)
 
 ## 1. Add the script
 
@@ -7850,11 +7856,17 @@ protocolID: [0, 'my site login'],
 keyID: '1',
 });``
 
+Docs: [Connect your site](https://docs.bwalletx.com/developers/connect/)
+
+Taking payments: [Payments](https://docs.bwalletx.com/developers/payments/)
+
 ## Sign users in
 
 To let people sign in to your app with bWalletX (extension, phone or web wallet), follow the [Sign in with bWalletX guide](https://bwalletx.com/connect): one script tag (connect.js), server code, and steps for AI agents.
 
 For the button itself (gold, dark or light, four sizes, React, SVG files and brand rules), see [Add Sign in with bWalletX to your site](https://bwalletx.com/sign-in-button).
+
+Docs: [Sign-in, step by step](https://docs.bwalletx.com/developers/connect/)
 
 ## Already using window.CWI?
 
@@ -7869,6 +7881,8 @@ To list every wallet the user has and let them choose:
 
 bWalletX implements the BRC-100 wallet interface. Sites can request any BRC-100 action, including signatures and keys from any protocol (BRC-29 payment-key derivation included). The user approves each request; we don't keep a hidden blocklist. If we ever have to restrict something, we'll say so here and in the release notes first.
 
+Docs: [What users see when your site asks](https://docs.bwalletx.com/use/apps-websites/)
+
 ## Which address will I see?
 
 BRC-100 wallets don't hand sites the user's main receive address. `identityKey` is the user's stable identity for your site, and payments made through `createAction` come from the user's wallet balance. So an address you derive from the identity key won't match the address shown on the wallet's Receive screen. That's expected.
@@ -7877,7 +7891,7 @@ BRC-100 wallets don't hand sites the user's main receive address. `identityKey` 
 
 Connect with bWalletX
 
-Questions: [support@bwalletx.com](mailto:support@bwalletx.com) · Source: [connect.js](https://bwalletx.com/connect.js)
+Questions: [support@bwalletx.com](mailto:support@bwalletx.com) · Docs: [docs.bwalletx.com](https://docs.bwalletx.com/) · Source: [connect.js](https://bwalletx.com/connect.js) · npm: [@bwalletx/connect](https://www.npmjs.com/package/@bwalletx/connect)
 
 ---
 
@@ -7969,19 +7983,33 @@ Claude→
 ChatGPT · Cursor→
 Any MCP agent
 
+[Agent docs →](https://docs.bwalletx.com/use/agents/)
+
 ## What agents can do
 
-### Tools (v0.2)
+### On npm now (bwalletx 0.2.0)
 
-`accounts`, `balance`, `price`, `send` (BSV, live), `buy` (live), `strategy_show`, `strategy_load` (always on paper), `log`, `stop_all`.
+`accounts`, `balance`, `price`, `send` (BSV, live), `buy` (BSV-21, live), `strategy_show`, `strategy_load` (always on paper), `log`, `stop_all`.
+
+### In the source (bwalletx 0.5.0, not on npm yet)
+
+Everything above, plus:
+
+- `list_for_sale`, `unlist`, `listings`, `buy_listing`: sell and buy ordinals, OpNS names and BSV-21 tokens on the 1Sat order book. Key-file accounts with `BWALLETX_PASSPHRASE`; each takes `dryRun` to build without sending.
+
+- `brc100_balance`, `brc100_addresses`, `brc100_fund`, `brc100_withdraw`: the account's own BRC-100 wallet. Key-file accounts with `BWALLETX_PASSPHRASE`.
+
+- `mint`, `mint_manifest`: mint files as NFTs. Paired accounts only: your phone signs, within the item and dollar limits you chose when pairing.
+
+- `pairing_status`, `serve_status`: read-only checks on pairing and on `bwalletx serve` (port 3321).
 
 ### Only the accounts you give it
 
-Agents work in agent accounts with their own keys and budget, exported from bWalletX. Your main wallet is never exposed.
+Agents work in agent accounts with their own keys and budget, never your main wallet. Pair an account with your phone (keys stay on the phone), or export its key file from bWalletX for an unattended server.
 
 ### Bounded
 
-Every spend passes the same checks as the app: the kill switch, the daily cap, at most 30 spends an hour, then the strategy's rules. An AI can only load strategies on paper; going live is a step you take yourself.
+Every spend passes the same checks as the app: the kill switch, the daily cap, at most 30 spends an hour, then the strategy's rules. Agents can stop everything (`stop_all`) but never loosen a limit: changing caps, `resume`, going live with a strategy, importing keys, pairing and starting `serve` are steps you take yourself at the terminal or on your phone.
 
 ## Set up
 
@@ -7994,7 +8022,8 @@ Claude Code (paired: no passphrase needed, your phone signs):
 
 Or with a key file for an unattended server:
 
-``claude mcp add bwalletx -e BWALLETX_PASSPHRASE=your-passphrase -- npx -y bwalletx mcp``
+``bwalletx key import ./trader.key.json
+claude mcp add bwalletx -e BWALLETX_PASSPHRASE=your-passphrase -- npx -y bwalletx mcp``
 
 Claude Desktop, Cursor and others (MCP config file):
 
@@ -8008,9 +8037,15 @@ Claude Desktop, Cursor and others (MCP config file):
 }
 }``
 
-The passphrase unlocks the agent account's key file on your machine. Use a separate agent account with a small balance for AI agents. Leave the passphrase out and the server stays paper-only: it can read and practise, but never send.
+The passphrase unlocks the agent account's key file on your machine. Use a separate agent account with a small balance for AI agents. Without the passphrase a key-file account stays paper-only: it can read and practise, but never send. Paired accounts don't need it.
 
-Coming: selling and listing. Minting is built in the source and comes to npm with the next published version. Source: [github.com/bitcoin-corp/bwalletx-cli](https://github.com/bitcoin-corp/bwalletx-cli).
+Want the 0.5.0 tools today? Build from source, then point your MCP client at `bwalletx mcp`:
+
+``git clone https://github.com/bitcoin-corp/bwalletx-cli && cd bwalletx-cli
+pnpm install && pnpm build && pnpm link --global
+claude mcp add bwalletx -- bwalletx mcp``
+
+Source and full command list: [github.com/bitcoin-corp/bwalletx-cli](https://github.com/bitcoin-corp/bwalletx-cli). Docs: [agents](https://docs.bwalletx.com/use/agents/) · [strategy format](https://docs.bwalletx.com/developers/strategy-format/).
 
 [Agent wallet](https://bwalletx.com/agent)
 [Developers](https://bwalletx.com/developers)
@@ -11737,7 +11772,7 @@ Source: https://bwalletx.com/connect.md
 
 # Add Sign in with bWalletX to your app
 
-Source: https://bwalletx.com/connect (this file: https://bwalletx.com/connect.md). Last checked against bWalletX 5.1.75, connect.js and @bsv/sdk 2.8.11 on 7 Oct 2026.
+Source: https://bwalletx.com/connect (this file: https://bwalletx.com/connect.md). Last checked against bWalletX 5.2.31, connect.js and @bwalletx/connect 0.5.0 on 18 Oct 2026. Full docs: https://docs.bwalletx.com/developers/connect/
 
 ## In 30 seconds
 

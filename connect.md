@@ -1,6 +1,6 @@
 # Add Sign in with bWalletX to your app
 
-Source: https://bwalletx.com/connect (this file: https://bwalletx.com/connect.md). Last checked against bWalletX 5.1.75, connect.js and @bsv/sdk 2.8.11 on 7 Oct 2026.
+Source: https://bwalletx.com/connect (this file: https://bwalletx.com/connect.md). Last checked against bWalletX 5.2.31, connect.js and @bwalletx/connect 0.5.0 on 18 Oct 2026. Full docs: https://docs.bwalletx.com/developers/connect/
 
 ## In 30 seconds
 
