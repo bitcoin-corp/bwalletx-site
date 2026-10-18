@@ -2159,7 +2159,7 @@ Privacy
 - LiveNo analytics or crash reports
 
 - LiveSpace transcripts only when the host turns it on and each speaker agrees, with a visible badge; transcription audio is deleted after. In bWalletX.
-- ComingHosts can keep a recording if everyone agrees; paid storage on bStoreX is coming
+- ComingHosts can keep a recording if everyone agrees; paid storage on [bDriveX](https://bdrivex.com) is coming
 - ComingEnd-to-end encrypted DMs
 
 [Privacy policy](https://bwalletx.com/privacy)
