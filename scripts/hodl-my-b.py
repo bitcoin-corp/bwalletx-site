@@ -21,6 +21,17 @@ MEDIA = {  # slot name -> '/media/hodl/<file>.jpg' or '.mp4' (muted loop). Empty
     "release": "/media/hodl/",
     "next": "/media/hodl/",
     "lifestyle": "/media/hodl/",
+    "e0-cover": "/media/hodl/e0/art/",
+    "e0-devices": "/media/hodl/e0/art/",
+    "e0-names": "/media/hodl/e0/art/",
+    "e0-rooms": "/media/hodl/e0/art/",
+    "e0-askb": "/media/hodl/e0/art/",
+    "e0-bmail": "/media/hodl/e0/art/",
+    "e0-exchange": "/media/hodl/e0/art/",
+    "e0-nfts": "/media/hodl/e0/art/",
+    "e0-agents": "/media/hodl/e0/art/",
+    "e0-open": "/media/hodl/e0/art/",
+    "e0-get": "/media/hodl/e0/art/",
 }
 TW = 'https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/'
 E = dict(beer='1f37a', spark='2728', heart='1f49b', bag='1f6cd', coffee='2615', ice='1f366', art='1f3a8', head='1f3a7', palm='1f334',
@@ -53,8 +64,22 @@ def media(slot, art=''):
     src = MEDIA.get(slot, '')
     if src.endswith('.mp4'):
         return f'<div class="media photo" data-media="{slot}"><video src="{src}" autoplay muted loop playsinline></video></div>'
-    elif src.endswith('/'):  # folder: <slot>-4x5.jpg on phones, <slot>-16x9.jpg on wide screens
-        return f'<div class="media photo" data-media="{slot}"><img src="{src}{slot}-4x5.jpg" alt="" /></div>'
+    elif src.endswith('/'):  # folder: <slot>-4x5 (pages are portrait); <slot>-16x9 for a landscape phone; AVIF/WebP when present
+        import os
+        disk = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), src.lstrip('/'))
+        has = lambda f: os.path.exists(os.path.join(disk, f))
+        srcs = ''
+        for ar, mq in (('16x9', '(orientation: landscape) and (max-width: 899px)'), ('4x5', '')):
+            if ar == '16x9' and not has(f'{slot}-16x9.jpg'):
+                continue
+            m = f' media="{mq}"' if mq else ''
+            for ext, typ in (('avif', 'image/avif'), ('webp', 'image/webp')):
+                if has(f'{slot}-{ar}.{ext}'):
+                    srcs += f'<source{m} type="{typ}" srcset="{src}{slot}-{ar}.{ext}" />'
+            if mq:
+                srcs += f'<source{m} srcset="{src}{slot}-{ar}.jpg" />'
+        img = f'<img src="{src}{slot}-4x5.jpg" alt="" decoding="async" />'
+        return f'<div class="media photo" data-media="{slot}">' + (f'<picture>{srcs}{img}</picture>' if srcs else img) + '</div>'
     elif src:
         return f'<div class="media photo" data-media="{slot}"><img src="{src}" alt="" /></div>'
     else:
@@ -154,7 +179,7 @@ def pages_issue_1(back):
 def pages_issue_0(back):
     import importlib.util
     spec = importlib.util.spec_from_file_location('e0', os.path.join(ROOT, 'scripts/hodl_edition_0.py')); m = importlib.util.module_from_spec(spec); spec.loader.exec_module(m)
-    return m.pages(dict(page=page, bg=bg, BLOB=BLOB, RING=RING, emo=emo, card=card, getqr=getqr, barcode=barcode, L=L, C=C), back)
+    return m.pages(dict(page=page, bg=bg, BLOB=BLOB, RING=RING, emo=emo, card=card, getqr=getqr, barcode=barcode, media=media, L=L, C=C), back)
 
 CSS = r'''
 :root{--ink:#111;--gold:#f5b800;--gold2:#ffd24d;--hf:'Space Grotesk',sans-serif;--bf:'IBM Plex Sans',sans-serif;--mono:'IBM Plex Mono',ui-monospace,monospace;color-scheme:light}
@@ -305,7 +330,7 @@ img.og{width:100%;height:auto;aspect-ratio:1200/630;object-fit:cover;display:blo
 .shot img{max-width:100%;max-height:100%;object-fit:contain;object-position:top;border-radius:18px;border:1px solid rgba(255,210,77,.4);box-shadow:0 30px 60px -25px rgba(0,0,0,.6);background:#000}
 .names{display:flex;flex-direction:column;gap:.4cqh;font:600 1.05em var(--mono)}.names b{font:700 min(9cqh,13cqw)/1 var(--hf);letter-spacing:-.04em}
 @media (max-width:899px){.pdfb{display:none}}
-.shot{min-height:30cqh}.s-cover:has(.e0h) .cl{top:46%}.s-back .g{display:grid;grid-template-columns:1fr 1fr;gap:12px;max-width:none}.s-back .g .cd span{display:none}
+.shot{min-height:30cqh}.s-cover:has(.e0h) .cl,.s-cover:has([data-media="e0-cover"]) .cl{top:46%}.s-back .g{display:grid;grid-template-columns:1fr 1fr;gap:12px;max-width:none}.s-back .g .cd span{display:none}
 .e0h{background:radial-gradient(70% 55% at 78% 78%,#4a3700,#0b0a08 72%)}.e0h .bigb{top:auto;bottom:-6%;right:2%;font-size:min(42cqh,62cqw);opacity:.9;color:#0b0a08;background:none;-webkit-text-fill-color:#0b0a08;filter:none;z-index:1;text-align:right}
 .e0h .blob{left:78%!important;top:76%!important}
 .e0mh{color:#fffaf0;text-shadow:none}.e0mh em{color:#ffd24d}.e0hl{color:#fffaf0}.s-cover:has(.e0h) .dl{border-color:rgba(255,250,240,.8);color:#fffaf0}.s-back .g{display:block;max-width:360px}.s-back .g .cd{display:flex;flex-direction:column;gap:6px}
@@ -314,6 +339,10 @@ img.og{width:100%;height:auto;aspect-ratio:1200/630;object-fit:cover;display:blo
 .s-back .g{display:grid!important;grid-template-columns:1fr 1fr;gap:12px;max-width:none!important}
 @container (max-width:600px){.shot{min-height:0}}
 body.print .tb,body.print .ctl,body.print .gate,body.print .pdfb{display:none!important}
+.page:not(.s-black):not(.s-cover):has(>.media.photo[data-media^="e0-"])>.wash{background:linear-gradient(180deg,var(--w) 0%,color-mix(in srgb,var(--w) 93%,transparent) 48%,color-mix(in srgb,var(--w) 78%,transparent) 72%,color-mix(in srgb,var(--w) 30%,transparent) 100%)}
+.s-black:has(>.media.photo[data-media^="e0-"])>.wash{background:linear-gradient(180deg,rgba(11,10,8,.94) 0%,rgba(11,10,8,.82) 45%,rgba(11,10,8,.45) 75%,rgba(11,10,8,.75) 100%)}
+.page:not(.s-black):not(.s-cover):has(>.media.photo[data-media^="e0-"])>.wash{background:linear-gradient(180deg,var(--w) 0%,color-mix(in srgb,var(--w) 93%,transparent) 48%,color-mix(in srgb,var(--w) 78%,transparent) 72%,color-mix(in srgb,var(--w) 30%,transparent) 100%)}
+.s-black:has(>.media.photo[data-media^="e0-"])>.wash{background:linear-gradient(180deg,rgba(11,10,8,.94) 0%,rgba(11,10,8,.82) 45%,rgba(11,10,8,.45) 75%,rgba(11,10,8,.75) 100%)}
 '''
 
 JS = r'''<script src="https://cdn.jsdelivr.net/npm/page-flip@2.0.7/dist/js/page-flip.browser.js"></script>
