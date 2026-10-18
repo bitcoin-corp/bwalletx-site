@@ -5,28 +5,56 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Games in bWalletX</title>
     <link rel="canonical" href="https://bwalletx.com/games" />
-    <meta name="description" content="Play games on Bitcoin SV, all in bGames inside bWalletX: bGames originals, the TokenBlaster arcade and more BSV games." />
+    <meta name="description" content="18 arcade games on the live Bitcoin SV chain at tokenblaster.lol, The Bitcoin Corporation&#x27;s games. Practise free, or play LIVE with bWalletX." />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://bwalletx.com/games" />
     <meta property="og:site_name" content="bWalletX" />
     <meta property="og:title" content="Games you can play in bWalletX" />
-    <meta property="og:description" content="Play games on Bitcoin SV, all in bGames inside bWalletX: bGames originals, the TokenBlaster arcade and more BSV games." />
-    <meta property="og:image" content="https://bwalletx.com/og-games-v3.png" />
+    <meta property="og:description" content="18 arcade games on the live Bitcoin SV chain at tokenblaster.lol, The Bitcoin Corporation&#x27;s games. Practise free, or play LIVE with bWalletX." />
+    <meta property="og:image" content="https://bwalletx.com/og-games-v4.png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
-    <meta property="og:image:alt" content="Play games on Bitcoin SV, all in bGames inside bWalletX: bGames originals, the TokenBlaster arcade and more BSV games." />
+    <meta property="og:image:alt" content="18 arcade games on the live Bitcoin SV chain at tokenblaster.lol, The Bitcoin Corporation&#x27;s games. Practise free, or play LIVE with bWalletX." />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@bWalletX" />
     <meta name="twitter:title" content="Games you can play in bWalletX" />
-    <meta name="twitter:description" content="Play games on Bitcoin SV, all in bGames inside bWalletX: bGames originals, the TokenBlaster arcade and more BSV games." />
-    <meta name="twitter:image" content="https://bwalletx.com/og-games-v3.png" />
+    <meta name="twitter:description" content="18 arcade games on the live Bitcoin SV chain at tokenblaster.lol, The Bitcoin Corporation&#x27;s games. Practise free, or play LIVE with bWalletX." />
+    <meta name="twitter:image" content="https://bwalletx.com/og-games-v4.png" />
     <link rel="icon" href="/favicon.ico" />
     <link rel="stylesheet" href="/styles.css" />
     <style>
-      .ext h1 { font-size: clamp(2.2rem, 6vw, 3.4rem); margin: 18px 0 10px; }
-      .ext h2 { margin: 48px 0 4px; font-size: 1.5rem; }
+      .ext h2 { margin: 56px 0 6px; font-size: clamp(1.5rem, 4vw, 2.1rem); letter-spacing: -0.02em; }
       .ext .small { color: #8a8a86; font-size: 0.85rem; }
       .ext .row { display: flex; gap: 12px; flex-wrap: wrap; margin: 26px 0; }
+      .ghero { position: relative; overflow: hidden; background: #050506; min-height: min(82svh, 720px); display: flex; align-items: flex-end; }
+      .ghero video, .ghero > img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+      .ghero::after { content: ""; position: absolute; inset: 0; background: linear-gradient(0deg, #0b0c0f 0%, rgba(11,12,15,.75) 38%, rgba(11,12,15,.1) 75%), linear-gradient(90deg, rgba(0,0,0,.55), transparent 60%); }
+      .ghero .in { position: relative; z-index: 1; width: 100%; max-width: 1120px; margin: 0 auto; padding: 0 16px 48px; box-sizing: border-box; }
+      .ghero .code { font: 700 .78rem ui-monospace, Menlo, monospace; letter-spacing: .16em; color: #ff5a4f; text-transform: uppercase; }
+      .ghero h1 { margin: 12px 0 12px; font-size: clamp(2.6rem, 8.5vw, 5.4rem); line-height: .98; letter-spacing: -0.045em; }
+      .ghero p { max-width: 600px; margin: 0; color: #d7dbe2; font-size: clamp(1rem, 2.6vw, 1.2rem); line-height: 1.55; }
+      .ghero .hcta { display: flex; flex-wrap: wrap; gap: 12px; margin: 24px 0 0; }
+      .stk { display: inline-block; margin: 0 8px 8px 0; padding: 5px 11px; background: #F5B800; color: #1a1300; font-weight: 700; font-size: .8rem; transform: rotate(-2deg); }
+      .stk.r { background: #e8261d; color: #fff; transform: rotate(1.5deg); }
+      .door { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 250px); gap: 18px; align-items: end; margin: 22px 0 8px; }
+      .shot { margin: 0; border-radius: 14px; overflow: hidden; border: 1px solid #ffffff1a; background: #111; box-shadow: 0 24px 60px -24px rgba(0,0,0,.8); }
+      .shot img { display: block; width: 100%; height: auto; }
+      .shot figcaption { padding: 9px 12px; font-size: .8rem; color: #8f96a3; }
+      .phone { border-radius: 26px; border: 6px solid #1c1e24; }
+      .pics { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 320px), 1fr)); gap: 16px; margin: 20px 0; }
+      .pics a { color: inherit; text-decoration: none; }
+      .pics .shot:hover { border-color: #F5B80088; }
+      .pics figcaption b { color: #fff; font-size: .95rem; display: block; margin-bottom: 2px; }
+      .wide { grid-column: 1 / -1; }
+      .steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr)); gap: 14px; margin: 20px 0; padding: 0; list-style: none; counter-reset: s; }
+      .steps li { background: #101114; border: 1px solid #ffffff12; border-radius: 16px; padding: 18px; counter-increment: s; }
+      .steps li::before { content: counter(s); display: grid; place-items: center; width: 32px; height: 32px; border-radius: 50%; background: #F5B800; color: #1a1300; font-weight: 800; margin-bottom: 10px; }
+      .steps h3 { margin: 0 0 6px; font-size: 1.05rem; }
+      .steps p { margin: 0; color: #a7adb8; font-size: .93rem; line-height: 1.55; }
+      .status { list-style: none; padding: 0; margin: 16px 0; display: grid; gap: 8px; }
+      .status li { display: flex; gap: 10px; align-items: baseline; color: #d7dbe2; line-height: 1.5; }
+      .status li span { flex: none; width: 1.4em; font-weight: 700; color: #3ecf8e; }
+      .status li.no span { color: #8a8a86; }
       .ggrid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 230px), 1fr)); gap: 14px; margin: 18px 0; }
       .gcard { display: flex; flex-direction: column; background: #101114; border: 1px solid #ffffff12; border-radius: 16px; overflow: hidden; min-width: 0; color: inherit; text-decoration: none; }
       .gcard:hover { border-color: #F5B80066; }
@@ -36,6 +64,11 @@
       .gcard h3 { margin: 0 0 4px; font-size: 1.05rem; }
       .gcard p { margin: 0; color: #a7adb8; font-size: 0.92rem; line-height: 1.5; }
       .gcard .play { display: inline-block; margin-top: 10px; color: #F5B800; font-size: 0.85rem; }
+      html body main.ext.ext { padding-top: 8px !important; }
+      .ghero { padding-top: 190px; }
+      @media (max-width: 859px) { .ghero { padding-top: 172px; } }
+      @media (max-width: 640px) { .door { grid-template-columns: 1fr; } .door .phone { max-width: 260px; margin: 0 auto; } }
+      @media (prefers-reduced-motion: reduce) { .ghero video { display: none; } }
     </style>
   </head>
   <body>
@@ -50,10 +83,59 @@
       </div>
     </header>
     <script src="/nav.js"></script>
+    <section class="ghero">
+      <video autoplay muted loop playsinline preload="metadata" poster="/media/games-hero.webp" aria-hidden="true"><source src="/media/games-hero.mp4" type="video/mp4" /></video>
+      <div class="in">
+        <div class="code">bGames &middot; bRacer gameplay</div>
+        <h1>Games on Bitcoin.<br /><span class="gold">Play now.</span></h1>
+        <p>The Bitcoin Corporation&rsquo;s games live at <strong>tokenblaster.lol</strong>: 18 arcade games where the levels, traffic and targets are the live BSV chain. Open them from the Apps tab in bWalletX, or connect bWalletX on any computer.</p>
+        <div class="hcta"><a class="btn btn-store" href="https://www.tokenblaster.lol" target="_blank" rel="noopener">Open tokenblaster.lol</a><a class="btn btn-store btn-ghost" href="/get">Get bWalletX</a></div>
+      </div>
+    </section>
     <main class="ext">
-      <h1>Games on Bitcoin. <span class="gold">Play now.</span></h1>
-      <p class="lede">Play games on Bitcoin SV, right now. They&rsquo;re all in <strong>bGames</strong> inside bWalletX: open the Apps tab, tap Games, and play with your wallet already signed in. Or tap any game below to play it in your browser.</p>
-      <div class="row"><a class="btn btn-store" href="/get">Get bWalletX</a></div>
+      <h2>tokenblaster.lol is the front door</h2>
+      <p class="lede">Every game from The Bitcoin Corporation is listed on one site. Pick a game, practise free, then load a few sats from your wallet when you want to play for real.</p>
+      <p><span class="stk">Free practice in every game</span><span class="stk r">LIVE: every action is a real tx</span></p>
+      <div class="door">
+        <a href="https://www.tokenblaster.lol" target="_blank" rel="noopener"><figure class="shot"><img src="/images/games/tb-home-d.webp" alt="tokenblaster.lol home page on a desktop browser" width="1280" height="800" /><figcaption>tokenblaster.lol on a computer</figcaption></figure></a>
+        <figure class="shot phone"><img src="/images/games/tb-home-m.webp" alt="tokenblaster.lol home page on a phone" width="600" height="1077" loading="lazy" /></figure>
+      </div>
+
+      <h2>What the games look like</h2>
+      <p class="small">Real screenshots, taken 18 Oct 2026. Tap one to play.</p>
+      <div class="pics">
+        <a class="wide" href="https://www.tokenblaster.lol/arcade/bracer" target="_blank" rel="noopener"><figure class="shot"><img src="/images/games/bracer-d.webp" alt="bRacer on tokenblaster.lol" loading="lazy" width="1280" height="720" /><figcaption><b>bRacer</b>Anti-gravity racing at 700 km/h. Every rival ship is a mainnet transaction.</figcaption></figure></a>
+        <a class="" href="https://www.tokenblaster.lol/arcade/npg-arena" target="_blank" rel="noopener"><figure class="shot"><img src="/images/games/npg-arena-d.webp" alt="Ninja Punk Girls: Arena on tokenblaster.lol" loading="lazy" width="1280" height="720" /><figcaption><b>Ninja Punk Girls: Arena</b>One-on-one 3D fighting with twelve NPG fighters.</figcaption></figure></a>
+        <a class="" href="https://www.tokenblaster.lol/arcade/invaders" target="_blank" rel="noopener"><figure class="shot"><img src="/images/games/invaders-d.webp" alt="Mempool Invaders on tokenblaster.lol" loading="lazy" width="1280" height="720" /><figcaption><b>Mempool Invaders</b>Every ship is a live transaction. Shoot the gold token ships.</figcaption></figure></a>
+        <a class="" href="https://www.tokenblaster.lol/arcade/bsvgun" target="_blank" rel="noopener"><figure class="shot"><img src="/images/games/bsvgun-d.webp" alt="BSVGun on tokenblaster.lol" loading="lazy" width="1280" height="720" /><figcaption><b>BSVGun</b>A neon shooting range where the targets are the live chain.</figcaption></figure></a>
+        <a class="" href="https://www.tokenblaster.lol/arcade/frogger" target="_blank" rel="noopener"><figure class="shot"><img src="/images/games/frogger-d.webp" alt="Chain Frogger on tokenblaster.lol" loading="lazy" width="1280" height="720" /><figcaption><b>Chain Frogger</b>Cross a 3D city where every vehicle is a real transaction.</figcaption></figure></a>
+        <a class="" href="https://www.tokenblaster.lol/arcade/highway21" target="_blank" rel="noopener"><figure class="shot"><img src="/images/games/highway-d.webp" alt="Highway 21M on tokenblaster.lol" loading="lazy" width="1280" height="720" /><figcaption><b>Highway 21M</b>OutRun-style racing; the billboards scroll real token moves.</figcaption></figure></a>
+        <a class="" href="https://www.tokenblaster.lol/arcade" target="_blank" rel="noopener"><figure class="shot"><img src="/images/games/tb-arcade-d.webp" alt="The arcade on tokenblaster.lol" loading="lazy" width="1280" height="720" /><figcaption><b>The arcade</b>All 18 games, each with a free practice mode.</figcaption></figure></a>
+      </div>
+
+      <h2 id="wallet">Play with bWalletX</h2>
+      <p class="lede">The games ask a BRC-100 wallet for permission, the same way any app on Bitcoin SV does. bWalletX is the wallet tokenblaster.lol is built around.</p>
+      <ol class="steps">
+        <li><h3>Open the game</h3><p><strong>On your phone:</strong> in bWalletX, open the Apps tab and tap <strong>Games</strong>. Games open in the wallet&rsquo;s own browser, so the wallet is already there. <strong>On a computer:</strong> visit tokenblaster.lol with the <a href="/extension">bWalletX extension</a> installed, or tap Connect and scan the QR code with bWalletX on your phone.</p></li>
+        <li><h3>Load your gun</h3><p>Choose LIVE and approve one load of 1,000, 10,000 or 100,000 sats. That is the only approval: the game then plays from those sats without asking again. Unload any time to send what&rsquo;s left back to your wallet.</p></li>
+        <li><h3>Play</h3><p>In LIVE mode each shot, jump or card is one transaction: 1 sat to The Bitcoin Corporation plus the network fee (about 26 sats). In Arena you can fire tokens from your wallet instead; hit another player and that token lands in their gun. Your best runs go on the leaderboards.</p></li>
+      </ol>
+      <p class="small">Nothing here is a bet: games don&rsquo;t pay out prizes. Coin Pop and Token Potions cost 10p a game, or you can practise free. Play with small amounts.</p>
+      <div class="pics">
+        <a href="https://www.tokenblaster.lol/arcade/bracer" target="_blank" rel="noopener"><figure class="shot phone" style="max-width:300px"><img src="/images/games/bracer-m.webp" alt="bRacer set-up screen on a phone: circuit, mode, hull and team" width="600" height="1077" loading="lazy" /><figcaption><b>bRacer on a phone</b>Pick a circuit, mode, hull and team.</figcaption></figure></a>
+      </div>
+
+      <h2>Status</h2>
+      <ul class="status">
+        <li><span>&#10003;</span>18 TokenBlaster games live on tokenblaster.lol, each with free practice</li>
+        <li><span>&#10003;</span>Apps &rsaquo; Games in bWalletX lists the arcade and opens each game with your wallet</li>
+        <li><span>&#10003;</span>Connect on a computer with the bWalletX extension, or pair your phone by QR</li>
+        <li><span>&#10003;</span>LIVE mode: one approval to load sats, then every action is a real transaction</li>
+        <li><span>&#10003;</span>Arena multiplayer: tokens you hit another player with land in their gun</li>
+        <li><span>&#10003;</span>Leaderboards at <a href="https://www.tokenblaster.lol/leaderboard" target="_blank" rel="noopener">tokenblaster.lol/leaderboard</a></li>
+        <li class="no"><span>&#9723;</span>Coming: bWalletX extension in the Chrome Web Store (install by hand for now)</li>
+      </ul>
+      <p class="small">The App Store and Google Play edition (bWallet) shows a smaller games list, with no TokenBlaster or real-money games.</p>
 
       <h2>bGames</h2>
       <p class="small">Built by us. Open bGames in the Apps tab.</p>
@@ -63,8 +145,8 @@
 <a class="gcard" href="https://ninjapunkgirls.online" target="_blank" rel="noopener"><span class="mono">N</span><span class="gt"><h3>Ninja Punk Girls</h3><p>Collect and battle cyberpunk NFT cards</p><span class="play">Play &rarr;</span></span></a>
       </div>
 
-      <h2>TokenBlaster arcade</h2>
-      <p class="small">From tokenblaster.lol. In LIVE mode every shot, jump or bite is a real transaction.</p>
+      <h2 id="arcade">The whole TokenBlaster arcade</h2>
+      <p class="small">18 games on tokenblaster.lol. Every one has a free practice mode; in LIVE mode every shot, jump or bite is a real transaction.</p>
       <div class="ggrid">
 <a class="gcard" href="https://www.tokenblaster.lol/arcade/doubleosatoshi" target="_blank" rel="noopener"><img src="https://www.tokenblaster.lol/arcade/doubleo.jpg" alt="" loading="lazy" /><span class="gt"><h3>Double-O Satoshi</h3><p>Spy shooter: every bullet is a token on chain</p><span class="play">Play &rarr;</span></span></a>
 <a class="gcard" href="https://www.tokenblaster.lol/arcade/bsvgun" target="_blank" rel="noopener"><img src="https://www.tokenblaster.lol/arcade/bsvgun.jpg" alt="" loading="lazy" /><span class="gt"><h3>BSVGun</h3><p>3D shooting range where the targets are the live chain</p><span class="play">Play &rarr;</span></span></a>
@@ -76,6 +158,7 @@
 <a class="gcard" href="https://www.tokenblaster.lol/arcade/snake" target="_blank" rel="noopener"><img src="https://www.tokenblaster.lol/arcade/snake.jpg" alt="" loading="lazy" /><span class="gt"><h3>Token Snake</h3><p>Neon 3D snake: every bite is a real transaction</p><span class="play">Play &rarr;</span></span></a>
 <a class="gcard" href="https://www.tokenblaster.lol/arcade/city" target="_blank" rel="noopener"><img src="https://www.tokenblaster.lol/arcade/city.jpg" alt="" loading="lazy" /><span class="gt"><h3>Satoshi City</h3><p>Open-world city where every car is a live tx</p><span class="play">Play &rarr;</span></span></a>
 <a class="gcard" href="https://www.tokenblaster.lol/arcade/npg-cards" target="_blank" rel="noopener"><img src="https://www.tokenblaster.lol/arcade/npg-cards.jpg" alt="" loading="lazy" /><span class="gt"><h3>NPG: Card Battle</h3><p>Ninja Punk Girls card battle, AI or online</p><span class="play">Play &rarr;</span></span></a>
+<a class="gcard" href="https://www.tokenblaster.lol/arcade/npg-arena" target="_blank" rel="noopener"><img src="https://www.tokenblaster.lol/arcade/npg-arena.jpg" alt="" loading="lazy" /><span class="gt"><h3>NPG: Arena</h3><p>Ninja Punk Girls 3D fighter, best of three</p><span class="play">Play &rarr;</span></span></a>
 <a class="gcard" href="https://www.tokenblaster.lol/arcade/npg-runner" target="_blank" rel="noopener"><img src="https://www.tokenblaster.lol/arcade/npg-runner.jpg" alt="" loading="lazy" /><span class="gt"><h3>NPG: Erobot Uprising</h3><p>Ninja Punk Girls platformer, three bosses</p><span class="play">Play &rarr;</span></span></a>
 <a class="gcard" href="https://www.tokenblaster.lol/arcade/rally" target="_blank" rel="noopener"><img src="https://www.tokenblaster.lol/arcade/rally.jpg" alt="" loading="lazy" /><span class="gt"><h3>Token Rally</h3><p>Rally racing against live chain traffic</p><span class="play">Play &rarr;</span></span></a>
 <a class="gcard" href="https://www.tokenblaster.lol/arcade/2048" target="_blank" rel="noopener"><img src="https://www.tokenblaster.lol/arcade/2048.jpg" alt="" loading="lazy" /><span class="gt"><h3>Sat Stack 2048</h3><p>Merge sat stacks up to a 1 BSV tile</p><span class="play">Play &rarr;</span></span></a>
@@ -102,12 +185,12 @@
 <a class="gcard" href="https://peerjump.fun/" target="_blank" rel="noopener"><span class="mono">P</span><span class="gt"><h3>PeerJump</h3><p>How high can you climb?</p><span class="play">Play &rarr;</span></span></a>
       </div>
 
-      <p class="small">Some games spend real tokens or pay out real money; play with small amounts. Games under &ldquo;More BSV games&rdquo; are made by other teams, not The Bitcoin Corporation. The App Store and Google Play edition (bWallet) shows a smaller list with no TokenBlaster or real-money games.</p>
+      <p class="small">Games under &ldquo;More BSV games&rdquo; are made by other teams, not The Bitcoin Corporation; some of them take real money. bWalletX is in beta: test with small amounts.</p>
       <div class="row">
         <a class="btn btn-store" href="/get">Get bWalletX</a>
-        <a class="btn btn-store btn-ghost" href="/features">All features</a>
+        <a class="btn btn-store btn-ghost" href="https://www.tokenblaster.lol" target="_blank" rel="noopener">tokenblaster.lol</a>
       </div>
-      <p class="small">bWalletX is in beta: test with small amounts. Questions: <a href="mailto:support@bwalletx.com">support@bwalletx.com</a></p>
+      <p class="small">Questions: <a href="mailto:support@bwalletx.com">support@bwalletx.com</a></p>
     </main>
   </body>
 </html>
