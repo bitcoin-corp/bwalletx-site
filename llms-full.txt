@@ -3958,140 +3958,266 @@ A [business agent](https://bwalletx.com/business-agents) can answer by text too:
 
 Source: https://bwalletx.com/store
 
-# The Store. Inside your wallet.
+The Store · inside bWalletX
 
-Themes and digital goods, inside your wallet. Paid in BSV, yours to keep. Open it from Exchange › Store in bWalletX.
+# Your shop.
+Inside everyone’s wallet.
 
-[Open bWalletX](https://web.bwalletx.com)[Get bWalletX](https://bwalletx.com/download)
+A bWalletX store is a shop front that lives inside the wallet itself. Your banner, your logo, your things for sale, one tap away for everyone who opens the Store. People pay you in BSV with one approval, and what they buy is theirs to keep.
 
-NPG · $1Ninja Punk Girls
+[Start your store](#start)
+[See what a store looks like](#look)
 
-NPGX · $1NPGX
+Free to start. Shops open after b has had a look. [What’s live today](#status)
 
-VexVoid · $1VexVoid
+‹ Store
 
-Pink paperFree theme
+Ninja Punk GirlsThemes and art from the NPG universe
 
-Blue paperFree theme
-
-Demo screens with made-up numbers. Free themes (Gold, White, Pink, Blue, Yellow, Mono, Duo, Tri and more) stay free in Wallet › ☰ › Theme.
-
-## How it works
-
-The Store is a mall. Each shop has its own banner, logo and items. Each item also sits in a department, so you can browse by shop or by kind of thing. Pick an item, approve one payment sheet, and it’s yours. A theme switches on straight away and stays yours to keep. The first sale went through on 17 October 2026.
-
-The Store is in bWalletX (web, Chrome extension, Android and iPhone). It is not in the App Store and Google Play edition, bWallet.
-
-## Shops
-
-### Ninja Punk Girls
-
-Hot-pink neon on black, with NPG card art.
+ThemesNFTsGamesArt
 
 NPG theme$1
 
-### NPGX
+NPG card #2709NFT
 
-Black and red, with the NPGX logo on your card.
+Card themeFrom your NFT
 
-NPGX theme$1
+NPG Racer carGame item
 
-### VexVoid
+Mock-up of a shop in the Store. Only the NPG theme is on sale today.
 
-White ink on black, with a point field on the card.
+## What a bWalletX store is
 
-VexVoid theme$1
+Think of the Store as a small shopping centre inside the wallet. Every shop has its own front. Every item also sits in a department, so people can browse by shop (“Ninja Punk Girls”) or by kind of thing (“Themes”).
 
-These three editions are now only available by buying them in the Store; they are no longer free in the Theme picker.
+It’s where your buyers already are.
+No new app to download and no account to make. People who use bWalletX open Exchange › Store and your shop is there, next to the others.
 
-## Departments
+Paying takes one tap.
+A buyer sees one sheet with the price and taps Allow. No card numbers and no checkout form. The money is BSV, straight from their wallet.
 
-- Themes. App colours and card art for your wallet.
+What they buy stays with them.
+A theme stays theirs to switch on whenever they like. An NFT sits in their wallet’s NFTs tab. Each sale also comes with a signed receipt.
 
-- Subscriptions. Regular access to apps, rooms and services.
+## What a store looks like
 
-- Stickers & emoji. Packs to use in chat and posts.
+Every shop is built the same way, so buyers always know where to look. You fill in five things and the Store does the rest.
 
-- Art & editions. Pictures and numbered editions.
+‹ Store
 
-- Music & video. Tracks, albums, films and clips.
+1
 
-- Courses & books. Things to read and learn from.
+2
+Ninja Punk GirlsThemes and art from the NPG universe
+3
 
-- Rooms & memberships. Entry to token rooms and clubs.
+ThemesNFTsGames4
 
-- Services. Work done for you by people or agents.
+NPG theme$1
 
-Today the Themes department has items; the others fill up as shops open.
+NPG cardNFT5
 
-## Sell in the Store
+- Banner. The wide picture across the top, 1500 × 500. Your art, your scene, your mood.
 
-Coming · shops open soon
+- Logo. A square, 512 × 512. It also shows on your shop’s tile in the Store and on your buyers’ receipts.
 
-You will be able to open your own shop. Here is what you’ll need, so you can get ready now.
+- Shop name and a line about you. Up to 40 characters for the name, a sentence or two for the rest.
 
-### What you can sell
+- Departments. Themes, NFTs, game items, art, music and more. Your items show under your shop and in the matching department.
 
-- Anything that fits a department: themes, subscriptions, stickers and emoji, art and editions, music and video, courses and books, rooms and memberships, services.
+- Items. Each one has a picture, a title, a short description and a price in dollars. Buyers pay the same value in BSV.
 
-### What a good shop needs
+Your shop also gets its own web address, `bwalletx.com/shop/your-name`. You pick the name when you start.
 
-- A shop name.
+### In the Store, your shop sits with the others
 
-- A logo: 512 × 512 PNG.
+Ninja Punk GirlsThemes and art from the NPG universe
 
-- A banner: 1500 × 500.
+NPGXBlack and red
 
-- A short blurb about you or your shop.
+VexVoidWhite ink on true black
 
-- At least 3 products, each with a title, a 1–2 line description, a price in $ and a preview image.
+Your shopRight here, next
 
-- For a theme: its colours (accent, background, surface, text) and the card art.
+## Who it’s for
 
-### Rules
+- NFT collections. You already have the art and the fans. Give them somewhere to buy, and something to do with what they own.
 
-- Digital goods only.
+- Artists and illustrators. Sell your pictures, and themes made from them, so fans carry your work on their phone.
 
-- Your own work, or work you have the rights to sell.
+- Musicians and film makers. Tracks, albums, clips, and a look for the wallet to match.
 
-- No pretending to be a brand or person you are not.
+- Game makers. Sell the cars, skins and extras for your game where your players keep their money.
 
-- b reviews every shop and every listing before it goes live.
+- Brands and communities. One place for your members to pick up the official look and the good stuff.
 
-### Money
+## What you can sell
 
-- Buyers pay in BSV from their wallet.
+◻ Coming
 
-- 80% to the seller, 20% to the Store.
+### Your NFTs
 
-- Your share is paid to your bWalletX.
+List the NFTs in your wallet and sell them from your shop. That includes old RelayX (Run) NFTs: bWalletX can already find them from your 12 words and keep them in your wallet under NFTs › Run. Selling them from a shop is next.
+
+◻ Coming
+
+### Themes made from your NFTs
+
+Your art becomes a theme: the app’s colours and a card with your picture on it. Your customers switch it on and their whole wallet wears your look. It’s the simplest way for fans to carry what they love on the phone they use every day.
+
+◻ Coming
+
+### Your own racing game
+
+[bRacer](https://bwalletx.com/games) is our anti-gravity racer. A collection can have its own branded version made from it, the way we’re making NPG Racer for Ninja Punk Girls, or enter its own team in bRacer. Your shop then sells the race cars, in your colours, to the people who play.
+
+✓ Live
+
+### Themes, today
+
+The Store already sells themes: NPG, NPGX and VexVoid, $1 each, paid in BSV with one approval. Every shop will use that same checkout.
+
+The other departments open later: subscriptions, stickers and emoji, art and editions, music and video, courses and books, rooms and memberships, and services.
+
+Worked example
+
+## The Ninja Punk Girls store
+
+Ninja Punk Girls is our own collection, so its store is being built first, one step at a time. Any collection’s pieces fit together the same way.
+
+- 1
+The shop. A pink-on-black banner, the NPG logo and a line about the universe. ✓ Live
+
+- 2
+The NPG theme at $1. Buyers switch it on and their wallet goes neon pink. ✓ Live
+
+- 3
+The cards. NPG holders bring their RelayX cards into bWalletX, where they show with their real card art. ✓ Live Selling them from the shop: ◻ Coming
+
+- 4
+A theme from your own card. Own girl #2709? Dress your wallet in her. ◻ Coming
+
+- 5
+NPG Racer. The NPG version of bRacer, with NPG race cars for sale in the shop. ◻ Coming
+
+## How the money works
+
+Buyertaps Allow on one sheet
+
+→
+
+BSVfor the dollar price you set
+
+→
+
+80% to youpaid to your shop’s own bWalletX
+
+20% to the Storekeeps the Store running
+
+- You set prices in dollars. The buyer pays the same value in BSV at the rate on the day.
+
+- Your share goes to the wallet your shop belongs to: the one you signed in with. We don’t hold it for you.
+
+- Every buyer gets a signed receipt with your shop’s logo on it.
+
+- Starting a shop is free, with no monthly fee.
+
+Payouts to sellers start when the first outside shops open. Today the Store sells only our own shops’ themes.
+
+Start your store
+
+## Make your shop now. Watch it take shape.
+
+Sign in with your wallet, fill in the basics, and see your shop as buyers will. It’s saved as a draft that only you can see. When shops open in the Store, b looks it over and you go live.
+
+1 Sign in
+
+Uses bWalletX on this computer (the Chrome extension), or the app on your phone with a QR code. Your shop belongs to that wallet.
+
+Scan this with bWalletX on your phone, or paste the link into [web.bwalletx.com](https://web.bwalletx.com).
+
+Cancel
+
+Signed in as Sign out
+
+2 Your shop
+
+Shop name
+Web address
+bwalletx.com/shop/
+3–30 letters, numbers and dashes.
+
+About your shop
+
+Logo square, 512 × 512
+Banner wide, 1500 × 500
+
+Accent colour
+
+Background
+
+3 Save your draft
+
+Save draft
+
+Your shop, as buyers will see it
+
+‹ Store
+
+Your shopA line about what you make.
+
+NFTsThemesGames
+
+Your first item$–
+
+A theme from your art$–
+
+bwalletx.com/shop/…
+
+Your draft stays private. Adding items comes next, in the wallet. The rules: digital goods only; your own work, or work you have the rights to sell; no pretending to be a brand or person you are not.
 
 ## Status
 
+What works today and what’s still coming. We tick these off as they ship.
+
 - ✓ LiveThe Store in bWalletX: Exchange › Store, with shops and departments.
 
-- ✓ LiveNPG, NPGX and VexVoid themes, $1 each, paid in BSV with one approval, yours to keep.
+- ✓ LiveNPG, NPGX and VexVoid themes, $1 each, paid in BSV with one approval, yours to keep, with a signed receipt.
 
-- ✓ LiveFree built-in themes in Wallet › ☰ › Theme.
+- ✓ LiveRelayX NFTs in bWalletX: found from your 12 words and kept under NFTs › Run ([how](https://bwalletx.com/recover-relayx)).
 
-- ◻ ComingOpen your own shop, reviewed by b before it goes live.
+- ✓ LiveShop preview on this page: your banner, logo, name and colours, shown as a shop.
 
-- ◻ ComingSell your own themes.
+- ◻ ComingSign in and save your draft shop on this page.
 
-- ◻ ComingSell other digital goods in the departments, 80% to the seller.
+- ◻ ComingYour shop opens in the Store, after b has reviewed it.
+
+- ◻ ComingSell your NFTs from your shop, including RelayX (Run) NFTs.
+
+- ◻ ComingThemes made from your NFTs, so your customers can dress their phones.
+
+- ◻ ComingA branded racing game made from bRacer, or a team in bRacer, with race cars sold in your shop.
+
+- ◻ ComingSeller payouts: 80% of each sale to your shop’s wallet.
 
 ## Questions
 
+What does it cost to start?
+Nothing. When you sell something, 80% goes to you and 20% to the Store.
+Do I need a bWalletX?
+Yes. Your shop belongs to your wallet, and that’s where your money arrives. [Get bWalletX](https://bwalletx.com/get) for the web, Chrome, Android or iPhone. It’s free.
+Who can see my draft?
+Only you, signed in with the same wallet. Nobody else sees it until your shop opens.
+Why does b review shops?
+So buyers can trust what they find: real makers, no fakes, nothing pretending to be someone it isn’t.
 Is a theme mine for good?
 Yes. Pay once and it’s yours to keep. Switch between it and the free themes whenever you like.
-How do I pay?
-In BSV, from your bWalletX balance. You see one sheet with the price, tap Allow, and the theme switches on.
 Why can’t I see the Store in bWallet?
-The Store is in bWalletX only: web, Chrome extension, Android and iPhone. It isn’t in the App Store and Google Play edition.
-When can I sell?
-Shops open soon. Get your logo, banner and three products ready using the list above.
+The Store is in bWalletX: web, Chrome extension, Android and iPhone. It isn’t in the App Store and Google Play edition, bWallet.
 
-[Open bWalletX](https://web.bwalletx.com)[See all themes](https://bwalletx.com/themes)
+## Less noise. More life. Just b.
+
+[Start your store](#start)[Open the Store in bWalletX](https://web.bwalletx.com)
 
 bWalletX is in beta: test with small amounts. Questions: [support@bwalletx.com](mailto:support@bwalletx.com)
 

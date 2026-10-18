@@ -3,66 +3,32 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>The Store in bWalletX</title>
+    <title>Start your store in bWalletX</title>
     <link rel="canonical" href="https://bwalletx.com/store" />
-    <meta name="description" content="The Store is inside bWalletX: shops and departments for themes and digital goods. NPG, NPGX and VexVoid themes are $1 each, paid in BSV, yours to keep." />
+    <meta name="description" content="Open a shop inside bWalletX: your banner, your logo, your items, in front of everyone who opens the Store. Sell NFTs, themes made from your art and items for your own game, paid in BSV. Start your store here." />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://bwalletx.com/store" />
     <meta property="og:site_name" content="bWalletX" />
-    <meta property="og:title" content="The Store: themes inside your wallet" />
-    <meta property="og:description" content="Shops and departments inside bWalletX. NPG, NPGX and VexVoid themes, $1 each, paid in BSV, yours to keep." />
-    <meta property="og:image" content="https://bwalletx.com/og-store-v1.png" />
+    <meta property="og:title" content="Start your store in bWalletX" />
+    <meta property="og:description" content="Your banner, your logo, your items, inside everyone's wallet. NFTs, themes made from your art, items for your own game. Paid in BSV." />
+    <meta property="og:image" content="https://bwalletx.com/og-store-v2.png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
-    <meta property="og:image:alt" content="The Store: themes inside your wallet, $1 each. Four demo wallet screens fanned out in the NPG pink, NPGX red, VexVoid black and white, and Pink paper themes." />
+    <meta property="og:image:alt" content="Start your store: a phone showing the Ninja Punk Girls shop in bWalletX, with its pink banner, logo, departments and items, beside the words Your shop, inside everyone's wallet." />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@bWalletX" />
-    <meta name="twitter:title" content="The Store: themes inside your wallet" />
-    <meta name="twitter:description" content="Shops and departments inside bWalletX. NPG, NPGX and VexVoid themes, $1 each, paid in BSV, yours to keep." />
-    <meta name="twitter:image" content="https://bwalletx.com/og-store-v1.png" />
+    <meta name="twitter:title" content="Start your store in bWalletX" />
+    <meta name="twitter:description" content="Your banner, your logo, your items, inside everyone's wallet. NFTs, themes made from your art, items for your own game. Paid in BSV." />
+    <meta name="twitter:image" content="https://bwalletx.com/og-store-v2.png" />
+    <meta name="theme-color" content="#0b0b0d" />
     <link rel="icon" href="/favicon.ico" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="/styles.css" />
-    <link rel="stylesheet" href="/store-media/phone.css" />
-    <style>
-      .st { max-width: 1040px; }
-      .st h1 { font-size: clamp(2.4rem, 7vw, 4.2rem); margin: 18px 0 10px; }
-      .st h2 { margin: 64px 0 10px; font-size: clamp(1.6rem, 4vw, 2.3rem); }
-      .st p, .st li { line-height: 1.7; }
-      .st .lede { max-width: 40em; }
-      .st .small { color: #8a8a86; font-size: 0.85rem; }
-      .st .row { display: flex; gap: 12px; flex-wrap: wrap; margin: 26px 0; }
-      .st .row .btn { text-decoration: none; }
-      .phones { display: flex; gap: 22px; overflow-x: auto; padding: 20px 4px 18px; margin: 10px -4px 0; scroll-snap-type: x mandatory; }
-      .phones figure { margin: 0; scroll-snap-align: start; display: flex; flex-direction: column; align-items: center; gap: 12px; }
-      .phones figcaption { font: 600 0.95rem var(--hf); text-align: center; }
-      .phones figcaption small { display: block; font: 400 0.8rem var(--bf); color: var(--muted); }
-      .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 280px), 1fr)); gap: 14px; margin: 18px 0; }
-      .shop { background: #101114; border: 1px solid #ffffff14; border-radius: 18px; overflow: hidden; min-width: 0; }
-      .shop .ban { height: 92px; position: relative; }
-      .shop .logo { position: absolute; left: 16px; bottom: -26px; width: 56px; height: 56px; border-radius: 14px; background: #000 center/cover; box-shadow: 0 0 0 3px #101114; }
-      .shop .in { padding: 34px 16px 16px; }
-      .shop h3 { margin: 0 0 4px; font-size: 1.1rem; }
-      .shop p { margin: 0 0 10px; color: #a7adb8; font-size: 0.92rem; line-height: 1.5; }
-      .shop .item { display: flex; justify-content: space-between; border-top: 1px solid #ffffff12; padding-top: 10px; font-size: 0.92rem; }
-      .shop .item b { color: var(--gold-hi); }
-      .deps { list-style: none; padding: 0; margin: 18px 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr)); gap: 0 28px; }
-      .deps li { padding: 11px 0; border-bottom: 1px solid #ffffff10; }
-      .manifest { background: #0d0e11; border: 1px solid #F5B80055; border-radius: 20px; padding: 6px 22px 18px; margin: 18px 0; }
-      .manifest h3 { margin: 22px 0 6px; font-size: 1.05rem; color: var(--gold-hi); }
-      .manifest ul { margin: 0; padding-left: 1.1em; }
-      .manifest li { margin: 4px 0; }
-      .feat { list-style: none; padding: 0; margin: 18px 0; }
-      .feat li { display: flex; gap: 12px; align-items: baseline; padding: 12px 0; border-bottom: 1px solid #ffffff10; }
-      .tag { flex: none; font-size: 0.75rem; font-weight: 700; padding: 2px 9px; border-radius: 999px; }
-      .tag.live { background: #F5B800; color: #000; }
-      .tag.soon { border: 1px solid #ffffff40; color: #a7adb8; }
-      .faq dt { font: 600 1.05rem var(--hf); margin-top: 22px; }
-      .faq dd { margin: 6px 0 0; color: #cfcbc0; }
-      .soonbox { display: inline-block; border: 1px dashed #ffffff40; color: #a7adb8; border-radius: 999px; padding: 4px 12px; font-size: .85rem; font-weight: 600; }
-    </style>
+    <link rel="stylesheet" href="/store-media/store.css" />
+    <script src="https://cdn.jsdelivr.net/npm/@bwalletx/connect@0.2.0/dist/bwalletx-connect.global.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcode-generator/1.4.4/qrcode.min.js" defer></script>
   </head>
   <body>
     <div class="beta-banner">bWalletX is in <strong>beta</strong>: test with small amounts.</div>
@@ -76,101 +42,265 @@
       </div>
     </header>
     <script src="/nav.js"></script>
-    <main class="ext st">
-      <h1>The Store. <span class="gold">Inside your wallet.</span></h1>
-      <p class="lede">Themes and digital goods, inside your wallet. Paid in BSV, yours to keep. Open it from Exchange &rsaquo; Store in bWalletX.</p>
-      <div class="row"><a class="btn btn-store" href="https://web.bwalletx.com" target="_blank" rel="noopener">Open bWalletX</a><a class="btn btn-ghost" href="/download">Get bWalletX</a></div>
 
-      <div class="phones" aria-label="Demo wallet screens in five themes">
-        <figure><div class="ph npg" data-art="icon-npg-512.png"></div><figcaption>NPG &middot; $1<small>Ninja Punk Girls</small></figcaption></figure>
-        <figure><div class="ph npgx" data-art="icon-npgx-512.png"></div><figcaption>NPGX &middot; $1<small>NPGX</small></figcaption></figure>
-        <figure><div class="ph vexvoid" data-art="icon-vexvoid-512.png"></div><figcaption>VexVoid &middot; $1<small>VexVoid</small></figcaption></figure>
-        <figure><div class="ph pink"></div><figcaption>Pink paper<small>Free theme</small></figcaption></figure>
-        <figure><div class="ph blue"></div><figcaption>Blue paper<small>Free theme</small></figcaption></figure>
-      </div>
-      <p class="small">Demo screens with made-up numbers. Free themes (Gold, White, Pink, Blue, Yellow, Mono, Duo, Tri and more) stay free in Wallet &rsaquo; &#9776; &rsaquo; Theme.</p>
+    <main class="ext sx">
+      <section class="sx-hero">
+        <div class="hero-copy">
+          <p class="kick">The Store &middot; inside bWalletX</p>
+          <h1>Your shop.<br /><span class="gold">Inside everyone&rsquo;s wallet.</span></h1>
+          <p class="lede">A bWalletX store is a shop front that lives inside the wallet itself. Your banner, your logo, your things for sale, one tap away for everyone who opens the Store. People pay you in BSV with one approval, and what they buy is theirs to keep.</p>
+          <div class="row">
+            <a class="btn btn-store" href="#start">Start your store</a>
+            <a class="btn btn-ghost" href="#look">See what a store looks like</a>
+          </div>
+          <p class="small">Free to start. Shops open after b has had a look. <a href="#status">What&rsquo;s live today</a></p>
+        </div>
+        <div class="hero-phone" aria-hidden="true">
+          <div class="sp" style="--acc:#FF2E93;--bg:#000;--sf:#12060d;--ln:#4a1834;--mu:#e0b3cb">
+            <div class="sp-scr">
+              <div class="sp-top"><span class="sp-back">&lsaquo; Store</span></div>
+              <div class="sp-ban" style="background-image:url(/store-media/npg-banner.webp)"></div>
+              <div class="sp-head"><img src="/store-media/icon-npg-512.png" alt="" /><div><b>Ninja Punk Girls</b><span>Themes and art from the NPG universe</span></div></div>
+              <div class="sp-chips"><span class="on">Themes</span><span>NFTs</span><span>Games</span><span>Art</span></div>
+              <div class="sp-grid">
+                <div class="sp-item"><i style="background:linear-gradient(135deg,#000 30%,#FF2E93)"></i><b>NPG theme</b><span>$1</span></div>
+                <div class="sp-item"><i style="background:center/cover url(/relayx/npg-2709-card.webp)"></i><b>NPG card #2709</b><span>NFT</span></div>
+                <div class="sp-item"><i style="background:center/cover url(/relayx/npg-2730-card.webp)"></i><b>Card theme</b><span>From your NFT</span></div>
+                <div class="sp-item"><i class="car"></i><b>NPG Racer car</b><span>Game item</span></div>
+              </div>
+            </div>
+          </div>
+          <p class="cap">Mock-up of a shop in the Store. Only the NPG theme is on sale today.</p>
+        </div>
+      </section>
 
-      <h2>How it works</h2>
-      <p>The Store is a mall. Each <b>shop</b> has its own banner, logo and items. Each item also sits in a <b>department</b>, so you can browse by shop or by kind of thing. Pick an item, approve one payment sheet, and it&rsquo;s yours. A theme switches on straight away and stays yours to keep. The first sale went through on 17 October 2026.</p>
-      <p class="small">The Store is in bWalletX (web, Chrome extension, Android and iPhone). It is not in the App Store and Google Play edition, bWallet.</p>
+      <section>
+        <h2>What a bWalletX store is</h2>
+        <p class="lede">Think of the Store as a small shopping centre inside the wallet. Every shop has its own front. Every item also sits in a department, so people can browse by shop (&ldquo;Ninja Punk Girls&rdquo;) or by kind of thing (&ldquo;Themes&rdquo;).</p>
+        <div class="three">
+          <div class="card"><b>It&rsquo;s where your buyers already are.</b><p>No new app to download and no account to make. People who use bWalletX open Exchange &rsaquo; Store and your shop is there, next to the others.</p></div>
+          <div class="card"><b>Paying takes one tap.</b><p>A buyer sees one sheet with the price and taps Allow. No card numbers and no checkout form. The money is BSV, straight from their wallet.</p></div>
+          <div class="card"><b>What they buy stays with them.</b><p>A theme stays theirs to switch on whenever they like. An NFT sits in their wallet&rsquo;s NFTs tab. Each sale also comes with a signed receipt.</p></div>
+        </div>
+      </section>
 
-      <h2>Shops</h2>
-      <div class="grid">
-        <div class="shop"><div class="ban" style="background:linear-gradient(120deg,#000 30%,#FF2E93)"><div class="logo" style="background-image:url(/store-media/icon-npg-512.png)"></div></div><div class="in"><h3>Ninja Punk Girls</h3><p>Hot-pink neon on black, with NPG card art.</p><div class="item"><span>NPG theme</span><b>$1</b></div></div></div>
-        <div class="shop"><div class="ban" style="background:linear-gradient(120deg,#000 30%,#FF2D3A)"><div class="logo" style="background-image:url(/store-media/icon-npgx-512.png)"></div></div><div class="in"><h3>NPGX</h3><p>Black and red, with the NPGX logo on your card.</p><div class="item"><span>NPGX theme</span><b>$1</b></div></div></div>
-        <div class="shop"><div class="ban" style="background:center/cover no-repeat url(/store-media/vexvoid-cover.jpg),#000"><div class="logo" style="background-image:url(/store-media/vexvoid-cover.jpg)"></div></div><div class="in"><h3>VexVoid</h3><p>White ink on black, with a point field on the card.</p><div class="item"><span>VexVoid theme</span><b>$1</b></div></div></div>
-      </div>
-      <p>These three editions are now only available by buying them in the Store; they are no longer free in the Theme picker.</p>
+      <section id="look">
+        <h2>What a store looks like</h2>
+        <p>Every shop is built the same way, so buyers always know where to look. You fill in five things and the Store does the rest.</p>
+        <div class="anat">
+          <div class="sp big" style="--acc:#FF2E93;--bg:#000;--sf:#12060d;--ln:#4a1834;--mu:#e0b3cb" aria-hidden="true">
+            <div class="sp-scr">
+              <div class="sp-top"><span class="sp-back">&lsaquo; Store</span></div>
+              <div class="sp-ban" style="background-image:url(/store-media/npg-banner.webp)"><em class="pin">1</em></div>
+              <div class="sp-head"><img src="/store-media/icon-npg-512.png" alt="" /><em class="pin p2">2</em><div><b>Ninja Punk Girls</b><span>Themes and art from the NPG universe</span></div><em class="pin p3">3</em></div>
+              <div class="sp-chips"><span class="on">Themes</span><span>NFTs</span><span>Games</span><em class="pin">4</em></div>
+              <div class="sp-grid">
+                <div class="sp-item"><i style="background:linear-gradient(135deg,#000 30%,#FF2E93)"></i><b>NPG theme</b><span>$1</span></div>
+                <div class="sp-item"><i style="background:center/cover url(/relayx/npg-2710-card.webp)"></i><b>NPG card</b><span>NFT</span><em class="pin">5</em></div>
+              </div>
+            </div>
+          </div>
+          <ol class="parts">
+            <li><b>Banner.</b> The wide picture across the top, 1500 &times; 500. Your art, your scene, your mood.</li>
+            <li><b>Logo.</b> A square, 512 &times; 512. It also shows on your shop&rsquo;s tile in the Store and on your buyers&rsquo; receipts.</li>
+            <li><b>Shop name and a line about you.</b> Up to 40 characters for the name, a sentence or two for the rest.</li>
+            <li><b>Departments.</b> Themes, NFTs, game items, art, music and more. Your items show under your shop and in the matching department.</li>
+            <li><b>Items.</b> Each one has a picture, a title, a short description and a price in dollars. Buyers pay the same value in BSV.</li>
+          </ol>
+        </div>
+        <p class="small">Your shop also gets its own web address, <code>bwalletx.com/shop/your-name</code>. You pick the name when you start.</p>
 
-      <h2>Departments</h2>
-      <ul class="deps">
-        <li><b>Themes.</b> App colours and card art for your wallet.</li>
-        <li><b>Subscriptions.</b> Regular access to apps, rooms and services.</li>
-        <li><b>Stickers &amp; emoji.</b> Packs to use in chat and posts.</li>
-        <li><b>Art &amp; editions.</b> Pictures and numbered editions.</li>
-        <li><b>Music &amp; video.</b> Tracks, albums, films and clips.</li>
-        <li><b>Courses &amp; books.</b> Things to read and learn from.</li>
-        <li><b>Rooms &amp; memberships.</b> Entry to token rooms and clubs.</li>
-        <li><b>Services.</b> Work done for you by people or agents.</li>
-      </ul>
-      <p class="small">Today the Themes department has items; the others fill up as shops open.</p>
+        <h3 class="sub">In the Store, your shop sits with the others</h3>
+        <div class="mall">
+          <div class="tile"><span class="tb" style="background:center/cover url(/store-media/npg-banner.webp)"></span><span class="tl"><img src="/store-media/icon-npg-512.png" alt="" /><span><b>Ninja Punk Girls</b><small>Themes and art from the NPG universe</small></span></span></div>
+          <div class="tile"><span class="tb" style="background:center/contain no-repeat url(/store-media/icon-npgx-512.png),#000"></span><span class="tl"><img src="/store-media/icon-npgx-512.png" alt="" /><span><b>NPGX</b><small>Black and red</small></span></span></div>
+          <div class="tile"><span class="tb" style="background:center/cover url(/store-media/vexvoid-cover.jpg)"></span><span class="tl"><img src="/store-media/vexvoid-cover.jpg" alt="" /><span><b>VexVoid</b><small>White ink on true black</small></span></span></div>
+          <div class="tile you"><span class="tb"></span><span class="tl"><i></i><span><b>Your shop</b><small>Right here, next</small></span></span></div>
+        </div>
+      </section>
 
-      <h2 id="sell">Sell in the Store</h2>
-      <p><span class="soonbox">Coming &middot; shops open soon</span></p>
-      <p>You will be able to open your own shop. Here is what you&rsquo;ll need, so you can get ready now.</p>
-      <div class="manifest">
-        <h3>What you can sell</h3>
-        <ul>
-          <li>Anything that fits a department: themes, subscriptions, stickers and emoji, art and editions, music and video, courses and books, rooms and memberships, services.</li>
+      <section>
+        <h2>Who it&rsquo;s for</h2>
+        <ul class="who">
+          <li><b>NFT collections.</b> You already have the art and the fans. Give them somewhere to buy, and something to do with what they own.</li>
+          <li><b>Artists and illustrators.</b> Sell your pictures, and themes made from them, so fans carry your work on their phone.</li>
+          <li><b>Musicians and film makers.</b> Tracks, albums, clips, and a look for the wallet to match.</li>
+          <li><b>Game makers.</b> Sell the cars, skins and extras for your game where your players keep their money.</li>
+          <li><b>Brands and communities.</b> One place for your members to pick up the official look and the good stuff.</li>
         </ul>
-        <h3>What a good shop needs</h3>
-        <ul>
-          <li>A shop name.</li>
-          <li>A logo: 512 &times; 512 PNG.</li>
-          <li>A banner: 1500 &times; 500.</li>
-          <li>A short blurb about you or your shop.</li>
-          <li>At least 3 products, each with a title, a 1&ndash;2 line description, a price in $ and a preview image.</li>
-          <li>For a theme: its colours (accent, background, surface, text) and the card art.</li>
-        </ul>
-        <h3>Rules</h3>
-        <ul>
-          <li>Digital goods only.</li>
-          <li>Your own work, or work you have the rights to sell.</li>
-          <li>No pretending to be a brand or person you are not.</li>
-          <li>b reviews every shop and every listing before it goes live.</li>
-        </ul>
-        <h3>Money</h3>
-        <ul>
-          <li>Buyers pay in BSV from their wallet.</li>
-          <li>80% to the seller, 20% to the Store.</li>
-          <li>Your share is paid to your bWalletX.</li>
-        </ul>
-      </div>
+      </section>
 
-      <h2>Status</h2>
-      <ul class="feat">
-        <li><span class="tag live">&#10003; Live</span><span><b>The Store</b> in bWalletX: Exchange &rsaquo; Store, with shops and departments.</span></li>
-        <li><span class="tag live">&#10003; Live</span><span><b>NPG, NPGX and VexVoid themes</b>, $1 each, paid in BSV with one approval, yours to keep.</span></li>
-        <li><span class="tag live">&#10003; Live</span><span><b>Free built-in themes</b> in Wallet &rsaquo; &#9776; &rsaquo; Theme.</span></li>
-        <li><span class="tag soon">&#9723; Coming</span><span><b>Open your own shop</b>, reviewed by b before it goes live.</span></li>
-        <li><span class="tag soon">&#9723; Coming</span><span><b>Sell your own themes.</b></span></li>
-        <li><span class="tag soon">&#9723; Coming</span><span><b>Sell other digital goods</b> in the departments, 80% to the seller.</span></li>
-      </ul>
+      <section>
+        <h2>What you can sell</h2>
+        <div class="sell">
+          <article>
+            <span class="pill soon">&#9723; Coming</span>
+            <h3>Your NFTs</h3>
+            <p>List the NFTs in your wallet and sell them from your shop. That includes old RelayX (Run) NFTs: bWalletX can already find them from your 12 words and keep them in your wallet under NFTs &rsaquo; Run. Selling them from a shop is next.</p>
+          </article>
+          <article>
+            <span class="pill soon">&#9723; Coming</span>
+            <h3>Themes made from your NFTs</h3>
+            <p>Your art becomes a theme: the app&rsquo;s colours and a card with your picture on it. Your customers switch it on and their whole wallet wears your look. It&rsquo;s the simplest way for fans to carry what they love on the phone they use every day.</p>
+          </article>
+          <article>
+            <span class="pill soon">&#9723; Coming</span>
+            <h3>Your own racing game</h3>
+            <p><a href="/games">bRacer</a> is our anti-gravity racer. A collection can have its own branded version made from it, the way we&rsquo;re making NPG Racer for Ninja Punk Girls, or enter its own team in bRacer. Your shop then sells the race cars, in your colours, to the people who play.</p>
+          </article>
+          <article>
+            <span class="pill live">&#10003; Live</span>
+            <h3>Themes, today</h3>
+            <p>The Store already sells themes: NPG, NPGX and VexVoid, $1 each, paid in BSV with one approval. Every shop will use that same checkout.</p>
+          </article>
+        </div>
+        <p>The other departments open later: subscriptions, stickers and emoji, art and editions, music and video, courses and books, rooms and memberships, and services.</p>
+      </section>
 
-      <h2>Questions</h2>
-      <dl class="faq">
-        <dt>Is a theme mine for good?</dt>
-        <dd>Yes. Pay once and it&rsquo;s yours to keep. Switch between it and the free themes whenever you like.</dd>
-        <dt>How do I pay?</dt>
-        <dd>In BSV, from your bWalletX balance. You see one sheet with the price, tap Allow, and the theme switches on.</dd>
-        <dt>Why can&rsquo;t I see the Store in bWallet?</dt>
-        <dd>The Store is in bWalletX only: web, Chrome extension, Android and iPhone. It isn&rsquo;t in the App Store and Google Play edition.</dd>
-        <dt>When can I sell?</dt>
-        <dd>Shops open soon. Get your logo, banner and three products ready using the list above.</dd>
-      </dl>
+      <section class="npg">
+        <p class="kick">Worked example</p>
+        <h2>The Ninja Punk Girls store</h2>
+        <p class="lede">Ninja Punk Girls is our own collection, so its store is being built first, one step at a time. Any collection&rsquo;s pieces fit together the same way.</p>
+        <div class="npg-in">
+          <ol class="steps">
+            <li><span class="n">1</span><div><b>The shop.</b> A pink-on-black banner, the NPG logo and a line about the universe. <span class="pill live">&#10003; Live</span></div></li>
+            <li><span class="n">2</span><div><b>The NPG theme</b> at $1. Buyers switch it on and their wallet goes neon pink. <span class="pill live">&#10003; Live</span></div></li>
+            <li><span class="n">3</span><div><b>The cards.</b> NPG holders bring their RelayX cards into bWalletX, where they show with their real card art. <span class="pill live">&#10003; Live</span> Selling them from the shop: <span class="pill soon">&#9723; Coming</span></div></li>
+            <li><span class="n">4</span><div><b>A theme from your own card.</b> Own girl #2709? Dress your wallet in her. <span class="pill soon">&#9723; Coming</span></div></li>
+            <li><span class="n">5</span><div><b>NPG Racer.</b> The NPG version of bRacer, with NPG race cars for sale in the shop. <span class="pill soon">&#9723; Coming</span></div></li>
+          </ol>
+          <div class="cards" aria-hidden="true">
+            <img src="/relayx/npg-2709-card.webp" alt="" loading="lazy" width="140" height="210" />
+            <img src="/relayx/npg-2710-card.webp" alt="" loading="lazy" width="140" height="210" />
+            <img src="/relayx/npg-2730-card.webp" alt="" loading="lazy" width="140" height="210" />
+          </div>
+        </div>
+      </section>
 
-      <div class="row"><a class="btn btn-store" href="https://web.bwalletx.com" target="_blank" rel="noopener">Open bWalletX</a><a class="btn btn-ghost" href="/themes">See all themes</a></div>
-      <p class="small">bWalletX is in beta: test with small amounts. Questions: <a href="mailto:support@bwalletx.com">support@bwalletx.com</a></p>
+      <section>
+        <h2>How the money works</h2>
+        <div class="flow" aria-label="How a sale is paid">
+          <div><b>Buyer</b><span>taps Allow on one sheet</span></div>
+          <i aria-hidden="true">&rarr;</i>
+          <div><b>BSV</b><span>for the dollar price you set</span></div>
+          <i aria-hidden="true">&rarr;</i>
+          <div class="split"><p class="you"><b>80% to you</b><span>paid to your shop&rsquo;s own bWalletX</span></p><p><b>20% to the Store</b><span>keeps the Store running</span></p></div>
+        </div>
+        <ul class="plain">
+          <li>You set prices in dollars. The buyer pays the same value in BSV at the rate on the day.</li>
+          <li>Your share goes to the wallet your shop belongs to: the one you signed in with. We don&rsquo;t hold it for you.</li>
+          <li>Every buyer gets a signed receipt with your shop&rsquo;s logo on it.</li>
+          <li>Starting a shop is free, with no monthly fee.</li>
+        </ul>
+        <p class="small">Payouts to sellers start when the first outside shops open. Today the Store sells only our own shops&rsquo; themes.</p>
+      </section>
+
+      <section id="start" class="start">
+        <p class="kick">Start your store</p>
+        <h2>Make your shop now. <span class="gold">Watch it take shape.</span></h2>
+        <p class="lede">Sign in with your wallet, fill in the basics, and see your shop as buyers will. It&rsquo;s saved as a <b>draft</b> that only you can see. When shops open in the Store, b looks it over and you go live.</p>
+
+        <div class="builder">
+          <div class="form">
+            <div class="step-h"><span class="n">1</span> Sign in</div>
+            <div id="signin-box">
+              <bwalletx-signin full-width label="continue" id="signin"></bwalletx-signin>
+              <p class="small">Uses bWalletX on this computer (the Chrome extension), or the app on your phone with a QR code. Your shop belongs to that wallet.</p>
+            </div>
+            <div id="pair-box" hidden>
+              <p>Scan this with bWalletX on your phone, or paste the link into <a href="https://web.bwalletx.com" target="_blank" rel="noopener">web.bwalletx.com</a>.</p>
+              <div id="pair-qr" class="qr"></div>
+              <p class="mono" id="pair-link"></p>
+              <p id="pair-code"></p>
+              <button type="button" class="btn btn-ghost" id="pair-cancel">Cancel</button>
+            </div>
+            <div id="who" hidden>
+              <p class="ok">Signed in as <b id="who-key"></b> <button type="button" class="link" id="signout">Sign out</button></p>
+            </div>
+            <p id="signin-msg" class="hint" role="status"></p>
+
+            <div class="step-h"><span class="n">2</span> Your shop</div>
+            <form id="shop-form" novalidate>
+              <label>Shop name<input name="name" id="f-name" maxlength="40" required placeholder="e.g. Neon Alley" autocomplete="off" /></label>
+              <label>Web address
+                <span class="addr"><span>bwalletx.com/shop/</span><input name="handle" id="f-handle" maxlength="30" required placeholder="neon-alley" autocomplete="off" spellcheck="false" autocapitalize="none" /></span>
+                <small id="handle-msg" class="hint">3&ndash;30 letters, numbers and dashes.</small>
+              </label>
+              <label>About your shop<textarea name="blurb" id="f-blurb" maxlength="280" rows="3" placeholder="One or two lines: what you make and who it&rsquo;s for."></textarea></label>
+              <div class="two">
+                <label>Logo <small>square, 512 &times; 512</small><input type="file" id="f-logo" accept="image/png,image/jpeg,image/webp" /></label>
+                <label>Banner <small>wide, 1500 &times; 500</small><input type="file" id="f-banner" accept="image/png,image/jpeg,image/webp" /></label>
+              </div>
+              <div class="two">
+                <div class="lab">Accent colour<span class="col"><input type="color" id="f-accent" value="#f5b800" aria-label="Accent colour" /><span class="sw" data-for="f-accent"><button type="button" style="--c:#f5b800" aria-label="Gold"></button><button type="button" style="--c:#ff2e93" aria-label="Pink"></button><button type="button" style="--c:#3ddc84" aria-label="Green"></button><button type="button" style="--c:#4da3ff" aria-label="Blue"></button><button type="button" style="--c:#ffffff" aria-label="White"></button></span></span></div>
+                <div class="lab">Background<span class="col"><input type="color" id="f-bg" value="#000000" aria-label="Background colour" /><span class="sw" data-for="f-bg"><button type="button" style="--c:#000000" aria-label="Black"></button><button type="button" style="--c:#12060d" aria-label="Plum"></button><button type="button" style="--c:#0b1a2e" aria-label="Navy"></button><button type="button" style="--c:#f7f6f2" aria-label="Paper"></button></span></span></div>
+              </div>
+              <div class="step-h"><span class="n">3</span> Save your draft</div>
+              <button type="submit" class="btn btn-store wide" id="save">Save draft</button>
+              <p id="save-msg" class="hint" role="status"></p>
+            </form>
+          </div>
+
+          <div class="preview">
+            <p class="pv-cap">Your shop, as buyers will see it</p>
+            <div class="sp big" id="pv">
+              <div class="sp-scr">
+                <div class="sp-top"><span class="sp-back">&lsaquo; Store</span></div>
+                <div class="sp-ban" id="pv-ban"></div>
+                <div class="sp-head"><img id="pv-logo" alt="" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" /><div><b id="pv-name">Your shop</b><span id="pv-blurb">A line about what you make.</span></div></div>
+                <div class="sp-chips"><span class="on">NFTs</span><span>Themes</span><span>Games</span></div>
+                <div class="sp-grid">
+                  <div class="sp-item ghost"><i></i><b>Your first item</b><span>$&ndash;</span></div>
+                  <div class="sp-item ghost"><i></i><b>A theme from your art</b><span>$&ndash;</span></div>
+                </div>
+              </div>
+            </div>
+            <p class="small center" id="pv-url">bwalletx.com/shop/&hellip;</p>
+          </div>
+        </div>
+        <p class="small">Your draft stays private. Adding items comes next, in the wallet. The rules: digital goods only; your own work, or work you have the rights to sell; no pretending to be a brand or person you are not.</p>
+      </section>
+
+      <section id="status">
+        <h2>Status</h2>
+        <p>What works today and what&rsquo;s still coming. We tick these off as they ship.</p>
+        <ul class="feat">
+          <li><span class="tag live">&#10003; Live</span><span><b>The Store</b> in bWalletX: Exchange &rsaquo; Store, with shops and departments.</span></li>
+          <li><span class="tag live">&#10003; Live</span><span><b>NPG, NPGX and VexVoid themes</b>, $1 each, paid in BSV with one approval, yours to keep, with a signed receipt.</span></li>
+          <li><span class="tag live">&#10003; Live</span><span><b>RelayX NFTs in bWalletX</b>: found from your 12 words and kept under NFTs &rsaquo; Run (<a href="/recover-relayx">how</a>).</span></li>
+          <li><span class="tag live">&#10003; Live</span><span><b>Shop preview</b> on this page: your banner, logo, name and colours, shown as a shop.</span></li>
+          <li><span class="tag soon">&#9723; Coming</span><span><b>Sign in and save your draft shop</b> on this page.</span></li>
+          <li><span class="tag soon">&#9723; Coming</span><span><b>Your shop opens in the Store</b>, after b has reviewed it.</span></li>
+          <li><span class="tag soon">&#9723; Coming</span><span><b>Sell your NFTs</b> from your shop, including RelayX (Run) NFTs.</span></li>
+          <li><span class="tag soon">&#9723; Coming</span><span><b>Themes made from your NFTs</b>, so your customers can dress their phones.</span></li>
+          <li><span class="tag soon">&#9723; Coming</span><span><b>A branded racing game</b> made from bRacer, or a team in bRacer, with race cars sold in your shop.</span></li>
+          <li><span class="tag soon">&#9723; Coming</span><span><b>Seller payouts</b>: 80% of each sale to your shop&rsquo;s wallet.</span></li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Questions</h2>
+        <dl class="faq">
+          <dt>What does it cost to start?</dt>
+          <dd>Nothing. When you sell something, 80% goes to you and 20% to the Store.</dd>
+          <dt>Do I need a bWalletX?</dt>
+          <dd>Yes. Your shop belongs to your wallet, and that&rsquo;s where your money arrives. <a href="/get">Get bWalletX</a> for the web, Chrome, Android or iPhone. It&rsquo;s free.</dd>
+          <dt>Who can see my draft?</dt>
+          <dd>Only you, signed in with the same wallet. Nobody else sees it until your shop opens.</dd>
+          <dt>Why does b review shops?</dt>
+          <dd>So buyers can trust what they find: real makers, no fakes, nothing pretending to be someone it isn&rsquo;t.</dd>
+          <dt>Is a theme mine for good?</dt>
+          <dd>Yes. Pay once and it&rsquo;s yours to keep. Switch between it and the free themes whenever you like.</dd>
+          <dt>Why can&rsquo;t I see the Store in bWallet?</dt>
+          <dd>The Store is in bWalletX: web, Chrome extension, Android and iPhone. It isn&rsquo;t in the App Store and Google Play edition, bWallet.</dd>
+        </dl>
+      </section>
+
+      <section class="end">
+        <h2>Less noise. More life. <span class="gold">Just b.</span></h2>
+        <div class="row center"><a class="btn btn-store" href="#start">Start your store</a><a class="btn btn-ghost" href="https://web.bwalletx.com" target="_blank" rel="noopener">Open the Store in bWalletX</a></div>
+        <p class="small">bWalletX is in beta: test with small amounts. Questions: <a href="mailto:support@bwalletx.com">support@bwalletx.com</a></p>
+      </section>
     </main>
     <footer class="foot">
       <div class="wrap foot-in">
@@ -179,6 +309,6 @@
         <p><a href="https://x.com/bWalletX" target="_blank" rel="noopener">@bWalletX on X</a> · <a href="https://bwalletx.com/twetch" target="_blank" rel="noopener">Twetch</a> · <a href="https://www.bchatx.com/u/bwalletx" target="_blank" rel="noopener">bChatX</a> · <a href="/privacy.html">Privacy policy</a></p>
       </div>
     </footer>
-    <script src="/store-media/phone.js"></script>
+    <script src="/store-media/store-start.js" defer></script>
   </body>
 </html>
