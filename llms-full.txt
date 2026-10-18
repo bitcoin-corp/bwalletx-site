@@ -953,9 +953,11 @@ Source: https://bwalletx.com/buy
 
 Open the wallet and the gold Buy BSV card is right at the top, with today’s price. Tap it to buy with a card or bank, or to receive BSV from an exchange or a friend.
 
-Buy BSV$20.26 per BSV
+Buy BSVLoading price…
 
-The price on the card is live and updates every minute. You’ll also find the card under the BSV price chart, and a Get BSV button on your BSV row while it’s empty.
+BSV price from WhatsOnChain, the same source the wallet uses.
+
+In the wallet, the card’s price updates every minute. You’ll also find the card under the BSV price chart, and a Get BSV button on your BSV row while it’s empty.
 
 [Get bWalletX](https://bwalletx.com/get)
 
@@ -987,25 +989,29 @@ Share your $name or paymail. They send to it and it arrives in seconds.
 
 Pick a provider in the sheet. It opens in the wallet’s browser. Copy your address from Receive and paste it there.
 
-The card and bank providers in the sheet today:
-
-- Ramp · Apple Pay, Google Pay, card or bank
-
-- BSV Association · buy page run by the BSV Association
-
-- Guardarian · card or bank transfer
+The card providers in the sheet today:
 
 - ChangeNOW · card, many currencies
 
 - Alchemy Pay · card, Apple Pay, Google Pay
 
-- Onramper · compares several card providers
+These open the provider’s own website. Whether you can buy depends on where you live: from the UK on 18 October 2026, Alchemy Pay said it isn’t available to UK users, and ChangeNOW’s page didn’t give a dollar price for BSV. Receiving BSV from an exchange or a friend works everywhere.
 
-- cex.io · card; needs an exchange account
+## Status
+
+- ✓ Live · receive BSV from an exchange, another wallet or a friend
+
+- ✓ Live · Buy BSV card with today’s price, opening the Get BSV sheet
+
+- ✓ Live · [swap other coins into BSV](https://bwalletx.com/swap) with ChangeNOW (bWalletX, not the store edition)
+
+- ◻ Coming · buy with card, Apple Pay or bank inside the app with Ramp, your address filled in. Waiting for Ramp to approve us
+
+- ◻ Coming · card buying that works in every country we serve, including the UK
 
 ### Good to know
 
-These providers are independent companies, not bWalletX. They check your ID and set their own fees and limits, and what’s on offer depends on where you live. bWalletX never holds your money: you pay the provider, and the BSV goes straight to your own wallet. We’re working on buying with Ramp fully inside the app, with your address filled in for you. It isn’t live yet.
+These providers are independent companies, not bWalletX. They check your ID and set their own fees and limits. bWalletX never holds your money: you pay the provider, and the BSV goes straight to your own wallet.
 
 ## What can I do with BSV?
 
@@ -1512,9 +1518,9 @@ Top up credits for bCorp apps from the Wallet tab.
 
 Claim `yourname@bwalletx.com` and receive to it.
 
-### Verified X and Google namesbWalletX
+### Sign in with X or GooglebWalletX
 
-Sign in with X or Google for a verified `name.x` or `name.gmail`, with your photo.
+Sign in with X or Google to verify it’s you and bring your photo. You choose your own handle.
 
 ### Every name visible
 
@@ -5434,7 +5440,7 @@ Signing documents and contracts is on [/sign](https://bwalletx.com/sign).
 
 - LiveSign in with bWalletX. Apps can let you sign in with your wallet instead of a password. Your wallet signs a one-time challenge; no password or email is shared. For developers: [/connect](https://bwalletx.com/connect).
 
-- LiveSign in with X. Get a verified name from your X account, with your photo: [/x](https://bwalletx.com/x).
+- LiveSign in with X or Google. Verify it’s you and bring your photo; you still choose your own handle: [/x](https://bwalletx.com/x), [/gmail](https://bwalletx.com/gmail).
 
 bWalletX is in beta: test with small amounts. Questions: [support@bwalletx.com](mailto:support@bwalletx.com)
 
@@ -6646,17 +6652,17 @@ A wallet has one main name. It can keep older names that still receive, and Sett
 
 ## 2. Sign in with X or Google
 
-Prove who you are, and your name is verified:
+Signing in proves the account is yours. It doesn't give you a name: you choose your own handle.
 
-### X → `yourhandle.x@bwalletx.com`
+### X
 
-Sign in with X and you get your exact X username, marked as verified. Nobody else can claim it.
+Sign in with X to verify it's you and bring your X picture. Your @name is suggested when you choose your handle; you can change it.
 
-### Google → `yourname.gmail@bwalletx.com`
+### Google
 
-Sign in with a Gmail address and you get a matching verified name.
+Sign in with Google to verify it's you and bring your Google picture. Your email address is never turned into a name.
 
-Your X or Google profile picture becomes your wallet's picture too. bWalletX never sees your X or Google password, and your keys never leave your device. If a wallet has a verified name, that name is its main name, token and room. Want a different identity? Add another account.
+Your X or Google profile picture becomes your wallet's picture too. bWalletX never sees your X or Google password, and your keys never leave your device. Older `.x` and `.gmail` names still receive, but new ones aren't given out.
 
 ## 3. Tokenised handles
 
@@ -6692,13 +6698,13 @@ bWalletX is in beta and some room rules are still being rolled out. Tokens can l
 
 Source: https://bwalletx.com/gmail
 
-# Sign in with Gmail
+# Sign in with Google
 
-Make a bWalletX wallet with your Gmail account and it comes with a verified name. People pay you at it, hold it as a token and use it to get into your chat room.
+Connect your Google account to bWalletX to show it's really you. Your wallet gets a Google badge and your Google picture. You choose your own handle, and your email address never becomes part of it.
 
-you@gmail.com→
-you.gmail@bwalletx.com→
-$YOU.GMAIL
+Google account→
+Google badge + photo→
+yourname@bwalletx.com
 
 ## How to do it
 
@@ -6706,47 +6712,50 @@ $YOU.GMAIL
 
 - Tap Create account, then Continue with Google.
 
-- Pick your Gmail account on Google's own sign-in page.
+- Pick your account on Google's own sign-in page.
 
-- Back in bWalletX, your name and picture are filled in. Choose a password and save your 12-word recovery phrase.
+- Back in bWalletX, your picture is filled in. Choose a password and save your 12-word recovery phrase.
 
-- Claim `yourname.gmail@bwalletx.com`. It's free.
+- Choose your handle. It's free.
 
-Already have a wallet? Use Restore with your 12 words and Continue with Google to bring the same name back.
+Already have a wallet? Go to Settings › Identity › Connect X or Google. Your handle stays as it is.
 
 ## Your name
 
-Your name comes from your Gmail address. Dots don't count and anything after a `+` is ignored, the same way Gmail treats them.
+Signing in with Google doesn't make a name for you. Your handle is a plain `yourname@bwalletx.com` that you choose. We stopped making names from Gmail addresses because they showed your email address to anyone who saw the name.
 
-jane.doe@gmail.com`janedoe.gmail@bwalletx.com`
-
-janedoe+shop@gmail.com`janedoe.gmail@bwalletx.com`
-
-jane_doe@googlemail.com`jane-doe.gmail@bwalletx.com`
-
-Only `@gmail.com` and `@googlemail.com` addresses get a `.gmail` name, because only Google can prove who owns them. Work or school Google accounts can still sign in, then pick an ordinary name.
+Older `yourname.gmail@bwalletx.com` names, made before October 2026, keep receiving, and the app hides most of the name where others can see it. New ones aren't given out.
 
 ## What you get
 
-### A verified paymail
+### A Google badge
 
-People send you BSV, tokens and messages at `yourname.gmail@bwalletx.com`. It's marked verified, and nobody else can claim it.
-
-### Your own token and room
-
-Turn the name into $YOURNAME.GMAIL, a BSV-21 token with your Google picture as its icon. Hold the token, join your room.
+Your listing shows that a Google account is linked, so people know a real account stands behind your wallet.
 
 ### Your picture
 
 Your Google profile picture becomes your wallet's picture, so friends recognise you in chats, calls and payments.
 
+### Your own token and room
+
+Turn your handle into $YOURNAME, a BSV-21 token with your picture as its icon. Hold the token, join your room.
+
 ## What Google shares
 
 bWalletX asks Google for three things only: your email address, your name and your profile picture. It never sees your Google password and can't read your email, contacts or files. Your wallet's keys are made on your device and never leave it; Google has nothing to do with them.
 
-Signing in with Google proves the name. Your 12-word recovery phrase is still the only way to get your money back, so keep it safe.
+Your 12-word recovery phrase is still the only way to get your money back, so keep it safe.
+
+## Status
+
+- LiveContinue with Google on Create account, and Connect Google in Settings › Identity.
+
+- LiveGoogle picture and badge on your wallet and listing.
+
+- LiveNo email in your name. New Gmail-based names are no longer given out.
 
 [Get bWalletX](https://bwalletx.com/get)
+[Sign in with X](https://bwalletx.com/x)
 [Social in bWalletX](https://bwalletx.com/social)
 [Privacy](https://bwalletx.com/privacy)
 
@@ -6862,17 +6871,17 @@ A wallet has one main name. It can keep older names that still receive, and Sett
 
 ## 2. Sign in with X or Google
 
-Prove who you are, and your name is verified:
+Signing in with X or Google proves the account is yours and brings your photo. It doesn't give you a name: you choose your own handle, a plain `yourname@bwalletx.com`.
 
-### X → `yourhandle.x@bwalletx.com`
+### X
 
-Sign in with X and you get your exact X username, marked as verified. Nobody else can claim it. [How X sign-in works](https://bwalletx.com/x).
+Your wallet shows an X badge and your X picture. Your X @name is filled in as a suggestion when you choose your handle; keep it or change it. [How X sign-in works](https://bwalletx.com/x).
 
-### Google → `yourname.gmail@bwalletx.com`
+### Google
 
-Sign in with a Gmail address and you get a matching verified name. [How Gmail sign-in works](https://bwalletx.com/gmail).
+Your wallet shows a Google badge and your Google picture. Nothing is made from your email address, so it never appears in your name. [How Google sign-in works](https://bwalletx.com/gmail).
 
-Your X or Google profile picture becomes your wallet's picture too. bWalletX never sees your X or Google password, and your keys never leave your device. If a wallet has a verified name, that name is its main name, token and room. Want a different identity? Add another account.
+bWalletX never sees your X or Google password, and your keys never leave your device. Older `.x` and `.gmail` names made before October 2026 still receive, but new ones aren't given out.
 
 ## 3. Tokenised handles
 
@@ -6918,11 +6927,11 @@ Source: https://bwalletx.com/x
 
 # Sign in with X
 
-Make a bWalletX wallet with your X account and it comes with a verified name: your X username. People pay you at it, hold it as a token and use it to get into your chat room.
+Connect your X account to bWalletX to show it's really you. Your wallet gets an X badge and your X picture, and your @name is offered as a suggestion when you choose your handle. You pick the name.
 
 @yourhandle→
-yourhandle.x@bwalletx.com→
-$YOURHANDLE
+X badge + photo→
+yourname@bwalletx.com
 
 ## How to do it
 
@@ -6932,52 +6941,48 @@ $YOURHANDLE
 
 - Sign in on X's own page and allow access.
 
-- Back in bWalletX, your @handle and picture are filled in. Choose a password and save your 12-word recovery phrase.
+- Back in bWalletX, your picture is filled in. Choose a password and save your 12-word recovery phrase.
 
-- Claim `yourhandle.x@bwalletx.com`. It's free.
+- Choose your handle. Your X @name is filled in as a suggestion; keep it or type another. It's free.
 
-Already have a wallet? Go to Settings › Identity › Connect X or Google. The verified name becomes your wallet's main name, and your older name still receives.
-
-Moving to a new phone? Use Restore with your 12 words and Continue with X to bring the same name back. If the 12 words belong to a different wallet, bWalletX says so and stops, so your name can't end up on the wrong wallet.
+Already have a wallet? Go to Settings › Identity › Connect X or Google. Your handle stays as it is.
 
 ## Your name
 
-Your name is your X username in lower case, with `.x` on the end. X allows underscores in usernames and paymail names don't, so an underscore becomes a hyphen.
+Signing in with X doesn't make a name for you. Your handle is a plain `yourname@bwalletx.com` that you choose, the same as everyone else's. X allows underscores in usernames and paymail names don't, so a suggested `@Jane_Doe` becomes `jane-doe`.
 
-@alice`alice.x@bwalletx.com`
-
-@Jane_Doe`jane-doe.x@bwalletx.com`
-
-One X account gets one name, held by one wallet. If you change your X username later, the name you claimed stays as it was.
+Older `yourhandle.x@bwalletx.com` names, made before October 2026, keep receiving. New ones aren't given out.
 
 ## What you get
 
-### A verified paymail
+### An X badge
 
-People send you BSV, tokens and messages at `yourhandle.x@bwalletx.com`. It's marked verified, and nobody else can claim it, because only the owner of the X account can sign in as it.
-
-### Your own token and room
-
-Turn the name into $YOURHANDLE, a BSV-21 token with your X picture as its icon. Hold the token, join your room. In Exchange › Friends it's listed with your x.com link and a tick.
+Your listing shows that the X account is linked, so people can tell your wallet belongs to the person they follow.
 
 ### Your picture
 
 Your X profile picture becomes your wallet's picture, so friends recognise you in chats, calls and payments.
 
-## How it differs from Gmail
+### Your own token and room
 
-It works the same way as [Sign in with Gmail](https://bwalletx.com/gmail), with two differences. X doesn't give us an email address, so your name comes from your username, not an address. And any X account can get a `.x` name, where only `@gmail.com` addresses get a `.gmail` one.
-
-A wallet holds one verified name. If it already has a `.gmail` name, add another account for your `.x` one.
+Turn your handle into $YOURNAME, a BSV-21 token with your picture as its icon. Hold the token, join your room.
 
 ## What X shares
 
 bWalletX reads three things from X: your username, your display name and your profile picture. It never sees your X password, can't post for you and doesn't read your messages. Your wallet's keys are made on your device and never leave it; X has nothing to do with them.
 
-Signing in with X proves the name. Your 12-word recovery phrase is still the only way to get your money back, so keep it safe.
+Your 12-word recovery phrase is still the only way to get your money back, so keep it safe.
+
+## Status
+
+- LiveContinue with X on Create account, and Connect X in Settings › Identity.
+
+- LiveX picture and badge on your wallet and listing.
+
+- Live@name suggested when you choose your handle.
 
 [Get bWalletX](https://bwalletx.com/get)
-[Sign in with Gmail](https://bwalletx.com/gmail)
+[Sign in with Google](https://bwalletx.com/gmail)
 [Social in bWalletX](https://bwalletx.com/social)
 [Privacy](https://bwalletx.com/privacy)
 

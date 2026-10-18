@@ -98,8 +98,8 @@ Full text of every page below: https://bwalletx.com/llms-full.txt
 - [bWallet Lounge on bChat](https://bwalletx.com/lounge): The bWallet Lounge is where bWallet and bWalletX people talk: questions, ideas, and the team is there. Type /b to ask the $b assistant any time. Open to everyone.
 - [Live in bWalletX](https://bwalletx.com/live): Your token is your ticket. Holders get into your room in bWalletX and watch you live. What works today in bChat and the wallet, and what is coming.
 - [Airdrops](https://bwalletx.com/airdrops): Airdrops: tokens and NFTs sent straight to holders. Your airdrop address, an Airdrops inbox with Keep and Hide, and the safety rules. Live since 5.1.85.
-- [Sign in with Gmail · bWalletX](https://bwalletx.com/gmail): Sign in to bWalletX with your Gmail account and get a verified name: yourname.gmail@bwalletx.com. Your paymail, your token and your chat room, with your Google picture.
-- [Sign in with X · bWalletX](https://bwalletx.com/x): Sign in to bWalletX with your X account and get a verified name: yourhandle.x@bwalletx.com. Your paymail, your token and your chat room, with your X picture.
+- [Sign in with Google · bWalletX](https://bwalletx.com/gmail): Connect your Google account to bWalletX: a Google badge and your Google picture on your wallet. You choose your own handle; your email address never becomes part of it.
+- [Sign in with X · bWalletX](https://bwalletx.com/x): Connect your X account to bWalletX: an X badge and your X picture on your wallet, and your @name suggested when you choose your own handle.
 
 ## Agents & developers
 
