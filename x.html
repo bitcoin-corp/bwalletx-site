@@ -5,21 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Sign in with X · bWalletX</title>
     <link rel="canonical" href="https://bwalletx.com/x" />
-    <meta name="description" content="Sign in to bWalletX with your X account and get a verified name: yourhandle.x@bwalletx.com. Your paymail, your token and your chat room, with your X picture." />
+    <meta name="description" content="Connect your X account to bWalletX: an X badge and your X picture on your wallet, and your @name suggested when you choose your own handle." />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://bwalletx.com/x" />
     <meta property="og:site_name" content="bWalletX" />
-    <meta property="og:title" content="Sign in with X: get yourhandle.x@bwalletx.com" />
-    <meta property="og:description" content="Sign in to bWalletX with your X account and get a verified name: yourhandle.x@bwalletx.com. Your paymail, your token and your chat room, with your X picture." />
-    <meta property="og:image" content="https://bwalletx.com/og-x-v2.png" />
+    <meta property="og:title" content="Sign in with X: verified, with your photo" />
+    <meta property="og:description" content="Connect your X account to bWalletX: an X badge and your X picture on your wallet, and your @name suggested when you choose your own handle." />
+    <meta property="og:image" content="https://bwalletx.com/og-x-v3.png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
-    <meta property="og:image:alt" content="Sign in to bWalletX with X and get yourhandle.x@bwalletx.com" />
+    <meta property="og:image:alt" content="Sign in to bWalletX with X: X badge, your photo, and you choose your handle" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@bWalletX" />
-    <meta name="twitter:title" content="Sign in with X: get yourhandle.x@bwalletx.com" />
-    <meta name="twitter:description" content="Sign in to bWalletX with your X account and get a verified name: yourhandle.x@bwalletx.com. Your paymail, your token and your chat room, with your X picture." />
-    <meta name="twitter:image" content="https://bwalletx.com/og-x-v2.png" />
+    <meta name="twitter:title" content="Sign in with X: verified, with your photo" />
+    <meta name="twitter:description" content="Connect your X account to bWalletX: an X badge and your X picture on your wallet, and your @name suggested when you choose your own handle." />
+    <meta name="twitter:image" content="https://bwalletx.com/og-x-v3.png" />
     <link rel="icon" href="/favicon.ico" />
     <link rel="stylesheet" href="/styles.css" />
     <style>
@@ -40,6 +40,10 @@
       .examples td:first-child { color: #a7adb8; }
       .ext .small { color: #8a8a86; font-size: 0.85rem; }
       .ext .row { display: flex; gap: 12px; flex-wrap: wrap; margin: 26px 0; }
+          .feat { list-style: none; padding: 0; margin: 18px 0; }
+      .feat li { display: flex; gap: 12px; align-items: baseline; padding: 12px 0; border-bottom: 1px solid #ffffff10; }
+      .tag { flex: none; font-size: 0.75rem; font-weight: 700; padding: 2px 9px; border-radius: 999px; }
+      .tag.live { background: #F5B800; color: #000; }
     </style>
   </head>
   <body>
@@ -57,11 +61,11 @@
     <main class="ext">
       <img src="/logo.svg" alt="bWalletX" width="72" height="64" />
       <h1>Sign in with X</h1>
-      <p class="lede">Make a bWalletX wallet with your X account and it comes with a verified name: your X username. People pay you at it, hold it as a token and use it to get into your chat room.</p>
+      <p class="lede">Connect your X account to bWalletX to show it's really you. Your wallet gets an X badge and your X picture, and your @name is offered as a suggestion when you choose your handle. You pick the name.</p>
       <div class="flow">
         <span class="pill">@yourhandle</span><span class="arrow">&rarr;</span>
-        <span class="pill">yourhandle.x@bwalletx.com</span><span class="arrow">&rarr;</span>
-        <span class="pill">$YOURHANDLE</span>
+        <span class="pill">X badge + photo</span><span class="arrow">&rarr;</span>
+        <span class="pill">yourname@bwalletx.com</span>
       </div>
 
       <h2>How to do it</h2>
@@ -69,36 +73,34 @@
         <li><a href="/get">Get bWalletX</a> on your phone or computer.</li>
         <li>Tap <b>Create account</b>, then <b>Continue with X</b>.</li>
         <li>Sign in on X's own page and allow access.</li>
-        <li>Back in bWalletX, your @handle and picture are filled in. Choose a password and save your 12-word recovery phrase.</li>
-        <li>Claim <code>yourhandle.x@bwalletx.com</code>. It's free.</li>
+        <li>Back in bWalletX, your picture is filled in. Choose a password and save your 12-word recovery phrase.</li>
+        <li>Choose your handle. Your X @name is filled in as a suggestion; keep it or type another. It's free.</li>
       </ol>
-      <p>Already have a wallet? Go to <b>Settings &rsaquo; Identity &rsaquo; Connect X or Google</b>. The verified name becomes your wallet's main name, and your older name still receives.</p>
-      <p>Moving to a new phone? Use <b>Restore</b> with your 12 words and <b>Continue with X</b> to bring the same name back. If the 12 words belong to a different wallet, bWalletX says so and stops, so your name can't end up on the wrong wallet.</p>
+      <p>Already have a wallet? Go to <b>Settings &rsaquo; Identity &rsaquo; Connect X or Google</b>. Your handle stays as it is.</p>
 
       <h2>Your name</h2>
-      <p>Your name is your X username in lower case, with <code>.x</code> on the end. X allows underscores in usernames and paymail names don't, so an underscore becomes a hyphen.</p>
-      <table class="examples">
-        <tr><td>@alice</td><td><code>alice.x@bwalletx.com</code></td></tr>
-        <tr><td>@Jane_Doe</td><td><code>jane-doe.x@bwalletx.com</code></td></tr>
-      </table>
-      <p>One X account gets one name, held by one wallet. If you change your X username later, the name you claimed stays as it was.</p>
+      <p>Signing in with X doesn't make a name for you. Your handle is a plain <code>yourname@bwalletx.com</code> that you choose, the same as everyone else's. X allows underscores in usernames and paymail names don't, so a suggested <code>@Jane_Doe</code> becomes <code>jane-doe</code>.</p>
+      <p>Older <code>yourhandle.x@bwalletx.com</code> names, made before October 2026, keep receiving. New ones aren't given out.</p>
 
       <h2>What you get</h2>
-      <div class="box"><h3>A verified paymail</h3><p>People send you BSV, tokens and messages at <code>yourhandle.x@bwalletx.com</code>. It's marked verified, and nobody else can claim it, because only the owner of the X account can sign in as it.</p></div>
-      <div class="box"><h3>Your own token and room</h3><p>Turn the name into <b>$YOURHANDLE</b>, a BSV-21 token with your X picture as its icon. Hold the token, join your room. In Exchange &rsaquo; Friends it's listed with your x.com link and a tick.</p></div>
+      <div class="box"><h3>An X badge</h3><p>Your listing shows that the X account is linked, so people can tell your wallet belongs to the person they follow.</p></div>
       <div class="box"><h3>Your picture</h3><p>Your X profile picture becomes your wallet's picture, so friends recognise you in chats, calls and payments.</p></div>
-
-      <h2>How it differs from Gmail</h2>
-      <p>It works the same way as <a href="/gmail">Sign in with Gmail</a>, with two differences. X doesn't give us an email address, so your name comes from your username, not an address. And any X account can get a <code>.x</code> name, where only <code>@gmail.com</code> addresses get a <code>.gmail</code> one.</p>
-      <p>A wallet holds one verified name. If it already has a <code>.gmail</code> name, add another account for your <code>.x</code> one.</p>
+      <div class="box"><h3>Your own token and room</h3><p>Turn your handle into <b>$YOURNAME</b>, a BSV-21 token with your picture as its icon. Hold the token, join your room.</p></div>
 
       <h2>What X shares</h2>
       <p>bWalletX reads three things from X: your username, your display name and your profile picture. It never sees your X password, can't post for you and doesn't read your messages. Your wallet's keys are made on your device and never leave it; X has nothing to do with them.</p>
-      <p>Signing in with X proves the name. Your 12-word recovery phrase is still the only way to get your money back, so keep it safe.</p>
+      <p>Your 12-word recovery phrase is still the only way to get your money back, so keep it safe.</p>
+
+      <h2>Status</h2>
+      <ul class="feat">
+<li><span class="tag live">Live</span><span><b>Continue with X</b> on Create account, and Connect X in Settings &rsaquo; Identity.</span></li>
+<li><span class="tag live">Live</span><span><b>X picture and badge</b> on your wallet and listing.</span></li>
+<li><span class="tag live">Live</span><span><b>@name suggested</b> when you choose your handle.</span></li>
+      </ul>
 
       <div class="row">
         <a class="btn btn-store" href="/get">Get bWalletX</a>
-        <a class="btn btn-store btn-ghost" href="/gmail">Sign in with Gmail</a>
+        <a class="btn btn-store btn-ghost" href="/gmail">Sign in with Google</a>
         <a class="btn btn-store btn-ghost" href="/social">Social in bWalletX</a>
         <a class="btn btn-store btn-ghost" href="/privacy">Privacy</a>
       </div>
