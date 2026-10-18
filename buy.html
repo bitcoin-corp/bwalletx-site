@@ -65,8 +65,9 @@
     <main class="ext">
       <h1>Buy BSV <span class="gold">in bWalletX</span></h1>
       <p class="lede">Open the wallet and the gold Buy BSV card is right at the top, with today&rsquo;s price. Tap it to buy with a card or bank, or to receive BSV from an exchange or a friend.</p>
-      <div class="buycard" aria-hidden="true"><b>Buy BSV</b><span>$20.26 <i>per BSV</i></span></div>
-      <p class="small">The price on the card is live and updates every minute. You&rsquo;ll also find the card under the BSV price chart, and a Get BSV button on your BSV row while it&rsquo;s empty.</p>
+      <div class="buycard"><b>Buy BSV</b><span id="bsv-price">Loading price&hellip;</span></div>
+      <p class="small" id="bsv-price-note">BSV price from WhatsOnChain, the same source the wallet uses.</p>
+      <p class="small">In the wallet, the card&rsquo;s price updates every minute. You&rsquo;ll also find the card under the BSV price chart, and a Get BSV button on your BSV row while it&rsquo;s empty.</p>
       <div class="row"><a class="btn btn-store" href="/get">Get bWalletX</a></div>
 
       <h2>How it works</h2>
@@ -82,18 +83,23 @@
         <div class="mcard"><svg class="mi" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg><h3>From a friend</h3><p>Share your $name or paymail. They send to it and it arrives in seconds.</p></div>
         <div class="mcard"><svg class="mi" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/></svg><h3>With a card or bank</h3><p>Pick a provider in the sheet. It opens in the wallet&rsquo;s browser. Copy your address from Receive and paste it there.</p></div>
       </div>
-      <p>The card and bank providers in the sheet today:</p>
+      <p>The card providers in the sheet today:</p>
       <ul class="plist">
-        <li><b>Ramp</b> <span>&middot; Apple Pay, Google Pay, card or bank</span></li>
-        <li><b>BSV Association</b> <span>&middot; buy page run by the BSV Association</span></li>
-        <li><b>Guardarian</b> <span>&middot; card or bank transfer</span></li>
         <li><b>ChangeNOW</b> <span>&middot; card, many currencies</span></li>
         <li><b>Alchemy Pay</b> <span>&middot; card, Apple Pay, Google Pay</span></li>
-        <li><b>Onramper</b> <span>&middot; compares several card providers</span></li>
-        <li><b>cex.io</b> <span>&middot; card; needs an exchange account</span></li>
+      </ul>
+      <p class="small">These open the provider&rsquo;s own website. Whether you can buy depends on where you live: from the UK on 18 October 2026, Alchemy Pay said it isn&rsquo;t available to UK users, and ChangeNOW&rsquo;s page didn&rsquo;t give a dollar price for BSV. Receiving BSV from an exchange or a friend works everywhere.</p>
+
+      <h2>Status</h2>
+      <ul class="plist">
+        <li><b>&#10003; Live</b> <span>&middot; receive BSV from an exchange, another wallet or a friend</span></li>
+        <li><b>&#10003; Live</b> <span>&middot; Buy BSV card with today&rsquo;s price, opening the Get BSV sheet</span></li>
+        <li><b>&#10003; Live</b> <span>&middot; <a href="/swap">swap other coins into BSV</a> with ChangeNOW (bWalletX, not the store edition)</span></li>
+        <li><b>&#9723; Coming</b> <span>&middot; buy with card, Apple Pay or bank inside the app with Ramp, your address filled in. Waiting for Ramp to approve us</span></li>
+        <li><b>&#9723; Coming</b> <span>&middot; card buying that works in every country we serve, including the UK</span></li>
       </ul>
 
-      <div class="box"><h3>Good to know</h3><p>These providers are independent companies, not bWalletX. They check your ID and set their own fees and limits, and what&rsquo;s on offer depends on where you live. bWalletX never holds your money: you pay the provider, and the BSV goes straight to your own wallet. We&rsquo;re working on buying with Ramp fully inside the app, with your address filled in for you. It isn&rsquo;t live yet.</p></div>
+      <div class="box"><h3>Good to know</h3><p>These providers are independent companies, not bWalletX. They check your ID and set their own fees and limits. bWalletX never holds your money: you pay the provider, and the BSV goes straight to your own wallet.</p></div>
 
       <h2>What can I do with BSV?</h2>
       <div class="mgrid">
@@ -108,5 +114,33 @@
       </div>
       <p class="small">bWalletX is in beta: test with small amounts. Questions: <a href="mailto:support@bwalletx.com">support@bwalletx.com</a></p>
     </main>
+    <script>
+      (function () {
+        var el = document.getElementById('bsv-price'), note = document.getElementById('bsv-price-note');
+        var KEY = 'bwx.site.bsvusd', TTL = 60000;
+        function hhmm(t) { var d = new Date(t); return ('0' + d.getHours()).slice(-2) + ':' + ('0' + d.getMinutes()).slice(-2); }
+        function show(c, fresh) {
+          el.innerHTML = '$' + c.rate.toFixed(2) + ' <i>per BSV</i>';
+          note.textContent = (fresh ? 'Live BSV price' : 'Last known BSV price') + ' as of ' + hhmm(c.t) + ', from ' + c.src + '.';
+        }
+        function get(url, pick, src) {
+          var ctl = window.AbortController ? new AbortController() : null;
+          var timer = setTimeout(function () { ctl && ctl.abort(); }, 6000);
+          return fetch(url, ctl ? { signal: ctl.signal } : {}).then(function (r) {
+            clearTimeout(timer); if (!r.ok) throw 0; return r.json();
+          }).then(function (j) { var v = Number(pick(j)); if (!(v > 0)) throw 0; return { rate: v, t: Date.now(), src: src }; });
+        }
+        var c = null; try { c = JSON.parse(localStorage.getItem(KEY)); } catch (e) {}
+        if (c && c.rate > 0 && Date.now() - c.t < TTL) return show(c, true);
+        get('https://api.whatsonchain.com/v1/bsv/main/exchangerate', function (j) { return j.rate; }, 'WhatsOnChain')
+          .catch(function () { return get('https://api.coingecko.com/api/v3/simple/price?ids=bitcoin-cash-sv&vs_currencies=usd', function (j) { return j['bitcoin-cash-sv'].usd; }, 'CoinGecko'); })
+          .then(function (n) { try { localStorage.setItem(KEY, JSON.stringify(n)); } catch (e) {} show(n, true); })
+          .catch(function () {
+            if (c && c.rate > 0 && Date.now() - c.t < 6 * 3600000) return show(c, false);
+            el.textContent = 'Price unavailable';
+            note.textContent = 'We couldn\u2019t load the BSV price just now. The wallet shows it live.';
+          });
+      })();
+    </script>
   </body>
 </html>
