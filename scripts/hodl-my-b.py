@@ -45,9 +45,9 @@ def emo(names, seed, area='edge', n=None):
     for k, nm in enumerate(names[:n or len(names)]):
         side = k % 4
         if area == 'edge':
-            x, y = [(r.uniform(82, 96), r.uniform(2, 20)), (r.uniform(84, 97), r.uniform(30, 92)), (r.uniform(30, 80), r.uniform(88, 97)), (r.uniform(-3, 5), r.uniform(55, 95))][side]
+            x, y = [(r.uniform(82, 96), r.uniform(2, 20)), (r.uniform(84, 97), r.uniform(30, 74)), (r.uniform(30, 80), r.uniform(66, 74)), (r.uniform(-3, 5), r.uniform(50, 74))][side]  # bottom ~20% is the footer band: no stickers
         else:
-            x, y = r.uniform(-2, 96), r.uniform(-2, 96)
+            x, y = r.uniform(-2, 96), r.uniform(-2, 74)
         sz = r.uniform(5, 11) if area == 'edge' else r.uniform(6, 14); rot = r.uniform(-30, 30); d = r.uniform(0, 3)
         out.append(f'<img class="em" src="{TW}{E[nm]}.svg" alt="" style="left:{x:.1f}%;top:{y:.1f}%;width:{sz:.1f}cqmin;--r:{rot:.0f}deg;animation-delay:-{d:.1f}s" />')
     return ''.join(out)
