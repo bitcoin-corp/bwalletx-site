@@ -5,7 +5,9 @@ import os
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 L = '<i class="p l">Live</i>'; N = '<i class="p">Next release</i>'; C = '<i class="p">Coming</i>'
 BEER = '<img class="beer" src="/images/twemoji-beer.svg" alt="" width="72" height="72" />'
-ISSUES = [  # newest last
+ISSUES = [  # n=0 is Edition 0, the whole story (evergreen); weekly editions follow, newest last
+    dict(n=0, week='18 Oct 2026', story='The whole story.', og='og-hodl-my-b-0.png',
+         blurb='bWalletX and the whole suite, start to finish. New here? Start here.'),
     dict(n=1, week='12 Oct 2026', story='Don&rsquo;t be bland. Get bRanded.', og='og-hodl-my-b-1-v2.png',
          blurb='Business agents, plus the week&rsquo;s round-up.'),
 ]
@@ -64,7 +66,7 @@ def card(href, img, t, s, ext=False):
     return f'<a class="cd" href="{href}"{tg}><img class="og" src="/{img}" alt="" width="1200" height="630" loading="lazy" /><b>{t}</b><span>{s}</span></a>'
 
 def page(body, scene, n=None, issue=1, hard=False, deco=''):
-    folio = f'<p class="folio">Hodl my b &middot; Issue {issue} &middot; {n}</p>' if n else ''
+    folio = f'<p class="folio">Hodl my b &middot; Edition {issue} &middot; {n}</p>' if n else ''
     dens = ' data-density="hard"' if hard else ''
     import re as _re
     m = _re.search(r'<div class="media photo".*?</div>', body)
@@ -112,10 +114,10 @@ SMSFLOAT = ('<div class="note" aria-hidden="true"><img src="' + TW + '1f4e9.svg"
 def pages_issue_1(back):
     P = []
     P.append(page(media('cover', cover_art())
-        + '<p class="mh r1">Hodl my <em>b</em></p><p class="dl r2"><span>Weekly</span><span>Issue 1</span><span>Week of 12 Oct 2026</span></p>'
+        + '<p class="mh r1">Hodl my <em>b</em></p><p class="dl r2"><span>Weekly</span><span>Edition 1</span><span>Week of 12 Oct 2026</span></p>'
         + '<p class="hl r3">Don&rsquo;t be bland. <span class="gd">Get bRanded.</span></p>'
         + '<ul class="cl r4"><li><b>Theme Store</b>New looks, live</li><li><b>Credits card</b>Prepay, coming</li><li><b>bChatX rooms</b>A token per room</li><li><b>All 19 bApps</b>Sign in and pay</li></ul>'
-        + '<div class="bc r4"><div class="pr"><b>Issue 1</b><span>Free &middot; weekly</span></div>' + barcode() + '</div>', 's-cover', hard=True))
+        + '<div class="bc r4"><div class="pr"><b>Edition 1</b><span>Free &middot; weekly</span></div>' + barcode() + '</div>', 's-cover', hard=True))
     P.append(page('<p class="k r1">Inside</p><h2 class="r2">This week.</h2><ol class="toc r3">'
         '<li><span>Paste a link, get a shopkeeper</span><b>3</b></li><li><span>The till is the chat</span><b>4</b></li>'
         '<li><span>An agent with pocket money</span><b>5</b></li><li><span>Bitcoin by text</span><b>6</b></li>'
@@ -148,6 +150,11 @@ def pages_issue_1(back):
     P.append(page('<p class="k r1">Back cover</p><h2 class="r2">Just b.</h2>' + media('lifestyle', '<div class="big gd">b</div>') + '<p class="k r3">Past issues</p><div class="r3">' + back + '</div><p class="foot2">By The Bitcoin Corporation Ltd &middot; Emoji: Twemoji, CC-BY 4.0 &middot; Music: original, made in your browser</p>', 's-back', hard=True,
         deco=bg('grid', BLOB('radial-gradient(circle,#f5b800,transparent 70%)', 40, 50, 100), emo(['beer', 'clink', 'notes', 'cool'], 14))))
     return P
+
+def pages_issue_0(back):
+    import importlib.util
+    spec = importlib.util.spec_from_file_location('e0', os.path.join(ROOT, 'scripts/hodl_edition_0.py')); m = importlib.util.module_from_spec(spec); spec.loader.exec_module(m)
+    return m.pages(dict(page=page, bg=bg, BLOB=BLOB, RING=RING, emo=emo, card=card, getqr=getqr, barcode=barcode, L=L, C=C), back)
 
 CSS = r'''
 :root{--ink:#111;--gold:#f5b800;--gold2:#ffd24d;--hf:'Space Grotesk',sans-serif;--bf:'IBM Plex Sans',sans-serif;--mono:'IBM Plex Mono',ui-monospace,monospace;color-scheme:light}
@@ -294,6 +301,14 @@ img.og{width:100%;height:auto;aspect-ratio:1200/630;object-fit:cover;display:blo
 .on .page.in .r2{transition-delay:.08s}.on .page.in .r3{transition-delay:.16s}.on .page.in .pin>.media{transition-delay:.22s}.on .page.in .r4{transition-delay:.3s}
 .on .s-cover .r4{transform:none!important}
 @media (prefers-reduced-motion:reduce){.sheen{display:none}.em{animation:none}}
+.shot{margin:0;flex:1 1 auto;min-height:0;display:flex;justify-content:center;align-items:flex-start}
+.shot img{max-width:100%;max-height:100%;object-fit:contain;object-position:top;border-radius:18px;border:1px solid rgba(255,210,77,.4);box-shadow:0 30px 60px -25px rgba(0,0,0,.6);background:#000}
+.names{display:flex;flex-direction:column;gap:.4cqh;font:600 1.05em var(--mono)}.names b{font:700 min(9cqh,13cqw)/1 var(--hf);letter-spacing:-.04em}
+@media (max-width:899px){.pdfb{display:none}}
+.shot{min-height:30cqh}.s-back .g{display:block;max-width:360px}.s-back .g .cd{display:flex;flex-direction:column;gap:6px}
+.pdfb{position:fixed;left:14px;bottom:12px;z-index:45;padding:9px 14px;border-radius:99px;background:rgba(0,0,0,.6);color:#ffd24d;font:600 .68rem var(--mono);letter-spacing:.12em;text-transform:uppercase;text-decoration:none;backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}
+@media print{@page{size:A4;margin:0}html,body{background:#fff}body.stack .page{width:210mm;height:297mm;min-height:0;break-after:page}.tb,.ctl,.gate,.pdfb{display:none!important}.em{animation:none}}
+body.print .tb,body.print .ctl,body.print .gate,body.print .pdfb{display:none!important}
 '''
 
 JS = r'''<script src="https://cdn.jsdelivr.net/npm/page-flip@2.0.7/dist/js/page-flip.browser.js"></script>
@@ -324,7 +339,8 @@ function loop(){while(next<ctx.currentTime+.2){tick(next,step);step++;next+=S}}
 return{start:function(){if(!ctx)init();ctx.resume();if(on)return;on=true;next=ctx.currentTime+.08;master.gain.setTargetAtTime(.7,ctx.currentTime,.6);timer=setInterval(loop,50)},
 toggle:function(){if(!ctx)return false;if(on){master.gain.setTargetAtTime(.0001,ctx.currentTime,.15);on=false;setTimeout(function(){if(!on)clearInterval(timer)},400)}else{this.start()}return on}}})();
 (function(){var el=document.getElementById('book');
-if(!window.St||matchMedia('(prefers-reduced-motion: reduce)').matches){document.body.classList.add('stack');return}
+if(/[?&]print\b/.test(location.search))document.body.classList.add('print');
+if(!window.St||document.body.classList.contains('print')||matchMedia('(prefers-reduced-motion: reduce)').matches){document.body.classList.add('stack');return}
 document.body.classList.add('on');
 var pages=[].slice.call(el.querySelectorAll('.page')),W=document.documentElement.clientWidth,H=document.documentElement.clientHeight,two=W>=900;
 var pf=new St.PageFlip(el,{width:two?Math.floor(W/2):W,height:H,size:'fixed',showCover:two,usePortrait:!two,mobileScrollSupport:false,flippingTime:800,drawShadow:true,maxShadowOpacity:.5,autoSize:false});
@@ -377,28 +393,83 @@ def head(url, title, desc, img, alt):
   </head>
 '''
 
-OG_COVER = 'og-hodl-my-b-cover.png?v=2'  # share image for the landing and the latest issue
+OG_SERIES = 'og-hodl-my-b-series-v1.png'  # share image for the /hodl-my-b landing (both editions)
+# Front-page sticker on bwalletx.com (index.html, between the hodl-sticker markers). Change per issue.
+STICKER = dict(kicker='New', title='Hodl my b', sub='Edition 0', href='/hodl-my-b/0', label='New: Hodl my b, Edition 0, the whole story')
+PDF0 = '/hodl-my-b/hodl-my-b-edition-0.pdf'
+
+def label(i):
+    return 'Edition 0 &middot; The whole story' if i['n'] == 0 else f'Edition {i["n"]} &middot; Week of {i["week"]}'
+
+def landing():
+    weekly = [i for i in ISSUES if i['n'] > 0]; latest = weekly[-1]; e0 = ISSUES[0]
+    def cov(i, tag):
+        return (f'<a class="lc" href="/hodl-my-b/{i["n"]}"><span class="tag">{tag}</span><img src="/{i["og"]}" alt="" width="1200" height="630" />'
+                f'<b>{label(i)}</b><span>{i["blurb"] if i["n"] == 0 else i["story"] + " " + i["blurb"]}</span></a>')
+    past = ''.join(f'<li><a href="/hodl-my-b/{i["n"]}">{label(i)}</a> &middot; {i["story"]}</li>' for i in reversed(weekly))
+    css = ('body{margin:0;background:#0b0a08;color:#f3efe4;font-family:var(--bf)}'
+           ':root{--hf:"Space Grotesk",sans-serif;--bf:"IBM Plex Sans",sans-serif;--mono:"IBM Plex Mono",monospace;color-scheme:dark}'
+           '*{box-sizing:border-box}main{max-width:1120px;margin:0 auto;padding:88px 16px 64px}'
+           '.k{font:500 12px var(--mono);letter-spacing:.18em;text-transform:uppercase;color:#ffd24d}'
+           'h1{font:700 clamp(44px,8vw,96px)/.92 var(--hf);letter-spacing:-.045em;margin:12px 0 16px}h1 em{font-style:normal;color:#ffd24d}'
+           '.lead{font-size:clamp(17px,2vw,20px);line-height:1.5;max-width:36em;color:#cfc8b6;margin:0 0 40px}'
+           '.two{display:grid;grid-template-columns:1fr 1fr;gap:24px}@media(max-width:760px){.two{grid-template-columns:1fr}}'
+           '.lc{display:flex;flex-direction:column;gap:10px;color:inherit;text-decoration:none;padding:14px;border-radius:20px;border:1px solid rgba(255,210,77,.22);background:rgba(255,255,255,.02);transition:border-color .2s ease-out,transform .2s ease-out}'
+           '.lc:hover,.lc:focus-visible{border-color:#ffd24d;transform:translateY(-2px);outline:none}'
+           '.lc img{width:100%;height:auto;aspect-ratio:1200/630;object-fit:cover;border-radius:12px}.lc b{font:700 22px var(--hf);letter-spacing:-.02em}.lc span{color:#cfc8b6;line-height:1.5}'
+           '.tag{align-self:flex-start;font:600 11px var(--mono)!important;letter-spacing:.14em;text-transform:uppercase;color:#111!important;background:#ffd24d;padding:4px 10px;border-radius:99px}'
+           '.row{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}.row a{color:#ffd24d;font:600 13px var(--mono);letter-spacing:.08em;text-transform:uppercase;text-underline-offset:4px}'
+           'h2{font:700 24px var(--hf);margin:56px 0 12px}ul.past{padding-left:18px;line-height:1.9;color:#cfc8b6}ul.past a{color:#f3efe4}'
+           '.tb{position:fixed;inset:0 0 auto;height:56px;display:flex;align-items:center;padding:0 16px;background:rgba(11,10,8,.8);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);z-index:5}'
+           '.tb a{display:flex;gap:8px;align-items:center;color:#fff;text-decoration:none;font:700 1rem var(--hf)}'
+           '@media (prefers-reduced-motion:reduce){.lc{transition:none}.lc:hover{transform:none}}')
+    body = (f'<body><header class="tb"><a href="/"><img src="/logo.svg" alt="" width="27" height="24" />bWalletX</a></header><main>'
+            '<p class="k">The bWalletX magazine</p><h1>Hodl my <em>b</em></h1>'
+            '<p class="lead">A glossy round-up of everything we ship, every week, with what is live and what is coming. New here? Start with Edition 0, the whole story.</p>'
+            '<div class="two">' + cov(e0, 'New here? Start here') + cov(latest, 'This week') + '</div>'
+            f'<div class="row"><a href="{PDF0}" download>Download Edition 0 (PDF)</a><a href="/releases">All releases</a><a href="/get">Get bWalletX</a></div>'
+            f'<h2>Weekly editions</h2><ul class="past">{past}</ul></main></body></html>\n')
+    h = head('/hodl-my-b', 'Hodl my b', 'Hodl my b, the bWalletX magazine. Edition 0 tells the whole story; a new edition every week shows what shipped, live and coming.',
+             OG_SERIES, 'Hodl my b: Edition 0, the whole story, and this week&#39;s edition')
+    h = h.replace(h[h.index('<style>'):h.index('</style>') + 8], '<style>' + css + '</style>')
+    open(os.path.join(ROOT, 'hodl-my-b.html'), 'w').write(h + body)
+
+def sticker():
+    p = os.path.join(ROOT, 'index.html'); s = open(p).read(); a, b = '<!-- hodl-sticker:start -->', '<!-- hodl-sticker:end -->'
+    if a not in s: return
+    t = STICKER
+    html = (f'{a}<a class="hodl-sticker" href="{t["href"]}" aria-label="{t["label"]}"><span class="hs-k">{t["kicker"]}</span>'
+            f'<span class="hs-t">{t["title"]}</span><span class="hs-s">{t["sub"]}</span></a>{b}')
+    s = s[:s.index(a)] + html + s[s.index(b) + len(b):]
+    open(p, 'w').write(s)
 
 def build():
-    back = ''.join(card(f'/hodl-my-b/{i["n"]}', i['og'], f'Issue {i["n"]} &middot; week of {i["week"]}', i['blurb']) for i in reversed(ISSUES))
-    menu = ''.join(f'<li><a href="/hodl-my-b/{i["n"]}">Issue {i["n"]} &middot; {i["week"]}</a></li>' for i in reversed(ISSUES))
+    allc = ''.join(card(f'/hodl-my-b/{i["n"]}', i['og'], label(i), i['blurb']) for i in reversed(ISSUES))
+    weekly = ''.join(card(f'/hodl-my-b/{i["n"]}', i['og'], label(i), i['blurb']) for i in reversed(ISSUES) if i['n'] > 0)
+    menu = ''.join(f'<li><a href="/hodl-my-b/{i["n"]}">{label(i)}</a></li>' for i in reversed(ISSUES))
     for i in ISSUES:
-        pages = globals()[f'pages_issue_{i["n"]}'](back)
+        pages = globals()[f'pages_issue_{i["n"]}'](weekly if i['n'] == 0 else allc)
+        pdf = f'<a class="pdfb" href="{PDF0}" download>Download the PDF</a>' if i['n'] == 0 else ''
+        short = 'Edition 0' if i['n'] == 0 else f'Edition {i["n"]}'
         body = f'''  <body>
     <header class="tb"><a class="brand" href="/"><img src="/logo.svg" alt="" width="27" height="24" />bWalletX</a>
-      <details><summary>Issue {i["n"]} &#9662;</summary><ul>{menu}<li><a href="/hodl-my-b">Latest</a></li></ul></details></header>
+      <details><summary>{short} &#9662;</summary><ul>{menu}<li><a href="/hodl-my-b">All editions</a></li>{'<li><a href="'+PDF0+'" download>Download the PDF</a></li>' if i['n']==0 else ''}</ul></details></header>
     <main><div class="book" id="book">{''.join(pages)}</div>
       <button class="ctl arw prev" type="button" aria-label="Previous page">&larr;</button><button class="ctl arw next" type="button" aria-label="Next page">&rarr;</button><nav class="ctl dots" aria-label="Pages"></nav><button class="ctl mute" type="button" aria-label="Mute music">&#9835;</button></main>
-    <div class="gate" role="dialog" aria-label="Open the magazine"><button type="button">Open &rarr;</button><small>Hodl my b &middot; Issue {i["n"]} &middot; sound on</small></div>
+    {pdf}
+    <div class="gate" role="dialog" aria-label="Open the magazine"><button type="button">Open &rarr;</button><small>Hodl my b &middot; {short} &middot; sound on</small></div>
     {JS}
   </body>
 </html>
 '''
-        title = f'Hodl my b, Issue {i["n"]}: {i["story"]}'
-        desc = f'Hodl my b, the weekly bWalletX magazine. Issue {i["n"]}, week of {i["week"]}: {i["blurb"]}'
-        alt = f'Magazine cover: Hodl my b, Weekly, Issue {i["n"]}. {i["story"]}'
-        open(os.path.join(ROOT, f'hodl-my-b/{i["n"]}.html'), 'w').write(head(f'/hodl-my-b/{i["n"]}', title, desc, OG_COVER, alt) + body)
-        if i is ISSUES[-1]:
-            open(os.path.join(ROOT, 'hodl-my-b.html'), 'w').write(head('/hodl-my-b', 'Hodl my b', 'Hodl my b: the weekly bWalletX magazine. Everything shipped each week, with what is live and what is coming.', OG_COVER, 'Magazine cover: Hodl my b, Weekly, Issue 1. Don&#39;t be bland. Get bRanded.') + body)
+        if i['n'] == 0:
+            title = 'Hodl my b, Edition 0: The whole story'
+            desc = 'Hodl my b, Edition 0: the whole story of bWalletX. One wallet on every device, one name with two addresses, bChatX rooms and Spaces, bMail that pays, and what is coming.'
+        else:
+            title = f'Hodl my b, Edition {i["n"]}: {i["story"]}'
+            desc = f'Hodl my b, the weekly bWalletX magazine. Edition {i["n"]}, week of {i["week"]}: {i["blurb"]}'
+        alt = f'Magazine cover: Hodl my b, {short}. {i["story"]}'
+        open(os.path.join(ROOT, f'hodl-my-b/{i["n"]}.html'), 'w').write(head(f'/hodl-my-b/{i["n"]}', title, desc, i['og'], alt) + body)
+    landing(); sticker()
 
 build()
