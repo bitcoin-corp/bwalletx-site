@@ -49,6 +49,8 @@
       <img src="/logo.svg" alt="bWalletX" width="72" height="64" />
       <h1>Connect with bWallet<span class="gold">X</span></h1>
       <p class="lede">One script gives your site a standard BRC-100 wallet. No API keys, no sign-up, and nothing passes through our servers: your page talks straight to the user's wallet.</p>
+      <p class="row"><a class="btn btn-store" href="https://docs.bwalletx.com/">Read the docs &rarr;</a></p>
+      <p class="small">The full developer guides live at <a href="https://docs.bwalletx.com/">docs.bwalletx.com</a>: <a href="https://docs.bwalletx.com/developers/connect/">connect your site</a>, <a href="https://docs.bwalletx.com/developers/payments/">payments</a>, <a href="https://docs.bwalletx.com/developers/public-apis/">public APIs</a>, <a href="https://docs.bwalletx.com/developers/name-bindings/">name bindings</a>, <a href="https://docs.bwalletx.com/developers/strategy-format/">strategy format</a>, <a href="https://docs.bwalletx.com/developers/store-receipts/">store receipts</a>, <a href="https://docs.bwalletx.com/developers/stack-recipes/">stack recipes</a>, <a href="https://docs.bwalletx.com/developers/open-source/">open source</a> and <a href="https://docs.bwalletx.com/errors/">error codes</a>. This page is the quick start.</p>
 
       <h2>Get bWalletX to test with</h2>
       <p>Install the wallet you'll connect to (version 5.2.31 beta). Checksums are on each download page.</p>
@@ -58,6 +60,7 @@
         <li><a href="https://web.bwalletx.com" target="_blank" rel="noopener">Web app</a> · <a href="/iphone">iPhone</a></li>
         <li><a href="/cli">bWalletX CLI</a> and <a href="/mcp">MCP server</a> for scripts and AI agents</li>
       </ul>
+      <p class="small">Docs: <a href="https://docs.bwalletx.com/use/editions/">Which edition to test with</a></p>
 
       <h2>1. Add the script</h2>
       <pre><code>&lt;script src="https://bwalletx.com/connect.js"&gt;&lt;/script&gt;</code></pre>
@@ -88,9 +91,13 @@ const { signature } = await wallet.createSignature({
   keyID: '1',
 });</code></pre>
 
+      <p class="small">Docs: <a href="https://docs.bwalletx.com/developers/connect/">Connect your site</a></p> <p class="small">Taking payments: <a href="https://docs.bwalletx.com/developers/payments/">Payments</a></p>
+
       <h2>Sign users in</h2>
       <p>To let people sign in to your app with bWalletX (extension, phone or web wallet), follow the <a href="/connect">Sign in with bWalletX guide</a>: one script tag (connect.js), server code, and steps for AI agents.</p>
       <p>For the button itself (gold, dark or light, four sizes, React, SVG files and brand rules), see <a href="/sign-in-button">Add Sign in with bWalletX to your site</a>.</p>
+
+      <p class="small">Docs: <a href="https://docs.bwalletx.com/developers/connect/">Sign-in, step by step</a></p>
 
       <h2>Already using window.CWI?</h2>
       <p>bWalletX also sets <code>window.CWI</code>, so sites that call it directly work as they are. But if the user also has another wallet installed (such as Yours), you can't tell which one answers. <code>bWalletX.connect()</code> picks bWalletX by name (rdns <code>com.bwalletx.extension</code>) through BRC-100 wallet discovery, so it always gets the right wallet.</p>
@@ -101,6 +108,8 @@ const { signature } = await wallet.createSignature({
       <h2>What your site can do</h2>
       <p>bWalletX implements the BRC-100 wallet interface. Sites can request any BRC-100 action, including signatures and keys from any protocol (BRC-29 payment-key derivation included). The user approves each request; we don't keep a hidden blocklist. If we ever have to restrict something, we'll say so here and in the release notes first.</p>
 
+      <p class="small">Docs: <a href="https://docs.bwalletx.com/use/apps-websites/">What users see when your site asks</a></p>
+
       <h2>Which address will I see?</h2>
       <p>BRC-100 wallets don't hand sites the user's main receive address. <code>identityKey</code> is the user's stable identity for your site, and payments made through <code>createAction</code> come from the user's wallet balance. So an address you derive from the identity key won't match the address shown on the wallet's Receive screen. That's expected.</p>
 
@@ -108,7 +117,7 @@ const { signature } = await wallet.createSignature({
       <button class="btn btn-store" id="try">Connect with bWalletX</button>
       <div id="try-out"></div>
 
-      <p class="small" style="margin-top: 48px">Questions: <a href="mailto:support@bwalletx.com">support@bwalletx.com</a> · Source: <a href="/connect.js">connect.js</a></p>
+      <p class="small" style="margin-top: 48px">Questions: <a href="mailto:support@bwalletx.com">support@bwalletx.com</a> · Docs: <a href="https://docs.bwalletx.com/">docs.bwalletx.com</a> · Source: <a href="/connect.js">connect.js</a> · npm: <a href="https://www.npmjs.com/package/@bwalletx/connect">@bwalletx/connect</a></p>
     </main>
     <script src="/connect.js"></script>
     <script>
