@@ -144,6 +144,11 @@
       "statusCode": 302
     },
     {
+      "source": "/download/:file(bwalletx-desktop(?!-5\\.2\\.32-mac\\.dmg$)[^/]*\\.dmg)",
+      "destination": "/download/bwalletx-desktop-5.2.32-mac.dmg",
+      "statusCode": 302
+    },
+    {
       "source": "/PNEE",
       "destination": "/pnees",
       "permanent": true
@@ -181,7 +186,16 @@
   ],
   "headers": [
     {
-      "source": "/download/(.*)\\.(apk|zip)",
+      "source": "/download/(.*)\\.dmg",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "application/x-apple-diskimage"
+        }
+      ]
+    },
+    {
+      "source": "/download/(.*)\\.(apk|zip|dmg)",
       "headers": [
         {
           "key": "Content-Disposition",

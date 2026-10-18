@@ -1325,9 +1325,12 @@ New bWalletX Desktop · free in your browser
 Money, bMail, chat rooms, Spaces, bApps and Ask b, side by side on a big screen. No app store, no download. Open it and it’s your wallet.
 
 [Open bWalletX Desktop →](https://desktop.bwalletx.com/)
+[Download for Mac](https://bwalletx.com/download/bwalletx-desktop-5.2.32-mac.dmg)
 [Install it as an app](#install)
 
 Chrome, Edge and Safari · your keys stay encrypted in your browser
+
+Mac app v5.2.32 · Apple silicon + Intel · macOS 11+ · 42.9 MB · signed and notarised · updates by downloading the new version for now (auto-update coming) · SHA-256 `d8789c3231ce4daa0f82e1d9ca82036ce08bac1b1a1c3805f827c8fc3963afd7`
 
 desktop.bwalletx.com
 
@@ -1398,6 +1401,11 @@ INSTALL · SAFARI ON MAC
 ### File › Add to Dock
 
 In Safari, choose File › Add to Dock. bWalletX Desktop opens like any other Mac app. Nothing to download from a store.
+
+MAC APP
+### Download for Mac
+
+[bWalletX for Mac](https://bwalletx.com/download/bwalletx-desktop-5.2.32-mac.dmg) (v5.2.32, universal, macOS 11+). Open the DMG and drag bWalletX to Applications. It keeps its own wallet, so restore yours with its recovery phrase.
 
 YOUR KEYS
 ### Encrypted in your browser
@@ -1843,8 +1851,20 @@ The full bWalletX on every device. Your keys stay on your device.
 [AndroidAPK download · v5.2.32 beta](https://bwalletx.com/android)
 [ChromeExtension · v5.2.32 beta](https://bwalletx.com/extension)
 [WebOpen in your browser](https://web.bwalletx.com)
-[DesktopIn your browser, or install it as an app](https://desktop.bwalletx.com)
 [iPhoneWeb app · install from Safari, no App Store](https://bwalletx.com/iphone)
+
+DesktopbWalletX on a big screen: money, bMail, chat and Spaces side by side.
+
+[Open in your browser](https://desktop.bwalletx.com)
+[Download for Mac](https://bwalletx.com/download/bwalletx-desktop-5.2.32-mac.dmg)
+
+Mac app v5.2.32 · Apple silicon + Intel · macOS 11+ · 42.9 MB · signed and notarised by Apple
+SHA-256 `d8789c3231ce4daa0f82e1d9ca82036ce08bac1b1a1c3805f827c8fc3963afd7`
+Updates: download the new version for now (auto-update coming). It keeps its own wallet: restore yours with its recovery phrase.
+
+Install it as an app
+
+Open [desktop.bwalletx.com](https://desktop.bwalletx.com) in Chrome, Edge or Brave, then click the install icon at the right of the address bar (or menu › Install bWalletX). It gets its own window and a dock icon. Your keys stay on your device.
 
 New to Desktop? [See what bWalletX Desktop does →](https://bwalletx.com/desktop)
 
@@ -2442,7 +2462,7 @@ Found a security problem? Email [support@bwalletx.com](mailto:support@bwalletx.c
 
 Source: https://bwalletx.com/
 
-[NewHodl my bEdition 0](https://bwalletx.com/hodl-my-b/0)
+[Hodl my bEdition 0](https://bwalletx.com/hodl-my-b/0)
 
 bWalletX
 
@@ -3429,6 +3449,7 @@ Each release ships to the Android APK, the Chrome extension and the web wallet. 
 
 ## 5.2.32 2026-10-18
 
+- bWalletX Desktop for Mac: a signed, notarised Mac app (Apple silicon and Intel, macOS 11+). [Download it](https://bwalletx.com/get). It updates by downloading the new version for now; auto-update is coming.
 - RelayX NFTs still listed for sale on RelayX are found too, and one tap cancels the listing back to your own address. [How it works](https://bwalletx.com/recover-relayx).
 - Airdrop tokens or BSV to every holder of a token with one approval, and BSV drops now show in your airdrop inbox.
 - Launching a coin: keep 0–20% for yourself, time-locked (by default a 12-month cliff, then monthly unlocks) with a public receipt. The real launch cost is shown: a 0.1 BSV indexing deposit, paid under the same Allow.
