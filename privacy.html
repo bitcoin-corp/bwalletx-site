@@ -249,6 +249,48 @@
         removes this device's registration from our push server; uninstalling the app makes its push token stop working.
       </p>
 
+      <h2 id="spaces-transcription">Spaces transcription (bWalletX only)</h2>
+      <p>
+        Spaces aren't transcribed unless the host turns it on. For each Space the host picks <b>Off</b> (the default),
+        <b>Transcribe</b>, or <b>Transcribe and track agreements</b>. While it's on, everyone in the Space sees a
+        <b>Transcribing</b> badge, and a message appears in the room each time the setting changes.
+      </p>
+      <ul>
+        <li>
+          <b>Listeners</b> see a notice before they join. Listening is never recorded or transcribed.
+        </li>
+        <li>
+          <b>Speakers</b> are transcribed only after ticking a separate box before their microphone goes on. You can
+          choose "Don't transcribe me" and still speak; others then see you marked "(not transcribed)", and your voice is
+          not recorded. You can stop at any time with "Stop transcribing me", which stops your recording straight away.
+        </li>
+        <li>
+          <b>Audio is deleted after transcription.</b> While you're being transcribed, your voice is recorded on our
+          media server long enough to turn it into text, then deleted. It is also deleted if transcription fails, if no
+          transcription service is set up, or if you've stopped being transcribed. We keep only the text, who said it,
+          when, and a fingerprint (hash) of the audio so that the same audio is never processed twice.
+        </li>
+        <li>
+          <b>Who can read it.</b> Only that Space's host and its speakers can read the transcript. Listeners, other room
+          members and the public can't.
+        </li>
+        <li>
+          <b>Deleting your words.</b> Each speaker can delete any of their own lines. A deleted line keeps its place
+          and the speaker's name but loses its words for good.
+        </li>
+        <li>
+          <b>Never in private chats.</b> Direct messages and private chats are never transcribed.
+        </li>
+        <li>
+          <b>Transcription service.</b> [OWNER TO CONFIRM BEFORE PUBLISHING: the speech-to-text provider, where it runs,
+          and whether it keeps any audio. Until a provider is chosen, no transcripts are made and any audio is deleted.]
+        </li>
+      </ul>
+      <p>
+        Transcription isn't available in bWallet from the App Store and Google Play. If you join a transcribed Space
+        from there, you see the badge and notice, but you're never transcribed.
+      </p>
+
       <h2 id="waitlist">Testing waitlist (this website)</h2>
       <p>
         If you join the testing waitlist on this website, we collect your email address, the phone platform you chose
