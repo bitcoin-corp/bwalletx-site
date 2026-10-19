@@ -4228,10 +4228,6 @@ Your money should be yours alone. Here is how bWalletX keeps it that way, what i
 
 - LiveOngoing internal review of the money and key paths.
 
-- ComingDedicated security mailbox (security@bwalletx.com). Until it is live, use [support@bwalletx.com](mailto:support@bwalletx.com) and put “SECURITY” in the subject.
-
-- ComingBug bounty programme.
-
 - ComingIndependent security audit.
 
 ## How bWalletX protects you
@@ -4250,7 +4246,7 @@ Your money should be yours alone. Here is how bWalletX keeps it that way, what i
 
 ## Report a vulnerability
 
-Email [security@bwalletx.com](mailto:security@bwalletx.com). (This mailbox is being set up. Until it is live, write to [support@bwalletx.com](mailto:support@bwalletx.com) with “SECURITY” in the subject.)
+Email [support@bwalletx.com](mailto:support@bwalletx.com?subject=SECURITY) with “SECURITY” in the subject.
 
 Please include:
 
@@ -4276,21 +4272,25 @@ We will reply within 3 working days, keep you updated while we fix it, and tell 
 
 ## Safe harbour
 
-If you research in good faith and follow the rules on this page, we will not take legal action against you or ask anyone else to, and we will treat your research as authorised. If someone else brings a claim over research that followed these rules, we will make it known that you acted with our permission. If you are unsure whether something is in bounds, ask us first.
+When you research security in line with this policy, The Bitcoin Corporation Ltd (bWalletX) considers your research to be:
 
-## Bug bounty Coming
+- Authorised in accordance with the Computer Fraud and Abuse Act (CFAA), the UK Computer Misuse Act 1990 and similar laws, and we will not initiate or support legal action against you for accidental, good-faith violations of this policy;
 
-A paid programme is on the way. Until it launches, any reward is at our discretion.
+- Exempt from the Digital Millennium Copyright Act (DMCA), and we will not bring a claim against you for circumvention of technology controls;
 
-SeverityExampleReward
+- Exempt from restrictions in our Terms that would interfere with conducting security research, and we waive those restrictions on a limited basis for work done under this policy; and
 
-CriticalAnyone can move or lock someone else’s money, or read their keys.[owner to set]
+- Lawful, helpful to the overall security of the Internet, and conducted in good faith.
 
-HighA payment or signature happens without the user’s approval.[owner to set]
+You are expected, as always, to comply with all applicable laws. If legal action is initiated by a third party against you and you have complied with this policy, we will take steps to make it known that your actions were conducted in compliance with this policy.
 
-MediumPrivate data leaks, or the approval sheet can be made to mislead.[owner to set]
+If at any time you have concerns or are unsure whether your security research is consistent with this policy, please email [support@bwalletx.com](mailto:support@bwalletx.com?subject=SECURITY) before going any further.
 
-LowMinor issues with limited impact.[owner to set]
+This safe harbour is based on the [disclose.io](https://disclose.io) Core Terms (CC0).
+
+## Rewards
+
+We’re a small team and can’t pay cash rewards yet. We’ll thank you publicly in the Hall of thanks (if you’d like) and fix what you find fast.
 
 ## What we’re doing now
 
@@ -9162,7 +9162,7 @@ The code is open. The bWalletX name and logo are trademarks of The Bitcoin Corpo
 
 Open an issue or a pull request on [the wallet repo](https://github.com/bitcoin-corp/bwallet) or [the CLI repo](https://github.com/bitcoin-corp/bwalletx-cli). The wallet repo has a CONTRIBUTING guide.
 
-If you find a security problem, please don’t post it publicly. Email [support@bwalletx.com](mailto:support@bwalletx.com) first.
+If you find a security problem, please don’t post it publicly. Email [support@bwalletx.com](mailto:support@bwalletx.com?subject=SECURITY) with “SECURITY” in the subject first, and see [Security at bWalletX](https://bwalletx.com/security) for how we handle reports.
 
 bWalletX is in beta: test with small amounts. Questions: [support@bwalletx.com](mailto:support@bwalletx.com)
 
