@@ -2645,17 +2645,19 @@ Part of bWalletX
 
 ## One wallet. Every site.
 
-Each of these sites runs on bWalletX. Sign in once with your wallet and they all work together.
+Each of these sites runs on bWalletX. Sign in once with your wallet and they all work together. [See every site →](https://bwalletx.com/sites)
 
-[LivebChatXChat, token rooms and live Spaces. Sign in with bWalletX.](https://www.bchatx.com)
-[LivebMailXEmail that pays. Your name@bmailx.com comes with your bWalletX name.](https://bmailx.com)
-[LivebRadioXLive shows in the bRadio Lounge. Raise your hand to speak.](https://bradiox.com)
-[LivebCalXThe calendar of live Spaces. Add one to your calendar in a tap.](https://bcalx.com)
-[LivebJobsXWork paid in Bitcoin, person to person. Your $name already takes payments.](https://bjobsx.com)
-[LivebNewsXThe news market. Headlines you discuss on chain in the bWalletX Feed.](https://bnewsx.com)
+[LivebChatXChat, rooms and live Spaces, with your wallet.](https://www.bchatx.com)
+[LivebMailXLetters that carry money. Your name@bmailx.com comes with your bWalletX name.](https://bmailx.com)
+[LivebMintXYou made it. Prove it's yours: put your work on Bitcoin in your own name, from about a penny.](https://bmintx.com)
+[LivebStoreXThe Store on the web. Themes and emoji themes, $1 each, each with a signed receipt.](https://bstorex.com)
+[LivebCalXWhat's on, live. Every scheduled Space, ready for your calendar.](https://bcalx.com)
+[LivebRadioXRadio you can join. Listen in the bRadio Lounge and raise your hand to speak.](https://bradiox.com)
+[LivebJobsXWork, paid in Bitcoin, person to person. Your name already takes payments.](https://bjobsx.com)
+[LivebNewsXHeadlines you talk over in the bWalletX Feed, with tips for the people who write them.](https://bnewsx.com)
 [LivebMusicXStream music by the second; every second pays the artist.](https://bmusicx.com)
-[LivebStoreXThe Store on the web. Themes and emoji themes, $1 each, paid in Bitcoin.](https://bstorex.com)
-[ComingbDriveXYour files and recordings, kept on chain and paid for month by month.](https://bdrivex.com)
+[ComingbVaultXLock it away for as long as you like, and get it back from your 12 words.](https://bvaultx.com)
+[ComingbDriveXYour files and recordings, kept on Bitcoin and paid for month by month.](https://bdrivex.com)
 
 bApps
 
@@ -7962,6 +7964,540 @@ Sign in with X and Google are in bWalletX (Android APK, Chrome extension, web an
 
 ---
 
+Source: https://bwalletx.com/sites/bcalx
+
+[Sites](https://bwalletx.com/sites) · bcalx.com
+
+# bCalX
+
+What's on, live. Every scheduled Space, ready for your calendar.
+
+[](https://bcalx.com)
+
+[Open bcalx.com →](https://bcalx.com)
+
+## What it is
+
+bCalX is the calendar of live audio Spaces on bChatX. See what’s on, add any Space to your calendar, subscribe to them all, and open the Space when it starts.
+
+## Status: 8 live, 2 coming
+
+- ✓What’s on: scheduled Spaces from bChatXFills in as rooms confirm Spaces.
+
+- ✓Add to calendar (.ics) for each Space
+
+- ✓Subscribe to every Space (calendar feed)
+
+- ✓A page and share image for each Space
+
+- ✓Schedule or book a Space in a bChatX room
+
+- ✓Reminders for room members on bChatX
+
+- ◻Remind me straight from bCalXWithout opening the room first.
+
+- ✓bCalendar in bWalletXA calendar of scheduled Spaces in the wallet (All, Following, Mine) with Remind me and.ics, from bWalletX 5.2.33.
+
+- ✓Per-room calendar feedsbcalx.com/room/<ticker>.ics
+
+- ◻Each Space signed on BitcoinThe host signs a public record (open spec); event pages verify it.
+
+as listed on bcalx.com, updated 19 Oct 2026.
+
+bCalX runs on bWalletX: one wallet signs you in and pays, here and on every other site. [Get bWalletX](https://bwalletx.com/get).
+
+In bWalletX: [Spaces](https://bwalletx.com/bspaces) · [Live](https://bwalletx.com/live) · [The Lounge](https://bwalletx.com/lounge)
+
+[← bStoreX](https://bwalletx.com/sites/bstorex)[All sites](https://bwalletx.com/sites)[bRadioX →](https://bwalletx.com/sites/bradiox)
+
+---
+
+Source: https://bwalletx.com/sites/bchatx
+
+[Sites](https://bwalletx.com/sites) · bchatx.com
+
+# bChatX
+
+Chat, rooms and live Spaces, with your wallet.
+
+[](https://www.bchatx.com)
+
+[Open bchatx.com →](https://www.bchatx.com)
+
+## What it is
+
+bChatX: chat rooms and live audio Spaces. Listen without an account; your wallet lets you speak and pay.
+
+## Status: 2 live, 0 coming
+
+- ✓A chat room for every tokenOpen to holders; the Lounge is open to everyone.
+
+- ✓Live audio SpacesListen without an account; sign in to speak.
+
+kept by hand, updated 19 Oct 2026.
+
+bChatX runs on bWalletX: one wallet signs you in and pays, here and on every other site. [Get bWalletX](https://bwalletx.com/get).
+
+In bWalletX: [Chat](https://bwalletx.com/chat) · [Social](https://bwalletx.com/social) · [The Lounge](https://bwalletx.com/lounge) · [Spaces](https://bwalletx.com/bspaces)
+
+[← bSharesX](https://bwalletx.com/sites/bsharesx)[All sites](https://bwalletx.com/sites)[bMailX →](https://bwalletx.com/sites/bmailx)
+
+---
+
+Source: https://bwalletx.com/sites/bdrivex
+
+[Sites](https://bwalletx.com/sites) · bdrivex.com
+
+# bDriveX
+
+Your files and recordings, kept on Bitcoin and paid for month by month.
+
+[](https://bdrivex.com)
+
+[Open bdrivex.com →](https://bdrivex.com)
+
+## What it is
+
+bDriveX keeps your files and recordings on Bitcoin, paid for from your own bWalletX a little each month. Stop paying and we stop storing. Recordings are kept only when every speaker agrees.
+
+## Status: 2 live, 5 coming
+
+- ✓Pictures, music and video on chain. Save them on Bitcoin as 1Sat Ordinals from inside bWalletX, kept in your wallet. bwalletx.com/features
+
+- ✓Writing saved on chain. Bitcoin Writer saves your documents to the BSV blockchain. Bitcoin Writer
+
+- ◻Store any file in bDriveX and find it again from any device with your wallet.
+
+- ◻Pay as long as you like: monthly payments your wallet signs in advance, each time-locked to its month. Stop paying and we stop storing.
+
+- ◻Keep a Space recording when every speaker agrees, encrypted to the people in it, at the cost of whoever keeps it.
+
+- ◻Spoken agreements: keep the audio of an agreement both sides said out loud, with its fingerprint sealed on chain.
+
+- ◻Share a file with anyone's name, or set a price and sell it through bStoreX.
+
+as listed on bdrivex.com, updated 19 Oct 2026.
+
+bDriveX runs on bWalletX: one wallet signs you in and pays, here and on every other site. [Get bWalletX](https://bwalletx.com/get).
+
+In bWalletX: [Mint](https://bwalletx.com/mint) · [Store](https://bwalletx.com/store) · [Privacy](https://bwalletx.com/privacy)
+
+[← bVaultX](https://bwalletx.com/sites/bvaultx)[All sites](https://bwalletx.com/sites)[bSharesX →](https://bwalletx.com/sites/bsharesx)
+
+---
+
+Source: https://bwalletx.com/sites/bjobsx
+
+[Sites](https://bwalletx.com/sites) · bjobsx.com
+
+# bJobsX
+
+Work, paid in Bitcoin, person to person. Your name already takes payments.
+
+[](https://bjobsx.com)
+
+[Open bjobsx.com →](https://bjobsx.com)
+
+## What it is
+
+bJobsX: a professional network and work market where people are paid in Bitcoin, person to person. Your bWalletX name takes payments today; job board, profiles and on-chain work records are coming.
+
+## Status: 5 live, 5 coming
+
+- ✓Your name takes payments. $you and you@bwalletx.com receive from any paymail wallet, straight into your own wallet.
+
+- ✓Partnerships. Set up partners, b drafts the agreement, everyone signs in their own wallet, and payments to the partnership split by the agreed share. bWalletX 5.2.32
+
+- ✓Tell b what's broken. Ask b takes bug reports and ideas, and fixes are listed in the open on bwalletx.com/bugs.
+
+- ✓Link your accounts: X and Google, as signed badges on your name (bWalletX 5.2.33). GitHub and LinkedIn soon.
+
+- ✓Agreements in bMail: send terms, both sign, sealed on chain (bWalletX 5.2.33).
+
+- ◻Link GitHub and LinkedIn as signed badges on your name.
+
+- ◻Paid tasks in token rooms: post a task, someone delivers, they're paid when it's accepted.
+
+- ◻Profiles and a job board for clients and contractors.
+
+- ◻Signed work records, your checkable CV.
+
+- ◻Contractor payouts for teams, then payroll, employer onboarding and right-to-work checks.
+
+as listed on bjobsx.com, updated 19 Oct 2026.
+
+bJobsX runs on bWalletX: one wallet signs you in and pays, here and on every other site. [Get bWalletX](https://bwalletx.com/get).
+
+In bWalletX: [Gigs](https://bwalletx.com/gigs) · [Handles](https://bwalletx.com/handles) · [Business agents](https://bwalletx.com/business-agents)
+
+[← bRadioX](https://bwalletx.com/sites/bradiox)[All sites](https://bwalletx.com/sites)[bNewsX →](https://bwalletx.com/sites/bnewsx)
+
+---
+
+Source: https://bwalletx.com/sites/bmailx
+
+[Sites](https://bwalletx.com/sites) · bmailx.com
+
+# bMailX
+
+Letters that carry money. Your name@bmailx.com comes with your bWalletX name.
+
+[](https://bmailx.com)
+
+[Open bmailx.com →](https://bmailx.com)
+
+## What it is
+
+bMailX: letters that carry money. Every letter arrives sealed with a paid stamp, strangers pay your price to reach you, friends write free. Your name@bmailx.com address takes payments today.
+
+## Status: 5 live, 4 coming
+
+- ✓name@bmailx.com takes payments from any paymail wallet, into the same wallet as name@bwalletx.com.
+
+- ✓Sealed letters in bMail, inside bWalletX. Only the person you write to can open them.
+
+- ✓Paid stamps. Each letter's stamp is a real payment to the recipient, checked when it arrives.
+
+- ✓Your price to reach you. 1¢ by default; friends free and on top; anything under your price goes to Requests.
+
+- ✓Reply paid. Prepay a reply so the other person can answer for free.
+
+- ◻A real email inbox at name@bmailx.com, so ordinary email reaches you there.
+
+- ◻Your Gmail in bMail, in the same inbox.
+
+- ◻Agreements in bMail: send, both sign, sealed.
+
+- ◻Any amount in a letter, on top of the stamp.
+
+as listed on bmailx.com, updated 19 Oct 2026.
+
+bMailX runs on bWalletX: one wallet signs you in and pays, here and on every other site. [Get bWalletX](https://bwalletx.com/get).
+
+In bWalletX: [bMail](https://bwalletx.com/bmail) · [Handles](https://bwalletx.com/handles) · [Names](https://bwalletx.com/names)
+
+[← bChatX](https://bwalletx.com/sites/bchatx)[All sites](https://bwalletx.com/sites)[bMintX →](https://bwalletx.com/sites/bmintx)
+
+---
+
+Source: https://bwalletx.com/sites/bmintx
+
+[Sites](https://bwalletx.com/sites) · bmintx.com
+
+# bMintX
+
+You made it. Prove it's yours: put your work on Bitcoin in your own name, from about a penny.
+
+[](https://bmintx.com)
+
+[Open bmintx.com →](https://bmintx.com)[Watch the 32-second film →](https://bmintx.com/watch)
+
+## What it is
+
+bMintX: timestamp the memes, music, videos and art you make on Bitcoin, in your own name, from about a penny. Every piece lands in your own vault in bWalletX.
+
+## Status: 5 live, 3 coming
+
+- ✓Mint in bWalletX (bMint)Art & photos, music, videos, 3D models, books & PDFs, one-page websites. One of a kind or a numbered collection.
+
+- ✓Cost shown before you signNetwork fee from file size; small files come to about a penny.
+
+- ✓Minted pieces held in your own walletYour keys, your pieces.
+
+- ✓Tickets, coins and memecoins from the same Mint cardIn bWalletX editions that include them.
+
+- ✓bPics: mint your photos and browse everyone’s
+
+- ◻A vault page on bmintx.comShow your minted work in a public gallery.
+
+- ◻Auto-mint from AI tools such as GrokMake something, and it’s minted in your name as it’s made.
+
+- ◻Code and gamesMint a build of your app or game as a piece of your work.
+
+as listed on bmintx.com, updated 19 Oct 2026.
+
+bMintX runs on bWalletX: one wallet signs you in and pays, here and on every other site. [Get bWalletX](https://bwalletx.com/get).
+
+In bWalletX: [Mint](https://bwalletx.com/mint) · [NFTs](https://bwalletx.com/nfts) · [Features](https://bwalletx.com/features)
+
+[← bMailX](https://bwalletx.com/sites/bmailx)[All sites](https://bwalletx.com/sites)[bStoreX →](https://bwalletx.com/sites/bstorex)
+
+---
+
+Source: https://bwalletx.com/sites/bnewsx
+
+[Sites](https://bwalletx.com/sites) · bnewsx.com
+
+# bNewsX
+
+Headlines you talk over in the bWalletX Feed, with tips for the people who write them.
+
+[](https://bnewsx.com)
+
+[Open bnewsx.com →](https://bnewsx.com)
+
+## What it is
+
+bNewsX: the news market. Headlines you can discuss on chain in the bWalletX Feed today; pay-to-read stories with writers paid directly, sources on chain and agents scanning the chain are coming.
+
+## Status: 3 live, 5 coming
+
+- ✓bNews in the Feed. Headlines (headline, source, link, never the article body) open as threads you discuss on chain, and swipe to close. In bWalletX.
+
+- ✓Tip an author in the Feed, with a message if you like.
+
+- ✓Bitcoin Writer: private drafts, every version saved on chain, pay per byte. bitcoin-writer.com
+
+- ◻Pay to read, with writers paid directly for each read.
+
+- ◻Sources on chain: each story links its sources in a record that can't be quietly changed.
+
+- ◻A room for every story, free or paid to join.
+
+- ◻Agents that scan the chain for new stories and bring them to the Feed.
+
+- ◻Read on bnewsx.com, outside the wallet.
+
+as listed on bnewsx.com, updated 19 Oct 2026.
+
+bNewsX runs on bWalletX: one wallet signs you in and pays, here and on every other site. [Get bWalletX](https://bwalletx.com/get).
+
+In bWalletX: [Social](https://bwalletx.com/social) · [Tips](https://bwalletx.com/tips) · [Culture](https://bwalletx.com/culture)
+
+[← bJobsX](https://bwalletx.com/sites/bjobsx)[All sites](https://bwalletx.com/sites)[bVaultX →](https://bwalletx.com/sites/bvaultx)
+
+---
+
+Source: https://bwalletx.com/sites/bradiox
+
+[Sites](https://bwalletx.com/sites) · bradiox.com
+
+# bRadioX
+
+Radio you can join. Listen in the bRadio Lounge and raise your hand to speak.
+
+[](https://bradiox.com)
+
+[Open bradiox.com →](https://bradiox.com)
+
+## What it is
+
+bRadioX: live radio you can join. Listen in the bRadio Lounge on bChatX, raise your hand to speak, and record shows in Bitcoin Radio. Paid shows and the radio exchange are coming.
+
+## Status: 4 live, 3 coming
+
+- ✓The bRadio Lounge, a public room with live audio on bChatX. Follow it to get a ping when a show goes live.
+
+- ✓Speak on air. Sign in with bWalletX, raise your hand, and the host brings you on stage.
+
+- ✓Bitcoin Radio studio: record in the browser and save recordings on-chain from your own bWalletX.
+
+- ◻A schedule of shows on bCalX, each with its own page and calendar invite.
+
+- ✓Paid shows, if the host wants: a host can charge by the minute, paid from the listener's own wallet straight to the people on stage. The Lounge is free.
+
+- ◻The $BRADIO token on the Exchange, with the Lounge as its room.
+
+- ◻bRadioX, the radio exchange: a token and a room for each show and artist.
+
+as listed on bradiox.com, updated 19 Oct 2026.
+
+bRadioX runs on bWalletX: one wallet signs you in and pays, here and on every other site. [Get bWalletX](https://bwalletx.com/get).
+
+In bWalletX: [bRadio](https://bwalletx.com/bradio) · [Spaces](https://bwalletx.com/bspaces) · [Streaming payments](https://bwalletx.com/streaming-payments)
+
+[← bCalX](https://bwalletx.com/sites/bcalx)[All sites](https://bwalletx.com/sites)[bJobsX →](https://bwalletx.com/sites/bjobsx)
+
+---
+
+Source: https://bwalletx.com/sites/bsharesx
+
+[Sites](https://bwalletx.com/sites) · bsharesx.com
+
+# bSharesX
+
+Share-register software for any company. The first register is in testing.
+
+[](https://bsharesx.com)
+
+[Open bsharesx.com →](https://bsharesx.com)
+
+## What it is
+
+bSharesX: software for keeping share registers, for any company. The register stays the legal record, a token mirrors it on chain, and each holder's certificate is a live view in their wallet.
+
+## Status: 1 live, 7 coming
+
+- ✓First register in testing. The Bitcoin Corporation Ltd, our own company, keeps its register in bShares inside bWalletX. Restricted to its registered members and director. bWalletX › bShares (direct editions only)
+
+- ◻Set up your company's register. Any company enters its members and holdings, and its directors approve them.
+
+- ◻Holdings in bWalletX. Members see what they hold, in their own wallet, next to everything else.
+
+- ◻Live certificates. A certificate that redraws when the register changes, plus an optional keepsake mint.
+
+- ◻Record transfers. A transfer is entered when the directors approve it, and the on-chain record follows the register.
+
+- ◻Member votes. Resolutions counted by holding, straight from the register.
+
+- ◻Payouts. A company pays its members pro rata to their holdings, from its own wallet.
+
+- ◻Partnership shares. For groups that haven't incorporated yet: a locked record of who holds what, that moves only when the partners agree.
+
+as listed on bsharesx.com, updated 19 Oct 2026.
+
+bSharesX runs on bWalletX: one wallet signs you in and pays, here and on every other site. [Get bWalletX](https://bwalletx.com/get).
+
+In bWalletX: [bShares](https://bwalletx.com/bshares)
+
+[← bDriveX](https://bwalletx.com/sites/bdrivex)[All sites](https://bwalletx.com/sites)[bChatX →](https://bwalletx.com/sites/bchatx)
+
+---
+
+Source: https://bwalletx.com/sites/bstorex
+
+[Sites](https://bwalletx.com/sites) · bstorex.com
+
+# bStoreX
+
+The Store on the web. Themes and emoji themes, $1 each, each with a signed receipt.
+
+[](https://bstorex.com)
+
+[Open bstorex.com →](https://bstorex.com)
+
+## What it is
+
+bStoreX: the bWalletX Store on the web. Themes and emoji themes sell today for $1 in Bitcoin, each with a signed receipt. Editions and sellers' own shops are coming. Storage lives at bDriveX.
+
+## Status: 6 live, 5 coming
+
+- ✓The Store in bWalletX. Exchange › Store, with shops and departments. Shown on bwalletx.com/store
+
+- ✓Themes for sale. NPG, NPGX and VexVoid themes, $1 each, paid in BSV with one approval and yours to keep. bwalletx.com/store
+
+- ✓Signed receipts. Each Store purchase saves a signed receipt in your wallet's NFTs, in the same payment. bwalletx.com/store
+
+- ✓Mint NFTs. Pictures, music and video, saved on Bitcoin as 1Sat Ordinals from inside bWalletX. bwalletx.com/features
+
+- ✓Your NFTs in one place, including RelayX cards found from your 12 words. bwalletx.com/store
+
+- ✓Emoji themes. Twelve emoji themes, $1 each in BSV, in bWalletX 5.2.33. bwalletx.com/themes
+
+- ◻Your own shop in the Store, opened after b has looked it over, with 80% of each sale paid to your wallet.
+
+- ◻Sell any file: music, video, art, books and downloads.
+
+- ◻Pay-per-download delivery, where buyers pay for each download and the seller is paid directly.
+
+- ◻Editions: limited, numbered theme editions at $99.
+
+- ◻More theme packs from creators.
+
+as listed on bstorex.com, updated 19 Oct 2026.
+
+bStoreX runs on bWalletX: one wallet signs you in and pays, here and on every other site. [Get bWalletX](https://bwalletx.com/get).
+
+In bWalletX: [Store](https://bwalletx.com/store) · [Themes](https://bwalletx.com/themes) · [Design your card](https://bwalletx.com/themes-custom)
+
+[← bMintX](https://bwalletx.com/sites/bmintx)[All sites](https://bwalletx.com/sites)[bCalX →](https://bwalletx.com/sites/bcalx)
+
+---
+
+Source: https://bwalletx.com/sites/bvaultx
+
+[Sites](https://bwalletx.com/sites) · bvaultx.com
+
+# bVaultX
+
+Lock it away for as long as you like, and get it back from your 12 words.
+
+[](https://bvaultx.com)
+
+[Open bvaultx.com →](https://bvaultx.com)
+
+## What it is
+
+bVaultX: lock BSV for as long as you want your files kept, and the lock pays for storage month by month. Prepaid, time-locked, and yours: you keep the keys and can always get unspent BSV back from your 12 words.
+
+## Status: 5 live, 4 coming
+
+- ✓Lock BSV. Time locks in bWalletX: all at once, or spread daily, weekly or monthly, up to about ten years. bWalletX › Lock
+
+- ✓Claim when it opens. Matured locks come back to your wallet in one tap. bWalletX › Lock
+
+- ✓Recover from your 12 words. Locks use your own keys, so a restored wallet still sees and claims them. No server needed.
+
+- ✓Lock receipts you can check. An optional receipt in the same transaction, checked against the chain. bwalletx.com/lock/verify
+
+- ✓Pots. Group your locks by what they're for, like a savings goal.
+
+- ◻Prepaid storage vaults: lock BSV for your files on bDriveX, paid by monthly payments your wallet signs in advance, each time-locked to its month.
+
+- ◻Stop any time. Stop, and we stop storing; payments for months that haven't come yet stay yours.
+
+- ◻Keep a Space recording when everyone on stage agrees, stored at the host's cost.
+
+- ◻Lock other coins in a vault: BTC and ETH, with the same rule that you hold the keys.
+
+as listed on bvaultx.com, updated 19 Oct 2026.
+
+bVaultX runs on bWalletX: one wallet signs you in and pays, here and on every other site. [Get bWalletX](https://bwalletx.com/get).
+
+In bWalletX: [Lock](https://bwalletx.com/lock) · [Pots](https://bwalletx.com/pots) · [Check a lock receipt](https://bwalletx.com/lock/verify)
+
+[← bNewsX](https://bwalletx.com/sites/bnewsx)[All sites](https://bwalletx.com/sites)[bDriveX →](https://bwalletx.com/sites/bdrivex)
+
+---
+
+Source: https://bwalletx.com/sites/
+
+[bWalletX](https://bwalletx.com/) · Sites · updated 19 Oct 2026
+
+# One wallet. Every site.
+
+Each of these sites runs on bWalletX. Sign in once with your wallet and they all work together. Every site keeps its own list of what is live today and what is coming; the counts below come from those lists.
+
+[bChatX
+Chat, rooms and live Spaces, with your wallet.
+bchatx.com2 Live0 Coming](https://bwalletx.com/sites/bchatx)
+[bMailX
+Letters that carry money. Your name@bmailx.com comes with your bWalletX name.
+bmailx.com5 Live4 Coming](https://bwalletx.com/sites/bmailx)
+[bMintX
+You made it. Prove it's yours: put your work on Bitcoin in your own name, from about a penny.
+bmintx.com5 Live3 Coming](https://bwalletx.com/sites/bmintx)
+[bStoreX
+The Store on the web. Themes and emoji themes, $1 each, each with a signed receipt.
+bstorex.com6 Live5 Coming](https://bwalletx.com/sites/bstorex)
+[bCalX
+What's on, live. Every scheduled Space, ready for your calendar.
+bcalx.com8 Live2 Coming](https://bwalletx.com/sites/bcalx)
+[bRadioX
+Radio you can join. Listen in the bRadio Lounge and raise your hand to speak.
+bradiox.com4 Live3 Coming](https://bwalletx.com/sites/bradiox)
+[bJobsX
+Work, paid in Bitcoin, person to person. Your name already takes payments.
+bjobsx.com5 Live5 Coming](https://bwalletx.com/sites/bjobsx)
+[bNewsX
+Headlines you talk over in the bWalletX Feed, with tips for the people who write them.
+bnewsx.com3 Live5 Coming](https://bwalletx.com/sites/bnewsx)
+[bVaultX
+Lock it away for as long as you like, and get it back from your 12 words.
+bvaultx.com5 Live4 Coming](https://bwalletx.com/sites/bvaultx)
+[bDriveX
+Your files and recordings, kept on Bitcoin and paid for month by month.
+bdrivex.com2 Live5 Coming](https://bwalletx.com/sites/bdrivex)
+[bSharesX
+Share-register software for any company. The first register is in testing.
+bsharesx.com1 Live7 Coming](https://bwalletx.com/sites/bsharesx)
+
+Counts are read from each site’s own status list once a day. Last change: 19 Oct 2026.
+
+Related: [bApps](https://bwalletx.com/bapps) · [Features](https://bwalletx.com/features) · [Connect](https://bwalletx.com/connect) · [Blog](https://bwalletx.com/blog)
+
+---
+
 Source: https://bwalletx.com/agent
 
 # The b agent
@@ -12263,6 +12799,82 @@ Related: [Signed names](https://bwalletx.com/name-bindings) · [Names](https://b
 
 ---
 
+Source: https://bwalletx.com/blog/059-one-wallet-every-site
+
+[Development blog](https://bwalletx.com/blog) · 059 · 19 Oct 2026
+
+# One wallet. Every site.
+
+Since our last post on 17 Oct: a family of sites that open with your bWalletX, four wallet releases and a calmer Desktop. Everything below works today.
+
+## Sites that open with your wallet
+
+One wallet signs you in and pays, on every one of these. Each site keeps its own list of what is live, and [bwalletx.com/sites](https://bwalletx.com/sites) gathers them in one place, refreshed daily.
+
+- [bChatX](https://bwalletx.com/sites/bchatx): chat rooms and live audio Spaces. Listen without an account; sign in to speak.
+
+- [bMailX](https://bwalletx.com/sites/bmailx): your name@bmailx.com takes payments, into the same wallet as name@bwalletx.com. Letters arrive sealed with a paid stamp, and friends write free.
+
+- [bMintX](https://bwalletx.com/sites/bmintx): put the things you make on Bitcoin in your own name, from about a penny. [Watch the 32-second film](https://bmintx.com/watch).
+
+- [bStoreX](https://bwalletx.com/sites/bstorex): the Store on the web. Themes and emoji themes, $1 each, each with a signed receipt in your wallet.
+
+- [bCalX](https://bwalletx.com/sites/bcalx): what’s on. Every scheduled Space, with a page of its own and a calendar invite.
+
+- [bRadioX](https://bwalletx.com/sites/bradiox): radio you can join. Listen in the bRadio Lounge and raise your hand to speak.
+
+- [bJobsX](https://bwalletx.com/sites/bjobsx): work paid person to person. Your name already takes payments.
+
+- [bNewsX](https://bwalletx.com/sites/bnewsx): headlines you talk over in the bWalletX Feed, with tips for the people who write them.
+
+- [bVaultX](https://bwalletx.com/sites/bvaultx): lock money away until a date you choose, and get it back from your 12 words, with no server needed.
+
+## In the wallet
+
+Releases 5.2.30 to 5.2.33 ([notes](https://bwalletx.com/releases)):
+
+- Claim your name, then link X and Google as signed badges. Your email is never stored or shown.
+
+- Agreements live in [bMail](https://bwalletx.com/bmail): both sides sign, and the signed copy gets a sealed receipt. bMail never loses a stamp or charges twice.
+
+- A calendar of scheduled Spaces, with Remind me and add-to-calendar.
+
+- Twelve emoji themes in the [Store](https://bwalletx.com/store), $1 each.
+
+- Bring old RelayX collections home from your 12 words, and cancel old RelayX listings back to yourself in one tap. [How it works](https://bwalletx.com/recover-relayx).
+
+- Settings › Troubleshooting › Resync coins clears up “already spent” sends.
+
+- [bWalletX Desktop for Mac](https://bwalletx.com/get): a signed, notarised app for Apple silicon and Intel.
+
+## Desktop and web, tidied
+
+[Desktop](https://bwalletx.com/desktop) opens straight on your wallet in the classic layout, with a tidy Store grid and its own Address book page. On [the web](https://bwalletx.com/web), the beta notice sits clear of the top bar again.
+
+## Status, 19 Oct 2026
+
+- ✓ Nine sites that open with bWalletX, listed at [/sites](https://bwalletx.com/sites)
+
+- ✓ Linked X and Google badges on your name
+
+- ✓ Agreements and name@bmailx.com in bMail
+
+- ✓ Calendar of Spaces in the wallet
+
+- ✓ Emoji themes in the Store
+
+- ✓ RelayX recovery and listing cancel
+
+- ✓ Desktop classic layout and web layout fixes
+
+Less noise. More life. Just b.
+
+Related: [Sites](https://bwalletx.com/sites) · [Releases](https://bwalletx.com/releases) · [Desktop](https://bwalletx.com/desktop)
+
+[← 058 Signed names](https://bwalletx.com/blog/058-signed-names)[All posts →](https://bwalletx.com/blog)
+
+---
+
 Source: https://bwalletx.com/blog/
 
 # Development blog
@@ -12270,6 +12882,10 @@ Source: https://bwalletx.com/blog/
 How bWallet and bWalletX were built, one chapter at a time. Every post is written from the git history of the wallet, this site, the chat server and the PNEEs prototype. It covers what we built, why, what broke, what we reversed and what is still not done.
 
 Newest first. Dates come from commits. bWallet is a fork of [Yours Wallet](https://github.com/yours-org/yours-wallet) (MIT licence).
+
+- 059 · 19 Oct 2026
+[One wallet. Every site.](https://bwalletx.com/blog/059-one-wallet-every-site)
+Since 17 Oct: a family of sites that open with your bWalletX, four wallet releases and a calmer Desktop. Everything here works today.
 
 - 058 · 17 Oct 2026
 [We could move your name. Now you can see if we do.](https://bwalletx.com/blog/058-signed-names)

@@ -1,0 +1,804 @@
+{
+  "about": "Every bWalletX satellite site. Curated fields (name, pitch, badge, listed, home, related, links, manual_status) are edited by hand; title, description, og_image and status are refreshed from each live site by scripts/sync-sites.mjs (daily GitHub Action).",
+  "updated": "2026-10-19",
+  "sites": [
+    {
+      "slug": "bchatx",
+      "name": "bChatX",
+      "domain": "www.bchatx.com",
+      "url": "https://www.bchatx.com",
+      "listed": true,
+      "home": true,
+      "badge": "live",
+      "pitch": "Chat, rooms and live Spaces, with your wallet.",
+      "related": [
+        [
+          "/chat",
+          "Chat"
+        ],
+        [
+          "/social",
+          "Social"
+        ],
+        [
+          "/lounge",
+          "The Lounge"
+        ],
+        [
+          "/bspaces",
+          "Spaces"
+        ]
+      ],
+      "manual_status": [
+        {
+          "state": "live",
+          "text": "A chat room for every token",
+          "detail": "Open to holders; the Lounge is open to everyone."
+        },
+        {
+          "state": "live",
+          "text": "Live audio Spaces",
+          "detail": "Listen without an account; sign in to speak."
+        }
+      ],
+      "title": "Welcome · bChatX",
+      "description": "bChatX: chat, rooms and Spaces on Bitcoin. Sign in with bWalletX.",
+      "og_image": "https://www.bchatx.com/api/og/bchatx?v=3",
+      "description_override": "bChatX: chat rooms and live audio Spaces. Listen without an account; your wallet lets you speak and pay."
+    },
+    {
+      "slug": "bmailx",
+      "name": "bMailX",
+      "domain": "bmailx.com",
+      "url": "https://bmailx.com",
+      "listed": true,
+      "home": true,
+      "badge": "live",
+      "pitch": "Letters that carry money. Your name@bmailx.com comes with your bWalletX name.",
+      "related": [
+        [
+          "/bmail",
+          "bMail"
+        ],
+        [
+          "/handles",
+          "Handles"
+        ],
+        [
+          "/names",
+          "Names"
+        ]
+      ],
+      "title": "bMailX · Email that pays",
+      "description": "bMailX: letters that carry money. Every letter arrives sealed with a paid stamp, strangers pay your price to reach you, friends write free. Your name@bmailx.com address takes payments today.",
+      "og_image": "https://bmailx.com/og-bmailx-v3.png",
+      "status": [
+        {
+          "state": "live",
+          "text": "name@bmailx.com takes payments from any paymail wallet, into the same wallet as name@bwalletx.com."
+        },
+        {
+          "state": "live",
+          "text": "Sealed letters in bMail, inside bWalletX. Only the person you write to can open them."
+        },
+        {
+          "state": "live",
+          "text": "Paid stamps. Each letter's stamp is a real payment to the recipient, checked when it arrives."
+        },
+        {
+          "state": "live",
+          "text": "Your price to reach you. 1¢ by default; friends free and on top; anything under your price goes to Requests."
+        },
+        {
+          "state": "live",
+          "text": "Reply paid. Prepay a reply so the other person can answer for free."
+        },
+        {
+          "state": "coming",
+          "text": "A real email inbox at name@bmailx.com, so ordinary email reaches you there."
+        },
+        {
+          "state": "coming",
+          "text": "Your Gmail in bMail, in the same inbox."
+        },
+        {
+          "state": "coming",
+          "text": "Agreements in bMail: send, both sign, sealed."
+        },
+        {
+          "state": "coming",
+          "text": "Any amount in a letter, on top of the stamp."
+        }
+      ]
+    },
+    {
+      "slug": "bmintx",
+      "name": "bMintX",
+      "domain": "bmintx.com",
+      "url": "https://bmintx.com",
+      "listed": true,
+      "home": true,
+      "badge": "live",
+      "pitch": "You made it. Prove it's yours: put your work on Bitcoin in your own name, from about a penny.",
+      "related": [
+        [
+          "/mint",
+          "Mint"
+        ],
+        [
+          "/nfts",
+          "NFTs"
+        ],
+        [
+          "/features",
+          "Features"
+        ]
+      ],
+      "links": [
+        {
+          "label": "Watch the 32-second film",
+          "url": "https://bmintx.com/watch",
+          "og_image": "https://bmintx.com/og-bmintx-watch-v2.png?v=2"
+        }
+      ],
+      "title": "bMintX · You made it. Prove it’s yours.",
+      "description": "bMintX: timestamp the memes, music, videos and art you make on Bitcoin, in your own name, from about a penny. Every piece lands in your own vault in bWalletX.",
+      "og_image": "https://bmintx.com/og-bmintx-v1.png",
+      "status": [
+        {
+          "state": "live",
+          "text": "Mint in bWalletX (bMint)",
+          "detail": "Art & photos, music, videos, 3D models, books & PDFs, one-page websites. One of a kind or a numbered collection."
+        },
+        {
+          "state": "live",
+          "text": "Cost shown before you sign",
+          "detail": "Network fee from file size; small files come to about a penny."
+        },
+        {
+          "state": "live",
+          "text": "Minted pieces held in your own wallet",
+          "detail": "Your keys, your pieces."
+        },
+        {
+          "state": "live",
+          "text": "Tickets, coins and memecoins from the same Mint card",
+          "detail": "In bWalletX editions that include them."
+        },
+        {
+          "state": "live",
+          "text": "bPics: mint your photos and browse everyone’s"
+        },
+        {
+          "state": "coming",
+          "text": "A vault page on bmintx.com",
+          "detail": "Show your minted work in a public gallery."
+        },
+        {
+          "state": "coming",
+          "text": "Auto-mint from AI tools such as Grok",
+          "detail": "Make something, and it’s minted in your name as it’s made."
+        },
+        {
+          "state": "coming",
+          "text": "Code and games",
+          "detail": "Mint a build of your app or game as a piece of your work."
+        }
+      ]
+    },
+    {
+      "slug": "bstorex",
+      "name": "bStoreX",
+      "domain": "bstorex.com",
+      "url": "https://bstorex.com",
+      "listed": true,
+      "home": true,
+      "badge": "live",
+      "pitch": "The Store on the web. Themes and emoji themes, $1 each, each with a signed receipt.",
+      "related": [
+        [
+          "/store",
+          "Store"
+        ],
+        [
+          "/themes",
+          "Themes"
+        ],
+        [
+          "/themes-custom",
+          "Design your card"
+        ]
+      ],
+      "title": "bStoreX · Sell digital things, paid in Bitcoin",
+      "description": "bStoreX: the bWalletX Store on the web. Themes and emoji themes sell today for $1 in Bitcoin, each with a signed receipt. Editions and sellers' own shops are coming. Storage lives at bDriveX.",
+      "og_image": "https://bstorex.com/og-bstorex-v3.png",
+      "status": [
+        {
+          "state": "live",
+          "text": "The Store in bWalletX. Exchange › Store, with shops and departments. Shown on bwalletx.com/store"
+        },
+        {
+          "state": "live",
+          "text": "Themes for sale. NPG, NPGX and VexVoid themes, $1 each, paid in BSV with one approval and yours to keep. bwalletx.com/store"
+        },
+        {
+          "state": "live",
+          "text": "Signed receipts. Each Store purchase saves a signed receipt in your wallet's NFTs, in the same payment. bwalletx.com/store"
+        },
+        {
+          "state": "live",
+          "text": "Mint NFTs. Pictures, music and video, saved on Bitcoin as 1Sat Ordinals from inside bWalletX. bwalletx.com/features"
+        },
+        {
+          "state": "live",
+          "text": "Your NFTs in one place, including RelayX cards found from your 12 words. bwalletx.com/store"
+        },
+        {
+          "state": "live",
+          "text": "Emoji themes. Twelve emoji themes, $1 each in BSV, in bWalletX 5.2.33. bwalletx.com/themes"
+        },
+        {
+          "state": "coming",
+          "text": "Your own shop in the Store, opened after b has looked it over, with 80% of each sale paid to your wallet."
+        },
+        {
+          "state": "coming",
+          "text": "Sell any file: music, video, art, books and downloads."
+        },
+        {
+          "state": "coming",
+          "text": "Pay-per-download delivery, where buyers pay for each download and the seller is paid directly."
+        },
+        {
+          "state": "coming",
+          "text": "Editions: limited, numbered theme editions at $99."
+        },
+        {
+          "state": "coming",
+          "text": "More theme packs from creators."
+        }
+      ]
+    },
+    {
+      "slug": "bcalx",
+      "name": "bCalX",
+      "domain": "bcalx.com",
+      "url": "https://bcalx.com",
+      "listed": true,
+      "home": true,
+      "badge": "live",
+      "pitch": "What's on, live. Every scheduled Space, ready for your calendar.",
+      "related": [
+        [
+          "/bspaces",
+          "Spaces"
+        ],
+        [
+          "/live",
+          "Live"
+        ],
+        [
+          "/lounge",
+          "The Lounge"
+        ]
+      ],
+      "title": "bCalX · What’s on, live",
+      "description": "bCalX is the calendar of live audio Spaces on bChatX. See what’s on, add any Space to your calendar, subscribe to them all, and open the Space when it starts.",
+      "og_image": "https://bcalx.com/api/og",
+      "status": [
+        {
+          "state": "live",
+          "text": "What’s on: scheduled Spaces from bChatX",
+          "detail": "Fills in as rooms confirm Spaces."
+        },
+        {
+          "state": "live",
+          "text": "Add to calendar (.ics) for each Space"
+        },
+        {
+          "state": "live",
+          "text": "Subscribe to every Space (calendar feed)"
+        },
+        {
+          "state": "live",
+          "text": "A page and share image for each Space"
+        },
+        {
+          "state": "live",
+          "text": "Schedule or book a Space in a bChatX room"
+        },
+        {
+          "state": "live",
+          "text": "Reminders for room members on bChatX"
+        },
+        {
+          "state": "coming",
+          "text": "Remind me straight from bCalX",
+          "detail": "Without opening the room first."
+        },
+        {
+          "state": "live",
+          "text": "bCalendar in bWalletX",
+          "detail": "A calendar of scheduled Spaces in the wallet (All, Following, Mine) with Remind me and.ics, from bWalletX 5.2.33."
+        },
+        {
+          "state": "live",
+          "text": "Per-room calendar feeds",
+          "detail": "bcalx.com/room/<ticker>.ics"
+        },
+        {
+          "state": "coming",
+          "text": "Each Space signed on Bitcoin",
+          "detail": "The host signs a public record (open spec); event pages verify it."
+        }
+      ]
+    },
+    {
+      "slug": "bradiox",
+      "name": "bRadioX",
+      "domain": "bradiox.com",
+      "url": "https://bradiox.com",
+      "listed": true,
+      "home": true,
+      "badge": "live",
+      "pitch": "Radio you can join. Listen in the bRadio Lounge and raise your hand to speak.",
+      "related": [
+        [
+          "/bradio",
+          "bRadio"
+        ],
+        [
+          "/bspaces",
+          "Spaces"
+        ],
+        [
+          "/streaming-payments",
+          "Streaming payments"
+        ]
+      ],
+      "title": "bRadioX · Radio you can join",
+      "description": "bRadioX: live radio you can join. Listen in the bRadio Lounge on bChatX, raise your hand to speak, and record shows in Bitcoin Radio. Paid shows and the radio exchange are coming.",
+      "og_image": "https://bradiox.com/og-bradiox-v2.png",
+      "status": [
+        {
+          "state": "live",
+          "text": "The bRadio Lounge, a public room with live audio on bChatX. Follow it to get a ping when a show goes live."
+        },
+        {
+          "state": "live",
+          "text": "Speak on air. Sign in with bWalletX, raise your hand, and the host brings you on stage."
+        },
+        {
+          "state": "live",
+          "text": "Bitcoin Radio studio: record in the browser and save recordings on-chain from your own bWalletX."
+        },
+        {
+          "state": "coming",
+          "text": "A schedule of shows on bCalX, each with its own page and calendar invite."
+        },
+        {
+          "state": "live",
+          "text": "Paid shows, if the host wants: a host can charge by the minute, paid from the listener's own wallet straight to the people on stage. The Lounge is free."
+        },
+        {
+          "state": "coming",
+          "text": "The $BRADIO token on the Exchange, with the Lounge as its room."
+        },
+        {
+          "state": "coming",
+          "text": "bRadioX, the radio exchange: a token and a room for each show and artist."
+        }
+      ]
+    },
+    {
+      "slug": "bjobsx",
+      "name": "bJobsX",
+      "domain": "bjobsx.com",
+      "url": "https://bjobsx.com",
+      "listed": true,
+      "home": true,
+      "badge": "live",
+      "pitch": "Work, paid in Bitcoin, person to person. Your name already takes payments.",
+      "related": [
+        [
+          "/gigs",
+          "Gigs"
+        ],
+        [
+          "/handles",
+          "Handles"
+        ],
+        [
+          "/business-agents",
+          "Business agents"
+        ]
+      ],
+      "title": "bJobsX · Work, paid in Bitcoin",
+      "description": "bJobsX: a professional network and work market where people are paid in Bitcoin, person to person. Your bWalletX name takes payments today; job board, profiles and on-chain work records are coming.",
+      "og_image": "https://bjobsx.com/og-bjobsx-v2.png",
+      "status": [
+        {
+          "state": "live",
+          "text": "Your name takes payments. $you and you@bwalletx.com receive from any paymail wallet, straight into your own wallet."
+        },
+        {
+          "state": "live",
+          "text": "Partnerships. Set up partners, b drafts the agreement, everyone signs in their own wallet, and payments to the partnership split by the agreed share. bWalletX 5.2.32"
+        },
+        {
+          "state": "live",
+          "text": "Tell b what's broken. Ask b takes bug reports and ideas, and fixes are listed in the open on bwalletx.com/bugs."
+        },
+        {
+          "state": "live",
+          "text": "Link your accounts: X and Google, as signed badges on your name (bWalletX 5.2.33). GitHub and LinkedIn soon."
+        },
+        {
+          "state": "live",
+          "text": "Agreements in bMail: send terms, both sign, sealed on chain (bWalletX 5.2.33)."
+        },
+        {
+          "state": "coming",
+          "text": "Link GitHub and LinkedIn as signed badges on your name."
+        },
+        {
+          "state": "coming",
+          "text": "Paid tasks in token rooms: post a task, someone delivers, they're paid when it's accepted."
+        },
+        {
+          "state": "coming",
+          "text": "Profiles and a job board for clients and contractors."
+        },
+        {
+          "state": "coming",
+          "text": "Signed work records, your checkable CV."
+        },
+        {
+          "state": "coming",
+          "text": "Contractor payouts for teams, then payroll, employer onboarding and right-to-work checks."
+        }
+      ]
+    },
+    {
+      "slug": "bnewsx",
+      "name": "bNewsX",
+      "domain": "bnewsx.com",
+      "url": "https://bnewsx.com",
+      "listed": true,
+      "home": true,
+      "badge": "live",
+      "pitch": "Headlines you talk over in the bWalletX Feed, with tips for the people who write them.",
+      "related": [
+        [
+          "/social",
+          "Social"
+        ],
+        [
+          "/tips",
+          "Tips"
+        ],
+        [
+          "/culture",
+          "Culture"
+        ]
+      ],
+      "title": "bNewsX · News you can trust, paid fairly",
+      "description": "bNewsX: the news market. Headlines you can discuss on chain in the bWalletX Feed today; pay-to-read stories with writers paid directly, sources on chain and agents scanning the chain are coming.",
+      "og_image": "https://bnewsx.com/og-bnewsx-v2.png",
+      "status": [
+        {
+          "state": "live",
+          "text": "bNews in the Feed. Headlines (headline, source, link, never the article body) open as threads you discuss on chain, and swipe to close. In bWalletX."
+        },
+        {
+          "state": "live",
+          "text": "Tip an author in the Feed, with a message if you like."
+        },
+        {
+          "state": "live",
+          "text": "Bitcoin Writer: private drafts, every version saved on chain, pay per byte. bitcoin-writer.com"
+        },
+        {
+          "state": "coming",
+          "text": "Pay to read, with writers paid directly for each read."
+        },
+        {
+          "state": "coming",
+          "text": "Sources on chain: each story links its sources in a record that can't be quietly changed."
+        },
+        {
+          "state": "coming",
+          "text": "A room for every story, free or paid to join."
+        },
+        {
+          "state": "coming",
+          "text": "Agents that scan the chain for new stories and bring them to the Feed."
+        },
+        {
+          "state": "coming",
+          "text": "Read on bnewsx.com, outside the wallet."
+        }
+      ]
+    },
+    {
+      "slug": "bmusicx",
+      "name": "bMusicX",
+      "domain": "bmusicx.com",
+      "url": "https://bmusicx.com",
+      "listed": false,
+      "home": true,
+      "badge": "live",
+      "pitch": "Stream music by the second; every second pays the artist.",
+      "related": [
+        [
+          "/artists",
+          "Artists"
+        ],
+        [
+          "/streaming-payments",
+          "Streaming payments"
+        ]
+      ],
+      "title": "bMusicX — Bitcoin Music Exchange",
+      "description": "bMusicX, the Bitcoin Music Exchange. Stream music by the second, and every second pays the artist directly.",
+      "og_image": "https://bmusicx.com/opengraph-image?8351039b29e756fb"
+    },
+    {
+      "slug": "bvaultx",
+      "name": "bVaultX",
+      "domain": "bvaultx.com",
+      "url": "https://bvaultx.com",
+      "listed": true,
+      "home": true,
+      "badge": "coming",
+      "pitch": "Lock it away for as long as you like, and get it back from your 12 words.",
+      "related": [
+        [
+          "/lock",
+          "Lock"
+        ],
+        [
+          "/pots",
+          "Pots"
+        ],
+        [
+          "/lock/verify",
+          "Check a lock receipt"
+        ]
+      ],
+      "title": "bVaultX · The vault that pays for itself",
+      "description": "bVaultX: lock BSV for as long as you want your files kept, and the lock pays for storage month by month. Prepaid, time-locked, and yours: you keep the keys and can always get unspent BSV back from your 12 words.",
+      "og_image": "https://bvaultx.com/og-bvaultx-v2.png",
+      "status": [
+        {
+          "state": "live",
+          "text": "Lock BSV. Time locks in bWalletX: all at once, or spread daily, weekly or monthly, up to about ten years. bWalletX › Lock"
+        },
+        {
+          "state": "live",
+          "text": "Claim when it opens. Matured locks come back to your wallet in one tap. bWalletX › Lock"
+        },
+        {
+          "state": "live",
+          "text": "Recover from your 12 words. Locks use your own keys, so a restored wallet still sees and claims them. No server needed."
+        },
+        {
+          "state": "live",
+          "text": "Lock receipts you can check. An optional receipt in the same transaction, checked against the chain. bwalletx.com/lock/verify"
+        },
+        {
+          "state": "live",
+          "text": "Pots. Group your locks by what they're for, like a savings goal."
+        },
+        {
+          "state": "coming",
+          "text": "Prepaid storage vaults: lock BSV for your files on bDriveX, paid by monthly payments your wallet signs in advance, each time-locked to its month."
+        },
+        {
+          "state": "coming",
+          "text": "Stop any time. Stop, and we stop storing; payments for months that haven't come yet stay yours."
+        },
+        {
+          "state": "coming",
+          "text": "Keep a Space recording when everyone on stage agrees, stored at the host's cost."
+        },
+        {
+          "state": "coming",
+          "text": "Lock other coins in a vault: BTC and ETH, with the same rule that you hold the keys."
+        }
+      ]
+    },
+    {
+      "slug": "bdrivex",
+      "name": "bDriveX",
+      "domain": "bdrivex.com",
+      "url": "https://bdrivex.com",
+      "listed": true,
+      "home": true,
+      "badge": "coming",
+      "pitch": "Your files and recordings, kept on Bitcoin and paid for month by month.",
+      "related": [
+        [
+          "/mint",
+          "Mint"
+        ],
+        [
+          "/store",
+          "Store"
+        ],
+        [
+          "/privacy",
+          "Privacy"
+        ]
+      ],
+      "title": "bDriveX · Your files and recordings, kept on chain",
+      "description": "bDriveX keeps your files and recordings on Bitcoin, paid for from your own bWalletX a little each month. Stop paying and we stop storing. Recordings are kept only when every speaker agrees.",
+      "og_image": "https://bdrivex.com/og-bdrivex-v2.png",
+      "status": [
+        {
+          "state": "live",
+          "text": "Pictures, music and video on chain. Save them on Bitcoin as 1Sat Ordinals from inside bWalletX, kept in your wallet. bwalletx.com/features"
+        },
+        {
+          "state": "live",
+          "text": "Writing saved on chain. Bitcoin Writer saves your documents to the BSV blockchain. Bitcoin Writer"
+        },
+        {
+          "state": "coming",
+          "text": "Store any file in bDriveX and find it again from any device with your wallet."
+        },
+        {
+          "state": "coming",
+          "text": "Pay as long as you like: monthly payments your wallet signs in advance, each time-locked to its month. Stop paying and we stop storing."
+        },
+        {
+          "state": "coming",
+          "text": "Keep a Space recording when every speaker agrees, encrypted to the people in it, at the cost of whoever keeps it."
+        },
+        {
+          "state": "coming",
+          "text": "Spoken agreements: keep the audio of an agreement both sides said out loud, with its fingerprint sealed on chain."
+        },
+        {
+          "state": "coming",
+          "text": "Share a file with anyone's name, or set a price and sell it through bStoreX."
+        }
+      ]
+    },
+    {
+      "slug": "bsharesx",
+      "name": "bSharesX",
+      "domain": "bsharesx.com",
+      "url": "https://bsharesx.com",
+      "listed": true,
+      "home": false,
+      "badge": "coming",
+      "pitch": "Share-register software for any company. The first register is in testing.",
+      "related": [
+        [
+          "/bshares",
+          "bShares"
+        ]
+      ],
+      "title": "bSharesX · Share registers, kept the modern way",
+      "description": "bSharesX: software for keeping share registers, for any company. The register stays the legal record, a token mirrors it on chain, and each holder's certificate is a live view in their wallet.",
+      "og_image": "https://bsharesx.com/og-bsharesx-v2.png",
+      "status": [
+        {
+          "state": "live",
+          "text": "First register in testing. The Bitcoin Corporation Ltd, our own company, keeps its register in bShares inside bWalletX. Restricted to its registered members and director. bWalletX › bShares (direct editions only)"
+        },
+        {
+          "state": "coming",
+          "text": "Set up your company's register. Any company enters its members and holdings, and its directors approve them."
+        },
+        {
+          "state": "coming",
+          "text": "Holdings in bWalletX. Members see what they hold, in their own wallet, next to everything else."
+        },
+        {
+          "state": "coming",
+          "text": "Live certificates. A certificate that redraws when the register changes, plus an optional keepsake mint."
+        },
+        {
+          "state": "coming",
+          "text": "Record transfers. A transfer is entered when the directors approve it, and the on-chain record follows the register."
+        },
+        {
+          "state": "coming",
+          "text": "Member votes. Resolutions counted by holding, straight from the register."
+        },
+        {
+          "state": "coming",
+          "text": "Payouts. A company pays its members pro rata to their holdings, from its own wallet."
+        },
+        {
+          "state": "coming",
+          "text": "Partnership shares. For groups that haven't incorporated yet: a locked record of who holds what, that moves only when the partners agree."
+        }
+      ]
+    },
+    {
+      "slug": "bwriterx",
+      "name": "bWriterX",
+      "domain": "bwriterx.com",
+      "url": "https://bwriterx.com",
+      "listed": false,
+      "home": false,
+      "badge": "live",
+      "pitch": "Write it down. Keep it forever.",
+      "related": [],
+      "title": "bWriterX · Write it down. Keep it forever.",
+      "description": "bWriterX is Bitcoin Writer: a writing app that saves each version of your work to Bitcoin, encrypted and timestamped. On the web and on Mac today. Publishing and pay-to-read are coming.",
+      "og_image": "https://bwriterx.com/og-bwriterx-v2.png",
+      "status": [
+        {
+          "state": "live",
+          "text": "A full writing app. Write and format documents in your browser, with tabs and autosave. bitcoin-writer.vercel.app"
+        },
+        {
+          "state": "live",
+          "text": "Bitcoin Writer for Mac, 1.5.0. Apple Silicon and Intel, with native menus and saving to and opening files on your Mac. Download from GitHub"
+        },
+        {
+          "state": "live",
+          "text": "Save to chain. Each save is written to Bitcoin as a new version, with a timestamp and a transaction you can look up. File › Save to Chain"
+        },
+        {
+          "state": "live",
+          "text": "Private by default. Your text is encrypted in the app before it is saved, with a key only your sign-in can open."
+        },
+        {
+          "state": "live",
+          "text": "See the price first. You get a quote in sats before you pay, and you pay from your HandCash wallet."
+        },
+        {
+          "state": "live",
+          "text": "Version history. A work tree of every save. Open any old version, or fork a document into two branches. History › Work Tree"
+        },
+        {
+          "state": "live",
+          "text": "Open from chain. Paste a save's transaction ID and the document opens again."
+        },
+        {
+          "state": "coming",
+          "text": "Sign in with bWalletX. Save and pay through any BRC-100 wallet, bWalletX first. Today the app signs in with HandCash."
+        },
+        {
+          "state": "coming",
+          "text": "Prove it or Inscribe. Put just a fingerprint of your text on chain to prove it existed, or the full text in the open, with bMintX."
+        },
+        {
+          "state": "coming",
+          "text": "Signed in your name. Each published piece carries your $name, so readers know who wrote it."
+        },
+        {
+          "state": "coming",
+          "text": "Pay to read. Free stays free. Paid pieces cost what it costs to serve them plus a small premium, and the money goes to the writer."
+        },
+        {
+          "state": "coming",
+          "text": "Articles in bChatX and bNews. Share a piece into a room or the news feed, with the paid part unlocked in one tap. bnewsx.com"
+        },
+        {
+          "state": "coming",
+          "text": "Files on bDriveX. Keep drafts, images and attachments in your own storage. bdrivex.com"
+        }
+      ]
+    },
+    {
+      "slug": "scammerscartel",
+      "name": "Scammers Cartel",
+      "domain": "scammerscartel.com",
+      "url": "https://scammerscartel.com",
+      "listed": false,
+      "home": false,
+      "badge": "live",
+      "pitch": "",
+      "related": [],
+      "title": "Scammers Cartel — the Space that never closes",
+      "description": "The Scammers Cartel group chat and 24/7 Space, on bChatX. Pull up and listen, no account needed. Hold 1 $SCAM to join the room.",
+      "og_image": "https://scammerscartel.com/skins/scammerscartel/og.jpg?v=1"
+    }
+  ]
+}

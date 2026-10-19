@@ -89,10 +89,11 @@
           { label: 'bTV: AIVJ', href: '/aivj' },
           { label: 'b creative', href: '/b-creative' }
         ] },
-      { label: 'bApps', href: '/bapps', pages: ['/bapps', '/bapps/bmovies', '/bshares', '/partnership-shares', '/bweb'],
+      { label: 'bApps', href: '/bapps', pages: ['/bapps', '/sites', '/bapps/bmovies', '/bshares', '/partnership-shares', '/bweb'],
         sub: [
           { label: 'All bApps', href: '/bapps' },
           { label: 'bMovies', href: '/bapps/bmovies' },
+          { label: 'All sites', href: '/sites' },
           { label: 'bChatX', href: 'https://www.bchatx.com' },
           { label: 'bMailX', href: 'https://bmailx.com' },
           { label: 'bRadioX', href: 'https://bradiox.com' },
@@ -135,11 +136,11 @@
           { label: 'Hodl my b · weekly', href: '/hodl-my-b' },
           { head: 'Latest' }
         ].concat([
-          { label: '053 Friends, bPics, video', href: '/blog/053-friends-bpics-and-video' },
-          { label: '052 Tip buttons', href: '/blog/052-tip-buttons' },
-          { label: '051 Spaces on a schedule', href: '/blog/051-spaces-schedule-and-ask-b' },
-          { label: '050 bTV: AIVJ — VexVoid, live', href: '/blog/050-aivj-tv-vexvoid-live' },
-          { label: '049 The Exchange, sorted', href: '/blog/049-the-exchange-sorted' }
+          { label: '059 One wallet. Every site.', href: '/blog/059-one-wallet-every-site' },
+          { label: '058 Signed names', href: '/blog/058-signed-names' },
+          { label: '057 HandCash and invites', href: '/blog/057-handcash-and-invites' },
+          { label: '056 bShares', href: '/blog/056-bshares' },
+          { label: '055 Digital Ice-Cream', href: '/blog/055-digital-ice-cream' }
         ]) }
     ],
     // Store edition (bWallet): browse-only Market, no trading, everything else lives on bWalletX.
