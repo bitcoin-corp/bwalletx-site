@@ -3493,6 +3493,15 @@ Each release ships to the Android APK, the Chrome extension and the web wallet. 
 
 ## 5.2.36 2026-10-19
 
+- Sending fixed: coins already spent from another device no longer inflate your balance or make sends fail. The wallet checks them quietly when you unlock (confirmed spends only, and it undoes any mistake).
+- If a send does hit a spent coin, you now see “cleared — tap Send again” instead of a raw network error.
+- Report to b never loses a report: offline or signed-out reports are saved and sent automatically later. See them under Your reports.
+- “You’re offline” instead of confusing sync errors when your phone has no internet.
+- Refresh shows a quiet “Up to date” tick on the card instead of a pop-up.
+- Desktop: the bChatX Feed no longer crashes.
+
+## 5.2.35 2026-10-19
+
 - Security: outside apps can no longer use the wallet’s own keys, including the keys behind bTrust. Outside 1Sat apps are now refused the wallet’s onesat and message-signing keys, so a few may need updating.
 - Pairing your phone uses only our own relay, and a paired session never inherits another site’s permissions.
 - Sign in with bWalletX now asks you to type the match code the site shows, and changing your password needs proof it’s you: your current password, Face ID or passcode, or your 12 words.
