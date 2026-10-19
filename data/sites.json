@@ -10,7 +10,7 @@
       "listed": true,
       "home": true,
       "badge": "live",
-      "pitch": "Chat, rooms and live Spaces. Sign in with bWalletX.",
+      "pitch": "Chat, rooms and live Spaces, with your wallet.",
       "related": [
         [
           "/chat",
@@ -39,15 +39,12 @@
           "state": "live",
           "text": "Live audio Spaces",
           "detail": "Listen without an account; sign in to speak."
-        },
-        {
-          "state": "live",
-          "text": "Sign in with bWalletX"
         }
       ],
       "title": "Welcome · bChatX",
       "description": "bChatX: chat, rooms and Spaces on Bitcoin. Sign in with bWalletX.",
-      "og_image": "https://www.bchatx.com/api/og/bchatx?v=3"
+      "og_image": "https://www.bchatx.com/api/og/bchatx?v=3",
+      "description_override": "bChatX: chat rooms and live audio Spaces. Listen without an account; your wallet lets you speak and pay."
     },
     {
       "slug": "bmailx",

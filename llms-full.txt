@@ -2647,7 +2647,7 @@ Part of bWalletX
 
 Each of these sites runs on bWalletX. Sign in once with your wallet and they all work together. [See every site →](https://bwalletx.com/sites)
 
-[LivebChatXChat, rooms and live Spaces. Sign in with bWalletX.](https://www.bchatx.com)
+[LivebChatXChat, rooms and live Spaces, with your wallet.](https://www.bchatx.com)
 [LivebMailXLetters that carry money. Your name@bmailx.com comes with your bWalletX name.](https://bmailx.com)
 [LivebMintXYou made it. Prove it's yours: put your work on Bitcoin in your own name, from about a penny.](https://bmintx.com)
 [LivebStoreXThe Store on the web. Themes and emoji themes, $1 each, each with a signed receipt.](https://bstorex.com)
@@ -7942,7 +7942,7 @@ Source: https://bwalletx.com/sites/bchatx
 
 # bChatX
 
-Chat, rooms and live Spaces. Sign in with bWalletX.
+Chat, rooms and live Spaces, with your wallet.
 
 [](https://www.bchatx.com)
 
@@ -7950,15 +7950,13 @@ Chat, rooms and live Spaces. Sign in with bWalletX.
 
 ## What it is
 
-bChatX: chat, rooms and Spaces on Bitcoin. Sign in with bWalletX.
+bChatX: chat rooms and live audio Spaces. Listen without an account; your wallet lets you speak and pay.
 
-## Status: 3 live, 0 coming
+## Status: 2 live, 0 coming
 
 - ✓A chat room for every tokenOpen to holders; the Lounge is open to everyone.
 
 - ✓Live audio SpacesListen without an account; sign in to speak.
-
-- ✓Sign in with bWalletX
 
 kept by hand, updated 19 Oct 2026.
 
@@ -8385,8 +8383,8 @@ Source: https://bwalletx.com/sites/
 Each of these sites runs on bWalletX. Sign in once with your wallet and they all work together. Every site keeps its own list of what is live today and what is coming; the counts below come from those lists.
 
 [bChatX
-Chat, rooms and live Spaces. Sign in with bWalletX.
-bchatx.com3 Live0 Coming](https://bwalletx.com/sites/bchatx)
+Chat, rooms and live Spaces, with your wallet.
+bchatx.com2 Live0 Coming](https://bwalletx.com/sites/bchatx)
 [bMailX
 Letters that carry money. Your name@bmailx.com comes with your bWalletX name.
 bmailx.com5 Live4 Coming](https://bwalletx.com/sites/bmailx)
@@ -8420,7 +8418,7 @@ bsharesx.com1 Live7 Coming](https://bwalletx.com/sites/bsharesx)
 
 Counts are read from each site’s own status list once a day. Last change: 19 Oct 2026.
 
-Related: [bApps](https://bwalletx.com/bapps) · [Features](https://bwalletx.com/features) · [Sign in with bWalletX](https://bwalletx.com/sign-in-button) · [Blog](https://bwalletx.com/blog)
+Related: [bApps](https://bwalletx.com/bapps) · [Features](https://bwalletx.com/features) · [Connect](https://bwalletx.com/connect) · [Blog](https://bwalletx.com/blog)
 
 ---
 
@@ -12731,7 +12729,7 @@ Source: https://bwalletx.com/blog/059-one-wallet-every-site
 
 # One wallet. Every site.
 
-Since our last post on 17 Oct: a family of sites that open with your bWalletX, Sign in with bWalletX for any site, four wallet releases and a calmer Desktop. Everything below works today.
+Since our last post on 17 Oct: a family of sites that open with your bWalletX, four wallet releases and a calmer Desktop. Everything below works today.
 
 ## Sites that open with your wallet
 
@@ -12754,10 +12752,6 @@ One wallet signs you in and pays, on every one of these. Each site keeps its own
 - [bNewsX](https://bwalletx.com/sites/bnewsx): headlines you talk over in the bWalletX Feed, with tips for the people who write them.
 
 - [bVaultX](https://bwalletx.com/sites/bvaultx): lock money away until a date you choose, and get it back from your 12 words, with no server needed.
-
-## Sign in with bWalletX
-
-Any site can now offer a Sign in with bWalletX button. It sends you to [auth.bwalletx.com](https://auth.bwalletx.com/.well-known/openid-configuration), your wallet shows one sheet, and you’re in. No password, no email. It uses the standard OAuth 2.1 with PKCE, so it fits the sign-in code most sites already have. [Add the button](https://bwalletx.com/sign-in-button).
 
 ## In the wallet
 
@@ -12785,8 +12779,6 @@ Releases 5.2.30 to 5.2.33 ([notes](https://bwalletx.com/releases)):
 
 - ✓ Nine sites that open with bWalletX, listed at [/sites](https://bwalletx.com/sites)
 
-- ✓ Sign in with bWalletX at auth.bwalletx.com
-
 - ✓ Linked X and Google badges on your name
 
 - ✓ Agreements and name@bmailx.com in bMail
@@ -12801,7 +12793,7 @@ Releases 5.2.30 to 5.2.33 ([notes](https://bwalletx.com/releases)):
 
 Less noise. More life. Just b.
 
-Related: [Sites](https://bwalletx.com/sites) · [Sign in button](https://bwalletx.com/sign-in-button) · [Releases](https://bwalletx.com/releases) · [Desktop](https://bwalletx.com/desktop)
+Related: [Sites](https://bwalletx.com/sites) · [Releases](https://bwalletx.com/releases) · [Desktop](https://bwalletx.com/desktop)
 
 [← 058 Signed names](https://bwalletx.com/blog/058-signed-names)[All posts →](https://bwalletx.com/blog)
 
@@ -12817,7 +12809,7 @@ Newest first. Dates come from commits. bWallet is a fork of [Yours Wallet](https
 
 - 059 · 19 Oct 2026
 [One wallet. Every site.](https://bwalletx.com/blog/059-one-wallet-every-site)
-Since 17 Oct: a family of sites that open with your bWalletX, Sign in with bWalletX for any site, four wallet releases and a calmer Desktop. Everything here works today.
+Since 17 Oct: a family of sites that open with your bWalletX, four wallet releases and a calmer Desktop. Everything here works today.
 
 - 058 · 17 Oct 2026
 [We could move your name. Now you can see if we do.](https://bwalletx.com/blog/058-signed-names)

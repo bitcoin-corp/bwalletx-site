@@ -107,7 +107,7 @@ Full text of every page below: https://bwalletx.com/llms-full.txt
 ## Sites
 
 - [bCalX · bWalletX sites](https://bwalletx.com/sites/bcalx): bCalX (bcalx.com): What's on, live. Every scheduled Space, ready for your calendar. 8 live, 2 coming.
-- [bChatX · bWalletX sites](https://bwalletx.com/sites/bchatx): bChatX (bchatx.com): Chat, rooms and live Spaces. Sign in with bWalletX. 3 live, 0 coming.
+- [bChatX · bWalletX sites](https://bwalletx.com/sites/bchatx): bChatX (bchatx.com): Chat, rooms and live Spaces, with your wallet. 2 live, 0 coming.
 - [bDriveX · bWalletX sites](https://bwalletx.com/sites/bdrivex): bDriveX (bdrivex.com): Your files and recordings, kept on Bitcoin and paid for month by month. 2 live, 5 coming.
 - [bJobsX · bWalletX sites](https://bwalletx.com/sites/bjobsx): bJobsX (bjobsx.com): Work, paid in Bitcoin, person to person. Your name already takes payments. 5 live, 5 coming.
 - [bMailX · bWalletX sites](https://bwalletx.com/sites/bmailx): bMailX (bmailx.com): Letters that carry money. Your name@bmailx.com comes with your bWalletX name. 5 live, 4 coming.
@@ -195,7 +195,7 @@ Full text of every page below: https://bwalletx.com/llms-full.txt
 - [056 bShares: a register for any company · bWalletX blog](https://bwalletx.com/blog/056-bshares): bShares keeps a company’s register of members, lets directors approve new shares, and locks shares so they can’t move without the right people. It’s in testing; the first register is our own company.
 - [057 Sign in with HandCash, and invites with tokens · bWalletX blog](https://bwalletx.com/blog/057-handcash-and-invites): New accounts can now start with HandCash as well as X. Your HandCash handle carries over as name@bwalletx.com, your friends can come with you, and invites with tokens bring people into Spaces.
 - [058 We could move your name. Now you can see if we do. · bWalletX blog](https://bwalletx.com/blog/058-signed-names): A bWalletX name is a row in our database, so we could point it at another key. On 17 Oct we did, for the owner’s own names. Now names are signed by their owners, and every change goes in a public log.
-- [059 One wallet. Every site. · bWalletX blog](https://bwalletx.com/blog/059-one-wallet-every-site): Since 17 Oct: a family of sites that open with your bWalletX, Sign in with bWalletX for any site, four wallet releases and a calmer Desktop. Everything here works today.
+- [059 One wallet. Every site. · bWalletX blog](https://bwalletx.com/blog/059-one-wallet-every-site): Since 17 Oct: a family of sites that open with your bWalletX, four wallet releases and a calmer Desktop. Everything here works today.
 - [bWalletX development blog](https://bwalletx.com/blog/): How bWallet and bWalletX were built from a fork of Yours Wallet: numbered posts from the git history, including what broke, what we reversed and what is still not done.
 
 ## Support

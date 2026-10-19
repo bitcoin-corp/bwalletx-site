@@ -183,7 +183,7 @@ ${TOPBAR}
 ${cards}
       </div>
       <p class="small">Counts are read from each site&rsquo;s own status list once a day. Last change: ${fmtDate(data.updated)}.</p>
-      <p class="related">Related: <a href="/bapps">bApps</a> · <a href="/features">Features</a> · <a href="/sign-in-button">Sign in with bWalletX</a> · <a href="/blog">Blog</a></p>
+      <p class="related">Related: <a href="/bapps">bApps</a> · <a href="/features">Features</a> · <a href="/connect">Connect</a> · <a href="/blog">Blog</a></p>
     </main>
   </body>
 </html>
@@ -198,7 +198,8 @@ function sitePage(data, s, i, list) {
   const links = (s.links || []).map((l) => `<a class="btn ghost" href="${esc(l.url)}">${esc(l.label)} &rarr;</a>`).join('');
   const related = (s.related || []).map(([h, t]) => `<a href="${esc(h)}">${esc(t)}</a>`).join(' · ');
   const prev = list[(i - 1 + list.length) % list.length], next = list[(i + 1) % list.length];
-  const what = s.description && s.description !== s.pitch ? `      <h2>What it is</h2>\n      <p>${esc(s.description)}</p>\n` : '';
+  const about = s.description_override || s.description;
+  const what = about && about !== s.pitch ? `      <h2>What it is</h2>\n      <p>${esc(about)}</p>\n` : '';
   const desc = `${s.name} (${s.domain.replace(/^www\./, '')}): ${s.pitch} ${c.live} live, ${c.coming} coming.`;
   return `${head({ title: `${s.name} · bWalletX sites`, desc, path: `/sites/${s.slug}`, og: `/og/og-site-${s.slug}-v1.png`, ogAlt: `${s.name}: ${s.pitch}` })}
   <body>
