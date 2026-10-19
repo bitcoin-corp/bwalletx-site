@@ -227,6 +227,9 @@
     var on = bar.querySelector('.section-nav');
     if (on) bar.insertBefore(sub, on); else bar.appendChild(sub);
     document.documentElement.classList.add('has-subnav');
+    // The pill row wraps (no sideways scrolling), so its height varies: push the page down to match.
+    var fitNav = function () { document.documentElement.style.setProperty('--nav-h', (bar.offsetTop + bar.offsetHeight) + 'px'); };
+    if (window.ResizeObserver) new ResizeObserver(fitNav).observe(bar); else { fitNav(); window.addEventListener('resize', fitNav); }
   }
 
   // Follow on X (bWalletX only): an icon before the Download / Web buttons, on every page.
@@ -281,7 +284,7 @@
     '.sub-nav{padding-top:0}' +
     '.nav-cta .x-link{display:inline-flex;align-items:center;justify-content:center;width:34px;height:34px;border-radius:50%;border:1px solid #ffffff33;color:#fff;margin-right:8px;vertical-align:middle}' +
     '.nav-cta .x-link:hover{border-color:#F5B800;color:#F5B800}' +
-    'html.has-subnav main.ext{padding-top:190px!important}' +
+    'html.has-subnav main.ext{padding-top:max(190px,calc(var(--nav-h,0px) + 66px))!important}' +
     '.nd{position:relative;display:inline-flex;align-items:center}' +
     '.nd-menu{display:none;position:absolute;top:100%;left:-14px;min-width:200px;padding:8px;margin-top:0;background:#0d0e11;border:1px solid #ffffff1f;border-radius:12px;box-shadow:0 12px 30px #0009;flex-direction:column;gap:2px;z-index:60}' +
     '.nd:hover .nd-menu,.nd:focus-within .nd-menu{display:flex}' +
@@ -299,7 +302,7 @@
     '.m-follow{display:flex;flex-wrap:wrap;gap:4px;margin:10px 0 0}.m-follow a{padding:6px 10px!important;font-size:.85rem}' +
     '@media (max-width:859px){.topbar nav[aria-label="Pages"]{display:none!important}.menu-btn{display:inline-block}' +
     '.topbar-in:has(nav[aria-label="Pages"]){flex-wrap:nowrap!important;height:64px!important;padding-top:0!important}' +
-    '.nav-cta .x-link,.nav-cta .web-btn{display:none}.topbar nav.m-menu:not([hidden]){display:block}.brand{flex:none}main.ext{padding-top:120px!important}html.has-subnav main.ext{padding-top:160px!important}}' +
+    '.nav-cta .x-link,.nav-cta .web-btn{display:none}.topbar nav.m-menu:not([hidden]){display:block}.brand{flex:none}main.ext{padding-top:120px!important}html.has-subnav main.ext{padding-top:max(160px,calc(var(--nav-h,0px) + 36px))!important}html.has-subnav .topbar{position:absolute}}' +
     '@media (min-width:860px){.m-menu{display:none!important}}' +
     // Paper pages (body.paper: /themes, /b-creative, ...): the Menu button and phone menu in ink, not white.
     'body.paper .menu-btn{color:var(--ink,#111);border-color:var(--ink,#111)}body.paper .m-menu{background:var(--sheet,#fff);border-top-color:var(--hair,#d9d6ce)}body.paper .m-menu details{border-bottom-color:var(--hair,#d9d6ce)}body.paper .m-menu summary,body.paper .m-menu a.m-top{color:var(--ink,#111)}body.paper .m-menu a{color:var(--muted,#5d5b56)}' +
