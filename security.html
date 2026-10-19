@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Security at bWalletX</title>
+    <link rel="canonical" href="https://bwalletx.com/security" />
+    <meta name="description" content="How bWalletX protects your keys and money, how to report a security problem, our safe-harbour promise for good-faith research, and what is live today." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://bwalletx.com/security" />
+    <meta property="og:site_name" content="bWalletX" />
+    <meta property="og:title" content="Security at bWalletX" />
+    <meta property="og:description" content="How bWalletX protects your keys and money, how to report a security problem, our safe-harbour promise for good-faith research, and what is live today." />
+    <meta property="og:image" content="https://bwalletx.com/og-security-v2.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="How bWalletX protects your keys and money, how to report a security problem, our safe-harbour promise for good-faith research, and what is live today." />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@bWalletX" />
+    <meta name="twitter:title" content="Security at bWalletX" />
+    <meta name="twitter:description" content="How bWalletX protects your keys and money, how to report a security problem, our safe-harbour promise for good-faith research, and what is live today." />
+    <meta name="twitter:image" content="https://bwalletx.com/og-security-v2.png" />
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="stylesheet" href="/styles.css" />
+    <style>
+      .ext h1 { font-size: clamp(2.2rem, 6vw, 3.4rem); margin: 18px 0 10px; }
+      .ext h2 { margin: 48px 0 8px; font-size: 1.5rem; }
+      .ext p, .ext li { line-height: 1.7; }
+      .ext .small { color: #8a8a86; font-size: 0.85rem; }
+      .ext .row { display: flex; gap: 12px; flex-wrap: wrap; margin: 26px 0; }
+      .ggrid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 230px), 1fr)); gap: 14px; margin: 18px 0; }
+      .gcard { display: block; background: #101114; border: 1px solid #ffffff12; border-radius: 16px; padding: 14px 16px; color: inherit; text-decoration: none; min-width: 0; }
+      .gcard:hover { border-color: #F5B80066; }
+      .gcard h3 { margin: 0 0 4px; font-size: 1.05rem; }
+      .gcard p { margin: 0; color: #a7adb8; font-size: 0.92rem; line-height: 1.5; }
+      .feat { list-style: none; padding: 0; margin: 18px 0; }
+      .feat li { display: flex; gap: 12px; align-items: baseline; padding: 12px 0; border-bottom: 1px solid #ffffff10; }
+      .tag { flex: none; font-size: 0.75rem; font-weight: 700; padding: 2px 9px; border-radius: 999px; }
+      .tag.live { background: #F5B800; color: #000; }
+      .tag.soon { border: 1px solid #ffffff40; color: #a7adb8; }
+      .ext table { width: 100%; border-collapse: collapse; margin: 18px 0; font-size: 0.95rem; }
+      .ext th, .ext td { text-align: left; padding: 10px 8px; border-bottom: 1px solid #ffffff14; vertical-align: top; overflow-wrap: anywhere; }
+      .ext th { color: #a7adb8; font-weight: 600; }
+      .ext code { overflow-wrap: anywhere; }
+      @media (max-width: 560px) { .ext table, .ext tbody, .ext tr, .ext td { display: block; } .ext tr:first-child { display: none; } .ext tr { padding: 10px 0; border-bottom: 1px solid #ffffff14; } .ext td { border: 0; padding: 3px 0; overflow-wrap: normal; } }
+    </style>
+  </head>
+  <body>
+    <div class="beta-banner">bWalletX is in <strong>beta</strong>: test with small amounts.</div>
+    <header class="topbar">
+      <div class="wrap topbar-in">
+        <a class="brand" href="/"><img src="/logo.svg" alt="" width="34" height="30" /><span>bWallet<span class="gold">X</span></span></a>
+        <nav aria-label="Pages">
+          <a href="/features">Features</a><a href="/exchange">Exchange</a><a href="/social">Social</a><a href="/agent">Agents</a><a href="/extension">Extension</a><a href="/developers">Developers</a>
+        </nav>
+        <span class="nav-cta"><a class="dl-btn" href="/get">Download</a><a class="web-btn" href="https://web.bwalletx.com" target="_blank" rel="noopener">Web &rarr;</a></span>
+      </div>
+    </header>
+    <script src="/nav.js"></script>
+    <main class="ext">
+      <h1>Security at <span class="gold">bWalletX.</span></h1>
+      <p class="lede">Your money should be yours alone. Here is how bWalletX keeps it that way, what is live today, and how to tell us if you find a problem.</p>
+
+      <h2>Where we stand today</h2>
+      <ul class="feat">
+        <li><span class="tag live">Live</span><span>Keys made and kept on your device, encrypted with your password.</span></li>
+        <li><span class="tag live">Live</span><span>Open-source wallet code (MIT) that anyone can read.</span></li>
+        <li><span class="tag live">Live</span><span>Ongoing internal review of the money and key paths.</span></li>
+        <li><span class="tag soon">Coming</span><span>Independent security audit.</span></li>
+      </ul>
+
+      <h2>How bWalletX protects you</h2>
+      <ul class="feat">
+        <li><span class="tag live">Keys</span><span>Your keys are created on your device and stay there, encrypted with your password.</span></li>
+        <li><span class="tag live">Servers</span><span>Our servers never hold keys that can move your money.</span></li>
+        <li><span class="tag live">Approval</span><span>Every payment and every signature needs your approval, on one sheet that shows what you are agreeing to.</span></li>
+        <li><span class="tag live">Recovery</span><span>Your 12 words restore your wallet, in bWalletX or in other compatible wallets, even if we disappeared.</span></li>
+        <li><span class="tag live">Open</span><span>The wallet is open source under the MIT licence, so anyone can check what it does: <a href="https://github.com/bitcoin-corp/bwallet" target="_blank" rel="noopener">bitcoin-corp/bwallet</a> and the phone edition <a href="https://github.com/b0ase/yours-mobile" target="_blank" rel="noopener">b0ase/yours-mobile</a>. More on the <a href="/open-source">open source page</a>.</span></li>
+        <li><span class="tag live">Built on</span><span>The open-source Yours Wallet and the BSV Association&rsquo;s open wallet libraries.</span></li>
+      </ul>
+
+      <h2>Report a vulnerability</h2>
+      <p>Email <a href="mailto:support@bwalletx.com?subject=SECURITY">support@bwalletx.com</a> with &ldquo;SECURITY&rdquo; in the subject.</p>
+      <p>Please include:</p>
+      <ul>
+        <li>what you found and why it matters;</li>
+        <li>the steps to reproduce it, and which edition and version (web, extension, iPhone, Android, desktop);</li>
+        <li>any proof of concept, screenshots or transaction IDs from your own test wallets;</li>
+        <li>how you would like to be credited, if at all.</li>
+      </ul>
+      <p>We will reply within 3 working days, keep you updated while we fix it, and tell you when it is fixed.</p>
+
+      <h2>Please play fair</h2>
+      <ul>
+        <li>Don&rsquo;t disclose the issue publicly for 90 days, or until it is fixed, whichever comes first.</li>
+        <li>Never access, move or change other people&rsquo;s funds or data. If you reach someone else&rsquo;s data by accident, stop, and tell us.</li>
+        <li>Test only with your own wallets and small amounts.</li>
+        <li>No social engineering, phishing, physical attacks or denial of service.</li>
+      </ul>
+
+      <h2>Safe harbour</h2>
+      <p>When conducting vulnerability research according to this policy, we consider this research conducted under this policy to be:</p>
+      <ul>
+        <li>Authorized in view of any applicable anti-hacking laws, and we will not initiate or support legal action against you for accidental, good faith violations of this policy;</li>
+        <li>Authorized in view of relevant anti-circumvention laws, and we will not bring a claim against you for circumvention of technology controls;</li>
+        <li>Exempt from restrictions in our Terms of Use (<a href="https://bwalletx.com/terms">https://bwalletx.com/terms</a>) that would interfere with conducting security research, and we waive those restrictions on a limited basis; and</li>
+        <li>Lawful, helpful to the overall security of the Internet, and conducted in good faith.</li>
+      </ul>
+      <p>You are expected, as always, to comply with all applicable laws. If legal action is initiated by a third party against you and you have complied with this policy, we will take steps to make it known that your actions were conducted in compliance with this policy.</p>
+      <p>If at any time you have concerns or are uncertain whether your security research is consistent with this policy, please submit a report through <a href="mailto:support@bwalletx.com?subject=SECURITY">support@bwalletx.com</a> (subject &ldquo;SECURITY&rdquo;) before going any further.</p>
+      <p class="small"><a href="https://github.com/disclose/dioterms" target="_blank" rel="noopener">Based on the disclose.io Core Terms (UK), CC0</a></p>
+
+      <h2>Rewards</h2>
+      <p>We&rsquo;re a small team and can&rsquo;t pay cash rewards yet. We&rsquo;ll thank you publicly in the Hall of thanks (if you&rsquo;d like) and fix what you find fast.</p>
+
+      <h2>What we&rsquo;re doing now</h2>
+      <p>We are running an ongoing security review of every path that touches your money and your keys, and fixing what it finds before new features in those areas ship.</p>
+
+      <h2>Hall of thanks</h2>
+      <p>People who report security problems responsibly will be thanked here, with their permission.</p>
+      <p class="small">No reports credited yet.</p>
+
+      <p class="small">Machine-readable contact: <a href="/.well-known/security.txt">/.well-known/security.txt</a>. bWalletX is in beta: test with small amounts.</p>
+    </main>
+  </body>
+</html>

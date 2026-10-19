@@ -4214,6 +4214,98 @@ bWalletX is in beta: test with small amounts. Questions: [support@bwalletx.com](
 
 ---
 
+Source: https://bwalletx.com/security
+
+# Security at bWalletX.
+
+Your money should be yours alone. Here is how bWalletX keeps it that way, what is live today, and how to tell us if you find a problem.
+
+## Where we stand today
+
+- LiveKeys made and kept on your device, encrypted with your password.
+
+- LiveOpen-source wallet code (MIT) that anyone can read.
+
+- LiveOngoing internal review of the money and key paths.
+
+- ComingIndependent security audit.
+
+## How bWalletX protects you
+
+- KeysYour keys are created on your device and stay there, encrypted with your password.
+
+- ServersOur servers never hold keys that can move your money.
+
+- ApprovalEvery payment and every signature needs your approval, on one sheet that shows what you are agreeing to.
+
+- RecoveryYour 12 words restore your wallet, in bWalletX or in other compatible wallets, even if we disappeared.
+
+- OpenThe wallet is open source under the MIT licence, so anyone can check what it does: [bitcoin-corp/bwallet](https://github.com/bitcoin-corp/bwallet) and the phone edition [b0ase/yours-mobile](https://github.com/b0ase/yours-mobile). More on the [open source page](https://bwalletx.com/open-source).
+
+- Built onThe open-source Yours Wallet and the BSV Association’s open wallet libraries.
+
+## Report a vulnerability
+
+Email [support@bwalletx.com](mailto:support@bwalletx.com?subject=SECURITY) with “SECURITY” in the subject.
+
+Please include:
+
+- what you found and why it matters;
+
+- the steps to reproduce it, and which edition and version (web, extension, iPhone, Android, desktop);
+
+- any proof of concept, screenshots or transaction IDs from your own test wallets;
+
+- how you would like to be credited, if at all.
+
+We will reply within 3 working days, keep you updated while we fix it, and tell you when it is fixed.
+
+## Please play fair
+
+- Don’t disclose the issue publicly for 90 days, or until it is fixed, whichever comes first.
+
+- Never access, move or change other people’s funds or data. If you reach someone else’s data by accident, stop, and tell us.
+
+- Test only with your own wallets and small amounts.
+
+- No social engineering, phishing, physical attacks or denial of service.
+
+## Safe harbour
+
+When conducting vulnerability research according to this policy, we consider this research conducted under this policy to be:
+
+- Authorized in view of any applicable anti-hacking laws, and we will not initiate or support legal action against you for accidental, good faith violations of this policy;
+
+- Authorized in view of relevant anti-circumvention laws, and we will not bring a claim against you for circumvention of technology controls;
+
+- Exempt from restrictions in our Terms of Use ([https://bwalletx.com/terms](https://bwalletx.com/terms)) that would interfere with conducting security research, and we waive those restrictions on a limited basis; and
+
+- Lawful, helpful to the overall security of the Internet, and conducted in good faith.
+
+You are expected, as always, to comply with all applicable laws. If legal action is initiated by a third party against you and you have complied with this policy, we will take steps to make it known that your actions were conducted in compliance with this policy.
+
+If at any time you have concerns or are uncertain whether your security research is consistent with this policy, please submit a report through [support@bwalletx.com](mailto:support@bwalletx.com?subject=SECURITY) (subject “SECURITY”) before going any further.
+
+[Based on the disclose.io Core Terms (UK), CC0](https://github.com/disclose/dioterms)
+
+## Rewards
+
+We’re a small team and can’t pay cash rewards yet. We’ll thank you publicly in the Hall of thanks (if you’d like) and fix what you find fast.
+
+## What we’re doing now
+
+We are running an ongoing security review of every path that touches your money and your keys, and fixing what it finds before new features in those areas ship.
+
+## Hall of thanks
+
+People who report security problems responsibly will be thanked here, with their permission.
+
+No reports credited yet.
+
+Machine-readable contact: [/.well-known/security.txt](https://bwalletx.com/.well-known/security.txt). bWalletX is in beta: test with small amounts.
+
+---
+
 Source: https://bwalletx.com/seedless-login
 
 ◻ Coming to bWalletX
@@ -9070,7 +9162,7 @@ The code is open. The bWalletX name and logo are trademarks of The Bitcoin Corpo
 
 Open an issue or a pull request on [the wallet repo](https://github.com/bitcoin-corp/bwallet) or [the CLI repo](https://github.com/bitcoin-corp/bwalletx-cli). The wallet repo has a CONTRIBUTING guide.
 
-If you find a security problem, please don’t post it publicly. Email [support@bwalletx.com](mailto:support@bwalletx.com) first.
+If you find a security problem, please don’t post it publicly. Email [support@bwalletx.com](mailto:support@bwalletx.com?subject=SECURITY) with “SECURITY” in the subject first, and see [Security at bWalletX](https://bwalletx.com/security) for how we handle reports.
 
 bWalletX is in beta: test with small amounts. Questions: [support@bwalletx.com](mailto:support@bwalletx.com)
 
