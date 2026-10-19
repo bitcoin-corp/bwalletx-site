@@ -1136,10 +1136,9 @@ a.btn-store {
   .topbar nav[aria-label='Pages'] {
     order: 3;
     width: 100%;
-    gap: 18px;
-    overflow-x: auto;
+    flex-wrap: wrap;
+    gap: 6px 18px;
     padding-bottom: 6px;
-    scrollbar-width: none;
   }
   .topbar nav[aria-label='Pages'] a {
     white-space: nowrap;
@@ -1153,10 +1152,9 @@ a.btn-store {
 }
 .section-nav .wrap {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   gap: 6px;
-  overflow-x: auto;
-  scrollbar-width: none;
 }
 .section-nav a {
   color: #c9c9c4;
@@ -1177,6 +1175,10 @@ a.btn-store {
 @media (max-width: 859px) {
   .section-nav .wrap {
     justify-content: flex-start;
+  }
+  .section-nav a {
+    padding: 4px 10px;
+    font-size: 0.78rem;
   }
 }
 .topbar nav.section-nav {
