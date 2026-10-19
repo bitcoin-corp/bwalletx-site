@@ -120,7 +120,7 @@
         ] },
       // Developers holds the Blog too (owner, 18 Oct 2026). When you publish a post, add it to the top of
       // Latest and drop the oldest (keep 5).
-      { label: 'Developers', href: '/developers', pages: ['/developers', '/connect', '/apps/add', '/open-source', '/blog', '/releases', '/hodl-my-b'],
+      { label: 'Developers', href: '/developers', pages: ['/developers', '/connect', '/apps/add', '/open-source', '/security', '/blog', '/releases', '/hodl-my-b'],
         // The pill row under the bar shows these only (not the post list in the menu).
         pills: ['/developers', '/connect', '/apps/add', '/cli', '/mcp', '/open-source', '/blog', '/releases', '/hodl-my-b'],
         sub: [
@@ -130,6 +130,7 @@
           { label: 'CLI', href: '/cli' },
           { label: 'MCP', href: '/mcp' },
           { label: 'Open source', href: '/open-source' },
+          { label: 'Security', href: '/security' },
           { label: 'Blog', href: '/blog' },
           { label: 'Releases', href: '/releases' },
           { label: 'Hodl my b · weekly', href: '/hodl-my-b' },

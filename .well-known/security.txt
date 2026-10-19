@@ -1,0 +1,5 @@
+Contact: mailto:security@bwalletx.com
+Expires: 2027-10-19T00:00:00.000Z
+Preferred-Languages: en
+Policy: https://bwalletx.com/security
+Canonical: https://bwalletx.com/.well-known/security.txt
