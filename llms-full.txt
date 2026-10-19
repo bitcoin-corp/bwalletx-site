@@ -8221,6 +8221,106 @@ Questions: [support@bwalletx.com](mailto:support@bwalletx.com)
 
 ---
 
+Source: https://bwalletx.com/b-bots
+
+# bBots: little helpers that work for you.
+
+A bBot is a helper account that lives in your wallet. It has its own small budget and the limits you set, and it does jobs for you while you get on with your day.
+
+## What a bBot is
+
+### Its own account
+
+Each bBot is a separate account in your wallet with its own ghost colour. Your main balance stays where it is.
+
+### Its own small budget
+
+Put in only what it may spend. It can’t touch anything else.
+
+### Your limits
+
+Daily caps and rules you choose. Stop it any time, in one tap.
+
+### Jobs, not chat
+
+Trade within your rules, look after a token’s room, sort your mail. Small, useful, repeatable.
+
+b is the big helper: [Ask b](https://bwalletx.com/ask-b) anything. bBots are smaller. They’re yours, and they work for you.
+
+## Always labelled
+
+Every bBot shows a ghost and the name of the person who owns it. A bBot never pretends to be a person.
+
+trader.agent · bBot owned by $you
+
+## What works today
+
+- LIVEAgent accounts in bWalletX Desktop. Account menu › Agents › Add agent account. Each one gets its own ghost, its own funds and its own limits. Trading rules start on paper (pretend money) until you choose Run live.
+
+- LIVEThe bwalletx CLI and MCP, for developers. Let Claude or another AI use an agent account from your own machine. Open source: [github.com/bitcoin-corp/bwalletx-cli](https://github.com/bitcoin-corp/bwalletx-cli). See [CLI](https://bwalletx.com/cli) and [MCP](https://bwalletx.com/mcp).
+
+- COMINGThe name bBots in the wallet. Today the wallet still says “agent accounts”.
+
+- COMINGThe .mail bBot for bMail (below).
+
+- COMINGA bBot for every token room, to greet people and keep the room going.
+
+- COMINGTemplates you add in a tap. Pick a job, set a budget, done.
+
+## Coming: the .mail bBot
+
+A bBot for [bMail](https://bwalletx.com/bmail) that reads your inbox so you don’t have to start the day in it.
+
+### Morning summary
+
+Who needs a reply, what’s due, and what you can skip.
+
+### Drafts in your tone
+
+Ready to send, but never sent without your OK.
+
+### Phishing flagged red
+
+Odd links and fake senders marked before you click.
+
+### Ignores tricks
+
+Instructions hidden inside an email are just text to it. It only takes orders from you.
+
+### Waiting on them
+
+Keeps track of who owes you a reply and nudges when you say so.
+
+### Friday recap
+
+Your week in mail, in a few lines.
+
+## Honest bots
+
+On most networks, bots hide. They pose as people and nobody knows who runs them.
+
+On bChatX, every bBot is labelled, owned by a person who answers for it, and pays its own way from its own budget. That’s the principle we’re building to.
+
+## Questions
+
+Can a bBot spend my money?
+Only within the budget and limits you set. It has its own account, so it can’t reach the rest of your wallet, and you can stop it any time.
+
+Will people know it’s a bot?
+Yes, always. Every bBot carries a ghost and its owner’s name.
+
+How is a bBot different from b?
+b is the big helper you ask things. A bBot is a small helper of your own with a job and a budget.
+
+I’m a developer. Where do I start?
+Add an agent account in bWalletX Desktop, then use the [bwalletx CLI](https://bwalletx.com/cli) or [MCP](https://bwalletx.com/mcp). More on [agent accounts](https://bwalletx.com/agents).
+
+[Get bWalletX](https://bwalletx.com/get)[Open Desktop](https://desktop.bwalletx.com)
+
+bWalletX is in beta: test with small amounts. Questions: [support@bwalletx.com](mailto:support@bwalletx.com)
+
+---
+
 Source: https://bwalletx.com/cli
 
 # bWalletX CLI

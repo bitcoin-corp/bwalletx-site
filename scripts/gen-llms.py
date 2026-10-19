@@ -67,7 +67,7 @@ SECTIONS = {
     'Product': ['index', 'get', 'android', 'iphone', 'extension', 'features', 'video', 'testers', 'buy', 'restore', 'restore-simplycash', 'history', 'push-notifications', 'web'],
     'Wallet features': ['exchange', 'exchange/strategies', 'mint', 'pnees', 'pots', 'subscriptions', 'lock', 'lock/verify', 'token-locking', 'launchpad', 'identity', 'identity-map', 'handles', 'bavatars', 'themes', 'swap', 'sign', 'games'],
     'Social': ['social', 'chat', 'bmail', 'friends', 'lounge', 'live', 'airdrops', 'gmail', 'x'],
-    'Agents & developers': ['agent', 'hold-to-talk', 'agents', 'strategies', 'strategies/spec', 'developers', 'connect', 'sign-in-button', 'cli', 'mcp', 'apps/add', 'open-source'],
+    'Agents & developers': ['agent', 'b-bots', 'hold-to-talk', 'agents', 'strategies', 'strategies/spec', 'developers', 'connect', 'sign-in-button', 'cli', 'mcp', 'apps/add', 'open-source'],
     'Support': ['privacy'],
 }
 def group(r):
