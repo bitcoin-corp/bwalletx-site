@@ -1,6 +1,6 @@
 # bWalletX: full site text
 
-Generated 2026-10-18 from https://bwalletx.com. Source pages are linked above each section.
+Generated 2026-10-19 from https://bwalletx.com. Source pages are linked above each section.
 
 ---
 
@@ -44,7 +44,7 @@ Source: https://bwalletx.com/android
 
 The full bWalletX wallet on your Android phone or tablet. Your keys stay on your device.
 
-[Download APK (beta) ↓](https://bwalletx.com/download/bwalletx-android-5.2.32.apk)
+[Download APK (beta) ↓](https://bwalletx.com/download/bwalletx-android-5.2.35.apk)
 
 It isn't on Google Play yet, so install it by hand. (The store edition, bWallet, is in a Google Play internal test: see [/testers/bwallet/android](https://bwalletx.com/testers/bwallet/android).)
 
@@ -52,13 +52,13 @@ It isn't on Google Play yet, so install it by hand. (The store edition, bWallet,
 
 - If Android asks, allow your browser to install unknown apps (Settings › Apps › your browser › Install unknown apps).
 
-- Open `bwalletx-android-5.2.32.apk` and tap Install.
+- Open `bwalletx-android-5.2.35.apk` and tap Install.
 
 - Open bWalletX and create or restore your wallet.
 
 Updating from an older version? Install over the top and your wallet stays. If Android says the app can't be updated, write down your 12 words first, then uninstall and reinstall.
 
-Version 5.2.32 beta · 34.2 MB · Android 7+ · SHA-256 4a00e27934e7f054318df3e4b97b356ae04783b0e31367dba2561a548932928c
+Version 5.2.35 beta · 35.5 MB · Android 7+ · SHA-256 6d7409eafc3f3af4c7515a6f2363adf57f6b185a60607e192d34da88496600e4
 
 Also: [Chrome extension](https://bwalletx.com/extension) · [Developers](https://bwalletx.com/developers)
 
@@ -1472,14 +1472,14 @@ Source: https://bwalletx.com/extension
 
 The full bWalletX wallet in Chrome's side panel, and a wallet websites like TokenBlaster can connect to. Your keys stay in the extension.
 
-[Download for Chrome (beta) ↓](https://bwalletx.com/download/bwalletx-extension-5.2.32.zip)
-[Download for Brave (beta) ↓](https://bwalletx.com/download/bwalletx-extension-5.2.32.zip)
+[Download for Chrome (beta) ↓](https://bwalletx.com/download/bwalletx-extension-5.2.35.zip)
+[Download for Brave (beta) ↓](https://bwalletx.com/download/bwalletx-extension-5.2.35.zip)
 
 Updating? Use the ↻ reload button on `chrome://extensions`, or replace the files in the same folder. Never click Remove — removing the extension deletes your wallet's records.
 
 It isn't on the Chrome Web Store yet, so install it by hand:
 
-- Unzip `bwalletx-extension-5.2.32.zip`.
+- Unzip `bwalletx-extension-5.2.35.zip`.
 
 - Open `chrome://extensions` in Chrome.
 
@@ -1493,7 +1493,7 @@ It isn't on the Chrome Web Store yet, so install it by hand:
 
 Same extension, same file. Brave runs Chrome extensions, so:
 
-- Unzip `bwalletx-extension-5.2.32.zip`.
+- Unzip `bwalletx-extension-5.2.35.zip`.
 
 - Open `brave://extensions` in Brave.
 
@@ -1503,7 +1503,7 @@ Same extension, same file. Brave runs Chrome extensions, so:
 
 - Pin bWalletX from the puzzle-piece menu, click it, and create or restore your wallet.
 
-Version 5.2.32 beta · SHA-256 51810d85f6412fd37c0b7e47875036927e02602af9084c7033e8580c2d16e4d7 · Source: [github.com/bitcoin-corp/bwallet](https://github.com/bitcoin-corp/bwallet)
+Version 5.2.35 beta · SHA-256 1f80f01a08db5d12053f2801ab9b59312ee971ad59b316b4db06c90bd387995d · Source: [github.com/bitcoin-corp/bwallet](https://github.com/bitcoin-corp/bwallet)
 
 ---
 
@@ -1840,8 +1840,8 @@ Source: https://bwalletx.com/get
 
 The full bWalletX on every device. Your keys stay on your device.
 
-[AndroidAPK download · v5.2.32 beta](https://bwalletx.com/android)
-[ChromeExtension · v5.2.32 beta](https://bwalletx.com/extension)
+[AndroidAPK download · v5.2.35 beta](https://bwalletx.com/android)
+[ChromeExtension · v5.2.35 beta](https://bwalletx.com/extension)
 [WebOpen in your browser](https://web.bwalletx.com)
 [DesktopIn your browser, or install it as an app](https://desktop.bwalletx.com)
 [iPhoneWeb app · install from Safari, no App Store](https://bwalletx.com/iphone)
@@ -2212,7 +2212,7 @@ holds your coins, pays and locks, and opens the chat room for every token you ho
 bWalletX is the full edition (web, Chrome, Android sideload, private iPhone build);
 bWallet is the App Store / Play edition with fewer features.
 
-Android · Download APK (beta)v5.2.32 beta · sideloadiPhone · Web appInstall from Safari · no App StoreChrome · Download extensionv5.2.32 beta · zip + install steps
+Android · Download APK (beta)v5.2.35 beta · sideloadiPhone · Web appInstall from Safari · no App StoreChrome · Download extensionv5.2.35 beta · zip + install steps
 
 ▶Watch the explainer · 1 min
 
@@ -2224,10 +2224,10 @@ How to sideload on Android
 Tap Download APK (beta). If Android asks, allow your browser to install unknown apps
 (Settings › Apps › your browser › Install unknown apps).
 
-- Open the downloaded bwalletx-android-5.2.32.apk and tap Install.
+- Open the downloaded bwalletx-android-5.2.35.apk and tap Install.
 
 -
-Optional but recommended: check the SHA-256 checksum matches4a00e27934e7f054318df3e4b97b356ae04783b0e31367dba2561a548932928c
+Optional but recommended: check the SHA-256 checksum matches6d7409eafc3f3af4c7515a6f2363adf57f6b185a60607e192d34da88496600e4
 
 Beta software. Use small amounts and back up your recovery phrase. Only install the APK from this site or
 the official GitHub release.
@@ -2413,7 +2413,7 @@ Join the waitlist →](https://www.bitcoinchat.online)
 
 Currently in beta.
 
-Android · Download APK (beta)v5.2.32 beta · sideloadiPhone · Web appInstall from Safari · no App StoreChrome · Download extensionv5.2.32 beta · zip + install steps
+Android · Download APK (beta)v5.2.35 beta · sideloadiPhone · Web appInstall from Safari · no App StoreChrome · Download extensionv5.2.35 beta · zip + install steps
 
 Download on theApp StorebWallet · not submitted yet
 
@@ -4452,13 +4452,13 @@ Loading…
 
 ## Where each version is
 
-We ship small updates often, usually several a week. A new version reaches each place at a different speed, because Apple and Google check some of them first. Latest: 5.2.32 (18 Oct 2026), [what’s new](https://bwalletx.com/releases#v5.2.32).
+We ship small updates often, usually several a week. A new version reaches each place at a different speed, because Apple and Google check some of them first. Latest: 5.2.35 (19 Oct 2026), [what’s new](https://bwalletx.com/releases#v5.2.35).
 
-- Web, Chrome extension, Android download (APK): the same day. Now on 5.2.32.
+- Web, Chrome extension, Android download (APK): the same day. Now on 5.2.35.
 
-- Android, Google Play test: the same day. Now on 5.2.32.
+- Android, Google Play test: the same day. Now on 5.2.35.
 
-- iPhone, TestFlight: about a day later, after Apple’s beta review. 5.2.32 is with Apple now; until it clears, TestFlight still offers an older build.
+- iPhone, TestFlight: about a day later, after Apple’s beta review. 5.2.35 is with Apple now; until it clears, TestFlight still offers an older build.
 
 - App Store and Play Store: not out yet. bWallet’s first store release is being prepared; testers will hear first.
 
@@ -7580,7 +7580,7 @@ Source: https://bwalletx.com/connect
 
 How to let people sign in to your site or app with their bWalletX: one script tag, two routes on your server, and no API keys.
 
-Also as plain Markdown for AI coding agents: [bwalletx.com/connect.md](https://bwalletx.com/connect.md). Checked against bWalletX 5.2.32, connect.js and @bwalletx/connect 0.5.0 on 18 Oct 2026. Full docs: [docs.bwalletx.com/developers/connect](https://docs.bwalletx.com/developers/connect/).
+Also as plain Markdown for AI coding agents: [bwalletx.com/connect.md](https://bwalletx.com/connect.md). Checked against bWalletX 5.2.35, connect.js and @bwalletx/connect 0.5.0 on 18 Oct 2026. Full docs: [docs.bwalletx.com/developers/connect](https://docs.bwalletx.com/developers/connect/).
 
 ## In 30 seconds
 
@@ -8066,11 +8066,11 @@ The full developer guides live at [docs.bwalletx.com](https://docs.bwalletx.com/
 
 ## Get bWalletX to test with
 
-Install the wallet you'll connect to (version 5.2.32 beta). Checksums are on each download page.
+Install the wallet you'll connect to (version 5.2.35 beta). Checksums are on each download page.
 
-- [Chrome / Brave extension (zip)](https://bwalletx.com/download/bwalletx-extension-5.2.32.zip) · [install steps](https://bwalletx.com/extension)
+- [Chrome / Brave extension (zip)](https://bwalletx.com/download/bwalletx-extension-5.2.35.zip) · [install steps](https://bwalletx.com/extension)
 
-- [Android APK](https://bwalletx.com/download/bwalletx-android-5.2.32.apk) · [install steps](https://bwalletx.com/android)
+- [Android APK](https://bwalletx.com/download/bwalletx-android-5.2.35.apk) · [install steps](https://bwalletx.com/android)
 
 - [Web app](https://web.bwalletx.com) · [iPhone](https://bwalletx.com/iphone)
 
@@ -11966,6 +11966,44 @@ screen.
 Turn push off or change previews, quiet hours and alerts in Settings › Notifications › Push notifications, or in
 your phone's notification settings. Turning push off, signing out of bChat or switching to another account
 removes this device's registration from our push server; uninstalling the app makes its push token stop working.
+
+## Spaces transcription (bWalletX only)
+
+Spaces aren't transcribed unless the host turns it on. For each Space the host picks Off (the default),
+Transcribe, or Transcribe and track agreements. While it's on, everyone in the Space sees a
+Transcribing badge, and a message appears in the room each time the setting changes.
+
+-
+Listeners see a notice before they join. Listening is never recorded or transcribed.
+
+-
+Speakers are transcribed only after ticking a separate box before their microphone goes on. You can
+choose "Don't transcribe me" and still speak; others then see you marked "(not transcribed)", and your voice is
+not recorded. You can stop at any time with "Stop transcribing me", which stops your recording straight away.
+
+-
+Audio is deleted after transcription. While you're being transcribed, your voice is recorded on our
+media server long enough to turn it into text, then deleted. It is also deleted if transcription fails, if no
+transcription service is set up, or if you've stopped being transcribed. We keep only the text, who said it,
+when, and a fingerprint (hash) of the audio so that the same audio is never processed twice.
+
+-
+Who can read it. Only that Space's host and its speakers can read the transcript. Listeners, other room
+members and the public can't.
+
+-
+Deleting your words. Each speaker can delete any of their own lines. A deleted line keeps its place
+and the speaker's name but loses its words for good.
+
+-
+Never in private chats. Direct messages and private chats are never transcribed.
+
+-
+Transcription service. [OWNER TO CONFIRM BEFORE PUBLISHING: the speech-to-text provider, where it runs,
+and whether it keeps any audio. Until a provider is chosen, no transcripts are made and any audio is deleted.]
+
+Transcription isn't available in bWallet from the App Store and Google Play. If you join a transcribed Space
+from there, you see the badge and notice, but you're never transcribed.
 
 ## Testing waitlist (this website)
 
