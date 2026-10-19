@@ -1,6 +1,6 @@
 # bWalletX: full site text
 
-Generated 2026-10-18 from https://bwalletx.com. Source pages are linked above each section.
+Generated 2026-10-19 from https://bwalletx.com. Source pages are linked above each section.
 
 ---
 
@@ -4200,6 +4200,82 @@ RelayX has closed, but everything your RelayX words hold is still on chain. bWal
 [Tell us](mailto:support@bwalletx.com?subject=Restore%20from%20another%20wallet) which one, and we’ll look at adding it.
 
 The story behind this page: [022 Bring your coins home](https://bwalletx.com/blog/022-bring-your-coins-home).
+
+bWalletX is in beta: test with small amounts. Questions: [support@bwalletx.com](mailto:support@bwalletx.com)
+
+---
+
+Source: https://bwalletx.com/seedless-login
+
+◻ Coming to bWalletX
+
+# No seed phrase to manage. Just your face.
+
+Soon you’ll start a wallet the way you sign in anywhere else. Say who you are with X, Google or HandCash. Lock the wallet with a passkey: Face ID, Touch ID or your device PIN. Nothing to write down on day one.
+
+None of this is live yet. It is being built and tested now. The checklist below shows where it stands, and we’ll tick items as they ship. Today, bWalletX works with a password and 12 words, as it always has.
+
+[Get bWalletX](https://bwalletx.com/get)[See the status →](#status)
+
+## How it will work
+
+### 1. Who you are
+
+Continue with X, Google or HandCash. This only says who you are and links your name and badge. It never touches your keys.
+
+### 2. What locks it
+
+A passkey made on your device locks the wallet. You unlock with your face, your finger or your PIN.
+
+### 3. Your 12 words, kept safe
+
+Your wallet still has its 12 words underneath. An encrypted copy is saved that only your passkey can open. You can show the words any time.
+
+## Same wallet on phone and computer
+
+Passkeys sync with your Apple or Google account, so the same passkey opens the same wallet on your other devices. On a computer, you can also scan a code with your phone to open it.
+
+## The classic way stays
+
+A password and 12 words will still be there, side by side. Pick whichever suits you. Restoring with your 12 words or a backup file works exactly as it does today.
+
+## We never hold your keys
+
+Your keys are made on your device. The encrypted copy of your 12 words can only be opened by your passkey, and the passkey never leaves your device or your Apple or Google account. We can’t open your wallet, and we can’t move your money. If we disappeared, your 12 words would still restore your wallet in any compatible app.
+
+## Status, 19 Oct 2026
+
+- ◻ ComingContinue with X, Google or HandCash on the welcome screen.
+
+- ◻ ComingCreate a wallet with a passkey (Face ID, Touch ID or device PIN). No password to invent.
+
+- ◻ ComingUnlock with your passkey.
+
+- ◻ ComingEncrypted copy of your 12 words that only your passkey can open.
+
+- ◻ ComingRestore on a new device with the same passkey.
+
+- ◻ ComingScan-to-open on a computer with your phone.
+
+- ◻ ComingIn the phone apps (bWallet on the App Store and Google Play), after testing on real devices.
+
+Already true today, and unchanged by this: password and 12 words, “Show recovery phrase” in Settings, restore from 12 words or a backup file.
+
+## Questions
+
+### What if I lose my phone?
+
+Your passkey lives in your Apple or Google account, not only on the phone. Sign in on a new phone, use the same passkey, and your wallet comes back. Your 12 words still work too. For larger amounts we’ll suggest you write them down as well.
+
+### Can bWalletX open my wallet?
+
+No. Only your passkey can open the encrypted copy of your words, and we never see your keys.
+
+### Do my old wallets still work?
+
+Yes, unchanged. Your password, your 12 words and your backups keep working exactly as before.
+
+Related: [Restore](https://bwalletx.com/restore) · [Identity](https://bwalletx.com/identity) · [Handles](https://bwalletx.com/handles) · [bTrust](https://bwalletx.com/btrust)
 
 bWalletX is in beta: test with small amounts. Questions: [support@bwalletx.com](mailto:support@bwalletx.com)
 
