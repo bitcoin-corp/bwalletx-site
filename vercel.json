@@ -51,6 +51,7 @@
     }
   ],
   "redirects": [
+    { "source": "/mint-a-team", "destination": "/your-character", "permanent": false },
     { "source": "/recover-relayX", "destination": "/recover-relayx", "permanent": true },
     { "source": "/relayx-nfts", "destination": "/recover-relayx", "permanent": true },
     {
