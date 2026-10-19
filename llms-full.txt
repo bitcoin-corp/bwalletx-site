@@ -1,6 +1,6 @@
 # bWalletX: full site text
 
-Generated 2026-10-19 from https://bwalletx.com. Source pages are linked above each section.
+Generated 2026-10-20 from https://bwalletx.com. Source pages are linked above each section.
 
 ---
 
@@ -1839,6 +1839,117 @@ The wallet code is public and you can check it. [What is open, and under which l
 Remove your paymail, profile and messages from our servers whenever you like.
 
 Some features are still in beta and vary by platform. What shipped when: [releases](https://bwalletx.com/releases). Questions: [support@bwalletx.com](mailto:support@bwalletx.com)
+
+---
+
+Source: https://bwalletx.com/flick-off
+
+FLICK OFF
+
+# Move your X and YouTube history onto Bitcoin
+
+Almost every app lets you download everything you have put into it. FLICK OFF takes that download and writes it to Bitcoin in your own name. bWalletX signs each piece with your key and holds it in your vault.
+
+1. Download your data→
+2. Drop it on bMintX→
+3. Own it in bWalletX
+
+## How it works
+
+### 1. Download your data
+
+Ask X or YouTube (Google Takeout) for your archive. They email you a zip. It is your data, and in the UK and EU you have a right to it.
+
+### 2. Drop the zip on bMintX
+
+The zip is read in your browser, and nothing is sent anywhere. You see what is inside and what it costs to mint, at cost price, before anything happens. For YouTube you pick which videos to mint.
+
+### 3. Sign with bWalletX
+
+Your wallet signs each piece and it is written to Bitcoin, keeping its original date. Your X posts land on bChatX. Your YouTube videos land on bVideoX. Your keys never leave your device.
+
+## What is live today
+
+LIVE
+### X → bChatX
+
+Your posts, follows and history, with a cost check in seconds.
+[Flick off X →](https://bmintx.com/flick-off/x)
+
+LIVE
+### YouTube → bVideoX
+
+Every video with its title, description and original upload date. See the cost of each one and pick.
+[Flick off YouTube →](https://bmintx.com/flick-off/youtube)
+
+## Coming next
+
+COMING
+### Instagram
+
+Photos and reels with their original dates.
+
+COMING
+### TikTok
+
+Your videos with captions and dates.
+
+COMING
+### LinkedIn
+
+Your profile and work history as a CV you own.
+
+COMING
+### Facebook
+
+Your friends, photos and posts.
+
+COMING
+### Import inside bWalletX
+
+Pick the zip in the Mint on your phone. Today you drop it on bMintX in a browser.
+
+If you can download it, it can be flicked. Tell us which one you want next at [support@bwalletx.com](mailto:support@bwalletx.com).
+
+## The rules
+
+### Your own content only
+
+FLICK OFF mints what you posted. Other people's posts are not copied. A reply to someone else links to the original.
+
+### Private messages stay private
+
+Direct messages are counted so you know they exist. They are never minted publicly.
+
+### Cost price, shown first
+
+You see the mint cost before you sign. It pays the Bitcoin network fee, nothing more. What you mint is a permanent public record, so check it before you sign.
+
+## The sites that run it
+
+LIVE
+### bMintX
+
+Where you drop the zip and mint.
+[bmintx.com/flick-off →](https://bmintx.com/flick-off)
+
+LIVE
+### bChatX
+
+Where your X posts land.
+[bchatx.com →](https://bchatx.com)
+
+LIVE
+### bVideoX
+
+Where your YouTube videos land.
+[bvideox.com →](https://bvideox.com)
+
+[Get bWalletX](https://bwalletx.com/get)
+[Start on bMintX](https://bmintx.com/flick-off)
+[All features](https://bwalletx.com/features)
+
+bWalletX is in beta. What you mint is public and permanent. Questions: [support@bwalletx.com](mailto:support@bwalletx.com)
 
 ---
 
