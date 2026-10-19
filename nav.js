@@ -88,10 +88,11 @@
           { label: 'bTV: AIVJ', href: '/aivj' },
           { label: 'b creative', href: '/b-creative' }
         ] },
-      { label: 'bApps', href: '/bapps', pages: ['/bapps', '/bapps/bmovies', '/bshares', '/partnership-shares', '/bweb'],
+      { label: 'bApps', href: '/bapps', pages: ['/bapps', '/sites', '/bapps/bmovies', '/bshares', '/partnership-shares', '/bweb'],
         sub: [
           { label: 'All bApps', href: '/bapps' },
           { label: 'bMovies', href: '/bapps/bmovies' },
+          { label: 'All sites', href: '/sites' },
           { label: 'bChatX', href: 'https://www.bchatx.com' },
           { label: 'bMailX', href: 'https://bmailx.com' },
           { label: 'bRadioX', href: 'https://bradiox.com' },

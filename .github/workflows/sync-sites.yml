@@ -1,0 +1,42 @@
+name: Sync sites hub
+
+# Daily: read each satellite site's Live/Coming status list, title, description and share image,
+# refresh data/sites.json and the /sites pages, and commit to main only when the data changed.
+on:
+  schedule:
+    - cron: '17 6 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: sync-sites
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 1
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Fetch sites and rebuild pages
+        run: node scripts/sync-sites.mjs
+      - name: Commit if the data changed
+        run: |
+          if git diff --quiet -- data/sites.json; then
+            echo "No change in data/sites.json; nothing to commit."
+            exit 0
+          fi
+          python3 scripts/seo-head.py
+          python3 scripts/gen-llms.py
+          git config user.name "bwalletx-sites-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/sites.json sites index.html llms.txt llms-full.txt sitemap.xml
+          git commit -m "Sites: daily sync of satellite status lists ($(date -u +%F))"
+          git push origin HEAD:main

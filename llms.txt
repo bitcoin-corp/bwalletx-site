@@ -104,6 +104,21 @@ Full text of every page below: https://bwalletx.com/llms-full.txt
 - [Sign in with Google · bWalletX](https://bwalletx.com/gmail): Connect your Google account to bWalletX: a Google badge and your Google picture on your wallet. You choose your own handle; your email address never becomes part of it.
 - [Sign in with X · bWalletX](https://bwalletx.com/x): Connect your X account to bWalletX: an X badge and your X picture on your wallet, and your @name suggested when you choose your own handle.
 
+## Sites
+
+- [bCalX · bWalletX sites](https://bwalletx.com/sites/bcalx): bCalX (bcalx.com): What's on, live. Every scheduled Space, ready for your calendar. 8 live, 2 coming.
+- [bChatX · bWalletX sites](https://bwalletx.com/sites/bchatx): bChatX (bchatx.com): Chat, rooms and live Spaces. Sign in with bWalletX. 3 live, 0 coming.
+- [bDriveX · bWalletX sites](https://bwalletx.com/sites/bdrivex): bDriveX (bdrivex.com): Your files and recordings, kept on Bitcoin and paid for month by month. 2 live, 5 coming.
+- [bJobsX · bWalletX sites](https://bwalletx.com/sites/bjobsx): bJobsX (bjobsx.com): Work, paid in Bitcoin, person to person. Your name already takes payments. 5 live, 5 coming.
+- [bMailX · bWalletX sites](https://bwalletx.com/sites/bmailx): bMailX (bmailx.com): Letters that carry money. Your name@bmailx.com comes with your bWalletX name. 5 live, 4 coming.
+- [bMintX · bWalletX sites](https://bwalletx.com/sites/bmintx): bMintX (bmintx.com): You made it. Prove it's yours: put your work on Bitcoin in your own name, from about a penny. 5 live, 3 coming.
+- [bNewsX · bWalletX sites](https://bwalletx.com/sites/bnewsx): bNewsX (bnewsx.com): Headlines you talk over in the bWalletX Feed, with tips for the people who write them. 3 live, 5 coming.
+- [bRadioX · bWalletX sites](https://bwalletx.com/sites/bradiox): bRadioX (bradiox.com): Radio you can join. Listen in the bRadio Lounge and raise your hand to speak. 4 live, 3 coming.
+- [bSharesX · bWalletX sites](https://bwalletx.com/sites/bsharesx): bSharesX (bsharesx.com): Share-register software for any company. The first register is in testing. 1 live, 7 coming.
+- [bStoreX · bWalletX sites](https://bwalletx.com/sites/bstorex): bStoreX (bstorex.com): The Store on the web. Themes and emoji themes, $1 each, each with a signed receipt. 6 live, 5 coming.
+- [bVaultX · bWalletX sites](https://bwalletx.com/sites/bvaultx): bVaultX (bvaultx.com): Lock it away for as long as you like, and get it back from your 12 words. 5 live, 4 coming.
+- [Sites · bWalletX](https://bwalletx.com/sites/): Every site that runs on bWalletX: bChatX, bMailX, bMintX, bStoreX, bCalX, bRadioX, bJobsX, bNewsX, bVaultX, bDriveX, bSharesX. One wallet signs you in to all of them. Each shows what is live today and what is coming.
+
 ## Agents & developers
 
 - [The b agent · bWalletX](https://bwalletx.com/agent): The b agent is the AI assistant inside bWalletX: ask how the wallet works, design strategies, or call it into a chat with /b. Use your own API key, or pay per message.

@@ -52,7 +52,7 @@ def allowed(rel):
     parts = rel.split('/')
     if set(parts[:-1]) & BAD_DIRS or any(x.startswith('walkthrough-') for x in parts) or '-template' in rel or rel in DUPES or os.path.basename(rel) in SKIP: return False
     if rel.endswith('.html'):
-        return '/' not in rel or fnmatch.fnmatch(rel, 'blog/*.html') or rel in SUBPAGES
+        return '/' not in rel or fnmatch.fnmatch(rel, 'blog/*.html') or fnmatch.fnmatch(rel, 'sites/*.html') or rel in SUBPAGES
     return False
 pages = []
 for rel in sorted(r for r in tracked if allowed(r)):
@@ -72,12 +72,13 @@ SECTIONS = {
 }
 def group(r):
     if r.startswith('blog/'): return 'Blog'
+    if r.startswith('sites/'): return 'Sites'
     k = r[:-5]
     for g, ks in SECTIONS.items():
         if k in ks: return g
     return 'Product'
 
-order = ['Product', 'Wallet features', 'Social', 'Agents & developers', 'Blog', 'Support']
+order = ['Product', 'Wallet features', 'Social', 'Sites', 'Agents & developers', 'Blog', 'Support']
 def one_line(d):
     d = re.sub(r'\s+', ' ', d).strip()
     return d
