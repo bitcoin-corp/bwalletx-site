@@ -12725,6 +12725,88 @@ Related: [Signed names](https://bwalletx.com/name-bindings) · [Names](https://b
 
 ---
 
+Source: https://bwalletx.com/blog/059-one-wallet-every-site
+
+[Development blog](https://bwalletx.com/blog) · 059 · 19 Oct 2026
+
+# One wallet. Every site.
+
+Since our last post on 17 Oct: a family of sites that open with your bWalletX, Sign in with bWalletX for any site, four wallet releases and a calmer Desktop. Everything below works today.
+
+## Sites that open with your wallet
+
+One wallet signs you in and pays, on every one of these. Each site keeps its own list of what is live, and [bwalletx.com/sites](https://bwalletx.com/sites) gathers them in one place, refreshed daily.
+
+- [bChatX](https://bwalletx.com/sites/bchatx): chat rooms and live audio Spaces. Listen without an account; sign in to speak.
+
+- [bMailX](https://bwalletx.com/sites/bmailx): your name@bmailx.com takes payments, into the same wallet as name@bwalletx.com. Letters arrive sealed with a paid stamp, and friends write free.
+
+- [bMintX](https://bwalletx.com/sites/bmintx): put the things you make on Bitcoin in your own name, from about a penny. [Watch the 32-second film](https://bmintx.com/watch).
+
+- [bStoreX](https://bwalletx.com/sites/bstorex): the Store on the web. Themes and emoji themes, $1 each, each with a signed receipt in your wallet.
+
+- [bCalX](https://bwalletx.com/sites/bcalx): what’s on. Every scheduled Space, with a page of its own and a calendar invite.
+
+- [bRadioX](https://bwalletx.com/sites/bradiox): radio you can join. Listen in the bRadio Lounge and raise your hand to speak.
+
+- [bJobsX](https://bwalletx.com/sites/bjobsx): work paid person to person. Your name already takes payments.
+
+- [bNewsX](https://bwalletx.com/sites/bnewsx): headlines you talk over in the bWalletX Feed, with tips for the people who write them.
+
+- [bVaultX](https://bwalletx.com/sites/bvaultx): lock money away until a date you choose, and get it back from your 12 words, with no server needed.
+
+## Sign in with bWalletX
+
+Any site can now offer a Sign in with bWalletX button. It sends you to [auth.bwalletx.com](https://auth.bwalletx.com/.well-known/openid-configuration), your wallet shows one sheet, and you’re in. No password, no email. It uses the standard OAuth 2.1 with PKCE, so it fits the sign-in code most sites already have. [Add the button](https://bwalletx.com/sign-in-button).
+
+## In the wallet
+
+Releases 5.2.30 to 5.2.33 ([notes](https://bwalletx.com/releases)):
+
+- Claim your name, then link X and Google as signed badges. Your email is never stored or shown.
+
+- Agreements live in [bMail](https://bwalletx.com/bmail): both sides sign, and the signed copy gets a sealed receipt. bMail never loses a stamp or charges twice.
+
+- A calendar of scheduled Spaces, with Remind me and add-to-calendar.
+
+- Twelve emoji themes in the [Store](https://bwalletx.com/store), $1 each.
+
+- Bring old RelayX collections home from your 12 words, and cancel old RelayX listings back to yourself in one tap. [How it works](https://bwalletx.com/recover-relayx).
+
+- Settings › Troubleshooting › Resync coins clears up “already spent” sends.
+
+- [bWalletX Desktop for Mac](https://bwalletx.com/get): a signed, notarised app for Apple silicon and Intel.
+
+## Desktop and web, tidied
+
+[Desktop](https://bwalletx.com/desktop) opens straight on your wallet in the classic layout, with a tidy Store grid and its own Address book page. On [the web](https://bwalletx.com/web), the beta notice sits clear of the top bar again.
+
+## Status, 19 Oct 2026
+
+- ✓ Nine sites that open with bWalletX, listed at [/sites](https://bwalletx.com/sites)
+
+- ✓ Sign in with bWalletX at auth.bwalletx.com
+
+- ✓ Linked X and Google badges on your name
+
+- ✓ Agreements and name@bmailx.com in bMail
+
+- ✓ Calendar of Spaces in the wallet
+
+- ✓ Emoji themes in the Store
+
+- ✓ RelayX recovery and listing cancel
+
+- ✓ Desktop classic layout and web layout fixes
+
+Less noise. More life. Just b.
+
+Related: [Sites](https://bwalletx.com/sites) · [Sign in button](https://bwalletx.com/sign-in-button) · [Releases](https://bwalletx.com/releases) · [Desktop](https://bwalletx.com/desktop)
+
+[← 058 Signed names](https://bwalletx.com/blog/058-signed-names)[All posts →](https://bwalletx.com/blog)
+
+---
+
 Source: https://bwalletx.com/blog/
 
 # Development blog
@@ -12732,6 +12814,10 @@ Source: https://bwalletx.com/blog/
 How bWallet and bWalletX were built, one chapter at a time. Every post is written from the git history of the wallet, this site, the chat server and the PNEEs prototype. It covers what we built, why, what broke, what we reversed and what is still not done.
 
 Newest first. Dates come from commits. bWallet is a fork of [Yours Wallet](https://github.com/yours-org/yours-wallet) (MIT licence).
+
+- 059 · 19 Oct 2026
+[One wallet. Every site.](https://bwalletx.com/blog/059-one-wallet-every-site)
+Since 17 Oct: a family of sites that open with your bWalletX, Sign in with bWalletX for any site, four wallet releases and a calmer Desktop. Everything here works today.
 
 - 058 · 17 Oct 2026
 [We could move your name. Now you can see if we do.](https://bwalletx.com/blog/058-signed-names)
