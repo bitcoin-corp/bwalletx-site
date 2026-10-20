@@ -3602,7 +3602,16 @@ Each release ships to the Android APK, the Chrome extension and the web wallet. 
 
 [Download bWalletX](https://bwalletx.com/download)
 
-## 5.2.37 2026-10-19
+## 5.2.37 2026-10-20
+
+- Sign in with bWalletX works on every site again. The approval sheet left “See your public identity” unticked, so pressing Allow answered “Permission denied”. It is now ticked and says plainly what it shares: only your public key.
+- Big wallets show their balance straight away. Checking for coins spent elsewhere now happens quietly after you unlock, on your device only.
+- Feed: tap an image to open it full screen, with Save.
+- Mint: Check this mint verifies a mint without trusting any server, and says VERIFIED, PENDING, REFUSED or UNREACHABLE.
+- Mint vault: each collection gets its own sub-vault, and Desktop gets a background film.
+- The Store on the home screen shows real gold banners for Names and Live Spaces, so no slide is blank. On the web, a quiet “New version · Tap to update” pill offers a newer build.
+
+## 5.2.36 2026-10-19
 
 - Sending fixed: coins already spent from another device no longer inflate your balance or make sends fail. The wallet checks them quietly when you unlock (confirmed spends only, and it undoes any mistake).
 - If a send does hit a spent coin, you now see “cleared — tap Send again” instead of a raw network error.
