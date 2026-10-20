@@ -1,6 +1,12 @@
 {
   "cleanUrls": true,
   "rewrites": [
+    { "source": "/", "has": [{ "type": "host", "value": "race.bwalletx.com" }, { "type": "header", "key": "user-agent", "value": "(?i).*(twitterbot|facebookexternalhit|slackbot|discordbot|telegrambot|whatsapp|linkedinbot|skypeuripreview|embedly|pinterest|redditbot|applebot|googlebot).*" }], "destination": "/race-card" },
+    { "source": "/", "has": [{ "type": "host", "value": "race.bwalletx.com" }], "destination": "https://www.vexvoid.com/race?theme=bacc" },
+    { "source": "/race", "has": [{ "type": "host", "value": "race.bwalletx.com" }], "destination": "https://www.vexvoid.com/race" },
+    { "source": "/race/:path*", "has": [{ "type": "host", "value": "race.bwalletx.com" }], "destination": "https://www.vexvoid.com/race/:path*" },
+    { "source": "/_next/:path*", "has": [{ "type": "host", "value": "race.bwalletx.com" }], "destination": "https://www.vexvoid.com/_next/:path*" },
+    { "source": "/manifest.json", "has": [{ "type": "host", "value": "race.bwalletx.com" }], "destination": "https://www.vexvoid.com/manifest.json" },
     {
       "source": "/b-Aware",
       "destination": "/b-aware"
