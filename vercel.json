@@ -1,6 +1,14 @@
 {
   "cleanUrls": true,
   "rewrites": [
+    {
+      "source": "/race",
+      "has": [
+        { "type": "query", "key": "theme", "value": "bacc" },
+        { "type": "header", "key": "user-agent", "value": "(?i).*(twitterbot|facebookexternalhit|slackbot|discordbot|telegrambot|whatsapp|linkedinbot|skypeuripreview|embedly|pinterest|redditbot|applebot|googlebot).*" }
+      ],
+      "destination": "/race-card.html"
+    },
     { "source": "/race", "destination": "https://www.vexvoid.com/race" },
     { "source": "/race/:path*", "destination": "https://www.vexvoid.com/race/:path*" },
     { "source": "/_next/:path*", "destination": "https://www.vexvoid.com/_next/:path*" },
