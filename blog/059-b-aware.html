@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>059 b-Aware: find a hole in bWalletX, get paid in BSV · bWalletX blog</title>
+    <meta name="description" content="bWalletX now has a responsible disclosure policy and a bug bounty, paid in BSV. How it works, why the numbers are what they are, and what we did about today&rsquo;s BRC-100 advisory." />
+    <link rel="canonical" href="https://bwalletx.com/blog/059-b-aware" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://bwalletx.com/blog/059-b-aware" />
+    <meta property="og:site_name" content="bWalletX" />
+    <meta property="og:title" content="b-Aware: find a hole in bWalletX, get paid in BSV" />
+    <meta property="og:description" content="bWalletX now has a responsible disclosure policy and a bug bounty, paid in BSV. How it works, why the numbers are what they are, and what we did about today&rsquo;s BRC-100 advisory." />
+    <meta property="og:image" content="https://bwalletx.com/og/og-blog-059.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@bWalletX" />
+    <meta name="twitter:title" content="b-Aware: find a hole in bWalletX, get paid in BSV" />
+    <meta name="twitter:description" content="bWalletX now has a responsible disclosure policy and a bug bounty, paid in BSV. How it works, why the numbers are what they are, and what we did about today&rsquo;s BRC-100 advisory." />
+    <meta name="twitter:image" content="https://bwalletx.com/og/og-blog-059.png" />
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="stylesheet" href="/styles.css" />
+    <style>
+      .ext { max-width: 760px; margin: 0 auto; padding: 120px 20px 80px; }
+      .ext h1 { font-size: clamp(2rem, 6vw, 3rem); margin: 10px 0 10px; line-height: 1.15; }
+      .ext h2 { margin: 44px 0 10px; font-size: 1.4rem; }
+      .ext p, .ext li { line-height: 1.7; }
+      .ext code { background: #17191e; padding: 2px 7px; border-radius: 6px; overflow-wrap: anywhere; }
+      .ext a { overflow-wrap: anywhere; }
+      .meta { color: #8a8a86; font-size: 0.9rem; margin: 0; }
+      .num { color: #F5B800; font-weight: 700; letter-spacing: .04em; }
+      .box { background: #101114; border: 1px solid #ffffff12; border-radius: 16px; padding: 18px 22px; margin: 28px 0; }
+      .box h2 { margin: 0 0 8px; font-size: 1.1rem; }
+      .box ul { margin: 0; padding-left: 1.2em; }
+      .related { color: #a7adb8; }
+      .pn { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; margin-top: 40px; border-top: 1px solid #ffffff14; padding-top: 20px; }
+      .pn a { color: #F5B800; text-decoration: none; max-width: 100%; }
+      .posts { list-style: none; padding: 0; margin: 28px 0; }
+      .posts li { background: #101114; border: 1px solid #ffffff12; border-radius: 16px; padding: 16px 20px; margin: 12px 0; }
+      .posts a { color: #fff; text-decoration: none; font-weight: 700; font-size: 1.1rem; }
+      .posts a:hover { color: #F5B800; }
+      .posts p { margin: 4px 0 0; color: #a7adb8; line-height: 1.55; }
+      .ext .small { color: #8a8a86; font-size: 0.85rem; }
+      .box ul.chk { list-style: none; padding-left: 0; }
+      .box ul.chk li { margin: 6px 0; }
+      .ext pre { background: #101114; border: 1px solid #ffffff12; border-radius: 12px; padding: 14px 16px; overflow-x: auto; font-size: 0.85rem; }
+      .ext pre code { background: none; padding: 0; overflow-wrap: normal; }
+    </style>
+      <!-- ld:start -->
+    <script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "BlogPosting",
+   "headline": "b-Aware: find a hole in bWalletX, get paid in BSV",
+   "description": "bWalletX now has a responsible disclosure policy and a bug bounty, paid in BSV. How it works, why the numbers are what they are, and what we did about today’s BRC-100 advisory.",
+   "url": "https://bwalletx.com/blog/059-b-aware",
+   "mainEntityOfPage": "https://bwalletx.com/blog/059-b-aware",
+   "image": "https://bwalletx.com/og/og-blog-059.png",
+   "inLanguage": "en",
+   "author": { "@type": "Organization", "name": "The Bitcoin Corporation Ltd", "url": "https://bwalletx.com/" },
+   "publisher": { "@type": "Organization", "name": "The Bitcoin Corporation Ltd", "logo": { "@type": "ImageObject", "url": "https://bwalletx.com/icon-512.png" } },
+   "datePublished": "2026-10-20"
+  }
+ ]
+}
+    </script>
+    <!-- ld:end -->
+  </head>
+  <body>
+    <div class="beta-banner">bWalletX is in <strong>beta</strong>: test with small amounts.</div>
+    <header class="topbar">
+      <div class="wrap topbar-in">
+        <a class="brand" href="/"><img src="/logo.svg" alt="" width="34" height="30" /><span>bWallet<span class="gold">X</span></span></a>
+        <nav aria-label="Pages">
+          <a href="/features">Features</a><a href="/exchange">Exchange</a><a href="/social">Social</a><a href="/agent">Agents</a><a href="/extension">Extension</a><a href="/developers">Developers</a>
+        </nav>
+        <span class="nav-cta"><a class="dl-btn" href="/get">Download</a><a class="web-btn" href="https://web.bwalletx.com" target="_blank" rel="noopener">Web &rarr;</a></span>
+      </div>
+    </header>
+    <script src="/nav.js"></script>
+    <main class="ext">
+      <p class="meta"><a href="/blog">Development blog</a> · <span class="num">059</span> · 20 Oct 2026</p>
+      <h1>b-Aware: find a hole in bWalletX, get paid in BSV</h1>
+      <p class="lede">bWalletX now has a responsible disclosure policy and a bug bounty, paid in BSV. Here is how it works, why the numbers are what they are, and what we did about today&rsquo;s BRC-100 advisory.</p>
+
+      <p>bWalletX is a non-custodial wallet. If it signs something you did not approve, or lets someone read your keys, that is the worst thing it can do, and we would rather hear about it from a researcher than from a victim. So from today there is a page for that: <a href="/b-Aware">bwalletx.com/b-Aware</a>.</p>
+
+      <h2>What it is</h2>
+      <p>A responsible disclosure policy and a bug bounty, paid in BSV.</p>
+      <ul>
+        <li><b>Report</b> by email to <a href="mailto:support@bwalletx.com?subject=b-Aware">support@bwalletx.com</a> with the subject <code>b-Aware</code>. We acknowledge within 2 working days, give you a severity and a fix plan within 7, and tell you when the fix ships. Never send a recovery phrase or key; use a throwaway wallet to show the problem.</li>
+        <li><b>Rewards:</b> Critical 10 BSV (take funds, extract keys, sign without approval), High 3 BSV (bypass an approval or permission, forge a pairing, drain through a dApp endpoint), Medium 0.5 BSV (leak private data, defeat the safety filter, lock a user out of their own wallet). Low findings get credit.</li>
+        <li><b>Safe harbour.</b> Good-faith research under the policy is authorised. We will not pursue legal action for it, and if someone else does, we will say publicly that you were acting under the policy.</li>
+      </ul>
+      <p>The machine-readable version is at <a href="/.well-known/security.txt"><code>/.well-known/security.txt</code></a>, and the policy lives in the open-source repository as <a href="https://github.com/bitcoin-corp/bwallet/blob/main/SECURITY.md">SECURITY.md</a>. Ordinary bugs still go to <a href="/bugs">Bugs</a>: tell b in the app.</p>
+
+      <h2>Why the numbers look like this</h2>
+      <p>We are a small company and we will not pretend otherwise. A flat &ldquo;10 BSV per bug&rdquo; would be the wrong shape now that AI-assisted scanning makes a plausible report nearly free to produce: it would pay a cosmetic finding the same as a key-extraction bug and it would be gamed within a week.</p>
+      <p>So the programme pays by <b>impact on users&rsquo; money and keys</b>, not by count. There is a <b>pool of 20 BSV per calendar quarter</b>; when it is spent, valid reports still earn credit and are paid from the next quarter, in triage order. First valid report of an issue wins. Duplicates, things we already know about and the published &ldquo;known and accepted&rdquo; list earn credit, not money. A working reproduction is required.</p>
+      <p>Ten criticals in a non-custodial wallet would be an existential finding whatever we paid for them. If they exist, we want to know. The pool keeps the spending from running ahead of our ability to fix.</p>
+
+      <h2>Public responses to advisories</h2>
+      <p>The page also carries our dated responses to published advisories that touch BRC-100 wallets and the BSV TypeScript stack, because &ldquo;are we affected?&rdquo; is the question every wallet user has and few wallets answer in writing.</p>
+      <p>Today&rsquo;s entry is <a href="https://github.com/bsv-blockchain/bsv-desktop/pull/135">bsv-blockchain/bsv-desktop#135</a>, a hardening of the reference desktop wallet&rsquo;s <code>manifest.json</code> fetch against server-side request forgery. A BRC-100 wallet fetches an app&rsquo;s manifest to show its declared permissions in one grouped prompt; in the Electron wallet that fetch ran in the privileged main process on a URL the renderer supplied.</p>
+      <p><b>bWalletX is not affected by the same mechanism.</b> There is no page-to-wallet &ldquo;fetch this URL&rdquo; channel. The manifest fetch happens inside the wallet toolbox&rsquo;s permissions manager, which builds the URL from the originator rather than accepting one, goes through the SDK&rsquo;s public-HTTPS fetch (HTTPS only, no credentials, pinned to that origin), refuses redirects, caps the body and times out. And the originator is not the page&rsquo;s to choose: the extension rejects any message whose originator does not match the browser-reported sender origin, and the mobile app derives it from the verified origin of each site&rsquo;s endpoint. The only host a site can make the wallet contact is its own.</p>
+      <p>We also say what we share with upstream: in browser runtimes the wallet cannot pre-resolve DNS, so a site could rebind its own hostname to a private address. That is listed under &ldquo;known and accepted&rdquo; rather than hidden. The two earlier ts-stack advisories (September&rsquo;s coordinated trust-boundary advisory and July&rsquo;s createAction output-redirection issue) are patched by the SDK and toolbox versions we ship.</p>
+
+      <h2>What we ask of you</h2>
+      <p>Test against your own wallets and your own money. Do not touch anyone else&rsquo;s data. Give us time to fix before you publish. In return you get a fast, written answer, a reward if it is real, and your name on the page if you want it there.</p>
+      <p>The credits section is empty today. Yours could be the first name on it.</p>
+
+      <div class="box">
+        <h2>Status, 20 Oct 2026</h2>
+        <ul class="chk">
+          <li>&check; Policy, reward table and 20 BSV quarterly pool published at <a href="/b-Aware">/b-Aware</a></li>
+          <li>&check; <code>security.txt</code>, <code>SECURITY.md</code> and GitHub issue templates in place</li>
+          <li>&check; Public response to bsv-desktop#135 (not affected) and to the September and July ts-stack advisories (patched)</li>
+          <li>&#9723; Private vulnerability reporting on GitHub as a second channel</li>
+          <li>&#9723; A dedicated security@ inbox and a PGP key</li>
+        </ul>
+      </div>
+      <p class="related">Related: <a href="/b-Aware">b-Aware</a> · <a href="/bugs">Bugs</a> · <a href="/open-source">Open source</a> · <a href="/privacy">Privacy</a></p>
+      <div class="pn"><a href="/blog/058-signed-names">&larr; 058 Signed names</a><a href="/blog">All posts &rarr;</a></div>
+    </main>
+  </body>
+</html>
