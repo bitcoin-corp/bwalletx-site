@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>bAcc: Bitcoin accelerationism, more payments and faster | bWalletX</title>
+    <link rel="canonical" href="https://bwalletx.com/bacc" />
+    <meta name="description" content="bAcc is the Bitcoin accelerationist movement: speed Bitcoin up by sending more of it, more often. More payments, more people, more transactions per second. Play the bAcc race game." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://bwalletx.com/bacc" />
+    <meta property="og:site_name" content="bWalletX" />
+    <meta property="og:title" content="bAcc: Bitcoin accelerationism" />
+    <meta property="og:description" content="Speed Bitcoin up: more payments, more people, more transactions per second. Play the race game." />
+    <meta property="og:image" content="https://bwalletx.com/og-bacc-v1.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="bAcc: Bitcoin accelerationism, in black and yellow racing stripes" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@bWalletX" />
+    <meta name="twitter:title" content="bAcc: Bitcoin accelerationism" />
+    <meta name="twitter:description" content="Speed Bitcoin up: more payments, more people, more transactions per second." />
+    <meta name="twitter:image" content="https://bwalletx.com/og-bacc-v1.png" />
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="stylesheet" href="/styles.css" />
+    <style>
+      .ext h1 { font-size: clamp(2.2rem, 6vw, 3.4rem); margin: 18px 0 10px; }
+      .ext h2 { margin: 48px 0 10px; font-size: 1.5rem; }
+      .ext p, .ext li { line-height: 1.65; }
+      .ext .small { color: #8a8a86; font-size: 0.85rem; }
+      .ext .row { display: flex; gap: 12px; flex-wrap: wrap; margin: 26px 0; }
+      .strap { font-weight: 800; letter-spacing: 0.14em; color: #F5B800; margin: 0; font-size: 0.85rem; }
+      /* Black and yellow racing stripes. */
+      .bacc-stripes { height: 38px; margin: 0 -20px; background: repeating-linear-gradient(to bottom, #F5B800 0 11px, #050505 11px 19px); }
+      .bacc-hero { position: relative; margin: 18px -20px 0; padding: 34px 20px 30px; background: #050505; border-top: 1px solid #F5B80033; border-bottom: 1px solid #F5B80033; overflow: hidden; }
+      .bacc-hero::after { content: ""; position: absolute; top: 0; bottom: 0; right: 2%; width: 56px; transform: skewX(-18deg); background: linear-gradient(90deg, #F5B800 0 40%, transparent 40% 60%, #F5B800 60% 100%); opacity: 0.9; }
+      .bacc-hero > * { position: relative; z-index: 1; max-width: 500px; }
+      .bacc-word { font-size: clamp(3.4rem, 14vw, 7rem); font-weight: 900; font-style: italic; letter-spacing: -0.03em; line-height: 0.95; margin: 6px 0 14px; color: #fff; }
+      .bacc-word .y { color: #F5B800; }
+      .box { background: #101114; border: 1px solid #ffffff12; border-left: 4px solid #F5B800; border-radius: 4px 16px 16px 4px; padding: 18px 20px; margin: 16px 0; }
+      .box h3 { margin: 0 0 6px; font-size: 1rem; }
+      .box p { margin: 0; color: #a7adb8; }
+      .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 14px; margin: 18px 0; }
+      .grid .box { margin: 0; display: flex; flex-direction: column; gap: 6px; }
+      .grid .box a.go { margin-top: auto; padding-top: 8px; color: #F5B800; font-weight: 700; text-decoration: none; }
+      .tag { align-self: flex-start; font-size: 0.72rem; font-weight: 800; letter-spacing: 0.1em; padding: 3px 9px; border-radius: 999px; border: 1px solid #ffffff22; color: #a7adb8; }
+      .tag.live { color: #7ee0a1; border-color: #7ee0a155; }
+      .tag.wip { color: #F5B800; border-color: #F5B80066; }
+    </style>
+  </head>
+  <body>
+    <div class="beta-banner">bWalletX is in <strong>beta</strong>: test with small amounts.</div>
+    <header class="topbar">
+      <div class="wrap topbar-in">
+        <a class="brand" href="/"><img src="/logo.svg" alt="" width="34" height="30" /><span>bWallet<span class="gold">X</span></span></a>
+        <nav aria-label="Pages">
+          <a href="/features">Features</a><a href="/exchange">Exchange</a><a href="/social">Social</a><a href="/agent">Agents</a><a href="/extension">Extension</a><a href="/developers">Developers</a>
+        </nav>
+        <span class="nav-cta"><a class="dl-btn" href="/get">Download</a><a class="web-btn" href="https://web.bwalletx.com" target="_blank" rel="noopener">Web &rarr;</a></span>
+      </div>
+    </header>
+    <script src="/nav.js"></script>
+    <main class="ext">
+      <div class="bacc-stripes" aria-hidden="true"></div>
+      <section class="bacc-hero">
+        <p class="strap">THE BITCOIN ACCELERATIONIST MOVEMENT</p>
+        <p class="bacc-word">b<span class="y">Acc</span></p>
+        <h1>Speed Bitcoin up: more payments, more often</h1>
+        <p class="lede">bAcc is the Bitcoin accelerationist movement. Its goal is simple: raise the number of Bitcoin transactions, by sending more of it, to more people, in more places. Faster and more of it is the whole idea. The long-run version has a name, hyperbitcoinization: Bitcoin becoming the money people use every day.</p>
+        <div class="row">
+          <a class="btn btn-store" href="/get">Get bWalletX</a>
+          <a class="btn btn-store btn-ghost" href="https://www.vexvoid.com/race">Play the bAcc race</a>
+        </div>
+      </section>
+      <div class="bacc-stripes" aria-hidden="true"></div>
+
+      <h2>What bAcc means</h2>
+      <div class="grid">
+        <div class="box"><h3>More payments</h3><p>Every payment you send adds to Bitcoin&rsquo;s volume. Tip, pay, split a bill, buy a track: the movement counts transactions, not speeches.</p></div>
+        <div class="box"><h3>Smaller payments</h3><p>Here, Bitcoin payments cost a fraction of a penny, so a one-cent payment makes sense. Small and frequent is how volume grows.</p></div>
+        <div class="box"><h3>More people</h3><p>A wallet that is easy to open and quick to use brings in people who have never held Bitcoin. That is why bWalletX exists.</p></div>
+      </div>
+
+      <h2>How to take part</h2>
+      <div class="box"><h3>1. Get a wallet</h3><p><a href="/get">bWalletX</a> runs on your phone, in Chrome and on the web. You hold your own keys.</p></div>
+      <div class="box"><h3>2. Pay in small amounts, often</h3><p>Send a payment to a friend, tip someone whose work you like, pay for something in Bitcoin. Each one is a transaction.</p></div>
+      <div class="box"><h3>3. Bring someone with you</h3><p>The fastest way to raise volume is more people sending. Show one person how to open a wallet.</p></div>
+
+      <h2>The game</h2>
+      <div class="grid">
+        <div class="box">
+          <span class="tag wip">IN PROGRESS</span>
+          <h3>VexVoid Race</h3>
+          <p>The bAcc game: jet-bike racing. It is still being built, and you can follow it and try what is there today.</p>
+          <a class="go" href="https://www.vexvoid.com/race">vexvoid.com/race &rarr;</a>
+        </div>
+      </div>
+
+      <h2>Merchandise</h2>
+      <div class="grid">
+        <div class="box">
+          <span class="tag">COMING</span>
+          <h3>bAcc racing jackets and more</h3>
+          <p>Black and yellow racing jackets and other bAcc gear are planned. Nothing is on sale yet, and this page will say so the day it is. Tell us what you want at <a href="mailto:support@bwalletx.com">support@bwalletx.com</a>.</p>
+        </div>
+      </div>
+
+      <div class="row">
+        <a class="btn btn-store" href="/get">Get bWalletX</a>
+        <a class="btn btn-store btn-ghost" href="https://www.vexvoid.com/race">Play the race</a>
+        <a class="btn btn-store btn-ghost" href="/features">All features</a>
+      </div>
+      <p class="small">bAcc is an idea and a community, not financial advice. Bitcoin can lose value, and bWalletX is in beta: test with small amounts. Questions: <a href="mailto:support@bwalletx.com">support@bwalletx.com</a></p>
+      <div class="bacc-stripes" aria-hidden="true"></div>
+    </main>
+  </body>
+</html>
