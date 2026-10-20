@@ -2,16 +2,49 @@
   "cleanUrls": true,
   "rewrites": [
     {
+      "source": "/b-Aware",
+      "destination": "/b-aware.html"
+    },
+    {
+      "source": "/disclosure",
+      "destination": "/b-aware.html"
+    },
+    {
+      "source": "/security",
+      "destination": "/b-aware.html"
+    },
+    {
+      "source": "/bounty",
+      "destination": "/b-aware.html"
+    },
+    {
       "source": "/race",
       "has": [
-        { "type": "query", "key": "theme", "value": "bacc" },
-        { "type": "header", "key": "user-agent", "value": "(?i).*(twitterbot|facebookexternalhit|slackbot|discordbot|telegrambot|whatsapp|linkedinbot|skypeuripreview|embedly|pinterest|redditbot|applebot|googlebot).*" }
+        {
+          "type": "query",
+          "key": "theme",
+          "value": "bacc"
+        },
+        {
+          "type": "header",
+          "key": "user-agent",
+          "value": "(?i).*(twitterbot|facebookexternalhit|slackbot|discordbot|telegrambot|whatsapp|linkedinbot|skypeuripreview|embedly|pinterest|redditbot|applebot|googlebot).*"
+        }
       ],
       "destination": "/race-card"
     },
-    { "source": "/race", "destination": "https://www.vexvoid.com/race" },
-    { "source": "/race/:path*", "destination": "https://www.vexvoid.com/race/:path*" },
-    { "source": "/_next/:path*", "destination": "https://www.vexvoid.com/_next/:path*" },
+    {
+      "source": "/race",
+      "destination": "https://www.vexvoid.com/race"
+    },
+    {
+      "source": "/race/:path*",
+      "destination": "https://www.vexvoid.com/race/:path*"
+    },
+    {
+      "source": "/_next/:path*",
+      "destination": "https://www.vexvoid.com/_next/:path*"
+    },
     {
       "source": "/themes/custom",
       "destination": "/themes-custom"
@@ -62,10 +95,26 @@
     }
   ],
   "redirects": [
-    { "source": "/bAcc", "destination": "/b/acc", "permanent": true },
-    { "source": "/bacc", "destination": "/b/acc", "permanent": true },
-    { "source": "/recover-relayX", "destination": "/recover-relayx", "permanent": true },
-    { "source": "/relayx-nfts", "destination": "/recover-relayx", "permanent": true },
+    {
+      "source": "/bAcc",
+      "destination": "/b/acc",
+      "permanent": true
+    },
+    {
+      "source": "/bacc",
+      "destination": "/b/acc",
+      "permanent": true
+    },
+    {
+      "source": "/recover-relayX",
+      "destination": "/recover-relayx",
+      "permanent": true
+    },
+    {
+      "source": "/relayx-nfts",
+      "destination": "/recover-relayx",
+      "permanent": true
+    },
     {
       "source": "/theme/:colour(white|pink|blue|yellow|vexvoid|gold|dark|npg|npgx)",
       "destination": "/themes/:colour",
@@ -201,15 +250,27 @@
     {
       "source": "/.well-known/apple-app-site-association",
       "headers": [
-        { "key": "Content-Type", "value": "application/json" },
-        { "key": "Cache-Control", "value": "public, max-age=3600" }
+        {
+          "key": "Content-Type",
+          "value": "application/json"
+        },
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=3600"
+        }
       ]
     },
     {
       "source": "/.well-known/assetlinks.json",
       "headers": [
-        { "key": "Content-Type", "value": "application/json" },
-        { "key": "Cache-Control", "value": "public, max-age=3600" }
+        {
+          "key": "Content-Type",
+          "value": "application/json"
+        },
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=3600"
+        }
       ]
     },
     {
@@ -265,6 +326,15 @@
         {
           "key": "Cache-Control",
           "value": "public, max-age=300"
+        }
+      ]
+    },
+    {
+      "source": "/.well-known/security.txt",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "text/plain; charset=utf-8"
         }
       ]
     }
