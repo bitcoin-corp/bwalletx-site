@@ -1626,6 +1626,86 @@ bWalletX is in beta: test with small amounts. Questions: [support@bwalletx.com](
 
 ---
 
+Source: https://bwalletx.com/direct
+
+BWALLET DIRECT
+
+Direct
+
+# Sign in straight from your own wallet
+
+bWallet Direct is a bWalletX wallet you open with a passkey, and the way a website lets you in with it. No account to make, no password to invent, no middleman holding your login. Your wallet proves it is you; the site checks it.
+
+[Make a wallet with a passkey](https://web.bwalletx.com)
+[Add it to your site](https://bwalletx.com/connect)
+
+## For customers
+
+### 1. Make your wallet with a passkey
+
+Face ID, a fingerprint or your device PIN opens it. Nothing to write down first. [How passkey sign-in works](https://bwalletx.com/direct).
+
+### 2. Press “Sign in with bWalletX” on a site
+
+Your wallet is found in your browser, in the app, or by scanning a QR code with your phone, and it asks you to approve.
+
+### 3. You are in
+
+The site gets a signature from your wallet’s identity key, nothing else: no email, name or password.
+
+## For businesses
+
+One script tag and two routes on your server. There is no API key, no client ID and no account with us: your server checks the signature itself. The same wallet gives the same ID every time they come back.
+
+[Read the guide](https://bwalletx.com/connect)
+[Plain-text version](https://bwalletx.com/connect.md)
+
+## What works today
+
+LIVE
+### Sign in with bWalletX
+
+Chrome extension, the app’s browser, and phone or web wallet by QR code.
+
+LIVE
+### Passkey wallets
+
+Web, Chrome extension and the Android download.
+
+PRIVATE
+### Passkeys on iPhone
+
+In the private build for now.
+
+COMING
+### Pay from the same button
+
+Not packaged yet. Today the button signs people in only.
+
+COMING
+### Passkeys in the App Store and Google Play editions
+
+Not in the store editions yet.
+
+COMING
+### Sign in to HandCash with bWalletX
+
+Not built.
+
+## Good to know
+
+### Passkeys stay in your Apple or Google account
+
+A passkey saved to iCloud cannot open a wallet on an Android phone, and the other way round. Keep your recovery file or 12 words as well.
+
+### Not the same as the Android “direct” download
+
+That is the bWalletX Android app you download from this site instead of Google Play. bWallet Direct is the sign-in service.
+
+bWalletX is in beta: test with small amounts. Questions: [support@bwalletx.com](mailto:support@bwalletx.com)
+
+---
+
 Source: https://bwalletx.com/extension
 
 # bWalletX for Chrome and Brave
