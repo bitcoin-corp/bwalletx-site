@@ -51,6 +51,8 @@
     }
   ],
   "redirects": [
+    { "source": "/bAcc", "destination": "/b/acc", "permanent": true },
+    { "source": "/bacc", "destination": "/b/acc", "permanent": true },
     { "source": "/recover-relayX", "destination": "/recover-relayx", "permanent": true },
     { "source": "/relayx-nfts", "destination": "/recover-relayx", "permanent": true },
     {
