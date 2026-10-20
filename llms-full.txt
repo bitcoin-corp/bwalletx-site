@@ -438,13 +438,39 @@ The bAcc game: jet-bike racing in black and yellow, free to play while it is in 
 
 [vexvoid.com/race?theme=bacc →](https://www.vexvoid.com/race?theme=bacc)
 
+## The Gas Run
+
+The bAcc game mode we are building. Your bike runs on real Bitcoin transactions, and the aim is to keep them flowing without a break.
+
+COMING
+### 1. Fill the tank
+
+Put a small amount of Bitcoin in the gas tank from your wallet, about one US dollar at most per run. What you do not use comes back to your wallet at the end.
+
+COMING
+### 2. Ride
+
+Your bike burns gas by sending real, paid transactions: faster on boost, none when you stop. A crash, or an empty tank, ends the run.
+
+COMING
+### 3. Your score
+
+The longest unbroken chain of your transactions that all get confirmed in a round. It is counted from the blockchain itself, so it cannot be faked.
+
+COMING
+### 4. Rounds
+
+A round follows the blocks, about ten minutes. You see a live count as you ride, marked pending, and the final score when the round closes. Beat the last round’s best.
+
+This mode is not built yet. There are no prizes: the first version is records and bragging rights. You pay normal network fees, nothing more, and every run is capped.
+
 ## Merchandise
 
 COMING
 
 ### bAcc racing jackets and more
 
-Black and yellow racing jackets and other bAcc gear are planned. Nothing is on sale yet, and this page will say so the day it is. Tell us what you want at [support@bwalletx.com](mailto:support@bwalletx.com).
+Black and yellow racing jackets and other bAcc gear are planned, along with a black and yellow bWalletX theme with racing stripes. Nothing is on sale yet, and this page will say so the day it is. Tell us what you want at [support@bwalletx.com](mailto:support@bwalletx.com).
 
 [Get bWalletX](https://bwalletx.com/get)
 [Play the race](https://www.vexvoid.com/race?theme=bacc)
