@@ -1,6 +1,6 @@
 # bWalletX: full site text
 
-Generated 2026-10-20 from https://bwalletx.com. Source pages are linked above each section.
+Generated 2026-10-21 from https://bwalletx.com. Source pages are linked above each section.
 
 ---
 
@@ -258,6 +258,220 @@ Sound
 
 ---
 
+Source: https://bwalletx.com/b-aware
+
+# b-Aware
+
+Responsible disclosure and bug bounty for bWalletX and bWallet · Policy version 1 · 20 October 2026
+
+bWallet and bWalletX are non-custodial. If you find a way to take or spend someone's money, read their keys or
+recovery phrase, or make the wallet sign something its owner did not approve, tell us first. We fix it, we
+credit you, and we pay for it in BSV.
+
+[Report](#report) [Rewards](#rewards) [Scope](#scope)
+[Safe harbour](#safe-harbour) [Known and accepted](#known)
+[Advisories](#advisories) [Credits](#credits)
+
+## How to report
+
+-
+Email [support@bwalletx.com](mailto:support@bwalletx.com?subject=b-Aware) with the subject line
+`b-Aware`. Put the report in the mail itself: the edition and version (Settings › About), the
+steps, what happens, and why it matters. Steps we can run beat a video.
+
+- If it lets an attacker move funds or read keys, say so in the subject so it is read first.
+
+-
+Do not open a public GitHub issue or a public bug report for a security finding. Ordinary bugs go to
+[Bugs](https://bwalletx.com/bugs) (tell b in the app) or
+[github.com/bitcoin-corp/bwallet/issues](https://github.com/bitcoin-corp/bwallet/issues).
+
+-
+Never send us a recovery phrase, private key, password or key file. Use a throwaway wallet to demonstrate.
+
+What you can expect from us: an acknowledgement within 2 working days, a severity and a fix plan within
+7 days, and a note when the fix ships. Our machine-readable contact is at
+[/.well-known/security.txt](https://bwalletx.com/.well-known/security.txt); the policy also lives in the repository as
+[SECURITY.md](https://github.com/bitcoin-corp/bwallet/blob/main/SECURITY.md).
+
+## What we pay
+
+Rewards are paid in BSV to an address you give us, within 14 days of the fix shipping or 30 days of triage,
+whichever is first.
+
+Severity
+What it looks like in bWallet
+Reward
+
+Critical
+Steal or spend funds, extract keys or the recovery phrase, sign without the owner's approval
+10 BSV
+
+High
+Bypass an approval or permission, forge a pairing or connection, drain through a dApp endpoint
+3 BSV
+
+Medium
+Leak private data, defeat the safety filter, deny a user their own wallet
+0.5 BSV
+
+Low
+Real but contained
+Credit
+
+### The rules that bound it
+
+-
+A pool, not an open tap. The reward pool is 20 BSV per calendar quarter. When it is spent, valid
+reports still earn credit and are paid from the next quarter's pool, in the order they were triaged. We are a
+small company and would rather say this than quietly stop paying.
+
+-
+First valid report wins. Duplicates, issues we already know about and anything listed under
+[Known and accepted](#known) earn credit, not money.
+
+-
+Proof required. A working reproduction against a wallet you control. Scanner output or an AI-written
+report with no reproduction is closed politely.
+
+-
+Severity is by impact on users' money and keys, not by CVSS alone. We set it and explain the reasoning
+in writing; if you disagree, say so and we will look again.
+
+- One reward per root cause, even where it shows up in several places.
+
+## Scope
+
+In scope (the code is open at
+[github.com/bitcoin-corp/bwallet](https://github.com/bitcoin-corp/bwallet)):
+
+- Key handling, signing and approvals: the background wallet, the approval sheets and the USB key flow.
+
+- Storage, backup and the remote storage provider.
+
+-
+The BRC-100 dApp bridge: the injected provider, the content script, the extension side panel and in-page
+sheet, the mobile dApp browser and its per-origin endpoints, pairing of computers and the CLI.
+
+- Paymail, OpNS names, the Name Store, pots and subscriptions, agent accounts.
+
+- The iOS and Android apps, the Chrome extension, and the web wallet.
+
+Out of scope:
+
+- The marketing sites and this page.
+
+- Rate limiting, missing security headers, best-practice notes with no exploit.
+
+-
+Self-XSS, clickjacking on pages with nothing to click, anything that needs a rooted or jailbroken device or
+physical access to an unlocked phone.
+
+- Social engineering of our staff or users.
+
+- Services we do not run: indexers, exchanges, HandCash, the Yours Wallet upstream.
+
+## Safe harbour
+
+Research done in good faith under this policy is authorised. We will not pursue, or support, legal action
+against you for it, and if a third party does, we will say publicly that you acted under this policy. Good faith
+means: you test against your own wallets and your own funds; you do not access, change or destroy anyone else's
+data or money; you do not degrade the service for other people; and you give us a reasonable time to fix before
+you publish. We will not ask you to sign anything to be paid.
+
+## Known and accepted
+
+Things we already know about. Reports of these earn credit only.
+
+-
+DNS rebinding of an app's own origin. In browser runtimes the wallet cannot pre-resolve DNS, so a site
+could point its own hostname at a private address after we verify it. The fetch is still limited to that
+site's HTTPS origin with no redirects; the same limitation is documented by the upstream reference wallet (see
+the 20 October advisory below).
+
+-
+Connected wallets hold operating balances. A BRC-100 wallet signs what its owner approves; it cannot
+judge intent. Keep savings in a wallet that is not connected to apps.
+
+## Advisories and our responses
+
+Published advisories that touch BRC-100 wallets, the BSV TypeScript stack or our dependencies, with what bWallet
+does about each. Newest first.
+
+### 20 October 2026 · SSRF hardening of BRC-100 manifest fetching (bsv-desktop)
+
+Source: [bsv-blockchain/bsv-desktop#135](https://github.com/bsv-blockchain/bsv-desktop/pull/135),
+opened 20 October 2026, no CVE or GHSA id at the time of writing. Not affected
+
+What it is. A BRC-100 wallet fetches `https://<app>/manifest.json` to show an app's
+declared permissions in one grouped prompt. In the Electron reference wallet that fetch ran in the privileged
+main process on a URL the renderer supplied, which is a server-side request forgery surface: a page could make
+the wallet process reach localhost or a private network. The pull request requires HTTPS on the default port
+with a `manifest.json` path, rejects localhost, private, reserved and non-public IP addresses
+including DNS results, refuses redirects, caps the body at 1 MiB, restricts the IPC handler to the main frame
+and removes the renderer's fallback to an unrestricted fetch.
+
+bWallet's position. bWallet does not have the mechanism the fix addresses. There is no privileged
+"fetch this URL" channel between a page and the wallet: the background never fetches a URL a page supplies.
+The manifest fetch happens inside the wallet toolbox's permissions manager (we ship wallet-toolbox-client
+2.14.5 and @bsv/sdk 2.8.11), which builds the URL from the originator rather than accepting one, goes through
+the SDK's public-HTTPS fetch (HTTPS only, no credentials, pinned to that origin, IP literals must be public),
+refuses redirects, caps the body at 256 KiB and times out after 10 seconds. The originator itself is not
+chosen by the page: the extension rejects any message whose originator does not match the browser's
+`sender.origin`, and the mobile app derives it from the verified origin of the per-site endpoint.
+The only host a site can make the wallet contact is therefore its own.
+
+Residual and shared. In browser runtimes the SDK cannot resolve DNS before the request, so a site could
+rebind its own hostname to a private address; the reference wallet notes the same gap. Plain HTTP is used only
+for an originator of `localhost`, for local development, as upstream does. We will adopt DNS and IP
+checks in our toolbox fork if upstream lands them, and we track the fix.
+
+Action for users: none.
+
+### 23 September 2026 · Coordinated ts-stack trust-boundary advisory (GHSA-qp3j-h5xf-p2p7)
+
+Source:
+[ts-stack advisory, High. Patched: @bsv/sdk 2.8.0, wallet-toolbox and wallet-toolbox-client 2.13.2, @bsv/message-box-client
+2.5.2, @bsv/templates 1.10.2 and others. Patched
+
+A broad set of findings across the stack: storage-supplied output scripts not verified against the requested
+outputs in createAction, action references not bound to the originator that was authorised, abort
+refusals reported as success, negative signature verdicts treated as success, originator spoofing over the
+wallet wire transport, and tenant isolation gaps in remote storage.
+
+bWallet's position. bWallet ships @bsv/sdk 2.8.11, wallet-toolbox-client 2.14.5 and
+@bsv/message-box-client 2.5.4, all past the patched versions. Separately from the stack fixes, the wallet
+checks every message's originator against the browser-reported sender origin before any wallet call, verifies
+the OpNS covenant locally before broadcast, and refuses to abort an action the network may already have.
+
+Action for users: be on the current release (bWalletX 5.2.38 or later, or the current store build).
+
+###
+6 July 2026 · createAction output redirection with remote storage (GHSA-36f9-7rg5-cpf8 / CVE-2026-56744)
+
+Source:
+ts-stack advisory, High. Affected wallet-toolbox, -client and -mobile; fixed in 2.13.2. Patched
+
+A malicious or compromised remote storage server could return output scripts different from the ones the
+caller asked for, redirecting a payment. bWallet ships wallet-toolbox-client 2.14.5, which verifies returned
+outputs against the authorised request. The remote storage provider is a setting you can change in Settings ›
+Wallet Backup.
+
+## Credits
+
+No reports yet. Yours could be the first name here.
+
+## Changes to this policy
+
+-
+20 October 2026: version 1. Policy, reward table, 20 BSV quarterly pool, safe harbour, first three advisory
+responses.
+
+The Bitcoin Corporation Ltd. Questions about the policy itself:
+support@bwalletx.com](https://github.com/bsv-blockchain/ts-stack/security/advisories/GHSA-qp3j-h5xf-p2p7).
+
+---
+
 Source: https://bwalletx.com/b-cool
 
 b cool
@@ -377,7 +591,7 @@ bAcc
 bAcc is the Bitcoin accelerationist movement. We want Bitcoin to be fast enough and cheap enough to pay for anything, anywhere, all day. Our goal is 1 billion transactions per second (1b TPS). That is a goal, not what the network does today. The long-run version has a name: hyperbitcoinization, Bitcoin becoming the money people use every day.
 
 [Get bWalletX](https://bwalletx.com/get)
-[Play the bAcc race](https://bwalletx.com/race?theme=bacc)
+[Play the bAcc race](https://race.bwalletx.com/race?theme=bacc)
 
 ## BTC is slow. BSV is built to be fast.
 
@@ -436,7 +650,7 @@ IN PROGRESS
 
 The bAcc game: jet-bike racing in black and yellow, free to play while it is in preview. Game engine by VexVoid. It is still being built: the bikes are being remodelled and the phone layout is not tested yet. Play what is there today.
 
-[bwalletx.com/race?theme=bacc →](https://bwalletx.com/race?theme=bacc)
+[race.bwalletx.com →](https://race.bwalletx.com/race?theme=bacc)
 
 ## The Gas Run
 
@@ -473,7 +687,7 @@ COMING
 Black and yellow racing jackets and other bAcc gear are planned, along with a black and yellow bWalletX theme with racing stripes. Nothing is on sale yet, and this page will say so the day it is. See the [bAcc theme](https://bwalletx.com/b/acc/store). Tell us what you want at [support@bwalletx.com](mailto:support@bwalletx.com).
 
 [Get bWalletX](https://bwalletx.com/get)
-[Play the race](https://bwalletx.com/race?theme=bacc)
+[Play the race](https://race.bwalletx.com/race?theme=bacc)
 [All features](https://bwalletx.com/features)
 
 bAcc is an idea and a community, not financial advice. Bitcoin can lose value, and bWalletX is in beta: test with small amounts. Questions: [support@bwalletx.com](mailto:support@bwalletx.com)
@@ -984,6 +1198,8 @@ Source: https://bwalletx.com/bugs
 # Bugs, fixed in the open.
 
 Tell b what broke and it goes straight to the team with a reference number. Bugs that are safe to show appear here as short summaries once a person has reviewed them. Anything touching keys, payments, sign-in or personal data stays private.
+
+Found a security weakness (funds, keys, approvals)? That goes to [b-Aware](https://bwalletx.com/b-Aware), our responsible disclosure policy and bug bounty, not here.
 
 AllNewPlannedFixingFixed
 
@@ -3713,6 +3929,16 @@ Notifications work the same in both editions: bWalletX here, and bWallet, the Ap
 [Privacy](https://bwalletx.com/privacy)
 
 Questions: [support@bwalletx.com](mailto:support@bwalletx.com)
+
+---
+
+Source: https://bwalletx.com/race-card
+
+bAcc RACE: the bAcc racing game | bWalletX
+
+-
+
+bAcc RACE. [Play the game](https://bwalletx.com/race?theme=bacc)
 
 ---
 
@@ -12728,7 +12954,71 @@ How to check a name yourself, with code: [Signed names](https://bwalletx.com/nam
 
 Related: [Signed names](https://bwalletx.com/name-bindings) · [Names](https://bwalletx.com/names) · [Handles](https://bwalletx.com/handles) · [Identity](https://bwalletx.com/identity)
 
-[← 057 HandCash and invites](https://bwalletx.com/blog/057-handcash-and-invites)[All posts →](https://bwalletx.com/blog)
+[← 057 HandCash and invites](https://bwalletx.com/blog/057-handcash-and-invites)[059 b-Aware →](https://bwalletx.com/blog/059-b-aware)
+
+---
+
+Source: https://bwalletx.com/blog/059-b-aware
+
+[Development blog](https://bwalletx.com/blog) · 059 · 20 Oct 2026
+
+# b-Aware: find a hole in bWalletX, get paid in BSV
+
+bWalletX now has a responsible disclosure policy and a bug bounty, paid in BSV. Here is how it works, why the numbers are what they are, and what we did about today’s BRC-100 advisory.
+
+bWalletX is a non-custodial wallet. If it signs something you did not approve, or lets someone read your keys, that is the worst thing it can do, and we would rather hear about it from a researcher than from a victim. So from today there is a page for that: [bwalletx.com/b-Aware](https://bwalletx.com/b-Aware).
+
+## What it is
+
+A responsible disclosure policy and a bug bounty, paid in BSV.
+
+- Report by email to [support@bwalletx.com](mailto:support@bwalletx.com?subject=b-Aware) with the subject `b-Aware`. We acknowledge within 2 working days, give you a severity and a fix plan within 7, and tell you when the fix ships. Never send a recovery phrase or key; use a throwaway wallet to show the problem.
+
+- Rewards: Critical 10 BSV (take funds, extract keys, sign without approval), High 3 BSV (bypass an approval or permission, forge a pairing, drain through a dApp endpoint), Medium 0.5 BSV (leak private data, defeat the safety filter, lock a user out of their own wallet). Low findings get credit.
+
+- Safe harbour. Good-faith research under the policy is authorised. We will not pursue legal action for it, and if someone else does, we will say publicly that you were acting under the policy.
+
+The machine-readable version is at [/.well-known/security.txt](https://bwalletx.com/.well-known/security.txt), and the policy lives in the open-source repository as [SECURITY.md](https://github.com/bitcoin-corp/bwallet/blob/main/SECURITY.md). Ordinary bugs still go to [Bugs](https://bwalletx.com/bugs): tell b in the app.
+
+## Why the numbers look like this
+
+We are a small company and we will not pretend otherwise. A flat “10 BSV per bug” would be the wrong shape now that AI-assisted scanning makes a plausible report nearly free to produce: it would pay a cosmetic finding the same as a key-extraction bug and it would be gamed within a week.
+
+So the programme pays by impact on users’ money and keys, not by count. There is a pool of 20 BSV per calendar quarter; when it is spent, valid reports still earn credit and are paid from the next quarter, in triage order. First valid report of an issue wins. Duplicates, things we already know about and the published “known and accepted” list earn credit, not money. A working reproduction is required.
+
+Ten criticals in a non-custodial wallet would be an existential finding whatever we paid for them. If they exist, we want to know. The pool keeps the spending from running ahead of our ability to fix.
+
+## Public responses to advisories
+
+The page also carries our dated responses to published advisories that touch BRC-100 wallets and the BSV TypeScript stack, because “are we affected?” is the question every wallet user has and few wallets answer in writing.
+
+Today’s entry is [bsv-blockchain/bsv-desktop#135](https://github.com/bsv-blockchain/bsv-desktop/pull/135), a hardening of the reference desktop wallet’s `manifest.json` fetch against server-side request forgery. A BRC-100 wallet fetches an app’s manifest to show its declared permissions in one grouped prompt; in the Electron wallet that fetch ran in the privileged main process on a URL the renderer supplied.
+
+bWalletX is not affected by the same mechanism. There is no page-to-wallet “fetch this URL” channel. The manifest fetch happens inside the wallet toolbox’s permissions manager, which builds the URL from the originator rather than accepting one, goes through the SDK’s public-HTTPS fetch (HTTPS only, no credentials, pinned to that origin), refuses redirects, caps the body and times out. And the originator is not the page’s to choose: the extension rejects any message whose originator does not match the browser-reported sender origin, and the mobile app derives it from the verified origin of each site’s endpoint. The only host a site can make the wallet contact is its own.
+
+We also say what we share with upstream: in browser runtimes the wallet cannot pre-resolve DNS, so a site could rebind its own hostname to a private address. That is listed under “known and accepted” rather than hidden. The two earlier ts-stack advisories (September’s coordinated trust-boundary advisory and July’s createAction output-redirection issue) are patched by the SDK and toolbox versions we ship.
+
+## What we ask of you
+
+Test against your own wallets and your own money. Do not touch anyone else’s data. Give us time to fix before you publish. In return you get a fast, written answer, a reward if it is real, and your name on the page if you want it there.
+
+The credits section is empty today. Yours could be the first name on it.
+
+## Status, 20 Oct 2026
+
+- ✓ Policy, reward table and 20 BSV quarterly pool published at [/b-Aware](https://bwalletx.com/b-Aware)
+
+- ✓ `security.txt`, `SECURITY.md` and GitHub issue templates in place
+
+- ✓ Public response to bsv-desktop#135 (not affected) and to the September and July ts-stack advisories (patched)
+
+- ◻ Private vulnerability reporting on GitHub as a second channel
+
+- ◻ A dedicated security@ inbox and a PGP key
+
+Related: [b-Aware](https://bwalletx.com/b-Aware) · [Bugs](https://bwalletx.com/bugs) · [Open source](https://bwalletx.com/open-source) · [Privacy](https://bwalletx.com/privacy)
+
+[← 058 Signed names](https://bwalletx.com/blog/058-signed-names)[All posts →](https://bwalletx.com/blog)
 
 ---
 
@@ -12739,6 +13029,10 @@ Source: https://bwalletx.com/blog/
 How bWallet and bWalletX were built, one chapter at a time. Every post is written from the git history of the wallet, this site, the chat server and the PNEEs prototype. It covers what we built, why, what broke, what we reversed and what is still not done.
 
 Newest first. Dates come from commits. bWallet is a fork of [Yours Wallet](https://github.com/yours-org/yours-wallet) (MIT licence).
+
+- 059 · 20 Oct 2026
+[b-Aware: find a hole in bWalletX, get paid in BSV](https://bwalletx.com/blog/059-b-aware)
+bWalletX now has a responsible disclosure policy and a bug bounty, paid in BSV: 10 BSV for a critical, a 20 BSV quarterly pool, a safe harbour, and our public answer to today’s BRC-100 advisory.
 
 - 058 · 17 Oct 2026
 [We could move your name. Now you can see if we do.](https://bwalletx.com/blog/058-signed-names)
