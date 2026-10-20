@@ -7,7 +7,7 @@
         { "type": "query", "key": "theme", "value": "bacc" },
         { "type": "header", "key": "user-agent", "value": "(?i).*(twitterbot|facebookexternalhit|slackbot|discordbot|telegrambot|whatsapp|linkedinbot|skypeuripreview|embedly|pinterest|redditbot|applebot|googlebot).*" }
       ],
-      "destination": "/race-card.html"
+      "destination": "/race-card"
     },
     { "source": "/race", "destination": "https://www.vexvoid.com/race" },
     { "source": "/race/:path*", "destination": "https://www.vexvoid.com/race/:path*" },
