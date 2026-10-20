@@ -372,12 +372,33 @@ THE BITCOIN ACCELERATIONIST MOVEMENT
 
 bAcc
 
-# Speed Bitcoin up: more payments, more often
+# Make Bitcoin faster
 
-bAcc is the Bitcoin accelerationist movement. Its goal is simple: raise the number of Bitcoin transactions, by sending more of it, to more people, in more places. Faster and more of it is the whole idea. The long-run version has a name, hyperbitcoinization: Bitcoin becoming the money people use every day.
+bAcc is the Bitcoin accelerationist movement. We want Bitcoin to be fast enough and cheap enough to pay for anything, anywhere, all day. Our goal is 1 billion transactions per second (1b TPS). That is a goal, not what the network does today. The long-run version has a name: hyperbitcoinization, Bitcoin becoming the money people use every day.
 
 [Get bWalletX](https://bwalletx.com/get)
 [Play the bAcc race](https://www.vexvoid.com/race)
+
+## BTC is slow. BSV is built to be fast.
+
+Both are called Bitcoin. They run the same idea differently, and speed is where they differ most.
+
+BTCBSV
+
+Speed on the main chainAbout 3 to 7 transactions a secondNo fixed limit in the protocol; capacity grows with the hardware
+
+Block sizeCapped by rule at a few megabytesBlocks can be as large as miners and nodes can handle
+
+Fee for a small paymentRises when the network is busy, often too high for small paymentsA fraction of a penny
+
+How it growsMoves small payments to other layersKeeps payments on the main chain and scales it up
+
+Figures are approximate and change over time. Check a current source before you rely on them.
+
+THE GOAL
+### 1b TPS: one billion transactions per second
+
+That is the target bAcc is working toward: a network that never makes anyone wait or pay much to send a payment. Today’s real-world volume is far lower, and we will not pretend otherwise. The speed has to be built, tested and shown.
 
 ## What bAcc means
 

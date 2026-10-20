@@ -3,14 +3,14 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>bAcc: Bitcoin accelerationism, more payments and faster | bWalletX</title>
+    <title>bAcc: make Bitcoin faster, the goal is 1 billion transactions a second | bWalletX</title>
     <link rel="canonical" href="https://bwalletx.com/b/acc" />
-    <meta name="description" content="bAcc is the Bitcoin accelerationist movement: speed Bitcoin up by sending more of it, more often. More payments, more people, more transactions per second. Play the bAcc race game." />
+    <meta name="description" content="bAcc is the Bitcoin accelerationist movement: make Bitcoin faster. BTC handles a few transactions a second; BSV is built to scale. Our goal: 1 billion transactions per second (1b TPS). Play the bAcc race game." />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://bwalletx.com/b/acc" />
     <meta property="og:site_name" content="bWalletX" />
     <meta property="og:title" content="bAcc: Bitcoin accelerationism" />
-    <meta property="og:description" content="Speed Bitcoin up: more payments, more people, more transactions per second. Play the race game." />
+    <meta property="og:description" content="Make Bitcoin faster. Goal: 1 billion transactions per second (1b TPS). BTC vs BSV explained." />
     <meta property="og:image" content="https://bwalletx.com/og-bacc-v1.png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
@@ -18,7 +18,7 @@
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@bWalletX" />
     <meta name="twitter:title" content="bAcc: Bitcoin accelerationism" />
-    <meta name="twitter:description" content="Speed Bitcoin up: more payments, more people, more transactions per second." />
+    <meta name="twitter:description" content="Make Bitcoin faster. Goal: 1 billion transactions per second (1b TPS)." />
     <meta name="twitter:image" content="https://bwalletx.com/og-bacc-v1.png" />
     <link rel="icon" href="/favicon.ico" />
     <link rel="stylesheet" href="/styles.css" />
@@ -44,6 +44,12 @@
       .grid .box a.go { margin-top: auto; padding-top: 8px; color: #F5B800; font-weight: 700; text-decoration: none; }
       .tag { align-self: flex-start; font-size: 0.72rem; font-weight: 800; letter-spacing: 0.1em; padding: 3px 9px; border-radius: 999px; border: 1px solid #ffffff22; color: #a7adb8; }
       .tag.live { color: #7ee0a1; border-color: #7ee0a155; }
+      .bacc-table { margin: 18px 0; border: 1px solid #ffffff14; border-radius: 12px; overflow: hidden; }
+      .bacc-row { display: grid; grid-template-columns: 1.1fr 1fr 1fr; gap: 12px; padding: 12px 16px; border-top: 1px solid #ffffff10; font-size: 0.95rem; line-height: 1.5; color: #a7adb8; }
+      .bacc-row:first-child { border-top: 0; }
+      .bacc-head { background: #101114; font-weight: 800; color: #F5B800; }
+      .bacc-row span:first-child { color: #fff; font-weight: 700; }
+      @media (max-width: 560px) { .bacc-row { grid-template-columns: 1fr; gap: 4px; } .bacc-head { display: none; } .bacc-row span:nth-child(2)::before { content: "BTC: "; font-weight: 800; color: #fff; } .bacc-row span:nth-child(3)::before { content: "BSV: "; font-weight: 800; color: #F5B800; } }
       .tag.wip { color: #F5B800; border-color: #F5B80066; }
     </style>
   </head>
@@ -64,14 +70,26 @@
       <section class="bacc-hero">
         <p class="strap">THE BITCOIN ACCELERATIONIST MOVEMENT</p>
         <p class="bacc-word">b<span class="y">Acc</span></p>
-        <h1>Speed Bitcoin up: more payments, more often</h1>
-        <p class="lede">bAcc is the Bitcoin accelerationist movement. Its goal is simple: raise the number of Bitcoin transactions, by sending more of it, to more people, in more places. Faster and more of it is the whole idea. The long-run version has a name, hyperbitcoinization: Bitcoin becoming the money people use every day.</p>
+        <h1>Make Bitcoin faster</h1>
+        <p class="lede">bAcc is the Bitcoin accelerationist movement. We want Bitcoin to be fast enough and cheap enough to pay for anything, anywhere, all day. Our goal is <strong>1 billion transactions per second (1b TPS)</strong>. That is a goal, not what the network does today. The long-run version has a name: hyperbitcoinization, Bitcoin becoming the money people use every day.</p>
         <div class="row">
           <a class="btn btn-store" href="/get">Get bWalletX</a>
           <a class="btn btn-store btn-ghost" href="https://www.vexvoid.com/race">Play the bAcc race</a>
         </div>
       </section>
       <div class="bacc-stripes" aria-hidden="true"></div>
+
+      <h2>BTC is slow. BSV is built to be fast.</h2>
+      <p>Both are called Bitcoin. They run the same idea differently, and speed is where they differ most.</p>
+      <div class="bacc-table" role="table" aria-label="BTC compared with BSV">
+        <div class="bacc-row bacc-head" role="row"><span role="columnheader"></span><span role="columnheader">BTC</span><span role="columnheader">BSV</span></div>
+        <div class="bacc-row" role="row"><span role="rowheader">Speed on the main chain</span><span>About 3 to 7 transactions a second</span><span>No fixed limit in the protocol; capacity grows with the hardware</span></div>
+        <div class="bacc-row" role="row"><span role="rowheader">Block size</span><span>Capped by rule at a few megabytes</span><span>Blocks can be as large as miners and nodes can handle</span></div>
+        <div class="bacc-row" role="row"><span role="rowheader">Fee for a small payment</span><span>Rises when the network is busy, often too high for small payments</span><span>A fraction of a penny</span></div>
+        <div class="bacc-row" role="row"><span role="rowheader">How it grows</span><span>Moves small payments to other layers</span><span>Keeps payments on the main chain and scales it up</span></div>
+      </div>
+      <p class="small">Figures are approximate and change over time. Check a current source before you rely on them.</p>
+      <div class="box"><span class="tag wip">THE GOAL</span><h3>1b TPS: one billion transactions per second</h3><p>That is the target bAcc is working toward: a network that never makes anyone wait or pay much to send a payment. Today&rsquo;s real-world volume is far lower, and we will not pretend otherwise. The speed has to be built, tested and shown.</p></div>
 
       <h2>What bAcc means</h2>
       <div class="grid">
