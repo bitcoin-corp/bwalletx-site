@@ -480,6 +480,44 @@ bAcc is an idea and a community, not financial advice. Bitcoin can lose value, a
 
 ---
 
+Source: https://bwalletx.com/b/acc/store
+
+THE bACC STORE
+
+bAcc
+
+# The bAcc theme for your bWalletX
+
+Black and yellow racing stripes through your whole wallet. It is a theme for bWalletX that you buy once for $1, paid in BSV inside the wallet’s Store, and keep.
+
+Coming soon
+[Back to bAcc](https://bwalletx.com/b/acc)
+
+## What it looks like
+
+Mockup: the design, not a real balance
+
+## The deal
+
+COMING
+### $1, once
+
+Paid in BSV inside bWalletX, in Store then Themes. No subscription.
+
+COMING
+### Yours to keep
+
+You get a receipt for it. Switch back to another theme any time.
+
+STATUS
+### Not on sale yet
+
+The theme is being made. This page will change the day you can buy it.
+
+The picture above is a mockup of the design. Prices and details may change before it goes on sale. bWalletX is in beta: test with small amounts. Questions: [support@bwalletx.com](mailto:support@bwalletx.com)
+
+---
+
 Source: https://bwalletx.com/bapps
 
 # bApps: apps that run inside bWalletX
@@ -4550,6 +4588,83 @@ No. Only your passkey can open the encrypted copy of your words, and we never se
 Yes, unchanged. Your password, your 12 words and your backups keep working exactly as before.
 
 Related: [Restore](https://bwalletx.com/restore) · [Identity](https://bwalletx.com/identity) · [Handles](https://bwalletx.com/handles) · [bTrust](https://bwalletx.com/btrust)
+
+bWalletX is in beta: test with small amounts. Questions: [support@bwalletx.com](mailto:support@bwalletx.com)
+
+---
+
+Source: https://bwalletx.com/seedless-signin
+
+SEEDLESS SIGN-IN
+
+Passkey
+
+# Open your wallet with your face or fingerprint
+
+Create a bWalletX wallet with a passkey. Your phone or computer’s own lock (Face ID, fingerprint or PIN) opens it. There is no password to invent and no 12-word phrase to write down before you start. Your 12 words are sealed with the passkey and saved as a locked recovery file you keep.
+
+[Try it on the web](https://web.bwalletx.com)
+[Get bWalletX](https://bwalletx.com/get)
+
+## This is the sign-in screen
+
+On a phone
+In a browser, with the QR code to open your phone wallet here
+
+## How it works
+
+### 1. Tap Continue with a passkey
+
+You are not asked to make a password or to copy down words.
+
+### 2. Confirm with your device lock
+
+Your phone or computer asks for Face ID, a fingerprint or its PIN. That is your device checking it is you. bWalletX never sees it.
+
+### 3. Keep your recovery file
+
+Your 12 words are sealed with your passkey and saved as a file only that passkey opens. A locked copy is also kept for you, so the same passkey can bring the wallet back on a new device.
+
+## Where it works today
+
+LIVE
+### Web
+
+web.bwalletx.com, in Chrome, Safari and Android browsers.
+
+LIVE
+### Chrome extension
+
+Sign in through web.bwalletx.com with your passkey; the wallet comes back into the extension.
+
+LIVE
+### Android download
+
+The direct download from bwalletx.com.
+
+PRIVATE
+### iPhone
+
+In the private build for now.
+
+COMING
+### App Store and Google Play
+
+Not in the store editions yet.
+
+## Good to know
+
+### Passkeys stay in your Apple or Google account
+
+A passkey saved to iCloud cannot open a wallet on an Android phone, and the other way round. On a different kind of device, use your recovery file or your 12 words, or add a passkey there.
+
+### We never hold your keys
+
+Your 12 words are locked with your passkey before they leave your device. What we store is the locked copy, which only your passkey can open.
+
+### You can still use a password and 12 words
+
+It is the other button on the sign-in screen.
 
 bWalletX is in beta: test with small amounts. Questions: [support@bwalletx.com](mailto:support@bwalletx.com)
 
