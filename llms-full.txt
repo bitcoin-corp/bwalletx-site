@@ -377,7 +377,7 @@ bAcc
 bAcc is the Bitcoin accelerationist movement. We want Bitcoin to be fast enough and cheap enough to pay for anything, anywhere, all day. Our goal is 1 billion transactions per second (1b TPS). That is a goal, not what the network does today. The long-run version has a name: hyperbitcoinization, Bitcoin becoming the money people use every day.
 
 [Get bWalletX](https://bwalletx.com/get)
-[Play the bAcc race](https://www.vexvoid.com/race)
+[Play the bAcc race](https://www.vexvoid.com/race?theme=bacc)
 
 ## BTC is slow. BSV is built to be fast.
 
@@ -434,9 +434,9 @@ IN PROGRESS
 
 ### VexVoid Race
 
-The bAcc game: jet-bike racing. It is still being built, and you can follow it and try what is there today.
+The bAcc game: jet-bike racing in black and yellow, free to play while it is in preview. It is still being built: the bikes are being remodelled and the phone layout is not tested yet. Play what is there today.
 
-[vexvoid.com/race →](https://www.vexvoid.com/race)
+[vexvoid.com/race?theme=bacc →](https://www.vexvoid.com/race?theme=bacc)
 
 ## Merchandise
 
@@ -447,7 +447,7 @@ COMING
 Black and yellow racing jackets and other bAcc gear are planned. Nothing is on sale yet, and this page will say so the day it is. Tell us what you want at [support@bwalletx.com](mailto:support@bwalletx.com).
 
 [Get bWalletX](https://bwalletx.com/get)
-[Play the race](https://www.vexvoid.com/race)
+[Play the race](https://www.vexvoid.com/race?theme=bacc)
 [All features](https://bwalletx.com/features)
 
 bAcc is an idea and a community, not financial advice. Bitcoin can lose value, and bWalletX is in beta: test with small amounts. Questions: [support@bwalletx.com](mailto:support@bwalletx.com)
