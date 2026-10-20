@@ -1,6 +1,9 @@
 {
   "cleanUrls": true,
   "rewrites": [
+    { "source": "/race", "destination": "https://www.vexvoid.com/race" },
+    { "source": "/race/:path*", "destination": "https://www.vexvoid.com/race/:path*" },
+    { "source": "/_next/:path*", "destination": "https://www.vexvoid.com/_next/:path*" },
     {
       "source": "/themes/custom",
       "destination": "/themes-custom"
