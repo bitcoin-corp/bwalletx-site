@@ -3,19 +3,19 @@
   "rewrites": [
     {
       "source": "/b-Aware",
-      "destination": "/b-aware.html"
+      "destination": "/b-aware"
     },
     {
       "source": "/disclosure",
-      "destination": "/b-aware.html"
+      "destination": "/b-aware"
     },
     {
       "source": "/security",
-      "destination": "/b-aware.html"
+      "destination": "/b-aware"
     },
     {
       "source": "/bounty",
-      "destination": "/b-aware.html"
+      "destination": "/b-aware"
     },
     {
       "source": "/race",
