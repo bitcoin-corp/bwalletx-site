@@ -348,7 +348,7 @@ Credit
 -
 A pool, not an open tap. The reward pool is 20 BSV per calendar quarter. When it is spent, valid
 reports still earn credit and are paid from the next quarter's pool, in the order they were triaged. We are a
-small company and would rather say this than quietly stop paying.
+small company and would rather say this than quietly stop paying. The pool balance and every payout are public on [/bounties](https://bwalletx.com/bounties).
 
 -
 First valid report wins. Duplicates, issues we already know about and anything listed under
@@ -1037,6 +1037,7 @@ The picture above is a mockup of the design. Prices and details may change befor
 Source: https://bwalletx.com/bad
 
 bAds
+
 - [bAds](https://bwalletx.com/bads)
 
 ---
@@ -1046,6 +1047,29 @@ Source: https://bwalletx.com/bads
 ## What’s a bAd?
 
 Our ads aren’t ads. They’re bAds. A bAd is made by b, the agent that lives in your bWalletX. You tell b about your business in a sentence. b makes the film, the logo or the whole brand, in your colours, not ours.
+
+## Order a bAd
+
+For a quick ad, b makes it on the spot with Grok Imagine. Square post, story or banner.
+
+### 1. Describe your business
+
+Your name, what you’re selling and, if you like, who it’s for and your colours.
+
+### 2. b makes the ad
+
+A clean layout, a short headline spelled right, your name on it. About a minute.
+
+### 3. Pay in BSV
+
+You see the price first. One pay sheet in your wallet, nothing else.
+
+### 4. It’s yours, minted
+
+Mint it in your name as a 1-sat NFT, or download it and post it anywhere.
+
+[Send b a brief](https://badvertisingx.com/account)
+Coming
 
 ## What b makes
 
@@ -1081,6 +1105,8 @@ No forms, no agency. Open b in your wallet and say what you need, or sign in at 
 - LiveTalk to b about your bAd in your wallet
 
 - LiveSend b a brief at badvertisingx.com, signed in with bWalletX
+
+- ComingOrder a bAd in your wallet: describe your business, b makes the ad with Grok Imagine, pay in BSV, mint it
 
 - Comingb quotes and takes payment for bAds in chat, once our quality check is passed
 
@@ -1208,6 +1234,50 @@ ChatEach film's room, for the people who backed it.
 A film token is a key to that film's room and a record that you backed it. It is not an investment and doesn't pay you anything.
 
 [Open bMovies](https://bmovies.app)[Get bWalletX](https://bwalletx.com/get)[All bApps](https://bwalletx.com/bapps)
+
+---
+
+Source: https://bwalletx.com/bounties
+
+# Bounties
+
+The [b-Aware](https://bwalletx.com/b-aware) reward pool and every payout from it, in public.
+
+### Pool
+
+Loading…
+
+Pool address: published soon
+
+0BSV paid this quarter
+
+0BSV paid all-time
+
+0reports rewarded
+
+0credit only
+
+## Payouts
+
+DateCreditSeverityBSVRecipientVerify
+
+Loading…
+
+Recipients are shown as a short fingerprint. The full address is visible in the transaction for anyone who checks it.
+
+Report details stay private until the fix has shipped and the reward is paid.
+
+## How the pool works
+
+- There is a fixed pool each calendar quarter. The bar shows what is left, read live from the pool address on chain.
+
+- The first valid report of an issue earns the reward. Duplicates earn credit.
+
+- Rewards are paid after the fix ships.
+
+- When a quarter's pool is spent, valid reports are paid from the next quarter's pool, in the order they were triaged.
+
+The full policy, the reward table and the safe harbour are on [b-Aware](https://bwalletx.com/b-aware).
 
 ---
 
