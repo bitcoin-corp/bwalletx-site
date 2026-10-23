@@ -116,6 +116,7 @@
         var API = 'https://push.bwalletx.com';
         var q = new URLSearchParams(location.search), st = document.getElementById('state');
         if (q.get('confirmed')) { st.hidden = false; st.textContent = "You're subscribed. Thank you."; }
+        if (q.get('expired')) { st.hidden = false; st.textContent = 'That link has expired. Sign up again below and we\'ll send a fresh one.'; }
         if (q.get('unsubscribed')) { st.hidden = false; st.textContent = "You've been unsubscribed. You won't get any more of these emails."; }
         function wire(id, path, build, okText) {
           var f = document.getElementById(id), msg = document.getElementById(id + '-msg');
