@@ -40,9 +40,9 @@
       .s-tie { background: radial-gradient(circle at 50% 30%, #3d63c4 0%, #1f3b86 45%, #0c1a45 100%); }
       .s-sign { background: radial-gradient(circle at 50% 30%, #d99a3a 0%, #8f5418 45%, #3a1f08 100%); }
       .scene .ph { position: absolute; inset: -4%; width: 108%; height: 108%; object-fit: cover; transform: scale(1.02); filter: brightness(1.35) saturate(1.3) contrast(1.05); }
-      .scene.on .ph { animation: kb 9s ease-out forwards; }
-      @keyframes kb { to { transform: scale(1.12) translate(-1.5%, -1%); } }
-      .scene .shade { position: absolute; inset: 0; background: radial-gradient(ellipse at 50% 50%, rgba(0,0,0,.38), rgba(0,0,0,.08) 70%), linear-gradient(180deg, rgba(0,0,0,.1), transparent 30%, transparent 80%, rgba(0,0,0,.5)); }
+      .scene .ph { transition: transform 9s cubic-bezier(.2,.6,.3,1); will-change: transform; }
+      .scene.on .ph { transform: scale(1.1) translate(-1.2%, -0.8%); }
+            .scene .shade { position: absolute; inset: 0; background: radial-gradient(ellipse at 50% 50%, rgba(0,0,0,.38), rgba(0,0,0,.08) 70%), linear-gradient(180deg, rgba(0,0,0,.1), transparent 30%, transparent 80%, rgba(0,0,0,.5)); }
       .cap { position: absolute; left: 0; right: 0; top: 50%; transform: translateY(-50%); padding: 0 16px; text-align: center; z-index: 2; }
       .cap h1, .cap h2 { margin: 0; display: flex; justify-content: center; align-items: flex-start; flex-wrap: wrap; gap: 0 0.22em; font: 700 clamp(3rem, 12vw, 10rem) / 1 var(--hf); letter-spacing: -0.045em; text-shadow: 0 6px 60px rgba(0,0,0,.6); }
       .lb { display: block; height: 0.86em; width: calc(0.86em * 0.74); margin-top: 0.08em; filter: drop-shadow(0 0 30px rgba(245,184,0,.35)); }
@@ -167,7 +167,7 @@
         <div class="cap"><h1><img class="lb" src="/logo.svg" alt="b" /><span>is for business</span></h1></div>
       </div>
       <div class="scene" data-at="6.67">
-        <img class="ph" src="/images/btrust-london-dawn.jpg" alt="" loading="lazy" />
+        <img class="ph" src="/images/btrust-london-dawn.jpg" alt="" decoding="async" />
         <div class="shade"></div>
         <div class="cap"><h2><img class="lb" src="/logo.svg" alt="b" /><span>paid</span></h2><p>In seconds, from your customer&rsquo;s own wallet. The network fee is usually well under a penny.</p></div>
       </div>
@@ -195,7 +195,7 @@
         <div class="cap"><h2><img class="lb" src="/logo.svg" alt="b" /><span>professional</span></h2><p>A business account beside your own, in the same wallet. Its own address, balance and history.</p></div>
       </div>
       <div class="scene" data-at="26.67">
-        <img class="ph" src="/images/bshares-boardroom.jpg" alt="" loading="lazy" />
+        <img class="ph" src="/images/bshares-boardroom.jpg" alt="" decoding="async" />
         <div class="shade"></div>
         <div class="cap"><h2><img class="lb" src="/logo.svg" alt="b" /><span>prepared</span></h2><p>Pots for tax, wages and a rainy day. Lock savings until a date you choose.</p></div>
       </div>
@@ -204,7 +204,7 @@
         <div class="cap"><h2><img class="lb" src="/logo.svg" alt="b" /><span>welcoming</span></h2><p>Customers sign in to your site with their wallet. No passwords to store, no emails to leak.</p></div>
       </div>
       <div class="scene" data-at="40" data-end>
-        <img class="ph" src="/images/btrust-london-dawn.jpg" alt="" loading="lazy" />
+        <img class="ph" src="/images/btrust-london-dawn.jpg" alt="" decoding="async" />
         <div class="shade"></div>
         <div class="cap"><h2><img class="lb" src="/logo.svg" alt="b" /><span>is for business</span></h2><p>Less paperwork. More business. Just b.</p><p class="getp"><a class="jb-go" href="/get?from=b-is-for-business-film">Get bWalletX</a></p></div>
       </div>
@@ -238,7 +238,7 @@
     </section>
 
     <section class="jb-end">
-      <img src="/images/bshares-boardroom.jpg" alt="" loading="lazy" />
+      <img src="/images/bshares-boardroom.jpg" alt="" decoding="async" />
       <div class="jb-end-in">
         <h2><img class="lb" src="/logo.svg" alt="b" /><span>is for business</span></h2>
         <a class="jb-go" href="/get?from=b-is-for-business">Get bWalletX</a>
