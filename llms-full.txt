@@ -681,7 +681,7 @@ Live you can use it today  ·  Early the site is up and the app is being built
 
 Some names that start with b belong to our clients, not to us. They are separate businesses with their own brands, and we never put our b on theirs.
 
-bDojoX is one example: a martial arts dojo with its own name, colours and site. Want one for your business? [Ask b at bAdvertisingX](https://badvertisingx.com).
+bDojoX is one example: a programme for companies on chain, with its own name, colours and site. Want your own branded wallet? [Work with us](https://bwalletx.com/clients), or [ask b at bAdvertisingX](https://badvertisingx.com) for a brand kit or ad film.
 
 [bDOJOXClient example · its own identityVisit bdojox.com](https://bdojox.com)
 
@@ -2097,6 +2097,117 @@ Publishing on chain costs a few cents or less for most sites, shown before you a
 For the details, read the [bWeb build plan](https://docs.bwalletx.com/plans/bweb-build-plan/).
 
 [Tell b you're interested](https://bwalletx.com/ask-b)[Be a pilot](mailto:support@bwalletx.com?subject=bWeb%20pilot)[Get bWalletX](https://bwalletx.com/get)
+
+---
+
+Source: https://bwalletx.com/clients
+
+# Your brand. Your wallet.
+
+Give your customers, fans or members a wallet with your name, your colours and your logo. We build it on bWalletX, so it is self-custody from day one: each user keeps their own keys.
+
+[Tell us what you want to build](#enquire)
+[See the editions](https://bwalletx.com/themes/custom)
+
+## The basic package
+
+$999to set up, then $99 a year
+
+### A branded edition of bWalletX
+
+- Your name and brand throughout
+
+- Your colours and your logo on the wallet
+
+- Your own domain, for example wallet.yourbrand.com
+
+- Still runs on bWalletX: self-custody, keys stay with each user
+
+- Built for you, and you approve it before it goes live
+
+Branded editions are only for the verified owner of the brand. We check. The wallet keeps a small “powered by bWalletX”. We can decline a design that impersonates someone or misleads people. Smaller and larger options are on [Custom editions](https://bwalletx.com/themes/custom).
+
+## Add-ons
+
+Priced separately. We quote before any work starts.
+
+### Brand kit and ad film Live
+
+Logo, colours, type and voice, or a short animated ad film, made by b at [bAdvertisingX](https://badvertisingx.com). One fixed price, quoted first.
+
+### Share register support Testing
+
+Help keeping your company's register of members with [bSharesX](https://bsharesx.com). Registers are in testing: the first one is our own company's.
+
+### The bDojoX programme Early
+
+[bDojoX](https://bdojox.com) takes a company step by step, belt by belt, from its first token to a register kept on chain. We can bring you in as it opens up.
+
+## How it works
+
+- EnquireFill in the form below. Tell us what you want to build.
+
+- CallWe reply within 2 working days and set up a call.
+
+- We build your editionYour name, colours and logo. You check it and approve it.
+
+- LaunchYour edition goes live and your people sign up.
+
+## Who it's for
+
+- Artists
+- Collectives
+- Art projects
+- Property projects
+- Communities
+- Token issuers
+
+Want to see a full edition? [The VexVoid edition](https://bwalletx.com/themes/vexvoid) is our artist showcase. Other businesses we work with keep their own brand: [we never put our b on theirs](https://bwalletx.com/b-family).
+
+## Please read
+
+Tokenised art, property and shares can be securities or other regulated products. We build software: wallets, brand work and register tools. We do not issue securities, raise money for you, give investment advice, or get regulatory approval for you.
+
+You are responsible for your own legal and regulatory advice, and for what you offer to others. Talk to a qualified lawyer in each country where you operate before you launch.
+
+bSharesX share registers are in testing. Nothing on this page is an offer of shares or tokens, and we make no promise of returns.
+
+## Tell us what you want to build
+
+Your name
+
+Company or project
+
+Email
+
+Phone (optional)
+
+Website (optional)
+
+Budget
+
+Not sure
+Up to $1k
+$1k–$5k
+$5k–$25k
+$25k+
+
+What do you want to build?
+
+Which services?
+
+Branded wallet
+Brand kit / ad film
+Share register support
+Token launch
+Other
+
+Leave this empty
+
+You may contact me about this enquiry by email or phone. See our [privacy policy](https://bwalletx.com/privacy).
+Send enquiry
+
+Prefer email? [support@bwalletx.com](mailto:support@bwalletx.com)
 
 ---
 
@@ -4547,7 +4658,7 @@ After Max joins: everyone gives up a tenth, so 30/30/40 becomes 27/27/36, plus M
 
 The partners get a shared chat that only they are in. b, the bWalletX assistant, is in it too.
 
-b drafts your partnership agreement, and any change to it. b explains each term in plain words. b helps you reach agreement, one point at a time.
+b drafts your partnership agreement, and any change to it. b explains each term in plain words. Anything still open is marked [TO BE AGREED], so you can settle it point by point. Each of you accepts with your own wallet. Help with disputes after signing is coming; see [Contracts in chat](https://bwalletx.com/contracts).
 
 When you all agree, each partner signs with their own wallet. Nobody signs for anyone else.
 
@@ -7079,7 +7190,7 @@ Renews yearly
 
 Spec B
 
-from $999 set-up + monthly
+$999 set-up + $99 a year
 
 ### Branded edition
 
@@ -7089,7 +7200,7 @@ from $999 set-up + monthly
 
 - Still runs on bWalletX: self-custody, keys stay with each user
 
-By enquiry
+Renews yearly · [Enquire](https://bwalletx.com/clients)
 
 Spec C
 
@@ -7119,7 +7230,7 @@ By quote
 
 Tell us your brand, your colours, a link to your logo and which edition you want, and we’ll reply with next steps. A Theme edition can also be ordered and paid inside bWalletX: ☰ › Settings › Theme › Get your own edition.
 
-[Open the order form](https://bwalletx.com/themes/custom/orderform)[Message us on bChatX](https://www.bchatx.com/u/bwalletx)[Message @bWalletX on X](https://x.com/bWalletX)
+[Open the order form](https://bwalletx.com/themes/custom/orderform)[For businesses](https://bwalletx.com/clients)[Message us on bChatX](https://www.bchatx.com/u/bwalletx)[Message @bWalletX on X](https://x.com/bWalletX)
 
 05 / 05  What’s live
 

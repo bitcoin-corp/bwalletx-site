@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Your own branded wallet · bWalletX for business</title>
+    <link rel="canonical" href="https://bwalletx.com/clients" />
+    <meta name="description" content="A wallet with your name, colours and logo, built on bWalletX. $999 to set up, then $99 a year. Tell us what you want to build and we'll reply within 2 working days." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://bwalletx.com/clients" />
+    <meta property="og:site_name" content="bWalletX" />
+    <meta property="og:title" content="Your brand. Your wallet. Built on bWalletX." />
+    <meta property="og:description" content="A wallet with your name, colours and logo. $999 to set up, then $99 a year. Self-custody: your users keep their own keys." />
+    <meta property="og:image" content="https://bwalletx.com/og-clients-v1.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Your brand, your wallet: a branded wallet card on bWalletX, $999 set-up then $99 a year" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@bWalletX" />
+    <meta name="twitter:title" content="Your brand. Your wallet. Built on bWalletX." />
+    <meta name="twitter:description" content="A wallet with your name, colours and logo. $999 to set up, then $99 a year. Self-custody: your users keep their own keys." />
+    <meta name="twitter:image" content="https://bwalletx.com/og-clients-v1.jpg" />
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="stylesheet" href="/styles.css" />
+    <style>
+      .ext h1 { font-size: clamp(2.2rem, 6vw, 3.6rem); margin: 18px 0 10px; line-height: 1.08; }
+      .ext h1 em { font-style: normal; color: #F5B800; }
+      .ext h2 { margin: 56px 0 10px; font-size: 1.6rem; }
+      .ext p, .ext li { line-height: 1.65; }
+      .ext .lede { font-size: 1.15rem; color: #d8d4c8; max-width: 44em; }
+      .ext .small { color: #8a8a86; font-size: 0.85rem; }
+      .ext .ctas { display: flex; gap: 12px; flex-wrap: wrap; margin: 26px 0; }
+      .price { display: flex; flex-wrap: wrap; gap: 10px 26px; align-items: baseline; margin: 6px 0 14px; }
+      .price b { font: 700 2.4rem var(--hf); color: #F5B800; }
+      .price span { color: #a7adb8; }
+      .box { background: #101114; border: 1px solid #ffffff12; border-radius: 16px; padding: 18px 20px; margin: 16px 0; }
+      .box h3 { margin: 0 0 6px; font-size: 1.05rem; }
+      .box p { margin: 0; color: #a7adb8; }
+      .gold-box { border-color: #F5B80055; }
+      .ticks { list-style: none; padding: 0; margin: 10px 0 0; }
+      .ticks li { padding: 8px 0 8px 28px; position: relative; border-bottom: 1px solid #ffffff0d; }
+      .ticks li::before { content: "✓"; position: absolute; left: 4px; color: #F5B800; font-weight: 700; }
+      .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 14px; margin: 16px 0; }
+      .grid .box { margin: 0; }
+      .tag { display: inline-block; font-size: 0.72rem; font-weight: 700; padding: 2px 9px; border-radius: 999px; margin-left: 6px; vertical-align: middle; background: #ffffff14; color: #cfcabd; }
+      .tag.live { background: #F5B800; color: #000; }
+      .steps { counter-reset: s; list-style: none; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 12px; }
+      .steps li { counter-increment: s; background: #101114; border: 1px solid #ffffff12; border-radius: 16px; padding: 18px 20px; }
+      .steps li::before { content: "0" counter(s); display: block; font: 700 0.85rem var(--hf); color: #F5B800; letter-spacing: .1em; margin-bottom: 6px; }
+      .steps b { display: block; margin-bottom: 4px; }
+      .steps span { color: #a7adb8; }
+      .who { display: flex; flex-wrap: wrap; gap: 10px; margin: 16px 0; padding: 0; list-style: none; }
+      .who li { background: #101114; border: 1px solid #F5B80055; color: #F5B800; border-radius: 999px; padding: 8px 16px; font-weight: 600; }
+      .legal { background: #0d0e10; border: 1px solid #ffffff1f; border-left: 3px solid #F5B800; border-radius: 12px; padding: 16px 20px; color: #cfcabd; }
+      .legal p { margin: 0 0 8px; } .legal p:last-child { margin: 0; }
+      form.enq { background: #101114; border: 1px solid #ffffff12; border-radius: 18px; padding: 22px; margin: 18px 0; }
+      ..grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 14px 18px; }
+      .enq label { display: block; font-weight: 600; font-size: 0.92rem; margin-bottom: 6px; }
+      .enq label small { color: #8a8a86; font-weight: 400; }
+      .enq input[type=text], .enq input[type=email], .enq input[type=tel], .enq input[type=url], .enq select, .enq textarea {
+        width: 100%; box-sizing: border-box; background: #0a0a0b; color: #f4f1e8; border: 1px solid #ffffff24; border-radius: 10px; padding: 11px 12px; font: inherit; }
+      .enq textarea { min-height: 130px; resize: vertical; }
+      .enq input:focus, .enq select:focus, .enq textarea:focus { outline: 2px solid #F5B80088; border-color: #F5B800; }
+      .enq fieldset { border: 0; padding: 0; margin: 18px 0 0; min-width: 0; }
+      .enq legend { font-weight: 600; font-size: 0.92rem; margin-bottom: 8px; padding: 0; }
+      .checks { display: flex; flex-wrap: wrap; gap: 8px 10px; }
+      .checks label { display: flex; gap: 8px; align-items: center; font-weight: 400; background: #0a0a0b; border: 1px solid #ffffff1f; border-radius: 999px; padding: 8px 14px; margin: 0; cursor: pointer; }
+      .consent { display: flex; gap: 10px; align-items: flex-start; margin: 18px 0 0; font-weight: 400 !important; }
+      .consent input { margin-top: 5px; flex: none; }
+      .enq .full { margin-top: 14px; }
+      .enq button { margin-top: 18px; border: 0; cursor: pointer; }
+      .out { margin: 14px 0 0; font-weight: 600; min-height: 1.4em; }
+      .out.ok { color: #5fd38d; } .out.err { color: #ff8a8a; }
+      .hp { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
+    </style>
+  </head>
+  <body>
+    <div class="beta-banner">bWalletX is in <strong>beta</strong>: test with small amounts.</div>
+    <header class="topbar">
+      <div class="wrap topbar-in">
+        <a class="brand" href="/"><img src="/logo.svg" alt="" width="34" height="30" /><span>bWallet<span class="gold">X</span></span></a>
+        <nav aria-label="Pages">
+          <a href="/features">Features</a><a href="/exchange">Exchange</a><a href="/social">Social</a><a href="/agent">Agents</a><a href="/extension">Extension</a><a href="/developers">Developers</a>
+        </nav>
+        <span class="nav-cta"><a class="dl-btn" href="/get">Download</a><a class="web-btn" href="https://web.bwalletx.com" target="_blank" rel="noopener">Web &rarr;</a></span>
+      </div>
+    </header>
+    <script src="/nav.js"></script>
+    <main class="ext">
+      <img src="/logo.svg" alt="bWalletX" width="72" height="64" />
+      <h1>Your brand. <em>Your wallet.</em></h1>
+      <p class="lede">Give your customers, fans or members a wallet with your name, your colours and your logo. We build it on bWalletX, so it is self-custody from day one: each user keeps their own keys.</p>
+      <div class="ctas">
+        <a class="btn btn-store" href="#enquire">Tell us what you want to build</a>
+        <a class="btn btn-store btn-ghost" href="/themes/custom">See the editions</a>
+      </div>
+
+      <h2>The basic package</h2>
+      <div class="box gold-box">
+        <div class="price"><b>$999</b><span>to set up, then <b style="font-size:1.4rem">$99</b> a year</span></div>
+        <h3>A branded edition of bWalletX</h3>
+        <ul class="ticks">
+          <li>Your name and brand throughout</li>
+          <li>Your colours and your logo on the wallet</li>
+          <li>Your own domain, for example wallet.yourbrand.com</li>
+          <li>Still runs on bWalletX: self-custody, keys stay with each user</li>
+          <li>Built for you, and you approve it before it goes live</li>
+        </ul>
+      </div>
+      <p class="small">Branded editions are only for the verified owner of the brand. We check. The wallet keeps a small &ldquo;powered by bWalletX&rdquo;. We can decline a design that impersonates someone or misleads people. Smaller and larger options are on <a href="/themes/custom">Custom editions</a>.</p>
+
+      <h2>Add-ons</h2>
+      <p>Priced separately. We quote before any work starts.</p>
+      <div class="grid">
+        <div class="box"><h3>Brand kit and ad film <span class="tag live">Live</span></h3><p>Logo, colours, type and voice, or a short animated ad film, made by b at <a href="https://badvertisingx.com">bAdvertisingX</a>. One fixed price, quoted first.</p></div>
+        <div class="box"><h3>Share register support <span class="tag">Testing</span></h3><p>Help keeping your company's register of members with <a href="https://bsharesx.com">bSharesX</a>. Registers are in testing: the first one is our own company's.</p></div>
+        <div class="box"><h3>The bDojoX programme <span class="tag">Early</span></h3><p><a href="https://bdojox.com">bDojoX</a> takes a company step by step, belt by belt, from its first token to a register kept on chain. We can bring you in as it opens up.</p></div>
+      </div>
+
+      <h2>How it works</h2>
+      <ol class="steps">
+        <li><b>Enquire</b><span>Fill in the form below. Tell us what you want to build.</span></li>
+        <li><b>Call</b><span>We reply within 2 working days and set up a call.</span></li>
+        <li><b>We build your edition</b><span>Your name, colours and logo. You check it and approve it.</span></li>
+        <li><b>Launch</b><span>Your edition goes live and your people sign up.</span></li>
+      </ol>
+
+      <h2>Who it's for</h2>
+      <ul class="who">
+        <li>Artists</li><li>Collectives</li><li>Art projects</li><li>Property projects</li><li>Communities</li><li>Token issuers</li>
+      </ul>
+      <p>Want to see a full edition? <a href="/themes/vexvoid">The VexVoid edition</a> is our artist showcase. Other businesses we work with keep their own brand: <a href="/b-family">we never put our b on theirs</a>.</p>
+
+      <h2>Please read</h2>
+      <div class="legal">
+        <p>Tokenised art, property and shares can be securities or other regulated products. We build software: wallets, brand work and register tools. We do not issue securities, raise money for you, give investment advice, or get regulatory approval for you.</p>
+        <p>You are responsible for your own legal and regulatory advice, and for what you offer to others. Talk to a qualified lawyer in each country where you operate before you launch.</p>
+        <p>bSharesX share registers are in testing. Nothing on this page is an offer of shares or tokens, and we make no promise of returns.</p>
+      </div>
+
+      <h2 id="enquire">Tell us what you want to build</h2>
+      <form class="enq" id="enq" novalidate>
+        <div class="fgrid">
+          <div><label for="f-name">Your name</label><input type="text" id="f-name" name="name" required maxlength="120" autocomplete="name" /></div>
+          <div><label for="f-company">Company or project</label><input type="text" id="f-company" name="company" required maxlength="160" autocomplete="organization" /></div>
+          <div><label for="f-email">Email</label><input type="email" id="f-email" name="email" required maxlength="254" autocomplete="email" /></div>
+          <div><label for="f-phone">Phone <small>(optional)</small></label><input type="tel" id="f-phone" name="phone" maxlength="40" autocomplete="tel" /></div>
+          <div><label for="f-website">Website <small>(optional)</small></label><input type="url" id="f-website" name="website" maxlength="300" placeholder="https://" autocomplete="url" /></div>
+          <div><label for="f-budget">Budget</label>
+            <select id="f-budget" name="budget">
+              <option value="not-sure">Not sure</option>
+              <option value="up-to-1k">Up to $1k</option>
+              <option value="1k-5k">$1k&ndash;$5k</option>
+              <option value="5k-25k">$5k&ndash;$25k</option>
+              <option value="25k-plus">$25k+</option>
+            </select></div>
+        </div>
+        <div class="full"><label for="f-message">What do you want to build?</label><textarea id="f-message" name="message" required maxlength="5000" placeholder="Who is it for, and what should it do?"></textarea></div>
+        <fieldset>
+          <legend>Which services?</legend>
+          <div class="checks">
+            <label><input type="checkbox" name="services" value="branded-wallet" checked /> Branded wallet</label>
+            <label><input type="checkbox" name="services" value="brand-kit" /> Brand kit / ad film</label>
+            <label><input type="checkbox" name="services" value="share-register" /> Share register support</label>
+            <label><input type="checkbox" name="services" value="token-launch" /> Token launch</label>
+            <label><input type="checkbox" name="services" value="other" /> Other</label>
+          </div>
+        </fieldset>
+        <div class="hp" aria-hidden="true"><label for="f-hp">Leave this empty</label><input type="text" id="f-hp" tabindex="-1" autocomplete="off" /></div>
+        <label class="consent"><input type="checkbox" id="f-consent" required /> <span>You may contact me about this enquiry by email or phone. See our <a href="/privacy">privacy policy</a>.</span></label>
+        <button class="btn btn-store" type="submit" id="f-send">Send enquiry</button>
+        <p class="out" id="f-out" role="status" aria-live="polite"></p>
+      </form>
+      <p class="small">Prefer email? <a href="mailto:support@bwalletx.com">support@bwalletx.com</a></p>
+    </main>
+    <footer class="foot">
+      <div class="wrap foot-in">
+        <a class="brand" href="/"><img src="/logo.svg" alt="" width="27" height="24" /><span>bWallet<span class="gold">X</span></span></a>
+        <p>By The Bitcoin Corporation Ltd.</p>
+        <p><a href="https://x.com/bWalletX" target="_blank" rel="noopener">@bWalletX on X</a> · <a href="https://www.bchatx.com/u/bwalletx" target="_blank" rel="noopener">bChatX</a> · <a href="/privacy.html">Privacy policy</a></p>
+      </div>
+    </footer>
+    <script>
+      (function () {
+        var f = document.getElementById('enq'), out = document.getElementById('f-out'), btn = document.getElementById('f-send');
+        var v = function (id) { return document.getElementById(id).value.trim(); };
+        var say = function (t, cls) { out.textContent = t; out.className = 'out ' + (cls || ''); };
+        f.addEventListener('submit', function (e) {
+          e.preventDefault();
+          if (v('f-hp')) return say("Thanks — we'll be in touch within 2 working days.", 'ok');
+          if (!v('f-name') || !v('f-company') || !v('f-message')) return say('Please fill in your name, company and what you want to build.', 'err');
+          if (!/^[^\s@]+@[^\s@]+\.[a-z]{2,}$/i.test(v('f-email'))) return say('Please enter a valid email address.', 'err');
+          if (!document.getElementById('f-consent').checked) return say('Please tick the box so we can contact you.', 'err');
+          var services = Array.prototype.map.call(f.querySelectorAll('input[name=services]:checked'), function (x) { return x.value; });
+          var body = { name: v('f-name'), company: v('f-company'), email: v('f-email'), phone: v('f-phone') || null, website: v('f-website') || null,
+            message: v('f-message'), services: services, budget: v('f-budget'), consent: true, source: 'bwalletx.com/clients' };
+          btn.disabled = true; say('Sending…');
+          fetch('https://push.bwalletx.com/clients/enquire', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify(body) })
+            .then(function (r) {
+              if (!r.ok) throw new Error(String(r.status));
+              f.reset(); say("Thanks — we'll be in touch within 2 working days.", 'ok');
+            })
+            .catch(function () { say('Something went wrong — email support@bwalletx.com', 'err'); })
+            .then(function () { btn.disabled = false; });
+        });
+      })();
+    </script>
+  </body>
+</html>
