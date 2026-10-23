@@ -5,12 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>The bWalletX brand</title>
     <link rel="canonical" href="https://bwalletx.com/brand" />
-    <meta name="description" content="The bWalletX brand: our gold b, colours, type and voice, with logo downloads and the rules for using them. The full brand guide is on docs.bwalletx.com." />
+    <meta name="description" content="The bWalletX brand: the gold b and how it's built, logo versions and downloads, colour, type, voice, imagery, motion, buttons, names and a press kit. The full brand guide is on docs.bwalletx.com." />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://bwalletx.com/brand" />
     <meta property="og:site_name" content="bWalletX" />
     <meta property="og:title" content="The bWalletX brand" />
-    <meta property="og:description" content="Our gold b, colours, type and voice, with logo downloads and the rules for using them." />
+    <meta property="og:description" content="The gold b, colour, type, voice, imagery and motion, with logo downloads and a press kit." />
     <meta property="og:image" content="https://bwalletx.com/og-brand-v1.jpg" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
@@ -18,52 +18,150 @@
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@bWalletX" />
     <meta name="twitter:title" content="The bWalletX brand" />
-    <meta name="twitter:description" content="Our gold b, colours, type and voice, with logo downloads and the rules for using them." />
+    <meta name="twitter:description" content="The gold b, colour, type, voice, imagery and motion, with logo downloads and a press kit." />
     <meta name="twitter:image" content="https://bwalletx.com/og-brand-v1.jpg" />
     <link rel="icon" href="/favicon.ico" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap" />
     <link rel="stylesheet" href="/styles.css" />
     <style>
-      /* The bWalletX brand (23 Oct 2026): the friendly public page. The full rulebook is docs.bwalletx.com/brand. */
-      html, body { overflow-x: clip; }
-      .ext.br h2 { margin: 64px 0 10px; font: 700 clamp(1.6rem, 4vw, 2.2rem) / 1.1 var(--hf); letter-spacing: -0.03em; }
+      /* The bWalletX brand (23 Oct 2026): the public brand page, laid out wide (1100px) in numbered sections.
+         The full rulebook is docs.bwalletx.com/brand. */
+      html, body { overflow-x: clip; scroll-behavior: smooth; }
+      main.ext.br { max-width: 1100px; box-sizing: border-box; }
+      .ext.br section.s { padding-top: 8px; scroll-margin-top: 110px; border-top: 1px solid #ffffff10; margin-top: 64px; }
+      .ext.br h2 { margin: 40px 0 10px; font: 700 clamp(1.8rem, 4.4vw, 2.8rem) / 1.05 var(--hf); letter-spacing: -0.035em; }
+      .ext.br h2 .no { display: block; font: 500 0.8rem 'IBM Plex Mono', monospace; letter-spacing: 0.14em; color: var(--gold); margin-bottom: 12px; }
+      .ext.br h3 { margin: 30px 0 8px; font: 600 1.1rem var(--hf); letter-spacing: -0.01em; }
       .ext.br p, .ext.br li { line-height: 1.7; }
-      .ext .small { color: #8a8a86; font-size: 0.85rem; }
-      .br-hero { text-align: center; padding: 40px 0 10px; }
-      .br-hero > img { display: block; margin: 0 auto; width: min(30vw, 150px); height: auto; filter: drop-shadow(0 0 40px rgba(245, 184, 0, 0.35)); }
-      .br-hero h1 { margin: 26px 0 12px; display: flex; justify-content: center; align-items: flex-start; flex-wrap: wrap; gap: 0 0.2em; font: 700 clamp(2.4rem, 8vw, 4.6rem) / 1 var(--hf); letter-spacing: -0.045em; }
-      .br-hero h1 .nm { display: inline-flex; align-items: flex-start; gap: 0.04em; }
-      .br-hero h1 .lb { height: 1em; width: 0.74em; margin-top: 0.02em; filter: none; }
-      .br-hero p { max-width: 600px; margin: 0 auto; color: #cfc6b0; }
+      .lead { font-size: 1.12rem; color: #e2dccb; max-width: 720px; }
+      .mono { font: 500 0.78rem 'IBM Plex Mono', monospace; letter-spacing: 0.02em; color: #9a958a; }
+      .small { color: #8a8a86; font-size: 0.85rem; }
+      .card { border: 1px solid #ffffff14; border-radius: 18px; background: #0d0d0f; }
       .brrow { display: flex; gap: 12px; flex-wrap: wrap; margin: 22px 0; }
       .brrow.c { justify-content: center; }
-      .tiles { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 12px; margin: 18px 0; }
-      .tile { border: 1px solid #ffffff14; border-radius: 16px; padding: 18px; text-align: center; background: #0d0d0f; text-decoration: none; color: inherit; }
-      .tile .pv { height: 90px; display: flex; align-items: center; justify-content: center; border-radius: 10px; margin-bottom: 12px; }
-      .tile .pv img { max-height: 70px; max-width: 80%; }
-      .tile b { display: block; font-size: 0.95rem; }
-      .tile span { font-size: 0.8rem; color: #8a8a86; }
-      a.tile:hover { border-color: #f5b80066; }
-      .sw { display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 10px; margin: 18px 0; }
-      .sw div { border-radius: 14px; padding: 70px 14px 12px; font-size: 0.82rem; border: 1px solid #ffffff14; }
-      .sw b { display: block; font-size: 0.95rem; }
-      .type { border: 1px solid #ffffff14; border-radius: 16px; padding: 24px; background: #0d0d0f; }
-      .type .big { font: 700 clamp(2.4rem, 8vw, 4rem) / 1 var(--hf); letter-spacing: -0.045em; display: flex; align-items: flex-start; gap: 0 0.2em; flex-wrap: wrap; }
-      .type .big img { height: 1em; width: 0.74em; margin-top: 0.02em; }
-      .type .mid { margin-top: 14px; font: 500 1.2rem var(--hf); color: #e8dfc6; }
-      .type .sm { margin-top: 10px; color: #8a8a86; font-size: 0.9rem; }
-      .voice { font: 700 clamp(1.6rem, 5vw, 2.6rem) / 1.15 var(--hf); letter-spacing: -0.03em; text-align: center; margin: 22px 0; }
-      .voice em { font-style: normal; color: var(--gold-hi); }
-      .dd { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 12px; margin: 18px 0; }
-      .dd > div { border: 1px solid #ffffff14; border-radius: 16px; padding: 18px 20px; background: #0d0d0f; }
-      .dd h3 { margin: 0 0 8px; font-size: 1rem; }
-      .dd .do h3 { color: #9fe0a8; }
-      .dd .dont h3 { color: #f08a8a; }
-      .dd ul { margin: 0; padding-left: 18px; }
-      .svc { border: 1px solid #f5b80044; border-radius: 20px; padding: 26px; background: radial-gradient(circle at 20% 0%, #2a1f08, #0d0d0f 70%); }
-      .svc h2 { margin-top: 0 !important; }
+      .g2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr)); gap: 14px; margin: 18px 0; }
+      .g3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 230px), 1fr)); gap: 12px; margin: 18px 0; }
+      @media (min-width: 760px) { .g3.fix3 { grid-template-columns: repeat(3, 1fr); } .g4.fix4 { grid-template-columns: repeat(4, 1fr); } }
+      .g4 { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 180px), 1fr)); gap: 12px; margin: 18px 0; }
+
+      /* Hero */
+      .br-hero { text-align: center; padding: 30px 0 0; }
+      .br-hero > img { display: block; margin: 0 auto; width: min(30vw, 140px); height: auto; animation: glow 6s ease-in-out infinite; }
+      @keyframes glow { 0%, 100% { filter: drop-shadow(0 0 30px rgba(245, 184, 0, 0.3)); } 50% { filter: drop-shadow(0 0 64px rgba(245, 184, 0, 0.7)); } }
+      .br-hero h1 { margin: 26px 0 14px; display: flex; justify-content: center; align-items: flex-start; flex-wrap: wrap; gap: 0 0.22em; font: 700 clamp(2.4rem, 8vw, 5rem) / 1 var(--hf); letter-spacing: -0.045em; }
+      .br-hero h1 .nm { display: inline-flex; align-items: flex-start; gap: 0.04em; }
+      .lb { display: block; height: 1em; width: 0.74em; margin-top: 0.02em; }
+      .br-hero p { max-width: 660px; margin: 0 auto; color: #cfc6b0; }
+      .toc { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; margin: 26px auto 0; max-width: 860px; }
+      .toc a { padding: 7px 13px; border: 1px solid #ffffff1f; border-radius: 999px; font-size: 0.85rem; color: #cfc8b6; text-decoration: none; }
+      .toc a:hover { border-color: var(--gold); color: var(--gold-hi); }
+
+      .idea div { padding: 22px; }
+      .idea b { display: block; font: 700 1.35rem var(--hf); letter-spacing: -0.02em; color: #fff; margin-bottom: 6px; }
+      .idea b em { font-style: normal; color: var(--gold-hi); }
+
+      /* Logo anatomy */
+      .anat { padding: 22px; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 24px; align-items: center; }
+      @media (max-width: 760px) { .anat { grid-template-columns: 1fr; } }
+      .anat svg { width: 100%; max-width: 420px; height: auto; display: block; margin: 0 auto; }
+      .anat ol { margin: 0; padding-left: 20px; }
+      .anat li { margin-bottom: 10px; }
+      .anat li b { color: #fff; }
+      .demo { padding: 22px; display: flex; align-items: center; justify-content: center; min-height: 240px; }
+      .clear { position: relative; display: inline-block; padding: 36px; outline: 1px dashed #f5b80088; }
+      .clear img { display: block; height: 120px; width: auto; }
+      .clear span { position: absolute; font: 500 0.7rem 'IBM Plex Mono', monospace; color: var(--gold); }
+      .clear .t { top: 10px; left: 50%; transform: translateX(-50%); }
+      .clear .l { left: 12px; top: 50%; transform: translateY(-50%); }
+      .sizes { display: flex; align-items: flex-end; justify-content: center; gap: 28px; flex-wrap: wrap; }
+      .sizes figure { margin: 0; text-align: center; }
+      .sizes img { display: block; margin: 0 auto 10px; width: auto; }
+
+      .ver { overflow: hidden; }
+      .ver .pv { height: 160px; display: flex; align-items: center; justify-content: center; border-radius: 18px 18px 0 0; }
+      .ver .pv img { max-height: 96px; width: auto; }
+      .ver .pv .tile { height: 108px; width: 108px; max-height: none; border-radius: 24px; box-shadow: 0 10px 30px rgba(0,0,0,.4); }
+      .ver .cap { padding: 12px 16px 16px; }
+      .ver .cap b { display: block; font-size: 0.95rem; }
+      .ver .cap span { font-size: 0.82rem; color: #8a8a86; }
+      .ver .cap a { font-size: 0.82rem; }
+      .whiteb { filter: brightness(0) invert(1); }
+      .blackb { filter: brightness(0); }
+
+      .wm { padding: 34px 22px; display: flex; flex-wrap: wrap; gap: 34px 60px; align-items: center; justify-content: center; }
+      .lock { display: inline-flex; align-items: center; gap: 14px; font: 700 2.4rem var(--hf); letter-spacing: -0.03em; color: #fff; }
+      .lock img { height: 1.3em; width: auto; }
+      .x { color: var(--gold); }
+      .stk { display: inline-flex; flex-direction: column; align-items: center; gap: 10px; font: 700 1.7rem var(--hf); letter-spacing: -0.03em; color: #fff; }
+      .stk img { height: 70px; width: auto; }
+      .inl { display: inline-flex; align-items: flex-start; gap: 0.04em; font: 700 2.4rem / 1 var(--hf); letter-spacing: -0.04em; color: #fff; }
+
+      .bad .pv { height: 140px; display: flex; align-items: center; justify-content: center; background: #000; border-radius: 18px 18px 0 0; position: relative; overflow: hidden; }
+      .bad .pv img { height: 80px; width: auto; }
+      .bad .pv::after { content: '✕'; position: absolute; top: 8px; right: 12px; color: #f08a8a; font-weight: 700; }
+      .bad .cap { padding: 10px 14px 14px; font-size: 0.86rem; color: #cfc8b6; }
+
+      .sw { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 160px), 1fr)); gap: 10px; margin: 18px 0; }
+      .sw div { border-radius: 16px; padding: 90px 14px 12px; font-size: 0.8rem; border: 1px solid #ffffff14; line-height: 1.5; }
+      .sw b { display: block; font-size: 0.98rem; }
+      .ratio { display: flex; height: 56px; border-radius: 14px; overflow: hidden; border: 1px solid #ffffff14; margin: 12px 0 8px; }
+      .ratio i { display: flex; align-items: center; padding-left: 12px; font: 600 0.8rem var(--hf); font-style: normal; white-space: nowrap; overflow: hidden; }
+      .pairs { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 190px), 1fr)); gap: 10px; margin: 14px 0; }
+      .pairs div { border-radius: 14px; padding: 16px; font: 600 1.05rem var(--hf); border: 1px solid #ffffff14; }
+      .pairs small { display: block; font: 500 0.75rem 'IBM Plex Mono', monospace; margin-top: 6px; opacity: 0.85; }
+
+      .spec { padding: 8px 24px; }
+      .spec .row1 { display: flex; align-items: baseline; justify-content: space-between; gap: 8px 16px; flex-wrap: wrap; border-bottom: 1px solid #ffffff10; padding: 20px 0; }
+      .spec .row1:last-child { border-bottom: 0; }
+      .spec .s-d { font: 700 clamp(2.4rem, 7vw, 4.6rem) / 1 var(--hf); letter-spacing: -0.045em; display: flex; align-items: flex-start; gap: 0 0.22em; flex-wrap: wrap; }
+      .spec .s-h { font: 700 2rem / 1.1 var(--hf); letter-spacing: -0.03em; }
+      .spec .s-b { font: 400 1.05rem / 1.7 var(--bf); color: #e2dccb; max-width: 560px; }
+      .spec .s-l { font: 700 0.82rem var(--hf); letter-spacing: 0.16em; text-transform: uppercase; }
+      .spec .s-m { font: 500 0.95rem 'IBM Plex Mono', monospace; color: #cfc8b6; }
+      .alpha { font: 500 clamp(1.3rem, 3.4vw, 2rem) / 1.35 var(--hf); letter-spacing: -0.01em; color: #e8dfc6; overflow-wrap: anywhere; }
+
+      .lines div { padding: 22px; font: 700 1.4rem / 1.2 var(--hf); letter-spacing: -0.025em; }
+      .lines div em { font-style: normal; color: var(--gold-hi); }
+      .lines small { display: block; margin-top: 10px; font: 400 0.8rem var(--bf); color: #8a8a86; letter-spacing: 0; }
+      .say { width: 100%; border-collapse: collapse; margin: 14px 0; font-size: 0.95rem; }
+      .say th, .say td { text-align: left; padding: 12px; border-bottom: 1px solid #ffffff12; vertical-align: top; width: 50%; }
+      .say th { font: 600 0.78rem var(--hf); letter-spacing: 0.12em; text-transform: uppercase; color: #8a8a86; }
+      .say td:first-child { color: #9fe0a8; }
+      .say td:last-child { color: #f0a0a0; }
+
+      .gal a { display: block; border-radius: 16px; overflow: hidden; border: 1px solid #ffffff14; text-decoration: none; color: inherit; background: #0d0d0f; }
+      .gal img { display: block; width: 100%; aspect-ratio: 1200 / 630; object-fit: cover; }
+      .gal span { display: block; padding: 10px 14px; font-size: 0.85rem; color: #cfc8b6; }
+
+      .mo { padding: 26px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 18px; min-height: 240px; text-align: center; }
+      .rev { display: flex; align-items: flex-start; gap: 0 0.22em; font: 700 clamp(2.4rem, 6vw, 3.4rem) / 1 var(--hf); letter-spacing: -0.045em; }
+      .rev .ch { display: inline-block; white-space: pre; animation: chin 4.8s cubic-bezier(.2,.7,.2,1) infinite; animation-delay: calc(var(--i) * 60ms); }
+      @keyframes chin { 0% { opacity: 0; filter: blur(8px); transform: translateY(0.35em); } 25%, 80% { opacity: 1; filter: none; transform: none; } 100% { opacity: 0; filter: blur(8px); } }
+      .rev .lb { animation: glow 4.8s ease-in-out infinite; }
+      .play { position: relative; width: 96px; height: 96px; border-radius: 50%; display: flex; align-items: center; justify-content: center; padding-left: 6px; box-sizing: border-box; color: #0b0a08; background: radial-gradient(circle at 35% 30%, #ffe48a, #f5b800 55%, #c98f00); animation: jbpulse 2.6s ease-in-out infinite; }
+      .play::before { content: ''; position: absolute; inset: -9px; border-radius: 50%; border: 2px solid rgba(255,210,77,.7); animation: jbring 2.6s ease-out infinite; }
+      @keyframes jbpulse { 0%, 100% { box-shadow: 0 18px 60px rgba(245,184,0,.4); } 50% { box-shadow: 0 18px 90px rgba(245,184,0,.75); } }
+      @keyframes jbring { from { transform: scale(.92); opacity: .9; } to { transform: scale(1.35); opacity: 0; } }
+      .playl { font: 700 0.88rem var(--hf); letter-spacing: 0.16em; text-transform: uppercase; }
+
+      .comp { padding: 26px; display: flex; flex-wrap: wrap; gap: 16px; align-items: center; justify-content: center; }
+      .b-gold { display: inline-block; padding: 14px 28px; border-radius: 999px; background: linear-gradient(180deg, #ffd24d, #f5b800); color: #0b0a08 !important; font: 700 1rem var(--hf); text-decoration: none; box-shadow: 0 10px 34px rgba(245,184,0,.3); }
+      .b-line { display: inline-block; padding: 13px 26px; border-radius: 999px; border: 1px solid rgba(255,255,255,.6); color: #fff !important; font: 500 0.8rem var(--hf); letter-spacing: 0.2em; text-transform: uppercase; text-decoration: none; }
+      .chipx { display: inline-block; padding: 7px 13px; border: 1px solid #ffffff1f; border-radius: 999px; font-size: 0.85rem; color: #cfc8b6; }
+      .tagl { font-size: 0.75rem; font-weight: 700; padding: 2px 9px; border-radius: 999px; background: #F5B800; color: #000; }
+      .tags { font-size: 0.75rem; font-weight: 700; padding: 2px 9px; border-radius: 999px; border: 1px solid #ffffff40; color: #a7adb8; }
+
+      .fam div { padding: 22px; }
+      .fam .nm2 { font: 700 1.7rem var(--hf); letter-spacing: -0.03em; color: #fff; }
+      .fam p { margin: 8px 0 0; color: #cfc8b6; }
+
+      .svc { border: 1px solid #f5b80044; border-radius: 22px; padding: 6px 28px 10px; background: radial-gradient(circle at 20% 0%, #2a1f08, #0d0d0f 70%); }
+      .press { padding: 24px; }
+      .press p { margin: 0 0 12px; }
+      .copy { cursor: pointer; font: inherit; }
+      @media (prefers-reduced-motion: reduce) { .br-hero > img, .rev .ch, .rev .lb, .play, .play::before { animation: none !important; opacity: 1 !important; filter: none !important; transform: none !important; } }
     </style>
   </head>
   <body>
@@ -80,63 +178,234 @@
     <script src="/nav.js"></script>
     <main class="ext br">
       <section class="br-hero">
-        <img src="/logo.svg" alt="The bWalletX b" width="111" height="150" />
+        <img src="/logo.svg" alt="The bWalletX b" width="104" height="140" />
         <h1><span>The</span><span class="nm"><img class="lb" src="/logo.svg" alt="b" />WalletX</span><span>brand</span></h1>
-        <p>A gold b on black, a calm voice and a few simple rules. Use our logo freely to point people to bWalletX. Please keep it as it is.</p>
-        <div class="brrow c"><a class="btn btn-store" href="https://docs.bwalletx.com/brand/">Read the full brand guide</a></div>
+        <p>A gold b on black, a calm voice and a handful of rules that keep everything we make looking and sounding like us. Use our logo freely to point people to bWalletX. Please keep it as it is.</p>
+        <div class="brrow c"><a class="btn btn-store" href="/brand/bwalletx-brand-kit.zip" download>Download the brand kit</a><a class="btn" href="https://docs.bwalletx.com/brand/">Read the full brand guide</a></div>
+        <nav class="toc" aria-label="On this page"><a href="#idea">The idea</a><a href="#logo">Logo</a><a href="#versions">Versions</a><a href="#name">Name</a><a href="#misuse">Misuse</a><a href="#colour">Colour</a><a href="#type">Type</a><a href="#voice">Voice</a><a href="#imagery">Imagery</a><a href="#motion">Motion and sound</a><a href="#buttons">Buttons</a><a href="#family">Family</a><a href="#services">Your brand</a><a href="#press">Press</a></nav>
       </section>
 
-      <h2>The logo</h2>
-      <p>Our logo is the b alone: a slanted flag on the stem and a round bowl, in a gold gradient. There is no X in the mark; the X lives in the name, bWallet<span class="gold">X</span>. Download the files you need below.</p>
-      <div class="tiles">
-        <a class="tile" href="/logo.svg" download="bwalletx-logo.svg"><div class="pv" style="background:#000"><img src="/logo.svg" alt="" /></div><b>Logo, SVG</b><span>Gold, any size</span></a>
-        <a class="tile" href="/brand/bwalletx-logo-1024.png" download><div class="pv" style="background:#000"><img src="/brand/bwalletx-logo-512.png" alt="" /></div><b>Logo, PNG</b><span>1024 px, transparent</span></a>
-        <a class="tile" href="/brand/bwalletx-logo-512.png" download><div class="pv" style="background:#1f4a78"><img src="/brand/bwalletx-logo-512.png" alt="" /></div><b>Logo, PNG</b><span>512 px, transparent</span></a>
-        <a class="tile" href="/brand/bwalletx-mark-circle.svg" download><div class="pv" style="background:#000"><img src="/brand/bwalletx-mark-circle.svg" alt="" /></div><b>Round mark, SVG</b><span>For avatars</span></a>
-        <a class="tile" href="/brand/signin-gold.svg" download><div class="pv" style="background:#111"><img src="/brand/signin-gold.svg" alt="" /></div><b>Sign-in button</b><span>Gold, SVG</span></a>
-        <a class="tile" href="/brand/signin-dark.svg" download><div class="pv" style="background:#f4f1e8"><img src="/brand/signin-dark.svg" alt="" /></div><b>Sign-in button</b><span>Dark and light, SVG</span></a>
-      </div>
-
-      <h2>Colour</h2>
-      <p>Gold on black first. Brighter accents for campaigns, used sparingly.</p>
-      <div class="sw">
-        <div style="background:#f5b800;color:#000"><b>Gold</b>#F5B800</div>
-        <div style="background:#ffd24d;color:#000"><b>Gold high</b>#FFD24D</div>
-        <div style="background:linear-gradient(180deg,#ffe58a,#ffd24d 55%,#c98f00);color:#000"><b>Logo gradient</b>#FFE58A → #C98F00</div>
-        <div style="background:#000;color:#f1ead9"><b>Black</b>#000000</div>
-        <div style="background:#f1ead9;color:#000"><b>Warm white</b>#F1EAD9</div>
-        <div style="background:#1f4a78;color:#fff"><b>Dusk blue</b>#1F4A78</div>
-        <div style="background:#134a5a;color:#fff"><b>Teal</b>#134A5A</div>
-      </div>
-
-      <h2>Type</h2>
-      <div class="type">
-        <div class="big"><img src="/logo.svg" alt="b" /><span>is for business</span></div>
-        <div class="mid">Space Grotesk. Bold and tight for headlines; regular for everything else.</div>
-        <div class="sm">In headings, our logo can stand in for the letter b, as above and on <a href="/just-b">/just-b</a>.</div>
-      </div>
-
-      <h2>Voice</h2>
-      <p class="voice">Less noise. More life. <em>Just b.</em></p>
-      <p>Calm, plain and friendly. We describe what works today, in everyday words, and we don&rsquo;t hype. BSV holders are stakeholders in the network, never shareholders in us.</p>
-
-      <h2>Using our brand</h2>
-      <div class="dd">
-        <div class="do"><h3>Please do</h3><ul><li>Use the logo to link to bWalletX, or to show that your app works with it.</li><li>Use the sign-in buttons for &ldquo;Sign in with bWalletX&rdquo;.</li><li>Give the logo some space, and keep it at least 16 px tall.</li><li>Write the name as bWalletX: small b, capital W, capital X.</li></ul></div>
-        <div class="dont"><h3>Please don&rsquo;t</h3><ul><li>Redraw, stretch, rotate or recolour the b.</li><li>Add an X, outlines or effects to the mark.</li><li>Suggest that we endorse or run your product unless we do.</li><li>Use our name or logo in your own product&rsquo;s name.</li></ul></div>
-      </div>
-
-      <section class="svc">
-        <h2>Your brand, on Bitcoin</h2>
-        <p>We also work on other companies&rsquo; brands. Your community can have its own wallet edition and theme, or a business agent that takes payment in chat. It carries your name, your colours and your voice, not ours.</p>
-        <div class="brrow"><a class="btn btn-store" href="/themes">Editions and themes</a><a class="btn" href="/business-agents">Business agents</a><a class="btn" href="mailto:support@bwalletx.com?subject=Our%20brand%2C%20on%20Bitcoin">Talk to us</a></div>
+      <section class="s" id="idea">
+        <h2><span class="no">01 · THE IDEA</span>b is for Bitcoin.</h2>
+        <p class="lead">The b is Bitcoin, made personal: your money, your keys, your name. Everything we make should feel calm and in control, never noisy or speculative.</p>
+        <div class="g3 fix3 idea">
+          <div class="card"><b>Less noise.</b>No hype, no charts shouting at you, no jargon. We say what something does, in everyday words.</div>
+          <div class="card"><b>More life.</b>Money that gets out of the way, so people can get on with music, friends, work and the things they love.</div>
+          <div class="card"><b>Just <em>b</em>.</b>Simple and confident. One gold letter is enough; we don&rsquo;t need to explain ourselves twice.</div>
+        </div>
       </section>
 
-      <h2>The full guide</h2>
-      <p>The complete rules for the logo, colour, type, voice, imagery, motion, music, campaign pages, share images and names are in the brand guide. It grows as we decide things, and every change is dated.</p>
-      <div class="brrow"><a class="btn btn-store" href="https://docs.bwalletx.com/brand/">docs.bwalletx.com/brand</a></div>
+      <section class="s" id="logo">
+        <h2><span class="no">02 · LOGO</span>The gold b.</h2>
+        <p class="lead">Our logo is the letter b alone, drawn from two simple shapes: a stem with a 45° flag cut across the top, and a round bowl. There is no X in the mark; the X lives in the name.</p>
+        <div class="card anat">
+          <svg viewBox="10 0 100 116" aria-label="How the b is built">
+            <defs><linearGradient id="ag" gradientUnits="userSpaceOnUse" x1="0" y1="12" x2="0" y2="105"><stop offset="0" stop-color="#FFE58A"/><stop offset=".55" stop-color="#FFD24D"/><stop offset="1" stop-color="#C98F00"/></linearGradient><mask id="am"><rect x="0" y="0" width="140" height="140" fill="#fff"/><circle cx="60" cy="72" r="15" fill="#000"/></mask></defs>
+            <g fill="url(#ag)" mask="url(#am)" opacity=".92"><polygon points="45,12 45,72 27,72 27,30"/><circle cx="60" cy="72" r="33"/></g>
+            <g fill="none" stroke="#fff" stroke-width=".35" stroke-dasharray="1.6 1.2" opacity=".75">
+              <line x1="14" y1="105" x2="106" y2="105"/><line x1="14" y1="12" x2="106" y2="12"/><line x1="14" y1="39" x2="106" y2="39"/>
+              <circle cx="60" cy="72" r="33"/><circle cx="60" cy="72" r="15"/><line x1="18" y1="48" x2="54" y2="12"/>
+            </g>
+            <g fill="#f5b800" font-family="IBM Plex Mono, monospace" font-size="3.2"><text x="96" y="10.5">top</text><text x="86" y="37.5">bowl top</text><text x="92" y="103.5">baseline</text><text x="26" y="25" transform="rotate(-45 26 25)">45° flag</text><text x="64" y="73">r15</text><text x="88" y="88">r33</text></g>
+            <circle cx="60" cy="72" r=".9" fill="#fff"/>
+          </svg>
+          <ol>
+            <li><b>The stem</b> is 18 units wide, cut at 45° across the top: the bCorp flag.</li>
+            <li><b>The bowl</b> is a circle (radius 33) with a round counter (radius 15).</li>
+            <li><b>They meet cleanly.</b> The stem ends exactly where the bowl&rsquo;s edge is upright, so the left side runs in one unbroken line.</li>
+            <li><b>The gold</b> runs top to bottom across the whole letter: #FFE58A, #FFD24D, #C98F00.</li>
+          </ol>
+        </div>
+        <div class="g2">
+          <div class="card demo"><div class="clear"><span class="t">x</span><span class="l">x</span><img src="/logo.svg" alt="" /></div></div>
+          <div class="card demo"><div class="sizes"><figure><img src="/logo.svg" alt="" style="height:16px" /><span class="mono">16 px min</span></figure><figure><img src="/logo.svg" alt="" style="height:24px" /><span class="mono">24 px</span></figure><figure><img src="/logo.svg" alt="" style="height:34px" /><span class="mono">34 px header</span></figure><figure><img src="/logo.svg" alt="" style="height:80px" /><span class="mono">80 px</span></figure></div></div>
+        </div>
+        <p><b>Clear space:</b> keep at least x clear all round, where x is the width of the counter (the hole). <b>Minimum size:</b> 16 px tall on screen, 6 mm in print.</p>
+      </section>
 
-      <p class="small">bWalletX is made by The Bitcoin Corporation Ltd. Brand questions: <a href="mailto:support@bwalletx.com">support@bwalletx.com</a></p>
+      <section class="s" id="versions">
+        <h2><span class="no">03 · VERSIONS</span>Use the right one.</h2>
+        <p class="lead">Gold on black is the logo. Use the others only when gold can&rsquo;t work.</p>
+        <div class="g3 fix3">
+          <div class="card ver"><div class="pv" style="background:#000"><img src="/logo.svg" alt="" /></div><div class="cap"><b>Gold gradient</b><span>The logo. On black or deep colour.</span><br /><a href="/logo.svg" download="bwalletx-logo.svg">SVG</a> · <a href="/brand/bwalletx-logo-1024.png" download>PNG 1024</a> · <a href="/brand/bwalletx-logo-512.png" download>PNG 512</a></div></div>
+          <div class="card ver"><div class="pv" style="background:#000"><img src="/brand/bwalletx-logo-flat.svg" alt="" /></div><div class="cap"><b>Flat gold</b><span>Where gradients print or stitch badly.</span><br /><a href="/brand/bwalletx-logo-flat.svg" download>SVG</a></div></div>
+          <div class="card ver"><div class="pv" style="background:#1f4a78"><img class="whiteb" src="/logo.svg" alt="" /></div><div class="cap"><b>White</b><span>On photos or busy colour, when gold won&rsquo;t read.</span></div></div>
+          <div class="card ver"><div class="pv" style="background:#f4f1e8"><img class="blackb" src="/logo.svg" alt="" /></div><div class="cap"><b>Black</b><span>On white and light themes, and one-colour print.</span></div></div>
+          <div class="card ver"><div class="pv" style="background:#1a1a1d"><img class="tile" src="/brand/bwalletx-app-icon.svg" alt="" /></div><div class="cap"><b>App icon</b><span>The b on a black tile, for the app and the extension.</span><br /><a href="/brand/bwalletx-app-icon.svg" download>SVG</a></div></div>
+          <div class="card ver"><div class="pv" style="background:#000"><img src="/brand/bwalletx-mark-circle.svg" alt="" /></div><div class="cap"><b>Round mark</b><span>For avatars and profile pictures.</span><br /><a href="/brand/bwalletx-mark-circle.svg" download>SVG</a></div></div>
+        </div>
+      </section>
+
+      <section class="s" id="name">
+        <h2><span class="no">04 · NAME</span>bWallet<span class="x">X</span>.</h2>
+        <p class="lead">Small b, capital W, capital X. The X is gold when we can show colour. In a headline, the logo can stand in for the b.</p>
+        <div class="card wm">
+          <span class="lock"><img src="/logo.svg" alt="" /><span>bWallet<span class="x">X</span></span></span>
+          <span class="stk"><img src="/logo.svg" alt="" /><span>bWallet<span class="x">X</span></span></span>
+          <span class="inl"><img class="lb" src="/logo.svg" alt="b" />WalletX</span>
+        </div>
+        <p class="small">The app in the App Store and Google Play is called <b>bWallet</b>: the same wallet without the exchange features. Everywhere else it&rsquo;s bWalletX.</p>
+      </section>
+
+      <section class="s" id="misuse">
+        <h2><span class="no">05 · MISUSE</span>Please don&rsquo;t.</h2>
+        <div class="g4 fix4">
+          <div class="card bad"><div class="pv"><img src="/logo.svg" alt="" style="transform:scaleX(1.5)" /></div><div class="cap">Stretch or squash it.</div></div>
+          <div class="card bad"><div class="pv"><img src="/logo.svg" alt="" style="transform:rotate(-18deg)" /></div><div class="cap">Rotate or tilt it.</div></div>
+          <div class="card bad"><div class="pv"><img src="/logo.svg" alt="" style="filter:hue-rotate(150deg) saturate(2)" /></div><div class="cap">Recolour it.</div></div>
+          <div class="card bad"><div class="pv"><span style="display:inline-flex;align-items:flex-end;gap:2px"><img src="/logo.svg" alt="" /><b style="font:700 2.4rem var(--hf);color:#f5b800">X</b></span></div><div class="cap">Add an X or other letters to the mark.</div></div>
+          <div class="card bad"><div class="pv"><img src="/logo.svg" alt="" style="filter:drop-shadow(6px 6px 0 #e33) drop-shadow(-3px -3px 0 #3cf)" /></div><div class="cap">Add outlines, shadows or effects.</div></div>
+          <div class="card bad"><div class="pv" style="background:url(/images/btrust-london-dawn.jpg) center 75%/cover"><img src="/logo.svg" alt="" style="opacity:.55" /></div><div class="cap">Lose it on a busy photo.</div></div>
+          <div class="card bad"><div class="pv" style="background:#fff"><img src="/logo.svg" alt="" /></div><div class="cap">Gold on white: use the black version.</div></div>
+          <div class="card bad"><div class="pv"><img src="/logo.svg" alt="" style="height:128px" /></div><div class="cap">Blow it up huge on its own.</div></div>
+        </div>
+      </section>
+
+      <section class="s" id="colour">
+        <h2><span class="no">06 · COLOUR</span>Gold on black.</h2>
+        <p class="lead">Black is the ground, gold is the light. Warm white for reading. Deep blues and teal for campaigns, used sparingly.</p>
+        <div class="sw">
+          <div style="background:#f5b800;color:#000"><b>Gold</b>#F5B800<br />RGB 245 184 0</div>
+          <div style="background:#ffd24d;color:#000"><b>Gold high</b>#FFD24D<br />RGB 255 210 77</div>
+          <div style="background:#c98f00;color:#000"><b>Gold low</b>#C98F00<br />RGB 201 143 0</div>
+          <div style="background:linear-gradient(180deg,#ffe58a,#ffd24d 55%,#c98f00);color:#000"><b>Logo gradient</b>#FFE58A → #C98F00</div>
+          <div style="background:#000;color:#f1ead9"><b>Black</b>#000000</div>
+          <div style="background:#0d0d0f;color:#f1ead9"><b>Card</b>#0D0D0F</div>
+          <div style="background:#f1ead9;color:#000"><b>Warm white</b>#F1EAD9</div>
+          <div style="background:#1f4a78;color:#fff"><b>Dusk blue</b>#1F4A78</div>
+          <div style="background:#134a5a;color:#fff"><b>Teal</b>#134A5A</div>
+          <div style="background:#1f3b86;color:#fff"><b>Royal blue</b>#1F3B86</div>
+        </div>
+        <div class="g2">
+          <div>
+            <h3>How much of each</h3>
+            <div class="ratio"><i style="flex:70;background:#000;color:#8a8a86">Black 70%</i><i style="flex:20;background:#f1ead9;color:#000">White 20%</i><i style="flex:10;background:#f5b800;color:#000">10%</i></div>
+            <p class="small">Gold is an accent and a light, never a large flat area. Empty avatars, banners and cards use gold art, never grey placeholders.</p>
+          </div>
+          <div>
+            <h3>Pairs that work</h3>
+            <div class="pairs">
+              <div style="background:#000;color:#ffd24d">Gold on black<small>Headlines, the logo</small></div>
+              <div style="background:#000;color:#f1ead9">White on black<small>Reading</small></div>
+              <div style="background:#f5b800;color:#000">Black on gold<small>Buttons</small></div>
+              <div style="background:#fff;color:#f5b800;border-color:#f08a8a">Gold on white ✕<small style="color:#a33">Too faint to read</small></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="s" id="type">
+        <h2><span class="no">07 · TYPE</span>Space Grotesk and IBM Plex.</h2>
+        <p class="lead">Space Grotesk for headlines, bold and tight. IBM Plex Sans for reading. IBM Plex Mono for codes and numbers that need to line up. All three are free on Google Fonts.</p>
+        <div class="card spec">
+          <div class="row1"><div class="s-d"><img class="lb" src="/logo.svg" alt="b" /><span>is for business</span></div><span class="mono">Display · Space Grotesk 700 · −0.045em</span></div>
+          <div class="row1"><div class="s-h">Get paid in seconds.</div><span class="mono">Heading · Space Grotesk 700 · −0.03em</span></div>
+          <div class="row1"><div class="s-b">Customers pay from their own wallet, straight into yours. The network fee is usually well under a penny, and every payment has a receipt.</div><span class="mono">Body · IBM Plex Sans 400 · line 1.7</span></div>
+          <div class="row1"><div class="s-l">Play the film · 0:40</div><span class="mono">Label · Space Grotesk 700 · +0.16em capitals</span></div>
+          <div class="row1"><div class="s-m">$name@bwalletx.com · 0.0042 BSV</div><span class="mono">Codes · IBM Plex Mono 500</span></div>
+          <div class="row1"><div class="alpha">Aa Bb Cc Dd Ee Ff Gg Hh Ii Jj Kk Ll Mm Nn Oo Pp Qq Rr Ss Tt Uu Vv Ww Xx Yy Zz 0123456789 £ $ € &amp; ? !</div></div>
+        </div>
+      </section>
+
+      <section class="s" id="voice">
+        <h2><span class="no">08 · VOICE</span>Calm, plain, warm.</h2>
+        <p class="lead">We talk like a good friend who happens to understand money. Short sentences, everyday words, and only what works today.</p>
+        <div class="g3 fix3 lines">
+          <div class="card">Less noise. More life. <em>Just b.</em><small>Our line</small></div>
+          <div class="card">Breathe out. You&rsquo;re <em>in control</em>.<small>/just-b</small></div>
+          <div class="card">Less paperwork. More business. <em>Just b.</em><small>/b-is-for-business</small></div>
+        </div>
+        <div class="card" style="padding:6px 16px">
+          <table class="say">
+            <thead><tr><th>Say</th><th>Not</th></tr></thead>
+            <tbody>
+              <tr><td>Get paid in seconds.</td><td>Revolutionary instant settlement layer.</td></tr>
+              <tr><td>Your keys stay with you.</td><td>Non-custodial self-sovereign architecture.</td></tr>
+              <tr><td>Stakeholders in the network.</td><td>Shareholders in us. Investors. Returns.</td></tr>
+              <tr><td>Tickets, access, rooms.</td><td>&ldquo;Tokens&rdquo; and &ldquo;holding&rdquo; in campaign copy.</td></tr>
+              <tr><td>It works today on Android and the web.</td><td>Coming soon! Huge things ahead!</td></tr>
+              <tr><td>3 PNEEs.</td><td>3 PNEES. 3 Pnees.</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="s" id="imagery">
+        <h2><span class="no">09 · IMAGERY</span>Drawn, warm, iPhone-first.</h2>
+        <p class="lead">Drawn and animated scenes first. Photos briefly and in the background. Pictures fill the phone screen edge to edge, with no decorative frames. Every page gets its own share image.</p>
+        <div class="g3 fix3 gal">
+          <a href="/just-b"><img src="/og-just-b-v4.jpg" alt="" loading="lazy" /><span>just b · the desert</span></a>
+          <a href="/b-cool"><img src="/og-b-cool-v6.jpg" alt="" loading="lazy" /><span>b cool · polar calm</span></a>
+          <a href="/b-creative"><img src="/og-b-creative-logo.png" alt="" loading="lazy" /><span>b creative · editions</span></a>
+          <a href="/b-is-for-business"><img src="/og-b-is-for-business-v3.jpg" alt="" loading="lazy" /><span>b is for business</span></a>
+          <a href="/bshares"><img src="/og-bshares-v3.jpg" alt="" loading="lazy" /><span>bShares · the boardroom</span></a>
+          <a href="/btrust"><img src="/og-btrust-v2.jpg" alt="" loading="lazy" /><span>bTrust · the City at dawn</span></a>
+        </div>
+      </section>
+
+      <section class="s" id="motion">
+        <h2><span class="no">10 · MOTION AND SOUND</span>Slow, smooth, golden.</h2>
+        <div class="g2">
+          <div class="card mo"><div class="rev" id="rev"><img class="lb" src="/logo.svg" alt="b" /><span>calm</span></div><span class="mono">Letters rise out of a soft blur, one after another</span></div>
+          <div class="card mo"><div class="play" aria-hidden="true"><svg viewBox="5 3 18 18" width="38" height="38"><path d="M8 5.5v13l11-6.5z" fill="currentColor" /></svg></div><span class="playl">Play the film · 0:40</span><span class="mono">The play button: big, gold, gently pulsing</span></div>
+        </div>
+        <p>Scenes crossfade, never cut. Photos zoom slowly. The logo glows gently. Everything respects reduced-motion settings. Music is by <a href="https://www.bchatx.com/u/vexvoid">VexVoid</a>: calm and steady, never hectic, credited on the page, and it only plays after a tap.</p>
+      </section>
+
+      <section class="s" id="buttons">
+        <h2><span class="no">11 · BUTTONS AND LABELS</span>One gold button per screen.</h2>
+        <div class="card comp">
+          <a class="b-gold" href="/get">Get bWalletX</a>
+          <a class="b-line" href="/get">Download</a>
+          <span class="chipx">A filter chip</span>
+          <span class="tagl">Live</span><span class="tags">Coming</span>
+          <img src="/brand/signin-gold.svg" alt="Sign in with bWalletX" style="height:44px" />
+          <img src="/brand/signin-dark.svg" alt="Sign in with bWalletX" style="height:44px" />
+        </div>
+        <p class="small">The main action is the gold pill; everything else is quieter. Sign-in buttons for your own site are in the brand kit.</p>
+      </section>
+
+      <section class="s" id="family">
+        <h2><span class="no">12 · FAMILY</span>Two brands.</h2>
+        <div class="g2 fam">
+          <div class="card"><div class="nm2">bWallet<span class="x">X</span></div><p>The wallet: web, Chrome, Android and iPhone. In the app stores it&rsquo;s bWallet.</p></div>
+          <div class="card"><div class="nm2">bChat<span class="x">X</span></div><p>Chat, Spaces and the feed, at bchatx.com.</p></div>
+        </div>
+        <p>Everything else is a bApp inside the wallet, named with a small b and a plain word: bMail, bTrust, bShares, bMint. An X on the end means an exchange: bMusicX is a music exchange.</p>
+      </section>
+
+      <section class="s" id="services">
+        <h2><span class="no">13 · YOUR BRAND</span>Your brand, on Bitcoin.</h2>
+        <div class="svc">
+          <p>We also work on other companies&rsquo; brands. Your community can have its own wallet edition and theme, or a business agent that takes payment in chat. It carries your name, your colours and your voice, not ours. Our name appears only if you choose to add a small &ldquo;Part of bWalletX&rdquo; credit.</p>
+          <div class="brrow"><a class="btn btn-store" href="/themes">Editions and themes</a><a class="btn" href="/business-agents">Business agents</a><a class="btn" href="mailto:support@bwalletx.com?subject=Our%20brand%2C%20on%20Bitcoin">Talk to us</a></div>
+        </div>
+      </section>
+
+      <section class="s" id="press">
+        <h2><span class="no">14 · PRESS</span>Writing about us?</h2>
+        <div class="card press">
+          <p class="mono">ABOUT bWALLETX</p>
+          <p id="boiler">bWalletX is a Bitcoin wallet for everyday life. People hold their own keys, pay and get paid in seconds, set money aside in pots, chat, and sign in to websites with their wallet. It runs on the web, as a Chrome extension and on Android. bWalletX is made in London by The Bitcoin Corporation Ltd.</p>
+          <div class="brrow" style="margin-bottom:0"><button type="button" class="btn copy" id="copyb">Copy this paragraph</button><a class="btn btn-store" href="/brand/bwalletx-brand-kit.zip" download>Download the brand kit</a><a class="btn" href="mailto:support@bwalletx.com?subject=Press">Press questions</a></div>
+        </div>
+        <p class="small">The kit has every logo version (SVG and PNG), the app icon, the round mark and the sign-in buttons.</p>
+      </section>
+
+      <section class="s" id="guide">
+        <h2><span class="no">THE FULL GUIDE</span>Every rule, dated.</h2>
+        <p>The complete rules for logo, colour, type, voice, imagery, motion, music, campaign pages, share images and names. It grows as we decide things, and every change is dated.</p>
+        <div class="brrow"><a class="btn btn-store" href="https://docs.bwalletx.com/brand/">docs.bwalletx.com/brand</a></div>
+        <p class="small">bWalletX is made by The Bitcoin Corporation Ltd. Brand questions: <a href="mailto:support@bwalletx.com">support@bwalletx.com</a></p>
+      </section>
     </main>
+    <script>
+      (function () {
+        var w = document.querySelector('#rev span'), t = w.textContent; w.textContent = '';
+        for (var i = 0; i < t.length; i++) { var c = document.createElement('span'); c.className = 'ch'; c.style.setProperty('--i', i); c.textContent = t[i]; w.appendChild(c); }
+        var b = document.getElementById('copyb');
+        b.onclick = function () { navigator.clipboard.writeText(document.getElementById('boiler').textContent).then(function () { b.textContent = 'Copied'; setTimeout(function () { b.textContent = 'Copy this paragraph'; }, 1800); }); };
+      })();
+    </script>
   </body>
 </html>
