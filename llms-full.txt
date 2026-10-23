@@ -244,7 +244,7 @@ Where to find b
 
 - [web.bwalletx.com/ask-b](https://web.bwalletx.com/ask-b)
 
-- [bchatx.com/ask-b](https://www.bchatx.com/ask-b)
+- [bchatx.com/ask-b](https://web.bwalletx.com/m/ask-b)
 
 - In the bWalletX apps: tap b. [Get bWalletX](https://bwalletx.com/get?from=ask-b)
 
@@ -630,7 +630,7 @@ Your wallet is your account for everything below.
 
 [### bWalletXLive
 The smart social super wallet. Hold, pay and sign in everywhere.bwalletx.com →](https://bwalletx.com/get)[### bChatXLive
-Chat rooms and live Spaces for every token and every crowd.www.bchatx.com →](https://www.bchatx.com)
+Chat rooms and live Spaces for every token and every crowd.www.bchatx.com →](https://www.bit-sign.online)
 
 ## Money
 
@@ -1067,7 +1067,7 @@ Live: working, in daily use. Beta: the site works, but it's early. Coming: not o
 
 ### Featured
 
-[bChatXLiveChat, voice and video messages, tokenised group chatsOpen →](https://www.bchatx.com)[bMoviesLiveWatch and back tokenised filmsRead more →](https://bwalletx.com/bapps/bmovies)[bMusicLiveTokenise your music; fans who hold it make the video with youOpen →](https://www.bmovies.app/bmusic)[bMintLiveDesign, stamp and mint tokens, currency and media on-chainOpen →](https://www.bitcoin-mint.com/mint)[bWriterLiveWrite and save documents on-chainOpen →](https://bitcoin-writer.com/)
+[bChatXLiveChat, voice and video messages, tokenised group chatsOpen →](https://www.bit-sign.online)[bMoviesLiveWatch and back tokenised filmsRead more →](https://bwalletx.com/bapps/bmovies)[bMusicLiveTokenise your music; fans who hold it make the video with youOpen →](https://www.bmovies.app/bmusic)[bMintLiveDesign, stamp and mint tokens, currency and media on-chainOpen →](https://www.bitcoin-mint.com/mint)[bWriterLiveWrite and save documents on-chainOpen →](https://bitcoin-writer.com/)
 
 ### Work
 
@@ -1285,7 +1285,7 @@ Talk live. Keep it.
 
 Live audio Spaces inside bWalletX. Host a conversation, bring people up on stage, and turn the best ones into podcast episodes.
 
-[Join the Lounge](https://www.bchatx.com/r/BRADIO)[Get bWalletX](https://bwalletx.com/get)
+[Join the Lounge](https://www.bit-sign.online/r/BRADIO)[Get bWalletX](https://bwalletx.com/get)
 
 ## Host a Space
 
@@ -1295,7 +1295,7 @@ A live bar and a mini player keep the Space with you while you move around the w
 
 ## The bRadio Lounge
 
-An open stage that’s always there. Drop in, listen, raise a hand. [Join the Lounge](https://www.bchatx.com/r/BRADIO).
+An open stage that’s always there. Drop in, listen, raise a hand. [Join the Lounge](https://www.bit-sign.online/r/BRADIO).
 
 ## Keep the good ones
 
@@ -1323,7 +1323,7 @@ Spaces are free in every edition. Paid listening is in bWalletX: the [direct dow
 
 - LivePodcast NFTs. Own an episode, listen in full, sell it on the Exchange.
 
-[Join the Lounge](https://www.bchatx.com/r/BRADIO)[Get bWalletX](https://bwalletx.com/get)
+[Join the Lounge](https://www.bit-sign.online/r/BRADIO)[Get bWalletX](https://bwalletx.com/get)
 
 bWalletX is in beta: test with small amounts. Questions: [support@bwalletx.com](mailto:support@bwalletx.com)
 
@@ -2125,6 +2125,10 @@ $999to set up, then $99 a year
 
 - Built for you, and you approve it before it goes live
 
+- A token for your business, issued with your wallet
+
+- The option to go through the bDojoX programme
+
 Branded editions are only for the verified owner of the brand. We check. The wallet keeps a small “powered by bWalletX”. We can decline a design that impersonates someone or misleads people. Smaller and larger options are on [Custom editions](https://bwalletx.com/themes/custom).
 
 ## Add-ons
@@ -2134,6 +2138,14 @@ Priced separately. We quote before any work starts.
 ### Brand kit and ad film Live
 
 Logo, colours, type and voice, or a short animated ad film, made by b at [bAdvertisingX](https://badvertisingx.com). One fixed price, quoted first.
+
+### Web design
+
+A website for your business that works with your wallet: sign in with it, take payments in it. Quoted to your brief.
+
+### Advertising and marketing
+
+Campaigns, share images and launch posts around your edition and your token. Quoted to your brief.
 
 ### Share register support Testing
 
@@ -2980,7 +2992,7 @@ Go live in a token room or a Space; who can watch, and what is next. [More](http
 
 ### bChatX on the web
 
-Chat lives on the web at [bchatx.com](https://www.bchatx.com): feed, rooms and [Spaces](https://www.bchatx.com/spaces), where anyone can listen without signing in. Sign in with bWalletX.
+Chat lives on the web at [bchatx.com](https://www.bit-sign.online): feed, rooms and [Spaces](https://www.bit-sign.online/spaces), where anyone can listen without signing in. Sign in with bWalletX.
 
 ### BountiesbWalletX
 
@@ -3008,7 +3020,7 @@ Type `/b` in any chat and bWalletX's own assistant answers there, day or night. 
 
 ### bWallet Lounge
 
-The community room on [bChatX](https://www.bchatx.com/room/LOUNGE): ask questions, meet other users, talk to the team.
+The community room on [bChatX](https://www.bit-sign.online/chat?room=LOUNGE): ask questions, meet other users, talk to the team.
 
 ## 📈Exchange and media
 
@@ -3140,6 +3152,60 @@ Some features are still in beta and vary by platform. What shipped when: [releas
 
 ---
 
+Source: https://bwalletx.com/feedback
+
+# Tell b what you think.
+
+Something broke, or you have an idea? Send it here. Every report is read.
+
+## Ways to send feedback
+
+-
+
+### Report to b, in the app
+Live
+
+Tap Report to b on any error screen in bWalletX. It files a report that b reads, and you get a reference number.
+
+-
+
+### Email
+Live
+
+Write to [support@bwalletx.com](mailto:support@bwalletx.com).
+
+-
+
+### Security issues: b-Aware
+Live
+
+Anything touching funds, keys or approvals goes to [b-Aware](https://bwalletx.com/b-aware). It stays private and is never posted publicly.
+
+-
+
+### The Lounge chat room
+Paused
+
+bChatX is temporarily unavailable. For now, the Lounge is open at [bit-sign.online](https://www.bit-sign.online/chat?room=LOUNGE).
+
+## What happens next
+
+- b reads your report and passes it to the team.
+
+- The team sorts it and decides what to do.
+
+- Fixed bugs appear on [Bugs](https://bwalletx.com/bugs). Suggestions appear on [Ideas](https://bwalletx.com/ideas).
+
+- Security reports are never published before the fix ships.
+
+- We never publish your name, handle, address or other personal details.
+
+See also: [Ideas](https://bwalletx.com/ideas) · [Bugs](https://bwalletx.com/bugs) · [b-Aware](https://bwalletx.com/b-aware) · [Releases](https://bwalletx.com/releases)
+
+[Get bWalletX](https://bwalletx.com/get)
+
+---
+
 Source: https://bwalletx.com/flick-off
 
 FLICK OFF
@@ -3235,7 +3301,7 @@ LIVE
 ### bChatX
 
 Where your X posts land.
-[bchatx.com →](https://bchatx.com)
+[bchatx.com →](https://www.bit-sign.online)
 
 LIVE
 ### bVideoX
@@ -3582,7 +3648,7 @@ The family
 Claim one name in bWalletX and every site here knows you. No new accounts: all roads lead to your wallet.
 
 - [bWalletXbwalletx.comLive The wallet: web, Android, Chrome, Desktop](https://bwalletx.com)
-- [bChatXbchatx.comLive Rooms, DMs and live Spaces](https://bchatx.com)
+- [bChatXbchatx.comLive Rooms, DMs and live Spaces](https://www.bit-sign.online)
 - [bMailXbmailx.comLive Sealed letters with a stamp that pays](https://bmailx.com)
 - [bRadioXbradiox.comLive Live shows you can join on air](https://bradiox.com)
 
@@ -3797,7 +3863,7 @@ Also this week
 
 ## Rooms, spots, ice-cream.
 
-[bChatX roomsLive · a token per room](https://www.bchatx.com/room/new/invite/b-creative)[b creativeThe spot](https://bwalletx.com/b-creative)[Digital Ice-CreamThree friends, one token](https://bwalletx.com/digital-ice-cream)[bAppsLive · all 19](https://bwalletx.com/bapps)
+[bChatX roomsLive · a token per room](https://www.bit-sign.online/room/new/invite/b-creative)[b creativeThe spot](https://bwalletx.com/b-creative)[Digital Ice-CreamThree friends, one token](https://bwalletx.com/digital-ice-cream)[bAppsLive · all 19](https://bwalletx.com/bapps)
 
 Hodl my b · Edition 1 · 10
 
@@ -4056,7 +4122,7 @@ Part of bWalletX
 
 Each of these sites runs on bWalletX. Sign in once with your wallet and they all work together.
 
-[LivebChatXChat, token rooms and live Spaces. Sign in with bWalletX.](https://www.bchatx.com)
+[LivebChatXChat, token rooms and live Spaces. Sign in with bWalletX.](https://www.bit-sign.online)
 [LivebMailXEmail that pays. Your name@bmailx.com comes with your bWalletX name.](https://bmailx.com)
 [LivebRadioXLive shows in the bRadio Lounge. Raise your hand to speak.](https://bradiox.com)
 [LivebCalXThe calendar of live Spaces. Add one to your calendar in a tap.](https://bcalx.com)
@@ -4128,7 +4194,7 @@ Apps only see the details you approve. Nothing is shared by default.
 ## Join the testing waitlist
 
 Sign up on bwallet.space to test bWalletX on iPhone and get new Android builds as they land.
-Join the waitlist →](https://www.bchatx.com)
+Join the waitlist →](https://www.bit-sign.online)
 
 ## bWalletX on Android, iPhone and Chrome.
 
@@ -4749,7 +4815,7 @@ Send BSV, MNEE or a token straight to . No middleman, no fee from us.
 
 Message on bChatX. Your conversation becomes a room you both own.
 
-[Open chat](https://bchatx.com)
+[Open chat](https://www.bit-sign.online)
 
 ## bWalletX
 
@@ -5890,7 +5956,7 @@ Source: https://bwalletx.com/sign-in-with-handcash
 
 Already have a HandCash account? You can use it to sign in to bChatX. The best way in is with bWalletX; HandCash works too. You keep your name and your friends, and you get your own bWalletX address.
 
-[Open bChatX](https://bchatx.com)[Get bWalletX](https://bwalletx.com/get)
+[Open bChatX](https://www.bit-sign.online)[Get bWalletX](https://bwalletx.com/get)
 
 ## How it works
 
@@ -7088,15 +7154,15 @@ Source: https://bwalletx.com/themes-custom
 
 Free · bWalletYour brand →
 
-Meme-themed wallets
+Branded wallets for businesses
 
-Meme wallets for memecoin communities Sheet 00 / 05
+For your customers, members and shareholders Sheet 00 / 06
 
-# Your brand’s own wallet. From $99.
+# Your company’s own wallet. From $99.
 
-A frog-themed wallet for a frog coin. Your colours, card art, icon and name, on a self-custody wallet your community already trusts to work.
+A wallet with your name on it, for the people you serve: a gallery’s collectors, a club’s members, a firm’s clients. Your colours, card art, icon and name, on a self-custody wallet.
 
-Every user still gets bWallet free. This is for brands and token communities who want their own: $99 a year, made by us. Anyone holding your token gets its theme free, automatically (coming).
+Every user still gets bWallet free. This is for businesses that want their own: from $99 a year, made by us. Later, the same wallet can show your shareholders their holding. [See the route](#route).
 
 [Order yours](https://bwalletx.com/themes/custom/orderform)[See prices](#tiers)
 
@@ -7110,15 +7176,15 @@ you@bwalletx.com
 
 Free
 
-🐸
+N
 
-🐸$FROG wallet · Ribbit.
+NNorthgate Property · Tenants
 
 $1,284.50
 
-4,200,000 FROG
+Example · property company
 
-wallet.yourcoin.com
+wallet.yourbrand.com
 
 From $99
 
@@ -7132,43 +7198,49 @@ Date16.10.2026
 
 DrawnbWalletX
 
-01 / 05  Who it’s for
+01 / 06  Who it’s for
 
-## Built for token owners.
+## Built for businesses.
 
-Own a token? Give your holders a wallet with its name on. Use it to promote the token, build a product around it, or start a business on chain.
+Give your customers, members or shareholders a wallet with your name on it. Pay and get paid, hold your company’s tickets or tokens, and later see a shareholding, all in one place.
 
-Token owners
+Examples below are fictional businesses, to show the idea.
 
-### Promote, build, start up
+Galleries & labels
 
-- Promote your token with a wallet in its colours
-- Build a product on it, or start a business on chain
+### Atelier Nine · Low Tide Records
 
-Memecoin communities
+- A gallery wallet for collectors, a label wallet for fans
+- Your artwork or sleeve art on every card
 
-### Meme wallets
+Property & professional firms
 
-- A wallet themed on your meme, for your holders
-- A frog-themed wallet for a frog coin, a dog wallet for a dog coin
+### Northgate Property · Fairway Partners
 
-Businesses
+- A wallet for tenants, clients or partners, in your house colours
+- A calm, serious look that matches your letterhead
 
-### Your user base, your culture
+Shops & clubs
 
-- Give customers a wallet in your colours and name
-- Grow a community around what you sell
+### Ember & Bean · The Hollis Club
 
-Artists & creators
+- A coffee roaster’s wallet for regulars, a members’ club card for members
+- Your name, your icon, on their phone
 
-### An edition for your fans
+Start-ups
 
-- VexVoid is the showcase. [See the VexVoid edition](https://bwalletx.com/themes/vexvoid)
-- Your art on every card
+### Ledgerline
+
+- A fintech start-up ships its own wallet without building one
+- When you have shareholders, they can see their holding there too. [See the route](#route)
 
 Run a wallet brand, or want to bring one back? Relaunch it on bWallet: a modern self-custody base, your name on top.
 
-02 / 05  Prices
+Community editions
+
+Artists and token communities have editions too: [VexVoid](https://bwalletx.com/themes/vexvoid) is the showcase. [See all themes](https://bwalletx.com/themes).
+
+02 / 06  Prices
 
 ## Three editions. Price first.
 
@@ -7186,6 +7258,8 @@ $99 a year
 
 - Built for you; you approve it
 
+- bWalletX Connect on your website, set up by us: your customers sign in and pay with their wallet ([how it works](https://bwalletx.com/connect))
+
 Renews yearly
 
 Spec B
@@ -7199,6 +7273,12 @@ $999 set-up + $99 a year
 - Your name and brand throughout
 
 - Still runs on bWalletX: self-custody, keys stay with each user
+
+- Your own token: a token for your business, issued with your branded wallet
+
+- The option to go through [bDojoX](#route), if you want to
+
+Priced low so businesses can get started. Tokens and shares may be regulated; we don’t sell them for you.
 
 Renews yearly · [Enquire](https://bwalletx.com/clients)
 
@@ -7214,7 +7294,31 @@ By quote
 
 By quote
 
-03 / 05  The rules, in short
+Add-ons (priced separately)
+
+- QuotedWeb design: a site for your business. [Ask us](https://bwalletx.com/clients)
+
+- QuotedBranding: a brand kit, logo and style guide. [bAdvertisingX](https://badvertisingx.com)
+
+- QuotedAdvertising and marketing: ad films, campaigns and posts. [bAdvertisingX](https://badvertisingx.com)
+
+03 / 06  The route
+
+## The route: from your wallet to your share register.
+
+A branded wallet is where it starts. If your company has shareholders, the same wallet can one day show them what they hold. Here is the path, and where each step stands today.
+
+- Live1. Your branded wallet. Your customers, members or shareholders use a wallet with your name on it (Branded edition, above). Each person keeps their own keys.
+
+- Testing2. Your share register on [bSharesX](https://bsharesx.com). Keep your company’s register of members with bSharesX. The company keeps the register as the law asks, and its directors approve every entry; a token mirrors it on chain, and if the two ever differ, the register wins. Holders see their holding in their own wallet. Registers are in testing: the first register in testing is The Bitcoin Corporation Ltd, our own company. Setting up other companies’ registers is coming. [More on bShares](https://bwalletx.com/bshares)
+
+- Early3. Optional: [bDojoX](https://bdojox.com). If you want to go that route, bDojoX is a programme for companies on chain, belt by belt, from its first token to a register kept on chain. Five belts, five stages: token launched, partnership shares locked, registered company, capital raised, public listing. The first two use tools that are live in bWalletX; the register is in testing; the later belts are coming or planned, and none of them is open yet.
+
+Please read this. Shares are securities. We don’t issue or sell shares for you, raise money for you, give investment or legal advice, or get regulatory approval for you. You need your own legal advice before offering shares to anyone. bShares registers are in testing. Nothing on this page is an offer of securities.
+
+[Talk to us](https://bwalletx.com/clients)[bSharesX](https://bsharesx.com)[bDojoX](https://bdojox.com)
+
+04 / 06  The rules, in short
 
 ## Fair for you, safe for your users.
 
@@ -7224,7 +7328,7 @@ By quote
 
 - 03We can decline a theme that impersonates someone or misleads people.
 
-04 / 05  How to order
+05 / 06  How to order
 
 ## Fill in the order form.
 
@@ -7232,7 +7336,7 @@ Tell us your brand, your colours, a link to your logo and which edition you want
 
 [Open the order form](https://bwalletx.com/themes/custom/orderform)[For businesses](https://bwalletx.com/clients)[Message us on bChatX](https://www.bchatx.com/u/bwalletx)[Message @bWalletX on X](https://x.com/bWalletX)
 
-05 / 05  What’s live
+06 / 06  What’s live
 
 ## Where things stand.
 
@@ -9153,7 +9257,7 @@ Source: https://bwalletx.com/chat
 
 BSV is a messaging protocol at heart. Every transaction can carry a message. So the conversation about BSV should live on BSV, in the same wallet that holds your coins and tokens.
 
-[Get bWalletX](https://bwalletx.com/get)[Open bChatX](https://www.bchatx.com)
+[Get bWalletX](https://bwalletx.com/get)[Open bChatX](https://www.bit-sign.online)
 
 ## Why
 
@@ -9174,7 +9278,7 @@ Boards on the Vulpine network.](https://fwetch.lol)
 [### Peck
 A BSV feed built on Bitcoin Schema.](https://peck.to)
 [### bChatX
-Our full chat app. Rooms, feed and messages.](https://www.bchatx.com)
+Our full chat app. Rooms, feed and messages.](https://www.bit-sign.online)
 
 Twetch, Treechat, Fwetch and Peck are made by other teams, not The Bitcoin Corporation.
 
@@ -9207,7 +9311,7 @@ Each item is marked by what the code does today.
 Download bWalletX, open the Chat tab, and join the bWallet Lounge. Buy a token to get into its room. Or open bChat in a browser and sign in with your wallet.
 
 [Get bWalletX](https://bwalletx.com/get)
-[Open bChatX](https://www.bchatx.com)
+[Open bChatX](https://www.bit-sign.online)
 
 Building a BSV app? Let your users sign in with bWalletX: [bwalletx.com/connect](https://bwalletx.com/connect).
 
@@ -9376,7 +9480,7 @@ Holding a token to get in costs nothing extra. Payments go wallet to wallet; you
 
 - LiveToken rooms. Hold a token to enter a room. In bChat and in bWalletX.
 
-- LiveSpaces in bChat. A host, speakers and listeners, a raise-hand queue, and opt-in camera for people on stage. On the web at [bchatx.com/spaces](https://www.bchatx.com/spaces), where anyone can listen without signing in. Runs on our own video server.
+- LiveSpaces in bChat. A host, speakers and listeners, a raise-hand queue, and opt-in camera for people on stage. On the web at [bchatx.com/spaces](https://www.bit-sign.online/spaces), where anyone can listen without signing in. Runs on our own video server.
 
 - Live1:1 voice and video calls in bWalletX.
 
@@ -9408,7 +9512,7 @@ Source: https://bwalletx.com/lounge
 
 The Lounge is where bWallet and bWalletX people talk. Ask a question, share an idea, tell us what's broken. The team is in there too.
 
-[Open the Lounge on bChatX](https://www.bchatx.com/room/LOUNGE)
+[Open the Lounge on bChatX](https://www.bit-sign.online/chat?room=LOUNGE)
 
 ## Already in your wallet
 
@@ -9424,7 +9528,7 @@ Stuck at 2am and nobody's around? Type `/b` followed by your question and the $b
 
 ## How to join
 
-- Open [bchatx.com/room/LOUNGE](https://www.bchatx.com/room/LOUNGE).
+- Open [bchatx.com/room/LOUNGE](https://www.bit-sign.online/chat?room=LOUNGE).
 
 - Sign in with bWalletX, or with X or Google.
 
@@ -10501,7 +10605,7 @@ Web walletYour browser’s speech recognition (Chrome, Edge, Safari). Firefox fa
 
 Chrome extensionBrowser speech recognitionOpens a permission tab once to ask for the microphone
 
-The same gesture works on [bChatX.com](https://www.bchatx.com/ask-b) too, in Ask b.
+The same gesture works on [bChatX.com](https://web.bwalletx.com/m/ask-b) too, in Ask b.
 
 ## Same rules as typing
 

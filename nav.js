@@ -110,10 +110,11 @@
           { label: 'Partnership shares (coming)', href: '/partnership-shares' },
           { label: 'bWeb (coming)', href: '/bweb' }
         ] },
-      { label: 'Agents', href: '/agents', pages: ['/agents', '/agent', '/ideas', '/bugs', '/b-Aware', '/b-aware', '/hold-to-talk', '/strategies', '/strategies/spec', '/cli', '/mcp'],
+      { label: 'Agents', href: '/agents', pages: ['/agents', '/agent', '/feedback', '/ideas', '/bugs', '/b-Aware', '/b-aware', '/hold-to-talk', '/strategies', '/strategies/spec', '/cli', '/mcp'],
         sub: [
           { label: 'Agent accounts', href: '/agents' },
           { label: 'b agent', href: '/agent' },
+          { label: 'Feedback', href: '/feedback' },
           { label: 'Ideas', href: '/ideas' },
           { label: 'Bugs', href: '/bugs' },
           { label: 'b-Aware', href: '/b-Aware' },
