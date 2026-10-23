@@ -74,10 +74,10 @@ bwalletx strategy load ./slow-accumulator.json --account trader
 bwalletx agent run trader            # run its strategy unattended
 bwalletx log --account trader
 bwalletx stop                        # kill switch: refuse every spend</code></pre>
-      <h2>What works today (v0.2)</h2>
+      <h2>What works today (v0.5)</h2>
       <div class="box"><h3>Live</h3><p>Balances, prices, the activity log, sending BSV to an address or paymail, and buying BSV-21 tokens from the Exchange. Strategies run by <code>agent run</code> trade for real once you load them live.</p></div>
       <div class="box"><h3>Paired or key file</h3><p><strong>Paired</strong> (<code>bwalletx login</code>): the phone checks and signs every request, so bWalletX must be open on that agent account. <strong>Key file</strong>: runs unattended on a server.</p></div>
-      <div class="box"><h3>Coming</h3><p>Minting is built in the source on GitHub and comes to npm with the next published version. Selling and buying listings (<code>list</code>, <code>unlist</code>, <code>listings</code>, <code>buy-listing</code>) are built in the source too (bwalletx 0.5.0, not on npm yet; npm has 0.2.0).</p></div>
+      <div class="box"><h3>New in 0.5</h3><p>Minting (<code>mint</code>, <code>mint-manifest</code>), selling and buying listings (<code>list</code>, <code>unlist</code>, <code>listings</code>, <code>buy-listing</code>), and the account&rsquo;s own BRC-100 wallet (<code>brc</code>, <code>fund</code>, <code>withdraw</code>). Install or update with <code>npm i -g bwalletx</code>.</p></div>
       <h2>Your keys stay safe</h2>
       <div class="box"><h3>Agent accounts only</h3><p>Only agent accounts can be exported, never your main wallet. The key file is encrypted with a passphrase you choose and stays encrypted on disk.</p></div>
       <div class="box"><h3>Limits</h3><p>The agent account's balance is the budget. Every spend is checked first: the kill switch, the daily cap, at most 30 spends an hour, then the strategy's rules. Every action is logged.</p></div>
