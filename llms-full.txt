@@ -673,7 +673,8 @@ Get paid, sell, advertise and ship.
 Work, paid in Bitcoin.bjobsx.com →](https://bjobsx.com)[### bStoreXEarly
 Sell digital things, paid in Bitcoin.bstorex.com →](https://bstorex.com)[### bAdvertisingXLive
 Tell b about your business. Get the ad.badvertisingx.com →](https://badvertisingx.com)[### bDriveXEarly
-Your files and recordings, kept on chain.bdrivex.com →](https://bdrivex.com)[### b0-xEarly
+Your files and recordings, kept on chain.bdrivex.com →](https://bdrivex.com)[### bSearchXComing
+Search the chain: fast search across posts, apps and tokens.bsearchx.com →](https://bwalletx.com/b-family#bsearchx)[### b0-xEarly
 Deploy to Bitcoin.b0-x.com →](https://b0-x.com)
 
 Live you can use it today  ·  Early the site is up and the app is being built. Each site says exactly what works.
@@ -1037,7 +1038,6 @@ The picture above is a mockup of the design. Prices and details may change befor
 Source: https://bwalletx.com/bad
 
 bAds
-
 - [bAds](https://bwalletx.com/bads)
 
 ---
@@ -4513,6 +4513,7 @@ Each of these sites runs on bWalletX. Sign in once with your wallet and they all
 [ComingbFriendsXBring your people with you: your friends graph, owned by your wallet.](https://bfriendsx.com)
 [LivebDojoXA launchpad for startups on chain: form your company and raise in BSV.](https://bdojox.com)
 [ComingbDriveXYour files and recordings, kept on chain and paid for month by month.](https://bdrivex.com)
+[ComingbSearchXSearch the chain: fast search across posts, apps and tokens.](https://bwalletx.com/b-family#bsearchx)
 
 bApps
 
