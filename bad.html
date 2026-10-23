@@ -40,6 +40,7 @@
       .sound .dot { width: 9px; height: 9px; border-radius: 50%; background: #F5B800; }
       .sound[aria-pressed="true"] .dot { background: #6fe08f; }
       .ext h2 { margin: 56px 0 10px; font-size: 1.6rem; }
+      .ext > h2:first-child { margin-top: 8px; }
       .ext p, .ext li { line-height: 1.65; }
       .ext .lede { font-size: 1.15rem; color: #d8d4c8; max-width: 44em; }
       .ext .small { color: #8a8a86; font-size: 0.85rem; }
@@ -135,7 +136,7 @@
         render(LINES[0]);
         var k = matchMedia('(max-aspect-ratio: 1/1)').matches ? 'tall' : 'wide', base = 'https://badvertisingx.com/media/hero-' + k;
         v.poster = base.replace('hero-', 'hero-poster-') + '.jpg';
-        v.src = base + (v.canPlayType('video/webm; codecs="vp9, opus"') ? '.webm' : '.mp4');
+        v.src = base + '.mp4';
         v.play().catch(function () {});
         var last = 0;
         (function tick() { var li = Math.floor((v.currentTime || 0) / B / 8) % LINES.length; if (li !== last) { last = li; render(LINES[li]); } requestAnimationFrame(tick); })();
