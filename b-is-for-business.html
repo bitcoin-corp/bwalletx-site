@@ -27,8 +27,8 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" />
     <link rel="stylesheet" href="/styles.css" />
     <style>
-      /* b is for business (23 Oct 2026), in the Just b series: a 40-second film (skyline, City dawn, briefcase, tie,
-         boardroom, sign-in) over Phantom Echoes by VexVoid, then the calm text and the end card.
+      /* b is for business (23 Oct 2026), in the Just b series: a 40-second film (skyline, café payment, briefcase, City stride,
+         tie, coffee, sports car) over Phantom Echoes by VexVoid, then the calm text and the end card.
          The b in every line is the real logo, as on /just-b. Everything it says is live. */
       body { margin: 0; background: #000; color: #f1ead9; overflow-x: clip; }
       .film { position: relative; width: 100%; max-width: none; height: 100svh; min-height: 540px; margin: 0; padding: 0; border: 0; border-radius: 0; box-shadow: none; background: #000; overflow: hidden; color: #f1ead9; aspect-ratio: auto; }
@@ -40,6 +40,7 @@
       .s-tie { background: radial-gradient(circle at 50% 30%, #3d63c4 0%, #1f3b86 45%, #0c1a45 100%); }
       .s-sign { background: radial-gradient(circle at 50% 30%, #d99a3a 0%, #8f5418 45%, #3a1f08 100%); }
       .scene .ph { position: absolute; inset: -4%; width: 108%; height: 108%; object-fit: cover; transform: scale(1.02); filter: brightness(1.35) saturate(1.3) contrast(1.05); }
+      .scene .ph.lit { filter: none; }
       .scene.on .ph { animation: kb 9s ease-out forwards; }
       @keyframes kb { to { transform: scale(1.12) translate(-1.5%, -1%); } }
       .scene .shade { position: absolute; inset: 0; background: radial-gradient(ellipse at 50% 50%, rgba(0,0,0,.38), rgba(0,0,0,.08) 70%), linear-gradient(180deg, rgba(0,0,0,.1), transparent 30%, transparent 80%, rgba(0,0,0,.5)); }
@@ -136,7 +137,7 @@
       .jb-calm em { font-style: normal; color: var(--gold-hi); }
       .jb-calm a { color: #e8dfc6; }
       .jb-end { position: relative; min-height: 100svh; display: flex; align-items: center; justify-content: center; overflow: hidden; }
-      .jb-end > img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 60%; filter: brightness(1.3) saturate(1.25); }
+      .jb-end > img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 60%; filter: none; }
       .jb-end::after { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, #000 0%, rgba(0,0,0,.25) 30%, rgba(0,0,0,.25) 75%, #000 100%); }
       .jb-end-in { position: relative; z-index: 1; text-align: center; padding: 0 16px; }
       .jb-end-in h2 { margin: 0 0 30px; display: flex; justify-content: center; align-items: flex-start; flex-wrap: wrap; gap: 0 0.22em; font: 700 clamp(2.6rem, 10vw, 5rem) / 1 var(--hf); letter-spacing: -0.04em; text-shadow: 0 4px 40px rgba(0,0,0,.6); }
@@ -166,12 +167,12 @@
         <svg class="sky" id="sky" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMax slice" aria-hidden="true"></svg>
         <div class="cap"><h1><img class="lb" src="/logo.svg" alt="b" /><span>is for business</span></h1></div>
       </div>
-      <div class="scene" data-at="6.67">
-        <img class="ph" src="/images/btrust-london-dawn.jpg" alt="" loading="lazy" />
+      <div class="scene" data-at="6.5">
+        <img class="ph lit" src="/images/biz-shop.jpg" alt="" loading="lazy" />
         <div class="shade"></div>
         <div class="cap"><h2><img class="lb" src="/logo.svg" alt="b" /><span>paid</span></h2><p>In seconds, from your customer&rsquo;s own wallet. The network fee is usually well under a penny.</p></div>
       </div>
-      <div class="scene s-case" data-at="13.33">
+      <div class="scene s-case" data-at="13">
         <svg class="case" viewBox="-40 -170 480 420" aria-hidden="true">
             <defs>
               <linearGradient id="lea" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2a2622" /><stop offset="1" stop-color="#121010" /></linearGradient>
@@ -186,7 +187,12 @@
           </svg>
         <div class="cap"><h2><img class="lb" src="/logo.svg" alt="b" /><span>on the record</span></h2><p>Every payment has a receipt on chain. You, your customer and your accountant can all check it.</p></div>
       </div>
-      <div class="scene s-tie" data-at="20">
+      <div class="scene" data-at="19.5">
+        <img class="ph lit" src="/images/biz-stride.jpg" alt="" loading="lazy" />
+        <div class="shade"></div>
+        <div class="cap"><h2><img class="lb" src="/logo.svg" alt="b" /><span>on the move</span></h2><p>Your business wallet on your phone, on the web and in Chrome. Take payment wherever you are.</p></div>
+      </div>
+      <div class="scene s-tie" data-at="26">
         <svg class="tie" viewBox="0 0 160 420" aria-hidden="true">
             <path d="M58 10 L102 10 L112 52 L80 74 L48 52 Z" fill="#2b2f3a" stroke="#f5b800" stroke-width="2.5" stroke-linejoin="round" />
             <path d="M62 76 L98 76 L130 330 L80 410 L30 330 Z" fill="#20242e" stroke="#f5b800" stroke-width="2.5" stroke-linejoin="round" />
@@ -194,17 +200,13 @@
           </svg>
         <div class="cap"><h2><img class="lb" src="/logo.svg" alt="b" /><span>professional</span></h2><p>A business account beside your own, in the same wallet. Its own address, balance and history.</p></div>
       </div>
-      <div class="scene" data-at="26.67">
-        <img class="ph" src="/images/bshares-boardroom.jpg" alt="" loading="lazy" />
+      <div class="scene" data-at="32.5">
+        <img class="ph lit" src="/images/biz-coffee.jpg" alt="" loading="lazy" />
         <div class="shade"></div>
-        <div class="cap"><h2><img class="lb" src="/logo.svg" alt="b" /><span>prepared</span></h2><p>Pots for tax, wages and a rainy day. Lock savings until a date you choose.</p></div>
+        <div class="cap"><h2><img class="lb" src="/logo.svg" alt="b" /><span>relaxed</span></h2><p>Tax, wages and savings already set aside in pots. Lock savings until a date you choose.</p></div>
       </div>
-      <div class="scene s-sign" data-at="33.33">
-        <div class="signin" aria-hidden="true"><div class="who">yourshop.com</div><div class="bt">Sign in with bWalletX</div><div class="ok">✓ Signed in. No password.</div></div>
-        <div class="cap"><h2><img class="lb" src="/logo.svg" alt="b" /><span>welcoming</span></h2><p>Customers sign in to your site with their wallet. No passwords to store, no emails to leak.</p></div>
-      </div>
-      <div class="scene" data-at="40" data-end>
-        <img class="ph" src="/images/btrust-london-dawn.jpg" alt="" loading="lazy" />
+      <div class="scene" data-at="39" data-end>
+        <img class="ph lit" src="/images/biz-car.jpg" alt="" loading="lazy" />
         <div class="shade"></div>
         <div class="cap"><h2><img class="lb" src="/logo.svg" alt="b" /><span>is for business</span></h2><p>Less paperwork. More business. Just b.</p><p class="getp"><a class="jb-go" href="/get?from=b-is-for-business-film">Get bWalletX</a></p></div>
       </div>
@@ -238,7 +240,7 @@
     </section>
 
     <section class="jb-end">
-      <img src="/images/bshares-boardroom.jpg" alt="" loading="lazy" />
+      <img src="/images/biz-deal.jpg" alt="" loading="lazy" />
       <div class="jb-end-in">
         <h2><img class="lb" src="/logo.svg" alt="b" /><span>is for business</span></h2>
         <a class="jb-go" href="/get?from=b-is-for-business">Get bWalletX</a>
@@ -250,7 +252,7 @@
 
     <script>
       (function () {
-        var LEN = 40, END = 46;
+        var LEN = 44, END = 46;
         var film = document.getElementById('film'), poster = document.getElementById('poster'), bar = document.getElementById('bar');
         var scenes = [].slice.call(film.querySelectorAll('.scene'));
         [].forEach.call(document.querySelectorAll('.cap h1 > span, .cap h2 > span, .poster h1 > span'), function (w) {
