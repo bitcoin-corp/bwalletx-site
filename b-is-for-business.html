@@ -77,7 +77,9 @@
       .scene.on .ring.r2 { animation-delay: 2s; }
       .scene.on .ring.r3 { animation-delay: 3.2s; }
       @keyframes ripple { 0% { opacity: 0.8; transform: translate(-50%, -50%) scale(0.6); } 100% { opacity: 0; transform: translate(-50%, -50%) scale(1.9); } }
-      .cap.low { top: auto; bottom: 9%; transform: none; }
+      .scene.on .getp a { pointer-events: auto; }
+      .cap .getp { margin-top: 26px; }
+      .cap.low { top: auto; bottom: 7%; transform: none; }
       .cap.low h1, .cap.low h2 { font-size: clamp(2.2rem, 7vw, 5.4rem); }
       /* Scene 1: the skyline rises and lights up */
       .sky { position: absolute; inset: 0; width: 100%; height: 100%; }
@@ -232,7 +234,7 @@
       <div class="scene s-big s-big3" data-at="52" data-end>
         <div class="halo"></div><span class="ring"></span><span class="ring r2"></span><span class="ring r3"></span>
         <img class="bigb" src="/logo.svg" alt="" />
-        <div class="cap low"><h2><span>is for business</span></h2><p>Less paperwork. More business. Just b.</p></div>
+        <div class="cap low"><h2><span>is for business</span></h2><p>Less paperwork. More business. Just b.</p><p class="getp"><a class="jb-go" href="/get?from=b-is-for-business-film">Get bWalletX</a></p></div>
       </div>
 
 
