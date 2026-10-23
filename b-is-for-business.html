@@ -58,6 +58,8 @@
       .scene.on .lb, .poster .lb { animation: lbin 1s cubic-bezier(.2,1.4,.4,1) forwards, lbglow 5s 1.2s ease-in-out infinite; }
       @keyframes lbin { to { opacity: 1; transform: none; } }
       @keyframes lbglow { 0%, 100% { filter: drop-shadow(0 0 24px rgba(245,184,0,.35)); } 50% { filter: drop-shadow(0 0 56px rgba(245,184,0,.85)); } }
+      .scene.on .getp a { pointer-events: auto; }
+      .cap .getp { margin-top: 26px; }
       .scene.on .cap > p { animation: rise 2.2s cubic-bezier(.25,.1,.25,1) forwards; animation-delay: 1.2s; }
             @keyframes rise { to { opacity: 1; filter: none; transform: none; } }
 
@@ -204,7 +206,7 @@
       <div class="scene" data-at="40" data-end>
         <img class="ph" src="/images/btrust-london-dawn.jpg" alt="" loading="lazy" />
         <div class="shade"></div>
-        <div class="cap"><h2><img class="lb" src="/logo.svg" alt="b" /><span>is for business</span></h2><p>Less paperwork. More business. Just b.</p></div>
+        <div class="cap"><h2><img class="lb" src="/logo.svg" alt="b" /><span>is for business</span></h2><p>Less paperwork. More business. Just b.</p><p class="getp"><a class="jb-go" href="/get?from=b-is-for-business-film">Get bWalletX</a></p></div>
       </div>
 
       <div class="poster" id="poster">
