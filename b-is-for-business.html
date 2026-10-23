@@ -27,7 +27,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" />
     <link rel="stylesheet" href="/styles.css" />
     <style>
-      /* b is for business (23 Oct 2026), in the Just b series: a one-minute film (skyline, City dawn, briefcase, tie,
+      /* b is for business (23 Oct 2026), in the Just b series: a 40-second film (skyline, City dawn, briefcase, tie,
          boardroom, sign-in) over Phantom Echoes by VexVoid, then the calm text and the end card.
          The b in every line is the real logo, as on /just-b. Everything it says is live. */
       body { margin: 0; background: #000; color: #f1ead9; overflow-x: clip; }
@@ -45,7 +45,7 @@
       .scene .shade { position: absolute; inset: 0; background: radial-gradient(ellipse at 50% 50%, rgba(0,0,0,.38), rgba(0,0,0,.08) 70%), linear-gradient(180deg, rgba(0,0,0,.1), transparent 30%, transparent 80%, rgba(0,0,0,.5)); }
       .cap { position: absolute; left: 0; right: 0; top: 50%; transform: translateY(-50%); padding: 0 16px; text-align: center; z-index: 2; }
       .cap h1, .cap h2 { margin: 0; display: flex; justify-content: center; align-items: flex-start; flex-wrap: wrap; gap: 0 0.22em; font: 700 clamp(3rem, 12vw, 10rem) / 1 var(--hf); letter-spacing: -0.045em; text-shadow: 0 6px 60px rgba(0,0,0,.6); }
-      .lb { display: block; height: 1em; width: 0.74em; margin-top: 0.02em; filter: drop-shadow(0 0 30px rgba(245,184,0,.35)); }
+      .lb { display: block; height: 0.86em; width: calc(0.86em * 0.74); margin-top: 0.08em; filter: drop-shadow(0 0 30px rgba(245,184,0,.35)); }
       .cap p { margin: 22px auto 0; max-width: 620px; font: 500 clamp(1.05rem, 2.6vw, 1.35rem) / 1.55 var(--hf); letter-spacing: 0.01em; color: rgba(255,255,255,.9); text-shadow: 0 2px 18px rgba(0,0,0,.8); }
       
       .cap > p { opacity: 0; filter: blur(4px); transform: translateY(0.4em); }
@@ -61,24 +61,6 @@
       .scene.on .cap > p { animation: rise 2.2s cubic-bezier(.25,.1,.25,1) forwards; animation-delay: 1.2s; }
             @keyframes rise { to { opacity: 1; filter: none; transform: none; } }
 
-      /* Big b moments: the logo alone, centred and large, with a slow gold light turning behind it. */
-      .s-big { background: radial-gradient(circle at 50% 42%, #3a2a0e 0%, #120d05 55%, #000 100%); }
-      .s-big2 { background: radial-gradient(circle at 50% 42%, #2b5a94 0%, #102a4e 55%, #050b16 100%); }
-      .s-big3 { background: radial-gradient(circle at 50% 42%, #5a3d10 0%, #1c1206 55%, #000 100%); }
-      .bigb { position: absolute; left: 50%; top: 40%; height: min(46vh, 60vw); width: auto; opacity: 0; transform: translate(-50%, -50%) scale(0.5); filter: drop-shadow(0 0 60px rgba(245, 184, 0, 0.55)); z-index: 1; }
-      .scene.on .bigb { animation: bigin 1.6s cubic-bezier(.2,1.2,.3,1) forwards, bigfloat 6s 1.6s ease-in-out infinite; }
-      @keyframes bigin { to { opacity: 1; transform: translate(-50%, -50%) scale(1); } }
-      @keyframes bigfloat { 0%, 100% { opacity: 1; transform: translate(-50%, -50%) scale(1); } 50% { opacity: 1; transform: translate(-50%, -52%) scale(1.035); } }
-      .halo { position: absolute; left: 50%; top: 40%; width: min(90vh, 120vw); aspect-ratio: 1; border-radius: 50%; background: conic-gradient(from 0deg, transparent 0 10%, rgba(245,184,0,.32) 20%, transparent 32%, rgba(255,210,77,.22) 55%, transparent 68%, rgba(245,184,0,.28) 85%, transparent 95%); filter: blur(28px); opacity: 0; transform: translate(-50%, -50%); }
-      .scene.on .halo { animation: lit 2s .3s ease forwards, spin 20s linear infinite; }
-      @keyframes spin { from { transform: translate(-50%, -50%) rotate(0); } to { transform: translate(-50%, -50%) rotate(360deg); } }
-      .ring { position: absolute; left: 50%; top: 40%; width: min(46vh, 60vw); aspect-ratio: 1; border-radius: 50%; border: 2px solid rgba(255, 210, 77, 0.55); opacity: 0; transform: translate(-50%, -50%) scale(0.6); }
-      .scene.on .ring { animation: ripple 3.6s 0.8s ease-out infinite; }
-      .scene.on .ring.r2 { animation-delay: 2s; }
-      .scene.on .ring.r3 { animation-delay: 3.2s; }
-      @keyframes ripple { 0% { opacity: 0.8; transform: translate(-50%, -50%) scale(0.6); } 100% { opacity: 0; transform: translate(-50%, -50%) scale(1.9); } }
-      .cap.low { top: auto; bottom: 9%; transform: none; }
-      .cap.low h1, .cap.low h2 { font-size: clamp(2.2rem, 7vw, 5.4rem); }
       /* Scene 1: the skyline rises and lights up */
       .sky { position: absolute; inset: 0; width: 100%; height: 100%; }
       .sky .bld { transform-box: fill-box; transform-origin: 50% 100%; transform: scaleY(0); }
@@ -163,7 +145,7 @@
       .jb-foot a { color: #8a8273; }
       @media (prefers-reduced-motion: reduce) {
         .scene, .scene * { animation: none !important; transition: none !important; }
-        .scene .cap > *, .ch, .lb, .bigb, .halo, .sky .bld, .sky .win, .case .rcpt, .signin, .endb { opacity: 1 !important; filter: none !important; transform: none !important; }
+        .scene .cap > *, .ch, .lb, .sky .bld, .sky .win, .case .rcpt, .signin, .endb { opacity: 1 !important; filter: none !important; transform: none !important; }
       }
       /* The play button (owner, 23 Oct 2026): bigger, solid gold, a slow pulse that invites a tap. */
       .jb-play { position: relative; width: 120px; height: 120px; padding-left: 8px; border: 0 !important; border-radius: 50%; color: #0b0a08 !important; background: radial-gradient(circle at 35% 30%, #ffe48a, #f5b800 55%, #c98f00) !important; box-shadow: 0 18px 60px rgba(245, 184, 0, 0.45), inset 0 2px 0 rgba(255, 255, 255, 0.5); animation: jbpulse 2.6s ease-in-out infinite; }
@@ -177,22 +159,17 @@
     </style>
   </head>
   <body class="jb">
-    <section class="film" id="film" aria-label="b is for business: a one-minute film">
+    <section class="film" id="film" aria-label="b is for business: a 40-second film">
       <div class="scene s-sky" data-at="0">
         <svg class="sky" id="sky" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMax slice" aria-hidden="true"></svg>
         <div class="cap"><h1><img class="lb" src="/logo.svg" alt="b" /><span>is for business</span></h1></div>
       </div>
-      <div class="scene s-big " data-at="6.5">
-        <div class="halo"></div><span class="ring"></span><span class="ring r2"></span><span class="ring r3"></span>
-        <img class="bigb" src="/logo.svg" alt="" />
-        <div class="cap low"><h2><span>Bitcoin, for business</span></h2><p>Money that moves at the speed of the internet, with the receipt built in.</p></div>
-      </div>
-      <div class="scene" data-at="13">
+      <div class="scene" data-at="6.67">
         <img class="ph" src="/images/btrust-london-dawn.jpg" alt="" loading="lazy" />
         <div class="shade"></div>
         <div class="cap"><h2><img class="lb" src="/logo.svg" alt="b" /><span>paid</span></h2><p>In seconds, from your customer&rsquo;s own wallet. The network fee is usually well under a penny.</p></div>
       </div>
-      <div class="scene s-case" data-at="19.5">
+      <div class="scene s-case" data-at="13.33">
         <svg class="case" viewBox="-40 -170 480 420" aria-hidden="true">
             <defs>
               <linearGradient id="lea" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2a2622" /><stop offset="1" stop-color="#121010" /></linearGradient>
@@ -207,7 +184,7 @@
           </svg>
         <div class="cap"><h2><img class="lb" src="/logo.svg" alt="b" /><span>on the record</span></h2><p>Every payment has a receipt on chain. You, your customer and your accountant can all check it.</p></div>
       </div>
-      <div class="scene s-tie" data-at="26">
+      <div class="scene s-tie" data-at="20">
         <svg class="tie" viewBox="0 0 160 420" aria-hidden="true">
             <path d="M58 10 L102 10 L112 52 L80 74 L48 52 Z" fill="#2b2f3a" stroke="#f5b800" stroke-width="2.5" stroke-linejoin="round" />
             <path d="M62 76 L98 76 L130 330 L80 410 L30 330 Z" fill="#20242e" stroke="#f5b800" stroke-width="2.5" stroke-linejoin="round" />
@@ -215,33 +192,27 @@
           </svg>
         <div class="cap"><h2><img class="lb" src="/logo.svg" alt="b" /><span>professional</span></h2><p>A business account beside your own, in the same wallet. Its own address, balance and history.</p></div>
       </div>
-      <div class="scene s-big s-big2" data-at="32.5">
-        <div class="halo"></div><span class="ring"></span><span class="ring r2"></span><span class="ring r3"></span>
-        <img class="bigb" src="/logo.svg" alt="" />
-        <div class="cap low"><h2><span>open all hours</span></h2><p>A payment at 3am on a Sunday arrives the same as one on a Monday morning.</p></div>
-      </div>
-      <div class="scene" data-at="39">
+      <div class="scene" data-at="26.67">
         <img class="ph" src="/images/bshares-boardroom.jpg" alt="" loading="lazy" />
         <div class="shade"></div>
         <div class="cap"><h2><img class="lb" src="/logo.svg" alt="b" /><span>prepared</span></h2><p>Pots for tax, wages and a rainy day. Lock savings until a date you choose.</p></div>
       </div>
-      <div class="scene s-sign" data-at="45.5">
+      <div class="scene s-sign" data-at="33.33">
         <div class="signin" aria-hidden="true"><div class="who">yourshop.com</div><div class="bt">Sign in with bWalletX</div><div class="ok">✓ Signed in. No password.</div></div>
         <div class="cap"><h2><img class="lb" src="/logo.svg" alt="b" /><span>welcoming</span></h2><p>Customers sign in to your site with their wallet. No passwords to store, no emails to leak.</p></div>
       </div>
-      <div class="scene s-big s-big3" data-at="52" data-end>
-        <div class="halo"></div><span class="ring"></span><span class="ring r2"></span><span class="ring r3"></span>
-        <img class="bigb" src="/logo.svg" alt="" />
-        <div class="cap low"><h2><span>is for business</span></h2><p>Less paperwork. More business. Just b.</p></div>
+      <div class="scene" data-at="40" data-end>
+        <img class="ph" src="/images/btrust-london-dawn.jpg" alt="" loading="lazy" />
+        <div class="shade"></div>
+        <div class="cap"><h2><img class="lb" src="/logo.svg" alt="b" /><span>is for business</span></h2><p>Less paperwork. More business. Just b.</p></div>
       </div>
-
 
       <div class="poster" id="poster">
         <img class="bg" src="/images/btrust-london-dawn.jpg" alt="" fetchpriority="high" />
         <div class="in">
           <h1><img class="lb" src="/logo.svg" alt="b" /><span>is for business</span></h1>
           <button type="button" class="jb-play" id="play" aria-label="Play b is for business with sound"><svg viewBox="5 3 18 18" width="46" height="46" aria-hidden="true"><path d="M8 5.5v13l11-6.5z" fill="currentColor" /></svg></button>
-          <p class="gate-l">Play the film &middot; 1:00</p>
+          <p class="gate-l">Play the film &middot; 0:40</p>
           <button type="button" class="quiet" id="quiet">Watch without sound</button>
         </div>
       </div>
@@ -277,7 +248,7 @@
 
     <script>
       (function () {
-        var LEN = 58, END = 64;
+        var LEN = 40, END = 46;
         var film = document.getElementById('film'), poster = document.getElementById('poster'), bar = document.getElementById('bar');
         var scenes = [].slice.call(film.querySelectorAll('.scene'));
         [].forEach.call(document.querySelectorAll('.cap h1 > span, .cap h2 > span, .poster h1 > span'), function (w) {
