@@ -283,6 +283,7 @@
     cta.insertBefore(bc, gh.nextSibling);
   }
 
+  // Phones hide the section pill row (it wrapped to many rows and covered heroes; owner, 23 Oct 2026). Menu has the same links.
   var css = document.createElement('style');
   css.textContent =
     '.topbar .sub-nav a[aria-current="page"]{color:#000!important;background:#F5B800;border-color:#F5B800}' +
@@ -307,7 +308,7 @@
     '.m-follow{display:flex;flex-wrap:wrap;gap:4px;margin:10px 0 0}.m-follow a{padding:6px 10px!important;font-size:.85rem}' +
     '@media (max-width:859px){.topbar nav[aria-label="Pages"]{display:none!important}.menu-btn{display:inline-block}' +
     '.topbar-in:has(nav[aria-label="Pages"]){flex-wrap:nowrap!important;height:64px!important;padding-top:0!important}' +
-    '.nav-cta .x-link,.nav-cta .web-btn{display:none}.topbar nav.m-menu:not([hidden]){display:block}.brand{flex:none}main.ext{padding-top:120px!important}html.has-subnav main.ext{padding-top:max(160px,calc(var(--nav-h,0px) + 36px))!important}html.has-subnav .topbar{position:absolute}}' +
+    '.nav-cta .x-link,.nav-cta .web-btn{display:none}.topbar nav.m-menu:not([hidden]){display:block}.brand{flex:none}main.ext{padding-top:120px!important}html.has-subnav main.ext{padding-top:120px!important}.topbar .sub-nav{display:none!important}}' +
     '@media (min-width:860px){.m-menu{display:none!important}}' +
     // Paper pages (body.paper: /themes, /b-creative, ...): the Menu button and phone menu in ink, not white.
     'body.paper .menu-btn{color:var(--ink,#111);border-color:var(--ink,#111)}body.paper .m-menu{background:var(--sheet,#fff);border-top-color:var(--hair,#d9d6ce)}body.paper .m-menu details{border-bottom-color:var(--hair,#d9d6ce)}body.paper .m-menu summary,body.paper .m-menu a.m-top{color:var(--ink,#111)}body.paper .m-menu a{color:var(--muted,#5d5b56)}' +
