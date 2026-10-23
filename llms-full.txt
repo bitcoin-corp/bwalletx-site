@@ -1,6 +1,6 @@
 # bWalletX: full site text
 
-Generated 2026-10-22 from https://bwalletx.com. Source pages are linked above each section.
+Generated 2026-10-23 from https://bwalletx.com. Source pages are linked above each section.
 
 ---
 
@@ -247,6 +247,28 @@ Where to find b
 - In the bWalletX apps: tap b. [Get bWalletX](https://bwalletx.com/get?from=ask-b)
 
 b runs on your own AI key, or on paid messages. Nothing is paid until you confirm.
+
+Help and support
+
+Stuck, or something not working? Here is how to reach us.
+
+- Ask b in the app. Tap b and describe the problem in your own words. b looks into it with you, and passes anything it can’t fix to the team.
+
+- Email us: [support@bwalletx.com](mailto:support@bwalletx.com). Never send your 12 words, password or backup file to anyone, including us.
+
+- Report a bug: [bwalletx.com/bugs](https://bwalletx.com/bugs), or tap Report to b on any error in the app.
+
+- Talk to other users: [the Lounge](https://bwalletx.com/lounge), the chat room every bWalletX user can join.
+
+Quick answers
+
+Lost or new phone? Install bWalletX and choose Restore, then use your 12 words or your encrypted backup file. [How restoring works](https://bwalletx.com/restore).
+
+Can you get my money back? No. bWalletX is self-custody: your keys stay on your device and we never hold them, so we can’t see, move or recover your funds. Keep your 12 words safe and offline.
+
+What does it cost? The app is free. Bitcoin SV network fees are usually a fraction of a penny per payment.
+
+Privacy. See our [privacy policy](https://bwalletx.com/privacy) and [terms](https://bwalletx.com/terms).
 
 ## Less noise. More life.
 
@@ -524,7 +546,7 @@ Music: [Echoes in the Fog by VexVoid](https://www.bchatx.com/u/vexvoid)
 
 Sound
 
-[just b](https://bwalletx.com/just-b) · [b cool](https://bwalletx.com/b-cool) · [b creative](https://bwalletx.com/b-creative)
+[just b](https://bwalletx.com/just-b) · [b cool](https://bwalletx.com/b-cool) · [b creative](https://bwalletx.com/b-creative) · [b is for business](https://bwalletx.com/b-is-for-business)
 
 bWalletX is in beta: test with small amounts. [support@bwalletx.com](mailto:support@bwalletx.com)
 
@@ -574,9 +596,96 @@ If you've built something on BSV, add it to the Apps screen of bWallet and bWall
 
 The Apps screen in bWalletX.
 
-[just b](https://bwalletx.com/just-b) · [b cool](https://bwalletx.com/b-cool) · [b creative](https://bwalletx.com/b-creative)
+[just b](https://bwalletx.com/just-b) · [b cool](https://bwalletx.com/b-cool) · [b creative](https://bwalletx.com/b-creative) · [b is for business](https://bwalletx.com/b-is-for-business)
 
 Example coins are invented. Music is generated live in your browser. Share-image emoji: [Twemoji](https://github.com/jdecked/twemoji), CC-BY 4.0. [support@bwalletx.com](mailto:support@bwalletx.com)
+
+---
+
+Source: https://bwalletx.com/b-is-for-business
+
+b is for business
+
+-
+
+-
+
+-
+
+-
+
+-
+
+-
+
+-
+
+# is for business
+
+## paid
+
+In seconds, from your customer’s own wallet. The network fee is usually well under a penny.
+
+## on the record
+
+Every payment has a receipt on chain. You, your customer and your accountant can all check it.
+
+## professional
+
+A business account beside your own, in the same wallet. Its own address, balance and history.
+
+## prepared
+
+Pots for tax, wages and a rainy day. Lock savings until a date you choose.
+
+yourshop.com
+
+Sign in with bWalletX
+
+✓ Signed in. No password.
+
+## welcoming
+
+Customers sign in to your site with their wallet. No passwords to store, no emails to leak.
+
+## is for business
+
+Less paperwork. More business. Just b.
+
+[Get bWalletX](https://bwalletx.com/get?from=b-is-for-business-film)
+
+# is for business
+
+Play the film · 0:40
+
+Watch without sound
+
+Open for business.
+You’re in charge.
+
+Get paid in seconds. Customers pay from their own wallet, straight into yours. No card processor in the middle, and the network fee is usually well under a penny.
+
+A receipt for everything. Every payment is recorded on Bitcoin. Anyone with the link can check it, including your accountant.
+
+Business and personal, kept apart. Add a business account in the same wallet, with its own address, balance and history.
+
+Money that knows where it’s going. Pots for tax, wages and a rainy day. Lock savings away until the date you choose.
+
+Customers sign in with their wallet. No passwords to store and no emails to leak. A script tag and two routes on your server. [How it works](https://bwalletx.com/direct)
+
+Agents with a spending limit. Give an agent its own account with a daily limit and a Stop button, in the [bwalletx command line](https://bwalletx.com/developers). Shop agents are next: [business agents](https://bwalletx.com/business-agents).
+
+Less paperwork. More business. Just b.
+
+## is for business
+
+[Get bWalletX](https://bwalletx.com/get?from=b-is-for-business)
+
+Music: [Phantom Echoes by VexVoid](https://www.bchatx.com/u/vexvoid). Questions from a business? [Write to us](mailto:support@bwalletx.com?subject=bWalletX%20for%20my%20business)
+
+[just b](https://bwalletx.com/just-b) · [b cool](https://bwalletx.com/b-cool) · [b creative](https://bwalletx.com/b-creative) · [b is for business](https://bwalletx.com/b-is-for-business)
+
+bWalletX is in beta: test with small amounts. [support@bwalletx.com](mailto:support@bwalletx.com)
 
 ---
 
@@ -1025,6 +1134,249 @@ Spaces are free in every edition. Paid listening is in bWalletX: the [direct dow
 [Join the Lounge](https://www.bchatx.com/r/BRADIO)[Get bWalletX](https://bwalletx.com/get)
 
 bWalletX is in beta: test with small amounts. Questions: [support@bwalletx.com](mailto:support@bwalletx.com)
+
+---
+
+Source: https://bwalletx.com/brand
+
+# TheWalletXbrand
+
+A gold b on black, a calm voice and a handful of rules that keep everything we make looking and sounding like us. Use our logo freely to point people to bWalletX. Please keep it as it is.
+
+[Download the brand kit](https://bwalletx.com/brand/bwalletx-brand-kit.zip)[Read the full brand guide](https://docs.bwalletx.com/brand/)
+
+[The idea](#idea)[Logo](#logo)[Versions](#versions)[Name](#name)[Misuse](#misuse)[Colour](#colour)[Type](#type)[Voice](#voice)[Imagery](#imagery)[Motion and sound](#motion)[Buttons](#buttons)[Family](#family)[Your brand](#services)[Press](#press)
+
+## 01 · THE IDEAb is for Bitcoin.
+
+The b is Bitcoin, made personal: your money, your keys, your name. Everything we make should feel calm and in control, never noisy or speculative.
+
+Less noise.No hype, no charts shouting at you, no jargon. We say what something does, in everyday words.
+
+More life.Money that gets out of the way, so people can get on with music, friends, work and the things they love.
+
+Just b.Simple and confident. One gold letter is enough; we don’t need to explain ourselves twice.
+
+## 02 · LOGOThe gold b.
+
+Our logo is the letter b alone, drawn from two simple shapes: a stem with a 45° flag cut across the top, and a round bowl. There is no X in the mark; the X lives in the name.
+
+- The stem is 18 units wide, cut at 45° across the top: the bCorp flag.
+
+- The bowl is a circle (radius 33) with a round counter (radius 15).
+
+- They meet cleanly. The stem ends exactly where the bowl’s edge is upright, so the left side runs in one unbroken line.
+
+- The gold runs top to bottom across the whole letter: #FFE58A, #FFD24D, #C98F00.
+
+xx
+
+16 px min24 px34 px header80 px
+
+Clear space: keep at least x clear all round, where x is the width of the counter (the hole). Minimum size: 16 px tall on screen, 6 mm in print.
+
+## 03 · VERSIONSUse the right one.
+
+Gold on black is the logo. Use the others only when gold can’t work.
+
+Gold gradientThe logo. On black or deep colour.
+[SVG](https://bwalletx.com/logo.svg) · [PNG 1024](https://bwalletx.com/brand/bwalletx-logo-1024.png) · [PNG 512](https://bwalletx.com/brand/bwalletx-logo-512.png)
+
+Flat goldWhere gradients print or stitch badly.
+[SVG](https://bwalletx.com/brand/bwalletx-logo-flat.svg)
+
+WhiteOn photos or busy colour, when gold won’t read.
+
+BlackOn white and light themes, and one-colour print.
+
+App iconThe b on a black tile, for the app and the extension.
+[SVG](https://bwalletx.com/brand/bwalletx-app-icon.svg)
+
+Round markFor avatars and profile pictures.
+[SVG](https://bwalletx.com/brand/bwalletx-mark-circle.svg)
+
+## 04 · NAMEbWalletX.
+
+Small b, capital W, capital X. The X is gold when we can show colour. In a headline, the logo can stand in for the b.
+
+bWalletX
+bWalletX
+WalletX
+
+The app in the App Store and Google Play is called bWallet: the same wallet without the exchange features. Everywhere else it’s bWalletX.
+
+## 05 · MISUSEPlease don’t.
+
+Stretch or squash it.
+
+Rotate or tilt it.
+
+Recolour it.
+
+X
+
+Add an X or other letters to the mark.
+
+Add outlines, shadows or effects.
+
+Lose it on a busy photo.
+
+Gold on white: use the black version.
+
+Blow it up huge on its own.
+
+## 06 · COLOURGold on black.
+
+Black is the ground, gold is the light. Warm white for reading. Deep blues and teal for campaigns, used sparingly.
+
+Gold#F5B800
+RGB 245 184 0
+
+Gold high#FFD24D
+RGB 255 210 77
+
+Gold low#C98F00
+RGB 201 143 0
+
+Logo gradient#FFE58A → #C98F00
+
+Black#000000
+
+Card#0D0D0F
+
+Warm white#F1EAD9
+
+Dusk blue#1F4A78
+
+Teal#134A5A
+
+Royal blue#1F3B86
+
+### How much of each
+
+Black 70%White 20%10%
+
+Gold is an accent and a light, never a large flat area. Empty avatars, banners and cards use gold art, never grey placeholders.
+
+### Pairs that work
+
+Gold on blackHeadlines, the logo
+
+White on blackReading
+
+Black on goldButtons
+
+Gold on white ✕Too faint to read
+
+## 07 · TYPESpace Grotesk and IBM Plex.
+
+Space Grotesk for headlines, bold and tight. IBM Plex Sans for reading. IBM Plex Mono for codes and numbers that need to line up. All three are free on Google Fonts.
+
+is for business
+Display · Space Grotesk 700 · −0.045em
+
+Get paid in seconds.
+Heading · Space Grotesk 700 · −0.03em
+
+Customers pay from their own wallet, straight into yours. The network fee is usually well under a penny, and every payment has a receipt.
+Body · IBM Plex Sans 400 · line 1.7
+
+Play the film · 0:40
+Label · Space Grotesk 700 · +0.16em capitals
+
+$name@bwalletx.com · 0.0042 BSV
+Codes · IBM Plex Mono 500
+
+Aa Bb Cc Dd Ee Ff Gg Hh Ii Jj Kk Ll Mm Nn Oo Pp Qq Rr Ss Tt Uu Vv Ww Xx Yy Zz 0123456789 £ $ € & ? !
+
+## 08 · VOICECalm, plain, warm.
+
+We talk like a good friend who happens to understand money. Short sentences, everyday words, and only what works today.
+
+Less noise. More life. Just b.Our line
+
+Breathe out. You’re in control./just-b
+
+Less paperwork. More business. Just b./b-is-for-business
+
+SayNot
+
+Get paid in seconds.Revolutionary instant settlement layer.
+
+Your keys stay with you.Non-custodial self-sovereign architecture.
+
+Stakeholders in the network.Shareholders in us. Investors. Returns.
+
+Tickets, access, rooms.“Tokens” and “holding” in campaign copy.
+
+It works today on Android and the web.Coming soon! Huge things ahead!
+
+3 PNEEs.3 PNEES. 3 Pnees.
+
+## 09 · IMAGERYDrawn, warm, iPhone-first.
+
+Drawn and animated scenes first. Photos briefly and in the background. Pictures fill the phone screen edge to edge, with no decorative frames. Every page gets its own share image.
+
+[just b · the desert](https://bwalletx.com/just-b)
+[b cool · polar calm](https://bwalletx.com/b-cool)
+[b creative · editions](https://bwalletx.com/b-creative)
+[b is for business](https://bwalletx.com/b-is-for-business)
+[bShares · the boardroom](https://bwalletx.com/bshares)
+[bTrust · the City at dawn](https://bwalletx.com/btrust)
+
+## 10 · MOTION AND SOUNDSlow, smooth, golden.
+
+calm
+Letters rise out of a soft blur, one after another
+
+Play the film · 0:40The play button: big, gold, gently pulsing
+
+Scenes crossfade, never cut. Photos zoom slowly. The logo glows gently. Everything respects reduced-motion settings. Music is by [VexVoid](https://www.bchatx.com/u/vexvoid): calm and steady, never hectic, credited on the page, and it only plays after a tap.
+
+## 11 · BUTTONS AND LABELSOne gold button per screen.
+
+[Get bWalletX](https://bwalletx.com/get)
+[Download](https://bwalletx.com/get)
+A filter chip
+LiveComing
+
+The main action is the gold pill; everything else is quieter. Sign-in buttons for your own site are in the brand kit.
+
+## 12 · FAMILYTwo brands.
+
+bWalletX
+
+The wallet: web, Chrome, Android and iPhone. In the app stores it’s bWallet.
+
+bChatX
+
+Chat, Spaces and the feed, at bchatx.com.
+
+Everything else is a bApp inside the wallet, named with a small b and a plain word: bMail, bTrust, bShares, bMint. An X on the end means an exchange: bMusicX is a music exchange.
+
+## 13 · YOUR BRANDYour brand, on Bitcoin.
+
+We also work on other companies’ brands. Your community can have its own wallet edition and theme, or a business agent that takes payment in chat. It carries your name, your colours and your voice, not ours. Our name appears only if you choose to add a small “Part of bWalletX” credit.
+
+[Editions and themes](https://bwalletx.com/themes)[Business agents](https://bwalletx.com/business-agents)[Talk to us](mailto:support@bwalletx.com?subject=Our%20brand%2C%20on%20Bitcoin)
+
+## 14 · PRESSWriting about us?
+
+ABOUT bWALLETX
+
+bWalletX is a Bitcoin wallet for everyday life. People hold their own keys, pay and get paid in seconds, set money aside in pots, chat, and sign in to websites with their wallet. It runs on the web, as a Chrome extension and on Android. bWalletX is made in London by The Bitcoin Corporation Ltd.
+
+Copy this paragraph[Download the brand kit](https://bwalletx.com/brand/bwalletx-brand-kit.zip)[Press questions](mailto:support@bwalletx.com?subject=Press)
+
+The kit has every logo version (SVG and PNG), the app icon, the round mark and the sign-in buttons.
+
+## THE FULL GUIDEEvery rule, dated.
+
+The complete rules for logo, colour, type, voice, imagery, motion, music, campaign pages, share images and names. It grows as we decide things, and every change is dated.
+
+[docs.bwalletx.com/brand](https://docs.bwalletx.com/brand/)
+
+bWalletX is made by The Bitcoin Corporation Ltd. Brand questions: [support@bwalletx.com](mailto:support@bwalletx.com)
 
 ---
 
@@ -3474,7 +3826,7 @@ Music: [Echoes of Dust by VexVoid](https://www.bchatx.com/u/vexvoid)
 
 Sound
 
-[just b](https://bwalletx.com/just-b) · [b cool](https://bwalletx.com/b-cool) · [b creative](https://bwalletx.com/b-creative)
+[just b](https://bwalletx.com/just-b) · [b cool](https://bwalletx.com/b-cool) · [b creative](https://bwalletx.com/b-creative) · [b is for business](https://bwalletx.com/b-is-for-business)
 
 bWalletX is in beta: test with small amounts. [support@bwalletx.com](mailto:support@bwalletx.com)
 
@@ -4063,6 +4415,15 @@ Every bWalletX release and what it added, newest first.
 Each release ships to the Android APK, the Chrome extension and the web wallet. Android also goes to Google Play internal testing. The App Store build is not yet submitted.
 
 [Download bWalletX](https://bwalletx.com/download)
+
+## 5.2.40 2026-10-23
+
+- A new bApps screen in tiers: our own b…X apps first, then commercial apps (NPG, VexVoid, Zero Dice), an 18+ group behind a check (never in the App Store or Play editions), and community apps that meet the bApp standard (a token, a bChatX room, a wallet theme and in-wallet payments). Others fold away under “Not yet bApp-ready”. In the Chrome extension a bApp opens in its own full tab.
+- Every token you mint or launch now gets a launch curve: 1 billion tokens, the first one costs 1¢, and you choose how far the price climbs: Standard (to 19¢), Big (to $1.99) or Huge (to $19.99). The first 1% is a fair-launch early tier, $10 at most per person. The curve is written on chain when you mint, can’t be changed, and has a fingerprint anyone can check. You can choose to burn unsold tokens after 6 or 12 months, or never.
+- Token market: list tokens for sale from the token row, straight after you mint, or from the token page, priced in dollars with the curve price shown. Buy is one tap, and the wallet checks the listing is still there first; if it’s gone, you’re offered the next one.
+- A page for every token: its launch curve chart, price against the 1¢ start, holder count and top holders, and a link to its room. Tokens held in escrow, claim pools or quarantine can’t be listed.
+- Chrome extension: a site you connect to can show the wallet in its own theme while its tab is open. Only themes built into the wallet are used, and your own theme comes back when you leave. Nothing is saved to your account.
+- Wallets made with a passkey: Show my 12 words now has Use my passkey, and Chrome, Edge and Android offer to save the wallet’s password in your password manager as a second way back in. Coming to rooms: commissions paid in tokens, held in escrow until the work is accepted. Swap: unchanged in the downloads, extension and web; the App Store edition leaves swap out.
 
 ## 5.2.39 2026-10-22
 
