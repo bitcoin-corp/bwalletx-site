@@ -661,7 +661,8 @@ Bring your people with you.
 [### bSocialXEarly
 Spaces for every social app.bsocialx.com →](https://bsocialx.com)[### bFriendsXEarly
 Bring your people with you.bfriendsx.com →](https://bfriendsx.com)[### bMailXEarly
-Email that pays.bmailx.com →](https://bmailx.com)[### bCalXEarly
+Email that pays.bmailx.com →](https://bmailx.com)[### bMessageXComing
+Private messages and calls. Private by default.bmessagex.com →](https://bmessagex.com)[### bCalXEarly
 What’s on, live.bcalx.com →](https://bcalx.com)
 
 ## Work and business
@@ -1036,7 +1037,6 @@ The picture above is a mockup of the design. Prices and details may change befor
 Source: https://bwalletx.com/bad
 
 bAds
-
 - [bAds](https://bwalletx.com/bads)
 
 ---
@@ -4431,6 +4431,7 @@ Each of these sites runs on bWalletX. Sign in once with your wallet and they all
 
 [LivebChatXChat, token rooms and live Spaces. Sign in with bWalletX.](https://chat.bwalletx.com)
 [LivebMailXEmail that pays. Your name@bmailx.com comes with your bWalletX name.](https://bmailx.com)
+[ComingbMessageXPrivate messages and calls, end-to-end encrypted. Your wallet is your identity, no phone number.](https://bmessagex.com)
 [LivebRadioXLive shows in the bRadio Lounge. Raise your hand to speak.](https://bradiox.com)
 [LivebCalXThe calendar of live Spaces. Add one to your calendar in a tap.](https://bcalx.com)
 [LivebJobsXWork paid in Bitcoin, person to person. Your $name already takes payments.](https://bjobsx.com)
