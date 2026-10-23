@@ -5,47 +5,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>b is for business</title>
     <link rel="canonical" href="https://bwalletx.com/b-is-for-business" />
-    <meta name="description" content="b is for business. Take payment on Bitcoin with a receipt anyone can check, keep a business account beside your own, set money aside in pots, and let customers sign in with their wallet. A 40-second film." />
+    <meta name="description" content="b is for business. Get paid in seconds, with a receipt anyone can check. Less paperwork. More business. Just b." />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://bwalletx.com/b-is-for-business" />
     <meta property="og:site_name" content="bWalletX" />
-    <meta property="og:title" content="b is for business." />
-    <meta property="og:description" content="Paid in seconds. A receipt anyone can check. A business account beside your own. Watch the 40-second film." />
-    <meta property="og:image" content="https://bwalletx.com/og-b-is-for-business-v1.jpg" />
+    <meta property="og:title" content="b is for business" />
+    <meta property="og:description" content="Get paid in seconds, with a receipt anyone can check. Just b." />
+    <meta property="og:image" content="https://bwalletx.com/og-b-is-for-business-v3.jpg" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
-    <meta property="og:image:alt" content="Gold-lit skyscrapers at dusk, a briefcase with a gold b, and the words b is for business." />
+    <meta property="og:image:alt" content="The bWalletX gold b over the City of London at dawn, and the words b is for business." />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@bWalletX" />
-    <meta name="twitter:title" content="b is for business." />
-    <meta name="twitter:description" content="Paid in seconds. A receipt anyone can check. A business account beside your own. Watch the 40-second film." />
-    <meta name="twitter:image" content="https://bwalletx.com/og-b-is-for-business-v1.jpg" />
-    <meta name="theme-color" content="#0b0b0c" />
+    <meta name="twitter:title" content="b is for business" />
+    <meta name="twitter:description" content="Get paid in seconds, with a receipt anyone can check. Just b." />
+    <meta name="twitter:image" content="https://bwalletx.com/og-b-is-for-business-v3.jpg" />
     <link rel="icon" href="/favicon.ico" />
+    <link rel="preload" as="image" href="/images/btrust-london-dawn.jpg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,500&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" />
     <link rel="stylesheet" href="/styles.css" />
     <style>
-      /* b is for business (23 Oct 2026): a 40-second film in the Just b series. Cinematic, not cartoon (that's
-         /b-creative): two photographs, drawn skyscrapers, a briefcase and a tie, and a piano-and-strings score made
-         in the browser. Everything it says is live; the list underneath shows what's coming. */
-      html, body { overflow-x: clip; }
-      main.ext.biz { padding-top: 0 !important; }
-      .ext h2 { margin: 48px 0 8px; font-size: 1.5rem; }
-      .ext p, .ext li { line-height: 1.7; }
-      .ext .small { color: #8a8a86; font-size: 0.85rem; }
-      .ext .row { display: flex; gap: 12px; flex-wrap: wrap; margin: 26px 0; }
-      .serif { font-family: 'Playfair Display', Georgia, serif; font-weight: 500; letter-spacing: -0.01em; }
-      .feat { list-style: none; padding: 0; margin: 18px 0; }
-      .feat li { display: flex; gap: 12px; align-items: baseline; padding: 12px 0; border-bottom: 1px solid #ffffff10; }
-      .tag { flex: none; font-size: 0.75rem; font-weight: 700; padding: 2px 9px; border-radius: 999px; white-space: nowrap; }
-      .tag.live { background: #F5B800; color: #000; }
-      .tag.next { border: 1px solid #F5B80088; color: #F5B800; }
-      .tag.soon { border: 1px solid #ffffff40; color: #a7adb8; }
-
-      /* The film */
-      .film { position: relative; width: 100vw; max-width: none; margin: 0 0 0 calc(50% - 50vw); height: min(86vh, 820px); min-height: 520px; background: #050506; overflow: hidden; color: #f3eee0; }
+      /* b is for business (23 Oct 2026), in the Just b series: a 40-second film (skyline, City dawn, briefcase, tie,
+         boardroom, sign-in) over a piano-and-strings score made in the browser, then the calm text and the end card.
+         The b in every line is the real logo, as on /just-b. Everything it says is live. */
+      body { margin: 0; background: #000; color: #f1ead9; overflow-x: clip; }
+      .film { position: relative; width: 100%; max-width: none; height: 100svh; min-height: 540px; margin: 0; padding: 0; border: 0; border-radius: 0; box-shadow: none; background: #000; overflow: hidden; color: #f1ead9; aspect-ratio: auto; }
+      .film::before, .film::after { display: none; }
       .scene { position: absolute; inset: 0; opacity: 0; transition: opacity 1.4s ease; pointer-events: none; }
       .scene.on { opacity: 1; }
       .scene .ph { position: absolute; inset: -4%; width: 108%; height: 108%; object-fit: cover; transform: scale(1.02); }
@@ -53,14 +40,15 @@
       @keyframes kb { to { transform: scale(1.12) translate(-1.5%, -1%); } }
       .scene .shade { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(0,0,0,.15), rgba(0,0,0,.05) 35%, rgba(0,0,0,.72) 75%, #050506); }
       .cap { position: absolute; left: 0; right: 0; bottom: 9%; padding: 0 16px; text-align: center; }
-      .cap h1, .cap h2 { margin: 0; font-family: 'Playfair Display', Georgia, serif; font-weight: 500; font-size: clamp(2rem, 6.4vw, 4.4rem); line-height: 1.06; letter-spacing: -0.02em; text-shadow: 0 4px 40px rgba(0,0,0,.7); }
-      .cap p { margin: 14px auto 0; max-width: 620px; font-size: clamp(1rem, 2.4vw, 1.25rem); color: #e2dccb; text-shadow: 0 2px 18px rgba(0,0,0,.8); }
-      .cap .gold { color: var(--gold); }
-      .cap > * { opacity: 0; transform: translateY(18px); }
-      .scene.on .cap > * { animation: rise 1.2s cubic-bezier(.2,.7,.2,1) forwards; }
+      .cap h1, .cap h2 { margin: 0; display: flex; justify-content: center; align-items: flex-start; flex-wrap: wrap; gap: 0 0.22em; font: 700 clamp(2.4rem, 9vw, 6.4rem) / 1.02 var(--hf); letter-spacing: -0.045em; text-shadow: 0 6px 60px rgba(0,0,0,.6); }
+      .lb { display: block; height: 0.86em; width: calc(0.86em * 0.74); margin-top: 0.08em; filter: drop-shadow(0 0 30px rgba(245,184,0,.35)); }
+      .cap p { margin: 18px auto 0; max-width: 560px; font: 400 clamp(0.95rem, 2.4vw, 1.15rem) / 1.6 var(--hf); letter-spacing: 0.02em; color: rgba(255,255,255,.72); text-shadow: 0 2px 18px rgba(0,0,0,.8); }
+      
+      .cap > * { opacity: 0; filter: blur(4px); transform: translateY(0.4em); }
+      .scene.on .cap > * { animation: rise 2.2s cubic-bezier(.25,.1,.25,1) forwards; }
       .scene.on .cap > *:nth-child(2) { animation-delay: .7s; }
       .scene.on .cap > *:nth-child(3) { animation-delay: 1.3s; }
-      @keyframes rise { to { opacity: 1; transform: none; } }
+      @keyframes rise { to { opacity: 1; filter: none; transform: none; } }
 
       /* Scene 1: the skyline rises and lights up */
       .sky { position: absolute; inset: 0; width: 100%; height: 100%; }
@@ -105,61 +93,64 @@
       .scene.on .signin .ok { animation: lit .6s 2.6s ease forwards; }
 
       /* End card */
-      .endb { position: absolute; left: 50%; top: 34%; transform: translate(-50%, -50%); width: min(28vw, 170px); opacity: 0; }
+      .endb { position: absolute; left: 50%; top: 32%; transform: translate(-50%, -50%); width: min(24vw, 130px); opacity: 0; }
       .scene.on .endb { animation: bpop 1.2s .2s cubic-bezier(.2,1.4,.4,1) forwards; }
-      .scene .go { pointer-events: auto; display: inline-block; margin-top: 18px; padding: 12px 22px; border-radius: 999px; background: var(--gold); color: #000; font-weight: 700; text-decoration: none; }
-
-      /* Poster + controls */
-      .poster { position: absolute; inset: 0; display: flex; align-items: flex-end; justify-content: center; transition: opacity .8s ease; }
+      /* The gate: as on /just-b, a round outlined play over the opening frame. */
+      .poster { position: absolute; inset: 0; z-index: 4; display: flex; flex-direction: column; align-items: center; justify-content: center; transition: opacity 1.2s ease; }
       .poster.gone { opacity: 0; pointer-events: none; }
-      .poster img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 50% 70%; }
-      .poster .shade { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(0,0,0,.2), rgba(0,0,0,.1) 40%, rgba(0,0,0,.8) 80%, #050506); }
-      .poster .in { position: relative; text-align: center; padding: 0 16px 8vh; }
-      .poster h1 { margin: 0 0 10px; font-family: 'Playfair Display', Georgia, serif; font-weight: 500; font-size: clamp(2.6rem, 9vw, 6rem); line-height: 1; letter-spacing: -0.03em; }
-      .poster p { margin: 0 auto 22px; max-width: 560px; color: #e2dccb; }
-      .play { display: inline-flex; align-items: center; gap: 12px; padding: 12px 22px 12px 12px; border: 0; border-radius: 999px; background: var(--gold); color: #000; font: inherit; font-weight: 700; cursor: pointer; }
-      .play .pc { width: 38px; height: 38px; border-radius: 50%; background: #000; display: grid; place-items: center; }
-      .play small { display: block; font-weight: 500; font-size: .75rem; opacity: .75; }
-      .quiet { display: block; margin: 12px auto 0; background: none; border: 0; color: #cfc8b6; font: inherit; font-size: .9rem; text-decoration: underline; cursor: pointer; }
-      .ctl { position: absolute; right: 16px; top: 16px; display: none; gap: 8px; z-index: 5; }
-      .film.playing .ctl { display: flex; }
-      .ctl button { width: 40px; height: 40px; border-radius: 50%; border: 1px solid #ffffff33; background: #0009; color: #fff; font-size: 1rem; cursor: pointer; }
-      .bar { position: absolute; left: 0; bottom: 0; height: 3px; width: 0; background: var(--gold); z-index: 5; }
+      .poster .bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 70%; }
+      .poster::after { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(0,0,0,.45) 0%, rgba(0,0,0,.15) 40%, rgba(0,0,0,.35) 70%, #000 100%); }
+      .poster .in { position: relative; z-index: 1; display: flex; flex-direction: column; align-items: center; gap: 26px; padding: 0 16px; text-align: center; }
+      .poster h1 { margin: 0; display: flex; justify-content: center; align-items: flex-start; flex-wrap: wrap; gap: 0 0.22em; font: 700 clamp(2.6rem, 11vw, 8rem) / 1.02 var(--hf); letter-spacing: -0.045em; text-shadow: 0 6px 60px rgba(0,0,0,.6); }
+      .jb-play { width: 76px; height: 76px; border-radius: 50%; display: flex; align-items: center; justify-content: center; padding-left: 4px; box-sizing: border-box; color: #fff; background: transparent; border: 1px solid rgba(255,255,255,.55); cursor: pointer; transition: transform .6s ease, border-color .6s ease, background .6s ease; }
+      .jb-play:hover, .jb-play:focus-visible { transform: scale(1.05); border-color: #fff; background: rgba(255,255,255,.06); }
+      .gate-l { margin: -10px 0 0; font: 400 .78rem var(--hf); letter-spacing: .2em; text-transform: uppercase; color: rgba(255,255,255,.55); }
+      .quiet { background: none; border: 0; padding: 4px; font: 400 .8rem var(--hf); letter-spacing: .06em; color: rgba(255,255,255,.45); cursor: pointer; text-decoration: underline; text-underline-offset: 3px; }
+      .quiet:hover { color: #fff; }
+      .bar { position: absolute; left: 0; bottom: 0; height: 2px; width: 0; background: var(--gold-hi); z-index: 5; }
+      .jb-sound { position: fixed; right: 14px; bottom: 14px; z-index: 6; display: none; gap: 4px; }
+      .jb-started .jb-sound { display: flex; }
+      .jb-sound button { width: 44px; height: 44px; display: flex; align-items: center; justify-content: center; border: 0; border-radius: 50%; background: transparent; color: rgba(255,255,255,.45); cursor: pointer; }
+      .jb-sound button:hover { color: rgba(255,255,255,.85); }
+      .jb-sound button[aria-pressed="true"] { color: rgba(245,210,120,.7); }
 
+      /* The calm part and the end card, as on /just-b. */
+      .jb-calm { max-width: 680px; margin: 0 auto; padding: 20vh 24px 18vh; text-align: center; color: #cfc6b0; font: 400 clamp(1.05rem, 2.4vw, 1.3rem) / 1.75 var(--hf); }
+      .jb-calm p { margin: 0 0 2.2em; }
+      .jb-calm .jb-lead { font: 700 clamp(1.9rem, 6vw, 3.2rem) / 1.15 var(--hf); letter-spacing: -0.03em; color: #fff; margin-bottom: 1.4em; }
+      .jb-calm p:last-child { margin: 2.2em 0 0; }
+      .jb-calm strong { display: block; margin-bottom: 0.35em; color: #fff; font-weight: 600; font-size: 1.15em; letter-spacing: -0.01em; }
+      .jb-calm em { font-style: normal; color: var(--gold-hi); }
+      .jb-calm a { color: #e8dfc6; }
+      .jb-end { position: relative; min-height: 100svh; display: flex; align-items: center; justify-content: center; overflow: hidden; }
+      .jb-end > img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 60%; }
+      .jb-end::after { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, #000 0%, rgba(0,0,0,.25) 30%, rgba(0,0,0,.25) 75%, #000 100%); }
+      .jb-end-in { position: relative; z-index: 1; text-align: center; padding: 0 16px; }
+      .jb-end-in h2 { margin: 0 0 30px; display: flex; justify-content: center; align-items: flex-start; flex-wrap: wrap; gap: 0 0.22em; font: 700 clamp(2.6rem, 10vw, 5rem) / 1 var(--hf); letter-spacing: -0.04em; text-shadow: 0 4px 40px rgba(0,0,0,.6); }
+      .jb-go { display: inline-block; padding: 18px 40px; border-radius: 999px; background: linear-gradient(180deg, #ffd24d, #f5b800); color: #0b0a08; font: 700 1.1rem var(--hf); text-decoration: none; box-shadow: 0 14px 50px rgba(245,184,0,.35); }
+      .jb-credit { margin: 22px 0 0; font: 400 .78rem var(--hf); letter-spacing: .08em; color: rgba(255,255,255,.55); }
+      .jb-credit a { color: inherit; text-decoration: none; border-bottom: 1px solid rgba(255,255,255,.25); }
+      .jb-foot { margin: 0; padding: 0 16px 22px; text-align: center; font-size: .75rem; color: #6a6458; }
+      .jb-foot a { color: #8a8273; }
       @media (prefers-reduced-motion: reduce) {
         .scene, .scene * { animation: none !important; transition: none !important; }
-        .scene .cap > *, .sky .bld, .sky .win, .case .rcpt, .signin, .endb { opacity: 1 !important; transform: none !important; }
+        .scene .cap > *, .sky .bld, .sky .win, .case .rcpt, .signin, .endb { opacity: 1 !important; filter: none !important; transform: none !important; }
       }
     </style>
   </head>
-  <body>
-    <div class="beta-banner">bWalletX is in <strong>beta</strong>: test with small amounts.</div>
-    <header class="topbar">
-      <div class="wrap topbar-in">
-        <a class="brand" href="/"><img src="/logo.svg" alt="" width="34" height="30" /><span>bWallet<span class="gold">X</span></span></a>
-        <nav aria-label="Pages">
-          <a href="/features">Features</a><a href="/exchange">Exchange</a><a href="/social">Social</a><a href="/agent">Agents</a><a href="/extension">Extension</a><a href="/developers">Developers</a>
-        </nav>
-        <span class="nav-cta"><a class="dl-btn" href="/get">Download</a><a class="web-btn" href="https://web.bwalletx.com" target="_blank" rel="noopener">Web &rarr;</a></span>
+  <body class="jb">
+    <section class="film" id="film" aria-label="b is for business: a 40-second film">
+      <div class="scene" data-at="0">
+        <svg class="sky" id="sky" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMax slice" aria-hidden="true"></svg>
+        <div class="cap"><h1><img class="lb" src="/logo.svg" alt="b" /><span>is for business</span></h1></div>
       </div>
-    </header>
-    <script src="/nav.js"></script>
-    <main class="ext biz">
-      <section class="film" id="film" aria-label="b is for business: a 40-second film">
-        <!-- 1. The City wakes up -->
-        <div class="scene" data-at="0">
-          <svg class="sky" id="sky" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMax slice" aria-hidden="true"></svg>
-          <div class="cap"><h1>b is for <span class="gold">business.</span></h1><p>What your business can do with bWalletX, today.</p></div>
-        </div>
-        <!-- 2. Get paid -->
-        <div class="scene" data-at="6.67">
-          <img class="ph" src="/images/btrust-london-dawn.jpg" alt="" loading="lazy" />
-          <div class="shade"></div>
-          <div class="cap"><h2>Get paid in <span class="gold">seconds.</span></h2><p>Customers pay from their own wallet, on Bitcoin. The network fee is usually well under a penny.</p></div>
-        </div>
-        <!-- 3. The briefcase: a receipt -->
-        <div class="scene" data-at="13.33">
-          <svg class="case" viewBox="-40 -170 480 420" aria-hidden="true">
+      <div class="scene" data-at="6.67">
+        <img class="ph" src="/images/btrust-london-dawn.jpg" alt="" loading="lazy" />
+        <div class="shade"></div>
+        <div class="cap"><h2><img class="lb" src="/logo.svg" alt="b" /><span>paid</span></h2><p>In seconds, from your customer&rsquo;s own wallet. The network fee is usually well under a penny.</p></div>
+      </div>
+      <div class="scene" data-at="13.33">
+        <svg class="case" viewBox="-40 -170 480 420" aria-hidden="true">
             <defs>
               <linearGradient id="lea" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2a2622" /><stop offset="1" stop-color="#121010" /></linearGradient>
               <linearGradient id="gld" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ffe08a" /><stop offset=".5" stop-color="#f5b800" /><stop offset="1" stop-color="#a87400" /></linearGradient>
@@ -168,75 +159,71 @@
             <circle class="bglow" cx="160" cy="40" r="150" fill="url(#glow)" />
             <g class="rcpt"><rect x="320" y="40" width="90" height="150" rx="3" fill="#f3eee0" /><g stroke="#bdb6a4" stroke-width="4" stroke-linecap="round"><path d="M335 65h60M335 85h44M335 105h52M335 125h36" /></g><path d="M335 155h60" stroke="#f5b800" stroke-width="6" stroke-linecap="round" /><text x="365" y="180" text-anchor="middle" font-size="13" font-family="Inter, system-ui, sans-serif" fill="#3a3630" font-weight="700">ON CHAIN ✓</text></g>
             <rect x="20" y="70" width="280" height="150" rx="16" fill="url(#lea)" stroke="#3a342c" stroke-width="3" />
-            <text class="bmark" x="160" y="58" text-anchor="middle" font-size="120" font-weight="800" font-family="Inter, system-ui, sans-serif" fill="url(#gld)">b</text>
+            <image class="bmark" href="/logo.svg" x="116" y="-70" width="88" height="119" />
             <g class="lid"><rect x="20" y="20" width="280" height="54" rx="14" fill="url(#lea)" stroke="#3a342c" stroke-width="3" /><rect x="138" y="-6" width="44" height="30" rx="8" fill="none" stroke="#3a342c" stroke-width="9" /><rect x="70" y="62" width="26" height="16" rx="3" fill="url(#gld)" /><rect x="224" y="62" width="26" height="16" rx="3" fill="url(#gld)" /></g>
           </svg>
-          <div class="cap"><h2>Every payment, a <span class="gold">receipt.</span></h2><p>Each one is recorded on chain, so you, your customer and your accountant can all check it.</p></div>
-        </div>
-        <!-- 4. The tie: a business account -->
-        <div class="scene" data-at="20">
-          <svg class="tie" viewBox="0 0 160 420" aria-hidden="true">
+        <div class="cap"><h2><img class="lb" src="/logo.svg" alt="b" /><span>on the record</span></h2><p>Every payment has a receipt on chain. You, your customer and your accountant can all check it.</p></div>
+      </div>
+      <div class="scene" data-at="20">
+        <svg class="tie" viewBox="0 0 160 420" aria-hidden="true">
             <path d="M58 10 L102 10 L112 52 L80 74 L48 52 Z" fill="#2b2f3a" stroke="#f5b800" stroke-width="2.5" stroke-linejoin="round" />
             <path d="M62 76 L98 76 L130 330 L80 410 L30 330 Z" fill="#20242e" stroke="#f5b800" stroke-width="2.5" stroke-linejoin="round" />
             <g class="pin"><rect x="40" y="190" width="80" height="9" rx="4.5" fill="url(#gld)" /></g>
           </svg>
-          <div class="cap"><h2>A business account, <span class="gold">beside your own.</span></h2><p>Add a second account in the same wallet. Its own address, its own balance, its own history.</p></div>
-        </div>
-        <!-- 5. The boardroom: pots -->
-        <div class="scene" data-at="26.67">
-          <img class="ph" src="/images/bshares-boardroom.jpg" alt="" loading="lazy" />
-          <div class="shade"></div>
-          <div class="cap"><h2>Set it aside, <span class="gold">in pots.</span></h2><p>Keep money for tax, wages or a rainy day in named pots, apart from what you spend. Lock savings until a date you choose.</p></div>
-        </div>
-        <!-- 6. Sign in with your wallet -->
-        <div class="scene" data-at="33.33">
-          <div class="signin" aria-hidden="true"><div class="who">yourshop.com</div><div class="bt">Sign in with bWalletX</div><div class="ok">✓ Signed in. No password.</div></div>
-          <div class="cap"><h2>Customers sign in <span class="gold">with their wallet.</span></h2><p>A script tag and two routes on your server. No passwords to store, no emails to leak.</p></div>
-        </div>
-        <!-- End card -->
-        <div class="scene" data-at="40" data-end>
-          <svg class="endb" viewBox="0 0 100 120" aria-hidden="true"><text x="50" y="100" text-anchor="middle" font-size="120" font-weight="800" font-family="Inter, system-ui, sans-serif" fill="url(#gld)">b</text></svg>
-          <div class="cap"><h2>b is for business.</h2><p>Less paperwork. More business. Just b.</p><p><a class="go" href="/get">Get bWalletX</a></p></div>
-        </div>
+        <div class="cap"><h2><img class="lb" src="/logo.svg" alt="b" /><span>professional</span></h2><p>A business account beside your own, in the same wallet. Its own address, balance and history.</p></div>
+      </div>
+      <div class="scene" data-at="26.67">
+        <img class="ph" src="/images/bshares-boardroom.jpg" alt="" loading="lazy" />
+        <div class="shade"></div>
+        <div class="cap"><h2><img class="lb" src="/logo.svg" alt="b" /><span>prepared</span></h2><p>Pots for tax, wages and a rainy day. Lock savings until a date you choose.</p></div>
+      </div>
+      <div class="scene" data-at="33.33">
+        <div class="signin" aria-hidden="true"><div class="who">yourshop.com</div><div class="bt">Sign in with bWalletX</div><div class="ok">✓ Signed in. No password.</div></div>
+        <div class="cap"><h2><img class="lb" src="/logo.svg" alt="b" /><span>welcoming</span></h2><p>Customers sign in to your site with their wallet. No passwords to store, no emails to leak.</p></div>
+      </div>
+      <div class="scene" data-at="40" data-end>
+        <img class="ph" src="/images/btrust-london-dawn.jpg" alt="" loading="lazy" />
+        <div class="shade"></div>
+        <div class="cap"><h2><img class="lb" src="/logo.svg" alt="b" /><span>is for business</span></h2><p>Less paperwork. More business. Just b.</p></div>
+      </div>
 
-        <div class="poster" id="poster">
-          <img src="/images/btrust-london-dawn.jpg" alt="" fetchpriority="high" />
-          <div class="shade"></div>
-          <div class="in">
-            <h1>b is for <span class="gold">business.</span></h1>
-            <p>Paid in seconds. A receipt anyone can check. A business account beside your own.</p>
-            <button type="button" class="play" id="play"><span class="pc"><svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4.5v15a1 1 0 0 0 1.5.86l12.4-7.5a1 1 0 0 0 0-1.72L8.5 3.64A1 1 0 0 0 7 4.5z" fill="#f5b800" /></svg></span><span>Watch the film<small>0:40 &middot; SOUND ON</small></span></button>
-            <button type="button" class="quiet" id="quiet">Watch without sound</button>
-          </div>
+      <div class="poster" id="poster">
+        <img class="bg" src="/images/btrust-london-dawn.jpg" alt="" fetchpriority="high" />
+        <div class="in">
+          <h1><img class="lb" src="/logo.svg" alt="b" /><span>is for business</span></h1>
+          <button type="button" class="jb-play" id="play" aria-label="Play b is for business with sound"><svg viewBox="0 0 24 24" width="26" height="26" aria-hidden="true"><path d="M8 5.5v13l11-6.5z" fill="currentColor" /></svg></button>
+          <p class="gate-l">Play &middot; 0:40 &middot; sound on</p>
+          <button type="button" class="quiet" id="quiet">Watch without sound</button>
         </div>
-        <div class="ctl"><button type="button" id="mute" aria-pressed="false" aria-label="Mute music">♪</button><button type="button" id="again" aria-label="Play again">↺</button></div>
-        <div class="bar" id="bar"></div>
-      </section>
+      </div>
+      <div class="bar" id="bar"></div>
+    </section>
+    <div class="jb-sound">
+      <button type="button" id="mute" aria-pressed="false" aria-label="Mute music"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><path d="M11 5 6 9H3v6h3l5 4z"></path><path d="M15.5 8.5a5 5 0 0 1 0 7"></path></svg></button>
+      <button type="button" id="again" aria-label="Play again"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><path d="M3 12a9 9 0 1 0 3-6.7"></path><path d="M3 4v5h5"></path></svg></button>
+    </div>
 
-      <h2 class="serif">Run your business from your wallet</h2>
-      <p>bWalletX is a Bitcoin wallet you hold the keys to. For a business, that means you take payment directly, with no card processor in the middle, and every payment comes with its own proof. It works on the web, as a Chrome extension and on Android and iPhone.</p>
-      <div class="row"><a class="btn btn-store" href="/get">Get bWalletX</a><a class="btn" href="/business-agents">Business agents</a></div>
+    <section class="jb-calm">
+      <p class="jb-lead">Open for business.<br />You&rsquo;re <em>in charge</em>.</p>
+      <p><strong>Get paid in seconds.</strong> Customers pay from their own wallet, straight into yours. No card processor in the middle, and the network fee is usually well under a penny.</p>
+      <p><strong>A receipt for everything.</strong> Every payment is recorded on Bitcoin. Anyone with the link can check it, including your accountant.</p>
+      <p><strong>Business and personal, kept apart.</strong> Add a business account in the same wallet, with its own address, balance and history.</p>
+      <p><strong>Money that knows where it&rsquo;s going.</strong> Pots for tax, wages and a rainy day. Lock savings away until the date you choose.</p>
+      <p><strong>Customers sign in with their wallet.</strong> No passwords to store and no emails to leak. A script tag and two routes on your server. <a href="/direct">How it works</a></p>
+      <p><strong>Agents with a spending limit.</strong> Give an agent its own account with a daily limit and a Stop button, in the <a href="/developers">bwalletx command line</a>. Shop agents are next: <a href="/business-agents">business agents</a>.</p>
+      <p class="jb-lead">Less paperwork. More business. <em style="display:block;white-space:nowrap">Just b.</em></p>
+    </section>
 
-      <h2 class="serif">What works today</h2>
-      <ul class="feat">
-        <li><span class="tag live">Live</span><span><b>Take payment.</b> Customers pay from their own wallet, and the money lands in yours. Network fees are usually well under a penny.</span></li>
-        <li><span class="tag live">Live</span><span><b>Receipts on chain.</b> Every bWalletX payment is recorded on Bitcoin, so anyone with the link can check it.</span></li>
-        <li><span class="tag live">Live</span><span><b>A business account.</b> Keep a second account in the same wallet, with its own address and history.</span></li>
-        <li><span class="tag live">Live</span><span><b>Pots and locks.</b> Put money aside in named pots, or lock it until a date you choose.</span></li>
-        <li><span class="tag live">Live</span><span><b>Sign in with bWalletX.</b> Customers sign in to your site with their wallet. A script tag and two routes on your server, no API key, no passwords. <a href="/direct">How it works</a></span></li>
-        <li><span class="tag live">Live</span><span><b>Agents with a spending limit.</b> A capped account with a daily limit and a Stop button, in the <a href="/developers">bwalletx command line and MCP server</a>.</span></li>
-        <li><span class="tag next">Next release</span><span><b>Your shop&rsquo;s agent, from a link.</b> Paste your website; b drafts an agent that answers customers and takes payment in chat. <a href="/business-agents">Business agents</a></span></li>
-        <li><span class="tag soon">Coming</span><span><b>Get paid by text.</b> Customers text your agent and pay by phone number. <a href="/sms">Bitcoin by text</a></span></li>
-        <li><span class="tag soon">In testing</span><span><b>Your share register.</b> Keep your company&rsquo;s register of members on chain. <a href="/bshares">bShares</a></span></li>
-        <li><span class="tag soon">Coming</span><span><b>Shared keys for the company&rsquo;s money.</b> Two or more directors approve a payment. <a href="/btrust">bTrust</a></span></li>
-      </ul>
-
-      <h2 class="serif">Questions from a business?</h2>
-      <p>Write to us and we&rsquo;ll help you set it up.</p>
-      <div class="row"><a class="btn btn-store" href="mailto:support@bwalletx.com?subject=bWalletX%20for%20my%20business">Ask about bWalletX for business</a></div>
-
-      <p class="small">Music made in your browser for this page. bWalletX is in beta: test with small amounts. Nothing on this page is financial advice. Questions: <a href="mailto:support@bwalletx.com">support@bwalletx.com</a></p>
-    </main>
+    <section class="jb-end">
+      <img src="/images/bshares-boardroom.jpg" alt="" loading="lazy" />
+      <div class="jb-end-in">
+        <h2><img class="lb" src="/logo.svg" alt="b" /><span>is for business</span></h2>
+        <a class="jb-go" href="/get?from=b-is-for-business">Get bWalletX</a>
+        <p class="jb-credit">Music made live in your browser. Questions from a business? <a href="mailto:support@bwalletx.com?subject=bWalletX%20for%20my%20business">Write to us</a></p>
+      </div>
+    </section>
+    <p class="jb-foot"><a href="/just-b">just b</a> · <a href="/b-cool">b cool</a> · <a href="/b-creative">b creative</a> · <a href="/b-is-for-business" aria-current="page">b is for business</a></p>
+    <p class="jb-foot">bWalletX is in beta: test with small amounts. <a href="mailto:support@bwalletx.com">support@bwalletx.com</a></p>
 
     <script>
       (function () {
@@ -317,16 +304,16 @@
         function play(sound) {
           cancelAnimationFrame(raf); withSound = sound; cur = -1; scenes.forEach(function (s) { s.classList.remove('on'); });
           if (sound) { if (!ctx) init(); ctx.resume(); start = ctx.currentTime + 0.15; score(start); } else start = performance.now() / 1000;
-          poster.classList.add('gone'); film.classList.add('playing'); raf = requestAnimationFrame(frame);
+          poster.classList.add('gone'); film.classList.add('playing'); document.body.classList.add('jb-started'); raf = requestAnimationFrame(frame);
         }
         document.getElementById('play').onclick = function () { play(true); };
         document.getElementById('quiet').onclick = function () { play(false); };
         document.getElementById('again').onclick = function () { if (ctx) { master.gain.setTargetAtTime(0.0001, ctx.currentTime, 0.1); } setTimeout(function () { play(withSound); }, withSound ? 250 : 0); };
         document.getElementById('mute').onclick = function () {
-          muted = !muted; this.setAttribute('aria-pressed', String(muted)); this.textContent = muted ? '×' : '♪';
+          muted = !muted; this.setAttribute('aria-pressed', String(muted)); 
           if (ctx) master.gain.setTargetAtTime(muted ? 0.0001 : 0.9, ctx.currentTime, 0.1);
         };
-        if (matchMedia('(prefers-reduced-motion: reduce)').matches) { poster.classList.add('gone'); show(scenes.length - 1); }
+        
       })();
     </script>
   </body>
