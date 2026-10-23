@@ -1036,6 +1036,7 @@ The picture above is a mockup of the design. Prices and details may change befor
 Source: https://bwalletx.com/bad
 
 bAds
+
 - [bAds](https://bwalletx.com/bads)
 
 ---
@@ -5334,8 +5335,13 @@ Each release ships to the Android APK, the Chrome extension and the web wallet. 
 - A page for every token: its launch curve chart, price against the 1¢ start, holder count and top holders, and a link to its room. Tokens held in escrow, claim pools or quarantine can’t be listed.
 - Chrome extension: a site you connect to can show the wallet in its own theme while its tab is open. Only themes built into the wallet are used, and your own theme comes back when you leave. Nothing is saved to your account.
 - Wallets made with a passkey: Show my 12 words now has Use my passkey, and Chrome, Edge and Android offer to save the wallet’s password in your password manager as a second way back in. Coming to rooms: commissions paid in tokens, held in escrow until the work is accepted. Swap: unchanged in the downloads, extension and web; the App Store edition leaves swap out.
+- Greeting cards and AI pictures in Mint, with a new card-making screen that shows your card as it’s made. In the bWalletX editions only, not the App Store or Google Play ones.
+- A site you connect to now shows its own colours and logo on the approval sheets, with the wallet’s strip showing the true site address.
+- If coins were spent from another device, sending now clears them and tries once more instead of failing.
+- bChatX rooms work again: the wallet falls back to chat.bwalletx.com while bchatx.com is on hold.
+- Safer by default: recovery phrases are caught in reports and Ask b before they leave your device, pausing or cancelling a subscription always sticks, wiping the wallet now removes phone pairings too, and more security fixes from our b-Aware reporters.
 
-## 5.2.40 2026-10-22
+## 5.2.39 2026-10-22
 
 - Fixes a crash (“reading ‘identityAddress’”) when opening the wallet after signing out and back in.
 - Making a backup during sign-up no longer leaves your balance stuck on “Still syncing”, and encrypted backups save every time, not just the first.
