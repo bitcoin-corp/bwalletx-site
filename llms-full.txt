@@ -1755,43 +1755,198 @@ bTrust is a way to arrange what you hold in your wallet. It isn’t a legal trus
 
 Source: https://bwalletx.com/bugs
 
-# Bugs, fixed in the open.
+# Known issues.
 
-Tell b what broke and it goes straight to the team with a reference number. Bugs that are safe to show appear here as short summaries once a person has reviewed them. Anything touching keys, payments, sign-in or personal data stays private.
+What’s broken, what we’re fixing, and what we fixed. Spotted something? Tell us below.
 
-Found a security weakness (funds, keys, approvals)? That goes to [b-Aware](https://bwalletx.com/b-Aware), our responsible disclosure policy and bug bounty, not here.
+## Report a bug
 
-AllNewPlannedFixingFixed
+What happened?
+Device and app version (for example iPhone 15, 5.2.40)
+Email (optional, if you’d like a reply)
 
-- Loading…
+Leave this empty
 
-## Where this stands
+Send report
 
-- LiveTell b in Ask b, or tap Report to b on any error. You get a reference like F-12.
+In the app? Tap Report to b on any error screen instead.
 
-- LiveEvery report reaches the team, grouped with others like it, in a daily summary.
+## Known issues
 
-- LivePrivate by default: nothing appears here until a person approves it.
+-
 
-- LiveYour reports in bWalletX: each one’s status, from received to fixed in a named release. Open it from the Your reports link after you tap Report to b.
+### The b button misbehaves when b disappears
+Investigating
 
-- ComingFixed bugs linked to the [release notes](https://bwalletx.com/releases).
+We are working out where and when it happens. If you see it, tell us what you tapped and on which device.
 
-- Coming“Me too” votes from signed-in bWalletX users.
+Reported 22 Oct 2026
 
-## How this list works
+-
 
-- Tell b in bWalletX. b passes it to the team.
+### Show my 12 words asked for a password you never set
+Fixed in 5.2.40
 
-- Each entry is a short summary, written without names, handles or addresses. Reports about keys, payments, sign-in or personal data stay private.
+If you made your wallet with a passkey, Show my 12 words now has Use my passkey, so you can see your words without a password.
 
-- A person reads every entry before it appears here.
+Fixed 23 Oct 2026
 
-See also: [Ideas](https://bwalletx.com/ideas) · [Ask b](https://bwalletx.com/ask-b)
+-
+
+### Passkey sign-in in the Chrome extension
+Fixed in 5.2.39
+
+Passkey sign-in was briefly taken out of the extension, then restored in the next release. A user confirmed it works.
+
+Fixed 22 Oct 2026
+
+-
+
+### Crash when opening the wallet after signing out and back in
+Fixed in 5.2.39
+
+The wallet showed an error about “identityAddress” instead of opening. It now opens normally.
+
+Fixed 22 Oct 2026
+
+-
+
+### Balance stuck on “Still syncing” after a backup at sign-up
+Fixed in 5.2.39
+
+Making a backup during sign-up no longer stalls your balance, and encrypted backups save every time.
+
+Fixed 22 Oct 2026
+
+-
+
+### Restoring a wallet could hang on Restoring…
+Fixed in 5.2.38
+
+Restoring or importing a wallet now finishes instead of spinning for good.
+
+Fixed 20 Oct 2026
+
+-
+
+### Sends failed after spending from another device
+Fixed in 5.2.36
+
+Coins already spent elsewhere could inflate your balance and make sends fail on iPhone. The wallet now clears them when you unlock, and if a send still hits one, it says “tap Send again”.
+
+Fixed 19 Oct 2026
+
+-
+
+### The bChatX Feed crashed on Desktop
+Fixed in 5.2.36
+
+The Feed opens normally on Desktop.
+
+Fixed 19 Oct 2026
+
+-
+
+### Web wallet layout and sign-in messages
+Fixed in 5.2.34
+
+Every screen stays in its column, a wrong password says so, and after sign-up you go straight to your wallet.
+
+Fixed 19 Oct 2026
+
+-
+
+### bMail could lose or double-pay a stamp
+Fixed in 5.2.33
+
+A retry now reuses the same stamp, so a stamp is never lost or paid twice.
+
+Fixed 18 Oct 2026
+
+-
+
+### Token sends failed with “OP_DUP”
+Fixed in 5.2.32
+
+The wallet repairs the token record and tries again once.
+
+Fixed 18 Oct 2026
+
+-
+
+### “Load failed” on the iPhone wallet screen
+Fixed in 5.2.30
+
+Busy lookups are retried, and any failure now names the service it couldn’t reach instead of a bare “Load failed”.
+
+Fixed 17 Oct 2026
+
+-
+
+### Black screen after unlock
+Fixed in 5.2.25
+
+If something goes wrong after unlock you now see a safety screen, not a blank page. The BSV price also no longer fails under load.
+
+Fixed 16 Oct 2026
+
+-
+
+### Phone apps refused to open their own pages
+Fixed in 5.2.20
+
+Pages no longer stop with a “Reserved originator” message.
+
+Fixed 14 Oct 2026
+
+-
+
+### Payments blocked by an old transaction
+Fixed in 5.2.19
+
+A stale transaction no longer blocks new payments.
+
+Fixed 14 Oct 2026
+
+-
+
+### Minting a name could wait forever
+Fixed in 5.2.17
+
+If the network never received a mint, the wallet now lets it go and tells you.
+
+Fixed 13 Oct 2026
+
+-
+
+### Big NFT mints failed
+Fixed in 5.2.15
+
+They now show Pending while the network catches up, and a stuck send releases its coins.
+
+Fixed 12 Oct 2026
+
+-
+
+### Chat list jumped while loading
+Fixed in 5.2.11
+
+Chats open at once and the list stays still.
+
+Fixed 12 Oct 2026
+
+-
+
+### Fingerprint unlock stopped working on Android
+Fixed in 5.2.10
+
+It works again, and asks you to set it up again when needed.
+
+Fixed 12 Oct 2026
+
+See also: [Feedback](https://bwalletx.com/feedback) · [Ideas](https://bwalletx.com/ideas) · [Releases](https://bwalletx.com/releases)
 
 [Get bWalletX](https://bwalletx.com/get)
-
-Found a security problem? Email [support@bwalletx.com](mailto:support@bwalletx.com) and don’t post details anywhere public.
 
 ---
 
@@ -3154,11 +3309,26 @@ Some features are still in beta and vary by platform. What shipped when: [releas
 
 Source: https://bwalletx.com/feedback
 
-# Tell b what you think.
+# What people say about bWalletX.
 
-Something broke, or you have an idea? Send it here. Every report is read.
+Reviews from the people who use it.
 
-## Ways to send feedback
+### Loading reviews…
+
+## Leave a review
+
+Your review
+First name
+Email (optional, if you’d like a reply; never published)
+You may publish this on bwalletx.com with my first name.
+
+Leave this empty
+
+Send review
+
+Reviews are checked before they appear.
+
+## Other ways to reach us
 
 -
 
@@ -3173,6 +3343,13 @@ Tap Report to b on any error screen in bWalletX. It files a report that b reads,
 Live
 
 Write to [support@bwalletx.com](mailto:support@bwalletx.com).
+
+-
+
+### Report a bug
+Live
+
+Use the short form on [Known issues](https://bwalletx.com/bugs), where you can also see what we’ve fixed.
 
 -
 
@@ -3194,13 +3371,13 @@ bChatX is temporarily unavailable. For now, the Lounge is open at [bit-sign.onli
 
 - The team sorts it and decides what to do.
 
-- Fixed bugs appear on [Bugs](https://bwalletx.com/bugs). Suggestions appear on [Ideas](https://bwalletx.com/ideas).
+- Fixed bugs appear on [Known issues](https://bwalletx.com/bugs). Suggestions appear on [Ideas](https://bwalletx.com/ideas).
 
 - Security reports are never published before the fix ships.
 
-- We never publish your name, handle, address or other personal details.
+- We never publish your email or personal details. A review shows only your first name, and only if you tick the box.
 
-See also: [Ideas](https://bwalletx.com/ideas) · [Bugs](https://bwalletx.com/bugs) · [b-Aware](https://bwalletx.com/b-aware) · [Releases](https://bwalletx.com/releases)
+See also: [Ideas](https://bwalletx.com/ideas) · [Known issues](https://bwalletx.com/bugs) · [b-Aware](https://bwalletx.com/b-aware) · [Releases](https://bwalletx.com/releases)
 
 [Get bWalletX](https://bwalletx.com/get)
 
