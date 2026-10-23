@@ -125,7 +125,7 @@
     const q = qrcode(0, 'H'); q.addData(text); q.make(); return q;
   }
   function drawQR(ctx, S, name, opts) {
-    const url = 'https://www.bchatx.com/u/' + encodeURIComponent(name);
+    const url = 'https://chat.bwalletx.com/u/' + encodeURIComponent(name);
     const q = qrModules(url), n = q.getModuleCount();
     const quiet = opts.quiet ?? 2, cell = S / (n + quiet * 2), off = quiet * cell;
     ctx.fillStyle = '#0b0a08'; ctx.fillRect(0, 0, S, S);
@@ -180,7 +180,7 @@
 
   // ── Art QR: standard polarity (dark spots on light), art visible between module centres ──
   function drawArtQR(ctx, S, name, art = drawCombo) {
-    const url = 'https://www.bchatx.com/u/' + encodeURIComponent(name);
+    const url = 'https://chat.bwalletx.com/u/' + encodeURIComponent(name);
     const q = qrModules(url), n = q.getModuleCount(), quiet = 3, cell = S / (n + quiet * 2), off = quiet * cell;
     ctx.fillStyle = '#fff3cf'; ctx.fillRect(0, 0, S, S);                       // pale gold quiet zone
     art(ctx, n * cell, name, off, off);                                         // art fills the code area
