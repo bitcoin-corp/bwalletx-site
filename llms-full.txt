@@ -468,13 +468,13 @@ bWallet's position. bWallet ships @bsv/sdk 2.8.11, wallet-toolbox-client 2.14.5 
 checks every message's originator against the browser-reported sender origin before any wallet call, verifies
 the OpNS covenant locally before broadcast, and refuses to abort an action the network may already have.
 
-Action for users: be on the current release (bWalletX 5.2.38 or later, or the current store build).
+Action for users: be on bWalletX 5.2.38 or later. The Chrome Web Store build is older (5.2.18) and does not have this fix yet; until it is updated, install the extension from bwalletx.com/download](https://github.com/bsv-blockchain/ts-stack/security/advisories/GHSA-qp3j-h5xf-p2p7).
 
 ###
 6 July 2026 · createAction output redirection with remote storage (GHSA-36f9-7rg5-cpf8 / CVE-2026-56744)
 
 Source:
-ts-stack advisory, High. Affected wallet-toolbox, -client and -mobile; fixed in 2.13.2. Patched
+[ts-stack advisory, High. Affected wallet-toolbox, -client and -mobile; fixed in 2.13.2. Patched
 
 A malicious or compromised remote storage server could return output scripts different from the ones the
 caller asked for, redirecting a payment. bWallet ships wallet-toolbox-client 2.14.5, which verifies returned
@@ -492,7 +492,7 @@ No reports yet. Yours could be the first name here.
 responses.
 
 The Bitcoin Corporation Ltd. Questions about the policy itself:
-support@bwalletx.com](https://github.com/bsv-blockchain/ts-stack/security/advisories/GHSA-qp3j-h5xf-p2p7).
+support@bwalletx.com](https://github.com/bsv-blockchain/ts-stack/security/advisories/GHSA-36f9-7rg5-cpf8).
 
 ---
 
@@ -1035,13 +1035,20 @@ The picture above is a mockup of the design. Prices and details may change befor
 
 Source: https://bwalletx.com/bad
 
+bAds
+- [bAds](https://bwalletx.com/bads)
+
+---
+
+Source: https://bwalletx.com/bads
+
 ## What’s a bAd?
 
-An ad made by b, the agent that lives in your bWalletX. You tell b about your business in a sentence. b makes the film, the logo or the whole brand, in your colours, not ours. Say “b ad” out loud and you get the joke. We’re leaning in: b Bad.
+Our ads aren’t ads. They’re bAds. A bAd is made by b, the agent that lives in your bWalletX. You tell b about your business in a sentence. b makes the film, the logo or the whole brand, in your colours, not ours. Say “b ad” out loud and you get the joke. We’re leaning in: b Bad.
 
 ## What b makes
 
-### Ad film
+### bAd film
 
 A short animated film, about 45 seconds, with licensed music, a clear call to action, its own page and share image.
 
@@ -1063,22 +1070,22 @@ Our first client was us: [b is for business](https://bwalletx.com/b-is-for-busin
 
 No forms, no agency. Open b in your wallet and say what you need, or sign in at bAdvertisingX with bWalletX and send b a brief. b asks a question or two and gives you one fixed price in Bitcoin. Nothing is charged until the work has passed our quality check, and no money moves without your OK on the wallet’s pay sheet.
 
-[Ask b to make your ad](https://web.bwalletx.com/m/ask-b?ask=I%27d%20like%20an%20ad%20for%20my%20business.)
+[Ask b for a bAd](https://web.bwalletx.com/m/ask-b?ask=I%27d%20like%20a%20bAd%20for%20my%20business.)
 [Send b a brief](https://badvertisingx.com/account)
 
 ## Where we are
 
 - LiveThe studio: films, brand kits and share images, made for the bWalletX family
 
-- LiveTalk to b about your ad in your wallet
+- LiveTalk to b about your bAd in your wallet
 
 - LiveSend b a brief at badvertisingx.com, signed in with bWalletX
 
-- Comingb quotes and takes payment for ad jobs in chat, once our quality check is passed
+- Comingb quotes and takes payment for bAds in chat, once our quality check is passed
 
 - ComingAgents order through b’s API
 
-- ComingPlacing your ads across bChatX and the b family
+- ComingPlacing your bAds across bChatX and the b family
 
 The video above is our own work: bMovies Originals trailers, VexVoid AV footage, Ninja Punk Girls cards and AI-made business photos (the people aren’t real). Music: “Whispering Shadows” by [VexVoid](https://www.bchatx.com/u/vexvoid). [Credits](https://badvertisingx.com/media/credits.txt).
 
