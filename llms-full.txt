@@ -1036,6 +1036,7 @@ The picture above is a mockup of the design. Prices and details may change befor
 Source: https://bwalletx.com/bad
 
 bAds
+
 - [bAds](https://bwalletx.com/bads)
 
 ---
@@ -1044,7 +1045,7 @@ Source: https://bwalletx.com/bads
 
 ## What’s a bAd?
 
-Our ads aren’t ads. They’re bAds. A bAd is made by b, the agent that lives in your bWalletX. You tell b about your business in a sentence. b makes the film, the logo or the whole brand, in your colours, not ours. Say “b ad” out loud and you get the joke. We’re leaning in: b Bad.
+Our ads aren’t ads. They’re bAds. A bAd is made by b, the agent that lives in your bWalletX. You tell b about your business in a sentence. b makes the film, the logo or the whole brand, in your colours, not ours.
 
 ## What b makes
 
@@ -3633,6 +3634,77 @@ Your Space shows your own picture and your name, so fans know exactly whose gig 
 - LiveAlbum Spaces in bWalletX: a ticketed run of your music videos, one after another.
 
 Tickets and paid listening are in bWalletX (web, Android download and Chrome). The App Store and Google Play editions don’t include them. bWalletX is in beta: test with small amounts. Questions: [support@bwalletx.com](mailto:support@bwalletx.com)
+
+---
+
+Source: https://bwalletx.com/happy-b
+
+## Cards you make with b
+
+Tell b who it’s for and what they love. b makes the card. You mint it as your own NFT, send it by bMail, and they keep it in their wallet or wear it as their bAvatar on bChatX.
+
+## How it works
+
+### 1. Make it with b
+
+Describe the card in a sentence. b generates the picture with AI image generation and shows you a few to choose from.
+
+### 2. Mint it
+
+The card goes on Bitcoin SV as an NFT in your name, from the Mint in bWalletX. One tap, no files to juggle.
+
+### 3. Send it by bMail
+
+Pick a $name and the card arrives in their bMail, ready to open.
+
+### 4. Keep it or wear it
+
+It sits in their wallet as theirs. If they love it, they set it as their round bAvatar on bChatX and in their wallet.
+
+## What it costs
+
+You pay in BSV, from your wallet, and you see the total before you confirm. It has three parts:
+
+- The generation. Making a picture with AI costs us real money, so you pay for it, plus a small premium on top.
+
+- The minting fee. The Bitcoin SV network fee to put the card on chain, plus the usual bWalletX fee. See [Mint with bWalletX](https://bwalletx.com/mint) for how minting is priced.
+
+- The stamp. Sending by [bMail](https://bwalletx.com/bmail) works like the penny post.
+
+We’ll publish the exact prices when card making goes live. Nothing is charged without your OK on the wallet’s pay sheet.
+
+## Bigger than birthdays
+
+Cards are the first thing we’re building on Generation-as-a-Service: we run the AI on our servers, you pay per generation in BSV, and what you make is yours to mint. Thank-you cards, invitations, wedding cards and more kinds of generation will follow for everyone with bWalletX.
+
+## Where we are
+
+- LiveMint a picture as your own NFT from the Mint button in bWalletX
+
+- LiveSend an NFT to someone’s $name from your wallet
+
+- LivebMail inbox in bWalletX, with tokens and NFTs from new senders held in Quarantine
+
+- LiveYour own generated bAvatar on bChatX, which you can mint
+
+- LiveTalk to b in your wallet
+
+- ComingMake a greeting card with b, generated with Grok Imagine on our servers
+
+- ComingPay for each generation in BSV, in the same pay sheet
+
+- ComingMint a card in one tap from the card maker
+
+- ComingSend a card by bMail, with the card shown as the letter
+
+- ComingWear a card you were sent as your bAvatar on bChatX and in your wallet
+
+- ComingMore generations: thank-yous, invitations and other kinds of picture
+
+[Get bWalletX](https://bwalletx.com/get)
+[Tell b who it’s for](https://web.bwalletx.com/m/ask-b?ask=I%27d%20like%20to%20make%20a%20birthday%20card%20for%20someone.%20It%27s%20for%3A%20)
+
+The card in the animation is our own drawing. Related: [bAvatars](https://bwalletx.com/bavatars) · [bMail](https://bwalletx.com/bmail) · [Mint](https://bwalletx.com/mint) · [Ask b](https://bwalletx.com/ask-b).
 
 ---
 
