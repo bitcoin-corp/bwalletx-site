@@ -201,7 +201,7 @@
       .jb-foot:first-of-type { padding-top: 22px; }
 
       @media (max-aspect-ratio: 1/1) {
-        .mk { flex-direction: column; font-size: min(52vw, 29svh); line-height: .78; }
+        .mk { flex-direction: column; font-size: min(60vw, 31svh); line-height: .9; }
         .dict h2 { font-size: min(27vw, 17svh); }
         .you { font-size: min(44vw, 34svh); }
         .big, .ttl .big, .credited .big { font-size: clamp(3rem, 15.4vw, 9rem); }
@@ -213,6 +213,7 @@
         .cap.lo { top: 70%; } .cap.s6 { top: 58%; }
         :root { --cw: min(34svh, 58vw); --coin-y: 36%; }
         .rule.t { top: 14%; } .rule.b { bottom: 14%; }
+        #vMake { filter: grayscale(1) contrast(1.05) brightness(2.2); }   /* the lower letters sit over the dark keyboard: lift it so KE reads */
       }
       @media (max-width: 520px) { .btn { width: 100%; max-width: 320px; } .getp, .jb-end-in .ctas { flex-direction: column; align-items: center; } .today { font-size: .875rem; padding: 0 12px; } }
 
