@@ -73,7 +73,7 @@
       <img src="/logo.svg" alt="bWalletX" width="72" height="64" />
 <h1 id="sign-in-with-bwalletx">Sign in with bWallet<span class="gold">X</span></h1>
 <p class="lede">How to let people sign in to your site or app with their bWalletX: one script tag, two routes on your server, and no API keys.</p>
-<p class="src-note">Also as plain Markdown for AI coding agents: <a href="/connect.md">bwalletx.com/connect.md</a>. Checked against bWalletX 5.2.37, connect.js and @bwalletx/connect 0.5.0 on 18 Oct 2026. Full docs: <a href="https://docs.bwalletx.com/developers/connect/">docs.bwalletx.com/developers/connect</a>.</p>
+<p class="src-note">Also as plain Markdown for AI coding agents: <a href="/connect.md">bwalletx.com/connect.md</a>. Checked against bWalletX 5.2.39, connect.js and @bwalletx/connect 0.5.0 on 18 Oct 2026. Full docs: <a href="https://docs.bwalletx.com/developers/connect/">docs.bwalletx.com/developers/connect</a>.</p>
 <h2 id="in-30-seconds">In 30 seconds</h2>
 <p>One script tag on your page, two routes on your server.</p>
 <pre><code class="language-html">&lt;script src=&quot;https://bwalletx.com/connect.js&quot;&gt;&lt;/script&gt;
@@ -444,7 +444,7 @@ Origin: https://example.com
 Nonce: 3q2-7wEXAMPLEnonce0Q8w
 Expires: 2026-10-07T12:02:00.000Z
 </code></pre>
-<p>(The second and fourth lines are empty.) This is the same text bChat and bit-sign use. The wallet does not parse it; any text works, but keep your origin, the nonce and the expiry in it so the user can see what they are approving and a signature made for your site is worthless anywhere else.</p>
+<p>(The second and fourth lines are empty.) This is the same text bChat and bChatX use. The wallet does not parse it; any text works, but keep your origin, the nonce and the expiry in it so the user can see what they are approving and a signature made for your site is worthless anywhere else.</p>
 <p>The signature call, as the wallet receives it:</p>
 <table>
 <thead>
@@ -494,7 +494,7 @@ Expires: 2026-10-07T12:02:00.000Z
 <h2 id="not-yet-available">Not yet available</h2>
 <p>These are gaps today. Plan around them.</p>
 <ul>
-<li><strong>No hosted sign-in or OAuth-style redirect.</strong> There is no bwalletx.com page you can send users to and get a callback from, and no hosted verify endpoint. You run the two routes yourself. bChat&#39;s own endpoints (<code>/api/bitsign/auth/bwallet/*</code> on bit-sign) accept requests from their own pages only and are not a public API.</li>
+<li><strong>No hosted sign-in or OAuth-style redirect.</strong> There is no bwalletx.com page you can send users to and get a callback from, and no hosted verify endpoint. You run the two routes yourself. bChat&#39;s own endpoints (<code>/api/bitsign/auth/bwallet/*</code> on bChatX) accept requests from their own pages only and are not a public API.</li>
 <li><strong>No user profile.</strong> You get the identity key and nothing else: no $handle, paymail, name or picture, and no proof linking the key to them.</li>
 <li><strong>The relay is ours.</strong> <code>relay.bwallet.space</code> accepts any https origin, but it is a single service run by The Bitcoin Corporation with no published uptime or rate-limit guarantees (it currently allows about 60 frames a minute per channel).</li>
 <li><strong>No test wallet.</strong> There is no testnet build or headless bWalletX for automated tests. To test your server, sign with <code>new ProtoWallet(PrivateKey.fromRandom()).createSignature(...)</code> using the same arguments; it makes exactly the signature bWalletX makes.</li>

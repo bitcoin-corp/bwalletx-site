@@ -81,7 +81,7 @@
     <main>
       <p><a href="/">← bWalletX</a></p>
       <h1>Privacy Policy</h1>
-      <p class="meta">bWalletX (Beta) · Effective 6 October 2026</p>
+      <p class="meta">bWalletX (Beta) · Effective 6 October 2026 · Updated 23 October 2026</p>
 
       <p class="notice">
         bWalletX is published by The Bitcoin Corporation Ltd and is based on the open-source Yours Wallet (MIT licence).
@@ -92,12 +92,12 @@
       <h2>Summary</h2>
       <p>
         bWalletX is non-custodial: your private keys and recovery phrase never leave your device, and we can't move your
-        money. To run chat, names, contacts and calls, our own service (bit-sign, operated by The Bitcoin Corporation
+        money. To run chat, names, contacts and calls, our own service (bChatX, operated by The Bitcoin Corporation
         Ltd) keeps the data listed under
         <a href="#service">What our service keeps</a>, linked to your wallet's identity key. If you use bChat on a
         phone, our push server also keeps your device's push token and notification settings so it can notify you (see
         <a href="#push">Notifications</a>). We use all of this only to run those features. We don't collect your email
-        (unless you choose Continue with Google), phone number, location, advertising identifiers, analytics or crash
+        address, phone number, location, advertising identifiers, analytics or crash
         reports, and we don't track you, sell your data or use it for advertising.
       </p>
 
@@ -138,7 +138,7 @@
         </li>
         <li>
           <b>Names and payments to names:</b> when you send to a $handle, paymail or OpNS name, or look up your own
-          name, the app asks 1Sat indexers (including OpNS), bit-sign and the paymail service of the address's domain
+          name, the app asks 1Sat indexers (including OpNS), bChatX and the paymail service of the address's domain
           (for example HandCash for <code>@handcash.io</code>) to resolve that name to a payment destination. Those
           services see the name being looked up.
         </li>
@@ -155,7 +155,7 @@
           <b>$b assistant (optional):</b> nothing is sent until you allow it in the app. In bWallet from the App Store
           and Google Play, $b uses your own AI provider key (Anthropic, OpenAI or OpenRouter) and your message and the
           recent conversation go straight from your phone to that provider. In bWalletX's pay-per-message mode, they go
-          to our server (bitcoinchat.online), which passes them to Anthropic; our server also sees the payment's
+          to our server (bChatX), which passes them to Anthropic; our server also sees the payment's
           transaction id and your bChat sign-in, and Anthropic does not. Your keys, balances, addresses, contacts, chats
           and files are never sent. You can withdraw consent in Settings › b agent.
         </li>
@@ -171,7 +171,7 @@
 
       <h2 id="service">What our service keeps</h2>
       <p>
-        Chat, names, contacts and calls run on bit-sign (<code>bitcoinchat.online</code>), operated by The Bitcoin
+        Chat, names, contacts and calls run on bChatX (<code>bchatx.com</code>; formerly bit-sign and bitcoinchat.online), operated by The Bitcoin
         Corporation Ltd. When you use those features it stores:
       </p>
       <ul>
@@ -196,22 +196,35 @@
 
       <h2 id="kyc">Verified identity (KYC certificates)</h2>
       <p>
-        Identity verification is optional. If you choose to verify, you are sent to bit-sign, which uses Veriff to check
-        your identity document. bit-sign and Veriff keep the verification record under their own privacy policies.
-        bit-sign then issues a private certificate that is stored in your wallet on your device. bWalletX does not
+        Identity verification is optional. If you choose to verify, you are sent to bChatX, which uses Veriff to check
+        your identity document. bChatX and Veriff keep the verification record under their own privacy policies.
+        bChatX then issues a private certificate that is stored in your wallet on your device. bWalletX does not
         upload that certificate anywhere by itself: you choose which details, if any, to reveal to an app or service,
         and only when you approve it.
       </p>
 
-      <h2 id="social">Continue with X or Google (bWalletX only)</h2>
+      <h2 id="social">Link your accounts (bWalletX only)</h2>
       <p>
-        If you choose Continue with X or Continue with Google when creating an account, you sign in on X or Google in
-        your browser and our sign-in service (the bWalletX paymail server, run by The Bitcoin Corporation Ltd) receives
-        your X @name or Gmail address, your display name and your profile photo from them. The app uses these to fill in
-        your name and photo and, if you claim it, to register a verified paymail such as
-        <code>yourname.x@bwalletx.com</code>. We keep that registration so the paymail keeps working. We don't receive
-        your X or Google password, and we don't post anything or read anything else from your account. This option isn't
-        in bWallet from the App Store and Google Play.
+        Creating a wallet needs no social account. Later, you can choose to link X, Google, GitHub, LinkedIn or HandCash
+        under Settings › Identity › Link your accounts. You sign in on that service in your browser and it confirms the
+        account is yours. Your wallet then signs the link with its identity key, so a badge on your profile shows it.
+        The link keeps a one-way hash of the account id and, where there is one, the public handle: your X @name, GitHub
+        login or HandCash $handle. For LinkedIn the badge shows your display name. For Google we keep only an "email
+        verified" tick: your email address is never stored, shown or put into a handle. The link is saved on your device
+        and the bWalletX paymail server (run by The Bitcoin Corporation Ltd) keeps a public copy so others can see the
+        badge. We don't receive your passwords for these services, and we don't post anything or read anything else from
+        your accounts. Linked accounts never hold or unlock your keys. You can unlink an account on the same screen. This
+        option isn't in bWallet from the App Store and Google Play.
+      </p>
+
+      <h2 id="passkey">Passkey wallets</h2>
+      <p>
+        If you create or protect a wallet with a passkey, an encrypted copy of your recovery phrase is made so you can
+        restore with that passkey. It can only be opened with your passkey, which stays in your passwords app or device.
+        The copy is kept on your device and in the recovery file you save, and our service (bChatX) keeps a copy of the
+        encrypted data, without any device label or wallet address, so you can restore on a new device. We can't read
+        it. Removing the passkey in Settings deletes the copy on your device. To ask us to delete the server copy, email
+        <a href="mailto:support@bwalletx.com">support@bwalletx.com</a>.
       </p>
 
       <h2 id="push">Notifications</h2>
@@ -220,7 +233,7 @@
         They're generated on your device.
       </p>
       <p>
-        <b>Push notifications (bChat).</b> When you're signed in to bChat, the app registers your device with our push
+        <b>Push notifications (bChatX).</b> When you're signed in to bChatX, the app registers your device with our push
         server, <code>push.bwalletx.com</code>, run by The Bitcoin Corporation Ltd on a server we rent from Hetzner, so
         you can be told about room mentions and direct messages while the app is closed. On a phone this is on by
         default once you sign in to bChat, and your phone asks for permission first; in the web wallet and Chrome
