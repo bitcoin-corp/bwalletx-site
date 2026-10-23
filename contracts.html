@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Contracts in chat · bWalletX</title>
+    <link rel="canonical" href="https://bwalletx.com/contracts" />
+    <meta name="description" content="Ask b to draft an agreement in your chat. Sign it with your hand and your wallet key. Seal a fingerprint on Bitcoin. Each party keeps a copy only they can read." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://bwalletx.com/contracts" />
+    <meta property="og:site_name" content="bWalletX" />
+    <meta property="og:title" content="Contracts in chat. Signed by hand. Sealed on Bitcoin." />
+    <meta property="og:description" content="Ask b to draft an agreement in your chat. Sign it with your hand and your wallet key. Seal a fingerprint on Bitcoin. Each party keeps a copy only they can read." />
+    <meta property="og:image" content="https://bwalletx.com/og-contracts-v1.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="A gold contract card with a handwritten signature and a Sealed on Bitcoin stamp" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@bWalletX" />
+    <meta name="twitter:title" content="Contracts in chat. Signed by hand. Sealed on Bitcoin." />
+    <meta name="twitter:description" content="Ask b to draft an agreement in your chat. Sign it with your hand and your wallet key. Seal a fingerprint on Bitcoin. Each party keeps a copy only they can read." />
+    <meta name="twitter:image" content="https://bwalletx.com/og-contracts-v1.jpg" />
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="stylesheet" href="/styles.css" />
+    <style>
+      .ext h1 { font-size: clamp(2.2rem, 6vw, 3.4rem); margin: 18px 0 10px; }
+      .ext h2 { margin: 48px 0 10px; font-size: 1.5rem; }
+      .ext p, .ext li { line-height: 1.65; }
+      .ext code { background: #17191e; padding: 2px 7px; border-radius: 6px; overflow-wrap: anywhere; }
+      .hero-img { width: 100%; max-width: 600px; height: auto; border-radius: 16px; margin: 10px 0 4px; display: block; }
+      .steps { list-style: none; padding: 0; margin: 22px 0; display: grid; gap: 12px; }
+      .steps li { background: #101114; border: 1px solid #ffffff12; border-radius: 16px; padding: 16px 18px; }
+      .steps .n { color: #F5B800; font-weight: 800; font-size: 0.78rem; letter-spacing: .08em; text-transform: uppercase; }
+      .steps h3 { margin: 4px 0 4px; font-size: 1.05rem; }
+      .steps p { margin: 0; color: #a7adb8; }
+      .box { background: #101114; border: 1px solid #ffffff12; border-radius: 16px; padding: 18px 20px; margin: 16px 0; }
+      .box h3 { margin: 0 0 6px; font-size: 1rem; }
+      .box p { margin: 0; color: #a7adb8; }
+      .tag { display: inline-block; font-size: 0.72rem; font-weight: 800; letter-spacing: .06em; text-transform: uppercase; border-radius: 999px; padding: 3px 10px; vertical-align: middle; margin-left: 6px; white-space: nowrap; }
+      .tag.live { background: #F5B800; color: #000; }
+      .tag.coming { background: transparent; color: #a7adb8; border: 1px solid #ffffff33; }
+      .status { list-style: none; padding: 0; margin: 16px 0; }
+      .status li { display: flex; gap: 12px; align-items: flex-start; padding: 12px 0; border-bottom: 1px solid #ffffff12; }
+      .status li .tag { margin: 3px 0 0; flex: 0 0 auto; min-width: 66px; text-align: center; }
+      .status li div { min-width: 0; }
+      .sample { background: #0b0c0f; border: 1px solid #F5B80033; border-radius: 12px; padding: 14px 16px; font-family: ui-monospace, Menlo, monospace; font-size: 0.82rem; line-height: 1.55; color: #d7d9de; white-space: pre-wrap; overflow-wrap: anywhere; margin: 14px 0; }
+      .ext .small { color: #8a8a86; font-size: 0.85rem; }
+      .ext .row { display: flex; gap: 12px; flex-wrap: wrap; margin: 26px 0; }
+    </style>
+  </head>
+  <body>
+    <div class="beta-banner">bWalletX is in <strong>beta</strong>: test with small amounts.</div>
+    <header class="topbar">
+      <div class="wrap topbar-in">
+        <a class="brand" href="/"><img src="/logo.svg" alt="" width="34" height="30" /><span>bWallet<span class="gold">X</span></span></a>
+        <nav aria-label="Pages">
+          <a href="/features">Features</a><a href="/exchange">Exchange</a><a href="/social">Social</a><a href="/agent">Agents</a><a href="/extension">Extension</a><a href="/developers">Developers</a>
+        </nav>
+        <span class="nav-cta"><a class="dl-btn" href="/get">Download</a><a class="web-btn" href="https://web.bwalletx.com" target="_blank" rel="noopener">Web &rarr;</a></span>
+      </div>
+    </header>
+    <script src="/nav.js"></script>
+    <main class="ext">
+      <img src="/logo.svg" alt="bWalletX" width="72" height="64" />
+      <h1>Contracts in chat</h1>
+      <p class="lede">Agree terms where you already talk. b drafts the agreement in your chat. You sign it with your hand and your wallet key. A fingerprint goes on Bitcoin, and each of you keeps a copy.</p>
+      <img class="hero-img" src="/og-contracts-v1.jpg" alt="A gold contract card with a handwritten signature and a Sealed on Bitcoin stamp" width="1200" height="630" />
+
+      <h2>How it works</h2>
+      <ol class="steps">
+        <li><div class="n">1 &middot; Draft</div><h3>Ask b to draft <span class="tag live">Live</span></h3><p>In a partnership room, tap Ask b. b writes a full agreement, or sums up the terms so far, from what the room has said. Anything still open shows as <b>[TO BE AGREED]</b>, highlighted so nobody misses it.</p></li>
+        <li><div class="n">2 &middot; Agree</div><h3>Everyone accepts <span class="tag live">Live</span></h3><p>b's draft is only a proposal. Every member accepts it with their own wallet before it counts. Nothing is accepted for you.</p></li>
+        <li><div class="n">3 &middot; Document</div><h3>A <code>.nds.html</code> contract <span class="tag live">Live</span></h3><p>On bChatX, contracts are <code>.nds.html</code> files: one web page with a box for each person who signs.</p></li>
+        <li><div class="n">4 &middot; Sign</div><h3>Your hand and your key <span class="tag live">Live</span></h3><p>Draw your signature into your box. bWalletX then signs a record of what you signed with your wallet's identity key.</p></li>
+        <li><div class="n">5 &middot; Seal</div><h3>A fingerprint on Bitcoin <span class="tag live">Live</span></h3><p>You approve a seal from your wallet. Only hashes go on chain, never the contract or your signature. You pay the network fee.</p></li>
+        <li><div class="n">6 &middot; Keep</div><h3>Each party holds a copy <span class="tag live">Live</span></h3><p>A sealed contract on bChatX is encrypted to the people who signed it. Agreements sent by bMail are encrypted to each party and land in their own Agreements box.</p></li>
+        <li><div class="n">7 &middot; Resolve</div><h3>b helps with disputes <span class="tag coming">Coming</span></h3><p>Not built yet. Today b drafts and sums up terms. It doesn't mediate disagreements after signing.</p></li>
+      </ol>
+      <p class="small">b's drafts are labelled &ldquo;Draft by b, not legal advice; review before signing&rdquo;. b drafts in partnership rooms only, not in token rooms or one-to-one chats.</p>
+
+      <h2>What a <code>.nds.html</code> file is</h2>
+      <p>It's a normal HTML page. Anyone can open it in a browser and read it. Inside sits a small, hidden manifest that lists the signature boxes: who signs, in what role, for which party, and where on the page the box goes.</p>
+      <div class="sample">&lt;script type="application/npg-sig-manifest+json"&gt;
+{ "signatureFields": [
+    { "id": "a", "party": "founder", "role": "Partner", "signerHandle": "alice" },
+    { "id": "b", "party": "founder", "role": "Partner", "signerHandle": "bob" } ],
+  "token": { "symbol": "ACME", "supply": 1000000000,
+    "distribution": [ { "to": "a", "pct": 60 }, { "to": "b", "pct": 40 } ] } }
+&lt;/script&gt;</div>
+      <p class="small">A simplified example, not a real contract.</p>
+      <div class="box"><h3>Token allocations</h3><p>A contract can carry token terms: the token's name and supply, and how the supply splits between the people who sign. bChatX checks the split before it builds the contract. bWalletX doesn't show token terms itself yet.</p></div>
+      <div class="box"><h3>Signed in place</h3><p>Each drawn signature lands exactly on its own box, so the signed file looks like the paper version would.</p></div>
+      <div class="box"><h3>What goes on chain</h3><p>Hashes only: a fingerprint of the contract and of the signatures. The text and your drawing never go on chain.</p></div>
+
+      <h2>Two places to sign</h2>
+      <div class="box"><h3>On bChatX</h3><p>Open the contract on bChatX and choose <b>Sign and seal with bWalletX</b>. Approve in the Chrome extension, or pair your phone with a QR code. Today that's two approvals: one to sign, one to pay the fee. <a href="/sign">More on Sign and seal</a>.</p></div>
+      <div class="box"><h3>In bMail, inside bWalletX</h3><p>bMail &rsaquo; Agreements sends a document (text, HTML or a small PDF) to the other party. Each of you signs with your card signature and identity key, then anyone who signed can seal it. Folders show what needs you, what's waiting, and what's sealed. bWalletX only.</p></div>
+
+      <h2>Privacy</h2>
+      <div class="box"><h3>Your drawn signature</h3><p>It's stored on your device only. It goes into a contract only when you sign one. <a href="/sign">How it's kept</a>.</p></div>
+      <div class="box"><h3>A sealed contract on bChatX</h3><p>Once everyone has signed, the finished contract is encrypted to the signers' keys. By default it's also wrapped to an offline recovery key, so it can be recovered. An author can choose a private contract with no recovery copy. While a contract is still being signed, it stays readable so the next person can sign it.</p></div>
+      <div class="box"><h3>When it isn't encrypted</h3><p>If someone signs by an email link, they have no key to encrypt to, so the contract is stored readable. Share certificates are stored readable on purpose, because they exist to be shown.</p></div>
+      <div class="box"><h3>Agreements by bMail</h3><p>The document travels inside a bMail letter, encrypted to each party. Only the parties can open it.</p></div>
+      <div class="box"><h3>On chain</h3><p>Nothing readable. The chain holds fingerprints, so anyone with a copy can check it hasn't changed. Without a copy, the fingerprint tells nobody anything.</p></div>
+
+      <h2>Status</h2>
+      <ul class="status">
+        <li><span class="tag live">Live</span><div><b>b drafts in partnership rooms.</b> A full agreement or a terms summary, with open points marked [TO BE AGREED].</div></li>
+        <li><span class="tag live">Live</span><div><b>Every member accepts b's draft</b> with their own wallet.</div></li>
+        <li><span class="tag live">Live</span><div><b><code>.nds.html</code> contracts on bChatX</b>, with signature boxes and optional token terms.</div></li>
+        <li><span class="tag live">Live</span><div><b>Card signature.</b> Sign the back of your wallet card with your finger. In bWalletX and bWallet.</div></li>
+        <li><span class="tag live">Live</span><div><b>Sign and seal with bWalletX</b> on bChatX. Hashes only on chain; you pay the network fee.</div></li>
+        <li><span class="tag live">Live</span><div><b>Sealed contracts encrypted to the signers</b> on bChatX, when every signer has a bChatX account.</div></li>
+        <li><span class="tag live">Live</span><div><b>bMail &rsaquo; Agreements.</b> Send, sign, seal and keep agreements in your wallet. bWalletX only.</div></li>
+        <li><span class="tag coming">Coming</span><div><b>One-tap sign and seal.</b> bWalletX shows one screen with the document, your box, your signature and the cost, then signs and pays together.</div></li>
+        <li><span class="tag coming">Coming</span><div><b>Token terms shown in bWalletX.</b> See a contract's token split in the wallet before you sign.</div></li>
+        <li><span class="tag coming">Coming</span><div><b>b helps resolve disputes.</b> b as a mediator between the parties after signing.</div></li>
+      </ul>
+      <p class="small">The contract text is never put on chain, encrypted or not. Encryption protects the stored copies.</p>
+
+      <h2>Store edition</h2>
+      <p>bWallet, the App Store and Google Play edition, has the card signature. bMail Agreements and partnership shares are in bWalletX only. Get bWalletX for the full set.</p>
+
+      <h2>Related</h2>
+      <div class="row">
+        <a class="btn btn-store btn-ghost" href="/sign">Your signature</a>
+        <a class="btn btn-store btn-ghost" href="/partnership-shares">Partnership shares</a>
+        <a class="btn btn-store btn-ghost" href="/bshares">bShares</a>
+        <a class="btn btn-store btn-ghost" href="/identity">Identity</a>
+        <a class="btn btn-store btn-ghost" href="/bmail">bMail</a>
+        <a class="btn btn-store btn-ghost" href="/digital-ice-cream">Digital Ice-Cream</a>
+      </div>
+      <p>b drafts help you get started. They aren't legal advice. Whether a document can be signed electronically depends on the document and the law where you are. Some, like wills and deeds that need a witness, can't.</p>
+
+      <div class="row">
+        <a class="btn btn-store" href="/get">Get bWalletX</a>
+        <a class="btn btn-store btn-ghost" href="/features">All features</a>
+      </div>
+      <p class="small">bWalletX is in beta: test with small amounts. Questions: <a href="mailto:support@bwalletx.com">support@bwalletx.com</a></p>
+    </main>
+  </body>
+</html>
