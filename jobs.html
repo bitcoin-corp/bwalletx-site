@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>Jobs: paid work, paid in BSV · bWalletX</title>
+    <meta name="description" content="Paid work on bWalletX: security testing, paid Android testing and, soon, feature bounties. Open source, paid in BSV, every payout public." />
+    <link rel="canonical" href="https://bwalletx.com/jobs" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://bwalletx.com/jobs" />
+    <meta property="og:site_name" content="bWalletX" />
+    <meta property="og:title" content="bWalletX jobs: paid work, paid in BSV" />
+    <meta property="og:description" content="Paid work on bWalletX: security testing, paid Android testing and, soon, feature bounties. Open source, paid in BSV, every payout public." />
+    <meta property="og:image" content="https://bwalletx.com/og-jobs-v1.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="bWalletX jobs: security testing, Android testing, feature bounties" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@bWalletX" />
+    <meta name="twitter:title" content="bWalletX jobs: paid work, paid in BSV" />
+    <meta name="twitter:description" content="Paid work on bWalletX: security testing, paid Android testing and, soon, feature bounties. Open source, paid in BSV, every payout public." />
+    <meta name="twitter:image" content="https://bwalletx.com/og-jobs-v1.png" />
+    <meta name="theme-color" content="#000000" />
+    <link rel="icon" href="/favicon.ico" sizes="48x48" />
+    <link rel="icon" href="/favicon.png" type="image/png" sizes="32x32" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="stylesheet" href="/styles.css" />
+    <style>
+      .ext { max-width: 760px; margin: 0 auto; padding: 120px 20px 80px; }
+      .ext h1 { font-size: clamp(2.2rem, 6vw, 3.4rem); margin: 10px 0 6px; line-height: 1.1; }
+      .ext h1 b { color: #F5B800; }
+      .ext h2 { margin: 44px 0 10px; font-size: 1.4rem; }
+      .ext h3 { margin: 22px 0 6px; font-size: 1.05rem; }
+      .ext p, .ext li, .ext td, .ext th { line-height: 1.7; }
+      .ext code { background: #17191e; padding: 2px 7px; border-radius: 6px; overflow-wrap: anywhere; }
+      .ext a { overflow-wrap: anywhere; }
+      .ext .meta { color: #8a8a86; font-size: 0.9rem; margin: 0; }
+      .ext .notice { padding: 14px 16px; border: 1px solid #f5b80040; background: #f5b8000d; border-radius: 14px; color: #fcd9a0; }
+      .ext .card { background: #101114; border: 1px solid #ffffff12; border-radius: 16px; padding: 16px 20px; margin: 14px 0; }
+      .ext .card h3 { margin: 0 0 6px; }
+      .ext table { width: 100%; border-collapse: collapse; margin: 10px 0 4px; font-size: 0.95rem; }
+      .ext th, .ext td { text-align: left; vertical-align: top; padding: 10px 10px; border-top: 1px solid #ffffff14; }
+      .ext th { color: #fff; font-weight: 600; border-top: 0; }
+      .ext td.r, .ext th.r { white-space: nowrap; color: #F5B800; font-weight: 700; }
+      .ext .status { display: inline-block; font-size: 0.72rem; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; padding: 3px 9px; border-radius: 999px; background: #22c55e22; color: #5fe08f; }
+      .ext .status.watch { background: #F5B80022; color: #F5B800; }
+      .ext .toc a { margin-right: 12px; }
+      @media (max-width: 560px) {
+        .ext table, .ext thead, .ext tbody, .ext tr, .ext th, .ext td { display: block; }
+        .ext thead { display: none; }
+        .ext tr { border-top: 1px solid #ffffff14; padding: 8px 0; }
+        .ext td { border: 0; padding: 2px 0; }
+        .ext td.r { white-space: normal; }
+      }
+      .ext .bar { height: 18px; border-radius: 999px; background: #ffffff10; overflow: hidden; margin: 12px 0 6px; }
+      .ext .bar i { display: block; height: 100%; width: 0; background: linear-gradient(90deg, #c99200, #F5B800); border-radius: 999px; transition: width .8s ease; }
+      .ext .big { font-size: clamp(1.6rem, 5vw, 2.2rem); font-weight: 700; color: #F5B800; margin: 4px 0 0; }
+      .ext .stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 10px; }
+      .ext .stats .card { margin: 0; }
+      .ext .stats b { display: block; font-size: 1.3rem; color: #fff; }
+      .ext .stats span { color: #8a8a86; font-size: 0.85rem; }
+      .ext .tag { font-size: 0.75rem; color: #F5B800; }
+      .ext .job .top { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; justify-content: space-between; }
+      .ext .status.coming { background: #ffffff14; color: #b8b8b2; }
+      .ext .pay { color: #F5B800; font-weight: 700; margin: 6px 0 0; }
+      .ext .job ul { padding-left: 20px; margin: 8px 0; }
+      .ext .job .how { margin: 8px 0 0; }
+      .ext ol.steps { padding-left: 22px; }
+      .ext form label { display: block; margin: 14px 0 4px; font-weight: 600; }
+      .ext input, .ext select, .ext textarea { width: 100%; box-sizing: border-box; background: #0b0c0f; color: #fff; border: 1px solid #ffffff22; border-radius: 12px; padding: 12px 14px; font: inherit; }
+      .ext textarea { min-height: 160px; resize: vertical; }
+      .ext input:focus, .ext select:focus, .ext textarea:focus { outline: 2px solid #F5B80088; border-color: #F5B800; }
+      .ext .btn { margin-top: 18px; background: #F5B800; color: #000; border: 0; border-radius: 999px; padding: 13px 26px; font-weight: 700; font-size: 1rem; cursor: pointer; }
+      .ext .btn[disabled] { opacity: .6; cursor: wait; }
+      .ext .hp { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
+      .ext #msg { margin-top: 12px; }
+    </style>
+  </head>
+  <body>
+    <div class="beta-banner">bWalletX is in <strong>beta</strong>: test with small amounts.</div>
+    <header class="topbar">
+      <div class="wrap topbar-in">
+        <a class="brand" href="/"><img src="/logo.svg" alt="" width="34" height="30" /><span>bWallet<span class="gold">X</span></span></a>
+        <nav aria-label="Pages">
+          <a href="/features">Features</a><a href="/exchange">Exchange</a><a href="/social">Social</a><a href="/agent">Agents</a><a href="/extension">Extension</a><a href="/developers">Developers</a>
+        </nav>
+        <span class="nav-cta"><a class="dl-btn" href="/get">Download</a><a class="web-btn" href="https://web.bwalletx.com" target="_blank" rel="noopener">Web &rarr;</a></span>
+      </div>
+    </header>
+    <script src="/nav.js"></script>
+    <main class="ext">
+      <h1><b>Jobs</b></h1>
+      <p class="meta">Paid work on bWalletX. The code is open source; the pay is in BSV; every payout is public on <a href="/bounties">/bounties</a>.</p>
+
+      <h2 id="open">Open contracts</h2>
+      <div id="jobs">
+        <div class="card job" id="job-security">
+          <div class="top"><h3>Security testing (b-Aware)</h3><span class="status">Live</span></div>
+          <p class="pay">Critical 10 BSV · High 3 BSV · Medium 0.5 BSV · Low: credit</p>
+          <p class="meta">Paid from a 20 BSV pool each quarter.</p>
+          <p>Read the code and try the apps. Find a way to take funds, read keys, or get past an approval in bWalletX, bWallet or bChatX.</p>
+          <ul><li>Test only your own wallets and accounts. No real users&#x27; funds or data.</li><li>First valid report of an issue is paid. Duplicates earn credit.</li><li>Rewards are paid after the fix ships.</li><li>Keep it private until it is fixed. Full policy and safe harbour on b-Aware.</li></ul>
+          <p class="how"><b>How to submit:</b> Email support@bwalletx.com with the subject b-Aware. Not the form below.</p>
+          <p class="how"><a href="/b-aware">Read the b-Aware policy and rates &rarr;</a></p>
+        </div>
+        <div class="card job" id="job-android-testers">
+          <div class="top"><h3>Paid Android testing</h3><span class="status">Live</span></div>
+          <p class="pay">1 BSV per tester</p>
+          <p class="meta">0.25 BSV after the first open from Google Play, 0.75 BSV after 12 of 14 daily check-ins.</p>
+          <p>Install bWallet from the Google Play test and use it every day for 14 days: send a little, receive, try the features, and tell us what breaks.</p>
+          <ul><li>Apply with Google on /testers first. Testers are approved by hand.</li><li>Use the Google account on your Android phone.</li><li>One tester per person. The app checks in once a day when you open it.</li><li>Use the form below for test reports and notes.</li></ul>
+          <p class="how"><b>How to submit:</b> Submit with the form below.</p>
+          <p class="how"><a href="/testers">Apply on /testers &rarr;</a></p>
+        </div>
+        <div class="card job" id="job-feature-bounties">
+          <div class="top"><h3>Feature bounties</h3><span class="status coming">Coming</span></div>
+          <p class="pay">Set per contract</p>
+          <p>Build or fix a named feature in our open-source code. Each bounty will list the task, the price and how b checks the work.</p>
+          <ul><li>Not open yet. The first contracts will appear here.</li></ul>
+        </div>
+      </div>
+
+      <h2 id="how">How it works</h2>
+      <ol class="steps">
+        <li><b>You submit</b> your work: a report, a test log, a fix.</li>
+        <li><b>b checks it.</b> b looks for duplicates and checks the work against the code.</li>
+        <li><b>The team approves.</b> b proposes a payout; a person on the team approves it.</li>
+        <li><b>You are paid in BSV</b>, and the payout is listed in public on <a href="/bounties">/bounties</a>.</li>
+      </ol>
+      <p class="meta">This is paid work, not an investment. Amounts are set per job and only paid after approval.</p>
+
+      <h2 id="submit">Submit work</h2>
+      <p class="notice"><b>Security issues:</b> do not use this form. Email <a href="mailto:support@bwalletx.com?subject=b-Aware">support@bwalletx.com</a> with the subject b-Aware, as the <a href="/b-aware">policy</a> says.</p>
+      <form id="f" novalidate>
+        <label for="job">Job</label>
+        <select id="job" name="job" required></select>
+        <label for="who">Your $handle or paymail</label>
+        <input id="who" name="who" maxlength="120" autocomplete="off" placeholder="$yourname or you@bwalletx.com" required />
+        <label for="email">Contact email</label>
+        <input id="email" name="email" type="email" maxlength="200" autocomplete="email" required />
+        <label for="text">What you did</label>
+        <textarea id="text" name="text" maxlength="6000" required placeholder="What you tested or built, what you found, steps to reproduce."></textarea>
+        <label for="links">Links (optional, one per line, up to 10)</label>
+        <textarea id="links" name="links" style="min-height:80px" placeholder="https://github.com/..."></textarea>
+        <div class="hp" aria-hidden="true"><label for="website">Website</label><input id="website" name="website" tabindex="-1" autocomplete="off" /></div>
+        <button class="btn" id="go" type="submit">Send to b</button>
+        <p id="msg" class="meta" role="status"></p>
+      </form>
+      <p class="meta">We keep your email to contact you about this submission only. b reads what you send as untrusted text.</p>
+    </main>
+    <script>
+    (function () {
+      var $ = function (id) { return document.getElementById(id); };
+      var esc = function (t) { return String(t == null ? '' : t).replace(/[&<>"']/g, function (c) { return '&#' + c.charCodeAt(0) + ';'; }); };
+      var safeHref = function (u) { u = String(u || ''); return /^\/(?!\/)/.test(u) || /^https:\/\//.test(u) ? u : ''; };
+      var API = 'https://push.bwalletx.com';
+      function card(j) {
+        var live = j.status === 'live';
+        var how = j.submit === 'email' ? (j.submit_text || '') : j.submit === 'form' ? 'Submit with the form below.' : '';
+        var href = safeHref(j.link);
+        return '<div class="card job" id="job-' + esc(j.id) + '"><div class="top"><h3>' + esc(j.title) + '</h3><span class="status' + (live ? '' : ' coming') + '">' + (live ? 'Live' : 'Coming') + '</span></div>' +
+          '<p class="pay">' + esc(j.pay) + '</p>' + (j.pay_note ? '<p class="meta">' + esc(j.pay_note) + '</p>' : '') +
+          '<p>' + esc(j.what) + '</p><ul>' + (j.rules || []).map(function (r) { return '<li>' + esc(r) + '</li>'; }).join('') + '</ul>' +
+          (how ? '<p class="how"><b>How to submit:</b> ' + esc(how) + '</p>' : '') +
+          (href ? '<p class="how"><a href="' + esc(href) + '">' + esc(j.link_text || 'More') + ' &rarr;</a></p>' : '') + '</div>';
+      }
+      function fill(jobs) {
+        var open = jobs.filter(function (j) { return j.status === 'live' && j.submit === 'form' && /^[a-z0-9][a-z0-9-]{0,39}$/.test(j.id); });
+        $('job').innerHTML = open.map(function (j) { return '<option value="' + esc(j.id) + '">' + esc(j.title) + '</option>'; }).join('');
+        if (!open.length) { $('f').hidden = true; }
+      }
+      var fallback = [{"id": "security", "title": "Security testing (b-Aware)", "status": "live", "submit": "email"}, {"id": "android-testers", "title": "Paid Android testing", "status": "live", "submit": "form"}, {"id": "feature-bounties", "title": "Feature bounties", "status": "coming", "submit": "none"}];
+      fill(fallback);
+      fetch('/jobs.json', { cache: 'no-store' }).then(function (r) { if (!r.ok) throw 0; return r.json(); }).then(function (d) {
+        var jobs = (d && d.jobs) || [];
+        if (!jobs.length) return;
+        $('jobs').innerHTML = jobs.map(card).join('');
+        fill(jobs);
+      }).catch(function () {});
+      $('f').addEventListener('submit', function (e) {
+        e.preventDefault();
+        var msg = $('msg'), go = $('go');
+        var links = $('links').value.split(/\s+/).map(function (s) { return s.trim(); }).filter(Boolean);
+        if (links.length > 10) { msg.textContent = 'Up to 10 links, please.'; return; }
+        if (links.some(function (l) { return !/^https?:\/\//i.test(l); })) { msg.textContent = 'Links must start with https://'; return; }
+        var body = { job: $('job').value, who: $('who').value.trim(), email: $('email').value.trim(), text: $('text').value.trim(), links: links, source: 'bwalletx.com/jobs', website: $('website').value };
+        if (!body.job || !body.who || !body.email || !body.text) { msg.textContent = 'Please fill in every field.'; return; }
+        go.disabled = true; msg.textContent = 'Sending\u2026';
+        fetch(API + '/v1/jobs/submit', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify(body) })
+          .then(function (r) { return r.json().catch(function () { return {}; }).then(function (j) { return { ok: r.ok, j: j }; }); })
+          .then(function (x) {
+            if (x.ok && x.j.ok) { $('f').reset(); msg.textContent = 'Sent. Your reference is ' + String(x.j.ref || '') + '. b will check it and the team will reply by email.'; }
+            else msg.textContent = String((x.j && x.j.error) || 'Could not send. Please try again later.');
+          })
+          .catch(function () { msg.textContent = 'Could not send. Please try again later.'; })
+          .then(function () { go.disabled = false; });
+      });
+    })();
+    </script>
+  </body>
+</html>
