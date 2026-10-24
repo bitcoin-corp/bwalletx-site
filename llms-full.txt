@@ -3746,7 +3746,7 @@ Making a card is $0.50 in BSV today, shown in the card maker before you pay. Not
 
 ## Send to any public key Coming
 
-Send a card to any public key — even Satoshi’s. Your card goes to the key’s address with a note only that key can open. Try it on 5 April, Satoshi’s birthday. We’re building this in the wallet now.
+Send a card to any public key — even Satoshi’s. Your card goes to the key’s address with a note only that key can open. We’re building this in the wallet now.
 
 ## Start from a photo or a post Coming
 
