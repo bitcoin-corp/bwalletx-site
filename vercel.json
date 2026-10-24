@@ -1,13 +1,86 @@
 {
   "cleanUrls": true,
   "rewrites": [
-    { "source": "/", "has": [{ "type": "host", "value": "race.bwalletx.com" }, { "type": "header", "key": "user-agent", "value": "(?i).*(twitterbot|facebookexternalhit|slackbot|discordbot|telegrambot|whatsapp|linkedinbot|skypeuripreview|embedly|pinterest|redditbot|applebot|googlebot).*" }], "destination": "/race-card" },
-    { "source": "/", "has": [{ "type": "host", "value": "race.bwalletx.com" }], "destination": "https://www.vexvoid.com/race?theme=bacc" },
-    { "source": "/race", "has": [{ "type": "host", "value": "race.bwalletx.com" }, { "type": "header", "key": "user-agent", "value": "(?i).*(twitterbot|facebookexternalhit|slackbot|discordbot|telegrambot|whatsapp|linkedinbot|skypeuripreview|embedly|pinterest|redditbot|applebot|googlebot).*" }], "destination": "/race-card" },
-    { "source": "/race", "has": [{ "type": "host", "value": "race.bwalletx.com" }], "destination": "https://www.vexvoid.com/race" },
-    { "source": "/race/:path*", "has": [{ "type": "host", "value": "race.bwalletx.com" }], "destination": "https://www.vexvoid.com/race/:path*" },
-    { "source": "/_next/:path*", "has": [{ "type": "host", "value": "race.bwalletx.com" }], "destination": "https://www.vexvoid.com/_next/:path*" },
-    { "source": "/manifest.json", "has": [{ "type": "host", "value": "race.bwalletx.com" }], "destination": "https://www.vexvoid.com/manifest.json" },
+    {
+      "source": "/",
+      "has": [
+        {
+          "type": "host",
+          "value": "race.bwalletx.com"
+        },
+        {
+          "type": "header",
+          "key": "user-agent",
+          "value": "(?i).*(twitterbot|facebookexternalhit|slackbot|discordbot|telegrambot|whatsapp|linkedinbot|skypeuripreview|embedly|pinterest|redditbot|applebot|googlebot).*"
+        }
+      ],
+      "destination": "/race-card"
+    },
+    {
+      "source": "/",
+      "has": [
+        {
+          "type": "host",
+          "value": "race.bwalletx.com"
+        }
+      ],
+      "destination": "https://www.vexvoid.com/race?theme=bacc"
+    },
+    {
+      "source": "/race",
+      "has": [
+        {
+          "type": "host",
+          "value": "race.bwalletx.com"
+        },
+        {
+          "type": "header",
+          "key": "user-agent",
+          "value": "(?i).*(twitterbot|facebookexternalhit|slackbot|discordbot|telegrambot|whatsapp|linkedinbot|skypeuripreview|embedly|pinterest|redditbot|applebot|googlebot).*"
+        }
+      ],
+      "destination": "/race-card"
+    },
+    {
+      "source": "/race",
+      "has": [
+        {
+          "type": "host",
+          "value": "race.bwalletx.com"
+        }
+      ],
+      "destination": "https://www.vexvoid.com/race"
+    },
+    {
+      "source": "/race/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "race.bwalletx.com"
+        }
+      ],
+      "destination": "https://www.vexvoid.com/race/:path*"
+    },
+    {
+      "source": "/_next/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "race.bwalletx.com"
+        }
+      ],
+      "destination": "https://www.vexvoid.com/_next/:path*"
+    },
+    {
+      "source": "/manifest.json",
+      "has": [
+        {
+          "type": "host",
+          "value": "race.bwalletx.com"
+        }
+      ],
+      "destination": "https://www.vexvoid.com/manifest.json"
+    },
     {
       "source": "/b-Aware",
       "destination": "/b-aware"
@@ -90,9 +163,62 @@
     }
   ],
   "redirects": [
-    { "source": "/race", "has": [{ "type": "host", "value": "(www\\.)?bwalletx\\.com" }], "missing": [{ "type": "header", "key": "user-agent", "value": "(?i).*(twitterbot|facebookexternalhit|slackbot|discordbot|telegrambot|whatsapp|linkedinbot|skypeuripreview|embedly|pinterest|redditbot|applebot|googlebot).*" }], "destination": "https://race.bwalletx.com/race", "permanent": false },
-    { "source": "/", "has": [{ "type": "host", "value": "race.bwalletx.com" }, { "type": "header", "key": "user-agent", "value": "(?i).*(twitterbot|facebookexternalhit|slackbot|discordbot|telegrambot|whatsapp|linkedinbot|skypeuripreview|embedly|pinterest|redditbot|applebot|googlebot).*" }], "destination": "/race-card", "permanent": false },
-    { "source": "/", "has": [{ "type": "host", "value": "race.bwalletx.com" }], "destination": "/race?theme=bacc", "permanent": false },
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "search.bwalletx.com"
+        }
+      ],
+      "destination": "https://bwalletx.com/b-family#bsearchx",
+      "permanent": false
+    },
+    {
+      "source": "/race",
+      "has": [
+        {
+          "type": "host",
+          "value": "(www\\.)?bwalletx\\.com"
+        }
+      ],
+      "missing": [
+        {
+          "type": "header",
+          "key": "user-agent",
+          "value": "(?i).*(twitterbot|facebookexternalhit|slackbot|discordbot|telegrambot|whatsapp|linkedinbot|skypeuripreview|embedly|pinterest|redditbot|applebot|googlebot).*"
+        }
+      ],
+      "destination": "https://race.bwalletx.com/race",
+      "permanent": false
+    },
+    {
+      "source": "/",
+      "has": [
+        {
+          "type": "host",
+          "value": "race.bwalletx.com"
+        },
+        {
+          "type": "header",
+          "key": "user-agent",
+          "value": "(?i).*(twitterbot|facebookexternalhit|slackbot|discordbot|telegrambot|whatsapp|linkedinbot|skypeuripreview|embedly|pinterest|redditbot|applebot|googlebot).*"
+        }
+      ],
+      "destination": "/race-card",
+      "permanent": false
+    },
+    {
+      "source": "/",
+      "has": [
+        {
+          "type": "host",
+          "value": "race.bwalletx.com"
+        }
+      ],
+      "destination": "/race?theme=bacc",
+      "permanent": false
+    },
     {
       "source": "/bAcc",
       "destination": "/b/acc",
@@ -245,14 +371,51 @@
     }
   ],
   "headers": [
-    { "source": "/.well-known/bwalletx-theme.json", "headers": [{ "key": "Content-Type", "value": "application/json; charset=utf-8" }, { "key": "Access-Control-Allow-Origin", "value": "*" }, { "key": "Cache-Control", "value": "public, max-age=3600" }] },
-    { "source": "/connect-demo/.well-known/bwalletx-theme.json", "headers": [{ "key": "Content-Type", "value": "application/json; charset=utf-8" }, { "key": "Access-Control-Allow-Origin", "value": "*" }] },
+    {
+      "source": "/.well-known/bwalletx-theme.json",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "application/json; charset=utf-8"
+        },
+        {
+          "key": "Access-Control-Allow-Origin",
+          "value": "*"
+        },
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=3600"
+        }
+      ]
+    },
+    {
+      "source": "/connect-demo/.well-known/bwalletx-theme.json",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "application/json; charset=utf-8"
+        },
+        {
+          "key": "Access-Control-Allow-Origin",
+          "value": "*"
+        }
+      ]
+    },
     {
       "source": "/status.json",
       "headers": [
-        { "key": "Access-Control-Allow-Origin", "value": "*" },
-        { "key": "Cache-Control", "value": "public, max-age=60, must-revalidate" },
-        { "key": "Content-Type", "value": "application/json" }
+        {
+          "key": "Access-Control-Allow-Origin",
+          "value": "*"
+        },
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=60, must-revalidate"
+        },
+        {
+          "key": "Content-Type",
+          "value": "application/json"
+        }
       ]
     },
     {
