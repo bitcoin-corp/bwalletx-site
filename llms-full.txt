@@ -323,21 +323,24 @@ What you can expect from us: an acknowledgement within 2 working days, a severit
 Rewards are paid in BSV to an address you give us, within 14 days of the fix shipping or 30 days of triage,
 whichever is first.
 
+New rates from 24 October 2026. Reports sent before then are paid at the rates that applied when they
+arrived (Critical 10, High 3, Medium 0.5 BSV, from a 20 BSV quarterly pool).
+
 Severity
 What it looks like in bWallet
 Reward
 
 Critical
 Steal or spend funds, extract keys or the recovery phrase, sign without the owner's approval
-10 BSV
+3 BSV
 
 High
 Bypass an approval or permission, forge a pairing or connection, drain through a dApp endpoint
-3 BSV
+1 BSV
 
 Medium
 Leak private data, defeat the safety filter, deny a user their own wallet
-0.5 BSV
+0.2 BSV
 
 Low
 Real but contained
@@ -346,7 +349,7 @@ Credit
 ### The rules that bound it
 
 -
-A pool, not an open tap. The reward pool is 20 BSV per calendar quarter. When it is spent, valid
+A pool, not an open tap. The reward pool is 10 BSV per calendar quarter. When it is spent, valid
 reports still earn credit and are paid from the next quarter's pool, in the order they were triaged. We are a
 small company and would rather say this than quietly stop paying. The pool balance and every payout are public on [/bounties](https://bwalletx.com/bounties).
 
@@ -486,6 +489,10 @@ Wallet Backup.
 No reports yet. Yours could be the first name here.
 
 ## Changes to this policy
+
+-
+24 October 2026: version 2. New rates for reports sent from today: Critical 3 BSV, High 1 BSV, Medium 0.2 BSV,
+Low credit, from a 10 BSV quarterly pool. Earlier reports keep the rates that applied when they arrived.
 
 -
 20 October 2026: version 1. Policy, reward table, 20 BSV quarterly pool, safe harbour, first three advisory
@@ -3844,7 +3851,7 @@ Cards are the first thing we’re building on Generation-as-a-Service: we run th
 [Get bWalletX](https://bwalletx.com/get)
 [Tell b who it’s for](https://web.bwalletx.com/m/ask-b?ask=I%27d%20like%20to%20make%20a%20birthday%20card%20for%20someone.%20It%27s%20for%3A%20)
 
-The card in the animation is our own drawing. The card maker is in the bWalletX web wallet and the bWalletX apps, not the bWallet store edition. Music: an original birthday-party tune made with Google Lyria 2 (AI music), finished by b with a party-horn ending. Sound starts only when you press Play. Related: [bAvatars](https://bwalletx.com/bavatars) · [bMail](https://bwalletx.com/bmail) · [Mint](https://bwalletx.com/mint) · [Ask b](https://bwalletx.com/ask-b).
+The card in the animation is our own drawing. The card maker is in the bWalletX web wallet and the bWalletX apps, not the bWallet store edition. Music: five original birthday-party tunes made with Google Lyria 2 (AI music), finished by b with a party-horn ending; a different one plays each time. Sound starts only when you press Play. Related: [bAvatars](https://bwalletx.com/bavatars) · [bMail](https://bwalletx.com/bmail) · [Mint](https://bwalletx.com/mint) · [Ask b](https://bwalletx.com/ask-b).
 
 ---
 
