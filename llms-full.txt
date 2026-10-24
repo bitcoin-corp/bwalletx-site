@@ -1038,6 +1038,7 @@ The picture above is a mockup of the design. Prices and details may change befor
 Source: https://bwalletx.com/bad
 
 bAds
+
 - [bAds](https://bwalletx.com/bads)
 
 ---
@@ -3711,13 +3712,13 @@ Source: https://bwalletx.com/happy-b
 
 ## Cards you make with b
 
-Tell b who it’s for and what they love. b makes the card. You mint it as your own NFT, send it by bMail, and they keep it in their wallet or wear it as their bAvatar on bChatX.
+Tell b who it’s for and what they love. b makes the card for $0.50 in BSV. You mint it as your own NFT, send it by bMail, and they keep it in their wallet or wear it as their bAvatar on bChatX.
 
 ## How it works
 
 ### 1. Make it with b
 
-Describe the card in a sentence. b generates the picture with AI image generation and shows you a few to choose from.
+Describe the card in a sentence. b generates the picture with AI image generation. Birthday is picked for you.
 
 ### 2. Mint it
 
@@ -3741,7 +3742,11 @@ You pay in BSV, from your wallet, and you see the total before you confirm. It h
 
 - The stamp. Sending by [bMail](https://bwalletx.com/bmail) works like the penny post.
 
-We’ll publish the exact prices when card making goes live. Nothing is charged without your OK on the wallet’s pay sheet.
+Making a card is $0.50 in BSV today, shown in the card maker before you pay. Nothing is charged without your OK on the wallet’s pay sheet.
+
+## Start from a photo or a post Coming
+
+Drop in a photo, or paste the link to a post on X, and b turns it into a birthday card you can mint. This isn’t live yet: today you describe the card in words. We’ll tick it off here when it works.
 
 ## Bigger than birthdays
 
@@ -3759,11 +3764,13 @@ Cards are the first thing we’re building on Generation-as-a-Service: we run th
 
 - LiveTalk to b in your wallet
 
-- ComingMake a greeting card with b, generated with Grok Imagine on our servers
+- LiveMake a birthday card in the card maker (Mint › Greeting card in the bWalletX web wallet)
 
-- ComingPay for each generation in BSV, in the same pay sheet
+- LivePay $0.50 in BSV for each card, in the wallet’s pay sheet
 
-- ComingMint a card in one tap from the card maker
+- LiveMint the card as your own NFT from the card maker
+
+- ComingStart a card from a photo you drop in or a link to a post on X
 
 - ComingSend a card by bMail, with the card shown as the letter
 
@@ -3771,10 +3778,11 @@ Cards are the first thing we’re building on Generation-as-a-Service: we run th
 
 - ComingMore generations: thank-yous, invitations and other kinds of picture
 
+[Mint a birthday card $0.50](https://web.bwalletx.com/m/bmint/mint/card)
 [Get bWalletX](https://bwalletx.com/get)
 [Tell b who it’s for](https://web.bwalletx.com/m/ask-b?ask=I%27d%20like%20to%20make%20a%20birthday%20card%20for%20someone.%20It%27s%20for%3A%20)
 
-The card in the animation is our own drawing. Related: [bAvatars](https://bwalletx.com/bavatars) · [bMail](https://bwalletx.com/bmail) · [Mint](https://bwalletx.com/mint) · [Ask b](https://bwalletx.com/ask-b).
+The card in the animation is our own drawing. The card maker is in the bWalletX web wallet and the bWalletX apps, not the bWallet store edition. Related: [bAvatars](https://bwalletx.com/bavatars) · [bMail](https://bwalletx.com/bmail) · [Mint](https://bwalletx.com/mint) · [Ask b](https://bwalletx.com/ask-b).
 
 ---
 
