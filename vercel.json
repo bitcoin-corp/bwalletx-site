@@ -391,7 +391,7 @@
           "value": "search.bwalletx.com"
         }
       ],
-      "destination": "https://bwalletx.com/b-family#bsearchx",
+      "destination": "https://bsearchx.com/$1",
       "permanent": false
     },
     {
