@@ -14619,7 +14619,61 @@ The credits section is empty today. Yours could be the first name on it.
 
 Related: [b-Aware](https://bwalletx.com/b-Aware) · [Bugs](https://bwalletx.com/bugs) · [Open source](https://bwalletx.com/open-source) · [Privacy](https://bwalletx.com/privacy)
 
-[← 058 Signed names](https://bwalletx.com/blog/058-signed-names)[All posts →](https://bwalletx.com/blog)
+[← 058 Signed names](https://bwalletx.com/blog/058-signed-names)[060 bVideoX →](https://bwalletx.com/blog/060-bvideox)
+
+---
+
+Source: https://bwalletx.com/blog/060-bvideox
+
+[Development blog](https://bwalletx.com/blog) · 060 · 24 Oct 2026
+
+# bVideoX: your YouTube videos, on Bitcoin, in your name
+
+You made every one of those videos. bVideoX lets you keep a record of each one in your own wallet: its title, description, date and link, signed and dated on Bitcoin. Three steps: Connect bWalletX, Link YouTube, Mint.
+
+## 1. Connect bWalletX
+
+Go to [bvideox.com](https://bvideox.com) and connect your wallet. Your studio opens at [bvideox.com/studio](https://bvideox.com/studio) under your full paymail, like `name@bwalletx.com`. It also has a public page at `bvideox.com/u/<name>`, and you can pick a different username for that link. Your wallet signs the change, so only you can make it.
+
+## 2. Link YouTube, no Google sign-in
+
+Enter your channel and bVideoX gives you a short code. Paste it into your YouTube channel description and press Check. We read your public channel page, find the code, and your wallet signs once to link the channel to you. The code only works for your wallet, and only for 30 minutes. Once the check passes you can delete it from your description.
+
+Then your whole library appears on the page: every public video you’ve posted.
+
+## 3. Mint one, a few, or all of them
+
+Tick the videos you want, or Select all. There is no cap. Each video becomes a record on Bitcoin in your own name, holding its title, description, date, link and a fingerprint of that information.
+
+Records are private by default. They are locked with your wallet’s own keys, so only your 12 words open them. You can make any single record public later, if you want the world to see it.
+
+## What it costs
+
+About 1¢ (1p) per video, plus a tiny network fee. The page shows the total before you mint, and one approval in your wallet covers the batch. A video only shows as done once the network shows the transaction, never just because the wallet said so.
+
+## Your videos stay where they are
+
+bVideoX never downloads or copies your videos. They stay on YouTube and play with YouTube’s own player. What goes on Bitcoin is the record that they’re yours, and when you made them.
+
+Anyone can look around first. [Browse](https://bvideox.com/browse) lists the channels on bVideoX, and you don’t need a wallet to watch. The [privacy](https://bvideox.com/privacy) and [terms](https://bvideox.com/terms) pages say, in plain English, what we read, what we keep and how to remove it.
+
+## Live today, 24 Oct 2026
+
+- ✓ Connect bWalletX: your studio, under your full paymail
+
+- ✓ Claim a channel with a code in its description, no Google sign-in
+
+- ✓ Your whole library on one page; mint one, some or all
+
+- ✓ Private records locked with your keys; make any one public later
+
+- ✓ Choose your own studio username
+
+- ✓ Browse, Privacy and Terms pages
+
+Related: [bVideoX](https://bvideox.com) · [Get bWalletX](https://bwalletx.com/get) · [Signed names](https://bwalletx.com/blog/058-signed-names)
+
+[← 059 b-Aware](https://bwalletx.com/blog/059-b-aware)[All posts →](https://bwalletx.com/blog)
 
 ---
 
@@ -14630,6 +14684,10 @@ Source: https://bwalletx.com/blog/
 How bWallet and bWalletX were built, one chapter at a time. Every post is written from the git history of the wallet, this site, the chat server and the PNEEs prototype. It covers what we built, why, what broke, what we reversed and what is still not done.
 
 Newest first. Dates come from commits. bWallet is a fork of [Yours Wallet](https://github.com/yours-org/yours-wallet) (MIT licence).
+
+- 060 · 24 Oct 2026
+[bVideoX: your YouTube videos, on Bitcoin, in your name](https://bwalletx.com/blog/060-bvideox)
+Connect bWalletX, link your YouTube channel with a short code, and mint a private record of each video in your own name. About 1¢ (1p) a video. Your videos stay on YouTube.
 
 - 059 · 20 Oct 2026
 [b-Aware: find a hole in bWalletX, get paid in BSV](https://bwalletx.com/blog/059-b-aware)
