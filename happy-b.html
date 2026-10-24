@@ -230,7 +230,7 @@
       </div>
       <div class="party" aria-hidden="true"><span class="bl" style="left:6%;--c:#FF5DA2;--d:0s;--t:9s"></span><span class="bl" style="left:84%;--c:#4CC9F0;--d:1.4s;--t:10s"></span><span class="bl" style="left:72%;--c:#7BE0AD;--d:3s;--t:8.5s"></span><span class="bl" style="left:18%;--c:#B79CFF;--d:4.2s;--t:11s"></span><span class="bl" style="left:92%;--c:#FF8A3D;--d:5.5s;--t:9.5s"></span><i style="left:4%;--c:#FF5DA2;--d:0s"></i><i style="left:14%;--c:#FFD24D;--d:.7s"></i><i style="left:27%;--c:#4CC9F0;--d:1.3s"></i><i style="left:41%;--c:#7BE0AD;--d:.3s"></i><i style="left:58%;--c:#B79CFF;--d:1.8s"></i><i style="left:66%;--c:#FF8A3D;--d:1s"></i><i style="left:79%;--c:#fff;--d:.5s"></i><i style="left:95%;--c:#FF5DA2;--d:1.5s"></i></div>
       <div class="gate" id="gate"><button class="playbig" id="play" type="button" aria-label="Play the birthday animation with sound"><span>&#9654;</span><span>Play</span></button><p>Turn your sound on &#127881;</p></div>
-      <audio id="tune" preload="auto"><source src="/audio/happy-b-tune.m4a" type="audio/mp4" /><source src="/audio/happy-b-tune.mp3" type="audio/mpeg" /></audio>
+      <audio id="tune" preload="none"></audio>
       <button class="ctl" id="mute" type="button" aria-pressed="false" hidden>&#128266; Sound on</button>
       <button class="ctl" id="replay" type="button" hidden>Replay</button>
     </section>
@@ -292,7 +292,7 @@
         <a class="btn btn-store btn-ghost" href="/get">Get bWalletX</a>
         <a class="btn btn-store btn-ghost" href="https://web.bwalletx.com/m/ask-b?ask=I%27d%20like%20to%20make%20a%20birthday%20card%20for%20someone.%20It%27s%20for%3A%20">Tell b who it&rsquo;s for</a>
       </div>
-      <p class="small">The card in the animation is our own drawing. The card maker is in the bWalletX web wallet and the bWalletX apps, not the bWallet store edition. Music: an original birthday-party tune made with Google Lyria 2 (AI music), finished by b with a party-horn ending. Sound starts only when you press Play. Related: <a href="/bavatars">bAvatars</a> · <a href="/bmail">bMail</a> · <a href="/mint">Mint</a> · <a href="/ask-b">Ask b</a>.</p>
+      <p class="small">The card in the animation is our own drawing. The card maker is in the bWalletX web wallet and the bWalletX apps, not the bWallet store edition. Music: five original birthday-party tunes made with Google Lyria 2 (AI music), finished by b with a party-horn ending; a different one plays each time. Sound starts only when you press Play. Related: <a href="/bavatars">bAvatars</a> · <a href="/bmail">bMail</a> · <a href="/mint">Mint</a> · <a href="/ask-b">Ask b</a>.</p>
     </main>
     <footer class="foot">
       <div class="wrap">
@@ -323,12 +323,21 @@
         function start() { // runs inside the tap: iOS only lets audio start from here
           cancelAnimationFrame(raf); tv.classList.remove('poster'); gate.hidden = true; muteBtn.hidden = replayBtn.hidden = false; i = -1;
           useAudio = false; t0 = performance.now();
-          try { audio.currentTime = 0; } catch (e) {}
+          pick(); // only the chosen file is fetched; src is set inside the tap
           var p = audio.play();
           if (p && p.then) p.then(function () { useAudio = true; }, function () { useAudio = false; });
           else useAudio = true;
           if (still) { show(scenes.length - 1); return; }
           show(0); raf = requestAnimationFrame(tick);
+        }
+        /* Five tunes, all with the party horn at 18.75 s. A random one per Play/Replay, never the same twice in a row. */
+        var TUNES = ['happy-b-tune', 'happy-b-tune-alt1', 'happy-b-tune-alt2', 'happy-b-tune-alt3', 'happy-b-tune-alt4'];
+        var canM4a = !!audio.canPlayType && audio.canPlayType('audio/mp4; codecs="mp4a.40.2"') !== '';
+        function pick() {
+          var last = -1; try { last = parseInt(sessionStorage.getItem('bwx.happyb.last'), 10); if (isNaN(last)) last = -1; } catch (e) {}
+          var n; do { n = Math.floor(Math.random() * TUNES.length); } while (n === last);
+          try { sessionStorage.setItem('bwx.happyb.last', String(n)); } catch (e) {}
+          audio.src = '/audio/' + TUNES[n] + (canM4a ? '.m4a' : '.mp3');
         }
         audio.addEventListener('error', function () { useAudio = false; });
         playBtn.addEventListener('click', start);
