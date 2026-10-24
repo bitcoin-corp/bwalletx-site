@@ -1,6 +1,6 @@
 # bWalletX: full site text
 
-Generated 2026-10-23 from https://bwalletx.com. Source pages are linked above each section.
+Generated 2026-10-24 from https://bwalletx.com. Source pages are linked above each section.
 
 ---
 
@@ -662,7 +662,8 @@ Bring your people with you.
 Spaces for every social app.bsocialx.com →](https://bsocialx.com)[### bFriendsXEarly
 Bring your people with you.bfriendsx.com →](https://bfriendsx.com)[### bMailXEarly
 Email that pays.bmailx.com →](https://bmailx.com)[### bMessageXComing
-Private messages and calls. Private by default.bmessagex.com →](https://bmessagex.com)[### bCalXEarly
+Private messages and calls. Private by default.bmessagex.com →](https://bmessagex.com)[### bNamesXEarly
+Your name, on chain. Verified names for businesses.bnamesx.com →](https://bnamesx.com)[### bCalXEarly
 What’s on, live.bcalx.com →](https://bcalx.com)
 
 ## Work and business
@@ -1068,8 +1069,8 @@ You see the price first. One pay sheet in your wallet, nothing else.
 
 Mint it in your name as a 1-sat NFT, or download it and post it anywhere.
 
-[Send b a brief](https://badvertisingx.com/account)
-Coming
+[Order a bAd](https://web.bwalletx.com/m/bmint/mint/ad)
+Live
 
 ## What b makes
 
@@ -1096,7 +1097,7 @@ Our first client was us: [b is for business](https://bwalletx.com/b-is-for-busin
 No forms, no agency. Open b in your wallet and say what you need, or sign in at bAdvertisingX with bWalletX and send b a brief. b asks a question or two and gives you one fixed price in Bitcoin. Nothing is charged until the work has passed our quality check, and no money moves without your OK on the wallet’s pay sheet.
 
 [Ask b for a bAd](https://web.bwalletx.com/m/ask-b?ask=I%27d%20like%20a%20bAd%20for%20my%20business.)
-[Send b a brief](https://badvertisingx.com/account)
+[Order a bAd](https://web.bwalletx.com/m/bmint/mint/ad)
 
 ## Where we are
 
@@ -1106,7 +1107,7 @@ No forms, no agency. Open b in your wallet and say what you need, or sign in at 
 
 - LiveSend b a brief at badvertisingx.com, signed in with bWalletX
 
-- ComingOrder a bAd in your wallet: describe your business, b makes the ad with Grok Imagine, pay in BSV, mint it
+- LiveOrder a bAd in the web wallet ($1 a bAd; extension and phones in the next release): describe your business, b makes the ad with Grok Imagine, pay in BSV, mint it
 
 - Comingb quotes and takes payment for bAds in chat, once our quality check is passed
 
