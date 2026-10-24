@@ -190,6 +190,17 @@
       "has": [
         {
           "type": "host",
+          "value": "videos.bwalletx.com"
+        }
+      ],
+      "destination": "https://bvideox.com/$1",
+      "permanent": false
+    },
+    {
+      "source": "/(.*)",
+      "has": [
+        {
+          "type": "host",
           "value": "vault.bwalletx.com"
         }
       ],
