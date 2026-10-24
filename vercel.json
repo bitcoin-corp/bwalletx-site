@@ -163,6 +163,7 @@
     }
   ],
   "redirects": [
+    { "source": "/family", "destination": "/b-family", "permanent": true },
     {
       "source": "/(.*)",
       "has": [
