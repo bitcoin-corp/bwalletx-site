@@ -242,7 +242,15 @@
         $('profile').hidden = !me;
         $('f').hidden = !(me && me.canSubmit);
         if (!me) return;
-        $('who').textContent = 'Signed in as $' + me.paymail + '. Payouts go only to ' + me.paymail + '@bwalletx.com.';
+        // Always the full paymail (name@bwalletx.com); no name yet: a short key + "Get your name".
+        var pm = me.paymail ? (String(me.paymail).indexOf('@') > 0 ? String(me.paymail) : me.paymail + '@bwalletx.com') : '';
+        var who = $('who'); who.style.overflowWrap = 'anywhere';
+        if (pm) who.textContent = 'Signed in as ' + pm + '. Payouts go only to ' + pm + '.';
+        else {
+          var k = String(me.identityKey || '');
+          who.textContent = 'Signed in' + (k ? ' as ' + k.slice(0, 6) + '\u2026' + k.slice(-4) : '') + '. You need a bWalletX name for payouts. ';
+          var g = document.createElement('a'); g.href = '/get'; g.textContent = 'Get your name'; who.append(g);
+        }
         $('level').textContent = LEVEL[me.verification] || me.verification;
         if (me.legalName) $('legal').value = me.legalName;
         if (me.country) $('country').value = me.country;
