@@ -883,6 +883,62 @@ bWalletX is in beta: test with small amounts. [support@bwalletx.com](mailto:supp
 
 ---
 
+Source: https://bwalletx.com/b-on-twetch
+
+# b on Twetch
+
+bWalletX has an account on Twetch: [@bWalletX](https://twetch.com/u/220501). Soon b, the helper inside bWalletX, will answer there too. Ask a question, get a plain answer. That's all.
+
+You mention @bWalletX→
+b reads it→
+b answers in the thread
+
+## How b answers
+
+### Only when asked
+
+b replies when you mention @bWalletX or reply to one of its posts. It never jumps into other conversations.
+
+### Short and plain
+
+One to three sentences. A link only when it helps, and only to bWalletX's own pages.
+
+### No price talk
+
+b doesn't give investment or price opinions and doesn't promise dates. It tells you what bWalletX does today.
+
+### A person checks first
+
+b's first replies are read and approved by a person before they go out. A few replies an hour at most, with a small daily budget.
+
+## Signing in with bWalletX on Twetch apps
+
+FwetchYes, Fwetch says it supports signing in with bWalletX.
+
+PeckLikely, through the same BRC-100 connection. We haven't confirmed it yet.
+
+TwetchNot yet. Linking your Twetch account to bWalletX is on the list below.
+
+bWalletX connects to apps through BRC-100, the open wallet standard, so any app that speaks it can ask your wallet to sign you in. [How connecting works](https://bwalletx.com/connect).
+
+## Status
+
+- Live@bWalletX on Twetch. Release notes and new features, a few a day. [Follow on Twetch](https://twetch.com/u/220501).
+
+- Comingb answers @bWalletX mentions and replies to its posts.
+
+- LiveSign in to Fwetch with bWalletX, by Fwetch's own statement.
+
+- ComingLink my Twetch: show your Twetch account on your bWalletX, next to X, Google, GitHub and LinkedIn.
+
+[Get bWalletX](https://bwalletx.com/get)
+[@bWalletX on Twetch](https://twetch.com/u/220501)
+[Ask b in the app](https://bwalletx.com/ask-b)
+
+Less noise. More life. Just b. Questions: [support@bwalletx.com](mailto:support@bwalletx.com)
+
+---
+
 Source: https://bwalletx.com/b/acc
 
 THE BITCOIN ACCELERATIONIST MOVEMENT
@@ -3788,7 +3844,7 @@ Cards are the first thing we’re building on Generation-as-a-Service: we run th
 [Get bWalletX](https://bwalletx.com/get)
 [Tell b who it’s for](https://web.bwalletx.com/m/ask-b?ask=I%27d%20like%20to%20make%20a%20birthday%20card%20for%20someone.%20It%27s%20for%3A%20)
 
-The card in the animation is our own drawing. The card maker is in the bWalletX web wallet and the bWalletX apps, not the bWallet store edition. Related: [bAvatars](https://bwalletx.com/bavatars) · [bMail](https://bwalletx.com/bmail) · [Mint](https://bwalletx.com/mint) · [Ask b](https://bwalletx.com/ask-b).
+The card in the animation is our own drawing. The card maker is in the bWalletX web wallet and the bWalletX apps, not the bWallet store edition. Music: an original birthday-party tune made with Google Lyria 2 (AI music), finished by b with a party-horn ending. Sound starts only when you press Play. Related: [bAvatars](https://bwalletx.com/bavatars) · [bMail](https://bwalletx.com/bmail) · [Mint](https://bwalletx.com/mint) · [Ask b](https://bwalletx.com/ask-b).
 
 ---
 
