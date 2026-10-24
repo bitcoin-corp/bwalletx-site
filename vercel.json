@@ -164,227 +164,227 @@
   ],
   "redirects": [
     {
-      "source": "/:path*",
+      "source": "/(.*)",
       "has": [
         {
           "type": "host",
           "value": "writer.bwalletx.com"
         }
       ],
-      "destination": "https://bwriterx.com/:path*",
+      "destination": "https://bwriterx.com/$1",
       "permanent": false
     },
     {
-      "source": "/:path*",
+      "source": "/(.*)",
       "has": [
         {
           "type": "host",
           "value": "video.bwalletx.com"
         }
       ],
-      "destination": "https://bvideox.com/:path*",
+      "destination": "https://bvideox.com/$1",
       "permanent": false
     },
     {
-      "source": "/:path*",
+      "source": "/(.*)",
       "has": [
         {
           "type": "host",
           "value": "vault.bwalletx.com"
         }
       ],
-      "destination": "https://bvaultx.com/:path*",
+      "destination": "https://bvaultx.com/$1",
       "permanent": false
     },
     {
-      "source": "/:path*",
+      "source": "/(.*)",
       "has": [
         {
           "type": "host",
           "value": "store.bwalletx.com"
         }
       ],
-      "destination": "https://bstorex.com/:path*",
+      "destination": "https://bstorex.com/$1",
       "permanent": false
     },
     {
-      "source": "/:path*",
+      "source": "/(.*)",
       "has": [
         {
           "type": "host",
           "value": "social.bwalletx.com"
         }
       ],
-      "destination": "https://bsocialx.com/:path*",
+      "destination": "https://bsocialx.com/$1",
       "permanent": false
     },
     {
-      "source": "/:path*",
+      "source": "/(.*)",
       "has": [
         {
           "type": "host",
           "value": "shares.bwalletx.com"
         }
       ],
-      "destination": "https://bsharesx.com/:path*",
+      "destination": "https://bsharesx.com/$1",
       "permanent": false
     },
     {
-      "source": "/:path*",
+      "source": "/(.*)",
       "has": [
         {
           "type": "host",
           "value": "radio.bwalletx.com"
         }
       ],
-      "destination": "https://bradiox.com/:path*",
+      "destination": "https://bradiox.com/$1",
       "permanent": false
     },
     {
-      "source": "/:path*",
+      "source": "/(.*)",
       "has": [
         {
           "type": "host",
           "value": "news.bwalletx.com"
         }
       ],
-      "destination": "https://bnewsx.com/:path*",
+      "destination": "https://bnewsx.com/$1",
       "permanent": false
     },
     {
-      "source": "/:path*",
+      "source": "/(.*)",
       "has": [
         {
           "type": "host",
           "value": "music.bwalletx.com"
         }
       ],
-      "destination": "https://bmusicx.com/:path*",
+      "destination": "https://bmusicx.com/$1",
       "permanent": false
     },
     {
-      "source": "/:path*",
+      "source": "/(.*)",
       "has": [
         {
           "type": "host",
           "value": "movies.bwalletx.com"
         }
       ],
-      "destination": "https://bmoviesx.com/:path*",
+      "destination": "https://bmoviesx.com/$1",
       "permanent": false
     },
     {
-      "source": "/:path*",
+      "source": "/(.*)",
       "has": [
         {
           "type": "host",
           "value": "money.bwalletx.com"
         }
       ],
-      "destination": "https://bmoneyx.com/:path*",
+      "destination": "https://bmoneyx.com/$1",
       "permanent": false
     },
     {
-      "source": "/:path*",
+      "source": "/(.*)",
       "has": [
         {
           "type": "host",
           "value": "mint.bwalletx.com"
         }
       ],
-      "destination": "https://bmintx.com/:path*",
+      "destination": "https://bmintx.com/$1",
       "permanent": false
     },
     {
-      "source": "/:path*",
+      "source": "/(.*)",
       "has": [
         {
           "type": "host",
           "value": "mail.bwalletx.com"
         }
       ],
-      "destination": "https://bmailx.com/:path*",
+      "destination": "https://bmailx.com/$1",
       "permanent": false
     },
     {
-      "source": "/:path*",
+      "source": "/(.*)",
       "has": [
         {
           "type": "host",
           "value": "jobs.bwalletx.com"
         }
       ],
-      "destination": "https://bjobsx.com/:path*",
+      "destination": "https://bjobsx.com/$1",
       "permanent": false
     },
     {
-      "source": "/:path*",
+      "source": "/(.*)",
       "has": [
         {
           "type": "host",
           "value": "friends.bwalletx.com"
         }
       ],
-      "destination": "https://bfriendsx.com/:path*",
+      "destination": "https://bfriendsx.com/$1",
       "permanent": false
     },
     {
-      "source": "/:path*",
+      "source": "/(.*)",
       "has": [
         {
           "type": "host",
           "value": "forge.bwalletx.com"
         }
       ],
-      "destination": "https://bforgex.com/:path*",
+      "destination": "https://bforgex.com/$1",
       "permanent": false
     },
     {
-      "source": "/:path*",
+      "source": "/(.*)",
       "has": [
         {
           "type": "host",
           "value": "drive.bwalletx.com"
         }
       ],
-      "destination": "https://bdrivex.com/:path*",
+      "destination": "https://bdrivex.com/$1",
       "permanent": false
     },
     {
-      "source": "/:path*",
+      "source": "/(.*)",
       "has": [
         {
           "type": "host",
           "value": "dojo.bwalletx.com"
         }
       ],
-      "destination": "https://bdojox.com/:path*",
+      "destination": "https://bdojox.com/$1",
       "permanent": false
     },
     {
-      "source": "/:path*",
+      "source": "/(.*)",
       "has": [
         {
           "type": "host",
           "value": "cal.bwalletx.com"
         }
       ],
-      "destination": "https://bcalx.com/:path*",
+      "destination": "https://bcalx.com/$1",
       "permanent": false
     },
     {
-      "source": "/:path*",
+      "source": "/(.*)",
       "has": [
         {
           "type": "host",
           "value": "ads.bwalletx.com"
         }
       ],
-      "destination": "https://badvertisingx.com/:path*",
+      "destination": "https://badvertisingx.com/$1",
       "permanent": false
     },
     {
-      "source": "/:path*",
+      "source": "/(.*)",
       "has": [
         {
           "type": "host",
