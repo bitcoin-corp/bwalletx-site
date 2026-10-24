@@ -325,7 +325,18 @@
           "value": "jobs.bwalletx.com"
         }
       ],
-      "destination": "https://bjobsx.com/$1",
+      "destination": "https://bwalletx.com/jobs",
+      "permanent": false
+    },
+    {
+      "source": "/(.*)",
+      "has": [
+        {
+          "type": "host",
+          "value": "(www\\.)?bjobsx\\.com"
+        }
+      ],
+      "destination": "https://bwalletx.com/jobs",
       "permanent": false
     },
     {

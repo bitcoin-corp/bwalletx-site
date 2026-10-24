@@ -4790,6 +4790,135 @@ Questions: [support@bwalletx.com](mailto:support@bwalletx.com)
 
 ---
 
+Source: https://bwalletx.com/jobs
+
+# Jobs
+
+Paid work on bWalletX. The code is open source; the pay is in BSV; every payout is public on [/bounties](https://bwalletx.com/bounties).
+
+## Open contracts
+
+### Security testing (b-Aware)
+Live
+
+Critical 10 BSV · High 3 BSV · Medium 0.5 BSV · Low: credit
+
+Paid from a 20 BSV pool each quarter.
+
+Read the code and try the apps. Find a way to take funds, read keys, or get past an approval in bWalletX, bWallet or bChatX.
+
+- Test only your own wallets and accounts. No real users' funds or data.
+- First valid report of an issue is paid. Duplicates earn credit.
+- Rewards are paid after the fix ships.
+- Keep it private until it is fixed. Full policy and safe harbour on b-Aware.
+- Anyone can report by email. To receive a reward you sign in with bWalletX on this page and verify your identity with Veriff.
+
+How to submit: Email support@bwalletx.com with the subject b-Aware. Not the form below.
+
+[Read the b-Aware policy and rates →](https://bwalletx.com/b-aware)
+
+### Paid Android testing
+Live
+
+1 BSV per tester
+
+0.25 BSV after the first open from Google Play, 0.75 BSV after 12 of 14 daily check-ins.
+
+Install bWallet from the Google Play test and use it every day for 14 days: send a little, receive, try the features, and tell us what breaks.
+
+- Apply with Google on /testers first. Testers are approved by hand.
+- Use the Google account on your Android phone.
+- One tester per person. The app checks in once a day when you open it.
+- Sign in with bWalletX below to send test reports and notes.
+
+How to submit: Sign in below and use the form.
+
+[Apply on /testers →](https://bwalletx.com/testers)
+
+### Feature bounties
+Coming
+
+Set per contract
+
+Build or fix a named feature in our open-source code. Each bounty will list the task, the price and how b checks the work.
+
+- Not open yet. The first contracts will appear here.
+
+## How it works
+
+- Sign in with bWalletX. Your wallet signs a one-time message. Nothing is spent.
+
+- Verify your identity with Veriff, our KYC provider. Coming
+
+- Submit your work: a test report, a fix, a finding.
+
+- b checks it. b looks for duplicates and checks the work against the code.
+
+- The team approves. b proposes a payout; a person on the team approves it.
+
+- You are paid in BSV to your bWalletX paymail, and the payout is listed in public on [/bounties](https://bwalletx.com/bounties).
+
+## Getting paid
+
+To take paid work you sign in with bWalletX and verify your identity with Veriff (our KYC provider). We pay to your bWalletX paymail.
+
+- No anonymous contractors. Every contractor has a bWalletX sign-in, a legal name, a country, at least one linked account (X, GitHub or Google) and a Veriff check. Veriff also does the sanctions check.
+
+- Paid only to your own paymail, `yourname@bwalletx.com`. We never pay to an address pasted into a form or a message.
+
+- Verify with Veriff: coming. Until it is live you can sign in, fill in your profile and submit work. Payouts start once you are verified.
+
+- Security reports stay open to anyone by email. A reward for one needs sign-in and Veriff too.
+
+This is paid work, not an investment. Amounts are set per job and only paid after approval.
+
+- Signed in with bWalletX Live
+
+- Contractor profile (legal name, country, linked account) Live
+
+- Verify with Veriff Coming
+
+- Payouts to your paymail After Veriff
+
+## Submit work
+
+Security issues: do not use this form. Email [support@bwalletx.com](mailto:support@bwalletx.com?subject=b-Aware) with the subject b-Aware, as the [policy](https://bwalletx.com/b-aware) says.
+
+### 1. Sign in with bWalletX
+
+You need a bWalletX paymail (`$name`). No wallet yet? [Get bWalletX](https://bwalletx.com/get).
+
+### 2. Your contractor profile
+
+Legal name (as on your ID)
+
+Country (two letters, e.g. GB)
+
+Linked account
+GitHubXGoogle
+
+Save profile
+
+Status: none. Verify with Veriff: coming.
+
+### 3. Send your work to b
+
+Job
+
+Contact email
+
+What you did
+
+Links (optional, one per line, up to 10)
+
+Website
+
+Send to b
+
+We use your email only to contact you about your work. Your legal name and country are private: they are never shown on the site. b reads what you send as untrusted text.
+
+---
+
 Source: https://bwalletx.com/just-b
 
 Just b
