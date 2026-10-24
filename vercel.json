@@ -168,6 +168,226 @@
       "has": [
         {
           "type": "host",
+          "value": "writer.bwalletx.com"
+        }
+      ],
+      "destination": "https://bwriterx.com/:path*",
+      "permanent": false
+    },
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "video.bwalletx.com"
+        }
+      ],
+      "destination": "https://bvideox.com/:path*",
+      "permanent": false
+    },
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "vault.bwalletx.com"
+        }
+      ],
+      "destination": "https://bvaultx.com/:path*",
+      "permanent": false
+    },
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "store.bwalletx.com"
+        }
+      ],
+      "destination": "https://bstorex.com/:path*",
+      "permanent": false
+    },
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "social.bwalletx.com"
+        }
+      ],
+      "destination": "https://bsocialx.com/:path*",
+      "permanent": false
+    },
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "shares.bwalletx.com"
+        }
+      ],
+      "destination": "https://bsharesx.com/:path*",
+      "permanent": false
+    },
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "radio.bwalletx.com"
+        }
+      ],
+      "destination": "https://bradiox.com/:path*",
+      "permanent": false
+    },
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "news.bwalletx.com"
+        }
+      ],
+      "destination": "https://bnewsx.com/:path*",
+      "permanent": false
+    },
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "music.bwalletx.com"
+        }
+      ],
+      "destination": "https://bmusicx.com/:path*",
+      "permanent": false
+    },
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "movies.bwalletx.com"
+        }
+      ],
+      "destination": "https://bmoviesx.com/:path*",
+      "permanent": false
+    },
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "money.bwalletx.com"
+        }
+      ],
+      "destination": "https://bmoneyx.com/:path*",
+      "permanent": false
+    },
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "mint.bwalletx.com"
+        }
+      ],
+      "destination": "https://bmintx.com/:path*",
+      "permanent": false
+    },
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "mail.bwalletx.com"
+        }
+      ],
+      "destination": "https://bmailx.com/:path*",
+      "permanent": false
+    },
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "jobs.bwalletx.com"
+        }
+      ],
+      "destination": "https://bjobsx.com/:path*",
+      "permanent": false
+    },
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "friends.bwalletx.com"
+        }
+      ],
+      "destination": "https://bfriendsx.com/:path*",
+      "permanent": false
+    },
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "forge.bwalletx.com"
+        }
+      ],
+      "destination": "https://bforgex.com/:path*",
+      "permanent": false
+    },
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "drive.bwalletx.com"
+        }
+      ],
+      "destination": "https://bdrivex.com/:path*",
+      "permanent": false
+    },
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "dojo.bwalletx.com"
+        }
+      ],
+      "destination": "https://bdojox.com/:path*",
+      "permanent": false
+    },
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "cal.bwalletx.com"
+        }
+      ],
+      "destination": "https://bcalx.com/:path*",
+      "permanent": false
+    },
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "ads.bwalletx.com"
+        }
+      ],
+      "destination": "https://badvertisingx.com/:path*",
+      "permanent": false
+    },
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
           "value": "search.bwalletx.com"
         }
       ],
