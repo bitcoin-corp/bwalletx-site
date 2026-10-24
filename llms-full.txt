@@ -3744,6 +3744,10 @@ You pay in BSV, from your wallet, and you see the total before you confirm. It h
 
 Making a card is $0.50 in BSV today, shown in the card maker before you pay. Nothing is charged without your OK on the wallet’s pay sheet.
 
+## Send to any public key Coming
+
+Send a card to any public key — even Satoshi’s. Your card goes to the key’s address with a note only that key can open. Try it on 5 April, Satoshi’s birthday. We’re building this in the wallet now.
+
 ## Start from a photo or a post Coming
 
 Drop in a photo, or paste the link to a post on X, and b turns it into a birthday card you can mint. This isn’t live yet: today you describe the card in words. We’ll tick it off here when it works.
@@ -3769,6 +3773,8 @@ Cards are the first thing we’re building on Generation-as-a-Service: we run th
 - LivePay $0.50 in BSV for each card, in the wallet’s pay sheet
 
 - LiveMint the card as your own NFT from the card maker
+
+- ComingSend a card to any public key, even Satoshi’s, with a note only that key can open
 
 - ComingStart a card from a photo you drop in or a link to a post on X
 
