@@ -323,24 +323,21 @@ What you can expect from us: an acknowledgement within 2 working days, a severit
 Rewards are paid in BSV to an address you give us, within 14 days of the fix shipping or 30 days of triage,
 whichever is first.
 
-New rates from 24 October 2026. Reports sent before then are paid at the rates that applied when they
-arrived (Critical 10, High 3, Medium 0.5 BSV, from a 20 BSV quarterly pool).
-
 Severity
 What it looks like in bWallet
 Reward
 
 Critical
 Steal or spend funds, extract keys or the recovery phrase, sign without the owner's approval
-3 BSV
+10 BSV
 
 High
 Bypass an approval or permission, forge a pairing or connection, drain through a dApp endpoint
-1 BSV
+3 BSV
 
 Medium
 Leak private data, defeat the safety filter, deny a user their own wallet
-0.2 BSV
+0.5 BSV
 
 Low
 Real but contained
@@ -349,7 +346,7 @@ Credit
 ### The rules that bound it
 
 -
-A pool, not an open tap. The reward pool is 10 BSV per calendar quarter. When it is spent, valid
+A pool, not an open tap. The reward pool is 20 BSV per calendar quarter. When it is spent, valid
 reports still earn credit and are paid from the next quarter's pool, in the order they were triaged. We are a
 small company and would rather say this than quietly stop paying. The pool balance and every payout are public on [/bounties](https://bwalletx.com/bounties).
 
@@ -491,8 +488,8 @@ No reports yet. Yours could be the first name here.
 ## Changes to this policy
 
 -
-24 October 2026: version 2. New rates for reports sent from today: Critical 3 BSV, High 1 BSV, Medium 0.2 BSV,
-Low credit, from a 10 BSV quarterly pool. Earlier reports keep the rates that applied when they arrived.
+24 October 2026: we briefly published lower rates and withdrew them the same day. The rates above stand;
+anyone who reported on 24 October is paid at them.
 
 -
 20 October 2026: version 1. Policy, reward table, 20 BSV quarterly pool, safe harbour, first three advisory
