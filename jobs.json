@@ -25,13 +25,14 @@
       "title": "Paid Android testing",
       "status": "live",
       "pay": "1 BSV per tester",
-      "pay_note": "0.25 BSV after the first open from Google Play, 0.75 BSV after 12 of 14 daily check-ins.",
+      "pay_note": "0.25 BSV after the first open from Google Play, 0.75 BSV after 12 of 14 daily check-ins. New testers are paid once identity checks (Veriff) are live.",
       "what": "Install bWallet from the Google Play test and use it every day for 14 days: send a little, receive, try the features, and tell us what breaks.",
       "rules": [
         "Apply with Google on /testers first. Testers are approved by hand.",
         "Use the Google account on your Android phone.",
         "One tester per person. The app checks in once a day when you open it.",
-        "Sign in with bWalletX below to send test reports and notes."
+        "Sign in with bWalletX below to send test reports and notes.",
+        "Payouts need a bWalletX sign-in and a Veriff check, like all paid work."
       ],
       "submit": "form",
       "link": "/testers",
