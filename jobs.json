@@ -12,7 +12,8 @@
         "Test only your own wallets and accounts. No real users' funds or data.",
         "First valid report of an issue is paid. Duplicates earn credit.",
         "Rewards are paid after the fix ships.",
-        "Keep it private until it is fixed. Full policy and safe harbour on b-Aware."
+        "Keep it private until it is fixed. Full policy and safe harbour on b-Aware.",
+        "Anyone can report by email. To receive a reward you sign in with bWalletX on this page and verify your identity with Veriff."
       ],
       "submit": "email",
       "submit_text": "Email support@bwalletx.com with the subject b-Aware. Not the form below.",
@@ -30,7 +31,7 @@
         "Apply with Google on /testers first. Testers are approved by hand.",
         "Use the Google account on your Android phone.",
         "One tester per person. The app checks in once a day when you open it.",
-        "Use the form below for test reports and notes."
+        "Sign in with bWalletX below to send test reports and notes."
       ],
       "submit": "form",
       "link": "/testers",
@@ -42,7 +43,9 @@
       "status": "coming",
       "pay": "Set per contract",
       "what": "Build or fix a named feature in our open-source code. Each bounty will list the task, the price and how b checks the work.",
-      "rules": ["Not open yet. The first contracts will appear here."],
+      "rules": [
+        "Not open yet. The first contracts will appear here."
+      ],
       "submit": "none"
     }
   ]

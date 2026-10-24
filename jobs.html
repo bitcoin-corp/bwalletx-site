@@ -4,13 +4,13 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
     <title>Jobs: paid work, paid in BSV · bWalletX</title>
-    <meta name="description" content="Paid work on bWalletX: security testing, paid Android testing and, soon, feature bounties. Open source, paid in BSV, every payout public." />
+    <meta name="description" content="Paid work on bWalletX: security testing, paid Android testing and, soon, feature bounties. Sign in with bWalletX, verify with Veriff, get paid in BSV to your paymail." />
     <link rel="canonical" href="https://bwalletx.com/jobs" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://bwalletx.com/jobs" />
     <meta property="og:site_name" content="bWalletX" />
     <meta property="og:title" content="bWalletX jobs: paid work, paid in BSV" />
-    <meta property="og:description" content="Paid work on bWalletX: security testing, paid Android testing and, soon, feature bounties. Open source, paid in BSV, every payout public." />
+    <meta property="og:description" content="Paid work on bWalletX: security testing, paid Android testing and, soon, feature bounties. Sign in with bWalletX, verify with Veriff, get paid in BSV to your paymail." />
     <meta property="og:image" content="https://bwalletx.com/og-jobs-v1.png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
@@ -18,7 +18,7 @@
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@bWalletX" />
     <meta name="twitter:title" content="bWalletX jobs: paid work, paid in BSV" />
-    <meta name="twitter:description" content="Paid work on bWalletX: security testing, paid Android testing and, soon, feature bounties. Open source, paid in BSV, every payout public." />
+    <meta name="twitter:description" content="Paid work on bWalletX: security testing, paid Android testing and, soon, feature bounties. Sign in with bWalletX, verify with Veriff, get paid in BSV to your paymail." />
     <meta name="twitter:image" content="https://bwalletx.com/og-jobs-v1.png" />
     <meta name="theme-color" content="#000000" />
     <link rel="icon" href="/favicon.ico" sizes="48x48" />
@@ -75,6 +75,11 @@
       .ext .btn[disabled] { opacity: .6; cursor: wait; }
       .ext .hp { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
       .ext #msg { margin-top: 12px; }
+      .ext ul.check { list-style: none; padding: 0; }
+      .ext ul.check li { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; justify-content: space-between; padding: 8px 0; border-top: 1px solid #ffffff14; }
+      .ext .pair { margin-top: 12px; }
+      .ext .pair img, .ext .pair canvas { background: #fff; padding: 10px; border-radius: 12px; max-width: 100%; }
+      .ext form.card h3, .ext #signin-box h3 { margin-bottom: 8px; }
     </style>
   </head>
   <body>
@@ -100,7 +105,7 @@
           <p class="pay">Critical 10 BSV · High 3 BSV · Medium 0.5 BSV · Low: credit</p>
           <p class="meta">Paid from a 20 BSV pool each quarter.</p>
           <p>Read the code and try the apps. Find a way to take funds, read keys, or get past an approval in bWalletX, bWallet or bChatX.</p>
-          <ul><li>Test only your own wallets and accounts. No real users&#x27; funds or data.</li><li>First valid report of an issue is paid. Duplicates earn credit.</li><li>Rewards are paid after the fix ships.</li><li>Keep it private until it is fixed. Full policy and safe harbour on b-Aware.</li></ul>
+          <ul><li>Test only your own wallets and accounts. No real users&#x27; funds or data.</li><li>First valid report of an issue is paid. Duplicates earn credit.</li><li>Rewards are paid after the fix ships.</li><li>Keep it private until it is fixed. Full policy and safe harbour on b-Aware.</li><li>Anyone can report by email. To receive a reward you sign in with bWalletX on this page and verify your identity with Veriff.</li></ul>
           <p class="how"><b>How to submit:</b> Email support@bwalletx.com with the subject b-Aware. Not the form below.</p>
           <p class="how"><a href="/b-aware">Read the b-Aware policy and rates &rarr;</a></p>
         </div>
@@ -109,8 +114,8 @@
           <p class="pay">1 BSV per tester</p>
           <p class="meta">0.25 BSV after the first open from Google Play, 0.75 BSV after 12 of 14 daily check-ins.</p>
           <p>Install bWallet from the Google Play test and use it every day for 14 days: send a little, receive, try the features, and tell us what breaks.</p>
-          <ul><li>Apply with Google on /testers first. Testers are approved by hand.</li><li>Use the Google account on your Android phone.</li><li>One tester per person. The app checks in once a day when you open it.</li><li>Use the form below for test reports and notes.</li></ul>
-          <p class="how"><b>How to submit:</b> Submit with the form below.</p>
+          <ul><li>Apply with Google on /testers first. Testers are approved by hand.</li><li>Use the Google account on your Android phone.</li><li>One tester per person. The app checks in once a day when you open it.</li><li>Sign in with bWalletX below to send test reports and notes.</li></ul>
+          <p class="how"><b>How to submit:</b> Sign in below and use the form.</p>
           <p class="how"><a href="/testers">Apply on /testers &rarr;</a></p>
         </div>
         <div class="card job" id="job-feature-bounties">
@@ -123,20 +128,62 @@
 
       <h2 id="how">How it works</h2>
       <ol class="steps">
-        <li><b>You submit</b> your work: a report, a test log, a fix.</li>
+        <li><b>Sign in with bWalletX.</b> Your wallet signs a one-time message. Nothing is spent.</li>
+        <li><b>Verify your identity with Veriff</b>, our KYC provider. <span class="status coming">Coming</span></li>
+        <li><b>Submit your work</b>: a test report, a fix, a finding.</li>
         <li><b>b checks it.</b> b looks for duplicates and checks the work against the code.</li>
         <li><b>The team approves.</b> b proposes a payout; a person on the team approves it.</li>
-        <li><b>You are paid in BSV</b>, and the payout is listed in public on <a href="/bounties">/bounties</a>.</li>
+        <li><b>You are paid in BSV</b> to your bWalletX paymail, and the payout is listed in public on <a href="/bounties">/bounties</a>.</li>
       </ol>
-      <p class="meta">This is paid work, not an investment. Amounts are set per job and only paid after approval.</p>
+
+      <h2 id="paid">Getting paid</h2>
+      <div class="card">
+        <p>To take paid work you sign in with bWalletX and verify your identity with Veriff (our KYC provider). We pay to your bWalletX paymail.</p>
+        <ul>
+          <li><b>No anonymous contractors.</b> Every contractor has a bWalletX sign-in, a legal name, a country, at least one linked account (X, GitHub or Google) and a Veriff check. Veriff also does the sanctions check.</li>
+          <li><b>Paid only to your own paymail</b>, <code>yourname@bwalletx.com</code>. We never pay to an address pasted into a form or a message.</li>
+          <li><b>Verify with Veriff: coming.</b> Until it is live you can sign in, fill in your profile and submit work. Payouts start once you are verified.</li>
+          <li><b>Security reports</b> stay open to anyone by email. A reward for one needs sign-in and Veriff too.</li>
+        </ul>
+        <p class="meta">This is paid work, not an investment. Amounts are set per job and only paid after approval.</p>
+      </div>
+      <ul class="check" id="levels">
+        <li><b>Signed in with bWalletX</b> <span class="status">Live</span></li>
+        <li><b>Contractor profile</b> (legal name, country, linked account) <span class="status">Live</span></li>
+        <li><b>Verify with Veriff</b> <span class="status coming">Coming</span></li>
+        <li><b>Payouts to your paymail</b> <span class="status coming">After Veriff</span></li>
+      </ul>
 
       <h2 id="submit">Submit work</h2>
       <p class="notice"><b>Security issues:</b> do not use this form. Email <a href="mailto:support@bwalletx.com?subject=b-Aware">support@bwalletx.com</a> with the subject b-Aware, as the <a href="/b-aware">policy</a> says.</p>
-      <form id="f" novalidate>
+
+      <div class="card" id="signin-box">
+        <h3>1. Sign in with bWalletX</h3>
+        <p class="meta">You need a bWalletX paymail (<code>$name</code>). No wallet yet? <a href="/get">Get bWalletX</a>.</p>
+        <div id="signin"></div>
+        <div id="bwx-pair" class="pair"></div>
+        <p id="smsg" class="meta" role="status"></p>
+      </div>
+
+      <form class="card" id="profile" hidden novalidate>
+        <h3>2. Your contractor profile</h3>
+        <p class="meta" id="who"></p>
+        <label for="legal">Legal name (as on your ID)</label>
+        <input id="legal" maxlength="120" autocomplete="name" required />
+        <label for="country">Country (two letters, e.g. GB)</label>
+        <input id="country" maxlength="2" autocomplete="country" required style="text-transform:uppercase" />
+        <label for="akind">Linked account</label>
+        <select id="akind"><option value="github">GitHub</option><option value="x">X</option><option value="google">Google</option></select>
+        <input id="ahandle" maxlength="100" placeholder="your username or email" aria-label="Linked account username" required style="margin-top:8px" />
+        <button class="btn" id="psave" type="submit">Save profile</button>
+        <p id="pmsg" class="meta" role="status"></p>
+        <p class="meta">Status: <b id="level">none</b>. Verify with Veriff: coming.</p>
+      </form>
+
+      <form class="card" id="f" hidden novalidate>
+        <h3>3. Send your work to b</h3>
         <label for="job">Job</label>
         <select id="job" name="job" required></select>
-        <label for="who">Your $handle or paymail</label>
-        <input id="who" name="who" maxlength="120" autocomplete="off" placeholder="$yourname or you@bwalletx.com" required />
         <label for="email">Contact email</label>
         <input id="email" name="email" type="email" maxlength="200" autocomplete="email" required />
         <label for="text">What you did</label>
@@ -147,17 +194,22 @@
         <button class="btn" id="go" type="submit">Send to b</button>
         <p id="msg" class="meta" role="status"></p>
       </form>
-      <p class="meta">We keep your email to contact you about this submission only. b reads what you send as untrusted text.</p>
+      <p class="meta">We use your email only to contact you about your work. Your legal name and country are private: they are never shown on the site. b reads what you send as untrusted text.</p>
     </main>
+    <script src="/connect.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
     <script>
     (function () {
       var $ = function (id) { return document.getElementById(id); };
       var esc = function (t) { return String(t == null ? '' : t).replace(/[&<>"']/g, function (c) { return '&#' + c.charCodeAt(0) + ';'; }); };
       var safeHref = function (u) { u = String(u || ''); return /^\/(?!\/)/.test(u) || /^https:\/\//.test(u) ? u : ''; };
       var API = 'https://push.bwalletx.com';
+      var token = null;
+      try { token = sessionStorage.getItem('bwx-jobs-token'); } catch (e) {}
+
       function card(j) {
         var live = j.status === 'live';
-        var how = j.submit === 'email' ? (j.submit_text || '') : j.submit === 'form' ? 'Submit with the form below.' : '';
+        var how = j.submit === 'email' ? (j.submit_text || '') : j.submit === 'form' ? 'Sign in below and use the form.' : '';
         var href = safeHref(j.link);
         return '<div class="card job" id="job-' + esc(j.id) + '"><div class="top"><h3>' + esc(j.title) + '</h3><span class="status' + (live ? '' : ' coming') + '">' + (live ? 'Live' : 'Coming') + '</span></div>' +
           '<p class="pay">' + esc(j.pay) + '</p>' + (j.pay_note ? '<p class="meta">' + esc(j.pay_note) + '</p>' : '') +
@@ -168,32 +220,86 @@
       function fill(jobs) {
         var open = jobs.filter(function (j) { return j.status === 'live' && j.submit === 'form' && /^[a-z0-9][a-z0-9-]{0,39}$/.test(j.id); });
         $('job').innerHTML = open.map(function (j) { return '<option value="' + esc(j.id) + '">' + esc(j.title) + '</option>'; }).join('');
-        if (!open.length) { $('f').hidden = true; }
       }
-      var fallback = [{"id": "security", "title": "Security testing (b-Aware)", "status": "live", "submit": "email"}, {"id": "android-testers", "title": "Paid Android testing", "status": "live", "submit": "form"}, {"id": "feature-bounties", "title": "Feature bounties", "status": "coming", "submit": "none"}];
-      fill(fallback);
+      fill([{"id": "security", "title": "Security testing (b-Aware)", "status": "live", "submit": "email"}, {"id": "android-testers", "title": "Paid Android testing", "status": "live", "submit": "form"}, {"id": "feature-bounties", "title": "Feature bounties", "status": "coming", "submit": "none"}]);
       fetch('/jobs.json', { cache: 'no-store' }).then(function (r) { if (!r.ok) throw 0; return r.json(); }).then(function (d) {
         var jobs = (d && d.jobs) || [];
         if (!jobs.length) return;
         $('jobs').innerHTML = jobs.map(card).join('');
         fill(jobs);
       }).catch(function () {});
+
+      function api(path, body) {
+        var h = { 'content-type': 'application/json' };
+        if (token) h.authorization = 'Bearer ' + token;
+        return fetch(API + path, { method: body ? 'POST' : 'GET', headers: h, body: body ? JSON.stringify(body) : undefined })
+          .then(function (r) { return r.json().catch(function () { return {}; }).then(function (j) { if (!r.ok) { var e = new Error(String(j.error || 'HTTP ' + r.status)); e.status = r.status; throw e; } return j; }); });
+      }
+      var LEVEL = { none: 'not set up', wallet: 'signed in with bWalletX (Veriff check coming)', veriff: 'verified with Veriff' };
+      function show(me) {
+        $('signin-box').hidden = !!me;
+        $('profile').hidden = !me;
+        $('f').hidden = !(me && me.canSubmit);
+        if (!me) return;
+        $('who').textContent = 'Signed in as $' + me.paymail + '. Payouts go only to ' + me.paymail + '@bwalletx.com.';
+        $('level').textContent = LEVEL[me.verification] || me.verification;
+        if (me.legalName) $('legal').value = me.legalName;
+        if (me.country) $('country').value = me.country;
+        if (me.accounts && me.accounts[0]) { $('akind').value = me.accounts[0].kind; $('ahandle').value = me.accounts[0].handle; }
+      }
+      if (token) api('/v1/jobs/me').then(function (j) { show(j.me); }).catch(function () { token = null; try { sessionStorage.removeItem('bwx-jobs-token'); } catch (e) {} });
+
+      var panel = $('bwx-pair');
+      if (window.bWalletX) window.bWalletX.renderButton('#signin', {
+        onClick: function (button) {
+          button.disabled = true; $('smsg').textContent = '';
+          window.bWalletX.signIn({
+            challenge: function (identityKey) { return api('/v1/jobs/auth/challenge', { identityKey: identityKey }); },
+            pairing: {
+              onLink: function (link) {
+                panel.replaceChildren();
+                if (window.QRCode) new QRCode(panel, { text: link, width: 220, height: 220 });
+                var p = document.createElement('p'); p.className = 'meta';
+                p.textContent = 'Scan with bWalletX on your phone, or paste this link into web.bwalletx.com: ' + link;
+                panel.append(p);
+              },
+              onCode: function (code) { var p = document.createElement('p'); p.textContent = 'Check bWalletX shows ' + code + ', then tap Connect.'; panel.append(p); },
+            },
+          }).then(function (r) {
+            return api('/v1/jobs/auth/verify', { identityKey: r.identityKey, nonce: r.nonce, signature: r.signature });
+          }).then(function (j) {
+            token = j.token; try { sessionStorage.setItem('bwx-jobs-token', token); } catch (e) {}
+            panel.replaceChildren(); show(j.me);
+          }).catch(function (e) {
+            $('smsg').textContent = e && e.code === 'NOT_FOUND' ? 'bWalletX was not found. Get it at bwalletx.com/get.' : String((e && e.message) || 'Sign-in did not work. Try again.');
+          }).then(function () { button.disabled = false; });
+        },
+      });
+      else $('smsg').textContent = 'Sign-in could not load. Refresh the page to try again.';
+
+      $('profile').addEventListener('submit', function (e) {
+        e.preventDefault();
+        var body = { legalName: $('legal').value.trim(), country: $('country').value.trim().toUpperCase(), accounts: [{ kind: $('akind').value, handle: $('ahandle').value.trim() }] };
+        if (!body.legalName || !/^[A-Z]{2}$/.test(body.country) || !body.accounts[0].handle) { $('pmsg').textContent = 'Please fill in your legal name, a two-letter country code and a linked account.'; return; }
+        $('psave').disabled = true; $('pmsg').textContent = 'Saving\u2026';
+        api('/v1/jobs/contractor', body).then(function (j) { $('pmsg').textContent = 'Saved.'; show(j.me); })
+          .catch(function (err) { $('pmsg').textContent = String(err.message); })
+          .then(function () { $('psave').disabled = false; });
+      });
+
       $('f').addEventListener('submit', function (e) {
         e.preventDefault();
         var msg = $('msg'), go = $('go');
         var links = $('links').value.split(/\s+/).map(function (s) { return s.trim(); }).filter(Boolean);
         if (links.length > 10) { msg.textContent = 'Up to 10 links, please.'; return; }
         if (links.some(function (l) { return !/^https?:\/\//i.test(l); })) { msg.textContent = 'Links must start with https://'; return; }
-        var body = { job: $('job').value, who: $('who').value.trim(), email: $('email').value.trim(), text: $('text').value.trim(), links: links, source: 'bwalletx.com/jobs', website: $('website').value };
-        if (!body.job || !body.who || !body.email || !body.text) { msg.textContent = 'Please fill in every field.'; return; }
+        var body = { job: $('job').value, email: $('email').value.trim(), text: $('text').value.trim(), links: links, source: 'bwalletx.com/jobs', website: $('website').value };
+        if (!body.job || !body.email || !body.text) { msg.textContent = 'Please fill in every field.'; return; }
         go.disabled = true; msg.textContent = 'Sending\u2026';
-        fetch(API + '/v1/jobs/submit', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify(body) })
-          .then(function (r) { return r.json().catch(function () { return {}; }).then(function (j) { return { ok: r.ok, j: j }; }); })
-          .then(function (x) {
-            if (x.ok && x.j.ok) { $('f').reset(); msg.textContent = 'Sent. Your reference is ' + String(x.j.ref || '') + '. b will check it and the team will reply by email.'; }
-            else msg.textContent = String((x.j && x.j.error) || 'Could not send. Please try again later.');
-          })
-          .catch(function () { msg.textContent = 'Could not send. Please try again later.'; })
+        api('/v1/jobs/submit', body).then(function (j) {
+          $('text').value = ''; $('links').value = '';
+          msg.textContent = 'Sent. Your reference is ' + String(j.ref || '') + '. b will check it and the team will reply by email.';
+        }).catch(function (err) { msg.textContent = String(err.message || 'Could not send. Please try again later.'); })
           .then(function () { go.disabled = false; });
       });
     })();
