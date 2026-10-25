@@ -343,7 +343,7 @@ def index_html():
             p['slug'], logo_tag(p['app']), gold_b(p['title']), p['og_sub'], n))
     out.append('      </div>\n')
     out.append('      <div class="row"><a class="btn btn-store" href="/get?from=on-b">Get bWalletX</a></div>\n')
-    out.append('      <p class="small">Each app named here is a separate service; bWalletX is not affiliated with any of them. Logos belong to their owners.</p>\n')
+    out.append('      <p class="small">Each app named here is a separate service; bWalletX is not affiliated with any of them. Logos belong to their owners. Our own sites: <a href="/services">b*X services</a>.</p>\n')
     out.append(TAIL)
     return ''.join(out)
 
