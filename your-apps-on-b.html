@@ -1,0 +1,280 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Your apps on b</title>
+    <link rel="canonical" href="https://bwalletx.com/your-apps-on-b" />
+    <meta name="description" content="Bring your apps. Keep your stuff. Twetch, RelayX, Treechat, Peck, Yours, CoinGeek and the Hodlocker way, all alongside bWalletX. Just b." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://bwalletx.com/your-apps-on-b" />
+    <meta property="og:site_name" content="bWalletX" />
+    <meta property="og:title" content="Your apps. On b." />
+    <meta property="og:description" content="Bring your apps. Keep your stuff. A short film with its own music." />
+    <meta property="og:image" content="https://bwalletx.com/og-your-apps-on-b.png?v=1" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Colourful bands with the words Your apps. On b. and the names Twetch, RelayX, Treechat, Peck, Hodlocker, Yours and CoinGeek." />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@bWalletX" />
+    <meta name="twitter:title" content="Your apps. On b." />
+    <meta name="twitter:description" content="Bring your apps. Keep your stuff. A short film with its own music." />
+    <meta name="twitter:image" content="https://bwalletx.com/og-your-apps-on-b.png?v=1" />
+    <meta name="theme-color" content="#111111" />
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500&family=Space+Grotesk:wght@400;500;600;700&display=swap" />
+    <link rel="stylesheet" href="/styles.css" />
+    <style>
+      /* Your apps on b (25 Oct 2026): ad film in the Just b series. Eight scenes, ~58 s, music synthesised live.
+         Every claim comes from the ✓ Live list on that app's /<app>-on-b page. */
+      html { overflow-x: hidden; }
+      body { margin: 0; background: #111; color: #fff; overflow-x: hidden; font-family: 'Space Grotesk', sans-serif; }
+      .tv { position: relative; height: 100svh; min-height: 560px; overflow: hidden; background: #111; }
+      .sc { position: absolute; inset: 0; overflow: hidden; background: radial-gradient(circle at 50% 30%, color-mix(in srgb, var(--bg) 70%, #fff) 0, var(--bg) 55%, color-mix(in srgb, var(--bg) 78%, #000) 100%); color: var(--ink);
+        clip-path: circle(0% at var(--ox, 50%) var(--oy, 50%)); visibility: hidden; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: clamp(14px, 3vh, 28px); padding: 64px 16px; box-sizing: border-box; text-align: center; }
+      .sc.on { visibility: visible; z-index: 2; animation: wipe 0.9s cubic-bezier(.7,0,.2,1) forwards; }
+      .sc.was { visibility: visible; z-index: 1; clip-path: circle(150% at 50% 50%); }
+      @keyframes wipe { to { clip-path: circle(150% at var(--ox, 50%) var(--oy, 50%)); } }
+      .sc::before { content: ""; position: absolute; inset: -10%; z-index: 0; background-image: radial-gradient(circle, color-mix(in srgb, var(--ink) 14%, transparent) 2px, transparent 2.5px); background-size: 34px 34px; animation: drift 14s linear infinite; }
+      @keyframes drift { to { transform: translate(34px, 34px); } }
+      .sc > * { position: relative; z-index: 1; }
+      /* App title cards: names set in type. Logos drop into .lg later (see LOGOS in the script). */
+      .apps { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; max-width: 92vw; }
+      .app { display: inline-flex; align-items: center; gap: 8px; padding: 7px 16px; border-radius: 999px; background: var(--ink); color: var(--bg); font: 700 clamp(.95rem, 3.4vw, 1.35rem) 'Space Grotesk', sans-serif; letter-spacing: -0.01em; opacity: 0; }
+      .app .lg { height: 1.2em; width: auto; display: block; border-radius: 4px; }
+      .on .app { animation: pop .7s cubic-bezier(.2,1.6,.4,1) both; }
+      @keyframes pop { from { opacity: 0; transform: scale(.3) rotate(-8deg); } to { opacity: 1; transform: none; } }
+      .cap { margin: 0; font: 700 clamp(2.6rem, 10vw, 7.5rem) / 1 'Space Grotesk', sans-serif; letter-spacing: -0.05em; max-width: 96vw; }
+      .cap .w { display: inline-block; white-space: nowrap; }
+      .cap .l { display: inline-block; opacity: 0; }
+      .cap .gb { color: #F5B800; -webkit-text-stroke: 2px var(--ink); paint-order: stroke fill; }
+      .on .cap .l { animation: lin .55s calc(.35s + var(--i) * 48ms) cubic-bezier(.2,1.5,.4,1) both; }
+      @keyframes lin { from { opacity: 0; transform: translateY(.45em) scale(.6) rotate(-6deg); } to { opacity: 1; transform: none; } }
+      .sub { margin: 0; max-width: 34ch; font: 500 clamp(1.02rem, 3.4vw, 1.45rem) / 1.35 'Space Grotesk', sans-serif; opacity: 0; }
+      .on .sub { animation: fade .8s 1.6s ease both; }
+      .more { font: 500 clamp(.78rem, 2.6vw, .95rem) 'IBM Plex Mono', monospace; letter-spacing: .06em; color: var(--ink); text-decoration: none; border-bottom: 2px solid currentColor; opacity: 0; }
+      .on .more { animation: fade .8s 2.4s ease both; }
+      @keyframes fade { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: none; } }
+      /* Drawn props, one per scene. */
+      .prop { width: min(88vw, 520px); min-height: 0; }
+      .words { display: grid; grid-template-columns: repeat(4, 1fr); gap: 6px; }
+      .words span { padding: 6px 4px; border-radius: 8px; background: color-mix(in srgb, var(--bg) 40%, #fff); border: 2px solid var(--ink); font: 500 clamp(.7rem, 2.6vw, .9rem) 'IBM Plex Mono', monospace; opacity: 0; }
+      .on .words span { animation: pop .5s calc(.9s + var(--i) * 90ms) cubic-bezier(.2,1.6,.4,1) both; }
+      .nfts { display: flex; justify-content: center; gap: 10px; }
+      .nfts i { width: 22%; aspect-ratio: 3/4; border-radius: 12px; border: 3px solid var(--ink); background: var(--c); opacity: 0; box-shadow: 0 10px 0 -4px color-mix(in srgb, var(--ink) 50%, transparent); }
+      .on .nfts i { animation: deal .7s calc(.8s + var(--i) * 160ms) cubic-bezier(.2,1.5,.4,1) both; }
+      @keyframes deal { from { opacity: 0; transform: translateY(-80px) rotate(-25deg); } to { opacity: 1; transform: rotate(var(--r)); } }
+      .feed { display: grid; gap: 8px; text-align: left; }
+      .post { display: flex; gap: 10px; align-items: center; padding: 9px 12px; border-radius: 14px; background: #fffdf6; color: #111; border: 2px solid var(--ink); opacity: 0; }
+      .post b { font-size: .8rem; padding: 2px 8px; border-radius: 999px; background: var(--c); color: #111; white-space: nowrap; }
+      .post span { flex: 1; height: 9px; border-radius: 5px; background: #e2ddcf; }
+      .on .post { animation: slide .6s calc(.9s + var(--i) * 260ms) cubic-bezier(.2,1.3,.4,1) both; }
+      @keyframes slide { from { opacity: 0; transform: translateX(-60px); } to { opacity: 1; transform: none; } }
+      .lock { width: clamp(90px, 22vw, 140px); }
+      .lock .sh { stroke-dasharray: 160; stroke-dashoffset: 160; }
+      .on .lock .sh { animation: draw 1.2s .8s ease forwards, shut .4s 2.1s ease forwards; }
+      @keyframes draw { to { stroke-dashoffset: 0; } }
+      @keyframes shut { from { transform: translateY(0); } to { transform: translateY(10px); } }
+      .coins { position: relative; height: clamp(70px, 14vh, 110px); }
+      .coins i { position: absolute; left: 10%; bottom: 0; width: clamp(34px, 8vw, 48px); aspect-ratio: 1; border-radius: 50%; background: #F5B800; border: 3px solid var(--ink); display: grid; place-items: center; font: 700 1.1rem 'Space Grotesk'; font-style: normal; color: #111; opacity: 0; }
+      .on .coins i { animation: arc 1.4s calc(.9s + var(--i) * 300ms) cubic-bezier(.3,.6,.4,1) both; }
+      @keyframes arc { 0% { opacity: 0; transform: translate(0, 0); } 15% { opacity: 1; } 50% { transform: translate(min(30vw, 190px), -60%); } 100% { opacity: 1; transform: translate(min(60vw, 380px), 0); } }
+      .heads { display: grid; gap: 8px; }
+      .heads div { display: flex; gap: 10px; align-items: center; padding: 8px; border-radius: 12px; background: #fffdf6; border: 2px solid var(--ink); opacity: 0; }
+      .heads div i { width: 64px; aspect-ratio: 16/10; border-radius: 6px; background: var(--c); }
+      .heads div span { flex: 1; display: grid; gap: 6px; } .heads div span::before, .heads div span::after { content: ""; height: 9px; border-radius: 5px; background: #2a2a2a; } .heads div span::after { width: 60%; background: #c9c3b4; }
+      .on .heads div { animation: fade .6s calc(.9s + var(--i) * 260ms) ease both; }
+      /* End card. */
+      .sc.end { background: #f7f6f2; color: #111; --ink: #111; --bg: #f7f6f2; }
+      .sc.end::before { background-image: linear-gradient(rgba(17,17,17,.06) 1px, transparent 1px), linear-gradient(90deg, rgba(17,17,17,.06) 1px, transparent 1px); background-size: 40px 40px; animation: none; }
+      .end .jb { margin: 0; font: 700 clamp(1.4rem, 5vw, 2.4rem) 'Space Grotesk', sans-serif; letter-spacing: -0.03em; opacity: 0; }
+      .on.end .jb { animation: fade .8s 2.2s ease both; }
+      .end a.go { display: inline-block; padding: 16px 34px; border-radius: 999px; background: #F5B800; color: #111; border: 2px solid #111; text-decoration: none; font: 700 1.1rem 'Space Grotesk', sans-serif; opacity: 0; }
+      .on.end a.go { animation: pop .8s 3s cubic-bezier(.2,1.6,.4,1) both; }
+      .end .alinks { display: flex; flex-wrap: wrap; justify-content: center; gap: 6px 14px; font: 500 .85rem 'IBM Plex Mono', monospace; opacity: 0; }
+      .end .alinks a { color: #4a4843; }
+      .on.end .alinks { animation: fade .8s 3.6s ease both; }
+      /* Gate: the big central Watch with sound button, as on /b-creative. */
+      .snd { position: absolute; z-index: 5; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 18px; border: 0; padding: 0; cursor: pointer;
+        background: rgba(0,0,0,.55); -webkit-backdrop-filter: blur(3px); backdrop-filter: blur(3px); color: #fff; transition: opacity .5s ease, visibility 0s .5s; }
+      .snd .pc { position: relative; width: clamp(110px, 28vw, 150px); aspect-ratio: 1; border-radius: 50%; background: #F5B800; display: grid; place-items: center; box-shadow: 0 18px 50px rgba(0,0,0,.45); transition: transform .2s ease; animation: pulse 1.8s ease-in-out infinite; }
+      .snd .pc::after { content: ''; position: absolute; inset: -14px; border-radius: 50%; border: 3px solid rgba(245,184,0,.7); animation: ring 2.2s ease-out infinite; }
+      @keyframes ring { 0% { transform: scale(.9); opacity: .9; } 100% { transform: scale(1.35); opacity: 0; } }
+      @keyframes pulse { 50% { transform: scale(1.05); } }
+      .snd:hover .pc, .snd:focus-visible .pc { transform: scale(1.08); }
+      .snd .pc svg { width: 42%; margin-left: 6%; }
+      .snd .pl { font: 700 clamp(1.1rem, 4vw, 1.45rem) 'Space Grotesk', sans-serif; letter-spacing: .02em; text-shadow: 0 2px 12px rgba(0,0,0,.5); }
+      .snd .pl small { display: block; margin-top: 4px; text-align: center; font: 500 .8rem 'IBM Plex Mono', monospace; letter-spacing: .12em; opacity: .8; }
+      .snd.off { opacity: 0; visibility: hidden; pointer-events: none; }
+      .mute { position: absolute; z-index: 5; right: 14px; bottom: 14px; width: 44px; height: 44px; border-radius: 50%; border: 0; background: rgba(17,17,17,.75); color: #fff; cursor: pointer; display: none; }
+      .mute.show { display: grid; place-items: center; }
+      .snd:focus-visible, .mute:focus-visible { outline: 3px solid #F5B800; outline-offset: 3px; }
+      .tv.still .snd, .tv.still .mute { display: none; }
+      .tv.poster .sc, .tv.poster .sc *, .tv.poster .sc::before { animation: none !important; opacity: 1 !important; }
+      .tv.poster .sc.on { clip-path: none; }
+      /* Below the film. */
+      .after { background: #f7f6f2; color: #111; padding: 72px 16px 40px; text-align: center; }
+      .after h2 { margin: 0; font: 700 clamp(2rem, 6vw, 3.2rem) / 1.05 'Space Grotesk', sans-serif; letter-spacing: -0.04em; }
+      .after p { margin: 14px auto 0; max-width: 560px; color: #5d5b56; font: 400 1.08rem / 1.6 'Space Grotesk', sans-serif; }
+      .after .cta { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin-top: 26px; }
+      .after .cta a { display: inline-flex; align-items: center; min-height: 46px; padding: 0 22px; border-radius: 999px; text-decoration: none; font: 600 .95rem 'Space Grotesk', sans-serif; border: 1px solid #111; color: #111; }
+      .after .cta a.pri { background: #111; color: #f7f6f2; }
+      .after .tag { margin-top: 30px; font-weight: 500; color: #111; }
+      .jb-foot { margin: 0; padding: 0 16px 22px; text-align: center; font-size: .75rem; color: #6e6c66; background: #f7f6f2; }
+      .jb-foot a { color: #4a4843; }
+      @media (prefers-reduced-motion: reduce) { .sc, .sc *, .sc::before, .snd .pc, .snd .pc::after { animation: none !important; } .sc.on { clip-path: none; } .sc .l, .sc .app, .sc .sub, .sc .more, .sc .words span, .sc .nfts i, .sc .post, .sc .heads div, .sc .coins i, .end .jb, .end a.go, .end .alinks { opacity: 1 !important; } .lock .sh { stroke-dashoffset: 0; } }
+    </style>
+  </head>
+  <body>
+    <section class="tv" id="tv" aria-label="Your apps on b: a short animated film about using your BSV apps alongside bWalletX">
+      <button type="button" class="snd" id="snd" aria-label="Watch the film with sound"><span class="pc"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4.5v15a1 1 0 0 0 1.5.86l12.4-7.5a1 1 0 0 0 0-1.72L8.5 3.64A1 1 0 0 0 7 4.5z" fill="#111"/></svg></span><span class="pl">Watch with sound<small>0:58 &middot; SOUND ON</small></span></button>
+      <button type="button" class="mute" id="mute" aria-pressed="false" aria-label="Mute music">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M11 5 6 9H3v6h3l5 4z"></path><path id="mute-w" d="M15.5 8.5a5 5 0 0 1 0 7M18.5 5.5a9 9 0 0 1 0 13"></path></svg>
+      </button>
+    </section>
+
+    <section class="after">
+      <h2>Bring your apps. Keep your stuff.</h2>
+      <p>The BSV apps you already use work alongside bWalletX: restore old wallets from their 12 words, find your NFTs, read Twetch, Peck and Treechat in one Feed, lock and tip, and catch CoinGeek headlines in bNews.</p>
+      <div class="cta"><a class="pri" href="/get?from=your-apps-on-b">Get bWalletX</a><a href="/on-b">All apps on b</a></div>
+      <p class="tag">Less noise. More life. Just b.</p>
+    </section>
+    <p class="jb-foot"><a href="/just-b">just b</a> · <a href="/b-cool">b cool</a> · <a href="/b-creative">b creative</a> · <a href="/talk-to-b">talk to b</a> · <a href="/your-apps-on-b" aria-current="page">your apps on b</a></p>
+    <p class="jb-foot">Apps shown are separate services; bWalletX is not affiliated with them. Logos belong to their owners. Music is generated live in your browser. bWalletX is in beta: test with small amounts. <a href="mailto:support@bwalletx.com">support@bwalletx.com</a></p>
+
+    <script>
+      (function () {
+        // LOGOS: official app logos go here once they land in /img/apps/ (e.g. Twetch: '/img/apps/twetch.svg').
+        // Empty means the name is shown as a typographic title card. Never draw or invent a logo.
+        var LOGOS = { Twetch: '', RelayX: '', Treechat: '', Peck: '', Hodlocker: '', Yours: '', CoinGeek: '' };
+
+        // Scenes: 3 bars each at 100 bpm (7.2 s). Each claim is from a ✓ Live list on that app's page.
+        var SCENES = [
+          { bg: '#ff8fbf', ink: '#2b0f1e', apps: [], cap: 'Bring your apps.', sub: 'Keep your stuff. The BSV apps you already use work alongside bWalletX.', more: ['/on-b', 'All apps on b'], prop: 'none' },
+          { bg: '#ffd84d', ink: '#3a2c00', apps: ['Twetch', 'Yours', 'RelayX'], cap: 'Twelve words.', sub: 'Restore your Twetch, Yours or RelayX wallet from its 12 words. Your words stay on your device.', more: ['/yours-on-b', 'Yours on b'], prop: 'words' },
+          { bg: '#b39cff', ink: '#1d1340', apps: ['RelayX'], cap: 'Found them.', sub: 'Find your RelayX NFTs from your 12 words, and keep them in the NFTs tab.', more: ['/relayx-on-b', 'RelayX on b'], prop: 'nfts' },
+          { bg: '#7cc7ff', ink: '#0a2235', apps: ['Twetch', 'Peck', 'Treechat'], cap: 'One Feed.', sub: 'Twetch, Peck and Treechat posts, side by side. Like and reply from bWalletX.', more: ['/treechat-on-b', 'Treechat on b'], prop: 'feed' },
+          { bg: '#6fdc8c', ink: '#0c2a12', apps: ['Hodlocker'], cap: 'Lock it in.', sub: 'Lock BSV behind a post the Hodlocker way, from a day to about ten years. Your coins stay yours.', more: ['/hodlocker-on-b', 'Hodlocker on b'], prop: 'lock' },
+          { bg: '#ffb347', ink: '#3a1e00', apps: ['Twetch', 'Peck'], cap: 'Say thanks.', sub: 'Tip a Twetch or Peck author in BSV, straight from the post.', more: ['/twetch-on-b', 'Twetch on b'], prop: 'coins' },
+          { bg: '#ff6b5e', ink: '#2a0806', apps: ['CoinGeek'], cap: 'Read the news.', sub: 'CoinGeek headlines in bNews. Each story opens as an on-chain thread.', more: ['/coingeek-on-b', 'CoinGeek on b'], prop: 'heads' },
+          { end: true, cap: 'Your apps. On b.' }
+        ];
+        var LINKS = [['/twetch-on-b', 'Twetch'], ['/relayx-on-b', 'RelayX'], ['/treechat-on-b', 'Treechat'], ['/peck-on-b', 'Peck'], ['/hodlocker-on-b', 'Hodlocker'], ['/yours-on-b', 'Yours'], ['/coingeek-on-b', 'CoinGeek']];
+        var tv = document.getElementById('tv');
+        function esc(s) { return s.replace(/&/g, '&amp;').replace(/</g, '&lt;'); }
+        function letters(s) { var i = 0; return s.split(' ').map(function (w) { return '<span class="w">' + Array.from(w).map(function (c) {
+          var gold = c === 'b' && /On b/.test(s) && w === 'b.'; return '<span class="l' + (gold ? ' gb' : '') + '" style="--i:' + (i++) + '">' + esc(c) + '</span>'; }).join('') + '</span>'; }).join(' '); }
+        function app(n, i) { return '<span class="app" style="animation-delay:' + (0.2 + i * 0.15) + 's">' + (LOGOS[n] ? '<img class="lg" src="' + LOGOS[n] + '" alt="">' : '') + esc(n) + '</span>'; }
+        var WORDS = ['word', 'word', 'word', 'word', 'word', 'word', 'word', 'word', 'word', 'word', 'word', 'word'];
+        function prop(s) {
+          if (s.prop === 'words') return '<div class="prop words" aria-hidden="true">' + WORDS.map(function (w, i) { return '<span style="--i:' + i + '">' + (i + 1) + '. ' + w + '</span>'; }).join('') + '</div>';
+          if (s.prop === 'nfts') return '<div class="prop nfts" aria-hidden="true">' + ['#ff5fa2', '#4fd1ff', '#ffd84d', '#6fdc8c'].map(function (c, i) { return '<i style="--i:' + i + ';--c:' + c + ';--r:' + [-8, -3, 3, 8][i] + 'deg"></i>'; }).join('') + '</div>';
+          if (s.prop === 'feed') return '<div class="prop feed" aria-hidden="true">' + [['Twetch', '#ffd84d'], ['Peck', '#ff8fbf'], ['Treechat', '#6fdc8c']].map(function (p, i) { return '<div class="post" style="--i:' + i + ';--c:' + p[1] + '"><b>' + p[0] + '</b><span></span></div>'; }).join('') + '</div>';
+          if (s.prop === 'lock') return '<svg class="prop lock" viewBox="0 0 100 110" aria-hidden="true"><path class="sh" d="M28 52 V34 a22 22 0 0 1 44 0 V52" fill="none" stroke="currentColor" stroke-width="9" stroke-linecap="round"/><rect x="14" y="50" width="72" height="54" rx="12" fill="#F5B800" stroke="currentColor" stroke-width="5"/><text x="50" y="88" text-anchor="middle" font-family="Space Grotesk, sans-serif" font-weight="700" font-size="34" fill="currentColor">b</text></svg>';
+          if (s.prop === 'coins') return '<div class="prop coins" aria-hidden="true">' + [0, 1, 2].map(function (i) { return '<i style="--i:' + i + '">b</i>'; }).join('') + '</div>';
+          if (s.prop === 'heads') return '<div class="prop heads" aria-hidden="true">' + ['#ffd84d', '#7cc7ff', '#b39cff'].map(function (c, i) { return '<div style="--i:' + i + ';--c:' + c + '"><i></i><span></span></div>'; }).join('') + '</div>';
+          return '';
+        }
+        var els = SCENES.map(function (s) {
+          var el = document.createElement('div'); el.className = 'sc' + (s.end ? ' end' : '');
+          if (s.bg) { el.style.setProperty('--bg', s.bg); el.style.setProperty('--ink', s.ink); }
+          if (s.end) el.innerHTML = '<p class="cap">' + letters(s.cap) + '</p><p class="jb">Just b.</p><a class="go" href="/get?from=your-apps-on-b">Get bWalletX</a><p class="alinks">' + LINKS.map(function (l) { return '<a href="' + l[0] + '">' + l[1] + '</a>'; }).join('') + '</p>';
+          else el.innerHTML = (s.apps.length ? '<div class="apps">' + s.apps.map(app).join('') + '</div>' : '') + '<p class="cap">' + letters(s.cap) + '</p>' + prop(s) + '<p class="sub">' + esc(s.sub) + '</p><a class="more" href="' + s.more[0] + '">' + esc(s.more[1]) + ' &rarr;</a>';
+          tv.insertBefore(el, tv.firstChild); return el;
+        });
+        var cur = -1;
+        function show(i) {
+          var prev = els[cur]; els.forEach(function (e) { e.classList.remove('was'); });
+          if (prev && prev !== els[i]) { prev.classList.remove('on'); prev.classList.add('was'); }
+          var el = els[i]; el.style.setProperty('--ox', (20 + Math.random() * 60) + '%'); el.style.setProperty('--oy', (25 + Math.random() * 50) + '%');
+          el.classList.remove('on'); void el.offsetWidth; el.classList.add('on'); cur = i;
+        }
+        var q = new URLSearchParams(location.search), stillM = (location.hash.match(/still=(\d+)/) || [])[1] || q.get('still');
+        var reduce = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
+        if (stillM != null) { tv.classList.add('still'); show(Math.min(+stillM, els.length - 1)); }
+        else if (reduce) show(els.length - 1); // reduced motion: the end card, still; the music can still play
+        else { tv.classList.add('poster'); show(0); }
+
+        // Music: an original, calm groove synthesised live with Web Audio (no samples). D major, 100 bpm.
+        // Dmaj9 / Bm9 / Gmaj9 / A6sus, one chord per bar. Builds from keys and pad to kick, hats, snare and a bell hook,
+        // swells into the end card, then resolves and fades. While sound is on, the audio clock changes the scenes.
+        var BPM = 100, SX = 60 / BPM / 4, PER = 48, N = SCENES.length * PER, SWING = 0.08;
+        var ctx, master, drums, music, keys, verb, duck, nb, playing = false, t0 = 0, stepN = 0, sched, vis = [];
+        var snd = document.getElementById('snd'), mute = document.getElementById('mute');
+        function mtof(m) { return 440 * Math.pow(2, (m - 69) / 12); }
+        function osc(type) { var o = ctx.createOscillator(); o.type = type; return o; }
+        function env(g, t, a, peak, dec) { g.gain.setValueAtTime(0.0001, t); g.gain.exponentialRampToValueAtTime(peak, t + a); g.gain.exponentialRampToValueAtTime(0.0001, t + dec); }
+        function init() {
+          ctx = new (window.AudioContext || window.webkitAudioContext)(); var i, c, d;
+          var comp = ctx.createDynamicsCompressor(); comp.threshold.value = -16; comp.ratio.value = 3.5; comp.attack.value = 0.005; comp.release.value = 0.2;
+          master = ctx.createGain(); master.gain.value = 0.0001; master.connect(comp); comp.connect(ctx.destination);
+          drums = ctx.createGain(); drums.gain.value = 0.7; drums.connect(master);
+          duck = ctx.createGain(); duck.connect(master); music = ctx.createGain(); music.connect(duck);
+          verb = ctx.createConvolver(); var len = ctx.sampleRate * 2.6 | 0, ir = ctx.createBuffer(2, len, ctx.sampleRate);
+          for (c = 0; c < 2; c++) { d = ir.getChannelData(c); for (i = 0; i < len; i++) d[i] = (Math.random() * 2 - 1) * Math.pow(1 - i / len, 3); }
+          verb.buffer = ir; var vg = ctx.createGain(); vg.gain.value = 0.28; verb.connect(vg); vg.connect(master);
+          keys = ctx.createGain(); keys.connect(music); var ks = ctx.createGain(); ks.gain.value = 0.45; keys.connect(ks); ks.connect(verb);
+          nb = ctx.createBuffer(1, ctx.sampleRate, ctx.sampleRate); d = nb.getChannelData(0); for (i = 0; i < d.length; i++) d[i] = Math.random() * 2 - 1;
+        }
+        function noise(t, type, f, v, dec, q) { var s = ctx.createBufferSource(), fl = ctx.createBiquadFilter(), g = ctx.createGain(); s.buffer = nb; fl.type = type; fl.frequency.value = f; if (q) fl.Q.value = q;
+          env(g, t, 0.001, v, dec); s.connect(fl); fl.connect(g); g.connect(drums); s.start(t, Math.random() * 0.3); s.stop(t + dec + 0.02); }
+        function kick(t, v) { var o = osc('sine'), g = ctx.createGain(); o.frequency.setValueAtTime(140, t); o.frequency.exponentialRampToValueAtTime(45, t + 0.1);
+          env(g, t, 0.002, v, 0.34); o.connect(g); g.connect(drums); o.start(t); o.stop(t + 0.36); duck.gain.setTargetAtTime(0.65, t, 0.004); duck.gain.setTargetAtTime(1, t + 0.03, 0.09); }
+        function snare(t, v) { noise(t, 'bandpass', 1900, 0.3 * v, 0.16, 0.8); }
+        function hat(t, v) { noise(t, 'highpass', 8500, 0.09 * v, 0.035); }
+        function bass(t, m, len) { var o = osc('triangle'), s = osc('sine'), g = ctx.createGain(); o.frequency.value = mtof(m); s.frequency.value = mtof(m - 12);
+          env(g, t, 0.01, 0.22, len); o.connect(g); s.connect(g); g.connect(music); o.start(t); s.start(t); o.stop(t + len + 0.05); s.stop(t + len + 0.05); }
+        function ep(t, notes, len, v) { notes.forEach(function (m) { var f = mtof(m), c = osc('sine'), md = osc('sine'), mg = ctx.createGain(), g = ctx.createGain();
+          c.frequency.value = f; md.frequency.value = f; mg.gain.setValueAtTime(f * 1.1, t); mg.gain.exponentialRampToValueAtTime(f * 0.05, t + 0.35); md.connect(mg); mg.connect(c.frequency);
+          g.gain.setValueAtTime(0.0001, t); g.gain.exponentialRampToValueAtTime(v, t + 0.008); g.gain.exponentialRampToValueAtTime(v * 0.3, t + len); g.gain.exponentialRampToValueAtTime(0.0001, t + len + 0.25);
+          c.connect(g); g.connect(keys); c.start(t); md.start(t); c.stop(t + len + 0.3); md.stop(t + len + 0.3); }); }
+        function pad(t, notes, len, v) { notes.forEach(function (m) { [-7, 7].forEach(function (dt) { var o = osc('sawtooth'), f = ctx.createBiquadFilter(), g = ctx.createGain(); o.frequency.value = mtof(m); o.detune.value = dt; f.type = 'lowpass'; f.frequency.value = 1100;
+          g.gain.setValueAtTime(0.0001, t); g.gain.exponentialRampToValueAtTime(v, t + 0.5); g.gain.setValueAtTime(v, t + len - 0.2); g.gain.exponentialRampToValueAtTime(0.0001, t + len + 0.6); o.connect(f); f.connect(g); g.connect(keys); o.start(t); o.stop(t + len + 0.65); }); }); }
+        function bell(t, m, v) { [1, 2.76, 5.4].forEach(function (r, i) { var o = osc('sine'), g = ctx.createGain(); o.frequency.value = mtof(m) * r; env(g, t, 0.002, [0.06, 0.022, 0.01][i] * (v || 1), 1.6 / (i + 1)); o.connect(g); g.connect(music); g.connect(verb); o.start(t); o.stop(t + 1.8); }); }
+        // One chord per bar. [bass, chord]
+        var PROG = [[38, [54, 57, 61, 64]], [35, [50, 54, 57, 61]], [43, [54, 57, 59, 62]], [45, [52, 54, 59, 62]]];
+        // Bell hook over two bars, in sixteenths: { step: midi }.
+        var HOOK = [{ 0: 78, 3: 76, 6: 73, 8: 74, 10: 76 }, { 0: 74, 4: 73, 6: 71, 10: 69, 12: 71 }];
+        function tick(t, s) {
+          var k = Math.floor(s / PER), bar = s >> 4, i = s & 15, ch = PROG[bar % 4], end = k === SCENES.length - 1;
+          if (end) { var e = s - k * PER; // end card: swell, then resolve on D and fade
+            if (e === 0) { kick(t, 0.9); bass(t, 38, 2.2); ep(t, [54, 57, 61, 64, 69], 2.2, 0.05); pad(t, [50, 54, 57, 61], 4.5, 0.02); bell(t, 81, 1.2); }
+            if (e === 16) { bass(t, 43, 2.2); ep(t, [54, 57, 59, 62], 2.2, 0.04); bell(t, 78, 0.9); }
+            if (e === 24) bell(t, 76, 0.7);
+            if (e === 32) { bass(t, 38, 3.5); ep(t, [50, 54, 57, 61, 66], 3.5, 0.04); pad(t, [54, 57, 61, 64], 4, 0.016); bell(t, 74, 0.8); }
+            if (e < 32 && i % 4 === 2) hat(t, 0.4);
+            return; }
+          if (i === 0) { bass(t, ch[0], 1.4); ep(t, ch[1], 1.2, 0.045); if (k >= 1) pad(t, ch[1], 16 * SX, 0.012); }
+          if (i === 10) { bass(t, ch[0] + (bar % 2 ? 7 : 12), 0.5); ep(t, ch[1], 0.5, 0.03); }
+          if (k >= 1 && (i === 0 || i === 8 || (k >= 3 && i === 11))) kick(t, i === 11 ? 0.55 : 0.85);
+          if (k >= 1 && i % 2 === 0) hat(t, i % 4 === 2 ? 1 : 0.5);
+          if (k >= 2 && (i === 4 || i === 12)) snare(t, 1);
+          if (k >= 3 && HOOK[bar & 1][i]) bell(t, HOOK[bar & 1][i], k >= 5 ? 1.2 : 1);
+          if (k === SCENES.length - 2 && s % PER >= 40 && i % 2 === 0) snare(t, 0.2 + (s % PER - 40) * 0.08); // little roll into the end card
+        }
+        function at(t, fn) { vis.push(setTimeout(fn, Math.max(0, (t - ctx.currentTime) * 1000))); if (vis.length > 40) vis.shift(); }
+        function loop() { var ahead = ctx.currentTime + 0.15;
+          while (stepN < N) { var t = t0 + stepN * SX; if (t >= ahead) break;
+            if (stepN % PER === 0 && !reduce && stillM == null) (function (k) { at(t, function () { show(k); }); })(stepN / PER);
+            tick(t + (stepN % 2 ? SX * SWING : 0), stepN); stepN++; }
+          if (stepN >= N) { clearInterval(sched); master.gain.setTargetAtTime(0.0001, t0 + N * SX + 1.5, 1.2); } }
+        function start(from) {
+          if (!ctx) init(); if (ctx.resume) ctx.resume(); var now = ctx.currentTime;
+          clearInterval(sched); vis.forEach(clearTimeout); vis = []; master.gain.cancelScheduledValues(now); master.gain.setTargetAtTime(0.7, now, 0.2);
+          tv.classList.remove('poster'); playing = true; stepN = from || 0; t0 = now + 0.1 - stepN * SX; sched = setInterval(loop, 25); loop();
+        }
+        function stop() { playing = false; clearInterval(sched); vis.forEach(clearTimeout); vis = []; master.gain.cancelScheduledValues(ctx.currentTime); master.gain.setTargetAtTime(0.0001, ctx.currentTime, 0.12); }
+        snd.addEventListener('click', function () { snd.classList.add('off'); mute.classList.add('show'); start(0); });
+        mute.addEventListener('click', function () {
+          var muted = mute.getAttribute('aria-pressed') !== 'true';
+          mute.setAttribute('aria-pressed', String(muted)); mute.setAttribute('aria-label', muted ? 'Unmute music' : 'Mute music');
+          document.getElementById('mute-w').style.opacity = muted ? 0.2 : 1;
+          if (muted) stop(); else start(stepN >= N ? 0 : Math.floor(stepN / 16) * 16); // resume from the current bar
+        });
+        window.__film = { scenes: els.length, end: N * SX, play: function () { snd.click(); } };
+      })();
+    </script>
+  </body>
+</html>
