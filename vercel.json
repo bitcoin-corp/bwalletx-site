@@ -536,6 +536,11 @@
       "permanent": false
     },
     {
+      "source": "/:m(move|Migrate|move-to-bwalletx|migrate-to-bwalletx)",
+      "destination": "/migrate",
+      "permanent": false
+    },
+    {
       "source": "/restore-simplycash",
       "destination": "/sweep-simplycash",
       "permanent": true
