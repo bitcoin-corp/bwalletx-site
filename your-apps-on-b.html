@@ -43,7 +43,7 @@
       /* App title cards: names set in type. Logos drop into .lg later (see LOGOS in the script). */
       .apps { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; max-width: 92vw; }
       .app { display: inline-flex; align-items: center; gap: 8px; padding: 7px 16px; border-radius: 999px; background: var(--ink); color: var(--bg); font: 700 clamp(.95rem, 3.4vw, 1.35rem) 'Space Grotesk', sans-serif; letter-spacing: -0.01em; opacity: 0; }
-      .app .lg { height: 1.2em; width: auto; display: block; border-radius: 4px; }
+      .app .lg { height: 1.25em; width: auto; max-width: 3.5em; object-fit: contain; display: block; border-radius: 6px; background: #fff; padding: 2px; }
       .on .app { animation: pop .7s cubic-bezier(.2,1.6,.4,1) both; }
       @keyframes pop { from { opacity: 0; transform: scale(.3) rotate(-8deg); } to { opacity: 1; transform: none; } }
       .cap { margin: 0; font: 700 clamp(2.6rem, 10vw, 7.5rem) / 1 'Space Grotesk', sans-serif; letter-spacing: -0.05em; max-width: 96vw; }
@@ -148,7 +148,7 @@
       (function () {
         // LOGOS: official app logos go here once they land in /img/apps/ (e.g. Twetch: '/img/apps/twetch.svg').
         // Empty means the name is shown as a typographic title card. Never draw or invent a logo.
-        var LOGOS = { Twetch: '', RelayX: '', Treechat: '', Peck: '', Hodlocker: '', Yours: '', CoinGeek: '' };
+        var LOGOS = { Twetch: '/img/apps/twetch.svg', RelayX: '/img/apps/relayx.png', Treechat: '/img/apps/treechat.svg', Peck: '/img/apps/peck.png', Hodlocker: '', Yours: '/img/apps/yours.png', CoinGeek: '/img/apps/coingeek.png' };
 
         // Scenes: 3 bars each at 100 bpm (7.2 s). Each claim is from a ✓ Live list on that app's page.
         var SCENES = [
