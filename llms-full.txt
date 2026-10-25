@@ -5673,7 +5673,7 @@ Each release ships to the Android APK, the Chrome extension and the web wallet. 
 
 ## 5.2.42 2026-10-25
 
-- Ask b is free to use: messages to b never ask for a payment or spend your BSV. b doesn’t talk about prices, and a one-time note tells you that we read these chats to improve b.
+- Talk to b any time: b answers in chat, and a one-time note explains that our team reads these chats so we can fix things fast.
 - Exchange has a Memepool tab: see the coins on TX Blaster’s Memepool and buy or sell them from the wallet, up to 1 BSV a trade. New TokenBlaster coins each get a room and a store.
 - The Store has a TokenBlaster shop with two $1 theme packs, and game rooms now dress themselves in the game’s own colours.
 - A name you receive as an NFT explains itself and has an “Add to my Names” button.
