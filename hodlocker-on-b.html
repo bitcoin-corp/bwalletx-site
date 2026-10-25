@@ -11,7 +11,7 @@
     <meta property="og:site_name" content="bWalletX" />
     <meta property="og:title" content="Hodlocker on b" />
     <meta property="og:description" content="Lock BSV behind posts in bWalletX the way Hodlocker did: same lock format, your coins stay yours, they unlock on the date shown, and a Most locked board." />
-    <meta property="og:image" content="https://bwalletx.com/og-hodlocker-on-b.png?v1" />
+    <meta property="og:image" content="https://bwalletx.com/og-hodlocker-on-b-v2.png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
     <meta property="og:image:alt" content="Hodlocker on b: Lock behind posts, Hodlocker-style. Your BSV stays yours." />
@@ -19,7 +19,7 @@
     <meta name="twitter:site" content="@bWalletX" />
     <meta name="twitter:title" content="Hodlocker on b" />
     <meta name="twitter:description" content="Lock BSV behind posts in bWalletX the way Hodlocker did: same lock format, your coins stay yours, they unlock on the date shown, and a Most locked board." />
-    <meta name="twitter:image" content="https://bwalletx.com/og-hodlocker-on-b.png?v1" />
+    <meta name="twitter:image" content="https://bwalletx.com/og-hodlocker-on-b-v2.png" />
     <link rel="icon" href="/favicon.ico" />
     <link rel="stylesheet" href="/styles.css" />
     <style>
@@ -43,6 +43,14 @@
       .grid a.box { display: block; margin: 0; text-decoration: none; color: inherit; }
       .grid a.box:hover { border-color: #F5B80066; }
       .grid a.box h3 .gold { color: #F5B800; }
+      .pair { display: flex; align-items: center; gap: 14px; margin: 22px 0 0; flex-wrap: wrap; }
+      .pair img, .tile .logo img { width: 56px; height: 56px; object-fit: contain; border-radius: 12px; display: block; }
+      .pair .plus { color: #8a8a86; font-size: 1.6rem; font-weight: 700; }
+      .pair .bmark { width: 56px; height: 50px; }
+      .pair .nm, .tile .nm { font-weight: 800; font-size: 1.15rem; padding: 14px 16px; border: 1px solid #ffffff22; border-radius: 12px; }
+      .tile .logo { display: flex; align-items: center; gap: 10px; margin-bottom: 12px; }
+      .tile .logo .plus { color: #8a8a86; font-weight: 700; }
+      .tile .logo .bmark { width: 34px; height: 30px; }
     </style>
   </head>
   <body>
@@ -59,6 +67,7 @@
     <script src="/nav.js"></script>
     <main class="ext">
       <p class="meta"><a href="/on-b">On b</a> · Using Hodlocker with bWalletX</p>
+      <div class="pair"><span class="nm">Hodlocker</span><span class="plus">+</span><img class="bmark" src="/logo.svg" alt="bWalletX b" width="56" height="50" /></div>
       <h1>Hodlocker on <span class="gold">b</span></h1>
       <p class="lede">Hodlocker made locking popular: you back a post by time-locking your own BSV against it. The site has gone, but the idea lives on in bWalletX, written in the same on-chain format.</p>
 
@@ -82,7 +91,7 @@
       </ul>
 
       <div class="row"><a class="btn btn-store" href="/get?from=hodlocker-on-b">Get bWalletX</a></div>
-      <p class="small">Your keys stay with you: bWalletX is self-custody. Hodlocker is a separate service; bWalletX is not affiliated with it. <a href="/on-b">More apps on b</a>.</p>
+      <p class="small">Your keys stay with you: bWalletX is self-custody. Hodlocker is a separate service; bWalletX is not affiliated with it. Logos belong to their owners. <a href="/on-b">More apps on b</a>.</p>
     </main>
   </body>
 </html>

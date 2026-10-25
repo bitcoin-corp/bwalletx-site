@@ -11,7 +11,7 @@
     <meta property="og:site_name" content="bWalletX" />
     <meta property="og:title" content="Your apps, on b" />
     <meta property="og:description" content="Use the Bitcoin SV apps you already know with bWalletX: Twetch, RelayX, CoinGeek, Peck, Hodlocker, Treechat and Yours. What works today, app by app." />
-    <meta property="og:image" content="https://bwalletx.com/og-on-b.png?v1" />
+    <meta property="og:image" content="https://bwalletx.com/og-on-b-v2.png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
     <meta property="og:image:alt" content="Your apps, on b: Twetch, RelayX, CoinGeek, Peck, Hodlocker, Treechat, Yours." />
@@ -19,7 +19,7 @@
     <meta name="twitter:site" content="@bWalletX" />
     <meta name="twitter:title" content="Your apps, on b" />
     <meta name="twitter:description" content="Use the Bitcoin SV apps you already know with bWalletX: Twetch, RelayX, CoinGeek, Peck, Hodlocker, Treechat and Yours. What works today, app by app." />
-    <meta name="twitter:image" content="https://bwalletx.com/og-on-b.png?v1" />
+    <meta name="twitter:image" content="https://bwalletx.com/og-on-b-v2.png" />
     <link rel="icon" href="/favicon.ico" />
     <link rel="stylesheet" href="/styles.css" />
     <style>
@@ -43,6 +43,14 @@
       .grid a.box { display: block; margin: 0; text-decoration: none; color: inherit; }
       .grid a.box:hover { border-color: #F5B80066; }
       .grid a.box h3 .gold { color: #F5B800; }
+      .pair { display: flex; align-items: center; gap: 14px; margin: 22px 0 0; flex-wrap: wrap; }
+      .pair img, .tile .logo img { width: 56px; height: 56px; object-fit: contain; border-radius: 12px; display: block; }
+      .pair .plus { color: #8a8a86; font-size: 1.6rem; font-weight: 700; }
+      .pair .bmark { width: 56px; height: 50px; }
+      .pair .nm, .tile .nm { font-weight: 800; font-size: 1.15rem; padding: 14px 16px; border: 1px solid #ffffff22; border-radius: 12px; }
+      .tile .logo { display: flex; align-items: center; gap: 10px; margin-bottom: 12px; }
+      .tile .logo .plus { color: #8a8a86; font-weight: 700; }
+      .tile .logo .bmark { width: 34px; height: 30px; }
     </style>
   </head>
   <body>
@@ -62,16 +70,16 @@
       <h1>Your apps, on <span class="gold">b</span></h1>
       <p class="lede">You already use Bitcoin SV apps. Here is what each one looks like from bWalletX: what you can bring over, what you can use side by side, and what doesn&rsquo;t work yet.</p>
       <div class="grid">
-        <a class="box" href="/twetch-on-b"><h3>Twetch on <span class="gold">b</span></h3><p>Read Twetch, tip authors and lock behind posts, all from bWalletX.</p><p class="small">8 live</p></a>
-        <a class="box" href="/relayx-on-b"><h3>RelayX on <span class="gold">b</span></h3><p>Your RelayX NFTs and BSV are still on chain. bWalletX finds them.</p><p class="small">5 live</p></a>
-        <a class="box" href="/coingeek-on-b"><h3>CoinGeek on <span class="gold">b</span></h3><p>CoinGeek headlines in bNews, with on-chain talk under each story.</p><p class="small">3 live</p></a>
-        <a class="box" href="/peck-on-b"><h3>Peck on <span class="gold">b</span></h3><p>Read Peck in the bWalletX Feed. Tip signed authors in BSV.</p><p class="small">4 live</p></a>
-        <a class="box" href="/hodlocker-on-b"><h3>Hodlocker on <span class="gold">b</span></h3><p>Lock behind posts, Hodlocker-style. Your BSV stays yours.</p><p class="small">5 live</p></a>
-        <a class="box" href="/treechat-on-b"><h3>Treechat on <span class="gold">b</span></h3><p>Read Treechat posts and whole threads in the bWalletX Feed.</p><p class="small">4 live</p></a>
-        <a class="box" href="/yours-on-b"><h3>Yours on <span class="gold">b</span></h3><p>Bring your Yours Wallet in with your 12 words. No extension needed.</p><p class="small">2 live</p></a>
+        <a class="box tile" href="/twetch-on-b"><div class="logo"><img src="/img/apps/twetch.svg" alt="Twetch logo" width="56" height="56" /><span class="plus">+</span><img class="bmark" src="/logo.svg" alt="" width="34" height="30" /></div><h3>Twetch on <span class="gold">b</span></h3><p>Read Twetch, tip authors and lock behind posts, all from bWalletX.</p><p class="small">8 live</p></a>
+        <a class="box tile" href="/relayx-on-b"><div class="logo"><img src="/img/apps/relayx.png" alt="RelayX logo" width="56" height="56" /><span class="plus">+</span><img class="bmark" src="/logo.svg" alt="" width="34" height="30" /></div><h3>RelayX on <span class="gold">b</span></h3><p>Your RelayX NFTs and BSV are still on chain. bWalletX finds them.</p><p class="small">5 live</p></a>
+        <a class="box tile" href="/coingeek-on-b"><div class="logo"><img src="/img/apps/coingeek.png" alt="CoinGeek logo" width="56" height="56" /><span class="plus">+</span><img class="bmark" src="/logo.svg" alt="" width="34" height="30" /></div><h3>CoinGeek on <span class="gold">b</span></h3><p>CoinGeek headlines in bNews, with on-chain talk under each story.</p><p class="small">3 live</p></a>
+        <a class="box tile" href="/peck-on-b"><div class="logo"><img src="/img/apps/peck.png" alt="Peck logo" width="56" height="56" /><span class="plus">+</span><img class="bmark" src="/logo.svg" alt="" width="34" height="30" /></div><h3>Peck on <span class="gold">b</span></h3><p>Read Peck in the bWalletX Feed. Tip signed authors in BSV.</p><p class="small">4 live</p></a>
+        <a class="box tile" href="/hodlocker-on-b"><div class="logo"><span class="nm">Hodlocker</span><span class="plus">+</span><img class="bmark" src="/logo.svg" alt="" width="34" height="30" /></div><h3>Hodlocker on <span class="gold">b</span></h3><p>Lock behind posts, Hodlocker-style. Your BSV stays yours.</p><p class="small">5 live</p></a>
+        <a class="box tile" href="/treechat-on-b"><div class="logo"><img src="/img/apps/treechat.svg" alt="Treechat logo" width="56" height="56" /><span class="plus">+</span><img class="bmark" src="/logo.svg" alt="" width="34" height="30" /></div><h3>Treechat on <span class="gold">b</span></h3><p>Read Treechat posts and whole threads in the bWalletX Feed.</p><p class="small">4 live</p></a>
+        <a class="box tile" href="/yours-on-b"><div class="logo"><img src="/img/apps/yours.png" alt="Yours Wallet logo" width="56" height="56" /><span class="plus">+</span><img class="bmark" src="/logo.svg" alt="" width="34" height="30" /></div><h3>Yours on <span class="gold">b</span></h3><p>Bring your Yours Wallet in with your 12 words. No extension needed.</p><p class="small">2 live</p></a>
       </div>
       <div class="row"><a class="btn btn-store" href="/get?from=on-b">Get bWalletX</a></div>
-      <p class="small">Each app named here is a separate service; bWalletX is not affiliated with any of them.</p>
+      <p class="small">Each app named here is a separate service; bWalletX is not affiliated with any of them. Logos belong to their owners.</p>
     </main>
   </body>
 </html>
