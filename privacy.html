@@ -81,7 +81,7 @@
     <main>
       <p><a href="/">← bWalletX</a></p>
       <h1>Privacy Policy</h1>
-      <p class="meta">bWalletX (Beta) · Effective 6 October 2026 · Updated 23 October 2026</p>
+      <p class="meta">bWalletX (Beta) · Effective 6 October 2026 · Updated 25 October 2026</p>
 
       <p class="notice">
         bWalletX is published by The Bitcoin Corporation Ltd and is based on the open-source Yours Wallet (MIT licence).
@@ -96,7 +96,9 @@
         Ltd) keeps the data listed under
         <a href="#service">What our service keeps</a>, linked to your wallet's identity key. If you use bChat on a
         phone, our push server also keeps your device's push token and notification settings so it can notify you (see
-        <a href="#push">Notifications</a>). We use all of this only to run those features. We don't collect your email
+        <a href="#push">Notifications</a>). We use all of this only to run those features. Conversations with b, our
+        assistant, are different: b is our team, and we read and keep them to fix bugs and improve the app (see
+        <a href="#b">Conversations with b</a>). We don't collect your email
         address, phone number, location, advertising identifiers, analytics or crash
         reports, and we don't track you, sell your data or use it for advertising.
       </p>
@@ -157,7 +159,8 @@
           recent conversation go straight from your phone to that provider. In bWalletX's pay-per-message mode, they go
           to our server (bChatX), which passes them to Anthropic; our server also sees the payment's
           transaction id and your bChat sign-in, and Anthropic does not. Your keys, balances, addresses, contacts, chats
-          and files are never sent. You can withdraw consent in Settings › b agent.
+          and files are never sent. You can withdraw consent in Settings › b agent. What we keep from these
+          conversations is under <a href="#b">Conversations with b</a>.
         </li>
         <li>
           <b>Websites you open</b> in the in-app browser receive the requests you make and the responses you approve.
@@ -193,6 +196,41 @@
         parties except the hosting providers that run the service, and it is never used for advertising or tracking. You
         can delete your account and this data from Settings (Delete account), or by contacting us.
       </p>
+
+      <h2 id="b">Conversations with b</h2>
+      <p>
+        <b>b is not a private chat.</b> b is the bWalletX team's assistant: an AI model (Claude, from Anthropic) run by
+        our server at The Bitcoin Corporation Ltd, answering on our behalf. When you talk to b, you are talking to our
+        company. Conversations with b are not end-to-end encrypted: they travel over HTTPS, and our server and our AI
+        provider can read them.
+      </p>
+      <ul>
+        <li>
+          <b>What we keep:</b> the messages you send b and b's replies, linked to your account, on our server.
+        </li>
+        <li>
+          <b>Why:</b> to fix bugs and improve the app. We are a small team and we read what people tell b so we can act
+          on it quickly. We never sell conversations, and we don't use them for advertising.
+        </li>
+        <li><b>Improving b:</b> We may use conversations, with personal details removed, to improve b. You can opt out: email <a href="mailto:support@bwalletx.com?subject=b%20opt-out">support@bwalletx.com</a> with the subject &lsquo;b opt-out&rsquo; and we&rsquo;ll exclude your chats.</li>
+        <li><b>Who can read them:</b> only our team and our server.</li>
+        <li><b>How long:</b> up to 180 days, then they are deleted.</li>
+        <li>
+          <b>Secrets removed:</b> the wallet strips anything that looks like a recovery phrase or private key before a
+          message leaves your device, and our server strips secrets again before anything is kept. Never type your
+          recovery phrase, private keys or passwords to b.
+        </li>
+        <li>
+          <b>AI provider:</b> each message, with the recent conversation, is sent to our AI provider (Anthropic) to
+          write b's reply. If you use your own AI key instead, your messages go from your device to the provider you
+          chose, under its terms.
+        </li>
+        <li>
+          <b>Deletion:</b> email <a href="mailto:support@bwalletx.com">support@bwalletx.com</a> to ask us to delete
+          your conversations with b.
+        </li>
+      </ul>
+      <p>We are rolling out this storage on our server now; we describe it here before it is fully live. More at <a href="/talk-to-b">bwalletx.com/talk-to-b</a>.</p>
 
       <h2 id="kyc">Verified identity (KYC certificates)</h2>
       <p>
@@ -297,7 +335,7 @@
           You can turn push notifications and message previews off in Settings › Notifications, and remove this device's
           push registration by signing out of bChat.
         </li>
-        <li>You can withdraw consent for the $b assistant in Settings › b agent.</li>
+        <li>You can withdraw consent for the $b assistant in Settings › b agent, and ask us to delete your conversations with b by emailing support@bwalletx.com.</li>
         <li>You can change the remote wallet storage provider in Settings → Wallet Backup.</li>
       </ul>
 

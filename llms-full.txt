@@ -248,13 +248,19 @@ Where to find b
 
 - In the bWalletX apps: tap b. [Get bWalletX](https://bwalletx.com/get?from=ask-b)
 
-b runs on your own AI key, or on paid messages. Nothing is paid until you confirm.
+b is us
+
+Talking to b means talking to our team. b is an AI model (Claude, from Anthropic) run by our server at The Bitcoin Corporation Ltd, answering on our behalf. It is not a private chat and it is not end-to-end encrypted.
+
+We read and keep what you tell b, for up to 180 days, so we can fix bugs and improve the app. We never sell conversations. We may use conversations, with personal details removed, to improve b. You can opt out: email [support@bwalletx.com](mailto:support@bwalletx.com?subject=b%20opt-out) with the subject ‘b opt-out’ and we’ll exclude your chats. Each message is also sent to our AI provider to write b’s reply.
+
+Never type your 12 words, private keys or passwords to b. The wallet strips anything that looks like one before it leaves your device, and our server strips them again, but don’t rely on it. [What happens to your chats with b](https://bwalletx.com/talk-to-b).
 
 Help and support
 
 Stuck, or something not working? Here is how to reach us.
 
-- Ask b in the app. Tap b and describe the problem in your own words. b looks into it with you, and passes anything it can’t fix to the team.
+- Ask b in the app. Tap b and describe the problem in your own words. b looks into it with you, and our team reads what you tell b, so nothing gets lost.
 
 - Email us: [support@bwalletx.com](mailto:support@bwalletx.com). Never send your 12 words, password or backup file to anyone, including us.
 
@@ -270,7 +276,7 @@ Can you get my money back? No. bWalletX is self-custody: your keys stay on your 
 
 What does it cost? The app is free. Bitcoin SV network fees are usually a fraction of a penny per payment.
 
-Privacy. See our [privacy policy](https://bwalletx.com/privacy) and [terms](https://bwalletx.com/terms).
+Is my chat with b private? No. b is our team, and we read and keep what you tell b. See [talking to b](https://bwalletx.com/talk-to-b), our [privacy policy](https://bwalletx.com/privacy#b) and [terms](https://bwalletx.com/terms).
 
 ## Less noise. More life.
 
@@ -286,7 +292,7 @@ Source: https://bwalletx.com/b-aware
 
 # b-Aware
 
-Responsible disclosure and bug bounty for bWalletX and bWallet · Policy version 1 · 20 October 2026
+Responsible disclosure and bug bounty for bWalletX and bWallet · Policy version 3 · 25 October 2026
 
 bWallet and bWalletX are non-custodial. If you find a way to take or spend someone's money, read their keys or
 recovery phrase, or make the wallet sign something its owner did not approve, tell us first. We fix it, we
@@ -297,6 +303,11 @@ credit you, and we pay for it in BSV.
 [Advisories](#advisories) [Credits](#credits)
 
 ## How to report
+
+-
+Check [bwalletx.com/bugs](https://bwalletx.com/bugs) first. Known and already-fixed issues are listed there and earn
+credit, not money. Still-unfixed security issues are not listed, for safety: if you found something serious
+that is not there, report it privately as below.
 
 -
 Email [support@bwalletx.com](mailto:support@bwalletx.com?subject=b-Aware) with the subject line
@@ -320,8 +331,10 @@ What you can expect from us: an acknowledgement within 2 working days, a severit
 
 ## What we pay
 
-Rewards are paid in BSV to an address you give us, within 14 days of the fix shipping or 30 days of triage,
-whichever is first.
+Rewards are paid in BSV to an address you give us, within 30 days of the fix being live on every channel
+(including the App Store and Chrome Web Store) or 60 days after we confirm your report, whichever is first. We
+pay in one batch each month. Reports received before 25 October 2026 keep the earlier terms: 14 days from the
+fix shipping or 30 days from triage.
 
 Severity
 What it looks like in bWallet
@@ -363,6 +376,13 @@ Severity is by impact on users' money and keys, not by CVSS alone. We set it and
 in writing; if you disagree, say so and we will look again.
 
 - One reward per root cause, even where it shows up in several places.
+
+-
+We pay people we can name. Every payout is recorded: who, which address, how much, and the
+transaction. Under 1 BSV, a stable handle and a paymail or address is enough. For 1 BSV or more (every High
+and Critical), we need your real name and country before we pay; the reward is held for you, not lost, until
+you send them. We keep your name private unless you ask to be credited by it. If you would rather stay
+anonymous, you still get credit, but not a payment of 1 BSV or more.
 
 ## Scope
 
@@ -488,6 +508,11 @@ No reports yet. Yours could be the first name here.
 ## Changes to this policy
 
 -
+25 October 2026: version 3. Check bwalletx.com/bugs](https://github.com/bsv-blockchain/ts-stack/security/advisories/GHSA-36f9-7rg5-cpf8) before reporting (listed issues earn
+credit, not money). Rewards are paid within 30 days of the fix being live on every channel or 60 days after we
+confirm the report, in one monthly batch; earlier reports keep the version 2 timing.
+
+-
 24 October 2026: we briefly published lower rates and withdrew them the same day. The rates above stand;
 anyone who reported on 24 October is paid at them.
 
@@ -496,7 +521,7 @@ anyone who reported on 24 October is paid at them.
 responses.
 
 The Bitcoin Corporation Ltd. Questions about the policy itself:
-support@bwalletx.com](https://github.com/bsv-blockchain/ts-stack/security/advisories/GHSA-36f9-7rg5-cpf8).
+[support@bwalletx.com](mailto:support@bwalletx.com).
 
 ---
 
@@ -1939,6 +1964,12 @@ Source: https://bwalletx.com/bugs
 
 What’s broken, what we’re fixing, and what we fixed. Spotted something? Tell us below.
 
+## Before you report: check this page
+
+Everything below is a known or fixed issue. Reporting something already listed here earns credit, not money.
+
+Security issues that are still being fixed are not listed, for your safety. If you found something that looks serious and it is not here, report it privately to [support@bwalletx.com](mailto:support@bwalletx.com?subject=b-Aware) with the subject b-Aware. See [b-Aware](https://bwalletx.com/b-Aware) for how we reward reports.
+
 ## Report a bug
 
 What happened?
@@ -2124,7 +2155,20 @@ It works again, and asks you to set it up again when needed.
 
 Fixed 12 Oct 2026
 
-See also: [Feedback](https://bwalletx.com/feedback) · [Ideas](https://bwalletx.com/ideas) · [Releases](https://bwalletx.com/releases)
+## Security fixes
+
+Found by researchers under [b-Aware](https://bwalletx.com/b-Aware) and reported privately. We describe a security fix here only once it is live everywhere you can get bWalletX, so more will appear as releases reach every store. Keep your wallet up to date.
+
+-
+
+### A stranger could knock a paired computer offline
+Fixed
+
+Someone who only knew a pairing’s channel could take over the phone’s side of the link and cut off your paired computer. No money could move. Our pairing server now refuses this. The fix is on our server, so every edition has it.
+
+Fixed 24 Oct 2026 · Security fix, reported privately under b-Aware
+
+See also: [b-Aware](https://bwalletx.com/b-Aware) · [Feedback](https://bwalletx.com/feedback) · [Ideas](https://bwalletx.com/ideas) · [Releases](https://bwalletx.com/releases)
 
 [Get bWalletX](https://bwalletx.com/get)
 
@@ -7094,6 +7138,122 @@ SimplyCash is named only to describe compatibility; bWalletX isn’t affiliated 
 
 ---
 
+Source: https://bwalletx.com/talk-to-b
+
+# Talking to b means talking to us.
+
+b is the bWalletX team’s assistant. When you talk to b, you are talking to our company, not writing in a private notebook.
+
+Not private. We read and keep what you tell b, so we can fix bugs and make the app better.
+
+Not end-to-end encrypted. Messages travel over HTTPS like any website, and our server and our AI provider can read them.
+
+Never type your 12 words, private keys or passwords to b. Nobody at bWalletX will ever ask for them.
+
+## Who b is
+
+b is an AI model, Claude from Anthropic, run by our server at The Bitcoin Corporation Ltd. It answers on our behalf. b is us.
+
+Each message you send b goes to our server, and from there to our AI provider (Anthropic) so it can write b’s reply.
+
+## Why we read what you tell b
+
+We are a small team, and we want fast, continuous, honest feedback. When something breaks or confuses you, telling b is the quickest way for it to reach us. We read those conversations and fix things quickly.
+
+It is how a small team listens to everyone at once. That only works if you know we are listening, so we are saying it plainly.
+
+## What we keep
+
+- Your conversations with b, kept on our server for up to 180 days.
+
+- Only our team and our server can read them. We never sell conversations, and we don’t use them for advertising.
+
+- Improving b. We may use conversations, with personal details removed, to improve b. You can opt out: email [support@bwalletx.com](mailto:support@bwalletx.com?subject=b%20opt-out) with the subject ‘b opt-out’ and we’ll exclude your chats.
+
+- Secrets are stripped. The wallet removes anything that looks like a recovery phrase or private key before a message leaves your device, and our server strips secrets again before anything is kept. Don’t rely on that: never type them.
+
+- Want them deleted? Email [support@bwalletx.com](mailto:support@bwalletx.com?subject=Delete%20my%20b%20conversations) and we will delete your conversations with b.
+
+The full detail is in our [privacy policy](https://bwalletx.com/privacy#b).
+
+## What is private in bWalletX, and what isn’t
+
+### Private
+
+- Your keys and your 12 words stay on your device. We never hold them and can’t move your money.
+
+- Sealed contracts on bChatX are encrypted to the people who sign them.
+
+- A passkey backup of your 12 words is encrypted so only your passkey opens it.
+
+### Not private
+
+- Chats with b. We read and keep them.
+
+- Bug reports and ideas you send to b or on [/bugs](https://bwalletx.com/bugs).
+
+- Rooms and the public feed. Room messages are stored on our server, and feed posts go on the public blockchain.
+
+- Direct messages are stored on our server. They are not end-to-end encrypted.
+
+## Questions
+
+### Is my chat with b private?
+
+No. b is our team. We read what you tell b and keep it, so we can fix things.
+
+### Is it encrypted?
+
+In transit, yes, with HTTPS like any website. It is not end-to-end encrypted, and we can read it. Some saved chat lists on bChatX are locked with your wallet so other people can’t browse them, but that does not make the conversation private from us: each message reaches our server and our AI provider readable, and we keep a readable copy.
+
+### Who can read it?
+
+Our team and our server at The Bitcoin Corporation Ltd. Each message is also sent to our AI provider (Anthropic) to write b’s reply.
+
+### How long is it kept?
+
+Up to 180 days. Email [support@bwalletx.com](mailto:support@bwalletx.com) to ask us to delete it sooner.
+
+### Do you use my chats to train AI?
+
+We may use conversations, with personal details removed, to improve b. You can opt out: email [support@bwalletx.com](mailto:support@bwalletx.com?subject=b%20opt-out) with the subject ‘b opt-out’ and we’ll exclude your chats. We never sell conversations.
+
+### What should I never tell b?
+
+Your 12 words (recovery phrase), private keys, passwords, backup files or API keys. The wallet tries to catch these and won’t send them, but please don’t type them at all. If you ever did, move your money to a new wallet.
+
+### What if I use my own AI key?
+
+Then b’s replies come straight from the provider you chose (Anthropic, OpenAI or OpenRouter), and your messages go to that provider, which handles them under its own terms. Anything you report to b still comes to us.
+
+### How do I talk privately to a person?
+
+bWalletX doesn’t have an end-to-end encrypted chat today. To reach a person on our team, email [support@bwalletx.com](mailto:support@bwalletx.com); that is ordinary email, read by us. To report a security problem, follow [b-Aware](https://bwalletx.com/b-aware).
+
+## Status, 25 Oct 2026
+
+- LiveA consent sheet before your first message to b, naming where it goes.
+
+- LiveThe wallet refuses to send anything that looks like a recovery phrase or private key.
+
+- LiveThis page and a “Conversations with b” section in the [privacy policy](https://bwalletx.com/privacy#b).
+
+- LiveDeletion on request by email to support@bwalletx.com.
+
+- ◻ Rolling outServer-side storage of b conversations for up to 180 days, with secrets stripped again on the server.
+
+- ◻ ComingPlainer wording inside the wallet, so every Ask b screen says the same as this page.
+
+- ◻ ComingDelete your b conversations yourself, in the app.
+
+See also: [Ask b](https://bwalletx.com/ask-b) · [Privacy](https://bwalletx.com/privacy#b) · [Bugs](https://bwalletx.com/bugs) · [b-Aware](https://bwalletx.com/b-aware)
+
+Less noise. More life. Just b.
+
+[Talk to b](https://web.bwalletx.com/ask-b)[About Ask b](https://bwalletx.com/ask-b)
+
+---
+
 Source: https://bwalletx.com/terms
 
 [← bWalletX](https://bwalletx.com/)
@@ -10272,7 +10432,7 @@ Separate accounts that an AI runs for you, each with its own budget and its own 
 
 ### Your own key
 
-Add an API key for Anthropic, OpenAI or OpenRouter. It stays in secure storage on your device and requests go straight from your phone to that provider. We don't see them. This is the more private option.
+Add an API key for Anthropic, OpenAI or OpenRouter. It stays in secure storage on your device and b’s requests go straight from your phone to that provider, which handles them under its own terms. Anything you report to b still comes to our team.
 
 ### Pay per message
 
@@ -10293,7 +10453,9 @@ It has the wallet's usage guide as its system prompt, so it can explain features
 
 ## Privacy and consent
 
-Before the first message to each provider, a consent sheet shows what is sent (your message and the last 8 turns) and what isn't. You can revoke consent in Settings. The agent refuses input that looks like a recovery phrase or private key, and it has no long-term memory, by design.
+Talking to b means talking to us. b is our team’s assistant, not a private chat, and it is not end-to-end encrypted. We read and keep conversations with b for up to 180 days, with secrets stripped, to fix bugs and improve the app. [How we handle chats with b →](https://bwalletx.com/talk-to-b)
+
+Before the first message to each provider, a consent sheet shows what is sent (your message and the last 8 turns) and what isn't. You can revoke consent in Settings. The wallet refuses to send anything that looks like a recovery phrase or private key. Each reply only sees the recent conversation, but our team keeps the conversations as described above.
 
 [Get bWalletX](https://bwalletx.com/get)
 [Agent accounts](https://bwalletx.com/agents)
@@ -12175,7 +12337,7 @@ We also cut the history sent with each message from 20 turns to 8. That lowers c
 
 For the stores, and because it is right, the agent now shows a consent sheet before the first message to each provider. It says what is sent (your message and the last 8 turns) and what isn't. You can revoke consent in Settings. The agent also refuses input that looks like a recovery phrase or a private key.
 
-On 5 October we added a banner on the agent page to add your own key, since that is the more private option.
+On 5 October we added a banner on the agent page to add your own key, since with your own key your messages go from your phone to your provider instead of through our server.
 
 ## What it can do
 
@@ -12185,7 +12347,7 @@ The agent has a usage guide for the wallet as its system prompt, so it can expla
 
 - The store build allows only your own key; pay-per-message is a private-build feature.
 - The agent can be wrong. Any action it takes in an agent account is limited by the strategy gate, not by its judgement.
-- There is no long-term memory, by design, and no way yet to export a conversation.
+- b doesn’t remember earlier chats when it answers, and there is no way yet to export a conversation. (Update, 25 Oct 2026: that is only the AI’s memory. Our team reads and keeps conversations with b; see [talking to b](https://bwalletx.com/talk-to-b).)
 
 Related: [Agents](https://bwalletx.com/agent) · [Strategies](https://bwalletx.com/strategies)
 
@@ -13965,7 +14127,7 @@ Source: https://bwalletx.com/blog/043-ask-b
 
 # Ask b
 
-b, the helper inside bWalletX, has a calmer home. Hold the gold b to talk, and your chats on bChatX now have their own links and are encrypted with your wallet.
+b, the helper inside bWalletX, has a calmer home. Hold the gold b to talk, and your chats on bChatX now have their own links.
 
 ## A quiet place to ask
 
@@ -13975,15 +14137,15 @@ b opens on a dark pool with a few gentle suggestions drifting past: a savings po
 
 Hold the gold b and speak. Your words appear in the box, and nothing sends until you do. b can fill in a payment for you, but nothing goes until you say so.
 
-## Your chats with b, kept private
+## Correction, 25 Oct 2026
+
+This post first said your chats with b were “kept private” and encrypted. That was misleading, and we have changed it. b is our team’s assistant: when you talk to b you are talking to us. Each message reaches our server and our AI provider readable, and we read and keep conversations with b for up to 180 days to fix bugs and improve the app. They are not end-to-end encrypted. [What happens to your chats with b](https://bwalletx.com/talk-to-b).
+
+## Your chats with b, with their own links
 
 On bChatX, Ask b lives at bchatx.com/ask-b. Each chat has its own link, so you can come back to it. Pin the ones you use and hide the ones you don't; opening hidden chats asks your wallet to sign first.
 
-With bWalletX connected, your chats are encrypted by your wallet before they are saved. We store the locked copy, not the words.
-
-## What's not done
-
-- Each message you send b still goes to the AI provider to be answered, in plain text, so it can reply.
+With bWalletX connected, the chat list you scroll back through is locked with your wallet, so other people can’t browse it. That does not make the chat private from us: our team can read what you tell b.
 
 Related: [Home](https://bwalletx.com/) · [Features](https://bwalletx.com/features) · [Developers](https://bwalletx.com/developers)
 
@@ -14756,7 +14918,7 @@ Every token on bChatX has a full page: price, chart, holders, posts and a Buy bu
 
 - 043 · 12 Oct 2026
 [Ask b](https://bwalletx.com/blog/043-ask-b)
-b, the helper inside bWalletX, has a calmer home. Hold the gold b to talk, and your chats on bChatX now have their own links and are encrypted with your wallet.
+b, the helper inside bWalletX, has a calmer home. Hold the gold b to talk, and your chats on bChatX now have their own links.
 
 - 042 · 12 Oct 2026
 [Chats that feel like Telegram](https://bwalletx.com/blog/042-chats-that-feel-like-telegram)
@@ -14934,7 +15096,7 @@ Source: https://bwalletx.com/privacy
 
 # Privacy Policy
 
-bWalletX (Beta) · Effective 6 October 2026 · Updated 23 October 2026
+bWalletX (Beta) · Effective 6 October 2026 · Updated 25 October 2026
 
 bWalletX is published by The Bitcoin Corporation Ltd and is based on the open-source Yours Wallet (MIT licence).
 It is not made, reviewed or endorsed by the Yours Wallet authors. This policy covers bWalletX (the full-feature
@@ -14947,7 +15109,9 @@ money. To run chat, names, contacts and calls, our own service (bChatX, operated
 Ltd) keeps the data listed under
 [What our service keeps](#service), linked to your wallet's identity key. If you use bChat on a
 phone, our push server also keeps your device's push token and notification settings so it can notify you (see
-[Notifications](#push)). We use all of this only to run those features. We don't collect your email
+[Notifications](#push)). We use all of this only to run those features. Conversations with b, our
+assistant, are different: b is our team, and we read and keep them to fix bugs and improve the app (see
+[Conversations with b](#b)). We don't collect your email
 address, phone number, location, advertising identifiers, analytics or crash
 reports, and we don't track you, sell your data or use it for advertising.
 
@@ -15008,7 +15172,8 @@ and Google Play, $b uses your own AI provider key (Anthropic, OpenAI or OpenRout
 recent conversation go straight from your phone to that provider. In bWalletX's pay-per-message mode, they go
 to our server (bChatX), which passes them to Anthropic; our server also sees the payment's
 transaction id and your bChat sign-in, and Anthropic does not. Your keys, balances, addresses, contacts, chats
-and files are never sent. You can withdraw consent in Settings › b agent.
+and files are never sent. You can withdraw consent in Settings › b agent. What we keep from these
+conversations is under [Conversations with b](#b).
 
 -
 Websites you open in the in-app browser receive the requests you make and the responses you approve.
@@ -15041,6 +15206,42 @@ Calls connect your device directly to the other person's; the service only helps
 and doesn't record calls. All of this is used only to provide these features. It is not shared with third
 parties except the hosting providers that run the service, and it is never used for advertising or tracking. You
 can delete your account and this data from Settings (Delete account), or by contacting us.
+
+## Conversations with b
+
+b is not a private chat. b is the bWalletX team's assistant: an AI model (Claude, from Anthropic) run by
+our server at The Bitcoin Corporation Ltd, answering on our behalf. When you talk to b, you are talking to our
+company. Conversations with b are not end-to-end encrypted: they travel over HTTPS, and our server and our AI
+provider can read them.
+
+-
+What we keep: the messages you send b and b's replies, linked to your account, on our server.
+
+-
+Why: to fix bugs and improve the app. We are a small team and we read what people tell b so we can act
+on it quickly. We never sell conversations, and we don't use them for advertising.
+
+- Improving b: We may use conversations, with personal details removed, to improve b. You can opt out: email [support@bwalletx.com](mailto:support@bwalletx.com?subject=b%20opt-out) with the subject ‘b opt-out’ and we’ll exclude your chats.
+
+- Who can read them: only our team and our server.
+
+- How long: up to 180 days, then they are deleted.
+
+-
+Secrets removed: the wallet strips anything that looks like a recovery phrase or private key before a
+message leaves your device, and our server strips secrets again before anything is kept. Never type your
+recovery phrase, private keys or passwords to b.
+
+-
+AI provider: each message, with the recent conversation, is sent to our AI provider (Anthropic) to
+write b's reply. If you use your own AI key instead, your messages go from your device to the provider you
+chose, under its terms.
+
+-
+Deletion: email [support@bwalletx.com](mailto:support@bwalletx.com) to ask us to delete
+your conversations with b.
+
+We are rolling out this storage on our server now; we describe it here before it is fully live. More at [bwalletx.com/talk-to-b](https://bwalletx.com/talk-to-b).
 
 ## Verified identity (KYC certificates)
 
@@ -15139,7 +15340,7 @@ stop. Payment never depends on ratings or reviews. Ask us to delete your tester 
 You can turn push notifications and message previews off in Settings › Notifications, and remove this device's
 push registration by signing out of bChat.
 
-- You can withdraw consent for the $b assistant in Settings › b agent.
+- You can withdraw consent for the $b assistant in Settings › b agent, and ask us to delete your conversations with b by emailing support@bwalletx.com.
 
 - You can change the remote wallet storage provider in Settings → Wallet Backup.
 
