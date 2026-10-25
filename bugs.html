@@ -51,6 +51,10 @@
       .fx-msg.ok { color: #5fe08f; } .fx-msg.err { color: #ff8a80; }
       .fx-msg a { color: inherit; }
       .fb-st.st-investigating { background: #ffffff14; color: #d8dbe0; }
+      .check-first { background: #101114; border: 1px solid #F5B80055; border-radius: 16px; padding: 16px 18px; margin: 18px 0 6px; }
+      .check-first h2 { margin: 0 0 6px; font-size: 1.15rem; }
+      .check-first p { margin: 6px 0 0; color: #d8dbe0; font-size: 0.95rem; overflow-wrap: anywhere; }
+      .check-first a { color: #F5B800; }
     </style>
   </head>
   <body>
@@ -68,6 +72,11 @@
     <main class="ext">
       <h1>Known <span class="gold">issues</span>.</h1>
       <p class="lede">What&rsquo;s broken, what we&rsquo;re fixing, and what we fixed. Spotted something? Tell us below.</p>
+      <div class="check-first" role="note">
+        <h2>Before you report: check this page</h2>
+        <p>Everything below is a known or fixed issue. Reporting something already listed here earns credit, not money.</p>
+        <p>Security issues that are still being fixed are not listed, for your safety. If you found something that looks serious and it is not here, report it privately to <a href="mailto:support@bwalletx.com?subject=b-Aware">support@bwalletx.com</a> with the subject <b>b-Aware</b>. See <a href="/b-Aware">b-Aware</a> for how we reward reports.</p>
+      </div>
       <h2>Report a bug</h2>
       <form class="fx-form" id="fx" novalidate>
         <label>What happened?<textarea name="what" required maxlength="4000"></textarea></label>
@@ -100,7 +109,12 @@
         <li class="fb-item"><div class="fb-top"><h3>Chat list jumped while loading</h3><span class="fb-st st-shipped">Fixed in 5.2.11</span></div><p>Chats open at once and the list stays still.</p><div class="fb-meta">Fixed 12 Oct 2026</div></li>
         <li class="fb-item"><div class="fb-top"><h3>Fingerprint unlock stopped working on Android</h3><span class="fb-st st-shipped">Fixed in 5.2.10</span></div><p>It works again, and asks you to set it up again when needed.</p><div class="fb-meta">Fixed 12 Oct 2026</div></li>
       </ul>
-      <p>See also: <a href="/feedback">Feedback</a> &middot; <a href="/ideas">Ideas</a> &middot; <a href="/releases">Releases</a></p>
+      <h2>Security fixes</h2>
+      <p class="small">Found by researchers under <a href="/b-Aware">b-Aware</a> and reported privately. We describe a security fix here only once it is live everywhere you can get bWalletX, so more will appear as releases reach every store. Keep your wallet up to date.</p>
+      <ul class="fb-list">
+        <li class="fb-item"><div class="fb-top"><h3>A stranger could knock a paired computer offline</h3><span class="fb-st st-shipped">Fixed</span></div><p>Someone who only knew a pairing&rsquo;s channel could take over the phone&rsquo;s side of the link and cut off your paired computer. No money could move. Our pairing server now refuses this. The fix is on our server, so every edition has it.</p><div class="fb-meta">Fixed 24 Oct 2026 &middot; Security fix, reported privately under b-Aware</div></li>
+      </ul>
+      <p>See also: <a href="/b-Aware">b-Aware</a> &middot; <a href="/feedback">Feedback</a> &middot; <a href="/ideas">Ideas</a> &middot; <a href="/releases">Releases</a></p>
       <div class="row" style="display:flex;gap:12px;flex-wrap:wrap;margin:26px 0"><a class="btn btn-store" href="/get">Get bWalletX</a></div>
     </main>
     <script>
