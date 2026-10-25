@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Peck on b · bWalletX</title>
+    <link rel="canonical" href="https://bwalletx.com/peck-on-b" />
+    <meta name="description" content="Read Peck posts in the bWalletX Feed from its public overlay, see each author&rsquo;s posts, tip signed authors in BSV and lock behind posts." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://bwalletx.com/peck-on-b" />
+    <meta property="og:site_name" content="bWalletX" />
+    <meta property="og:title" content="Peck on b" />
+    <meta property="og:description" content="Read Peck posts in the bWalletX Feed from its public overlay, see each author&rsquo;s posts, tip signed authors in BSV and lock behind posts." />
+    <meta property="og:image" content="https://bwalletx.com/og-peck-on-b.png?v1" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Peck on b: Read Peck in the bWalletX Feed. Tip signed authors in BSV." />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@bWalletX" />
+    <meta name="twitter:title" content="Peck on b" />
+    <meta name="twitter:description" content="Read Peck posts in the bWalletX Feed from its public overlay, see each author&rsquo;s posts, tip signed authors in BSV and lock behind posts." />
+    <meta name="twitter:image" content="https://bwalletx.com/og-peck-on-b.png?v1" />
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="stylesheet" href="/styles.css" />
+    <style>
+      .ext .meta { color: #8a8a86; font-size: 0.9rem; margin: 0; }
+      .ext h1 { font-size: clamp(2.2rem, 6vw, 3.4rem); margin: 18px 0 10px; overflow-wrap: anywhere; }
+      .ext h1 .gold { color: #F5B800; }
+      .ext h2 { margin: 48px 0 10px; font-size: 1.5rem; }
+      .ext p, .ext li { line-height: 1.65; }
+      .box { background: #101114; border: 1px solid #ffffff12; border-radius: 16px; padding: 18px 20px; margin: 16px 0; }
+      .box h3 { margin: 0 0 6px; font-size: 1rem; }
+      .box p { margin: 0; color: #a7adb8; }
+      .ext .small { color: #8a8a86; font-size: 0.85rem; }
+      .ext .row { display: flex; gap: 12px; flex-wrap: wrap; margin: 26px 0; }
+      .feat { list-style: none; padding: 0; margin: 18px 0; }
+      .feat li { display: flex; gap: 12px; align-items: baseline; padding: 12px 0; border-bottom: 1px solid #ffffff10; }
+      .feat li span:last-child { min-width: 0; overflow-wrap: anywhere; }
+      .tag { flex: none; font-size: 0.75rem; font-weight: 700; padding: 2px 9px; border-radius: 999px; white-space: nowrap; }
+      .tag.live { background: #F5B800; color: #000; }
+      .tag:not(.live) { background: #ffffff14; color: #cfcabd; }
+      .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 14px; margin: 22px 0; }
+      .grid a.box { display: block; margin: 0; text-decoration: none; color: inherit; }
+      .grid a.box:hover { border-color: #F5B80066; }
+      .grid a.box h3 .gold { color: #F5B800; }
+    </style>
+  </head>
+  <body>
+    <div class="beta-banner">bWalletX is in <strong>beta</strong>: test with small amounts.</div>
+    <header class="topbar">
+      <div class="wrap topbar-in">
+        <a class="brand" href="/"><img src="/logo.svg" alt="" width="34" height="30" /><span>bWallet<span class="gold">X</span></span></a>
+        <nav aria-label="Pages">
+          <a href="/features">Features</a><a href="/exchange">Exchange</a><a href="/social">Social</a><a href="/agent">Agents</a><a href="/extension">Extension</a><a href="/developers">Developers</a>
+        </nav>
+        <span class="nav-cta"><a class="dl-btn" href="/get">Download</a><a class="web-btn" href="https://web.bwalletx.com" target="_blank" rel="noopener">Web &rarr;</a></span>
+      </div>
+    </header>
+    <script src="/nav.js"></script>
+    <main class="ext">
+      <p class="meta"><a href="/on-b">On b</a> · Using Peck with bWalletX</p>
+      <h1>Peck on <span class="gold">b</span></h1>
+      <p class="lede">Peck posts are plain Bitcoin Schema on chain, so bWalletX can read them. Use Peck as you do, and follow it from the same place you keep your coins.</p>
+
+      <h2>What you can do</h2>
+      <div class="box"><h3>Read Peck in the Feed</h3><p>Open Feed and pick the Peck chip. Posts come from Peck&rsquo;s public overlay, current to the latest block. Tap a name to see that author&rsquo;s posts; tap Open to see a post on peck.to.</p></div>
+      <div class="box"><h3>Tip signed authors</h3><p>When a post&rsquo;s signature checks out, the tip goes to the address that signed it. If it can&rsquo;t be tied to the author, the tip button says so instead of guessing.</p></div>
+      <div class="box"><h3>Like, reply and lock</h3><p>Lock BSV behind a post you rate; it stays yours. Likes and replies you make here are written on chain as bChat posts.</p></div>
+
+      <h2>Status</h2>
+      <p class="small">What works in bWalletX today, and what doesn&rsquo;t yet.</p>
+      <ul class="feat">
+        <li><span class="tag live">&check; Live</span><span>Peck posts in the Feed, from its public overlay</span> <!-- src/mobile/feed/feedApi.ts (fetchPeck), src/mobile/feed/peck.ts --></li>
+        <li><span class="tag live">&check; Live</span><span>A Peck author&rsquo;s posts on one page</span> <!-- src/mobile/feed/authorFeed.ts --></li>
+        <li><span class="tag live">&check; Live</span><span>Tip authors whose signature checks out</span> <!-- src/mobile/feed/peck.ts (aip_verified) --></li>
+        <li><span class="tag live">&check; Live</span><span>Lock, like and reply from bWalletX (written as bChat)</span> <!-- src/mobile/feed/sources.ts, src/mobile/feed/locks.ts --></li>
+        <li><span class="tag">&#9675; Not yet</span><span>Your bWalletX posts showing in the Peck app</span></li>
+        <li><span class="tag">&#9675; Not yet</span><span>Import who you follow on Peck</span></li>
+      </ul>
+
+      <div class="row"><a class="btn btn-store" href="/get?from=peck-on-b">Get bWalletX</a></div>
+      <p class="small">Your keys stay with you: bWalletX is self-custody. Peck is a separate service; bWalletX is not affiliated with it. <a href="/on-b">More apps on b</a>.</p>
+    </main>
+  </body>
+</html>

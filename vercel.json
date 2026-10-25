@@ -163,6 +163,19 @@
     }
   ],
   "redirects": [
+    { "source": "/relayX-on-b", "destination": "/relayx-on-b", "permanent": true },
+    { "source": "/RelayX-on-b", "destination": "/relayx-on-b", "permanent": true },
+    { "source": "/CoinGeek-on-b", "destination": "/coingeek-on-b", "permanent": true },
+    { "source": "/Coingeek-on-b", "destination": "/coingeek-on-b", "permanent": true },
+    { "source": "/coinGeek-on-b", "destination": "/coingeek-on-b", "permanent": true },
+    { "source": "/Twetch-on-b", "destination": "/twetch-on-b", "permanent": true },
+    { "source": "/Peck-on-b", "destination": "/peck-on-b", "permanent": true },
+    { "source": "/Hodlocker-on-b", "destination": "/hodlocker-on-b", "permanent": true },
+    { "source": "/HodLocker-on-b", "destination": "/hodlocker-on-b", "permanent": true },
+    { "source": "/Treechat-on-b", "destination": "/treechat-on-b", "permanent": true },
+    { "source": "/TreeChat-on-b", "destination": "/treechat-on-b", "permanent": true },
+    { "source": "/Yours-on-b", "destination": "/yours-on-b", "permanent": true },
+    { "source": "/On-b", "destination": "/on-b", "permanent": true },
     { "source": "/family", "destination": "/b-family", "permanent": true },
     {
       "source": "/(.*)",
