@@ -58,7 +58,7 @@ It isn't on Google Play yet, so install it by hand. (The store edition, bWallet,
 
 Updating from an older version? Install over the top and your wallet stays. If Android says the app can't be updated, write down your 12 words first, then uninstall and reinstall.
 
-Version 5.2.42 beta · 37.2 MB · Android 7+ · SHA-256 0a28f9465d34d3fc78e472bc1fc80503d352434fddd983186bf729a2cb933ceb
+Version 5.2.42 beta · 37.4 MB · Android 7+ · SHA-256 61a893440e175a6e1dc2942c0bb1f6230684357e100b68073a32a5819d793534
 
 Also: [Chrome extension](https://bwalletx.com/extension) · [Developers](https://bwalletx.com/developers)
 
@@ -3228,7 +3228,7 @@ Same extension, same file. Brave runs Chrome extensions, so:
 
 - Pin bWalletX from the puzzle-piece menu, click it, and create or restore your wallet.
 
-Version 5.2.42 beta · SHA-256 de432ae9611dc19fd67615750aa5d96828124dd1cd85172c9a07bfa62b2f658c · Source: [github.com/bitcoin-corp/bwallet](https://github.com/bitcoin-corp/bwallet)
+Version 5.2.42 beta · SHA-256 98e4a113771044711e117ed0536096b61ae069fe9b39392330a49b7d906bf66a · Source: [github.com/bitcoin-corp/bwallet](https://github.com/bitcoin-corp/bwallet)
 
 ---
 
@@ -4511,7 +4511,7 @@ Tap Download APK (beta). If Android asks, allow your browser to install unknown 
 - Open the downloaded bwalletx-android-5.2.42.apk and tap Install.
 
 -
-Optional but recommended: check the SHA-256 checksum matches0a28f9465d34d3fc78e472bc1fc80503d352434fddd983186bf729a2cb933ceb
+Optional but recommended: check the SHA-256 checksum matches61a893440e175a6e1dc2942c0bb1f6230684357e100b68073a32a5819d793534
 
 Beta software. Use small amounts and back up your recovery phrase. Only install the APK from this site or
 the official GitHub release.
@@ -5672,6 +5672,15 @@ Each release ships to the Android APK, the Chrome extension and the web wallet. 
 [Download bWalletX](https://bwalletx.com/download)
 
 ## 5.2.42 2026-10-25
+
+- Ask b is free to use: messages to b never ask for a payment or spend your BSV. b doesn’t talk about prices, and a one-time note tells you that we read these chats to improve b.
+- Exchange has a Memepool tab: see the coins on TX Blaster’s Memepool and buy or sell them from the wallet, up to 1 BSV a trade. New TokenBlaster coins each get a room and a store.
+- The Store has a TokenBlaster shop with two $1 theme packs, and game rooms now dress themselves in the game’s own colours.
+- A name you receive as an NFT explains itself and has an “Add to my Names” button.
+- bApps now show two to a row on colour tiles, bVideoX plays full screen, and the main wallet card shows $b as its unit.
+- Fewer approval prompts in everyday use, and a connected site’s theme shows correctly even if it was approved before.
+
+## 5.2.41 2026-10-25
 
 - Every approval and payment sheet now shows the amount in dollars first, with sats small underneath.
 - After you disconnect a site, or a day away from it, the site’s next request asks “Reconnect to <site>?”. It never interrupts you in the middle of a session.

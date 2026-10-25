@@ -75,7 +75,7 @@ Full text of every page below: https://bwalletx.com/llms-full.txt
 - [Send a bMail · bWalletX](https://bwalletx.com/person): Everything you can do with a person on bWalletX: send a bMail for a penny, call, pay or tip, and chat. Write your message now; bWalletX sends it.
 - [bAcc RACE: the bAcc racing game | bWalletX](https://bwalletx.com/race-card): bAcc RACE: make Bitcoin faster. A racing game in your browser, in black and yellow. In progress. Game engine by VexVoid.
 - [Your RelayX NFTs are still yours · bWalletX](https://bwalletx.com/recover-relayx): RelayX has closed, but the NFTs bought and minted there are still on chain at their owners' keys. bWalletX finds them from your RelayX 12 words. Your words stay on your phone, and finding them moves nothing.
-- [Releases](https://bwalletx.com/releases): Every bWalletX release and what it added, newest first. Latest: 5.2.41.
+- [Releases](https://bwalletx.com/releases): Every bWalletX release and what it added, newest first. Latest: 5.2.42.
 - [Seedless login · bWalletX](https://bwalletx.com/seedless-login): Live in bWalletX: create and open your wallet with a passkey, Face ID, fingerprint or PIN. No seed phrase to manage. Your 12 words still exist, and we never hold your keys.
 - [Sign in with a passkey: open your wallet with your face or fingerprint | bWalletX](https://bwalletx.com/seedless-signin): Create a bWalletX wallet with a passkey. Face ID, fingerprint or your device PIN opens it: no password to invent. Your 12 words are sealed with the passkey and saved as a locked recovery file.
 - [Sign in with HandCash](https://bwalletx.com/sign-in-with-handcash): Sign in to bChatX with your verified HandCash account. You get a new bWalletX address and first claim on the same name as name@bwalletx.com.
