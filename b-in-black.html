@@ -222,8 +222,8 @@
         // The pulse analyser only comes up on a real gesture: a suspended AudioContext would silence the music.
         var tries = ['pointerover', 'wheel', 'scroll', 'touchstart'], sure = ['pointerdown', 'keydown'];
         function off() { tries.concat(sure).forEach(function (n) { removeEventListener(n, onTry, true); removeEventListener(n, onSure, true); }); }
-        function onTry() { if (muted || !a.paused) return; set(true).then(off, function () { btn.setAttribute('aria-pressed', 'false'); }); }
-        function onSure(e) { if (muted || btn.contains(e.target)) return; off(); analyse(); if (cx && cx.state === 'suspended') cx.resume(); if (a.paused) set(true).catch(function () {}); }
+        function onTry() { if (muted || !a.paused) return; set(true).then(off, function () { if (a.paused) btn.setAttribute('aria-pressed', 'false'); }); }
+        function onSure(e) { if (muted || btn.contains(e.target)) return; off(); analyse(); if (cx && cx.state === 'suspended') cx.resume(); set(true).catch(function () {}); }
         tries.forEach(function (n) { addEventListener(n, onTry, { capture: true, passive: true }); });
         sure.forEach(function (n) { addEventListener(n, onSure, true); });
         btn.addEventListener('click', function () { var on = btn.getAttribute('aria-pressed') !== 'true'; muted = !on; off(); if (on) analyse(); set(on).catch(function () {}); });
