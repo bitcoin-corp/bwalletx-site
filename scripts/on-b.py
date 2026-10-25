@@ -1,12 +1,13 @@
 #!/usr/bin/env python3
 """Build the "<app> on b" pages (/twetch-on-b, /relayx-on-b, ...), the /on-b index and their share images.
 
-    python3 scripts/on-b.py          # writes <slug>.html, on-b.html and og-<slug>.png (headless Chrome)
+    python3 scripts/on-b.py          # writes <slug>.html, on-b.html and og-<slug>-<OG_VER>.png (headless Chrome)
     python3 scripts/on-b.py --no-og  # pages only
 
 Every "live" line must name the bWalletX source file that proves it (the `src` field, kept in an HTML
-comment so reviewers can check it). Other apps are named in plain text only: no logos, colours or wording
-that suggests a partnership.
+comment so reviewers can check it). Other apps' logos are shown only to identify them (nominative use),
+at a modest size, exactly as each app publishes them: never redrawn, recoloured or distorted. No wording
+that suggests a partnership. Each logo's source URL is in LOGOS below.
 """
 import html
 import os
@@ -16,7 +17,26 @@ import tempfile
 
 ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
 CHROME = os.environ.get('CHROME', '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome')
-OG_VER = 'v1'
+OG_VER = 'v2'
+
+# Official logos, saved unmodified under /img/apps/. Source of each file:
+LOGOS = {
+    # https://twetch.com/favicon.svg (twetch.com <link rel="icon" type="image/svg+xml">)
+    'Twetch': ('/img/apps/twetch.svg', '#4a4c66'),
+    # https://relayx.com/logo192.png (apple-touch-icon), via https://web.archive.org/web/2024id_/https://relayx.com/logo192.png
+    'RelayX': ('/img/apps/relayx.png', '#2a6bf2'),
+    # https://coingeek.com/wp-content/uploads/2024/09/cropped-android-chrome-512x512-1.png (site icon, 512px)
+    'CoinGeek': ('/img/apps/coingeek.png', '#e0263a'),
+    # https://peck.to/apple-touch-icon.png (peck.to apple-touch-icon)
+    'Peck': ('/img/apps/peck.png', '#e8e3d6'),
+    # https://treechat.com/assets/favicon.svg (treechat.com <link rel="icon">)
+    'Treechat': ('/img/apps/treechat.svg', '#8d7fe3'),
+    # https://yours.org/favicon.ico (144x144, converted ico -> png without other changes)
+    'Yours Wallet': ('/img/apps/yours.png', '#3ecf6e'),
+    # Hodlocker: hodlocker.com is down; the archived site (web.archive.org, 2024) has only a 48px generic
+    # padlock favicon and no logo, so its name is shown in plain text. Colour taken from that favicon.
+    'Hodlocker': (None, '#f5a623'),
+}
 
 PAGES = [
     {
@@ -183,7 +203,19 @@ PAGES = [
     },
 ]
 
-FOOT_NOTE = '{app} is a separate service; bWalletX is not affiliated with it.'
+FOOT_NOTE = '{app} is a separate service; bWalletX is not affiliated with it. Logos belong to their owners.'
+
+
+def logo_tag(app, cls=''):
+    src = LOGOS[app][0]
+    if not src:
+        return '<span class="nm">{}</span>'.format(html.escape(app))
+    return '<img src="{}" alt="{} logo" width="56" height="56" />'.format(src, html.escape(app))
+
+
+def pair_html(app):
+    return ('<div class="pair">{}<span class="plus">+</span>'
+            '<img class="bmark" src="/logo.svg" alt="bWalletX b" width="56" height="50" /></div>').format(logo_tag(app))
 
 HEAD = '''<!doctype html>
 <html lang="en">
@@ -198,7 +230,7 @@ HEAD = '''<!doctype html>
     <meta property="og:site_name" content="bWalletX" />
     <meta property="og:title" content="{title}" />
     <meta property="og:description" content="{desc}" />
-    <meta property="og:image" content="https://bwalletx.com/og-{slug}.png?{ver}" />
+    <meta property="og:image" content="https://bwalletx.com/og-{slug}-{ver}.png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
     <meta property="og:image:alt" content="{title}: {og_sub}" />
@@ -206,7 +238,7 @@ HEAD = '''<!doctype html>
     <meta name="twitter:site" content="@bWalletX" />
     <meta name="twitter:title" content="{title}" />
     <meta name="twitter:description" content="{desc}" />
-    <meta name="twitter:image" content="https://bwalletx.com/og-{slug}.png?{ver}" />
+    <meta name="twitter:image" content="https://bwalletx.com/og-{slug}-{ver}.png" />
     <link rel="icon" href="/favicon.ico" />
     <link rel="stylesheet" href="/styles.css" />
     <style>
@@ -230,6 +262,14 @@ HEAD = '''<!doctype html>
       .grid a.box {{ display: block; margin: 0; text-decoration: none; color: inherit; }}
       .grid a.box:hover {{ border-color: #F5B80066; }}
       .grid a.box h3 .gold {{ color: #F5B800; }}
+      .pair {{ display: flex; align-items: center; gap: 14px; margin: 22px 0 0; flex-wrap: wrap; }}
+      .pair img, .tile .logo img {{ width: 56px; height: 56px; object-fit: contain; border-radius: 12px; display: block; }}
+      .pair .plus {{ color: #8a8a86; font-size: 1.6rem; font-weight: 700; }}
+      .pair .bmark {{ width: 56px; height: 50px; }}
+      .pair .nm, .tile .nm {{ font-weight: 800; font-size: 1.15rem; padding: 14px 16px; border: 1px solid #ffffff22; border-radius: 12px; }}
+      .tile .logo {{ display: flex; align-items: center; gap: 10px; margin-bottom: 12px; }}
+      .tile .logo .plus {{ color: #8a8a86; font-weight: 700; }}
+      .tile .logo .bmark {{ width: 34px; height: 30px; }}
     </style>
   </head>
   <body>
@@ -262,6 +302,7 @@ def gold_b(title):
 def page_html(p):
     out = [HEAD.format(ver=OG_VER, **p)]
     out.append('      <p class="meta"><a href="/on-b">On b</a> · Using {} with bWalletX</p>\n'.format(p['app']))
+    out.append('      ' + pair_html(p['app']) + '\n')
     out.append('      <h1>{}</h1>\n'.format(gold_b(p['title'])))
     out.append('      <p class="lede">{}</p>\n\n'.format(p['lede']))
     out.append('      <h2>What you can do</h2>\n')
@@ -296,42 +337,91 @@ def index_html():
     out.append('      <div class="grid">\n')
     for p in PAGES:
         n = sum(1 for s in p['status'] if s[0])
-        out.append('        <a class="box" href="/{}"><h3>{}</h3><p>{}</p><p class="small">{} live</p></a>\n'.format(
-            p['slug'], gold_b(p['title']), p['og_sub'], n))
+        out.append('        <a class="box tile" href="/{}"><div class="logo">{}<span class="plus">+</span>'
+                   '<img class="bmark" src="/logo.svg" alt="" width="34" height="30" /></div>'
+                   '<h3>{}</h3><p>{}</p><p class="small">{} live</p></a>\n'.format(
+            p['slug'], logo_tag(p['app']), gold_b(p['title']), p['og_sub'], n))
     out.append('      </div>\n')
     out.append('      <div class="row"><a class="btn btn-store" href="/get?from=on-b">Get bWalletX</a></div>\n')
-    out.append('      <p class="small">Each app named here is a separate service; bWalletX is not affiliated with any of them.</p>\n')
+    out.append('      <p class="small">Each app named here is a separate service; bWalletX is not affiliated with any of them. Logos belong to their owners.</p>\n')
     out.append(TAIL)
     return ''.join(out)
 
 
-OG_TPL = '''<!doctype html><html><head><meta charset="utf-8"><style>
-html,body{{margin:0;width:1200px;height:630px;overflow:hidden}}
-body{{background:radial-gradient(900px 600px at 88% 18%,#3a2a00 0,#120c00 45%,#000 75%);color:#fff;
-font-family:-apple-system,"Helvetica Neue",Arial,sans-serif;position:relative}}
-.k{{position:absolute;left:80px;top:72px;color:#F5B800;font-weight:700;letter-spacing:.12em;font-size:26px}}
-h1{{position:absolute;left:76px;top:118px;margin:0;font-size:{size}px;font-weight:800;letter-spacing:-.02em;line-height:1.05}}
-h1 b{{color:#F5B800}}
-p{{position:absolute;left:80px;top:{ptop}px;width:960px;margin:0;font-size:38px;line-height:1.3;color:#d9d4c7}}
-.u{{position:absolute;left:80px;bottom:72px;font-size:28px;color:#9aa3b2}}
-img{{position:absolute;right:80px;bottom:62px;width:40px}}
-</style></head><body><div class="k">ON b · BWALLETX</div><h1>{h1}</h1><p>{sub}</p>
-<div class="u">bwalletx.com/{slug}</div><img src="file://{logo}"></body></html>'''
+OG_CSS = """html,body{margin:0;width:1200px;height:630px;overflow:hidden}
+body{color:#fff;font-family:-apple-system,"Helvetica Neue",Arial,sans-serif;position:relative;
+background:radial-gradient(700px 520px at 8% 10%,BRAND 0,transparent 70%),
+radial-gradient(760px 560px at 96% 96%,#ff7a1a 0,transparent 68%),
+radial-gradient(700px 600px at 70% 0%,#F5B800 0,transparent 70%),
+linear-gradient(135deg,BRAND 0,#c2410c 55%,#F5B800 100%)}
+body:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,#0000 0,#0006 100%)}
+.z{position:absolute;z-index:1}
+.k{left:80px;top:60px;font-weight:800;letter-spacing:.14em;font-size:24px;color:#fff;opacity:.9}
+.u{left:80px;bottom:56px;font-size:28px;color:#fff;opacity:.85;font-weight:600}
+.tile{background:#fff;border-radius:44px;box-shadow:0 24px 60px #0007;display:flex;align-items:center;justify-content:center}
+.tile img{width:100%;height:100%;object-fit:contain;border-radius:44px}
+.btile{background:#000;border-radius:44px;box-shadow:0 24px 60px #0007,0 0 0 4px #F5B800;display:flex;align-items:center;justify-content:center}
+.nm{font-weight:900;color:#111;text-align:center;line-height:1}
+"""
+
+OG_APP = """<!doctype html><html><head><meta charset="utf-8"><style>{css}
+.pair{{left:80px;top:122px;display:flex;align-items:center;gap:34px}}
+.pair .tile,.pair .btile{{width:220px;height:220px}}
+.plus{{font-size:110px;font-weight:900;color:#fff;text-shadow:0 6px 24px #0006}}
+h1{{left:76px;top:378px;margin:0;font-size:{size}px;font-weight:900;letter-spacing:-.02em;line-height:1;text-shadow:0 6px 30px #0007}}
+h1 b{{color:#000;background:#F5B800;border-radius:22px;padding:0 22px}}
+</style></head><body><div class="z k">BWALLETX · ON b</div>
+<div class="z pair"><div class="tile">{logo}</div><div class="plus">+</div><div class="btile"><img src="file://{b}" style="width:150px"></div></div>
+<h1 class="z">{h1}</h1><div class="z u">bwalletx.com/{slug}</div></body></html>"""
+
+OG_INDEX = """<!doctype html><html><head><meta charset="utf-8"><style>{css}
+.t{{width:150px;height:150px;border-radius:34px}} .t img{{border-radius:34px}}
+.big{{left:480px;top:150px;width:240px;height:240px}}
+h1{{left:0;width:1200px;text-align:center;top:450px;margin:0;font-size:76px;font-weight:900;text-shadow:0 6px 30px #0007}}
+h1 b{{color:#000;background:#F5B800;border-radius:18px;padding:0 16px}}
+.u{{left:0;width:1200px;text-align:center;bottom:26px;font-size:24px}}
+.nm{{font-size:28px}}
+</style></head><body>{tiles}
+<div class="z btile big"><img src="file://{b}" style="width:170px"></div>
+<h1 class="z">Your apps, on <b>b</b></h1><div class="z u">bwalletx.com/on-b</div></body></html>"""
 
 
-def render_og(slug, title, sub):
-    t = html.escape(title[:-1]) + '<b>b</b>' if title.endswith(' b') else html.escape(title)
-    size = 120 if len(title) <= 14 else 100
+def og_logo(app, fs=40):
+    src = LOGOS[app][0]
+    if not src:
+        return '<div class="nm" style="font-size:{}px">{}</div>'.format(fs, html.escape(app))
+    return '<img src="file://{}">'.format(os.path.join(ROOT, src.lstrip('/')))
+
+
+def shoot(page, slug):
     tmp = tempfile.NamedTemporaryFile('w', suffix='.html', delete=False)
-    tmp.write(OG_TPL.format(h1=t, sub=html.escape(sub), slug=slug, logo=os.path.join(ROOT, 'logo.svg'),
-                            size=size, ptop=118 + int(size * 1.05) + 40))
+    tmp.write(page)
     tmp.close()
-    out = os.path.join(ROOT, 'og-{}.png'.format(slug))
+    out = os.path.join(ROOT, 'og-{}-{}.png'.format(slug, OG_VER))
     subprocess.run([CHROME, '--headless=new', '--disable-gpu', '--hide-scrollbars', '--allow-file-access-from-files',
                     '--force-device-scale-factor=1', '--window-size=1200,630', '--screenshot=' + out, 'file://' + tmp.name],
                    check=True, capture_output=True)
     os.unlink(tmp.name)
     print('wrote', out)
+
+
+def render_og(p):
+    app, title = p['app'], p['title']
+    name = title[:-len(' on b')]
+    size = 130 if len(title) <= 12 else 112
+    css = OG_CSS.replace('BRAND', LOGOS[app][1])
+    shoot(OG_APP.format(css=css, logo=og_logo(app), b=os.path.join(ROOT, 'logo.svg'), slug=p['slug'], size=size,
+                        h1=html.escape(name) + ' on <b>b</b>'), p['slug'])
+
+
+def render_og_index():
+    # logos ring around the big gold b: 4 across the top, 3 lower on the sides
+    spots = [(120, 120), (330, 60), (720, 60), (930, 120), (80, 330), (970, 330), (300, 300)]
+    tiles = []
+    for (x, y), p in zip(spots, PAGES):
+        tiles.append('<div class="z tile t" style="left:{}px;top:{}px">{}</div>'.format(x, y, og_logo(p['app'], 28)))
+    css = OG_CSS.replace('BRAND', '#7c3aed')
+    shoot(OG_INDEX.format(css=css, tiles=''.join(tiles), b=os.path.join(ROOT, 'logo.svg')), 'on-b')
 
 
 def main():
@@ -342,8 +432,8 @@ def main():
         f.write(index_html())
     if '--no-og' not in sys.argv:
         for p in PAGES:
-            render_og(p['slug'], p['title'], p['og_sub'])
-        render_og('on-b', 'Your apps, on b', INDEX['og_sub'])
+            render_og(p)
+        render_og_index()
 
 
 if __name__ == '__main__':
