@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>b is coming</title>
+    <link rel="canonical" href="https://bwalletx.com/b-is-coming" />
+    <meta name="description" content="Bitcoin is coming. Are you ready? It's worth the wait. Just b." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://bwalletx.com/b-is-coming" />
+    <meta property="og:site_name" content="bWalletX" />
+    <meta property="og:title" content="b is coming" />
+    <meta property="og:description" content="Bitcoin is coming. Are you ready? It's worth the wait." />
+    <meta property="og:image" content="https://bwalletx.com/og-b-is-coming-v1.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="A glowing gold b: Bitcoin is coming. Are you ready?" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@bWalletX" />
+    <meta name="twitter:title" content="b is coming" />
+    <meta name="twitter:description" content="Bitcoin is coming. Are you ready? It's worth the wait." />
+    <meta name="twitter:image" content="https://bwalletx.com/og-b-is-coming-v1.jpg" />
+    <meta name="theme-color" content="#05080f" />
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" />
+    <link rel="stylesheet" href="/styles.css" />
+    <style>
+      /* b is coming (owner, 25 Oct 2026): the Just b series with a wink. Everything builds up, teases, then arrives. */
+      html { overflow-x: hidden; }
+      body { margin: 0; background: #05080f; color: #e6edf5; overflow-x: hidden; }
+      .ic-scene { position: relative; min-height: 100svh; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 0 16px; box-sizing: border-box; text-align: center; overflow: hidden; }
+      .ic-hero { background: radial-gradient(ellipse at 50% 45%, rgba(245, 184, 0, 0.14), rgba(5, 8, 15, 0) 60%), #05080f; }
+      /* The b builds: slow breaths that get quicker and brighter, then it arrives. */
+      .ic-b { position: relative; width: clamp(140px, 34vw, 300px); aspect-ratio: 0.74; }
+      .ic-b img { width: 100%; height: 100%; display: block; object-fit: contain; filter: drop-shadow(0 0 30px rgba(245, 184, 0, 0.35)); }
+      .ic-b.build img { animation: build 1.6s ease-in-out infinite; }
+      .ic-b.build2 img { animation: build 0.9s ease-in-out infinite; }
+      .ic-b.build3 img { animation: build 0.45s ease-in-out infinite; }
+      .ic-b.came img { animation: came 1.4s cubic-bezier(0.2, 1.4, 0.4, 1) both, glow 6s 1.4s ease-in-out infinite; }
+      .ic-b::after { content: ''; position: absolute; inset: -40%; border-radius: 50%; background: radial-gradient(circle, rgba(255, 210, 77, 0.55), rgba(255, 210, 77, 0) 60%); opacity: 0; pointer-events: none; }
+      .ic-b.came::after { animation: flash 1.6s ease-out both; }
+      @keyframes build { 0%, 100% { transform: scale(1); filter: drop-shadow(0 0 24px rgba(245, 184, 0, 0.35)); } 50% { transform: scale(1.06); filter: drop-shadow(0 0 70px rgba(245, 184, 0, 0.85)); } }
+      @keyframes came { 0% { transform: scale(1.06); } 35% { transform: scale(1.22); } 100% { transform: scale(1); } }
+      @keyframes glow { 0%, 100% { filter: drop-shadow(0 0 24px rgba(245, 184, 0, 0.35)); } 50% { filter: drop-shadow(0 0 60px rgba(245, 184, 0, 0.8)); } }
+      @keyframes flash { 0% { opacity: 0; transform: scale(0.4); } 25% { opacity: 1; } 100% { opacity: 0; transform: scale(1.6); } }
+      .ic-h1 { margin: 34px 0 0; font: 700 clamp(2.4rem, 9vw, 6.5rem) / 1.02 var(--hf); letter-spacing: -0.045em; color: #fff; }
+      .ic-h1 em { font-style: normal; color: var(--gold-hi); }
+      .ic-tease { margin: 18px 0 0; min-height: 1.6em; font: 500 clamp(1rem, 3vw, 1.35rem) var(--hf); color: #b9c6d6; letter-spacing: 0.02em; transition: opacity 0.5s ease; }
+      .ic-hint { position: absolute; bottom: 22px; left: 0; right: 0; font: 500 0.72rem var(--hf); letter-spacing: 0.3em; text-transform: uppercase; color: #5d6878; }
+
+      /* The loading bar that won't quite finish. */
+      .ic-load { min-height: 80svh; }
+      .ic-load h2, .ic-count h2 { margin: 0 0 28px; font: 700 clamp(1.9rem, 6vw, 3.4rem) / 1.1 var(--hf); letter-spacing: -0.03em; color: #fff; }
+      .ic-bar { width: min(560px, 100%); height: 14px; border-radius: 999px; background: #121a28; overflow: hidden; box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.06); }
+      .ic-bar i { display: block; height: 100%; width: 0; border-radius: inherit; background: linear-gradient(90deg, #c98f00, #f5b800, #ffe48a); transition: width 0.9s cubic-bezier(0.3, 0.7, 0.3, 1); }
+      .ic-bar.done i { box-shadow: 0 0 30px rgba(255, 210, 77, 0.8); }
+      .ic-pct { margin: 18px 0 0; font: 600 clamp(1.1rem, 3.4vw, 1.5rem) var(--hf); color: var(--gold-hi); font-variant-numeric: tabular-nums; }
+      .ic-msg { margin: 8px 0 0; min-height: 1.5em; font: 400 clamp(0.95rem, 2.6vw, 1.1rem) var(--hf); color: #b9c6d6; }
+
+      /* The countdown that edges, then bursts. */
+      .ic-count { min-height: 90svh; }
+      .ic-num { font: 700 clamp(6rem, 30vw, 16rem) / 1 var(--hf); letter-spacing: -0.06em; color: #fff; font-variant-numeric: tabular-nums; text-shadow: 0 6px 60px rgba(0, 0, 0, 0.6); min-height: 1em; }
+      .ic-num.pop { animation: pop 0.6s ease-out; color: var(--gold-hi); }
+      @keyframes pop { from { transform: scale(1.3); } to { transform: none; } }
+      .ic-again { margin-top: 26px; padding: 12px 24px; border-radius: 999px; border: 1px solid rgba(255, 255, 255, 0.4); background: transparent; color: #fff; font: 500 0.8rem var(--hf); letter-spacing: 0.18em; text-transform: uppercase; cursor: pointer; visibility: hidden; }
+      .ic-again.on { visibility: visible; }
+      .ic-again:hover, .ic-again:focus-visible { background: var(--gold-hi); border-color: var(--gold-hi); color: #0b0a08; }
+      /* Gold sats: fixed to the viewport so the shower never widens the page. */
+      .ic-sats { position: fixed; inset: 0; pointer-events: none; z-index: 20; overflow: hidden; }
+      .ic-sat { position: absolute; top: 0; left: 0; width: 14px; height: 14px; border-radius: 50%; background: radial-gradient(circle at 35% 30%, #fff2b8, #f5b800 55%, #a87600); box-shadow: 0 0 10px rgba(255, 210, 77, 0.7); will-change: transform, opacity; }
+
+      .ic-calm { max-width: 680px; margin: 0 auto; padding: 16vh 24px 14vh; text-align: center; color: #b9c6d6; font: 400 clamp(1.05rem, 2.4vw, 1.3rem) / 1.75 var(--hf); }
+      .ic-calm p { margin: 0 0 2.2em; }
+      .ic-calm .ic-lead { font: 700 clamp(1.9rem, 6vw, 3.2rem) / 1.15 var(--hf); letter-spacing: -0.03em; color: #fff; margin-bottom: 1.4em; }
+      .ic-calm strong { display: block; margin-bottom: 0.35em; color: #fff; font-weight: 600; font-size: 1.15em; letter-spacing: -0.01em; }
+      .ic-calm em { font-style: normal; color: var(--gold-hi); }
+      .ic-calm p:last-child { margin-bottom: 0; }
+
+      .ic-end { background: radial-gradient(ellipse at 50% 60%, rgba(245, 184, 0, 0.18), rgba(5, 8, 15, 0) 60%), #05080f; }
+      .ic-end h2 { margin: 0 0 12px; font: 700 clamp(2.6rem, 10vw, 5rem) / 1 var(--hf); letter-spacing: -0.04em; color: #fff; }
+      .ic-end p { margin: 0 0 30px; color: #b9c6d6; font: 400 clamp(0.95rem, 2.6vw, 1.1rem) var(--hf); }
+      .jb-go { display: inline-block; padding: 18px 40px; border-radius: 999px; background: linear-gradient(180deg, #ffd24d, #f5b800); color: #0b0a08; font: 700 1.1rem var(--hf); text-decoration: none; box-shadow: 0 14px 50px rgba(245, 184, 0, 0.35); }
+      .jb-go:focus-visible { outline: 2px solid var(--gold); outline-offset: 4px; }
+      .jb-foot { position: relative; z-index: 1; margin: 0; padding: 0 16px 22px; text-align: center; font-size: 0.75rem; color: #5d6878; }
+      .jb-foot a { color: #7f8b9b; }
+      .jb-series a { color: #b9c6d6; }
+      .jb-series span { color: #3e4756; }
+
+      @media (prefers-reduced-motion: reduce) {
+        .ic-b img, .ic-b::after, .ic-num.pop { animation: none !important; }
+        .ic-bar i { transition: none; }
+      }
+    </style>
+  </head>
+  <body class="jb">
+    <section class="ic-scene ic-hero">
+      <div class="ic-b" id="ic-b"><img src="/logo.svg" alt="b" width="148" height="200" /></div>
+      <h1 class="ic-h1">Bitcoin is<br /><em>coming</em>.</h1>
+      <p class="ic-tease" id="ic-tease" aria-live="polite">Are you ready?</p>
+      <p class="ic-hint" aria-hidden="true">Keep going ↓</p>
+    </section>
+
+    <section class="ic-scene ic-load" id="ic-load">
+      <h2>Getting there…</h2>
+      <div class="ic-bar" id="ic-bar" role="progressbar" aria-label="Bitcoin arriving" aria-valuemin="0" aria-valuemax="100" aria-valuenow="100"><i></i></div>
+      <p class="ic-pct" id="ic-pct">100%</p>
+      <p class="ic-msg" id="ic-msg" aria-live="polite">Arrived. It’s worth the wait.</p>
+    </section>
+
+    <section class="ic-scene ic-count" id="ic-count">
+      <h2>Brace yourself.</h2>
+      <div class="ic-num" id="ic-num" aria-live="polite">b</div>
+      <button type="button" class="ic-again" id="ic-again">Again?</button>
+    </section>
+
+    <section class="ic-calm">
+      <p class="ic-lead">Some things are <em>worth the wait</em>.</p>
+      <p><strong>Don’t fake it. Self-custody.</strong> Your keys stay on your device. Nobody else holds them, nobody else can spend for you.</p>
+      <p><strong>Take it slow.</strong> Pay by the second for what you watch, read or hear, and stop whenever you like.</p>
+      <p><strong>Lock it away.</strong> Set some aside and let time hold it for you, untouchable until the day you chose.</p>
+      <p><strong>Spread the love.</strong> Tip the people who make the things you enjoy. Every penny goes to them.</p>
+      <p><strong>Ready when you are.</strong> On the web, as a Chrome extension, on Android, and on iPhone through TestFlight.</p>
+      <p class="ic-lead">It came. <em style="display:block;white-space:nowrap">Just b.</em></p>
+    </section>
+
+    <section class="ic-scene ic-end">
+      <h2>Ready?</h2>
+      <p>Free on Android, iPhone, Chrome and the web.</p>
+      <a class="jb-go" href="/get?from=b-is-coming">Get bWalletX</a>
+    </section>
+    <div class="ic-sats" id="ic-sats" aria-hidden="true"></div>
+    <p class="jb-foot jb-series"><a href="/just-b">just b</a> <span>·</span> <a href="/b-cool">b cool</a> <span>·</span> <a href="/b-creative">b creative</a> <span>·</span> <a href="/b-is-for-business">b is for business</a> <span>·</span> <a href="/b-is-coming" aria-current="page">b is coming</a></p>
+    <p class="jb-foot">bWalletX is in beta: test with small amounts. <a href="mailto:support@bwalletx.com">support@bwalletx.com</a></p>
+    <script>
+      (function () {
+        var reduce = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
+        var $ = function (id) { return document.getElementById(id); };
+        // Reduced motion: the markup already shows every payoff (arrived b, 100%, b). Nothing to animate.
+        if (reduce) return;
+
+        // 1. The hero b builds up, faster and brighter, teasing, then arrives. Loops gently.
+        var b = $('ic-b'), tease = $('ic-tease');
+        var lines = [['build', 'Are you ready?'], ['build2', 'Almost there…'], ['build3', 'Almost…'], ['came', 'Bitcoin has come. Worth the wait?']];
+        function hero() {
+          var t = 0;
+          lines.forEach(function (l, i) {
+            setTimeout(function () { b.className = 'ic-b ' + l[0]; tease.textContent = l[1]; }, t);
+            t += i === 2 ? 2200 : 3200;
+          });
+          setTimeout(hero, t + 6000);
+        }
+        hero();
+
+        // Run a scene once when it scrolls into view.
+        function onView(el, fn) {
+          if (!('IntersectionObserver' in window)) return fn();
+          var io = new IntersectionObserver(function (es) { if (es[0].isIntersecting) { io.disconnect(); fn(); } }, { threshold: 0.5 });
+          io.observe(el);
+        }
+
+        // 2. The loading bar that keeps stopping just short.
+        var bar = $('ic-bar'), fill = bar.querySelector('i'), pct = $('ic-pct'), msg = $('ic-msg');
+        var steps = [[0, 'Warming up…'], [42, 'Getting there…'], [87, 'Nearly…'], [97, 'Don’t stop now…'], [99, 'Almost…'], [99.9, 'Almost…'], [99.99, 'Hold on…'], [100, 'Arrived. It’s worth the wait.']];
+        function setP(p, m) { fill.style.width = p + '%'; pct.textContent = (p % 1 ? p.toFixed(p < 99.95 ? 1 : 2) : p) + '%'; msg.textContent = m; bar.setAttribute('aria-valuenow', String(p)); bar.classList.toggle('done', p === 100); }
+        setP(0, 'Warming up…');
+        onView($('ic-load'), function () {
+          var t = 300;
+          steps.forEach(function (s, i) { setTimeout(function () { setP(s[0], s[1]); if (s[0] === 100) burst(40); }, t); t += i < 3 ? 1100 : 1600; });
+        });
+
+        // 3. The countdown that edges: 3, 2, 1, ½, ¼… then the burst.
+        var num = $('ic-num'), again = $('ic-again');
+        var seq = ['3', '2', '1', '½', '¼', '⅛', 'b'];
+        function count() {
+          again.classList.remove('on');
+          var t = 200;
+          seq.forEach(function (s, i) {
+            setTimeout(function () {
+              num.textContent = s; num.classList.remove('pop');
+              if (s === 'b') { void num.offsetWidth; num.classList.add('pop'); burst(90); again.classList.add('on'); }
+            }, t);
+            t += i < 3 ? 900 : 1300;
+          });
+        }
+        num.textContent = '3';
+        onView($('ic-count'), count);
+        again.addEventListener('click', count);
+
+        // A shower of gold sats from the middle of the screen. Fixed layer, transforms only.
+        var layer = $('ic-sats');
+        function burst(n) {
+          var w = innerWidth, h = innerHeight;
+          for (var i = 0; i < n; i++) {
+            var s = document.createElement('i'); s.className = 'ic-sat';
+            var a = Math.random() * Math.PI * 2, v = 0.25 + Math.random() * 0.45;
+            var dx = Math.cos(a) * w * v, dy = Math.sin(a) * h * v - h * 0.15, sc = 0.5 + Math.random();
+            layer.appendChild(s);
+            var an = s.animate([
+              { transform: 'translate(' + w / 2 + 'px,' + h / 2 + 'px) scale(' + sc + ')', opacity: 1 },
+              { transform: 'translate(' + (w / 2 + dx) + 'px,' + (h / 2 + dy) + 'px) scale(' + sc + ')', opacity: 1, offset: 0.55 },
+              { transform: 'translate(' + (w / 2 + dx * 1.15) + 'px,' + (h * 1.1) + 'px) scale(' + sc * 0.8 + ')', opacity: 0 }
+            ], { duration: 2200 + Math.random() * 1200, easing: 'cubic-bezier(0.2, 0.6, 0.4, 1)' });
+            an.onfinish = function () { this.effect.target.remove(); };
+          }
+        }
+      })();
+    </script>
+  </body>
+</html>
