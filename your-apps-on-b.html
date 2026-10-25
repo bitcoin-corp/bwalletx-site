@@ -27,7 +27,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500&family=Space+Grotesk:wght@400;500;600;700&display=swap" />
     <link rel="stylesheet" href="/styles.css" />
     <style>
-      /* Your apps on b (25 Oct 2026): ad film in the Just b series. Eight scenes, ~58 s, music synthesised live.
+      /* Your apps on b (25 Oct 2026): ad film in the Just b series. Eight scenes, 60 s, music: Cherry Graffiti by b0ase.
          Every claim comes from the ✓ Live list on that app's /<app>-on-b page. */
       html { overflow-x: hidden; }
       body { margin: 0; background: #111; color: #fff; overflow-x: hidden; font-family: 'Space Grotesk', sans-serif; }
@@ -50,12 +50,13 @@
       .cap .w { display: inline-block; white-space: nowrap; }
       .cap .l { display: inline-block; opacity: 0; }
       .cap .gb { color: #F5B800; -webkit-text-stroke: 2px var(--ink); paint-order: stroke fill; }
-      .on .cap .l { animation: lin .55s calc(.35s + var(--i) * 48ms) cubic-bezier(.2,1.5,.4,1) both; }
+      /* Letters land on sixteenths of the 92.1 BPM grid, starting one beat after the downbeat. */
+      .on .cap .l { animation: lin .45s calc(.651s + var(--i) * .1628s) cubic-bezier(.2,1.5,.4,1) both; }
       @keyframes lin { from { opacity: 0; transform: translateY(.45em) scale(.6) rotate(-6deg); } to { opacity: 1; transform: none; } }
       .sub { margin: 0; max-width: 34ch; font: 500 clamp(1.02rem, 3.4vw, 1.45rem) / 1.35 'Space Grotesk', sans-serif; opacity: 0; }
-      .on .sub { animation: fade .8s 1.6s ease both; }
+      .on .sub { animation: fade .8s 3.256s ease both; }
       .more { font: 500 clamp(.78rem, 2.6vw, .95rem) 'IBM Plex Mono', monospace; letter-spacing: .06em; color: var(--ink); text-decoration: none; border-bottom: 2px solid currentColor; opacity: 0; }
-      .on .more { animation: fade .8s 2.4s ease both; }
+      .on .more { animation: fade .8s 4.56s ease both; }
       @keyframes fade { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: none; } }
       /* Drawn props, one per scene. */
       .prop { width: min(88vw, 520px); min-height: 0; }
@@ -128,8 +129,9 @@
     </style>
   </head>
   <body>
+    <audio id="music" src="/audio/your-apps-on-b-cherry-graffiti.mp3" preload="auto"></audio>
     <section class="tv" id="tv" aria-label="Your apps on b: a short animated film about using your BSV apps alongside bWalletX">
-      <button type="button" class="snd" id="snd" aria-label="Watch the film with sound"><span class="pc"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4.5v15a1 1 0 0 0 1.5.86l12.4-7.5a1 1 0 0 0 0-1.72L8.5 3.64A1 1 0 0 0 7 4.5z" fill="#111"/></svg></span><span class="pl">Watch with sound<small>0:58 &middot; SOUND ON</small></span></button>
+      <button type="button" class="snd" id="snd" aria-label="Watch the film with sound"><span class="pc"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4.5v15a1 1 0 0 0 1.5.86l12.4-7.5a1 1 0 0 0 0-1.72L8.5 3.64A1 1 0 0 0 7 4.5z" fill="#111"/></svg></span><span class="pl">Watch with sound<small>1:00 &middot; SOUND ON</small></span></button>
       <button type="button" class="mute" id="mute" aria-pressed="false" aria-label="Mute music">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M11 5 6 9H3v6h3l5 4z"></path><path id="mute-w" d="M15.5 8.5a5 5 0 0 1 0 7M18.5 5.5a9 9 0 0 1 0 13"></path></svg>
       </button>
@@ -142,7 +144,7 @@
       <p class="tag">Less noise. More life. Just b.</p>
     </section>
     <p class="jb-foot"><a href="/just-b">just b</a> · <a href="/b-cool">b cool</a> · <a href="/b-creative">b creative</a> · <a href="/talk-to-b">talk to b</a> · <a href="/your-apps-on-b" aria-current="page">your apps on b</a></p>
-    <p class="jb-foot">Apps shown are separate services; bWalletX is not affiliated with them. Logos belong to their owners. Music is generated live in your browser. bWalletX is in beta: test with small amounts. <a href="mailto:support@bwalletx.com">support@bwalletx.com</a></p>
+    <p class="jb-foot">Apps shown are separate services; bWalletX is not affiliated with them. Logos belong to their owners. Music: <a href="https://b0ase.com">Cherry Graffiti by b0ase</a>. bWalletX is in beta: test with small amounts. <a href="mailto:support@bwalletx.com">support@bwalletx.com</a></p>
 
     <script>
       (function () {
@@ -197,83 +199,25 @@
         else if (reduce) show(els.length - 1); // reduced motion: the end card, still; the music can still play
         else { tv.classList.add('poster'); show(0); }
 
-        // Music: an original, calm groove synthesised live with Web Audio (no samples). D major, 100 bpm.
-        // Dmaj9 / Bm9 / Gmaj9 / A6sus, one chord per bar. Builds from keys and pad to kick, hats, snare and a bell hook,
-        // swells into the end card, then resolves and fades. While sound is on, the audio clock changes the scenes.
-        var BPM = 100, SX = 60 / BPM / 4, PER = 48, N = SCENES.length * PER, SWING = 0.08;
-        var ctx, master, drums, music, keys, verb, duck, nb, playing = false, t0 = 0, stepN = 0, sched, vis = [];
-        var snd = document.getElementById('snd'), mute = document.getElementById('mute');
-        function mtof(m) { return 440 * Math.pow(2, (m - 69) / 12); }
-        function osc(type) { var o = ctx.createOscillator(); o.type = type; return o; }
-        function env(g, t, a, peak, dec) { g.gain.setValueAtTime(0.0001, t); g.gain.exponentialRampToValueAtTime(peak, t + a); g.gain.exponentialRampToValueAtTime(0.0001, t + dec); }
-        function init() {
-          ctx = new (window.AudioContext || window.webkitAudioContext)(); var i, c, d;
-          var comp = ctx.createDynamicsCompressor(); comp.threshold.value = -16; comp.ratio.value = 3.5; comp.attack.value = 0.005; comp.release.value = 0.2;
-          master = ctx.createGain(); master.gain.value = 0.0001; master.connect(comp); comp.connect(ctx.destination);
-          drums = ctx.createGain(); drums.gain.value = 0.7; drums.connect(master);
-          duck = ctx.createGain(); duck.connect(master); music = ctx.createGain(); music.connect(duck);
-          verb = ctx.createConvolver(); var len = ctx.sampleRate * 2.6 | 0, ir = ctx.createBuffer(2, len, ctx.sampleRate);
-          for (c = 0; c < 2; c++) { d = ir.getChannelData(c); for (i = 0; i < len; i++) d[i] = (Math.random() * 2 - 1) * Math.pow(1 - i / len, 3); }
-          verb.buffer = ir; var vg = ctx.createGain(); vg.gain.value = 0.28; verb.connect(vg); vg.connect(master);
-          keys = ctx.createGain(); keys.connect(music); var ks = ctx.createGain(); ks.gain.value = 0.45; keys.connect(ks); ks.connect(verb);
-          nb = ctx.createBuffer(1, ctx.sampleRate, ctx.sampleRate); d = nb.getChannelData(0); for (i = 0; i < d.length; i++) d[i] = Math.random() * 2 - 1;
-        }
-        function noise(t, type, f, v, dec, q) { var s = ctx.createBufferSource(), fl = ctx.createBiquadFilter(), g = ctx.createGain(); s.buffer = nb; fl.type = type; fl.frequency.value = f; if (q) fl.Q.value = q;
-          env(g, t, 0.001, v, dec); s.connect(fl); fl.connect(g); g.connect(drums); s.start(t, Math.random() * 0.3); s.stop(t + dec + 0.02); }
-        function kick(t, v) { var o = osc('sine'), g = ctx.createGain(); o.frequency.setValueAtTime(140, t); o.frequency.exponentialRampToValueAtTime(45, t + 0.1);
-          env(g, t, 0.002, v, 0.34); o.connect(g); g.connect(drums); o.start(t); o.stop(t + 0.36); duck.gain.setTargetAtTime(0.65, t, 0.004); duck.gain.setTargetAtTime(1, t + 0.03, 0.09); }
-        function snare(t, v) { noise(t, 'bandpass', 1900, 0.3 * v, 0.16, 0.8); }
-        function hat(t, v) { noise(t, 'highpass', 8500, 0.09 * v, 0.035); }
-        function bass(t, m, len) { var o = osc('triangle'), s = osc('sine'), g = ctx.createGain(); o.frequency.value = mtof(m); s.frequency.value = mtof(m - 12);
-          env(g, t, 0.01, 0.22, len); o.connect(g); s.connect(g); g.connect(music); o.start(t); s.start(t); o.stop(t + len + 0.05); s.stop(t + len + 0.05); }
-        function ep(t, notes, len, v) { notes.forEach(function (m) { var f = mtof(m), c = osc('sine'), md = osc('sine'), mg = ctx.createGain(), g = ctx.createGain();
-          c.frequency.value = f; md.frequency.value = f; mg.gain.setValueAtTime(f * 1.1, t); mg.gain.exponentialRampToValueAtTime(f * 0.05, t + 0.35); md.connect(mg); mg.connect(c.frequency);
-          g.gain.setValueAtTime(0.0001, t); g.gain.exponentialRampToValueAtTime(v, t + 0.008); g.gain.exponentialRampToValueAtTime(v * 0.3, t + len); g.gain.exponentialRampToValueAtTime(0.0001, t + len + 0.25);
-          c.connect(g); g.connect(keys); c.start(t); md.start(t); c.stop(t + len + 0.3); md.stop(t + len + 0.3); }); }
-        function pad(t, notes, len, v) { notes.forEach(function (m) { [-7, 7].forEach(function (dt) { var o = osc('sawtooth'), f = ctx.createBiquadFilter(), g = ctx.createGain(); o.frequency.value = mtof(m); o.detune.value = dt; f.type = 'lowpass'; f.frequency.value = 1100;
-          g.gain.setValueAtTime(0.0001, t); g.gain.exponentialRampToValueAtTime(v, t + 0.5); g.gain.setValueAtTime(v, t + len - 0.2); g.gain.exponentialRampToValueAtTime(0.0001, t + len + 0.6); o.connect(f); f.connect(g); g.connect(keys); o.start(t); o.stop(t + len + 0.65); }); }); }
-        function bell(t, m, v) { [1, 2.76, 5.4].forEach(function (r, i) { var o = osc('sine'), g = ctx.createGain(); o.frequency.value = mtof(m) * r; env(g, t, 0.002, [0.06, 0.022, 0.01][i] * (v || 1), 1.6 / (i + 1)); o.connect(g); g.connect(music); g.connect(verb); o.start(t); o.stop(t + 1.8); }); }
-        // One chord per bar. [bass, chord]
-        var PROG = [[38, [54, 57, 61, 64]], [35, [50, 54, 57, 61]], [43, [54, 57, 59, 62]], [45, [52, 54, 59, 62]]];
-        // Bell hook over two bars, in sixteenths: { step: midi }.
-        var HOOK = [{ 0: 78, 3: 76, 6: 73, 8: 74, 10: 76 }, { 0: 74, 4: 73, 6: 71, 10: 69, 12: 71 }];
-        function tick(t, s) {
-          var k = Math.floor(s / PER), bar = s >> 4, i = s & 15, ch = PROG[bar % 4], end = k === SCENES.length - 1;
-          if (end) { var e = s - k * PER; // end card: swell, then resolve on D and fade
-            if (e === 0) { kick(t, 0.9); bass(t, 38, 2.2); ep(t, [54, 57, 61, 64, 69], 2.2, 0.05); pad(t, [50, 54, 57, 61], 4.5, 0.02); bell(t, 81, 1.2); }
-            if (e === 16) { bass(t, 43, 2.2); ep(t, [54, 57, 59, 62], 2.2, 0.04); bell(t, 78, 0.9); }
-            if (e === 24) bell(t, 76, 0.7);
-            if (e === 32) { bass(t, 38, 3.5); ep(t, [50, 54, 57, 61, 66], 3.5, 0.04); pad(t, [54, 57, 61, 64], 4, 0.016); bell(t, 74, 0.8); }
-            if (e < 32 && i % 4 === 2) hat(t, 0.4);
-            return; }
-          if (i === 0) { bass(t, ch[0], 1.4); ep(t, ch[1], 1.2, 0.045); if (k >= 1) pad(t, ch[1], 16 * SX, 0.012); }
-          if (i === 10) { bass(t, ch[0] + (bar % 2 ? 7 : 12), 0.5); ep(t, ch[1], 0.5, 0.03); }
-          if (k >= 1 && (i === 0 || i === 8 || (k >= 3 && i === 11))) kick(t, i === 11 ? 0.55 : 0.85);
-          if (k >= 1 && i % 2 === 0) hat(t, i % 4 === 2 ? 1 : 0.5);
-          if (k >= 2 && (i === 4 || i === 12)) snare(t, 1);
-          if (k >= 3 && HOOK[bar & 1][i]) bell(t, HOOK[bar & 1][i], k >= 5 ? 1.2 : 1);
-          if (k === SCENES.length - 2 && s % PER >= 40 && i % 2 === 0) snare(t, 0.2 + (s % PER - 40) * 0.08); // little roll into the end card
-        }
-        function at(t, fn) { vis.push(setTimeout(fn, Math.max(0, (t - ctx.currentTime) * 1000))); if (vis.length > 40) vis.shift(); }
-        function loop() { var ahead = ctx.currentTime + 0.15;
-          while (stepN < N) { var t = t0 + stepN * SX; if (t >= ahead) break;
-            if (stepN % PER === 0 && !reduce && stillM == null) (function (k) { at(t, function () { show(k); }); })(stepN / PER);
-            tick(t + (stepN % 2 ? SX * SWING : 0), stepN); stepN++; }
-          if (stepN >= N) { clearInterval(sched); master.gain.setTargetAtTime(0.0001, t0 + N * SX + 1.5, 1.2); } }
-        function start(from) {
-          if (!ctx) init(); if (ctx.resume) ctx.resume(); var now = ctx.currentTime;
-          clearInterval(sched); vis.forEach(clearTimeout); vis = []; master.gain.cancelScheduledValues(now); master.gain.setTargetAtTime(0.7, now, 0.2);
-          tv.classList.remove('poster'); playing = true; stepN = from || 0; t0 = now + 0.1 - stepN * SX; sched = setInterval(loop, 25); loop();
-        }
-        function stop() { playing = false; clearInterval(sched); vis.forEach(clearTimeout); vis = []; master.gain.cancelScheduledValues(ctx.currentTime); master.gain.setTargetAtTime(0.0001, ctx.currentTime, 0.12); }
-        snd.addEventListener('click', function () { snd.classList.add('off'); mute.classList.add('show'); start(0); });
+        // Music: a 60 s edit of "Cherry Graffiti" by b0ase, cut on a downbeat at 92.1 BPM (bar 2.605 s).
+        // Scenes 1-7 last 3 bars each; the end card lands on bar 22. With sound, the track's own clock (audio.currentTime) drives the film.
+        var BEAT = 60 / 92.12, BAR = 4 * BEAT, SCENE_BARS = 3, END = 60;
+        var music = document.getElementById('music'), snd = document.getElementById('snd'), mute = document.getElementById('mute'), raf = 0, withSound = false, t0 = 0;
+        function now() { return withSound ? music.currentTime : performance.now() / 1000 - t0; }
+        function frame() { var t = now(), k = Math.min(els.length - 1, Math.floor(t / (SCENE_BARS * BAR)));
+          if (k !== cur && !reduce) show(k);
+          if (t < END && !music.ended) raf = requestAnimationFrame(frame); }
+        function play(sound) { cancelAnimationFrame(raf); withSound = sound; cur = -1; music.currentTime = 0; t0 = performance.now() / 1000;
+          tv.classList.remove('poster'); if (!reduce) show(0);
+          if (sound) music.play().catch(function () { withSound = false; t0 = performance.now() / 1000; });
+          raf = requestAnimationFrame(frame); }
+        snd.addEventListener('click', function () { snd.classList.add('off'); mute.classList.add('show'); play(true); });
         mute.addEventListener('click', function () {
-          var muted = mute.getAttribute('aria-pressed') !== 'true';
+          var muted = !music.muted; music.muted = muted;
           mute.setAttribute('aria-pressed', String(muted)); mute.setAttribute('aria-label', muted ? 'Unmute music' : 'Mute music');
           document.getElementById('mute-w').style.opacity = muted ? 0.2 : 1;
-          if (muted) stop(); else start(stepN >= N ? 0 : Math.floor(stepN / 16) * 16); // resume from the current bar
         });
-        window.__film = { scenes: els.length, end: N * SX, play: function () { snd.click(); } };
+        window.__film = { scenes: els.length, end: END, play: play };
       })();
     </script>
   </body>
