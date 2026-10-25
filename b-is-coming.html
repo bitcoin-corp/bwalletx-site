@@ -150,25 +150,26 @@
       <p class="ic-lead">It came. <em style="display:block;white-space:nowrap">Just b.</em></p>
     </section>
 
-    <section class="ic-scene ic-end">
+    <section class="ic-scene ic-end" id="ic-end">
       <h2>Ready?</h2>
       <p>Free on Android, iPhone, Chrome and the web.</p>
       <a class="jb-go" href="/get?from=b-is-coming">Get bWalletX</a>
     </section>
     <div class="ic-sats" id="ic-sats" aria-hidden="true"></div>
     <p class="jb-foot jb-series"><a href="/just-b">just b</a> <span>·</span> <a href="/b-cool">b cool</a> <span>·</span> <a href="/b-creative">b creative</a> <span>·</span> <a href="/b-is-for-business">b is for business</a> <span>·</span> <a href="/b-is-coming" aria-current="page">b is coming</a></p>
-    <p class="jb-foot">bWalletX is in beta: test with small amounts. <a href="mailto:support@bwalletx.com">support@bwalletx.com</a></p>
+    <p class="jb-foot">bWalletX is in beta: test with small amounts. Music and voices are generated live in your browser. <a href="mailto:support@bwalletx.com">support@bwalletx.com</a></p>
     <script>
       (function () {
         var reduce = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
         var $ = function (id) { return document.getElementById(id); };
         // Sound effects: all synthesised with Web Audio, off by default, choice remembered.
         var sfx = (function () {
-          var ctx = null, master = null, on = false, btn = $('ic-snd'), lab = $('ic-snd-l');
-          function init() { if (ctx) return; var AC = window.AudioContext || window.webkitAudioContext; if (!AC) return; ctx = new AC(); master = ctx.createGain(); master.gain.value = 0.7; var comp = ctx.createDynamicsCompressor(); comp.threshold.value = -14; comp.knee.value = 10; comp.ratio.value = 8; comp.attack.value = 0.003; comp.release.value = 0.2; master.connect(comp); comp.connect(ctx.destination); }
+          var ctx = null, master = null, comp = null, on = false, btn = $('ic-snd'), lab = $('ic-snd-l');
+          function init() { if (ctx) return; var AC = window.AudioContext || window.webkitAudioContext; if (!AC) return; ctx = new AC(); master = ctx.createGain(); master.gain.value = 0.5; comp = ctx.createDynamicsCompressor(); comp.threshold.value = -14; comp.knee.value = 10; comp.ratio.value = 8; comp.attack.value = 0.003; comp.release.value = 0.2; master.connect(comp); comp.connect(ctx.destination); }
           function set(v, save) {
             on = v; btn.setAttribute('aria-pressed', String(v)); btn.setAttribute('aria-label', v ? 'Turn sound off' : 'Turn sound on'); lab.textContent = v ? 'Sound on' : 'Sound';
             if (v) { init(); if (ctx && ctx.state === 'suspended') ctx.resume(); }
+            if (S.onchange) S.onchange(v);
             if (save) { try { localStorage.setItem('ic-sound', v ? '1' : '0'); } catch (e) {} }
           }
           try { if (localStorage.getItem('ic-sound') === '1') { on = true; btn.setAttribute('aria-pressed', 'true'); lab.textContent = 'Sound on'; } } catch (e) {}
@@ -214,8 +215,119 @@
           };
           S.ooh = function () { if (!ok()) return; tone('sine', 400, 1800, 0, 0.55, 0.3, 'lin'); boing(0.75, 180); };
           S.set = function (v) { set(v, true); };
+          S.isOn = function () { return on; }; S.ctx = function () { return ctx; }; S.out = function () { return comp; };
           return S;
         })();
+
+        // The music: an original 70s slow-jam groove, synthesised live (no samples). Its clock drives the animations.
+        var mus = (function () {
+          var BPM = 84, SPB = 60 / BPM, S16 = SPB / 4, ctx, bus, playing = false, step = 0, nextT = 0, timer, level = 1, stalled = false, chorusUntil = -1, nbuf, squeak = 0;
+          function mf(m) { return 440 * Math.pow(2, (m - 69) / 12); }
+          function boot() { ctx = sfx.ctx(); if (!ctx || !sfx.out()) return false; if (!bus) { bus = ctx.createGain(); bus.gain.value = 0.6; bus.connect(sfx.out()); } return true; }
+          function env(node, t, a, d, v) { var g = ctx.createGain(); g.gain.setValueAtTime(0.0001, t); g.gain.exponentialRampToValueAtTime(v, t + a); g.gain.exponentialRampToValueAtTime(0.0001, t + a + d); node.connect(g); g.connect(bus); }
+          function osc(type, f, t, dur, v, fl) {
+            var o = ctx.createOscillator(), n = o; o.type = type; o.frequency.setValueAtTime(f, t);
+            if (fl) { var bq = ctx.createBiquadFilter(); bq.type = fl.type; bq.frequency.setValueAtTime(fl.f, t); if (fl.f2) bq.frequency.exponentialRampToValueAtTime(fl.f2, t + dur); bq.Q.value = fl.q || 1; o.connect(bq); n = bq; }
+            env(n, t, 0.008, dur, v); o.start(t); o.stop(t + dur + 0.05); return o;
+          }
+          function hiss(t, dur, v, f, type) {
+            if (!nbuf) { nbuf = ctx.createBuffer(1, ctx.sampleRate / 2, ctx.sampleRate); var d = nbuf.getChannelData(0); for (var i = 0; i < d.length; i++) d[i] = Math.random() * 2 - 1; }
+            var src = ctx.createBufferSource(), bq = ctx.createBiquadFilter(); src.buffer = nbuf; bq.type = type || 'highpass'; bq.frequency.value = f; src.connect(bq); env(bq, t, 0.002, dur, v); src.start(t); src.stop(t + dur + 0.05);
+          }
+          function pad(t, notes, dur, v, dull) {
+            notes.forEach(function (m) { [-7, 7].forEach(function (dt) {
+              var o = ctx.createOscillator(), bq = ctx.createBiquadFilter(), g = ctx.createGain(); o.type = 'triangle'; o.frequency.value = mf(m); o.detune.value = dt;
+              bq.type = 'lowpass'; bq.frequency.value = dull ? 600 : 1700; g.gain.setValueAtTime(0.0001, t); g.gain.linearRampToValueAtTime(v, t + 0.6); g.gain.linearRampToValueAtTime(0.0001, t + dur);
+              o.connect(bq); bq.connect(g); g.connect(bus); o.start(t); o.stop(t + dur + 0.1);
+            }); });
+          }
+          // Dm9 to G13, two bars each; the chorus jumps up a tone into E major.
+          var prog = [[50, [62, 65, 69, 72, 76]], [55, [59, 62, 65, 69, 71]]];
+          var chor = [[52, [64, 68, 71, 75, 78]], [57, [64, 69, 73, 76, 80]]];
+          var bassPat = [0, null, null, 0, null, null, 12, null, 0, null, 7, null, 10, null, 12, 7];
+          function tick(t) {
+            var s = step % 16, bar = Math.floor(step / 16), chorus = t < chorusUntil, ch = (chorus ? chor : prog)[Math.floor(bar / 2) % 2], root = ch[0], L = chorus ? 4 : level;
+            if (stalled) { if (stalled !== 'hush' && s === 0) pad(t, ch[1], SPB * 4, 0.03, true); return; }
+            if (s === 0 || s === 10 || (L >= 3 && s === 8)) osc('sine', 130, t, 0.25, 0.9).frequency.exponentialRampToValueAtTime(40, t + 0.2);
+            if (s === 4 || s === 12) { hiss(t, 0.06, 0.35, 1800, 'bandpass'); osc('triangle', 900, t, 0.04, 0.2); }
+            if (L >= 2 || s % 2 === 0) hiss(t, s % 4 === 2 ? 0.08 : 0.03, s % 2 ? 0.06 : 0.1, 7000);
+            // Bedsprings, locked to the groove: every beat, then every 8th, then every 16th.
+            if (squeak && s % [0, 4, 2, 1][squeak] === 0) { var sf = 1300 + (s % 2) * 260; osc('sine', sf, t, 0.07, 0.07).frequency.exponentialRampToValueAtTime(sf * 1.35, t + 0.06); hiss(t, 0.05, 0.05, 2600, 'bandpass'); }
+            // The slow-jam bass slide into each bar.
+            if (s === 14 && bar % 2 === 1) { osc('sawtooth', mf(root - 12), t, S16 * 2, 0.3, { type: 'lowpass', f: 900, f2: 300, q: 5 }).frequency.exponentialRampToValueAtTime(mf(root), t + S16 * 2); }
+            if (bassPat[s] !== null) osc('sawtooth', mf(root - 12 + bassPat[s]), t, S16 * 1.6, 0.35, { type: 'lowpass', f: 700, f2: 200, q: 6 });
+            if (L >= 2 && (s % 4 === 2 || s % 4 === 3 || (L >= 3 && s % 2 === 1))) {
+              var up = s % 4 === 2; // the wah: filter sweeps up on the "chicka", down on the "wow"
+              osc('sawtooth', mf(ch[1][1]), t, S16 * 0.9, 0.12, { type: 'bandpass', f: up ? 450 : 1900, f2: up ? 1900 : 450, q: 9 });
+              osc('sawtooth', mf(ch[1][2]), t, S16 * 0.9, 0.08, { type: 'bandpass', f: up ? 500 : 2000, f2: up ? 2000 : 500, q: 9 });
+            }
+            if (s === 0 && bar % 2 === 0) pad(t, ch[1], SPB * 8, chorus ? 0.06 : 0.035 + L * 0.005);
+            if (chorus && (s === 0 || s === 3 || s === 6 || s === 14)) ch[1].slice(1, 4).forEach(function (m) { osc('sawtooth', mf(m + 12), t, 0.2, 0.06, { type: 'lowpass', f: 3200 }); });
+          }
+          function loop() { var ahead = ctx.currentTime + 0.2; while (nextT < ahead) { tick(nextT); nextT += S16; step++; } }
+          return {
+            start: function () { if (playing || !boot()) return; playing = true; step = 0; nextT = ctx.currentTime + 0.08; timer = setInterval(loop, 40); },
+            stop: function () { playing = false; clearInterval(timer); },
+            on: function () { return playing; },
+            level: function (l) { level = l; stalled = false; },
+            stall: function (v) { stalled = v; },
+            squeak: function (n) { squeak = n; },
+            // "bow-chicka-wow-wow": a wah lick on the next beat.
+            lick: function () { if (!playing) return; var t = ctx.currentTime + this.nextBeatMs() / 1000, r = mf(57);
+              osc('sawtooth', r, t, SPB * 0.7, 0.16, { type: 'bandpass', f: 2200, f2: 350, q: 10 });
+              osc('sawtooth', r * 1.5, t + SPB * 0.75, S16 * 0.8, 0.13, { type: 'bandpass', f: 400, f2: 2200, q: 10 });
+              osc('sawtooth', r * 1.5, t + SPB, S16 * 0.8, 0.13, { type: 'bandpass', f: 400, f2: 2200, q: 10 });
+              [1.5, 2].forEach(function (b) { osc('sawtooth', r * 1.26, t + SPB * b, SPB * 0.45, 0.15, { type: 'bandpass', f: 350, f2: 2400, q: 10 }); }); },
+            chorus: function (bars) { if (ctx) chorusUntil = ctx.currentTime + bars * 4 * SPB; stalled = false; },
+            // Milliseconds until the next beat on the audio clock (0 when the music is off).
+            nextBeatMs: function () { if (!playing) return 0; var t0 = nextT - step * S16, nb = Math.ceil((ctx.currentTime - t0) / SPB) * SPB; return Math.max(0, (t0 + nb - ctx.currentTime) * 1000); },
+            beatMs: SPB * 1000
+          };
+        })();
+        // A timeline: with music on, every event snaps to the half-beat grid, starting on the next beat.
+        function timeline() {
+          var base = mus.nextBeatMs(), q = mus.on() ? mus.beatMs / 2 : 1;
+          return function (fn, ms) { return setTimeout(fn, base + Math.round(ms / q) * q); };
+        }
+        // The voice: a cartoon formant synth (pulse source through vowel filters), no recordings, no words. ?v=him goes lower.
+        var vox = (function () {
+          var him = /[?&]v=him(&|$)/.test(location.search), P = him ? 0.5 : 1, FK = him ? 0.85 : 1, bus, nb;
+          var V = { oo: [320, 800, 2300], oh: [520, 900, 2500], ah: [850, 1250, 2800], eh: [620, 1800, 2600] };
+          function ok() { var c = sfx.ctx(); if (!sfx.isOn() || !c || c.state !== 'running') return null; if (!bus) { bus = c.createGain(); bus.gain.value = 0.8; bus.connect(sfx.out()); } return c; }
+          function breath(c, t, dur, v, f) {
+            if (!nb) { nb = c.createBuffer(1, c.sampleRate, c.sampleRate); var d = nb.getChannelData(0); for (var i = 0; i < d.length; i++) d[i] = Math.random() * 2 - 1; }
+            var src = c.createBufferSource(), bq = c.createBiquadFilter(), g = c.createGain(); src.buffer = nb; bq.type = 'bandpass'; bq.frequency.value = (f || 1400) * FK; bq.Q.value = 0.8;
+            g.gain.setValueAtTime(0.0001, t); g.gain.linearRampToValueAtTime(v, t + dur * 0.3); g.gain.linearRampToValueAtTime(0.0001, t + dur);
+            src.connect(bq); bq.connect(g); g.connect(bus); src.start(t); src.stop(t + dur + 0.05);
+          }
+          // One sung syllable: pitch glides f0a to f0b, vowel glides va to vb, with vibrato, breath and an optional crack.
+          function syl(c, t, dur, f0a, f0b, va, vb, vol, crack) {
+            var o = c.createOscillator(), g = c.createGain(), lfo = c.createOscillator(), lg = c.createGain();
+            o.type = 'sawtooth'; o.frequency.setValueAtTime(f0a * P, t); o.frequency.exponentialRampToValueAtTime(f0b * P, t + dur);
+            if (crack) { o.frequency.setValueAtTime(f0b * P * 1.6, t + dur * 0.55); o.frequency.exponentialRampToValueAtTime(f0b * P, t + dur * 0.7); }
+            lfo.frequency.value = 5.5; lg.gain.value = 6 * P; lfo.connect(lg); lg.connect(o.frequency);
+            g.gain.setValueAtTime(0.0001, t); g.gain.linearRampToValueAtTime(vol, t + Math.min(0.08, dur / 3)); g.gain.setValueAtTime(vol, t + dur * 0.7); g.gain.linearRampToValueAtTime(0.0001, t + dur);
+            V[va].forEach(function (f, k) {
+              var bq = c.createBiquadFilter(), fg = c.createGain(); bq.type = 'bandpass'; bq.Q.value = 7 + k * 3;
+              bq.frequency.setValueAtTime(f * FK, t); bq.frequency.linearRampToValueAtTime(V[vb][k] * FK, t + dur);
+              fg.gain.value = [1, 0.5, 0.22][k]; o.connect(bq); bq.connect(fg); fg.connect(g);
+            });
+            g.connect(bus); o.start(t); lfo.start(t); o.stop(t + dur + 0.05); lfo.stop(t + dur + 0.05);
+            breath(c, t, dur * 0.8, vol * 0.25);
+          }
+          var L = {
+            'ooh': function (c, t) { syl(c, t, 0.9, 260, 225, 'oo', 'oo', 0.25); },
+            'oh': function (c, t) { syl(c, t, 0.55, 280, 310, 'oh', 'oh', 0.3); syl(c, t + 0.6, 0.45, 300, 250, 'oh', 'oo', 0.25); },
+            'oh-yes': function (c, t) { syl(c, t, 0.4, 290, 320, 'oh', 'oh', 0.3); syl(c, t + 0.45, 0.35, 320, 360, 'oh', 'ah', 0.34); syl(c, t + 0.85, 0.5, 380, 330, 'eh', 'ah', 0.4, true); },
+            'yes': function (c, t) { syl(c, t, 0.6, 400, 330, 'eh', 'ah', 0.45, true); },
+            'come-on': function (c, t) { syl(c, t, 0.45, 320, 260, 'oh', 'oh', 0.35); syl(c, t + 0.55, 0.25, 280, 300, 'ah', 'ah', 0.3); syl(c, t + 0.85, 0.7, 340, 170, 'oh', 'oo', 0.4, true); },
+            'climax': function (c, t) { syl(c, t, 0.28, 340, 360, 'ah', 'ah', 0.45); syl(c, t + 0.38, 0.28, 380, 400, 'ah', 'ah', 0.5); syl(c, t + 0.78, 1.5, 430, 360, 'ah', 'oh', 0.55, true); },
+            'pant': function (c, t) { for (var i = 0; i < 4; i++) { breath(c, t + i * 0.24, 0.16, 0.35, i % 2 ? 900 : 1500); syl(c, t + i * 0.24, 0.12, 240, 220, 'ah', 'ah', 0.08); } },
+            'sigh': function (c, t) { breath(c, t, 1.4, 0.3, 1000); syl(c, t + 0.1, 1.3, 240, 165, 'ah', 'oh', 0.2); }
+          };
+          return { play: function (n, delay) { var c = ok(); if (c && L[n]) L[n](c, c.currentTime + 0.03 + (delay || 0)); } };
+        })();
+        sfx.onchange = function (v) { if (v) mus.start(); else mus.stop(); };
 
         // The gate: nothing plays until the visitor enters, so the first sound lands on the first pulse.
         var gateEl = $('ic-gate'), entered = false, startHero = null;
@@ -235,13 +347,13 @@
         var b = $('ic-b'), tease = $('ic-tease');
         var lines = [['build', 'Are you ready?'], ['build2', 'Almost there…'], ['build3', 'Almost…'], ['came', 'Bitcoin has come. Worth the wait?']];
         function hero() {
-          var t = 0;
+          var t = 0, at = timeline();
           lines.forEach(function (l, i) {
-            setTimeout(function () { b.className = 'ic-b ' + l[0]; tease.textContent = l[1]; if (i === 3) { sfx.pop(true); setTimeout(sfx.shimmer, 250); } }, t);
-            if (i < 3) for (var k = 0, per = [1600, 900, 450][i], span = i === 2 ? 2200 : 3200; k * per < span; k++) (function (d) { setTimeout(function () { sfx.beat(i); }, d); })(t + k * per);
+            at(function () { b.className = 'ic-b ' + l[0]; tease.textContent = l[1]; mus.level(Math.min(i + 1, 3)); mus.squeak(i >= 1 && i < 3 ? 1 : 0); if (i < 3) mus.lick(); vox.play(['ooh', 'oh', 'oh-yes', 'yes'][i]); if (i === 3) { sfx.pop(true); setTimeout(sfx.shimmer, 250); } }, t);
+            if (i < 3) for (var k = 0, per = [1600, 900, 450][i], span = i === 2 ? 2200 : 3200; k * per < span; k++) (function (d) { at(function () { sfx.beat(i); }, d); })(t + k * per);
             t += i === 2 ? 2200 : 3200;
           });
-          setTimeout(hero, t + 6000);
+          at(hero, t + 6000);
         }
         startHero = hero;
 
@@ -258,8 +370,8 @@
         function setP(p, m) { fill.style.width = p + '%'; pct.textContent = (p % 1 ? p.toFixed(p < 99.95 ? 1 : 2) : p) + '%'; msg.textContent = m; bar.setAttribute('aria-valuenow', String(p)); bar.classList.toggle('done', p === 100); }
         setP(0, 'Warming up…');
         onView($('ic-load'), function () {
-          var t = 300;
-          steps.forEach(function (s, i) { setTimeout(function () { setP(s[0], s[1]); if (s[0] === 100) { burst(40); setTimeout(function () { sfx.ahh(); sfx.coins(16); }, 200); } else if (s[0] >= 97) sfx.swell(300, 300 + s[0] * 6, 1.2, true); else if (s[0]) sfx.swell(200, 200 + s[0] * 4, 0.9); }, t); t += i < 3 ? 1100 : 1600; });
+          var t = 300, at = timeline(); mus.level(2);
+          steps.forEach(function (s, i) { at(function () { setP(s[0], s[1]); if (s[0] >= 97 && s[0] < 100) { mus.stall(true); mus.lick(); vox.play('come-on', 0.9); } else mus.level(s[0] === 100 ? 3 : 2); if (s[0] === 100) { burst(40); setTimeout(function () { sfx.ahh(); sfx.coins(16); }, 200); } else if (s[0] >= 97) sfx.swell(300, 300 + s[0] * 6, 1.2, true); else if (s[0]) sfx.swell(200, 200 + s[0] * 4, 0.9); }, t); t += i < 3 ? 1100 : 1600; });
         });
 
         // 3. The countdown that edges: 3, 2, 1, ½, ¼… then the burst.
@@ -267,12 +379,12 @@
         var seq = ['3', '2', '1', '½', '¼', '⅛', 'b'];
         function count() {
           again.classList.remove('on');
-          var t = 200;
+          var t = 200, at = timeline(); mus.level(3); mus.squeak(1);
           seq.forEach(function (s, i) {
-            setTimeout(function () {
+            at(function () {
               if (s === 'b') num.innerHTML = '<img src="/logo.svg" alt="b" class="ic-numb" />'; else num.textContent = s; num.classList.remove('pop');
-              if (s === 'b') { void num.offsetWidth; num.classList.add('pop'); burst(90); again.classList.add('on'); sfx.pop(true); setTimeout(sfx.fanfare, 380); setTimeout(function () { sfx.coins(50); }, 700); }
-              else { sfx.tick(i); if (i === 5) setTimeout(sfx.gulp, 450); }
+              if (s === 'b') { void num.offsetWidth; num.classList.add('pop'); burst(90); again.classList.add('on'); mus.squeak(0); mus.chorus(8); vox.play('climax', 0.12); setTimeout(function () { vox.play('sigh'); }, 4200); sfx.pop(true); setTimeout(sfx.fanfare, 380); setTimeout(function () { sfx.coins(50); }, 700); }
+              else { sfx.tick(i); mus.squeak(i < 2 ? 1 : i < 4 ? 2 : 3); if (i >= 3) vox.play('pant'); if (i === 5) { setTimeout(sfx.gulp, 450); setTimeout(function () { mus.stall('hush'); }, 700); } }
             }, t);
             t += i < 3 ? 650 : (i === 5 ? 2000 : 450); // speeds up, then holds its breath before b
           });
@@ -280,6 +392,7 @@
         num.textContent = '3';
         onView($('ic-count'), count);
         again.addEventListener('click', function () { sfx.ooh(); count(); });
+        onView($('ic-end'), function () { vox.play('sigh'); });
 
         // A shower of gold sats from the middle of the screen. Fixed layer, transforms only.
         var layer = $('ic-sats');
