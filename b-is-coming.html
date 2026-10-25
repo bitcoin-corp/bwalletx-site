@@ -88,13 +88,36 @@
       .jb-series a { color: #b9c6d6; }
       .jb-series span { color: #3e4756; }
 
+      .ic-snd { position: fixed; top: 14px; right: 14px; z-index: 30; display: flex; align-items: center; gap: 8px; height: 44px; padding: 0 14px; border-radius: 999px; border: 1px solid rgba(255, 255, 255, 0.35); background: rgba(5, 8, 15, 0.6); -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px); color: #fff; font: 600 0.72rem var(--hf); letter-spacing: 0.16em; text-transform: uppercase; cursor: pointer; }
+      .ic-snd[aria-pressed="true"] { background: radial-gradient(circle at 35% 30%, #ffe48a, #f5b800 55%, #c98f00); color: #0b0a08; border-color: transparent; box-shadow: 0 8px 30px rgba(245, 184, 0, 0.45); }
+      .ic-snd:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
+      .ic-snd .off-x { display: inline; } .ic-snd[aria-pressed="true"] .off-x { display: none; }
+      /* The gate (owner, 25 Oct): one big gold speaker to enter; content stays underneath for crawlers. */
+      .ic-gate { position: fixed; inset: 0; z-index: 40; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 20px; padding: 0 16px; background: rgba(5, 8, 15, 0.82); -webkit-backdrop-filter: blur(24px); backdrop-filter: blur(24px); transition: opacity 1.2s ease, visibility 1.2s; text-align: center; }
+      .ic-gate.off { opacity: 0; visibility: hidden; pointer-events: none; }
+      .ic-gate-go { display: flex; flex-direction: column; align-items: center; gap: 20px; border: 0; padding: 0; background: none; cursor: pointer; color: #fff; font: 700 clamp(1.1rem, 4vw, 1.4rem) var(--hf); letter-spacing: 0.08em; text-transform: uppercase; }
+      .ic-gate-go .spk { position: relative; width: 132px; height: 132px; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #0b0a08; background: radial-gradient(circle at 35% 30%, #ffe48a, #f5b800 55%, #c98f00); box-shadow: 0 18px 60px rgba(245, 184, 0, 0.45), inset 0 2px 0 rgba(255, 255, 255, 0.5); animation: gpulse 2.6s ease-in-out infinite; transition: transform 0.4s ease; }
+      .ic-gate-go .spk::before { content: ''; position: absolute; inset: -10px; border-radius: 50%; border: 2px solid rgba(255, 210, 77, 0.7); animation: gring 2.6s ease-out infinite; }
+      .ic-gate-go:hover .spk, .ic-gate-go:focus-visible .spk { transform: scale(1.08); }
+      .ic-gate-go:focus-visible { outline: none; } .ic-gate-go:focus-visible .spk { outline: 3px solid #fff; outline-offset: 6px; }
+      .ic-quiet { border: 0; background: none; color: #7f8b9b; font: 400 0.85rem var(--hf); text-decoration: underline; cursor: pointer; padding: 8px; }
+      .ic-quiet:hover, .ic-quiet:focus-visible { color: #fff; }
+      @keyframes gpulse { 0%, 100% { box-shadow: 0 18px 60px rgba(245, 184, 0, 0.4); } 50% { box-shadow: 0 18px 90px rgba(245, 184, 0, 0.8); } }
+      @keyframes gring { from { transform: scale(0.92); opacity: 0.9; } to { transform: scale(1.35); opacity: 0; } }
+      body.gated { overflow: hidden; }
+      @media (prefers-reduced-motion: reduce) { .ic-gate-go .spk, .ic-gate-go .spk::before { animation: none; } }
       @media (prefers-reduced-motion: reduce) {
         .ic-b img, .ic-b::after, .ic-num.pop { animation: none !important; }
         .ic-bar i { transition: none; }
       }
     </style>
   </head>
-  <body class="jb">
+  <body class="jb gated">
+    <div class="ic-gate" id="ic-gate" role="dialog" aria-label="Enter b is coming">
+      <button type="button" class="ic-gate-go" id="ic-gate-go"><span class="spk"><svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M11 5 6 9H3v6h3l5 4z" fill="currentColor"></path><path d="M15.5 8.5a5 5 0 0 1 0 7"></path><path d="M18.5 5.5a9 9 0 0 1 0 13"></path></svg></span><span>Turn it up 🔊</span></button>
+      <button type="button" class="ic-quiet" id="ic-quiet">or enter quietly</button>
+    </div>
+    <button type="button" class="ic-snd" id="ic-snd" aria-pressed="false" aria-label="Turn sound on"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M11 5 6 9H3v6h3l5 4z"></path><path d="M15.5 8.5a5 5 0 0 1 0 7"></path><path class="off-x" d="M21 4 4 21"></path></svg><span id="ic-snd-l">Sound</span></button>
     <section class="ic-scene ic-hero">
       <div class="ic-b" id="ic-b"><img src="/logo.svg" alt="b" width="148" height="200" /></div>
       <h1 class="ic-h1">Bitcoin is<br /><em>coming</em>.</h1>
@@ -137,6 +160,72 @@
       (function () {
         var reduce = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
         var $ = function (id) { return document.getElementById(id); };
+        // Sound effects: all synthesised with Web Audio, off by default, choice remembered.
+        var sfx = (function () {
+          var ctx = null, master = null, on = false, btn = $('ic-snd'), lab = $('ic-snd-l');
+          function init() { if (ctx) return; var AC = window.AudioContext || window.webkitAudioContext; if (!AC) return; ctx = new AC(); master = ctx.createGain(); master.gain.value = 0.7; var comp = ctx.createDynamicsCompressor(); comp.threshold.value = -14; comp.knee.value = 10; comp.ratio.value = 8; comp.attack.value = 0.003; comp.release.value = 0.2; master.connect(comp); comp.connect(ctx.destination); }
+          function set(v, save) {
+            on = v; btn.setAttribute('aria-pressed', String(v)); btn.setAttribute('aria-label', v ? 'Turn sound off' : 'Turn sound on'); lab.textContent = v ? 'Sound on' : 'Sound';
+            if (v) { init(); if (ctx && ctx.state === 'suspended') ctx.resume(); }
+            if (save) { try { localStorage.setItem('ic-sound', v ? '1' : '0'); } catch (e) {} }
+          }
+          try { if (localStorage.getItem('ic-sound') === '1') { on = true; btn.setAttribute('aria-pressed', 'true'); lab.textContent = 'Sound on'; } } catch (e) {}
+          // A remembered "on" still needs a gesture before the browser lets audio play: the first tap anywhere wakes it.
+          document.addEventListener('pointerdown', function () { if (on) set(true); }, { once: true });
+          btn.addEventListener('click', function () { set(!on || !ctx, true); if (on) S.pop(); });
+          function ok() { return on && ctx && ctx.state === 'running'; }
+          function tone(type, f0, f1, t0, dur, vol, glide) {
+            var o = ctx.createOscillator(), g = ctx.createGain(), t = ctx.currentTime + (t0 || 0);
+            o.type = type; o.frequency.setValueAtTime(f0, t); if (f1) o.frequency[glide === 'lin' ? 'linearRampToValueAtTime' : 'exponentialRampToValueAtTime'](f1, t + dur);
+            g.gain.setValueAtTime(0.0001, t); g.gain.exponentialRampToValueAtTime(vol || 0.3, t + Math.min(0.02, dur / 4)); g.gain.exponentialRampToValueAtTime(0.0001, t + dur);
+            o.connect(g); g.connect(master); o.start(t); o.stop(t + dur + 0.05); return { o: o, g: g, t: t };
+          }
+          function noise(t0, dur, vol, freq) {
+            var n = ctx.sampleRate * dur, buf = ctx.createBuffer(1, n, ctx.sampleRate), d = buf.getChannelData(0);
+            for (var i = 0; i < n; i++) d[i] = (Math.random() * 2 - 1) * (1 - i / n);
+            var src = ctx.createBufferSource(), f = ctx.createBiquadFilter(), g = ctx.createGain(), t = ctx.currentTime + (t0 || 0);
+            src.buffer = buf; f.type = 'bandpass'; f.frequency.value = freq || 1500; g.gain.value = vol || 0.3;
+            src.connect(f); f.connect(g); g.connect(master); src.start(t);
+          }
+          var S = {};
+          // Wobbly vibrato on any tone.
+          function wob(x, rate, depth) { var l = ctx.createOscillator(), lg = ctx.createGain(); l.frequency.value = rate; lg.gain.value = depth; l.connect(lg); lg.connect(x.o.frequency); l.start(x.t); l.stop(x.t + 3); }
+          function boing(t0, f) { var x = tone('sine', f || 160, (f || 160) * 2.2, t0, 0.45, 0.4); wob(x, 18, 40); }
+          function wahwah(t0) { [[311, 294], [294, 277], [277, 233]].forEach(function (n, i) { var d = i === 2 ? 1.0 : 0.32, x = tone('sawtooth', n[0], n[1], t0 + i * 0.36, d, 0.14, 'lin'); if (i === 2) wob(x, 6, 10); }); }
+          function pfft(t0) { var x = tone('sawtooth', 120, 60, t0, 0.5, 0.18); wob(x, 30, 25); noise(t0, 0.45, 0.25, 300); }
+          // Heartbeat with a bouncy kazoo buzz; higher and quicker each round.
+          S.beat = function (lvl) { if (!ok()) return; var f = 140 + lvl * 60, x = tone('sawtooth', f, f * 1.25, 0, 0.16, 0.12, 'lin'); wob(x, 25, 12); tone('sine', 70 + lvl * 15, 45, 0, 0.18, 0.5); var y = tone('sawtooth', f * 1.25, f * 1.5, 0.18 - lvl * 0.04, 0.12, 0.1, 'lin'); wob(y, 25, 12); };
+          S.pop = function (big) { if (!ok()) return; tone('sine', big ? 1400 : 900, 90, 0, big ? 0.2 : 0.12, big ? 1 : 0.6); noise(0, big ? 0.15 : 0.08, big ? 0.9 : 0.5, 2500); if (big) noise(0.02, 0.4, 0.3, 6000); };
+          S.shimmer = function () { if (!ok()) return; [1568, 1976, 2349, 2637, 3136, 3951].forEach(function (f, i) { tone('triangle', f, 0, 0.12 + i * 0.06, 0.8, 0.1); }); boing(0.1, 220); };
+          // Rising swell with a boing spring and wobble; near-misses deflate after a beat.
+          S.swell = function (from, to, dur, fall) { if (!ok()) return; var x = tone('square', from, to, 0, dur, 0.08, 'lin'); wob(x, 7, 14); var y = tone('sine', from * 2, to * 2, 0, dur, 0.1, 'lin'); wob(y, 7, 20); boing(dur * 0.4, from * 0.8); if (fall) { if (Math.random() < 0.5) wahwah(dur + 0.15); else pfft(dur + 0.15); } };
+          S.ahh = function () { if (!ok()) return; [262, 330, 392, 523].forEach(function (f) { var x = tone('triangle', f, 0, 0.2, 1.8, 0.12); wob(x, 5, 4); }); };
+          S.coins = function (n) { if (!ok()) return; for (var i = 0; i < n; i++) { var f = 2200 + Math.random() * 2200, t = i * 0.06 + Math.random() * 0.05; tone('square', f, 0, t, 0.08, 0.06); tone('sine', f * 1.5, 0, t + 0.01, 0.14, 0.07); } };
+          // Squeaky ticks, higher as they go.
+          S.tick = function (i) { if (!ok()) return; var f = 1600 + i * 450; tone('square', f, f * 1.4, 0, 0.05, 0.14); tone('sine', f * 2, 0, 0.02, 0.04, 0.08); };
+          S.gulp = function () { if (!ok()) return; var x = tone('sine', 420, 140, 0.05, 0.22, 0.45); tone('sine', 300, 520, 0.28, 0.08, 0.25); };
+          // Party horn, a noise-burst "yaaay" with a chord under it.
+          S.fanfare = function () { if (!ok()) return;
+            var h = tone('sawtooth', 380, 520, 0, 0.7, 0.16, 'lin'); wob(h, 14, 25);
+            for (var i = 0; i < 6; i++) noise(0.35 + i * 0.08 + Math.random() * 0.05, 1.2, 0.18, 700 + Math.random() * 1500);
+            [523, 659, 784, 1046].forEach(function (f) { var x = tone('sawtooth', f, 0, 0.4, 1.6, 0.05); wob(x, 5, 6); });
+          };
+          S.ooh = function () { if (!ok()) return; tone('sine', 400, 1800, 0, 0.55, 0.3, 'lin'); boing(0.75, 180); };
+          S.set = function (v) { set(v, true); };
+          return S;
+        })();
+
+        // The gate: nothing plays until the visitor enters, so the first sound lands on the first pulse.
+        var gateEl = $('ic-gate'), entered = false, startHero = null;
+        function enter(loud) {
+          if (entered) return; entered = true;
+          sfx.set(loud); gateEl.classList.add('off'); document.body.classList.remove('gated');
+          if (startHero) setTimeout(startHero, 300);
+        }
+        $('ic-gate-go').addEventListener('click', function () { enter(true); });
+        $('ic-quiet').addEventListener('click', function () { enter(false); });
+        $('ic-gate-go').focus();
+
         // Reduced motion: the markup already shows every payoff (arrived b, 100%, b). Nothing to animate.
         if (reduce) return;
 
@@ -146,12 +235,13 @@
         function hero() {
           var t = 0;
           lines.forEach(function (l, i) {
-            setTimeout(function () { b.className = 'ic-b ' + l[0]; tease.textContent = l[1]; }, t);
+            setTimeout(function () { b.className = 'ic-b ' + l[0]; tease.textContent = l[1]; if (i === 3) { sfx.pop(true); setTimeout(sfx.shimmer, 250); } }, t);
+            if (i < 3) for (var k = 0, per = [1600, 900, 450][i], span = i === 2 ? 2200 : 3200; k * per < span; k++) (function (d) { setTimeout(function () { sfx.beat(i); }, d); })(t + k * per);
             t += i === 2 ? 2200 : 3200;
           });
           setTimeout(hero, t + 6000);
         }
-        hero();
+        startHero = hero;
 
         // Run a scene once when it scrolls into view.
         function onView(el, fn) {
@@ -167,7 +257,7 @@
         setP(0, 'Warming up…');
         onView($('ic-load'), function () {
           var t = 300;
-          steps.forEach(function (s, i) { setTimeout(function () { setP(s[0], s[1]); if (s[0] === 100) burst(40); }, t); t += i < 3 ? 1100 : 1600; });
+          steps.forEach(function (s, i) { setTimeout(function () { setP(s[0], s[1]); if (s[0] === 100) { burst(40); setTimeout(function () { sfx.ahh(); sfx.coins(16); }, 200); } else if (s[0] >= 97) sfx.swell(300, 300 + s[0] * 6, 1.2, true); else if (s[0]) sfx.swell(200, 200 + s[0] * 4, 0.9); }, t); t += i < 3 ? 1100 : 1600; });
         });
 
         // 3. The countdown that edges: 3, 2, 1, ½, ¼… then the burst.
@@ -179,14 +269,15 @@
           seq.forEach(function (s, i) {
             setTimeout(function () {
               num.textContent = s; num.classList.remove('pop');
-              if (s === 'b') { void num.offsetWidth; num.classList.add('pop'); burst(90); again.classList.add('on'); }
+              if (s === 'b') { void num.offsetWidth; num.classList.add('pop'); burst(90); again.classList.add('on'); sfx.pop(true); setTimeout(sfx.fanfare, 380); setTimeout(function () { sfx.coins(50); }, 700); }
+              else { sfx.tick(i); if (i === 5) setTimeout(sfx.gulp, 450); }
             }, t);
-            t += i < 3 ? 900 : 1300;
+            t += i < 3 ? 650 : (i === 5 ? 2000 : 450); // speeds up, then holds its breath before b
           });
         }
         num.textContent = '3';
         onView($('ic-count'), count);
-        again.addEventListener('click', count);
+        again.addEventListener('click', function () { sfx.ooh(); count(); });
 
         // A shower of gold sats from the middle of the screen. Fixed layer, transforms only.
         var layer = $('ic-sats');
