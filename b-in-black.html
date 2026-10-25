@@ -42,6 +42,7 @@
       .bb-sub { position: relative; margin: 22px 0 0; font: 400 clamp(0.95rem, 2.6vw, 1.15rem) var(--hf); letter-spacing: 0.22em; text-transform: uppercase; color: #8a8c92; }
       .bb-in { opacity: 0; transform: translateY(10px); animation: bbrise 2.4s 0.6s ease forwards; }
       .bb-sub.bb-in { animation-delay: 1.8s; }
+      .bb-tm { font-size: 2.4em; letter-spacing: 0; vertical-align: -0.05em; margin-left: 0.08em; }
       .bb-soon { position: relative; margin: 16px 0 0; font: 500 clamp(0.7rem, 1.8vw, 0.82rem) var(--hf); letter-spacing: 0.42em; text-transform: uppercase; color: #a9abb0; padding-left: 0.42em; }
       .bb-soon.bb-in { animation-delay: 1.2s; }
       @keyframes bbrise { to { opacity: 1; transform: none; } }
@@ -127,7 +128,7 @@
         <svg class="bb-refl" viewBox="23 8 74 100" aria-hidden="true"><use href="#bbShape" /></svg>
       </div>
       <h1 class="bb-in">b black.</h1>
-      <p class="bb-soon bb-in">soon&trade;</p>
+      <p class="bb-soon bb-in">soon<span class="bb-tm">&trade;</span></p>
     </section>
 
     <section class="bb-calm">
