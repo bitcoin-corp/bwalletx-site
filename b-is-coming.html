@@ -559,7 +559,7 @@
           'vec3 L=normalize(vec3(-.4,.6,.7));float spec=pow(max(dot(reflect(-L,N),vec3(0,0,1)),0.),38.);' +
           'float sheen=pow(max(dot(N,normalize(vec3(.3,.2,1.))),0.),6.);' +
           'float gx=exp(-pow((s.x-.5)*3.2,2.))*exp(-y*2.2);' +
-          'vec3 col=vec3(.014,.014,.018)+vec3(.09,.095,.115)*sheen+vec3(.7,.71,.76)*spec*.7+vec3(.96,.72,0.)*.35*gx*(.6+.4*sheen);' +
+          'vec3 col=vec3(.10,.012,.045)+vec3(.42,.06,.22)*sheen+vec3(1.,.45,.75)*spec*.85+vec3(.96,.72,0.)*.35*gx*(.6+.4*sheen);' +
           'float a=smoothstep(0.,.35,y)*.92;gl_FragColor=vec4(col*a,a);}';
         function sh(t, s) { var o = gl.createShader(t); gl.shaderSource(o, s); gl.compileShader(o); return o; }
         var pr = gl.createProgram(); gl.attachShader(pr, sh(gl.VERTEX_SHADER, V)); gl.attachShader(pr, sh(gl.FRAGMENT_SHADER, F)); gl.linkProgram(pr);
