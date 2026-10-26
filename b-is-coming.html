@@ -5,21 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>b is coming</title>
     <link rel="canonical" href="https://bwalletx.com/b-is-coming" />
-    <meta name="description" content="b is coming. Almost. Just b." />
+    <meta name="description" content="b is coming." />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://bwalletx.com/b-is-coming" />
     <meta property="og:site_name" content="bWalletX" />
     <meta property="og:title" content="b is coming" />
-    <meta property="og:description" content="b is coming. Building. Almost there…" />
-    <meta property="og:image" content="https://bwalletx.com/og-b-is-coming-v3.png" />
+    <meta property="og:description" content="b is coming." />
+    <meta property="og:image" content="https://bwalletx.com/og-b-is-coming-v4.png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
-    <meta property="og:image:alt" content="A glowing gold b, almost here: b is coming." />
+    <meta property="og:image:alt" content="A glowing gold b: b is coming." />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@bWalletX" />
     <meta name="twitter:title" content="b is coming" />
-    <meta name="twitter:description" content="b is coming. Building. Almost there…" />
-    <meta name="twitter:image" content="https://bwalletx.com/og-b-is-coming-v3.png" />
+    <meta name="twitter:description" content="b is coming." />
+    <meta name="twitter:image" content="https://bwalletx.com/og-b-is-coming-v4.png" />
     <meta name="theme-color" content="#05080f" />
     <link rel="icon" href="/favicon.ico" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -177,32 +177,28 @@
       <div class="ic-fx" id="ic-fx" aria-hidden="true"><i class="ic-blob" style="--x:18%;--y:28%;--s:46vmax;--c:#ff2d7a;--d:23s"></i><i class="ic-blob" style="--x:82%;--y:70%;--s:52vmax;--c:#e0162b;--d:29s"></i><i class="ic-blob" style="--x:60%;--y:18%;--s:38vmax;--c:#ff5fa2;--d:19s"></i><canvas id="ic-pool"></canvas><canvas id="ic-waves"></canvas></div>
       <div class="ic-b" id="ic-b"><img src="/logo.svg" alt="b" width="148" height="200" /></div>
       <h1 class="ic-h1">b is <em>coming</em>.</h1>
-      <p class="ic-tease" id="ic-tease" aria-live="polite">Building…</p>
+      <p class="ic-tease" id="ic-tease" aria-live="polite"></p>
       <p class="ic-say" id="ic-say" aria-live="polite"></p>
       <p class="ic-hint" aria-hidden="true">Keep going ↓</p>
     </section>
 
     <section class="ic-scene ic-load" id="ic-load">
-      <h2>Getting there…</h2>
-      <div class="ic-bar" id="ic-bar" role="progressbar" aria-label="b arriving" aria-valuemin="0" aria-valuemax="100" aria-valuenow="99.9"><i></i></div>
+            <div class="ic-bar" id="ic-bar" role="progressbar" aria-label="b arriving" aria-valuemin="0" aria-valuemax="100" aria-valuenow="99.9"><i></i></div>
       <p class="ic-pct" id="ic-pct">99.9%</p>
-      <p class="ic-msg" id="ic-msg" aria-live="polite">Almost…</p>
+      <p class="ic-msg" id="ic-msg" aria-live="polite"></p>
     </section>
 
     <section class="ic-scene ic-count" id="ic-count">
-      <h2>Brace yourself.</h2>
-      <div class="ic-num" id="ic-num" aria-live="polite"><img src="/logo.svg" alt="b" class="ic-numb" /></div>
+            <div class="ic-num" id="ic-num" aria-live="polite"><img src="/logo.svg" alt="b" class="ic-numb" /></div>
     </section>
 
     <section class="ic-calm">
-      <p class="ic-lead">Almost. <em>Here.</em></p>
-      <p><strong>Don’t fake it. Self-custody.</strong> Your keys stay on your device. Nobody else holds them, nobody else can spend for you.</p>
+            <p><strong>Don’t fake it. Self-custody.</strong> Your keys stay on your device. Nobody else holds them, nobody else can spend for you.</p>
       <p><strong>Take it slow.</strong> Pay by the second for what you watch, read or hear, and stop whenever you like.</p>
       <p><strong>Lock it away.</strong> Set some aside and let time hold it for you, untouchable until the day you chose.</p>
       <p><strong>Spread the love.</strong> Tip the people who make the things you enjoy. Every penny goes to them.</p>
       <p><strong>Ready when you are.</strong> On the web, as a Chrome extension, on Android, and on iPhone through TestFlight.</p>
-      <p class="ic-lead">Not yet. <em style="display:block">Stay close.</em></p>
-    </section>
+          </section>
 
     <div class="ic-cta"><a class="jb-go" href="/get?from=b-is-coming">Get bWalletX</a></div>
     <div class="ic-sats" id="ic-sats" aria-hidden="true"></div>
@@ -450,8 +446,8 @@
 
         // 1. The hero b builds up, faster and brighter, flares almost there, then pulls back and loops. It never arrives (owner, 26 Oct).
         var b = $('ic-b'), tease = $('ic-tease');
-        var lines = [['build', 'Building…'], ['build2', 'Almost there…'], ['build3', 'Almost…'], ['near', 'So close.']];
-        var pass = 0, NEAR = ['Almost.', 'So close.', 'Not yet.', 'Stay close.'];
+        var lines = [['build', ''], ['build2', ''], ['build3', ''], ['near', '']];
+        var pass = 0, NEAR = [''];
         function hero() {
           pass++; bEl.style.setProperty('--near', Math.min(1.1 + pass * 0.05, 1.45)); bEl.style.setProperty('--glo', Math.min(90 + pass * 30, 260) + 'px'); lines[3][1] = NEAR[(pass - 1) % NEAR.length];
           var t = 0, at = timeline(); heroT0 = performance.now() + mus.nextBeatMs(); mus.swell(BUILD); if (performance.now() - lastHero > LOOP) { bs = 0.12; bo = 0; } lastHero = performance.now(); heroEl.classList.add('hush');
@@ -478,11 +474,11 @@
 
         // 2. The loading bar that keeps stopping just short.
         var loadPass = 0, bar = $('ic-bar'), fill = bar.querySelector('i'), pct = $('ic-pct'), msg = $('ic-msg');
-        var steps = [[0, 'Warming up…'], [42, 'Getting there…'], [87, 'Nearly…'], [97, 'Don’t stop now…'], [99, 'Almost…'], [99.9, 'Almost…'], [99.99, 'Hold on…'], [0, 'Not yet.']];
+        var steps = [[0, ''], [42, ''], [87, ''], [97, ''], [99, ''], [99.9, ''], [99.99, ''], [0, '']];
         function setP(p, m) { fill.style.width = p + '%'; pct.textContent = String(p) + '%'; msg.textContent = m; bar.setAttribute('aria-valuenow', String(p)); bar.classList.toggle('done', p === 100); }
-        setP(0, 'Warming up…');
+        setP(0, '');
         onView($('ic-load'), function loadRun() {
-          loadPass = (loadPass || 0) + 1; steps[6][0] = +(100 - Math.pow(10, -1 - loadPass)).toFixed(loadPass + 1); steps[6][1] = ['Hold on…', 'Nearly…', 'So close…', 'Almost.'][(loadPass - 1) % 4];
+          loadPass = (loadPass || 0) + 1; steps[6][0] = +(100 - Math.pow(10, -1 - loadPass)).toFixed(loadPass + 1); 
           var t = 300, at = timeline(); mus.level(2);
           steps.forEach(function (s, i) { at(function () { setP(s[0], s[1]); if (s[0] >= 97 && s[0] < 100) { mus.stall(true); mus.lick(); vox.play('come-on', 0.9); } else mus.level(s[0] === 100 ? 3 : 2); if (s[0] === 100) { burst(40); setTimeout(function () { sfx.ahh(); sfx.coins(16); }, 200); } else if (s[0] >= 97) sfx.swell(300, 300 + s[0] * 6, 1.2, true); else if (s[0]) sfx.swell(200, 200 + s[0] * 4, 0.9); }, t); t += i < 3 ? 1100 : 1600; });
           at(loadRun, t + 2400); // back to the start: it never quite gets there
@@ -495,7 +491,7 @@
                     var t = 200, at = timeline(); mus.level(3); mus.squeak(1);
           seq.forEach(function (s, i) {
             at(function () {
-              if (s === '…') { num.innerHTML = '<img src="/logo.svg" alt="b, almost" class="ic-numb" style="opacity:.35;transform:scale(.7);transition:opacity 1.2s,transform 1.2s" />'; vox.play('climax-long'); mus.squeak(0); mus.stall('hush'); at(count, t + 8200); return; }
+              if (s === '…') { num.innerHTML = '<img src="/logo.svg" alt="b" class="ic-numb" style="opacity:.35;transform:scale(.7);transition:opacity 1.2s,transform 1.2s" />'; vox.play('climax-long'); mus.squeak(0); mus.stall('hush'); at(count, t + 8200); return; }
               if (s === 'b') num.innerHTML = '<img src="/logo.svg" alt="b" class="ic-numb" />'; else num.textContent = s; num.classList.remove('pop');
               if (s === 'b') { void num.offsetWidth; num.classList.add('pop'); burst(90); mus.squeak(0); mus.chorus(8); vox.play('climax', 0.12); setTimeout(function () { vox.play('sigh'); }, 4200); sfx.pop(true); setTimeout(sfx.fanfare, 380); setTimeout(function () { sfx.coins(50); }, 700); }
               else { sfx.tick(i); mus.squeak(i < 2 ? 1 : i < 4 ? 2 : 3); if (i >= 3) vox.play('pant'); if (i === 5) { setTimeout(sfx.gulp, 450); setTimeout(function () { mus.stall('hush'); }, 700); } }
