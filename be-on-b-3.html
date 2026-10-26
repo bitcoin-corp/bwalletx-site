@@ -123,7 +123,7 @@
       .t.br img { width: 100%; height: 100%; object-fit: contain; display: block; }
       .many .t { width: clamp(70px, 11vw, 140px); height: clamp(70px, 11vw, 140px); }
       .many .t.br { padding: clamp(10px, 1.7vw, 22px); }
-      /* Edge tiles beside the final slogan: small enough at 390px to stay clear of "be ON b". */
+      /* Edge tiles beside the final slogan: small enough at 390px to stay clear of "be on b". */
       .many.fin .t { width: clamp(50px, 8vw, 112px); height: clamp(50px, 8vw, 112px); }
       .many.fin .t.br { padding: clamp(8px, 1.3vw, 18px); }
       .t.side, .many .t.side, .many.fin .t.side { --sz: clamp(44px, 7vw, 120px); width: var(--sz); height: var(--sz); }
@@ -166,7 +166,7 @@
       <div class="flash" id="flash"></div>
       <div class="poster" id="poster">
         <div class="in">
-          <h1 class="slogan" data-slogan="be ON {L}"></h1>
+          <h1 class="slogan" data-slogan="be on {L}"></h1>
           <button type="button" class="play" id="play" aria-label="Play Your posts, on b, with sound"><svg viewBox="5 3 18 18" aria-hidden="true"><path d="M8 5.5v13l11-6.5z" fill="currentColor" /></svg></button>
           <p class="gate-l">Play it loud &middot; 0:33</p>
           <button type="button" class="quiet" id="quiet">Watch without sound</button>
@@ -186,7 +186,7 @@
       <p><strong>Bring your X timeline.</strong> Download your X archive and bring it into bChatX. Your posts come with you.</p>
       <p><strong>Bring your people.</strong> bchatx.com/migrate has invite pages for Facebook, LinkedIn, YouTube, Instagram, TikTok, Reddit, Threads, Bluesky and Pinterest.</p>
       <p><strong>Meet the BSV apps.</strong> Twetch, Peck and Treechat in the Feed, CoinGeek in bNews, your RelayX NFTs and Yours Wallet in bWalletX, and Hodlocker-style locks. Tip authors in BSV.</p>
-      <p class="lead">be ON b.</p>
+      <p class="lead">be on b.</p>
     </section>
 
     <section class="end">
@@ -247,7 +247,7 @@
         function comp(kind, list, sides) {
           var many = list.length > 8, pos = (kind === 'burst' || kind === 'into' || kind === 'swirl') && !many ? corners(list.length) : bands(list.length, !!sides);
           return '<div class="c-' + kind + (many ? ' many' : '') + (sides ? ' fin' : '') + '">' + list.map(function (n, i) { return one(n, i, pos[i]); }).join('') + (sides ? sides.map(function (n, k) {
-            // Edge tiles (owner, 26 Oct 2026): [TikTok] be ON b [WhatsApp], level with the slogan, pinned to the far edges.
+            // Edge tiles (owner, 26 Oct 2026): [TikTok] be on b [WhatsApp], level with the slogan, pinned to the far edges.
             return one(n, list.length + k, [k ? 96 : 4, 50], 'class:side;--x:' + (k ? 'calc(100% - 6px - var(--sz) / 2)' : 'calc(6px + var(--sz) / 2)') + ';');
           }).join('') : '') + '</div>';
         }
@@ -282,7 +282,7 @@
           { beat: 36, bg: bg('#2ee6d6', '#2a3fe0'), slogan: 'News', sub: 'CoinGeek headlines in bNews.', art: comp('swirl', ['CoinGeek', 'YouTube', 'LinkedIn', 'Facebook', 'X', 'Google', 'Treechat']) },
           { at: BREAK, bt: BB, bg: bg('#ff4d6d', '#7a0b3f'), slogan: 'Everyone, on {L}', sub: 'X, Facebook, LinkedIn, YouTube, Instagram, TikTok, Reddit, Threads, Bluesky, Pinterest: invite them in.', art: belts(['X', 'Facebook', 'LinkedIn', 'YouTube', 'Instagram', 'TikTok', 'Google'], BSV) + blast(36), hit: '#ffd24d' },
           { at: BREAK + 4 * BB, bt: BB, bg: bg('#ff9a3c', '#a3122f'), slogan: 'b is coming…', art: comp('into', ['X', 'Facebook', 'LinkedIn', 'YouTube', 'Instagram', 'TikTok', 'Google', 'Treechat']) },
-          { at: BACK, bg: bg('#5b2be0', '#12063a'), slogan: 'be ON {L}', art: comp('grid', EVERYONE.filter(function (n) { return n !== 'TikTok' && n !== 'WhatsApp'; }), ['TikTok', 'WhatsApp']) + blast(60), hit: '#fff', xl: true, cta: true }
+          { at: BACK, bg: bg('#5b2be0', '#12063a'), slogan: 'be on {L}', art: comp('grid', EVERYONE.filter(function (n) { return n !== 'TikTok' && n !== 'WhatsApp'; }), ['TikTok', 'WhatsApp']) + blast(60), hit: '#fff', xl: true, cta: true }
         ];
         var stage = document.getElementById('stage'), film = document.getElementById('film'), flash = document.getElementById('flash'), bar = document.getElementById('bar'), poster = document.getElementById('poster');
         stage.innerHTML = SCENES.map(function (s) {
