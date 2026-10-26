@@ -68,6 +68,9 @@
       .t.app { background: #fff; border: 3px solid rgba(255,255,255,.9); padding: clamp(5px, .8vw, 9px); overflow: hidden; box-shadow: 0 18px 40px rgba(0,0,0,.35); }
       .t.app img { width: 100%; height: 100%; object-fit: contain; display: block; border-radius: 20%; }
       .t.wm { display: flex; align-items: center; justify-content: center; background: #1b1340; color: #ffd24d; border: 3px solid rgba(255,255,255,.9); font: 700 clamp(1rem, 2.6vw, 1.9rem) var(--hf); letter-spacing: -0.03em; box-shadow: 0 18px 40px rgba(0,0,0,.35); }
+      /* Brand tiles: simple-icons 13.21.0 (CC0) marks from /img/brands, in each brand's colour on a white tile. */
+      .t.br { background: #fff; border: 3px solid rgba(255,255,255,.9); padding: clamp(14px, 2.4vw, 30px); box-shadow: 0 18px 40px rgba(0,0,0,.35); }
+      .t.br img { width: 100%; height: 100%; object-fit: contain; display: block; }
       /* Name tiles: plain words in our font on our colours. No official logos, glyphs or brand colours. */
       .t.nm { display: flex; align-items: center; justify-content: center; width: auto; min-width: clamp(100px, 18vw, 190px); padding: 0 .4em; background: var(--c); color: #140a33; font: 700 clamp(1.25rem, 3.6vw, 2.8rem) var(--hf); letter-spacing: -0.03em; box-shadow: 0 18px 40px rgba(0,0,0,.25); }
       .t.nm.big { font-size: clamp(2.4rem, 7vw, 5rem); }
@@ -162,7 +165,7 @@
       </div>
     </section>
     <p class="foot"><a href="/just-b">just b</a> · <a href="/b-is-for-business">b is for business</a> · <a href="/on-b">your apps on b</a> · <a href="/b-on-b">b on b</a> · <a href="/b-on-b-2" aria-current="page">b on b, again</a></p>
-    <p class="foot">bWalletX is in beta: test with small amounts. App names belong to their owners; the &ldquo;everything on b&rdquo; line is a joke and a wish, not a partnership. <a href="mailto:support@bwalletx.com">support@bwalletx.com</a></p>
+    <p class="foot">Names and logos belong to their owners. bChatX is not affiliated with them. bWalletX is in beta: test with small amounts. App names belong to their owners; the &ldquo;everything on b&rdquo; line is a joke and a wish, not a partnership. <a href="mailto:support@bwalletx.com">support@bwalletx.com</a></p>
 
     <script>
       (function () {
@@ -185,12 +188,17 @@
           return '<div class="t ' + cls + '" style="--x:' + p[0] + '%;--y:' + p[1] + '%;--fx:' + fx + ';--fy:' + fy + ';--r:' + (i % 2 ? -40 : 35) + 'deg;--d:' + (i * 0.03).toFixed(2) + ';' + (extra || '') + '">' + (inner || '') + '</div>';
         }
         // Every tile is a brand: the real logo from /img/apps, or the name as a wordmark when there is no logo file (Hodlocker).
-        var ALL = ['twetch.svg', 'relayx.png', 'coingeek.png', 'peck.png', 'treechat.svg', 'yours.png', 'Hodlocker'];
-        function apps(list) { return list.map(function (a, i) { return /\./.test(a) ? tile(i, 'app', '<img src="/img/apps/' + a + '" alt="" />') : tile(i, 'wm', esc(a)); }).join(''); }
-        function names() {
-          var n = [['X', '#ff9a3c'], ['LinkedIn', '#7cf06a'], ['Facebook', '#ff6ad5'], ['Google', '#2ee6d6']];
-          return n.map(function (v, i) { return tile(i, 'nm' + (v[0] === 'X' ? ' big' : ''), esc(v[0]), '--c:' + v[1]); }).join('');
-        }
+        // Big platforms: their real marks from /img/brands (simple-icons 13.21.0, CC0).
+        var BR = { X: 'x', Google: 'google', LinkedIn: 'linkedin', Facebook: 'facebook', YouTube: 'youtube', Instagram: 'instagram', TikTok: 'tiktok', Reddit: 'reddit', Discord: 'discord', Telegram: 'telegram', Twitch: 'twitch' };
+        function apps(list) { return list.map(function (a, i) {
+          if (BR[a]) return tile(i, 'br', '<img src="/img/brands/' + BR[a] + '.svg" alt="' + esc(a) + '" />');
+          return /\./.test(a) ? tile(i, 'app', '<img src="/img/apps/' + a + '" alt="" />') : tile(i, 'wm', esc(a));
+        }).join(''); }
+        // Six-tile mixes: BSV apps with two or three big platforms, so no screen is only BSV apps.
+        var MIX1 = ['twetch.svg', 'X', 'relayx.png', 'Instagram', 'treechat.svg', 'Google'];
+        var MIX2 = ['YouTube', 'yours.png', 'Twitch', 'peck.png', 'coingeek.png', 'Hodlocker'];
+        var MIX3 = ['twetch.svg', 'LinkedIn', 'yours.png', 'Facebook', 'relayx.png', 'X'];
+        function names() { return apps(['X', 'LinkedIn', 'Facebook', 'Google', 'YouTube', 'TikTok']); }
         var seed = 7; function rnd() { seed = (seed * 9301 + 49297) % 233280; return seed / 233280; }
         function blast(n) {
           var o = '<div class="ring"></div>';
@@ -201,21 +209,21 @@
         function bg(a, b) { return 'radial-gradient(circle at 50% 40%, ' + a + ', ' + b + ')'; }
         // beat: when it starts (in beats from the start of the cut). hit: a drop (flash + shake + blast).
         var SCENES = [
-          { beat: 0,  bg: bg('#ff4d6d', '#a3122f'), slogan: 'All your apps', art: apps(ALL) + blast(40), hit: '#fff' },
+          { beat: 0,  bg: bg('#ff4d6d', '#a3122f'), slogan: 'All your apps', art: apps(MIX1) + blast(40), hit: '#fff' },
           { beat: 4,  bg: bg('#9a6bff', '#4a1fd1'), slogan: 'on {L}', art: blast(30), xl: true },
-          { beat: 8,  bg: bg('#2ee6d6', '#087f78'), slogan: 'Read it', sub: 'Twetch, Peck and Treechat in the Feed.', art: apps(['twetch.svg', 'peck.png', 'treechat.svg']) + blast(24), hit: '#fff' },
-          { beat: 12, bg: bg('#ff9a3c', '#d63a1c'), slogan: 'Tip it', sub: 'Tip the authors in BSV.', art: apps(['peck.png', 'twetch.svg']) },
-          { beat: 16, bg: bg('#4da3ff', '#2a3fe0'), slogan: 'Bring it', sub: 'Yours Wallet comes in with your 12 words.', art: apps(['yours.png', 'relayx.png']) + blast(24), hit: '#fff' },
-          { beat: 20, bg: bg('#7c5cff', '#2b1a8f'), slogan: 'Find it', sub: 'Your RelayX NFTs, found on chain.', art: apps(['relayx.png']) },
-          { beat: 24, bg: bg('#7cf06a', '#169a4c'), slogan: 'Lock it', sub: 'Lock behind posts, Hodlocker-style.', art: apps(['Hodlocker']) + blast(24), hit: '#fff' },
-          { beat: 28, bg: bg('#ff6ad5', '#a21caf'), slogan: 'News', sub: 'CoinGeek headlines in bNews.', art: apps(['coingeek.png']) },
-          { beat: 32, bg: bg('#ffd24d', '#e0632e'), slogan: 'All of it.', art: apps(ALL) + blast(40), hit: '#fff' },
-          { beat: 36, bg: bg('#2ee6d6', '#2a3fe0'), slogan: 'One wallet.', art: apps(ALL) },
-          { beat: 40, bg: bg('#ff4d6d', '#5b2be0'), slogan: 'Your keys.', sub: 'Your BSV stays yours.', art: apps(ALL) },
+          { beat: 8,  bg: bg('#2ee6d6', '#087f78'), slogan: 'Read it', sub: 'Twetch, Peck and Treechat in the Feed.', art: apps(['twetch.svg', 'X', 'peck.png', 'Reddit', 'treechat.svg', 'Instagram']) + blast(24), hit: '#fff' },
+          { beat: 12, bg: bg('#ff9a3c', '#d63a1c'), slogan: 'Tip it', sub: 'Tip the authors in BSV.', art: apps(['peck.png', 'YouTube', 'twetch.svg', 'TikTok', 'Twitch']) },
+          { beat: 16, bg: bg('#4da3ff', '#2a3fe0'), slogan: 'Bring it', sub: 'Yours Wallet comes in with your 12 words.', art: apps(['yours.png', 'Google', 'relayx.png', 'Telegram', 'LinkedIn']) + blast(24), hit: '#fff' },
+          { beat: 20, bg: bg('#7c5cff', '#2b1a8f'), slogan: 'Find it', sub: 'Your RelayX NFTs, found on chain.', art: apps(['relayx.png', 'Instagram', 'Discord', 'Facebook']) },
+          { beat: 24, bg: bg('#7cf06a', '#169a4c'), slogan: 'Lock it', sub: 'Lock behind posts, Hodlocker-style.', art: apps(['Hodlocker', 'X', 'YouTube', 'LinkedIn']) + blast(24), hit: '#fff' },
+          { beat: 28, bg: bg('#ff6ad5', '#a21caf'), slogan: 'News', sub: 'CoinGeek headlines in bNews.', art: apps(['coingeek.png', 'Google', 'X', 'YouTube']) },
+          { beat: 32, bg: bg('#ffd24d', '#e0632e'), slogan: 'All of it.', art: apps(MIX2) + blast(40), hit: '#fff' },
+          { beat: 36, bg: bg('#2ee6d6', '#2a3fe0'), slogan: 'One wallet.', art: apps(MIX3) },
+          { beat: 40, bg: bg('#ff4d6d', '#5b2be0'), slogan: 'Your keys.', sub: 'Your BSV stays yours.', art: apps(MIX1) },
           { beat: 44, bg: bg('#8b5cff', '#2b1a8f'), slogan: 'One day,' },
           { beat: 48, bg: bg('#ff4d6d', '#7a0b3f'), slogan: 'everything will {L} on {L}', art: names() + blast(36), hit: '#ffd24d' },
           { beat: 56, bg: bg('#ff9a3c', '#a3122f'), slogan: 'We can dream.', sub: 'A wish, not a deal.', art: names() },
-          { beat: 64, bg: bg('#5b2be0', '#12063a'), slogan: 'Not BNB, | {L} ON {L}', art: apps(ALL) + blast(60), hit: '#fff', xl: true, cta: true }
+          { beat: 64, bg: bg('#5b2be0', '#12063a'), slogan: 'Not BNB, | {L} ON {L}', art: apps(MIX2) + blast(60), hit: '#fff', xl: true, cta: true }
         ];
         var stage = document.getElementById('stage'), film = document.getElementById('film'), flash = document.getElementById('flash'), bar = document.getElementById('bar'), poster = document.getElementById('poster');
         stage.innerHTML = SCENES.map(function (s) {
