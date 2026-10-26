@@ -1,0 +1,317 @@
+<!doctype html>
+<!--
+  b on b 3 (26 Oct 2026): the X-migration campaign. Bring your X timeline (and the rest) to bChatX, on b. 32 s on Music (owner's pick): "Shattered Circuits (Alt)" by VexVoid, 117.5 BPM (0.5106 s a beat), 20.4 s from the 65.15 s hit;
+  a 5 s "Phantom Echoes (Alt)" break (95.7 BPM, 8 beats from its 40.43 s hit) for the "one day" moment;
+  then back into Shattered Circuits (Alt) at its 130.53 s hit for the final slam. Each part is loudness-matched to -11 LUFS. Scenes change every 2-6 beats; drops get a flash, shake and tile burst.
+  Flashes are rate-limited to at most 3 a second (photosensitivity) and are off under prefers-reduced-motion.
+  Test hooks: ?autoplay=silent, ?t=SECONDS, window.__film.
+-->
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Your posts, on b</title>
+    <meta name="description" content="Bring your X timeline to b. Move from X, Facebook, LinkedIn, YouTube and more to bChatX. Not BNB, b ON b." />
+    <link rel="canonical" href="https://bwalletx.com/b-on-b-3" />
+    <link rel="icon" href="/favicon.ico" />
+    <meta property="og:site_name" content="bWalletX" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://bwalletx.com/b-on-b-3" />
+    <meta property="og:title" content="Bring your X timeline to b" />
+    <meta property="og:description" content="Move from X, Facebook, LinkedIn, YouTube and more to bChatX. Your posts, on b." />
+    <meta property="og:image" content="https://bwalletx.com/og-b-on-b-3.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Bring your X timeline to b: the X, Facebook, LinkedIn, YouTube, Instagram, TikTok and Google marks with Twetch, Treechat, RelayX and more around the gold b." />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@bWalletX" />
+    <meta name="twitter:title" content="Bring your X timeline to b" />
+    <meta name="twitter:description" content="Move from X, Facebook, LinkedIn, YouTube and more to bChatX. Your posts, on b." />
+    <meta name="twitter:image" content="https://bwalletx.com/og-b-on-b-3.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" />
+    <style>
+      :root { --bg: #0d0b1f; --ink: #fff8e8; --gold: #ffd24d; --gold-hi: #ffe58a; --gold-lo: #c98f00; --gold-rgb: 255, 210, 77; --hf: 'Space Grotesk', system-ui, sans-serif; --beat: .5106s; }
+      * { box-sizing: border-box; }
+      html, body { margin: 0; background: var(--bg); color: var(--ink); overflow-x: clip; font-family: var(--hf); }
+      .film { position: relative; width: 100%; height: 100svh; min-height: 540px; overflow: hidden; background: #000; }
+      .stage { position: absolute; inset: 0; }
+      .film.shake .stage { animation: shake .32s cubic-bezier(.36,.07,.19,.97); }
+      @keyframes shake { 10%, 90% { transform: translate(-2px, 1px); } 20%, 80% { transform: translate(5px, -3px); } 30%, 50%, 70% { transform: translate(-9px, 4px) rotate(-.4deg); } 40%, 60% { transform: translate(9px, -4px) rotate(.4deg); } }
+      .scene { position: absolute; inset: 0; opacity: 0; pointer-events: none; clip-path: circle(0% at 50% 50%); }
+      .scene.on { opacity: 1; clip-path: circle(150% at 50% 50%); transition: clip-path .34s cubic-bezier(.6,0,.2,1); z-index: 1; }
+      .scene.was { opacity: 1; clip-path: circle(150% at 50% 50%); z-index: 0; }
+      .scene .bgz { position: absolute; inset: -6%; background: var(--bg-s); transform: scale(1.18); }
+      .scene.on .bgz { animation: punch .5s cubic-bezier(.2,1.6,.4,1) forwards; }
+      @keyframes punch { to { transform: scale(1); } }
+
+      .cap { position: absolute; left: 0; right: 0; top: 50%; transform: translateY(-50%); padding: 0 16px; text-align: center; z-index: 3; }
+      .slogan { margin: 0; display: flex; justify-content: center; align-items: center; flex-wrap: wrap; gap: 0 .2em; font: 700 clamp(3rem, 13vw, 10.5rem) / .95 var(--hf); letter-spacing: -0.05em; text-shadow: 0 6px 0 rgba(0,0,0,.18), 0 10px 50px rgba(20,8,60,.5); }
+      .slogan.xl { font-size: clamp(3.6rem, 17vw, 13rem); }
+      .slogan .w { display: inline-flex; align-items: center; }
+      .slogan .br { flex-basis: 100%; height: 0; }
+      .lb { display: block; height: .86em; width: auto; max-width: 1.2em; filter: drop-shadow(0 0 30px rgba(var(--gold-rgb), .6)); }
+      .scene.on .slogan { animation: slam .42s cubic-bezier(.1,.9,.2,1) both; }
+      @keyframes slam { 0% { transform: scale(3); opacity: 0; filter: blur(8px); } 55% { transform: scale(.94); opacity: 1; filter: none; } 75% { transform: scale(1.03); } 100% { transform: none; opacity: 1; } }
+      .scene.on .cap p { animation: subin .3s .22s ease-out both; }
+      @keyframes subin { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: none; } }
+      .cap p { margin: 18px auto 0; max-width: 620px; font: 600 clamp(1.05rem, 2.8vw, 1.45rem) / 1.4 var(--hf); color: #fff; text-shadow: 0 2px 14px rgba(20,8,60,.7); }
+      .sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+
+      /* Tiles burst out from the centre: they start stacked in the middle and fly to their spot with overshoot. */
+      .tiles { position: absolute; inset: 0; z-index: 2; }
+      .t { position: absolute; left: var(--x); top: var(--y); width: clamp(100px, 18vw, 190px); height: clamp(100px, 18vw, 190px); translate: -50% -50%; border-radius: 26%; opacity: 0; }
+      
+      @keyframes boom { 0% { opacity: 1; transform: translate(var(--fx), var(--fy)) scale(.15) rotate(var(--r)); } 100% { opacity: 1; transform: none; } }
+      @keyframes thump { 0% { scale: 1.07; } 60%, 100% { scale: 1; } }
+      .t.c { background: var(--c); box-shadow: 0 18px 40px rgba(0,0,0,.25); }
+      .t.app { background: #fff; border: 3px solid rgba(255,255,255,.9); padding: clamp(5px, .8vw, 9px); overflow: hidden; box-shadow: 0 18px 40px rgba(0,0,0,.35); }
+      .t.app img { width: 100%; height: 100%; object-fit: contain; display: block; border-radius: 20%; }
+      .t.wm { display: flex; align-items: center; justify-content: center; background: #1b1340; color: #ffd24d; border: 3px solid rgba(255,255,255,.9); font: 700 clamp(1rem, 2.6vw, 1.9rem) var(--hf); letter-spacing: -0.03em; box-shadow: 0 18px 40px rgba(0,0,0,.35); }
+      /* Name tiles: plain words in our font on our colours. No official logos, glyphs or brand colours. */
+      .t.nm { display: flex; align-items: center; justify-content: center; width: auto; min-width: clamp(100px, 18vw, 190px); padding: 0 .4em; background: var(--c); color: #140a33; font: 700 clamp(1.25rem, 3.6vw, 2.8rem) var(--hf); letter-spacing: -0.03em; box-shadow: 0 18px 40px rgba(0,0,0,.25); }
+      .t.nm.big { font-size: clamp(2.4rem, 7vw, 5rem); }
+      .cf { position: absolute; left: 50%; top: 50%; width: var(--s); height: var(--s); border-radius: var(--br); background: var(--c); opacity: 0; z-index: 2; }
+      .scene.on .cf { animation: blast .9s calc(var(--d) * 1s) cubic-bezier(.1,.8,.25,1) forwards; }
+      @keyframes blast { 0% { opacity: 1; transform: translate(-50%, -50%) scale(.4); } 75% { opacity: 1; } 100% { opacity: 0; transform: translate(-50%, -50%) rotate(var(--rot)) translate(var(--dx), var(--dy)) scale(1); } }
+      .ring { position: absolute; left: 50%; top: 50%; width: 40vmax; height: 40vmax; border-radius: 50%; border: 10px solid rgba(255,255,255,.8); translate: -50% -50%; opacity: 0; z-index: 2; }
+      .scene.on .ring { animation: shock .55s ease-out forwards; }
+      @keyframes shock { 0% { opacity: .9; transform: scale(.05); } 100% { opacity: 0; transform: scale(2.4); border-width: 1px; } }
+
+      .flash { position: absolute; inset: 0; z-index: 6; background: var(--fl, #fff); opacity: 0; pointer-events: none; }
+      .flash.go { animation: fl .16s ease-out; }
+      @keyframes fl { 0% { opacity: .85; } 100% { opacity: 0; } }
+
+      .getp { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; margin-top: 26px; }
+      .scene.on .getp a { pointer-events: auto; }
+      .cta { display: inline-block; padding: 18px 38px; border-radius: 999px; background: linear-gradient(180deg, var(--gold-hi), var(--gold)); color: #140a08; font: 700 1.1rem var(--hf); text-decoration: none; box-shadow: 0 14px 50px rgba(var(--gold-rgb), .4); transition: transform .15s ease-out; }
+      .cta2 { display: inline-block; padding: 17px 32px; border-radius: 999px; border: 2px solid rgba(255,255,255,.7); color: #fff; font: 700 1.05rem var(--hf); text-decoration: none; transition: background .15s ease-out; }
+      .cta:hover { transform: translateY(-2px); } .cta2:hover { background: rgba(255,255,255,.12); }
+      .cta:focus-visible, .cta2:focus-visible, .play:focus-visible, .quiet:focus-visible { outline: 3px solid #fff; outline-offset: 3px; }
+
+      .poster { position: absolute; inset: 0; z-index: 7; display: flex; align-items: center; justify-content: center; background: radial-gradient(circle at 25% 25%, #ff4d6d 0, transparent 40%), radial-gradient(circle at 78% 72%, #2ee6d6 0, transparent 42%), radial-gradient(circle at 50% 50%, #7b3cff, #1c0a4d); transition: opacity .25s ease; }
+      .poster.gone { opacity: 0; pointer-events: none; }
+      .poster .in { display: flex; flex-direction: column; align-items: center; gap: 24px; padding: 0 16px; text-align: center; }
+      .play { position: relative; width: 120px; height: 120px; padding-left: 8px; border: 0; border-radius: 50%; display: flex; align-items: center; justify-content: center; cursor: pointer; color: #140a08; background: radial-gradient(circle at 35% 30%, var(--gold-hi), var(--gold) 55%, var(--gold-lo)); box-shadow: 0 18px 60px rgba(var(--gold-rgb), .5), inset 0 2px 0 rgba(255,255,255,.5); animation: pulse var(--beat) ease-in-out infinite alternate; }
+      .play::before { content: ''; position: absolute; inset: -10px; border-radius: 50%; border: 2px solid rgba(var(--gold-rgb), .8); animation: pring 1s ease-out infinite; }
+      .play svg { width: 46px; height: 46px; }
+      @keyframes pulse { to { transform: scale(1.07); } }
+      @keyframes pring { from { transform: scale(.92); opacity: .9; } to { transform: scale(1.4); opacity: 0; } }
+      .gate-l { margin: -4px 0 0; font: 700 1rem var(--hf); letter-spacing: .16em; text-transform: uppercase; color: #fff; }
+      .quiet { background: none; border: 0; padding: 4px; font: 400 .85rem var(--hf); letter-spacing: .06em; color: rgba(255,255,255,.75); cursor: pointer; text-decoration: underline; text-underline-offset: 3px; }
+      .warn { margin: 0; font: 400 .75rem var(--hf); color: rgba(255,255,255,.7); }
+      .bar { position: absolute; left: 0; bottom: 0; height: 3px; width: 0; background: var(--gold-hi); z-index: 6; }
+      .snd { position: fixed; right: 14px; bottom: 14px; z-index: 8; display: none; gap: 4px; }
+      .started .snd { display: flex; }
+      .snd button { width: 44px; height: 44px; display: flex; align-items: center; justify-content: center; border: 0; border-radius: 50%; background: rgba(0,0,0,.25); color: rgba(255,255,255,.75); cursor: pointer; }
+      .snd button[aria-pressed="true"] { color: var(--gold-hi); }
+
+      .calm { max-width: 680px; margin: 0 auto; padding: 18vh 24px 16vh; text-align: center; color: #cfc6e8; font: 400 clamp(1.05rem, 2.4vw, 1.3rem) / 1.75 var(--hf); }
+      .calm p { margin: 0 0 2.2em; }
+      .calm .lead { font: 700 clamp(1.9rem, 6vw, 3.2rem) / 1.15 var(--hf); letter-spacing: -0.03em; color: #fff; margin-bottom: 1.4em; }
+      .calm strong { display: block; margin-bottom: .35em; color: #fff; font-weight: 600; font-size: 1.15em; }
+      .end { position: relative; min-height: 100svh; display: flex; align-items: center; justify-content: center; overflow: hidden; background: radial-gradient(circle at 20% 80%, #ff4d6d66, transparent 50%), radial-gradient(circle at 80% 20%, #2ee6d666, transparent 50%), radial-gradient(circle at 50% 50%, #5b2be0, #140a33); }
+      .end-in { position: relative; z-index: 1; text-align: center; padding: 0 16px; }
+      .end-in .slogan { font-size: clamp(2.6rem, 11vw, 6rem); margin-bottom: 26px; }
+      .credit { margin: 22px 0 0; font: 400 .8rem var(--hf); letter-spacing: .08em; color: rgba(255,255,255,.7); }
+      .foot { margin: 0; padding: 0 16px 22px; text-align: center; font-size: .75rem; color: #8a84a8; }
+      .foot a { color: #b0a9cc; }
+
+      /* b on b 3: compositions. Each scene arranges its tiles differently. */
+      .t.br { background: #fff; border: 3px solid rgba(255,255,255,.9); padding: clamp(14px, 2.4vw, 30px); box-shadow: 0 18px 40px rgba(0,0,0,.35); }
+      .t.br img { width: 100%; height: 100%; object-fit: contain; display: block; }
+      .many .t { width: clamp(70px, 11vw, 140px); height: clamp(70px, 11vw, 140px); }
+      .many .t.br { padding: clamp(10px, 1.7vw, 22px); }
+      .many .t.wm { font-size: clamp(.7rem, 1.6vw, 1.3rem); }
+      .scene.on .c-grid .t { animation: gslam .38s calc(var(--d) * 1s) cubic-bezier(.1,.9,.2,1) both, thump var(--beat) calc(.4s + var(--d) * 1s) ease-out infinite; }
+      @keyframes gslam { 0% { opacity: 0; transform: scale(2.8); } 60% { opacity: 1; transform: scale(.92); } 100% { opacity: 1; transform: none; } }
+      .scene.on .c-into .t { animation: suck 1.3s calc(.15s + var(--d) * 1s) cubic-bezier(.6,0,.9,.4) both; }
+      @keyframes suck { 0% { opacity: 1; transform: none; } 85% { opacity: 1; } 100% { opacity: 0; transform: translate(var(--fx), var(--fy)) scale(.08) rotate(240deg); } }
+      .c-swirl { position: absolute; inset: 0; }
+      .scene.on .c-swirl { animation: swirl .75s cubic-bezier(.15,.9,.3,1.15) both; }
+      @keyframes swirl { from { transform: rotate(-220deg) scale(.15); } to { transform: none; } }
+      .scene.on .c-swirl .t, .scene.on .c-pop .t, .scene.on .c-rain .t, .scene.on .c-walls .t { opacity: 1; }
+      .scene.on .c-swirl .t { animation: thump var(--beat) .75s ease-out infinite; }
+      .scene.on .c-rain .t { animation: rain .62s calc(var(--d) * 2s) cubic-bezier(.3,1.45,.55,1) both, thump var(--beat) calc(.7s + var(--d) * 2s) ease-out infinite; }
+      @keyframes rain { from { transform: translateY(-120vh) rotate(var(--r)); } to { transform: none; } }
+      .scene.on .c-walls .t { animation: walls .5s calc(var(--d) * 1s) cubic-bezier(.2,1.5,.4,1) both, thump var(--beat) .6s ease-out infinite; }
+      @keyframes walls { from { transform: translateX(var(--wx)); } to { transform: none; } }
+      .scene.on .c-pop .t { animation: pop3 .45s calc(var(--d) * 2s) cubic-bezier(.3,2,.5,1) both, thump var(--beat) calc(.5s + var(--d) * 2s) ease-out infinite; }
+      @keyframes pop3 { from { transform: scale(0) rotate(var(--r)); } to { transform: none; } }
+      .belt { position: absolute; left: 0; top: var(--y); display: flex; gap: clamp(12px, 2vw, 24px); width: max-content; translate: 0 -50%; z-index: 2; }
+      .belt .t { position: relative; left: auto; top: auto; translate: none; opacity: 1; flex: none; }
+      .scene.on .belt { animation: belt 3.2s linear infinite; }
+      .scene.on .belt.rev { animation-direction: reverse; }
+      @keyframes belt { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+      .scene.on .c-burst .t { animation: boom .62s calc(var(--d) * 1s) cubic-bezier(.17,1.75,.4,1) forwards, thump var(--beat) calc(.62s + var(--d) * 1s) ease-out infinite; }
+      @media (max-width: 480px) { .play { width: 104px; height: 104px; } .cap p { font-size: 1rem; } }
+      @media (prefers-reduced-motion: reduce) {
+        .film.shake .stage, .scene *, .poster *, .play::before { animation: none !important; }
+        .scene.on, .poster { transition: none; }
+        .flash, .cf, .ring { display: none !important; }
+        .t { opacity: 1 !important; transform: none !important; }
+        .scene .c-into .t { display: none; }
+      }
+    </style>
+  </head>
+  <body>
+    <section class="film" id="film" aria-label="Your posts, on b: a 33-second film">
+      <div class="stage" id="stage"></div>
+      <div class="flash" id="flash"></div>
+      <div class="poster" id="poster">
+        <div class="in">
+          <h1 class="slogan" data-slogan="{L} ON {L}"></h1>
+          <button type="button" class="play" id="play" aria-label="Play Your posts, on b, with sound"><svg viewBox="5 3 18 18" aria-hidden="true"><path d="M8 5.5v13l11-6.5z" fill="currentColor" /></svg></button>
+          <p class="gate-l">Play it loud &middot; 0:33</p>
+          <button type="button" class="quiet" id="quiet">Watch without sound</button>
+          <p class="warn">Fast cuts and flashes. Turned off if your device asks for reduced motion.</p>
+        </div>
+      </div>
+      <div class="bar" id="bar"></div>
+      <audio id="music" src="/audio/b-on-b-3-circuits-phantom.mp3" preload="auto"></audio>
+    </section>
+    <div class="snd">
+      <button type="button" id="mute" aria-pressed="false" aria-label="Mute music"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><path d="M11 5 6 9H3v6h3l5 4z"></path><path d="M15.5 8.5a5 5 0 0 1 0 7"></path></svg></button>
+      <button type="button" id="again" aria-label="Play again"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><path d="M3 12a9 9 0 1 0 3-6.7"></path><path d="M3 4v5h5"></path></svg></button>
+    </div>
+
+    <section class="calm">
+      <p class="lead">Your posts, on b.</p>
+      <p><strong>Bring your X timeline.</strong> Download your X archive and bring it into bChatX. Your posts come with you.</p>
+      <p><strong>Bring your people.</strong> bchatx.com/migrate has invite pages for Facebook, LinkedIn, YouTube, Instagram, TikTok, Reddit, Threads, Bluesky and Pinterest.</p>
+      <p><strong>Meet the BSV apps.</strong> Twetch, Peck and Treechat in the Feed, CoinGeek in bNews, your RelayX NFTs and Yours Wallet in bWalletX, and Hodlocker-style locks. Tip authors in BSV.</p>
+      <p class="lead">Not BNB, b ON b.</p>
+    </section>
+
+    <section class="end">
+      <div class="end-in">
+        <h2 class="slogan" data-slogan="Your posts, on {L}"></h2>
+        <p class="getp"><a class="cta" href="https://www.bchatx.com/migrate/x">Bring your X posts</a> <a class="cta2" href="/get?from=b-on-b-3">Get bWalletX</a></p>
+        <p class="credit">Music: Shattered Circuits (Alt) and Phantom Echoes (Alt) by VexVoid</p>
+      </div>
+    </section>
+    <p class="foot"><a href="/just-b">just b</a> · <a href="/on-b">your apps on b</a> · <a href="/b-on-b">b on b</a> · <a href="/b-on-b-2">b on b, again</a> · <a href="/b-on-b-3" aria-current="page">your posts, on b</a></p>
+    <p class="foot">Names and logos belong to their owners. bChatX is not affiliated with them. bWalletX is in beta: test with small amounts. <a href="mailto:support@bwalletx.com">support@bwalletx.com</a></p>
+
+    <script>
+      (function () {
+        var BEAT = 0.5106, BREAK = 20.422, BB = 0.627, BACK = 25.438, END = 33.4, LOGO = '/logo.svg';
+        var COL = ['#ff4d6d', '#2ee6d6', '#8b5cff', '#ffd24d', '#7cf06a', '#4da3ff', '#ff9a3c', '#ff6ad5'];
+        // Corner spots for tiles (x%, y%), all clear of the centred slogan.
+        var SPOT = [[14, 15], [86, 15], [14, 85], [86, 85], [50, 9], [50, 91], [7, 50], [93, 50]];
+        // Phones: no room at the sides of the slogan, so the 7th tile sits under the top row.
+        if (window.innerWidth < 640) SPOT = [[16, 12], [84, 12], [16, 88], [84, 88], [50, 7], [50, 93], [50, 24], [50, 76]];
+        function esc(s) { return String(s).replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); }
+        function slogan(text) {
+          var logo = '<img class="lb" src="' + LOGO + '" alt="" />';
+          return '<span class="sr">' + esc(text.replace(/\{L\}/g, 'b').replace(/ \| /g, ' ')) + '</span>' + text.split(/\s+/).map(function (w) {
+            if (w === '|') return '<span class="br"></span>';
+            return '<span class="w" aria-hidden="true">' + w.split(/(\{L\})/).filter(Boolean).map(function (p) { return p === '{L}' ? logo : esc(p); }).join('') + '</span>';
+          }).join('');
+        }
+        // Brand marks: simple-icons 13.21.0 (CC0) in /img/brands, in each brand's colour on a white tile.
+        // BSV apps: /img/apps logos; Hodlocker has no logo file, so its name is the mark.
+        var T = {
+          X: ['br', '/img/brands/x.svg'], Google: ['br', '/img/brands/google.svg'], LinkedIn: ['br', '/img/brands/linkedin.svg'],
+          Facebook: ['br', '/img/brands/facebook.svg'], YouTube: ['br', '/img/brands/youtube.svg'], Instagram: ['br', '/img/brands/instagram.svg'], TikTok: ['br', '/img/brands/tiktok.svg'],
+          Twetch: ['app', '/img/apps/twetch.svg'], Treechat: ['app', '/img/apps/treechat.svg'], RelayX: ['app', '/img/apps/relayx.png'], CoinGeek: ['app', '/img/apps/coingeek.png'],
+          Peck: ['app', '/img/apps/peck.png'], Yours: ['app', '/img/apps/yours.png'], Hodlocker: ['wm', '']
+        };
+        var BIG = ['X', 'Facebook', 'LinkedIn', 'YouTube', 'Instagram', 'TikTok', 'Google'];
+        var BSV = ['Twetch', 'Treechat', 'RelayX', 'CoinGeek', 'Peck', 'Yours', 'Hodlocker'];
+        var phone = window.innerWidth < 640;
+        function face(n) { var t = T[n]; return t[0] === 'wm' ? esc(n) : '<img src="' + t[1] + '" alt="' + esc(n) + '" />'; }
+        function one(n, i, p, extra) {
+          var fx = (50 - p[0]) + 'vw', fy = (50 - p[1]) + 'vh';
+          return '<div class="t ' + T[n][0] + '" style="--x:' + p[0] + '%;--y:' + p[1] + '%;--fx:' + fx + ';--fy:' + fy + ';--wx:' + (p[0] < 50 ? -70 : 70) + 'vw;--r:' + (i % 2 ? -40 : 35) + 'deg;--d:' + (i * 0.035).toFixed(3) + ';' + (extra || '') + '">' + face(n) + '</div>';
+        }
+        // Tiles sit in a top band and a bottom band, clear of the centred slogan.
+        function bands(n) {
+          var top = Math.ceil(n / 2), out = [], rows = phone ? 4 : 5;
+          function band(k, y0, dir) { for (var i = 0; i < k; i++) { var r = Math.floor(i / rows), c = i % rows, inRow = Math.min(rows, k - r * rows);
+            out.push([inRow === 1 ? 50 : (phone ? 11 : 12) + c * (phone ? 78 : 76) / (inRow - 1), y0 + dir * r * (phone ? 13 : 17)]); } }
+          band(top, phone ? 8 : 12, 1); band(n - top, phone ? 92 : 88, -1); return out;
+        }
+        function corners(n) { var S = phone ? [[16, 12], [84, 12], [16, 88], [84, 88], [50, 7], [50, 93], [50, 24], [50, 76]] : [[14, 15], [86, 15], [14, 85], [86, 85], [50, 9], [50, 91], [7, 50], [93, 50]]; return S.slice(0, n); }
+        function comp(kind, list) {
+          var many = list.length > 8, pos = (kind === 'burst' || kind === 'into' || kind === 'swirl') && !many ? corners(list.length) : bands(list.length);
+          return '<div class="c-' + kind + (many ? ' many' : '') + '">' + list.map(function (n, i) { return one(n, i, pos[i]); }).join('') + '</div>';
+        }
+        function belts(a, b) {
+          function row(list, y, rev) { var h = list.concat(list, list, list).map(function (n, i) { return one(n, i, [0, 0]); }).join(''); return '<div class="belt' + (rev ? ' rev' : '') + '" style="--y:' + y + '%">' + h + h + '</div>'; }
+          return row(a, phone ? 13 : 16, false) + row(b, phone ? 87 : 84, true);
+        }
+        function mix(a, b) { var o = []; for (var i = 0; i < Math.max(a.length, b.length); i++) { if (a[i]) o.push(a[i]); if (b[i]) o.push(b[i]); } return o; }
+        var ALL = mix(BIG, BSV);
+        var seed = 7; function rnd() { seed = (seed * 9301 + 49297) % 233280; return seed / 233280; }
+        function blast(n) {
+          var o = '<div class="ring"></div>';
+          for (var i = 0; i < n; i++) { var a = rnd() * 6.283, r = 30 + rnd() * 45;
+            o += '<i class="cf" style="--c:' + COL[i % COL.length] + ';--s:' + [10, 16, 22][i % 3] + 'px;--br:' + (i % 2 ? '50%' : '4px') + ';--dx:' + (Math.cos(a) * r).toFixed(0) + 'vw;--dy:' + (Math.sin(a) * r).toFixed(0) + 'vh;--rot:' + ((rnd() * 400 - 200) | 0) + 'deg;--d:' + (rnd() * 0.08).toFixed(2) + '"></i>'; }
+          return o;
+        }
+        function bg(a, b) { return 'radial-gradient(circle at 50% 40%, ' + a + ', ' + b + ')'; }
+        // beat: when it starts (in beats from the start of the cut). hit: a drop (flash + shake + blast).
+        // beat: start on the Shattered Circuits (Alt) grid. at: explicit seconds for the Phantom Echoes (Alt) break and the return.
+        var SCENES = [
+          { beat: 0,  bg: bg('#ff4d6d', '#a3122f'), slogan: 'Bring your X timeline', art: comp('grid', ALL) + blast(40), hit: '#fff' },
+          { beat: 4,  bg: bg('#9a6bff', '#4a1fd1'), slogan: 'to {L}', art: comp('into', ['X', 'Facebook', 'LinkedIn', 'YouTube', 'Instagram', 'TikTok', 'Google', 'Twetch']), xl: true },
+          { beat: 8,  bg: bg('#2ee6d6', '#087f78'), slogan: 'Your posts, on {L}', sub: 'Download your X archive. bChatX brings it in.', art: comp('swirl', ['X', 'Twetch', 'Treechat', 'Peck', 'Instagram', 'TikTok']) + blast(24), hit: '#fff' },
+          { beat: 12, bg: bg('#ff9a3c', '#d63a1c'), slogan: 'Move from X,', sub: 'Facebook, LinkedIn, YouTube, Instagram, TikTok and more.', art: belts(['X', 'Facebook', 'LinkedIn', 'YouTube'], ['Instagram', 'TikTok', 'Google', 'Treechat']) },
+          { beat: 16, bg: bg('#4da3ff', '#2a3fe0'), slogan: 'to bChatX', sub: 'Invite pages for your people, at bchatx.com/migrate.', art: comp('rain', mix(['Facebook', 'LinkedIn', 'YouTube', 'Google'], ['Twetch', 'Treechat', 'Peck', 'CoinGeek'])) + blast(24), hit: '#fff' },
+          { beat: 20, bg: bg('#7c5cff', '#2b1a8f'), slogan: 'Read it', sub: 'Twetch, Peck and Treechat in the Feed.', art: comp('walls', ['Twetch', 'X', 'Peck', 'YouTube', 'Treechat', 'Instagram']) },
+          { beat: 24, bg: bg('#7cf06a', '#169a4c'), slogan: 'Tip it', sub: 'Tip the authors in BSV.', art: comp('pop', mix(['TikTok', 'X', 'Facebook', 'LinkedIn'], ['Peck', 'Twetch', 'Treechat', 'Yours'])) + blast(24), hit: '#fff' },
+          { beat: 28, bg: bg('#ff6ad5', '#a21caf'), slogan: 'Lock it', sub: 'Lock behind posts, Hodlocker-style.', art: comp('burst', ['Hodlocker', 'LinkedIn', 'Google', 'Twetch', 'YouTube', 'Instagram']) },
+          { beat: 32, bg: bg('#ffd24d', '#e0632e'), slogan: 'Bring it', sub: 'Your RelayX NFTs, found. Yours Wallet, in with your 12 words.', art: comp('grid', mix(['Google', 'Instagram', 'X', 'Facebook', 'YouTube'], ['RelayX', 'Yours', 'CoinGeek', 'Hodlocker', 'Treechat'])) + blast(40), hit: '#fff' },
+          { beat: 36, bg: bg('#2ee6d6', '#2a3fe0'), slogan: 'News', sub: 'CoinGeek headlines in bNews.', art: comp('swirl', ['CoinGeek', 'YouTube', 'LinkedIn', 'Facebook', 'X', 'Google']) },
+          { at: BREAK, bt: BB, bg: bg('#ff4d6d', '#7a0b3f'), slogan: 'Everyone, on {L}', sub: 'X, Facebook, LinkedIn, YouTube, Instagram, TikTok, Reddit, Threads, Bluesky, Pinterest: invite them in.', art: belts(['X', 'Facebook', 'LinkedIn', 'YouTube', 'Instagram', 'TikTok', 'Google'], BSV) + blast(36), hit: '#ffd24d' },
+          { at: BREAK + 4 * BB, bt: BB, bg: bg('#ff9a3c', '#a3122f'), slogan: 'Bring them', art: comp('into', ['X', 'Facebook', 'LinkedIn', 'YouTube', 'Instagram', 'TikTok', 'Google', 'Treechat']) },
+          { at: BACK, bg: bg('#5b2be0', '#12063a'), slogan: 'Not BNB, | {L} ON {L}', art: comp('grid', ALL) + blast(60), hit: '#fff', xl: true, cta: true }
+        ];
+        var stage = document.getElementById('stage'), film = document.getElementById('film'), flash = document.getElementById('flash'), bar = document.getElementById('bar'), poster = document.getElementById('poster');
+        stage.innerHTML = SCENES.map(function (s) {
+          s.at = s.at != null ? s.at : s.beat * BEAT;
+          return '<div class="scene" style="--bg-s:' + s.bg + (s.bt ? ';--beat:' + s.bt + 's' : '') + '"><div class="bgz"></div><div class="tiles">' + (s.art || '') + '</div><div class="cap"><h2 class="slogan' + (s.xl ? ' xl' : '') + '">' + slogan(s.slogan) + '</h2>' + (s.sub ? '<p>' + esc(s.sub) + '</p>' : '') +
+            (s.cta ? '<p class="getp"><a class="cta" href="https://www.bchatx.com/migrate/x">Bring your X posts</a> <a class="cta2" href="/get?from=b-on-b-3">Get bWalletX</a></p>' : '') + '</div></div>';
+        }).join('');
+        [].forEach.call(document.querySelectorAll('[data-slogan]'), function (h) { h.innerHTML = slogan(h.getAttribute('data-slogan')); });
+        var els = [].slice.call(stage.children);
+        var reduce = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
+        var music = document.getElementById('music'), muted = false, withSound = false, start = 0, raf = 0, cur = -1, lastFlash = -9;
+        function now() { return withSound ? music.currentTime : performance.now() / 1000 - start; }
+        function hit(colour, t) {
+          if (reduce) return;
+          // Photosensitivity: never more than 3 flashes a second (we allow one per 0.34 s at most).
+          if (t - lastFlash >= 0.34) { lastFlash = t; flash.style.setProperty('--fl', colour); flash.classList.remove('go'); void flash.offsetWidth; flash.classList.add('go'); }
+          film.classList.remove('shake'); void film.offsetWidth; film.classList.add('shake');
+        }
+        function show(k, t) {
+          if (k === cur) return;
+          els.forEach(function (e, j) { e.classList.toggle('on', j === k); e.classList.toggle('was', j === cur); });
+          cur = k; if (SCENES[k].hit) hit(SCENES[k].hit, t);
+        }
+        function frame() {
+          var t = now(), k = 0;
+          SCENES.forEach(function (s, j) { if (t >= s.at) k = j; });
+          show(k, t); bar.style.width = Math.min(100, t / END * 100) + '%';
+          if (t < END && !(withSound && music.ended)) raf = requestAnimationFrame(frame); else bar.style.width = '0';
+        }
+        function play(sound) {
+          cancelAnimationFrame(raf); withSound = sound; cur = -1; lastFlash = -9;
+          els.forEach(function (e) { e.classList.remove('on', 'was'); });
+          music.pause(); music.currentTime = 0; music.muted = muted; start = performance.now() / 1000;
+          if (sound) music.play().catch(function () { withSound = false; start = performance.now() / 1000; });
+          poster.classList.add('gone'); document.body.classList.add('started'); raf = requestAnimationFrame(frame);
+        }
+        document.getElementById('play').onclick = function () { play(true); };
+        document.getElementById('quiet').onclick = function () { play(false); };
+        document.getElementById('again').onclick = function () { play(withSound); };
+        document.getElementById('mute').onclick = function () { muted = !muted; music.muted = muted; this.setAttribute('aria-pressed', String(muted)); };
+        var q = new URLSearchParams(location.search);
+        if (q.get('autoplay') === 'silent' || q.has('t')) { play(false); if (q.has('t')) start -= parseFloat(q.get('t')) || 0; }
+        window.__film = { scenes: SCENES.length, end: END, play: play };
+      })();
+    </script>
+  </body>
+</html>
