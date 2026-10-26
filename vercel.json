@@ -163,6 +163,7 @@
     }
   ],
   "redirects": [
+    { "source": "/mint-a-team", "destination": "/your-character", "permanent": false },
     { "source": "/relayX-on-b", "destination": "/relayx-on-b", "permanent": true },
     { "source": "/RelayX-on-b", "destination": "/relayx-on-b", "permanent": true },
     { "source": "/CoinGeek-on-b", "destination": "/coingeek-on-b", "permanent": true },
