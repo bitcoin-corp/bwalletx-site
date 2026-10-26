@@ -67,7 +67,7 @@
         <li><span class="pill live">Live</span><span>Tell b in Ask b, or tap Report to b on any error. You get a reference like F-12.</span></li>
         <li><span class="pill live">Live</span><span>Every report reaches the team, grouped with others like it, in a daily summary.</span></li>
         <li><span class="pill live">Live</span><span>Private by default: nothing appears here until a person approves it.</span></li>
-        <li><span class="pill soon">Coming</span><span>Your reports in bWalletX: each one&rsquo;s status, from received to shipped in a named release.</span></li>
+        <li><span class="pill live">Live</span><span>Your reports in bWalletX: each one&rsquo;s status, from received to shipped in a named release. Open it from the Your reports link after you tap Report to b.</span></li>
         <li><span class="pill soon">Coming</span><span>Shipped ideas linked to the <a href="/releases">release notes</a>.</span></li>
         <li><span class="pill soon">Coming</span><span>&ldquo;Me too&rdquo; votes from signed-in bWalletX users.</span></li>
       </ul>
@@ -84,7 +84,7 @@
     <script>
       (function () {
         var KIND = 'idea';
-        var API = 'https://www.bchatx.com/api/public/feedback?kind=' + KIND;
+        var API = 'https://www.bit-sign.online/api/public/feedback?kind=' + KIND;
         var LABEL = { new: 'New', planned: 'Planned', fixing: KIND === 'idea' ? 'Building' : 'Fixing', shipped: KIND === 'idea' ? 'Shipped' : 'Fixed' };
         var list = document.getElementById('fb-list');
         var all = [], filter = '';

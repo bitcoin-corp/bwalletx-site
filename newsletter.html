@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Newsletter · bWalletX</title>
+    <link rel="canonical" href="https://bwalletx.com/newsletter" />
+    <meta name="description" content="Get bWalletX updates by email: a monthly round-up of what shipped, and news for Android testers." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://bwalletx.com/newsletter" />
+    <meta property="og:site_name" content="bWalletX" />
+    <meta property="og:title" content="bWalletX newsletter" />
+    <meta property="og:description" content="Get bWalletX updates by email: a monthly round-up of what shipped, and news for Android testers." />
+    <meta property="og:image" content="https://bwalletx.com/og-newsletter-v1.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Sign in to bWalletX with X: X badge, your photo, and you choose your handle" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@bWalletX" />
+    <meta name="twitter:title" content="bWalletX newsletter" />
+    <meta name="twitter:description" content="Get bWalletX updates by email: a monthly round-up of what shipped, and news for Android testers." />
+    <meta name="twitter:image" content="https://bwalletx.com/og-newsletter-v1.jpg" />
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="stylesheet" href="/styles.css" />
+    <style>
+      .ext h1 { font-size: clamp(2.2rem, 6vw, 3.4rem); margin: 18px 0 10px; }
+      .ext h2 { margin: 48px 0 10px; font-size: 1.5rem; }
+      .ext p, .ext li { line-height: 1.65; }
+      .ext code { background: #17191e; padding: 2px 7px; border-radius: 6px; overflow-wrap: anywhere; }
+      .flow { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; margin: 22px 0; }
+      .pill { background: #101114; border: 1px solid #F5B80055; color: #F5B800; border-radius: 999px; padding: 8px 16px; font-weight: 700; overflow-wrap: anywhere; }
+      .arrow { color: #667085; }
+      .box { background: #101114; border: 1px solid #ffffff12; border-radius: 16px; padding: 18px 20px; margin: 16px 0; }
+      .box h3 { margin: 0 0 6px; font-size: 1rem; }
+      .box p { margin: 0; color: #a7adb8; }
+      .ext ol { padding-left: 1.3em; }
+      .ext ol li { margin: 6px 0; }
+      .examples { width: 100%; border-collapse: collapse; margin: 14px 0; font-size: 0.95rem; }
+      .examples td { padding: 9px 10px; border-bottom: 1px solid #ffffff12; overflow-wrap: anywhere; }
+      .examples td:first-child { color: #a7adb8; }
+      .ext .small { color: #8a8a86; font-size: 0.85rem; }
+      .ext .row { display: flex; gap: 12px; flex-wrap: wrap; margin: 26px 0; }
+          .feat { list-style: none; padding: 0; margin: 18px 0; }
+      .feat li { display: flex; gap: 12px; align-items: baseline; padding: 12px 0; border-bottom: 1px solid #ffffff10; }
+      .tag { flex: none; font-size: 0.75rem; font-weight: 700; padding: 2px 9px; border-radius: 999px; }
+      .tag.live { background: #F5B800; color: #000; }
+      .tag:not(.live) { background: #ffffff14; color: #cfcabd; }
+    
+      .nl-form { display: grid; gap: 14px; max-width: 520px; margin: 22px 0 8px; }
+      .nl-form label.f { display: grid; gap: 6px; font-weight: 600; }
+      .nl-form input[type=email], .nl-form input[type=text], .nl-form textarea { width: 100%; box-sizing: border-box; background: #0f1013; color: #f4f1e8; border: 1px solid #ffffff26; border-radius: 12px; padding: 13px 14px; font: inherit; }
+      .nl-form textarea { min-height: 90px; resize: vertical; }
+      .nl-form input:focus, .nl-form textarea:focus { outline: 2px solid #ffd24d; outline-offset: 1px; }
+      .tracks { display: grid; gap: 10px; }
+      .track { display: flex; gap: 12px; align-items: flex-start; padding: 14px 16px; border: 1px solid #ffffff1a; border-radius: 14px; background: #0b0b0d; cursor: pointer; }
+      .track input { margin-top: 4px; accent-color: #f5b800; width: 18px; height: 18px; }
+      .track b { display: block; }
+      .track span { color: #a9a69c; font-size: .92rem; }
+      .nl-msg { min-height: 1.3em; font-weight: 600; }
+      .nl-msg.ok { color: #6fe08f; } .nl-msg.err { color: #ff8a80; }
+      .notice { border: 1px solid #f5b80055; border-radius: 14px; padding: 14px 16px; margin: 18px 0; }
+      .nl-form button { justify-self: start; border: 0; cursor: pointer; }
+      .nl-form button:disabled { opacity: .6; cursor: default; }
+</style>
+  </head>
+  <body>
+    <div class="beta-banner">bWalletX is in <strong>beta</strong>: test with small amounts.</div>
+    <header class="topbar">
+      <div class="wrap topbar-in">
+        <a class="brand" href="/"><img src="/logo.svg" alt="" width="34" height="30" /><span>bWallet<span class="gold">X</span></span></a>
+        <nav aria-label="Pages">
+          <a href="/features">Features</a><a href="/exchange">Exchange</a><a href="/social">Social</a><a href="/agent">Agents</a><a href="/extension">Extension</a><a href="/developers">Developers</a>
+        </nav>
+        <span class="nav-cta"><a class="dl-btn" href="/get">Download</a><a class="web-btn" href="https://web.bwalletx.com" target="_blank" rel="noopener">Web &rarr;</a></span>
+      </div>
+    </header>
+    <script src="/nav.js"></script>
+    <main class="ext">
+      <img src="/logo.svg" alt="bWalletX" width="72" height="64" />
+      <h1>bWalletX newsletter</h1>
+      <p class="lede">What shipped, what's next and how to get the most from your wallet, by email. No spam, and one click to unsubscribe.</p>
+      <div class="notice" id="state" hidden></div>
+
+      <h2>Sign up</h2>
+      <form class="nl-form" id="nl" novalidate>
+        <label class="f">Your email <input type="email" name="email" autocomplete="email" required placeholder="you@example.com" /></label>
+        <div class="tracks">
+          <label class="track"><input type="checkbox" name="tracks" value="users" checked /><span><b>Monthly round-up</b><span>Once a month: what's new in bWalletX and the b apps.</span></span></label>
+          <label class="track"><input type="checkbox" name="tracks" value="testers" /><span><b>Testers</b><span>News for people testing bWallet on Android: builds, links and what to try.</span></span></label>
+        </div>
+        <button class="btn btn-store" type="submit">Sign up</button>
+        <p class="nl-msg" id="nl-msg" role="status"></p>
+        <p class="small">We'll email you a link to confirm. You won't get anything until you click it. We use your email only for these updates. See our <a href="/privacy">privacy policy</a>.</p>
+      </form>
+
+      <h2>Investor updates</h2>
+      <p>Quarterly updates go to existing investors and shareholders only, so they're by invitation. If you're an investor in The Bitcoin Corporation Ltd, ask to be added and we'll check it against the register.</p>
+      <form class="nl-form" id="inv" novalidate>
+        <label class="f">Your name <input type="text" name="name" autocomplete="name" required /></label>
+        <label class="f">Your email <input type="email" name="email" autocomplete="email" required /></label>
+        <label class="f">Anything we should know (optional) <textarea name="note" maxlength="1000"></textarea></label>
+        <button class="btn btn-store btn-ghost" type="submit">Ask to be added</button>
+        <p class="nl-msg" id="inv-msg" role="status"></p>
+        <p class="small">Investor updates are for existing investors only. Nothing we send is an offer of securities.</p>
+      </form>
+
+      <div class="row">
+        <a class="btn btn-store" href="/get">Get bWalletX</a>
+        <a class="btn btn-store btn-ghost" href="/testers">Become a tester</a>
+        <a class="btn btn-store btn-ghost" href="/releases">Release notes</a>
+      </div>
+      <p class="small">Questions? <a href="mailto:support@bwalletx.com">support@bwalletx.com</a></p>
+    </main>
+    <script>
+      (function () {
+        var API = 'https://push.bwalletx.com';
+        var q = new URLSearchParams(location.search), st = document.getElementById('state');
+        if (q.get('confirmed')) { st.hidden = false; st.textContent = "You're subscribed. Thank you."; }
+        if (q.get('expired')) { st.hidden = false; st.textContent = 'That link has expired. Sign up again below and we\'ll send a fresh one.'; }
+        if (q.get('unsubscribed')) { st.hidden = false; st.textContent = "You've been unsubscribed. You won't get any more of these emails."; }
+        function wire(id, path, build, okText) {
+          var f = document.getElementById(id), msg = document.getElementById(id + '-msg');
+          f.addEventListener('submit', function (e) {
+            e.preventDefault(); msg.className = 'nl-msg'; msg.textContent = '';
+            var body = build(f); if (!body) return;
+            var b = f.querySelector('button'); b.disabled = true;
+            fetch(API + path, { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify(body) })
+              .then(function (r) { if (!r.ok) throw new Error(String(r.status)); msg.className = 'nl-msg ok'; msg.textContent = okText; f.reset(); })
+              .catch(function () { msg.className = 'nl-msg err'; msg.textContent = 'Something went wrong. Please try again, or email support@bwalletx.com.'; })
+              .finally(function () { b.disabled = false; });
+          });
+          return msg;
+        }
+        var nlMsg = wire('nl', '/newsletter/subscribe', function (f) {
+          var email = f.email.value.trim(), tracks = [].slice.call(f.querySelectorAll('input[name=tracks]:checked')).map(function (i) { return i.value; });
+          if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) { nlMsg.className = 'nl-msg err'; nlMsg.textContent = 'Please enter a valid email.'; return null; }
+          if (!tracks.length) { nlMsg.className = 'nl-msg err'; nlMsg.textContent = 'Pick at least one.'; return null; }
+          return { email: email, tracks: tracks, source: 'bwalletx.com/newsletter' };
+        }, 'Check your inbox: we sent a link to confirm.');
+        var invMsg = wire('inv', '/newsletter/request-investor', function (f) {
+          var email = f.email.value.trim(), name = f.name.value.trim();
+          if (!name || !/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) { invMsg.className = 'nl-msg err'; invMsg.textContent = 'Please enter your name and a valid email.'; return null; }
+          return { name: name, email: email, note: f.note.value.trim() };
+        }, "Thanks. We'll check the register and reply by email.");
+      })();
+    </script>
+  </body>
+</html>

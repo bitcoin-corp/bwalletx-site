@@ -5,20 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Token locking</title>
     <link rel="canonical" href="https://bwalletx.com/token-locking" />
-    <meta name="description" content="Lock tokens the way Lock BSV locks BSV: creator vesting at launch with a public receipt, personal token locks, and airdrops that unlock over time. Coming, pending a mainnet indexer test." />
+    <meta name="description" content="Lock tokens the way Lock BSV locks BSV: personal token locks and creator vesting at launch are live. Airdrops that unlock over time are coming." />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://bwalletx.com/token-locking" />
     <meta property="og:site_name" content="bWalletX" />
     <meta property="og:title" content="Token locking: bWalletX" />
-    <meta property="og:description" content="Lock tokens the way Lock BSV locks BSV: creator vesting at launch with a public receipt, personal token locks, and airdrops that unlock over time. Coming, pending a mainnet indexer test." />
+    <meta property="og:description" content="Lock tokens the way Lock BSV locks BSV: personal token locks and creator vesting at launch are live. Airdrops that unlock over time are coming." />
     <meta property="og:image" content="https://bwalletx.com/og-token-locking-v1.png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
-    <meta property="og:image:alt" content="Lock tokens the way Lock BSV locks BSV: creator vesting at launch with a public receipt, personal token locks, and airdrops that unlock over time. Coming, pending a mainnet indexer test." />
+    <meta property="og:image:alt" content="Lock tokens the way Lock BSV locks BSV: personal token locks and creator vesting at launch are live. Airdrops that unlock over time are coming." />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@bWalletX" />
     <meta name="twitter:title" content="Token locking: bWalletX" />
-    <meta name="twitter:description" content="Lock tokens the way Lock BSV locks BSV: creator vesting at launch with a public receipt, personal token locks, and airdrops that unlock over time. Coming, pending a mainnet indexer test." />
+    <meta name="twitter:description" content="Lock tokens the way Lock BSV locks BSV: personal token locks and creator vesting at launch are live. Airdrops that unlock over time are coming." />
     <meta name="twitter:image" content="https://bwalletx.com/og-token-locking-v1.png" />
     <link rel="icon" href="/favicon.ico" />
     <link rel="stylesheet" href="/styles.css" />
@@ -61,18 +61,18 @@
     <main class="ext">
       <h1>Token locking. <span class="gold">Lock tokens so nobody can dump early.</span></h1>
       <p class="lede"><a href="/lock">Lock BSV</a> is live: BSV locked until a block height, and nobody can move it before then, not even you. Token locking does the same for tokens.</p>
-      <p><span class="tag soon">Coming</span> Token locking is not built yet. It needs a lock script that carries a token (the same idea as the OrdLock outputs used for listings) and a test on mainnet with a tiny amount, to check that the token indexers still show the locked tokens and accept them when the lock opens. We&rsquo;ll build it once that test passes.</p>
+      <p><span class="tag live">Live</span> Personal token locks shipped in 5.2.44. Creator vesting at launch shipped in 5.2.32. Locked airdrops are still coming.</p>
 
       <h2>Creator vesting at launch: prove you won&rsquo;t dump</h2>
-      <p>When you launch a coin, you can keep a share for yourself, locked so you can&rsquo;t sell it straight away. The plan:</p>
+      <p>When you launch a coin, you can keep a share for yourself, locked so you can&rsquo;t sell it straight away. Live since 5.2.32, in bWalletX only (the <a href="/launchpad">Launchpad</a>):</p>
       <ul class="feat">
-<li><span class="tag soon">Coming</span><span><b>Creator allocation: 0 to 20%</b> of the supply, set by the creator. The default is 10%.</span></li>
-<li><span class="tag soon">Coming</span><span><b>Always time-locked.</b> The default is a 12-month cliff (nothing unlocks for a year), then linear unlocking over 24 months. The shortest lock allowed is 6 months.</span></li>
-<li><span class="tag soon">Coming</span><span><b>A public receipt.</b> The coin&rsquo;s page shows how much the creator locked and until when, linked to the locks on chain, so anyone can check them.</span></li>
+<li><span class="tag live">Live</span><span><b>Creator allocation: 0 to 20%</b> of the supply, set by the creator. The default is 10%.</span></li>
+<li><span class="tag live">Live</span><span><b>Always time-locked.</b> The default is a 12-month cliff (nothing unlocks for a year), then monthly unlocks over 24 months. The shortest lock allowed is 6 months.</span></li>
+<li><span class="tag live">Live</span><span><b>A public receipt.</b> The coin&rsquo;s page shows how much the creator locked and until when, linked to the locks on chain, so anyone can check them.</span></li>
       </ul>
 
       <h2>Personal token locks</h2>
-      <p><span class="tag soon">Coming</span> A &ldquo;Lock tokens&rdquo; option next to Lock BSV, with the same date picker, the same irreversible confirmation and the same optional receipt.</p>
+      <p><span class="tag live">Live</span> Lock BSV-21 tokens until a date, with an on-chain receipt. In the Wallet, swipe a token row and tap Lock. Your token locks are listed in Locks &amp; Pots › Locks, under Token locks. On a new device, Find my token locks finds them again from your recovery phrase. Live since 5.2.44.</p>
 
       <h2>Locked airdrops</h2>
       <p><span class="tag soon">Coming</span> Airdrops that unlock over time: each recipient gets their own lock that they can claim once it opens. See <a href="/airdrops">Airdrops</a>.</p>

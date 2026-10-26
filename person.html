@@ -125,7 +125,7 @@
           <div class="card">
             <h2>Chat</h2>
             <p>Message <span data-h></span> on bChatX. Your conversation becomes a room you both own.</p>
-            <div class="pp-row"><a class="pp-btn ghost full" id="chat" href="https://bchatx.com" rel="noopener">Open chat</a></div>
+            <div class="pp-row"><a class="pp-btn ghost full" id="chat" href="https://chat.bwalletx.com" rel="noopener">Open chat</a></div>
           </div>
           <div class="card">
             <h2>bWalletX</h2>
@@ -153,7 +153,7 @@
         function setHandle(h) {
           document.querySelectorAll('[data-h]').forEach(function (el) { el.textContent = '$' + h; });
           document.title = 'Send $' + h + ' a bMail · bWalletX';
-          $('chat').href = 'https://bchatx.com/$' + encodeURIComponent(h);
+          $('chat').href = 'https://chat.bwalletx.com/$' + encodeURIComponent(h);
         }
         function show(id) { $('loading').hidden = true; $(id).hidden = false; }
         function usd(n) { return n < 1 ? Math.round(n * 100 * 100) / 100 + '¢' : '$' + n.toFixed(2); }

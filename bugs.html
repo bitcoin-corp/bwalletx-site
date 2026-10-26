@@ -3,22 +3,22 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Bugs: what people told b and what we fixed</title>
+    <title>Known issues: bugs and fixes in bWalletX</title>
     <link rel="canonical" href="https://bwalletx.com/bugs" />
-    <meta name="description" content="Bugs people reported to b, the assistant in bWalletX, and where each fix stands: new, planned, fixing or fixed. Entries appear after review." />
+    <meta name="description" content="Known issues in bWalletX and what we fixed, with the release each fix shipped in. Report a bug in a minute." />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://bwalletx.com/bugs" />
     <meta property="og:site_name" content="bWalletX" />
-    <meta property="og:title" content="Bugs in bWalletX, fixed in the open" />
-    <meta property="og:description" content="Bugs people reported to b, the assistant in bWalletX, and where each fix stands: new, planned, fixing or fixed. Entries appear after review." />
+    <meta property="og:title" content="Known issues in bWalletX" />
+    <meta property="og:description" content="Known issues in bWalletX and what we fixed, with the release each fix shipped in. Report a bug in a minute." />
     <meta property="og:image" content="https://bwalletx.com/og-bugs-v1.png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
     <meta property="og:image:alt" content="A list of bugs reported to b in bWalletX, each with a status: fixing, planned, fixed or new." />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@bWalletX" />
-    <meta name="twitter:title" content="Bugs in bWalletX, fixed in the open" />
-    <meta name="twitter:description" content="Bugs people reported to b, the assistant in bWalletX, and where each fix stands: new, planned, fixing or fixed. Entries appear after review." />
+    <meta name="twitter:title" content="Known issues in bWalletX" />
+    <meta name="twitter:description" content="Known issues in bWalletX and what we fixed, with the release each fix shipped in. Report a bug in a minute." />
     <meta name="twitter:image" content="https://bwalletx.com/og-bugs-v1.png" />
     <link rel="icon" href="/favicon.ico" />
     <link rel="stylesheet" href="/styles.css" />
@@ -27,9 +27,6 @@
       .ext h2 { margin: 40px 0 8px; font-size: 1.5rem; }
       .ext p, .ext li { line-height: 1.7; }
       .ext .small { color: #8a8a86; font-size: 0.85rem; }
-      .fb-filters { display: flex; gap: 8px; flex-wrap: wrap; margin: 18px 0 6px; }
-      .fb-filters button { background: #101114; color: #d8dbe0; border: 1px solid #ffffff1f; border-radius: 999px; padding: 7px 14px; font: 600 0.88rem inherit; cursor: pointer; }
-      .fb-filters button[aria-pressed="true"] { background: linear-gradient(180deg, #F2C230, #E6B020); color: #000; border-color: transparent; }
       .fb-list { list-style: none; padding: 0; margin: 14px 0; display: grid; gap: 12px; }
       .fb-item { background: #101114; border: 1px solid #ffffff12; border-radius: 16px; padding: 16px 18px; }
       .fb-top { display: flex; justify-content: space-between; gap: 12px; align-items: flex-start; }
@@ -39,8 +36,25 @@
       .fb-st { flex: none; font-size: 0.72rem; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; border-radius: 999px; padding: 4px 10px; white-space: nowrap; }
       .st-new { background: #ffffff14; color: #d8dbe0; } .st-planned { background: #F5B80022; color: #F5B800; }
       .st-fixing { background: #3b82f622; color: #7fb0ff; } .st-shipped { background: #22c55e22; color: #5fe08f; }
-      .fb-empty { background: #101114; border: 1px dashed #ffffff26; border-radius: 16px; padding: 22px 18px; color: #d8dbe0; }
-      .fb-empty b { color: #F5B800; }
+      .x-unused { background: #101114; border: 1px dashed #ffffff26; border-radius: 16px; padding: 22px 18px; color: #d8dbe0; }
+      .x-unused b { color: #F5B800; }
+      .fx-form { background: #101114; border: 1px solid #ffffff12; border-radius: 16px; padding: 18px; display: grid; gap: 12px; margin: 14px 0; }
+      .fx-form label { display: grid; gap: 6px; font-weight: 600; font-size: 0.95rem; }
+      .fx-form label.tick { display: flex; gap: 10px; align-items: flex-start; font-weight: 500; }
+      .fx-form .opt { color: #8a8a86; font-weight: 400; }
+      .fx-form input[type=text], .fx-form input[type=email], .fx-form textarea { width: 100%; box-sizing: border-box; background: #000; color: #fff; border: 1px solid #ffffff2a; border-radius: 10px; padding: 10px 12px; font: inherit; }
+      .fx-form textarea { min-height: 110px; resize: vertical; }
+      .fx-form button { justify-self: start; background: linear-gradient(180deg, #F2C230, #E6B020); color: #000; border: 0; border-radius: 999px; padding: 10px 20px; font-family: inherit; font-weight: 700; font-size: 1rem; cursor: pointer; }
+      .fx-form button:disabled { opacity: .6; }
+      .fx-hp { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
+      .fx-msg { min-height: 1.2em; margin: 0; font-size: 0.93rem; }
+      .fx-msg.ok { color: #5fe08f; } .fx-msg.err { color: #ff8a80; }
+      .fx-msg a { color: inherit; }
+      .fb-st.st-investigating { background: #ffffff14; color: #d8dbe0; }
+      .check-first { background: #101114; border: 1px solid #F5B80055; border-radius: 16px; padding: 16px 18px; margin: 18px 0 6px; }
+      .check-first h2 { margin: 0 0 6px; font-size: 1.15rem; }
+      .check-first p { margin: 6px 0 0; color: #d8dbe0; font-size: 0.95rem; overflow-wrap: anywhere; }
+      .check-first a { color: #F5B800; }
     </style>
   </head>
   <body>
@@ -56,74 +70,74 @@
     </header>
     <script src="/nav.js"></script>
     <main class="ext">
-      <h1>Bugs, <span class="gold">fixed</span> in the open.</h1>
-      <p class="lede">Tell b what broke and it goes straight to the team with a reference number. Bugs that are safe to show appear here as short summaries once a person has reviewed them. Anything touching keys, payments, sign-in or personal data stays private.</p>
-      <div class="fb-filters" role="group" aria-label="Filter by status">
-        <button type="button" data-st="" aria-pressed="true">All</button><button type="button" data-st="new" aria-pressed="false">New</button><button type="button" data-st="planned" aria-pressed="false">Planned</button><button type="button" data-st="fixing" aria-pressed="false">Fixing</button><button type="button" data-st="shipped" aria-pressed="false">Fixed</button>
+      <h1>Known <span class="gold">issues</span>.</h1>
+      <p class="lede">What&rsquo;s broken, what we&rsquo;re fixing, and what we fixed. Spotted something? Tell us below.</p>
+      <div class="check-first" role="note">
+        <h2>Before you report: check this page</h2>
+        <p>Everything below is a known or fixed issue. Reporting something already listed here earns credit, not money.</p>
+        <p>Security issues that are still being fixed are not listed, for your safety. If you found something that looks serious and it is not here, report it privately to <a href="mailto:support@bwalletx.com?subject=b-Aware">support@bwalletx.com</a> with the subject <b>b-Aware</b>. See <a href="/b-Aware">b-Aware</a> for how we reward reports.</p>
       </div>
-      <ul class="fb-list" id="fb-list" aria-live="polite"><li class="fb-empty">Loading&hellip;</li></ul>
-      <h2>Where this stands</h2>
-      <ul class="status">
-        <li><span class="pill live">Live</span><span>Tell b in Ask b, or tap Report to b on any error. You get a reference like F-12.</span></li>
-        <li><span class="pill live">Live</span><span>Every report reaches the team, grouped with others like it, in a daily summary.</span></li>
-        <li><span class="pill live">Live</span><span>Private by default: nothing appears here until a person approves it.</span></li>
-        <li><span class="pill soon">Coming</span><span>Your reports in bWalletX: each one&rsquo;s status, from received to fixed in a named release.</span></li>
-        <li><span class="pill soon">Coming</span><span>Fixed bugs linked to the <a href="/releases">release notes</a>.</span></li>
-        <li><span class="pill soon">Coming</span><span>&ldquo;Me too&rdquo; votes from signed-in bWalletX users.</span></li>
+      <h2>Report a bug</h2>
+      <form class="fx-form" id="fx" novalidate>
+        <label>What happened?<textarea name="what" required maxlength="4000"></textarea></label>
+        <label><span>Device and app version <span class="opt">(for example iPhone 15, 5.2.44)</span></span><input type="text" name="device" maxlength="200" /></label>
+        <label><span>Email <span class="opt">(optional, if you&rsquo;d like a reply)</span></span><input type="email" name="email" maxlength="200" autocomplete="email" /></label>
+        <div class="fx-hp" aria-hidden="true"><label>Leave this empty<input type="text" name="website" tabindex="-1" autocomplete="off" /></label></div>
+        <button type="submit">Send report</button>
+        <p class="fx-msg" id="fx-msg" role="status" aria-live="polite"></p>
+      </form>
+      <p class="small">In the app? Tap <b>Report to b</b> on any error screen instead.</p>
+      <h2>Known issues</h2>
+      <ul class="fb-list">
+        <li class="fb-item"><div class="fb-top"><h3>The b button misbehaves when b disappears</h3><span class="fb-st st-investigating">Investigating</span></div><p>We are working out where and when it happens. If you see it, tell us what you tapped and on which device.</p><div class="fb-meta">Reported 22 Oct 2026</div></li>
+        <li class="fb-item"><div class="fb-top"><h3>Show my 12 words asked for a password you never set</h3><span class="fb-st st-shipped">Fixed in 5.2.44</span></div><p>If you made your wallet with a passkey, Show my 12 words now has Use my passkey, so you can see your words without a password.</p><div class="fb-meta">Fixed 23 Oct 2026</div></li>
+        <li class="fb-item"><div class="fb-top"><h3>Passkey sign-in in the Chrome extension</h3><span class="fb-st st-shipped">Fixed in 5.2.44</span></div><p>Passkey sign-in was briefly taken out of the extension, then restored in the next release. A user confirmed it works.</p><div class="fb-meta">Fixed 22 Oct 2026</div></li>
+        <li class="fb-item"><div class="fb-top"><h3>Crash when opening the wallet after signing out and back in</h3><span class="fb-st st-shipped">Fixed in 5.2.44</span></div><p>The wallet showed an error about &ldquo;identityAddress&rdquo; instead of opening. It now opens normally.</p><div class="fb-meta">Fixed 22 Oct 2026</div></li>
+        <li class="fb-item"><div class="fb-top"><h3>Balance stuck on &ldquo;Still syncing&rdquo; after a backup at sign-up</h3><span class="fb-st st-shipped">Fixed in 5.2.44</span></div><p>Making a backup during sign-up no longer stalls your balance, and encrypted backups save every time.</p><div class="fb-meta">Fixed 22 Oct 2026</div></li>
+        <li class="fb-item"><div class="fb-top"><h3>Restoring a wallet could hang on Restoring&hellip;</h3><span class="fb-st st-shipped">Fixed in 5.2.38</span></div><p>Restoring or importing a wallet now finishes instead of spinning for good.</p><div class="fb-meta">Fixed 20 Oct 2026</div></li>
+        <li class="fb-item"><div class="fb-top"><h3>Sends failed after spending from another device</h3><span class="fb-st st-shipped">Fixed in 5.2.36</span></div><p>Coins already spent elsewhere could inflate your balance and make sends fail on iPhone. The wallet now clears them when you unlock, and if a send still hits one, it says &ldquo;tap Send again&rdquo;.</p><div class="fb-meta">Fixed 19 Oct 2026</div></li>
+        <li class="fb-item"><div class="fb-top"><h3>The bChatX Feed crashed on Desktop</h3><span class="fb-st st-shipped">Fixed in 5.2.36</span></div><p>The Feed opens normally on Desktop.</p><div class="fb-meta">Fixed 19 Oct 2026</div></li>
+        <li class="fb-item"><div class="fb-top"><h3>Web wallet layout and sign-in messages</h3><span class="fb-st st-shipped">Fixed in 5.2.34</span></div><p>Every screen stays in its column, a wrong password says so, and after sign-up you go straight to your wallet.</p><div class="fb-meta">Fixed 19 Oct 2026</div></li>
+        <li class="fb-item"><div class="fb-top"><h3>bMail could lose or double-pay a stamp</h3><span class="fb-st st-shipped">Fixed in 5.2.33</span></div><p>A retry now reuses the same stamp, so a stamp is never lost or paid twice.</p><div class="fb-meta">Fixed 18 Oct 2026</div></li>
+        <li class="fb-item"><div class="fb-top"><h3>Token sends failed with &ldquo;OP_DUP&rdquo;</h3><span class="fb-st st-shipped">Fixed in 5.2.32</span></div><p>The wallet repairs the token record and tries again once.</p><div class="fb-meta">Fixed 18 Oct 2026</div></li>
+        <li class="fb-item"><div class="fb-top"><h3>&ldquo;Load failed&rdquo; on the iPhone wallet screen</h3><span class="fb-st st-shipped">Fixed in 5.2.30</span></div><p>Busy lookups are retried, and any failure now names the service it couldn&rsquo;t reach instead of a bare &ldquo;Load failed&rdquo;.</p><div class="fb-meta">Fixed 17 Oct 2026</div></li>
+        <li class="fb-item"><div class="fb-top"><h3>Black screen after unlock</h3><span class="fb-st st-shipped">Fixed in 5.2.25</span></div><p>If something goes wrong after unlock you now see a safety screen, not a blank page. The BSV price also no longer fails under load.</p><div class="fb-meta">Fixed 16 Oct 2026</div></li>
+        <li class="fb-item"><div class="fb-top"><h3>Phone apps refused to open their own pages</h3><span class="fb-st st-shipped">Fixed in 5.2.20</span></div><p>Pages no longer stop with a &ldquo;Reserved originator&rdquo; message.</p><div class="fb-meta">Fixed 14 Oct 2026</div></li>
+        <li class="fb-item"><div class="fb-top"><h3>Payments blocked by an old transaction</h3><span class="fb-st st-shipped">Fixed in 5.2.19</span></div><p>A stale transaction no longer blocks new payments.</p><div class="fb-meta">Fixed 14 Oct 2026</div></li>
+        <li class="fb-item"><div class="fb-top"><h3>Minting a name could wait forever</h3><span class="fb-st st-shipped">Fixed in 5.2.17</span></div><p>If the network never received a mint, the wallet now lets it go and tells you.</p><div class="fb-meta">Fixed 13 Oct 2026</div></li>
+        <li class="fb-item"><div class="fb-top"><h3>Big NFT mints failed</h3><span class="fb-st st-shipped">Fixed in 5.2.15</span></div><p>They now show Pending while the network catches up, and a stuck send releases its coins.</p><div class="fb-meta">Fixed 12 Oct 2026</div></li>
+        <li class="fb-item"><div class="fb-top"><h3>Chat list jumped while loading</h3><span class="fb-st st-shipped">Fixed in 5.2.11</span></div><p>Chats open at once and the list stays still.</p><div class="fb-meta">Fixed 12 Oct 2026</div></li>
+        <li class="fb-item"><div class="fb-top"><h3>Fingerprint unlock stopped working on Android</h3><span class="fb-st st-shipped">Fixed in 5.2.10</span></div><p>It works again, and asks you to set it up again when needed.</p><div class="fb-meta">Fixed 12 Oct 2026</div></li>
       </ul>
-      <h2>How this list works</h2>
-      <ul>
-        <li>Tell <b>b</b> in bWalletX. b passes it to the team.</li>
-        <li>Each entry is a short summary, written without names, handles or addresses. Reports about keys, payments, sign-in or personal data stay private.</li>
-        <li>A person reads every entry before it appears here.</li>
+      <h2>Security fixes</h2>
+      <p class="small">Found by researchers under <a href="/b-Aware">b-Aware</a> and reported privately. We describe a security fix here only once it is live everywhere you can get bWalletX, so more will appear as releases reach every store. Keep your wallet up to date.</p>
+      <ul class="fb-list">
+        <li class="fb-item"><div class="fb-top"><h3>A stranger could knock a paired computer offline</h3><span class="fb-st st-shipped">Fixed</span></div><p>Someone who only knew a pairing&rsquo;s channel could take over the phone&rsquo;s side of the link and cut off your paired computer. No money could move. Our pairing server now refuses this. The fix is on our server, so every edition has it.</p><div class="fb-meta">Fixed 24 Oct 2026 &middot; Security fix, reported privately under b-Aware</div></li>
       </ul>
-      <p>See also: <a href="/ideas">Ideas</a> &middot; <a href="/ask-b">Ask b</a></p>
+      <p>See also: <a href="/b-Aware">b-Aware</a> &middot; <a href="/feedback">Feedback</a> &middot; <a href="/ideas">Ideas</a> &middot; <a href="/releases">Releases</a></p>
       <div class="row" style="display:flex;gap:12px;flex-wrap:wrap;margin:26px 0"><a class="btn btn-store" href="/get">Get bWalletX</a></div>
-      <p class="small">Found a security problem? Email <a href="mailto:support@bwalletx.com">support@bwalletx.com</a> and don&rsquo;t post details anywhere public.</p>
     </main>
     <script>
       (function () {
-        var KIND = 'bug';
-        var API = 'https://www.bchatx.com/api/public/feedback?kind=' + KIND;
-        var LABEL = { new: 'New', planned: 'Planned', fixing: KIND === 'idea' ? 'Building' : 'Fixing', shipped: KIND === 'idea' ? 'Shipped' : 'Fixed' };
-        var list = document.getElementById('fb-list');
-        var all = [], filter = '';
-        function el(tag, cls, text) { var e = document.createElement(tag); if (cls) e.className = cls; if (text != null) e.textContent = text; return e; }
-        function empty(msg) {
-          list.innerHTML = '';
-          var li = el('li', 'fb-empty');
-          if (msg) li.textContent = msg;
-          else { li.appendChild(document.createTextNode('Tell ')); li.appendChild(el('b', '', 'b')); li.appendChild(document.createTextNode(' in the app. Nothing has been approved for this list yet; reports still reach the team.')); }
-          list.appendChild(li);
-        }
-        function render() {
-          var rows = all.filter(function (r) { return !filter || r.status === filter; });
-          if (!rows.length) return empty(all.length ? 'Nothing here with that status yet.' : '');
-          list.innerHTML = '';
-          rows.forEach(function (r) {
-            var li = el('li', 'fb-item'), top = el('div', 'fb-top');
-            top.appendChild(el('h3', '', r.title));
-            var st = LABEL[r.status] || 'New';
-            if (r.status === 'shipped' && r.version) st += ' ' + r.version;
-            top.appendChild(el('span', 'fb-st st-' + (LABEL[r.status] ? r.status : 'new'), st));
-            li.appendChild(top);
-            li.appendChild(el('p', '', r.summary));
-            var d = new Date(r.updated_at);
-            li.appendChild(el('div', 'fb-meta', (r.area && r.area !== 'other' ? r.area.charAt(0).toUpperCase() + r.area.slice(1) + ' · ' : '') + (isNaN(d) ? '' : 'Updated ' + d.toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' }))));
-            list.appendChild(li);
-          });
-        }
-        document.querySelectorAll('.fb-filters button').forEach(function (b) {
-          b.addEventListener('click', function () {
-            filter = b.getAttribute('data-st');
-            document.querySelectorAll('.fb-filters button').forEach(function (x) { x.setAttribute('aria-pressed', x === b ? 'true' : 'false'); });
-            render();
-          });
+        var API = 'https://push.bwalletx.com';
+        var f = document.getElementById('fx'), msg = document.getElementById('fx-msg');
+        function err(t) { msg.className = 'fx-msg err'; msg.innerHTML = t; }
+        f.addEventListener('submit', function (e) {
+          e.preventDefault(); msg.className = 'fx-msg'; msg.textContent = '';
+          var body = (function (f) {
+            var what = f.what.value.trim(), email = f.email.value.trim();
+            if (!what) { err('Please say what happened.'); return null; }
+            if (email && !EMAIL.test(email)) { err('That email doesn&rsquo;t look right.'); return null; }
+            return { what: what, device: f.device.value.trim(), email: email || null, source: 'bwalletx.com/bugs' };
+          })(f); if (!body) return;
+          if (f.website.value) return;
+          var b = f.querySelector('button'); b.disabled = true;
+          fetch(API + '/bugs/submit', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify(body) })
+            .then(function (r) { if (!r.ok) throw new Error(String(r.status)); msg.className = 'fx-msg ok'; msg.textContent = 'Thanks. Your report is with the team.'; f.reset(); })
+            .catch(function () { err('Couldn&rsquo;t send, email <a href="mailto:support@bwalletx.com">support@bwalletx.com</a>.'); })
+            .finally(function () { b.disabled = false; });
         });
-        fetch(API, { headers: { accept: 'application/json' } })
-          .then(function (r) { return r.ok ? r.json() : { entries: [] }; })
-          .then(function (j) { all = Array.isArray(j && j.entries) ? j.entries.filter(function (r) { return r && r.kind === KIND; }) : []; render(); })
-          .catch(function () { all = []; render(); });
+        var EMAIL = /^[^@\s]+@[^@\s]+\.[^@\s]+$/;
       })();
     </script>
   </body>

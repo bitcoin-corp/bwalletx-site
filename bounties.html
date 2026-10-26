@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>Bounties: live pool and payouts · bWalletX</title>
+    <meta name="description" content="The b-Aware bug bounty pool, live from the chain: what is left this quarter, what has been paid, and a transaction link for every payout." />
+    <link rel="canonical" href="https://bwalletx.com/bounties" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://bwalletx.com/bounties" />
+    <meta property="og:site_name" content="bWalletX" />
+    <meta property="og:title" content="bWalletX bounties: live pool and payouts" />
+    <meta property="og:description" content="The b-Aware bug bounty pool, live from the chain: what is left this quarter, what has been paid, and a transaction link for every payout." />
+    <meta property="og:image" content="https://bwalletx.com/og-bounties-v1.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="bWalletX bounties: live pool balance and public payouts" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@bWalletX" />
+    <meta name="twitter:title" content="bWalletX bounties: live pool and payouts" />
+    <meta name="twitter:description" content="The b-Aware bug bounty pool, live from the chain: what is left this quarter, what has been paid, and a transaction link for every payout." />
+    <meta name="twitter:image" content="https://bwalletx.com/og-bounties-v1.png" />
+    <meta name="theme-color" content="#000000" />
+    <link rel="icon" href="/favicon.ico" sizes="48x48" />
+    <link rel="icon" href="/favicon.png" type="image/png" sizes="32x32" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="stylesheet" href="/styles.css" />
+    <style>
+      .ext { max-width: 760px; margin: 0 auto; padding: 120px 20px 80px; }
+      .ext h1 { font-size: clamp(2.2rem, 6vw, 3.4rem); margin: 10px 0 6px; line-height: 1.1; }
+      .ext h1 b { color: #F5B800; }
+      .ext h2 { margin: 44px 0 10px; font-size: 1.4rem; }
+      .ext h3 { margin: 22px 0 6px; font-size: 1.05rem; }
+      .ext p, .ext li, .ext td, .ext th { line-height: 1.7; }
+      .ext code { background: #17191e; padding: 2px 7px; border-radius: 6px; overflow-wrap: anywhere; }
+      .ext a { overflow-wrap: anywhere; }
+      .ext .meta { color: #8a8a86; font-size: 0.9rem; margin: 0; }
+      .ext .notice { padding: 14px 16px; border: 1px solid #f5b80040; background: #f5b8000d; border-radius: 14px; color: #fcd9a0; }
+      .ext .card { background: #101114; border: 1px solid #ffffff12; border-radius: 16px; padding: 16px 20px; margin: 14px 0; }
+      .ext .card h3 { margin: 0 0 6px; }
+      .ext table { width: 100%; border-collapse: collapse; margin: 10px 0 4px; font-size: 0.95rem; }
+      .ext th, .ext td { text-align: left; vertical-align: top; padding: 10px 10px; border-top: 1px solid #ffffff14; }
+      .ext th { color: #fff; font-weight: 600; border-top: 0; }
+      .ext td.r, .ext th.r { white-space: nowrap; color: #F5B800; font-weight: 700; }
+      .ext .status { display: inline-block; font-size: 0.72rem; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; padding: 3px 9px; border-radius: 999px; background: #22c55e22; color: #5fe08f; }
+      .ext .status.watch { background: #F5B80022; color: #F5B800; }
+      .ext .toc a { margin-right: 12px; }
+      @media (max-width: 560px) {
+        .ext table, .ext thead, .ext tbody, .ext tr, .ext th, .ext td { display: block; }
+        .ext thead { display: none; }
+        .ext tr { border-top: 1px solid #ffffff14; padding: 8px 0; }
+        .ext td { border: 0; padding: 2px 0; }
+        .ext td.r { white-space: normal; }
+      }
+      .ext .bar { height: 18px; border-radius: 999px; background: #ffffff10; overflow: hidden; margin: 12px 0 6px; }
+      .ext .bar i { display: block; height: 100%; width: 0; background: linear-gradient(90deg, #c99200, #F5B800); border-radius: 999px; transition: width .8s ease; }
+      .ext .big { font-size: clamp(1.6rem, 5vw, 2.2rem); font-weight: 700; color: #F5B800; margin: 4px 0 0; }
+      .ext .stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 10px; }
+      .ext .stats .card { margin: 0; }
+      .ext .stats b { display: block; font-size: 1.3rem; color: #fff; }
+      .ext .stats span { color: #8a8a86; font-size: 0.85rem; }
+      .ext .tag { font-size: 0.75rem; color: #F5B800; }
+    </style>
+  </head>
+  <body>
+    <div class="beta-banner">bWalletX is in <strong>beta</strong>: test with small amounts.</div>
+    <header class="topbar">
+      <div class="wrap topbar-in">
+        <a class="brand" href="/"><img src="/logo.svg" alt="" width="34" height="30" /><span>bWallet<span class="gold">X</span></span></a>
+        <nav aria-label="Pages">
+          <a href="/features">Features</a><a href="/exchange">Exchange</a><a href="/social">Social</a><a href="/agent">Agents</a><a href="/extension">Extension</a><a href="/developers">Developers</a>
+        </nav>
+        <span class="nav-cta"><a class="dl-btn" href="/get">Download</a><a class="web-btn" href="https://web.bwalletx.com" target="_blank" rel="noopener">Web &rarr;</a></span>
+      </div>
+    </header>
+    <script src="/nav.js"></script>
+    <main class="ext">
+      <h1><b>Bounties</b></h1>
+      <p class="meta">The <a href="/b-aware">b-Aware</a> reward pool and every payout from it, in public.</p>
+
+      <div class="card" id="pool">
+        <h3>Pool <span class="meta" id="quarter"></span></h3>
+        <p class="big" id="left">Loading&hellip;</p>
+        <div class="bar" id="barwrap" hidden><i id="bar"></i></div>
+        <p class="meta" id="poolnote"></p>
+        <p class="meta">Pool address: <span id="addr">published soon</span></p>
+      </div>
+
+      <div class="stats">
+        <div class="card"><b id="s-q">0</b><span>BSV paid this quarter</span></div>
+        <div class="card"><b id="s-all">0</b><span>BSV paid all-time</span></div>
+        <div class="card"><b id="s-n">0</b><span>reports rewarded</span></div>
+        <div class="card"><b id="s-c">0</b><span>credit only</span></div>
+      </div>
+
+      <h2 id="payouts">Payouts</h2>
+      <table>
+        <thead><tr><th>Date</th><th>Credit</th><th>Severity</th><th class="r">BSV</th><th>Recipient</th><th>Verify</th></tr></thead>
+        <tbody id="rows"><tr><td colspan="6">Loading&hellip;</td></tr></tbody>
+      </table>
+      <p class="meta">Recipients are shown as a short fingerprint. The full address is visible in the transaction for anyone who checks it.</p>
+      <p class="meta">Report details stay private until the fix has shipped and the reward is paid.</p>
+
+      <h2>How the pool works</h2>
+      <ul>
+        <li>There is a fixed pool each calendar quarter. The bar shows what is left, read live from the pool address on chain.</li>
+        <li>The first valid report of an issue earns the reward. Duplicates earn credit.</li>
+        <li>Rewards are paid after the fix ships.</li>
+        <li>When a quarter's pool is spent, valid reports are paid from the next quarter's pool, in the order they were triaged.</li>
+      </ul>
+      <p>The full policy, the reward table and the safe harbour are on <a href="/b-aware">b-Aware</a>.</p>
+    </main>
+    <script>
+    (function () {
+      var $ = function (id) { return document.getElementById(id); };
+      var fmt = function (n) { return (Math.round(n * 1e8) / 1e8).toLocaleString('en-GB', { maximumFractionDigits: 8 }); };
+      var esc = function (t) { return String(t == null ? '' : t).replace(/[&<>"']/g, function (c) { return '&#' + c.charCodeAt(0) + ';'; }); };
+      var short = function (a) { return a ? a.slice(0, 6) + '\u2026' + a.slice(-4) : ''; };
+      var WOC = 'https://api.whatsonchain.com/v1/bsv/main';
+      function getJSON(u) { return fetch(u, { cache: 'no-store' }).then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); }); }
+      function price() {
+        return getJSON(WOC + '/exchangerate').then(function (j) { var r = Number(j.rate); if (!r) throw 0; return r; })
+          .catch(function () { return getJSON('https://api.coingecko.com/api/v3/simple/price?ids=bitcoin-cash-sv&vs_currencies=usd').then(function (j) { return Number(j['bitcoin-cash-sv'].usd); }); })
+          .catch(function () { return null; });
+      }
+      getJSON('/bounties.json').then(function (d) {
+        var pool = d.pool || {}, pays = d.payouts || [], q = pool.quarter || '';
+        $('quarter').textContent = q ? '· ' + q : '';
+        var qSum = 0, all = 0;
+        pays.forEach(function (p) { all += Number(p.bsv) || 0; if (p.quarter === q) qSum += Number(p.bsv) || 0; });
+        $('s-q').textContent = fmt(qSum); $('s-all').textContent = fmt(all);
+        $('s-n').textContent = pays.length; $('s-c').textContent = d.credit_only || 0;
+        $('rows').innerHTML = pays.length ? pays.slice().sort(function (a, b) { return a.date < b.date ? 1 : -1; }).map(function (p) {
+          var dt = new Date(p.date + 'T12:00:00Z').toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' });
+          return '<tr><td>' + esc(dt) + '</td><td>' + esc(p.credit) + (p.note ? '<br><span class="tag">' + esc(p.note) + '</span>' : '') +
+            '</td><td>' + esc(p.severity) + '</td><td class="r">' + esc(fmt(Number(p.bsv))) + '</td><td><code>' + esc(short(p.address)) +
+            '</code></td><td><a href="https://whatsonchain.com/tx/' + encodeURIComponent(p.txid) + '" target="_blank" rel="noopener">View transaction</a></td></tr>';
+        }).join('') : '<tr><td colspan="6">No payouts yet.</td></tr>';
+
+        var addr = pool.address;
+        var max = Number(pool.target_bsv) || Number(pool.topped_up_bsv) || 0;
+        function show(bal, live, usd) {
+          var top = Math.max(max, bal);
+          $('left').textContent = fmt(bal) + ' BSV' + (usd ? ' (~$' + Math.round(bal * usd).toLocaleString('en-US') + ')' : '') + ' left';
+          if (top > 0) { $('barwrap').hidden = false; requestAnimationFrame(function () { $('bar').style.width = Math.min(100, bal / top * 100) + '%'; }); }
+          $('poolnote').textContent = live ? 'Live balance from the chain. It shrinks as payouts go out and grows when the pool is topped up.' : 'Live balance unavailable; showing the last published figure.';
+        }
+        if (!addr) { $('left').textContent = 'Pool opening soon'; $('poolnote').textContent = 'The live balance appears here once the pool address is published.'; return; }
+        $('addr').innerHTML = '<code>' + esc(addr) + '</code> · <a href="https://whatsonchain.com/address/' + encodeURIComponent(addr) + '" target="_blank" rel="noopener">view on chain</a>';
+        var fallback = Number(pool.last_balance_bsv) || 0;
+        Promise.all([getJSON(WOC + '/address/' + encodeURIComponent(addr) + '/balance'), price()]).then(function (r) {
+          show(((Number(r[0].confirmed) || 0) + (Number(r[0].unconfirmed) || 0)) / 1e8, true, r[1]);
+        }).catch(function () { price().then(function (u) { show(fallback, false, u); }); });
+      }).catch(function () { $('left').textContent = 'Pool data unavailable'; $('rows').innerHTML = '<tr><td colspan="6">Could not load payouts. Try again shortly.</td></tr>'; });
+    })();
+    </script>
+  </body>
+</html>

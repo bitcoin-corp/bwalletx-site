@@ -1,0 +1,53 @@
+{
+  "updated": "2026-10-24",
+  "jobs": [
+    {
+      "id": "security",
+      "title": "Security testing (b-Aware)",
+      "status": "live",
+      "pay": "Critical 10 BSV · High 3 BSV · Medium 0.5 BSV · Low: credit",
+      "pay_note": "Paid from a 20 BSV pool each quarter.",
+      "what": "Read the code and try the apps. Find a way to take funds, read keys, or get past an approval in bWalletX, bWallet or bChatX.",
+      "rules": [
+        "Test only your own wallets and accounts. No real users' funds or data.",
+        "First valid report of an issue is paid. Duplicates earn credit.",
+        "Rewards are paid after the fix ships.",
+        "Keep it private until it is fixed. Full policy and safe harbour on b-Aware.",
+        "Anyone can report by email. To receive a reward you sign in with bWalletX on this page and verify your identity with Veriff."
+      ],
+      "submit": "email",
+      "submit_text": "Email support@bwalletx.com with the subject b-Aware. Not the form below.",
+      "link": "/b-aware",
+      "link_text": "Read the b-Aware policy and rates"
+    },
+    {
+      "id": "android-testers",
+      "title": "Paid Android testing",
+      "status": "live",
+      "pay": "1 BSV per tester",
+      "pay_note": "0.25 BSV after the first open from Google Play, 0.75 BSV after 12 of 14 daily check-ins. New testers are paid once identity checks (Veriff) are live.",
+      "what": "Install bWallet from the Google Play test and use it every day for 14 days: send a little, receive, try the features, and tell us what breaks.",
+      "rules": [
+        "Apply with Google on /testers first. Testers are approved by hand.",
+        "Use the Google account on your Android phone.",
+        "One tester per person. The app checks in once a day when you open it.",
+        "Sign in with bWalletX below to send test reports and notes.",
+        "Payouts need a bWalletX sign-in and a Veriff check, like all paid work."
+      ],
+      "submit": "form",
+      "link": "/testers",
+      "link_text": "Apply on /testers"
+    },
+    {
+      "id": "feature-bounties",
+      "title": "Feature bounties",
+      "status": "coming",
+      "pay": "Set per contract",
+      "what": "Build or fix a named feature in our open-source code. Each bounty will list the task, the price and how b checks the work.",
+      "rules": [
+        "Not open yet. The first contracts will appear here."
+      ],
+      "submit": "none"
+    }
+  ]
+}

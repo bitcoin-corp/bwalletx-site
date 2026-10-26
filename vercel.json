@@ -2,6 +2,118 @@
   "cleanUrls": true,
   "rewrites": [
     {
+      "source": "/",
+      "has": [
+        {
+          "type": "host",
+          "value": "race.bwalletx.com"
+        },
+        {
+          "type": "header",
+          "key": "user-agent",
+          "value": "(?i).*(twitterbot|facebookexternalhit|slackbot|discordbot|telegrambot|whatsapp|linkedinbot|skypeuripreview|embedly|pinterest|redditbot|applebot|googlebot).*"
+        }
+      ],
+      "destination": "/race-card"
+    },
+    {
+      "source": "/",
+      "has": [
+        {
+          "type": "host",
+          "value": "race.bwalletx.com"
+        }
+      ],
+      "destination": "https://www.vexvoid.com/race?theme=bacc"
+    },
+    {
+      "source": "/race",
+      "has": [
+        {
+          "type": "host",
+          "value": "race.bwalletx.com"
+        },
+        {
+          "type": "header",
+          "key": "user-agent",
+          "value": "(?i).*(twitterbot|facebookexternalhit|slackbot|discordbot|telegrambot|whatsapp|linkedinbot|skypeuripreview|embedly|pinterest|redditbot|applebot|googlebot).*"
+        }
+      ],
+      "destination": "/race-card"
+    },
+    {
+      "source": "/race",
+      "has": [
+        {
+          "type": "host",
+          "value": "race.bwalletx.com"
+        }
+      ],
+      "destination": "https://www.vexvoid.com/race"
+    },
+    {
+      "source": "/race/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "race.bwalletx.com"
+        }
+      ],
+      "destination": "https://www.vexvoid.com/race/:path*"
+    },
+    {
+      "source": "/_next/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "race.bwalletx.com"
+        }
+      ],
+      "destination": "https://www.vexvoid.com/_next/:path*"
+    },
+    {
+      "source": "/manifest.json",
+      "has": [
+        {
+          "type": "host",
+          "value": "race.bwalletx.com"
+        }
+      ],
+      "destination": "https://www.vexvoid.com/manifest.json"
+    },
+    {
+      "source": "/b-Aware",
+      "destination": "/b-aware"
+    },
+    {
+      "source": "/disclosure",
+      "destination": "/b-aware"
+    },
+    {
+      "source": "/security",
+      "destination": "/b-aware"
+    },
+    {
+      "source": "/bounty",
+      "destination": "/b-aware"
+    },
+    {
+      "source": "/race",
+      "has": [
+        {
+          "type": "query",
+          "key": "theme",
+          "value": "bacc"
+        },
+        {
+          "type": "header",
+          "key": "user-agent",
+          "value": "(?i).*(twitterbot|facebookexternalhit|slackbot|discordbot|telegrambot|whatsapp|linkedinbot|skypeuripreview|embedly|pinterest|redditbot|applebot|googlebot).*"
+        }
+      ],
+      "destination": "/race-card"
+    },
+    {
       "source": "/themes/custom",
       "destination": "/themes-custom"
     },
@@ -52,8 +164,343 @@
   ],
   "redirects": [
     { "source": "/mint-a-team", "destination": "/your-character", "permanent": false },
-    { "source": "/recover-relayX", "destination": "/recover-relayx", "permanent": true },
-    { "source": "/relayx-nfts", "destination": "/recover-relayx", "permanent": true },
+    { "source": "/relayX-on-b", "destination": "/relayx-on-b", "permanent": true },
+    { "source": "/RelayX-on-b", "destination": "/relayx-on-b", "permanent": true },
+    { "source": "/CoinGeek-on-b", "destination": "/coingeek-on-b", "permanent": true },
+    { "source": "/Coingeek-on-b", "destination": "/coingeek-on-b", "permanent": true },
+    { "source": "/coinGeek-on-b", "destination": "/coingeek-on-b", "permanent": true },
+    { "source": "/Twetch-on-b", "destination": "/twetch-on-b", "permanent": true },
+    { "source": "/Peck-on-b", "destination": "/peck-on-b", "permanent": true },
+    { "source": "/Hodlocker-on-b", "destination": "/hodlocker-on-b", "permanent": true },
+    { "source": "/HodLocker-on-b", "destination": "/hodlocker-on-b", "permanent": true },
+    { "source": "/Treechat-on-b", "destination": "/treechat-on-b", "permanent": true },
+    { "source": "/TreeChat-on-b", "destination": "/treechat-on-b", "permanent": true },
+    { "source": "/Yours-on-b", "destination": "/yours-on-b", "permanent": true },
+    { "source": "/On-b", "destination": "/on-b", "permanent": true },
+    { "source": "/B-on-b", "destination": "/be-on-b", "permanent": true },
+    { "source": "/b-on-B", "destination": "/be-on-b", "permanent": true },
+    { "source": "/b-on-b", "destination": "/be-on-b", "permanent": true },
+    { "source": "/b-on-b-2", "destination": "/be-on-b-2", "permanent": true },
+    { "source": "/b-on-b-3", "destination": "/be-on-b-3", "permanent": true },
+    { "source": "/family", "destination": "/b-family", "permanent": true },
+    {
+      "source": "/(.*)",
+      "has": [
+        {
+          "type": "host",
+          "value": "writer.bwalletx.com"
+        }
+      ],
+      "destination": "https://bwriterx.com/$1",
+      "permanent": false
+    },
+    {
+      "source": "/(.*)",
+      "has": [
+        {
+          "type": "host",
+          "value": "video.bwalletx.com"
+        }
+      ],
+      "destination": "https://bvideox.com/$1",
+      "permanent": false
+    },
+    {
+      "source": "/(.*)",
+      "has": [
+        {
+          "type": "host",
+          "value": "videos.bwalletx.com"
+        }
+      ],
+      "destination": "https://bvideox.com/$1",
+      "permanent": false
+    },
+    {
+      "source": "/(.*)",
+      "has": [
+        {
+          "type": "host",
+          "value": "vault.bwalletx.com"
+        }
+      ],
+      "destination": "https://bvaultx.com/$1",
+      "permanent": false
+    },
+    {
+      "source": "/(.*)",
+      "has": [
+        {
+          "type": "host",
+          "value": "store.bwalletx.com"
+        }
+      ],
+      "destination": "https://bstorex.com/$1",
+      "permanent": false
+    },
+    {
+      "source": "/(.*)",
+      "has": [
+        {
+          "type": "host",
+          "value": "social.bwalletx.com"
+        }
+      ],
+      "destination": "https://bsocialx.com/$1",
+      "permanent": false
+    },
+    {
+      "source": "/(.*)",
+      "has": [
+        {
+          "type": "host",
+          "value": "shares.bwalletx.com"
+        }
+      ],
+      "destination": "https://bsharesx.com/$1",
+      "permanent": false
+    },
+    {
+      "source": "/(.*)",
+      "has": [
+        {
+          "type": "host",
+          "value": "radio.bwalletx.com"
+        }
+      ],
+      "destination": "https://bradiox.com/$1",
+      "permanent": false
+    },
+    {
+      "source": "/(.*)",
+      "has": [
+        {
+          "type": "host",
+          "value": "news.bwalletx.com"
+        }
+      ],
+      "destination": "https://bnewsx.com/$1",
+      "permanent": false
+    },
+    {
+      "source": "/(.*)",
+      "has": [
+        {
+          "type": "host",
+          "value": "music.bwalletx.com"
+        }
+      ],
+      "destination": "https://bmusicx.com/$1",
+      "permanent": false
+    },
+    {
+      "source": "/(.*)",
+      "has": [
+        {
+          "type": "host",
+          "value": "movies.bwalletx.com"
+        }
+      ],
+      "destination": "https://bmoviesx.com/$1",
+      "permanent": false
+    },
+    {
+      "source": "/(.*)",
+      "has": [
+        {
+          "type": "host",
+          "value": "money.bwalletx.com"
+        }
+      ],
+      "destination": "https://bmoneyx.com/$1",
+      "permanent": false
+    },
+    {
+      "source": "/(.*)",
+      "has": [
+        {
+          "type": "host",
+          "value": "mint.bwalletx.com"
+        }
+      ],
+      "destination": "https://bmintx.com/$1",
+      "permanent": false
+    },
+    {
+      "source": "/(.*)",
+      "has": [
+        {
+          "type": "host",
+          "value": "mail.bwalletx.com"
+        }
+      ],
+      "destination": "https://bmailx.com/$1",
+      "permanent": false
+    },
+    {
+      "source": "/(.*)",
+      "has": [
+        {
+          "type": "host",
+          "value": "jobs.bwalletx.com"
+        }
+      ],
+      "destination": "https://bwalletx.com/jobs",
+      "permanent": false
+    },
+    {
+      "source": "/(.*)",
+      "has": [
+        {
+          "type": "host",
+          "value": "(www\\.)?bjobsx\\.com"
+        }
+      ],
+      "destination": "https://bwalletx.com/jobs",
+      "permanent": false
+    },
+    {
+      "source": "/(.*)",
+      "has": [
+        {
+          "type": "host",
+          "value": "friends.bwalletx.com"
+        }
+      ],
+      "destination": "https://bfriendsx.com/$1",
+      "permanent": false
+    },
+    {
+      "source": "/(.*)",
+      "has": [
+        {
+          "type": "host",
+          "value": "forge.bwalletx.com"
+        }
+      ],
+      "destination": "https://bforgex.com/$1",
+      "permanent": false
+    },
+    {
+      "source": "/(.*)",
+      "has": [
+        {
+          "type": "host",
+          "value": "drive.bwalletx.com"
+        }
+      ],
+      "destination": "https://bdrivex.com/$1",
+      "permanent": false
+    },
+    {
+      "source": "/(.*)",
+      "has": [
+        {
+          "type": "host",
+          "value": "dojo.bwalletx.com"
+        }
+      ],
+      "destination": "https://bdojox.com/$1",
+      "permanent": false
+    },
+    {
+      "source": "/(.*)",
+      "has": [
+        {
+          "type": "host",
+          "value": "cal.bwalletx.com"
+        }
+      ],
+      "destination": "https://bcalx.com/$1",
+      "permanent": false
+    },
+    {
+      "source": "/(.*)",
+      "has": [
+        {
+          "type": "host",
+          "value": "ads.bwalletx.com"
+        }
+      ],
+      "destination": "https://badvertisingx.com/$1",
+      "permanent": false
+    },
+    {
+      "source": "/(.*)",
+      "has": [
+        {
+          "type": "host",
+          "value": "search.bwalletx.com"
+        }
+      ],
+      "destination": "https://bsearchx.com/$1",
+      "permanent": false
+    },
+    {
+      "source": "/race",
+      "has": [
+        {
+          "type": "host",
+          "value": "(www\\.)?bwalletx\\.com"
+        }
+      ],
+      "missing": [
+        {
+          "type": "header",
+          "key": "user-agent",
+          "value": "(?i).*(twitterbot|facebookexternalhit|slackbot|discordbot|telegrambot|whatsapp|linkedinbot|skypeuripreview|embedly|pinterest|redditbot|applebot|googlebot).*"
+        }
+      ],
+      "destination": "https://race.bwalletx.com/race",
+      "permanent": false
+    },
+    {
+      "source": "/",
+      "has": [
+        {
+          "type": "host",
+          "value": "race.bwalletx.com"
+        },
+        {
+          "type": "header",
+          "key": "user-agent",
+          "value": "(?i).*(twitterbot|facebookexternalhit|slackbot|discordbot|telegrambot|whatsapp|linkedinbot|skypeuripreview|embedly|pinterest|redditbot|applebot|googlebot).*"
+        }
+      ],
+      "destination": "/race-card",
+      "permanent": false
+    },
+    {
+      "source": "/",
+      "has": [
+        {
+          "type": "host",
+          "value": "race.bwalletx.com"
+        }
+      ],
+      "destination": "/race?theme=bacc",
+      "permanent": false
+    },
+    {
+      "source": "/bAcc",
+      "destination": "/b/acc",
+      "permanent": true
+    },
+    {
+      "source": "/bacc",
+      "destination": "/b/acc",
+      "permanent": true
+    },
+    {
+      "source": "/recover-relayX",
+      "destination": "/recover-relayx",
+      "permanent": true
+    },
+    {
+      "source": "/relayx-nfts",
+      "destination": "/recover-relayx",
+      "permanent": true
+    },
     {
       "source": "/theme/:colour(white|pink|blue|yellow|vexvoid|gold|dark|npg|npgx)",
       "destination": "/themes/:colour",
@@ -92,6 +539,11 @@
     {
       "source": "/twetch",
       "destination": "https://twetch.com/u/220501",
+      "permanent": false
+    },
+    {
+      "source": "/:m(move|Migrate|move-to-bwalletx|migrate-to-bwalletx)",
+      "destination": "/migrate",
       "permanent": false
     },
     {
@@ -135,13 +587,13 @@
       "statusCode": 301
     },
     {
-      "source": "/download/:file(bwalletx-android(?!-5.2.36\\.apk$)[^/]*\\.apk)",
-      "destination": "/download/bwalletx-android-5.2.36.apk",
+      "source": "/download/:file(bwalletx-android(?!-5.2.44\\.apk$)[^/]*\\.apk)",
+      "destination": "/download/bwalletx-android-5.2.44.apk",
       "statusCode": 302
     },
     {
-      "source": "/download/:file(bwalletx-extension(?!-5.2.36\\.zip$)[^/]*\\.zip)",
-      "destination": "/download/bwalletx-extension-5.2.36.zip",
+      "source": "/download/:file(bwalletx-extension(?!-5.2.44\\.zip$)[^/]*\\.zip)",
+      "destination": "/download/bwalletx-extension-5.2.44.zip",
       "statusCode": 302
     },
     {
@@ -187,17 +639,76 @@
   ],
   "headers": [
     {
+      "source": "/.well-known/bwalletx-theme.json",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "application/json; charset=utf-8"
+        },
+        {
+          "key": "Access-Control-Allow-Origin",
+          "value": "*"
+        },
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=3600"
+        }
+      ]
+    },
+    {
+      "source": "/connect-demo/.well-known/bwalletx-theme.json",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "application/json; charset=utf-8"
+        },
+        {
+          "key": "Access-Control-Allow-Origin",
+          "value": "*"
+        }
+      ]
+    },
+    {
+      "source": "/status.json",
+      "headers": [
+        {
+          "key": "Access-Control-Allow-Origin",
+          "value": "*"
+        },
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=60, must-revalidate"
+        },
+        {
+          "key": "Content-Type",
+          "value": "application/json"
+        }
+      ]
+    },
+    {
       "source": "/.well-known/apple-app-site-association",
       "headers": [
-        { "key": "Content-Type", "value": "application/json" },
-        { "key": "Cache-Control", "value": "public, max-age=3600" }
+        {
+          "key": "Content-Type",
+          "value": "application/json"
+        },
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=3600"
+        }
       ]
     },
     {
       "source": "/.well-known/assetlinks.json",
       "headers": [
-        { "key": "Content-Type", "value": "application/json" },
-        { "key": "Cache-Control", "value": "public, max-age=3600" }
+        {
+          "key": "Content-Type",
+          "value": "application/json"
+        },
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=3600"
+        }
       ]
     },
     {
@@ -253,6 +764,15 @@
         {
           "key": "Cache-Control",
           "value": "public, max-age=300"
+        }
+      ]
+    },
+    {
+      "source": "/.well-known/security.txt",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "text/plain; charset=utf-8"
         }
       ]
     }

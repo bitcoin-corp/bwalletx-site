@@ -3,14 +3,14 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Sign in with X · bWalletX</title>
+    <title>Link your X account · bWalletX</title>
     <link rel="canonical" href="https://bwalletx.com/x" />
-    <meta name="description" content="Connect your X account to bWalletX: an X badge and your X picture on your wallet, and your @name suggested when you choose your own handle." />
+    <meta name="description" content="Link your X account to bWalletX: an X badge and your X picture on your wallet, and your @name suggested when you choose your own handle." />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://bwalletx.com/x" />
     <meta property="og:site_name" content="bWalletX" />
     <meta property="og:title" content="Sign in with X: verified, with your photo" />
-    <meta property="og:description" content="Connect your X account to bWalletX: an X badge and your X picture on your wallet, and your @name suggested when you choose your own handle." />
+    <meta property="og:description" content="Link your X account to bWalletX: an X badge and your X picture on your wallet, and your @name suggested when you choose your own handle." />
     <meta property="og:image" content="https://bwalletx.com/og-x-v3.png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
@@ -18,7 +18,7 @@
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@bWalletX" />
     <meta name="twitter:title" content="Sign in with X: verified, with your photo" />
-    <meta name="twitter:description" content="Connect your X account to bWalletX: an X badge and your X picture on your wallet, and your @name suggested when you choose your own handle." />
+    <meta name="twitter:description" content="Link your X account to bWalletX: an X badge and your X picture on your wallet, and your @name suggested when you choose your own handle." />
     <meta name="twitter:image" content="https://bwalletx.com/og-x-v3.png" />
     <link rel="icon" href="/favicon.ico" />
     <link rel="stylesheet" href="/styles.css" />
@@ -44,6 +44,7 @@
       .feat li { display: flex; gap: 12px; align-items: baseline; padding: 12px 0; border-bottom: 1px solid #ffffff10; }
       .tag { flex: none; font-size: 0.75rem; font-weight: 700; padding: 2px 9px; border-radius: 999px; }
       .tag.live { background: #F5B800; color: #000; }
+      .tag:not(.live) { background: #ffffff14; color: #cfcabd; }
     </style>
   </head>
   <body>
@@ -60,8 +61,8 @@
     <script src="/nav.js"></script>
     <main class="ext">
       <img src="/logo.svg" alt="bWalletX" width="72" height="64" />
-      <h1>Sign in with X</h1>
-      <p class="lede">Connect your X account to bWalletX to show it's really you. Your wallet gets an X badge and your X picture, and your @name is offered as a suggestion when you choose your handle. You pick the name.</p>
+      <h1>Link your X account</h1>
+      <p class="lede">Link your X account to your bWalletX to show it's really you. Your wallet gets an X badge and can use your X picture. You make the wallet first, with a passkey or a password; linking X comes after, and it's optional.</p>
       <div class="flow">
         <span class="pill">@yourhandle</span><span class="arrow">&rarr;</span>
         <span class="pill">X badge + photo</span><span class="arrow">&rarr;</span>
@@ -70,16 +71,15 @@
 
       <h2>How to do it</h2>
       <ol>
-        <li><a href="/get">Get bWalletX</a> on your phone or computer.</li>
-        <li>Tap <b>Create account</b>, then <b>Continue with X</b>.</li>
-        <li>Sign in on X's own page and allow access.</li>
-        <li>Back in bWalletX, your picture is filled in. Choose a password and save your 12-word recovery phrase.</li>
-        <li>Choose your handle. Your X @name is filled in as a suggestion; keep it or type another. It's free.</li>
+        <li><a href="/get">Get bWalletX</a> on your phone or computer and create your wallet.</li>
+        <li>On your wallet's home screen, tap the <b>Link your accounts</b> card. You can also go to <b>Settings &rsaquo; Identity &rsaquo; Link your accounts</b> at any time.</li>
+        <li>Choose <b>X</b>, sign in on X's own page and allow access.</li>
+        <li>Back in bWalletX, your X account shows as linked.</li>
       </ol>
-      <p>Already have a wallet? Go to <b>Settings &rsaquo; Identity &rsaquo; Connect X or Google</b>. Your handle stays as it is.</p>
+      <p>The same screen links Google, GitHub and LinkedIn. Linking never changes your handle or your money.</p>
 
       <h2>Your name</h2>
-      <p>Signing in with X doesn't make a name for you. Your handle is a plain <code>yourname@bwalletx.com</code> that you choose, the same as everyone else's. X allows underscores in usernames and paymail names don't, so a suggested <code>@Jane_Doe</code> becomes <code>jane-doe</code>.</p>
+      <p>Linking X doesn't make a name for you. Your handle is a plain <code>yourname@bwalletx.com</code> that you choose, the same as everyone else's, in <b>Settings &rsaquo; Identity &rsaquo; Change handle</b>. X allows underscores in usernames and paymail names don't, so <code>@Jane_Doe</code> would be <code>jane-doe</code>.</p>
       <p>Older <code>yourhandle.x@bwalletx.com</code> names, made before October 2026, keep receiving. New ones aren't given out.</p>
 
       <h2>What you get</h2>
@@ -93,18 +93,17 @@
 
       <h2>Status</h2>
       <ul class="feat">
-<li><span class="tag live">Live</span><span><b>Continue with X</b> on Create account, and Connect X in Settings &rsaquo; Identity.</span></li>
-<li><span class="tag live">Live</span><span><b>X picture and badge</b> on your wallet and listing.</span></li>
-<li><span class="tag live">Live</span><span><b>@name suggested</b> when you choose your handle.</span></li>
+<li><span class="tag live">Live</span><span><b>Link your accounts</b> on the wallet home and in Settings &rsaquo; Identity: X, Google, GitHub and LinkedIn.</span></li>
+<li><span class="tag">Beta</span><span><b>X badge</b> on your wallet and listing (shown as beta in the app).</span></li>
       </ul>
 
       <div class="row">
         <a class="btn btn-store" href="/get">Get bWalletX</a>
-        <a class="btn btn-store btn-ghost" href="/gmail">Sign in with Google</a>
+        <a class="btn btn-store btn-ghost" href="/gmail">Link Google</a>
         <a class="btn btn-store btn-ghost" href="/social">Social in bWalletX</a>
         <a class="btn btn-store btn-ghost" href="/privacy">Privacy</a>
       </div>
-      <p class="small">Sign in with X and Google are in bWalletX (Android APK, Chrome extension, web and iPhone). The App Store and Google Play version, bWallet, doesn't have them yet. They aren't offered for agent accounts. Questions: <a href="mailto:support@bwalletx.com">support@bwalletx.com</a></p>
+      <p class="small">Linking X and Google is in bWalletX (Android APK, Chrome extension, web and iPhone). The App Store and Google Play version, bWallet, doesn't have them yet. They aren't offered for agent accounts. Questions: <a href="mailto:support@bwalletx.com">support@bwalletx.com</a></p>
     </main>
   </body>
 </html>
