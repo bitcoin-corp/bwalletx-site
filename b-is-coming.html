@@ -33,7 +33,7 @@
       .ic-scene { overflow-wrap: anywhere; position: relative; min-height: 100svh; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 0 16px; box-sizing: border-box; text-align: center; overflow: hidden; }
       .ic-hero { background: radial-gradient(ellipse at 50% 45%, rgba(245, 184, 0, 0.14), rgba(5, 8, 15, 0) 60%), #05080f; }
       /* The b builds: slow breaths that get quicker and brighter, then it arrives. */
-      .ic-b { position: relative; width: clamp(140px, 34vw, 300px); aspect-ratio: 0.74; }
+      .ic-b { position: relative; width: clamp(96px, min(30vw, 26svh), 260px); aspect-ratio: 0.74; }
       .ic-b img { width: 100%; height: 100%; display: block; object-fit: contain; filter: drop-shadow(0 0 30px rgba(245, 184, 0, 0.35)); }
       .ic-b.build img { animation: build 1.6s ease-in-out infinite; }
       .ic-b.build2 img { animation: build 0.9s ease-in-out infinite; }
@@ -57,25 +57,25 @@
       @keyframes came { 0% { transform: scale(1.06); } 35% { transform: scale(1.22); } 100% { transform: scale(1); } }
       @keyframes glow { 0%, 100% { filter: drop-shadow(0 0 24px rgba(245, 184, 0, 0.35)); } 50% { filter: drop-shadow(0 0 60px rgba(245, 184, 0, 0.8)); } }
       @keyframes flash { 0% { opacity: 0; transform: scale(0.4); } 25% { opacity: 1; } 100% { opacity: 0; transform: scale(1.6); } }
-      .ic-h1 { margin: 34px 0 0; font: 700 clamp(5rem, 23vw, 19rem) / 0.9 var(--hf); letter-spacing: -0.045em; color: #fff; }
+      .ic-h1 { margin: 6px 0 0; font: 700 clamp(3.2rem, min(21vw, 16svh), 13rem) / 0.9 var(--hf); letter-spacing: -0.045em; color: #fff; }
       .ic-h1 em { font-style: normal; color: var(--gold-hi); }
-      .ic-tease { margin: 18px 0 0; min-height: 1.6em; font: 700 clamp(2.4rem, 11vw, 7rem) / 1 var(--hf); letter-spacing: -0.03em; color: #ffe7a6; letter-spacing: 0.02em; transition: opacity 0.5s ease; }
+      .ic-tease { margin: 14px 0 0; min-height: 1.2em; font: 700 clamp(1.8rem, min(8vw, 7svh), 4.5rem) / 1 var(--hf); letter-spacing: -0.03em; color: #ffe7a6; letter-spacing: 0.02em; transition: opacity 0.5s ease; }
       .ic-hint { position: absolute; bottom: 22px; left: 0; right: 0; font: 500 0.72rem var(--hf); letter-spacing: 0.3em; text-transform: uppercase; color: #5d6878; }
 
       /* The loading bar that won't quite finish. */
       .ic-load { min-height: 80svh; }
-      .ic-load h2, .ic-count h2 { margin: 0 0 28px; font: 700 clamp(3rem, 12vw, 9.5rem) / 0.95 var(--hf); letter-spacing: -0.03em; color: #fff; }
+      .ic-load h2, .ic-count h2 { margin: 0 0 28px; font: 700 clamp(2.4rem, min(11vw, 13svh), 7rem) / 0.95 var(--hf); letter-spacing: -0.03em; color: #fff; }
       .ic-bar { width: min(560px, 100%); height: 14px; border-radius: 999px; background: #121a28; overflow: hidden; box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.06); }
       .ic-bar i { display: block; height: 100%; width: 0; border-radius: inherit; background: linear-gradient(90deg, #c98f00, #f5b800, #ffe48a); transition: width 0.9s cubic-bezier(0.3, 0.7, 0.3, 1); }
       .ic-bar.done i { box-shadow: 0 0 30px rgba(255, 210, 77, 0.8); }
-      .ic-pct { margin: 18px 0 0; font: 700 clamp(3rem, 14vw, 8rem) var(--hf); color: var(--gold-hi); font-variant-numeric: tabular-nums; }
-      .ic-msg { margin: 8px 0 0; min-height: 1.5em; font: 700 clamp(2rem, 9vw, 5rem) / 1.05 var(--hf); letter-spacing: -0.02em; color: #ffe7a6; }
+      .ic-pct { margin: 18px 0 0; font: 700 clamp(2.4rem, min(12vw, 13svh), 7rem) var(--hf); color: var(--gold-hi); font-variant-numeric: tabular-nums; }
+      .ic-msg { margin: 8px 0 0; min-height: 1.5em; font: 700 clamp(1.6rem, min(8vw, 9svh), 4.5rem) / 1.05 var(--hf); letter-spacing: -0.02em; color: #ffe7a6; }
 
       /* The countdown that edges, then bursts. */
       .ic-count { min-height: 90svh; }
-      .ic-num { font: 700 clamp(10rem, 56vw, 32rem) / 1 var(--hf); letter-spacing: -0.06em; color: #fff; font-variant-numeric: tabular-nums; text-shadow: 0 6px 60px rgba(0, 0, 0, 0.6); min-height: 1em; }
+      .ic-num { font: 700 clamp(6rem, min(48vw, 48svh), 24rem) / 1 var(--hf); letter-spacing: -0.06em; color: #fff; font-variant-numeric: tabular-nums; text-shadow: 0 6px 60px rgba(0, 0, 0, 0.6); min-height: 1em; }
       .ic-num { display: flex; justify-content: center; align-items: center; }
-      .ic-numb { display: block; width: clamp(140px, 34vw, 300px); height: auto; aspect-ratio: 0.74; max-width: 100%; object-fit: contain; filter: drop-shadow(0 0 30px rgba(245, 184, 0, 0.35)); animation: glow 6s 1.4s ease-in-out infinite; }
+      .ic-numb { display: block; width: clamp(110px, min(34vw, 30svh), 300px); height: auto; aspect-ratio: 0.74; max-width: 100%; object-fit: contain; filter: drop-shadow(0 0 30px rgba(245, 184, 0, 0.35)); animation: glow 6s 1.4s ease-in-out infinite; }
       .ic-num.pop { animation: pop 0.6s ease-out; color: var(--gold-hi); }
       @keyframes pop { from { transform: scale(1.3); } to { transform: none; } }
       .ic-again { margin-top: 26px; padding: 12px 24px; border-radius: 999px; border: 1px solid rgba(255, 255, 255, 0.4); background: transparent; color: #fff; font: 500 0.8rem var(--hf); letter-spacing: 0.18em; text-transform: uppercase; cursor: pointer; visibility: hidden; }
@@ -87,13 +87,13 @@
 
       .ic-calm { overflow-wrap: anywhere; max-width: 1400px; margin: 0 auto; padding: 16vh 24px 14vh; text-align: center; color: #b9c6d6; font: 400 clamp(1.05rem, 2.4vw, 1.3rem) / 1.75 var(--hf); }
       .ic-calm p { margin: 0 0 2.2em; }
-      .ic-calm .ic-lead { font: 700 clamp(2.8rem, 12vw, 8rem) / 1 var(--hf); letter-spacing: -0.03em; color: #fff; margin-bottom: 1.4em; }
+      .ic-calm .ic-lead { font: 700 clamp(2.4rem, min(11vw, 14svh), 7rem) / 1 var(--hf); letter-spacing: -0.03em; color: #fff; margin-bottom: 1.4em; }
       .ic-calm strong { display: block; margin-bottom: 0.35em; color: #fff; font-weight: 600; font-size: 1.15em; letter-spacing: -0.01em; }
       .ic-calm em { font-style: normal; color: var(--gold-hi); }
       .ic-calm p:last-child { margin-bottom: 0; }
 
       .ic-end { background: radial-gradient(ellipse at 50% 60%, rgba(245, 184, 0, 0.18), rgba(5, 8, 15, 0) 60%), #05080f; }
-      .ic-end h2 { margin: 0 0 12px; font: 700 clamp(2.6rem, 10vw, 5rem) / 1 var(--hf); letter-spacing: -0.04em; color: #fff; }
+      .ic-end h2 { margin: 0 0 12px; font: 700 clamp(2.2rem, min(10vw, 12svh), 5rem) / 1 var(--hf); letter-spacing: -0.04em; color: #fff; }
       .ic-end p { margin: 0 0 30px; color: #b9c6d6; font: 400 clamp(0.95rem, 2.6vw, 1.1rem) var(--hf); }
       .jb-go { display: inline-block; padding: 18px 40px; border-radius: 999px; background: linear-gradient(180deg, #ffd24d, #f5b800); color: #0b0a08; font: 700 1.1rem var(--hf); text-decoration: none; box-shadow: 0 14px 50px rgba(245, 184, 0, 0.35); }
       .jb-go:focus-visible { outline: 2px solid var(--gold); outline-offset: 4px; }
@@ -137,9 +137,10 @@
       @keyframes drift { from { transform: translate(-6%, -4%) scale(0.9); } to { transform: translate(6%, 5%) scale(1.1); } }
       #ic-waves { position: absolute; inset: 0; width: 100%; height: 100%; }
       .ic-heart { position: absolute; bottom: -60px; left: 0; width: 34px; height: 34px; will-change: transform, opacity; }
-      .ic-b { transform: scale(var(--bs, 0.35)); transform-origin: 50% 70%; opacity: var(--bo, 1); filter: hue-rotate(calc(var(--heat) * -78deg)) saturate(calc(1 + var(--heat) * 0.7)) brightness(calc(0.45 + var(--bo, 1) * 0.3 + var(--heat) * 0.35)); }
+      .ic-b { transform: scale(var(--bs, 0.35)); transform-origin: 50% 100%; opacity: var(--bo, 1); filter: hue-rotate(calc(var(--heat) * -78deg)) saturate(calc(1 + var(--heat) * 0.7)) brightness(calc(0.45 + var(--bo, 1) * 0.3 + var(--heat) * 0.35)); }
       /* Opening (owner): no text at first, only darkness and the b emerging. The words fade in once the build is under way. */
-.ic-say { position: absolute !important; left: 16px; right: 16px; top: 60%; margin: 0; font: 700 clamp(3.2rem, 15vw, 12rem) / 0.95 var(--hf); letter-spacing: -0.03em; color: #ffe3ee; text-shadow: 0 4px 30px rgba(255, 45, 122, 0.55); opacity: 0; transform: translateY(8px); transition: opacity 0.9s ease, transform 0.9s ease; }
+.ic-say { position: absolute !important; left: 16px; right: 16px; top: 60%; margin: 0; font: 700 clamp(2.2rem, min(11vw, 13svh), 8rem) / 0.95 var(--hf); letter-spacing: -0.03em; color: #ffe3ee; text-shadow: 0 4px 30px rgba(255, 45, 122, 0.55); opacity: 0; transform: translateY(8px); transition: opacity 0.9s ease, transform 0.9s ease; }
+      /* 26 Oct fit (owner): b grows up from its base so it sits right on the title; every title capped by width and height so nothing clips. */
       .ic-say.on { opacity: 1; transform: none; }
       .ic-hero .ic-h1, .ic-hero .ic-tease, .ic-hero .ic-hint { transition: opacity 2.4s ease, transform 2.4s ease; }
       .ic-hero.hush .ic-h1, .ic-hero.hush .ic-tease, .ic-hero.hush .ic-hint { opacity: 0; transform: translateY(10px); }
@@ -191,7 +192,7 @@
       (function () {
         // The words of the build (owner's "try", 26 Oct): swap them here. Each fades in and out on a loudness step,
         // then "b is coming" arrives and holds at the peak. Each line stays a little longer than the one before.
-        var BUILD_WORDS = ['b playful', 'b exciting', 'b daring', 'b provocative'];
+        var BUILD_WORDS = ['b playful', 'b naughty', 'b daring', 'b provocative'];
         var reduce = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
         var $ = function (id) { return document.getElementById(id); };
         // Sound effects: all synthesised with Web Audio, off by default, choice remembered.
