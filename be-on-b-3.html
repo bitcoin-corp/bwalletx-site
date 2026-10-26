@@ -123,6 +123,11 @@
       .t.br img { width: 100%; height: 100%; object-fit: contain; display: block; }
       .many .t { width: clamp(70px, 11vw, 140px); height: clamp(70px, 11vw, 140px); }
       .many .t.br { padding: clamp(10px, 1.7vw, 22px); }
+      /* Edge tiles beside the final slogan: small enough at 390px to stay clear of "be ON b". */
+      .many.fin .t { width: clamp(50px, 8vw, 112px); height: clamp(50px, 8vw, 112px); }
+      .many.fin .t.br { padding: clamp(8px, 1.3vw, 18px); }
+      .t.side, .many .t.side, .many.fin .t.side { --sz: clamp(44px, 7vw, 120px); width: var(--sz); height: var(--sz); }
+      .many .t.side.br { padding: clamp(5px, 1.2vw, 18px); }
       .many .t.wm { font-size: clamp(.7rem, 1.6vw, 1.3rem); }
       .scene.on .c-grid .t { animation: gslam .38s calc(var(--d) * 1s) cubic-bezier(.1,.9,.2,1) both, thump var(--beat) calc(.4s + var(--d) * 1s) ease-out infinite; }
       @keyframes gslam { 0% { opacity: 0; transform: scale(2.8); } 60% { opacity: 1; transform: scale(.92); } 100% { opacity: 1; transform: none; } }
@@ -227,19 +232,24 @@
         function face(n) { var t = T[n]; return t[0] === 'wm' ? esc(n) : '<img src="' + t[1] + '" alt="' + esc(n) + '" />'; }
         function one(n, i, p, extra) {
           var fx = (50 - p[0]) + 'vw', fy = (50 - p[1]) + 'vh';
-          return '<div class="t ' + T[n][0] + '" style="--x:' + p[0] + '%;--y:' + p[1] + '%;--fx:' + fx + ';--fy:' + fy + ';--wx:' + (p[0] < 50 ? -70 : 70) + 'vw;--r:' + (i % 2 ? -40 : 35) + 'deg;--d:' + (i * 0.035).toFixed(3) + ';' + (extra || '') + '">' + face(n) + '</div>';
+          var side = /class:side;/.test(extra || ''); extra = (extra || '').replace('class:side;', '');
+          return '<div class="t ' + T[n][0] + (side ? ' side' : '') + '" style="--x:' + p[0] + '%;--y:' + p[1] + '%;--fx:' + fx + ';--fy:' + fy + ';--wx:' + (p[0] < 50 ? -70 : 70) + 'vw;--r:' + (i % 2 ? -40 : 35) + 'deg;--d:' + (i * 0.035).toFixed(3) + ';' + (extra || '') + '">' + face(n) + '</div>';
         }
         // Tiles sit in a top band and a bottom band, clear of the centred slogan.
-        function bands(n) {
-          var top = Math.ceil(n / 2), out = [], rows = phone ? 4 : 5;
+        function bands(n, fin) {
+          // fin: the final slam, kept to two rows a band so the slogan and the CTAs stay clear.
+          var top = Math.ceil(n / 2), out = [], rows = fin ? 5 : phone ? 4 : 5, step = fin ? (phone ? 13 : 15) : (phone ? 13 : 17);
           function band(k, y0, dir) { for (var i = 0; i < k; i++) { var r = Math.floor(i / rows), c = i % rows, inRow = Math.min(rows, k - r * rows);
-            out.push([inRow === 1 ? 50 : (phone ? 11 : 12) + c * (phone ? 78 : 76) / (inRow - 1), y0 + dir * r * (phone ? 13 : 17)]); } }
-          band(top, phone ? 8 : 12, 1); band(n - top, phone ? 92 : 88, -1); return out;
+            out.push([inRow === 1 ? 50 : (phone ? 11 : 12) + c * (phone ? 78 : 76) / (inRow - 1), y0 + dir * r * step]); } }
+          band(top, fin ? (phone ? 8 : 9) : phone ? 8 : 12, 1); band(n - top, fin ? (phone ? 92 : 91) : phone ? 92 : 88, -1); return out;
         }
         function corners(n) { var S = phone ? [[16, 12], [84, 12], [16, 88], [84, 88], [50, 7], [50, 93], [50, 24], [50, 76]] : [[14, 15], [86, 15], [14, 85], [86, 85], [50, 9], [50, 91], [7, 50], [93, 50]]; return S.slice(0, n); }
-        function comp(kind, list) {
-          var many = list.length > 8, pos = (kind === 'burst' || kind === 'into' || kind === 'swirl') && !many ? corners(list.length) : bands(list.length);
-          return '<div class="c-' + kind + (many ? ' many' : '') + '">' + list.map(function (n, i) { return one(n, i, pos[i]); }).join('') + '</div>';
+        function comp(kind, list, sides) {
+          var many = list.length > 8, pos = (kind === 'burst' || kind === 'into' || kind === 'swirl') && !many ? corners(list.length) : bands(list.length, !!sides);
+          return '<div class="c-' + kind + (many ? ' many' : '') + (sides ? ' fin' : '') + '">' + list.map(function (n, i) { return one(n, i, pos[i]); }).join('') + (sides ? sides.map(function (n, k) {
+            // Edge tiles (owner, 26 Oct 2026): [TikTok] be ON b [WhatsApp], level with the slogan, pinned to the far edges.
+            return one(n, list.length + k, [k ? 96 : 4, 50], 'class:side;--x:' + (k ? 'calc(100% - 6px - var(--sz) / 2)' : 'calc(6px + var(--sz) / 2)') + ';');
+          }).join('') : '') + '</div>';
         }
         function belts(a, b) {
           function row(list, y, rev) { var h = list.concat(list, list, list).map(function (n, i) { return one(n, i, [0, 0]); }).join(''); return '<div class="belt' + (rev ? ' rev' : '') + '" style="--y:' + y + '%">' + h + h + '</div>'; }
@@ -265,14 +275,14 @@
           { beat: 8,  bg: bg('#2ee6d6', '#087f78'), slogan: 'Your posts, on {L}', sub: 'Download your X archive. bChatX brings it in.', art: comp('swirl', ['X', 'Twetch', 'Treechat', 'Peck', 'Instagram', 'TikTok']) + blast(24), hit: '#fff' },
           { beat: 12, bg: bg('#ff9a3c', '#d63a1c'), slogan: 'Move from X,', sub: 'Facebook, LinkedIn, YouTube, Instagram, TikTok and more.', art: belts(['X', 'Facebook', 'LinkedIn', 'YouTube'], ['Instagram', 'TikTok', 'Google', 'Treechat']) },
           { beat: 16, bg: bg('#4da3ff', '#2a3fe0'), slogan: 'to bChatX', sub: 'Invite pages for your people, at bchatx.com/migrate.', art: comp('rain', mix(['Facebook', 'LinkedIn', 'YouTube', 'Google'], ['Twetch', 'Treechat', 'Peck', 'CoinGeek'])) + blast(24), hit: '#fff' },
-          { beat: 20, bg: bg('#7c5cff', '#2b1a8f'), slogan: 'Read it', sub: 'Twetch, Peck and Treechat in the Feed.', art: comp('walls', ['Twetch', 'X', 'Peck', 'YouTube', 'Treechat', 'Instagram']) },
+          { beat: 20, bg: bg('#7c5cff', '#2b1a8f'), slogan: 'Read it', sub: 'Twetch, Peck and Treechat in the Feed.', art: comp('walls', ['Twetch', 'X', 'Peck', 'YouTube', 'Treechat', 'Instagram', 'Treechat']) },
           { beat: 24, bg: bg('#7cf06a', '#169a4c'), slogan: 'Tip it', sub: 'Tip the authors in BSV.', art: comp('pop', mix(['TikTok', 'X', 'Facebook', 'LinkedIn'], ['Peck', 'Twetch', 'Treechat', 'Yours'])) + blast(24), hit: '#fff' },
-          { beat: 28, bg: bg('#ff6ad5', '#a21caf'), slogan: 'Lock it', sub: 'Lock behind posts, Hodlocker-style.', art: comp('burst', ['Hodlocker', 'LinkedIn', 'Google', 'Twetch', 'YouTube', 'Instagram']) },
+          { beat: 28, bg: bg('#ff6ad5', '#a21caf'), slogan: 'Lock it', sub: 'Lock behind posts, Hodlocker-style.', art: comp('burst', ['Hodlocker', 'LinkedIn', 'Google', 'Twetch', 'YouTube', 'Instagram', 'Treechat']) },
           { beat: 32, bg: bg('#ffd24d', '#e0632e'), slogan: 'Bring it', sub: 'Your RelayX NFTs, found. Yours Wallet, in with your 12 words.', art: comp('grid', mix(['Google', 'Instagram', 'X', 'Facebook', 'YouTube'], ['RelayX', 'Yours', 'CoinGeek', 'Hodlocker', 'Treechat'])) + blast(40), hit: '#fff' },
-          { beat: 36, bg: bg('#2ee6d6', '#2a3fe0'), slogan: 'News', sub: 'CoinGeek headlines in bNews.', art: comp('swirl', ['CoinGeek', 'YouTube', 'LinkedIn', 'Facebook', 'X', 'Google']) },
+          { beat: 36, bg: bg('#2ee6d6', '#2a3fe0'), slogan: 'News', sub: 'CoinGeek headlines in bNews.', art: comp('swirl', ['CoinGeek', 'YouTube', 'LinkedIn', 'Facebook', 'X', 'Google', 'Treechat']) },
           { at: BREAK, bt: BB, bg: bg('#ff4d6d', '#7a0b3f'), slogan: 'Everyone, on {L}', sub: 'X, Facebook, LinkedIn, YouTube, Instagram, TikTok, Reddit, Threads, Bluesky, Pinterest: invite them in.', art: belts(['X', 'Facebook', 'LinkedIn', 'YouTube', 'Instagram', 'TikTok', 'Google'], BSV) + blast(36), hit: '#ffd24d' },
           { at: BREAK + 4 * BB, bt: BB, bg: bg('#ff9a3c', '#a3122f'), slogan: 'b is coming…', art: comp('into', ['X', 'Facebook', 'LinkedIn', 'YouTube', 'Instagram', 'TikTok', 'Google', 'Treechat']) },
-          { at: BACK, bg: bg('#5b2be0', '#12063a'), slogan: 'be ON {L}', art: comp('grid', EVERYONE) + blast(60), hit: '#fff', xl: true, cta: true }
+          { at: BACK, bg: bg('#5b2be0', '#12063a'), slogan: 'be ON {L}', art: comp('grid', EVERYONE.filter(function (n) { return n !== 'TikTok' && n !== 'WhatsApp'; }), ['TikTok', 'WhatsApp']) + blast(60), hit: '#fff', xl: true, cta: true }
         ];
         var stage = document.getElementById('stage'), film = document.getElementById('film'), flash = document.getElementById('flash'), bar = document.getElementById('bar'), poster = document.getElementById('poster');
         stage.innerHTML = SCENES.map(function (s) {
@@ -291,10 +301,14 @@
           if (t - lastFlash >= 0.34) { lastFlash = t; flash.style.setProperty('--fl', colour); flash.classList.remove('go'); void flash.offsetWidth; flash.classList.add('go'); }
           film.classList.remove('shake'); void film.offsetWidth; film.classList.add('shake');
         }
+        // Edge tiles sit level with the slogan line, wherever the slogan lands at this width.
+        function level(el) { var h = el.querySelector('.slogan'), b = el.getBoundingClientRect(), r = h.getBoundingClientRect();
+          [].forEach.call(el.querySelectorAll('.t.side'), function (t) { t.style.setProperty('--y', (r.top + r.height / 2 - b.top) + 'px'); }); }
+        window.addEventListener('resize', function () { if (cur >= 0 && SCENES[cur].cta) level(els[cur]); });
         function show(k, t) {
           if (k === cur) return;
           els.forEach(function (e, j) { e.classList.toggle('on', j === k); e.classList.toggle('was', j === cur); });
-          cur = k; if (SCENES[k].hit) hit(SCENES[k].hit, t);
+          cur = k; if (SCENES[k].cta) level(els[k]); if (SCENES[k].hit) hit(SCENES[k].hit, t);
         }
         function frame() {
           var t = now(), k = 0;
