@@ -29,8 +29,13 @@ Full text of every page below: https://bwalletx.com/llms-full.txt
 - [b cool](https://bwalletx.com/b-cool): Less noise. More life. Just b.
 - [b creative](https://bwalletx.com/b-creative): b creative. Your brand's own wallet. From $99. Less noise. More life. Just b.
 - [The b family · bWalletX](https://bwalletx.com/b-family): The b family: everyday apps for chat, money, video, music, news, work and selling, all running on bWalletX. Sign in once with your wallet and get paid in Bitcoin.
+- [b black](https://bwalletx.com/b-in-black): The same wallet, dressed for the evening. Soon.
+- [b is coming](https://bwalletx.com/b-is-coming): Bitcoin is coming. Are you ready? It's worth the wait. Just b.
 - [b is for auteurs](https://bwalletx.com/b-is-for-auteurs): b is for auteurs. Filmmakers, animators, musicians, writers and artists: make it, keep the credit, and every film gets its own token and room. Watch the house films on bMovies.app.
 - [b is for business](https://bwalletx.com/b-is-for-business): b is for business. Get paid in seconds, with a receipt anyone can check. Less paperwork. More business. Just b.
+- [b on b, again](https://bwalletx.com/b-on-b-2): Twetch, RelayX, CoinGeek, Peck, Hodlocker, Treechat and Yours, all on b. Fast. Loud. Not BNB, b ON b.
+- [Your posts, on b](https://bwalletx.com/b-on-b-3): Bring your X timeline to b. Move from X, Facebook, LinkedIn, YouTube and more to bChatX. Not BNB, b ON b.
+- [b on b](https://bwalletx.com/b-on-b): All your Bitcoin SV apps, together on b. Twetch, RelayX, CoinGeek, Peck, Hodlocker, Treechat and Yours. Just b.
 - [b is on Twetch · bWalletX](https://bwalletx.com/b-on-twetch): Press release, 24 Oct 2026: b, the assistant in bWalletX, is on Twetch as @bWalletX. It posts bWalletX updates and answers questions people ask it there.
 - [bAcc: make Bitcoin faster, the goal is 1 billion transactions a second | bWalletX](https://bwalletx.com/b/acc): bAcc is the Bitcoin accelerationist movement: make Bitcoin faster. BTC handles a few transactions a second; BSV is built to scale. Our goal: 1 billion transactions per second (1b TPS). Play the bAcc race game.
 - [The bAcc theme for bWalletX, $1 | bAcc store | bWalletX](https://bwalletx.com/b/acc/store): The bAcc theme: black and yellow racing stripes for your bWalletX. Coming to the Store inside bWalletX for $1, paid in BSV.
@@ -50,6 +55,7 @@ Full text of every page below: https://bwalletx.com/llms-full.txt
 - [bRand business agents](https://bwalletx.com/business-agents): bRand: paste your website and b drafts an agent that answers customers and takes sats in chat, from a capped account, with a receipt on chain. Don't be bland. Get bRanded.
 - [bWeb: ask b to build your website](https://bwalletx.com/bweb): bWeb (planned): ask b for a website or shop, get one fixed price in BSV, and an agent builds it. The finished site is published on bitcoin and the code is yours. Pilot first.
 - [Your own branded wallet · bWalletX for business](https://bwalletx.com/clients): A wallet with your name, colours and logo, built on bWalletX. $999 to set up, then $99 a year. Tell us what you want to build and we'll reply within 2 working days.
+- [CoinGeek on b · bWalletX](https://bwalletx.com/coingeek-on-b): Read CoinGeek headlines in bNews inside bWalletX, open each story on CoinGeek, and talk about it in an on-chain thread where you can tip, like and lock.
 - [Contracts in chat · bWalletX](https://bwalletx.com/contracts): Ask b to draft an agreement in your chat. Sign it with your hand and your wallet key. Seal a fingerprint on Bitcoin. Each party keeps a copy only they can read.
 - [Credits: prepaid credit for services](https://bwalletx.com/credits): Credits are prepaid credit a service issues for its own service. bWalletX holds them and spends them for you. bCredits for b, the bWalletX agent, come first. Credits are in testing.
 - [Culture: make it on BSV](https://bwalletx.com/culture): How culture is made with tokens in bWalletX: one token, many kinds of media. Games, pictures, films, music, rooms and live Spaces can all gather around the same token, and tips go straight to the people who make things.
@@ -63,21 +69,27 @@ Full text of every page below: https://bwalletx.com/llms-full.txt
 - [Hodl my b](https://bwalletx.com/hodl-my-b): Hodl my b, the bWalletX magazine. Edition 0 tells the whole story; a new edition every week shows what shipped, live and coming.
 - [Hodl my b, Edition 0: The whole story](https://bwalletx.com/hodl-my-b/0): Hodl my b, Edition 0: the whole story of bWalletX. One wallet on every device, one name with two addresses, bChatX rooms and Spaces, bMail that pays, and what is coming.
 - [Hodl my b, Edition 1: Don’t be bland. Get bRanded.](https://bwalletx.com/hodl-my-b/1): Hodl my b, the weekly bWalletX magazine. Edition 1, week of 12 Oct 2026: Business agents, plus the week’s round-up.
+- [Hodlocker on b · bWalletX](https://bwalletx.com/hodlocker-on-b): Lock BSV behind posts in bWalletX the way Hodlocker did: same lock format, your coins stay yours, they unlock on the date shown, and a Most locked board.
 - [Ideas: what people asked b for](https://bwalletx.com/ideas): Ideas people sent to b, the assistant in bWalletX, and where each one stands: new, planned, building or shipped. Entries appear after review.
-- [Invites: bring people into your Space](https://bwalletx.com/invite): Invite people into a Space with a token attached. They sign in with X or HandCash, get bWalletX, and the token lets them straight into the room's chat.
+- [You're invited to bWalletX](https://bwalletx.com/invite): bWalletX is your own Bitcoin wallet and account in one: your money, your name and your posts, held by you. Get it on Chrome, the web, iPhone or Android.
 - [Jobs: paid work, paid in BSV · bWalletX](https://bwalletx.com/jobs): Paid work on bWalletX: security testing, paid Android testing and, soon, feature bounties. Sign up with bWalletX and submit work now. Payouts in BSV open once identity checks (Veriff) are live.
 - [Just b](https://bwalletx.com/just-b): Just b
+- [Move to bWalletX](https://bwalletx.com/migrate): Move your coins, NFTs, tokens, names and posts into bWalletX. Sweep from Yours, RelayX, Twetch, SimplyCash, Money Button or a paper key, on your own device. Keys never leave it.
 - [Signed names and the public name log · bWalletX](https://bwalletx.com/name-bindings): A bWalletX name is a row in our database. Now each name is signed by the wallet that owns it, every wallet checks that before paying, and every change of who a name points to goes in a public log anyone can read.
 - [Get your name on Bitcoin](https://bwalletx.com/names): Your own name on Bitcoin, yours forever. One payment, no renewals: $10 for five letters or more, $50 for four, $100 for three, $500 for one or two. Search it, buy it or claim it, and give one to a friend, in bWalletX.
 - [Newsletter · bWalletX](https://bwalletx.com/newsletter): Get bWalletX updates by email: a monthly round-up of what shipped, and news for Android testers.
 - [NFTs: everything you own, edge to edge](https://bwalletx.com/nfts): The NFT library in bWalletX Desktop: pictures, clips, music and documents in one grid, opened edge to edge with no frames. Turn a moment from a clip into your card art.
+- [Your apps, on b · bWalletX](https://bwalletx.com/on-b): Use the Bitcoin SV apps you already know with bWalletX: Twetch, RelayX, CoinGeek, Peck, Hodlocker, Treechat and Yours. What works today, app by app.
 - [Partnership shares: start with friends, incorporate later](https://bwalletx.com/partnership-shares): Start something with friends. Share it fairly with Partnership shares in bWalletX. b drafts the agreement in a chat only the partners are in. Incorporate when you're ready.
+- [Peck on b · bWalletX](https://bwalletx.com/peck-on-b): Read Peck posts in the bWalletX Feed from its public overlay, see each author’s posts, tip signed authors in BSV and lock behind posts.
 - [Send a bMail · bWalletX](https://bwalletx.com/person): Everything you can do with a person on bWalletX: send a bMail for a penny, call, pay or tip, and chat. Write your message now; bWalletX sends it.
 - [bAcc RACE: the bAcc racing game | bWalletX](https://bwalletx.com/race-card): bAcc RACE: make Bitcoin faster. A racing game in your browser, in black and yellow. In progress. Game engine by VexVoid.
 - [Your RelayX NFTs are still yours · bWalletX](https://bwalletx.com/recover-relayx): RelayX has closed, but the NFTs bought and minted there are still on chain at their owners' keys. bWalletX finds them from your RelayX 12 words. Your words stay on your phone, and finding them moves nothing.
-- [Releases](https://bwalletx.com/releases): Every bWalletX release and what it added, newest first. Latest: 5.2.42.
+- [RelayX on b · bWalletX](https://bwalletx.com/relayx-on-b): RelayX has closed, but your RelayX NFTs and BSV are still on chain. bWalletX finds them from your 12 words, keeps them in your wallet and cancels old listings.
+- [Releases](https://bwalletx.com/releases): Every bWalletX release and what it added, newest first. Latest: 5.2.44.
 - [Seedless login · bWalletX](https://bwalletx.com/seedless-login): Live in bWalletX: create and open your wallet with a passkey, Face ID, fingerprint or PIN. No seed phrase to manage. Your 12 words still exist, and we never hold your keys.
 - [Sign in with a passkey: open your wallet with your face or fingerprint | bWalletX](https://bwalletx.com/seedless-signin): Create a bWalletX wallet with a passkey. Face ID, fingerprint or your device PIN opens it: no password to invent. Your 12 words are sealed with the passkey and saved as a locked recovery file.
+- [Our b*X services · bWalletX](https://bwalletx.com/services): Every b*X.com site from bWalletX in one place: bChatX, bMailX, bCalX, bRadioX, bNewsX, bMusicX, bWriterX and more. What is live today, and what is coming.
 - [Sign in with HandCash](https://bwalletx.com/sign-in-with-handcash): Sign in to bChatX with your verified HandCash account. You get a new bWalletX address and first claim on the same name as name@bwalletx.com.
 - [Bitcoin by text](https://bwalletx.com/sms): Link your phone number to your bWalletX wallet and send money by text. The recipient gets a claim link; unclaimed funds come back to you. Customers can text a business agent too. In build.
 - [Start your store in bWalletX](https://bwalletx.com/store): Open a shop inside bWalletX: your banner, your logo, your items, in front of everyone who opens the Store. Sell NFTs, themes made from your art and items for your own game, paid in BSV. Start your store here.
@@ -93,6 +105,9 @@ Full text of every page below: https://bwalletx.com/llms-full.txt
 - [Branded wallets for businesses](https://bwalletx.com/themes-custom): A self-custody wallet in your company’s name for your customers, members or shareholders, from $99 a year. Plus the route from a branded wallet to a share register kept with bSharesX, and optionally bDojoX. Powered by bWalletX.
 - [Tips: pay the people who make things](https://bwalletx.com/tips): In bWalletX Desktop, tip artists, NFT creators, rooms, people in chat, friends and Spaces speakers. Pick an amount, tap Allow once, and all of it goes to them.
 - [Token curves: how a person's token is priced](https://bwalletx.com/token-curves): Every person's token in bWalletX sells on the same gentle curve: 1 cent to join their room, doubling every 10,000 supporters. The money goes to the person. Nothing is held back, there is no reserve and no buy-back, and resale is between people on the Exchange.
+- [Treechat on b · bWalletX](https://bwalletx.com/treechat-on-b): Read Treechat posts and whole threads in the bWalletX Feed, open them on Treechat, lock behind posts, and keep Treechat on your Apps home screen.
+- [Twetch on b · bWalletX](https://bwalletx.com/twetch-on-b): Read Twetch in the bWalletX Feed, tip authors in BSV, lock behind posts, restore a Twetch wallet from its 12 words and pay name@twetch.me.
+- [Yours on b · bWalletX](https://bwalletx.com/yours-on-b): Move a Yours Wallet into bWalletX with your 12 words or a Yours backup file. The Yours extension is not needed.
 
 ## Wallet features
 
