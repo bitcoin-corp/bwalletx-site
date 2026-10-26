@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>b is coming</title>
     <link rel="canonical" href="https://bwalletx.com/b-is-coming" />
-    <meta name="description" content="b is coming. Are you ready? Almost. Closer. Just b." />
+    <meta name="description" content="b is coming. Almost. Just b." />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://bwalletx.com/b-is-coming" />
     <meta property="og:site_name" content="bWalletX" />
@@ -45,7 +45,7 @@
       .ic-lt { display: inline-block; opacity: 0; transform: translateY(0.3em); animation: lt 0.5s ease forwards; white-space: pre; }
       @keyframes lt { to { opacity: 1; transform: none; } }
       /* Always-on CTA overlay (owner, 26 Oct): it never arrives, so the way in stays on screen the whole time. */
-      .ic-cta { position: fixed; left: 0; right: 0; margin: 0 auto; width: fit-content; bottom: max(16px, env(safe-area-inset-bottom)); z-index: 35; display: flex; align-items: center; gap: 14px; padding: 8px 8px 8px 20px; border-radius: 999px; background: rgba(8, 10, 16, 0.78); -webkit-backdrop-filter: blur(14px); backdrop-filter: blur(14px); border: 1px solid rgba(255, 210, 77, 0.35); box-shadow: 0 18px 50px rgba(0, 0, 0, 0.5); white-space: nowrap; max-width: calc(100vw - 32px); box-sizing: border-box; }
+      .ic-cta { position: fixed; left: 0; right: 0; margin: 0 auto; width: fit-content; bottom: max(16px, env(safe-area-inset-bottom)); z-index: 35; display: flex; align-items: center; gap: 14px; padding: 8px; border-radius: 999px; background: rgba(8, 10, 16, 0.78); -webkit-backdrop-filter: blur(14px); backdrop-filter: blur(14px); border: 1px solid rgba(255, 210, 77, 0.35); box-shadow: 0 18px 50px rgba(0, 0, 0, 0.5); white-space: nowrap; max-width: calc(100vw - 32px); box-sizing: border-box; }
       .ic-cta span { font: 600 0.95rem var(--hf); color: #ffe7a6; }
       .ic-cta .jb-go { padding: 12px 22px; font-size: 1rem; }
       body.gated .ic-cta { opacity: 0; pointer-events: none; }
@@ -57,7 +57,7 @@
       @keyframes came { 0% { transform: scale(1.06); } 35% { transform: scale(1.22); } 100% { transform: scale(1); } }
       @keyframes glow { 0%, 100% { filter: drop-shadow(0 0 24px rgba(245, 184, 0, 0.35)); } 50% { filter: drop-shadow(0 0 60px rgba(245, 184, 0, 0.8)); } }
       @keyframes flash { 0% { opacity: 0; transform: scale(0.4); } 25% { opacity: 1; } 100% { opacity: 0; transform: scale(1.6); } }
-      .ic-h1 { margin: 6px 0 0; font: 700 clamp(3.2rem, min(21vw, 16svh), 13rem) / 0.9 var(--hf); letter-spacing: -0.045em; color: #fff; }
+      .ic-h1 { margin: 6px 0 0; white-space: nowrap; max-width: calc(100vw - 32px); font: 700 clamp(1.6rem, min(15vw, 18svh), 11rem) / 0.95 var(--hf); letter-spacing: -0.045em; color: #fff; }
       .ic-h1 em { font-style: normal; color: var(--gold-hi); }
       .ic-tease { margin: 14px 0 0; min-height: 1.2em; font: 700 clamp(1.8rem, min(8vw, 7svh), 4.5rem) / 1 var(--hf); letter-spacing: -0.03em; color: #ffe7a6; letter-spacing: 0.02em; transition: opacity 0.5s ease; }
       .ic-hint { position: absolute; bottom: 22px; left: 0; right: 0; font: 500 0.72rem var(--hf); letter-spacing: 0.3em; text-transform: uppercase; color: #5d6878; }
@@ -156,8 +156,8 @@
     <section class="ic-scene ic-hero" id="ic-hero">
       <div class="ic-fx" id="ic-fx" aria-hidden="true"><i class="ic-blob" style="--x:18%;--y:28%;--s:46vmax;--c:#ff2d7a;--d:23s"></i><i class="ic-blob" style="--x:82%;--y:70%;--s:52vmax;--c:#e0162b;--d:29s"></i><i class="ic-blob" style="--x:60%;--y:18%;--s:38vmax;--c:#ff5fa2;--d:19s"></i><canvas id="ic-waves"></canvas></div>
       <div class="ic-b" id="ic-b"><img src="/logo.svg" alt="b" width="148" height="200" /></div>
-      <h1 class="ic-h1">b is<br /><em>coming</em>.</h1>
-      <p class="ic-tease" id="ic-tease" aria-live="polite">Are you ready?</p>
+      <h1 class="ic-h1">b is <em>coming</em>.</h1>
+      <p class="ic-tease" id="ic-tease" aria-live="polite">Building…</p>
       <p class="ic-say" id="ic-say" aria-live="polite"></p>
       <p class="ic-hint" aria-hidden="true">Keep going ↓</p>
     </section>
@@ -175,7 +175,7 @@
     </section>
 
     <section class="ic-calm">
-      <p class="ic-lead">Almost. <em>Closer.</em></p>
+      <p class="ic-lead">Almost. <em>Here.</em></p>
       <p><strong>Don’t fake it. Self-custody.</strong> Your keys stay on your device. Nobody else holds them, nobody else can spend for you.</p>
       <p><strong>Take it slow.</strong> Pay by the second for what you watch, read or hear, and stop whenever you like.</p>
       <p><strong>Lock it away.</strong> Set some aside and let time hold it for you, untouchable until the day you chose.</p>
@@ -184,7 +184,7 @@
       <p class="ic-lead">Not yet. <em style="display:block">Stay close.</em></p>
     </section>
 
-    <div class="ic-cta"><span>Closer…</span><a class="jb-go" href="/get?from=b-is-coming">Get bWalletX</a></div>
+    <div class="ic-cta"><a class="jb-go" href="/get?from=b-is-coming">Get bWalletX</a></div>
     <div class="ic-sats" id="ic-sats" aria-hidden="true"></div>
     <p class="jb-foot jb-series"><a href="/just-b">just b</a> <span>·</span> <a href="/b-cool">b cool</a> <span>·</span> <a href="/b-creative">b creative</a> <span>·</span> <a href="/b-is-for-business">b is for business</a> <span>·</span> <a href="/b-is-coming" aria-current="page">b is coming</a></p>
     <p class="jb-foot">bWalletX is in beta: test with small amounts. Music and voices are generated live in your browser. <a href="mailto:support@bwalletx.com">support@bwalletx.com</a></p>
@@ -430,8 +430,8 @@
 
         // 1. The hero b builds up, faster and brighter, flares almost there, then pulls back and loops. It never arrives (owner, 26 Oct).
         var b = $('ic-b'), tease = $('ic-tease');
-        var lines = [['build', 'Are you ready?'], ['build2', 'Almost there…'], ['build3', 'Almost…'], ['near', 'Closer…']];
-        var pass = 0, NEAR = ['Closer…', 'Almost.', 'So close.', 'Not yet.', 'Stay close.'];
+        var lines = [['build', 'Building…'], ['build2', 'Almost there…'], ['build3', 'Almost…'], ['near', 'So close.']];
+        var pass = 0, NEAR = ['Almost.', 'So close.', 'Not yet.', 'Stay close.'];
         function hero() {
           pass++; bEl.style.setProperty('--near', Math.min(1.1 + pass * 0.05, 1.45)); bEl.style.setProperty('--glo', Math.min(90 + pass * 30, 260) + 'px'); lines[3][1] = NEAR[(pass - 1) % NEAR.length];
           var t = 0, at = timeline(); heroT0 = performance.now() + mus.nextBeatMs(); mus.swell(BUILD); if (performance.now() - lastHero > LOOP) { bs = 0.12; bo = 0; } lastHero = performance.now(); heroEl.classList.add('hush');
@@ -462,7 +462,7 @@
         function setP(p, m) { fill.style.width = p + '%'; pct.textContent = String(p) + '%'; msg.textContent = m; bar.setAttribute('aria-valuenow', String(p)); bar.classList.toggle('done', p === 100); }
         setP(0, 'Warming up…');
         onView($('ic-load'), function loadRun() {
-          loadPass = (loadPass || 0) + 1; steps[6][0] = +(100 - Math.pow(10, -1 - loadPass)).toFixed(loadPass + 1); steps[6][1] = ['Hold on…', 'Closer…', 'So close…', 'Almost.'][(loadPass - 1) % 4];
+          loadPass = (loadPass || 0) + 1; steps[6][0] = +(100 - Math.pow(10, -1 - loadPass)).toFixed(loadPass + 1); steps[6][1] = ['Hold on…', 'Nearly…', 'So close…', 'Almost.'][(loadPass - 1) % 4];
           var t = 300, at = timeline(); mus.level(2);
           steps.forEach(function (s, i) { at(function () { setP(s[0], s[1]); if (s[0] >= 97 && s[0] < 100) { mus.stall(true); mus.lick(); vox.play('come-on', 0.9); } else mus.level(s[0] === 100 ? 3 : 2); if (s[0] === 100) { burst(40); setTimeout(function () { sfx.ahh(); sfx.coins(16); }, 200); } else if (s[0] >= 97) sfx.swell(300, 300 + s[0] * 6, 1.2, true); else if (s[0]) sfx.swell(200, 200 + s[0] * 4, 0.9); }, t); t += i < 3 ? 1100 : 1600; });
           at(loadRun, t + 2400); // back to the start: it never quite gets there
