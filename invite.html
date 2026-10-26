@@ -3,22 +3,22 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Invites: bring people into your Space</title>
+    <title>You're invited to bWalletX</title>
     <link rel="canonical" href="https://bwalletx.com/invite" />
-    <meta name="description" content="Invite people into a Space with a token attached. They sign in with X or HandCash, get bWalletX, and the token lets them straight into the room's chat." />
+    <meta name="description" content="bWalletX is your own Bitcoin wallet and account in one: your money, your name and your posts, held by you. Get it on Chrome, the web, iPhone or Android." />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://bwalletx.com/invite" />
     <meta property="og:site_name" content="bWalletX" />
-    <meta property="og:title" content="Invites: the token is the ticket" />
-    <meta property="og:description" content="Invite people into a Space with a token attached. They sign in with X or HandCash, get bWalletX, and the token lets them straight into the room's chat." />
+    <meta property="og:title" content="You're invited to bWalletX" />
+    <meta property="og:description" content="Your money, your name and your posts, held by you." />
     <meta property="og:image" content="https://bwalletx.com/og-invites-v1.png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
-    <meta property="og:image:alt" content="A gold invite card carrying a token, on its way into a Space." />
+    <meta property="og:image:alt" content="A gold invite card for bWalletX." />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@bWalletX" />
-    <meta name="twitter:title" content="Invites: the token is the ticket" />
-    <meta name="twitter:description" content="Invite people into a Space with a token attached. They sign in with X or HandCash, get bWalletX, and the token lets them straight into the room's chat." />
+    <meta name="twitter:title" content="You're invited to bWalletX" />
+    <meta name="twitter:description" content="Your money, your name and your posts, held by you." />
     <meta name="twitter:image" content="https://bwalletx.com/og-invites-v1.png" />
     <link rel="icon" href="/favicon.ico" />
     <link rel="stylesheet" href="/styles.css" />
@@ -35,6 +35,23 @@
       .tag { flex: none; font-size: 0.75rem; font-weight: 700; padding: 2px 9px; border-radius: 999px; }
       .tag.live { background: #F5B800; color: #000; }
       .tag.soon { border: 1px solid #ffffff40; color: #a7adb8; }
+      html, body { overflow-x: clip; }
+      .ext .invited { display: inline-block; margin: 18px 0 0; padding: 6px 14px; border-radius: 999px; background: #F5B800; color: #000; font-weight: 700; overflow-wrap: anywhere; }
+      .get-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; margin: 24px 0; }
+      .get-card { display: flex; flex-direction: column; gap: 4px; padding: 18px; border-radius: 16px; background: #101114; border: 1px solid #F5B80055; text-decoration: none; }
+      .get-card b { color: #fff; font-size: 1.1rem; }
+      .get-card span { color: #a7adb8; font-size: 0.88rem; }
+      .get-card:hover { border-color: #F5B800; }
+      .share { background: #101114; border: 1px solid #ffffff1f; border-radius: 18px; padding: 20px; margin: 28px 0; }
+      .share h2 { margin-top: 0; }
+      .share label { display: block; font-size: .88rem; color: #a7adb8; margin: 0 0 6px; }
+      .share-row { display: flex; gap: 8px; margin: 0 0 12px; }
+      .share input { flex: 1; min-width: 0; width: 100%; box-sizing: border-box; font: inherit; font-size: .92rem; padding: 11px 14px; border-radius: 12px; border: 1px solid #ffffff2a; background: #17191e; color: #fff; }
+      .share button { flex: none; font: inherit; font-weight: 700; padding: 11px 18px; border-radius: 999px; border: 0; background: #F5B800; color: #000; cursor: pointer; }
+      .cta-row { display: flex; gap: 12px; flex-wrap: wrap; align-items: center; margin: 8px 0 26px; }
+      .line-btn { display: inline-block; padding: 12px 20px; border-radius: 999px; border: 1px solid #ffffff40; color: #fff; text-decoration: none; font-weight: 700; }
+      .line-btn:hover { border-color: #F5B800; }
+      @media (max-width: 760px) { .get-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
     </style>
   </head>
   <body>
@@ -50,10 +67,28 @@
     </header>
     <script src="/nav.js"></script>
     <main class="ext">
-      <h1>Invites. <span class="gold">The token is the ticket.</span></h1>
-      <p class="lede">Bring your people into a Space. Each invite carries a small amount of the room&rsquo;s token, and holding it is what lets them in.</p>
-      <div class="row"><a class="btn btn-store" href="/get">Get bWalletX</a><a class="btn" href="/bspaces">About Spaces</a></div>
+      <p class="invited" id="invited" hidden></p>
+      <h1>You&rsquo;re invited to <span class="gold">bWalletX.</span></h1>
+      <p class="lede">bWalletX is your own Bitcoin wallet and account in one: your money, your name and your posts, held by you.</p>
+      <div class="get-grid">
+        <a class="get-card" data-ref href="/extension"><b>Chrome</b><span>Browser extension</span></a>
+        <a class="get-card" href="https://web.bwalletx.com" rel="noopener"><b>Web</b><span>web.bwalletx.com</span></a>
+        <a class="get-card" data-ref href="/iphone"><b>iPhone</b><span>Install from Safari</span></a>
+        <a class="get-card" data-ref href="/android"><b>Android</b><span>APK download</span></a>
+      </div>
+      <div class="cta-row"><a class="btn btn-store" data-ref href="/get">Get bWalletX</a><a class="line-btn" href="/migrate">Moving from somewhere else?</a></div>
 
+      <section class="share" aria-labelledby="share-h">
+        <h2 id="share-h">Share this invite</h2>
+        <label for="my-handle">Your X handle (optional), so friends see who invited them</label>
+        <div class="share-row"><input id="my-handle" placeholder="@yourhandle" autocomplete="off" autocapitalize="off" spellcheck="false" /></div>
+        <div class="share-row"><input id="share-url" readonly aria-label="Invite link" value="https://bwalletx.com/invite" /><button type="button" id="copy">Copy link</button></div>
+        <a class="line-btn" id="post-x" href="#" target="_blank" rel="noopener" data-text="I'm on bWalletX: your money, your name and your posts, held by you. Come join me.">Post to X</a>
+        <p class="small" id="copied" role="status"></p>
+      </section>
+
+      <h2 style="margin-top:64px">Inviting people into a Space? <span class="gold">The token is the ticket.</span></h2>
+      <p>Each Space invite carries a small amount of the room&rsquo;s token, and holding it is what lets them in. <a href="/bspaces">About Spaces</a></p>
       <p>There are two kinds of invite. They do different jobs.</p>
 
       <h2>Open Drops</h2>
@@ -84,7 +119,7 @@
 
       <h2>Where this stands</h2>
       <ul class="feat">
-<li><span class="tag live">&check; Live</span><span><b>Address book import</b> (CSV, contact cards, JSON, pasted lists) and export to CSV: in the app (5.2.42). Each paymail is looked up as you import.</span></li>
+<li><span class="tag live">&check; Live</span><span><b>Address book import</b> (CSV, contact cards, JSON, pasted lists) and export to CSV: in the app (5.2.44). Each paymail is looked up as you import.</span></li>
 <li><span class="tag live">&check; Live</span><span><b>Sign in with HandCash</b> on bchatx.com: switched on; first real sign-in being tested.</span></li>
 <li><span class="tag live">&check; Live</span><span><b>HandCash friends into your address book:</b> the server side is live; the wallet button is coming.</span></li>
 <li><span class="tag live">Live</span><span><b>Open Drops:</b> live in bWalletX 5.2.26 (first run pending). Each link is made for an @handle and pre-funded with the room token; whoever opens it first gets the token, and room entry is tied to that X account.</span></li>
@@ -96,5 +131,6 @@
       <p class="related">Related: <a href="/bspaces">bSpaces</a> · <a href="/bmail">bMail</a> · <a href="/airdrops">Airdrops</a> · <a href="/friends">Friends</a> · <a href="/x">Sign in with X</a></p>
       <p class="small">bWalletX is in beta: test with small amounts. Questions: <a href="mailto:support@bwalletx.com">support@bwalletx.com</a></p>
     </main>
+    <script src="/invite.js"></script>
   </body>
 </html>

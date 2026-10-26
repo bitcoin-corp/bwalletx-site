@@ -77,6 +77,12 @@
         .card dd { margin-bottom: 6px; }
         .safety { padding: 22px 18px; }
       }
+      .svc-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; margin: 20px 0; }
+      .svc { display: flex; flex-direction: column; gap: 8px; align-items: flex-start; background: #fff; border: 1px solid #0000001a; border-radius: 16px; padding: 16px 18px; text-decoration: none; color: #111; }
+      .svc.soon { background: #fbfaf6; border-style: dashed; }
+      .svc:hover { border-color: #F5B800; }
+      .svc b { font-size: 1.08rem; color: #111; }
+      @media (max-width: 760px) { .svc-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
     </style>
   </head>
   <body>
@@ -96,7 +102,7 @@
       <p class="kicker">Move to bWalletX</p>
       <h1>Bring everything <span class="gold">home.</span></h1>
       <p class="lede">Coins, NFTs, tokens, names and your posts. bWalletX sweeps them in from the wallet you used before, right on your own device. Moving is free; you only pay the normal network fee, usually a cent or less.</p>
-      <div class="row"><a class="btn btn-gold" href="https://web.bwalletx.com" target="_blank" rel="noopener">Open bWalletX</a><a class="btn btn-line" href="/get">Get the app</a><a class="btn btn-line" href="#wallets">Pick your wallet</a></div>
+      <div class="row"><a class="btn btn-gold" href="https://web.bwalletx.com" target="_blank" rel="noopener">Open bWalletX</a><a class="btn btn-line" href="/get">Get the app</a><a class="btn btn-line" href="#wallets">Pick your wallet</a><a class="btn btn-line" href="#services">From a social network</a></div>
       <div class="promise">
         <div><b>On your device</b><span>Your phrase or key is typed into bWalletX and held in memory for the sweep only. It is never stored or sent to us.</span></div>
         <div><b>Nothing burned</b><span>Anything that looks like a token but can&rsquo;t be read is listed, not swept, so it can&rsquo;t be lost by accident.</span></div>
@@ -203,6 +209,25 @@
           <dt>Where</dt><dd>The bChatX migration hub lists every import and what it supports.</dd></dl>
           <div class="cta"><a class="go" href="https://www.bchatx.com/migrate" target="_blank" rel="noopener">bChatX migration hub</a></div>
         </article>
+      </div>
+
+      <h2 id="services">From a social network</h2>
+      <p class="sub">Pick where you&rsquo;re moving from. Each page has a share card, so you can invite the people you follow there. Only the X import is live today; the others say so until bChatX ships them.</p>
+      <div class="svc-grid">
+<!-- MIGRATE-INVITE:START -->
+          <a class="svc" href="/migrate/invite/x"><b>X</b><span class="tag live">Import live</span></a>
+          <a class="svc soon" href="/migrate/invite/instagram"><b>Instagram</b><span class="tag soon">Coming soon</span></a>
+          <a class="svc soon" href="/migrate/invite/tiktok"><b>TikTok</b><span class="tag soon">Coming soon</span></a>
+          <a class="svc soon" href="/migrate/invite/youtube"><b>YouTube</b><span class="tag soon">Coming soon</span></a>
+          <a class="svc soon" href="/migrate/invite/reddit"><b>Reddit</b><span class="tag soon">Coming soon</span></a>
+          <a class="svc soon" href="/migrate/invite/linkedin"><b>LinkedIn</b><span class="tag soon">Coming soon</span></a>
+          <a class="svc soon" href="/migrate/invite/facebook"><b>Facebook</b><span class="tag soon">Coming soon</span></a>
+          <a class="svc soon" href="/migrate/invite/threads"><b>Threads</b><span class="tag soon">Coming soon</span></a>
+          <a class="svc soon" href="/migrate/invite/bluesky"><b>Bluesky</b><span class="tag soon">Coming soon</span></a>
+          <a class="svc soon" href="/migrate/invite/pinterest"><b>Pinterest</b><span class="tag soon">Coming soon</span></a>
+          <a class="svc soon" href="/migrate/invite/twetch"><b>Twetch</b><span class="tag soon">Coming soon</span></a>
+          <a class="svc soon" href="/migrate/invite/treechat"><b>Treechat</b><span class="tag soon">Coming soon</span></a>
+<!-- MIGRATE-INVITE:END -->
       </div>
 
       <h2 id="assets">Tokens, ordinals and names</h2>

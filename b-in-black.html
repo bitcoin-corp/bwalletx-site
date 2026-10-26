@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>b black</title>
+    <link rel="canonical" href="https://bwalletx.com/b-in-black" />
+    <meta name="description" content="The same wallet, dressed for the evening. Soon." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://bwalletx.com/b-in-black" />
+    <meta property="og:site_name" content="bWalletX" />
+    <meta property="og:title" content="b black." />
+    <meta property="og:description" content="The same wallet, dressed for the evening. Soon." />
+    <meta property="og:image" content="https://bwalletx.com/og-b-black-v2.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="A flat black b on black, with the words b black. soon." />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@bWalletX" />
+    <meta name="twitter:title" content="b black." />
+    <meta name="twitter:description" content="The same wallet, dressed for the evening. Soon." />
+    <meta name="twitter:image" content="https://bwalletx.com/og-b-black-v2.png" />
+    <meta name="theme-color" content="#000000" />
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" />
+    <link rel="stylesheet" href="/styles.css" />
+    <style>
+      /* b in black (owner, 25 Oct 2026): the real b mark from /logo.svg, unchanged in shape, rendered flat and quiet on true black. */
+      html, body { height: 100%; overflow: hidden; overscroll-behavior: none; }
+      body { margin: 0; background: #000; color: #d8d8da; touch-action: none; }
+      .bb-hero { position: relative; height: 100svh; display: flex; flex-direction: column; align-items: center; justify-content: center; overflow: hidden; padding: 12vh 16px 10vh; box-sizing: border-box; text-align: center; }
+      /* Studio light: a faint pool behind the mark, a vignette, a whisper of grain. */
+      .bb-hero::before { content: ''; position: absolute; inset: 0; background: radial-gradient(48% 42% at 50% 44%, rgba(255, 255, 255, 0.055), rgba(255, 255, 255, 0) 70%), radial-gradient(120% 90% at 50% 50%, rgba(0, 0, 0, 0) 55%, #000 100%); pointer-events: none; }
+      .bb-grain { position: absolute; inset: 0; opacity: 0.05; pointer-events: none; mix-blend-mode: screen; }
+      .bb-mark { position: relative; width: min(52vw, 46vh, 360px); aspect-ratio: 74 / 100; }
+      .bb-mark svg { display: block; width: 100%; height: 100%; overflow: visible; }
+      /* The floor reflection: the same mark, flipped, faded out fast. */
+      .bb-refl { position: absolute; left: 0; right: 0; top: 100%; height: 100%; transform: scaleY(-1); opacity: 0.07; -webkit-mask-image: linear-gradient(0deg, #000 0%, transparent 38%); mask-image: linear-gradient(0deg, #000 0%, transparent 38%); pointer-events: none; }
+      .bb-hero h1 { position: relative; margin: 9vh 0 0; font: 600 clamp(2.6rem, 9vw, 6rem) / 1 var(--hf); letter-spacing: -0.045em; background: linear-gradient(180deg, #f4f4f6 0%, #a9abb0 55%, #6d6f74 100%); -webkit-background-clip: text; background-clip: text; color: transparent; }
+      .bb-sub { position: relative; margin: 22px 0 0; font: 400 clamp(0.95rem, 2.6vw, 1.15rem) var(--hf); letter-spacing: 0.22em; text-transform: uppercase; color: #8a8c92; }
+      .bb-in { opacity: 0; transform: translateY(10px); animation: bbrise 7s 1.5s ease forwards; }
+      .bb-sub.bb-in { animation-delay: 1.8s; }
+      .bb-tm { font-size: 1.2em; letter-spacing: 0; vertical-align: -0.05em; margin-left: 0.08em; }
+      .bb-soon { position: relative; margin: 22px 0 0; font: 500 clamp(1.6rem, 4.6vw, 2.6rem) var(--hf); letter-spacing: 0.42em; text-transform: uppercase; color: #a9abb0; padding-left: 0.42em; }
+      .bb-soon.bb-in { animation-delay: 5s; }
+      @keyframes bbrise { to { opacity: 1; transform: none; } }
+
+      .bb-calm { max-width: 640px; margin: 0 auto; padding: 16vh 24px 14vh; text-align: center; color: #9a9ca2; font: 400 clamp(1.05rem, 2.4vw, 1.25rem) / 1.75 var(--hf); }
+      .bb-calm p { margin: 0 0 2.2em; }
+      .bb-calm strong { display: block; margin-bottom: 0.35em; color: #f2f2f4; font-weight: 600; font-size: 1.12em; letter-spacing: -0.01em; }
+      .bb-calm .bb-lead { font: 600 clamp(1.9rem, 6vw, 3rem) / 1.15 var(--hf); letter-spacing: -0.03em; color: #f2f2f4; margin-bottom: 1.4em; }
+      .bb-end { padding: 6vh 16px 14vh; text-align: center; }
+      .bb-end h2 { margin: 0 0 30px; font: 600 clamp(2.2rem, 8vw, 4rem) / 1 var(--hf); letter-spacing: -0.04em; color: #f2f2f4; }
+      .bb-ctas { display: flex; flex-wrap: wrap; gap: 14px; justify-content: center; }
+      .bb-go { display: inline-block; padding: 17px 36px; border-radius: 999px; text-decoration: none; font: 600 1.02rem var(--hf); letter-spacing: 0.01em; }
+      .bb-go.chrome { color: #0a0a0b; background: linear-gradient(180deg, #fafafa 0%, #c9cacd 48%, #9c9ea3 52%, #e3e4e6 100%); box-shadow: 0 14px 50px rgba(255, 255, 255, 0.08), inset 0 1px 0 #fff; }
+      .bb-go.line { color: #e6e6e8; border: 1px solid rgba(255, 255, 255, 0.35); }
+      .bb-go:hover.line, .bb-go:focus-visible.line { border-color: #fff; color: #fff; }
+      .bb-go:focus-visible { outline: 2px solid #e6e6e8; outline-offset: 4px; }
+      .bb-credit { margin: 24px 0 0; font: 400 0.78rem var(--hf); letter-spacing: 0.08em; color: #6b6d72; }
+      .bb-credit a { color: #9a9ca2; text-decoration: none; border-bottom: 1px solid rgba(255, 255, 255, 0.2); }
+      /* Glints: star sparkles on the mark's edge, faint motes drifting in the dark. */
+      .bb-stars { position: absolute; inset: 0; pointer-events: none; overflow: hidden; }
+      .bb-mote { position: absolute; width: 2px; height: 2px; border-radius: 50%; background: #fff; opacity: 0; box-shadow: 0 0 6px rgba(255, 255, 255, 0.6); animation: bbmote var(--d) linear var(--w) infinite; }
+      @keyframes bbmote { 0% { opacity: 0; transform: translate(0, 0); } 20% { opacity: var(--o); } 80% { opacity: var(--o); } 100% { opacity: 0; transform: translate(var(--dx), -40px); } }
+      .bb-star { position: absolute; width: 18px; height: 18px; margin: -9px 0 0 -9px; opacity: 0; transform: scale(0.2) rotate(0deg); pointer-events: none; }
+      .bb-star.on { animation: bbstar 1.4s ease-out forwards; }
+      .bb-star::before, .bb-star::after { content: ''; position: absolute; left: 50%; top: 50%; background: radial-gradient(closest-side, #fff, rgba(255, 255, 255, 0)); }
+      .bb-star::before { width: 100%; height: 2px; margin: -1px 0 0 -50%; }
+      .bb-star::after { width: 2px; height: 100%; margin: -50% 0 0 -1px; }
+      @keyframes bbstar { 0% { opacity: 0; transform: scale(0.2) rotate(0deg); } 35% { opacity: 0.95; transform: scale(1) rotate(25deg); } 100% { opacity: 0; transform: scale(0.3) rotate(45deg); } }
+      .bb-mark.beat { filter: brightness(1.08); }
+      .bb-mark { transition: filter 0.5s ease; }
+      /* Gate: a calm silver play disc over the blurred scene, as on /b-cool. */
+      .bb-sound { position: fixed; right: 14px; bottom: 14px; z-index: 6; width: 44px; height: 44px; display: flex; align-items: center; justify-content: center; border: 0; border-radius: 50%; background: transparent; color: rgba(255, 255, 255, 0.45); cursor: pointer; opacity: 0; visibility: hidden; transition: opacity 1.4s ease; }
+      .bb-sound { opacity: 1; visibility: visible; }
+      .bb-sound[aria-pressed="true"] { color: rgba(230, 230, 235, 0.8); }
+      .bb-sound:focus-visible { outline: 2px solid #e6e6e8; outline-offset: 3px; }
+      @media (prefers-reduced-motion: reduce) { .bb-mote, .bb-star { display: none; } }
+      .jb-foot { margin: 0; padding: 0 16px 22px; text-align: center; font-size: 0.75rem; color: #55575c; }
+      .jb-foot a { color: #7c7e84; }
+      .jb-series a { color: #a6a8ad; }
+      .jb-series span { color: #34363a; }
+      @media (prefers-reduced-motion: reduce) { .bb-in { animation: none; opacity: 1; transform: none; } }
+    </style>
+  </head>
+  <body>
+    <section class="bb-hero">
+      <svg class="bb-grain" aria-hidden="true" width="100%" height="100%"><filter id="bbNoise"><feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" stitchTiles="stitch" /><feColorMatrix values="0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 0.9 0" /></filter><rect width="100%" height="100%" filter="url(#bbNoise)" /></svg>
+      <div class="bb-stars" id="bbMotes" aria-hidden="true"></div>
+      <div class="bb-mark" id="bbMark">
+        <!-- The b from /logo.svg: same polygon, circle and counter, only the paint changes. -->
+        <svg viewBox="23 8 74 100" role="img" aria-label="The bWalletX b in black">
+          <defs>
+            <!-- Body: near-black with a cold horizon line, like polished obsidian under a softbox. -->
+            <linearGradient id="bbBody" gradientUnits="userSpaceOnUse" x1="0" y1="12" x2="0" y2="105">
+              <stop offset="0" stop-color="#1c1d20" /><stop offset="1" stop-color="#101012" />
+            </linearGradient>
+            <!-- Rim light from upper left. -->
+            <radialGradient id="bbRim" gradientUnits="userSpaceOnUse" cx="40" cy="30" r="70">
+              <stop offset="0" stop-color="#fff" stop-opacity="0.06" /><stop offset="0.5" stop-color="#fff" stop-opacity="0.01" /><stop offset="1" stop-color="#fff" stop-opacity="0" />
+            </radialGradient>
+            <!-- The sheen: a narrow diagonal band that sweeps across slowly. -->
+            <linearGradient id="bbSheen" gradientUnits="userSpaceOnUse" x1="10" y1="10" x2="110" y2="110">
+              <stop offset="0.38" stop-color="#fff" stop-opacity="0" /><stop offset="0.47" stop-color="#fff" stop-opacity="0.02" />
+              <stop offset="0.5" stop-color="#fff" stop-opacity="0.1" /><stop offset="0.53" stop-color="#fff" stop-opacity="0.02" /><stop offset="0.62" stop-color="#fff" stop-opacity="0" />
+            </linearGradient>
+            <!-- Bevel: specular lighting on the blurred alpha gives the crisp chrome edge. -->
+            <filter id="bbBevel" filterUnits="userSpaceOnUse" x="0" y="0" width="120" height="120" color-interpolation-filters="sRGB">
+              <feGaussianBlur in="SourceAlpha" stdDeviation="1.6" result="b" />
+              <feSpecularLighting in="b" surfaceScale="4" specularConstant="1.1" specularExponent="28" lighting-color="#ffffff" result="s">
+                <fePointLight id="bbLight" x="30" y="0" z="60" />
+              </feSpecularLighting>
+              <feComposite in="s" in2="SourceAlpha" operator="in" result="sc" />
+              <feComposite in="SourceGraphic" in2="sc" operator="arithmetic" k1="0" k2="1" k3="0.85" k4="0" />
+            </filter>
+          </defs>
+          <!-- One path (stem + bowl + counter) so the see-through layers never paint twice where stem and bowl meet. -->
+          <defs><path id="bbPath" d="M45,12 L45,72 L27,72 L27,30 Z M93,72 A33,33 0 1,1 27,72 A33,33 0 1,1 93,72 Z M75,72 A15,15 0 1,0 45,72 A15,15 0 1,0 75,72 Z" /></defs>
+          <g id="bbShape">
+            <use href="#bbPath" fill="url(#bbBody)" />
+            <use href="#bbPath" fill="url(#bbRim)" />
+            <use href="#bbPath" fill="url(#bbSheen)" id="bbSheenG" />
+          </g>
+        </svg>
+        <svg class="bb-refl" viewBox="23 8 74 100" aria-hidden="true"><use href="#bbShape" /></svg>
+      </div>
+      <h1 class="bb-in">b black.</h1>
+      <p class="bb-soon bb-in">soon<span class="bb-tm">&trade;</span></p>
+    </section>
+
+
+
+    <button type="button" class="bb-sound" id="bbSound" aria-pressed="false" aria-label="Play music">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><path d="M11 5 6 9H3v6h3l5 4z"></path><path d="M15.5 8.5a5 5 0 0 1 0 7"></path><path d="M18.5 5.5a9 9 0 0 1 0 13"></path></svg>
+    </button>
+    <audio id="bbMusic" src="/audio/b-in-black-shadowed-depths.mp3" preload="auto" loop></audio>
+    <script>
+      // The sheen sweeps slowly; the highlight and the bevel light lean toward the pointer or the phone's tilt.
+      (function () {
+        var sheen = document.getElementById('bbSheen'), light = document.getElementById('bbLight'), rim = document.getElementById('bbRim');
+        var tx = 0, ty = 0, px = 0, py = 0;
+        function lean(x, y) { tx = Math.max(-1, Math.min(1, x)); ty = Math.max(-1, Math.min(1, y)); }
+        function paint(t) {
+          var sweep = t == null ? -18 : ((t / 1000) % 9) / 9 * 140 - 70; // one pass every 9 s
+          sheen.setAttribute('gradientTransform', 'translate(' + (sweep + px * 10).toFixed(2) + ' ' + (sweep * 0.2 + py * 6).toFixed(2) + ')');
+          light.setAttribute('x', (30 + px * 40).toFixed(1)); light.setAttribute('y', (py * 30).toFixed(1));
+          rim.setAttribute('cx', (40 + px * 14).toFixed(1)); rim.setAttribute('cy', (30 + py * 12).toFixed(1));
+        }
+        if (window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches) { paint(null); return; }
+        addEventListener('pointermove', function (e) { lean(e.clientX / innerWidth * 2 - 1, e.clientY / innerHeight * 2 - 1); }, { passive: true });
+        addEventListener('deviceorientation', function (e) { if (e.gamma != null) lean(e.gamma / 30, (e.beta - 45) / 30); }, { passive: true });
+        (function loop(t) { px += (tx - px) * 0.05; py += (ty - py) * 0.05; paint(t); requestAnimationFrame(loop); })(0);
+      })();
+      // Glints: drifting motes in the dark, and small star sparkles that land on the edge of the mark.
+      (function () {
+        if (window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+        var box = document.getElementById('bbMotes'), mark = document.getElementById('bbMark');
+        for (var i = 0; i < 26; i++) {
+          var m = document.createElement('i'); m.className = 'bb-mote';
+          m.style.cssText = 'left:' + (Math.random() * 100) + '%;top:' + (Math.random() * 100) + '%;--d:' + (9 + Math.random() * 10) + 's;--w:-' + (Math.random() * 18) + 's;--o:' + (0.08 + Math.random() * 0.22) + ';--dx:' + (Math.random() * 40 - 20) + 'px';
+          box.appendChild(m);
+        }
+        // Edge points in the logo's own viewBox (23 8 74 100): the flag and the bowl's outer rim.
+        function edge() {
+          if (Math.random() < 0.3) { var t = Math.random(); return [27 + 18 * t, 30 - 18 * t]; }
+          var a = Math.random() * Math.PI * 2; return [60 + 33 * Math.cos(a), 72 + 33 * Math.sin(a)];
+        }
+        function spark() {
+          var p = edge(), st = document.createElement('span'); st.className = 'bb-star';
+          st.style.left = ((p[0] - 23) / 74 * 100) + '%'; st.style.top = ((p[1] - 8) / 100 * 100) + '%';
+          mark.appendChild(st); requestAnimationFrame(function () { st.classList.add('on'); });
+          setTimeout(function () { st.remove(); }, 1600);
+          setTimeout(spark, 1800 + Math.random() * 3200);
+        }
+        setTimeout(spark, 2200);
+      })();
+      // Music (VexVoid, "Shadowed Depths"): starts on the first hover, scroll, click, tap or key the browser allows, fades in; the mark breathes gently with the low end.
+      (function () {
+        var btn = document.getElementById('bbSound'), a = document.getElementById('bbMusic'), mark = document.getElementById('bbMark'), t, an, buf;
+        var reduce = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
+        function fade(to, done) {
+          clearInterval(t);
+          t = setInterval(function () {
+            var v = a.volume + (to > a.volume ? 0.03 : -0.04);
+            if ((to > a.volume && v >= to) || (to <= a.volume && v <= to)) { a.volume = to; clearInterval(t); if (done) done(); } else a.volume = Math.max(0, Math.min(1, v));
+          }, 80);
+        }
+        function pulse() {
+          if (!an) return;
+          an.getByteFrequencyData(buf); var s = 0; for (var i = 1; i < 6; i++) s += buf[i];
+          mark.classList.toggle('beat', s / 5 > 200 && !a.paused);
+          setTimeout(pulse, 120);
+        }
+        var muted = false, cx;
+        function analyse() {
+          if (an || reduce || !window.AudioContext) return;
+          try { cx = new AudioContext(); var src = cx.createMediaElementSource(a); an = cx.createAnalyser(); an.fftSize = 64; buf = new Uint8Array(an.frequencyBinCount); src.connect(an); an.connect(cx.destination); pulse(); } catch (e) {}
+        }
+        function set(on) {
+          btn.setAttribute('aria-pressed', String(on)); btn.setAttribute('aria-label', on ? 'Mute music' : 'Play music');
+          if (on) { a.volume = 0; return a.play().then(function () { fade(0.5); }); }
+          fade(0, function () { a.pause(); mark.classList.remove('beat'); });
+          return Promise.resolve();
+        }
+        // Hover and scroll rarely count as a gesture, so those are tries; a click, tap or key always starts it.
+        // The pulse analyser only comes up on a real gesture: a suspended AudioContext would silence the music.
+        var tries = ['pointerover', 'wheel', 'scroll', 'touchstart'], sure = ['pointerdown', 'keydown'];
+        function off() { tries.concat(sure).forEach(function (n) { removeEventListener(n, onTry, true); removeEventListener(n, onSure, true); }); }
+        function onTry() { if (muted || !a.paused) return; set(true).then(off, function () { if (a.paused) btn.setAttribute('aria-pressed', 'false'); }); }
+        function onSure(e) { if (muted || btn.contains(e.target)) return; off(); analyse(); if (cx && cx.state === 'suspended') cx.resume(); set(true).catch(function () {}); }
+        tries.forEach(function (n) { addEventListener(n, onTry, { capture: true, passive: true }); });
+        sure.forEach(function (n) { addEventListener(n, onSure, true); });
+        btn.addEventListener('click', function () { var on = btn.getAttribute('aria-pressed') !== 'true'; muted = !on; off(); if (on) analyse(); set(on).catch(function () {}); });
+      })();
+    </script>
+  </body>
+</html>
