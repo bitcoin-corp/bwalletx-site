@@ -1,0 +1,22 @@
+{
+  "pool": {
+    "address": "",
+    "target_bsv": null,
+    "topped_up_bsv": null,
+    "quarter": "2026 Q4",
+    "last_balance_bsv": null
+  },
+  "payouts": [
+    {
+      "date": "2026-10-23",
+      "quarter": "2026 Q4",
+      "credit": "AsrHardi",
+      "severity": "Medium",
+      "bsv": 0.5,
+      "txid": "3bfe4b7dc4463d8ed374be2e9c129b13d40cccaf86def42fb520495d0001e24e",
+      "address": "15Fy4DA38FoJZbGXn9eympewLjNW8Bvxvk",
+      "note": "Paid before the pool"
+    }
+  ],
+  "credit_only": 0
+}

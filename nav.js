@@ -60,7 +60,7 @@
           { label: 'Store', href: '/store' },
           { label: 'Buy BSV', href: '/buy' }
         ] },
-      { label: 'Social', href: '/social', pages: ['/social', '/chat', '/friends', '/lounge', '/games', '/video', '/live', '/tips', '/streaming-payments', '/credits', '/bspaces', '/bphone', '/bmail', '/bpositive', '/airdrops', '/sign', '/x', '/sign-in-with-handcash', '/gmail'],
+      { label: 'Social', href: '/social', pages: ['/social', '/chat', '/friends', '/lounge', '/games', '/video', '/live', '/tips', '/streaming-payments', '/credits', '/bspaces', '/bphone', '/bmail', '/services', '/bpositive', '/airdrops', '/sign', '/x', '/sign-in-with-handcash', '/gmail'],
         sub: [
           { label: 'Social', href: '/social' },
           { label: 'Chat', href: '/chat' },
@@ -75,6 +75,7 @@
           { label: 'bSpaces', href: '/bspaces' },
           { label: 'bPhone', href: '/bphone' },
           { label: 'bMail', href: '/bmail' },
+          { label: 'b*X services', href: '/services' },
           { label: 'bPositive (coming)', href: '/bpositive' },
           { label: 'Airdrops', href: '/airdrops' },
           { label: 'Your signature', href: '/sign' },
@@ -94,7 +95,7 @@
           { label: 'All bApps', href: '/bapps' },
           { label: 'bMovies', href: '/bapps/bmovies' },
           { label: 'bBots', href: '/b-bots' },
-          { label: 'bChatX', href: 'https://www.bchatx.com' },
+          { label: 'bChatX', href: 'https://chat.bwalletx.com' },
           { label: 'bMailX', href: 'https://bmailx.com' },
           { label: 'bRadioX', href: 'https://bradiox.com' },
           { label: 'bCalX', href: 'https://bcalx.com' },
@@ -102,17 +103,23 @@
           { label: 'bNewsX', href: 'https://bnewsx.com' },
           { label: 'bMusicX', href: 'https://bmusicx.com' },
           { label: 'bStoreX', href: 'https://bstorex.com' },
+          { label: 'bMintX: FLICK OFF', href: 'https://bmintx.com/flick-off' },
+          { label: 'bVideoX', href: 'https://bvideox.com' },
+          { label: 'bFriendsX', href: 'https://bfriendsx.com' },
+          { label: 'bDojoX', href: 'https://bdojox.com' },
           { label: 'bDriveX', href: 'https://bdrivex.com' },
           { label: 'bShares: registers for any company', href: '/bshares' },
           { label: 'Partnership shares (coming)', href: '/partnership-shares' },
           { label: 'bWeb (coming)', href: '/bweb' }
         ] },
-      { label: 'Agents', href: '/agents', pages: ['/agents', '/agent', '/ideas', '/bugs', '/hold-to-talk', '/strategies', '/strategies/spec', '/cli', '/mcp'],
+      { label: 'Agents', href: '/agents', pages: ['/agents', '/agent', '/feedback', '/ideas', '/bugs', '/b-Aware', '/b-aware', '/hold-to-talk', '/strategies', '/strategies/spec', '/cli', '/mcp'],
         sub: [
           { label: 'Agent accounts', href: '/agents' },
           { label: 'b agent', href: '/agent' },
+          { label: 'Feedback', href: '/feedback' },
           { label: 'Ideas', href: '/ideas' },
           { label: 'Bugs', href: '/bugs' },
+          { label: 'b-Aware', href: '/b-Aware' },
           { label: 'Hold to talk', href: '/hold-to-talk' },
           { label: 'Strategies', href: '/strategies' },
           { label: 'Strategy spec', href: '/strategies/spec' },
@@ -204,7 +211,7 @@
     panel.innerHTML = items.map(function (it) {
       if (!it.sub) return '<a class="m-top" href="' + it.href + '">' + it.label + '</a>';
       return '<details' + (it === section ? ' open' : '') + '><summary>' + it.label + '</summary>' + subLinks(it) + '</details>';
-    }).join('') + '<a class="m-top" href="https://web.bwalletx.com">Web wallet &rarr;</a><p class="m-follow"><a href="https://x.com/bWalletX">X</a><a href="https://bwalletx.com/twetch">Twetch</a><a href="https://github.com/bitcoin-corp/bwallet">GitHub</a><a href="https://www.youtube.com/@bWalletX">YouTube</a><a href="https://www.bchatx.com/room/LOUNGE">bChatX Lounge</a></p>';
+    }).join('') + '<a class="m-top" href="https://web.bwalletx.com">Web wallet &rarr;</a><p class="m-follow"><a href="https://x.com/bWalletX">X</a><a href="https://bwalletx.com/twetch">Twetch</a><a href="https://github.com/bitcoin-corp/bwallet">GitHub</a><a href="https://www.youtube.com/@bWalletX">YouTube</a><a href="https://chat.bwalletx.com/room/LOUNGE">bChatX Lounge</a></p>';
     mb.addEventListener('click', function () {
       var open = panel.hidden;
       panel.hidden = !open;
@@ -228,6 +235,9 @@
     var on = bar.querySelector('.section-nav');
     if (on) bar.insertBefore(sub, on); else bar.appendChild(sub);
     document.documentElement.classList.add('has-subnav');
+    // The pill row wraps (no sideways scrolling), so its height varies: push the page down to match.
+    var fitNav = function () { document.documentElement.style.setProperty('--nav-h', (bar.offsetTop + bar.offsetHeight) + 'px'); };
+    if (window.ResizeObserver) new ResizeObserver(fitNav).observe(bar); else { fitNav(); window.addEventListener('resize', fitNav); }
   }
 
   // Follow on X (bWalletX only): an icon before the Download / Web buttons, on every page.
@@ -266,23 +276,24 @@
     // bChat instead of Telegram/Discord (owner, 6 Oct 2026): a white b, next to X and GitHub.
     var bc = document.createElement('a');
     bc.className = 'x-link bchat-link';
-    bc.href = 'https://www.bchatx.com/room/LOUNGE';
+    bc.href = 'https://chat.bwalletx.com/room/LOUNGE';
     bc.target = '_blank';
     bc.rel = 'noopener';
     bc.setAttribute('aria-label', 'Join the bWallet Lounge on bChat');
     bc.title = 'Join the bWallet Lounge on bChat';
     // bChat's own b (bit-sign public/bchat-icon.svg: flag-top stem + bowl), in white.
-    bc.innerHTML = '<svg viewBox="12 10 96 96" width="20" height="20" aria-hidden="true"><mask id="bc-hole"><rect x="0" y="0" width="120" height="120" fill="#fff"/><circle cx="60" cy="72" r="15" fill="#000"/></mask><g fill="currentColor" mask="url(#bc-hole)"><polygon points="45,12 45,76 27,76 27,30"/><circle cx="60" cy="72" r="33"/></g></svg>';
+    bc.innerHTML = '<svg viewBox="12 10 96 96" width="20" height="20" aria-hidden="true"><mask id="bc-hole"><rect x="0" y="0" width="120" height="120" fill="#fff"/><circle cx="60" cy="72" r="15" fill="#000"/></mask><g fill="currentColor" mask="url(#bc-hole)"><polygon points="45,12 45,72 27,72 27,30"/><circle cx="60" cy="72" r="33"/></g></svg>';
     cta.insertBefore(bc, gh.nextSibling);
   }
 
+  // Phones hide the section pill row (it wrapped to many rows and covered heroes; owner, 23 Oct 2026). Menu has the same links.
   var css = document.createElement('style');
   css.textContent =
     '.topbar .sub-nav a[aria-current="page"]{color:#000!important;background:#F5B800;border-color:#F5B800}' +
     '.sub-nav{padding-top:0}' +
     '.nav-cta .x-link{display:inline-flex;align-items:center;justify-content:center;width:34px;height:34px;border-radius:50%;border:1px solid #ffffff33;color:#fff;margin-right:8px;vertical-align:middle}' +
     '.nav-cta .x-link:hover{border-color:#F5B800;color:#F5B800}' +
-    'html.has-subnav main.ext{padding-top:190px!important}' +
+    'html.has-subnav main.ext{padding-top:max(190px,calc(var(--nav-h,0px) + 66px))!important}' +
     '.nd{position:relative;display:inline-flex;align-items:center}' +
     '.nd-menu{display:none;position:absolute;top:100%;left:-14px;min-width:200px;padding:8px;margin-top:0;background:#0d0e11;border:1px solid #ffffff1f;border-radius:12px;box-shadow:0 12px 30px #0009;flex-direction:column;gap:2px;z-index:60}' +
     '.nd:hover .nd-menu,.nd:focus-within .nd-menu{display:flex}' +
@@ -300,7 +311,7 @@
     '.m-follow{display:flex;flex-wrap:wrap;gap:4px;margin:10px 0 0}.m-follow a{padding:6px 10px!important;font-size:.85rem}' +
     '@media (max-width:859px){.topbar nav[aria-label="Pages"]{display:none!important}.menu-btn{display:inline-block}' +
     '.topbar-in:has(nav[aria-label="Pages"]){flex-wrap:nowrap!important;height:64px!important;padding-top:0!important}' +
-    '.nav-cta .x-link,.nav-cta .web-btn{display:none}.topbar nav.m-menu:not([hidden]){display:block}.brand{flex:none}main.ext{padding-top:120px!important}html.has-subnav main.ext{padding-top:160px!important}}' +
+    '.nav-cta .x-link,.nav-cta .web-btn{display:none}.topbar nav.m-menu:not([hidden]){display:block}.brand{flex:none}main.ext{padding-top:120px!important}html.has-subnav main.ext{padding-top:120px!important}.topbar .sub-nav{display:none!important}}' +
     '@media (min-width:860px){.m-menu{display:none!important}}' +
     // Paper pages (body.paper: /themes, /b-creative, ...): the Menu button and phone menu in ink, not white.
     'body.paper .menu-btn{color:var(--ink,#111);border-color:var(--ink,#111)}body.paper .m-menu{background:var(--sheet,#fff);border-top-color:var(--hair,#d9d6ce)}body.paper .m-menu details{border-bottom-color:var(--hair,#d9d6ce)}body.paper .m-menu summary,body.paper .m-menu a.m-top{color:var(--ink,#111)}body.paper .m-menu a{color:var(--muted,#5d5b56)}' +

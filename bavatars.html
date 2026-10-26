@@ -386,17 +386,17 @@
     <footer class="foot">
       <div class="wrap foot-in">
         <a class="brand" href="/"><img src="/logo.svg" alt="" width="27" height="24" /><span>bWallet<span class="gold">X</span></span></a>
-        <p>By The Bitcoin Corporation Ltd.</p>
-        <p><a href="https://x.com/bWalletX" target="_blank" rel="noopener">@bWalletX on X</a> · <a href="https://bwalletx.com/twetch" target="_blank" rel="noopener">Twetch</a> · <a href="https://www.bchatx.com/u/bwalletx" target="_blank" rel="noopener">bChatX</a> · <a href="/privacy.html">Privacy policy</a></p>
+        <p>By The Bitcoin Corporation Ltd (company no. 16735102, registered in England &amp; Wales).</p>
+        <p><a href="https://x.com/bWalletX" target="_blank" rel="noopener">@bWalletX on X</a> · <a href="https://bwalletx.com/twetch" target="_blank" rel="noopener">Twetch</a> · <a href="https://chat.bwalletx.com/u/bwalletx" target="_blank" rel="noopener">bChatX</a> · <a href="/privacy.html">Privacy policy</a></p>
       </div>
     </footer>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcode-generator/1.4.4/qrcode.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcode-generator/1.4.4/qrcode.min.js" integrity="sha384-mZT2gIty7ZDdOGkxfP6joZcYdMW1Jvj9dRlfpTmaJAKKXTqzygtB22k7FLe+KZC1" crossorigin="anonymous"></script>
     <script src="/bavatars.js"></script>
     <script>
       (function () {
         var B = window.bAvatars;
-        var API = 'https://www.bchatx.com/api/bavatar/';
+        var API = 'https://www.bit-sign.online/api/bavatar/';
         var WALL = ['alice', 'sam', 'nova', 'kai', 'mira', 'otto', 'jun', 'zed', 'ivy', 'leo', 'ruby', 'max'];
         var SAMPLES = ['alice', 'sam', 'nova', 'kai', 'mira', 'otto', 'jun'];
         var MIX = ['bloom', 'orbit', 'deco', 'kintsugi', 'sigil'];
@@ -546,7 +546,7 @@
 
         // Mint: the account's edition number (signup order) from bChatX.
         (function () {
-          var NUM = 'https://www.bchatx.com/api/public/bavatar/';
+          var NUM = 'https://www.bit-sign.online/api/public/bavatar/';
           var input = document.getElementById('mint-name'), out = document.getElementById('mint-out');
           var t, seq = 0;
           function pad(n) { return n < 1000 ? ('00' + n).slice(-3) : String(n); }

@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Sign in with a passkey: open your wallet with your face or fingerprint | bWalletX</title>
+    <link rel="canonical" href="https://bwalletx.com/seedless-signin" />
+    <meta name="description" content="Create a bWalletX wallet with a passkey. Face ID, fingerprint or your device PIN opens it: no password to invent. Your 12 words are sealed with the passkey and saved as a locked recovery file." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://bwalletx.com/seedless-signin" />
+    <meta property="og:site_name" content="bWalletX" />
+    <meta property="og:title" content="Sign in with a passkey" />
+    <meta property="og:description" content="Open your bWalletX wallet with your face or fingerprint. No password to forget." />
+    <meta property="og:image" content="https://bwalletx.com/og-seedless-signin-v1.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Sign in with a passkey: black and yellow racing stripes, bWalletX" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@bWalletX" />
+    <meta name="twitter:title" content="Sign in with a passkey" />
+    <meta name="twitter:description" content="Open your bWalletX wallet with your face or fingerprint. No password to forget." />
+    <meta name="twitter:image" content="https://bwalletx.com/og-seedless-signin-v1.png" />
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="stylesheet" href="/styles.css" />
+    <style>
+      .ext h1 { font-size: clamp(2.2rem, 6vw, 3.4rem); margin: 18px 0 10px; }
+      .ext h2 { margin: 48px 0 10px; font-size: 1.5rem; }
+      .ext p, .ext li { line-height: 1.65; }
+      .ext .small { color: #8a8a86; font-size: 0.85rem; }
+      .ext .row { display: flex; gap: 12px; flex-wrap: wrap; margin: 26px 0; }
+      .strap { font-weight: 800; letter-spacing: 0.14em; color: #F5B800; margin: 0; font-size: 0.85rem; }
+      /* Black and yellow racing stripes. */
+      .bacc-stripes { height: 38px; margin: 0 -20px; background: repeating-linear-gradient(to bottom, #F5B800 0 11px, #050505 11px 19px); }
+      .bacc-hero { position: relative; margin: 18px -20px 0; padding: 34px 20px 30px; background: #050505; border-top: 1px solid #F5B80033; border-bottom: 1px solid #F5B80033; overflow: hidden; }
+      .bacc-hero::after { content: ""; position: absolute; top: 0; bottom: 0; right: 2%; width: 56px; transform: skewX(-18deg); background: linear-gradient(90deg, #F5B800 0 40%, transparent 40% 60%, #F5B800 60% 100%); opacity: 0.9; }
+      .bacc-hero > * { position: relative; z-index: 1; max-width: 500px; }
+      .bacc-word { font-size: clamp(3.4rem, 14vw, 7rem); font-weight: 900; font-style: italic; letter-spacing: -0.03em; line-height: 0.95; margin: 6px 0 14px; color: #fff; }
+      .bacc-word .y { color: #F5B800; }
+      .box { background: #101114; border: 1px solid #ffffff12; border-left: 4px solid #F5B800; border-radius: 4px 16px 16px 4px; padding: 18px 20px; margin: 16px 0; }
+      .box h3 { margin: 0 0 6px; font-size: 1rem; }
+      .box p { margin: 0; color: #a7adb8; }
+      .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 14px; margin: 18px 0; }
+      .grid .box { margin: 0; display: flex; flex-direction: column; gap: 6px; }
+      .grid .box a.go { margin-top: auto; padding-top: 8px; color: #F5B800; font-weight: 700; text-decoration: none; }
+      .tag { align-self: flex-start; font-size: 0.72rem; font-weight: 800; letter-spacing: 0.1em; padding: 3px 9px; border-radius: 999px; border: 1px solid #ffffff22; color: #a7adb8; }
+      .tag.live { color: #7ee0a1; border-color: #7ee0a155; }
+      .bacc-table { margin: 18px 0; border: 1px solid #ffffff14; border-radius: 12px; overflow: hidden; }
+      .bacc-row { display: grid; grid-template-columns: 1.1fr 1fr 1fr; gap: 12px; padding: 12px 16px; border-top: 1px solid #ffffff10; font-size: 0.95rem; line-height: 1.5; color: #a7adb8; }
+      .bacc-row:first-child { border-top: 0; }
+      .bacc-head { background: #101114; font-weight: 800; color: #F5B800; }
+      .bacc-row span:first-child { color: #fff; font-weight: 700; }
+      @media (max-width: 560px) { .bacc-row { grid-template-columns: 1fr; gap: 4px; } .bacc-head { display: none; } .bacc-row span:nth-child(2)::before { content: "BTC: "; font-weight: 800; color: #fff; } .bacc-row span:nth-child(3)::before { content: "BSV: "; font-weight: 800; color: #F5B800; } }
+      .tag.wip { color: #F5B800; border-color: #F5B80066; }
+      .shots { display: flex; flex-wrap: wrap; gap: 18px; justify-content: center; margin: 22px 0; align-items: flex-start; }
+      .shots figure { margin: 0; text-align: center; max-width: 320px; }
+      .shots img { width: 100%; height: auto; border-radius: 22px; border: 1px solid #F5B80033; display: block; }
+      .shots figcaption { color: #8a8a86; font-size: 0.82rem; margin-top: 8px; }
+      .btn.off { opacity: 0.5; pointer-events: none; }
+    </style>
+  </head>
+  <body>
+    <div class="beta-banner">bWalletX is in <strong>beta</strong>: test with small amounts.</div>
+    <header class="topbar">
+      <div class="wrap topbar-in">
+        <a class="brand" href="/"><img src="/logo.svg" alt="" width="34" height="30" /><span>bWallet<span class="gold">X</span></span></a>
+        <nav aria-label="Pages">
+          <a href="/features">Features</a><a href="/exchange">Exchange</a><a href="/social">Social</a><a href="/agent">Agents</a><a href="/extension">Extension</a><a href="/developers">Developers</a>
+        </nav>
+        <span class="nav-cta"><a class="dl-btn" href="/get">Download</a><a class="web-btn" href="https://web.bwalletx.com" target="_blank" rel="noopener">Web &rarr;</a></span>
+      </div>
+    </header>
+    <script src="/nav.js"></script>
+    <main class="ext">
+      <div class="bacc-stripes" aria-hidden="true"></div>
+      <section class="bacc-hero">
+        <p class="strap">SEEDLESS SIGN-IN</p>
+        <p class="bacc-word">Pass<span class="y">key</span></p>
+        <h1>Open your wallet with your face or fingerprint</h1>
+        <p class="lede">Create a bWalletX wallet with a passkey. Your phone or computer&rsquo;s own lock (Face ID, fingerprint or PIN) opens it. There is no password to invent and no 12-word phrase to write down before you start. Your 12 words are sealed with the passkey and saved as a locked recovery file you keep.</p>
+        <div class="row">
+          <a class="btn btn-store" href="https://web.bwalletx.com">Try it on the web</a>
+          <a class="btn btn-store btn-ghost" href="/get">Get bWalletX</a>
+        </div>
+      </section>
+      <div class="bacc-stripes" aria-hidden="true"></div>
+
+      <h2>This is the sign-in screen</h2>
+      <div class="shots">
+        <figure><img src="/media/seedless-signin-phone.webp" alt="The bWalletX sign-in screen on a phone: X and Google side by side, Continue with HandCash, Continue with a passkey, Restore with a passkey" width="366" height="792" loading="lazy" /><figcaption>On a phone</figcaption></figure>
+        <figure><img src="/media/seedless-signin-qr.webp" alt="The bWalletX sign-in screen in a browser, with a QR code to open your phone wallet on the computer" width="676" height="896" loading="lazy" /><figcaption>In a browser, with the QR code to open your phone wallet here</figcaption></figure>
+      </div>
+
+      <h2>How it works</h2>
+      <div class="box"><h3>1. Tap Continue with a passkey</h3><p>You are not asked to make a password or to copy down words.</p></div>
+      <div class="box"><h3>2. Confirm with your device lock</h3><p>Your phone or computer asks for Face ID, a fingerprint or its PIN. That is your device checking it is you. bWalletX never sees it.</p></div>
+      <div class="box"><h3>3. Keep your recovery file</h3><p>Your 12 words are sealed with your passkey and saved as a file only that passkey opens. A locked copy is also kept for you, so the same passkey can bring the wallet back on a new device.</p></div>
+
+      <h2>Where it works today</h2>
+      <div class="grid">
+        <div class="box"><span class="tag live">LIVE</span><h3>Web</h3><p>web.bwalletx.com, in Chrome, Safari and Android browsers.</p></div>
+        <div class="box"><span class="tag live">LIVE</span><h3>Chrome extension</h3><p>Sign in through web.bwalletx.com with your passkey; the wallet comes back into the extension.</p></div>
+        <div class="box"><span class="tag live">LIVE</span><h3>Android download</h3><p>The direct download from bwalletx.com.</p></div>
+        <div class="box"><span class="tag wip">PRIVATE</span><h3>iPhone</h3><p>In the private build for now.</p></div>
+        <div class="box"><span class="tag">COMING</span><h3>App Store and Google Play</h3><p>Not in the store editions yet.</p></div>
+      </div>
+
+      <h2>Good to know</h2>
+      <div class="box"><h3>Passkeys stay in your Apple or Google account</h3><p>A passkey saved to iCloud cannot open a wallet on an Android phone, and the other way round. On a different kind of device, use your recovery file or your 12 words, or add a passkey there.</p></div>
+      <div class="box"><h3>We never hold your keys</h3><p>Your 12 words are locked with your passkey before they leave your device. What we store is the locked copy, which only your passkey can open.</p></div>
+      <div class="box"><h3>You can still use a password and 12 words</h3><p>It is the other button on the sign-in screen.</p></div>
+      <p class="small">bWalletX is in beta: test with small amounts. Questions: <a href="mailto:support@bwalletx.com">support@bwalletx.com</a></p>
+      <div class="bacc-stripes" aria-hidden="true"></div>
+    </main>
+  </body>
+</html>

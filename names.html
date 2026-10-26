@@ -5,12 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Get your name on Bitcoin</title>
     <link rel="canonical" href="https://bwalletx.com/names" />
-    <meta name="description" content="Your own name on Bitcoin, yours forever. One payment, no renewals: $1 for five letters or more, $5 for four, $15 for three. Search it, buy it or claim it, and give one to a friend, in bWalletX." />
+    <meta name="description" content="Your own name on Bitcoin, yours forever. One payment, no renewals: $10 for five letters or more, $50 for four, $100 for three, $500 for one or two. Search it, buy it or claim it, and give one to a friend, in bWalletX." />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://bwalletx.com/names" />
     <meta property="og:site_name" content="bWalletX" />
     <meta property="og:title" content="Get your name on Bitcoin" />
-    <meta property="og:description" content="Yours forever. One payment, no renewals. $1 for five letters or more, $5 for four, $15 for three. Search, buy or claim it in bWalletX." />
+    <meta property="og:description" content="Yours forever. One payment, no renewals. $10 for five letters or more, $50 for four, $100 for three, $500 for one or two. Search, buy or claim it in bWalletX." />
     <meta property="og:image" content="https://bwalletx.com/og-names-v1.png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
@@ -18,12 +18,12 @@
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@bWalletX" />
     <meta name="twitter:title" content="Get your name on Bitcoin" />
-    <meta name="twitter:description" content="Yours forever. One payment, no renewals. $1 for five letters or more, $5 for four, $15 for three. Search, buy or claim it in bWalletX." />
+    <meta name="twitter:description" content="Yours forever. One payment, no renewals. $10 for five letters or more, $50 for four, $100 for three, $500 for one or two. Search, buy or claim it in bWalletX." />
     <meta name="twitter:image" content="https://bwalletx.com/og-names-v1.png" />
     <link rel="icon" href="/favicon.ico" />
     <link rel="stylesheet" href="/styles.css" />
     <style>
-      /* The Name Store's look (desktop.bwalletx.com/names), on the site: gold pool behind, dark cards on top. */
+      /* The Name Store's look (web.bwalletx.com/names), on the site: gold pool behind, dark cards on top. */
       .nm-wrap { position: relative; isolation: isolate; }
       .nm-pool { position: fixed; inset: 0; z-index: -1; pointer-events: none; background: radial-gradient(circle at 50% 40%, #3a2a08 0%, #170f04 45%, #050403 80%); }
       .nm-pool canvas { position: absolute; inset: 0; width: 100%; height: 100%; }
@@ -110,7 +110,7 @@
           <input id="nm-q" type="text" placeholder="Find your name" autocomplete="off" autocapitalize="none" spellcheck="false" maxlength="64" aria-label="Find your name" />
           <button type="submit">Search &rarr;</button>
         </form>
-        <div class="nm-tiers"><span>5+ characters <b>$1.00</b></span><span>4 characters <b>$5.00</b></span><span>3 characters <b>$15.00</b></span><span>Shorter or special names: make an offer</span></div>
+        <div class="nm-tiers"><span>5+ characters <b>$10.00</b></span><span>4 characters <b>$50.00</b></span><span>3 characters <b>$100.00</b></span><span>1–2 characters <b>$500.00</b></span><span>Special names: make an offer</span></div>
 
         <div class="nm-grid">
           <section class="nm-card" id="nm-result" aria-live="polite">
@@ -138,16 +138,16 @@
           <p>Your name takes payments in bWalletX once you set it as your name in Settings &rsaquo; Identity.</p>
         </details>
 
-        <p class="small">Buying and giving happen in bWalletX: <a href="https://desktop.bwalletx.com/names">desktop.bwalletx.com/names</a> or <a href="https://web.bwalletx.com/names">web.bwalletx.com/names</a>. Questions: <a href="mailto:support@bwalletx.com">support@bwalletx.com</a></p>
+        <p class="small">Buying and giving happen in bWalletX: <a href="https://web.bwalletx.com/names">web.bwalletx.com/names</a> or <a href="https://web.bwalletx.com/names">web.bwalletx.com/names</a>. Questions: <a href="mailto:support@bwalletx.com">support@bwalletx.com</a></p>
       </main>
     </div>
 
     <script>
       // Same mechanics as the Name Store in bWalletX (src/mobile/names/store): availability from the 1Sat name
       // tree, listings from the 1Sat market feed, tier prices by length, offer-only names, and the wallet for the
-      // buy / claim / give step (desktop.bwalletx.com/names?q=<name>).
+      // buy / claim / give step (web.bwalletx.com/names?q=<name>).
       (function () {
-        var STORE = 'https://desktop.bwalletx.com/names';
+        var STORE = 'https://web.bwalletx.com/names';
         var HOUSE = { '1A3SPh9TwVAwmBv9d8VTczwKq761s1byt7': 1, '12EZT8mTDNsnCzW7XqvMwfLV44fcA2AWg4': 1, '14rHQU9DHjQhbtXMmnNc6M943XjZBF9oWs': 1, '1F4J9KkMoqtznXPJuCgb98LRymssc8MFfd': 1 };
         var PREMIUM = ["1shot","401","402","academy","aibc","aibuildersclub","aigf","aigirlfriends","airdrop","airdrops","aitr","aitribes","aivj","aivjs","anthropic","arweave","audex","auth0","b0-x","b0ase","b0asecom","b0asex","b0s","b3d","bbooks","bbrowser","bcal","bchat","bchatx","bcode","bcorp","bdesktop","bdns","bdrive","beautyqueen","beautyqueenai","bedu","bexchange","bfile","bgame","bgit","billion","bit-sign","bit-trust","bitcdn","bitcoin-os","bitcoin3d","bitcoinapps","bitcoinart","bitcoinbooks","bitcoinbrowser","bitcoincalendar","bitcoinchat","bitcoincode","bitcoincorp","bitcoincorporation","bitcoindns","bitcoindrive","bitcoineducation","bitcoinemail","bitcoinfile","bitcoingaming","bitcoinidentity","bitcoinjobs","bitcoinmail","bitcoinmaps","bitcoinmarketplace","bitcoinmovies","bitcoinmusic","bitcoinos","bitcoinpaint","bitcoinphotos","bitcoinradio","bitcoinsheets","bitcoinsocial","bitcoinspreadsheet","bitcoinwriter","bitdns","bitgit","bitgold","bitpension","bitsign","bittrust","bjobs","bluesky","bmail","bmailx","bmaps","bmarket","bmint","bmoney","bmoneyx","bmovie","bmovies","bmoviesx","bmusic","bmusicx","boase","bpaint","bphotos","bpic","bpics","bradio","brc100","bsearch","bsheet","bsheets","bsocial","bspace","bspaces","bsv21","bsvapi","btrust","btv","bvid","bvideo","bwallet","bwalletx","bwrite","bwriter","cashback","cashboard","cashflow","cashhandle","cashhandletoken","cboard","cherry","cherry-x","cherryx","claude","clawminer","cloudflare","coinbase-tx","copilot","cortana","coursekings","cryptography","custody","cyber","cypherpunk","cypherpunks","debian","deepseek","digital-cash","digitalgold","divvy","dns-dex","docker","docusign","dropbox","e-cash","empire","encryption","escrow","etrade","fanclub","faucet","fediverse","ffnews","fidelity","firebase","floop","floopwallet","fnews","ftse","gateway","genius","giggle","gitlab","goldmine","grok","hardmoney","hashcash","hctoken","heroku","hflix","hodler","hubspot","huggingface","hyperflix","indextoken","interiordesignpro","interiorvision","ipfs","jackpot","jira","justb","kintsugi","kintsugiai","klarna","kubernetes","kweg","kwegwong","launchpad","launchpads","libertas","libertascoffee","liberty","lightning","lilithtattoo","llama","lucky7","macbook","macos","mainnet","marina3d","mars3d","masterclass","mastodon","mcpy","memecoin","mempool","merkle","metagraph","micropay","micropayment","midjourney","mikro","mikrocosm","minecraftparty","minted","minter","minting","missvoid","mistral","money-button","moneybutton","mongodb","monzo","multisig","mysql","netlify","ninjapunk","ninjapunkgirls","nostr","notion","npg","npgred","npgx","nyse","okta","oneshot","oneshotcomics","opensource","oracles","osinka","osinkakalaso","overlay","overnerd","path-402","path40","path401","path402","path403","pathfouroone","payday","paymail","payment","payments","pennypics","penshun","permissionless","perplexity","phoenix","platinum","postgres","pow20","proofofwork","pytorch","quantum","quickbooks","rafs","rafskitchen","redis","repo-dex","repodex","repotokeniser","richardboase","robust-ae","robustae","robustengineering","rockstar","santander","satsback","satstack","schwab","scrollpay","selfcustody","sensei","senseii","shopify","siri","slack","sound-money","spotlight","square","squarespace","stablecoins","stacksats","stargate","stripe","studio","substack","supabase","superstar","tensorflow","teranode","timelock","tinycapital","tinycapitalpartners","tips","titan","tokenomics","treasure","trello","tribe","tribeswallet","tribify","trustless","twall","tweettoken","twilio","twittertokeniser","ubuntu","university","v01d","v3x","v3xv0id","venmo","vercel","vex","vexvoid","victory","wealth","websitestrategy","websitestrategypro","weight","wordpressdesignlondon","worldwide","wpldn","wspro","yhc","yourcash","yourname","zapier","zelle","zerodice","zeus"];
         var premium = {}; for (var i = 0; i < PREMIUM.length; i++) premium[PREMIUM[i]] = 1;
@@ -160,8 +160,8 @@
         };
         var RE = /^[a-z0-9-]{1,64}$/;
         var clean = function (s) { return String(s || '').trim().toLowerCase().replace(/^[@$]+/, ''); };
-        var tierUsd = function (n) { return n.length >= 5 ? 1 : n.length === 4 ? 5 : 15; };
-        var isPremium = function (n) { return !!premium[n] || n.length < 3; };
+        var tierUsd = function (n) { return n.length >= 5 ? 10 : n.length === 4 ? 50 : n.length === 3 ? 100 : 500; };
+        var isPremium = function (n) { return !!premium[n]; };
         var usd = function (x) { return '$' + x.toFixed(2); };
         var esc = function (s) { return String(s).replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); };
         var storeHref = function (n) { return STORE + '?q=' + encodeURIComponent(n); };
@@ -189,7 +189,7 @@
           m.className = 'nm-modal'; m.id = 'nm-modal'; m.setAttribute('role', 'dialog'); m.setAttribute('aria-modal', 'true'); m.setAttribute('aria-label', 'Where is your bWalletX?');
           m.innerHTML = '<div class="nm-sheet">' +
             '<h3>Where is your bWalletX?</h3><p class="muted"><b>' + esc(n) + '</b> will be waiting on the Names page.</p>' +
-            (phone ? '' : '<a class="nm-opt" href="' + storeHref(n) + '"><b>Desktop</b><span>desktop.bwalletx.com: the installed Desktop app, or the wide layout in this browser.</span></a>') +
+            (phone ? '' : '<a class="nm-opt" href="' + storeHref(n) + '"><b>Desktop</b><span>web.bwalletx.com: the installed Desktop app, or the wide layout in this browser.</span></a>') +
             '<a class="nm-opt" href="' + webHref(n) + '"><b>' + (phone ? 'Open it here' : 'Web wallet') + '</b><span>web.bwalletx.com' + (phone ? ', in this browser.' : ': the phone layout, in this browser.') + '</span></a>' +
             (phone ? '' : '<div class="nm-opt"><b>Phone</b><span>Point your phone\u2019s camera at this. It opens web.bwalletx.com on the phone, signed in as you if you have used it there.</span><div class="qr" id="nm-qr"></div></div>') +
             (ext ? '<div class="nm-opt"><b>Browser extension</b><span>This browser has a wallet extension. Open bWalletX from the toolbar, choose Names and search <b>' + esc(n) + '</b>.</span></div>' : '') +
@@ -313,8 +313,8 @@
           var ours = all.filter(function (l) { return HOUSE[l.seller] && !isPremium(l.name); }).sort(function (a, b) { return a.name.length - b.name.length || (a.name < b.name ? -1 : 1); });
           if (!ours.length) return;
           var rails = [
-            { title: 'Short names', sub: '3 and 4 letters', pick: function (l) { return l.name.length <= 4; } },
-            { title: 'Names', sub: 'Five letters and up, $1 each', pick: function (l) { return l.name.length >= 5; } }
+            { title: 'Short names', sub: '1 to 4 letters', pick: function (l) { return l.name.length <= 4; } },
+            { title: 'Names', sub: 'Five letters and up, $10 each', pick: function (l) { return l.name.length >= 5; } }
           ];
           var html = rails.map(function (r) {
             var items = ours.filter(r.pick).slice(0, 24);

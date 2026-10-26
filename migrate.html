@@ -1,0 +1,263 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Move to bWalletX</title>
+    <link rel="canonical" href="https://bwalletx.com/migrate" />
+    <meta name="description" content="Move your coins, NFTs, tokens, names and posts into bWalletX. Sweep from Yours, RelayX, Twetch, SimplyCash, Money Button or a paper key, on your own device. Keys never leave it." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://bwalletx.com/migrate" />
+    <meta property="og:site_name" content="bWalletX" />
+    <meta property="og:title" content="Move to bWalletX" />
+    <meta property="og:description" content="Bring your coins, NFTs, tokens, names and posts home. Sweep from other BSV wallets on your own device. Keys never leave it." />
+    <meta property="og:image" content="https://bwalletx.com/og-migrate.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Move to bWalletX: bring your coins, NFTs, tokens and posts home." />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@bWalletX" />
+    <meta name="twitter:title" content="Move to bWalletX" />
+    <meta name="twitter:description" content="Bring your coins, NFTs, tokens, names and posts home. Sweep from other BSV wallets on your own device. Keys never leave it." />
+    <meta name="twitter:image" content="https://bwalletx.com/og-migrate.png" />
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="stylesheet" href="/styles.css" />
+    <style>
+      html, body { overflow-x: clip; }
+      body { background: #f7f5ef; color: #111; }
+      main.mg { max-width: 1080px; margin: 0 auto; padding: 48px 16px 96px; box-sizing: border-box; color: #111; }
+      .mg h1 { font-size: clamp(2.4rem, 7vw, 4.4rem); letter-spacing: -0.035em; line-height: 1.02; margin: 10px 0 16px; color: #111; max-width: 14ch; }
+      .mg h2 { margin: 64px 0 8px; font-size: clamp(1.5rem, 3.4vw, 2rem); letter-spacing: -0.02em; color: #111; }
+      .mg h3 { margin: 0; font-size: 1.12rem; color: #111; }
+      .mg p, .mg li { line-height: 1.65; color: #222; }
+      .mg .gold { color: #9a6c00; }
+      .mg a { color: #7a5400; }
+      .mg .kicker { text-transform: uppercase; letter-spacing: .12em; font-size: .78rem; font-weight: 700; color: #9a6c00; margin: 0; }
+      .mg .lede { font-size: 1.18rem; color: #333; max-width: 60ch; }
+      .mg .sub { color: #555; max-width: 62ch; margin: 0 0 20px; }
+      .mg code { background: #ece7da; padding: 1px 6px; border-radius: 6px; font-size: .9em; color: #111; }
+      .mg .row { display: flex; gap: 12px; flex-wrap: wrap; margin: 26px 0; }
+      .mg .btn { display: inline-block; padding: 13px 22px; border-radius: 999px; font-weight: 700; text-decoration: none; }
+      .mg .btn-gold { background: #F5B800; color: #000; box-shadow: 0 6px 20px -8px #c99600; }
+      .mg .btn-line { border: 1px solid #11111140; color: #111; background: #fff8; }
+      .promise { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin: 32px 0 0; }
+      .promise div { background: #fff; border: 1px solid #0000001a; border-radius: 16px; padding: 16px 18px; }
+      .promise b { display: block; margin-bottom: 4px; }
+      .promise span { color: #555; font-size: .93rem; line-height: 1.5; }
+      .jump { display: flex; flex-wrap: wrap; gap: 8px; margin: 18px 0 0; }
+      .jump a { font-size: .88rem; text-decoration: none; padding: 7px 13px; border-radius: 999px; background: #fff; border: 1px solid #0000001a; color: #111; }
+      .jump a:hover { border-color: #F5B800; }
+      .grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; margin: 20px 0; }
+      .card { background: #fff; border: 1px solid #0000001a; border-radius: 20px; padding: 22px; display: flex; flex-direction: column; gap: 12px; scroll-margin-top: 90px; }
+      .card.soon { background: #fbfaf6; border-style: dashed; }
+      .card .hd { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+      .tag { flex: none; font-size: 0.72rem; font-weight: 800; padding: 3px 10px; border-radius: 999px; letter-spacing: .03em; text-transform: uppercase; }
+      .tag.live { background: #F5B800; color: #000; }
+      .tag.soon { background: #ece7da; color: #6b5a2e; }
+      .card dl { margin: 0; display: grid; grid-template-columns: 92px 1fr; gap: 6px 12px; font-size: .94rem; }
+      .card dt { color: #8a7a52; font-weight: 700; font-size: .78rem; text-transform: uppercase; letter-spacing: .06em; padding-top: 3px; }
+      .card dd { margin: 0; color: #222; line-height: 1.5; }
+      .card ol { margin: 0; padding-left: 20px; font-size: .94rem; }
+      .card ol li { line-height: 1.55; margin: 2px 0; }
+      .card .safe { font-size: .86rem; color: #5a4a1e; background: #fdf4d6; border-radius: 10px; padding: 9px 12px; margin: 0; }
+      .card .cta { margin-top: auto; display: flex; gap: 10px; flex-wrap: wrap; }
+      .card .cta a { font-size: .9rem; font-weight: 700; text-decoration: none; padding: 9px 16px; border-radius: 999px; }
+      .card .cta .go { background: #111; color: #fff; }
+      .card .cta .more { border: 1px solid #11111130; color: #111; }
+      .safety { background: #111; color: #f5f1e6; border-radius: 24px; padding: 28px; margin: 64px 0 0; }
+      .safety h2 { color: #fff; margin-top: 0; }
+      .safety li { color: #e7e1d1; }
+      .safety b { color: #F5B800; }
+      details { background: #fff; border: 1px solid #0000001a; border-radius: 12px; padding: 12px 16px; margin: 10px 0; }
+      summary { font-weight: 700; cursor: pointer; color: #111; }
+      .mg .small { color: #555; font-size: 0.85rem; }
+      @media (max-width: 760px) {
+        .grid, .promise { grid-template-columns: 1fr; }
+        .card dl { grid-template-columns: 1fr; gap: 2px; }
+        .card dd { margin-bottom: 6px; }
+        .safety { padding: 22px 18px; }
+      }
+      .svc-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; margin: 20px 0; }
+      .svc { display: flex; flex-direction: column; gap: 8px; align-items: flex-start; background: #fff; border: 1px solid #0000001a; border-radius: 16px; padding: 16px 18px; text-decoration: none; color: #111; }
+      .svc.soon { background: #fbfaf6; border-style: dashed; }
+      .svc:hover { border-color: #F5B800; }
+      .svc b { font-size: 1.08rem; color: #111; }
+      @media (max-width: 760px) { .svc-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+    </style>
+  </head>
+  <body>
+    <div class="beta-banner">bWalletX is in <strong>beta</strong>: test with small amounts.</div>
+    <header class="topbar">
+      <div class="wrap topbar-in">
+        <a class="brand" href="/"><img src="/logo.svg" alt="" width="34" height="30" /><span>bWallet<span class="gold">X</span></span></a>
+        <nav aria-label="Pages">
+          <a href="/features">Features</a><a href="/exchange">Exchange</a><a href="/social">Social</a><a href="/agent">Agents</a><a href="/extension">Extension</a><a href="/developers">Developers</a>
+        </nav>
+        <span class="nav-cta"><a class="dl-btn" href="/get">Download</a><a class="web-btn" href="https://web.bwalletx.com" target="_blank" rel="noopener">Web &rarr;</a></span>
+      </div>
+    </header>
+    <script src="/nav.js"></script>
+
+    <main class="mg">
+      <p class="kicker">Move to bWalletX</p>
+      <h1>Bring everything <span class="gold">home.</span></h1>
+      <p class="lede">Coins, NFTs, tokens, names and your posts. bWalletX sweeps them in from the wallet you used before, right on your own device. Moving is free; you only pay the normal network fee, usually a cent or less.</p>
+      <div class="row"><a class="btn btn-gold" href="https://web.bwalletx.com" target="_blank" rel="noopener">Open bWalletX</a><a class="btn btn-line" href="/get">Get the app</a><a class="btn btn-line" href="#wallets">Pick your wallet</a><a class="btn btn-line" href="#services">From a social network</a></div>
+      <div class="promise">
+        <div><b>On your device</b><span>Your phrase or key is typed into bWalletX and held in memory for the sweep only. It is never stored or sent to us.</span></div>
+        <div><b>Nothing burned</b><span>Anything that looks like a token but can&rsquo;t be read is listed, not swept, so it can&rsquo;t be lost by accident.</span></div>
+        <div><b>See it first</b><span>Every sweep shows what it found, in dollars, before you tap. Tick only what you want.</span></div>
+      </div>
+
+      <h2 id="wallets">From another wallet</h2>
+      <p class="sub">Find your old wallet below. <b>Live</b> routes work in bWalletX today. <b>Coming</b> ones aren&rsquo;t built yet: don&rsquo;t paste their keys anywhere in the meantime.</p>
+      <nav class="jump" aria-label="Wallets">
+        <a href="#yours">Yours / Panda</a><a href="#relayx">RelayX</a><a href="#twetch">Twetch</a><a href="#simplycash">SimplyCash</a><a href="#moneybutton">Money Button</a><a href="#wif">Paper key / WIF</a><a href="#other">Other phrase</a><a href="#handcash">HandCash</a><a href="#electrum">Electrum SV</a><a href="#metanet">Metanet / Babbage</a>
+      </nav>
+
+      <div class="grid">
+        <article class="card" id="yours">
+          <div class="hd"><h3>Yours / Panda Wallet</h3><span class="tag live">Live</span></div>
+          <dl><dt>What moves</dt><dd>BSV, 1Sat NFTs, BSV-21 tokens, from the payment, ordinals and identity keys (and the older Yours payment key).</dd>
+          <dt>You need</dt><dd>Your 12-word Yours recovery phrase.</dd></dl>
+          <ol><li>In bWalletX, open <b>Settings &rsaquo; Account data &rsaquo; Sweep into this account</b>.</li><li>Paste your Yours phrase. All the Yours keys are tried for you.</li><li>Check what it found, tick it, tap <b>Sweep</b>.</li></ol>
+          <p class="safe">New to bWalletX? Restoring with your Yours phrase opens the same wallet directly, since bWalletX uses the same keys.</p>
+          <div class="cta"><a class="go" href="https://web.bwalletx.com" target="_blank" rel="noopener">Open bWalletX</a></div>
+        </article>
+
+        <article class="card" id="relayx">
+          <div class="hd"><h3>RelayX</h3><span class="tag live">Live</span></div>
+          <dl><dt>What moves</dt><dd>BSV, RelayX NFT collections (Run jigs) and 1Sat ordinals from your RelayX keys. Listed items can be cancelled first.</dd>
+          <dt>You need</dt><dd>Your 12-word RelayX recovery phrase.</dd></dl>
+          <ol><li>Open <b>Restore &rsaquo; RelayX</b>, or the sweep screen in Settings.</li><li>Paste your RelayX phrase. bWalletX scans RelayX&rsquo;s payment and ordinals paths.</li><li>Review coins and NFTs, then sweep them home.</li></ol>
+          <p class="safe">RelayX itself is offline. Recovery reads the chain directly, so it still works.</p>
+          <div class="cta"><a class="go" href="https://web.bwalletx.com" target="_blank" rel="noopener">Open bWalletX</a><a class="more" href="/recover-relayx">Full RelayX guide</a></div>
+        </article>
+
+        <article class="card" id="twetch">
+          <div class="hd"><h3>Twetch wallet</h3><span class="tag live">Live</span></div>
+          <dl><dt>What moves</dt><dd>BSV on your Twetch payment key, plus anything on the shared Yours-style keys.</dd>
+          <dt>You need</dt><dd>Your Twetch 12-word recovery phrase.</dd></dl>
+          <ol><li>Open <b>Restore &rsaquo; Twetch</b>, or <b>Sweep into this account</b>.</li><li>Paste the phrase. The Twetch path is tried automatically.</li><li>Confirm the amount and sweep.</li></ol>
+          <div class="cta"><a class="go" href="https://web.bwalletx.com" target="_blank" rel="noopener">Open bWalletX</a></div>
+        </article>
+
+        <article class="card" id="simplycash">
+          <div class="hd"><h3>SimplyCash</h3><span class="tag live">Live</span></div>
+          <dl><dt>What moves</dt><dd>BSV, NFTs and tokens on SimplyCash&rsquo;s path <code>m/44'/145'/0'</code>, receive and change.</dd>
+          <dt>You need</dt><dd>Your 12 words, or the full SimplyCash recovery string (words:path:passphrase).</dd></dl>
+          <ol><li>Open <b>Restore &rsaquo; SimplyCash</b> or the sweep screen.</li><li>Paste the words or recovery string.</li><li>bWalletX walks the addresses until 20 in a row are unused, then shows the total.</li></ol>
+          <div class="cta"><a class="go" href="https://web.bwalletx.com" target="_blank" rel="noopener">Open bWalletX</a><a class="more" href="/sweep-simplycash">Full SimplyCash guide</a></div>
+        </article>
+
+        <article class="card" id="moneybutton">
+          <div class="hd"><h3>Money Button</h3><span class="tag live">Live</span></div>
+          <dl><dt>What moves</dt><dd>BSV on Money Button&rsquo;s path <code>m/44'/0'/0'</code>. Old Money Button &ldquo;assets&rdquo; (SFP tokens) are shown but can&rsquo;t move: they needed Fabriik&rsquo;s server, which is gone.</dd>
+          <dt>You need</dt><dd>Your Money Button 12-word phrase (and passphrase, if you set one).</dd></dl>
+          <ol><li>Open <b>Sweep into this account</b>.</li><li>Paste your phrase. The Money Button path is in the standard scan.</li><li>Sweep the BSV. SFP tokens are kept out of the sweep so they aren&rsquo;t spent as plain coins.</li></ol>
+          <div class="cta"><a class="go" href="https://web.bwalletx.com" target="_blank" rel="noopener">Open bWalletX</a></div>
+        </article>
+
+        <article class="card" id="wif">
+          <div class="hd"><h3>Paper wallet / private key (WIF)</h3><span class="tag live">Live</span></div>
+          <dl><dt>What moves</dt><dd>Everything on that one address: BSV, NFTs and BSV-21 tokens. An xprv works too.</dd>
+          <dt>You need</dt><dd>The private key, usually starting with <code>5</code>, <code>K</code> or <code>L</code>.</dd></dl>
+          <ol><li>Open <b>Sweep into this account</b> and paste the key.</li><li>Or open <b>Restore &rsaquo; Restore with private key</b> to use it as an account.</li><li>Sweep. Treat the paper key as spent afterwards.</li></ol>
+          <div class="cta"><a class="go" href="https://web.bwalletx.com" target="_blank" rel="noopener">Open bWalletX</a></div>
+        </article>
+
+        <article class="card" id="other">
+          <div class="hd"><h3>Any other BIP39 phrase</h3><span class="tag live">Live</span></div>
+          <dl><dt>What moves</dt><dd>BSV, NFTs and tokens on the common BSV layouts: BIP44 coin types 236&rsquo; and 0&rsquo;, or a custom path you type.</dd>
+          <dt>You need</dt><dd>The 12 or 24 words and, if your old wallet used one, its derivation path.</dd></dl>
+          <ol><li>Open <b>Sweep into this account</b>.</li><li>Paste the phrase. If the chosen path is empty, the other common paths are tried.</li><li>Still nothing? Use <b>Custom path</b>.</li></ol>
+          <div class="cta"><a class="go" href="https://web.bwalletx.com" target="_blank" rel="noopener">Open bWalletX</a></div>
+        </article>
+
+        <article class="card soon" id="handcash">
+          <div class="hd"><h3>HandCash</h3><span class="tag soon">Coming</span></div>
+          <dl><dt>Today</dt><dd>HandCash doesn&rsquo;t give you a phrase to sweep. Send your BSV from HandCash to your bWalletX address or $handle like any payment.</dd>
+          <dt>Coming</dt><dd>A guided move for HandCash balances and items.</dd></dl>
+        </article>
+
+        <article class="card soon" id="electrum">
+          <div class="hd"><h3>Electrum SV</h3><span class="tag soon">Coming</span></div>
+          <dl><dt>Today</dt><dd>Electrum SV seeds aren&rsquo;t BIP39, so the sweep can&rsquo;t read them yet. Export a single private key from Electrum SV and use the WIF route, or send to your bWalletX address.</dd>
+          <dt>Coming</dt><dd>Electrum SV seed support.</dd></dl>
+        </article>
+
+        <article class="card soon" id="metanet">
+          <div class="hd"><h3>Metanet Desktop / Babbage</h3><span class="tag soon">Coming</span></div>
+          <dl><dt>Today</dt><dd>bWalletX speaks BRC-100, so apps you use with Metanet also connect to bWalletX. To move coins, send them to your bWalletX address.</dd>
+          <dt>Coming</dt><dd>Import from a Metanet / Babbage wallet.</dd></dl>
+        </article>
+      </div>
+
+      <h2 id="content">Your posts and content</h2>
+      <p class="sub">Your coins aren&rsquo;t the only thing worth bringing. Your X timeline can come with you, owned by you on-chain.</p>
+      <div class="grid">
+        <article class="card" id="x">
+          <div class="hd"><h3>X timeline &rarr; bChatX</h3><span class="tag live">Live</span></div>
+          <dl><dt>What moves</dt><dd>Your posts from your X archive, into bChatX, signed with your bWalletX.</dd>
+          <dt>You need</dt><dd>Your X data archive (download it from X&rsquo;s settings). No X password.</dd></dl>
+          <ol><li>Request your archive from X and wait for the download link.</li><li>Open bChatX&rsquo;s import and choose the archive file.</li><li>Pick the posts to bring over and approve in bWalletX.</li></ol>
+          <div class="cta"><a class="go" href="https://www.bchatx.com/migrate-from-x" target="_blank" rel="noopener">Move from X</a></div>
+        </article>
+        <article class="card" id="more-content">
+          <div class="hd"><h3>Everything else</h3><span class="tag live">Hub</span></div>
+          <dl><dt>What moves</dt><dd>Chats, communities and other archives as each import comes online.</dd>
+          <dt>Where</dt><dd>The bChatX migration hub lists every import and what it supports.</dd></dl>
+          <div class="cta"><a class="go" href="https://www.bchatx.com/migrate" target="_blank" rel="noopener">bChatX migration hub</a></div>
+        </article>
+      </div>
+
+      <h2 id="services">From a social network</h2>
+      <p class="sub">Pick where you&rsquo;re moving from. Each page has a share card, so you can invite the people you follow there. Only the X import is live today; the others say so until bChatX ships them.</p>
+      <div class="svc-grid">
+<!-- MIGRATE-INVITE:START -->
+          <a class="svc" href="/migrate/invite/x"><b>X</b><span class="tag live">Import live</span></a>
+          <a class="svc soon" href="/migrate/invite/instagram"><b>Instagram</b><span class="tag soon">Coming soon</span></a>
+          <a class="svc soon" href="/migrate/invite/tiktok"><b>TikTok</b><span class="tag soon">Coming soon</span></a>
+          <a class="svc soon" href="/migrate/invite/youtube"><b>YouTube</b><span class="tag soon">Coming soon</span></a>
+          <a class="svc soon" href="/migrate/invite/reddit"><b>Reddit</b><span class="tag soon">Coming soon</span></a>
+          <a class="svc soon" href="/migrate/invite/linkedin"><b>LinkedIn</b><span class="tag soon">Coming soon</span></a>
+          <a class="svc soon" href="/migrate/invite/facebook"><b>Facebook</b><span class="tag soon">Coming soon</span></a>
+          <a class="svc soon" href="/migrate/invite/threads"><b>Threads</b><span class="tag soon">Coming soon</span></a>
+          <a class="svc soon" href="/migrate/invite/bluesky"><b>Bluesky</b><span class="tag soon">Coming soon</span></a>
+          <a class="svc soon" href="/migrate/invite/pinterest"><b>Pinterest</b><span class="tag soon">Coming soon</span></a>
+          <a class="svc soon" href="/migrate/invite/twetch"><b>Twetch</b><span class="tag soon">Coming soon</span></a>
+          <a class="svc soon" href="/migrate/invite/treechat"><b>Treechat</b><span class="tag soon">Coming soon</span></a>
+<!-- MIGRATE-INVITE:END -->
+      </div>
+
+      <h2 id="assets">Tokens, ordinals and names</h2>
+      <p class="sub">They ride along with any live wallet route above. Here&rsquo;s how each kind is treated.</p>
+      <div class="grid">
+        <article class="card"><div class="hd"><h3>1Sat ordinals (NFTs)</h3><span class="tag live">Live</span></div><p>Swept as NFTs once their origin is confirmed as a real inscription. Images, music, collectibles and bAvatars all count.</p></article>
+        <article class="card"><div class="hd"><h3>BSV-21 tokens</h3><span class="tag live">Live</span></div><p>Found by balance and swept one token at a time, so each lands intact in your bWalletX tokens list.</p></article>
+        <article class="card"><div class="hd"><h3>BSV-20 and unreadable items</h3><span class="tag live">Listed</span></div><p>Anything that might be a token but can&rsquo;t be confirmed is shown with a warning and <b>never swept</b>, because spending it as a plain NFT could burn it.</p></article>
+        <article class="card"><div class="hd"><h3>OpNS names</h3><span class="tag live">Live</span></div><p>OpNS names are 1Sat ordinals, so they move with your NFTs. After moving, set one as your name in bWalletX.</p><div class="cta"><a class="more" href="/handles">About names</a></div></article>
+      </div>
+
+      <section class="safety" id="safety">
+        <h2>Stay safe while you move</h2>
+        <ul>
+          <li><b>Never share your phrase or key.</b> Not with b, not with support, not in any chat or form. We will never ask for it.</li>
+          <li><b>Type it only into bWalletX</b>, on your own device. Only public addresses are looked up online to find your coins.</li>
+          <li><b>Check the address bar.</b> bWalletX on the web is only ever <code style="background:#2a2a2a;color:#fff">web.bwalletx.com</code>.</li>
+          <li><b>Test with a little first.</b> For larger amounts, bWalletX offers a small test sweep before the rest.</li>
+          <li><b>Afterwards, treat the old phrase as retired.</b> Your coins are now protected by your bWalletX backup, so make that backup now.</li>
+        </ul>
+      </section>
+
+      <h2>Questions</h2>
+      <details><summary>Does it cost anything?</summary><p>No fee from us. Each sweep pays the normal Bitcoin SV network fee, a fraction of a cent for most moves.</p></details>
+      <details><summary>It found nothing.</summary><p>Check every word and add the passphrase if you used one. Then try <b>Custom path</b>. You can also ask b in the app, without ever sharing your phrase.</p></details>
+      <details><summary>Is it in the App Store and Play versions?</summary><p>Yes. Sweep is in every bWalletX and bWallet build, and on <a href="https://web.bwalletx.com" target="_blank" rel="noopener">web.bwalletx.com</a>.</p></details>
+      <details><summary>My wallet isn&rsquo;t listed.</summary><p>If it gave you 12 or 24 words, try the <a href="#other">Any other BIP39 phrase</a> route. Otherwise email <a href="mailto:support@bwalletx.com">support@bwalletx.com</a> with the wallet&rsquo;s name (never the phrase) and we&rsquo;ll look at adding it.</p></details>
+
+      <div class="row"><a class="btn btn-gold" href="https://web.bwalletx.com" target="_blank" rel="noopener">Open bWalletX</a><a class="btn btn-line" href="/get">Get the app</a></div>
+      <p class="small">Other wallets are named only to describe compatibility; bWalletX isn&rsquo;t affiliated with them. bWalletX is in beta: test with small amounts. Questions: <a href="mailto:support@bwalletx.com">support@bwalletx.com</a></p>
+    </main>
+  </body>
+</html>

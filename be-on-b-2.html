@@ -1,0 +1,275 @@
+<!doctype html>
+<!--
+  be on b 2 (26 Oct 2026): the fast, explosive cut. 32 s on "Shattered Circuits" by v3xv0id (152 BPM, 0.3947 s a beat): 25.26 s from the 114.4 s drop,
+  hard-cut to the 153.2 s drop for the final slam. Scenes change every 2-6 beats; drops get a flash, shake and tile burst.
+  Flashes are rate-limited to at most 3 a second (photosensitivity) and are off under prefers-reduced-motion.
+  Test hooks: ?autoplay=silent, ?t=SECONDS, window.__film.
+-->
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>be on b · bWalletX</title>
+    <meta name="description" content="Twetch, RelayX, CoinGeek, Peck, Hodlocker, Treechat and Yours, all on b. Fast. Loud. be on b." />
+    <link rel="canonical" href="https://bwalletx.com/be-on-b-2" />
+    <link rel="icon" href="/favicon.ico" />
+    <meta property="og:site_name" content="bWalletX" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://bwalletx.com/be-on-b-2" />
+    <meta property="og:title" content="be on b" />
+    <meta property="og:description" content="All your Bitcoin SV apps, on b. Fast. Loud. 33 seconds." />
+    <meta property="og:image" content="https://bwalletx.com/og-be-on-b-v2.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="be on b: the gold bWalletX b with X, YouTube, Instagram, TikTok, Facebook, LinkedIn, Google, Reddit and the BSV apps around it." />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@bWalletX" />
+    <meta name="twitter:title" content="be on b" />
+    <meta name="twitter:description" content="All your Bitcoin SV apps, on b. Fast. Loud. 33 seconds." />
+    <meta name="twitter:image" content="https://bwalletx.com/og-be-on-b-v2.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" />
+    <style>
+      :root { --bg: #0d0b1f; --ink: #fff8e8; --gold: #ffd24d; --gold-hi: #ffe58a; --gold-lo: #c98f00; --gold-rgb: 255, 210, 77; --hf: 'Space Grotesk', system-ui, sans-serif; --beat: .3947s; }
+      * { box-sizing: border-box; }
+      html, body { margin: 0; background: var(--bg); color: var(--ink); overflow-x: clip; font-family: var(--hf); }
+      .film { position: relative; width: 100%; height: 100svh; min-height: 540px; overflow: hidden; background: #000; }
+      .stage { position: absolute; inset: 0; }
+      .film.shake .stage { animation: shake .32s cubic-bezier(.36,.07,.19,.97); }
+      @keyframes shake { 10%, 90% { transform: translate(-2px, 1px); } 20%, 80% { transform: translate(5px, -3px); } 30%, 50%, 70% { transform: translate(-9px, 4px) rotate(-.4deg); } 40%, 60% { transform: translate(9px, -4px) rotate(.4deg); } }
+      .scene { position: absolute; inset: 0; opacity: 0; pointer-events: none; clip-path: circle(0% at 50% 50%); }
+      .scene.on { opacity: 1; clip-path: circle(150% at 50% 50%); transition: clip-path .34s cubic-bezier(.6,0,.2,1); z-index: 1; }
+      .scene.was { opacity: 1; clip-path: circle(150% at 50% 50%); z-index: 0; }
+      .scene .bgz { position: absolute; inset: -6%; background: var(--bg-s); transform: scale(1.18); }
+      .scene.on .bgz { animation: punch .5s cubic-bezier(.2,1.6,.4,1) forwards; }
+      @keyframes punch { to { transform: scale(1); } }
+
+      .cap { position: absolute; left: 0; right: 0; top: 50%; transform: translateY(-50%); padding: 0 16px; text-align: center; z-index: 3; }
+      .slogan { margin: 0; display: flex; justify-content: center; align-items: center; flex-wrap: wrap; gap: 0 .2em; font: 700 clamp(3rem, 13vw, 10.5rem) / .95 var(--hf); letter-spacing: -0.05em; text-shadow: 0 6px 0 rgba(0,0,0,.18), 0 10px 50px rgba(20,8,60,.5); }
+      .slogan.xl { font-size: clamp(3.6rem, 17vw, 13rem); }
+      .slogan .w { display: inline-flex; align-items: center; }
+      .slogan .br { flex-basis: 100%; height: 0; }
+      .lb { display: block; height: .86em; width: auto; max-width: 1.2em; filter: drop-shadow(0 0 30px rgba(var(--gold-rgb), .6)); }
+      .scene.on .slogan { animation: slam .42s cubic-bezier(.1,.9,.2,1) both; }
+      @keyframes slam { 0% { transform: scale(3); opacity: 0; filter: blur(8px); } 55% { transform: scale(.94); opacity: 1; filter: none; } 75% { transform: scale(1.03); } 100% { transform: none; opacity: 1; } }
+      .scene.on .cap p { animation: subin .3s .22s ease-out both; }
+      @keyframes subin { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: none; } }
+      .cap p { margin: 18px auto 0; max-width: 620px; font: 600 clamp(1.05rem, 2.8vw, 1.45rem) / 1.4 var(--hf); color: #fff; text-shadow: 0 2px 14px rgba(20,8,60,.7); }
+      .sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+
+      /* Tiles burst out from the centre: they start stacked in the middle and fly to their spot with overshoot. */
+      .tiles { position: absolute; inset: 0; z-index: 2; }
+      .t { position: absolute; left: var(--x); top: var(--y); width: clamp(100px, 18vw, 190px); height: clamp(100px, 18vw, 190px); translate: -50% -50%; border-radius: 26%; opacity: 0; }
+      .scene.on .t { animation: boom .62s calc(var(--d) * 1s) cubic-bezier(.17,1.75,.4,1) forwards, thump var(--beat) calc(.62s + var(--d) * 1s) ease-out infinite; }
+      @keyframes boom { 0% { opacity: 1; transform: translate(var(--fx), var(--fy)) scale(.15) rotate(var(--r)); } 100% { opacity: 1; transform: none; } }
+      @keyframes thump { 0% { scale: 1.07; } 60%, 100% { scale: 1; } }
+      .t.c { background: var(--c); box-shadow: 0 18px 40px rgba(0,0,0,.25); }
+      .t.app { background: #fff; border: 3px solid rgba(255,255,255,.9); padding: clamp(5px, .8vw, 9px); overflow: hidden; box-shadow: 0 18px 40px rgba(0,0,0,.35); }
+      .t.app img { width: 100%; height: 100%; object-fit: contain; display: block; border-radius: 20%; }
+      .t.wm { display: flex; align-items: center; justify-content: center; background: #1b1340; color: #ffd24d; border: 3px solid rgba(255,255,255,.9); font: 700 clamp(1rem, 2.6vw, 1.9rem) var(--hf); letter-spacing: -0.03em; box-shadow: 0 18px 40px rgba(0,0,0,.35); }
+      /* Brand tiles: simple-icons 13.21.0 (CC0) marks from /img/brands, in each brand's colour on a white tile. */
+      .t.br { background: #fff; border: 3px solid rgba(255,255,255,.9); padding: clamp(14px, 2.4vw, 30px); box-shadow: 0 18px 40px rgba(0,0,0,.35); }
+      .t.br img { width: 100%; height: 100%; object-fit: contain; display: block; }
+      /* Name tiles: plain words in our font on our colours. */
+      .t.nm { display: flex; align-items: center; justify-content: center; width: auto; min-width: clamp(100px, 18vw, 190px); padding: 0 .4em; background: var(--c); color: #140a33; font: 700 clamp(1.25rem, 3.6vw, 2.8rem) var(--hf); letter-spacing: -0.03em; box-shadow: 0 18px 40px rgba(0,0,0,.25); }
+      .t.nm.big { font-size: clamp(2.4rem, 7vw, 5rem); }
+      .cf { position: absolute; left: 50%; top: 50%; width: var(--s); height: var(--s); border-radius: var(--br); background: var(--c); opacity: 0; z-index: 2; }
+      .scene.on .cf { animation: blast .9s calc(var(--d) * 1s) cubic-bezier(.1,.8,.25,1) forwards; }
+      @keyframes blast { 0% { opacity: 1; transform: translate(-50%, -50%) scale(.4); } 75% { opacity: 1; } 100% { opacity: 0; transform: translate(-50%, -50%) rotate(var(--rot)) translate(var(--dx), var(--dy)) scale(1); } }
+      .ring { position: absolute; left: 50%; top: 50%; width: 40vmax; height: 40vmax; border-radius: 50%; border: 10px solid rgba(255,255,255,.8); translate: -50% -50%; opacity: 0; z-index: 2; }
+      .scene.on .ring { animation: shock .55s ease-out forwards; }
+      @keyframes shock { 0% { opacity: .9; transform: scale(.05); } 100% { opacity: 0; transform: scale(2.4); border-width: 1px; } }
+
+      .flash { position: absolute; inset: 0; z-index: 6; background: var(--fl, #fff); opacity: 0; pointer-events: none; }
+      .flash.go { animation: fl .16s ease-out; }
+      @keyframes fl { 0% { opacity: .85; } 100% { opacity: 0; } }
+
+      .getp { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; margin-top: 26px; }
+      .scene.on .getp a { pointer-events: auto; }
+      .cta { display: inline-block; padding: 18px 38px; border-radius: 999px; background: linear-gradient(180deg, var(--gold-hi), var(--gold)); color: #140a08; font: 700 1.1rem var(--hf); text-decoration: none; box-shadow: 0 14px 50px rgba(var(--gold-rgb), .4); transition: transform .15s ease-out; }
+      .cta2 { display: inline-block; padding: 17px 32px; border-radius: 999px; border: 2px solid rgba(255,255,255,.7); color: #fff; font: 700 1.05rem var(--hf); text-decoration: none; transition: background .15s ease-out; }
+      .cta:hover { transform: translateY(-2px); } .cta2:hover { background: rgba(255,255,255,.12); }
+      .cta:focus-visible, .cta2:focus-visible, .play:focus-visible, .quiet:focus-visible { outline: 3px solid #fff; outline-offset: 3px; }
+
+      .poster { position: absolute; inset: 0; z-index: 7; display: flex; align-items: center; justify-content: center; background: radial-gradient(circle at 25% 25%, #ff4d6d 0, transparent 40%), radial-gradient(circle at 78% 72%, #2ee6d6 0, transparent 42%), radial-gradient(circle at 50% 50%, #7b3cff, #1c0a4d); transition: opacity .25s ease; }
+      .poster.gone { opacity: 0; pointer-events: none; }
+      .poster .in { display: flex; flex-direction: column; align-items: center; gap: 24px; padding: 0 16px; text-align: center; }
+      .play { position: relative; width: 120px; height: 120px; padding-left: 8px; border: 0; border-radius: 50%; display: flex; align-items: center; justify-content: center; cursor: pointer; color: #140a08; background: radial-gradient(circle at 35% 30%, var(--gold-hi), var(--gold) 55%, var(--gold-lo)); box-shadow: 0 18px 60px rgba(var(--gold-rgb), .5), inset 0 2px 0 rgba(255,255,255,.5); animation: pulse var(--beat) ease-in-out infinite alternate; }
+      .play::before { content: ''; position: absolute; inset: -10px; border-radius: 50%; border: 2px solid rgba(var(--gold-rgb), .8); animation: pring 1s ease-out infinite; }
+      .play svg { width: 46px; height: 46px; }
+      @keyframes pulse { to { transform: scale(1.07); } }
+      @keyframes pring { from { transform: scale(.92); opacity: .9; } to { transform: scale(1.4); opacity: 0; } }
+      .gate-l { margin: -4px 0 0; font: 700 1rem var(--hf); letter-spacing: .16em; text-transform: uppercase; color: #fff; }
+      .quiet { background: none; border: 0; padding: 4px; font: 400 .85rem var(--hf); letter-spacing: .06em; color: rgba(255,255,255,.75); cursor: pointer; text-decoration: underline; text-underline-offset: 3px; }
+      .warn { margin: 0; font: 400 .75rem var(--hf); color: rgba(255,255,255,.7); }
+      .bar { position: absolute; left: 0; bottom: 0; height: 3px; width: 0; background: var(--gold-hi); z-index: 6; }
+      .snd { position: fixed; right: 14px; bottom: 14px; z-index: 8; display: none; gap: 4px; }
+      .started .snd { display: flex; }
+      .snd button { width: 44px; height: 44px; display: flex; align-items: center; justify-content: center; border: 0; border-radius: 50%; background: rgba(0,0,0,.25); color: rgba(255,255,255,.75); cursor: pointer; }
+      .snd button[aria-pressed="true"] { color: var(--gold-hi); }
+
+      .calm { max-width: 680px; margin: 0 auto; padding: 18vh 24px 16vh; text-align: center; color: #cfc6e8; font: 400 clamp(1.05rem, 2.4vw, 1.3rem) / 1.75 var(--hf); }
+      .calm p { margin: 0 0 2.2em; }
+      .calm .lead { font: 700 clamp(1.9rem, 6vw, 3.2rem) / 1.15 var(--hf); letter-spacing: -0.03em; color: #fff; margin-bottom: 1.4em; }
+      .calm strong { display: block; margin-bottom: .35em; color: #fff; font-weight: 600; font-size: 1.15em; }
+      .end { position: relative; min-height: 100svh; display: flex; align-items: center; justify-content: center; overflow: hidden; background: radial-gradient(circle at 20% 80%, #ff4d6d66, transparent 50%), radial-gradient(circle at 80% 20%, #2ee6d666, transparent 50%), radial-gradient(circle at 50% 50%, #5b2be0, #140a33); }
+      .end-in { position: relative; z-index: 1; text-align: center; padding: 0 16px; }
+      .end-in .slogan { font-size: clamp(2.6rem, 11vw, 6rem); margin-bottom: 26px; }
+      .credit { margin: 22px 0 0; font: 400 .8rem var(--hf); letter-spacing: .08em; color: rgba(255,255,255,.7); }
+      .foot { margin: 0; padding: 0 16px 22px; text-align: center; font-size: .75rem; color: #8a84a8; }
+      .foot a { color: #b0a9cc; }
+      @media (max-width: 480px) { .play { width: 104px; height: 104px; } .cap p { font-size: 1rem; } }
+      @media (prefers-reduced-motion: reduce) {
+        .film.shake .stage, .scene *, .poster *, .play::before { animation: none !important; }
+        .scene.on, .poster { transition: none; }
+        .flash, .cf, .ring { display: none !important; }
+        .t { opacity: 1 !important; }
+      }
+    </style>
+  </head>
+  <body>
+    <section class="film" id="film" aria-label="be on b, again: a 33-second film">
+      <div class="stage" id="stage"></div>
+      <div class="flash" id="flash"></div>
+      <div class="poster" id="poster">
+        <div class="in">
+          <h1 class="slogan" data-slogan="be on {L}"></h1>
+          <button type="button" class="play" id="play" aria-label="Play be on b, again, with sound"><svg viewBox="5 3 18 18" aria-hidden="true"><path d="M8 5.5v13l11-6.5z" fill="currentColor" /></svg></button>
+          <p class="gate-l">Play it loud &middot; 0:33</p>
+          <button type="button" class="quiet" id="quiet">Watch without sound</button>
+          <p class="warn">Fast cuts and flashes. Turned off if your device asks for reduced motion.</p>
+        </div>
+      </div>
+      <div class="bar" id="bar"></div>
+      <audio id="music" src="/audio/b-on-b-2-shattered-circuits.mp3" preload="auto"></audio>
+    </section>
+    <div class="snd">
+      <button type="button" id="mute" aria-pressed="false" aria-label="Mute music"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><path d="M11 5 6 9H3v6h3l5 4z"></path><path d="M15.5 8.5a5 5 0 0 1 0 7"></path></svg></button>
+      <button type="button" id="again" aria-label="Play again"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><path d="M3 12a9 9 0 1 0 3-6.7"></path><path d="M3 4v5h5"></path></svg></button>
+    </div>
+
+    <section class="calm">
+      <p class="lead">Your apps, together. Loud.</p>
+      <p><strong>Bring what you already have.</strong> Your RelayX NFTs and BSV are still on chain, and bWalletX finds them. Your Yours Wallet comes in with your 12 words.</p>
+      <p><strong>Read it all in one place.</strong> Twetch, Peck and Treechat posts in the Feed. CoinGeek headlines in bNews, with on-chain talk under each story.</p>
+      <p><strong>Tip, lock and keep your keys.</strong> Tip authors in BSV. Lock behind posts, Hodlocker-style. Your BSV stays yours.</p>
+      <p class="lead">be on b.</p>
+    </section>
+
+    <section class="end">
+      <div class="end-in">
+        <h2 class="slogan" data-slogan="Your apps, on {L}"></h2>
+        <p class="getp"><a class="cta" href="/on-b">See your apps on b</a> <a class="cta2" href="/get?from=be-on-b-2">Get bWalletX</a></p>
+        <p class="credit">Music: Shattered Circuits by v3xv0id</p>
+      </div>
+    </section>
+    <p class="foot"><a href="/just-b">just b</a> · <a href="/b-is-for-business">b is for business</a> · <a href="/on-b">your apps on b</a> · <a href="/be-on-b">be on b</a> · <a href="/be-on-b-2" aria-current="page">be on b, again</a></p>
+    <p class="foot">Names and logos belong to their owners. bChatX is not affiliated with them. bWalletX is in beta: test with small amounts. <a href="mailto:support@bwalletx.com">support@bwalletx.com</a></p>
+
+    <script>
+      (function () {
+        var BEAT = 0.3947, END = 33.2, LOGO = '/logo.svg';
+        var COL = ['#ff4d6d', '#2ee6d6', '#8b5cff', '#ffd24d', '#7cf06a', '#4da3ff', '#ff9a3c', '#ff6ad5'];
+        // Corner spots for tiles (x%, y%), all clear of the centred slogan.
+        var SPOT = [[14, 15], [86, 15], [14, 85], [86, 85], [50, 9], [50, 91], [7, 50], [93, 50]];
+        // Phones: no room at the sides of the slogan, so the 7th tile sits under the top row.
+        if (window.innerWidth < 640) SPOT = [[16, 12], [84, 12], [16, 88], [84, 88], [50, 7], [50, 93], [50, 24], [50, 76]];
+        function esc(s) { return String(s).replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); }
+        function slogan(text) {
+          var logo = '<img class="lb" src="' + LOGO + '" alt="" />';
+          return '<span class="sr">' + esc(text.replace(/\{L\}/g, 'b').replace(/ \| /g, ' ')) + '</span>' + text.split(/\s+/).map(function (w) {
+            if (w === '|') return '<span class="br"></span>';
+            return '<span class="w" aria-hidden="true">' + w.split(/(\{L\})/).filter(Boolean).map(function (p) { return p === '{L}' ? logo : esc(p); }).join('') + '</span>';
+          }).join('');
+        }
+        function tile(i, cls, inner, extra) {
+          var p = SPOT[i % SPOT.length], fx = (50 - p[0]) + 'vw', fy = (50 - p[1]) + 'vh';
+          return '<div class="t ' + cls + '" style="--x:' + p[0] + '%;--y:' + p[1] + '%;--fx:' + fx + ';--fy:' + fy + ';--r:' + (i % 2 ? -40 : 35) + 'deg;--d:' + (i * 0.03).toFixed(2) + ';' + (extra || '') + '">' + (inner || '') + '</div>';
+        }
+        // Every tile is a brand: the real logo from /img/apps, or the name as a wordmark when there is no logo file (Hodlocker).
+        // Big platforms: their real marks from /img/brands (simple-icons 13.21.0, CC0).
+        var BR = { X: 'x', Google: 'google', LinkedIn: 'linkedin', Facebook: 'facebook', YouTube: 'youtube', Instagram: 'instagram', TikTok: 'tiktok', Reddit: 'reddit', Discord: 'discord', Telegram: 'telegram', Twitch: 'twitch' };
+        function apps(list) { return list.map(function (a, i) {
+          if (BR[a]) return tile(i, 'br', '<img src="/img/brands/' + BR[a] + '.svg" alt="' + esc(a) + '" />');
+          return /\./.test(a) ? tile(i, 'app', '<img src="/img/apps/' + a + '" alt="" />') : tile(i, 'wm', esc(a));
+        }).join(''); }
+        // Six-tile mixes: BSV apps with two or three big platforms, so no screen is only BSV apps.
+        var MIX1 = ['twetch.svg', 'X', 'relayx.png', 'Instagram', 'treechat.svg', 'Google'];
+        var MIX2 = ['YouTube', 'yours.png', 'Twitch', 'peck.png', 'coingeek.png', 'Hodlocker'];
+        var MIX3 = ['twetch.svg', 'LinkedIn', 'yours.png', 'Facebook', 'relayx.png', 'X'];
+        function names() { return apps(['X', 'LinkedIn', 'Facebook', 'Google', 'YouTube', 'TikTok']); }
+        var seed = 7; function rnd() { seed = (seed * 9301 + 49297) % 233280; return seed / 233280; }
+        function blast(n) {
+          var o = '<div class="ring"></div>';
+          for (var i = 0; i < n; i++) { var a = rnd() * 6.283, r = 30 + rnd() * 45;
+            o += '<i class="cf" style="--c:' + COL[i % COL.length] + ';--s:' + [10, 16, 22][i % 3] + 'px;--br:' + (i % 2 ? '50%' : '4px') + ';--dx:' + (Math.cos(a) * r).toFixed(0) + 'vw;--dy:' + (Math.sin(a) * r).toFixed(0) + 'vh;--rot:' + ((rnd() * 400 - 200) | 0) + 'deg;--d:' + (rnd() * 0.08).toFixed(2) + '"></i>'; }
+          return o;
+        }
+        function bg(a, b) { return 'radial-gradient(circle at 50% 40%, ' + a + ', ' + b + ')'; }
+        // beat: when it starts (in beats from the start of the cut). hit: a drop (flash + shake + blast).
+        // ?embed=1 (bmintx.com/migrate, owner 26 Oct 2026): kept so embed links still work; no BNB line anywhere now.
+        var EMBED = new URLSearchParams(location.search).has('embed');
+        var SCENES = [
+          { beat: 0,  bg: bg('#ff4d6d', '#a3122f'), slogan: 'All your apps', art: apps(MIX1) + blast(40), hit: '#fff' },
+          { beat: 4,  bg: bg('#9a6bff', '#4a1fd1'), slogan: 'on {L}', art: apps(['YouTube', 'Google', 'Reddit', 'treechat.svg']) + blast(30), xl: true },
+          { beat: 8,  bg: bg('#2ee6d6', '#087f78'), slogan: 'Read it', sub: 'Twetch, Peck and Treechat in the Feed.', art: apps(['twetch.svg', 'X', 'peck.png', 'Reddit', 'treechat.svg', 'Instagram']) + blast(24), hit: '#fff' },
+          { beat: 12, bg: bg('#ff9a3c', '#d63a1c'), slogan: 'Tip it', sub: 'Tip the authors in BSV.', art: apps(['peck.png', 'YouTube', 'twetch.svg', 'TikTok', 'Twitch', 'treechat.svg']) },
+          { beat: 16, bg: bg('#4da3ff', '#2a3fe0'), slogan: 'Bring it', sub: 'Yours Wallet comes in with your 12 words.', art: apps(['yours.png', 'Google', 'relayx.png', 'Telegram', 'LinkedIn', 'treechat.svg']) + blast(24), hit: '#fff' },
+          { beat: 20, bg: bg('#7c5cff', '#2b1a8f'), slogan: 'Find it', sub: 'Your RelayX NFTs, found on chain.', art: apps(['relayx.png', 'Instagram', 'Discord', 'Facebook', 'treechat.svg']) },
+          { beat: 24, bg: bg('#7cf06a', '#169a4c'), slogan: 'Lock it', sub: 'Lock behind posts, Hodlocker-style.', art: apps(['Hodlocker', 'X', 'YouTube', 'LinkedIn', 'treechat.svg']) + blast(24), hit: '#fff' },
+          { beat: 28, bg: bg('#ff6ad5', '#a21caf'), slogan: 'News', sub: 'CoinGeek headlines in bNews.', art: apps(['coingeek.png', 'Google', 'X', 'YouTube', 'treechat.svg']) },
+          { beat: 32, bg: bg('#ffd24d', '#e0632e'), slogan: 'All of it.', art: apps(MIX2) + blast(40), hit: '#fff' },
+          { beat: 36, bg: bg('#2ee6d6', '#2a3fe0'), slogan: 'One wallet.', art: apps(MIX3.concat(['treechat.svg'])) },
+          { beat: 40, bg: bg('#ff4d6d', '#5b2be0'), slogan: 'Your keys.', sub: 'Your BSV stays yours.', art: apps(MIX1) },
+          { beat: 44, bg: bg('#8b5cff', '#2b1a8f'), slogan: 'Everyone,', art: apps(['X', 'Instagram', 'TikTok', 'treechat.svg']) },
+          { beat: 48, bg: bg('#ff4d6d', '#7a0b3f'), slogan: 'on {L}', art: names() + blast(36), hit: '#ffd24d' },
+          { beat: 56, bg: bg('#ff9a3c', '#a3122f'), slogan: 'b is coming…', art: names() },
+          { beat: 64, bg: bg('#5b2be0', '#12063a'), slogan: 'be on {L}', art: apps(MIX2) + blast(60), hit: '#fff', xl: true, cta: true }
+        ];
+        var stage = document.getElementById('stage'), film = document.getElementById('film'), flash = document.getElementById('flash'), bar = document.getElementById('bar'), poster = document.getElementById('poster');
+        stage.innerHTML = SCENES.map(function (s) {
+          s.at = s.beat * BEAT;
+          return '<div class="scene" style="--bg-s:' + s.bg + '"><div class="bgz"></div><div class="tiles">' + (s.art || '') + '</div><div class="cap"><h2 class="slogan' + (s.xl ? ' xl' : '') + '">' + slogan(s.slogan) + '</h2>' + (s.sub ? '<p>' + esc(s.sub) + '</p>' : '') +
+            (s.cta ? '<p class="getp"><a class="cta" href="/on-b">See your apps on b</a> <a class="cta2" href="/get?from=be-on-b-2">Get bWalletX</a></p>' : '') + '</div></div>';
+        }).join('');
+        [].forEach.call(document.querySelectorAll('[data-slogan]'), function (h) { h.innerHTML = slogan(h.getAttribute('data-slogan')); });
+        var els = [].slice.call(stage.children);
+        var reduce = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
+        var music = document.getElementById('music'), muted = false, withSound = false, start = 0, raf = 0, cur = -1, lastFlash = -9;
+        function now() { return withSound ? music.currentTime : performance.now() / 1000 - start; }
+        function hit(colour, t) {
+          if (reduce) return;
+          // Photosensitivity: never more than 3 flashes a second (we allow one per 0.34 s at most).
+          if (t - lastFlash >= 0.34) { lastFlash = t; flash.style.setProperty('--fl', colour); flash.classList.remove('go'); void flash.offsetWidth; flash.classList.add('go'); }
+          film.classList.remove('shake'); void film.offsetWidth; film.classList.add('shake');
+        }
+        function show(k, t) {
+          if (k === cur) return;
+          els.forEach(function (e, j) { e.classList.toggle('on', j === k); e.classList.toggle('was', j === cur); });
+          cur = k; if (SCENES[k].hit) hit(SCENES[k].hit, t);
+        }
+        function frame() {
+          var t = now(), k = 0;
+          SCENES.forEach(function (s, j) { if (t >= s.at) k = j; });
+          show(k, t); bar.style.width = Math.min(100, t / END * 100) + '%';
+          if (t < END && !(withSound && music.ended)) raf = requestAnimationFrame(frame); else bar.style.width = '0';
+        }
+        function play(sound) {
+          cancelAnimationFrame(raf); withSound = sound; cur = -1; lastFlash = -9;
+          els.forEach(function (e) { e.classList.remove('on', 'was'); });
+          music.pause(); music.currentTime = 0; music.muted = muted; start = performance.now() / 1000;
+          if (sound) music.play().catch(function () { withSound = false; start = performance.now() / 1000; });
+          poster.classList.add('gone'); document.body.classList.add('started'); raf = requestAnimationFrame(frame);
+        }
+        document.getElementById('play').onclick = function () { play(true); };
+        document.getElementById('quiet').onclick = function () { play(false); };
+        document.getElementById('again').onclick = function () { play(withSound); };
+        document.getElementById('mute').onclick = function () { muted = !muted; music.muted = muted; this.setAttribute('aria-pressed', String(muted)); };
+        var q = new URLSearchParams(location.search);
+        if (q.get('autoplay') === 'silent' || q.has('t')) { play(false); if (q.has('t')) start -= parseFloat(q.get('t')) || 0; }
+        window.__film = { scenes: SCENES.length, end: END, play: play };
+      })();
+    </script>
+  </body>
+</html>

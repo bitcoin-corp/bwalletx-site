@@ -62,8 +62,8 @@
       <p class="row"><a class="btn btn-store" href="https://docs.bwalletx.com/use/agents/">Agent docs &rarr;</a></p>
 
       <h2>What agents can do</h2>
-      <div class="box"><h3>On npm now (bwalletx 0.2.0)</h3><p><code>accounts</code>, <code>balance</code>, <code>price</code>, <code>send</code> (BSV, live), <code>buy</code> (BSV-21, live), <code>strategy_show</code>, <code>strategy_load</code> (always on paper), <code>log</code>, <code>stop_all</code>.</p></div>
-      <div class="box"><h3>In the source (bwalletx 0.5.0, not on npm yet)</h3><p>Everything above, plus:</p>
+      <div class="box"><h3>Since bwalletx 0.2</h3><p><code>accounts</code>, <code>balance</code>, <code>price</code>, <code>send</code> (BSV, live), <code>buy</code> (BSV-21, live), <code>strategy_show</code>, <code>strategy_load</code> (always on paper), <code>log</code>, <code>stop_all</code>.</p></div>
+      <div class="box"><h3>New in bwalletx 0.5 (on npm)</h3><p>Everything above, plus:</p>
         <ul>
           <li><code>list_for_sale</code>, <code>unlist</code>, <code>listings</code>, <code>buy_listing</code>: sell and buy ordinals, OpNS names and BSV-21 tokens on the 1Sat order book. Key-file accounts with <code>BWALLETX_PASSPHRASE</code>; each takes <code>dryRun</code> to build without sending.</li>
           <li><code>brc100_balance</code>, <code>brc100_addresses</code>, <code>brc100_fund</code>, <code>brc100_withdraw</code>: the account's own BRC-100 wallet. Key-file accounts with <code>BWALLETX_PASSPHRASE</code>.</li>
@@ -93,9 +93,8 @@ claude mcp add bwalletx -e BWALLETX_PASSPHRASE=your-passphrase -- npx -y bwallet
   }
 }</code></pre>
       <p class="small">The passphrase unlocks the agent account's key file on your machine. Use a separate agent account with a small balance for AI agents. Without the passphrase a key-file account stays paper-only: it can read and practise, but never send. Paired accounts don't need it.</p>
-      <p><strong>Want the 0.5.0 tools today?</strong> Build from source, then point your MCP client at <code>bwalletx mcp</code>:</p>
-      <pre><code>git clone https://github.com/bitcoin-corp/bwalletx-cli && cd bwalletx-cli
-pnpm install && pnpm build && pnpm link --global
+      <p><strong>Install or update:</strong></p>
+      <pre><code>npm i -g bwalletx
 claude mcp add bwalletx -- bwalletx mcp</code></pre>
       <p>Source and full command list: <a href="https://github.com/bitcoin-corp/bwalletx-cli">github.com/bitcoin-corp/bwalletx-cli</a>. Docs: <a href="https://docs.bwalletx.com/use/agents/">agents</a> · <a href="https://docs.bwalletx.com/developers/strategy-format/">strategy format</a>.</p>
 
