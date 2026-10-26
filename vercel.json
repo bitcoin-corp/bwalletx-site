@@ -176,6 +176,8 @@
     { "source": "/TreeChat-on-b", "destination": "/treechat-on-b", "permanent": true },
     { "source": "/Yours-on-b", "destination": "/yours-on-b", "permanent": true },
     { "source": "/On-b", "destination": "/on-b", "permanent": true },
+    { "source": "/B-on-b", "destination": "/b-on-b", "permanent": true },
+    { "source": "/b-on-B", "destination": "/b-on-b", "permanent": true },
     { "source": "/family", "destination": "/b-family", "permanent": true },
     {
       "source": "/(.*)",
