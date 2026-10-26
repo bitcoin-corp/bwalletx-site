@@ -215,6 +215,9 @@
         var T = {
           X: ['br', '/img/brands/x.svg'], Google: ['br', '/img/brands/google.svg'], LinkedIn: ['br', '/img/brands/linkedin.svg'],
           Facebook: ['br', '/img/brands/facebook.svg'], YouTube: ['br', '/img/brands/youtube.svg'], Instagram: ['br', '/img/brands/instagram.svg'], TikTok: ['br', '/img/brands/tiktok.svg'],
+          Reddit: ['br', '/img/brands/reddit.svg'], Discord: ['br', '/img/brands/discord.svg'], Telegram: ['br', '/img/brands/telegram.svg'],
+          Twitch: ['br', '/img/brands/twitch.svg'], Bluesky: ['br', '/img/brands/bluesky.svg'], Threads: ['br', '/img/brands/threads.svg'],
+          Pinterest: ['br', '/img/brands/pinterest.svg'], WhatsApp: ['br', '/img/brands/whatsapp.svg'],
           Twetch: ['app', '/img/apps/twetch.svg'], Treechat: ['app', '/img/apps/treechat.svg'], RelayX: ['app', '/img/apps/relayx.png'], CoinGeek: ['app', '/img/apps/coingeek.png'],
           Peck: ['app', '/img/apps/peck.png'], Yours: ['app', '/img/apps/yours.png'], Hodlocker: ['wm', '']
         };
@@ -244,6 +247,8 @@
         }
         function mix(a, b) { var o = []; for (var i = 0; i < Math.max(a.length, b.length); i++) { if (a[i]) o.push(a[i]); if (b[i]) o.push(b[i]); } return o; }
         var ALL = mix(BIG, BSV);
+        // The final slam: everyone (owner, 26 Oct 2026: "really everyone"; Telegram, Reddit, Discord and Twitch all export your data).
+        var EVERYONE = mix(BIG.concat(['Reddit', 'Discord', 'Telegram', 'Twitch', 'Bluesky', 'Threads', 'Pinterest', 'WhatsApp']), BSV);
         var seed = 7; function rnd() { seed = (seed * 9301 + 49297) % 233280; return seed / 233280; }
         function blast(n) {
           var o = '<div class="ring"></div>';
@@ -267,7 +272,7 @@
           { beat: 36, bg: bg('#2ee6d6', '#2a3fe0'), slogan: 'News', sub: 'CoinGeek headlines in bNews.', art: comp('swirl', ['CoinGeek', 'YouTube', 'LinkedIn', 'Facebook', 'X', 'Google']) },
           { at: BREAK, bt: BB, bg: bg('#ff4d6d', '#7a0b3f'), slogan: 'Everyone, on {L}', sub: 'X, Facebook, LinkedIn, YouTube, Instagram, TikTok, Reddit, Threads, Bluesky, Pinterest: invite them in.', art: belts(['X', 'Facebook', 'LinkedIn', 'YouTube', 'Instagram', 'TikTok', 'Google'], BSV) + blast(36), hit: '#ffd24d' },
           { at: BREAK + 4 * BB, bt: BB, bg: bg('#ff9a3c', '#a3122f'), slogan: 'Bring them', art: comp('into', ['X', 'Facebook', 'LinkedIn', 'YouTube', 'Instagram', 'TikTok', 'Google', 'Treechat']) },
-          { at: BACK, bg: bg('#5b2be0', '#12063a'), slogan: 'Not BNB, | {L} ON {L}', art: comp('grid', ALL) + blast(60), hit: '#fff', xl: true, cta: true }
+          { at: BACK, bg: bg('#5b2be0', '#12063a'), slogan: 'Not BNB, | {L} ON {L}', art: comp('grid', EVERYONE) + blast(60), hit: '#fff', xl: true, cta: true }
         ];
         var stage = document.getElementById('stage'), film = document.getElementById('film'), flash = document.getElementById('flash'), bar = document.getElementById('bar'), poster = document.getElementById('poster');
         stage.innerHTML = SCENES.map(function (s) {
