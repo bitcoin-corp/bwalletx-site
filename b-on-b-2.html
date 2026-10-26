@@ -1,7 +1,8 @@
 <!doctype html>
 <!--
-  b on b 2 (26 Oct 2026): the fast, explosive cut. 32 s on "Shattered Circuits" by v3xv0id (152 BPM, 0.3947 s a beat): 25.26 s from the 114.4 s drop,
-  hard-cut to the 153.2 s drop for the final slam. Scenes change every 2-6 beats; drops get a flash, shake and tile burst.
+  b on b 2 (26 Oct 2026): the fast, explosive cut. 32 s on Music (owner's pick): "Shattered Circuits (Alt)" by VexVoid, 117.5 BPM (0.5106 s a beat), 20.4 s from the 65.15 s hit;
+  a 5 s "Phantom Echoes (Alt)" break (95.7 BPM, 8 beats from its 40.43 s hit) for the "one day" moment;
+  then back into Shattered Circuits (Alt) at its 130.53 s hit for the final slam. Each part is loudness-matched to -11 LUFS. Scenes change every 2-6 beats; drops get a flash, shake and tile burst.
   Flashes are rate-limited to at most 3 a second (photosensitivity) and are off under prefers-reduced-motion.
   Test hooks: ?autoplay=silent, ?t=SECONDS, window.__film.
 -->
@@ -31,7 +32,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" />
     <style>
-      :root { --bg: #0d0b1f; --ink: #fff8e8; --gold: #ffd24d; --gold-hi: #ffe58a; --gold-lo: #c98f00; --gold-rgb: 255, 210, 77; --hf: 'Space Grotesk', system-ui, sans-serif; --beat: .3947s; }
+      :root { --bg: #0d0b1f; --ink: #fff8e8; --gold: #ffd24d; --gold-hi: #ffe58a; --gold-lo: #c98f00; --gold-rgb: 255, 210, 77; --hf: 'Space Grotesk', system-ui, sans-serif; --beat: .5106s; }
       * { box-sizing: border-box; }
       html, body { margin: 0; background: var(--bg); color: var(--ink); overflow-x: clip; font-family: var(--hf); }
       .film { position: relative; width: 100%; height: 100svh; min-height: 540px; overflow: hidden; background: #000; }
@@ -139,7 +140,7 @@
         </div>
       </div>
       <div class="bar" id="bar"></div>
-      <audio id="music" src="/audio/b-on-b-2-shattered-circuits.mp3" preload="auto"></audio>
+      <audio id="music" src="/audio/b-on-b-2-circuits-phantom.mp3" preload="auto"></audio>
     </section>
     <div class="snd">
       <button type="button" id="mute" aria-pressed="false" aria-label="Mute music"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><path d="M11 5 6 9H3v6h3l5 4z"></path><path d="M15.5 8.5a5 5 0 0 1 0 7"></path></svg></button>
@@ -158,7 +159,7 @@
       <div class="end-in">
         <h2 class="slogan" data-slogan="Your apps, on {L}"></h2>
         <p class="getp"><a class="cta" href="/on-b">See your apps on b</a> <a class="cta2" href="/get?from=b-on-b-2">Get bWalletX</a></p>
-        <p class="credit">Music: Shattered Circuits by v3xv0id</p>
+        <p class="credit">Music: Shattered Circuits (Alt) and Phantom Echoes (Alt) by VexVoid</p>
       </div>
     </section>
     <p class="foot"><a href="/just-b">just b</a> · <a href="/b-is-for-business">b is for business</a> · <a href="/on-b">your apps on b</a> · <a href="/b-on-b">b on b</a> · <a href="/b-on-b-2" aria-current="page">b on b, again</a></p>
@@ -166,7 +167,7 @@
 
     <script>
       (function () {
-        var BEAT = 0.3947, END = 33.2, LOGO = '/logo.svg';
+        var BEAT = 0.5106, BREAK = 20.422, BB = 0.627, BACK = 25.438, END = 33.4, LOGO = '/logo.svg';
         var COL = ['#ff4d6d', '#2ee6d6', '#8b5cff', '#ffd24d', '#7cf06a', '#4da3ff', '#ff9a3c', '#ff6ad5'];
         // Corner spots for tiles (x%, y%), all clear of the centred slogan.
         var SPOT = [[14, 15], [86, 15], [14, 85], [86, 85], [50, 9], [50, 91], [7, 50], [93, 50]];
@@ -200,6 +201,7 @@
         }
         function bg(a, b) { return 'radial-gradient(circle at 50% 40%, ' + a + ', ' + b + ')'; }
         // beat: when it starts (in beats from the start of the cut). hit: a drop (flash + shake + blast).
+        // beat: start on the Shattered Circuits (Alt) grid. at: explicit seconds for the break and the return.
         var SCENES = [
           { beat: 0,  bg: bg('#ff4d6d', '#a3122f'), slogan: 'All your apps', art: apps(ALL) + blast(40), hit: '#fff' },
           { beat: 4,  bg: bg('#9a6bff', '#4a1fd1'), slogan: 'on {L}', art: blast(30), xl: true },
@@ -210,17 +212,15 @@
           { beat: 24, bg: bg('#7cf06a', '#169a4c'), slogan: 'Lock it', sub: 'Lock behind posts, Hodlocker-style.', art: apps(['Hodlocker']) + blast(24), hit: '#fff' },
           { beat: 28, bg: bg('#ff6ad5', '#a21caf'), slogan: 'News', sub: 'CoinGeek headlines in bNews.', art: apps(['coingeek.png']) },
           { beat: 32, bg: bg('#ffd24d', '#e0632e'), slogan: 'All of it.', art: apps(ALL) + blast(40), hit: '#fff' },
-          { beat: 36, bg: bg('#2ee6d6', '#2a3fe0'), slogan: 'One wallet.', art: apps(ALL) },
-          { beat: 40, bg: bg('#ff4d6d', '#5b2be0'), slogan: 'Your keys.', sub: 'Your BSV stays yours.', art: apps(ALL) },
-          { beat: 44, bg: bg('#8b5cff', '#2b1a8f'), slogan: 'One day,' },
-          { beat: 48, bg: bg('#ff4d6d', '#7a0b3f'), slogan: 'everything will {L} on {L}', art: names() + blast(36), hit: '#ffd24d' },
-          { beat: 56, bg: bg('#ff9a3c', '#a3122f'), slogan: 'We can dream.', sub: 'A wish, not a deal.', art: names() },
-          { beat: 64, bg: bg('#5b2be0', '#12063a'), slogan: 'Not BNB, | {L} ON {L}', art: apps(ALL) + blast(60), hit: '#fff', xl: true, cta: true }
+          { beat: 36, bg: bg('#8b5cff', '#2b1a8f'), slogan: 'One day,' },
+          { at: BREAK, bt: BB, bg: bg('#ff4d6d', '#7a0b3f'), slogan: 'everything will {L} on {L}', art: names() + blast(36), hit: '#ffd24d' },
+          { at: BREAK + 4 * BB, bt: BB, bg: bg('#ff9a3c', '#a3122f'), slogan: 'We can dream.', sub: 'A wish, not a deal.', art: names() },
+          { at: BACK, bg: bg('#5b2be0', '#12063a'), slogan: 'Not BNB, | {L} ON {L}', art: apps(ALL) + blast(60), hit: '#fff', xl: true, cta: true }
         ];
         var stage = document.getElementById('stage'), film = document.getElementById('film'), flash = document.getElementById('flash'), bar = document.getElementById('bar'), poster = document.getElementById('poster');
         stage.innerHTML = SCENES.map(function (s) {
-          s.at = s.beat * BEAT;
-          return '<div class="scene" style="--bg-s:' + s.bg + '"><div class="bgz"></div><div class="tiles">' + (s.art || '') + '</div><div class="cap"><h2 class="slogan' + (s.xl ? ' xl' : '') + '">' + slogan(s.slogan) + '</h2>' + (s.sub ? '<p>' + esc(s.sub) + '</p>' : '') +
+          s.at = s.at != null ? s.at : s.beat * BEAT;
+          return '<div class="scene" style="--bg-s:' + s.bg + (s.bt ? ';--beat:' + s.bt + 's' : '') + '"><div class="bgz"></div><div class="tiles">' + (s.art || '') + '</div><div class="cap"><h2 class="slogan' + (s.xl ? ' xl' : '') + '">' + slogan(s.slogan) + '</h2>' + (s.sub ? '<p>' + esc(s.sub) + '</p>' : '') +
             (s.cta ? '<p class="getp"><a class="cta" href="/on-b">See your apps on b</a> <a class="cta2" href="/get?from=b-on-b-2">Get bWalletX</a></p>' : '') + '</div></div>';
         }).join('');
         [].forEach.call(document.querySelectorAll('[data-slogan]'), function (h) { h.innerHTML = slogan(h.getAttribute('data-slogan')); });
