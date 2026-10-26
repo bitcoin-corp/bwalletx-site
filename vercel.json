@@ -176,8 +176,11 @@
     { "source": "/TreeChat-on-b", "destination": "/treechat-on-b", "permanent": true },
     { "source": "/Yours-on-b", "destination": "/yours-on-b", "permanent": true },
     { "source": "/On-b", "destination": "/on-b", "permanent": true },
-    { "source": "/B-on-b", "destination": "/b-on-b", "permanent": true },
-    { "source": "/b-on-B", "destination": "/b-on-b", "permanent": true },
+    { "source": "/B-on-b", "destination": "/be-on-b", "permanent": true },
+    { "source": "/b-on-B", "destination": "/be-on-b", "permanent": true },
+    { "source": "/b-on-b", "destination": "/be-on-b", "permanent": true },
+    { "source": "/b-on-b-2", "destination": "/be-on-b-2", "permanent": true },
+    { "source": "/b-on-b-3", "destination": "/be-on-b-3", "permanent": true },
     { "source": "/family", "destination": "/b-family", "permanent": true },
     {
       "source": "/(.*)",
@@ -583,13 +586,13 @@
       "statusCode": 301
     },
     {
-      "source": "/download/:file(bwalletx-android(?!-5.2.42\\.apk$)[^/]*\\.apk)",
-      "destination": "/download/bwalletx-android-5.2.42.apk",
+      "source": "/download/:file(bwalletx-android(?!-5.2.44\\.apk$)[^/]*\\.apk)",
+      "destination": "/download/bwalletx-android-5.2.44.apk",
       "statusCode": 302
     },
     {
-      "source": "/download/:file(bwalletx-extension(?!-5.2.42\\.zip$)[^/]*\\.zip)",
-      "destination": "/download/bwalletx-extension-5.2.42.zip",
+      "source": "/download/:file(bwalletx-extension(?!-5.2.44\\.zip$)[^/]*\\.zip)",
+      "destination": "/download/bwalletx-extension-5.2.44.zip",
       "statusCode": 302
     },
     {

@@ -5,39 +5,51 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>b is coming</title>
     <link rel="canonical" href="https://bwalletx.com/b-is-coming" />
-    <meta name="description" content="Bitcoin is coming. Are you ready? It's worth the wait. Just b." />
+    <meta name="description" content="b is coming." />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://bwalletx.com/b-is-coming" />
     <meta property="og:site_name" content="bWalletX" />
     <meta property="og:title" content="b is coming" />
-    <meta property="og:description" content="Bitcoin is coming. Are you ready? It's worth the wait." />
-    <meta property="og:image" content="https://bwalletx.com/og-b-is-coming-v1.jpg" />
+    <meta property="og:description" content="b is coming." />
+    <meta property="og:image" content="https://bwalletx.com/og-b-is-coming-v4.png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
-    <meta property="og:image:alt" content="A glowing gold b: Bitcoin is coming. Are you ready?" />
+    <meta property="og:image:alt" content="A glowing gold b: b is coming." />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@bWalletX" />
     <meta name="twitter:title" content="b is coming" />
-    <meta name="twitter:description" content="Bitcoin is coming. Are you ready? It's worth the wait." />
-    <meta name="twitter:image" content="https://bwalletx.com/og-b-is-coming-v1.jpg" />
-    <meta name="theme-color" content="#05080f" />
+    <meta name="twitter:description" content="b is coming." />
+    <meta name="twitter:image" content="https://bwalletx.com/og-b-is-coming-v4.png" />
+    <meta name="theme-color" content="#fde4ee" />
     <link rel="icon" href="/favicon.ico" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" />
     <link rel="stylesheet" href="/styles.css" />
     <style>
-      /* b is coming (owner, 25 Oct 2026): the Just b series with a wink. Everything builds up, teases, then arrives. */
+      /* b is coming (owner, 25 Oct 2026): the Just b series with a wink. Everything builds up, teases, nears the climax, then pulls back and loops. It never arrives (owner, 26 Oct). */
       html { overflow-x: hidden; }
       body { margin: 0; background: #05080f; color: #e6edf5; overflow-x: hidden; }
-      .ic-scene { position: relative; min-height: 100svh; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 0 16px; box-sizing: border-box; text-align: center; overflow: hidden; }
+      .ic-scene { overflow-wrap: anywhere; position: relative; min-height: 100svh; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 0 16px; box-sizing: border-box; text-align: center; overflow: hidden; }
       .ic-hero { background: radial-gradient(ellipse at 50% 45%, rgba(245, 184, 0, 0.14), rgba(5, 8, 15, 0) 60%), #05080f; }
       /* The b builds: slow breaths that get quicker and brighter, then it arrives. */
-      .ic-b { position: relative; width: clamp(140px, 34vw, 300px); aspect-ratio: 0.74; }
+      .ic-b { position: relative; width: clamp(96px, min(30vw, 26svh), 260px); aspect-ratio: 0.74; }
       .ic-b img { width: 100%; height: 100%; display: block; object-fit: contain; filter: drop-shadow(0 0 30px rgba(245, 184, 0, 0.35)); }
       .ic-b.build img { animation: build 1.6s ease-in-out infinite; }
       .ic-b.build2 img { animation: build 0.9s ease-in-out infinite; }
       .ic-b.build3 img { animation: build 0.45s ease-in-out infinite; }
+      .ic-b.near img { animation: near 2.2s cubic-bezier(0.3, 0, 0.3, 1) infinite; }
+      .ic-b.near::after { animation: tflash 2.2s ease-in-out infinite; }
+      @keyframes near { 0%, 100% { transform: scale(0.96); filter: drop-shadow(0 0 30px rgba(245, 184, 0, 0.4)); } 55% { transform: scale(var(--near, 1.14)); filter: drop-shadow(0 0 var(--glo, 110px) rgba(255, 220, 110, 1)); } 70% { transform: scale(0.98); } }
+      @keyframes tflash { 0%, 100% { opacity: 0; transform: scale(0.5); } 55% { opacity: 0.7; transform: scale(1.1); } 75% { opacity: 0; } }
+      .ic-lt { display: inline-block; opacity: 0; transform: translateY(0.3em); animation: lt 0.5s ease forwards; white-space: pre; }
+      @keyframes lt { to { opacity: 1; transform: none; } }
+      /* Always-on CTA overlay (owner, 26 Oct): it never arrives, so the way in stays on screen the whole time. */
+      .ic-cta { position: fixed; left: 0; right: 0; margin: 0 auto; width: fit-content; bottom: max(16px, env(safe-area-inset-bottom)); z-index: 35; display: flex; align-items: center; gap: 14px; padding: 8px; border-radius: 999px; background: rgba(8, 10, 16, 0.78); -webkit-backdrop-filter: blur(14px); backdrop-filter: blur(14px); border: 1px solid rgba(255, 210, 77, 0.35); box-shadow: 0 18px 50px rgba(0, 0, 0, 0.5); white-space: nowrap; max-width: calc(100vw - 32px); box-sizing: border-box; }
+      .ic-cta span { font: 600 0.95rem var(--hf); color: #ffe7a6; }
+      .ic-cta .jb-go { padding: 12px 22px; font-size: 1rem; }
+      body.gated .ic-cta { opacity: 0; pointer-events: none; }
+      .jb-foot:last-of-type { padding-bottom: 110px; }
       .ic-b.came img { animation: came 1.4s cubic-bezier(0.2, 1.4, 0.4, 1) both, glow 6s 1.4s ease-in-out infinite; }
       .ic-b::after { content: ''; position: absolute; inset: -40%; border-radius: 50%; background: radial-gradient(circle, rgba(255, 210, 77, 0.55), rgba(255, 210, 77, 0) 60%); opacity: 0; pointer-events: none; }
       .ic-b.came::after { animation: flash 1.6s ease-out both; }
@@ -45,25 +57,25 @@
       @keyframes came { 0% { transform: scale(1.06); } 35% { transform: scale(1.22); } 100% { transform: scale(1); } }
       @keyframes glow { 0%, 100% { filter: drop-shadow(0 0 24px rgba(245, 184, 0, 0.35)); } 50% { filter: drop-shadow(0 0 60px rgba(245, 184, 0, 0.8)); } }
       @keyframes flash { 0% { opacity: 0; transform: scale(0.4); } 25% { opacity: 1; } 100% { opacity: 0; transform: scale(1.6); } }
-      .ic-h1 { margin: 34px 0 0; font: 700 clamp(2.4rem, 9vw, 6.5rem) / 1.02 var(--hf); letter-spacing: -0.045em; color: #fff; }
+      .ic-h1 { margin: 6px 0 0; white-space: nowrap; max-width: calc(100vw - 32px); font: 700 clamp(1.6rem, min(15vw, 18svh), 11rem) / 0.95 var(--hf); letter-spacing: -0.045em; color: #fff; }
       .ic-h1 em { font-style: normal; color: var(--gold-hi); }
-      .ic-tease { margin: 18px 0 0; min-height: 1.6em; font: 500 clamp(1rem, 3vw, 1.35rem) var(--hf); color: #b9c6d6; letter-spacing: 0.02em; transition: opacity 0.5s ease; }
+      .ic-tease { margin: 14px 0 0; min-height: 1.2em; font: 700 clamp(1.8rem, min(8vw, 7svh), 4.5rem) / 1 var(--hf); letter-spacing: -0.03em; color: #ffe7a6; letter-spacing: 0.02em; transition: opacity 0.5s ease; }
       .ic-hint { position: absolute; bottom: 22px; left: 0; right: 0; font: 500 0.72rem var(--hf); letter-spacing: 0.3em; text-transform: uppercase; color: #5d6878; }
 
       /* The loading bar that won't quite finish. */
       .ic-load { min-height: 80svh; }
-      .ic-load h2, .ic-count h2 { margin: 0 0 28px; font: 700 clamp(1.9rem, 6vw, 3.4rem) / 1.1 var(--hf); letter-spacing: -0.03em; color: #fff; }
+      .ic-load h2, .ic-count h2 { margin: 0 0 28px; font: 700 clamp(2.4rem, min(11vw, 13svh), 7rem) / 0.95 var(--hf); letter-spacing: -0.03em; color: #fff; }
       .ic-bar { width: min(560px, 100%); height: 14px; border-radius: 999px; background: #121a28; overflow: hidden; box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.06); }
       .ic-bar i { display: block; height: 100%; width: 0; border-radius: inherit; background: linear-gradient(90deg, #c98f00, #f5b800, #ffe48a); transition: width 0.9s cubic-bezier(0.3, 0.7, 0.3, 1); }
       .ic-bar.done i { box-shadow: 0 0 30px rgba(255, 210, 77, 0.8); }
-      .ic-pct { margin: 18px 0 0; font: 600 clamp(1.1rem, 3.4vw, 1.5rem) var(--hf); color: var(--gold-hi); font-variant-numeric: tabular-nums; }
-      .ic-msg { margin: 8px 0 0; min-height: 1.5em; font: 400 clamp(0.95rem, 2.6vw, 1.1rem) var(--hf); color: #b9c6d6; }
+      .ic-pct { margin: 18px 0 0; font: 700 clamp(2.4rem, min(12vw, 13svh), 7rem) var(--hf); color: var(--gold-hi); font-variant-numeric: tabular-nums; }
+      .ic-msg { margin: 8px 0 0; min-height: 1.5em; font: 700 clamp(1.6rem, min(8vw, 9svh), 4.5rem) / 1.05 var(--hf); letter-spacing: -0.02em; color: #ffe7a6; }
 
       /* The countdown that edges, then bursts. */
       .ic-count { min-height: 90svh; }
-      .ic-num { font: 700 clamp(6rem, 30vw, 16rem) / 1 var(--hf); letter-spacing: -0.06em; color: #fff; font-variant-numeric: tabular-nums; text-shadow: 0 6px 60px rgba(0, 0, 0, 0.6); min-height: 1em; }
+      .ic-num { font: 700 clamp(6rem, min(48vw, 48svh), 24rem) / 1 var(--hf); letter-spacing: -0.06em; color: #fff; font-variant-numeric: tabular-nums; text-shadow: 0 6px 60px rgba(0, 0, 0, 0.6); min-height: 1em; }
       .ic-num { display: flex; justify-content: center; align-items: center; }
-      .ic-numb { display: block; width: clamp(140px, 34vw, 300px); height: auto; aspect-ratio: 0.74; max-width: 100%; object-fit: contain; filter: drop-shadow(0 0 30px rgba(245, 184, 0, 0.35)); animation: glow 6s 1.4s ease-in-out infinite; }
+      .ic-numb { display: block; width: clamp(110px, min(34vw, 30svh), 300px); height: auto; aspect-ratio: 0.74; max-width: 100%; object-fit: contain; filter: drop-shadow(0 0 30px rgba(245, 184, 0, 0.35)); animation: glow 6s 1.4s ease-in-out infinite; }
       .ic-num.pop { animation: pop 0.6s ease-out; color: var(--gold-hi); }
       @keyframes pop { from { transform: scale(1.3); } to { transform: none; } }
       .ic-again { margin-top: 26px; padding: 12px 24px; border-radius: 999px; border: 1px solid rgba(255, 255, 255, 0.4); background: transparent; color: #fff; font: 500 0.8rem var(--hf); letter-spacing: 0.18em; text-transform: uppercase; cursor: pointer; visibility: hidden; }
@@ -73,15 +85,15 @@
       .ic-sats { position: fixed; inset: 0; pointer-events: none; z-index: 20; overflow: hidden; }
       .ic-sat { position: absolute; top: 0; left: 0; width: 14px; height: 14px; border-radius: 50%; background: radial-gradient(circle at 35% 30%, #fff2b8, #f5b800 55%, #a87600); box-shadow: 0 0 10px rgba(255, 210, 77, 0.7); will-change: transform, opacity; }
 
-      .ic-calm { max-width: 680px; margin: 0 auto; padding: 16vh 24px 14vh; text-align: center; color: #b9c6d6; font: 400 clamp(1.05rem, 2.4vw, 1.3rem) / 1.75 var(--hf); }
+      .ic-calm { overflow-wrap: anywhere; max-width: 1400px; margin: 0 auto; padding: 16vh 24px 14vh; text-align: center; color: #b9c6d6; font: 400 clamp(1.05rem, 2.4vw, 1.3rem) / 1.75 var(--hf); }
       .ic-calm p { margin: 0 0 2.2em; }
-      .ic-calm .ic-lead { font: 700 clamp(1.9rem, 6vw, 3.2rem) / 1.15 var(--hf); letter-spacing: -0.03em; color: #fff; margin-bottom: 1.4em; }
+      .ic-calm .ic-lead { font: 700 clamp(2.4rem, min(11vw, 14svh), 7rem) / 1 var(--hf); letter-spacing: -0.03em; color: #fff; margin-bottom: 1.4em; }
       .ic-calm strong { display: block; margin-bottom: 0.35em; color: #fff; font-weight: 600; font-size: 1.15em; letter-spacing: -0.01em; }
       .ic-calm em { font-style: normal; color: var(--gold-hi); }
       .ic-calm p:last-child { margin-bottom: 0; }
 
       .ic-end { background: radial-gradient(ellipse at 50% 60%, rgba(245, 184, 0, 0.18), rgba(5, 8, 15, 0) 60%), #05080f; }
-      .ic-end h2 { margin: 0 0 12px; font: 700 clamp(2.6rem, 10vw, 5rem) / 1 var(--hf); letter-spacing: -0.04em; color: #fff; }
+      .ic-end h2 { margin: 0 0 12px; font: 700 clamp(2.2rem, min(10vw, 12svh), 5rem) / 1 var(--hf); letter-spacing: -0.04em; color: #fff; }
       .ic-end p { margin: 0 0 30px; color: #b9c6d6; font: 400 clamp(0.95rem, 2.6vw, 1.1rem) var(--hf); }
       .jb-go { display: inline-block; padding: 18px 40px; border-radius: 999px; background: linear-gradient(180deg, #ffd24d, #f5b800); color: #0b0a08; font: 700 1.1rem var(--hf); text-decoration: none; box-shadow: 0 14px 50px rgba(245, 184, 0, 0.35); }
       .jb-go:focus-visible { outline: 2px solid var(--gold); outline-offset: 4px; }
@@ -98,13 +110,17 @@
       .ic-gate { position: fixed; inset: 0; z-index: 40; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 20px; padding: 0 16px; background: rgba(5, 8, 15, 0.82); -webkit-backdrop-filter: blur(24px); backdrop-filter: blur(24px); transition: opacity 1.2s ease, visibility 1.2s; text-align: center; }
       .ic-gate.off { opacity: 0; visibility: hidden; pointer-events: none; }
       .ic-gate-go { display: flex; flex-direction: column; align-items: center; gap: 20px; border: 0; padding: 0; background: none; cursor: pointer; color: #fff; font: 700 clamp(1.1rem, 4vw, 1.4rem) var(--hf); letter-spacing: 0.08em; text-transform: uppercase; }
-      .ic-gate-go .spk { position: relative; width: 132px; height: 132px; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #0b0a08; background: radial-gradient(circle at 35% 30%, #ffe48a, #f5b800 55%, #c98f00); box-shadow: 0 18px 60px rgba(245, 184, 0, 0.45), inset 0 2px 0 rgba(255, 255, 255, 0.5); animation: gpulse 2.6s ease-in-out infinite; transition: transform 0.4s ease; }
-      .ic-gate-go .spk::before { content: ''; position: absolute; inset: -10px; border-radius: 50%; border: 2px solid rgba(255, 210, 77, 0.7); animation: gring 2.6s ease-out infinite; }
-      .ic-gate-go:hover .spk, .ic-gate-go:focus-visible .spk { transform: scale(1.08); }
+      /* Owner, 26 Oct: a soft, glossy pink play button to press. */
+      .ic-gate-go .spk { position: relative; width: 132px; height: 132px; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: rgba(122, 22, 66, 0.55); background: radial-gradient(circle at 34% 28%, #fff4f8 0, #ffc6dc 14%, #f78fb6 48%, #e0648f 78%, #c24a76 100%); box-shadow: 0 18px 60px rgba(247, 120, 170, 0.45), inset 0 -10px 22px rgba(150, 30, 80, 0.28), inset 0 6px 14px rgba(255, 255, 255, 0.55); animation: gpulse 2.6s ease-in-out infinite; transition: transform 0.25s ease; }
+      .ic-gate-go .spk::before { content: ''; position: absolute; inset: -10px; border-radius: 50%; border: 2px solid rgba(255, 170, 205, 0.7); animation: gring 2.6s ease-out infinite; }
+      .ic-gate-go .spk::after { content: ''; position: absolute; top: 14%; left: 22%; width: 34%; height: 22%; border-radius: 50%; background: radial-gradient(ellipse, rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0) 70%); transform: rotate(-24deg); pointer-events: none; }
+      .ic-gate-go .spk svg { position: relative; margin-left: 6px; filter: drop-shadow(0 1px 0 rgba(255, 255, 255, 0.5)); }
+      .ic-gate-go:active .spk { transform: scale(0.94); box-shadow: 0 8px 30px rgba(247, 120, 170, 0.4), inset 0 6px 18px rgba(150, 30, 80, 0.4), inset 0 -2px 8px rgba(255, 255, 255, 0.4); }
+      .ic-gate-go:hover .spk, .ic-gate-go:focus-visible .spk { transform: scale(1.06); }
       .ic-gate-go:focus-visible { outline: none; } .ic-gate-go:focus-visible .spk { outline: 3px solid #fff; outline-offset: 6px; }
       .ic-quiet { border: 0; background: none; color: #7f8b9b; font: 400 0.85rem var(--hf); text-decoration: underline; cursor: pointer; padding: 8px; }
       .ic-quiet:hover, .ic-quiet:focus-visible { color: #fff; }
-      @keyframes gpulse { 0%, 100% { box-shadow: 0 18px 60px rgba(245, 184, 0, 0.4); } 50% { box-shadow: 0 18px 90px rgba(245, 184, 0, 0.8); } }
+      @keyframes gpulse { 0%, 100% { box-shadow: 0 18px 60px rgba(247, 120, 170, 0.4), inset 0 -10px 22px rgba(150, 30, 80, 0.28), inset 0 6px 14px rgba(255, 255, 255, 0.55); } 50% { box-shadow: 0 18px 90px rgba(247, 120, 170, 0.75), inset 0 -10px 22px rgba(150, 30, 80, 0.28), inset 0 6px 14px rgba(255, 255, 255, 0.55); } }
       @keyframes gring { from { transform: scale(0.92); opacity: 0.9; } to { transform: scale(1.35); opacity: 0; } }
       body.gated { overflow: hidden; }
       @media (prefers-reduced-motion: reduce) { .ic-gate-go .spk, .ic-gate-go .spk::before { animation: none; } }
@@ -112,54 +128,118 @@
         .ic-b img, .ic-b::after, .ic-num.pop { animation: none !important; }
         .ic-bar i { transition: none; }
       }
+
+      /* 26 Oct (owner): dark start, warms to deep pink/red with the loudness; drifting blobs, sine ribbons, hearts and kisses. */
+      .ic-hero { --heat: 0; isolation: isolate; }
+      .ic-hero > *:not(.ic-fx):not(.ic-hint) { position: relative; z-index: 1; }
+      .ic-hero > .ic-fx { position: absolute; inset: 0; z-index: 0; overflow: hidden; pointer-events: none; }
+      .ic-blob { position: absolute; left: var(--x); top: var(--y); width: var(--s); height: var(--s); margin: calc(var(--s) / -2) 0 0 calc(var(--s) / -2); border-radius: 50%; background: radial-gradient(circle, var(--c), transparent 65%); opacity: calc(var(--heat) * 0.5); filter: blur(20px); animation: drift var(--d) ease-in-out infinite alternate; }
+      @keyframes drift { from { transform: translate(-6%, -4%) scale(0.9); } to { transform: translate(6%, 5%) scale(1.1); } }
+      #ic-waves { position: absolute; inset: 0; width: 100%; height: 100%; }
+      .ic-heart { position: absolute; bottom: -60px; left: 0; width: 34px; height: 34px; will-change: transform, opacity; }
+      .ic-b { transform: scale(var(--bs, 0.35)); transform-origin: 50% 100%; opacity: var(--bo, 1); filter: hue-rotate(calc(var(--heat) * -78deg)) saturate(calc(1 + var(--heat) * 0.7)) brightness(calc(0.45 + var(--bo, 1) * 0.3 + var(--heat) * 0.35)); }
+      /* Opening (owner): no text at first, only darkness and the b emerging. The words fade in once the build is under way. */
+.ic-say { position: absolute !important; left: 16px; right: 16px; top: 60%; margin: 0; font: 700 clamp(2.2rem, min(11vw, 13svh), 8rem) / 0.95 var(--hf); letter-spacing: -0.03em; color: #ffe3ee; text-shadow: 0 4px 30px rgba(255, 45, 122, 0.55); opacity: 0; transform: translateY(8px); transition: opacity 0.9s ease, transform 0.9s ease; }
+      /* 26 Oct fit (owner): b grows up from its base so it sits right on the title; every title capped by width and height so nothing clips. */
+      .ic-say.on { opacity: 1; transform: none; }
+      .ic-hero .ic-h1, .ic-hero .ic-tease, .ic-hero .ic-hint { transition: opacity 2.4s ease, transform 2.4s ease; }
+      .ic-hero.hush .ic-h1, .ic-hero.hush .ic-tease, .ic-hero.hush .ic-hint { opacity: 0; transform: translateY(10px); }
+      @media (prefers-reduced-motion: reduce) { .ic-blob { animation: none; } }
+      /* Gloss pass (owner, 26 Oct): sheen on the b, grain. The obsidian pool was removed in the soft pass below. */
+      .ic-b::before { content: ''; position: absolute; inset: 0; z-index: 2; pointer-events: none; -webkit-mask: url(/logo.svg) center / contain no-repeat; mask: url(/logo.svg) center / contain no-repeat; background: linear-gradient(115deg, rgba(255, 255, 255, 0) 36%, rgba(255, 255, 255, 0.85) 48%, rgba(255, 246, 214, 0.25) 52%, rgba(255, 255, 255, 0) 62%) 0 0 / 300% 100% no-repeat; mix-blend-mode: screen; animation: sheen 5.5s cubic-bezier(0.5, 0, 0.3, 1) infinite; }
+      @keyframes sheen { 0% { background-position: 120% 0; } 55%, 100% { background-position: -40% 0; } }
+      .ic-h1, .ic-load h2, .ic-count h2, .ic-calm .ic-lead { background: linear-gradient(105deg, #fff 0%, #fff 40%, #fff6dc 49%, #fff 54%, #fff 100%) 0 0 / 260% 100%; -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; filter: drop-shadow(0 0 22px rgba(255, 214, 120, 0.28)) drop-shadow(0 2px 1px rgba(0, 0, 0, 0.5)); animation: tsheen 7s ease-in-out infinite; }
+      .ic-h1 em, .ic-calm .ic-lead em { background: linear-gradient(105deg, #f5b800 0%, #ffd24d 38%, #fffbe6 48%, #ffd24d 56%, #c98f00 100%) 0 0 / 260% 100%; -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; animation: tsheen 7s ease-in-out infinite; }
+      /* Clip-to-text paints only inside the box: pad it so descenders (the g) never clip. */
+      .ic-h1, .ic-load h2, .ic-count h2, .ic-calm .ic-lead { padding: 0.06em 0.06em 0.18em; margin-bottom: -0.18em; }
+      @keyframes tsheen { 0% { background-position: 100% 0; } 60%, 100% { background-position: 0% 0; } }
+      .ic-gate { background: radial-gradient(circle at 50% 46%, rgba(120, 18, 60, 0.55), rgba(40, 6, 22, 0.6) 38%, rgba(5, 8, 15, 0.9) 72%); }
+      .ic-gate::before { content: ''; position: absolute; inset: 0; pointer-events: none; opacity: 0.5; background: repeating-radial-gradient(circle at 50% 46%, rgba(255, 150, 200, 0.05) 0 1px, transparent 1px 3px); filter: blur(0.6px); }
+      .ic-grain { position: fixed; inset: -50%; z-index: 45; pointer-events: none; opacity: 0.07; mix-blend-mode: overlay; background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E"); animation: grain 0.9s steps(4) infinite; }
+      @keyframes grain { 0% { transform: translate(0, 0); } 25% { transform: translate(-4%, 3%); } 50% { transform: translate(3%, -5%); } 75% { transform: translate(-2%, -2%); } 100% { transform: translate(0, 0); } }
+      @media (prefers-reduced-motion: reduce) { .ic-b::before, .ic-h1, .ic-h1 em, .ic-load h2, .ic-count h2, .ic-calm .ic-lead, .ic-calm .ic-lead em, .ic-grain { animation: none; } }
+      /* Soft pass (owner, 26 Oct): the glossy pool looked like skin. Pastel pink, cotton-candy and marabou fluff, velvet, a light dreamy bloom. Nothing wet. */
+      body { background: radial-gradient(120% 80% at 50% 0%, #fff6fa, #fde4ee 55%, #f8d3e3) fixed, #fde4ee; color: #4a1832; }
+      .ic-hero { background: #fde8f1; }
+      #ic-fluff { position: absolute; inset: 0; width: 100%; height: 100%; filter: blur(2px); opacity: calc(0.75 + var(--heat) * 0.25); }
+      .ic-blob { opacity: calc(0.12 + var(--heat) * 0.22); filter: blur(40px) saturate(0.55) brightness(1.25); }
+      .ic-hero::after { content: ''; position: absolute; inset: 0; z-index: 0; pointer-events: none; background: radial-gradient(circle at 50% 42%, rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0) 38%), radial-gradient(ellipse at 50% 50%, rgba(255, 255, 255, 0) 55%, rgba(214, 120, 160, 0.16)); }
+      .ic-scene:not(.ic-hero)::before, .ic-calm::before { content: ''; position: absolute; inset: 0; z-index: -1; pointer-events: none; opacity: 0.35; background: repeating-linear-gradient(115deg, rgba(255, 255, 255, 0.25) 0 1px, transparent 1px 3px); filter: blur(0.5px); }
+      .ic-calm { position: relative; isolation: isolate; }
+      .ic-b { filter: hue-rotate(calc(var(--heat) * -20deg)) brightness(calc(0.8 + var(--bo, 1) * 0.2)); }
+      .ic-b img { filter: drop-shadow(0 0 26px rgba(255, 210, 120, 0.55)) drop-shadow(0 6px 18px rgba(170, 90, 120, 0.25)); }
+      .ic-h1, .ic-load h2, .ic-count h2, .ic-calm .ic-lead { background-image: linear-gradient(105deg, #4a1832 0%, #4a1832 40%, #9a3a6c 49%, #4a1832 56%, #4a1832 100%); filter: drop-shadow(0 1px 0 rgba(255, 255, 255, 0.7)); }
+      .ic-h1 em, .ic-calm .ic-lead em { background-image: linear-gradient(105deg, #8a5a00 0%, #a06a00 38%, #c98f00 48%, #a06a00 56%, #7a4f00 100%); }
+      .ic-tease, .ic-msg { color: #7a2a52; }
+      .ic-say { color: #5a1a3c; text-shadow: 0 0 24px rgba(255, 255, 255, 0.9), 0 2px 12px rgba(255, 180, 210, 0.6); }
+      .ic-hint { color: #8a4a68; }
+      .ic-bar { background: #f6cadb; box-shadow: inset 0 1px 3px rgba(150, 60, 100, 0.18); }
+      .ic-pct { color: #8a5a00; }
+      .ic-num { color: #4a1832; text-shadow: 0 0 40px rgba(255, 255, 255, 0.9); }
+      .ic-again { border-color: rgba(74, 24, 50, 0.4); color: #4a1832; }
+      .ic-calm { color: #5c2f47; }
+      .ic-calm strong { color: #3e1229; }
+      .ic-calm em { color: #8a5a00; }
+      .ic-end { background: radial-gradient(ellipse at 50% 60%, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0) 60%); }
+      .ic-end h2 { color: #4a1832; } .ic-end p { color: #5c2f47; }
+      .jb-foot { color: #7a4562; } .jb-foot a { color: #6a2a4c; } .jb-series a { color: #5c2f47; } .jb-series span { color: #b27a95; }
+      .ic-cta { background: rgba(255, 244, 249, 0.75); border-color: rgba(230, 150, 185, 0.6); box-shadow: 0 18px 50px rgba(200, 100, 145, 0.25); }
+      .ic-snd { background: rgba(255, 244, 249, 0.7); border-color: rgba(200, 110, 150, 0.45); color: #4a1832; }
+      .ic-gate { background: radial-gradient(circle at 50% 46%, rgba(255, 255, 255, 0.85), rgba(253, 228, 238, 0.85) 40%, rgba(244, 196, 218, 0.92) 80%); }
+      .ic-gate::before { opacity: 0.6; background: repeating-linear-gradient(115deg, rgba(255, 255, 255, 0.35) 0 1px, transparent 1px 3px); }
+      .ic-gate-go { color: #4a1832; }
+      .ic-gate-go .spk { color: rgba(122, 22, 66, 0.6); background: radial-gradient(circle at 40% 34%, #fff7fa 0, #ffd9e8 30%, #f9b3cf 70%, #ee93b8 100%); box-shadow: 0 18px 60px rgba(247, 140, 185, 0.35), inset 0 -8px 20px rgba(200, 90, 140, 0.18), inset 0 4px 12px rgba(255, 255, 255, 0.6); animation-name: gpulse-soft; }
+      .ic-gate-go .spk::after { top: 12%; left: 24%; width: 36%; height: 24%; background: radial-gradient(ellipse, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0) 70%); }
+      @keyframes gpulse-soft { 0%, 100% { box-shadow: 0 18px 50px rgba(247, 140, 185, 0.3), inset 0 -8px 20px rgba(200, 90, 140, 0.18), inset 0 4px 12px rgba(255, 255, 255, 0.6); } 50% { box-shadow: 0 18px 80px rgba(247, 140, 185, 0.55), inset 0 -8px 20px rgba(200, 90, 140, 0.18), inset 0 4px 12px rgba(255, 255, 255, 0.6); } }
+      .ic-quiet { color: #6a2a4c; } .ic-quiet:hover, .ic-quiet:focus-visible { color: #3e1229; }
+      .ic-grain { opacity: 0.05; mix-blend-mode: soft-light; }
+      /* Short landscape: reserve room for the fixed CTA pill so it never covers the tease line. */
+      @media (max-height: 520px) { .ic-hero { padding-bottom: calc(84px + env(safe-area-inset-bottom)); } }
     </style>
   </head>
   <body class="jb gated">
+    <div class="ic-grain" aria-hidden="true"></div>
     <div class="ic-gate" id="ic-gate" role="dialog" aria-label="Enter b is coming">
-      <button type="button" class="ic-gate-go" id="ic-gate-go"><span class="spk"><svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M11 5 6 9H3v6h3l5 4z" fill="currentColor"></path><path d="M15.5 8.5a5 5 0 0 1 0 7"></path><path d="M18.5 5.5a9 9 0 0 1 0 13"></path></svg></span><span>Turn it up 🔊</span></button>
+      <button type="button" class="ic-gate-go" id="ic-gate-go" aria-label="Play, with sound"><span class="spk"><svg width="44" height="44" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13a1 1 0 0 0 1.5.86l10.2-6.5a1 1 0 0 0 0-1.72L9.5 4.64A1 1 0 0 0 8 5.5z" fill="currentColor"></path></svg></span><span>Turn it up 🔊</span></button>
       <button type="button" class="ic-quiet" id="ic-quiet">or enter quietly</button>
     </div>
     <button type="button" class="ic-snd" id="ic-snd" aria-pressed="false" aria-label="Turn sound on"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M11 5 6 9H3v6h3l5 4z"></path><path d="M15.5 8.5a5 5 0 0 1 0 7"></path><path class="off-x" d="M21 4 4 21"></path></svg><span id="ic-snd-l">Sound</span></button>
-    <section class="ic-scene ic-hero">
+    <section class="ic-scene ic-hero" id="ic-hero">
+      <div class="ic-fx" id="ic-fx" aria-hidden="true"><i class="ic-blob" style="--x:18%;--y:28%;--s:46vmax;--c:#ff2d7a;--d:23s"></i><i class="ic-blob" style="--x:82%;--y:70%;--s:52vmax;--c:#e0162b;--d:29s"></i><i class="ic-blob" style="--x:60%;--y:18%;--s:38vmax;--c:#ff5fa2;--d:19s"></i><canvas id="ic-fluff"></canvas><canvas id="ic-waves"></canvas></div>
       <div class="ic-b" id="ic-b"><img src="/logo.svg" alt="b" width="148" height="200" /></div>
-      <h1 class="ic-h1">Bitcoin is<br /><em>coming</em>.</h1>
-      <p class="ic-tease" id="ic-tease" aria-live="polite">Are you ready?</p>
+      <h1 class="ic-h1">b is <em>coming</em>.</h1>
+      <p class="ic-tease" id="ic-tease" aria-live="polite"></p>
+      <p class="ic-say" id="ic-say" aria-live="polite"></p>
       <p class="ic-hint" aria-hidden="true">Keep going ↓</p>
     </section>
 
     <section class="ic-scene ic-load" id="ic-load">
-      <h2>Getting there…</h2>
-      <div class="ic-bar" id="ic-bar" role="progressbar" aria-label="Bitcoin arriving" aria-valuemin="0" aria-valuemax="100" aria-valuenow="100"><i></i></div>
-      <p class="ic-pct" id="ic-pct">100%</p>
-      <p class="ic-msg" id="ic-msg" aria-live="polite">Arrived. It’s worth the wait.</p>
+            <div class="ic-bar" id="ic-bar" role="progressbar" aria-label="b arriving" aria-valuemin="0" aria-valuemax="100" aria-valuenow="99.9"><i></i></div>
+      <p class="ic-pct" id="ic-pct">99.9%</p>
+      <p class="ic-msg" id="ic-msg" aria-live="polite"></p>
     </section>
 
     <section class="ic-scene ic-count" id="ic-count">
-      <h2>Brace yourself.</h2>
-      <div class="ic-num" id="ic-num" aria-live="polite"><img src="/logo.svg" alt="b" class="ic-numb" /></div>
-      <button type="button" class="ic-again" id="ic-again">Again?</button>
+            <div class="ic-num" id="ic-num" aria-live="polite"><img src="/logo.svg" alt="b" class="ic-numb" /></div>
     </section>
 
     <section class="ic-calm">
-      <p class="ic-lead">Some things are <em>worth the wait</em>.</p>
-      <p><strong>Don’t fake it. Self-custody.</strong> Your keys stay on your device. Nobody else holds them, nobody else can spend for you.</p>
+            <p><strong>Don’t fake it. Self-custody.</strong> Your keys stay on your device. Nobody else holds them, nobody else can spend for you.</p>
       <p><strong>Take it slow.</strong> Pay by the second for what you watch, read or hear, and stop whenever you like.</p>
       <p><strong>Lock it away.</strong> Set some aside and let time hold it for you, untouchable until the day you chose.</p>
       <p><strong>Spread the love.</strong> Tip the people who make the things you enjoy. Every penny goes to them.</p>
       <p><strong>Ready when you are.</strong> On the web, as a Chrome extension, on Android, and on iPhone through TestFlight.</p>
-      <p class="ic-lead">It came. <em style="display:block;white-space:nowrap">Just b.</em></p>
-    </section>
+          </section>
 
-    <section class="ic-scene ic-end" id="ic-end">
-      <h2>Ready?</h2>
-      <p>Free on Android, iPhone, Chrome and the web.</p>
-      <a class="jb-go" href="/get?from=b-is-coming">Get bWalletX</a>
-    </section>
+    <div class="ic-cta"><a class="jb-go" href="/get?from=b-is-coming">Get bWalletX</a></div>
     <div class="ic-sats" id="ic-sats" aria-hidden="true"></div>
     <p class="jb-foot jb-series"><a href="/just-b">just b</a> <span>·</span> <a href="/b-cool">b cool</a> <span>·</span> <a href="/b-creative">b creative</a> <span>·</span> <a href="/b-is-for-business">b is for business</a> <span>·</span> <a href="/b-is-coming" aria-current="page">b is coming</a></p>
     <p class="jb-foot">bWalletX is in beta: test with small amounts. Music and voices are generated live in your browser. <a href="mailto:support@bwalletx.com">support@bwalletx.com</a></p>
     <script>
       (function () {
+        // The words of the build (owner's "try", 26 Oct): swap them here. Each fades in and out on a loudness step,
+        // then "b is coming" arrives and holds at the peak. Each line stays a little longer than the one before.
+        var BUILD_WORDS = ['b playful', 'b naughty', 'b daring', 'b provocative'];
         var reduce = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
         var $ = function (id) { return document.getElementById(id); };
         // Sound effects: all synthesised with Web Audio, off by default, choice remembered.
@@ -223,7 +303,7 @@
         var mus = (function () {
           var BPM = 84, SPB = 60 / BPM, S16 = SPB / 4, ctx, bus, playing = false, step = 0, nextT = 0, timer, level = 1, stalled = false, chorusUntil = -1, nbuf, squeak = 0;
           function mf(m) { return 440 * Math.pow(2, (m - 69) / 12); }
-          function boot() { ctx = sfx.ctx(); if (!ctx || !sfx.out()) return false; if (!bus) { bus = ctx.createGain(); bus.gain.value = 0.6; bus.connect(sfx.out()); } return true; }
+          function boot() { ctx = sfx.ctx(); if (!ctx || !sfx.out()) return false; if (!bus) { bus = ctx.createGain(); bus.gain.setValueAtTime(0.08, ctx.currentTime); bus.gain.linearRampToValueAtTime(0.6, ctx.currentTime + 16); bus.connect(sfx.out()); } return true; }
           function env(node, t, a, d, v) { var g = ctx.createGain(); g.gain.setValueAtTime(0.0001, t); g.gain.exponentialRampToValueAtTime(v, t + a); g.gain.exponentialRampToValueAtTime(0.0001, t + a + d); node.connect(g); g.connect(bus); }
           function osc(type, f, t, dur, v, fl) {
             var o = ctx.createOscillator(), n = o; o.type = type; o.frequency.setValueAtTime(f, t);
@@ -278,6 +358,8 @@
               osc('sawtooth', r * 1.5, t + SPB * 0.75, S16 * 0.8, 0.13, { type: 'bandpass', f: 400, f2: 2200, q: 10 });
               osc('sawtooth', r * 1.5, t + SPB, S16 * 0.8, 0.13, { type: 'bandpass', f: 400, f2: 2200, q: 10 });
               [1.5, 2].forEach(function (b) { osc('sawtooth', r * 1.26, t + SPB * b, SPB * 0.45, 0.15, { type: 'bandpass', f: 350, f2: 2400, q: 10 }); }); },
+            // 26 Oct: a crescendo, so the music really does get louder as the b grows (quiet start, full at the peak).
+            swell: function (ms) { if (!bus) return; var t = ctx.currentTime + this.nextBeatMs() / 1000; bus.gain.cancelScheduledValues(ctx.currentTime); bus.gain.setValueAtTime(0.08, t); bus.gain.linearRampToValueAtTime(0.6, t + ms / 1000); },
             chorus: function (bars) { if (ctx) chorusUntil = ctx.currentTime + bars * 4 * SPB; stalled = false; },
             // Milliseconds until the next beat on the audio clock (0 when the music is off).
             nextBeatMs: function () { if (!playing) return 0; var t0 = nextT - step * S16, nb = Math.ceil((ctx.currentTime - t0) / SPB) * SPB; return Math.max(0, (t0 + nb - ctx.currentTime) * 1000); },
@@ -293,7 +375,7 @@
         var vox = (function () {
           var him = /[?&]v=him(&|$)/.test(location.search), P = him ? 0.5 : 1, FK = him ? 0.85 : 1, bus, nb;
           var V = { oo: [320, 800, 2300], oh: [520, 900, 2500], ah: [850, 1250, 2800], eh: [620, 1800, 2600] };
-          function ok() { var c = sfx.ctx(); if (!sfx.isOn() || !c || c.state !== 'running') return null; if (!bus) { bus = c.createGain(); bus.gain.value = 0.8; bus.connect(sfx.out()); } return c; }
+          function ok() { var c = sfx.ctx(); if (!sfx.isOn() || !c || c.state !== 'running') return null; if (!bus) { bus = c.createGain(); bus.gain.value = 1.1; bus.connect(sfx.out()); } return c; }
           function breath(c, t, dur, v, f) {
             if (!nb) { nb = c.createBuffer(1, c.sampleRate, c.sampleRate); var d = nb.getChannelData(0); for (var i = 0; i < d.length; i++) d[i] = Math.random() * 2 - 1; }
             var src = c.createBufferSource(), bq = c.createBiquadFilter(), g = c.createGain(); src.buffer = nb; bq.type = 'bandpass'; bq.frequency.value = (f || 1400) * FK; bq.Q.value = 0.8;
@@ -322,6 +404,7 @@
             'yes': function (c, t) { syl(c, t, 0.6, 400, 330, 'eh', 'ah', 0.45, true); },
             'come-on': function (c, t) { syl(c, t, 0.45, 320, 260, 'oh', 'oh', 0.35); syl(c, t + 0.55, 0.25, 280, 300, 'ah', 'ah', 0.3); syl(c, t + 0.85, 0.7, 340, 170, 'oh', 'oo', 0.4, true); },
             'climax': function (c, t) { syl(c, t, 0.28, 340, 360, 'ah', 'ah', 0.45); syl(c, t + 0.38, 0.28, 380, 400, 'ah', 'ah', 0.5); syl(c, t + 0.78, 1.5, 430, 360, 'ah', 'oh', 0.55, true); },
+            'climax-long': function (c, t) { var k = 0, i; for (i = 0; i < 7; i++) { syl(c, t + k, 0.26, 300 + i * 22, 320 + i * 24, 'ah', 'ah', 0.4 + i * 0.04); breath(c, t + k + 0.27, 0.12, 0.3, 1400); k += 0.42 - i * 0.03; } syl(c, t + k, 2.6, 470, 455, 'ah', 'ah', 0.75, true); syl(c, t + k + 0.05, 2.5, 940, 900, 'ah', 'ah', 0.12); k += 2.7; syl(c, t + k, 1.1, 420, 230, 'ah', 'oh', 0.55, true); syl(c, t + k + 1.2, 1.8, 240, 110, 'oh', 'oo', 0.4); breath(c, t + k + 1.2, 2, 0.35, 900); },
             'pant': function (c, t) { for (var i = 0; i < 4; i++) { breath(c, t + i * 0.24, 0.16, 0.35, i % 2 ? 900 : 1500); syl(c, t + i * 0.24, 0.12, 240, 220, 'ah', 'ah', 0.08); } },
             'sigh': function (c, t) { breath(c, t, 1.4, 0.3, 1000); syl(c, t + 0.1, 1.3, 240, 165, 'ah', 'oh', 0.2); }
           };
@@ -340,22 +423,78 @@
         $('ic-quiet').addEventListener('click', function () { enter(false); });
         $('ic-gate-go').focus();
 
-        // Reduced motion: the markup already shows every payoff (arrived b, 100%, b). Nothing to animate.
-        if (reduce) return;
 
-        // 1. The hero b builds up, faster and brighter, teasing, then arrives. Loops gently.
-        var b = $('ic-b'), tease = $('ic-tease');
-        var lines = [['build', 'Are you ready?'], ['build2', 'Almost there…'], ['build3', 'Almost…'], ['came', 'Bitcoin has come. Worth the wait?']];
-        function hero() {
-          var t = 0, at = timeline();
-          lines.forEach(function (l, i) {
-            at(function () { b.className = 'ic-b ' + l[0]; tease.textContent = l[1]; mus.level(Math.min(i + 1, 3)); mus.squeak(i >= 1 && i < 3 ? 1 : 0); if (i < 3) mus.lick(); vox.play(['ooh', 'oh', 'oh-yes', 'yes'][i]); if (i === 3) { sfx.pop(true); setTimeout(sfx.shimmer, 250); } }, t);
-            if (i < 3) for (var k = 0, per = [1600, 900, 450][i], span = i === 2 ? 2200 : 3200; k * per < span; k++) (function (d) { at(function () { sfx.beat(i); }, d); })(t + k * per);
-            t += i === 2 ? 2200 : 3200;
+        // 26 Oct (owner): the b starts small and grows with the loudness of the music (AnalyserNode RMS, smoothed),
+        // the hero warms from near-black to deep pink and red, and hearts and kisses float up as it builds.
+        // No analysis yet (before the first tap, sound off) = a slow grow matched to the hero's timeline.
+        // Reduced motion: one gentle grow and colour fade, no particles.
+        var heroEl = $('ic-hero'), bEl = $('ic-b'), cv = $('ic-waves'), cx = cv.getContext && cv.getContext('2d');
+        var HERO_MS = [5714, 5714, 4286], HOLD = 8571, BUILD = 15714, LOOP = BUILD + HOLD; // 84 BPM bars: 2 + 2 + 1.5 of build, 3 held
+        heroEl.classList.add('hush'); var lastHero = -1e9, bo = 0;
+        var LO = 0.04, HI = 0.115, an = null, abuf = null, rmsS = 0, heat = 0, bs = 0.12, heroT0 = performance.now(), heroOn = true, lastF = performance.now(), hearts = 0, spawnAcc = 0;
+        function analyser() { if (an) return an; var c = sfx.ctx(), o = sfx.out(); if (!c || !o) return null; an = c.createAnalyser(); an.fftSize = 2048; abuf = new Float32Array(an.fftSize); o.connect(an); return an; }
+        function audioLoud() {
+          var c = sfx.ctx(); if (!sfx.isOn() || !mus.on() || !c || c.state !== 'running' || !analyser()) return null;
+          an.getFloatTimeDomainData(abuf); for (var i = 0, sum = 0; i < abuf.length; i++) sum += abuf[i] * abuf[i];
+          var rms = Math.sqrt(sum / abuf.length); rmsS += (rms - rmsS) * (rms > rmsS ? 0.03 : 0.008); window.__icRms = rmsS;
+          return Math.min(1, Math.max(0, (rmsS - LO) / (HI - LO)));
+        }
+        function timeLoud() { var e = performance.now() - heroT0; if (reduce) return Math.min(1, e / (BUILD * 1.6)); e %= LOOP; return e < BUILD ? Math.pow(e / BUILD, 1.3) : 1; }
+        function mix(a, b, k) { return a.map(function (v, i) { return Math.round(v + (b[i] - v) * k); }); }
+        function rgb(c) { return 'rgb(' + c.join(',') + ')'; }
+        var HEARTS = ['/img/twemoji/2764.svg', '/img/twemoji/1f48b.svg'], fx = $('ic-fx');
+        function heart() {
+          var w = heroEl.clientWidth, h = heroEl.clientHeight, im = document.createElement('img'), sz = 22 + Math.random() * 26, x = 8 + Math.random() * (w - sz - 16);
+          im.src = HEARTS[Math.random() < 0.55 ? 0 : 1]; im.alt = ''; im.className = 'ic-heart'; im.style.width = im.style.height = sz + 'px'; fx.appendChild(im); hearts++;
+          var sway = (Math.random() - 0.5) * 60, f = [];
+          for (var k = 0; k <= 6; k++) f.push({ transform: 'translate(' + (x + Math.sin(k * 1.1) * sway) + 'px,' + (-k / 6 * (h + 80)) + 'px) rotate(' + (Math.sin(k) * 12) + 'deg)', opacity: k === 0 ? 0 : k === 6 ? 0 : 0.9 });
+          var a = im.animate(f, { duration: 6000 + Math.random() * 3000, easing: 'linear' });
+          a.onfinish = function () { im.remove(); hearts--; };
+        }
+        function frame(now) {
+          var dt = Math.min(64, now - lastF); lastF = now; requestAnimationFrame(frame);
+          if (!heroOn || document.hidden) return;
+          var a = reduce ? null : audioLoud(), L = a === null ? timeLoud() : a, k = 1 - Math.pow(1 - 0.03, dt / 16.7), kh = 1 - Math.pow(1 - 0.02, dt / 16.7);
+          bs += (0.35 + 0.65 * L - bs) * k; heat += (L - heat) * kh;
+          var since = now - heroT0; bo += (Math.min(1, Math.max(0, since / 4000)) - bo) * k;
+          bEl.style.setProperty('--bo', bo.toFixed(3)); bEl.style.setProperty('--bs', bs.toFixed(4)); heroEl.style.setProperty('--heat', heat.toFixed(3));
+          heroEl.style.background = 'radial-gradient(ellipse at 50% 45%, ' + rgb(mix([255, 246, 250], [255, 214, 232], heat)) + ', ' + rgb(mix([253, 232, 241], [250, 190, 216], heat)) + ' 55%, ' + rgb(mix([246, 214, 228], [238, 160, 196], heat)) + ')';
+          if (reduce || !cx) return;
+          var w = heroEl.clientWidth, h = heroEl.clientHeight, r = Math.min(1.5, devicePixelRatio || 1);
+          if (cv.width !== Math.round(w * r) || cv.height !== Math.round(h * r)) { cv.width = Math.round(w * r); cv.height = Math.round(h * r); }
+          cx.setTransform(r, 0, 0, r, 0, 0); cx.clearRect(0, 0, w, h);
+          [['255,255,255', 0.62, 0.9, 0], ['255,170,205', 0.72, 1.3, 2], ['255,225,238', 0.8, 0.7, 4]].forEach(function (rb) {
+            cx.beginPath(); for (var x = 0; x <= w; x += 8) { var y = h * rb[1] + Math.sin(x / w * Math.PI * 2 * rb[2] + now / 1400 + rb[3]) * (14 + 50 * heat); x ? cx.lineTo(x, y) : cx.moveTo(x, y); }
+            cx.strokeStyle = 'rgba(' + rb[0] + ',' + (0.18 + 0.3 * heat) + ')'; cx.lineWidth = 10 + 18 * heat; cx.lineCap = 'round'; cx.stroke();
           });
-          at(hero, t + 6000);
+          spawnAcc += dt / 1000 * (0.2 + 4 * heat * heat); while (spawnAcc >= 1) { spawnAcc--; if (hearts < 36) heart(); }
+        }
+        if ('IntersectionObserver' in window) new IntersectionObserver(function (es) { heroOn = es[0].isIntersecting; }, { threshold: 0 }).observe(heroEl);
+        requestAnimationFrame(frame);
+
+        // Reduced motion: the markup already shows every payoff (arrived b, 100%, b). Nothing to animate.
+        if (reduce) { setTimeout(function () { heroEl.classList.remove('hush'); }, 6000); return; }
+
+        // 1. The hero b builds up, faster and brighter, flares almost there, then pulls back and loops. It never arrives (owner, 26 Oct).
+        var b = $('ic-b'), tease = $('ic-tease');
+        var lines = [['build', ''], ['build2', ''], ['build3', ''], ['near', '']];
+        var pass = 0, NEAR = [''];
+        function hero() {
+          pass++; bEl.style.setProperty('--near', Math.min(1.1 + pass * 0.05, 1.45)); bEl.style.setProperty('--glo', Math.min(90 + pass * 30, 260) + 'px'); lines[3][1] = NEAR[(pass - 1) % NEAR.length];
+          var t = 0, at = timeline(); heroT0 = performance.now() + mus.nextBeatMs(); mus.swell(BUILD); if (performance.now() - lastHero > LOOP) { bs = 0.12; bo = 0; } lastHero = performance.now(); heroEl.classList.add('hush');
+          // One word per loudness step (the music steps up at each stage), each fading in and out; then the title.
+          var say = $('ic-say'), wT = 2200;
+          BUILD_WORDS.forEach(function (w, i) { var d = 2000 + i * 400; (function (t0) { at(function () { spell(say, w); say.classList.add('on'); }, t0); at(function () { say.classList.remove('on'); }, t0 + d); })(wT); wT += d + 500; });
+          at(function () { heroEl.classList.remove('hush'); }, BUILD - 600);
+          lines.forEach(function (l, i) {
+            at(function () { b.className = 'ic-b ' + l[0]; tease.textContent = l[1]; mus.level(Math.min(i + 1, 3)); mus.squeak(i >= 1 && i < 3 ? 1 : 0); if (i < 3) mus.lick(); vox.play(['ooh', 'oh', 'oh-yes', 'climax-long'][i]); if (i === 3) sfx.swell(300, 900, 2, true); }, t);
+            if (i < 3) for (var k = 0, per = [1600, 900, 450][i], span = HERO_MS[i]; k * per < span; k++) (function (d) { at(function () { sfx.beat(i); }, d); })(t + k * per);
+            if (i < 3) t += HERO_MS[i];
+          });
+          at(hero, t + HOLD);
         }
         startHero = hero;
+        function spell(el, w) { el.setAttribute('aria-label', w); el.innerHTML = ''; w.split('').forEach(function (ch, j) { var s = document.createElement('span'); s.className = 'ic-lt'; s.setAttribute('aria-hidden', 'true'); s.textContent = ch; s.style.animationDelay = (j * 55) + 'ms'; el.appendChild(s); }); }
 
         // Run a scene once when it scrolls into view.
         function onView(el, fn) {
@@ -365,25 +504,27 @@
         }
 
         // 2. The loading bar that keeps stopping just short.
-        var bar = $('ic-bar'), fill = bar.querySelector('i'), pct = $('ic-pct'), msg = $('ic-msg');
-        var steps = [[0, 'Warming up…'], [42, 'Getting there…'], [87, 'Nearly…'], [97, 'Don’t stop now…'], [99, 'Almost…'], [99.9, 'Almost…'], [99.99, 'Hold on…'], [100, 'Arrived. It’s worth the wait.']];
-        function setP(p, m) { fill.style.width = p + '%'; pct.textContent = (p % 1 ? p.toFixed(p < 99.95 ? 1 : 2) : p) + '%'; msg.textContent = m; bar.setAttribute('aria-valuenow', String(p)); bar.classList.toggle('done', p === 100); }
-        setP(0, 'Warming up…');
-        onView($('ic-load'), function () {
+        var loadPass = 0, bar = $('ic-bar'), fill = bar.querySelector('i'), pct = $('ic-pct'), msg = $('ic-msg');
+        var steps = [[0, ''], [42, ''], [87, ''], [97, ''], [99, ''], [99.9, ''], [99.99, ''], [0, '']];
+        function setP(p, m) { fill.style.width = p + '%'; pct.textContent = String(p) + '%'; msg.textContent = m; bar.setAttribute('aria-valuenow', String(p)); bar.classList.toggle('done', p === 100); }
+        setP(0, '');
+        onView($('ic-load'), function loadRun() {
+          loadPass = (loadPass || 0) + 1; steps[6][0] = +(100 - Math.pow(10, -1 - loadPass)).toFixed(loadPass + 1); 
           var t = 300, at = timeline(); mus.level(2);
           steps.forEach(function (s, i) { at(function () { setP(s[0], s[1]); if (s[0] >= 97 && s[0] < 100) { mus.stall(true); mus.lick(); vox.play('come-on', 0.9); } else mus.level(s[0] === 100 ? 3 : 2); if (s[0] === 100) { burst(40); setTimeout(function () { sfx.ahh(); sfx.coins(16); }, 200); } else if (s[0] >= 97) sfx.swell(300, 300 + s[0] * 6, 1.2, true); else if (s[0]) sfx.swell(200, 200 + s[0] * 4, 0.9); }, t); t += i < 3 ? 1100 : 1600; });
+          at(loadRun, t + 2400); // back to the start: it never quite gets there
         });
 
         // 3. The countdown that edges: 3, 2, 1, ½, ¼… then the burst.
-        var num = $('ic-num'), again = $('ic-again');
-        var seq = ['3', '2', '1', '½', '¼', '⅛', 'b'];
+        var num = $('ic-num');
+        var seq = ['3', '2', '1', '½', '¼', '⅛', '…'];
         function count() {
-          again.classList.remove('on');
-          var t = 200, at = timeline(); mus.level(3); mus.squeak(1);
+                    var t = 200, at = timeline(); mus.level(3); mus.squeak(1);
           seq.forEach(function (s, i) {
             at(function () {
+              if (s === '…') { num.innerHTML = '<img src="/logo.svg" alt="b" class="ic-numb" style="opacity:.35;transform:scale(.7);transition:opacity 1.2s,transform 1.2s" />'; vox.play('climax-long'); mus.squeak(0); mus.stall('hush'); at(count, t + 8200); return; }
               if (s === 'b') num.innerHTML = '<img src="/logo.svg" alt="b" class="ic-numb" />'; else num.textContent = s; num.classList.remove('pop');
-              if (s === 'b') { void num.offsetWidth; num.classList.add('pop'); burst(90); again.classList.add('on'); mus.squeak(0); mus.chorus(8); vox.play('climax', 0.12); setTimeout(function () { vox.play('sigh'); }, 4200); sfx.pop(true); setTimeout(sfx.fanfare, 380); setTimeout(function () { sfx.coins(50); }, 700); }
+              if (s === 'b') { void num.offsetWidth; num.classList.add('pop'); burst(90); mus.squeak(0); mus.chorus(8); vox.play('climax', 0.12); setTimeout(function () { vox.play('sigh'); }, 4200); sfx.pop(true); setTimeout(sfx.fanfare, 380); setTimeout(function () { sfx.coins(50); }, 700); }
               else { sfx.tick(i); mus.squeak(i < 2 ? 1 : i < 4 ? 2 : 3); if (i >= 3) vox.play('pant'); if (i === 5) { setTimeout(sfx.gulp, 450); setTimeout(function () { mus.stall('hush'); }, 700); } }
             }, t);
             t += i < 3 ? 650 : (i === 5 ? 2000 : 450); // speeds up, then holds its breath before b
@@ -391,8 +532,7 @@
         }
         num.textContent = '3';
         onView($('ic-count'), count);
-        again.addEventListener('click', function () { sfx.ooh(); count(); });
-        onView($('ic-end'), function () { vox.play('sigh'); });
+        
 
         // A shower of gold sats from the middle of the screen. Fixed layer, transforms only.
         var layer = $('ic-sats');
@@ -411,6 +551,48 @@
             an.onfinish = function () { this.effect.target.remove(); };
           }
         }
+      })();
+    </script>
+    <script>
+      // The soft fluff behind the b (the play button is plain CSS: smooth, no fur). Half resolution, DPR <= 1.5, paused when hidden; reduced motion = one still frame.
+      (function () {
+        var still = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
+        // Soft pass (owner, 26 Oct): the pool read as skin. Instead, procedural cotton-candy puffs and marabou wisps drift
+        // slowly behind the b. Sprites are pre-rendered once; the canvas runs at half resolution with DPR <= 1.5 and a CSS blur.
+        var el = document.getElementById('ic-fluff'); if (!el || !el.getContext) return;
+        var g = el.getContext('2d');
+        function puff(sz, tint) {
+          var o = document.createElement('canvas'); o.width = o.height = sz; var q = o.getContext('2d'), m = sz / 2;
+          for (var i = 0; i < 26; i++) {
+            var a = Math.random() * 6.283, d = Math.random() * m * 0.42, x = m + Math.cos(a) * d, y = m + Math.sin(a) * d * 0.7, rr = m * (0.22 + Math.random() * 0.3);
+            var gr = q.createRadialGradient(x, y - rr * 0.2, 0, x, y, rr); gr.addColorStop(0, 'rgba(255,255,255,0.55)'); gr.addColorStop(0.5, 'rgba(' + tint + ',0.32)'); gr.addColorStop(1, 'rgba(' + tint + ',0)');
+            q.fillStyle = gr; q.beginPath(); q.arc(x, y, rr, 0, 6.283); q.fill();
+          }
+          for (var j = 0; j < 220; j++) { // marabou wisps: fine, curling strands off the edge
+            var b = Math.random() * 6.283, r0 = m * (0.3 + Math.random() * 0.2), L = m * (0.12 + Math.random() * 0.4), c = (Math.random() - 0.5) * 0.9;
+            q.strokeStyle = 'rgba(255,' + (215 + Math.round(Math.random() * 35)) + ',' + (230 + Math.round(Math.random() * 25)) + ',' + (0.12 + Math.random() * 0.25) + ')'; q.lineWidth = 0.6 + Math.random();
+            q.beginPath(); q.moveTo(m + Math.cos(b) * r0, m + Math.sin(b) * r0 * 0.8);
+            q.quadraticCurveTo(m + Math.cos(b + c * 0.3) * (r0 + L * 0.6), m + Math.sin(b + c * 0.3) * (r0 + L * 0.6) * 0.8, m + Math.cos(b + c) * (r0 + L), m + Math.sin(b + c) * (r0 + L) * 0.8); q.stroke();
+          }
+          return o;
+        }
+        var TINTS = ['255,190,215', '255,206,226', '248,180,214', '255,222,236'], SPR = TINTS.map(function (t) { return puff(256, t); }), P = [];
+        for (var i = 0; i < 16; i++) P.push({ x: Math.random(), y: Math.random(), s: 0.28 + Math.random() * 0.5, v: 0.004 + Math.random() * 0.008, ph: Math.random() * 6.283, k: i % SPR.length, o: 0.55 + Math.random() * 0.45 });
+        var on = true, t0 = performance.now();
+        function size() { var k = Math.min(devicePixelRatio || 1, 1.5) * 0.5; el.width = Math.max(1, Math.round(el.clientWidth * k)); el.height = Math.max(1, Math.round(el.clientHeight * k)); }
+        function draw(sec) {
+          var w = el.width, h = el.height, u = Math.max(w, h); g.clearRect(0, 0, w, h);
+          P.forEach(function (p) {
+            var x = ((p.x + sec * p.v) % 1.4 - 0.2) * w + Math.sin(sec * 0.15 + p.ph) * u * 0.02, y = p.y * h + Math.sin(sec * 0.11 + p.ph * 1.7) * u * 0.03, d = p.s * u;
+            g.globalAlpha = p.o; g.drawImage(SPR[p.k], x - d / 2, y - d / 2, d, d);
+          });
+          g.globalAlpha = 1;
+        }
+        size(); draw(8);
+        addEventListener('resize', function () { size(); draw(8 + (performance.now() - t0) / 1000); });
+        if (still) return;
+        if ('IntersectionObserver' in window) new IntersectionObserver(function (es) { on = es[0].isIntersecting; }).observe(el);
+        (function loop() { if (on && !document.hidden) draw(8 + (performance.now() - t0) / 1000); requestAnimationFrame(loop); })();
       })();
     </script>
   </body>

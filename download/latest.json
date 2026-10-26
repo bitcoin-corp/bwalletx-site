@@ -1,8 +1,8 @@
 {
-  "version": "5.2.42",
-  "versionCode": 131,
-  "apk": "https://bwalletx.com/download/bwalletx-android-5.2.42.apk",
-  "sha256": "61a893440e175a6e1dc2942c0bb1f6230684357e100b68073a32a5819d793534",
-  "size": 39239270,
-  "notes_url": "https://bwalletx.com/releases#v5.2.42"
+  "version": "5.2.44",
+  "versionCode": 132,
+  "apk": "https://bwalletx.com/download/bwalletx-android-5.2.44.apk",
+  "sha256": "df496d3f54a1cd10faade1478cece03be659e91dc0e5dd4185289635e38280d3",
+  "size": 39683423,
+  "notes_url": "https://bwalletx.com/releases#v5.2.44"
 }
