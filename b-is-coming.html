@@ -20,7 +20,7 @@
     <meta name="twitter:title" content="b is coming" />
     <meta name="twitter:description" content="b is coming." />
     <meta name="twitter:image" content="https://bwalletx.com/og-b-is-coming-v4.png" />
-    <meta name="theme-color" content="#05080f" />
+    <meta name="theme-color" content="#fde4ee" />
     <link rel="icon" href="/favicon.ico" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -145,23 +145,54 @@
       .ic-hero .ic-h1, .ic-hero .ic-tease, .ic-hero .ic-hint { transition: opacity 2.4s ease, transform 2.4s ease; }
       .ic-hero.hush .ic-h1, .ic-hero.hush .ic-tease, .ic-hero.hush .ic-hint { opacity: 0; transform: translateY(10px); }
       @media (prefers-reduced-motion: reduce) { .ic-blob { animation: none; } }
-      /* Gloss pass (owner, 26 Oct): sheen, an obsidian pool under the b, fur on the play button, grain and bloom.
-         The pool is the bChatX/bWalletX ObsidianHero shader, drawn at half resolution with DPR capped at 1.5. */
-      #ic-pool { position: absolute; left: 0; right: 0; bottom: 0; width: 100%; height: 34%; }
+      /* Gloss pass (owner, 26 Oct): sheen on the b, grain. The obsidian pool was removed in the soft pass below. */
       .ic-b::before { content: ''; position: absolute; inset: 0; z-index: 2; pointer-events: none; -webkit-mask: url(/logo.svg) center / contain no-repeat; mask: url(/logo.svg) center / contain no-repeat; background: linear-gradient(115deg, rgba(255, 255, 255, 0) 36%, rgba(255, 255, 255, 0.85) 48%, rgba(255, 246, 214, 0.25) 52%, rgba(255, 255, 255, 0) 62%) 0 0 / 300% 100% no-repeat; mix-blend-mode: screen; animation: sheen 5.5s cubic-bezier(0.5, 0, 0.3, 1) infinite; }
-      .ic-b img { -webkit-box-reflect: below 2px linear-gradient(transparent 62%, rgba(0, 0, 0, 0.22)); }
       @keyframes sheen { 0% { background-position: 120% 0; } 55%, 100% { background-position: -40% 0; } }
       .ic-h1, .ic-load h2, .ic-count h2, .ic-calm .ic-lead { background: linear-gradient(105deg, #fff 0%, #fff 40%, #fff6dc 49%, #fff 54%, #fff 100%) 0 0 / 260% 100%; -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; filter: drop-shadow(0 0 22px rgba(255, 214, 120, 0.28)) drop-shadow(0 2px 1px rgba(0, 0, 0, 0.5)); animation: tsheen 7s ease-in-out infinite; }
       .ic-h1 em, .ic-calm .ic-lead em { background: linear-gradient(105deg, #f5b800 0%, #ffd24d 38%, #fffbe6 48%, #ffd24d 56%, #c98f00 100%) 0 0 / 260% 100%; -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; animation: tsheen 7s ease-in-out infinite; }
       /* Clip-to-text paints only inside the box: pad it so descenders (the g) never clip. */
       .ic-h1, .ic-load h2, .ic-count h2, .ic-calm .ic-lead { padding: 0.06em 0.06em 0.18em; margin-bottom: -0.18em; }
       @keyframes tsheen { 0% { background-position: 100% 0; } 60%, 100% { background-position: 0% 0; } }
-      .ic-fur { position: absolute; left: -26px; top: -26px; width: calc(100% + 52px); height: calc(100% + 52px); pointer-events: none; z-index: -1; }
       .ic-gate { background: radial-gradient(circle at 50% 46%, rgba(120, 18, 60, 0.55), rgba(40, 6, 22, 0.6) 38%, rgba(5, 8, 15, 0.9) 72%); }
       .ic-gate::before { content: ''; position: absolute; inset: 0; pointer-events: none; opacity: 0.5; background: repeating-radial-gradient(circle at 50% 46%, rgba(255, 150, 200, 0.05) 0 1px, transparent 1px 3px); filter: blur(0.6px); }
       .ic-grain { position: fixed; inset: -50%; z-index: 45; pointer-events: none; opacity: 0.07; mix-blend-mode: overlay; background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E"); animation: grain 0.9s steps(4) infinite; }
       @keyframes grain { 0% { transform: translate(0, 0); } 25% { transform: translate(-4%, 3%); } 50% { transform: translate(3%, -5%); } 75% { transform: translate(-2%, -2%); } 100% { transform: translate(0, 0); } }
       @media (prefers-reduced-motion: reduce) { .ic-b::before, .ic-h1, .ic-h1 em, .ic-load h2, .ic-count h2, .ic-calm .ic-lead, .ic-calm .ic-lead em, .ic-grain { animation: none; } }
+      /* Soft pass (owner, 26 Oct): the glossy pool looked like skin. Pastel pink, cotton-candy and marabou fluff, velvet, a light dreamy bloom. Nothing wet. */
+      body { background: radial-gradient(120% 80% at 50% 0%, #fff6fa, #fde4ee 55%, #f8d3e3) fixed, #fde4ee; color: #4a1832; }
+      .ic-hero { background: #fde8f1; }
+      #ic-fluff { position: absolute; inset: 0; width: 100%; height: 100%; filter: blur(2px); opacity: calc(0.75 + var(--heat) * 0.25); }
+      .ic-blob { opacity: calc(0.12 + var(--heat) * 0.22); filter: blur(40px) saturate(0.55) brightness(1.25); }
+      .ic-hero::after { content: ''; position: absolute; inset: 0; z-index: 0; pointer-events: none; background: radial-gradient(circle at 50% 42%, rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0) 38%), radial-gradient(ellipse at 50% 50%, rgba(255, 255, 255, 0) 55%, rgba(214, 120, 160, 0.16)); }
+      .ic-scene:not(.ic-hero)::before, .ic-calm::before { content: ''; position: absolute; inset: 0; z-index: -1; pointer-events: none; opacity: 0.35; background: repeating-linear-gradient(115deg, rgba(255, 255, 255, 0.25) 0 1px, transparent 1px 3px); filter: blur(0.5px); }
+      .ic-calm { position: relative; isolation: isolate; }
+      .ic-b { filter: hue-rotate(calc(var(--heat) * -20deg)) brightness(calc(0.8 + var(--bo, 1) * 0.2)); }
+      .ic-b img { filter: drop-shadow(0 0 26px rgba(255, 210, 120, 0.55)) drop-shadow(0 6px 18px rgba(170, 90, 120, 0.25)); }
+      .ic-h1, .ic-load h2, .ic-count h2, .ic-calm .ic-lead { background-image: linear-gradient(105deg, #4a1832 0%, #4a1832 40%, #9a3a6c 49%, #4a1832 56%, #4a1832 100%); filter: drop-shadow(0 1px 0 rgba(255, 255, 255, 0.7)); }
+      .ic-h1 em, .ic-calm .ic-lead em { background-image: linear-gradient(105deg, #8a5a00 0%, #a06a00 38%, #c98f00 48%, #a06a00 56%, #7a4f00 100%); }
+      .ic-tease, .ic-msg { color: #7a2a52; }
+      .ic-say { color: #5a1a3c; text-shadow: 0 0 24px rgba(255, 255, 255, 0.9), 0 2px 12px rgba(255, 180, 210, 0.6); }
+      .ic-hint { color: #8a4a68; }
+      .ic-bar { background: #f6cadb; box-shadow: inset 0 1px 3px rgba(150, 60, 100, 0.18); }
+      .ic-pct { color: #8a5a00; }
+      .ic-num { color: #4a1832; text-shadow: 0 0 40px rgba(255, 255, 255, 0.9); }
+      .ic-again { border-color: rgba(74, 24, 50, 0.4); color: #4a1832; }
+      .ic-calm { color: #5c2f47; }
+      .ic-calm strong { color: #3e1229; }
+      .ic-calm em { color: #8a5a00; }
+      .ic-end { background: radial-gradient(ellipse at 50% 60%, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0) 60%); }
+      .ic-end h2 { color: #4a1832; } .ic-end p { color: #5c2f47; }
+      .jb-foot { color: #7a4562; } .jb-foot a { color: #6a2a4c; } .jb-series a { color: #5c2f47; } .jb-series span { color: #b27a95; }
+      .ic-cta { background: rgba(255, 244, 249, 0.75); border-color: rgba(230, 150, 185, 0.6); box-shadow: 0 18px 50px rgba(200, 100, 145, 0.25); }
+      .ic-snd { background: rgba(255, 244, 249, 0.7); border-color: rgba(200, 110, 150, 0.45); color: #4a1832; }
+      .ic-gate { background: radial-gradient(circle at 50% 46%, rgba(255, 255, 255, 0.85), rgba(253, 228, 238, 0.85) 40%, rgba(244, 196, 218, 0.92) 80%); }
+      .ic-gate::before { opacity: 0.6; background: repeating-linear-gradient(115deg, rgba(255, 255, 255, 0.35) 0 1px, transparent 1px 3px); }
+      .ic-gate-go { color: #4a1832; }
+      .ic-gate-go .spk { color: rgba(122, 22, 66, 0.6); background: radial-gradient(circle at 40% 34%, #fff7fa 0, #ffd9e8 30%, #f9b3cf 70%, #ee93b8 100%); box-shadow: 0 18px 60px rgba(247, 140, 185, 0.35), inset 0 -8px 20px rgba(200, 90, 140, 0.18), inset 0 4px 12px rgba(255, 255, 255, 0.6); animation-name: gpulse-soft; }
+      .ic-gate-go .spk::after { top: 12%; left: 24%; width: 36%; height: 24%; background: radial-gradient(ellipse, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0) 70%); }
+      @keyframes gpulse-soft { 0%, 100% { box-shadow: 0 18px 50px rgba(247, 140, 185, 0.3), inset 0 -8px 20px rgba(200, 90, 140, 0.18), inset 0 4px 12px rgba(255, 255, 255, 0.6); } 50% { box-shadow: 0 18px 80px rgba(247, 140, 185, 0.55), inset 0 -8px 20px rgba(200, 90, 140, 0.18), inset 0 4px 12px rgba(255, 255, 255, 0.6); } }
+      .ic-quiet { color: #6a2a4c; } .ic-quiet:hover, .ic-quiet:focus-visible { color: #3e1229; }
+      .ic-grain { opacity: 0.05; mix-blend-mode: soft-light; }
       /* Short landscape: reserve room for the fixed CTA pill so it never covers the tease line. */
       @media (max-height: 520px) { .ic-hero { padding-bottom: calc(84px + env(safe-area-inset-bottom)); } }
     </style>
@@ -169,12 +200,12 @@
   <body class="jb gated">
     <div class="ic-grain" aria-hidden="true"></div>
     <div class="ic-gate" id="ic-gate" role="dialog" aria-label="Enter b is coming">
-      <button type="button" class="ic-gate-go" id="ic-gate-go" aria-label="Play, with sound"><span class="spk"><canvas class="ic-fur" id="ic-fur" aria-hidden="true"></canvas><svg width="44" height="44" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13a1 1 0 0 0 1.5.86l10.2-6.5a1 1 0 0 0 0-1.72L9.5 4.64A1 1 0 0 0 8 5.5z" fill="currentColor"></path></svg></span><span>Turn it up 🔊</span></button>
+      <button type="button" class="ic-gate-go" id="ic-gate-go" aria-label="Play, with sound"><span class="spk"><svg width="44" height="44" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13a1 1 0 0 0 1.5.86l10.2-6.5a1 1 0 0 0 0-1.72L9.5 4.64A1 1 0 0 0 8 5.5z" fill="currentColor"></path></svg></span><span>Turn it up 🔊</span></button>
       <button type="button" class="ic-quiet" id="ic-quiet">or enter quietly</button>
     </div>
     <button type="button" class="ic-snd" id="ic-snd" aria-pressed="false" aria-label="Turn sound on"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M11 5 6 9H3v6h3l5 4z"></path><path d="M15.5 8.5a5 5 0 0 1 0 7"></path><path class="off-x" d="M21 4 4 21"></path></svg><span id="ic-snd-l">Sound</span></button>
     <section class="ic-scene ic-hero" id="ic-hero">
-      <div class="ic-fx" id="ic-fx" aria-hidden="true"><i class="ic-blob" style="--x:18%;--y:28%;--s:46vmax;--c:#ff2d7a;--d:23s"></i><i class="ic-blob" style="--x:82%;--y:70%;--s:52vmax;--c:#e0162b;--d:29s"></i><i class="ic-blob" style="--x:60%;--y:18%;--s:38vmax;--c:#ff5fa2;--d:19s"></i><canvas id="ic-pool"></canvas><canvas id="ic-waves"></canvas></div>
+      <div class="ic-fx" id="ic-fx" aria-hidden="true"><i class="ic-blob" style="--x:18%;--y:28%;--s:46vmax;--c:#ff2d7a;--d:23s"></i><i class="ic-blob" style="--x:82%;--y:70%;--s:52vmax;--c:#e0162b;--d:29s"></i><i class="ic-blob" style="--x:60%;--y:18%;--s:38vmax;--c:#ff5fa2;--d:19s"></i><canvas id="ic-fluff"></canvas><canvas id="ic-waves"></canvas></div>
       <div class="ic-b" id="ic-b"><img src="/logo.svg" alt="b" width="148" height="200" /></div>
       <h1 class="ic-h1">b is <em>coming</em>.</h1>
       <p class="ic-tease" id="ic-tease" aria-live="polite"></p>
@@ -427,14 +458,14 @@
           bs += (0.35 + 0.65 * L - bs) * k; heat += (L - heat) * kh;
           var since = now - heroT0; bo += (Math.min(1, Math.max(0, since / 4000)) - bo) * k;
           bEl.style.setProperty('--bo', bo.toFixed(3)); bEl.style.setProperty('--bs', bs.toFixed(4)); heroEl.style.setProperty('--heat', heat.toFixed(3));
-          heroEl.style.background = 'radial-gradient(ellipse at 50% 45%, ' + rgb(mix([12, 10, 16], [196, 22, 92], heat)) + ', ' + rgb(mix([5, 8, 15], [110, 8, 34], heat)) + ' 55%, ' + rgb(mix([3, 4, 8], [42, 4, 16], heat)) + ')';
+          heroEl.style.background = 'radial-gradient(ellipse at 50% 45%, ' + rgb(mix([255, 246, 250], [255, 214, 232], heat)) + ', ' + rgb(mix([253, 232, 241], [250, 190, 216], heat)) + ' 55%, ' + rgb(mix([246, 214, 228], [238, 160, 196], heat)) + ')';
           if (reduce || !cx) return;
           var w = heroEl.clientWidth, h = heroEl.clientHeight, r = Math.min(1.5, devicePixelRatio || 1);
           if (cv.width !== Math.round(w * r) || cv.height !== Math.round(h * r)) { cv.width = Math.round(w * r); cv.height = Math.round(h * r); }
           cx.setTransform(r, 0, 0, r, 0, 0); cx.clearRect(0, 0, w, h);
-          [['255,60,140', 0.62, 0.9, 0], ['230,25,50', 0.72, 1.3, 2], ['255,140,190', 0.8, 0.7, 4]].forEach(function (rb) {
+          [['255,255,255', 0.62, 0.9, 0], ['255,170,205', 0.72, 1.3, 2], ['255,225,238', 0.8, 0.7, 4]].forEach(function (rb) {
             cx.beginPath(); for (var x = 0; x <= w; x += 8) { var y = h * rb[1] + Math.sin(x / w * Math.PI * 2 * rb[2] + now / 1400 + rb[3]) * (14 + 50 * heat); x ? cx.lineTo(x, y) : cx.moveTo(x, y); }
-            cx.strokeStyle = 'rgba(' + rb[0] + ',' + (0.08 + 0.4 * heat) + ')'; cx.lineWidth = 6 + 14 * heat; cx.lineCap = 'round'; cx.stroke();
+            cx.strokeStyle = 'rgba(' + rb[0] + ',' + (0.18 + 0.3 * heat) + ')'; cx.lineWidth = 10 + 18 * heat; cx.lineCap = 'round'; cx.stroke();
           });
           spawnAcc += dt / 1000 * (0.2 + 4 * heat * heat); while (spawnAcc >= 1) { spawnAcc--; if (hearts < 36) heart(); }
         }
@@ -523,48 +554,40 @@
       })();
     </script>
     <script>
-      // Gloss pass: the obsidian pool (ObsidianHero shader, bit-sign/src/components/bchatx) as a floor under the b,
-      // plus fur strands on the pink play button. Half resolution, DPR <= 1.5, paused when hidden; reduced motion = one still frame.
+      // The soft fluff behind the b (the play button is plain CSS: smooth, no fur). Half resolution, DPR <= 1.5, paused when hidden; reduced motion = one still frame.
       (function () {
         var still = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
-        var fur = document.getElementById('ic-fur');
-        if (fur && fur.getContext) {
-          var r = Math.min(1.5, devicePixelRatio || 1), S = fur.offsetWidth || 184; fur.width = fur.height = Math.round(S * r);
-          var c = fur.getContext('2d'); c.scale(r, r); var R0 = S / 2 - 26, cx = S / 2;
-          for (var i = 0; i < 1400; i++) {
-            var a = Math.random() * Math.PI * 2, r1 = R0 - 6 + Math.random() * 8, len = 8 + Math.random() * 16, bend = (Math.random() - 0.5) * 0.5;
-            var x0 = cx + Math.cos(a) * r1, y0 = cx + Math.sin(a) * r1, x1 = cx + Math.cos(a + bend * 0.12) * (r1 + len), y1 = cx + Math.sin(a + bend * 0.12) * (r1 + len);
-            var lit = 0.5 + 0.5 * Math.cos(a + 2.2);
-            c.strokeStyle = 'rgba(' + Math.round(240 + 15 * lit) + ',' + Math.round(140 + 80 * lit) + ',' + Math.round(180 + 50 * lit) + ',' + (0.25 + 0.45 * Math.random()) + ')';
-            c.lineWidth = 0.6 + Math.random() * 0.7; c.beginPath(); c.moveTo(x0, y0);
-            c.quadraticCurveTo(cx + Math.cos(a + bend * 0.2) * (r1 + len * 0.6), cx + Math.sin(a + bend * 0.2) * (r1 + len * 0.6), x1, y1); c.stroke();
+        // Soft pass (owner, 26 Oct): the pool read as skin. Instead, procedural cotton-candy puffs and marabou wisps drift
+        // slowly behind the b. Sprites are pre-rendered once; the canvas runs at half resolution with DPR <= 1.5 and a CSS blur.
+        var el = document.getElementById('ic-fluff'); if (!el || !el.getContext) return;
+        var g = el.getContext('2d');
+        function puff(sz, tint) {
+          var o = document.createElement('canvas'); o.width = o.height = sz; var q = o.getContext('2d'), m = sz / 2;
+          for (var i = 0; i < 26; i++) {
+            var a = Math.random() * 6.283, d = Math.random() * m * 0.42, x = m + Math.cos(a) * d, y = m + Math.sin(a) * d * 0.7, rr = m * (0.22 + Math.random() * 0.3);
+            var gr = q.createRadialGradient(x, y - rr * 0.2, 0, x, y, rr); gr.addColorStop(0, 'rgba(255,255,255,0.55)'); gr.addColorStop(0.5, 'rgba(' + tint + ',0.32)'); gr.addColorStop(1, 'rgba(' + tint + ',0)');
+            q.fillStyle = gr; q.beginPath(); q.arc(x, y, rr, 0, 6.283); q.fill();
           }
+          for (var j = 0; j < 220; j++) { // marabou wisps: fine, curling strands off the edge
+            var b = Math.random() * 6.283, r0 = m * (0.3 + Math.random() * 0.2), L = m * (0.12 + Math.random() * 0.4), c = (Math.random() - 0.5) * 0.9;
+            q.strokeStyle = 'rgba(255,' + (215 + Math.round(Math.random() * 35)) + ',' + (230 + Math.round(Math.random() * 25)) + ',' + (0.12 + Math.random() * 0.25) + ')'; q.lineWidth = 0.6 + Math.random();
+            q.beginPath(); q.moveTo(m + Math.cos(b) * r0, m + Math.sin(b) * r0 * 0.8);
+            q.quadraticCurveTo(m + Math.cos(b + c * 0.3) * (r0 + L * 0.6), m + Math.sin(b + c * 0.3) * (r0 + L * 0.6) * 0.8, m + Math.cos(b + c) * (r0 + L), m + Math.sin(b + c) * (r0 + L) * 0.8); q.stroke();
+          }
+          return o;
         }
-        var el = document.getElementById('ic-pool'); if (!el) return;
-        var gl = el.getContext('webgl', { antialias: false, premultipliedAlpha: true, alpha: true, powerPreference: 'low-power' });
-        if (!gl) { el.remove(); return; }
-        var V = 'attribute vec2 p;void main(){gl_Position=vec4(p,0.,1.);}';
-        var F = 'precision mediump float;uniform vec2 r;uniform float t;' +
-          'float h(vec2 p){return fract(sin(dot(p,vec2(127.1,311.7)))*43758.5453);}' +
-          'float n(vec2 p){vec2 i=floor(p),f=fract(p);f=f*f*(3.-2.*f);return mix(mix(h(i),h(i+vec2(1,0)),f.x),mix(h(i+vec2(0,1)),h(i+vec2(1,1)),f.x),f.y);}' +
-          'float fbm(vec2 p){float v=0.,a=.5;for(int i=0;i<5;i++){v+=a*n(p);p=p*2.03+vec2(1.7,9.2);a*=.5;}return v;}' +
-          'float H(vec2 p){vec2 q=vec2(fbm(p+t*.04),fbm(p+vec2(5.2,1.3)-t*.03));return fbm(p+2.2*q);}' +
-          'void main(){vec2 s=gl_FragCoord.xy/r;float y=1.-s.y;' +
-          'vec2 p=vec2((s.x-.5)*r.x/r.y*1.4/(.25+y),1.2/(.25+y));float e=.004;' +
-          'float c=H(p);vec3 N=normalize(vec3(c-H(p+vec2(e,0)),c-H(p+vec2(0,e)),.012));' +
-          'vec3 L=normalize(vec3(-.4,.6,.7));float spec=pow(max(dot(reflect(-L,N),vec3(0,0,1)),0.),38.);' +
-          'float sheen=pow(max(dot(N,normalize(vec3(.3,.2,1.))),0.),6.);' +
-          'float gx=exp(-pow((s.x-.5)*3.2,2.))*exp(-y*2.2);' +
-          'vec3 col=vec3(.10,.012,.045)+vec3(.42,.06,.22)*sheen+vec3(1.,.45,.75)*spec*.85+vec3(.96,.72,0.)*.35*gx*(.6+.4*sheen);' +
-          'float a=smoothstep(0.,.35,y)*.92;gl_FragColor=vec4(col*a,a);}';
-        function sh(t, s) { var o = gl.createShader(t); gl.shaderSource(o, s); gl.compileShader(o); return o; }
-        var pr = gl.createProgram(); gl.attachShader(pr, sh(gl.VERTEX_SHADER, V)); gl.attachShader(pr, sh(gl.FRAGMENT_SHADER, F)); gl.linkProgram(pr);
-        if (!gl.getProgramParameter(pr, gl.LINK_STATUS)) { el.remove(); return; }
-        gl.useProgram(pr); gl.bindBuffer(gl.ARRAY_BUFFER, gl.createBuffer()); gl.bufferData(gl.ARRAY_BUFFER, new Float32Array([-1, -1, 3, -1, -1, 3]), gl.STATIC_DRAW);
-        var loc = gl.getAttribLocation(pr, 'p'); gl.enableVertexAttribArray(loc); gl.vertexAttribPointer(loc, 2, gl.FLOAT, false, 0, 0);
-        var uR = gl.getUniformLocation(pr, 'r'), uT = gl.getUniformLocation(pr, 't'), t0 = performance.now(), on = true;
-        function size() { var k = Math.min(devicePixelRatio || 1, 1.5) * 0.5; el.width = Math.max(1, Math.round(el.clientWidth * k)); el.height = Math.max(1, Math.round(el.clientHeight * k)); gl.viewport(0, 0, el.width, el.height); }
-        function draw(sec) { gl.uniform2f(uR, el.width, el.height); gl.uniform1f(uT, sec); gl.drawArrays(gl.TRIANGLES, 0, 3); }
+        var TINTS = ['255,190,215', '255,206,226', '248,180,214', '255,222,236'], SPR = TINTS.map(function (t) { return puff(256, t); }), P = [];
+        for (var i = 0; i < 16; i++) P.push({ x: Math.random(), y: Math.random(), s: 0.28 + Math.random() * 0.5, v: 0.004 + Math.random() * 0.008, ph: Math.random() * 6.283, k: i % SPR.length, o: 0.55 + Math.random() * 0.45 });
+        var on = true, t0 = performance.now();
+        function size() { var k = Math.min(devicePixelRatio || 1, 1.5) * 0.5; el.width = Math.max(1, Math.round(el.clientWidth * k)); el.height = Math.max(1, Math.round(el.clientHeight * k)); }
+        function draw(sec) {
+          var w = el.width, h = el.height, u = Math.max(w, h); g.clearRect(0, 0, w, h);
+          P.forEach(function (p) {
+            var x = ((p.x + sec * p.v) % 1.4 - 0.2) * w + Math.sin(sec * 0.15 + p.ph) * u * 0.02, y = p.y * h + Math.sin(sec * 0.11 + p.ph * 1.7) * u * 0.03, d = p.s * u;
+            g.globalAlpha = p.o; g.drawImage(SPR[p.k], x - d / 2, y - d / 2, d, d);
+          });
+          g.globalAlpha = 1;
+        }
         size(); draw(8);
         addEventListener('resize', function () { size(); draw(8 + (performance.now() - t0) / 1000); });
         if (still) return;
