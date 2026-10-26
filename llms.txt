@@ -146,6 +146,7 @@ Full text of every page below: https://bwalletx.com/llms-full.txt
 ## Agents & developers
 
 - [Ask b · bWalletX](https://bwalletx.com/agent): Ask b is the AI assistant inside bWalletX: ask how the wallet works, design strategies, or call it into a chat with /b. Use your own API key, or pay per message.
+- [bBots: little helpers that work for you](https://bwalletx.com/b-bots): A bBot is a helper account in your bWalletX with its own small budget and limits you set. It does jobs for you, it's always labelled with a ghost and its owner, and you can stop it any time.
 - [Hold to talk to b](https://bwalletx.com/hold-to-talk): Hold to talk to b: the wallet and CLI are MIT-licensed on GitHub. What that means for your keys, balances, tokens and locks if we ever disappear.
 - [bWalletX Agent Accounts](https://bwalletx.com/agents): Give each AI its own bWalletX account, its own budget and its own ghost. Daily caps, Stop all, an activity log, and the CLI or MCP for Claude and other agents.
 - [bWalletX Strategies](https://bwalletx.com/strategies): Tell the b agent your idea: it writes the strategy, tests it against live prices and packages it as an encrypted NFT to sell on Exchange › Strategies. Buyers load it into their own agent, with spending limits the wallet enforces.
