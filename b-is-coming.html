@@ -10,16 +10,16 @@
     <meta property="og:url" content="https://bwalletx.com/b-is-coming" />
     <meta property="og:site_name" content="bWalletX" />
     <meta property="og:title" content="b is coming" />
-    <meta property="og:description" content="b is coming. Are you ready? It's worth the wait." />
-    <meta property="og:image" content="https://bwalletx.com/og-b-is-coming-v2.png" />
+    <meta property="og:description" content="b is coming. Building. Almost there…" />
+    <meta property="og:image" content="https://bwalletx.com/og-b-is-coming-v3.png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
-    <meta property="og:image:alt" content="A glowing gold b: b is coming. Are you ready?" />
+    <meta property="og:image:alt" content="A glowing gold b, almost here: b is coming." />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@bWalletX" />
     <meta name="twitter:title" content="b is coming" />
-    <meta name="twitter:description" content="b is coming. Are you ready? It's worth the wait." />
-    <meta name="twitter:image" content="https://bwalletx.com/og-b-is-coming-v2.png" />
+    <meta name="twitter:description" content="b is coming. Building. Almost there…" />
+    <meta name="twitter:image" content="https://bwalletx.com/og-b-is-coming-v3.png" />
     <meta name="theme-color" content="#05080f" />
     <link rel="icon" href="/favicon.ico" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -27,7 +27,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" />
     <link rel="stylesheet" href="/styles.css" />
     <style>
-      /* b is coming (owner, 25 Oct 2026): the Just b series with a wink. Everything builds up, teases, then arrives. */
+      /* b is coming (owner, 25 Oct 2026): the Just b series with a wink. Everything builds up, teases, nears the climax, then pulls back and loops. It never arrives (owner, 26 Oct). */
       html { overflow-x: hidden; }
       body { margin: 0; background: #05080f; color: #e6edf5; overflow-x: hidden; }
       .ic-scene { position: relative; min-height: 100svh; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 0 16px; box-sizing: border-box; text-align: center; overflow: hidden; }
@@ -38,6 +38,18 @@
       .ic-b.build img { animation: build 1.6s ease-in-out infinite; }
       .ic-b.build2 img { animation: build 0.9s ease-in-out infinite; }
       .ic-b.build3 img { animation: build 0.45s ease-in-out infinite; }
+      .ic-b.near img { animation: near 2.2s cubic-bezier(0.3, 0, 0.3, 1) infinite; }
+      .ic-b.near::after { animation: tflash 2.2s ease-in-out infinite; }
+      @keyframes near { 0%, 100% { transform: scale(0.96); filter: drop-shadow(0 0 30px rgba(245, 184, 0, 0.4)); } 55% { transform: scale(1.14); filter: drop-shadow(0 0 110px rgba(255, 220, 110, 1)); } 70% { transform: scale(0.98); } }
+      @keyframes tflash { 0%, 100% { opacity: 0; transform: scale(0.5); } 55% { opacity: 0.7; transform: scale(1.1); } 75% { opacity: 0; } }
+      .ic-lt { display: inline-block; opacity: 0; transform: translateY(0.3em); animation: lt 0.5s ease forwards; white-space: pre; }
+      @keyframes lt { to { opacity: 1; transform: none; } }
+      /* Always-on CTA overlay (owner, 26 Oct): it never arrives, so the way in stays on screen the whole time. */
+      .ic-cta { position: fixed; left: 0; right: 0; margin: 0 auto; width: fit-content; bottom: max(16px, env(safe-area-inset-bottom)); z-index: 35; display: flex; align-items: center; gap: 14px; padding: 8px 8px 8px 20px; border-radius: 999px; background: rgba(8, 10, 16, 0.78); -webkit-backdrop-filter: blur(14px); backdrop-filter: blur(14px); border: 1px solid rgba(255, 210, 77, 0.35); box-shadow: 0 18px 50px rgba(0, 0, 0, 0.5); white-space: nowrap; max-width: calc(100vw - 32px); box-sizing: border-box; }
+      .ic-cta span { font: 600 0.95rem var(--hf); color: #ffe7a6; }
+      .ic-cta .jb-go { padding: 12px 22px; font-size: 1rem; }
+      body.gated .ic-cta { opacity: 0; pointer-events: none; }
+      .jb-foot:last-of-type { padding-bottom: 110px; }
       .ic-b.came img { animation: came 1.4s cubic-bezier(0.2, 1.4, 0.4, 1) both, glow 6s 1.4s ease-in-out infinite; }
       .ic-b::after { content: ''; position: absolute; inset: -40%; border-radius: 50%; background: radial-gradient(circle, rgba(255, 210, 77, 0.55), rgba(255, 210, 77, 0) 60%); opacity: 0; pointer-events: none; }
       .ic-b.came::after { animation: flash 1.6s ease-out both; }
@@ -47,7 +59,7 @@
       @keyframes flash { 0% { opacity: 0; transform: scale(0.4); } 25% { opacity: 1; } 100% { opacity: 0; transform: scale(1.6); } }
       .ic-h1 { margin: 34px 0 0; font: 700 clamp(2.4rem, 9vw, 6.5rem) / 1.02 var(--hf); letter-spacing: -0.045em; color: #fff; }
       .ic-h1 em { font-style: normal; color: var(--gold-hi); }
-      .ic-tease { margin: 18px 0 0; min-height: 1.6em; font: 500 clamp(1rem, 3vw, 1.35rem) var(--hf); color: #b9c6d6; letter-spacing: 0.02em; transition: opacity 0.5s ease; }
+      .ic-tease { margin: 18px 0 0; min-height: 1.6em; font: 600 clamp(1.5rem, 6vw, 2.4rem) / 1.15 var(--hf); color: #ffe7a6; letter-spacing: 0.02em; transition: opacity 0.5s ease; }
       .ic-hint { position: absolute; bottom: 22px; left: 0; right: 0; font: 500 0.72rem var(--hf); letter-spacing: 0.3em; text-transform: uppercase; color: #5d6878; }
 
       /* The loading bar that won't quite finish. */
@@ -56,8 +68,8 @@
       .ic-bar { width: min(560px, 100%); height: 14px; border-radius: 999px; background: #121a28; overflow: hidden; box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.06); }
       .ic-bar i { display: block; height: 100%; width: 0; border-radius: inherit; background: linear-gradient(90deg, #c98f00, #f5b800, #ffe48a); transition: width 0.9s cubic-bezier(0.3, 0.7, 0.3, 1); }
       .ic-bar.done i { box-shadow: 0 0 30px rgba(255, 210, 77, 0.8); }
-      .ic-pct { margin: 18px 0 0; font: 600 clamp(1.1rem, 3.4vw, 1.5rem) var(--hf); color: var(--gold-hi); font-variant-numeric: tabular-nums; }
-      .ic-msg { margin: 8px 0 0; min-height: 1.5em; font: 400 clamp(0.95rem, 2.6vw, 1.1rem) var(--hf); color: #b9c6d6; }
+      .ic-pct { margin: 18px 0 0; font: 700 clamp(1.8rem, 7vw, 2.8rem) var(--hf); color: var(--gold-hi); font-variant-numeric: tabular-nums; }
+      .ic-msg { margin: 8px 0 0; min-height: 1.5em; font: 600 clamp(1.4rem, 5.6vw, 2.2rem) / 1.2 var(--hf); color: #ffe7a6; }
 
       /* The countdown that edges, then bursts. */
       .ic-count { min-height: 90svh; }
@@ -123,7 +135,7 @@
       .ic-heart { position: absolute; bottom: -60px; left: 0; width: 34px; height: 34px; will-change: transform, opacity; }
       .ic-b { transform: scale(var(--bs, 0.35)); transform-origin: 50% 70%; opacity: var(--bo, 1); filter: hue-rotate(calc(var(--heat) * -78deg)) saturate(calc(1 + var(--heat) * 0.7)) brightness(calc(0.45 + var(--bo, 1) * 0.3 + var(--heat) * 0.35)); }
       /* Opening (owner): no text at first, only darkness and the b emerging. The words fade in once the build is under way. */
-.ic-say { position: absolute !important; left: 16px; right: 16px; top: 62%; margin: 0; font: 600 clamp(1.4rem, 5.5vw, 2.6rem) var(--hf); letter-spacing: -0.02em; color: #ffd6e6; text-shadow: 0 4px 30px rgba(255, 45, 122, 0.55); opacity: 0; transform: translateY(8px); transition: opacity 0.9s ease, transform 0.9s ease; }
+.ic-say { position: absolute !important; left: 16px; right: 16px; top: 60%; margin: 0; font: 700 clamp(2.3rem, 10vw, 4.6rem) / 1.05 var(--hf); letter-spacing: -0.03em; color: #ffe3ee; text-shadow: 0 4px 30px rgba(255, 45, 122, 0.55); opacity: 0; transform: translateY(8px); transition: opacity 0.9s ease, transform 0.9s ease; }
       .ic-say.on { opacity: 1; transform: none; }
       .ic-hero .ic-h1, .ic-hero .ic-tease, .ic-hero .ic-hint { transition: opacity 2.4s ease, transform 2.4s ease; }
       .ic-hero.hush .ic-h1, .ic-hero.hush .ic-tease, .ic-hero.hush .ic-hint { opacity: 0; transform: translateY(10px); }
@@ -147,15 +159,14 @@
 
     <section class="ic-scene ic-load" id="ic-load">
       <h2>Getting there…</h2>
-      <div class="ic-bar" id="ic-bar" role="progressbar" aria-label="b arriving" aria-valuemin="0" aria-valuemax="100" aria-valuenow="100"><i></i></div>
-      <p class="ic-pct" id="ic-pct">100%</p>
-      <p class="ic-msg" id="ic-msg" aria-live="polite">Arrived. It’s worth the wait.</p>
+      <div class="ic-bar" id="ic-bar" role="progressbar" aria-label="b arriving" aria-valuemin="0" aria-valuemax="100" aria-valuenow="99.9"><i></i></div>
+      <p class="ic-pct" id="ic-pct">99.9%</p>
+      <p class="ic-msg" id="ic-msg" aria-live="polite">Almost…</p>
     </section>
 
     <section class="ic-scene ic-count" id="ic-count">
       <h2>Brace yourself.</h2>
       <div class="ic-num" id="ic-num" aria-live="polite"><img src="/logo.svg" alt="b" class="ic-numb" /></div>
-      <button type="button" class="ic-again" id="ic-again">Again?</button>
     </section>
 
     <section class="ic-calm">
@@ -165,14 +176,10 @@
       <p><strong>Lock it away.</strong> Set some aside and let time hold it for you, untouchable until the day you chose.</p>
       <p><strong>Spread the love.</strong> Tip the people who make the things you enjoy. Every penny goes to them.</p>
       <p><strong>Ready when you are.</strong> On the web, as a Chrome extension, on Android, and on iPhone through TestFlight.</p>
-      <p class="ic-lead">It came. <em style="display:block;white-space:nowrap">Just b.</em></p>
+      <p class="ic-lead">b is coming. <em style="display:block;white-space:nowrap">Stay close.</em></p>
     </section>
 
-    <section class="ic-scene ic-end" id="ic-end">
-      <h2>Ready?</h2>
-      <p>Free on Android, iPhone, Chrome and the web.</p>
-      <a class="jb-go" href="/get?from=b-is-coming">Get bWalletX</a>
-    </section>
+    <div class="ic-cta"><span>b is coming</span><a class="jb-go" href="/get?from=b-is-coming">Get bWalletX</a></div>
     <div class="ic-sats" id="ic-sats" aria-hidden="true"></div>
     <p class="jb-foot jb-series"><a href="/just-b">just b</a> <span>·</span> <a href="/b-cool">b cool</a> <span>·</span> <a href="/b-creative">b creative</a> <span>·</span> <a href="/b-is-for-business">b is for business</a> <span>·</span> <a href="/b-is-coming" aria-current="page">b is coming</a></p>
     <p class="jb-foot">bWalletX is in beta: test with small amounts. Music and voices are generated live in your browser. <a href="mailto:support@bwalletx.com">support@bwalletx.com</a></p>
@@ -415,23 +422,24 @@
         // Reduced motion: the markup already shows every payoff (arrived b, 100%, b). Nothing to animate.
         if (reduce) { setTimeout(function () { heroEl.classList.remove('hush'); }, 6000); return; }
 
-        // 1. The hero b builds up, faster and brighter, teasing, then arrives. Loops gently.
+        // 1. The hero b builds up, faster and brighter, flares almost there, then pulls back and loops. It never arrives (owner, 26 Oct).
         var b = $('ic-b'), tease = $('ic-tease');
-        var lines = [['build', 'Are you ready?'], ['build2', 'Almost there…'], ['build3', 'Almost…'], ['came', 'b has come. Worth the wait?']];
+        var lines = [['build', 'Are you ready?'], ['build2', 'Almost there…'], ['build3', 'Almost…'], ['near', 'b is coming…']];
         function hero() {
           var t = 0, at = timeline(); heroT0 = performance.now() + mus.nextBeatMs(); mus.swell(BUILD); if (performance.now() - lastHero > LOOP) { bs = 0.12; bo = 0; } lastHero = performance.now(); heroEl.classList.add('hush');
           // One word per loudness step (the music steps up at each stage), each fading in and out; then the title.
           var say = $('ic-say'), wT = 2200;
-          BUILD_WORDS.forEach(function (w, i) { var d = 2000 + i * 400; (function (t0) { at(function () { say.textContent = w; say.classList.add('on'); }, t0); at(function () { say.classList.remove('on'); }, t0 + d); })(wT); wT += d + 500; });
+          BUILD_WORDS.forEach(function (w, i) { var d = 2000 + i * 400; (function (t0) { at(function () { spell(say, w); say.classList.add('on'); }, t0); at(function () { say.classList.remove('on'); }, t0 + d); })(wT); wT += d + 500; });
           at(function () { heroEl.classList.remove('hush'); }, BUILD - 600);
           lines.forEach(function (l, i) {
-            at(function () { b.className = 'ic-b ' + l[0]; tease.textContent = l[1]; mus.level(Math.min(i + 1, 3)); mus.squeak(i >= 1 && i < 3 ? 1 : 0); if (i < 3) mus.lick(); vox.play(['ooh', 'oh', 'oh-yes', 'yes'][i]); if (i === 3) { sfx.pop(true); setTimeout(sfx.shimmer, 250); } }, t);
+            at(function () { b.className = 'ic-b ' + l[0]; tease.textContent = l[1]; mus.level(Math.min(i + 1, 3)); mus.squeak(i >= 1 && i < 3 ? 1 : 0); if (i < 3) mus.lick(); vox.play(['ooh', 'oh', 'oh-yes', 'pant'][i]); if (i === 3) sfx.swell(300, 900, 2, true); }, t);
             if (i < 3) for (var k = 0, per = [1600, 900, 450][i], span = HERO_MS[i]; k * per < span; k++) (function (d) { at(function () { sfx.beat(i); }, d); })(t + k * per);
             if (i < 3) t += HERO_MS[i];
           });
           at(hero, t + HOLD);
         }
         startHero = hero;
+        function spell(el, w) { el.setAttribute('aria-label', w); el.innerHTML = ''; w.split('').forEach(function (ch, j) { var s = document.createElement('span'); s.className = 'ic-lt'; s.setAttribute('aria-hidden', 'true'); s.textContent = ch; s.style.animationDelay = (j * 55) + 'ms'; el.appendChild(s); }); }
 
         // Run a scene once when it scrolls into view.
         function onView(el, fn) {
@@ -442,24 +450,25 @@
 
         // 2. The loading bar that keeps stopping just short.
         var bar = $('ic-bar'), fill = bar.querySelector('i'), pct = $('ic-pct'), msg = $('ic-msg');
-        var steps = [[0, 'Warming up…'], [42, 'Getting there…'], [87, 'Nearly…'], [97, 'Don’t stop now…'], [99, 'Almost…'], [99.9, 'Almost…'], [99.99, 'Hold on…'], [100, 'Arrived. It’s worth the wait.']];
+        var steps = [[0, 'Warming up…'], [42, 'Getting there…'], [87, 'Nearly…'], [97, 'Don’t stop now…'], [99, 'Almost…'], [99.9, 'Almost…'], [99.99, 'Hold on…'], [0, 'Not yet. b is coming…']];
         function setP(p, m) { fill.style.width = p + '%'; pct.textContent = (p % 1 ? p.toFixed(p < 99.95 ? 1 : 2) : p) + '%'; msg.textContent = m; bar.setAttribute('aria-valuenow', String(p)); bar.classList.toggle('done', p === 100); }
         setP(0, 'Warming up…');
-        onView($('ic-load'), function () {
+        onView($('ic-load'), function loadRun() {
           var t = 300, at = timeline(); mus.level(2);
           steps.forEach(function (s, i) { at(function () { setP(s[0], s[1]); if (s[0] >= 97 && s[0] < 100) { mus.stall(true); mus.lick(); vox.play('come-on', 0.9); } else mus.level(s[0] === 100 ? 3 : 2); if (s[0] === 100) { burst(40); setTimeout(function () { sfx.ahh(); sfx.coins(16); }, 200); } else if (s[0] >= 97) sfx.swell(300, 300 + s[0] * 6, 1.2, true); else if (s[0]) sfx.swell(200, 200 + s[0] * 4, 0.9); }, t); t += i < 3 ? 1100 : 1600; });
+          at(loadRun, t + 2400); // back to the start: it never quite gets there
         });
 
         // 3. The countdown that edges: 3, 2, 1, ½, ¼… then the burst.
-        var num = $('ic-num'), again = $('ic-again');
-        var seq = ['3', '2', '1', '½', '¼', '⅛', 'b'];
+        var num = $('ic-num');
+        var seq = ['3', '2', '1', '½', '¼', '⅛', '…'];
         function count() {
-          again.classList.remove('on');
-          var t = 200, at = timeline(); mus.level(3); mus.squeak(1);
+                    var t = 200, at = timeline(); mus.level(3); mus.squeak(1);
           seq.forEach(function (s, i) {
             at(function () {
+              if (s === '…') { num.innerHTML = '<img src="/logo.svg" alt="b, almost" class="ic-numb" style="opacity:.35;transform:scale(.7);transition:opacity 1.2s,transform 1.2s" />'; vox.play('sigh'); mus.squeak(0); mus.stall('hush'); at(count, t + 3200); return; }
               if (s === 'b') num.innerHTML = '<img src="/logo.svg" alt="b" class="ic-numb" />'; else num.textContent = s; num.classList.remove('pop');
-              if (s === 'b') { void num.offsetWidth; num.classList.add('pop'); burst(90); again.classList.add('on'); mus.squeak(0); mus.chorus(8); vox.play('climax', 0.12); setTimeout(function () { vox.play('sigh'); }, 4200); sfx.pop(true); setTimeout(sfx.fanfare, 380); setTimeout(function () { sfx.coins(50); }, 700); }
+              if (s === 'b') { void num.offsetWidth; num.classList.add('pop'); burst(90); mus.squeak(0); mus.chorus(8); vox.play('climax', 0.12); setTimeout(function () { vox.play('sigh'); }, 4200); sfx.pop(true); setTimeout(sfx.fanfare, 380); setTimeout(function () { sfx.coins(50); }, 700); }
               else { sfx.tick(i); mus.squeak(i < 2 ? 1 : i < 4 ? 2 : 3); if (i >= 3) vox.play('pant'); if (i === 5) { setTimeout(sfx.gulp, 450); setTimeout(function () { mus.stall('hush'); }, 700); } }
             }, t);
             t += i < 3 ? 650 : (i === 5 ? 2000 : 450); // speeds up, then holds its breath before b
@@ -467,8 +476,7 @@
         }
         num.textContent = '3';
         onView($('ic-count'), count);
-        again.addEventListener('click', function () { sfx.ooh(); count(); });
-        onView($('ic-end'), function () { vox.play('sigh'); });
+        
 
         // A shower of gold sats from the middle of the screen. Fixed layer, transforms only.
         var layer = $('ic-sats');
