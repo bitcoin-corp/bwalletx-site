@@ -1,6 +1,6 @@
 <!doctype html>
 <!--
-  b on b (26 Oct 2026), Just b series. Built from the b-ad-film template. Brand-neutral version of the bwalletx.com/b-is-for-business engine.
+  be on b (26 Oct 2026), Just b series. Built from the b-ad-film template. Brand-neutral version of the bwalletx.com/b-is-for-business engine.
    Edit the CSS variables in :root and the SCENES array in the script.
   Scenes are built from SCENES at load time; timings follow the audio clock when music plays,
   and the wall clock when the viewer picks "Watch without sound" (or no music file exists).
@@ -9,24 +9,24 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>b on b</title>
+    <title>be on b</title>
     <meta name="description" content="All your Bitcoin SV apps, together on b. Twetch, RelayX, CoinGeek, Peck, Hodlocker, Treechat and Yours. Just b." />
-    <link rel="canonical" href="https://bwalletx.com/b-on-b" />
+    <link rel="canonical" href="https://bwalletx.com/be-on-b" />
     <link rel="icon" href="/favicon.ico" />
     <meta property="og:site_name" content="bWalletX" />
-    <meta property="og:image:alt" content="The gold bWalletX b, twice, in the words b on b, over bright coloured app tiles." />
+    <meta property="og:image:alt" content="The words be on b, with the gold bWalletX b, over bright coloured app tiles." />
     <meta name="twitter:site" content="@bWalletX" />
     <meta name="twitter:description" content="All your Bitcoin SV apps, together on b. Just b." />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://bwalletx.com/b-on-b" />
-    <meta property="og:title" content="b on b" />
+    <meta property="og:url" content="https://bwalletx.com/be-on-b" />
+    <meta property="og:title" content="be on b" />
     <meta property="og:description" content="All your Bitcoin SV apps, together on b. Twetch, RelayX, CoinGeek, Peck, Hodlocker, Treechat and Yours. Just b." />
-    <meta property="og:image" content="https://bwalletx.com/og-b-on-b.png" />
+    <meta property="og:image" content="https://bwalletx.com/og-be-on-b.png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="b on b" />
-    <meta name="twitter:image" content="https://bwalletx.com/og-b-on-b.png" />
+    <meta name="twitter:title" content="be on b" />
+    <meta name="twitter:image" content="https://bwalletx.com/og-be-on-b.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" />
@@ -117,7 +117,7 @@
       .foot { margin: 0; padding: 0 16px 22px; text-align: center; font-size: .75rem; color: #6a6458; }
 
 
-      /* b on b (26 Oct 2026): all the BSV apps coming together on b. Our gold b plus lots of other colour. */
+      /* be on b (26 Oct 2026): all the BSV apps coming together on b. Our gold b plus lots of other colour. */
       .tiles { position: absolute; inset: 0; }
       .tile { position: absolute; left: var(--x); top: var(--y); width: clamp(54px, 9vw, 96px); aspect-ratio: 1; border-radius: 26%; background: var(--c); opacity: 0; translate: -50% -50%; transform: scale(.4) rotate(var(--r)); box-shadow: 0 20px 50px rgba(0,0,0,.25); }
       .scene.on .tile { animation: tilein 1.6s calc(var(--d) * 1s) cubic-bezier(.2,1.2,.3,1) forwards, bob 4s calc(1.6s + var(--d) * 1s) ease-in-out infinite; }
@@ -152,13 +152,13 @@
     </style>
   </head>
   <body>
-    <section class="film" id="film" aria-label="b on b: a 46-second film">
+    <section class="film" id="film" aria-label="be on b: a 46-second film">
       <!-- Scenes are generated from SCENES below. -->
       <div class="poster" id="poster">
         <!-- Optional: <img class="bg" src="poster.jpg" alt="" fetchpriority="high" /> -->
         <div class="in">
-          <h1 class="slogan" data-slogan="{L} on {L}"></h1>
-          <button type="button" class="play" id="play" aria-label="Play b on b with sound"><svg viewBox="5 3 18 18" aria-hidden="true"><path d="M8 5.5v13l11-6.5z" fill="currentColor" /></svg></button>
+          <h1 class="slogan" data-slogan="be on {L}"></h1>
+          <button type="button" class="play" id="play" aria-label="Play be on b with sound"><svg viewBox="5 3 18 18" aria-hidden="true"><path d="M8 5.5v13l11-6.5z" fill="currentColor" /></svg></button>
           <p class="gate-l" id="gate-l">Play the film</p>
           <button type="button" class="quiet" id="quiet">Watch without sound</button>
         </div>
@@ -183,11 +183,11 @@
       <!-- Optional: <img src="end.jpg" alt="" decoding="async" /> -->
       <div class="end-in">
         <h2 class="slogan" data-slogan="Your apps, on {L}"></h2>
-        <p class="acts"><a class="cta" href="/on-b">See your apps on b</a> <a class="cta2" href="/get?from=b-on-b">Get bWalletX</a></p>
+        <p class="acts"><a class="cta" href="/on-b">See your apps on b</a> <a class="cta2" href="/get?from=be-on-b">Get bWalletX</a></p>
         <p class="credit" id="credit"></p>
       </div>
     </section>
-    <p class="foot"><a href="/just-b">just b</a> · <a href="/b-cool">b cool</a> · <a href="/b-is-for-business">b is for business</a> · <a href="/on-b">your apps on b</a> · <a href="/b-on-b" aria-current="page">b on b</a></p>
+    <p class="foot"><a href="/just-b">just b</a> · <a href="/b-cool">b cool</a> · <a href="/b-is-for-business">b is for business</a> · <a href="/on-b">your apps on b</a> · <a href="/be-on-b" aria-current="page">be on b</a></p>
     <p class="foot">bWalletX is in beta: test with small amounts. App names belong to their owners; the &ldquo;everything on b&rdquo; line is a joke and a wish, not a partnership. <a href="mailto:support@bwalletx.com">support@bwalletx.com</a></p>
 
     <script>
@@ -209,7 +209,7 @@
         { at: 13.04, bg: 'radial-gradient(circle at 50% 35%, #ff7a59, #3d1010)', art: '<div class="apps"><img class="app" src="/img/apps/relayx.png" alt="" style="--x:8%;--y:14%;--fx:-120px;--fy:-80px;--d:0.00" /><img class="app" src="/img/apps/yours.png" alt="" style="--x:92%;--y:14%;--fx:120px;--fy:-90px;--d:0.15" /></div>', slogan: 'Bring it to {L}', sub: 'Your RelayX NFTs are still on chain, and bWalletX finds them. Yours Wallet comes in with your 12 words.' },
         { at: 19.57, bg: 'radial-gradient(circle at 50% 35%, #3fae6a, #0a2a17)', art: '<svg class="big-lock" viewBox="0 0 100 120" aria-hidden="true"><path class="shackle" d="M28 52V34a22 22 0 0 1 44 0v18" fill="none" stroke="#ffe58a" stroke-width="10" stroke-linecap="round"/><rect x="16" y="50" width="68" height="60" rx="14" fill="#ffd24d"/><circle cx="50" cy="76" r="8" fill="#1a3a22"/><rect x="46" y="78" width="8" height="16" rx="3" fill="#1a3a22"/></svg>', slogan: 'Lock it on {L}', sub: 'Lock behind posts, Hodlocker-style. Your BSV stays yours.' },
         { at: 26.09, bg: 'radial-gradient(circle at 50% 35%, #4d8dff, #0b1844)', art: '<div class="apps"><img class="app" src="/img/apps/twetch.svg" alt="" style="--x:8%;--y:14%;--fx:-120px;--fy:-80px;--d:0.00" /><img class="app" src="/img/apps/relayx.png" alt="" style="--x:92%;--y:14%;--fx:120px;--fy:-90px;--d:0.15" /><img class="app" src="/img/apps/coingeek.png" alt="" style="--x:8%;--y:86%;--fx:-120px;--fy:90px;--d:0.30" /><img class="app" src="/img/apps/peck.png" alt="" style="--x:92%;--y:86%;--fx:120px;--fy:90px;--d:0.45" /><img class="app" src="/img/apps/treechat.svg" alt="" style="--x:50%;--y:2%;--fx:0px;--fy:-120px;--d:0.60" /><img class="app" src="/img/apps/yours.png" alt="" style="--x:50%;--y:98%;--fx:0px;--fy:120px;--d:0.75" /></div>', slogan: 'One wallet. All of it.', sub: 'Twetch, RelayX, CoinGeek, Peck, Hodlocker, Treechat and Yours, side by side in bWalletX.' },
-        { at: 32.61, bg: 'radial-gradient(circle at 50% 35%, #d0509e, #2a0a26)', art: '<div class="dream"><span class="dw" style="--x:20%;--y:24%;--tx:30vw;--ty:60px;--d:0.00">Twitter</span><span class="dw" style="--x:78%;--y:22%;--tx:-30vw;--ty:60px;--d:0.35">LinkedIn</span><span class="dw" style="--x:18%;--y:80%;--tx:30vw;--ty:-60px;--d:0.70">YouTube</span><span class="dw" style="--x:80%;--y:80%;--tx:-30vw;--ty:-60px;--d:1.05">Facebook</span><span class="dw" style="--x:50%;--y:12%;--tx:0vw;--ty:80px;--d:1.40">and the rest</span></div>', slogan: 'One day, everything will {L} on {L}', sub: 'A wish, not a deal. We can dream.' },
+        { at: 32.61, bg: 'radial-gradient(circle at 50% 35%, #d0509e, #2a0a26)', art: '<div class="dream"><span class="dw" style="--x:20%;--y:24%;--tx:30vw;--ty:60px;--d:0.00">Twitter</span><span class="dw" style="--x:78%;--y:22%;--tx:-30vw;--ty:60px;--d:0.35">LinkedIn</span><span class="dw" style="--x:18%;--y:80%;--tx:30vw;--ty:-60px;--d:0.70">YouTube</span><span class="dw" style="--x:80%;--y:80%;--tx:-30vw;--ty:-60px;--d:1.05">Facebook</span><span class="dw" style="--x:50%;--y:12%;--tx:0vw;--ty:80px;--d:1.40">and the rest</span></div>', slogan: 'One day, everything will be on {L}', sub: 'A wish, not a deal. We can dream.' },
         { at: 39.13, bg: 'radial-gradient(circle at 50% 40%, #3a2f8f, #07061a)', art: '<div class="tiles"><i class="tile" style="--x:10%;--y:14%;--c:#ff7a59;--r:25deg;--d:0.00"></i><i class="tile" style="--x:90%;--y:12%;--c:#3fd0c9;--r:-30deg;--d:0.12"></i><i class="tile" style="--x:8%;--y:86%;--c:#8b6cff;--r:25deg;--d:0.24"></i><i class="tile" style="--x:92%;--y:88%;--c:#ff5d8f;--r:-30deg;--d:0.36"></i><i class="tile" style="--x:32%;--y:8%;--c:#59c36a;--r:25deg;--d:0.48"></i><i class="tile" style="--x:68%;--y:92%;--c:#4da3ff;--r:-30deg;--d:0.60"></i><i class="tile" style="--x:4%;--y:32%;--c:#ffb4a2;--r:25deg;--d:0.72"></i><i class="tile" style="--x:96%;--y:68%;--c:#c7f464;--r:-30deg;--d:0.84"></i></div>', slogan: 'Not BNB. Just {L}.', sub: 'One b is plenty.', cta: true }
       ];
       // ---------------------------------
@@ -236,7 +236,7 @@
           if (s.art) html += '<div class="art" aria-hidden="true">' + s.art + '</div>';
           html += '<div class="cap"><h2 class="slogan">' + slogan(s.slogan || '') + '</h2>';
           if (s.sub) html += '<p>' + esc(s.sub) + '</p>';
-          if (s.cta) html += '<p class="getp"><a class="cta" href="' + esc(FILM.cta.href) + '">' + esc(FILM.cta.label) + '</a> <a class="cta2" href="/get?from=b-on-b">Get bWalletX</a></p>';
+          if (s.cta) html += '<p class="getp"><a class="cta" href="' + esc(FILM.cta.href) + '">' + esc(FILM.cta.label) + '</a> <a class="cta2" href="/get?from=be-on-b">Get bWalletX</a></p>';
           html += '</div></div>';
         });
         poster.insertAdjacentHTML('beforebegin', html);
