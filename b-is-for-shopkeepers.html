@@ -2,8 +2,8 @@
 <!--
   b is for shopkeepers (26 Oct 2026, v2 "Mabel's shop window"): the bMarketX commercial in the b-is-for family.
   Mabel (a made-up seller, not a real eBay store) moves 682 teapots from eBay to bMarketX, keeps her stars and mints her shop.
-  Music: Shattered Circuits (Alt) by VexVoid, beats 0-80 from its 65.15 s hit, hard cut on beat 80 to its 130.53 s hit; -11 LUFS.
-  117.5 BPM (0.5106 s a beat); a cut every 6 beats behind a striped awning wipe. One drawn hero object per scene, words on a tag below.
+  Music: Insect Symphony by VexVoid, 46.2 s from 109.22 s (on the beat), fade out, -11 LUFS.
+  77.8 BPM, gridded in half-beats (0.3856 s, 155.6 double-time); a cut every 4 beats behind a striped awning wipe. One drawn hero object per scene, words on a tag below.
   Every claim is live today. Buying is not: the film never shows a sale; the calm text says buying opens soon.
   Test hooks: ?autoplay=silent, ?t=SECONDS, ?still=SCENE, window.__film.
 -->
@@ -36,7 +36,7 @@
       /* b is for shopkeepers, "Mabel's shop window" (v2, 26 Oct 2026). Its own look: flat paper colours, one drawn hero object
          per scene in the top half, the words on a shop tag below it, a striped awning that drops on each cut, labels that
          stamp on, and a gentle bob on the beat. */
-      :root { --beat: .5106s; --ink: #1d1712; --paper: #f6efe0; --gold: #ffd24d; --gold-hi: #ffe58a; --gold-lo: #c98f00; --red: #E53238; --blue: #0064D2; --yel: #F5AF02; --grn: #86B817; --hf: 'Space Grotesk', system-ui, sans-serif; }
+      :root { --beat: .3856s; --ink: #1d1712; --paper: #f6efe0; --gold: #ffd24d; --gold-hi: #ffe58a; --gold-lo: #c98f00; --red: #E53238; --blue: #0064D2; --yel: #F5AF02; --grn: #86B817; --hf: 'Space Grotesk', system-ui, sans-serif; }
       * { box-sizing: border-box; }
       html, body { margin: 0; background: #1d1712; color: #fff8e8; overflow-x: clip; font-family: var(--hf); }
       .film { position: relative; width: 100%; height: 100svh; min-height: 560px; overflow: hidden; background: var(--paper); }
@@ -108,6 +108,7 @@
       .count { font: 700 clamp(2.4rem, 9vw, 5rem)/1 var(--hf); color: var(--ink); letter-spacing: -0.04em; font-variant-numeric: tabular-nums; text-align: center; }
       .count small { display: block; font-size: .28em; letter-spacing: .14em; text-transform: uppercase; color: #5a4a3a; margin-top: 6px; }
       .wm { height: clamp(28px, 4vw, 42px); width: auto; display: block; margin: 0 auto 14px; }
+      .wmw { display: flex; align-items: baseline; justify-content: center; gap: 2px; margin: 0 auto 14px; } .wmw .wm { margin: 0; } .dotcom { font: 700 clamp(22px, 3.1vw, 33px)/1 var(--hf); color: #f1ead9; letter-spacing: -0.03em; }
       .getp { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; margin-top: 22px; }
       .cta { display: inline-block; padding: 16px 34px; border-radius: 999px; background: linear-gradient(180deg, var(--gold-hi), var(--gold)); color: #140a08; font: 700 1.05rem var(--hf); text-decoration: none; box-shadow: 0 6px 0 rgba(0,0,0,.25); }
       .cta2 { display: inline-block; padding: 15px 30px; border-radius: 999px; border: 2px solid #fff; color: #fff; font: 700 1rem var(--hf); text-decoration: none; }
@@ -166,7 +167,7 @@
         </div>
       </div>
       <div class="bar" id="bar"></div>
-      <audio id="music" src="/audio/b-is-for-shopkeepers-shattered-circuits.mp3" preload="auto"></audio>
+      <audio id="music" src="/audio/b-is-for-shopkeepers-insect-symphony.mp3" preload="auto"></audio>
     </section>
     <div class="snd">
       <button type="button" id="mute" aria-pressed="false" aria-label="Mute music"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><path d="M11 5 6 9H3v6h3l5 4z"></path><path d="M15.5 8.5a5 5 0 0 1 0 7"></path></svg></button>
@@ -185,10 +186,10 @@
 
     <section class="end">
       <div class="end-in">
-        <img class="wm" src="/bmarket/logo-dark.svg" alt="bMarketX" />
+        <span class="wmw"><img class="wm" src="/bmarket/logo-dark.svg" alt="bMarketX" /><span class="dotcom">.com</span></span>
         <h2 data-slogan="{L} is for | shopkeepers"></h2>
-        <p class="getp"><a class="cta" href="https://bmarketx.com/sell?from=b-is-for-shopkeepers">Bring your shop</a> <a class="cta2" href="https://bmarketx.com?from=b-is-for-shopkeepers">Visit bMarketX</a></p>
-        <p class="credit">Music: <a href="https://chat.bwalletx.com/u/vexvoid">Shattered Circuits (Alt) by VexVoid</a>. Mabel&rsquo;s Teapots is made up.</p>
+        <p class="getp"><a class="cta" href="https://bmarketx.com/sell?from=b-is-for-shopkeepers">Bring your shop</a> <a class="cta2" href="https://bmarketx.com?from=b-is-for-shopkeepers">Visit bMarketX.com</a></p>
+        <p class="credit">Music: <a href="https://chat.bwalletx.com/u/vexvoid">Insect Symphony by VexVoid</a>. Mabel&rsquo;s Teapots is made up.</p>
       </div>
     </section>
     <p class="foot"><a href="/just-b">just b</a> · <a href="/b-creative">b creative</a> · <a href="/b-is-for-business">b is for business</a> · <a href="/b-is-coming">b is coming</a> · <a href="/b-is-for-shopkeepers" aria-current="page">b is for shopkeepers</a> · <a href="/b-market">bMarketX</a></p>
@@ -196,7 +197,7 @@
 
     <script>
       (function () {
-        var BEAT = 0.5106, END = 46.3;
+        var BEAT = 0.3856, END = 46.2;
         function esc(s) { return String(s).replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); }
         function slogan(text) {
           return '<span class="sr">' + esc(text.replace(/\{L\}/g, 'b').replace(/ \| /g, ' ')) + '</span>' + text.split(/\s+/).map(function (w) {
@@ -221,35 +222,35 @@
           price: '<svg viewBox="0 0 400 300"><g class="swing"><path d="M200 0 L200 60" stroke="#3a2a1a" stroke-width="4"/><path d="M110 60 h180 l40 80 l-40 80 h-180 z" fill="#fffaf0" stroke="#3a2a1a" stroke-width="6" transform="rotate(90 200 140) translate(0 0)"/><circle cx="200" cy="78" r="9" fill="#3a2a1a"/><text x="200" y="190" text-anchor="middle" font-family="Space Grotesk" font-weight="700" font-size="78" fill="#1d1712">75&#162;</text></g></svg>',
           wallet: '<svg viewBox="0 0 400 300"><rect x="90" y="70" width="220" height="150" rx="24" fill="#2b2420" stroke="#ffd24d" stroke-width="5"/><rect x="250" y="120" width="60" height="50" rx="12" fill="#ffd24d"/><circle cx="275" cy="145" r="7" fill="#2b2420"/><image href="/logo.svg" x="140" y="100" width="66" height="89"/></svg>',
           dollar: '<svg viewBox="0 0 400 300"><g class="swing"><path d="M200 0 L200 50" stroke="#3a2a1a" stroke-width="4"/><rect x="90" y="50" width="220" height="190" rx="22" fill="#fffaf0" stroke="#3a2a1a" stroke-width="6"/><circle cx="200" cy="74" r="9" fill="#3a2a1a"/><text x="200" y="160" text-anchor="middle" font-family="Space Grotesk" font-weight="700" font-size="54" fill="#1d1712">$24.00</text><text x="200" y="208" text-anchor="middle" font-family="Space Grotesk" font-weight="700" font-size="24" fill="#0064D2">paid in BSV</text></g></svg>',
-          door: '<svg viewBox="0 0 400 300"><rect x="110" y="20" width="180" height="270" rx="10" fill="#0064D2" stroke="#1d1712" stroke-width="6"/><rect x="132" y="44" width="136" height="110" rx="6" fill="#bfe0ff"/><circle cx="268" cy="200" r="8" fill="#ffd24d"/><path d="M200 44 L200 66" stroke="#1d1712" stroke-width="3"/><g class="flip"><rect x="150" y="66" width="100" height="44" rx="6" fill="#fffaf0" stroke="#1d1712" stroke-width="3"/><text class="s1" x="200" y="96" text-anchor="middle" font-family="Space Grotesk" font-weight="700" font-size="20" fill="#E53238">MOVING</text><text class="s2" x="200" y="96" text-anchor="middle" font-family="Space Grotesk" font-weight="700" font-size="16" fill="#2f7d12">MOVED IN</text></g><g class="pop" style="--k:3"><path d="M90 30 C90 10 120 10 120 30 L124 50 H86 Z" fill="#F5AF02" stroke="#1d1712" stroke-width="3"/><circle cx="105" cy="55" r="5" fill="#1d1712"/></g></svg>'
+          door: '<svg viewBox="0 0 400 300"><rect x="110" y="20" width="180" height="270" rx="10" fill="#0064D2" stroke="#1d1712" stroke-width="6"/><rect x="132" y="44" width="136" height="110" rx="6" fill="#bfe0ff"/><circle cx="268" cy="200" r="8" fill="#ffd24d"/><rect x="128" y="236" width="144" height="30" rx="6" fill="#fffaf0"/><text x="200" y="257" text-anchor="middle" font-family="Space Grotesk" font-weight="700" font-size="17" fill="#1d1712">bMarketX.com</text><path d="M200 44 L200 66" stroke="#1d1712" stroke-width="3"/><g class="flip"><rect x="150" y="66" width="100" height="44" rx="6" fill="#fffaf0" stroke="#1d1712" stroke-width="3"/><text class="s1" x="200" y="96" text-anchor="middle" font-family="Space Grotesk" font-weight="700" font-size="20" fill="#E53238">MOVING</text><text class="s2" x="200" y="96" text-anchor="middle" font-family="Space Grotesk" font-weight="700" font-size="16" fill="#2f7d12">MOVED IN</text></g><g class="pop" style="--k:3"><path d="M90 30 C90 10 120 10 120 30 L124 50 H86 Z" fill="#F5AF02" stroke="#1d1712" stroke-width="3"/><circle cx="105" cy="55" r="5" fill="#1d1712"/></g></svg>'
         };
         var PR = ['$24.00', '$38.50', '$19.99', '$52.00'], PC = ['#E53238', '#0064D2', '#F5AF02', '#86B817'];
         H.store = '<div class="card"><div class="url">bmarketx.com/str/mabelsteapots</div><div class="hd"><div class="av">M</div><div><div class="nm">Mabel&rsquo;s Teapots</div><div class="fb">99.9% positive &middot; 4.1K sold &middot; 312 followers</div></div></div><div class="grid">' + PR.map(function (p, k) { return '<div class="it" style="--k:' + k + '"><div class="th">' + potSm(PC[k], k) + '</div><div class="pr">' + p + '</div></div>'; }).join('') + '</div></div>';
         H.code = '<div class="card pad">Hand-picked teapots since 2007. Every pot washed, wrapped and loved.<br /><br /><span class="stampc">bmx-7Q4K</span></div>';
-        H.sign2 = '<div class="card pad" style="text-align:center"><div style="color:#6b5f48">bmarketx.com</div><div class="bt">Sign in with bWalletX</div><div class="ok">&#10003; Signed in. No password.</div></div>';
+        H.sign2 = '<div class="card pad" style="text-align:center"><div style="color:#6b5f48">bMarketX.com</div><div class="bt">Sign in with bWalletX</div><div class="ok">&#10003; Signed in. No password.</div></div>';
         // One hero per scene. bg: flat paper colour. plate/plink: the tag. subc: subline colour.
         var SCENES = [
-          { b: 0,  bg: '#E53238', hero: 'sign',   s: '{L} is for | shopkeepers' },
-          { b: 6,  bg: '#f6efe0', hero: 'mabel',  s: 'Meet Mabel', sub: '682 teapots. Nineteen years on eBay. One very good cardigan.', subc: '#3a2a1a', plate: '#1d1712', plink: '#fffaf0' },
-          { b: 12, bg: '#0064D2', hero: 'store',  s: 'Same shop', sub: 'Her store page, laid out the way her buyers already know.' },
-          { b: 18, bg: '#bfe0ff', hero: 'street', s: 'New street', sub: 'bmarketx.com/str/mabelsteapots', subc: '#0b2a55', plate: '#0064D2', plink: '#fff' },
-          { b: 24, bg: '#86B817', hero: 'csv',    s: 'One file', sub: 'Her Seller Hub &ldquo;All active listings&rdquo; CSV, uploaded.' },
-          { b: 30, bg: '#F5AF02', hero: 'kettle', s: 'Before the | kettle boiled', sub: 'All 682 moved in about a minute.', subc: '#3a2a1a' },
-          { b: 36, bg: '#f6efe0', hero: 'code',   s: 'Or paste a link', sub: 'A short code in her eBay store description proves the shop is hers.', subc: '#3a2a1a', plate: '#E53238', plink: '#fff' },
-          { b: 42, bg: '#0064D2', hero: 'stars',  s: 'Keep your stars', sub: 'Her feedback, items sold and followers come too.' },
-          { b: 48, bg: '#ffd24d', hero: 'sign2',  s: 'No password', sub: 'Sign in with bWalletX. Your wallet is your account.', subc: '#3a2a1a', plate: '#1d1712', plink: '#fffaf0' },
-          { b: 54, bg: '#86B817', hero: 'token',  s: 'Mint the lot', sub: 'Each teapot a BSV-21 token in her own wallet, its photo on chain. Supply = stock.' },
-          { b: 60, bg: '#E53238', hero: 'price',  s: 'For all 682', sub: 'About a tenth of a cent a listing.' },
-          { b: 66, bg: '#1d1712', hero: 'wallet', s: 'Hers. Not ours.', sub: 'Her shop, in her own wallet.', plate: '#ffd24d' },
-          { b: 72, bg: '#f6efe0', hero: 'dollar', s: 'Dollars on the tag', sub: 'Paid in BSV, straight from bWalletX.', subc: '#3a2a1a', plate: '#0064D2', plink: '#fff' },
-          { b: 80, bg: '#E53238', hero: 'door',   s: '{L} is for | shopkeepers', cta: true }
+          { b: 0, bg: '#E53238', hero: 'sign',   s: '{L} is for | shopkeepers' },
+          { b: 8, bg: '#f6efe0', hero: 'mabel',  s: 'Meet Mabel', sub: '682 teapots. Nineteen years on eBay. One very good cardigan.', subc: '#3a2a1a', plate: '#1d1712', plink: '#fffaf0' },
+          { b: 16, bg: '#0064D2', hero: 'store',  s: 'Same shop', sub: 'Her store page, laid out the way her buyers already know.' },
+          { b: 24, bg: '#bfe0ff', hero: 'street', s: 'New street', sub: 'bmarketx.com/str/mabelsteapots', subc: '#0b2a55', plate: '#0064D2', plink: '#fff' },
+          { b: 32, bg: '#86B817', hero: 'csv',    s: 'One file', sub: 'Her Seller Hub &ldquo;All active listings&rdquo; CSV, uploaded.' },
+          { b: 40, bg: '#F5AF02', hero: 'kettle', s: 'Before the | kettle boiled', sub: 'All 682 moved in about a minute.', subc: '#3a2a1a' },
+          { b: 48, bg: '#f6efe0', hero: 'code',   s: 'Or paste a link', sub: 'A short code in her eBay store description proves the shop is hers.', subc: '#3a2a1a', plate: '#E53238', plink: '#fff' },
+          { b: 56, bg: '#0064D2', hero: 'stars',  s: 'Keep your stars', sub: 'Her feedback, items sold and followers come too.' },
+          { b: 64, bg: '#ffd24d', hero: 'sign2',  s: 'No password', sub: 'Sign in to bMarketX.com with bWalletX. Your wallet is your account.', subc: '#3a2a1a', plate: '#1d1712', plink: '#fffaf0' },
+          { b: 72, bg: '#86B817', hero: 'token',  s: 'Mint the lot', sub: 'Each teapot a BSV-21 token in her own wallet, its photo on chain. Supply = stock.' },
+          { b: 80, bg: '#E53238', hero: 'price',  s: 'For all 682', sub: 'About a tenth of a cent a listing.' },
+          { b: 88, bg: '#1d1712', hero: 'wallet', s: 'Hers. Not ours.', sub: 'Her shop, in her own wallet.', plate: '#ffd24d' },
+          { b: 96, bg: '#f6efe0', hero: 'dollar', s: 'Dollars on the tag', sub: 'Paid in BSV, straight from bWalletX.', subc: '#3a2a1a', plate: '#0064D2', plink: '#fff' },
+          { b: 104, bg: '#E53238', hero: 'door',   s: '{L} is for | shopkeepers', cta: true }
         ];
         var stage = document.getElementById('stage');
         stage.innerHTML = SCENES.map(function (s) {
           s.at = s.b * BEAT;
           var st = '--bgc:' + s.bg + (s.plate ? ';--plate:' + s.plate : '') + (s.plink ? ';--plink:' + s.plink : '') + (s.subc ? ';--subc:' + s.subc : '');
-          return '<div class="scene" style="' + st + '"><div class="hero">' + H[s.hero] + '</div><div class="tag">' + (s.cta ? '<img class="wm" src="/bmarket/logo-dark.svg" alt="bMarketX" />' : '') + '<h2>' + slogan(s.s) + '</h2>' + (s.sub ? '<p>' + s.sub + '</p>' : '')
-            + (s.cta ? '<p class="getp"><a class="cta" href="https://bmarketx.com/sell?from=b-is-for-shopkeepers-film">Bring your shop</a> <a class="cta2" href="https://bmarketx.com?from=b-is-for-shopkeepers-film">Visit bMarketX</a></p>' : '') + '</div></div>';
+          return '<div class="scene" style="' + st + '"><div class="hero">' + H[s.hero] + '</div><div class="tag">' + (s.cta ? '<span class="wmw"><img class="wm" src="/bmarket/logo-dark.svg" alt="bMarketX" /><span class="dotcom">.com</span></span>' : '') + '<h2>' + slogan(s.s) + '</h2>' + (s.sub ? '<p>' + s.sub + '</p>' : '')
+            + (s.cta ? '<p class="getp"><a class="cta" href="https://bmarketx.com/sell?from=b-is-for-shopkeepers-film">Bring your shop</a> <a class="cta2" href="https://bmarketx.com?from=b-is-for-shopkeepers-film">Visit bMarketX.com</a></p>' : '') + '</div></div>';
         }).join('');
         // The end scene: the wordmark sits above the tag, so the door hero is shorter.
         var last = stage.lastElementChild; last.querySelector('.hero').style.height = '34%'; last.querySelector('.tag').style.top = '48%';
