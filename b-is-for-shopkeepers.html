@@ -3,7 +3,10 @@
   b is for shopkeepers (26 Oct 2026, v2 "Mabel's shop window"): the bMarketX commercial in the b-is-for family.
   Mabel (a made-up seller, not a real eBay store) moves 682 teapots from eBay to bMarketX, keeps her stars and mints her shop.
   Music: Insect Symphony by VexVoid, 46.2 s from 109.22 s (on the beat), fade out, -11 LUFS.
-  77.8 BPM, gridded in half-beats (0.3856 s, 155.6 double-time); a cut every 4 beats behind a striped awning wipe. One drawn hero object per scene, words on a tag below.
+  Sync: the beats were measured in this exact cut (spectral-flux onsets, 77.96 BPM, first beat at 0.275 s, each beat snapped to its
+  local onset peak, median error 5 ms). BEATS below is that list. Bars start on beats 0, 4, 8...: a scene changes on every bar start.
+  Everything runs on the audio clock: each frame reads music.currentTime and seeks every running CSS animation (Web Animations API)
+  and the awning to it, so nothing drifts if playback starts late, stalls or the tab sleeps. ?debug=1 shows the sync overlay. One drawn hero object per scene, words on a tag below.
   Every claim is live today. Buying is not: the film never shows a sale; the calm text says buying opens soon.
   Test hooks: ?autoplay=silent, ?t=SECONDS, ?still=SCENE, window.__film.
 -->
@@ -36,7 +39,7 @@
       /* b is for shopkeepers, "Mabel's shop window" (v2, 26 Oct 2026). Its own look: flat paper colours, one drawn hero object
          per scene in the top half, the words on a shop tag below it, a striped awning that drops on each cut, labels that
          stamp on, and a gentle bob on the beat. */
-      :root { --beat: .3856s; --ink: #1d1712; --paper: #f6efe0; --gold: #ffd24d; --gold-hi: #ffe58a; --gold-lo: #c98f00; --red: #E53238; --blue: #0064D2; --yel: #F5AF02; --grn: #86B817; --hf: 'Space Grotesk', system-ui, sans-serif; }
+      :root { --beat: 0.7694s; --ink: #1d1712; --paper: #f6efe0; --gold: #ffd24d; --gold-hi: #ffe58a; --gold-lo: #c98f00; --red: #E53238; --blue: #0064D2; --yel: #F5AF02; --grn: #86B817; --hf: 'Space Grotesk', system-ui, sans-serif; }
       * { box-sizing: border-box; }
       html, body { margin: 0; background: #1d1712; color: #fff8e8; overflow-x: clip; font-family: var(--hf); }
       .film { position: relative; width: 100%; height: 100svh; min-height: 560px; overflow: hidden; background: var(--paper); }
@@ -46,23 +49,23 @@
       .scene::before { content: ''; position: absolute; inset: 0; background-image: radial-gradient(rgba(0,0,0,.05) 1px, transparent 1px); background-size: 6px 6px; pointer-events: none; }
       .hero { position: absolute; left: 50%; top: 6%; height: 50%; width: min(86vw, 560px); translate: -50% 0; display: flex; align-items: center; justify-content: center; }
       .hero > svg { height: 100%; width: 100%; overflow: visible; }
-      .scene.on .hero { animation: drop .55s cubic-bezier(.2,1.5,.45,1) both, bob var(--beat) .6s ease-in-out infinite alternate; }
-      @keyframes drop { from { transform: translateY(-60vh) rotate(-6deg); } to { transform: none; } }
+      .scene.on .hero { animation: drop .36s calc(var(--beat) - .3s) linear both, bob var(--beat) var(--beat) ease-in-out infinite alternate; }
+      @keyframes drop { 0% { transform: translateY(-60vh) rotate(-6deg); animation-timing-function: cubic-bezier(.5,0,.9,.5); } 83% { transform: translateY(0) scale(1.04, .94); } 100% { transform: none; } }
       @keyframes bob { from { translate: -50% 0; } to { translate: -50% -6px; } }
       .tag { position: absolute; left: 50%; top: 61%; translate: -50% 0; width: min(92vw, 820px); text-align: center; }
       .tag h2 { display: inline-flex; align-items: center; flex-wrap: wrap; justify-content: center; gap: 0 .22em; margin: 0; padding: .14em .5em .18em; background: var(--plate, #fffaf0); color: var(--plink, var(--ink)); border-radius: 14px; font: 700 clamp(2.2rem, 8vw, 5.4rem)/1 var(--hf); letter-spacing: -0.04em; box-shadow: 0 8px 0 rgba(0,0,0,.18); rotate: -2deg; }
       .tag h2 .lb { height: .82em; width: auto; }
       .tag h2 .br { flex-basis: 100%; height: 0; }
-      .scene.on .tag h2 { animation: stamp .32s calc(var(--beat) * 1) cubic-bezier(.3,1.6,.5,1) both; }
-      @keyframes stamp { from { opacity: 0; transform: scale(1.7) rotate(-6deg); } to { opacity: 1; transform: none; } }
+      .scene.on .tag h2 { animation: stamp .24s calc(var(--beat) * 2 - .17s) linear both; }
+      @keyframes stamp { 0% { opacity: 0; transform: scale(1.7) rotate(-6deg); animation-timing-function: ease-in; } 70% { opacity: 1; transform: scale(.96); } 100% { opacity: 1; transform: none; } }
       .tag p { margin: 18px auto 0; max-width: 600px; font: 600 clamp(1rem, 2.6vw, 1.35rem)/1.4 var(--hf); color: var(--subc, #fff); }
       .scene.on .tag p { animation: up .4s calc(var(--beat) * 2) ease-out both; }
       @keyframes up { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: none; } }
       /* the awning drops over each cut and lifts on the beat */
       .awn { position: absolute; left: 0; right: 0; top: 0; height: 100%; z-index: 5; background: repeating-linear-gradient(90deg, var(--red) 0 60px, #fffaf0 60px 120px); transform: translateY(calc(-100% - 40px)); pointer-events: none; }
       .awn::after { content: ''; position: absolute; left: 0; right: 0; bottom: -26px; height: 26px; background: radial-gradient(circle at 30px 0, var(--red) 29px, transparent 30px) 0 0 / 120px 26px, radial-gradient(circle at 90px 0, #fffaf0 29px, transparent 30px) 0 0 / 120px 26px; }
-      .awn.go { animation: awn .42s cubic-bezier(.6,0,.3,1); }
-      @keyframes awn { 0% { transform: translateY(calc(-100% - 40px)); } 45%, 55% { transform: translateY(0); } 100% { transform: translateY(calc(-100% - 40px)); } }
+      .dbg { position: absolute; left: 10px; top: 10px; z-index: 9; padding: 8px 10px; border-radius: 8px; background: rgba(0,0,0,.75); color: #fff; font: 12px/1.4 ui-monospace, monospace; white-space: pre; pointer-events: none; }
+      .dbg i { display: inline-block; width: 14px; height: 14px; border-radius: 50%; background: #444; vertical-align: -2px; margin-right: 6px; } .dbg i.on { background: #ffd24d; } .dbg i.bar { background: #E53238; }
       /* hero details */
       .scene.on .swing { animation: swing calc(var(--beat) * 2) ease-in-out infinite alternate; transform-origin: 200px 0; transform-box: view-box; }
       @keyframes swing { from { transform: rotate(-4deg); } to { transform: rotate(4deg); } }
@@ -71,22 +74,22 @@
       .scene.on .steam path:nth-child(2) { animation-delay: .4s; } .scene.on .steam path:nth-child(3) { animation-delay: .8s; }
       @keyframes steam { 0% { stroke-dashoffset: 60; opacity: 0; } 30% { opacity: 1; } 100% { stroke-dashoffset: -60; opacity: 0; } }
       .pop { opacity: 0; transform-box: fill-box; transform-origin: 50% 50%; }
-      .scene.on .pop { animation: popin .3s calc(.5s + var(--k) * var(--beat)) cubic-bezier(.3,1.8,.5,1) both; }
-      @keyframes popin { from { opacity: 0; transform: scale(0) rotate(-20deg); } to { opacity: 1; transform: none; } }
+      .scene.on .pop { animation: popin .2s calc(var(--beat) + var(--k) * var(--beat) / 2 - .14s) linear both; }
+      @keyframes popin { 0% { opacity: 0; transform: scale(0) rotate(-20deg); animation-timing-function: ease-in; } 70% { opacity: 1; transform: scale(1.12); } 100% { opacity: 1; transform: none; } }
       .fall { transform-box: fill-box; }
       .scene.on .fall { animation: fall .9s .4s cubic-bezier(.5,0,.8,.6) both; }
       @keyframes fall { 0% { transform: translateY(-120px); } 70% { transform: translateY(0); opacity: 1; } 100% { transform: translateY(70px); opacity: 0; } }
-      .scene.on .turn { animation: turn .5s calc(var(--beat) * 3) ease both; transform-box: fill-box; transform-origin: 20% 50%; }
+      .scene.on .turn { animation: turn .4s calc(var(--beat) * 3 - .2s) ease both; transform-box: fill-box; transform-origin: 20% 50%; }
       @keyframes turn { to { transform: rotate(90deg); } }
       .morph1, .morph2 { transform-box: fill-box; transform-origin: 50% 50%; }
-      .scene.on .morph1 { animation: m1 .5s calc(var(--beat) * 3) ease-in both; }
-      .scene.on .morph2 { animation: m2 1s calc(var(--beat) * 3) cubic-bezier(.3,1.4,.5,1) both; }
+      .scene.on .morph1 { animation: m1 .3s calc(var(--beat) * 2.5) ease-in both; }
+      .scene.on .morph2 { animation: m2 calc(var(--beat) * 1.5) calc(var(--beat) * 2.5) ease-in-out both; }
       @keyframes m1 { to { opacity: 0; transform: scale(.3); } }
-      @keyframes m2 { 0% { opacity: 0; transform: scale(.3); } 40% { opacity: 1; transform: none; } 100% { opacity: 1; transform: translate(0, 80px) scale(.7); } }
-      .scene.on .flip { animation: flip .5s calc(var(--beat) * 2) ease both; transform-box: fill-box; transform-origin: 50% 0; }
+      @keyframes m2 { 0% { opacity: 0; transform: scale(.3); } 33% { opacity: 1; transform: none; } 100% { opacity: 1; transform: translate(0, 80px) scale(.7); } }
+      .scene.on .flip { animation: flip .5s calc(var(--beat) * 3 - .25s) ease both; transform-box: fill-box; transform-origin: 50% 0; }
       @keyframes flip { 0% { transform: rotateX(0); } 50% { transform: rotateX(90deg); } 100% { transform: rotateX(0); } }
       .flip .s1 { opacity: 1; } .flip .s2 { opacity: 0; }
-      .scene.on .flip .s1 { animation: hide 0s calc(var(--beat) * 2 + .25s) forwards; } .scene.on .flip .s2 { animation: show 0s calc(var(--beat) * 2 + .25s) forwards; }
+      .scene.on .flip .s1 { animation: hide 0s calc(var(--beat) * 3) forwards; } .scene.on .flip .s2 { animation: show 0s calc(var(--beat) * 3) forwards; }
       @keyframes hide { to { opacity: 0; } } @keyframes show { to { opacity: 1; } }
       /* HTML heroes: the store page, the description, the sign-in */
       .card { width: min(84vw, 440px); background: #fff; color: #111; border-radius: 16px; box-shadow: 0 10px 0 rgba(0,0,0,.15); font: 500 13px/1.4 var(--hf); text-align: left; overflow: hidden; }
@@ -98,13 +101,13 @@
       .card .th { aspect-ratio: 1; border-radius: 10px; background: #f5efe3; padding: 6px; } .card .th svg { width: 100%; height: 100%; }
       .card .pr { font-weight: 700; margin-top: 4px; }
       .card .it { opacity: 0; }
-      .scene.on .card .it { animation: popin .3s calc(.5s + var(--k) * var(--beat)) cubic-bezier(.3,1.8,.5,1) both; }
+      .scene.on .card .it { animation: popin .2s calc(var(--beat) + var(--k) * var(--beat) / 2 - .14s) linear both; }
       .card.pad { padding: 18px 20px; background: #fffaf0; font-size: 15px; }
       .stampc { display: inline-block; padding: 2px 8px; border: 3px solid var(--red); color: var(--red); border-radius: 6px; font-weight: 700; rotate: -6deg; opacity: 0; }
-      .scene.on .stampc { animation: stamp .3s calc(var(--beat) * 3) cubic-bezier(.3,1.6,.5,1) forwards; }
+      .scene.on .stampc { animation: stamp .24s calc(var(--beat) * 3 - .17s) linear both; }
       .card .bt { margin-top: 14px; padding: 13px; border-radius: 12px; background: var(--gold); color: #000; font-weight: 700; text-align: center; }
       .card .ok { margin-top: 12px; color: #1d7a3a; font-weight: 700; text-align: center; opacity: 0; }
-      .scene.on .card .ok { animation: up .3s calc(var(--beat) * 4) ease-out forwards; }
+      .scene.on .card .ok { animation: up .3s calc(var(--beat) * 3) ease-out both; }
       .count { font: 700 clamp(2.4rem, 9vw, 5rem)/1 var(--hf); color: var(--ink); letter-spacing: -0.04em; font-variant-numeric: tabular-nums; text-align: center; }
       .count small { display: block; font-size: .28em; letter-spacing: .14em; text-transform: uppercase; color: #5a4a3a; margin-top: 6px; }
       .wm { height: clamp(28px, 4vw, 42px); width: auto; display: block; margin: 0 auto 14px; }
@@ -197,7 +200,10 @@
 
     <script>
       (function () {
-        var BEAT = 0.3856, END = 46.2;
+        var END = 46.2;
+        // The beats of this cut, measured offline (see the header). Bars start on every 4th beat.
+        var BEATS = [0.284, 1.053, 1.821, 2.524, 3.362, 4.131, 4.904, 5.667, 6.435, 7.204, 7.972, 8.75, 9.523, 10.297, 11.065, 11.828, 12.596, 13.365, 14.138, 14.906, 15.674, 16.438, 17.216, 17.984, 18.747, 19.516, 20.284, 21.057, 21.83, 22.599, 23.372, 24.135, 24.903, 25.672, 26.445, 27.213, 27.976, 28.745, 29.523, 30.296, 31.059, 31.828, 32.596, 33.364, 34.137, 34.911, 35.679, 36.442, 37.215, 37.984, 38.747, 39.52, 40.293, 41.057, 41.83, 42.603, 43.361, 44.135, 44.903, 45.676];
+        var BEAT = 0.7694;
         function esc(s) { return String(s).replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); }
         function slogan(text) {
           return '<span class="sr">' + esc(text.replace(/\{L\}/g, 'b').replace(/ \| /g, ' ')) + '</span>' + text.split(/\s+/).map(function (w) {
@@ -231,23 +237,23 @@
         // One hero per scene. bg: flat paper colour. plate/plink: the tag. subc: subline colour.
         var SCENES = [
           { b: 0, bg: '#E53238', hero: 'sign',   s: '{L} is for | shopkeepers' },
-          { b: 8, bg: '#f6efe0', hero: 'mabel',  s: 'Meet Mabel', sub: '682 teapots. Nineteen years on eBay. One very good cardigan.', subc: '#3a2a1a', plate: '#1d1712', plink: '#fffaf0' },
-          { b: 16, bg: '#0064D2', hero: 'store',  s: 'Same shop', sub: 'Her store page, laid out the way her buyers already know.' },
-          { b: 24, bg: '#bfe0ff', hero: 'street', s: 'New street', sub: 'bmarketx.com/str/mabelsteapots', subc: '#0b2a55', plate: '#0064D2', plink: '#fff' },
-          { b: 32, bg: '#86B817', hero: 'csv',    s: 'One file', sub: 'Her Seller Hub &ldquo;All active listings&rdquo; CSV, uploaded.' },
-          { b: 40, bg: '#F5AF02', hero: 'kettle', s: 'Before the | kettle boiled', sub: 'All 682 moved in about a minute.', subc: '#3a2a1a' },
-          { b: 48, bg: '#f6efe0', hero: 'code',   s: 'Or paste a link', sub: 'A short code in her eBay store description proves the shop is hers.', subc: '#3a2a1a', plate: '#E53238', plink: '#fff' },
-          { b: 56, bg: '#0064D2', hero: 'stars',  s: 'Keep your stars', sub: 'Her feedback, items sold and followers come too.' },
-          { b: 64, bg: '#ffd24d', hero: 'sign2',  s: 'No password', sub: 'Sign in to bMarketX.com with bWalletX. Your wallet is your account.', subc: '#3a2a1a', plate: '#1d1712', plink: '#fffaf0' },
-          { b: 72, bg: '#86B817', hero: 'token',  s: 'Mint the lot', sub: 'Each teapot a BSV-21 token in her own wallet, its photo on chain. Supply = stock.' },
-          { b: 80, bg: '#E53238', hero: 'price',  s: 'For all 682', sub: 'About a tenth of a cent a listing.' },
-          { b: 88, bg: '#1d1712', hero: 'wallet', s: 'Hers. Not ours.', sub: 'Her shop, in her own wallet.', plate: '#ffd24d' },
-          { b: 96, bg: '#f6efe0', hero: 'dollar', s: 'Dollars on the tag', sub: 'Paid in BSV, straight from bWalletX.', subc: '#3a2a1a', plate: '#0064D2', plink: '#fff' },
-          { b: 104, bg: '#E53238', hero: 'door',   s: '{L} is for | shopkeepers', cta: true }
+          { b: 4, bg: '#f6efe0', hero: 'mabel',  s: 'Meet Mabel', sub: '682 teapots. Nineteen years on eBay. One very good cardigan.', subc: '#3a2a1a', plate: '#1d1712', plink: '#fffaf0' },
+          { b: 8, bg: '#0064D2', hero: 'store',  s: 'Same shop', sub: 'Her store page, laid out the way her buyers already know.' },
+          { b: 12, bg: '#bfe0ff', hero: 'street', s: 'New street', sub: 'bmarketx.com/str/mabelsteapots', subc: '#0b2a55', plate: '#0064D2', plink: '#fff' },
+          { b: 16, bg: '#86B817', hero: 'csv',    s: 'One file', sub: 'Her Seller Hub &ldquo;All active listings&rdquo; CSV, uploaded.' },
+          { b: 20, bg: '#F5AF02', hero: 'kettle', s: 'Before the | kettle boiled', sub: 'All 682 moved in about a minute.', subc: '#3a2a1a' },
+          { b: 24, bg: '#f6efe0', hero: 'code',   s: 'Or paste a link', sub: 'A short code in her eBay store description proves the shop is hers.', subc: '#3a2a1a', plate: '#E53238', plink: '#fff' },
+          { b: 28, bg: '#0064D2', hero: 'stars',  s: 'Keep your stars', sub: 'Her feedback, items sold and followers come too.' },
+          { b: 32, bg: '#ffd24d', hero: 'sign2',  s: 'No password', sub: 'Sign in to bMarketX.com with bWalletX. Your wallet is your account.', subc: '#3a2a1a', plate: '#1d1712', plink: '#fffaf0' },
+          { b: 36, bg: '#86B817', hero: 'token',  s: 'Mint the lot', sub: 'Each teapot a BSV-21 token in her own wallet, its photo on chain. Supply = stock.' },
+          { b: 40, bg: '#E53238', hero: 'price',  s: 'For all 682', sub: 'About a tenth of a cent a listing.' },
+          { b: 44, bg: '#1d1712', hero: 'wallet', s: 'Hers. Not ours.', sub: 'Her shop, in her own wallet.', plate: '#ffd24d' },
+          { b: 48, bg: '#f6efe0', hero: 'dollar', s: 'Dollars on the tag', sub: 'Paid in BSV, straight from bWalletX.', subc: '#3a2a1a', plate: '#0064D2', plink: '#fff' },
+          { b: 52, bg: '#E53238', hero: 'door',   s: '{L} is for | shopkeepers', cta: true }
         ];
         var stage = document.getElementById('stage');
         stage.innerHTML = SCENES.map(function (s) {
-          s.at = s.b * BEAT;
+          s.at = BEATS[s.b];
           var st = '--bgc:' + s.bg + (s.plate ? ';--plate:' + s.plate : '') + (s.plink ? ';--plink:' + s.plink : '') + (s.subc ? ';--subc:' + s.subc : '');
           return '<div class="scene" style="' + st + '"><div class="hero">' + H[s.hero] + '</div><div class="tag">' + (s.cta ? '<span class="wmw"><img class="wm" src="/bmarket/logo-dark.svg" alt="bMarketX" /><span class="dotcom">.com</span></span>' : '') + '<h2>' + slogan(s.s) + '</h2>' + (s.sub ? '<p>' + s.sub + '</p>' : '')
             + (s.cta ? '<p class="getp"><a class="cta" href="https://bmarketx.com/sell?from=b-is-for-shopkeepers-film">Bring your shop</a> <a class="cta2" href="https://bmarketx.com?from=b-is-for-shopkeepers-film">Visit bMarketX.com</a></p>' : '') + '</div></div>';
@@ -260,28 +266,53 @@
         var reduce = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
         var music = document.getElementById('music'), muted = false, withSound = false, start = 0, raf = 0, cur = -1;
         function now() { return withSound ? music.currentTime : performance.now() / 1000 - start; }
+        // Every animation in the live scene is paused and seeked to the audio clock each frame.
+        var anims = [];
         function show(k) {
           if (k === cur) return;
-          var first = cur < 0; cur = k;
-          function swap() { els.forEach(function (e, j) { e.classList.toggle('on', j === k); }); }
-          // The awning drops, the scene changes behind it, the awning lifts.
-          if (reduce || first) { swap(); return; }
-          awn.classList.remove('go'); void awn.offsetWidth; awn.classList.add('go'); setTimeout(swap, 180);
+          cur = k; els.forEach(function (e, j) { e.classList.toggle('on', j === k); });
+          anims = els[k].getAnimations ? els[k].getAnimations({ subtree: true }) : [];
+          anims.forEach(function (a) { a.pause(); });
         }
+        // The awning: closed on each cut (the bar start), open 0.2 s either side. Computed from the same clock.
+        var AW = 0.2, OFF = 'translateY(calc(-100% - 40px))';
+        function awning(t) {
+          if (reduce) return;
+          var d = 9; SCENES.forEach(function (s, j) { if (j) d = Math.min(d, Math.abs(t - s.at)); });
+          if (d >= AW) { awn.style.transform = OFF; return; }
+          var c = 1 - d / AW; c = c * c * (3 - 2 * c);
+          awn.style.transform = 'translateY(calc(' + (-(1 - c) * 100).toFixed(2) + '% - ' + ((1 - c) * 40).toFixed(1) + 'px))';
+        }
+        var debug = new URLSearchParams(location.search).has('debug'), dbg = null, lastB = -1, log = [];
+        if (debug) { dbg = document.createElement('div'); dbg.className = 'dbg'; film.appendChild(dbg); window.__sync = log; }
         function frame() {
           var t = now(), k = 0;
           SCENES.forEach(function (s, j) { if (t >= s.at) k = j; });
-          show(k); bar.style.width = Math.min(100, t / END * 100) + '%';
-          cnt.textContent = Math.max(0, Math.min(682, Math.round((t - SCENES[KI].at - 0.4) / (BEAT * 5) * 682)));
+          show(k);
+          anims.forEach(function (a) { try { a.currentTime = Math.max(0, (t - SCENES[k].at) * 1000); } catch (e) {} });
+          awning(t);
+          bar.style.width = Math.min(100, t / END * 100) + '%';
+          cnt.textContent = Math.max(0, Math.min(682, Math.round((t - SCENES[KI].at - BEAT) / (BEAT * 2) * 682)));
+          if (dbg) {
+            var b = -1; for (var i = 0; i < BEATS.length; i++) if (t >= BEATS[i]) b = i;
+            if (b !== lastB && b >= 0) { log.push({ beat: b, sched: BEATS[b], audio: +t.toFixed(3), lateMs: Math.round((t - BEATS[b]) * 1000) }); lastB = b; dbg.dataset.late = log.map(function (e) { return e.lateMs; }).join(','); }
+            var e = log.length ? log[log.length - 1] : null, on = e && t - BEATS[b] < 0.09;
+            dbg.innerHTML = '<i class="' + (on ? (b % 4 === 0 ? 'bar' : 'on') : '') + '"></i>audio ' + t.toFixed(3) + ' s  ' + (withSound ? '(audio clock)' : '(silent clock)')
+              + '\nbeat #' + b + '  sched ' + (b >= 0 ? BEATS[b].toFixed(3) : '-') + '  seen ' + (e ? e.audio.toFixed(3) + '  late ' + e.lateMs + ' ms' : '-')
+              + '\nscene ' + k + '  cut at ' + SCENES[k].at.toFixed(3) + ' (beat ' + SCENES[k].b + ')';
+          }
           if (t < END && !(withSound && music.ended)) raf = requestAnimationFrame(frame); else bar.style.width = '0';
         }
         function play(sound) {
-          cancelAnimationFrame(raf); withSound = sound; cur = -1;
+          cancelAnimationFrame(raf); withSound = sound; cur = -1; lastB = -1; log.length = 0;
           els.forEach(function (e) { e.classList.remove('on'); });
           music.pause(); music.currentTime = 0; music.muted = muted; start = performance.now() / 1000;
+          // With sound, the clock is music.currentTime, which stays at 0 until the audio really starts, so start latency can't shift the film.
           if (sound) music.play().catch(function () { withSound = false; start = performance.now() / 1000; });
           poster.classList.add('gone'); document.body.classList.add('started'); raf = requestAnimationFrame(frame);
         }
+        // A sleeping tab stops requestAnimationFrame but not the audio; the first frame back seeks everything to the audio time.
+        document.addEventListener('visibilitychange', function () { if (!document.hidden && document.body.classList.contains('started')) { cancelAnimationFrame(raf); raf = requestAnimationFrame(frame); } });
         document.getElementById('play').onclick = function () { play(true); };
         document.getElementById('quiet').onclick = function () { play(false); };
         document.getElementById('again').onclick = function () { play(withSound); };
