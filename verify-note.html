@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>Verify a signed note · bWalletX</title>
+    <meta name="description" content="Check a note or IOU signed in bWalletX: who signed it, when, and that not a word has changed." />
+    <link rel="canonical" href="https://bwalletx.com/verify-note" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://bwalletx.com/verify-note" />
+    <meta property="og:site_name" content="bWalletX" />
+    <meta property="og:title" content="Verify a signed note" />
+    <meta property="og:description" content="Check a note or IOU signed in bWalletX: who signed it, when, and that not a word has changed." />
+    <meta property="og:image" content="https://bwalletx.com/og-verify-note.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Verify a signed note in bWalletX" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@bWalletX" />
+    <meta name="twitter:title" content="Verify a signed note" />
+    <meta name="twitter:description" content="Who signed it, when, and that not a word has changed." />
+    <meta name="twitter:image" content="https://bwalletx.com/og-verify-note.png" />
+    <meta name="theme-color" content="#000000" />
+    <link rel="icon" href="/favicon.ico" sizes="48x48" />
+    <style>
+      :root { --gold: #f5c542; --fg: #fff; --muted: #98a2b3; --line: #2b2f36; --ok: #32d583; --bad: #f97066; }
+      * { box-sizing: border-box; }
+      body { margin: 0; background: #000; color: var(--fg); font: 16px/1.5 system-ui, -apple-system, Segoe UI, Roboto, sans-serif; }
+      main { max-width: 680px; margin: 0 auto; padding: 48px 16px 64px; }
+      a { color: var(--gold); }
+      h1 { font-size: 32px; margin: 0 0 8px; }
+      p.lead { color: var(--muted); margin: 0 0 24px; }
+      textarea { width: 100%; min-height: 180px; background: #0b0c0e; color: var(--fg); border: 1px solid var(--line); border-radius: 12px; padding: 12px; font: 13px/1.4 ui-monospace, Menlo, monospace; }
+      .row { display: flex; gap: 8px; flex-wrap: wrap; margin: 12px 0 24px; }
+      button, label.file { background: var(--gold); color: #000; border: 0; border-radius: 10px; padding: 10px 16px; font-weight: 700; cursor: pointer; font-size: 14px; }
+      label.file { background: #2b2f36; color: #fff; }
+      label.file input { display: none; }
+      .result { border: 1px solid var(--line); border-radius: 12px; padding: 16px; display: none; }
+      .result.ok { border-color: var(--ok); display: block; }
+      .result.bad { border-color: var(--bad); display: block; }
+      .verdict { font-weight: 700; margin-bottom: 8px; }
+      .ok .verdict { color: var(--ok); }
+      .bad .verdict { color: var(--bad); }
+      .text { white-space: pre-wrap; word-break: break-word; margin: 8px 0; }
+      .meta { color: var(--muted); font-size: 13px; word-break: break-all; }
+      footer { color: var(--muted); font-size: 13px; margin-top: 40px; }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>Verify a signed note</h1>
+      <p class="lead">
+        Notes and IOUs signed in bWalletX (Settings › Sign a note) carry a signature from the signer's identity key.
+        Paste the note file or open it here to see who signed it, when, and that not a word has changed. It's checked
+        in your browser; nothing is uploaded.
+      </p>
+      <textarea id="input" placeholder='{"type":"bwalletx-signed-note", …}' spellcheck="false"></textarea>
+      <div class="row">
+        <button id="check" type="button">Check</button>
+        <label class="file">Open a file<input id="file" type="file" accept=".json,application/json" /></label>
+      </div>
+      <div id="result" class="result">
+        <div class="verdict" id="verdict"></div>
+        <div class="text" id="text"></div>
+        <div class="meta" id="meta"></div>
+      </div>
+      <footer>
+        A valid signature proves the holder of that identity key signed this exact text. To know whose key it is, check
+        it against their bWalletX profile or paymail. <a href="/">bWalletX</a>
+      </footer>
+    </main>
+    <script type="module">
+      import { KeyDeriver, PrivateKey, Signature, Utils } from 'https://cdn.jsdelivr.net/npm/@bsv/sdk@2.8.11/+esm';
+      const PROTOCOL = [2, 'bwalletx signed note'];
+      const message = (n) => `bwalletx signed note v1\n${n.signer}\n${n.date}\n${n.text}`;
+      const verify = (n) => {
+        if (n?.type !== 'bwalletx-signed-note' || n.scheme !== 'bwx-note') return false;
+        const bytes = Utils.toArray(String(n.signature), 'hex');
+        const signer = Utils.toHex(bytes.slice(4, 37));
+        if (signer !== String(n.signer).toLowerCase() || bytes[37] !== 0) return false;
+        const keyID = Utils.toBase64(bytes.slice(38, 70));
+        const pub = new KeyDeriver(new PrivateKey(1)).derivePublicKey(PROTOCOL, keyID, signer, false);
+        return pub.verify(Utils.toArray(message(n), 'utf8'), Signature.fromDER(bytes.slice(70)));
+      };
+      const $ = (id) => document.getElementById(id);
+      const show = (ok, verdict, text = '', meta = '') => {
+        $('result').className = 'result ' + (ok ? 'ok' : 'bad');
+        $('verdict').textContent = verdict;
+        $('text').textContent = text;
+        $('meta').textContent = meta;
+      };
+      const check = () => {
+        let n;
+        try {
+          n = JSON.parse($('input').value);
+        } catch {
+          return show(false, '✗ That is not a note file.');
+        }
+        let ok = false;
+        try {
+          ok = verify(n);
+        } catch {}
+        if (!ok) return show(false, '✗ The signature does not match. This note was changed or not signed by this key.');
+        show(true, '✓ Valid: signed and unchanged', n.text, `Signed ${new Date(n.date).toUTCString()} by identity key ${n.signer}`);
+      };
+      $('check').onclick = check;
+      $('file').onchange = async (e) => {
+        const f = e.target.files?.[0];
+        if (!f) return;
+        $('input').value = await f.text();
+        check();
+      };
+    </script>
+  </body>
+</html>
