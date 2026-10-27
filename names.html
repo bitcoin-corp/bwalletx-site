@@ -3,23 +3,23 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Get your name on Bitcoin</title>
+    <title>Get your name</title>
     <link rel="canonical" href="https://bwalletx.com/names" />
-    <meta name="description" content="Your own name on Bitcoin, yours forever. One payment, no renewals: $10 for five letters or more, $50 for four, $100 for three, $500 for one or two. Search it, buy it or claim it, and give one to a friend, in bWalletX." />
+    <meta name="description" content="Your @bwalletx.com name is free. Short names cost more: 4 letters $10, 3 letters $100, 1–2 letters $1000. Search it and get it in bWalletX." />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://bwalletx.com/names" />
     <meta property="og:site_name" content="bWalletX" />
-    <meta property="og:title" content="Get your name on Bitcoin" />
-    <meta property="og:description" content="Yours forever. One payment, no renewals. $10 for five letters or more, $50 for four, $100 for three, $500 for one or two. Search, buy or claim it in bWalletX." />
-    <meta property="og:image" content="https://bwalletx.com/og-names-v1.png" />
+    <meta property="og:title" content="Your name is free. Short names cost more." />
+    <meta property="og:description" content="Your @bwalletx.com name is free. Short names cost more: 4 letters $10, 3 letters $100, 1–2 letters $1000. Search it and get it in bWalletX." />
+    <meta property="og:image" content="https://bwalletx.com/og-names.png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
-    <meta property="og:image:alt" content="Get your name on Bitcoin: alice, alice@bwalletx.com, $1.00, Buy alice." />
+    <meta property="og:image:alt" content="Your name is free. yourname@bwalletx.com. 4 letters $10, 3 letters $100, 1–2 letters $1000." />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@bWalletX" />
-    <meta name="twitter:title" content="Get your name on Bitcoin" />
-    <meta name="twitter:description" content="Yours forever. One payment, no renewals. $10 for five letters or more, $50 for four, $100 for three, $500 for one or two. Search, buy or claim it in bWalletX." />
-    <meta name="twitter:image" content="https://bwalletx.com/og-names-v1.png" />
+    <meta name="twitter:title" content="Your name is free. Short names cost more." />
+    <meta name="twitter:description" content="Your @bwalletx.com name is free. Short names cost more: 4 letters $10, 3 letters $100, 1–2 letters $1000. Search it and get it in bWalletX." />
+    <meta name="twitter:image" content="https://bwalletx.com/og-names.png" />
     <link rel="icon" href="/favicon.ico" />
     <link rel="stylesheet" href="/styles.css" />
     <style>
@@ -84,6 +84,21 @@
       .nm-opt .qr svg { width: 100%; height: 100%; display: block; }
       .nm-sheet .foot { display: flex; justify-content: space-between; align-items: center; margin-top: 16px; font-size: .88rem; color: rgba(244,241,232,.64); }
       .nm-sheet .foot a { color: #F5B800; }
+      /* Paymail names (owner pricing, 27 Oct 2026): big, plain, little to read. */
+      .pm { text-align: center; margin: 0 auto 72px; max-width: 760px; }
+      .pm h1 { font-size: clamp(2.6rem, 9vw, 4.4rem); max-width: 14ch; }
+      .pm-tiers { font-size: 1.1rem; color: rgba(244,241,232,.82); margin: -14px 0 26px; }
+      .pm-tiers b { color: #F5B800; }
+      .pm .price { font-size: clamp(1.3rem, 4.5vw, 1.8rem); font-weight: 700; margin: 0 0 28px; color: #f4f1e8; }
+      .pm .price .gold { color: #F5B800; }
+      .pm-search { display: flex; align-items: center; gap: 0; max-width: 640px; margin: 0 auto; background: #0b0c0f; border: 2px solid rgba(245,184,0,.55); border-radius: 20px; padding: 6px 18px; }
+      .pm-search input { flex: 1; min-width: 0; background: transparent; border: 0; outline: 0; color: #fff; font-size: clamp(1.3rem, 5vw, 1.8rem); padding: 12px 0; text-align: right; }
+      .pm-search .dom { color: rgba(244,241,232,.64); font-size: clamp(1rem, 4vw, 1.5rem); white-space: nowrap; }
+      .pm-out { min-height: 150px; margin-top: 22px; }
+      .pm-status { font-size: clamp(1.5rem, 6vw, 2.2rem); font-weight: 800; letter-spacing: -.02em; margin: 0 0 6px; overflow-wrap: anywhere; }
+      .pm-status.ok { color: #4ADE80; } .pm-status.no { color: #FDA29B; } .pm-status.held { color: #F5B800; }
+      .pm-note { font-size: 1.1rem; color: rgba(244,241,232,.82); margin: 0; }
+      .pm .nm-cta { font-size: 1.2rem; padding: 16px 26px; border-radius: 14px; }
       .nm-sheet .close { background: transparent; color: #f4f1e8; border: 1px solid rgba(244,241,232,.2); border-radius: 10px; padding: 8px 14px; cursor: pointer; font-weight: 600; }
     </style>
   </head>
@@ -102,9 +117,23 @@
     <div class="nm-wrap">
       <div class="nm-pool" aria-hidden="true"><canvas id="nm-canvas"></canvas><div class="dim"></div></div>
       <main class="ext nm">
-        <span class="nm-kicker">Names</span>
-        <h1>Get your name on Bitcoin.</h1>
-        <p class="lede">Yours forever. One payment, no renewals.</p>
+        <section class="pm" aria-labelledby="pm-title">
+          <span class="nm-kicker">Names</span>
+          <h1 id="pm-title">Your name is free.</h1>
+          <p class="price">Short names cost more.</p>
+          <p class="pm-tiers">5+ letters <b>Free</b> · 4 letters <b>$10</b> · 3 letters <b>$100</b> · 1–2 letters <b>$1000</b></p>
+          <form class="pm-search" id="pm-form" role="search">
+            <input id="pm-q" type="text" placeholder="yourname" autocomplete="off" autocapitalize="none" spellcheck="false" maxlength="32" aria-label="Find your @bwalletx.com name" />
+            <span class="dom">@bwalletx.com</span>
+          </form>
+          <div class="pm-out" id="pm-out" aria-live="polite">
+            <p class="pm-note">Type a name.</p>
+          </div>
+        </section>
+
+        <span class="nm-kicker">On-chain names</span>
+        <h2 class="nm-h1" style="text-align:center;font-size:clamp(1.8rem,6vw,2.6rem);letter-spacing:-.03em;margin:14px auto 10px;max-width:18ch">On-chain names you own.</h2>
+        <p class="lede">An OpNS name lives in your wallet, not on our server. One payment, no renewals.</p>
 
         <form class="nm-search" id="nm-form" role="search">
           <input id="nm-q" type="text" placeholder="Find your name" autocomplete="off" autocapitalize="none" spellcheck="false" maxlength="64" aria-label="Find your name" />
@@ -142,6 +171,48 @@
       </main>
     </div>
 
+    <script>
+      // @bwalletx.com names: live availability + price from the paymail server's `available` op.
+      (function () {
+        var API = 'https://pay.bwallet.space/api/paymail?op=available&alias=';
+        var GET = 'https://web.bwalletx.com';
+        var q = document.getElementById('pm-q');
+        var out = document.getElementById('pm-out');
+        var esc = function (s) { return String(s).replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); };
+        var show = function (cls, title, note, cta) {
+          out.innerHTML = '<p class="pm-status ' + cls + '">' + title + '</p>' + (note ? '<p class="pm-note">' + note + '</p>' : '') +
+            (cta ? '<a class="nm-cta" href="' + GET + '" target="_blank" rel="noopener">Get it in bWalletX &rarr;</a>' : '');
+        };
+        var timer = null, seq = 0;
+        var check = function () {
+          var a = String(q.value || '').trim().toLowerCase().replace(/^[@$]+/, '').replace(/@.*$/, '');
+          if (!a) return (out.innerHTML = '<p class="pm-note">Type a name.</p>');
+          var mine = ++seq;
+          out.innerHTML = '<p class="pm-note">Checking ' + esc(a) + '&hellip;</p>';
+          fetch(API + encodeURIComponent(a), { signal: AbortSignal.timeout ? AbortSignal.timeout(10000) : undefined })
+            .then(function (r) { return r.ok ? r.json() : null; })
+            .catch(function () { return null; })
+            .then(function (j) {
+              if (mine !== seq) return;
+              var name = esc(a) + '@bwalletx.com';
+              if (!j) return show('no', 'Couldn&rsquo;t check', 'Try again in a moment.', false);
+              var st = j.status || (j.available ? 'free' : j.reason);
+              var usd = Number(j.priceUsd) || 0;
+              switch (st) {
+                case 'free': case 'mine':
+                  return show('ok', 'Free', name + ' is yours to take.', true);
+                case 'priced':
+                  return show('held', '$' + usd.toLocaleString('en-US'), name + ' is available. Paid in BSV.', true);
+                case 'taken': return show('no', 'Taken', name + ' is taken. Try another.', false);
+                case 'held': case 'reserved': return show('held', 'Reserved', name + ' is not for sale.', false);
+                default: return show('no', 'Not a valid name', esc(j.message || 'Use a-z, 0-9, - or _.'), false);
+              }
+            });
+        };
+        q.addEventListener('input', function () { clearTimeout(timer); timer = setTimeout(check, 300); });
+        document.getElementById('pm-form').addEventListener('submit', function (e) { e.preventDefault(); clearTimeout(timer); check(); });
+      })();
+    </script>
     <script>
       // Same mechanics as the Name Store in bWalletX (src/mobile/names/store): availability from the 1Sat name
       // tree, listings from the 1Sat market feed, tier prices by length, offer-only names, and the wallet for the
