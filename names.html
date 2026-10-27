@@ -5,20 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Get your name</title>
     <link rel="canonical" href="https://bwalletx.com/names" />
-    <meta name="description" content="Your first @bwalletx.com name is free. Extra names $1. Search it now and get it in bWalletX. Want an on-chain name you own outright? That's here too." />
+    <meta name="description" content="Your @bwalletx.com name is free. Short names cost more: 4 letters $10, 3 letters $100, 1–2 letters $1000. Search it and get it in bWalletX." />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://bwalletx.com/names" />
     <meta property="og:site_name" content="bWalletX" />
-    <meta property="og:title" content="Your first name is free" />
-    <meta property="og:description" content="Your first @bwalletx.com name is free. Extra names $1. Search it now and get it in bWalletX. Want an on-chain name you own outright? That's here too." />
+    <meta property="og:title" content="Your name is free. Short names cost more." />
+    <meta property="og:description" content="Your @bwalletx.com name is free. Short names cost more: 4 letters $10, 3 letters $100, 1–2 letters $1000. Search it and get it in bWalletX." />
     <meta property="og:image" content="https://bwalletx.com/og-names.png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
-    <meta property="og:image:alt" content="Your first name is free: yourname@bwalletx.com. Extra names $1." />
+    <meta property="og:image:alt" content="Your name is free. yourname@bwalletx.com. 4 letters $10, 3 letters $100, 1–2 letters $1000." />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@bWalletX" />
-    <meta name="twitter:title" content="Your first name is free" />
-    <meta name="twitter:description" content="Your first @bwalletx.com name is free. Extra names $1. Search it now and get it in bWalletX. Want an on-chain name you own outright? That's here too." />
+    <meta name="twitter:title" content="Your name is free. Short names cost more." />
+    <meta name="twitter:description" content="Your @bwalletx.com name is free. Short names cost more: 4 letters $10, 3 letters $100, 1–2 letters $1000. Search it and get it in bWalletX." />
     <meta name="twitter:image" content="https://bwalletx.com/og-names.png" />
     <link rel="icon" href="/favicon.ico" />
     <link rel="stylesheet" href="/styles.css" />
@@ -87,6 +87,8 @@
       /* Paymail names (owner pricing, 27 Oct 2026): big, plain, little to read. */
       .pm { text-align: center; margin: 0 auto 72px; max-width: 760px; }
       .pm h1 { font-size: clamp(2.6rem, 9vw, 4.4rem); max-width: 14ch; }
+      .pm-tiers { font-size: 1.1rem; color: rgba(244,241,232,.82); margin: -14px 0 26px; }
+      .pm-tiers b { color: #F5B800; }
       .pm .price { font-size: clamp(1.3rem, 4.5vw, 1.8rem); font-weight: 700; margin: 0 0 28px; color: #f4f1e8; }
       .pm .price .gold { color: #F5B800; }
       .pm-search { display: flex; align-items: center; gap: 0; max-width: 640px; margin: 0 auto; background: #0b0c0f; border: 2px solid rgba(245,184,0,.55); border-radius: 20px; padding: 6px 18px; }
@@ -117,8 +119,9 @@
       <main class="ext nm">
         <section class="pm" aria-labelledby="pm-title">
           <span class="nm-kicker">Names</span>
-          <h1 id="pm-title">Your first name is free.</h1>
-          <p class="price">Extra names <span class="gold">$1</span></p>
+          <h1 id="pm-title">Your name is free.</h1>
+          <p class="price">Short names cost more.</p>
+          <p class="pm-tiers">5+ letters <b>Free</b> · 4 letters <b>$10</b> · 3 letters <b>$100</b> · 1–2 letters <b>$1000</b></p>
           <form class="pm-search" id="pm-form" role="search">
             <input id="pm-q" type="text" placeholder="yourname" autocomplete="off" autocapitalize="none" spellcheck="false" maxlength="32" aria-label="Find your @bwalletx.com name" />
             <span class="dom">@bwalletx.com</span>
@@ -193,13 +196,15 @@
               if (mine !== seq) return;
               var name = esc(a) + '@bwalletx.com';
               if (!j) return show('no', 'Couldn&rsquo;t check', 'Try again in a moment.', false);
-              var extra = j.price && j.price.extraUsd ? '$' + j.price.extraUsd : 'free';
-              switch (j.status || (j.available ? 'free' : j.reason)) {
-                case 'free': case 'paid': case 'mine':
-                  return show('ok', name + ' is free', 'Free as your first name. As an extra name: ' + extra + '.', true);
-                case 'taken': return show('no', name + ' is taken', 'Try another.', false);
-                case 'held': return show('held', name + ' is held', 'Held for The Bitcoin Corporation. Not for sale.', false);
-                case 'reserved': return show('held', name + ' is reserved', 'Not for sale.', false);
+              var st = j.status || (j.available ? 'free' : j.reason);
+              var usd = Number(j.priceUsd) || 0;
+              switch (st) {
+                case 'free': case 'mine':
+                  return show('ok', 'Free', name + ' is yours to take.', true);
+                case 'priced':
+                  return show('held', '$' + usd.toLocaleString('en-US'), name + ' is available. Paid in BSV.', true);
+                case 'taken': return show('no', 'Taken', name + ' is taken. Try another.', false);
+                case 'held': case 'reserved': return show('held', 'Reserved', name + ' is not for sale.', false);
                 default: return show('no', 'Not a valid name', esc(j.message || 'Use a-z, 0-9, - or _.'), false);
               }
             });
