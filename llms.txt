@@ -35,9 +35,6 @@ Full text of every page below: https://bwalletx.com/llms-full.txt
 - [b is for business](https://bwalletx.com/b-is-for-business): b is for business. Get paid in seconds, with a receipt anyone can check. Less paperwork. More business. Just b.
 - [b is for shopkeepers](https://bwalletx.com/b-is-for-shopkeepers): b is for shopkeepers. Bring your eBay shop to bMarketX in about a minute, keep your stars, and own every listing. Just b.
 - [bMarketX.com: your eBay store, on Bitcoin](https://bwalletx.com/b-market): bMarketX is your eBay store, on Bitcoin. Move your shop over in about a minute, keep your feedback, sign in with bWalletX and mint your listings into your own wallet.
-- [bChatX: chat, rooms and Spaces · bWalletX](https://bwalletx.com/bchatx): bChatX is chat, rooms, Spaces and a feed that you sign in to with your bWalletX. What works today, with the date each part shipped.
-- [bGitX: your code, on b · bWalletX](https://bwalletx.com/bgitx): bGitX connects your GitHub repos to bWalletX and gives each repo a room in bChatX. What works today, with dates.
-- [tokenblaster.lol: games on the live chain · bWalletX](https://bwalletx.com/tokenblaster): tokenblaster.lol is our arcade of games built on the live BSV chain, with BlastPad for launching coins. Connect bWalletX to play. What works today, with dates.
 - [b is on Twetch · bWalletX](https://bwalletx.com/b-on-twetch): Press release, 24 Oct 2026: b, the assistant in bWalletX, is on Twetch as @bWalletX. It posts bWalletX updates and answers questions people ask it there.
 - [bAcc: make Bitcoin faster, the goal is 1 billion transactions a second | bWalletX](https://bwalletx.com/b/acc): bAcc is the Bitcoin accelerationist movement: make Bitcoin faster. BTC handles a few transactions a second; BSV is built to scale. Our goal: 1 billion transactions per second (1b TPS). Play the bAcc race game.
 - [The bAcc theme for bWalletX, $1 | bAcc store | bWalletX](https://bwalletx.com/b/acc/store): The bAcc theme: black and yellow racing stripes for your bWalletX. Coming to the Store inside bWalletX for $1, paid in BSV.
@@ -45,9 +42,11 @@ Full text of every page below: https://bwalletx.com/llms-full.txt
 - [bAds · we sell bAds, made by b · bWalletX](https://bwalletx.com/bads): We sell bAds: ads made by b, the agent in your bWalletX. Tell b about your business and b makes the film, the logo or the whole brand at bAdvertisingX, for one fixed price in Bitcoin.
 - [bApps: apps that run inside bWalletX](https://bwalletx.com/bapps): bApps are Bitcoin apps that open inside bWalletX: sign in with your wallet, pay from your wallet, one bar across every app. bChatX, bMovies, bMusic, bMint, bWriter and more.
 - [bMovies inside bWalletX](https://bwalletx.com/bapps/bmovies): bMovies is a film feed on Bitcoin SV: watch thousands of films, sign in with bWalletX, back the films you like with their tokens. What works today and what is coming.
+- [bChatX: chat, rooms and Spaces · bWalletX](https://bwalletx.com/bchatx): bChatX is chat, rooms, Spaces and a feed that you sign in to with your bWalletX. What works today, with the date each part shipped.
 - [be on b · bWalletX](https://bwalletx.com/be-on-b-2): Twetch, RelayX, CoinGeek, Peck, Hodlocker, Treechat and Yours, all on b. Fast. Loud. be on b.
 - [be on b · bWalletX](https://bwalletx.com/be-on-b-3): Bring your X timeline to b. Move from X, Facebook, LinkedIn, YouTube and more to bChatX. be on b.
 - [be on b · bWalletX](https://bwalletx.com/be-on-b): All your Bitcoin SV apps, together on b. Twetch, RelayX, CoinGeek, Peck, Hodlocker, Treechat and Yours. Just b.
+- [bGitX: your code, on b · bWalletX](https://bwalletx.com/bgitx): bGitX connects your GitHub repos to bWalletX and gives each repo a room in bChatX. What works today, with dates.
 - [Bounties: live pool and payouts · bWalletX](https://bwalletx.com/bounties): The b-Aware bug bounty pool, live from the chain: what is left this quarter, what has been paid, and a transaction link for every payout.
 - [bPhone](https://bwalletx.com/bphone): bPhone: charge to receive calls in bWalletX. Set a price per second, minute, hour or call in BSV, MNEE or a token; list yourself with your hours; take bookings. The caller pays your wallet as you talk.
 - [bPositive](https://bwalletx.com/bpositive): Sponsor someone’s journey in bWalletX: monthly support from pots, milestone pledges confirmed by witnesses, thank-you NFTs. Gifts only, 18+, 0% fee.
@@ -110,6 +109,7 @@ Full text of every page below: https://bwalletx.com/llms-full.txt
 - [Branded wallets for businesses](https://bwalletx.com/themes-custom): A self-custody wallet in your company’s name for your customers, members or shareholders, from $99 a year. Plus the route from a branded wallet to a share register kept with bSharesX, and optionally bDojoX. Powered by bWalletX.
 - [Tips: pay the people who make things](https://bwalletx.com/tips): In bWalletX Desktop, tip artists, NFT creators, rooms, people in chat, friends and Spaces speakers. Pick an amount, tap Allow once, and all of it goes to them.
 - [Token curves: how a person's token is priced](https://bwalletx.com/token-curves): Every person's token in bWalletX sells on the same gentle curve: 1 cent to join their room, doubling every 10,000 supporters. The money goes to the person. Nothing is held back, there is no reserve and no buy-back, and resale is between people on the Exchange.
+- [tokenblaster.lol: games on the live chain · bWalletX](https://bwalletx.com/tokenblaster): tokenblaster.lol is our arcade of games built on the live BSV chain, with BlastPad for launching coins. Connect bWalletX to play. What works today, with dates.
 - [Treechat on b · bWalletX](https://bwalletx.com/treechat-on-b): Read Treechat posts and whole threads in the bWalletX Feed, open them on Treechat, lock behind posts, and keep Treechat on your Apps home screen.
 - [Twetch on b · bWalletX](https://bwalletx.com/twetch-on-b): Read Twetch in the bWalletX Feed, tip authors in BSV, lock behind posts, restore a Twetch wallet from its 12 words and pay name@twetch.me.
 - [Verify a signed note · bWalletX](https://bwalletx.com/verify-note): Check a note or IOU signed in bWalletX: who signed it, when, and that not a word has changed.
@@ -137,7 +137,7 @@ Full text of every page below: https://bwalletx.com/llms-full.txt
 - [Themes: make bWallet yours](https://bwalletx.com/themes): Change the look of your wallet: Gold, Black/White, and the White, Pink, Blue and Yellow paper themes, plus $1 artist editions. Wallet › ☰ › Settings › Theme.
 - [Swap into BSV: 1,000+ coins, straight to your wallet](https://bwalletx.com/swap): In bWalletX, swap BTC, ETH, USDT, SOL and 1,000+ other coins into BSV, paid straight into your own wallet. Nobody holds your coins. Swaps are run by ChangeNOW.
 - [Your signature · bWalletX](https://bwalletx.com/sign): Flip your bWalletX card and sign the back with your finger. Your signature stays on your device. Next: sign bChatX contracts with it and seal them on Bitcoin for under a penny.
-- [Games in bWalletX](https://bwalletx.com/games): 18 arcade games on the live Bitcoin SV chain at tokenblaster.lol, The Bitcoin Corporation's games. Practise free, or play LIVE with bWalletX.
+- [Games in bWalletX](https://bwalletx.com/games): 19 arcade games on the live Bitcoin SV chain at tokenblaster.lol, The Bitcoin Corporation's games. Try any game for a few seconds, then insert $b to play.
 
 ## Social
 
