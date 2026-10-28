@@ -10147,7 +10147,7 @@ Source: https://bwalletx.com/games
 
 Every game from The Bitcoin Corporation is listed on one site. Pick a game and try it: a short demo runs under a flashing INSERT $b TO PLAY banner. Insert $b from your wallet to play properly.
 
-Try any game, then insert $bLIVE: every action is a real tx
+Try any game, then insert $bEach play is paid on chain
 
 [tokenblaster.lol on a computer](https://www.tokenblaster.lol)
 
@@ -10179,7 +10179,7 @@ Every game opens at its cabinet. Tap Try a demo for a short taste: the game runs
 -
 ### Play
 
-In LIVE mode each shot, jump or card is one transaction: 1 sat to The Bitcoin Corporation plus the network fee (about 26 sats). In Arena you can fire tokens from your wallet instead; hit another player and that token lands in their gun. Your best runs go on the leaderboards.
+Each play is paid from your credit to The Bitcoin Corporation in one on-chain transaction; the cabinet shows the price before you start (from 10 cents a play). Some games also have a LIVE mode where each shot or bite is its own small transaction, paid from the ammo you load. In Arena you can fire tokens from your wallet instead; hit another player and that token lands in their gun. Your best runs go on the leaderboards.
 
 Nothing here is a bet: games don’t pay out prizes. Each play is paid from the credit you insert; a demo is free but short and has no score. Play with small amounts.
 
@@ -10193,7 +10193,7 @@ Nothing here is a bet: games don’t pay out prizes. Each play is paid from the 
 
 - ✓Connect on a computer with the bWalletX extension, or pair your phone by QR
 
-- ✓LIVE mode: one approval to load sats, then every action is a real transaction
+- ✓Coin-op credit: one wallet approval loads credit, then each play is paid from it on chain
 
 - ✓Arena multiplayer: tokens you hit another player with land in their gun
 
