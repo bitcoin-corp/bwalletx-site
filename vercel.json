@@ -719,6 +719,16 @@
       "source": "/bmovies",
       "destination": "/bapps/bmovies",
       "statusCode": 308
+    },
+    {
+      "source": "/advertise",
+      "destination": "/bads",
+      "permanent": true
+    },
+    {
+      "source": "/advertising",
+      "destination": "/bads",
+      "permanent": true
     }
   ],
   "headers": [
