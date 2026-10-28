@@ -108,9 +108,10 @@ for g in order:
             '- bVideoX (https://bvideox.com): bring your YouTube channel to Bitcoin; each video record is signed by you with its original upload date. Priced by size at cost, shown per video before you mint (titles and descriptions: pennies for a whole channel).',
             '- bMoviesX (https://bmoviesx.com): films on Bitcoin; watching the bMovies.app feed is free. Uploading and minting on bMoviesX are not live yet.',
             '- AIVJ (VexVoid live sets): first 3 minutes free, then 1p a minute (about $0.013), paid straight to the artist at %s/aivj.' % BASE,
-            '- Premium and artist themes: $1 each in the in-app Store (no public endpoint yet; buy inside bWalletX).',
-            '- Theme edition (a branded wallet for a token community): $99 a year, ordered inside bWalletX (Theme > Get your own edition).',
-            '- Branded edition with a business agent: from $999, by quote via %s/business-agents.' % BASE,
+            '- Premium and artist themes: $1 each (VexVoid, NPG, NPGX, emoji themes), in the in-app Store or by agents through the Store API.',
+            '- Theme edition (a branded wallet for a token community): $99 a year, inside bWalletX (Theme > Get your own edition) or through the Store API.',
+            '- Branded edition with a business agent: from $999, by quote via %s/business-agents; agents can pay the deposit and send the brief through the Store API.' % BASE,
+            '- Store API for agents: GET %s/api/agent/products, POST /api/agent/quote (5-minute single-use quote in USD, sats and MNEE), POST /api/agent/buy (signed by the identity key, paid from the agent\'s BRC-100 wallet, granted to that key). MCP tools `list_products`, `quote`, `buy_product`. Discovery: %s/.well-known/agent.json and %s/.well-known/mcp.json.' % (BASE, BASE, BASE),
             '- Partners programme (earn, not buy): commission for referrals, see %s/partners.' % BASE]
     if g == 'Support':
         lines.append('- [Email support](mailto:support@bwalletx.com): support@bwalletx.com')

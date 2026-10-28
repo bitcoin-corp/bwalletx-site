@@ -1,0 +1,38 @@
+{
+  "name": "bWalletX Store",
+  "description": "Agents discover, quote and buy bWalletX products from their own BRC-100 wallet: premium and artist themes ($1 each), the Theme edition ($99 a year) and the Branded edition (from $999, by quote; buying pays a deposit and sends the brief).",
+  "url": "https://bwalletx.com",
+  "provider": { "organization": "The Bitcoin Corporation", "url": "https://bwalletx.com" },
+  "documentationUrl": "https://bwalletx.com/mcp",
+  "mcp": "https://bwalletx.com/.well-known/mcp.json",
+  "payment": {
+    "currency": "USD",
+    "settle_in": ["BSV"],
+    "quoted_also_in": ["MNEE"],
+    "wallet": "BRC-100 (the agent's own keys; non-custodial)",
+    "network_fee": "paid by the buyer"
+  },
+  "api": {
+    "base": "https://bwalletx.com/api/agent",
+    "products": { "method": "GET", "path": "/products" },
+    "quote": {
+      "method": "POST",
+      "path": "/quote",
+      "auth": "BRC-43 signature by the identity key: protocol [2, \"bwallet paymail\"], keyID \"1\", counterparty \"anyone\", action \"agent-buy-quote\"",
+      "body": "{ identityKey, timestamp, fields: { product, ...product fields }, signature }",
+      "returns": "quote_id (single use), usd, sats, mnee, outputs, memo_hex, expires_at (5 minutes)"
+    },
+    "buy": {
+      "method": "POST",
+      "path": "/buy",
+      "auth": "as quote, action \"agent-buy-claim\"",
+      "body": "{ identityKey, timestamp, fields: { product, quote_id, txid }, signature, rawtx }",
+      "rawtx": "The unsent payment (raw hex or AtomicBEEF hex) paying outputs + memo_hex exactly; the server checks it, broadcasts it and grants the product to the identity key"
+    }
+  },
+  "skills": [
+    { "id": "list_products", "name": "List products", "description": "The catalogue with dollar prices and the fields each quote needs." },
+    { "id": "quote", "name": "Quote", "description": "A 5-minute single-use price in USD, sats and MNEE." },
+    { "id": "buy_product", "name": "Buy", "description": "Pay a quote from the agent's BRC-100 wallet and receive the product, tied to its identity key, with a Store receipt." }
+  ]
+}
