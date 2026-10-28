@@ -133,7 +133,56 @@
           <p class="vtext">Decorative background loop: a gold ring turning slowly on black. No information is shown in the video.</p>
         </video>
         <div class="hero-shade" aria-hidden="true"></div>
-        <!-- hodl-sticker:start --><a class="hodl-sticker" href="/hodl-my-b/0" aria-label="New: Hodl my b, Edition 0, the whole story"><img class="hs-e" src="/media/emoji/1f37a.svg" alt="" width="96" height="96" /><span class="hs-tab"><span class="hs-t">Hodl my b</span><span class="hs-s">Edition 0</span></span></a><!-- hodl-sticker:end -->
+        <style>
+.bacc-sticker{gap:0;width:clamp(170px,26vw,390px);transform:rotate(-5deg)}.bacc-sticker img{width:100%;height:auto;display:block}.bacc-sticker:hover{transform:rotate(-2deg) scale(1.04)}
+.bacc-sticker.measuring{transform:none!important;transition:none!important}
+@media (max-width:1180px){.bacc-sticker{width:max(330px,26vw)}}@media (max-width:700px){.bacc-sticker{width:min(46vw,190px)}}
+.hodl-sticker{transition:transform .2s cubic-bezier(.2,.8,.2,1),opacity .45s ease}
+.hodl-sticker{opacity:0;visibility:hidden;top:clamp(220px,27vh,270px)}@media (min-width:701px){.hodl-sticker{left:61%;right:auto}}
+html.stickers-ready .hodl-sticker:not(.is-off){opacity:1;visibility:visible}
+.hodl-sticker.is-off{visibility:hidden;transition:transform .45s ease,opacity .45s ease,visibility 0s .45s}
+.hodl-sticker.is-off{opacity:0;pointer-events:none;transform:rotate(-10deg) perspective(600px) rotateY(80deg) scale(.9)}.bacc-sticker.is-off{transform:rotate(-5deg) perspective(900px) rotateY(80deg) scale(.9)}
+@media (prefers-reduced-motion:reduce){.hodl-sticker,.hodl-sticker.is-off{transition:none}}
+</style><!-- hodl-sticker:start --><a class="hodl-sticker" href="/hodl-my-b/0" aria-label="New: Hodl my b, Edition 0, the whole story"><img class="hs-e" src="/media/emoji/1f37a.svg" alt="" width="96" height="96" /><span class="hs-tab"><span class="hs-t">Hodl my b</span><span class="hs-s">Edition 0</span></span></a><!-- hodl-sticker:end --><a class="hodl-sticker bacc-sticker is-off" href="/b/acc" aria-label="bAcc: Bitcoin accelerationist" aria-hidden="true" tabindex="-1"><img src="/media/bacc-sticker.svg" alt="" width="240" height="200" /></a><script>
+/* Hodl my b + bAcc stickers (owner, 28 Oct): share one spot, centred over the word "super", below the
+   "Identity" pill, a little low. Each falls back to the right-hand spot when centring would overlap the
+   wordmark/headline (phones). They alternate every 5.5s. */
+(function(){
+  var hs=document.querySelector('.hodl-sticker:not(.bacc-sticker)'); if(!hs) return; var bs=document.querySelector('.bacc-sticker');
+  function superInfo(){var w=document.createTreeWalker(document.querySelector('main')||document.body,NodeFilter.SHOW_TEXT),n;
+    while((n=w.nextNode())){if(/^(SCRIPT|STYLE)$/.test(n.parentNode.nodeName)) continue; var i=n.data.search(/super/i); if(i>=0){var r=document.createRange(); r.setStart(n,i); r.setEnd(n,i+5); return {r:r.getBoundingClientRect(),el:n.parentNode};}} return null;}
+  function idBottom(){var b=0; document.querySelectorAll('.topbar a, .topbar nav').forEach(function(a){if(a.offsetParent){var r=a.getBoundingClientRect(); if(r.height&&r.bottom<300) b=Math.max(b,r.bottom);}}); return b;}
+  function hit(a,b){return a.left<b.right&&a.right>b.left&&a.top<b.bottom&&a.bottom>b.top;}
+  function placeOne(el){
+    el.style.left=''; el.style.right=''; el.style.top='';
+    var sp=superInfo(); if(!sp) return; var su=sp.r, idb=idBottom();
+    var par=(el.offsetParent||document.body).getBoundingClientRect();
+    var hr=el.getBoundingClientRect(), h=hr.height, w=hr.width;
+    var bad=[]; document.querySelectorAll('.hero h1, .hero h2, .hero .wordmark, .hero img').forEach(function(e){
+      if(e.closest('.hodl-sticker')) return; var rs; if(e.tagName==='IMG') rs=e.getClientRects(); else {var rg=document.createRange(); rg.selectNodeContents(e); rs=rg.getClientRects();}
+      for(var i=0;i<rs.length;i++) if(!(rs[i].top>=su.top-1&&rs[i].bottom<=su.bottom+1&&rs[i].left<=su.left&&rs[i].right>=su.right)) bad.push(rs[i]);});
+    var top=Math.max(idb+14, su.top-h-(el===bs?30:18));
+    var left=Math.min(Math.max((su.left+su.right)/2-w/2, 8), innerWidth-w-8);
+    var box={left:left,right:left+w,top:top,bottom:top+h};
+    var ok=box.top>idb&&box.bottom<=su.top&&bad.every(function(b){return !hit(box,b);});
+    if(ok){ el.style.top=Math.round(top-par.top)+'px'; el.style.left=Math.round(left-par.left)+'px'; el.style.right='auto'; return; }
+    var fb={left:hr.left,right:hr.right,top:top,bottom:top+h};
+    bad.forEach(function(b){ if(hit(fb,b)) { top=Math.max(idb+8, b.top-h-8); fb.top=top; fb.bottom=top+h; } });
+    el.style.top=Math.round(top-par.top)+'px';
+  }
+  function place(){ placeOne(hs); if(bs){ bs.classList.add('measuring'); placeOne(bs); bs.classList.remove('measuring'); } }
+  if(document.readyState!=='loading') place(); else document.addEventListener('DOMContentLoaded',place);
+  addEventListener('resize',place);
+  // Reveal only once fonts (which move "super") and images are in, so the sticker never jumps.
+  var reveal=function(){ place(); requestAnimationFrame(function(){ document.documentElement.classList.add('stickers-ready'); }); };
+  var fontsReady=document.fonts?document.fonts.ready:Promise.resolve();
+  var loaded=new Promise(function(r){ if(document.readyState==='complete') r(); else addEventListener('load',r); });
+  Promise.all([fontsReady,loaded]).then(reveal); setTimeout(reveal,3000);
+  if(bs){ var on=0; setInterval(function(){ if(document.hidden) return; on=1-on; var a=on?bs:hs, b=on?hs:bs;
+    b.classList.add('is-off'); b.setAttribute('aria-hidden','true'); b.tabIndex=-1;
+    a.classList.remove('is-off'); a.removeAttribute('aria-hidden'); a.removeAttribute('tabindex'); }, 5500); }
+})();
+</script>
         <div class="wrap hero-in">
           <img class="hero-logo" src="/logo.svg" alt="bWalletX logo" width="109" height="96" />
           <p class="wordmark">bWallet<span class="gold">X</span></p>
