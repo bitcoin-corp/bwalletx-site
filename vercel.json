@@ -163,16 +163,6 @@
     }
   ],
   "redirects": [
-    {
-      "source": "/partners",
-      "destination": "https://www.badvertisingx.com/partners",
-      "permanent": true
-    },
-    {
-      "source": "/partners.html",
-      "destination": "https://www.badvertisingx.com/partners",
-      "permanent": true
-    },
     { "source": "/mint-a-team", "destination": "/your-character", "permanent": false },
     { "source": "/relayX-on-b", "destination": "/relayx-on-b", "permanent": true },
     { "source": "/RelayX-on-b", "destination": "/relayx-on-b", "permanent": true },
