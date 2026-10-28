@@ -146,6 +146,10 @@
       "destination": "https://pay.bwallet.space/.well-known/bsvalias"
     },
     {
+      "source": "/api/agent/:op",
+      "destination": "https://pay.bwallet.space/api/agent/:op"
+    },
+    {
       "source": "/api/waitlist",
       "destination": "https://www.bwallet.space/api/waitlist"
     },
@@ -163,26 +167,106 @@
     }
   ],
   "redirects": [
-    { "source": "/mint-a-team", "destination": "/your-character", "permanent": false },
-    { "source": "/relayX-on-b", "destination": "/relayx-on-b", "permanent": true },
-    { "source": "/RelayX-on-b", "destination": "/relayx-on-b", "permanent": true },
-    { "source": "/CoinGeek-on-b", "destination": "/coingeek-on-b", "permanent": true },
-    { "source": "/Coingeek-on-b", "destination": "/coingeek-on-b", "permanent": true },
-    { "source": "/coinGeek-on-b", "destination": "/coingeek-on-b", "permanent": true },
-    { "source": "/Twetch-on-b", "destination": "/twetch-on-b", "permanent": true },
-    { "source": "/Peck-on-b", "destination": "/peck-on-b", "permanent": true },
-    { "source": "/Hodlocker-on-b", "destination": "/hodlocker-on-b", "permanent": true },
-    { "source": "/HodLocker-on-b", "destination": "/hodlocker-on-b", "permanent": true },
-    { "source": "/Treechat-on-b", "destination": "/treechat-on-b", "permanent": true },
-    { "source": "/TreeChat-on-b", "destination": "/treechat-on-b", "permanent": true },
-    { "source": "/Yours-on-b", "destination": "/yours-on-b", "permanent": true },
-    { "source": "/On-b", "destination": "/on-b", "permanent": true },
-    { "source": "/B-on-b", "destination": "/be-on-b", "permanent": true },
-    { "source": "/b-on-B", "destination": "/be-on-b", "permanent": true },
-    { "source": "/b-on-b", "destination": "/be-on-b", "permanent": true },
-    { "source": "/b-on-b-2", "destination": "/be-on-b-2", "permanent": true },
-    { "source": "/b-on-b-3", "destination": "/be-on-b-3", "permanent": true },
-    { "source": "/family", "destination": "/b-family", "permanent": true },
+    {
+      "source": "/mint-a-team",
+      "destination": "/your-character",
+      "permanent": false
+    },
+    {
+      "source": "/relayX-on-b",
+      "destination": "/relayx-on-b",
+      "permanent": true
+    },
+    {
+      "source": "/RelayX-on-b",
+      "destination": "/relayx-on-b",
+      "permanent": true
+    },
+    {
+      "source": "/CoinGeek-on-b",
+      "destination": "/coingeek-on-b",
+      "permanent": true
+    },
+    {
+      "source": "/Coingeek-on-b",
+      "destination": "/coingeek-on-b",
+      "permanent": true
+    },
+    {
+      "source": "/coinGeek-on-b",
+      "destination": "/coingeek-on-b",
+      "permanent": true
+    },
+    {
+      "source": "/Twetch-on-b",
+      "destination": "/twetch-on-b",
+      "permanent": true
+    },
+    {
+      "source": "/Peck-on-b",
+      "destination": "/peck-on-b",
+      "permanent": true
+    },
+    {
+      "source": "/Hodlocker-on-b",
+      "destination": "/hodlocker-on-b",
+      "permanent": true
+    },
+    {
+      "source": "/HodLocker-on-b",
+      "destination": "/hodlocker-on-b",
+      "permanent": true
+    },
+    {
+      "source": "/Treechat-on-b",
+      "destination": "/treechat-on-b",
+      "permanent": true
+    },
+    {
+      "source": "/TreeChat-on-b",
+      "destination": "/treechat-on-b",
+      "permanent": true
+    },
+    {
+      "source": "/Yours-on-b",
+      "destination": "/yours-on-b",
+      "permanent": true
+    },
+    {
+      "source": "/On-b",
+      "destination": "/on-b",
+      "permanent": true
+    },
+    {
+      "source": "/B-on-b",
+      "destination": "/be-on-b",
+      "permanent": true
+    },
+    {
+      "source": "/b-on-B",
+      "destination": "/be-on-b",
+      "permanent": true
+    },
+    {
+      "source": "/b-on-b",
+      "destination": "/be-on-b",
+      "permanent": true
+    },
+    {
+      "source": "/b-on-b-2",
+      "destination": "/be-on-b-2",
+      "permanent": true
+    },
+    {
+      "source": "/b-on-b-3",
+      "destination": "/be-on-b-3",
+      "permanent": true
+    },
+    {
+      "source": "/family",
+      "destination": "/b-family",
+      "permanent": true
+    },
     {
       "source": "/(.*)",
       "has": [
@@ -638,6 +722,32 @@
     }
   ],
   "headers": [
+    {
+      "source": "/.well-known/agent.json",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "application/json; charset=utf-8"
+        },
+        {
+          "key": "Access-Control-Allow-Origin",
+          "value": "*"
+        }
+      ]
+    },
+    {
+      "source": "/.well-known/mcp.json",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "application/json; charset=utf-8"
+        },
+        {
+          "key": "Access-Control-Allow-Origin",
+          "value": "*"
+        }
+      ]
+    },
     {
       "source": "/.well-known/bwalletx-theme.json",
       "headers": [

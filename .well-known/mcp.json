@@ -1,0 +1,13 @@
+{
+  "schema": "bwalletx.mcp/1",
+  "name": "bwalletx",
+  "title": "bWalletX MCP server",
+  "description": "Run bWalletX agent accounts: balances, sends, the 1Sat exchange, minting, and buying bWalletX Store products (themes, Theme edition, Branded edition deposit). Every spend passes the agent's own gate: per-call limit, daily cap, kill switch, rate limit and strategy rules.",
+  "documentation": "https://bwalletx.com/mcp",
+  "cli": "https://bwalletx.com/cli",
+  "transport": "stdio",
+  "install": { "npm": "bwalletx", "command": "npx", "args": ["-y", "bwalletx", "mcp"] },
+  "brc100": { "command": "bwalletx serve", "url": "http://localhost:3321", "note": "A BRC-100 wallet for the agent account on localhost" },
+  "store_tools": ["list_products", "quote", "buy_product"],
+  "store_api": "https://bwalletx.com/.well-known/agent.json"
+}
