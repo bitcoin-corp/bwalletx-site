@@ -1,6 +1,6 @@
 # bWalletX: full site text
 
-Generated 2026-10-26 from https://bwalletx.com. Source pages are linked above each section.
+Generated 2026-10-28 from https://bwalletx.com. Source pages are linked above each section.
 
 ---
 
@@ -709,7 +709,8 @@ Know what you have, prove what you made.
 
 [### bMoneyXEarly
 Your money history, yours.bmoneyx.com →](https://bmoneyx.com)[### bMintXEarly
-You made it. Prove it’s yours.bmintx.com →](https://bmintx.com)[### bSharesXEarly
+You made it. Prove it’s yours.bmintx.com →](https://bmintx.com)[### bMarketXEarly
+Sell anything you’ve minted.bmarketx.com →](https://bmarketx.com)[### bSharesXEarly
 Share registers, kept the modern way.bsharesx.com →](https://bsharesx.com)[### bVaultXEarly
 The vault that pays for itself.bvaultx.com →](https://bvaultx.com)
 
@@ -719,11 +720,13 @@ Creators get paid directly, in Bitcoin.
 
 [### bMoviesXLive
 Upload your movies. Mint them on Bitcoin.bmoviesx.com →](https://bmoviesx.com)[### bVideoXLive
-Your channel, owned by you.bvideox.com →](https://bvideox.com)[### bMusicXEarly
+Your channel, owned by you.bvideox.com →](https://bvideox.com)[### bPicsXEarly
+Your pictures: AI pictures, cards and your photos.bpicsx-site.vercel.app →](https://bpicsx-site.vercel.app)[### bMusicXEarly
 The Bitcoin music exchange.bmusicx.com →](https://bmusicx.com)[### bRadioXEarly
 Radio you can join.bradiox.com →](https://bradiox.com)[### bNewsXEarly
 News you can trust, paid fairly.bnewsx.com →](https://bnewsx.com)[### bWriterXEarly
-Write it down. Keep it forever.bwriterx.com →](https://bwriterx.com)
+Write it down. Keep it forever.bwriterx.com →](https://bwriterx.com)[### bSheetsXComing
+Your spreadsheets.bsheetsx.com →](https://bsheetsx.com)
 
 ## People
 
@@ -731,9 +734,9 @@ Bring your people with you.
 
 [### bSocialXEarly
 Spaces for every social app.bsocialx.com →](https://bsocialx.com)[### bFriendsXEarly
-Bring your people with you.bfriendsx.com →](https://bfriendsx.com)[### bMailXEarly
-Email that pays.bmailx.com →](https://bmailx.com)[### bMessageXComing
-Private messages and calls. Private by default.bmessagex.com →](https://bmessagex.com)[### bCalXEarly
+Bring your people with you.bfriendsx.com →](https://bfriendsx.com)[### bNamesXEarly
+Your paymail name: name@bwalletx.com.bnamesx.com →](https://bnamesx.com)[### bMailXEarly
+Email that pays.bmailx.com →](https://bmailx.com)[### bCalXEarly
 What’s on, live.bcalx.com →](https://bcalx.com)
 
 ## Work and business
@@ -746,9 +749,13 @@ Sell digital things, paid in Bitcoin.bstorex.com →](https://bstorex.com)[### b
 Tell b about your business. Get the ad.badvertisingx.com →](https://badvertisingx.com)[### bDriveXEarly
 Your files and recordings, kept on chain.bdrivex.com →](https://bdrivex.com)[### bSearchXComing
 Search the chain: fast search across posts, apps and tokens.bsearchx.com →](https://bsearchx.com)[### b0-xEarly
-Deploy to Bitcoin.b0-x.com →](https://b0-x.com)
+Deploy to Bitcoin.b0-x.com →](https://b0-x.com)[### bWebXComing
+Your websites, on chain for good.bwebx.com →](https://bwebx.com)[### bSignXComing
+Contracts both sides sign.bsignx.com →](https://bsignx.com)[### bDNSXComing
+Prove you own a domain, then tokenise it. Trade on DNS DEX.bdnsx.com →](https://bdnsx.com)[### bTerminalXComing
+The pro CLI for your wallet and agents.bterminalx.com →](https://bterminalx.com)
 
-Live you can use it today  ·  Early the site is up and the app is being built. Each site says exactly what works.
+Live you can use it today  ·  Early the site is up and the app is being built. Coming a holding page for now. Each site says exactly what works.
 
 ## We build for others too.
 
@@ -3452,12 +3459,21 @@ Source: https://bwalletx.com/extension
 
 The full bWalletX wallet in Chrome's side panel, and a wallet websites like TokenBlaster can connect to. Your keys stay in the extension.
 
-[Download for Chrome (beta) ↓](https://bwalletx.com/download/bwalletx-extension-5.2.44.zip)
-[Download for Brave (beta) ↓](https://bwalletx.com/download/bwalletx-extension-5.2.44.zip)
+[Add to Chrome →](https://chromewebstore.google.com/detail/choopkcgggoaehffickjojkohmpbladd)
 
-Updating? Use the ↻ reload button on `chrome://extensions`, or replace the files in the same folder. Never click Remove — removing the extension deletes your wallet's records.
+From the Chrome Web Store. Works in Brave too. Updates itself.
 
-It isn't on the Chrome Web Store yet, so install it by hand:
+## Latest build, direct (experimental)
+
+The newest version before the Web Store has reviewed it. You install it by hand and update it by hand.
+
+[Download the latest build (.zip) ↓](https://bwalletx.com/download/bwalletx-extension-5.2.44.zip)
+
+Two separate wallets. The Web Store version and the direct build are different installs, and each keeps its own wallet. If you switch, write down your recovery words first and restore them in the new one. Never click Remove on the old one until you have: removing an extension deletes its wallet's records.
+
+Updating the direct build? Use the ↻ reload button on `chrome://extensions`, or replace the files in the same folder.
+
+To install the direct build:
 
 - Unzip `bwalletx-extension-5.2.44.zip`.
 
@@ -3491,304 +3507,277 @@ Source: https://bwalletx.com/features
 
 # bWalletX features
 
-One non-custodial BSV wallet for money, names, tokens, rooms, media and apps. Your keys never leave your device.
+One non-custodial BSV wallet: send and receive by name, message and call people, hold and make tokens, and connect to apps. Your keys never leave your device.
 
 [Android](https://bwalletx.com/android)
 [iPhone · web app](https://bwalletx.com/iphone)
 [Chrome extension](https://bwalletx.com/extension)
+[Desktop](https://bwalletx.com/desktop)
 [Web](https://web.bwalletx.com)
 
-bWalletX only in bWalletX (Android, Chrome, web). Rows without the tag are also in [bWallet](https://www.bwallet.space) from the App Store and Google Play.
+bWalletX only in bWalletX (web, Chrome extension, Desktop, direct Android download). Cards without the tag are also in [bWallet](https://www.bwallet.space) from the App Store and Google Play. Coming means not shipped yet.
 
-## 💰Wallet
+## 💰Send and receive
 
-### BSV, priced in dollars
+### Pay a name
 
-Balances and prices in USD; you pay in sats. Live price chart.
+Send to a $handle or a paymail like `name@bwalletx.com` instead of a long address. Send stops and asks if a name you paid before now points somewhere new.
+
+### Dollars first
+
+Balances, sends and every approval show the amount in dollars, with sats underneath. Live BSV price chart.
+
+### Receive
+
+Two tabs, Money and NFTs & names, each with its own address and QR, so nothing lands in the wrong place.
 
 ### Buy BSVbWalletX
 
-Buy with a card from inside the wallet, in dollars, sent straight to your address. [How](https://bwalletx.com/buy).
-
-### Send to names
-
-Pay a paymail like `name@bwalletx.com` instead of a long address.
+Buy with a card from inside the wallet, sent straight to your address. [How](https://bwalletx.com/buy).
 
 ### Tokens and NFTs
 
-Hold, send and receive BSV-21 tokens and 1Sat Ordinals, with a separate ordinals address.
-
-### Pots and standing orders
-
-Set money aside in a pot and pay regular amounts from it. Pause or cancel any time. Subscriptions to apps are bWalletX only. [How](https://bwalletx.com/subscriptions).
-
-### History and exports
-
-Every transaction for any date range, with a CSV export and a PDF statement. [More](https://bwalletx.com/history).
-
-### Restore from anywhere
-
-12 words are enough. Import from Yours, Panda, RelayX or Twetch, a private key or a backup file. [How](https://bwalletx.com/restore).
-
-### Lock BSV
-
-Lock until a date or pay yourself out over time, shaped by a curve or a template, with optional public receipts. [More](https://bwalletx.com/lock). Live since 5.1.84.
+Hold, send and receive BSV-21 tokens, 1Sat Ordinals and MNEE. Swipe the wallet card to see each balance.
 
 ### Airdrops inbox
 
-Tokens and NFTs sent to you land in an inbox with Keep and Hide, an unread count and address-poisoning warnings. [More](https://bwalletx.com/airdrops). Live since 5.1.85.
+Tokens, NFTs and BSV sent to you wait in an inbox with Keep and Hide, and warnings for address-poisoning tricks. [More](https://bwalletx.com/airdrops).
 
-### Web wallet
+### History and exports
 
-The same wallet in your browser, laid out like the app. [Open it](https://bwalletx.com/web).
+Every transaction for any date range, with CSV and PDF statements. Find a missing payment by its transaction ID. [More](https://bwalletx.com/history).
 
-### Sweep another wallet
+### Tips
 
-Pull funds in from any 12/24-word wallet, scanning its addresses for you.
+Tip the person behind a post, track or room in one tap, with an optional message. [More](https://bwalletx.com/tips).
 
-### Find lost tokens
+### Pots and standing orders
 
-Recover purchases and tokens that didn't show up, and heal indexing.
+Set money aside in a pot and pay regular amounts from it. Pause or cancel any time. [More](https://bwalletx.com/pots).
+
+### App subscriptionsbWalletX
+
+Subscribe to an app from your wallet and manage it in the Subscriptions tab. [How](https://bwalletx.com/subscriptions).
+
+### Lock BSV
+
+Lock until a date, or pay yourself out over time on a curve, with optional public receipts. A lock never opens early. [More](https://bwalletx.com/lock).
 
 ### Several accounts
 
-Keep separate accounts, each with its own name.
+Keep separate accounts, each with its own name, under one master password.
 
 ### bCreditsbWalletX
 
-Top up credits for bCorp apps from the Wallet tab.
+Top up credits for bCorp apps with BSV from the card row. [More](https://bwalletx.com/credits).
 
 ## 🪪Names and identity
 
-### Your own paymail
+### Your name
 
-Claim `yourname@bwalletx.com` and receive to it.
+Claim a $handle and `yourname@bwalletx.com`, and get paid and messaged at it. Add extra names in Settings › Identity. [More](https://bwalletx.com/handles).
+
+### Signed by you
+
+Your name is signed by your own wallet, so nobody (us included) can quietly point it elsewhere. Every change goes in a public log, and a name only moves to another wallet when that wallet accepts. [More](https://bwalletx.com/name-bindings).
+
+### Name StorebWalletX
+
+Search, buy, sell or give names. Price depends on length. [More](https://bwalletx.com/names).
 
 ### Link your accountsbWalletX
 
-Link your accounts (X, Google, GitHub, LinkedIn, HandCash), beta, in Settings › Identity. You choose your own handle.
+Link X and Google (and more as they arrive) in Settings › Identity. Each link is proved by the provider and signed by your wallet; your email is never shown. [More](https://bwalletx.com/identity).
 
-### Every name visible
+### Linked walletsbWalletX
 
-Settings lists every name your wallet receives at, with one-tap unlink.
-
-### Handles
-
-Your $handle, the name people pay and message you by. [More](https://bwalletx.com/handles).
+Prove you own an ETH, BNB, SOL or TRX address by signing with MetaMask, Phantom or TronLink. Identity only; no funds move.
 
 ### Identity map
 
-Settings › Identity shows your identity key, the keys grown from it and every name that points at them, and flags a mix-up. [More](https://bwalletx.com/identity-map). Live since 5.1.88.
+See your identity key, the keys grown from it and every name that points at them, with a warning if something is mixed up. [More](https://bwalletx.com/identity-map).
+
+### Profile and bAvatar
+
+A display name and bAvatar that follow you into chat and the exchange. Tap it to flip to your pay code. [More](https://bwalletx.com/bavatars).
+
+### Look-alike protection
+
+Brand, provider and very short names are reserved, and names that imitate someone (a 1 for an l) are flagged in bMail and chat.
 
 ### Sign-in alerts
 
-Get told when your handle signs in somewhere new, with a Recent sign-ins list. Live since 5.1.88.
-
-### Profile and avatar
-
-An avatar and display name that follow you into chat and the market.
-
-### Signed issuer statements
-
-Every token you mint carries a statement signed by your identity, so anyone can check who made it.
+Get told when your handle signs in somewhere new, with a Recent sign-ins list.
 
 ### Verified identity (optional)
 
-An ID check through bChatX, only when something needs it. [More](https://bwalletx.com/identity#verify).
+An ID check and certificate, only when something needs it. [More](https://bwalletx.com/identity#verify).
+
+## 💬Messages and calls
+
+### Friends
+
+Your address book: message, call or pay anyone, and see their token and room. Import and export contacts.
+
+### Chat
+
+Direct messages and rooms, with swipe to pin, mute or archive. Chat is also on the web at [bchatx.com](https://www.bchatx.com); sign in with bWalletX. [More](https://bwalletx.com/chat).
+
+### bMail
+
+Mail between wallets, with sent copies kept and newest first. Send signed notes and agreements, sealed on chain. [More](https://bwalletx.com/bmail).
+
+### Voice and video calls
+
+Recents, contacts and a keypad. Flip camera mid-call; share your screen from the web, Desktop or the extension.
+
+### Push notifications
+
+DMs always reach you; set each room to All, Mentions or Off. Previews off by default, plus quiet hours. On phone, web and Chrome. [More](https://bwalletx.com/push-notifications).
+
+### Token roomsbWalletX
+
+Every token gets a chat room; hold the token to join. The owner sets the rules, and can charge per message. [More](https://bwalletx.com/b-creative).
+
+### bSpacesbWalletX
+
+Live audio and video Spaces: a stage, speakers, raise-hand and invite links. Anyone can listen on the web. [More](https://bwalletx.com/bspaces).
+
+### bPhone: paid callsbWalletX
+
+Set a rate to receive calls, paid wallet to wallet while you talk, and take bookings. [More](https://bwalletx.com/bphone).
+
+### Contracts in chat
+
+Ask b to draft an agreement in a room, sign it with your wallet, and seal a fingerprint on Bitcoin. [More](https://bwalletx.com/contracts).
+
+### Tickets and bountiesbWalletX
+
+Send a ticket token to invite someone into your room, or post a paid task and pay out when it's done.
+
+### bWallet Lounge
+
+The community room: ask questions, meet other users, talk to the team. [Join](https://www.bchatx.com/chat?room=LOUNGE).
+
+## 📰Feed and media
+
+### One feed for BSV social
+
+Twetch, Treechat, bChatX, CoinGeek, Hodlocker and RelayX in one timeline, with sorting, favourites and a leaderboard. [More](https://bwalletx.com/social).
+
+### Lock to like
+
+Back a post by time-locking your own BSV against it. The coins stay yours.
+
+### Media player
+
+Play music and video NFTs you own, with a mini player and lock-screen playback. Publish your own release with a cover.
 
 ## ✨Make things
 
-### Your personal tokenbWalletX
+### Private by default
 
-Mint a $HANDLE token named after you in one tap. Its icon is your profile picture.
+Pictures and posts you mint are encrypted so only you can see them. Making one public is a separate step you choose. [More](https://bwalletx.com/mint).
+
+### Mint NFTs
+
+Inscribe images, music and video as 1Sat Ordinals. Check any mint yourself without trusting a server.
 
 ### Mint tokens
 
 Create BSV-21 tokens with your own supply, icon and name.
 
-### Mint NFTs
+### Your personal tokenbWalletX
 
-Inscribe images, music and video as 1Sat Ordinals.
+A $HANDLE token named after you in one tap, with your bAvatar as its icon.
 
-### Launch your own coinbWalletX
+### Launch a coinbWalletX
 
-A Launch your own coin button on the Launchpad, buying and selling bonding-curve coins, and shareable token links. The wallet won't sign a token that promises returns. [More](https://bwalletx.com/launchpad). Live since 5.1.85.
+Name, ticker, icon and one approval, with a published launch curve and a holders' room. The wallet won't sign a token sold with a promise of profit. [More](https://bwalletx.com/launchpad).
 
 ### Token locking
 
-Lock tokens until a date: swipe a token row in the Wallet and tap Lock. Your locks are in Locks & Pots › Locks. Creator vesting is coming. [More](https://bwalletx.com/token-locking). Live since 5.2.44.
+Lock tokens until a date: swipe a token row and tap Lock. [More](https://bwalletx.com/token-locking).
 
-### TicketsbWalletX
+### Airdrop to holdersbWalletX
 
-Mint a ticket token; sending one invites someone into your room.
+Send tokens or BSV to every holder of a token with one approval.
 
-## 💬Friends and social
+## 📈Exchange and Store
 
-### Token roomsbWalletX
+### ExchangebWalletX
 
-Hold the token, join the room. Every token gets a chat room; its owner sets the rules.
+Browse, buy and sell tokens and NFTs wallet to wallet at prices you set. Token IDs, verified badges and look-alike warnings. Nobody holds your coins for you. [More](https://bwalletx.com/exchange).
 
-### Friends
+### MemepoolbWalletX
 
-Your address book: message, call or pay anyone, and see their token and room.
-
-### Direct messages
-
-Private chats with your contacts.
-
-### Voice and video calls
-
-Call friends straight from the wallet. The Calls tab has Recents, Contacts, Services and a Keypad. Turn your camera on or off mid-call and flip between front and back. Redesigned in 5.1.88.
-
-### bPhone: paid callsbWalletX
-
-Charge to receive calls: per second, minute, hour or call, in BSV, MNEE or a token, paid wallet to wallet while you talk. List yourself with your hours and take bookings. [More](https://bwalletx.com/bphone). Live since 5.1.87.
-
-### bSpacesbWalletX
-
-Live audio and video Spaces in token rooms: a stage, speakers, raise-hand and invite links. Not in the store edition. [More](https://bwalletx.com/bspaces). Live since 5.1.85.
-
-### Pay per messagebWalletX
-
-Token rooms can charge per message; the message and the payment go in one transaction. [More](https://bwalletx.com/chat). Live since 5.1.85.
-
-### Live rooms
-
-Go live in a token room or a Space; who can watch, and what is next. [More](https://bwalletx.com/live).
-
-### bChatX on the web
-
-Chat lives on the web at [bchatx.com](https://chat.bwalletx.com): feed, rooms and [Spaces](https://chat.bwalletx.com/spaces), where anyone can listen without signing in. Sign in with bWalletX.
-
-### BountiesbWalletX
-
-Post paid tasks in a token room and pay out from your wallet when they're done.
-
-### One feed for BSV social
-
-Twetch, Treechat and bChat posts in one timeline, with full-size images, source badges and bookmarks. Twetch first by default.
-
-### Lock to like
-
-Back a post by time-locking your own BSV against it, plus a most-locked leaderboard.
-
-### Push notifications
-
-DMs always reach you; groups only when you're mentioned, or set each room's bell to All, Mentions or Off. Previews off by default, plus quiet hours. On iPhone, Android, the web and Chrome. [More](https://bwalletx.com/push-notifications).
-
-### Contracts in chat
-
-Ask b to draft an agreement in a partnership room, sign it by hand and with your wallet key, and seal a fingerprint on Bitcoin. Dispute help from b is coming. [More](https://bwalletx.com/contracts).
-
-### $b in every room
-
-Type `/b` in any chat and bWalletX's own assistant answers there, day or night. `/b` on its own lists the commands.
-
-### bWallet Lounge
-
-The community room on [bChatX](https://chat.bwalletx.com/chat?room=LOUNGE): ask questions, meet other users, talk to the team.
-
-## 📈Exchange and media
-
-### The exchangebWalletX
-
-Buy and sell tokens and NFTs wallet to wallet, including every $HANDLE token and verified X accounts.
-
-### Browse the marketbWalletX
-
-Explore tokens and NFTs, filtered for safety.
-
-### SellbWalletX
-
-List your tokens and NFTs at your own price from the wallet.
+Buy or sell TX Blaster Memepool coins from the wallet, up to 1 BSV a trade.
 
 ### Safety filterbWalletX
 
-Always-on filter for unsafe content in the market; your own items blur instead.
+An always-on filter for unsafe content in the exchange.
 
-### Media player
+### Store and themes
 
-Play music and video ordinals you own, with a mini player.
+Shops with themes and packs, paid in BSV with one approval. Theme the whole app and your card. [Store](https://bwalletx.com/store) · [Themes](https://bwalletx.com/themes).
 
-### SharesbWalletX
+### Edit home
 
-See company share listings in the market.
+Add, remove and reorder modules on your home screen.
 
 ## 🧩Apps and websites
 
-### [bApps store](https://bwalletx.com/bapps)
+### [bApps](https://bwalletx.com/bapps)
 
-A built-in store of Bitcoin apps, one tap away. Desktop- or phone-sized. [See them all](https://bwalletx.com/bapps).
-
-### Browser
-
-Open BSV apps inside the wallet; they can ask it to pay or sign.
+A built-in shelf of Bitcoin apps. In the Chrome extension each opens in its own tab. [See them all](https://bwalletx.com/bapps).
 
 ### Connect to websites
 
-A BRC-100 wallet sites can connect to. [For developers](https://bwalletx.com/developers).
+A BRC-100 wallet any site can connect to. Sign in with bWalletX shows a match code to type. [For developers](https://bwalletx.com/developers).
 
 ### Pair by QR
 
-Scan a site's QR with your phone to connect it, and see or remove paired sites.
+Scan a site's QR with your phone to sign in or sign there, and remove paired sites any time.
 
-### b agent
+### Allowed stays allowed
 
-A help assistant with your own AI key. Pay per message from the wallet is bWalletX only.
+Permissions are remembered per site. After a day away, or a disconnect, the site asks to reconnect.
 
-## 👻Agents
+### Desktop
+
+The whole wallet on a big screen at desktop.bwalletx.com, or as a signed Mac app. [Download](https://bwalletx.com/desktop).
+
+### bGitX
+
+Connect your GitHub repos at [bgitx.com](https://bgitx.com). Read-only.
+
+### [Partners](https://bwalletx.com/partners)
+
+Refer businesses to bAds and get a commission when they pay. [More](https://bwalletx.com/partners).
+
+## 👻b and agents
+
+### Ask b
+
+bWalletX's assistant in the wallet and in any chat with `/b`. It helps, turns errors into bug reports, and passes ideas to the team, who read these chats. [More](https://bwalletx.com/ask-b).
+
+### Hold to talk
+
+Hold the b, speak, let go; nothing sends until you do. [How](https://bwalletx.com/hold-to-talk).
 
 ### Agent accountsbWalletX
 
-Give an AI its own account with a budget and a daily cap. Each one gets a little pixel ghost in its own colour, on the card and as its avatar. [How it works](https://bwalletx.com/agent).
-
-### Stop allbWalletX
-
-One tap freezes every agent; a stopped agent can't spend. Every action is logged in dollars.
-
-### bAgentsbWalletX
-
-The ghost house: see all your agents, their balances and spending today, and stop or resume them. At [agents.bwalletx.com](https://agents.bwalletx.com).
-
-### Hold to talk to b
-
-Touch and hold the b, speak, let go to send. [How it works](https://bwalletx.com/hold-to-talk). Live since 5.1.89.
+Give an AI its own account with a budget and a daily cap. Stop all freezes every agent at once, and every action is logged. See them at [agents.bwalletx.com](https://agents.bwalletx.com). [How it works](https://bwalletx.com/agent).
 
 ### CLI and MCP
 
 Pair a computer or Claude to an agent account with `npx bwalletx`. [CLI](https://bwalletx.com/cli) · [MCP](https://bwalletx.com/mcp).
 
-## 🍺Agents that pay on chain
+### Business agentsbWalletX
 
-### [Hodl my b](https://bwalletx.com/hodl-my-b)
+From one link, b drafts a shop that takes BSV with checkout in chat, on a capped agent account. [More](https://bwalletx.com/business-agents).
 
-The weekly bWalletX magazine: everything shipped each week, live and coming. [Read this week’s issue](https://bwalletx.com/hodl-my-b) or [start with Edition 0](https://bwalletx.com/hodl-my-b/0).
-
-### [Business agents](https://bwalletx.com/business-agents)
-
-Paste a website, b drafts a shop that takes BSV in chat. Coming in the next release.
-
-### [Bitcoin by text](https://bwalletx.com/sms)
-
-SMS for agents and claim links. Coming.
-
-### [bCredits](https://bwalletx.com/credits)
-
-Prepay for b. Coming.
-
-### [Themes](https://bwalletx.com/themes) and [editions](https://bwalletx.com/themes/custom)
-
-Your own theme for $99 a year, or a branded edition. Live.
-
-### [bChatX rooms](https://bwalletx.com/b-creative)
-
-Start a room with its own token. Live.
-
-### [Identity](https://bwalletx.com/identity)
-
-ID check and certificate live; sharing one fact is coming.
-
-## 🔐Security
+## 🔐Security and recovery
 
 ### Non-custodial
 
@@ -3796,25 +3785,63 @@ Keys are created and stored on your device. We never see them.
 
 ### Approve every request
 
-Nothing is signed or paid without your tap; set a one-tap limit for small payments.
+Nothing is signed or paid without your tap, and outside apps can't use the wallet's own keys. Set a one-tap limit for small payments.
+
+### Passkey sign-inbWalletX
+
+Face ID or fingerprint on the web wallet and the direct Android download; the extension signs in through the web. Not in the store editions yet. [More](https://bwalletx.com/seedless-login).
 
 ### Face ID and fingerprint
 
 Unlock with biometrics on your phone.
 
-### Strong passwords
+### Restore from anywhere
 
-Generate a strong password and change it anytime.
+12 words, a private key or a backup file. Import from Yours, Panda, RelayX or Twetch. [How](https://bwalletx.com/restore).
+
+### Encrypted backups
+
+Your backup is encrypted and restored and checked first when you set up a new device.
+
+### Sweep another wallet
+
+Pull funds in from any 12/24-word wallet. Recover RelayX NFT collections too. [How](https://bwalletx.com/recover-relayx).
+
+### Troubleshooting
+
+Resync coins and recover payments from Settings, with plain-English results.
+
+### Passwords
+
+One master password, with a strength check. Changing it needs your current password, biometrics or your 12 words.
+
+### bTrustbWalletX
+
+Co-sign payments with other people; every payment and fee is shown before you sign. [More](https://bwalletx.com/btrust).
 
 ### Open source
 
-The wallet code is public and you can check it. [What is open, and under which licence](https://bwalletx.com/open-source).
+The wallet code is public. [What is open, and under which licence](https://bwalletx.com/open-source).
 
 ### Delete your account
 
 Remove your paymail, profile and messages from our servers whenever you like.
 
-Some features are still in beta and vary by platform. What shipped when: [releases](https://bwalletx.com/releases). Questions: [support@bwalletx.com](mailto:support@bwalletx.com)
+## 🛠️Coming
+
+### [Bitcoin by text](https://bwalletx.com/sms)Coming
+
+SMS for agents and claim links.
+
+### Share one factComing
+
+Prove one thing from your verified identity without sharing the rest.
+
+### Creator vestingComing
+
+Token locks that release to a creator over time.
+
+Some features are still in beta and vary by platform. What shipped when: [releases](https://bwalletx.com/releases). Every week's changes: [Hodl my b](https://bwalletx.com/hodl-my-b). Questions: [support@bwalletx.com](mailto:support@bwalletx.com)
 
 ---
 
@@ -5182,78 +5209,6 @@ Questions: [support@bwalletx.com](mailto:support@bwalletx.com)
 
 ---
 
-Source: https://bwalletx.com/your-character
-
-# Buy an NFT. It becomes you.
-
-An NFT in your wallet can be more than a picture. It can be your face in chat, your player in a game, and one of a team. Some of this works today; the rest is on its way, and the checklist below says which is which.
-
-[Open bWalletX](https://web.bwalletx.com)[See the status →](#status)
-
-## How it works
-
-### 1. Own it
-
-Hold an NFT in bWalletX, like a Pixel Fox today, or an NPG Avatar when they arrive. It sits in your wallet, under your keys.
-
-### 2. Wear it
-
-Use its art on your wallet card and as your avatar. Soon it becomes your bChatX profile on its own, with nothing to set up.
-
-### 3. Play as it
-
-Coming to [bGames](https://bwalletx.com/games), such as Arena and bRacer: your NFT is the character you play.
-
-### 4. Trade it
-
-Buy and sell NFTs on the [bWalletX Exchange](https://bwalletx.com/exchange), from your own wallet.
-
-### 5. Make a team
-
-Coming: put several NFTs together as a team. Each gets its own labelled bChatX profile in your room, run as a [bBot](https://bwalletx.com/agents). Setting up is free; you pay only for the AI they use.
-
-## The first collection: NPG Avatars
-
-3,334 single-image Ninja Punk Girls avatars are coming to the Exchange. Each one is a character you can wear, play and team up. They are not on sale yet; we’ll say so here when they are.
-
-Already out there: collections like the Pixel Foxes. If you hold one, it shows in your wallet today.
-
-## Status, 20 Oct 2026
-
-- ✓ LiveNFTs in your wallet. See and hold them in bWalletX.
-
-- ✓ LiveNFT art on your card and avatar.
-
-- ✓ LiveTrade NFTs on the Exchange.
-
-- ◻ ComingYour NFT becomes your bChatX profile, automatically.
-
-- ◻ ComingPlay as your NFT in bGames (Arena, bRacer).
-
-- ◻ ComingNFT teams: several NFTs, each a labelled bBot profile in your room.
-
-- ◻ ComingNPG Avatars on the Exchange (3,334).
-
-## Questions
-
-### Is my NFT still mine?
-
-Yes. It stays in your wallet under your keys. Using it as your avatar or character doesn’t move it.
-
-### What does a team cost?
-
-Setting one up is free. When your team’s bBots talk or work, you pay only for the AI they use.
-
-### Will people know a team member is a bot?
-
-Yes. Every bBot profile is labelled as one.
-
-Related: [NFTs](https://bwalletx.com/nfts) · [Exchange](https://bwalletx.com/exchange) · [bGames](https://bwalletx.com/games) · [bChatX](https://bchatx.com) · [Releases](https://bwalletx.com/releases)
-
-bWalletX is in beta: test with small amounts. Questions: [support@bwalletx.com](mailto:support@bwalletx.com)
-
----
-
 Source: https://bwalletx.com/jobs
 
 # Jobs
@@ -5822,9 +5777,21 @@ Source: https://bwalletx.com/names
 
 Names
 
-# Get your name on Bitcoin.
+# Your name is free.
 
-Yours forever. One payment, no renewals.
+Short names cost more.
+
+5+ letters Free · 4 letters $10 · 3 letters $100 · 1–2 letters $1000
+
+@bwalletx.com
+
+Type a name.
+
+On-chain names
+
+## On-chain names you own.
+
+An OpNS name lives in your wallet, not on our server. One payment, no renewals.
 
 Search →
 
@@ -8149,7 +8116,7 @@ Source: https://bwalletx.com/terms
 
 # Terms of Service
 
-bWalletX (Beta) · Effective 18 October 2026
+bWalletX (Beta) · Effective 28 October 2026
 
 Please read these terms before using bWalletX. The short version: it's your wallet and your 12 words. We can't
 see them, recover them or move your money. Keep your words safe, start with small amounts while we're in beta,
@@ -8212,6 +8179,15 @@ not claim a handle that impersonates someone else, infringes a trademark or is o
 suspend or reassign a handle that breaks these terms or that a rights holder can show belongs to them. Because
 the paymail service is run by us, a handle depends on that service: it isn't the same as owning your keys, and
 your money stays in your wallet whatever happens to a handle.
+
+Reserved handles. Some handles are kept for The Bitcoin Corporation Ltd and can't be claimed:
+every one- and two-character handle (including the numbers `0` to `99`), which we keep
+for The Bitcoin Corporation Ltd; the names of our products and of b, our AI assistant; and the names of
+identity providers and major platforms (for example `gmail`, `github` or
+`linkedin`). Using any handle, display name, bot name or letter to pose as bCorp, a member of our
+staff, b or our support team is impersonation under these terms, and we may suspend or reassign that handle.
+A short name never means someone works for us: bCorp and its staff are identified only by the Verified · The Bitcoin Corporation badge. We will never ask for your 12 words or your password, in bMail or anywhere else. Handles registered before 28
+October 2026 that are now reserved stay with their holders unless they are used to impersonate.
 
 ## 6. No financial advice
 
@@ -9242,6 +9218,22 @@ Your keys stay with you: bWalletX is self-custody. Twetch is a separate service;
 
 ---
 
+Source: https://bwalletx.com/verify-note
+
+# Verify a signed note
+
+Notes and IOUs signed in bWalletX (Settings › Sign a note) carry a signature from the signer's identity key.
+Paste the note file or open it here to see who signed it, when, and that not a word has changed. It's checked
+in your browser; nothing is uploaded.
+
+Check
+Open a file
+
+A valid signature proves the holder of that identity key signed this exact text. To know whose key it is, check
+it against their bWalletX profile or paymail. [bWalletX](https://bwalletx.com/)
+
+---
+
 Source: https://bwalletx.com/video
 
 # bWalletX in one minute
@@ -9320,6 +9312,94 @@ bWalletX. Get it free at bwalletx.com. It’s in beta, so start with small amoun
 
 ---
 
+Source: https://bwalletx.com/wallet-frames
+
+# Your private things. Opened only by your wallet.
+
+A Wallet Frame is a small window inside our products’ pages that belongs to your wallet, not to the site. It opens your private posts, music, photos and records on your own device. The site around it never sees them.
+
+Coming November 2026. This page says what works today and what doesn’t yet. See the status list below.
+
+[Get bWalletX](https://bwalletx.com/get)[What’s live →](#status)
+
+## Like the card box at a shop
+
+When you pay by card in a shop, you tap a small box that belongs to the payment company, not the shop. The shop gets paid. It never sees your card details. A Wallet Frame does the same for your posts, music, photos and records: the product shows the page, your wallet shows what’s private.
+
+## Two names for each product
+
+Every product has a public side and a private side.
+
+Private (in your wallet)Public (on the web)
+
+bChatX Wallet FramebChatX.com
+
+bMusicX Wallet FramebMusicX.com
+
+bMintX Wallet FramebMintX.com
+
+What you choose to make public lives at the .com, for anyone to see. What you keep private stays in the frame, for you and the people you share it with.
+
+## Where you’ll see it
+
+### Desktop and web
+
+The frame sits inside the product’s page. Open it full screen whenever you like.
+
+### Phone
+
+Full screen inside the bWallet app: the small full-screen version.
+
+### bApps from the store
+
+They open full screen inside your wallet.
+
+## Why we’re doing this
+
+- Your keys never leave your wallet. No product site holds them, ours included.
+
+- Your private things stay private. They’re locked before they leave your device and only opened inside your wallet.
+
+- You choose what goes public. Nothing moves to the .com unless you say so.
+
+- A hacked site gives nothing away. It only ever held locked content it couldn’t read.
+
+## Status, 26 Oct 2026
+
+- ✓ LivePrivate minting in bWallet. Media you mint is locked by default; only your wallet opens it.
+
+- ✓ LiveWallet-only opening. The rule that private content is opened only inside your wallet, never on a product’s server.
+
+- ◻ NovemberbChatX Wallet Frame.
+
+- ◻ NovemberFull-screen bApps inside the wallet.
+
+- ◻ ComingWallet Frames for music, photos and video.
+
+- ◻ ComingDeveloper guide for putting a Wallet Frame in your own product.
+
+We tick items here as they ship.
+
+## Questions
+
+### Is a Wallet Frame live today?
+
+Not yet. Private minting already works in the wallet. The first Wallet Frame, in bChatX, is planned for November.
+
+### Can the product’s company see my private things?
+
+No. The frame is drawn by your wallet. The product’s site only passes along content that’s already locked.
+
+### Do I need anything new?
+
+Just bWalletX or bWallet. The frame comes with the wallet.
+
+Related: [Mint](https://bwalletx.com/mint) · [bApps](https://bwalletx.com/bapps) · [Chat](https://bwalletx.com/chat) · [Identity](https://bwalletx.com/identity)
+
+bWalletX is in beta: test with small amounts. Questions: [support@bwalletx.com](mailto:support@bwalletx.com)
+
+---
+
 Source: https://bwalletx.com/web
 
 # Use bWalletX in your browser.
@@ -9343,6 +9423,110 @@ Nothing to install. Open the web wallet, restore with your 12 words or create a 
 The web wallet is in beta: test with small amounts. For daily use we recommend [the app or the browser extension](https://bwalletx.com/get), which keep your wallet on your own device rather than in a browser tab.
 
 Questions: [support@bwalletx.com](mailto:support@bwalletx.com)
+
+---
+
+Source: https://bwalletx.com/your-apps-on-b
+
+Your apps on b
+
+-
+
+-
+
+-
+
+-
+
+-
+
+-
+
+Watch with sound1:00 · SOUND ON
+
+## Bring your apps. Keep your stuff.
+
+The BSV apps you already use work alongside bWalletX: restore old wallets from their 12 words, find your NFTs, read Twetch, Peck and Treechat in one Feed, lock and tip, and catch CoinGeek headlines in bNews.
+
+[Get bWalletX](https://bwalletx.com/get?from=your-apps-on-b)[All apps on b](https://bwalletx.com/on-b)
+
+Less noise. More life. Just b.
+
+[just b](https://bwalletx.com/just-b) · [b cool](https://bwalletx.com/b-cool) · [b creative](https://bwalletx.com/b-creative) · [talk to b](https://bwalletx.com/talk-to-b) · [your apps on b](https://bwalletx.com/your-apps-on-b)
+
+Apps shown are separate services; bWalletX is not affiliated with them. Logos belong to their owners. Music: [Cherry Graffiti by b0ase](https://b0ase.com). bWalletX is in beta: test with small amounts. [support@bwalletx.com](mailto:support@bwalletx.com)
+
+---
+
+Source: https://bwalletx.com/your-character
+
+# Buy an NFT. It becomes you.
+
+An NFT in your wallet can be more than a picture. It can be your face in chat, your player in a game, and one of a team. Some of this works today; the rest is on its way, and the checklist below says which is which.
+
+[Open bWalletX](https://web.bwalletx.com)[See the status →](#status)
+
+## How it works
+
+### 1. Own it
+
+Hold an NFT in bWalletX, like a Pixel Fox today, or an NPG Avatar when they arrive. It sits in your wallet, under your keys.
+
+### 2. Wear it
+
+Use its art on your wallet card and as your avatar. Soon it becomes your bChatX profile on its own, with nothing to set up.
+
+### 3. Play as it
+
+Coming to [bGames](https://bwalletx.com/games), such as Arena and bRacer: your NFT is the character you play.
+
+### 4. Trade it
+
+Buy and sell NFTs on the [bWalletX Exchange](https://bwalletx.com/exchange), from your own wallet.
+
+### 5. Make a team
+
+Coming: put several NFTs together as a team. Each gets its own labelled bChatX profile in your room, run as a [bBot](https://bwalletx.com/agents). Setting up is free; you pay only for the AI they use.
+
+## The first collection: NPG Avatars
+
+3,334 single-image Ninja Punk Girls avatars are coming to the Exchange. Each one is a character you can wear, play and team up. They are not on sale yet; we’ll say so here when they are.
+
+Already out there: collections like the Pixel Foxes. If you hold one, it shows in your wallet today.
+
+## Status, 20 Oct 2026
+
+- ✓ LiveNFTs in your wallet. See and hold them in bWalletX.
+
+- ✓ LiveNFT art on your card and avatar.
+
+- ✓ LiveTrade NFTs on the Exchange.
+
+- ◻ ComingYour NFT becomes your bChatX profile, automatically.
+
+- ◻ ComingPlay as your NFT in bGames (Arena, bRacer).
+
+- ◻ ComingNFT teams: several NFTs, each a labelled bBot profile in your room.
+
+- ◻ ComingNPG Avatars on the Exchange (3,334).
+
+## Questions
+
+### Is my NFT still mine?
+
+Yes. It stays in your wallet under your keys. Using it as your avatar or character doesn’t move it.
+
+### What does a team cost?
+
+Setting one up is free. When your team’s bBots talk or work, you pay only for the AI they use.
+
+### Will people know a team member is a bot?
+
+Yes. Every bBot profile is labelled as one.
+
+Related: [NFTs](https://bwalletx.com/nfts) · [Exchange](https://bwalletx.com/exchange) · [bGames](https://bwalletx.com/games) · [bChatX](https://bchatx.com) · [Releases](https://bwalletx.com/releases)
+
+bWalletX is in beta: test with small amounts. Questions: [support@bwalletx.com](mailto:support@bwalletx.com)
 
 ---
 
@@ -12658,6 +12842,52 @@ Open an issue or a pull request on [the wallet repo](https://github.com/bitcoin-
 If you find a security problem, please don’t post it publicly. Email [support@bwalletx.com](mailto:support@bwalletx.com) first.
 
 bWalletX is in beta: test with small amounts. Questions: [support@bwalletx.com](mailto:support@bwalletx.com)
+
+---
+
+Source: https://bwalletx.com/partners
+
+# bWalletX Partners.
+
+Your bWalletX paymail is your partner account. Share your link; when someone you refer pays for bAds or a paid bWalletX feature, a commission is paid to your wallet in BSV.
+
+Opening soon. Referral links and payouts aren’t live yet. Get your paymail now so you’re ready.
+
+## How it works
+
+### Get a paymail
+
+Your name@bwalletx.com is your partner account. No separate sign-up.
+
+### Share your link
+
+Post it with “#ad” or “affiliate link” so people know.
+
+### They pay, you’re paid
+
+After a 30-day hold, the commission goes to your wallet in BSV, weekly.
+
+## What counts
+
+- bAds campaigns and AI-made bAds: 20%.
+
+- bWalletX paid features: 20% for 90 days.
+
+- Paid game play: 10% for 90 days.
+
+- Kintsugi / bWalletX Direct jobs: 5%, up to $100 a job.
+
+Token sales, shares, adult products and referring yourself never count. Commission is only paid on confirmed payments, never on clicks or sign-ups.
+
+## Why it’s in the wallet
+
+Your commission will arrive like any other payment, in your wallet history. Minimum payout $10; smaller amounts roll over. An ID check is needed once you’ve been paid over $1,000.
+
+The full programme, rates and rules are run by bAdvertisingX.
+
+[Partners at bAdvertisingX →](https://www.badvertisingx.com/partners)[Get bWalletX](https://bwalletx.com/get)
+
+Run by The Bitcoin Corporation Ltd (Co. 16735102). bWalletX is in beta. Questions: [support@bwalletx.com](mailto:support@bwalletx.com)
 
 ---
 

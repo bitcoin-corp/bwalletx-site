@@ -13,7 +13,7 @@ Full text of every page below: https://bwalletx.com/llms-full.txt
 - [bWalletX for Android](https://bwalletx.com/android): Download the bWalletX Android app (APK): the BSV wallet for tokens, media and apps.
 - [bWalletX on iPhone](https://bwalletx.com/iphone): Use bWalletX on iPhone today: install the web app from Safari in under a minute. No App Store needed.
 - [bWalletX for Chrome](https://bwalletx.com/extension): Install the bWalletX Chrome extension: the full bWalletX wallet in Chrome's side panel, and a wallet websites can connect to.
-- [bWalletX Features](https://bwalletx.com/features): Everything bWalletX does: BSV and tokens, names and paymail, token rooms, calls, market, media, minting, and a wallet websites can connect to.
+- [bWalletX Features](https://bwalletx.com/features): Everything bWalletX does: send and receive by name, messages and calls, names you sign yourself, private minting, the exchange, and a wallet websites can connect to. Web, Chrome, Android and Desktop.
 - [Watch: bWalletX in one minute](https://bwalletx.com/video): A one-minute tour of bWalletX: create a wallet, back it up, dollar balances, the Exchange, the Apps store, the Feed and group chats, and b, your AI agent.
 - [Get 1 BSV: test bWallet on Android](https://bwalletx.com/testers): Get 1 BSV for testing bWallet on Android for 14 days. 20 places. Apply with Google; paid to your own bWallet.
 - [Buy BSV in bWalletX](https://bwalletx.com/buy): Buy BSV right in bWalletX: tap the gold Buy BSV card, pay with card, Apple Pay, Google Pay or bank through an independent provider, or receive from an exchange or a friend. Your BSV lands in your wallet, shown in dollars.
@@ -76,7 +76,7 @@ Full text of every page below: https://bwalletx.com/llms-full.txt
 - [Just b](https://bwalletx.com/just-b): Just b
 - [Move to bWalletX](https://bwalletx.com/migrate): Move your coins, NFTs, tokens, names and posts into bWalletX. Sweep from Yours, RelayX, Twetch, SimplyCash, Money Button or a paper key, on your own device. Keys never leave it.
 - [Signed names and the public name log · bWalletX](https://bwalletx.com/name-bindings): A bWalletX name is a row in our database. Now each name is signed by the wallet that owns it, every wallet checks that before paying, and every change of who a name points to goes in a public log anyone can read.
-- [Get your name on Bitcoin](https://bwalletx.com/names): Your own name on Bitcoin, yours forever. One payment, no renewals: $10 for five letters or more, $50 for four, $100 for three, $500 for one or two. Search it, buy it or claim it, and give one to a friend, in bWalletX.
+- [Get your name](https://bwalletx.com/names): Your @bwalletx.com name is free. Short names cost more: 4 letters $10, 3 letters $100, 1–2 letters $1000. Search it and get it in bWalletX.
 - [Newsletter · bWalletX](https://bwalletx.com/newsletter): Get bWalletX updates by email: a monthly round-up of what shipped, and news for Android testers.
 - [NFTs: everything you own, edge to edge](https://bwalletx.com/nfts): The NFT library in bWalletX Desktop: pictures, clips, music and documents in one grid, opened edge to edge with no frames. Turn a moment from a clip into your card art.
 - [Your apps, on b · bWalletX](https://bwalletx.com/on-b): Use the Bitcoin SV apps you already know with bWalletX: Twetch, RelayX, CoinGeek, Peck, Hodlocker, Treechat and Yours. What works today, app by app.
@@ -105,9 +105,12 @@ Full text of every page below: https://bwalletx.com/llms-full.txt
 - [Branded wallets for businesses](https://bwalletx.com/themes-custom): A self-custody wallet in your company’s name for your customers, members or shareholders, from $99 a year. Plus the route from a branded wallet to a share register kept with bSharesX, and optionally bDojoX. Powered by bWalletX.
 - [Tips: pay the people who make things](https://bwalletx.com/tips): In bWalletX Desktop, tip artists, NFT creators, rooms, people in chat, friends and Spaces speakers. Pick an amount, tap Allow once, and all of it goes to them.
 - [Token curves: how a person's token is priced](https://bwalletx.com/token-curves): Every person's token in bWalletX sells on the same gentle curve: 1 cent to join their room, doubling every 10,000 supporters. The money goes to the person. Nothing is held back, there is no reserve and no buy-back, and resale is between people on the Exchange.
-- [Your character · bWalletX](https://bwalletx.com/your-character): Own an NFT in bWalletX, such as an NPG Avatar or a Pixel Fox, and it becomes your character: your avatar, your bChatX profile, your player in bGames, and part of a team. Here is what works today and what is coming.
 - [Treechat on b · bWalletX](https://bwalletx.com/treechat-on-b): Read Treechat posts and whole threads in the bWalletX Feed, open them on Treechat, lock behind posts, and keep Treechat on your Apps home screen.
 - [Twetch on b · bWalletX](https://bwalletx.com/twetch-on-b): Read Twetch in the bWalletX Feed, tip authors in BSV, lock behind posts, restore a Twetch wallet from its 12 words and pay name@twetch.me.
+- [Verify a signed note · bWalletX](https://bwalletx.com/verify-note): Check a note or IOU signed in bWalletX: who signed it, when, and that not a word has changed.
+- [Wallet Frames: your private things, drawn by your wallet · bWalletX](https://bwalletx.com/wallet-frames): A Wallet Frame is a small window owned by bWallet, set inside our products' pages. It opens your private posts, music, photos and records on your own device, so the product's site never sees them. Coming November 2026.
+- [Your apps on b](https://bwalletx.com/your-apps-on-b): Bring your apps. Keep your stuff. Twetch, RelayX, Treechat, Peck, Yours, CoinGeek and the Hodlocker way, all alongside bWalletX. Just b.
+- [Your character · bWalletX](https://bwalletx.com/your-character): Own an NFT in bWalletX, such as an NPG Avatar or a Pixel Fox, and it becomes your character: your avatar, your bChatX profile, your player in bGames, and part of a team. Here is what works today and what is coming.
 - [Yours on b · bWalletX](https://bwalletx.com/yours-on-b): Move a Yours Wallet into bWalletX with your 12 words or a Yours backup file. The Yours extension is not needed.
 
 ## Wallet features
@@ -158,7 +161,21 @@ Full text of every page below: https://bwalletx.com/llms-full.txt
 - [bWalletX MCP](https://bwalletx.com/mcp): Let Claude, ChatGPT, Cursor or any MCP agent use your bWalletX agent accounts: balances, sends, trades and strategies, within the budget and limits you set.
 - [Add your app to bWallet](https://bwalletx.com/apps/add): Built a BSV app? Add it to the Apps screen in bWallet and bWalletX: one tap from the wallet, with wallet sign-in and BSV payments built in. Free, reviewed by a person.
 - [Open source bWalletX](https://bwalletx.com/open-source): bWalletX is open source: the wallet and CLI are MIT-licensed on GitHub. What that means for your keys, balances, tokens and locks if we ever disappear.
+- [Partners: refer people, get a commission](https://bwalletx.com/partners): Share your bWalletX link. When someone you refer pays for bAds or a paid feature, you get a commission in BSV, paid to your paymail.
 - [Sign in with bWalletX (Markdown)](https://bwalletx.com/connect.md): Plain Markdown for AI coding agents.
+
+## Services agents can buy
+
+Every payment is a BRC-100 action from the user's own bWalletX (non-custodial); agents use an agent account with its own keys and budget through the bwalletx MCP server (`bwalletx serve`, a BRC-100 wallet on localhost:3321; see https://bwalletx.com/mcp and https://bwalletx.com/cli). Prices in USD, paid in BSV at the live rate.
+
+- Exchange tokens and NFTs: the listing price plus the network fee. MCP tools `listings`, `price`, `buy`, `buy_listing`, `list_for_sale`, `unlist`.
+- Minting: the network fee only. MCP tools `mint`, `mint_manifest`.
+- Sending BSV and tokens: the network fee only. MCP tool `send`.
+- bTV: AIVJ live channel: first 3 minutes free, then 1p a minute (about $0.013), paid straight to the artist from the wallet at https://bwalletx.com/aivj.
+- Premium and artist themes: $1 each in the in-app Store (no public endpoint yet; buy inside bWalletX).
+- Theme edition (a branded wallet for a token community): $99 a year, ordered inside bWalletX (Theme > Get your own edition).
+- Branded edition with a business agent: from $999, by quote via https://bwalletx.com/business-agents.
+- Partners programme (earn, not buy): commission for referrals, see https://bwalletx.com/partners.
 
 ## Blog
 
