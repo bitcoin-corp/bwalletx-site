@@ -88,7 +88,7 @@
         sub: [
           { label: 'Artists', href: '/artists' },
           { label: 'VexVoid', href: '/artists/vexvoid', also: ['/vexvoid'] },
-          { label: 'bTV: AIVJ', href: '/aivj' },
+          { label: 'AIVJ', href: '/aivj' },
           { label: 'b creative', href: '/b-creative' }
         ] },
       { label: 'bApps', href: '/bapps', pages: ['/bapps', '/b-bots', '/bapps/bmovies', '/bshares', '/partnership-shares', '/bweb'],
@@ -147,7 +147,7 @@
           { label: '053 Friends, bPics, video', href: '/blog/053-friends-bpics-and-video' },
           { label: '052 Tip buttons', href: '/blog/052-tip-buttons' },
           { label: '051 Spaces on a schedule', href: '/blog/051-spaces-schedule-and-ask-b' },
-          { label: '050 bTV: AIVJ — VexVoid, live', href: '/blog/050-aivj-tv-vexvoid-live' },
+          { label: '050 AIVJ — VexVoid, live', href: '/blog/050-aivj-tv-vexvoid-live' },
           { label: '049 The Exchange, sorted', href: '/blog/049-the-exchange-sorted' }
         ]) }
     ],
