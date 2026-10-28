@@ -1,0 +1,373 @@
+<!doctype html>
+<!--
+  b is for shopkeepers (26 Oct 2026, v2 "Mabel's shop window"): the bMarketX commercial in the b-is-for family.
+  Mabel (a made-up seller, not a real eBay store) moves 682 teapots from eBay to bMarketX, keeps her stars and mints her shop.
+  Music: Echoes Silent Blade by VexVoid, 46.2 s from 57.635 s (a bar start, 40 ms pre-roll), fade out, -11 LUFS.
+  Sync: the beats were measured in this exact cut (spectral-flux onsets, 99.99 BPM, first beat at 0.040 s, each beat snapped to its
+  local onset peak, median error 9 ms). BEATS below is that list. Bars start on beats 0, 4, 8...: every scene change is on a bar start;
+  most scenes last one bar (2.4 s), Mabel, the kettle and the mint get two; the end card starts on bar 16.
+  Everything runs on the audio clock: each frame reads music.currentTime and seeks every running CSS animation (Web Animations API)
+  and the awning to it, so nothing drifts if playback starts late, stalls or the tab sleeps. ?debug=1 shows the sync overlay. One drawn hero object per scene, words on a tag below.
+  Every claim is live today. Buying is not: the film never shows a sale; the calm text says buying opens soon.
+  Test hooks: ?autoplay=silent, ?t=SECONDS, ?still=SCENE, ?debug=1, ?peaks=1, ?offset=MS, window.__film.
+-->
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>b is for shopkeepers</title>
+    <link rel="canonical" href="https://bwalletx.com/b-is-for-shopkeepers" />
+    <meta name="description" content="b is for shopkeepers. Bring your eBay shop to bMarketX in about a minute, keep your stars, and own every listing. Just b." />
+    <link rel="icon" href="/favicon.ico" />
+    <meta property="og:site_name" content="bWalletX" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://bwalletx.com/b-is-for-shopkeepers" />
+    <meta property="og:title" content="b is for shopkeepers" />
+    <meta property="og:description" content="Bring your shop. Keep your stars. Own every listing. bMarketX, signed in with bWalletX." />
+    <meta property="og:image" content="https://bwalletx.com/og-b-is-for-shopkeepers-v2.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="A hand-drawn Mabel&rsquo;s Teapots shop sign on red, and the words b is for shopkeepers on a shop tag." />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@bWalletX" />
+    <meta name="twitter:title" content="b is for shopkeepers" />
+    <meta name="twitter:description" content="Bring your shop. Keep your stars. Own every listing. Just b." />
+    <meta name="twitter:image" content="https://bwalletx.com/og-b-is-for-shopkeepers-v2.jpg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" />
+    <style>
+      /* b is for shopkeepers, "Mabel's shop window" (v2, 26 Oct 2026). Its own look: flat paper colours, one drawn hero object
+         per scene in the top half, the words on a shop tag below it, a striped awning that drops on each cut, labels that
+         stamp on, and a gentle bob on the beat. */
+      :root { --beat: 0.6s; --ink: #1d1712; --paper: #f6efe0; --gold: #ffd24d; --gold-hi: #ffe58a; --gold-lo: #c98f00; --red: #E53238; --blue: #0064D2; --yel: #F5AF02; --grn: #86B817; --hf: 'Space Grotesk', system-ui, sans-serif; }
+      * { box-sizing: border-box; }
+      html, body { margin: 0; background: #1d1712; color: #fff8e8; overflow-x: clip; font-family: var(--hf); }
+      .film { position: relative; width: 100%; height: 100svh; min-height: 560px; overflow: hidden; background: var(--paper); }
+      .scene { position: absolute; inset: 0; visibility: hidden; background: var(--bgc); }
+      .scene.on { visibility: visible; }
+      /* paper grain */
+      .scene::before { content: ''; position: absolute; inset: 0; background-image: radial-gradient(rgba(0,0,0,.06) 1px, transparent 1px); background-size: 6px 6px; background-position: var(--gx, 0) var(--gx, 0); pointer-events: none; }
+      .spkw { position: absolute; left: 50%; top: 6%; height: 50%; width: min(86vw, 560px); translate: -50% 0; pointer-events: none; }
+      .spk { position: absolute; right: 4%; top: 2%; width: clamp(22px, 3vw, 34px); height: auto; opacity: 0; pointer-events: none; }
+      .hero { position: absolute; left: 50%; top: 6%; height: 50%; width: min(86vw, 560px); translate: -50% 0; display: flex; align-items: center; justify-content: center; }
+      .hero > svg { height: 100%; width: 100%; overflow: visible; }
+      .scene.on .hero { animation: drop .36s calc(var(--o, 0s) + var(--hb, 1) * var(--beat) - .3s) linear both; }
+      .hero > * { transform-origin: 50% 100%; }
+      @keyframes drop { 0% { transform: translateY(-60vh) rotate(-6deg); animation-timing-function: cubic-bezier(.5,0,.9,.5); } 83% { transform: translateY(0) scale(1.04, .94); } 100% { transform: none; } }
+      @keyframes bob { from { translate: -50% 0; } to { translate: -50% -6px; } }
+      .tag { position: absolute; left: 50%; top: 61%; translate: -50% 0; width: min(92vw, 820px); text-align: center; }
+      .tag h2 { display: inline-flex; align-items: center; flex-wrap: wrap; justify-content: center; gap: 0 .22em; margin: 0; padding: .14em .5em .18em; background: var(--plate, #fffaf0); color: var(--plink, var(--ink)); border-radius: 14px; font: 700 clamp(2.2rem, 8vw, 5.4rem)/1 var(--hf); letter-spacing: -0.04em; box-shadow: 0 8px 0 rgba(0,0,0,.18); rotate: -2deg; }
+      .tag h2 .lb { height: .82em; width: auto; }
+      .tag h2 .br { flex-basis: 100%; height: 0; }
+      .scene.on .tag h2 { animation: stamp .24s calc(var(--o, 0s) + var(--tb, 2) * var(--beat) - .17s) linear both; }
+      @keyframes stamp { 0% { opacity: 0; transform: scale(1.7) rotate(-6deg); animation-timing-function: ease-in; } 70% { opacity: 1; transform: scale(.96); } 100% { opacity: 1; transform: none; } }
+      .tag p { margin: 18px auto 0; max-width: 600px; font: 600 clamp(1rem, 2.6vw, 1.35rem)/1.4 var(--hf); color: var(--subc, #fff); }
+      .scene.on .tag p { animation: up .4s calc(var(--o, 0s) + var(--tb, 2) * var(--beat)) ease-out both; }
+      @keyframes up { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: none; } }
+      /* the awning drops over each cut and lifts on the beat */
+      .awn { position: absolute; left: 0; right: 0; top: 0; height: 100%; z-index: 5; background: repeating-linear-gradient(90deg, var(--red) 0 60px, #fffaf0 60px 120px); transform: translateY(calc(-100% - 40px)); pointer-events: none; }
+      .awn::after { content: ''; position: absolute; left: 0; right: 0; bottom: -26px; height: 26px; background: radial-gradient(circle at 30px 0, var(--red) 29px, transparent 30px) 0 0 / 120px 26px, radial-gradient(circle at 90px 0, #fffaf0 29px, transparent 30px) 0 0 / 120px 26px; }
+      .dbg { position: absolute; left: 10px; top: 10px; z-index: 9; padding: 8px 10px; border-radius: 8px; background: rgba(0,0,0,.75); color: #fff; font: 12px/1.4 ui-monospace, monospace; white-space: pre; pointer-events: none; }
+      .dbg i { display: inline-block; width: 14px; height: 14px; border-radius: 50%; background: #444; vertical-align: -2px; margin-right: 6px; } .dbg i.on { background: #ffd24d; } .dbg i.bar { background: #E53238; }
+      /* hero details */
+      .scene.on .swing { animation: swing calc(var(--beat) * 2) var(--o, 0s) ease-in-out infinite alternate; transform-origin: 200px 0; transform-box: view-box; }
+      @keyframes swing { from { transform: rotate(-4deg); } to { transform: rotate(4deg); } }
+      .steam path { stroke-dasharray: 60; stroke-dashoffset: 60; }
+      .scene.on .steam path { animation: steam calc(var(--beat) * 1.5) ease-out infinite; }
+      .scene.on .steam path:nth-child(2) { animation-delay: calc(var(--beat) / 2); } .scene.on .steam path:nth-child(3) { animation-delay: var(--beat); }
+      @keyframes steam { 0% { stroke-dashoffset: 60; opacity: 0; } 30% { opacity: 1; } 100% { stroke-dashoffset: -60; opacity: 0; } }
+      .pop { opacity: 0; transform-box: fill-box; transform-origin: 50% 50%; }
+      .scene.on .pop { animation: popin .2s calc(var(--o, 0s) + var(--beat) + var(--k) * var(--beat) / 2 - .14s) linear both; }
+      @keyframes popin { 0% { opacity: 0; transform: scale(0) rotate(-20deg); animation-timing-function: ease-in; } 70% { opacity: 1; transform: scale(1.12); } 100% { opacity: 1; transform: none; } }
+      .fall { transform-box: fill-box; }
+      .scene.on .fall { animation: fall calc(var(--beat) * 2) calc(var(--o, 0s) + var(--beat)) linear both; }
+      @keyframes fall { 0% { transform: translateY(-120px); animation-timing-function: ease-in; } 50% { transform: translateY(0); } 92% { transform: translateY(0); opacity: 1; animation-timing-function: ease-in; } 100% { transform: translateY(70px); opacity: 0; } }
+      .scene.on .turn { animation: turn .4s calc(var(--beat) * 3 - .2s) ease both; transform-box: fill-box; transform-origin: 20% 50%; }
+      @keyframes turn { to { transform: rotate(90deg); } }
+      .morph1, .morph2 { transform-box: fill-box; transform-origin: 50% 50%; }
+      .scene.on .morph1 { animation: m1 .3s calc(var(--o, 0s) + (var(--db, 3) - 2) * var(--beat)) ease-in both; }
+      .scene.on .morph2 { animation: m2 calc(var(--beat) * 2 / .85) calc(var(--o, 0s) + (var(--db, 3) - 2) * var(--beat)) linear both; }
+      @keyframes m1 { to { opacity: 0; transform: scale(.3); } }
+      @keyframes m2 { 0% { opacity: 0; transform: scale(.3); animation-timing-function: ease-out; } 30% { opacity: 1; transform: none; animation-timing-function: cubic-bezier(.6,0,.9,.6); } 85% { opacity: 1; transform: translate(0, 80px) scale(.7); } 91% { transform: translate(0, 86px) scale(.78, .6); } 100% { opacity: 1; transform: translate(0, 80px) scale(.7); } }
+      .scene.on .flip { animation: flip .5s calc(var(--o, 0s) + var(--db, 3) * var(--beat) - .25s) ease both; transform-box: fill-box; transform-origin: 50% 0; }
+      @keyframes flip { 0% { transform: rotateX(0); } 50% { transform: rotateX(90deg); } 100% { transform: rotateX(0); } }
+      .flip .s1 { opacity: 1; } .flip .s2 { opacity: 0; }
+      .scene.on .flip .s1 { animation: hide 0s calc(var(--o, 0s) + var(--db, 3) * var(--beat)) forwards; } .scene.on .flip .s2 { animation: show 0s calc(var(--o, 0s) + var(--db, 3) * var(--beat)) forwards; }
+      @keyframes hide { to { opacity: 0; } } @keyframes show { to { opacity: 1; } }
+      /* HTML heroes: the store page, the description, the sign-in */
+      .card { width: min(84vw, 440px); background: #fff; color: #111; border-radius: 16px; box-shadow: 0 10px 0 rgba(0,0,0,.15); font: 500 13px/1.4 var(--hf); text-align: left; overflow: hidden; }
+      .card .url { background: #eef0f3; color: #555; padding: 8px 12px; font-size: 12px; }
+      .card .hd { display: flex; gap: 10px; align-items: center; padding: 10px 14px; border-bottom: 1px solid #eee; }
+      .card .av { width: 36px; height: 36px; border-radius: 50%; background: var(--yel); display: flex; align-items: center; justify-content: center; font-weight: 700; flex: none; }
+      .card .nm { font-weight: 700; font-size: 15px; } .card .fb { color: #666; font-size: 11px; }
+      .card .grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; padding: 12px 14px 16px; }
+      .card .th { aspect-ratio: 1; border-radius: 10px; background: #f5efe3; padding: 6px; } .card .th svg { width: 100%; height: 100%; }
+      .card .pr { font-weight: 700; margin-top: 4px; }
+      .card .it { opacity: 0; }
+      .scene.on .bell { animation: popin .2s calc(var(--o, 0s) + var(--db, 3) * var(--beat) - .14s) linear both, ring .3s calc(var(--o, 0s) + var(--db, 3) * var(--beat)) ease-out 3 alternate; }
+      @keyframes ring { from { rotate: -14deg; } to { rotate: 14deg; } }
+      .scene.on .card .it { animation: popin .2s calc(var(--o, 0s) + var(--beat) + var(--k) * var(--beat) / 2 - .14s) linear both; }
+      .card.pad { padding: 18px 20px; background: #fffaf0; font-size: 15px; }
+      .stampc { display: inline-block; padding: 2px 8px; border: 3px solid var(--red); color: var(--red); border-radius: 6px; font-weight: 700; rotate: -6deg; opacity: 0; }
+      .scene.on .stampc { animation: stamp .24s calc(var(--o, 0s) + var(--db, 3) * var(--beat) - .17s) linear both; }
+      .card .bt { margin-top: 14px; padding: 13px; border-radius: 12px; background: var(--gold); color: #000; font-weight: 700; text-align: center; }
+      .card .ok { margin-top: 12px; color: #1d7a3a; font-weight: 700; text-align: center; opacity: 0; }
+      .scene.on .card .ok { animation: up .3s calc(var(--o, 0s) + var(--db, 3) * var(--beat) - .1s) ease-out both; }
+      .count { font: 700 clamp(2.4rem, 9vw, 5rem)/1 var(--hf); color: var(--ink); letter-spacing: -0.04em; font-variant-numeric: tabular-nums; text-align: center; }
+      .count small { display: block; font-size: .28em; letter-spacing: .14em; text-transform: uppercase; color: #5a4a3a; margin-top: 6px; }
+      .wm { height: clamp(28px, 4vw, 42px); width: auto; display: block; margin: 0 auto 14px; }
+      .wmw { display: flex; align-items: baseline; justify-content: center; gap: 2px; margin: 0 auto 14px; } .wmw .wm { margin: 0; } .dotcom { font: 700 clamp(22px, 3.1vw, 33px)/1 var(--hf); color: #f1ead9; letter-spacing: -0.03em; }
+      .getp { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; margin-top: 22px; }
+      .cta { display: inline-block; padding: 16px 34px; border-radius: 999px; background: linear-gradient(180deg, var(--gold-hi), var(--gold)); color: #140a08; font: 700 1.05rem var(--hf); text-decoration: none; box-shadow: 0 6px 0 rgba(0,0,0,.25); }
+      .cta2 { display: inline-block; padding: 15px 30px; border-radius: 999px; border: 2px solid #fff; color: #fff; font: 700 1rem var(--hf); text-decoration: none; }
+      .scene.on .getp a { pointer-events: auto; }
+      .sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+      /* gate */
+      .poster { position: absolute; inset: 0; z-index: 7; display: flex; align-items: center; justify-content: center; background: var(--red) repeating-linear-gradient(90deg, rgba(255,255,255,.08) 0 60px, transparent 60px 120px); transition: opacity .3s; }
+      .poster.gone { opacity: 0; pointer-events: none; }
+      .poster .in { display: flex; flex-direction: column; align-items: center; gap: 22px; padding: 0 16px; text-align: center; }
+      .poster h1 { margin: 0; display: inline-flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 0 .22em; padding: .14em .5em .18em; background: #fffaf0; color: var(--ink); border-radius: 14px; font: 700 clamp(2.4rem, 9vw, 5.6rem)/1 var(--hf); letter-spacing: -0.04em; rotate: -2deg; box-shadow: 0 8px 0 rgba(0,0,0,.2); }
+      .poster h1 .lb { height: .82em; } .poster h1 .br { flex-basis: 100%; height: 0; }
+      .play { position: relative; width: 120px; height: 120px; padding-left: 8px; border: 0; border-radius: 50%; display: flex; align-items: center; justify-content: center; cursor: pointer; color: #140a08; background: radial-gradient(circle at 35% 30%, var(--gold-hi), var(--gold) 55%, var(--gold-lo)); box-shadow: 0 18px 60px rgba(0,0,0,.35), inset 0 2px 0 rgba(255,255,255,.5); animation: pulse var(--beat) ease-in-out infinite alternate; }
+      .play::before { content: ''; position: absolute; inset: -10px; border-radius: 50%; border: 2px solid rgba(255,229,138,.85); animation: pring 1s ease-out infinite; }
+      .play svg { width: 46px; height: 46px; }
+      @keyframes pulse { to { transform: scale(1.07); } } @keyframes pring { from { transform: scale(.92); opacity: .9; } to { transform: scale(1.4); opacity: 0; } }
+      .gate-l { margin: 0; font: 700 1rem var(--hf); letter-spacing: .16em; text-transform: uppercase; color: #fff; }
+      .quiet { background: none; border: 0; padding: 4px; font: 400 .85rem var(--hf); color: rgba(255,255,255,.85); cursor: pointer; text-decoration: underline; text-underline-offset: 3px; }
+      .bar { position: absolute; left: 0; bottom: 0; height: 4px; width: 0; background: var(--gold); z-index: 6; }
+      .snd { position: fixed; right: 14px; bottom: 14px; z-index: 8; display: none; gap: 4px; }
+      .started .snd { display: flex; }
+      .snd button { width: 44px; height: 44px; display: flex; align-items: center; justify-content: center; border: 0; border-radius: 50%; background: rgba(0,0,0,.3); color: #fff; cursor: pointer; }
+      .snd button[aria-pressed="true"] { color: var(--gold-hi); }
+      .play:focus-visible, .quiet:focus-visible, .cta:focus-visible, .cta2:focus-visible { outline: 3px solid #fff; outline-offset: 3px; }
+      /* calm text and end card */
+      .calm { max-width: 680px; margin: 0 auto; padding: 18vh 24px 16vh; text-align: center; color: #d9cdb6; font: 400 clamp(1.05rem, 2.4vw, 1.3rem)/1.75 var(--hf); }
+      .calm p { margin: 0 0 2.2em; } .calm .lead { font: 700 clamp(1.9rem, 6vw, 3.2rem)/1.15 var(--hf); letter-spacing: -0.03em; color: #fff; margin-bottom: 1.4em; }
+      .calm strong { display: block; margin-bottom: .35em; color: #fff; font-weight: 600; font-size: 1.15em; }
+      .end { position: relative; min-height: 100svh; display: flex; align-items: center; justify-content: center; background: var(--red) repeating-linear-gradient(90deg, rgba(255,255,255,.08) 0 60px, transparent 60px 120px); }
+      .end-in { text-align: center; padding: 0 16px; }
+      .end-in h2 { display: inline-flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 0 .22em; margin: 0 0 8px; padding: .14em .5em .18em; background: #fffaf0; color: var(--ink); border-radius: 14px; font: 700 clamp(2.2rem, 9vw, 4.6rem)/1 var(--hf); letter-spacing: -0.04em; rotate: -2deg; }
+      .end-in h2 .lb { height: .82em; } .end-in h2 .br { flex-basis: 100%; height: 0; }
+      .credit { margin: 22px 0 0; font: 400 .8rem var(--hf); letter-spacing: .06em; color: rgba(255,255,255,.85); } .credit a { color: inherit; }
+      .foot { margin: 0; padding: 0 16px 22px; text-align: center; font-size: .75rem; color: #9a8c76; } .foot a { color: #c9b99c; }
+      @media (min-width: 900px) and (min-height: 700px) { .hero .card { zoom: 1.45; } }
+      @media (max-width: 640px) { .hero { top: 7%; height: 44%; } .tag { top: 56%; } .play { width: 104px; height: 104px; } .awn { background-size: auto; } }
+      /* ?still=N: a test hook that shows scene N with every animation at its end state, for screenshots. */
+      .still .scene *, .still .scene { animation-delay: -30s !important; animation-iteration-count: 1 !important; }
+      .still .poster, .still .awn { display: none; }
+      @media (prefers-reduced-motion: reduce) {
+        .scene *, .poster *, .play::before, .awn { animation: none !important; }
+        .pop, .card .it, .stampc, .card .ok, .flip .s2 { opacity: 1 !important; transform: none !important; }
+        .flip .s1, .fall { opacity: 0 !important; } .morph1 { opacity: 0 !important; } .morph2 { opacity: 1 !important; }
+      }
+    </style>
+  </head>
+  <body>
+    <section class="film" id="film" aria-label="b is for shopkeepers: a 45-second film">
+      <div id="stage"></div>
+      <div class="awn" id="awn"></div>
+      <div class="poster" id="poster">
+        <div class="in">
+          <h1 data-slogan="{L} is for | shopkeepers"></h1>
+          <button type="button" class="play" id="play" aria-label="Play b is for shopkeepers with sound"><svg viewBox="5 3 18 18" aria-hidden="true"><path d="M8 5.5v13l11-6.5z" fill="currentColor" /></svg></button>
+          <p class="gate-l">Play it loud &middot; 0:45</p>
+          <button type="button" class="quiet" id="quiet">Watch without sound</button>
+        </div>
+      </div>
+      <div class="bar" id="bar"></div>
+      <audio id="music" src="/audio/b-is-for-shopkeepers-echoes-silent-blade.mp3" preload="auto"></audio>
+    </section>
+    <div class="snd">
+      <button type="button" id="mute" aria-pressed="false" aria-label="Mute music"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><path d="M11 5 6 9H3v6h3l5 4z"></path><path d="M15.5 8.5a5 5 0 0 1 0 7"></path></svg></button>
+      <button type="button" id="again" aria-label="Play again"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><path d="M3 12a9 9 0 1 0 3-6.7"></path><path d="M3 4v5h5"></path></svg></button>
+    </div>
+
+    <section class="calm">
+      <p class="lead">You built a shop.<br />Now own it.</p>
+      <p><strong>The shop you know.</strong> bMarketX store pages use the layout buyers and sellers already know from eBay, at bmarketx.com/str/your-shop. Mabel is made up. Your shop is real.</p>
+      <p><strong>Moved in about a minute.</strong> Upload the &ldquo;All active listings&rdquo; CSV from eBay Seller Hub, or paste your store link and prove it&rsquo;s yours with a short code in your eBay store description. The code route brings your feedback score, items sold and followers too.</p>
+      <p><strong>Your wallet is your account.</strong> Sign in with bWalletX (BRC-100). No password to store, none to leak.</p>
+      <p><strong>Mint the whole shop, if you like.</strong> Each listing becomes a BSV-21 token in your own bWalletX, its photo inscribed on chain as the icon, one token for each item in stock. About a tenth of a cent a listing: around 75 cents for a 682-item store. You own it, not bMarketX.</p>
+      <p><strong>Dollars on the tag, Bitcoin at the till.</strong> Prices show in US dollars and are paid in BSV from bWalletX. Buying opens soon: checkout, shipping and Sign in with eBay aren&rsquo;t live yet. Move in now and your shop is ready when they are. <a href="/b-market" style="color:#ffe58a">How bMarketX works</a></p>
+      <p class="lead">Bring your shop. Keep your stars. Just b.</p>
+    </section>
+
+    <section class="end">
+      <div class="end-in">
+        <span class="wmw"><img class="wm" src="/bmarket/logo-dark.svg" alt="bMarketX" /><span class="dotcom">.com</span></span>
+        <h2 data-slogan="{L} is for | shopkeepers"></h2>
+        <p class="getp"><a class="cta" href="https://bmarketx.com/sell?from=b-is-for-shopkeepers">Bring your shop</a> <a class="cta2" href="https://bmarketx.com?from=b-is-for-shopkeepers">Visit bMarketX.com</a></p>
+        <p class="credit">Music: <a href="https://chat.bwalletx.com/u/vexvoid">Echoes Silent Blade by VexVoid</a>. Mabel&rsquo;s Teapots is made up.</p>
+      </div>
+    </section>
+    <p class="foot"><a href="/just-b">just b</a> · <a href="/b-creative">b creative</a> · <a href="/b-is-for-business">b is for business</a> · <a href="/b-is-coming">b is coming</a> · <a href="/b-is-for-shopkeepers" aria-current="page">b is for shopkeepers</a> · <a href="/b-market">bMarketX</a></p>
+    <p class="foot">bMarketX is not affiliated with or endorsed by eBay. bWalletX is in beta: test with small amounts. <a href="mailto:support@bwalletx.com">support@bwalletx.com</a></p>
+
+    <script>
+      (function () {
+        var END = 46.2;
+        // The beats of this cut, measured offline (see the header). Bars start on every 4th beat.
+        var BEATS = [0.04, 0.639, 1.242, 1.836, 2.444, 3.038, 3.642, 4.235, 4.839, 5.438, 6.041, 6.635, 7.239, 7.837, 8.436, 9.039, 9.638, 10.237, 10.84, 11.434, 12.038, 12.636, 13.24, 13.839, 14.442, 15.036, 15.639, 16.238, 16.887, 17.47, 18.069, 18.648, 19.236, 19.84, 20.444, 21.037, 21.641, 22.239, 22.838, 23.437, 24.04, 24.639, 25.238, 25.836, 26.44, 27.039, 27.637, 28.236, 28.839, 29.438, 30.042, 30.635, 31.239, 31.838, 32.436, 33.035, 33.644, 34.237, 34.836, 35.434, 36.043, 36.642, 37.235, 37.839, 38.438, 39.041, 39.64, 40.239, 40.842, 41.441, 42.039, 42.638, 43.242, 43.835, 44.439, 45.038, 45.641];
+        var BEAT = 0.6;
+        function esc(s) { return String(s).replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); }
+        function slogan(text) {
+          return '<span class="sr">' + esc(text.replace(/\{L\}/g, 'b').replace(/ \| /g, ' ')) + '</span>' + text.split(/\s+/).map(function (w) {
+            if (w === '|') return '<span class="br"></span>';
+            return '<span aria-hidden="true">' + w.split(/(\{L\})/).filter(Boolean).map(function (p) { return p === '{L}' ? '<img class="lb" src="/logo.svg" alt="" />' : esc(p); }).join('') + '</span>';
+          }).join('');
+        }
+        // Mabel's things. Each drawn once, each different.
+        var tallPot = '<g><path d="M150 250 C120 130 280 130 250 250 Z" fill="#E53238"/><g fill="#fffaf0" opacity=".9"><rect x="150" y="160" width="100" height="12" rx="6"/><rect x="140" y="195" width="120" height="12" rx="6"/><rect x="138" y="228" width="124" height="10" rx="5"/></g><path d="M250 190 C300 175 305 130 320 124" stroke="#E53238" stroke-width="16" fill="none" stroke-linecap="round"/><path d="M152 170 C100 170 104 230 150 228" stroke="#E53238" stroke-width="13" fill="none"/><ellipse cx="200" cy="140" rx="40" ry="11" fill="#b8222a"/><circle cx="200" cy="124" r="11" fill="#b8222a"/></g>';
+        var cardigan = '<g transform="translate(270 212)"><path d="M0 0 h90 l10 38 h-110 z" fill="#86B817"/><path d="M45 0 v38" stroke="#5c8a0c" stroke-width="3"/><circle cx="38" cy="12" r="3.5" fill="#fffaf0"/><circle cx="38" cy="26" r="3.5" fill="#fffaf0"/><path d="M0 0 C20 10 70 10 90 0" stroke="#5c8a0c" stroke-width="3" fill="none"/></g>';
+        var shelf = '<rect x="40" y="250" width="320" height="12" rx="4" fill="#7a4a22"/>';
+        var squatPot = function (c) { return '<g><path d="M-50 0 C-60 -50 60 -50 50 0 Z" fill="' + c + '"/><path d="M48 -18 C70 -24 74 -40 84 -42" stroke="' + c + '" stroke-width="10" fill="none" stroke-linecap="round"/><path d="M-48 -26 C-74 -26 -72 -4 -48 -6" stroke="' + c + '" stroke-width="8" fill="none"/><ellipse cx="0" cy="-36" rx="22" ry="6" fill="' + c + '"/><circle cx="0" cy="-44" r="7" fill="' + c + '"/></g>'; };
+        var potSm = function (c, v) { var b = ['M14 82 C2 30 98 30 86 82 Z', 'M10 82 C10 46 90 46 90 82 Z', 'M20 82 C0 50 30 30 50 30 C70 30 100 50 80 82 Z', 'M18 82 L26 40 L74 40 L82 82 Z'][v]; return '<svg viewBox="-6 6 124 84"><path d="' + b + '" fill="' + c + '"/><path d="M84 52 C104 46 108 26 116 24" stroke="' + c + '" stroke-width="9" fill="none" stroke-linecap="round"/><path d="M16 46 C-8 46 -6 74 16 72" stroke="' + c + '" stroke-width="7" fill="none"/><circle cx="50" cy="28" r="6" fill="' + c + '"/></svg>'; };
+        var H = {
+          sign: '<svg viewBox="0 0 400 300"><g class="swing"><path d="M120 0 L140 70 M280 0 L260 70" stroke="#3a2a1a" stroke-width="5"/><rect x="70" y="70" width="260" height="130" rx="16" fill="#fffaf0" stroke="#3a2a1a" stroke-width="6"/><text x="200" y="128" text-anchor="middle" font-family="Space Grotesk" font-weight="700" font-size="36" fill="#E53238">Mabel&#8217;s</text><text x="200" y="172" text-anchor="middle" font-family="Space Grotesk" font-weight="700" font-size="34" fill="#1d1712">Teapots</text><circle cx="100" cy="100" r="6" fill="#F5AF02"/><circle cx="300" cy="170" r="6" fill="#0064D2"/></g></svg>',
+          mabel: '<svg viewBox="0 0 400 300">' + shelf + tallPot + cardigan + '</svg>',
+          street: '<svg viewBox="0 0 400 300"><rect x="60" y="30" width="8" height="230" fill="#3a2a1a"/><rect x="20" y="40" width="250" height="56" rx="8" fill="#0064D2"/><text x="145" y="77" text-anchor="middle" font-family="Space Grotesk" font-weight="700" font-size="24" fill="#fff">bmarketx.com/str</text><g transform="translate(270 0)"><rect x="-70" y="210" width="140" height="22" rx="6" fill="#7a4a22"/><circle cx="-40" cy="246" r="16" fill="#3a2a1a"/><circle cx="40" cy="246" r="16" fill="#3a2a1a"/><path d="M70 214 L110 180" stroke="#3a2a1a" stroke-width="8" stroke-linecap="round"/><g transform="translate(0 208)">' + squatPot('#0064D2') + '</g></g></svg>',
+          csv: '<svg viewBox="0 0 400 300"><g class="fall"><path d="M150 30 h80 l30 30 v110 h-110 z" fill="#fffaf0" stroke="#3a2a1a" stroke-width="4"/><path d="M230 30 v30 h30" fill="none" stroke="#3a2a1a" stroke-width="4"/><rect x="165" y="110" width="80" height="34" rx="6" fill="#86B817"/><text x="205" y="135" text-anchor="middle" font-family="Space Grotesk" font-weight="700" font-size="20" fill="#fff">CSV</text><path d="M168 80 h60 M168 94 h44" stroke="#c9bfa8" stroke-width="6" stroke-linecap="round"/></g><rect x="80" y="210" width="240" height="70" rx="12" fill="#3a2a1a"/><rect x="130" y="232" width="140" height="12" rx="6" fill="#120c08"/><text x="200" y="272" text-anchor="middle" font-family="Space Grotesk" font-weight="700" font-size="14" fill="#F5AF02">bmarketx.com/sell</text></svg>',
+          kettle: '<div style="display:flex;align-items:center;gap:6%;height:100%"><svg viewBox="0 0 200 220" style="height:100%;width:auto"><g class="steam" stroke="#fffaf0" stroke-width="7" fill="none" stroke-linecap="round"><path d="M150 70 C140 50 165 40 152 18"/><path d="M168 74 C160 52 184 44 172 22"/><path d="M132 72 C124 52 148 44 136 22"/></g><path d="M30 200 C20 120 60 90 100 90 C140 90 180 120 170 200 Z" fill="#fffaf0"/><path d="M168 140 L196 96" stroke="#fffaf0" stroke-width="14" stroke-linecap="round"/><path d="M60 92 C60 50 140 50 140 92" stroke="#1d1712" stroke-width="10" fill="none"/><rect x="24" y="196" width="152" height="12" rx="6" fill="#1d1712"/></svg><div class="count"><span class="n">0</span><small>teapots moved</small></div></div>',
+          stars: '<svg viewBox="0 0 400 300">' + [0, 1, 2, 3, 4].map(function (k) { var x = 40 + k * 80; return '<g class="pop" style="--k:' + k + '"><path transform="translate(' + x + ' 120) scale(1.5)" d="M0 -24 L7 -8 L24 -7 L11 4 L15 21 L0 12 L-15 21 L-11 4 L-24 -7 L-7 -8 Z" fill="#F5AF02" stroke="#1d1712" stroke-width="3" stroke-linejoin="round"/></g>'; }).join('') + '<g class="pop" style="--k:5"><text x="200" y="250" text-anchor="middle" font-family="Space Grotesk" font-weight="700" font-size="56" fill="#1d1712">99.9%</text></g></svg>',
+          token: '<svg viewBox="0 0 400 300"><g class="morph1" transform="translate(200 120)">' + squatPot('#F5AF02') + '</g><g class="morph2"><circle cx="200" cy="110" r="62" fill="#ffd24d" stroke="#c98f00" stroke-width="6"/><circle cx="200" cy="110" r="48" fill="none" stroke="#c98f00" stroke-width="2" stroke-dasharray="4 6"/><g transform="translate(200 132) scale(.6)">' + squatPot('#b37e00') + '</g></g><rect x="130" y="210" width="140" height="70" rx="16" fill="#1d1712"/><rect x="230" y="232" width="40" height="26" rx="8" fill="#ffd24d"/><image href="/logo.svg" x="150" y="224" width="32" height="42"/></svg>',
+          price: '<svg viewBox="0 0 400 300"><g class="swing"><path d="M200 0 L200 60" stroke="#3a2a1a" stroke-width="4"/><path d="M110 60 h180 l40 80 l-40 80 h-180 z" fill="#fffaf0" stroke="#3a2a1a" stroke-width="6" transform="rotate(90 200 140) translate(0 0)"/><circle cx="200" cy="78" r="9" fill="#3a2a1a"/><text x="200" y="190" text-anchor="middle" font-family="Space Grotesk" font-weight="700" font-size="78" fill="#1d1712">75&#162;</text></g></svg>',
+          wallet: '<svg viewBox="0 0 400 300"><rect x="90" y="70" width="220" height="150" rx="24" fill="#2b2420" stroke="#ffd24d" stroke-width="5"/><rect x="250" y="120" width="60" height="50" rx="12" fill="#ffd24d"/><circle cx="275" cy="145" r="7" fill="#2b2420"/><image href="/logo.svg" x="140" y="100" width="66" height="89"/></svg>',
+          dollar: '<svg viewBox="0 0 400 300"><g class="swing"><path d="M200 0 L200 50" stroke="#3a2a1a" stroke-width="4"/><rect x="90" y="50" width="220" height="190" rx="22" fill="#fffaf0" stroke="#3a2a1a" stroke-width="6"/><circle cx="200" cy="74" r="9" fill="#3a2a1a"/><text x="200" y="160" text-anchor="middle" font-family="Space Grotesk" font-weight="700" font-size="54" fill="#1d1712">$24.00</text><text x="200" y="208" text-anchor="middle" font-family="Space Grotesk" font-weight="700" font-size="24" fill="#0064D2">paid in BSV</text></g></svg>',
+          door: '<svg viewBox="0 0 400 300"><rect x="110" y="20" width="180" height="270" rx="10" fill="#0064D2" stroke="#1d1712" stroke-width="6"/><rect x="132" y="44" width="136" height="110" rx="6" fill="#bfe0ff"/><circle cx="268" cy="200" r="8" fill="#ffd24d"/><rect x="128" y="236" width="144" height="30" rx="6" fill="#fffaf0"/><text x="200" y="257" text-anchor="middle" font-family="Space Grotesk" font-weight="700" font-size="17" fill="#1d1712">bMarketX.com</text><path d="M200 44 L200 66" stroke="#1d1712" stroke-width="3"/><g class="flip"><rect x="150" y="66" width="100" height="44" rx="6" fill="#fffaf0" stroke="#1d1712" stroke-width="3"/><text class="s1" x="200" y="96" text-anchor="middle" font-family="Space Grotesk" font-weight="700" font-size="20" fill="#E53238">MOVING</text><text class="s2" x="200" y="96" text-anchor="middle" font-family="Space Grotesk" font-weight="700" font-size="16" fill="#2f7d12">MOVED IN</text></g><g class="pop bell" style="--k:3"><path d="M90 30 C90 10 120 10 120 30 L124 50 H86 Z" fill="#F5AF02" stroke="#1d1712" stroke-width="3"/><circle cx="105" cy="55" r="5" fill="#1d1712"/></g></svg>'
+        };
+        var PR = ['$24.00', '$38.50', '$19.99', '$52.00'], PC = ['#E53238', '#0064D2', '#F5AF02', '#86B817'];
+        H.store = '<div class="card"><div class="url">bmarketx.com/str/mabelsteapots</div><div class="hd"><div class="av">M</div><div><div class="nm">Mabel&rsquo;s Teapots</div><div class="fb">99.9% positive &middot; 4.1K sold &middot; 312 followers</div></div></div><div class="grid">' + PR.map(function (p, k) { return '<div class="it" style="--k:' + k + '"><div class="th">' + potSm(PC[k], k) + '</div><div class="pr">' + p + '</div></div>'; }).join('') + '</div></div>';
+        H.code = '<div class="card pad">Hand-picked teapots since 2007. Every pot washed, wrapped and loved.<br /><br /><span class="stampc">bmx-7Q4K</span></div>';
+        H.sign2 = '<div class="card pad" style="text-align:center"><div style="color:#6b5f48">bMarketX.com</div><div class="bt">Sign in with bWalletX</div><div class="ok">&#10003; Signed in. No password.</div></div>';
+        // One hero per scene. bg: flat paper colour. plate/plink: the tag. subc: subline colour.
+        var SCENES = [
+          { b: 0, bg: '#E53238', hero: 'sign', hard: true, hb: 0, tb: 2,   s: '{L} is for | shopkeepers' },
+          { b: 4, bg: '#f6efe0', hero: 'mabel',  s: 'Meet Mabel', sub: '682 teapots. Nineteen years on eBay. One very good cardigan.', subc: '#3a2a1a', plate: '#1d1712', plink: '#fffaf0' },
+          { b: 12, bg: '#0064D2', hero: 'store',  s: 'Same shop', sub: 'Her store page, laid out the way her buyers already know.' },
+          { b: 16, bg: '#bfe0ff', hero: 'street', s: 'New street', sub: 'bmarketx.com/str/mabelsteapots', subc: '#0b2a55', plate: '#0064D2', plink: '#fff' },
+          { b: 20, bg: '#86B817', hero: 'csv',    s: 'One file', sub: 'Her Seller Hub &ldquo;All active listings&rdquo; CSV, uploaded.' },
+          { b: 24, bg: '#F5AF02', hero: 'kettle', s: 'Before the | kettle boiled', sub: 'All 682 moved in about a minute.', subc: '#3a2a1a' },
+          { b: 32, bg: '#f6efe0', hero: 'code',   s: 'Or paste a link', sub: 'A short code in her eBay store description proves the shop is hers.', subc: '#3a2a1a', plate: '#E53238', plink: '#fff' },
+          { b: 36, bg: '#0064D2', hero: 'stars',  s: 'Keep your stars', sub: 'Her feedback, items sold and followers come too.' },
+          { b: 40, bg: '#ffd24d', hero: 'sign2',  s: 'No password', sub: 'Sign in to bMarketX.com with bWalletX. Your wallet is your account.', subc: '#3a2a1a', plate: '#1d1712', plink: '#fffaf0' },
+          { b: 44, bg: '#86B817', hero: 'token', db: 7,  s: 'Mint the lot', sub: 'Each teapot a BSV-21 token in her own wallet, its photo on chain. Supply = stock.' },
+          { b: 52, bg: '#E53238', hero: 'price',  s: 'For all 682', sub: 'About a tenth of a cent a listing.' },
+          { b: 56, bg: '#1d1712', hero: 'wallet', tb: 3, s: 'Hers. Not ours.', sub: 'Her shop, in her own wallet.', plate: '#ffd24d' },
+          { b: 60, bg: '#f6efe0', hero: 'dollar', s: 'Dollars on the tag', sub: 'Paid in BSV, straight from bWalletX.', subc: '#3a2a1a', plate: '#0064D2', plink: '#fff' },
+          { b: 64, bg: '#E53238', hero: 'door', hard: true, hb: 0, db: 4,   s: '{L} is for | shopkeepers', cta: true }
+        ];
+        var stage = document.getElementById('stage');
+        stage.innerHTML = SCENES.map(function (s) {
+          // at: the cut (a bar start). on: when the scene appears; a hard cut shows it 0.3 s early, under the previous
+          // scene's last frames, so its first impact can land exactly on the cut. hb/tb/db: the beats (from the cut)
+          // where the hero lands, the tag stamps and the detail hits.
+          s.at = BEATS[s.b]; s.o = s.hard ? 0.3 : 0; s.on = s.at - s.o;
+          var st = '--o:' + s.o + 's;--hb:' + (s.hb != null ? s.hb : 1) + ';--tb:' + (s.tb || 2) + ';--db:' + (s.db || 3) + ';--bgc:' + s.bg + (s.plate ? ';--plate:' + s.plate : '') + (s.plink ? ';--plink:' + s.plink : '') + (s.subc ? ';--subc:' + s.subc : '');
+          return '<div class="scene" style="' + st + '"><div class="hero">' + H[s.hero] + '</div><div class="spkw"><svg class="spk" viewBox="-12 -12 24 24" aria-hidden="true"><path d="M0 -11 L3 -3 L11 0 L3 3 L0 11 L-3 3 L-11 0 L-3 -3 Z" fill="#ffd24d" stroke="#1d1712" stroke-width="1.5" stroke-linejoin="round"/></svg></div><div class="tag">' + (s.cta ? '<span class="wmw"><img class="wm" src="/bmarket/logo-dark.svg" alt="bMarketX" /><span class="dotcom">.com</span></span>' : '') + '<h2>' + slogan(s.s) + '</h2>' + (s.sub ? '<p>' + s.sub + '</p>' : '')
+            + (s.cta ? '<p class="getp"><a class="cta" href="https://bmarketx.com/sell?from=b-is-for-shopkeepers-film">Bring your shop</a> <a class="cta2" href="https://bmarketx.com?from=b-is-for-shopkeepers-film">Visit bMarketX.com</a></p>' : '') + '</div></div>';
+        }).join('');
+        // The end scene: the wordmark sits above the tag, so the door hero is shorter.
+        var last = stage.lastElementChild; last.querySelector('.hero').style.height = '34%'; last.querySelector('.tag').style.top = '48%';
+        [].forEach.call(document.querySelectorAll('[data-slogan]'), function (h) { h.innerHTML = slogan(h.getAttribute('data-slogan')); });
+        var els = [].slice.call(stage.children), cnt = stage.querySelector('.count .n'), KI = 5;
+        var film = document.getElementById('film'), awn = document.getElementById('awn'), bar = document.getElementById('bar'), poster = document.getElementById('poster');
+        var reduce = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
+        var music = document.getElementById('music'), muted = false, withSound = false, start = 0, raf = 0, cur = -1;
+        // What you see should match what you hear: subtract the audio output latency (Bluetooth can be 150-250 ms).
+        // From an AudioContext made on the tap; 40 ms if the browser can't say. ?offset=MS adds a hand-tuned delay.
+        var q0 = new URLSearchParams(location.search), OFFSET = (parseFloat(q0.get('offset')) || 0) / 1000, actx = null, lat = 0;
+        function latency() { if (!withSound) return 0; if (actx && (actx.outputLatency || actx.baseLatency)) return (actx.outputLatency || 0) + (actx.baseLatency || 0); return 0.04; }
+        function now() { lat = latency(); return (withSound ? music.currentTime : performance.now() / 1000 - start) - lat - OFFSET; }
+        // Every animation in the live scene is paused and seeked to the audio clock each frame.
+        var anims = [];
+        function show(k) {
+          if (k === cur) return;
+          cur = k; els.forEach(function (e, j) { e.classList.toggle('on', j === k); });
+          anims = els[k].getAnimations ? els[k].getAnimations({ subtree: true }) : [];
+          anims.forEach(function (a) { a.pause(); });
+        }
+        // The awning: closed on each cut (the bar start), open 0.2 s either side. Computed from the same clock.
+        var AW = 0.2, OFF = 'translateY(calc(-100% - 40px))';
+        function awning(t) {
+          if (reduce) return;
+          var d = 9; SCENES.forEach(function (s, j) { if (j && !s.hard) d = Math.min(d, Math.abs(t - s.at)); });
+          if (d >= AW) { awn.style.transform = OFF; return; }
+          var c = 1 - d / AW; c = c * c * (3 - 2 * c);
+          awn.style.transform = 'translateY(calc(' + (-(1 - c) * 100).toFixed(2) + '% - ' + ((1 - c) * 40).toFixed(1) + 'px))';
+        }
+        var debug = new URLSearchParams(location.search).has('debug'), dbg = null, lastB = -1, log = [];
+        if (debug) { dbg = document.createElement('div'); dbg.className = 'dbg'; film.appendChild(dbg); window.__sync = log; }
+        // Every beat does something: the hero squashes, the tag thumps, the paper steps. Bar starts hit harder.
+        // The envelope peaks AT the beat: an 80 ms attack before it, a 180 ms release after.
+        var heroes = els.map(function (e) { return e.querySelector('.hero > *'); }), tags = els.map(function (e) { return e.querySelector('.tag h2'); }), spks = els.map(function (e) { return e.querySelector('.spk'); });
+        function env(t, bt) { var d = t - bt; return d < -0.08 ? 0 : d < 0 ? 1 + d / 0.08 : Math.exp(-d / 0.18); }
+        function pulse(t, k) {
+          if (reduce) return;
+          var b = 0; while (b + 1 < BEATS.length && BEATS[b + 1] <= t + 0.08) b++;
+          var A = 0, best = 0; for (var i = Math.max(0, b - 1); i <= Math.min(BEATS.length - 1, b + 1); i++) { var e = env(t, BEATS[i]) * (i % 4 === 0 ? 1.8 : 1); if (e > A) { A = e; best = i; } }
+          var h = heroes[k]; if (h) h.style.scale = (1 + 0.035 * A).toFixed(4) + ' ' + (1 - 0.035 * A).toFixed(4);
+          var g = tags[k]; if (g) g.style.scale = (1 + 0.022 * A).toFixed(4);
+          film.style.setProperty('--gx', (best % 2 ? 3 : 0) + 'px');
+          // The 8th-note feel: a small sparkle by the hero on each off-beat.
+          var sp = spks[k]; if (sp && b + 1 < BEATS.length) { var mid = (BEATS[b] + BEATS[b + 1]) / 2, e2 = env(t, mid); sp.style.opacity = e2.toFixed(3); sp.style.transform = 'scale(' + (0.6 + 0.6 * e2).toFixed(3) + ') rotate(' + (e2 * 45).toFixed(1) + 'deg)'; }
+        }
+        function frame() {
+          var t = now(), k = 0;
+          SCENES.forEach(function (s, j) { if (t >= s.on) k = j; });
+          show(k);
+          anims.forEach(function (a) { try { a.currentTime = Math.max(0, (t - SCENES[k].on) * 1000); } catch (e) {} });
+          awning(t); pulse(t, k);
+          bar.style.width = Math.min(100, t / END * 100) + '%';
+          cnt.textContent = Math.max(0, Math.min(682, Math.round((t - SCENES[KI].at - BEAT) / (BEAT * 2) * 682)));
+          if (dbg) {
+            var b = -1; for (var i = 0; i < BEATS.length; i++) if (t >= BEATS[i]) b = i;
+            if (b !== lastB && b >= 0) { log.push({ beat: b, sched: BEATS[b], audio: +t.toFixed(3), lateMs: Math.round((t - BEATS[b]) * 1000) }); lastB = b; dbg.dataset.late = log.map(function (e) { return e.lateMs; }).join(','); }
+            var e = log.length ? log[log.length - 1] : null, on = e && t - BEATS[b] < 0.09;
+            dbg.innerHTML = '<i class="' + (on ? (b % 4 === 0 ? 'bar' : 'on') : '') + '"></i>audio ' + t.toFixed(3) + ' s  ' + (withSound ? '(audio clock)' : '(silent clock)')
+              + '\nbeat #' + b + '  sched ' + (b >= 0 ? BEATS[b].toFixed(3) : '-') + '  seen ' + (e ? e.audio.toFixed(3) + '  late ' + e.lateMs + ' ms' : '-')
+              + '\nscene ' + k + '  cut at ' + SCENES[k].at.toFixed(3) + ' (beat ' + SCENES[k].b + ')'
+              + '\nlatency ' + Math.round(lat * 1000) + ' ms  offset ' + Math.round(OFFSET * 1000) + ' ms';
+          }
+          if (t < END && !(withSound && music.ended)) raf = requestAnimationFrame(frame); else bar.style.width = '0';
+        }
+        function play(sound) {
+          cancelAnimationFrame(raf); withSound = sound; cur = -1; lastB = -1; log.length = 0;
+          els.forEach(function (e) { e.classList.remove('on'); });
+          music.pause(); music.currentTime = 0; music.muted = muted; start = performance.now() / 1000;
+          // With sound, the clock is music.currentTime, which stays at 0 until the audio really starts, so start latency can't shift the film.
+          if (sound) { try { actx = actx || new (window.AudioContext || window.webkitAudioContext)(); } catch (e) { actx = null; } }
+          if (sound) music.play().catch(function () { withSound = false; start = performance.now() / 1000; });
+          poster.classList.add('gone'); document.body.classList.add('started'); raf = requestAnimationFrame(frame);
+        }
+        // A sleeping tab stops requestAnimationFrame but not the audio; the first frame back seeks everything to the audio time.
+        document.addEventListener('visibilitychange', function () { if (!document.hidden && document.body.classList.contains('started')) { cancelAnimationFrame(raf); raf = requestAnimationFrame(frame); } });
+        document.getElementById('play').onclick = function () { play(true); };
+        document.getElementById('quiet').onclick = function () { play(false); };
+        document.getElementById('again').onclick = function () { play(withSound); };
+        document.getElementById('mute').onclick = function () { muted = !muted; music.muted = muted; this.setAttribute('aria-pressed', String(muted)); };
+        var q = new URLSearchParams(location.search);
+        if (q.has('still')) { var n = parseInt(q.get('still'), 10) || 0; document.body.classList.add('still'); els[n].classList.add('on'); if (n === KI) cnt.textContent = '682'; window.__film = { scenes: SCENES.length, end: END, play: play }; return; }
+        if (q.get('autoplay') === 'silent' || q.has('t')) { play(false); if (q.has('t')) start -= parseFloat(q.get('t')) || 0; }
+        // ?peaks=1 (or window.__peaks()): when each scene's key motion peaks, from the browser's computed timing, against the nearest beat.
+        var FR = { drop: .83, stamp: .7, popin: .7, m2: .85, flip: .5, fall: .5 };
+        window.__peaks = function () {
+          var out = [];
+          els.forEach(function (e, j) {
+            e.classList.add('on');
+            e.getAnimations({ subtree: true }).forEach(function (a) {
+              var n = a.animationName, fr = FR[n]; if (fr == null) return;
+              var ct = a.effect.getComputedTiming(), pk = SCENES[j].on + (ct.delay + fr * ct.duration) / 1000;
+              var grid = BEATS.concat(BEATS.slice(1).map(function (c, i) { return (c + BEATS[i]) / 2; })), nb = grid.reduce(function (p, c) { return Math.abs(c - pk) < Math.abs(p - pk) ? c : p; });
+              out.push({ scene: j, anim: n, peak: +pk.toFixed(3), beat: +nb.toFixed(3), half: BEATS.indexOf(nb) < 0, errMs: Math.round((pk - nb) * 1000) });
+            });
+            e.classList.remove('on');
+          });
+          return out;
+        };
+        if (q.has('peaks')) { var pre = document.createElement('pre'); pre.id = 'peaks'; pre.textContent = JSON.stringify(window.__peaks()); document.body.appendChild(pre); }
+        window.__film = { scenes: SCENES.length, end: END, play: play };
+      })();
+    </script>
+  </body>
+</html>
