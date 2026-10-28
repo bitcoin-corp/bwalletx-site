@@ -44,6 +44,7 @@ def to_md(s):
 # Never media-src/, walkthrough-*/, tmp/, cut/, og/, node_modules/, *-template files (they are gitignored and
 # .vercelignored, and git ls-files keeps untracked scratch out too).
 import subprocess, fnmatch
+subprocess.run(['python3', os.path.join(ROOT, 'scripts', 'blog-index-thumbs.py')], check=True)  # every /blog card from its post's og:image
 SUBPAGES = {'b/acc.html', 'b/acc/store.html', 'apps/add.html', 'exchange/strategies.html', 'strategies/spec.html', 'lock/verify.html', 'bapps/bmovies.html', 'artists/vexvoid.html', 'testers/bwallet/iphone.html', 'testers/bwallet/android.html', 'testers/bwalletx/chrome-extension.html', 'testers/bwalletx/web.html', 'testers/bwalletx/desktop.html', 'hodl-my-b/0.html', 'hodl-my-b/1.html'}
 DUPES = {'download.html', 'pnee.html'}  # canonical points to /get and /pnees
 BAD_DIRS = {'media-src', 'tmp', 'node_modules', 'cut', 'og', 'scripts', 'download'}
