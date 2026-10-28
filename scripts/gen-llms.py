@@ -67,7 +67,7 @@ SECTIONS = {
     'Product': ['index', 'get', 'android', 'iphone', 'extension', 'features', 'video', 'testers', 'buy', 'restore', 'restore-simplycash', 'history', 'push-notifications', 'web'],
     'Wallet features': ['exchange', 'exchange/strategies', 'mint', 'pnees', 'pots', 'subscriptions', 'lock', 'lock/verify', 'token-locking', 'launchpad', 'identity', 'identity-map', 'handles', 'bavatars', 'themes', 'swap', 'sign', 'games'],
     'Social': ['social', 'chat', 'bmail', 'friends', 'lounge', 'live', 'airdrops', 'gmail', 'x'],
-    'Agents & developers': ['agent', 'b-bots', 'hold-to-talk', 'agents', 'strategies', 'strategies/spec', 'developers', 'connect', 'sign-in-button', 'cli', 'mcp', 'apps/add', 'open-source'],
+    'Agents & developers': ['agent', 'b-bots', 'hold-to-talk', 'agents', 'strategies', 'strategies/spec', 'developers', 'connect', 'sign-in-button', 'cli', 'mcp', 'apps/add', 'open-source', 'partners'],
     'Support': ['privacy'],
 }
 def group(r):
@@ -100,6 +100,16 @@ for g in order:
     if g == 'Agents & developers':
         for d in DOCS:
             lines.append('- [%s (Markdown)](%s/%s): Plain Markdown for AI coding agents.' % ('Sign in with bWalletX' if d == 'connect.md' else d, BASE, d))
+        lines += ['', '## Services agents can buy', '',
+            'Every payment is a BRC-100 action from the user\'s own bWalletX (non-custodial); agents use an agent account with its own keys and budget through the bwalletx MCP server (`bwalletx serve`, a BRC-100 wallet on localhost:3321; see %s/mcp and %s/cli). Prices in USD, paid in BSV at the live rate.' % (BASE, BASE), '',
+            '- Exchange tokens and NFTs: the listing price plus the network fee. MCP tools `listings`, `price`, `buy`, `buy_listing`, `list_for_sale`, `unlist`.',
+            '- Minting: the network fee only. MCP tools `mint`, `mint_manifest`.',
+            '- Sending BSV and tokens: the network fee only. MCP tool `send`.',
+            '- bTV: AIVJ live channel: first 3 minutes free, then 1p a minute (about $0.013), paid straight to the artist from the wallet at %s/aivj.' % BASE,
+            '- Premium and artist themes: $1 each in the in-app Store (no public endpoint yet; buy inside bWalletX).',
+            '- Theme edition (a branded wallet for a token community): $99 a year, ordered inside bWalletX (Theme > Get your own edition).',
+            '- Branded edition with a business agent: from $999, by quote via %s/business-agents.' % BASE,
+            '- Partners programme (earn, not buy): commission for referrals, see %s/partners.' % BASE]
     if g == 'Support':
         lines.append('- [Email support](mailto:support@bwalletx.com): support@bwalletx.com')
     lines.append('')
