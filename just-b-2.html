@@ -168,6 +168,21 @@
         .s3 .cap .getp { margin-top: 12px; }
         .s3 .jb-go { padding: 14px 32px; }
       }
+      /* Phones: no drawn frame. The home screen fills the viewer's own screen, edge to edge. */
+      @media (max-width: 600px), (orientation: portrait) and (max-width: 900px) {
+        .film { height: 100dvh; min-height: 0; --ph: 100dvh; --pw: 100vw; }
+        .phone { top: 0; left: 0; width: 100vw; height: 100dvh; transform: none; }
+        .shell, .island { display: none; }
+        .screen { inset: 0; border-radius: 0; padding-top: env(safe-area-inset-top); }
+        .sbar { top: calc(env(safe-area-inset-top) + 3.6cqw); }
+        .cap { bottom: calc(15.5dvh + 26px); top: auto; z-index: 5; }
+        .cap h1, .cap h2 { font-size: clamp(1.3rem, 6vw, 1.7rem); text-shadow: 0 2px 12px #000; }
+        .cap > p:not(.getp) { display: none; }
+        .s3 .cap { bottom: auto; top: 34dvh; }
+        .s3 .cap > p:not(.getp) { display: block; }
+        .s3 .cap h2 { font-size: clamp(2.4rem, 12vw, 3.4rem); }
+        .jb-sound { bottom: calc(14dvh + 2px); right: 6px; }
+      }
       @media (prefers-reduced-motion: reduce) { .ico { transition: none !important; } }
     </style>
   </head>
