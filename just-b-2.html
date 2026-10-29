@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
     <title>Just b: less noise</title>
     <link rel="canonical" href="https://bwalletx.com/just-b-2" />
     <meta name="description" content="A busy phone full of apps. Then the b arrives, takes its place in the dock, and the noise goes, one app at a time. Less noise. More life. Just b." />
@@ -138,7 +138,7 @@
       .sbar svg { height: 3.3cqw; vertical-align: middle; }
       .sbar .r { display: flex; gap: 1.4cqw; align-items: center; }
       .bat { display: inline-block; padding: .3cqw 1.1cqw; border-radius: 1.4cqw; background: #fff; color: #000; font-size: 3.1cqw; font-weight: 700; }
-      .ico { position: absolute; width: 17.5%; aspect-ratio: 1; border-radius: 23%; z-index: 2; transition: left .4s cubic-bezier(.34,1.35,.5,1), top .4s cubic-bezier(.34,1.35,.5,1), transform .5s cubic-bezier(.2,1.5,.4,1), opacity .4s ease; box-shadow: 0 1.2cqw 2.4cqw rgba(0,0,0,.35); }
+      .ico { position: absolute; width: var(--iw, 17.5%); aspect-ratio: 1; border-radius: 23%; z-index: 2; transition: left .4s cubic-bezier(.34,1.35,.5,1), top .4s cubic-bezier(.34,1.35,.5,1), transform .5s cubic-bezier(.2,1.5,.4,1), opacity .4s ease; box-shadow: 0 1.2cqw 2.4cqw rgba(0,0,0,.35); }
       .ico > svg { position: absolute; inset: 0; width: 100%; height: 100%; border-radius: 23%; }
       .ico::after { content: ''; position: absolute; inset: 0; border-radius: 23%; background: linear-gradient(180deg, rgba(255,255,255,.22), transparent 45%); pointer-events: none; }
       .ico .lbl { position: absolute; top: 106%; left: -30%; right: -30%; text-align: center; color: #fff; font: 500 2.75cqw/1.1 -apple-system, "SF Pro Text", system-ui, sans-serif; white-space: nowrap; text-shadow: 0 1px 3px rgba(0,0,0,.6); transition: opacity .3s ease; }
@@ -149,7 +149,11 @@
       .ico.b { background: #000; border: 1px solid #2c2c2c; z-index: 4; transition: left .8s cubic-bezier(.34,1.3,.5,1), top .8s cubic-bezier(.34,1.3,.5,1), transform .5s cubic-bezier(.2,1.5,.4,1), opacity .4s ease, box-shadow 1.5s ease; }
       .ico.b::after { display: none; }
       .ico.b img { position: absolute; left: 50%; top: 50%; height: 62%; transform: translate(-50%, -50%); }
-      .film.last .ico.b { box-shadow: 0 0 60px rgba(245,184,0,.55); }
+      .ico.b::before { content: ''; position: absolute; left: 50%; top: 50%; width: 320%; height: 320%; transform: translate(-50%, -50%); border-radius: 50%; background: radial-gradient(circle, rgba(245,184,0,0) 0%, rgba(245,184,0,0) 15%, rgba(245,184,0,.34) 16.5%, rgba(245,184,0,.12) 38%, rgba(245,184,0,0) 68%); opacity: 0; transition: opacity 1.5s ease; pointer-events: none; z-index: -1; }
+      .film.last .ico.b::before { opacity: 1; }
+      /* The CTA glow: no filter on its paragraph (a filter clips the shadow into a hard band in Safari). */
+      .scene.on .cap > p.getp { animation-name: riseNoBlur; filter: none; }
+      @keyframes riseNoBlur { from { opacity: 0; transform: translateY(0.4em); } to { opacity: 1; transform: none; } }
       .dock { position: absolute; left: 3%; right: 3%; bottom: 1.6%; height: 10.6%; border-radius: 10cqw; background: rgba(40,40,40,.75); border: 1px solid #2e2e2e; }
       .search { position: absolute; left: 50%; bottom: 14.4%; transform: translateX(-50%); padding: 1.2cqw 3.4cqw; border-radius: 99px; background: #1b1b1b; border: 1px solid #333; color: #bbb; font: 500 3.4cqw/1 system-ui, sans-serif; white-space: nowrap; }
       .film.jump .ico, .film.jump .scene, .film.jump .poster { transition: none !important; }
@@ -168,21 +172,25 @@
         .s3 .cap .getp { margin-top: 12px; }
         .s3 .jb-go { padding: 14px 32px; }
       }
-      /* Phones: no drawn frame. The home screen fills the viewer's own screen, edge to edge. */
-      @media (max-width: 600px), (orientation: portrait) and (max-width: 900px) {
-        .film { height: 100dvh; min-height: 0; --ph: 100dvh; --pw: 100vw; }
-        .phone { top: 0; left: 0; width: 100vw; height: 100dvh; transform: none; }
-        .shell, .island { display: none; }
-        .screen { inset: 0; border-radius: 0; padding-top: env(safe-area-inset-top); }
-        .sbar { top: calc(env(safe-area-inset-top) + 3.6cqw); }
-        .cap { bottom: calc(15.5dvh + 26px); top: auto; z-index: 5; }
-        .cap h1, .cap h2 { font-size: clamp(1.3rem, 6vw, 1.7rem); text-shadow: 0 2px 12px #000; }
-        .cap > p:not(.getp) { display: none; }
-        .s3 .cap { bottom: auto; top: 34dvh; }
-        .s3 .cap > p:not(.getp) { display: block; }
-        .s3 .cap h2 { font-size: clamp(2.4rem, 12vw, 3.4rem); }
-        .jb-sound { bottom: calc(14dvh + 2px); right: 6px; }
-      }
+      /* Phones: no drawn frame. The home screen fills the visible viewport edge to edge; the real status bar stays
+         on top, so ours is hidden. Every size below is set in px by layout() from the visible viewport and safe areas. */
+      .film.full { height: var(--vh, 100svh); min-height: 0; }
+      .film.full .phone { top: 0; left: 0; width: 100vw; height: var(--vh, 100svh); transform: none; }
+      .film.full .shell, .film.full .island, .film.full .sbar { display: none; }
+      .film.full .screen { inset: 0; border-radius: 0; }
+      .film.full .dock { left: 3%; right: 3%; bottom: var(--dockb); height: var(--dockh); border-radius: calc(var(--dockh) * .32); }
+      .film.full .search { bottom: var(--srchb); font-size: 13px; padding: 5px 12px; }
+      .film.full .ico .lbl { font-size: 11px; top: calc(100% + 5px); }
+      .film.full .ico.lift { transform: scale(1.08) !important; }
+      .film.full .ico .bd { font-size: 10px; }
+      .film.full .cap { left: 0; right: 0; width: auto; top: auto; bottom: var(--capb); transform: none; padding: 0 16px; text-align: center; z-index: 5; }
+      .film.full .cap h1, .film.full .cap h2 { justify-content: center; font-size: clamp(1.25rem, 5.6vw, 1.6rem); text-shadow: 0 2px 12px #000; }
+      .film.full .cap > p:not(.getp) { display: none; }
+      .film.full .s3 .cap { bottom: auto; top: 30%; }
+      .film.full .s3 .cap > p:not(.getp) { display: block; margin: 8px auto 0; font-size: .95rem; }
+      .film.full .s3 .cap h2 { font-size: clamp(2.4rem, 12vw, 3.4rem); }
+      .jb-full .jb-sound { bottom: var(--sndb); right: 6px; }
+      .safe-probe { position: fixed; top: 0; left: 0; width: 0; height: 0; padding: env(safe-area-inset-top) 0 env(safe-area-inset-bottom) 0; visibility: hidden; pointer-events: none; }
       @media (prefers-reduced-motion: reduce) { .ico { transition: none !important; } }
     </style>
   </head>
@@ -301,8 +309,34 @@
         // Events run strictly one at a time, as on iOS: ADD (appears in the first free slot, then is dragged to its place),
         // MOVE (drag), DEL (one app goes; every app after it shifts back one slot), DOCK (b dragged into the dock pushes one
         // dock app out to the first free slot), DDEL (a dock app goes), CENTRE (b slides to the middle of the dock).
-        function gridPos(i) { return { l: 5.75 + (i % 4) * 23.3, t: 8.6 + Math.floor(i / 4) * 11.4 }; }
-        var DOCKL = [5.75, 29.05, 52.35, 75.65], DOCKT = 89.1;
+        // Layout in % of the screen. Desktop: the framed phone. Phones: computed from the visible viewport like iOS.
+        var G = { l0: 5.75, lp: 23.3, t0: 8.6, tp: 11.4, dt: 89.1 }, DOCKL = [5.75, 29.05, 52.35, 75.65], DOCKT = 89.1, CENTREL = 41.25;
+        function gridPos(i) { return { l: G.l0 + (i % 4) * G.lp, t: G.t0 + Math.floor(i / 4) * G.tp }; }
+        var MQ = window.matchMedia('(max-width: 600px), (orientation: portrait) and (max-width: 900px)');
+        var probe = document.createElement('div'); probe.className = 'safe-probe'; document.body.appendChild(probe);
+        var SAFE = (new URLSearchParams(location.search).get('safe') || '').split(',').map(Number);
+        function layout() {
+          var f = document.getElementById('film');
+          if (!MQ.matches) {
+            f.classList.remove('full'); document.body.classList.remove('jb-full'); f.style.removeProperty('--iw'); f.style.removeProperty('--vh');
+            G = { l0: 5.75, lp: 23.3, t0: 8.6, tp: 11.4 }; DOCKL = [5.75, 29.05, 52.35, 75.65]; DOCKT = 89.1; CENTREL = 41.25;
+          } else {
+            var W = window.innerWidth, H = Math.round(window.visualViewport ? window.visualViewport.height : window.innerHeight);
+            var cs = getComputedStyle(probe), st = SAFE[0] >= 0 && SAFE.length > 1 ? SAFE[0] : parseFloat(cs.paddingTop) || 0, sb = SAFE.length > 1 ? SAFE[1] : parseFloat(cs.paddingBottom) || 0;
+            var top = Math.max(st, 20) + 14, dockB = Math.max(sb, 12) + 14;
+            // Icon size from width (60/393 like iOS) but capped so 6 rows of icon + 12px label + gap fit the visible height.
+            var s0 = 60 / 393 * W, fixed = dockB + 0.07 * W + 12 + 30 + 10 + 34 + top, s = Math.min(s0, (H - fixed - 6 * 30) / 7);
+            var m = 0.07 * W, lp = (W - 2 * m - s) / 3, dockH = s + 0.07 * W, srchB = dockB + dockH + 12, capB = srchB + 30 + 8;
+            var avail = H - capB - 34 - top, tp = Math.min(s + 34, avail / 6);
+            f.style.setProperty('--vh', H + 'px'); f.style.setProperty('--iw', (s / W * 100) + '%');
+            f.style.setProperty('--dockb', dockB + 'px'); f.style.setProperty('--dockh', dockH + 'px');
+            f.style.setProperty('--srchb', srchB + 'px'); f.style.setProperty('--capb', capB + 'px'); f.style.setProperty('--sndb', (srchB - 6) + 'px');
+            G = { l0: m / W * 100, lp: lp / W * 100, t0: top / H * 100, tp: tp / H * 100 };
+            DOCKL = [0, 1, 2, 3].map(function (d) { return (m + d * lp) / W * 100; }); DOCKT = (H - dockB - dockH / 2 - s / 2) / H * 100; CENTREL = (W - s) / 2 / W * 100;
+            f.classList.add('full'); document.body.classList.add('jb-full');
+          }
+          for (var k in cache) { cache[k].l = cache[k].t = undefined; }
+        }
         var INIT = { list: [], dock: [22, 23, 24, 25] }, i;
         for (i = 0; i < 22; i++) INIT.list.push(i);
         var EV = [], nextId = 26, at = 0.3;
@@ -355,6 +389,7 @@
         function ease(x) { return x < .5 ? 2 * x * x : 1 - Math.pow(-2 * x + 2, 2) / 2; }
         function dragPos(a, b, q) { var k = ease(q); return { l: a.l + (b.l - a.l) * k, t: a.t + (b.t - a.t) * k - Math.sin(Math.PI * q) * 3 }; }
         function render(t) {
+          lastT = t;
           var S = clone(INIT), cur = null, p = 0;
           for (var j = 0; j < EV.length; j++) { var e = EV[j]; if (t >= e.at + e.dur) apply(S, e); else { if (t >= e.at) { cur = e; p = (t - e.at) / e.dur; } break; } }
           var L = S.list.slice(), drag = null, gone = null, dock = S.dock.slice(), centre = S.centre, seen = {};
@@ -375,11 +410,13 @@
             else if (cur.ty === 'CENTRE') centre = 1;
           }
           L.forEach(function (id, i) { if (id === gone && L.indexOf(id) === i && cur.ty === 'DEL' && p <= 0.35) { set(id, { o: 0 }); seen[id] = 1; return; } var g = gridPos(i); set(id, { l: g.l, t: g.t, o: 1 }); seen[id] = 1; });
-          dock.forEach(function (id, d) { if (id === null || seen[id]) return; set(id, { l: id === 'b' && centre ? 41.25 : DOCKL[d], t: DOCKT, o: 1, dk: 1 }); seen[id] = 1; });
+          dock.forEach(function (id, d) { if (id === null || seen[id]) return; set(id, { l: id === 'b' && centre ? CENTREL : DOCKL[d], t: DOCKT, o: 1, dk: 1 }); seen[id] = 1; });
           if (drag) { set(drag.id, { l: drag.pos.l, t: drag.pos.t, o: 1, lift: 1, dk: drag.dk }); seen[drag.id] = 1; }
           for (var k in els) if (!seen[k]) set(k, { o: 0 });
         }
-        render(0);
+        layout(); render(0);
+        var lastT = 0, relayout = function () { layout(); render(lastT); };
+        window.addEventListener('resize', relayout); if (window.visualViewport) window.visualViewport.addEventListener('resize', relayout);
 
         // The music: 28 s of "Four Ton Shadows" by VexVoid. With sound, the film follows the track's clock.
         var music = document.getElementById('music'), muted = false;
