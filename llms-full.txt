@@ -44,7 +44,7 @@ Source: https://bwalletx.com/android
 
 The full bWalletX wallet on your Android phone or tablet. Your keys stay on your device.
 
-[Download APK (beta) ↓](https://bwalletx.com/download/bwalletx-android-5.2.44.apk)
+[Download APK (beta) ↓](https://bwalletx.com/download/bwalletx-android-5.2.45.apk)
 
 It isn't on Google Play yet, so install it by hand. (The store edition, bWallet, is in a Google Play internal test: see [/testers/bwallet/android](https://bwalletx.com/testers/bwallet/android).)
 
@@ -52,13 +52,13 @@ It isn't on Google Play yet, so install it by hand. (The store edition, bWallet,
 
 - If Android asks, allow your browser to install unknown apps (Settings › Apps › your browser › Install unknown apps).
 
-- Open `bwalletx-android-5.2.44.apk` and tap Install.
+- Open `bwalletx-android-5.2.45.apk` and tap Install.
 
 - Open bWalletX and create or restore your wallet.
 
 Updating from an older version? Install over the top and your wallet stays. If Android says the app can't be updated, write down your 12 words first, then uninstall and reinstall.
 
-Version 5.2.44 beta · 37.8 MB · Android 7+ · SHA-256 df496d3f54a1cd10faade1478cece03be659e91dc0e5dd4185289635e38280d3
+Version 5.2.45 beta · 24.1 MB · Android 7+ · SHA-256 c539055522e144844711c0aea5af03601d6b00ca8ed77a7557e3ffeda6146b04
 
 Also: [Chrome extension](https://bwalletx.com/extension) · [Developers](https://bwalletx.com/developers)
 
@@ -2483,7 +2483,7 @@ Security issues that are still being fixed are not listed, for your safety. If y
 ## Report a bug
 
 What happened?
-Device and app version (for example iPhone 15, 5.2.44)
+Device and app version (for example iPhone 15, 5.2.45)
 Email (optional, if you’d like a reply)
 
 Leave this empty
@@ -2506,7 +2506,7 @@ Reported 22 Oct 2026
 -
 
 ### Show my 12 words asked for a password you never set
-Fixed in 5.2.44
+Fixed in 5.2.45
 
 If you made your wallet with a passkey, Show my 12 words now has Use my passkey, so you can see your words without a password.
 
@@ -2515,7 +2515,7 @@ Fixed 23 Oct 2026
 -
 
 ### Passkey sign-in in the Chrome extension
-Fixed in 5.2.44
+Fixed in 5.2.45
 
 Passkey sign-in was briefly taken out of the extension, then restored in the next release. A user confirmed it works.
 
@@ -2524,7 +2524,7 @@ Fixed 22 Oct 2026
 -
 
 ### Crash when opening the wallet after signing out and back in
-Fixed in 5.2.44
+Fixed in 5.2.45
 
 The wallet showed an error about “identityAddress” instead of opening. It now opens normally.
 
@@ -2533,7 +2533,7 @@ Fixed 22 Oct 2026
 -
 
 ### Balance stuck on “Still syncing” after a backup at sign-up
-Fixed in 5.2.44
+Fixed in 5.2.45
 
 Making a backup during sign-up no longer stalls your balance, and encrypted backups save every time.
 
@@ -3757,7 +3757,7 @@ From the Chrome Web Store. Works in Brave too. Updates itself.
 
 The newest version before the Web Store has reviewed it. You install it by hand and update it by hand.
 
-[Download the latest build (.zip) ↓](https://bwalletx.com/download/bwalletx-extension-5.2.44.zip)
+[Download the latest build (.zip) ↓](https://bwalletx.com/download/bwalletx-extension-5.2.45.zip)
 
 Two separate wallets. The Web Store version and the direct build are different installs, and each keeps its own wallet. If you switch, write down your recovery words first and restore them in the new one. Never click Remove on the old one until you have: removing an extension deletes its wallet's records.
 
@@ -3765,7 +3765,7 @@ Updating the direct build? Use the ↻ reload button on `chrome://extensions`, o
 
 To install the direct build:
 
-- Unzip `bwalletx-extension-5.2.44.zip`.
+- Unzip `bwalletx-extension-5.2.45.zip`.
 
 - Open `chrome://extensions` in Chrome.
 
@@ -3779,7 +3779,7 @@ To install the direct build:
 
 Same extension, same file. Brave runs Chrome extensions, so:
 
-- Unzip `bwalletx-extension-5.2.44.zip`.
+- Unzip `bwalletx-extension-5.2.45.zip`.
 
 - Open `brave://extensions` in Brave.
 
@@ -3789,7 +3789,7 @@ Same extension, same file. Brave runs Chrome extensions, so:
 
 - Pin bWalletX from the puzzle-piece menu, click it, and create or restore your wallet.
 
-Version 5.2.44 beta · SHA-256 dbd07e619c9f2fee46a70e44f28ce6fdb64c317717f9bc714d4462163d3658da · Source: [github.com/bitcoin-corp/bwallet](https://github.com/bitcoin-corp/bwallet)
+Version 5.2.45 beta · SHA-256 2371836399268e11d481613d2b1736fd0d14334fb62d05fb62502a9e3abe96b5 · Source: [github.com/bitcoin-corp/bwallet](https://github.com/bitcoin-corp/bwallet)
 
 ---
 
@@ -4332,8 +4332,8 @@ Source: https://bwalletx.com/get
 
 The full bWalletX on every device. Your keys stay on your device.
 
-[AndroidAPK download · v5.2.44 beta](https://bwalletx.com/android)
-[ChromeExtension · v5.2.44 beta](https://bwalletx.com/extension)
+[AndroidAPK download · v5.2.45 beta](https://bwalletx.com/android)
+[ChromeExtension · v5.2.45 beta](https://bwalletx.com/extension)
 [WebOpen in your browser](https://web.bwalletx.com)
 [iPhoneWeb app · install from Safari, no App Store](https://bwalletx.com/iphone)
 
@@ -5126,7 +5126,7 @@ holds your coins, pays and locks, and opens the chat room for every token you ho
 bWalletX is the full edition (web, Chrome, Android sideload, private iPhone build);
 bWallet is the App Store / Play edition with fewer features.
 
-Android · Download APK (beta)v5.2.44 beta · sideloadiPhone · Web appInstall from Safari · no App StoreChrome · Download extensionv5.2.44 beta · zip + install steps
+Android · Download APK (beta)v5.2.45 beta · sideloadiPhone · Web appInstall from Safari · no App StoreChrome · Download extensionv5.2.45 beta · zip + install steps
 
 ▶Watch the explainer · 1 min
 
@@ -5138,10 +5138,10 @@ How to sideload on Android
 Tap Download APK (beta). If Android asks, allow your browser to install unknown apps
 (Settings › Apps › your browser › Install unknown apps).
 
-- Open the downloaded bwalletx-android-5.2.44.apk and tap Install.
+- Open the downloaded bwalletx-android-5.2.45.apk and tap Install.
 
 -
-Optional but recommended: check the SHA-256 checksum matchesdf496d3f54a1cd10faade1478cece03be659e91dc0e5dd4185289635e38280d3
+Optional but recommended: check the SHA-256 checksum matchesc539055522e144844711c0aea5af03601d6b00ca8ed77a7557e3ffeda6146b04
 
 Beta software. Use small amounts and back up your recovery phrase. Only install the APK from this site or
 the official GitHub release.
@@ -5159,7 +5159,7 @@ a balance.
 
 The real wallet home screen (web app, test wallet).
 
-Live in 5.2.44
+Live in 5.2.45
 
 ## What you can do today.
 
@@ -5177,7 +5177,7 @@ Each one is in the current bWalletX beta. Tap for how it works.
 [LiveExchangeTokens, NFTs and $HANDLE tokens wallet to wallet, plus the 3D market.](https://bwalletx.com/exchange)
 [LiveLaunchpadBuy and sell TokenBlaster coins from the Exchange.](https://bwalletx.com/launchpad)
 
-Live in 5.2.44
+Live in 5.2.45
 
 ## New in the wallet.
 
@@ -5349,7 +5349,7 @@ Join the waitlist →](https://chat.bwalletx.com)
 
 Currently in beta.
 
-Android · Download APK (beta)v5.2.44 beta · sideloadiPhone · Web appInstall from Safari · no App StoreChrome · Download extensionv5.2.44 beta · zip + install steps
+Android · Download APK (beta)v5.2.45 beta · sideloadiPhone · Web appInstall from Safari · no App StoreChrome · Download extensionv5.2.45 beta · zip + install steps
 
 Download on theApp StorebWallet · not submitted yet
 
@@ -5418,7 +5418,7 @@ Planned: as the people in your contacts join, they’ll be matched to their paym
 
 ## Where this stands
 
-- ✓ LiveAddress book import (CSV, contact cards, JSON, pasted lists) and export to CSV: in the app (5.2.44). Each paymail is looked up as you import.
+- ✓ LiveAddress book import (CSV, contact cards, JSON, pasted lists) and export to CSV: in the app (5.2.45). Each paymail is looked up as you import.
 
 - ✓ LiveSign in with HandCash on bchatx.com: switched on; first real sign-in being tested.
 
@@ -6701,7 +6701,7 @@ Each release ships to the Android APK, the Chrome extension and the web wallet. 
 
 [Download bWalletX](https://bwalletx.com/download)
 
-## 5.2.44 2026-10-26
+## 5.2.45 2026-10-26
 
 - Minting is private by default: your pictures and posts are minted encrypted, only you can see them, and “Make public now” is one tap away. Imports from X mint privately too.
 - Feed now pulls in CoinGeek, Hodlocker and RelayX, with an All / sort / Favourites / Leaderboard row and a tidy grid of sources.
@@ -8817,9 +8817,9 @@ Loading…
 
 ## Where each version is
 
-We ship small updates often, usually several a week. A new version reaches each place at a different speed, because Apple and Google check some of them first. Latest: 5.2.44 (22 Oct 2026), [what’s new](https://bwalletx.com/releases#v5.2.44).
+We ship small updates often, usually several a week. A new version reaches each place at a different speed, because Apple and Google check some of them first. Latest: 5.2.45 (22 Oct 2026), [what’s new](https://bwalletx.com/releases#v5.2.45).
 
-- Web, Chrome extension, Android download (APK): the same day. Now on 5.2.44.
+- Web, Chrome extension, Android download (APK): the same day. Now on 5.2.45.
 
 - Android, Google Play test: the same day. Now on 5.2.37.
 
@@ -10673,7 +10673,7 @@ By default, one thing: holders can enter the coin’s bChat room. Anything else 
 
 ## Creator vesting and airdrops
 
-- LiveCreator vesting. Creators can keep 0 to 20% (default 10%), always time-locked: by default a 12-month cliff, then 24 months of linear unlocking, never less than 6 months, with a public receipt. Live since 5.2.32. Personal token locks are live too (5.2.44). See [Token locking](https://bwalletx.com/token-locking).
+- LiveCreator vesting. Creators can keep 0 to 20% (default 10%), always time-locked: by default a 12-month cliff, then 24 months of linear unlocking, never less than 6 months, with a public receipt. Live since 5.2.32. Personal token locks are live too (5.2.45). See [Token locking](https://bwalletx.com/token-locking).
 
 - LiveAirdrops to holders. The way to reward holders is to send them tokens. Holders receive and keep airdrops in the inbox (5.1.85). Issuers can send tokens or BSV to every holder with one approval (5.2.32, bWalletX only). See [Airdrops](https://bwalletx.com/airdrops).
 
@@ -11548,7 +11548,7 @@ Source: https://bwalletx.com/token-locking
 
 [Lock BSV](https://bwalletx.com/lock) is live: BSV locked until a block height, and nobody can move it before then, not even you. Token locking does the same for tokens.
 
-Live Personal token locks shipped in 5.2.44. Creator vesting at launch shipped in 5.2.32. Locked airdrops are still coming.
+Live Personal token locks shipped in 5.2.45. Creator vesting at launch shipped in 5.2.32. Locked airdrops are still coming.
 
 ## Creator vesting at launch: prove you won’t dump
 
@@ -11562,7 +11562,7 @@ When you launch a coin, you can keep a share for yourself, locked so you can’t
 
 ## Personal token locks
 
-Live Lock BSV-21 tokens until a date, with an on-chain receipt. In the Wallet, swipe a token row and tap Lock. Your token locks are listed in Locks & Pots › Locks, under Token locks. On a new device, Find my token locks finds them again from your recovery phrase. Live since 5.2.44.
+Live Lock BSV-21 tokens until a date, with an on-chain receipt. In the Wallet, swipe a token row and tap Lock. Your token locks are listed in Locks & Pots › Locks, under Token locks. On a new device, Find my token locks finds them again from your recovery phrase. Live since 5.2.45.
 
 ## Locked airdrops
 
@@ -12539,7 +12539,7 @@ Source: https://bwalletx.com/connect
 
 How to let people sign in to your site or app with their bWalletX: one script tag, two routes on your server, and no API keys.
 
-Also as plain Markdown for AI coding agents: [bwalletx.com/connect.md](https://bwalletx.com/connect.md). Checked against bWalletX 5.2.44, connect.js and @bwalletx/connect 0.5.0 on 18 Oct 2026. Full docs: [docs.bwalletx.com/developers/connect](https://docs.bwalletx.com/developers/connect/).
+Also as plain Markdown for AI coding agents: [bwalletx.com/connect.md](https://bwalletx.com/connect.md). Checked against bWalletX 5.2.45, connect.js and @bwalletx/connect 0.5.0 on 18 Oct 2026. Full docs: [docs.bwalletx.com/developers/connect](https://docs.bwalletx.com/developers/connect/).
 
 ## In 30 seconds
 
@@ -13025,11 +13025,11 @@ The full developer guides live at [docs.bwalletx.com](https://docs.bwalletx.com/
 
 ## Get bWalletX to test with
 
-Install the wallet you'll connect to (version 5.2.44 beta). Checksums are on each download page.
+Install the wallet you'll connect to (version 5.2.45 beta). Checksums are on each download page.
 
-- [Chrome / Brave extension (zip)](https://bwalletx.com/download/bwalletx-extension-5.2.44.zip) · [install steps](https://bwalletx.com/extension)
+- [Chrome / Brave extension (zip)](https://bwalletx.com/download/bwalletx-extension-5.2.45.zip) · [install steps](https://bwalletx.com/extension)
 
-- [Android APK](https://bwalletx.com/download/bwalletx-android-5.2.44.apk) · [install steps](https://bwalletx.com/android)
+- [Android APK](https://bwalletx.com/download/bwalletx-android-5.2.45.apk) · [install steps](https://bwalletx.com/android)
 
 - [Web app](https://web.bwalletx.com) · [iPhone](https://bwalletx.com/iphone)
 
