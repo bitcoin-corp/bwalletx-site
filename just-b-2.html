@@ -176,13 +176,13 @@
       <div class="scene s0" data-at="0">
         <div class="cap"><h1><span>Less noise.</span></h1></div>
       </div>
-      <div class="scene s1" data-at="6.73">
+      <div class="scene s1" data-at="3.77">
         <div class="cap"><h2><img class="lb" src="/logo.svg" alt="b" /><span>your wallet</span></h2><p>Keys on your phone. Pay a $name in seconds.</p></div>
       </div>
-      <div class="scene s2" data-at="12.12">
+      <div class="scene s2" data-at="8.08">
         <div class="cap"><h2><img class="lb" src="/logo.svg" alt="b" /><span>in one place</span></h2><p>Token chat rooms, a store and sign-in, in the same app.</p></div>
       </div>
-      <div class="scene s3" data-at="23.57" data-end>
+      <div class="scene s3" data-at="18.86" data-end>
         <div class="cap"><h2><span>Just</span><img class="lb" src="/logo.svg" alt="b" /></h2><p>Less noise. More life.</p><p class="getp"><a class="jb-go" href="/get?from=just-b-2-film">Get bWalletX</a></p></div>
       </div>
 
@@ -290,16 +290,14 @@
         var DOCKL = [5.75, 29.05, 52.35, 75.65], DOCKT = 89.1;
         var INIT = { list: [], dock: [22, 23, 24, 25] }, i;
         for (i = 0; i < 22; i++) INIT.list.push(i);
-        var EV = [], nextId = 26, at = 0.5;
+        var EV = [], nextId = 26, at = 0.3;
         function ev(o, dur, gap) { o.at = at * B; o.dur = dur * B; EV.push(o); at += dur + (gap === undefined ? 0.2 : gap); }
-        ev({ ty: 'ADD', id: nextId++, to: 5 }, 2.3);
-        ev({ ty: 'DEL', idx: 9 }, 1);
-        ev({ ty: 'MOVE', from: 14, to: 2 }, 1.6);
-        ev({ ty: 'ADD', id: nextId++, to: 17 }, 2.2);
-        ev({ ty: 'DEL', idx: 3 }, 1, 0);
-        at = 10; ev({ ty: 'ADD', id: 'b', to: 6 }, 2.3);
-        ev({ ty: 'ADD', id: nextId++, to: 1 }, 2.1);
-        ev({ ty: 'DOCK', slot: 1 }, 1.8);
+        ev({ ty: 'ADD', id: nextId++, to: 5 }, 1.9);
+        ev({ ty: 'DEL', idx: 9 }, 0.9);
+        ev({ ty: 'MOVE', from: 14, to: 2 }, 1.5, 0);
+        at = 5.6; ev({ ty: 'ADD', id: 'b', to: 6 }, 1.9);
+        ev({ ty: 'ADD', id: nextId++, to: 1 }, 1.6, 0.1);
+        ev({ ty: 'DOCK', slot: 1 }, 1.4);
         // The clean-up: from beat 18, one app at a time, then the dock neighbours, then the b moves to the centre.
         function apply(S, e) {
           var L = S.list;
@@ -312,10 +310,12 @@
         }
         function clone(S) { return { list: S.list.slice(), dock: S.dock.slice(), centre: S.centre }; }
         var sim = clone(INIT); EV.forEach(function (e) { apply(sim, e); });
-        at = 18; var n = sim.list.length, step = (34 - 18 - 0.8) / (n + 3);
-        for (i = 0; n > 0; i++, n--) ev({ ty: 'DEL', idx: (h(i, 13) * n) | 0 }, step * 0.85, step * 0.15);
-        [0, 3, 2].forEach(function (s) { ev({ ty: 'DDEL', slot: s }, step * 0.85, step * 0.15); });
-        ev({ ty: 'CENTRE' }, 0.8, 0);
+        // Deletions accelerate: about 0.45 s apart at first, down to a quick 0.12 s cascade, still one at a time.
+        var n = sim.list.length, tt = 8.2;
+        function evs(o, gap) { o.at = tt; o.dur = gap * 0.85; EV.push(o); tt += gap; }
+        for (i = 0; i < n; i++) evs({ ty: 'DEL', idx: (h(i, 13) * (n - i)) | 0 }, 0.45 - 0.33 * Math.pow(i / (n - 1), 0.8));
+        tt = 15.4; [0, 3, 2].forEach(function (s) { evs({ ty: 'DDEL', slot: s }, 0.55); });
+        tt = 17.2; evs({ ty: 'CENTRE' }, 0.9);
 
         var screen = document.getElementById('screen'), els = {}, cache = {};
         function el(id) {
