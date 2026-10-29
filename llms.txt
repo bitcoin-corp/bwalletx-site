@@ -27,7 +27,7 @@ Full text of every page below: https://bwalletx.com/llms-full.txt
 - [Ask b](https://bwalletx.com/ask-b): Ask b, the bWalletX team’s assistant. Type a question and b helps: send money, make a pot, explain something, fix a problem. Our team reads what you tell b.
 - [b-Aware: responsible disclosure and bug bounty · bWalletX](https://bwalletx.com/b-aware): How to report a security weakness in bWalletX or bWallet, what we pay for it in BSV, the safe harbour for good-faith research, and our public responses to BRC-100 advisories.
 - [b cool](https://bwalletx.com/b-cool): Less noise. More life. Just b.
-- [b creative](https://bwalletx.com/b-creative): b creative. Your brand's own wallet. From $99. Less noise. More life. Just b.
+- [b Creative](https://bwalletx.com/b-creative): b Creative. Your brand's own wallet. From $99. Less noise. More life. Just b.
 - [The b family · bWalletX](https://bwalletx.com/b-family): The b family: everyday apps for chat, money, video, music, news, work and selling, all running on bWalletX. Sign in once with your wallet and get paid in Bitcoin.
 - [b black](https://bwalletx.com/b-in-black): The same wallet, dressed for the evening. Soon.
 - [b is coming](https://bwalletx.com/b-is-coming): b is coming.
@@ -61,6 +61,7 @@ Full text of every page below: https://bwalletx.com/llms-full.txt
 - [Your own branded wallet · bWalletX for business](https://bwalletx.com/clients): A wallet with your name, colours and logo, built on bWalletX. $999 to set up, then $99 a year. Tell us what you want to build and we'll reply within 2 working days.
 - [CoinGeek on b · bWalletX](https://bwalletx.com/coingeek-on-b): Read CoinGeek headlines in bNews inside bWalletX, open each story on CoinGeek, and talk about it in an on-chain thread where you can tip, like and lock.
 - [Contracts in chat · bWalletX](https://bwalletx.com/contracts): Ask b to draft an agreement in your chat. Sign it with your hand and your wallet key. Seal a fingerprint on Bitcoin. Each party keeps a copy only they can read.
+- [b Creative · bWalletX](https://bwalletx.com/creative): b Creative: every bWalletX campaign in one place. The Just b series, be on b, the apps-on-b pages, Happy b-day cards, FLICK OFF and more.
 - [Credits: prepaid credit for services](https://bwalletx.com/credits): Credits are prepaid credit a service issues for its own service. bWalletX holds them and spends them for you. bCredits for b, the bWalletX agent, come first. Credits are in testing.
 - [Culture: make it on BSV](https://bwalletx.com/culture): How culture is made with tokens in bWalletX: one token, many kinds of media. Games, pictures, films, music, rooms and live Spaces can all gather around the same token, and tips go straight to the people who make things.
 - [bWalletX Desktop](https://bwalletx.com/desktop): bWalletX Desktop: your whole wallet on a big screen at desktop.bwalletx.com. Money, bMail, chat, Spaces, bApps and Ask b side by side. Install it as an app from Chrome, Edge or Safari.

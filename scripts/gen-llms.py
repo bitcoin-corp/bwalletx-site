@@ -132,3 +132,11 @@ sm += ['  <url><loc>%s</loc></url>' % p['url'] for p in pages] + ['  <url><loc>%
 sm += ['</urlset>']
 open(os.path.join(ROOT, 'sitemap.xml'), 'w').write('\n'.join(sm) + '\n')
 print(len(pages), 'pages ->', 'llms.txt', 'llms-full.txt', 'sitemap.xml')
+
+# Site search (29 Oct 2026): a small client-side index for the navbar search in nav.js. Same allowlist as above.
+import json
+def short_title(t):
+    return re.sub(r'\s*[·|]\s*bWalletX( blog)?\s*$', '', t).strip()
+idx = [{'u': p['url'][len(BASE):] or '/', 't': short_title(p['title']), 'd': one_line(p['desc'])[:180]} for p in pages]
+open(os.path.join(ROOT, 'search-index.json'), 'w').write(json.dumps(idx, ensure_ascii=False, separators=(',', ':')))
+print(len(idx), 'pages -> search-index.json')
