@@ -11680,6 +11680,71 @@ bWalletX is in beta: test with small amounts. Nothing here is investment advice.
 
 ---
 
+Source: https://bwalletx.com/b-socials
+
+# Everything b.
+
+Everything b, in one place.
+
+## Start
+
+[bWalletXThe smart social super wallet. Hold, pay and sign in everywhere.→](https://bwalletx.com/get)[bChatXChat rooms and live Spaces for every token and every crowd.→](https://chat.bwalletx.com)
+
+## Money
+
+[bMarketXSell anything you’ve minted.→](https://bmarketx.com)[bMintXYou made it. Prove it’s yours.→](https://bmintx.com)[bMoneyXYour money history, yours.→](https://bmoneyx.com)[bSharesXShare registers, kept the modern way.→](https://bsharesx.com)[bVaultXThe vault that pays for itself.→](https://bvaultx.com)
+
+## Watch, listen, read
+
+[bMoviesXUpload your movies. Mint them on Bitcoin.→](https://bmoviesx.com)[bVideoXYour channel, owned by you.→](https://bvideox.com)[bMusicXThe Bitcoin music exchange.→](https://bmusicx.com)[bPicsXYour pictures: AI pictures, cards and your photos.→](https://bpicsx.com)[bRadioXRadio you can join.→](https://bradiox.com)[bWriterXWrite it down. Keep it forever.→](https://bwriterx.com)[bNewsXNews you can trust, paid fairly.→](https://bnewsx.com)
+
+## People
+
+[bSocialXSpaces for every social app.→](https://bsocialx.com)[bFriendsXBring your people with you.→](https://bfriendsx.com)[bNamesXYour paymail name: name@bwalletx.com.→](https://bnamesx.com)[bMailXEmail that pays.→](https://bmailx.com)[bCalXWhat’s on, live.→](https://bcalx.com)
+
+## Work and business
+
+[bJobsXWork, paid in Bitcoin.→](https://bjobsx.com)[bStoreXSell digital things, paid in Bitcoin.→](https://bstorex.com)[bAdvertisingXTell b about your business. Get the ad.→](https://badvertisingx.com)[bDriveXYour files and recordings, kept on chain.→](https://bdrivex.com)[bSignXContracts both sides sign.→](https://bsignx.com)[bGitXConnect your GitHub repos and give each one a room.→](https://bgitx.com)
+
+## Play
+
+[tokenblaster.lolAn arcade of games played on the live BSV chain, plus BlastPad for launching coins.→](https://www.tokenblaster.lol)
+
+## Social
+
+[bChatXChat with us. The Lounge is open to everyone.→](https://www.bchatx.com)[X@bWalletX: news and releases.→](https://x.com/bWalletX)[GitHubThe wallet’s source code, in the open.→](https://github.com/bitcoin-corp/bwallet)[YouTubeFilms, demos and live Spaces.→](https://www.youtube.com/@bWalletX)[TwetchFind us among the builders on Twetch.→](https://bwalletx.com/twetch)
+
+## Add the b to your site
+
+Put our gold b on your website as a link to bChatX. Copy a snippet, or download the files.
+
+Icon, 16 pxCopy
+``<a href="https://www.bchatx.com" title="Chat on bChatX"><img src="https://bwalletx.com/b/b-16.png" width="16" height="16" alt="bChatX"></a>``
+
+Icon, 32 pxCopy
+``<a href="https://www.bchatx.com" title="Chat on bChatX"><img src="https://bwalletx.com/b/b-32.png" width="32" height="32" alt="bChatX"></a>``
+
+Icon, 64 pxCopy
+``<a href="https://www.bchatx.com" title="Chat on bChatX"><img src="https://bwalletx.com/b/b-64.png" width="64" height="64" alt="bChatX"></a>``
+
+Pill, darkCopy
+``<a href="https://www.bchatx.com"><img src="https://bwalletx.com/b/pill-dark.svg" width="216" height="44" alt="Chat on bChatX"></a>``
+
+Pill, lightCopy
+``<a href="https://www.bchatx.com"><img src="https://bwalletx.com/b/pill-light.svg" width="216" height="44" alt="Chat on bChatX"></a>``
+
+Tile, darkCopy
+``<a href="https://www.bchatx.com" title="Chat on bChatX"><img src="https://bwalletx.com/b/b-tile-dark.svg" width="64" height="64" alt="bChatX"></a>``
+
+Tile, lightCopy
+``<a href="https://www.bchatx.com" title="Chat on bChatX"><img src="https://bwalletx.com/b/b-tile-light.svg" width="64" height="64" alt="bChatX"></a>``
+
+[b (SVG)](https://bwalletx.com/b/b.svg)[16 PNG](https://bwalletx.com/b/b-16.png)[32 PNG](https://bwalletx.com/b/b-32.png)[64 PNG](https://bwalletx.com/b/b-64.png)[128 PNG](https://bwalletx.com/b/b-128.png)[Pill dark SVG](https://bwalletx.com/b/pill-dark.svg)[Pill light SVG](https://bwalletx.com/b/pill-light.svg)[Pill dark PNG](https://bwalletx.com/b/pill-dark.png)[Pill light PNG](https://bwalletx.com/b/pill-light.png)[Tile dark SVG](https://bwalletx.com/b/b-tile-dark.svg)[Tile light SVG](https://bwalletx.com/b/b-tile-light.svg)
+
+Please use the b as it is: don’t recolour, stretch, rotate or redraw it, and keep clear space around it of at least a quarter of its height. Brand rules: [/brand](https://bwalletx.com/brand).
+
+---
+
 Source: https://bwalletx.com/bmail
 
 In bWalletX now

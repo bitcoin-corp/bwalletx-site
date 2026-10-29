@@ -148,7 +148,7 @@
       ['Company', [['The b family', '/b-family'], ['Blog', '/blog'], ['Hodl my b', '/hodl-my-b'], ['Newsletter', '/newsletter'], ['Brand', '/brand'], ['Jobs', '/jobs'], ['Gigs', '/gigs']]],
       ['More', [['Sign in with HandCash', '/sign-in-with-handcash'], ['Sign in with Gmail', '/gmail'], ['Wallet Frames', '/wallet-frames'], ['Your apps on b', '/on-b'], ['Contracts in chat', '/contracts'], ['bRadio', '/bradio']]],
       ['Coming', [['Business agents', '/business-agents'], ['SMS', '/sms'], ['bPositive', '/bpositive'], ['Partnership shares', '/partnership-shares'], ['bWeb', '/bweb']]],
-      ['Follow', [['bChatX', 'https://www.bchatx.com'], ['X', 'https://x.com/bWalletX'], ['Twetch', '/twetch'], ['GitHub', 'https://github.com/bitcoin-corp/bwallet'], ['YouTube', 'https://www.youtube.com/@bWalletX'], ['bChatX Lounge', 'https://chat.bwalletx.com/room/LOUNGE'], ['Privacy', '/privacy'], ['Terms', '/terms']]]
+      ['Follow', [['Everything b', '/b-socials'], ['bChatX', 'https://www.bchatx.com'], ['X', 'https://x.com/bWalletX'], ['Twetch', '/twetch'], ['GitHub', 'https://github.com/bitcoin-corp/bwallet'], ['YouTube', 'https://www.youtube.com/@bWalletX'], ['bChatX Lounge', 'https://chat.bwalletx.com/room/LOUNGE'], ['Privacy', '/privacy'], ['Terms', '/terms']]]
     ],
     // Store edition (bWallet): browse-only Market, no trading, everything else lives on bWalletX.
     store: [
@@ -186,6 +186,12 @@
     ['gh', 'https://github.com/bitcoin-corp/bwallet', 'Source code on GitHub', '<svg viewBox="0 0 16 16" width="15" height="15" aria-hidden="true"><path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>'],
     ['yt', 'https://www.youtube.com/@bWalletX', 'bWalletX on YouTube', '<svg viewBox="0 0 24 24" width="15" height="15" aria-hidden="true"><path fill="currentColor" d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8zM9.6 15.6V8.4l6.2 3.6-6.2 3.6z"/></svg>']
   ];
+  function barSocHtml() {
+    return '<span class="nx-socs">' + SOC.filter(function (x) { return x[0] === 'bchat' || x[0] === 'gh'; }).map(function (x) {
+      var me = x[0] === 'bchat';
+      return '<a class="nx-soc nx-' + x[0] + '" href="' + (me ? '/b-socials' : x[1]) + '"' + (me ? '' : ' target="_blank" rel="noopener"') + ' aria-label="' + (me ? 'Everything b: our services and socials' : x[2]) + '" title="' + (me ? 'Everything b, in one place' : x[2]) + '">' + x[3] + '</a>';
+    }).join('') + '</span>';
+  }
   function socHtml(cls) { return '<span class="' + cls + '">' + SOC.map(function (x) { return '<a class="nx-soc nx-' + x[0] + '" href="' + x[1] + '" target="_blank" rel="noopener" aria-label="' + x[2] + '" title="' + x[2] + '">' + x[3]  + '</a>'; }).join('') + '</span>'; }
   function link(it, active) {
     if (it.head) return '<span class="nd-head">' + it.head + '</span>';
@@ -207,9 +213,9 @@
   var bar = main.closest('.topbar');
   var ctaBox = bar && bar.querySelector('.nav-cta');
   if (ctaBox && !store) {
-    // Right side (owner, 29 Oct 2026: declutter): just the ONE wallet button. Socials live in the footer
-    // (Follow column) and the phone menu.
-    ctaBox.innerHTML = '<a class="dl-btn nx-wallet" href="/get" title="Placeholder for the official wallet button (GET bWALLETX / CONNECT / your chip)">Get bWalletX</a>';
+    // Right side (owner, 29 Oct 2026): the b icon (-> /b-socials, everything b in one place) and GitHub,
+    // then the ONE wallet button. X and YouTube live in the footer (Follow column) and the phone menu.
+    ctaBox.innerHTML = barSocHtml() + '<a class="dl-btn nx-wallet" href="/get" title="Placeholder for the official wallet button (GET bWALLETX / CONNECT / your chip)">Get bWalletX</a>';
   }
   // Site search (owner, 29 Oct 2026): a compact field under the brand on desktop/tablet; at the top of the
   // Menu panel on phones. Index = /search-index.json, built by scripts/gen-llms.py (same pages as llms.txt).
@@ -255,16 +261,17 @@
     document.addEventListener('click', function (e) { if (!f.contains(e.target)) sr.innerHTML = ''; });
     return f;
   }
-  var brandEl = bar && bar.querySelector('.brand');
-  var deskSearch = null, menuSearch = null;
-  if (brandEl && !store && !bar.querySelector('.nx-bb')) {
-    var bb = document.createElement('div');
-    bb.className = 'nx-bb';
-    brandEl.parentNode.insertBefore(bb, brandEl);
-    bb.appendChild(brandEl);
+  // Desktop/tablet: a slim search row directly below the bar (owner, 29 Oct 2026: never squash the brand).
+  var deskSearch = null, sRow = null;
+  if (bar && !store && !bar.querySelector('.nx-srow')) {
+    sRow = document.createElement('div');
+    sRow.className = 'nx-srow';
+    sRow.innerHTML = '<div class="wrap"></div>';
     deskSearch = makeSearch('nx-sdesk');
-    bb.appendChild(deskSearch);
+    sRow.firstChild.appendChild(deskSearch);
+    document.documentElement.classList.add('has-srow');
   }
+  var menuSearch = null;
   if (ctaBox && !ctaBox.querySelector('.menu-btn')) {
     var mb = document.createElement('button');
     mb.type = 'button'; mb.className = 'menu-btn';
@@ -308,6 +315,8 @@
     if (window.ResizeObserver) new ResizeObserver(fitNav).observe(bar); else { fitNav(); window.addEventListener('resize', fitNav); }
   }
 
+  if (sRow) bar.appendChild(sRow);
+
   // Footer: the proposal's columns, on every page (added on top of a page's own footer, or as a new one).
   if (!store && NAV.foot) {
     var f = document.createElement('div');
@@ -342,10 +351,8 @@
     '.nx-socs{display:inline-flex;align-items:center;gap:6px}.nx-soc{display:inline-flex;align-items:center;justify-content:center;width:30px;height:30px;border-radius:50%;border:1px solid #ffffff33;color:#fff}.nx-soc:hover{border-color:#F5B800;color:#F5B800}' +
     '.m-soc{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0 4px}.m-menu .m-soc a.nx-soc{display:inline-flex;align-items:center;justify-content:center;padding:0 10px;color:#fff}.m-soc .nx-soc{width:auto;min-width:40px;height:40px;padding:0 10px}' +
     '@media (max-width:1180px) and (min-width:860px){.nx-socs .nx-soc{width:28px;height:28px}.nx-socs{gap:4px}.nav-cta{gap:8px}}' +
-    '.nx-bb{display:flex;flex-direction:column;justify-content:center;gap:5px;position:relative;flex:none;min-width:0}' +
-    '.nx-bb .brand{font-size:1.05rem;line-height:1;gap:8px}.nx-bb .brand img{width:26px;height:auto}' +
-    '.nx-sform{position:relative;margin:0}.nx-sdesk{width:0;min-width:100%}' +
-    '.nx-sform input{display:block;width:100%;box-sizing:border-box;-webkit-appearance:none;appearance:none;font:500 .8rem/1 inherit;color:#fff;background:#ffffff0f url("data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 24 24%27%3E%3Ccircle cx=%2710.5%27 cy=%2710.5%27 r=%276.5%27 fill=%27none%27 stroke=%27%23a8a69e%27 stroke-width=%272.4%27/%3E%3Cpath d=%27M15.5 15.5 21 21%27 stroke=%27%23a8a69e%27 stroke-width=%272.6%27 stroke-linecap=%27round%27/%3E%3C/svg%3E") no-repeat 8px 50%/12px;border:1px solid #ffffff2e;border-radius:999px;padding:0 10px 0 25px;height:24px;outline:none}' +
+    '.nx-sform{position:relative;margin:0}.nx-srow{border-top:1px solid #ffffff0d}.nx-srow .wrap{display:flex;justify-content:center;padding-top:5px;padding-bottom:7px}.nx-sdesk{width:100%;max-width:560px}.nx-sdesk .nx-sres{width:100%}html.has-srow body{padding-top:38px}' +
+    '.nx-sform input{display:block;width:100%;box-sizing:border-box;-webkit-appearance:none;appearance:none;font:500 .8rem/1 inherit;color:#fff;background:#ffffff0f url("data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 24 24%27%3E%3Ccircle cx=%2710.5%27 cy=%2710.5%27 r=%276.5%27 fill=%27none%27 stroke=%27%23a8a69e%27 stroke-width=%272.4%27/%3E%3Cpath d=%27M15.5 15.5 21 21%27 stroke=%27%23a8a69e%27 stroke-width=%272.6%27 stroke-linecap=%27round%27/%3E%3C/svg%3E") no-repeat 8px 50%/12px;border:1px solid #ffffff2e;border-radius:999px;padding:0 10px 0 25px;height:28px;outline:none}' +
     '.nx-sform input::placeholder{color:#a8a69e}.nx-sform input:focus{border-color:#F5B800;background-color:#16171b}' +
     '.nx-sform input::-webkit-search-cancel-button{display:none}' +
     '.nx-sres{position:absolute;top:calc(100% + 8px);left:0;width:min(440px,calc(100vw - 32px));box-sizing:border-box;padding:8px;background:#0d0e11;border:1px solid #ffffff1f;border-radius:14px;box-shadow:0 14px 34px #000a;z-index:70;max-height:min(60vh,460px);overflow-y:auto}.nx-sres:empty{display:none}' +
@@ -353,8 +360,8 @@
     '.nx-sres a{display:block;padding:9px 10px;border-radius:9px;text-decoration:none;color:#ddd}.nx-sres a:hover,.nx-sres a:focus{background:#ffffff10;outline:none}.nx-sres a:first-child{background:#ffffff0a}' +
     '.nx-sres b{display:block;color:#fff;font-weight:600;font-size:.95rem}.nx-sres span{display:block;margin-top:2px;color:#9a988f;font-size:.82rem;line-height:1.4;overflow:hidden;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical}' +
     '.nx-snone{margin:8px 10px;color:#9a988f;font-size:.9rem}' +
-    '@media (max-width:859px){.nx-sdesk{display:none}.nx-bb .brand{font-size:1.1rem}.nx-bb .brand img{width:28px}}' +
-    '@media (max-width:430px){.nav-cta{gap:6px!important}.nx-wallet{padding-left:10px!important;padding-right:10px!important;font-size:.8rem!important}.menu-btn{padding:5px 9px}.topbar .brand span{font-size:1rem}.topbar .brand img{width:26px;height:auto}}' +
+    '@media (max-width:859px){.nx-srow{display:none}html.has-srow body{padding-top:0}.nx-socs{display:none}}' +
+    '@media (max-width:430px){.nav-cta{gap:6px!important}.nx-wallet{padding-left:10px!important;padding-right:10px!important;font-size:.8rem!important}.menu-btn{padding:5px 9px}.topbar .brand span{font-size:1rem}.topbar .brand img{width:28px;height:auto}}' +
     'body.paper .nx-sform input{color:var(--ink,#111);border-color:var(--hair,#bdbab2);background-color:#0000000a}body.paper .nx-sform input::placeholder{color:var(--muted,#5d5b56)}' +
     '.menu-btn{display:none;font:600 .9rem inherit;color:#fff;background:transparent;border:1px solid #ffffff40;border-radius:999px;padding:5px 12px;cursor:pointer}' +
     '.m-menu{background:#0d0e11;border-top:1px solid #ffffff14;padding:6px 16px 14px;max-height:calc(100vh - 120px);overflow-y:auto}' +
