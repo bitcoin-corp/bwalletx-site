@@ -90,7 +90,7 @@
           { label: 'bShares', href: '/bshares' },
           { label: 'Branded wallets', href: '/clients' }
         ] },
-      { key: 'build', label: 'Build', href: '/developers', pages: ['/developers', '/agent', '/ask-b', '/talk-to-b', '/agents', '/strategies', '/strategies/spec', '/cli', '/mcp', '/connect', '/direct', '/sign-in-button', '/apps/add', '/open-source', '/releases', '/on-b', '/your-apps-on-b', '/hold-to-talk'],
+      { key: 'build', label: 'Build', href: '/developers', pages: ['/developers', '/agent', '/ask-b', '/talk-to-b', '/agents', '/strategies', '/strategies/spec', '/cli', '/mcp', '/connect', '/direct', '/sign-in-button', '/apps/add', '/open-source', '/releases', '/roadmap', '/on-b', '/your-apps-on-b', '/hold-to-talk'],
         sub: [
           { label: 'Developers', href: '/developers', ov: 1 },
           { label: 'b agent', href: '/agent', also: ['/ask-b', '/talk-to-b', '/hold-to-talk'] },
@@ -101,7 +101,8 @@
           { label: 'Sign in with bWalletX', href: '/connect', also: ['/direct', '/sign-in-button'] },
           { label: 'Add your app', href: '/apps/add', also: ['/on-b', '/your-apps-on-b'] },
           { label: 'Open source', href: '/open-source' },
-          { label: 'Releases', href: '/releases' }
+          { label: 'Releases', href: '/releases' },
+          { label: 'Roadmap', href: '/roadmap' }
         ] },
       { key: 'bapps', label: 'bApps', href: '/bapps', icon: 1, pages: ['/bapps', '/bapps/bmovies', '/b-bots', '/services', '/b-market', '/bgitx', '/flick-off', '/tokenblaster'],
         sub: [
