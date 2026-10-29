@@ -4367,9 +4367,24 @@ Open [web.bwalletx.com](https://web.bwalletx.com) in Chrome, Edge or Brave, then
 
 New to Desktop? [See what bWalletX Desktop does →](https://bwalletx.com/desktop)
 
+## Help us bring bWallet to Google Play
+
+Google needs 12 Android testers for 14 days before we can go public. Takes a minute.
+
+- Tap Become a tester and sign in with your Google account.
+
+- Install bWallet from Google Play.
+
+- Keep it installed for 14 days.
+
+[Become a tester](https://play.google.com/apps/testing/com.bitcoincorp.bwallet)
+[Install on Google Play](https://play.google.com/store/apps/details?id=com.bitcoincorp.bwallet)
+
+Already using the direct APK? You can keep it; the Play version installs separately, so you can have both.
+
 ## bWallet in the app stores
 
-The store edition, bWallet, is in beta. On iPhone you can join it now through TestFlight: [testflight.apple.com/join/1TTnQNKm](https://testflight.apple.com/join/1TTnQNKm) (install TestFlight first, then open the link on your iPhone). On Android it is in internal testing on Google Play: apply on [/testers](https://bwalletx.com/testers), and once your Google account is added, join at [play.google.com/apps/internaltest/4701646815257978169](https://play.google.com/apps/internaltest/4701646815257978169). The wider closed test waits on Google verifying our organisation account. It hasn’t been submitted to the App Store itself yet; that waits on converting our Apple developer account to an organisation account. [Join the waitlist](https://bwalletx.com/#waitlist) to hear when either opens.
+The store edition, bWallet, is in beta. On iPhone you can join it now through TestFlight: [testflight.apple.com/join/1TTnQNKm](https://testflight.apple.com/join/1TTnQNKm) (install TestFlight first, then open the link on your iPhone). On Android it is in a closed test on Google Play (see above). It hasn’t been submitted to the App Store itself yet; that waits on converting our Apple developer account to an organisation account. [Join the waitlist](https://bwalletx.com/#waitlist) to hear when either opens.
 
 [Download on theApp StorebWallet · not submitted yetGET IT ONGoogle PlaybWallet · Play internal testing
 
@@ -8852,8 +8867,6 @@ Test bWallet on your Android phone for 14 days and I'll pay you 1 BSV. Google wo
 
 20 places
 
-Status, 7 Oct 2026: the 14-day test hasn't started yet. Google asked us to move bWallet to an organisation developer account first, and that is being verified. The terms above still stand. If you've signed up, you keep your place and we'll email you when the test opens.
-
 Loading…
 
 ## Where each version is
@@ -8872,7 +8885,7 @@ Every release is listed on [/releases](https://bwalletx.com/releases), newest fi
 
 ## The Android test link
 
-Once your Google account is on the list, join here on your phone: [play.google.com/apps/internaltest/4701646815257978169](https://play.google.com/apps/internaltest/4701646815257978169), then install bWallet from Google Play. What to test and how to report is on [/testers/bwallet/android](https://bwalletx.com/testers/bwallet/android). The link does nothing for an account that isn’t on the list, so apply first.
+Join on your phone: [play.google.com/apps/testing/com.bitcoincorp.bwallet](https://play.google.com/apps/testing/com.bitcoincorp.bwallet), then install bWallet from Google Play. What to test and how to report is on [/testers/bwallet/android](https://bwalletx.com/testers/bwallet/android).
 
 ## Testing bWalletX, the full edition?
 
@@ -8922,11 +8935,11 @@ Source: https://bwalletx.com/testers/bwallet/android
 
 # Test bWallet on Android.
 
-bWallet is the Play Store edition of bWalletX: send, receive, tokens, names, chat and calls, with no exchange. It is in internal testing on Google Play. This page says how to join, exactly what to test, and how to tell us what you find.
+bWallet is the Play Store edition of bWalletX: send, receive, tokens, names, chat and calls, with no exchange. It is in a closed test on Google Play. This page says how to join, exactly what to test, and how to tell us what you find.
 
-[Join the beta on Google Play](https://play.google.com/apps/internaltest/4701646815257978169)
+[Join the beta on Google Play](https://play.google.com/apps/testing/com.bitcoincorp.bwallet)
 
-The link: [https://play.google.com/apps/internaltest/4701646815257978169](https://play.google.com/apps/internaltest/4701646815257978169). It only works for a Google account we have added to the tester list, so [apply on /testers](https://bwalletx.com/testers) first if you haven’t.
+The link: [https://play.google.com/apps/testing/com.bitcoincorp.bwallet](https://play.google.com/apps/testing/com.bitcoincorp.bwallet).
 
 ## On what
 
