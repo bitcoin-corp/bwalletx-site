@@ -5,13 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Just b: less noise</title>
     <link rel="canonical" href="https://bwalletx.com/just-b-2" />
-    <meta name="description" content="A restless phone full of apps. Then the b arrives, finds its place in the dock, and the noise goes, one app at a time. Less noise. More life. Just b." />
+    <meta name="description" content="A busy phone full of apps. Then the b arrives, takes its place in the dock, and the noise goes, one app at a time. Less noise. More life. Just b." />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://bwalletx.com/just-b-2" />
     <meta property="og:site_name" content="bWalletX" />
     <meta property="og:title" content="Just b" />
     <meta property="og:description" content="A phone full of apps, then just one. Less noise. More life. Just b." />
-    <meta property="og:image" content="https://bwalletx.com/og-just-b-2-v2.jpg" />
+    <meta property="og:image" content="https://bwalletx.com/og-just-b-2-v3.jpg" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
     <meta property="og:image:alt" content="An iPhone with an empty black home screen and only the gold b app in the dock, beside the words Just b." />
@@ -19,18 +19,18 @@
     <meta name="twitter:site" content="@bWalletX" />
     <meta name="twitter:title" content="Just b" />
     <meta name="twitter:description" content="A phone full of apps, then just one. Less noise. More life. Just b." />
-    <meta name="twitter:image" content="https://bwalletx.com/og-just-b-2-v2.jpg" />
+    <meta name="twitter:image" content="https://bwalletx.com/og-just-b-2-v3.jpg" />
     <link rel="icon" href="/favicon.ico" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" />
     <link rel="stylesheet" href="/styles.css" />
     <style>
-      /* Just b 2 (29 Oct 2026, owner's storyline): a restless home screen whose apps keep changing on the beat;
-         the gold b arrives in the grid, moves around, settles in the centre of the dock, then every other app is
-         erased one by one until only the b is left. The phone is the star: sharp, centred, never dimmed.
-         Captions sit beside it (desktop) or below it (phone). Icons are drawn, generic tiles (no real brands).
-         46 seconds over Phantom Echoes by VexVoid (92 BPM). */
+      /* Just b 2 (29 Oct 2026, owner's storyline, v3): a busy iPhone home screen where new apps keep installing and
+         the rest reflow along, iOS-style; the gold b installs too, gets pushed along, then takes a place in the dock
+         (pushing one app out); every other app is then removed one by one until only the b is left.
+         The phone is the star: true iPhone Pro proportions, sharp and centred, never dimmed. Icons are drawn,
+         made-up apps (no real brands). 28 seconds over Four Ton Shadows by VexVoid (89 BPM). */
       body { margin: 0; background: #000; color: #f1ead9; overflow-x: clip; }
       .film { position: relative; width: 100%; max-width: none; height: 100svh; min-height: 540px; margin: 0; padding: 0; border: 0; border-radius: 0; box-shadow: none; background: #000; overflow: hidden; color: #f1ead9; aspect-ratio: auto; }
       .film::before, .film::after { display: none; }
@@ -119,42 +119,45 @@
       .s1 { background: radial-gradient(circle at 50% 45%, #5a2a14 0%, #2a140a 50%, #0a0503 100%); }
       .s2 { background: radial-gradient(circle at 50% 45%, #163e48 0%, #0b2228 50%, #030a0c 100%); }
       .s3 { background: radial-gradient(ellipse at 50% 45%, #2a2208 0%, #120f05 40%, #000 75%); }
-      .film { --ph: min(84svh, 800px); --pw: calc(var(--ph) * 0.4843); }
+      .film { --ph: min(80svh, 780px); --pw: calc(var(--ph) * 0.478); }
       .cap { left: auto; right: calc(50% + var(--pw) / 2 + 56px); width: min(30vw, 440px); padding: 0; text-align: right; }
       .cap h1, .cap h2 { justify-content: flex-end; font-size: clamp(2.2rem, 4vw, 4rem); }
       .cap p { margin: 16px 0 0 auto; max-width: 380px; font-size: clamp(1rem, 1.3vw, 1.15rem); }
       .s3 .cap h2 { font-size: clamp(3rem, 6vw, 6rem); }
       .s3 .cap .getp { margin-top: 22px; }
-      .scene.on .ch { animation-delay: calc(0.6s + var(--i) * 55ms); }
-      .scene.on .lb { animation-delay: 0.4s, 1.6s; }
-      .scene.on .cap > p { animation-delay: 1.4s; }
+      .scene.on .ch { animation-delay: calc(0.3s + var(--i) * 45ms); }
+      .scene.on .lb { animation-delay: 0.2s, 1.4s; }
+      .scene.on .cap > p { animation-delay: 1s; }
 
-      /* The phone: one persistent iPhone over every scene, driven frame by frame from the film clock. */
-      .phone { position: absolute; left: 50%; top: 50%; z-index: 3; height: var(--ph); aspect-ratio: 708 / 1462; transform: translate(-50%, -50%); container-type: size; }
-      .shell { position: absolute; inset: 0; border-radius: 15cqw / 7.2cqh; background: #0c0c0d; border: 1px solid #2a2a2e; box-shadow: 0 40px 120px rgba(0,0,0,.7); }
-      .screen { position: absolute; inset: 2.2cqh 4.4cqw; border-radius: 11cqw / 5.4cqh; background: #000; overflow: hidden; }
-      .sbar { position: absolute; left: 6%; right: 6%; top: 1.6cqh; display: flex; justify-content: space-between; align-items: center; color: #fff; font: 600 4.6cqw/1 -apple-system, "SF Pro Text", system-ui, sans-serif; z-index: 3; }
-      .sbar svg { height: 3.4cqw; vertical-align: middle; }
+      /* The phone: iPhone Pro proportions (71.5 x 149.6 mm body), thin even bezels, Dynamic Island. */
+      .phone { position: absolute; left: 50%; top: 50%; z-index: 3; height: var(--ph); width: var(--pw); max-width: none; max-height: none; aspect-ratio: auto; transform: translate(-50%, -50%); container-type: size; }
+      .shell { position: absolute; inset: 0; border-radius: 17cqw; background: linear-gradient(135deg, #3a3a3e, #1a1a1c 40%, #2a2a2d); box-shadow: 0 40px 120px rgba(0,0,0,.7), inset 0 0 0 1px #4a4a4e; }
+      .screen { position: absolute; inset: 3.2cqw; border-radius: 14cqw; background: #000; overflow: hidden; }
+      .island { position: absolute; left: 50%; top: 2.6cqw; width: 30cqw; height: 8.6cqw; transform: translateX(-50%); border-radius: 99px; background: #000; z-index: 5; box-shadow: 0 0 0 1px #111; }
+      .sbar { position: absolute; left: 8%; right: 7%; top: 4.6cqw; display: flex; justify-content: space-between; align-items: center; color: #fff; font: 600 4.4cqw/1 -apple-system, "SF Pro Text", system-ui, sans-serif; z-index: 4; }
+      .sbar svg { height: 3.3cqw; vertical-align: middle; }
       .sbar .r { display: flex; gap: 1.4cqw; align-items: center; }
-      .bat { display: inline-block; padding: .3cqw 1.1cqw; border-radius: 1.4cqw; background: #fff; color: #000; font-size: 3.3cqw; font-weight: 700; }
-      .ico { position: absolute; width: 16%; aspect-ratio: 1; border-radius: 23%; display: flex; align-items: center; justify-content: center; z-index: 2; transition: left .55s cubic-bezier(.5,0,.2,1), top .55s cubic-bezier(.5,0,.2,1), transform .45s cubic-bezier(.5,0,.3,1), opacity .45s ease; box-shadow: inset 0 1px 0 rgba(255,255,255,.25); }
-      .ico svg { width: 56%; height: 56%; }
-      .ico .bd { position: absolute; right: -9%; top: -9%; min-width: 34%; height: 34%; border-radius: 99px; background: #ff3b30; color: #fff; font: 700 2.6cqw/1 system-ui, sans-serif; display: flex; align-items: center; justify-content: center; }
-      .ico.b { background: #000; border: 1px solid #2c2c2c; box-shadow: 0 0 0 0 rgba(245,184,0,0); z-index: 4; transition: left .8s cubic-bezier(.5,0,.2,1), top .8s cubic-bezier(.5,0,.2,1), transform .5s cubic-bezier(.2,1.4,.4,1), opacity .5s ease, box-shadow 1.5s ease; }
-      .ico.b img { height: 62%; }
+      .bat { display: inline-block; padding: .3cqw 1.1cqw; border-radius: 1.4cqw; background: #fff; color: #000; font-size: 3.1cqw; font-weight: 700; }
+      .ico { position: absolute; width: 17.5%; aspect-ratio: 1; border-radius: 23%; z-index: 2; transition: left .6s cubic-bezier(.34,1.35,.5,1), top .6s cubic-bezier(.34,1.35,.5,1), transform .5s cubic-bezier(.2,1.5,.4,1), opacity .4s ease; box-shadow: 0 1.2cqw 2.4cqw rgba(0,0,0,.35); }
+      .ico > svg { position: absolute; inset: 0; width: 100%; height: 100%; border-radius: 23%; }
+      .ico::after { content: ''; position: absolute; inset: 0; border-radius: 23%; background: linear-gradient(180deg, rgba(255,255,255,.22), transparent 45%); pointer-events: none; }
+      .ico .lbl { position: absolute; top: 106%; left: -30%; right: -30%; text-align: center; color: #fff; font: 500 2.75cqw/1.1 -apple-system, "SF Pro Text", system-ui, sans-serif; white-space: nowrap; text-shadow: 0 1px 3px rgba(0,0,0,.6); transition: opacity .3s ease; }
+      .ico.dk .lbl { opacity: 0; }
+      .ico .bd { position: absolute; right: -8%; top: -8%; min-width: 32%; height: 32%; padding: 0 3%; box-sizing: border-box; border-radius: 99px; background: #ff3b30; color: #fff; font: 600 2.7cqw/1 system-ui, sans-serif; display: flex; align-items: center; justify-content: center; z-index: 1; }
+      .ico.b { background: #000; border: 1px solid #2c2c2c; z-index: 4; transition: left .8s cubic-bezier(.34,1.3,.5,1), top .8s cubic-bezier(.34,1.3,.5,1), transform .5s cubic-bezier(.2,1.5,.4,1), opacity .4s ease, box-shadow 1.5s ease; }
+      .ico.b::after { display: none; }
+      .ico.b img { position: absolute; left: 50%; top: 50%; height: 62%; transform: translate(-50%, -50%); }
       .film.last .ico.b { box-shadow: 0 0 60px rgba(245,184,0,.55); }
-      .dock { position: absolute; left: 3%; right: 3%; bottom: 1.8cqh; height: 11cqh; border-radius: 9cqw; background: #141414; border: 1px solid #2a2a2a; }
-      .search { position: absolute; left: 50%; bottom: 14.6cqh; transform: translateX(-50%); padding: 1.2cqw 3.4cqw; border-radius: 99px; background: #1b1b1b; border: 1px solid #333; color: #bbb; font: 500 3.6cqw/1 system-ui, sans-serif; white-space: nowrap; }
-      .film.jump .ico { transition: none !important; }
-      .film.jump .scene, .film.jump .poster { transition: none !important; }
+      .dock { position: absolute; left: 3%; right: 3%; bottom: 1.6%; height: 10.6%; border-radius: 10cqw; background: rgba(40,40,40,.75); border: 1px solid #2e2e2e; }
+      .search { position: absolute; left: 50%; bottom: 14.4%; transform: translateX(-50%); padding: 1.2cqw 3.4cqw; border-radius: 99px; background: #1b1b1b; border: 1px solid #333; color: #bbb; font: 500 3.4cqw/1 system-ui, sans-serif; white-space: nowrap; }
+      .film.jump .ico, .film.jump .scene, .film.jump .poster { transition: none !important; }
       .film.jump .scene.on .ch, .film.jump .scene.on .lb, .film.jump .scene.on .cap > p { animation: none !important; opacity: 1; filter: none; transform: none; }
 
       .jb-end { flex-direction: column; gap: 28px; padding: 10svh 16px; background: radial-gradient(ellipse at 50% 40%, #1d1806 0%, #000 70%); }
       .jb-end::after { display: none; }
       .jb-end > img.endimg { position: static; width: auto; height: auto; max-width: min(92vw, 520px); max-height: 74svh; object-fit: contain; filter: none; border-radius: 12px; }
-      /* Phone layout: the phone up top, the caption below it. */
       @media (max-width: 900px) {
-        .film { --ph: min(64svh, 600px, calc((100vw - 32px) / 0.4843)); }
+        .film { --ph: min(62svh, 600px, calc((100vw - 48px) / 0.478)); }
         .phone { top: 3svh; transform: translateX(-50%); }
         .cap { right: 0; left: 0; width: auto; top: auto; bottom: 64px; transform: none; padding: 0 16px; text-align: center; }
         .cap h1, .cap h2 { justify-content: center; font-size: clamp(1.9rem, 8vw, 2.8rem); }
@@ -167,23 +170,24 @@
     </style>
   </head>
   <body class="jb">
-    <section class="film" id="film" aria-label="Just b: a 46-second film">
+    <section class="film" id="film" aria-label="Just b: a 28-second film">
       <div class="scene s0" data-at="0">
         <div class="cap"><h1><span>Less noise.</span></h1></div>
       </div>
-      <div class="scene s1" data-at="13.04">
+      <div class="scene s1" data-at="6.73">
         <div class="cap"><h2><img class="lb" src="/logo.svg" alt="b" /><span>your wallet</span></h2><p>Keys on your phone. Pay a $name in seconds.</p></div>
       </div>
-      <div class="scene s2" data-at="26.09">
+      <div class="scene s2" data-at="12.12">
         <div class="cap"><h2><img class="lb" src="/logo.svg" alt="b" /><span>in one place</span></h2><p>Token chat rooms, a store and sign-in, in the same app.</p></div>
       </div>
-      <div class="scene s3" data-at="39.13" data-end>
+      <div class="scene s3" data-at="23.57" data-end>
         <div class="cap"><h2><span>Just</span><img class="lb" src="/logo.svg" alt="b" /></h2><p>Less noise. More life.</p><p class="getp"><a class="jb-go" href="/get?from=just-b-2-film">Get bWalletX</a></p></div>
       </div>
 
       <div class="phone" id="phone" aria-hidden="true">
         <div class="shell"></div>
         <div class="screen" id="screen">
+          <div class="island"></div>
           <div class="sbar"><span>19:12 <svg viewBox="0 0 24 16"><path fill="#fff" d="M2 4h2v5h7V6h8a3 3 0 0 1 3 3v6h-2v-2H4v2H2zm4 1.5a2 2 0 1 1 0 .1z"/></svg></span><span class="r"><svg viewBox="0 0 18 12"><rect x="0" y="8" width="3" height="4" rx="1" fill="#fff"/><rect x="5" y="5.5" width="3" height="6.5" rx="1" fill="#fff"/><rect x="10" y="3" width="3" height="9" rx="1" fill="#fff"/><rect x="15" y="0" width="3" height="12" rx="1" fill="#555"/></svg><svg viewBox="0 0 16 12"><path fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" d="M1.5 4.5a9.5 9.5 0 0 1 13 0M4 7.2a6 6 0 0 1 8 0"/><circle cx="8" cy="10" r="1.6" fill="#fff"/></svg><span class="bat">94</span></span></div>
           <div class="dock"></div>
           <div class="search">&#9906; Search</div>
@@ -193,12 +197,12 @@
       <div class="poster" id="poster">
         <div class="in">
           <button type="button" class="jb-play" id="play" aria-label="Play Just b with sound"><svg viewBox="5 3 18 18" width="46" height="46" aria-hidden="true"><path d="M8 5.5v13l11-6.5z" fill="currentColor" /></svg></button>
-          <p class="gate-l">Play the film &middot; 0:46</p>
+          <p class="gate-l">Play the film &middot; 0:28</p>
           <button type="button" class="quiet" id="quiet">Watch without sound</button>
         </div>
       </div>
       <div class="bar" id="bar"></div>
-      <audio id="music" src="/audio/b-is-for-business-phantom-echoes.mp3" preload="auto"></audio>
+      <audio id="music" src="/audio/just-b-2-four-ton-shadows.mp3" preload="auto"></audio>
     </section>
     <div class="jb-sound">
       <button type="button" id="mute" aria-pressed="false" aria-label="Mute music"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><path d="M11 5 6 9H3v6h3l5 4z"></path><path d="M15.5 8.5a5 5 0 0 1 0 7"></path></svg></button>
@@ -219,7 +223,7 @@
       <img class="endimg" src="/images/just-b-2-end.jpg" alt="An iPhone with an empty black home screen and only the gold b app in the dock. Just b." decoding="async" />
       <div class="jb-end-in">
         <a class="jb-go" href="/get?from=just-b-2">Get bWalletX</a>
-        <p class="jb-credit">Music: <a href="https://chat.bwalletx.com/u/vexvoid">Phantom Echoes by VexVoid</a></p>
+        <p class="jb-credit">Music: <a href="https://chat.bwalletx.com/u/vexvoid">Four Ton Shadows by VexVoid</a></p>
       </div>
     </section>
     <p class="jb-foot"><a href="/just-b">just b</a> · <a href="/just-b-2" aria-current="page">just b 2</a> · <a href="/b-cool">b cool</a> · <a href="/b-creative">b Creative</a> · <a href="/b-is-for-business">b is for business</a></p>
@@ -227,7 +231,7 @@
 
     <script>
       (function () {
-        var LEN = 46, END = 46, B = 60 / 92;
+        var END = 28.3, LEN = END, B = 60 / 89.1;
         var film = document.getElementById('film'), poster = document.getElementById('poster'), bar = document.getElementById('bar');
         var scenes = [].slice.call(film.querySelectorAll('.scene'));
         var ats = scenes.map(function (s) { return parseFloat(s.dataset.at); });
@@ -236,78 +240,81 @@
           for (var i = 0; i < t.length; i++) { var c = document.createElement('span'); c.className = 'ch'; c.setAttribute('aria-hidden', 'true'); c.style.setProperty('--i', i); c.textContent = t[i]; w.appendChild(c); }
         });
 
-        // Drawn, generic glyphs and colours (no real brands).
-        var G = ['<circle cx="12" cy="12" r="6"/>', '<rect x="6" y="6" width="12" height="12" rx="2"/>', '<path d="M12 5l7 13H5z"/>',
-          '<path d="M12 20s-7-4.5-7-9.5A4 4 0 0 1 12 8a4 4 0 0 1 7 2.5C19 15.5 12 20 12 20z"/>', '<path d="M13 3L6 13h5l-1 8 7-10h-5z"/>',
-          '<path d="M12 4l2.4 5 5.6.6-4.2 3.8 1.2 5.6L12 16.2 7 19l1.2-5.6L4 9.6 9.6 9z"/>', '<path d="M7 17a4 4 0 0 1 .5-8 5 5 0 0 1 9.5 1.5A3.3 3.3 0 0 1 17 17z"/>',
-          '<path d="M5 7h14v10H5z M5 7l7 6 7-6" fill="none" stroke="#fff" stroke-width="2"/>', '<path d="M9 17V7l9-2v10" fill="none" stroke="#fff" stroke-width="2"/><circle cx="7" cy="17" r="2.4"/><circle cx="16" cy="15" r="2.4"/>',
-          '<rect x="4" y="7" width="16" height="11" rx="2"/><circle cx="12" cy="12.5" r="3.2" fill="#0003"/>', '<path d="M6 18V10M12 18V6M18 18v-5" stroke="#fff" stroke-width="3" stroke-linecap="round"/>',
-          '<path d="M5 6h14v9H10l-4 3v-3H5z"/>', '<circle cx="12" cy="12" r="7" fill="none" stroke="#fff" stroke-width="2"/><path d="M12 8v4l3 2" stroke="#fff" stroke-width="2" fill="none"/>',
-          '<path d="M12 4a5 5 0 0 1 5 5c0 4-5 11-5 11S7 13 7 9a5 5 0 0 1 5-5z"/>', '<path d="M4 12h16M12 4v16" stroke="#fff" stroke-width="3" stroke-linecap="round"/>',
-          '<rect x="5" y="4" width="14" height="16" rx="2"/><path d="M8 9h8M8 13h8M8 17h5" stroke="#0004" stroke-width="2"/>',
-          '<path d="M4 16l5-5 4 4 7-7" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>', '<circle cx="9" cy="12" r="4"/><circle cx="16" cy="12" r="3"/>'];
-        var C = ['#ff6b4a', '#3b82f6', '#22c55e', '#eab308', '#a855f7', '#ec4899', '#14b8a6', '#f97316', '#6366f1', '#ef4444', '#0ea5e9', '#84cc16'];
+        // Made-up apps, drawn iOS-style (no real brands): [background, artwork in a 60x60 box, names].
+        var W = 'fill="#fff"';
+        var APPS = [
+          ['linear-gradient(160deg,#e4e7eb,#9aa1aa)', '<rect x="9" y="18" width="42" height="28" rx="6" fill="#2a2d33"/><rect x="16" y="14" width="10" height="6" rx="2" fill="#2a2d33"/><circle cx="30" cy="32" r="10.5" fill="#111" stroke="#5a5f68" stroke-width="2.5"/><circle cx="30" cy="32" r="5.5" fill="#2f63d8"/><circle cx="27.5" cy="29.5" r="1.8" fill="#fff" opacity=".85"/><circle cx="44" cy="23" r="1.6" fill="#ffd34d"/>', ['Lenso', 'Shutterly']],
+          ['linear-gradient(160deg,#6ee68a,#18b046)', '<path ' + W + ' d="M30 13c-10.5 0-19 6.8-19 15.2 0 4.7 2.7 8.9 7 11.7L17 47.5l8.8-4.6c1.3.3 2.7.4 4.2.4 10.5 0 19-6.8 19-15.1S40.5 13 30 13z"/>', ['Natter', 'Yakkit']],
+          ['linear-gradient(160deg,#f6f1e4,#ddd4bf)', '<path d="M0 40 L60 22" stroke="#fff" stroke-width="7"/><path d="M18 0 L30 60" stroke="#fff" stroke-width="5"/><path d="M0 50 C20 44 30 56 60 46" stroke="#7cc4ff" stroke-width="5" fill="none"/><rect x="38" y="4" width="18" height="14" rx="3" fill="#a8dd8e"/><path d="M30 12c-6 0-10.5 4.6-10.5 10.3 0 7.4 10.5 18.7 10.5 18.7s10.5-11.3 10.5-18.7C40.5 16.6 36 12 30 12z" fill="#ff3b30"/><circle cx="30" cy="22.5" r="4" fill="#fff"/>', ['Wayfind', 'Roamr']],
+          ['linear-gradient(160deg,#ff7a8f,#e0244b)', '<path ' + W + ' d="M24 15l18-4v26.5a6 6 0 1 1-3-5.2V19l-12 2.7v19.8a6 6 0 1 1-3-5.2z"/>', ['Melodi', 'Tunely']],
+          ['linear-gradient(160deg,#5ac8fa,#1a6ff5)', '<rect x="10" y="17" width="40" height="27" rx="4" ' + W + '/><path d="M11 19l19 14 19-14" fill="none" stroke="#1a6ff5" stroke-width="2.6" stroke-linejoin="round"/>', ['Postie', 'Inboxy']],
+          ['#ffffff', '<g transform="translate(30 30)"><ellipse rx="5.5" ry="12" cy="-10" fill="#ff9500" opacity=".85"/><ellipse rx="5.5" ry="12" cy="-10" fill="#ffcc00" opacity=".85" transform="rotate(45)"/><ellipse rx="5.5" ry="12" cy="-10" fill="#34c759" opacity=".85" transform="rotate(90)"/><ellipse rx="5.5" ry="12" cy="-10" fill="#30b0c7" opacity=".85" transform="rotate(135)"/><ellipse rx="5.5" ry="12" cy="-10" fill="#007aff" opacity=".85" transform="rotate(180)"/><ellipse rx="5.5" ry="12" cy="-10" fill="#af52de" opacity=".85" transform="rotate(225)"/><ellipse rx="5.5" ry="12" cy="-10" fill="#ff2d55" opacity=".85" transform="rotate(270)"/><ellipse rx="5.5" ry="12" cy="-10" fill="#ff3b30" opacity=".85" transform="rotate(315)"/></g>', ['Petal', 'Gallerie']],
+          ['linear-gradient(160deg,#3a3a3c,#111)', '<g fill="#a5a5a5"><circle cx="17" cy="20" r="5"/><circle cx="30" cy="20" r="5"/><circle cx="17" cy="32" r="5"/><circle cx="30" cy="32" r="5"/><circle cx="17" cy="44" r="5"/><circle cx="30" cy="44" r="5"/></g><g fill="#ff9f0a"><circle cx="43" cy="20" r="5"/><circle cx="43" cy="32" r="5"/><circle cx="43" cy="44" r="5"/></g>', ['Sums']],
+          ['linear-gradient(180deg,#4aa8ff,#1e62d8)', '<circle cx="24" cy="23" r="9" fill="#ffd60a"/><path ' + W + ' d="M21 45a8 8 0 0 1 .8-16 10 10 0 0 1 19 2.6A6.8 6.8 0 0 1 41 45z"/>', ['Drizzle', 'Sunny']],
+          ['#ffffff', '<rect width="60" height="15" fill="#ffd60a"/><g stroke="#d8d8d8" stroke-width="1.6"><path d="M8 26h44M8 34h44M8 42h44M8 50h30"/></g><path d="M8 26h28" stroke="#8a8a8e" stroke-width="2.4"/>', ['Jotter', 'Scribbl']],
+          ['linear-gradient(160deg,#ffb84d,#ff7400)', '<path ' + W + ' d="M14 22h32l-2.5 26a3 3 0 0 1-3 2.7H19.5a3 3 0 0 1-3-2.7z"/><path d="M23 25v-5a7 7 0 0 1 14 0v5" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round"/>', ['Baggo', 'Cartly']],
+          ['linear-gradient(160deg,#9b6bff,#4b2fd0)', '<circle cx="30" cy="30" r="15" fill="none" stroke="#fff" stroke-width="3"/><path ' + W + ' d="M26 22.5v15l12-7.5z"/>', ['Reelr', 'Flickit']],
+          ['linear-gradient(160deg,#ff5fd2,#a12bd6)', '<path ' + W + ' d="M18 21h24a9 9 0 0 1 8.7 11.3l-2 7.5a5 5 0 0 1-8.4 2.2L37 38H23l-3.3 4a5 5 0 0 1-8.4-2.2l-2-7.5A9 9 0 0 1 18 21z"/><path d="M19 27v8M15 31h8" stroke="#a12bd6" stroke-width="2.6" stroke-linecap="round"/><circle cx="39" cy="29" r="2" fill="#a12bd6"/><circle cx="43" cy="33" r="2" fill="#a12bd6"/>', ['Playzo', 'Pixel Pals']],
+          ['linear-gradient(160deg,#2c2c2e,#000)', '<circle cx="30" cy="30" r="20" fill="#fff"/><path d="M30 30V16M30 30l9 5" stroke="#111" stroke-width="3" stroke-linecap="round"/><path d="M30 30l-6 10" stroke="#ff9500" stroke-width="1.5"/><circle cx="30" cy="30" r="2" fill="#ff9500"/>', ['Tick']],
+          ['#ffffff', '<text x="30" y="19" text-anchor="middle" font-family="system-ui,sans-serif" font-size="9" font-weight="600" fill="#ff3b30">THU</text><text x="30" y="46" text-anchor="middle" font-family="system-ui,sans-serif" font-size="27" font-weight="300" fill="#111">29</text>', ['Dayplan']],
+          ['linear-gradient(160deg,#ff6b8a,#c9184a)', '<path ' + W + ' d="M30 47S12 36.5 12 24.5A9 9 0 0 1 30 19a9 9 0 0 1 18 5.5C48 36.5 30 47 30 47z"/><path d="M15 31h8l3-6 4 11 3-5h12" fill="none" stroke="#c9184a" stroke-width="2.4" stroke-linejoin="round"/>', ['Pulse+', 'Movr']],
+          ['#ffffff', '<rect x="11" y="13" width="38" height="34" rx="3" fill="#f2f2f2" stroke="#d0d0d0"/><rect x="15" y="17" width="30" height="7" rx="1.5" fill="#ff3b30"/><g stroke="#9a9a9e" stroke-width="2"><path d="M15 30h14M15 35h14M15 40h14"/></g><rect x="32" y="28" width="13" height="14" rx="1.5" fill="#c7c7cc"/>', ['Dailies', 'Headliner']],
+          ['linear-gradient(160deg,#64d2ff,#0a84ff)', '<path ' + W + ' d="M10 19a3 3 0 0 1 3-3h11l4 4h19a3 3 0 0 1 3 3v20a3 3 0 0 1-3 3H13a3 3 0 0 1-3-3z"/><rect x="10" y="24" width="40" height="22" rx="3" fill="#e8f4ff"/>', ['Stash']],
+          ['linear-gradient(160deg,#30d158,#0b8a3a)', '<rect x="9" y="17" width="42" height="27" rx="4.5" ' + W + '/><rect x="9" y="23" width="42" height="5" fill="#0b8a3a"/><rect x="14" y="34" width="12" height="4" rx="1" fill="#c7c7cc"/>', ['Purse', 'Coinly']]
+        ];
         function h(a, b) { var x = Math.sin(a * 127.1 + b * 311.7) * 43758.5453; return x - Math.floor(x); }
+        function appOf(id) { var k = (id * 7 + 3) % APPS.length, a = APPS[k]; return { bg: a[0], art: a[1], name: a[2][(h(id, 5) * a[2].length) | 0], bd: h(id, 6) > 0.78 ? 1 + ((h(id, 7) * 12) | 0) : 0 }; }
 
-        // Timeline, in beats (92 BPM).
-        var B_IN = 20, B_DOCK = 35, ERASE0 = 24.13, ERASE_STEP = B * 0.75, DOCK_ERASE = [56, 57, 58, 59];
-        var NG = 24, ND = 4;
-        function gridPos(s) { return { l: 6 + (s % 4) * 23, t: 7.5 + Math.floor(s / 4) * 10.6 }; }
-        var DOCK4 = [6, 29, 52, 75], DOCK5 = [3, 22.5, 61.5, 81], DOCKT = 89.6;
-        var eraseOrder = []; for (var i = 0; i < NG; i++) eraseOrder.push(i);
-        eraseOrder.sort(function (a, b) { return h(a, 9) - h(b, 9); });
-        var eraseAt = {}; eraseOrder.forEach(function (id, k) { eraseAt[id] = ERASE0 + k * ERASE_STEP; });
-
-        // State at beat n: slot of each grid app, slot of the b, version (look) of each app.
+        // Timeline (beats at 89.1 BPM). New apps install on the beat and the rest reflow in reading order.
+        var B_IN = 10, B_DOCK = 16, ERASE0 = 12.12, ERASE_STEP = B * 0.55, B_CENTRE = 35, CAP = 24;
+        function gridPos(i) { return { l: 5.75 + (i % 4) * 23.3, t: 8.6 + Math.floor(i / 4) * 11.4 }; }
+        var DOCKL = [5.75, 29.05, 52.35, 75.65], DOCKT = 89.1;
         function state(n) {
-          var slotOf = [], i; for (i = 0; i < NG; i++) slotOf.push(i);
-          var bSlot = -1, hidden = -1, ver = [];
-          for (i = 0; i < NG + ND; i++) ver.push(0);
-          for (var m = 1; m <= n; m++) {
-            if (m < B_DOCK + 1) for (i = 0; i < NG + ND; i++) if (h(i, m) < (i < NG ? 0.11 : 0.035)) ver[i]++;
-            if (m % 2 === 0 && m < B_DOCK) { // two apps (or the b) trade places
-              var a = (h(m, 1) * NG) | 0, c = (h(m, 2) * NG) | 0;
-              var ia = slotOf.indexOf(a), ic = slotOf.indexOf(c);
-              if (bSlot === a) bSlot = c; else if (bSlot === c) bSlot = a;
-              if (ia >= 0) slotOf[ia] = c; if (ic >= 0) slotOf[ic] = a;
-            }
-            if (m === B_IN) { hidden = slotOf.indexOf(9); bSlot = 9; }
-            if (m === B_DOCK) { slotOf[hidden] = bSlot; hidden = -1; bSlot = -2; }
+          var list = [], dock = [24, 25, 26, 27], next = 28, i;
+          for (i = 0; i < CAP; i++) list.push(i);
+          for (var m = 1; m <= Math.min(n, B_DOCK); m++) {
+            if (m === B_DOCK) { list.splice(list.indexOf('b'), 1); dock[1] = 'b'; break; }
+            if (m === B_IN) list.splice(1, 0, 'b');
+            else if (m % 4 === 3) { var r = (h(m, 2) * list.length) | 0; if (list[r] !== 'b') list.splice(r, 1); }
+            else list.splice((h(m, 3) * Math.min(list.length, 8)) | 0, 0, next++);
+            while (list.length > CAP) { for (i = list.length - 1; list[i] === 'b'; i--); list.splice(i, 1); }
+            if (m === 5) dock[0] = next++;
+            if (m === 13) dock[3] = next++;
           }
-          return { slotOf: slotOf, bSlot: bSlot, hidden: hidden, ver: ver };
+          return { list: list, dock: dock };
         }
+        var FINAL = state(B_DOCK).list.slice(), eraseOrder = FINAL.slice().sort(function (a, b) { return h(a, 9) - h(b, 9); });
 
-        var screen = document.getElementById('screen'), els = [], cache = [];
-        for (i = 0; i < NG + ND; i++) { var e = document.createElement('div'); e.className = 'ico'; screen.appendChild(e); els.push(e); cache.push({}); }
-        var bel = document.createElement('div'); bel.className = 'ico b'; bel.innerHTML = '<img src="/logo.svg" alt="" />'; screen.appendChild(bel); var bc = {};
-        function look(i, v) { var k = i * 7 + v * 5; return { g: G[k % G.length], c1: C[(i + v * 3) % C.length], c2: C[(i * 5 + v + 3) % C.length], bd: h(i, v + 50) > 0.6 ? 1 + ((h(i, v + 70) * 19) | 0) : 0 }; }
-        function set(e, c, p, animate) {
-          if (c.l !== p.l) { e.style.left = p.l + '%'; c.l = p.l; }
-          if (c.t !== p.t) { e.style.top = p.t + '%'; c.t = p.t; }
-          if (c.o !== p.o) { e.style.opacity = p.o; e.style.transform = p.o ? '' : 'scale(.3)'; c.o = p.o; }
-          if (p.v !== undefined && c.v !== p.v) {
-            var L = look(p.i, p.v); e.style.background = 'linear-gradient(160deg,' + L.c1 + ',' + L.c2 + ')';
-            e.innerHTML = '<svg viewBox="0 0 24 24" fill="#fff">' + L.g + '</svg>' + (L.bd ? '<span class="bd">' + L.bd + '</span>' : '');
-            if (c.v !== undefined && animate && e.animate) e.animate([{ transform: 'scale(.55) rotate(-8deg)', opacity: .4 }, { transform: 'none', opacity: 1 }], { duration: 320, easing: 'cubic-bezier(.2,1.4,.4,1)' });
-            c.v = p.v;
-          }
+        var screen = document.getElementById('screen'), els = {}, cache = {};
+        function el(id) {
+          if (els[id]) return els[id];
+          var e = document.createElement('div');
+          if (id === 'b') { e.className = 'ico b'; e.innerHTML = '<img src="/logo.svg" alt="" /><span class="lbl">bWalletX</span>'; }
+          else { var a = appOf(id); e.className = 'ico'; e.style.background = a.bg; e.innerHTML = '<svg viewBox="0 0 60 60">' + a.art + '</svg>' + (a.bd ? '<span class="bd">' + a.bd + '</span>' : '') + '<span class="lbl">' + a.name + '</span>'; }
+          e.style.opacity = 0; e.style.transform = 'scale(.2)';
+          screen.appendChild(e); els[id] = e; cache[id] = { o: 0 }; return e;
         }
-        function render(t, animate) {
-          var n = Math.max(0, Math.floor(t / B)), S = state(n);
-          for (var i = 0; i < NG; i++) {
-            var gp = gridPos(S.slotOf[i]), on = i !== S.hidden && !(t >= eraseAt[i]);
-            set(els[i], cache[i], { l: gp.l, t: gp.t, o: on ? 1 : 0, v: S.ver[i], i: i }, animate);
-          }
-          for (var d = 0; d < ND; d++) {
-            var j = NG + d, docked = n >= B_DOCK;
-            set(els[j], cache[j], { l: docked ? DOCK5[d] : DOCK4[d], t: DOCKT, o: n >= DOCK_ERASE[[0, 3, 1, 2].indexOf(d)] ? 0 : 1, v: S.ver[j], i: j }, animate);
-          }
-          var bp = S.bSlot === -2 ? { l: 42, t: DOCKT, o: 1 } : S.bSlot >= 0 ? (function (g) { return { l: g.l, t: g.t, o: 1 }; })(gridPos(S.bSlot)) : { l: gridPos(9).l, t: gridPos(9).t, o: 0 };
-          set(bel, bc, bp, animate);
+        function set(id, p) {
+          var e = el(id), c = cache[id];
+          if (p.o && (c.l === undefined)) { e.style.left = p.l + '%'; e.style.top = p.t + '%'; c.l = p.l; c.t = p.t; e.offsetWidth; }
+          if (p.o && c.l !== p.l) { e.style.left = p.l + '%'; c.l = p.l; }
+          if (p.o && c.t !== p.t) { e.style.top = p.t + '%'; c.t = p.t; }
+          if (c.o !== p.o) { e.style.opacity = p.o; e.style.transform = p.o ? '' : 'scale(.2)'; c.o = p.o; }
+          if (c.dk !== !!p.dk) { e.classList.toggle('dk', !!p.dk); c.dk = !!p.dk; }
         }
-        render(0, false);
+        function render(t) {
+          var n = Math.max(0, Math.floor(t / B)), S = state(n), list = S.list, seen = {};
+          if (n >= B_DOCK && t >= ERASE0) { var k = Math.min(eraseOrder.length, Math.floor((t - ERASE0) / ERASE_STEP) + 1), gone = eraseOrder.slice(0, k); list = list.filter(function (id) { return gone.indexOf(id) < 0; }); }
+          list.forEach(function (id, i) { var g = gridPos(i); set(id, { l: g.l, t: g.t, o: 1 }); seen[id] = 1; });
+          S.dock.forEach(function (id, d) {
+            if (id !== 'b' && n >= ({ 0: 32, 3: 33, 2: 34 })[d]) return;
+            set(id, { l: id === 'b' && n >= B_CENTRE ? 41.25 : DOCKL[d], t: DOCKT, o: 1, dk: 1 }); seen[id] = 1;
+          });
+          for (var id in els) if (!seen[id]) set(id, { o: 0 });
+        }
+        render(0);
 
-        // The music: 46 s of "Phantom Echoes" by VexVoid. With sound, the film follows the track's clock.
+        // The music: 28 s of "Four Ton Shadows" by VexVoid. With sound, the film follows the track's clock.
         var music = document.getElementById('music'), muted = false;
         var start = 0, raf = 0, withSound = false, cur = -1;
         var HOLD = /[?&]hold/.test(location.search) ? parseFloat(new URLSearchParams(location.search).get('t')) : null;
@@ -317,7 +324,7 @@
           ats.forEach(function (a, j) { if (t >= a) k = j; });
           if (k !== cur) { cur = k; scenes.forEach(function (s, j) { s.classList.toggle('on', j === k); }); }
           film.classList.toggle('last', k === scenes.length - 1);
-          render(t, !film.classList.contains('jump'));
+          render(t);
           bar.style.width = Math.min(100, (t / LEN) * 100) + '%';
           if (t < END) raf = requestAnimationFrame(frame); else bar.style.width = '0';
         }
