@@ -11,15 +11,15 @@
     <meta property="og:site_name" content="bWalletX" />
     <meta property="og:title" content="b is coming" />
     <meta property="og:description" content="b is coming." />
-    <meta property="og:image" content="https://bwalletx.com/og-b-is-coming-v4.png" />
+    <meta property="og:image" content="https://bwalletx.com/og-b-is-coming-v5.png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
-    <meta property="og:image:alt" content="A glowing gold b: b is coming." />
+    <meta property="og:image:alt" content="A glowing pink b: b is coming." />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@bWalletX" />
     <meta name="twitter:title" content="b is coming" />
     <meta name="twitter:description" content="b is coming." />
-    <meta name="twitter:image" content="https://bwalletx.com/og-b-is-coming-v4.png" />
+    <meta name="twitter:image" content="https://bwalletx.com/og-b-is-coming-v5.png" />
     <meta name="theme-color" content="#fde4ee" />
     <link rel="icon" href="/favicon.ico" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -34,11 +34,11 @@
       .ic-hero { background: radial-gradient(ellipse at 50% 45%, rgba(245, 184, 0, 0.14), rgba(5, 8, 15, 0) 60%), #05080f; }
       /* The b builds: slow breaths that get quicker and brighter, then it arrives. */
       .ic-b { position: relative; width: clamp(96px, min(30vw, 26svh), 260px); aspect-ratio: 0.74; }
-      .ic-b img { width: 100%; height: 100%; display: block; object-fit: contain; filter: drop-shadow(0 0 30px rgba(245, 184, 0, 0.35)); }
-      .ic-b.build img { animation: build 1.6s ease-in-out infinite; }
-      .ic-b.build2 img { animation: build 0.9s ease-in-out infinite; }
-      .ic-b.build3 img { animation: build 0.45s ease-in-out infinite; }
-      .ic-b.near img { animation: near 2.2s cubic-bezier(0.3, 0, 0.3, 1) infinite; }
+      .ic-b .ic-logo { width: 100%; height: 100%; display: block; object-fit: contain; filter: drop-shadow(0 0 30px rgba(245, 184, 0, 0.35)); }
+      .ic-b.build .ic-logo { animation: build 1.6s ease-in-out infinite; }
+      .ic-b.build2 .ic-logo { animation: build 0.9s ease-in-out infinite; }
+      .ic-b.build3 .ic-logo { animation: build 0.45s ease-in-out infinite; }
+      .ic-b.near .ic-logo { animation: near 2.2s cubic-bezier(0.3, 0, 0.3, 1) infinite; }
       .ic-b.near::after { animation: tflash 2.2s ease-in-out infinite; }
       @keyframes near { 0%, 100% { transform: scale(0.96); filter: drop-shadow(0 0 30px rgba(245, 184, 0, 0.4)); } 55% { transform: scale(var(--near, 1.14)); filter: drop-shadow(0 0 var(--glo, 110px) rgba(255, 220, 110, 1)); } 70% { transform: scale(0.98); } }
       @keyframes tflash { 0%, 100% { opacity: 0; transform: scale(0.5); } 55% { opacity: 0.7; transform: scale(1.1); } 75% { opacity: 0; } }
@@ -50,7 +50,7 @@
       .ic-cta .jb-go { padding: 12px 22px; font-size: 1rem; }
       body.gated .ic-cta { opacity: 0; pointer-events: none; }
       .jb-foot:last-of-type { padding-bottom: 110px; }
-      .ic-b.came img { animation: came 1.4s cubic-bezier(0.2, 1.4, 0.4, 1) both, glow 6s 1.4s ease-in-out infinite; }
+      .ic-b.came .ic-logo { animation: came 1.4s cubic-bezier(0.2, 1.4, 0.4, 1) both, glow 6s 1.4s ease-in-out infinite; }
       .ic-b::after { content: ''; position: absolute; inset: -40%; border-radius: 50%; background: radial-gradient(circle, rgba(255, 210, 77, 0.55), rgba(255, 210, 77, 0) 60%); opacity: 0; pointer-events: none; }
       .ic-b.came::after { animation: flash 1.6s ease-out both; }
       @keyframes build { 0%, 100% { transform: scale(1); filter: drop-shadow(0 0 24px rgba(245, 184, 0, 0.35)); } 50% { transform: scale(1.06); filter: drop-shadow(0 0 70px rgba(245, 184, 0, 0.85)); } }
@@ -125,7 +125,7 @@
       body.gated { overflow: hidden; }
       @media (prefers-reduced-motion: reduce) { .ic-gate-go .spk, .ic-gate-go .spk::before { animation: none; } }
       @media (prefers-reduced-motion: reduce) {
-        .ic-b img, .ic-b::after, .ic-num.pop { animation: none !important; }
+        .ic-b .ic-logo, .ic-b::after, .ic-num.pop { animation: none !important; }
         .ic-bar i { transition: none; }
       }
 
@@ -167,7 +167,7 @@
       .ic-scene:not(.ic-hero)::before, .ic-calm::before { content: ''; position: absolute; inset: 0; z-index: -1; pointer-events: none; opacity: 0.35; background: repeating-linear-gradient(115deg, rgba(255, 255, 255, 0.25) 0 1px, transparent 1px 3px); filter: blur(0.5px); }
       .ic-calm { position: relative; isolation: isolate; }
       .ic-b { filter: hue-rotate(calc(var(--heat) * -20deg)) brightness(calc(0.8 + var(--bo, 1) * 0.2)); }
-      .ic-b img { filter: drop-shadow(0 0 26px rgba(255, 210, 120, 0.55)) drop-shadow(0 6px 18px rgba(170, 90, 120, 0.25)); }
+      .ic-b .ic-logo { filter: drop-shadow(0 0 26px rgba(255, 210, 120, 0.55)) drop-shadow(0 6px 18px rgba(170, 90, 120, 0.25)); }
       .ic-h1, .ic-load h2, .ic-count h2, .ic-calm .ic-lead { background-image: linear-gradient(105deg, #4a1832 0%, #4a1832 40%, #9a3a6c 49%, #4a1832 56%, #4a1832 100%); filter: drop-shadow(0 1px 0 rgba(255, 255, 255, 0.7)); }
       .ic-h1 em, .ic-calm .ic-lead em { background-image: linear-gradient(105deg, #8a5a00 0%, #a06a00 38%, #c98f00 48%, #a06a00 56%, #7a4f00 100%); }
       .ic-tease, .ic-msg { color: #7a2a52; }
@@ -195,6 +195,40 @@
       .ic-grain { opacity: 0.05; mix-blend-mode: soft-light; }
       /* Short landscape: reserve room for the fixed CTA pill so it never covers the tease line. */
       @media (max-height: 520px) { .ic-hero { padding-bottom: calc(84px + env(safe-area-inset-bottom)); } }
+      /* Pink pass (owner, 29 Oct 2026): on this page only, the b is pink, magenta and crimson instead of gold, with a matching glow.
+         The logo is drawn with the same mask approach as the sheen (mask: url(/logo.svg)); the glow filter sits on the wrapper so the mask can't clip it. */
+      .ic-logo { display: block; width: 100%; height: 100%; }
+      .ic-logo > i, .ic-ib > i { display: block; width: 100%; height: 100%; -webkit-mask: url(/logo.svg) center / contain no-repeat; mask: url(/logo.svg) center / contain no-repeat; background: linear-gradient(180deg, #ffb3d6 0%, #ff5fa2 24%, #e0217f 58%, #a8103d 100%); }
+      .ic-b { filter: brightness(calc(0.85 + var(--bo, 1) * 0.15)); }
+      .ic-b .ic-logo, .ic-numb { filter: drop-shadow(0 0 26px rgba(255, 64, 150, 0.5)) drop-shadow(0 6px 18px rgba(168, 16, 61, 0.25)); }
+      .ic-b::after { background: radial-gradient(circle, rgba(255, 80, 160, 0.5), rgba(255, 80, 160, 0) 60%); }
+      .ic-b::before { background-image: linear-gradient(115deg, rgba(255, 255, 255, 0) 36%, rgba(255, 255, 255, 0.8) 48%, rgba(255, 214, 234, 0.25) 52%, rgba(255, 255, 255, 0) 62%); }
+      @keyframes build { 0%, 100% { transform: scale(1); filter: drop-shadow(0 0 24px rgba(255, 64, 150, 0.4)); } 50% { transform: scale(1.06); filter: drop-shadow(0 0 70px rgba(230, 30, 120, 0.85)); } }
+      @keyframes near { 0%, 100% { transform: scale(0.96); filter: drop-shadow(0 0 30px rgba(255, 64, 150, 0.45)); } 55% { transform: scale(var(--near, 1.14)); filter: drop-shadow(0 0 var(--glo, 110px) rgba(255, 40, 130, 1)); } 70% { transform: scale(0.98); } }
+      @keyframes glow { 0%, 100% { filter: drop-shadow(0 0 24px rgba(255, 64, 150, 0.4)); } 50% { filter: drop-shadow(0 0 60px rgba(230, 30, 120, 0.8)); } }
+      /* The b in the captions: the logo itself, sized to the text, pulsing on the same beat as the big b (data-beat is set in the same timer). */
+      .ic-ib { display: inline-block; width: 0.6em; height: 0.8em; margin-right: 0.04em; vertical-align: -0.02em; filter: drop-shadow(0 0 0.12em rgba(255, 64, 150, 0.55)); transform-origin: 50% 90%; }
+      .ic-ib > i { -webkit-mask-position: left bottom; mask-position: left bottom; }
+      .ic-vh { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+      .ic-h1 .ic-ib { -webkit-text-fill-color: initial; }
+      .ic-hero[data-beat="build"] .ic-ib { animation: ibp 1.6s ease-in-out infinite; }
+      .ic-hero[data-beat="build2"] .ic-ib { animation: ibp 0.9s ease-in-out infinite; }
+      .ic-hero[data-beat="build3"] .ic-ib { animation: ibp 0.45s ease-in-out infinite; }
+      .ic-hero[data-beat="near"] .ic-ib { animation: ibn 2.2s cubic-bezier(0.3, 0, 0.3, 1) infinite; }
+      @keyframes ibp { 0%, 100% { transform: scale(1); filter: drop-shadow(0 0 0.1em rgba(255, 64, 150, 0.45)); } 50% { transform: scale(1.08); filter: drop-shadow(0 0 0.35em rgba(230, 30, 120, 0.9)); } }
+      @keyframes ibn { 0%, 100% { transform: scale(0.97); } 55% { transform: scale(1.12); filter: drop-shadow(0 0 0.5em rgba(255, 40, 130, 1)); } 70% { transform: scale(0.99); } }
+      @media (prefers-reduced-motion: reduce) { .ic-ib, .ic-hero[data-beat] .ic-ib { animation: none !important; } }
+      /* The rest of the page's gold accents, in the same palette (text kept dark enough to read on the pastel pink). */
+      .ic-h1 em, .ic-calm .ic-lead em { background-image: linear-gradient(105deg, #a8103d 0%, #c2185b 38%, #e0217f 48%, #c2185b 56%, #8e0d34 100%); }
+      .ic-calm em, .ic-pct { color: #a8103d; }
+      .ic-bar i { background: linear-gradient(90deg, #ff8cc6, #ff4f9a, #e0217f); }
+      .ic-bar.done i { box-shadow: 0 0 30px rgba(255, 64, 150, 0.8); }
+      .ic-num.pop { color: #c2185b; }
+      .jb-go { background: linear-gradient(180deg, #e8338a, #b8124a); color: #fff; box-shadow: 0 14px 50px rgba(224, 33, 127, 0.35); }
+      .jb-go:focus-visible, .ic-snd:focus-visible { outline-color: #c2185b; }
+      .ic-again:hover, .ic-again:focus-visible { background: #c2185b; border-color: #c2185b; color: #fff; }
+      .ic-snd[aria-pressed="true"] { background: radial-gradient(circle at 35% 30%, #ff9ccb, #e0217f 55%, #a8103d); color: #fff; box-shadow: 0 8px 30px rgba(224, 33, 127, 0.45); }
+      .ic-sat { background: radial-gradient(circle at 35% 30%, #ffe0ef, #ff4f9a 55%, #a8103d); box-shadow: 0 0 10px rgba(255, 64, 150, 0.7); }
     </style>
   </head>
   <body class="jb gated">
@@ -206,8 +240,8 @@
     <button type="button" class="ic-snd" id="ic-snd" aria-pressed="false" aria-label="Turn sound on"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M11 5 6 9H3v6h3l5 4z"></path><path d="M15.5 8.5a5 5 0 0 1 0 7"></path><path class="off-x" d="M21 4 4 21"></path></svg><span id="ic-snd-l">Sound</span></button>
     <section class="ic-scene ic-hero" id="ic-hero">
       <div class="ic-fx" id="ic-fx" aria-hidden="true"><i class="ic-blob" style="--x:18%;--y:28%;--s:46vmax;--c:#ff2d7a;--d:23s"></i><i class="ic-blob" style="--x:82%;--y:70%;--s:52vmax;--c:#e0162b;--d:29s"></i><i class="ic-blob" style="--x:60%;--y:18%;--s:38vmax;--c:#ff5fa2;--d:19s"></i><canvas id="ic-fluff"></canvas><canvas id="ic-waves"></canvas></div>
-      <div class="ic-b" id="ic-b"><img src="/logo.svg" alt="b" width="148" height="200" /></div>
-      <h1 class="ic-h1">b is <em>coming</em>.</h1>
+      <div class="ic-b" id="ic-b"><span class="ic-logo" role="img" aria-label="b"><i></i></span></div>
+      <h1 class="ic-h1"><span class="ic-ib"><i aria-hidden="true"></i><span class="ic-vh">b</span></span> is <em>coming</em>.</h1>
       <p class="ic-tease" id="ic-tease" aria-live="polite"></p>
       <p class="ic-say" id="ic-say" aria-live="polite"></p>
       <p class="ic-hint" aria-hidden="true">Keep going ↓</p>
@@ -220,7 +254,7 @@
     </section>
 
     <section class="ic-scene ic-count" id="ic-count">
-            <div class="ic-num" id="ic-num" aria-live="polite"><img src="/logo.svg" alt="b" class="ic-numb" /></div>
+            <div class="ic-num" id="ic-num" aria-live="polite"><span class="ic-numb ic-logo" role="img" aria-label="b"><i></i></span></div>
     </section>
 
     <section class="ic-calm">
@@ -483,18 +517,25 @@
           pass++; bEl.style.setProperty('--near', Math.min(1.1 + pass * 0.05, 1.45)); bEl.style.setProperty('--glo', Math.min(90 + pass * 30, 260) + 'px'); lines[3][1] = NEAR[(pass - 1) % NEAR.length];
           var t = 0, at = timeline(); heroT0 = performance.now() + mus.nextBeatMs(); mus.swell(BUILD); if (performance.now() - lastHero > LOOP) { bs = 0.12; bo = 0; } lastHero = performance.now(); heroEl.classList.add('hush');
           // One word per loudness step (the music steps up at each stage), each fading in and out; then the title.
-          var say = $('ic-say'), wT = 2200;
-          BUILD_WORDS.forEach(function (w, i) { var d = 2000 + i * 400; (function (t0) { at(function () { spell(say, w); say.classList.add('on'); }, t0); at(function () { say.classList.remove('on'); }, t0 + d); })(wT); wT += d + 500; });
-          at(function () { heroEl.classList.remove('hush'); }, BUILD - 600);
+          // 29 Oct (owner): each caption is shown inside the same timer callback that switches the b's beat and fires its
+          // voice cue, and hidden on the same grid, so words, pulse and voice can't drift apart.
+          // build (ooh) = b playful, build2 (oh) = b naughty, build3 (oh-yes) = b daring, near (climax-long) = b provocative,
+          // then "b is coming." lands on the long held note of the climax and holds until the loop restarts.
+          var say = $('ic-say'), FADE = 900, PEAK = 2300; say.classList.remove('on');
+          function caption(i) { spell(say, BUILD_WORDS[i]); say.classList.add('on'); }
           lines.forEach(function (l, i) {
-            at(function () { b.className = 'ic-b ' + l[0]; tease.textContent = l[1]; mus.level(Math.min(i + 1, 3)); mus.squeak(i >= 1 && i < 3 ? 1 : 0); if (i < 3) mus.lick(); vox.play(['ooh', 'oh', 'oh-yes', 'climax-long'][i]); if (i === 3) sfx.swell(300, 900, 2, true); }, t);
+            if (i === 0) at(function () { caption(0); }, t + 2200); // the opening stays wordless while the b emerges
+            if (i < 3) at(function () { say.classList.remove('on'); }, t + HERO_MS[i] - FADE);
+            else at(function () { say.classList.remove('on'); heroEl.classList.remove('hush'); }, t + PEAK);
+            at(function () { b.className = 'ic-b ' + l[0]; heroEl.setAttribute('data-beat', l[0]); if (i > 0) caption(i); tease.textContent = l[1]; mus.level(Math.min(i + 1, 3)); mus.squeak(i >= 1 && i < 3 ? 1 : 0); if (i < 3) mus.lick(); vox.play(['ooh', 'oh', 'oh-yes', 'climax-long'][i]); if (i === 3) sfx.swell(300, 900, 2, true); }, t);
             if (i < 3) for (var k = 0, per = [1600, 900, 450][i], span = HERO_MS[i]; k * per < span; k++) (function (d) { at(function () { sfx.beat(i); }, d); })(t + k * per);
             if (i < 3) t += HERO_MS[i];
           });
           at(hero, t + HOLD);
         }
         startHero = hero;
-        function spell(el, w) { el.setAttribute('aria-label', w); el.innerHTML = ''; w.split('').forEach(function (ch, j) { var s = document.createElement('span'); s.className = 'ic-lt'; s.setAttribute('aria-hidden', 'true'); s.textContent = ch; s.style.animationDelay = (j * 55) + 'ms'; el.appendChild(s); }); }
+        // 29 Oct (owner): no typed "b" in the captions. Wherever the word b appears, the animated b logo stands in for it.
+        function spell(el, w) { el.setAttribute('aria-label', w); el.innerHTML = ''; w.split(/(\bb\b)/).forEach(function (part) { if (!part) return; if (part === 'b') { var s = document.createElement('span'); s.className = 'ic-lt'; s.setAttribute('aria-hidden', 'true'); s.style.animationDelay = (el.childNodes.length * 55) + 'ms'; s.innerHTML = '<span class="ic-ib"><i></i></span>'; el.appendChild(s); return; } part.split('').forEach(function (ch) { var s = document.createElement('span'); s.className = 'ic-lt'; s.setAttribute('aria-hidden', 'true'); s.textContent = ch; s.style.animationDelay = (el.childNodes.length * 55) + 'ms'; el.appendChild(s); }); }); }
 
         // Run a scene once when it scrolls into view.
         function onView(el, fn) {
@@ -522,8 +563,8 @@
                     var t = 200, at = timeline(); mus.level(3); mus.squeak(1);
           seq.forEach(function (s, i) {
             at(function () {
-              if (s === '…') { num.innerHTML = '<img src="/logo.svg" alt="b" class="ic-numb" style="opacity:.35;transform:scale(.7);transition:opacity 1.2s,transform 1.2s" />'; vox.play('climax-long'); mus.squeak(0); mus.stall('hush'); at(count, t + 8200); return; }
-              if (s === 'b') num.innerHTML = '<img src="/logo.svg" alt="b" class="ic-numb" />'; else num.textContent = s; num.classList.remove('pop');
+              if (s === '…') { num.innerHTML = '<span class="ic-numb ic-logo" role="img" aria-label="b" style="opacity:.35;transform:scale(.7);transition:opacity 1.2s,transform 1.2s"><i></i></span>'; vox.play('climax-long'); mus.squeak(0); mus.stall('hush'); at(count, t + 8200); return; }
+              if (s === 'b') num.innerHTML = '<span class="ic-numb ic-logo" role="img" aria-label="b"><i></i></span>'; else num.textContent = s; num.classList.remove('pop');
               if (s === 'b') { void num.offsetWidth; num.classList.add('pop'); burst(90); mus.squeak(0); mus.chorus(8); vox.play('climax', 0.12); setTimeout(function () { vox.play('sigh'); }, 4200); sfx.pop(true); setTimeout(sfx.fanfare, 380); setTimeout(function () { sfx.coins(50); }, 700); }
               else { sfx.tick(i); mus.squeak(i < 2 ? 1 : i < 4 ? 2 : 3); if (i >= 3) vox.play('pant'); if (i === 5) { setTimeout(sfx.gulp, 450); setTimeout(function () { mus.stall('hush'); }, 700); } }
             }, t);
@@ -534,7 +575,7 @@
         onView($('ic-count'), count);
         
 
-        // A shower of gold sats from the middle of the screen. Fixed layer, transforms only.
+        // A shower of pink sats from the middle of the screen. Fixed layer, transforms only.
         var layer = $('ic-sats');
         function burst(n) {
           var w = innerWidth, h = innerHeight;
