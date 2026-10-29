@@ -207,30 +207,26 @@
   var bar = main.closest('.topbar');
   var ctaBox = bar && bar.querySelector('.nav-cta');
   if (ctaBox && !store) {
-    // Right side: Blog, bApps grid icon (option), the ONE wallet button (placeholder until the official one lands).
-    ctaBox.innerHTML = '';
-    ctaBox.insertAdjacentHTML('beforeend', socHtml('nx-socs'));
-    ctaBox.insertAdjacentHTML('beforeend', '<a class="dl-btn nx-wallet" href="/get" title="Placeholder for the official wallet button (GET bWALLETX / CONNECT / your chip)">Get bWalletX</a>');
+    // Right side (owner, 29 Oct 2026: declutter): just the ONE wallet button. Socials live in the footer
+    // (Follow column) and the phone menu.
+    ctaBox.innerHTML = '<a class="dl-btn nx-wallet" href="/get" title="Placeholder for the official wallet button (GET bWALLETX / CONNECT / your chip)">Get bWalletX</a>';
   }
-  // Site search (owner, 29 Oct 2026): a magnifier in the bar opens a search box over this site's pages.
-  // Index = /search-index.json, built by scripts/gen-llms.py from the same pages as llms.txt and the sitemap.
-  if (ctaBox && !store && !ctaBox.querySelector('.nx-sbtn')) {
-    var sb = document.createElement('button');
-    sb.type = 'button'; sb.className = 'nx-sbtn'; sb.setAttribute('aria-label', 'Search this site'); sb.title = 'Search (/)';
-    sb.setAttribute('aria-expanded', 'false'); sb.setAttribute('aria-controls', 'nx-search');
-    sb.innerHTML = '<svg viewBox="0 0 24 24" width="17" height="17" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5" fill="none" stroke="currentColor" stroke-width="2.2"/><path d="M15.5 15.5 21 21" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg>';
-    ctaBox.insertBefore(sb, ctaBox.firstChild);
-    var sp = document.createElement('div');
-    sp.id = 'nx-search'; sp.className = 'nx-search'; sp.hidden = true;
-    sp.innerHTML = '<form role="search" class="nx-sform"><input type="search" placeholder="Search bWalletX pages" aria-label="Search bWalletX pages" autocomplete="off" spellcheck="false" /></form><div class="nx-sres" role="list"></div>';
-    bar.appendChild(sp);
-    var si = sp.querySelector('input'), sr = sp.querySelector('.nx-sres'), sidx = null;
-    var esc = function (t) { return String(t).replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); };
-    var load = function () {
-      if (sidx) return;
-      sidx = [];
-      fetch('/search-index.json').then(function (r) { return r.json(); }).then(function (d) { sidx = d; run(); }).catch(function () {});
-    };
+  // Site search (owner, 29 Oct 2026): a compact field under the brand on desktop/tablet; at the top of the
+  // Menu panel on phones. Index = /search-index.json, built by scripts/gen-llms.py (same pages as llms.txt).
+  var sidx = null, sWaiters = [];
+  var esc = function (t) { return String(t).replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); };
+  var loadIdx = function (cb) {
+    if (sidx && sidx.length) return cb();
+    sWaiters.push(cb);
+    if (sidx) return;
+    sidx = [];
+    fetch('/search-index.json').then(function (r) { return r.json(); }).then(function (d) { sidx = d; sWaiters.splice(0).forEach(function (f) { f(); }); }).catch(function () {});
+  };
+  function makeSearch(cls) {
+    var f = document.createElement('form');
+    f.setAttribute('role', 'search'); f.className = 'nx-sform ' + cls;
+    f.innerHTML = '<input type="search" placeholder="Search" aria-label="Search bWalletX pages" title="Search (/)" autocomplete="off" spellcheck="false" /><div class="nx-sres" role="list"></div>';
+    var si = f.querySelector('input'), sr = f.querySelector('.nx-sres');
     var run = function () {
       var q = si.value.trim().toLowerCase();
       if (!q) { sr.innerHTML = ''; return; }
@@ -252,18 +248,22 @@
         return '<a role="listitem" href="' + esc(h.p.u) + '"><b>' + esc(h.p.t) + '</b>' + (h.p.d ? '<span>' + esc(h.p.d) + '</span>' : '') + '</a>';
       }).join('') : (sidx && sidx.length ? '<p class="nx-snone">No pages match &ldquo;' + esc(si.value.trim()) + '&rdquo;.</p>' : '');
     };
-    var openS = function (o) {
-      sp.hidden = !o; sb.setAttribute('aria-expanded', String(o));
-      if (o) { load(); si.focus(); var m = document.getElementById('m-menu'); if (m && !m.hidden) { m.hidden = true; var b2 = ctaBox.querySelector('.menu-btn'); if (b2) b2.setAttribute('aria-expanded', 'false'); } }
-    };
-    sb.addEventListener('click', function () { openS(sp.hidden); });
-    si.addEventListener('input', run);
-    sp.querySelector('form').addEventListener('submit', function (e) { e.preventDefault(); var a = sr.querySelector('a'); if (a) location.href = a.getAttribute('href'); });
-    document.addEventListener('keydown', function (e) {
-      if (e.key === 'Escape' && !sp.hidden) { openS(false); sb.focus(); }
-      else if (e.key === '/' && sp.hidden && !/^(INPUT|TEXTAREA|SELECT)$/.test((document.activeElement || {}).tagName || '') && !(document.activeElement || {}).isContentEditable) { e.preventDefault(); openS(true); }
-    });
-    document.addEventListener('click', function (e) { if (!sp.hidden && !sp.contains(e.target) && !sb.contains(e.target)) openS(false); });
+    si.addEventListener('focus', function () { loadIdx(run); });
+    si.addEventListener('input', function () { loadIdx(run); });
+    si.addEventListener('keydown', function (e) { if (e.key === 'Escape') { si.value = ''; sr.innerHTML = ''; si.blur(); } });
+    f.addEventListener('submit', function (e) { e.preventDefault(); var a = sr.querySelector('a'); if (a) location.href = a.getAttribute('href'); });
+    document.addEventListener('click', function (e) { if (!f.contains(e.target)) sr.innerHTML = ''; });
+    return f;
+  }
+  var brandEl = bar && bar.querySelector('.brand');
+  var deskSearch = null, menuSearch = null;
+  if (brandEl && !store && !bar.querySelector('.nx-bb')) {
+    var bb = document.createElement('div');
+    bb.className = 'nx-bb';
+    brandEl.parentNode.insertBefore(bb, brandEl);
+    bb.appendChild(brandEl);
+    deskSearch = makeSearch('nx-sdesk');
+    bb.appendChild(deskSearch);
   }
   if (ctaBox && !ctaBox.querySelector('.menu-btn')) {
     var mb = document.createElement('button');
@@ -277,12 +277,24 @@
       if (!it.sub) return '<a class="m-top" href="' + it.href + '">' + it.label + '</a>';
       return '<details' + (it === section ? ' open' : '') + '><summary>' + it.label + '</summary><div class="m-grid">' + subLinks(it) + '</div></details>';
     }).join('') + socHtml('m-soc');
-    mb.addEventListener('click', function () { var o = panel.hidden; panel.hidden = !o; mb.setAttribute('aria-expanded', String(o)); var ss = document.getElementById('nx-search'); if (o && ss) { ss.hidden = true; var bb = ctaBox.querySelector('.nx-sbtn'); if (bb) bb.setAttribute('aria-expanded', 'false'); } });
+    if (!store) { menuSearch = makeSearch('nx-smenu'); panel.insertBefore(menuSearch, panel.firstChild); }
+    mb.addEventListener('click', function () { var o = panel.hidden; panel.hidden = !o; mb.setAttribute('aria-expanded', String(o)); });
     // One accordion open at a time keeps the panel short.
     panel.addEventListener('toggle', function (e) { if (e.target.open) panel.querySelectorAll('details').forEach(function (d) { if (d !== e.target) d.open = false; }); }, true);
     ctaBox.appendChild(mb);
     bar.appendChild(panel);
   }
+
+  // '/' focuses search: the field under the brand, or (phones) opens the Menu and focuses its field.
+  if (deskSearch || menuSearch) document.addEventListener('keydown', function (e) {
+    var ae = document.activeElement || {};
+    if (e.key !== '/' || /^(INPUT|TEXTAREA|SELECT)$/.test(ae.tagName || '') || ae.isContentEditable) return;
+    e.preventDefault();
+    var di = deskSearch && deskSearch.querySelector('input');
+    if (di && di.offsetParent) return di.focus();
+    var pn = document.getElementById('m-menu'), mbt = ctaBox && ctaBox.querySelector('.menu-btn');
+    if (pn && menuSearch) { pn.hidden = false; if (mbt) mbt.setAttribute('aria-expanded', 'true'); menuSearch.querySelector('input').focus(); }
+  });
 
   if (section && section.sub) {
     var sub = document.createElement('nav');
@@ -330,17 +342,20 @@
     '.nx-socs{display:inline-flex;align-items:center;gap:6px}.nx-soc{display:inline-flex;align-items:center;justify-content:center;width:30px;height:30px;border-radius:50%;border:1px solid #ffffff33;color:#fff}.nx-soc:hover{border-color:#F5B800;color:#F5B800}' +
     '.m-soc{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0 4px}.m-menu .m-soc a.nx-soc{display:inline-flex;align-items:center;justify-content:center;padding:0 10px;color:#fff}.m-soc .nx-soc{width:auto;min-width:40px;height:40px;padding:0 10px}' +
     '@media (max-width:1180px) and (min-width:860px){.nx-socs .nx-soc{width:28px;height:28px}.nx-socs{gap:4px}.nav-cta{gap:8px}}' +
-    '.nx-sbtn{display:inline-flex;align-items:center;justify-content:center;width:34px;height:34px;flex:none;border-radius:50%;border:1px solid #ffffff33;background:transparent;color:#fff;cursor:pointer;padding:0}.nx-sbtn:hover,.nx-sbtn[aria-expanded="true"]{border-color:#F5B800;color:#F5B800}' +
-    '.nx-search{position:absolute;top:100%;right:max(16px,calc((100vw - 1180px)/2));width:min(460px,calc(100vw - 32px));box-sizing:border-box;padding:12px;background:#0d0e11;border:1px solid #ffffff1f;border-radius:14px;box-shadow:0 14px 34px #000a;z-index:70}' +
-    '.nx-search[hidden]{display:none}' +
-    '.nx-search input{width:100%;box-sizing:border-box;font:500 1rem inherit;color:#fff;background:#16171b;border:1px solid #ffffff2a;border-radius:10px;padding:11px 14px;outline:none}.nx-search input:focus{border-color:#F5B800}' +
-    '.nx-sres{max-height:min(60vh,460px);overflow-y:auto;margin-top:6px}.nx-sres:empty{display:none}' +
+    '.nx-bb{display:flex;flex-direction:column;justify-content:center;gap:5px;position:relative;flex:none;min-width:0}' +
+    '.nx-bb .brand{font-size:1.05rem;line-height:1;gap:8px}.nx-bb .brand img{width:26px;height:auto}' +
+    '.nx-sform{position:relative;margin:0}.nx-sdesk{width:0;min-width:100%}' +
+    '.nx-sform input{display:block;width:100%;box-sizing:border-box;-webkit-appearance:none;appearance:none;font:500 .8rem/1 inherit;color:#fff;background:#ffffff0f url("data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 24 24%27%3E%3Ccircle cx=%2710.5%27 cy=%2710.5%27 r=%276.5%27 fill=%27none%27 stroke=%27%23a8a69e%27 stroke-width=%272.4%27/%3E%3Cpath d=%27M15.5 15.5 21 21%27 stroke=%27%23a8a69e%27 stroke-width=%272.6%27 stroke-linecap=%27round%27/%3E%3C/svg%3E") no-repeat 8px 50%/12px;border:1px solid #ffffff2e;border-radius:999px;padding:0 10px 0 25px;height:24px;outline:none}' +
+    '.nx-sform input::placeholder{color:#a8a69e}.nx-sform input:focus{border-color:#F5B800;background-color:#16171b}' +
+    '.nx-sform input::-webkit-search-cancel-button{display:none}' +
+    '.nx-sres{position:absolute;top:calc(100% + 8px);left:0;width:min(440px,calc(100vw - 32px));box-sizing:border-box;padding:8px;background:#0d0e11;border:1px solid #ffffff1f;border-radius:14px;box-shadow:0 14px 34px #000a;z-index:70;max-height:min(60vh,460px);overflow-y:auto}.nx-sres:empty{display:none}' +
+    '.nx-smenu{margin:10px 0 4px}.nx-smenu input{height:40px;font-size:1rem;padding-left:32px;background-position:11px 50%;background-size:15px}.nx-smenu .nx-sres{position:static;width:auto;margin-top:6px;box-shadow:none}' +
     '.nx-sres a{display:block;padding:9px 10px;border-radius:9px;text-decoration:none;color:#ddd}.nx-sres a:hover,.nx-sres a:focus{background:#ffffff10;outline:none}.nx-sres a:first-child{background:#ffffff0a}' +
     '.nx-sres b{display:block;color:#fff;font-weight:600;font-size:.95rem}.nx-sres span{display:block;margin-top:2px;color:#9a988f;font-size:.82rem;line-height:1.4;overflow:hidden;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical}' +
     '.nx-snone{margin:8px 10px;color:#9a988f;font-size:.9rem}' +
-    '@media (max-width:859px){.nx-search{left:16px;right:16px;width:auto}}' +
-    '@media (max-width:430px){.nav-cta{gap:6px!important}.nx-sbtn{width:30px;height:30px}.nx-wallet{padding-left:10px!important;padding-right:10px!important;font-size:.8rem!important}.menu-btn{padding:5px 9px}.topbar .brand span{font-size:1rem}.topbar .brand img{width:28px;height:auto}}' +
-    'body.paper .nx-sbtn{color:var(--ink,#111);border-color:var(--ink,#111)}' +
+    '@media (max-width:859px){.nx-sdesk{display:none}.nx-bb .brand{font-size:1.1rem}.nx-bb .brand img{width:28px}}' +
+    '@media (max-width:430px){.nav-cta{gap:6px!important}.nx-wallet{padding-left:10px!important;padding-right:10px!important;font-size:.8rem!important}.menu-btn{padding:5px 9px}.topbar .brand span{font-size:1rem}.topbar .brand img{width:26px;height:auto}}' +
+    'body.paper .nx-sform input{color:var(--ink,#111);border-color:var(--hair,#bdbab2);background-color:#0000000a}body.paper .nx-sform input::placeholder{color:var(--muted,#5d5b56)}' +
     '.menu-btn{display:none;font:600 .9rem inherit;color:#fff;background:transparent;border:1px solid #ffffff40;border-radius:999px;padding:5px 12px;cursor:pointer}' +
     '.m-menu{background:#0d0e11;border-top:1px solid #ffffff14;padding:6px 16px 14px;max-height:calc(100vh - 120px);overflow-y:auto}' +
     '.m-menu details{border-bottom:1px solid #ffffff12}' +
