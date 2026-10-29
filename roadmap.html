@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Roadmap</title>
+    <link rel="canonical" href="https://bwalletx.com/roadmap" />
+    <meta name="description" content="What bWalletX does today, what we are building now, and what is planned next." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://bwalletx.com/roadmap" />
+    <meta property="og:site_name" content="bWalletX" />
+    <meta property="og:title" content="bWalletX roadmap: live, building, planned" />
+    <meta property="og:description" content="What bWalletX does today, what we are building now, and what is planned next." />
+    <meta property="og:image" content="https://bwalletx.com/og-roadmap-v1.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="What bWalletX does today, what we are building now, and what is planned next." />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@bWalletX" />
+    <meta name="twitter:title" content="bWalletX roadmap: live, building, planned" />
+    <meta name="twitter:description" content="What bWalletX does today, what we are building now, and what is planned next." />
+    <meta name="twitter:image" content="https://bwalletx.com/og-roadmap-v1.png" />
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="stylesheet" href="/styles.css" />
+    <style>
+      .ext h1 { font-size: clamp(2.2rem, 6vw, 3.4rem); margin: 18px 0 10px; }
+      .ext h2 { margin: 52px 0 6px; font-size: 1.6rem; display:flex; gap:10px; align-items:center; flex-wrap:wrap; }
+      .ext p { line-height: 1.7; }
+      .ext .small { color: #8a8a86; font-size: 0.85rem; }
+      .tag { flex: none; font-size: 0.75rem; font-weight: 700; padding: 2px 10px; border-radius: 999px; }
+      .tag.live { background: #F5B800; color: #000; }
+      .tag.build { border: 1px solid #F5B80099; color: #F5B800; }
+      .tag.soon { border: 1px solid #ffffff40; color: #a7adb8; }
+      .rgrid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr)); gap: 14px; margin: 18px 0; }
+      .rcard { background: #101114; border: 1px solid #ffffff12; border-radius: 16px; padding: 14px 18px; min-width: 0; }
+      .rcard h3 { margin: 0 0 6px; font-size: 1.1rem; }
+      .rcard ul { list-style: none; padding: 0; margin: 0; }
+      .rcard li { padding: 8px 0; border-top: 1px solid #ffffff0d; line-height: 1.5; color: #d6d8dc; overflow-wrap: anywhere; }
+      .rcard li:first-child { border-top: 0; }
+      .rcard a { color: #F5B800; text-decoration: none; }
+      .rcard a:hover { text-decoration: underline; }
+      .jump { display:flex; gap:10px; flex-wrap:wrap; margin: 20px 0; }
+      .jump a { border:1px solid #ffffff22; border-radius:999px; padding:6px 14px; color:inherit; text-decoration:none; }
+      @media (max-width: 600px) { main.ext { padding-left: 16px; padding-right: 16px; } }
+    </style>
+  </head>
+  <body>
+    <div class="beta-banner">bWalletX is in <strong>beta</strong>: test with small amounts.</div>
+    <header class="topbar">
+      <div class="wrap topbar-in">
+        <a class="brand" href="/"><img src="/logo.svg" alt="" width="34" height="30" /><span>bWallet<span class="gold">X</span></span></a>
+        <nav aria-label="Pages">
+          <a href="/features">Features</a><a href="/exchange">Exchange</a><a href="/social">Social</a><a href="/agent">Agents</a><a href="/extension">Extension</a><a href="/developers">Developers</a>
+        </nav>
+        <span class="nav-cta"><a class="dl-btn" href="/get">Download</a><a class="web-btn" href="https://web.bwalletx.com" target="_blank" rel="noopener">Web &rarr;</a></span>
+      </div>
+    </header>
+    <script src="/nav.js"></script>
+    <main class="ext">
+      <h1>Roadmap.</h1>
+      <p>What bWalletX does today, what we are building now, and what is planned. No dates: things move to Live when they ship.</p>
+      <div class="jump"><a href="#live">Live now</a><a href="#building">Building now</a><a href="#planned">Planned</a><a href="/releases">Releases</a></div>
+      <h2 id="live"><span class="tag live">Live</span> Live now</h2>
+      <p class="small">Shipped and working today. Every release is listed on <a href="/releases">Releases</a>.</p>
+      <div class="rgrid"><section class="rcard"><h3>Wallet</h3><ul><li><a href="/get">Web wallet, Android app, Chrome extension and a Mac Desktop app</a></li><li>Sign in with a passkey (Face ID or fingerprint)</li><li>Send to a $name or address, with dollars shown first on every approval</li><li>Encrypted backups and restore from your 12 words</li><li><a href="/lock">Lock BSV and tokens until a date, recoverable from your 12 words</a></li><li><a href="/pots">Pots, standing orders and subscriptions, with one switch to pause spending</a></li><li><a href="/btrust">bTrust: recovery slices for people you trust and an inheritance plan</a></li><li>Themes and a card designer, with theme packs in the Store</li><li>Choose what sits on your home screen</li><li><a href="/migrate">Restore old RelayX wallets and find their NFTs</a></li><li><a href="/nfts">NFTs: view, send, receive, full-screen viewer and 3D models</a></li><li><a href="/buy">Swap into BSV and Buy BSV from the wallet</a></li><li><a href="/exchange">Exchange: markets, token pages with charts, swipe to buy, sell or chat</a></li><li><a href="/launchpad">Launch your own coin with a holders’ room and a launch curve</a></li><li><a href="/airdrops">Airdrop tokens or BSV to every holder with one approval</a></li><li>The Store: shops, departments and themes paid in BSV</li><li><a href="/connect">Sign in with bWalletX for other sites</a></li></ul></section><section class="rcard"><h3>Chat</h3><ul><li><a href="/chat">Token rooms with live chat, in the wallet and on bChatX</a></li><li><a href="/bspaces">Live Spaces with camera and screen sharing, and a calendar of scheduled Spaces</a></li><li><a href="/bphone">Calls with screen sharing</a></li><li><a href="/bmail">bMail: one inbox with price-to-reach and signed agreements</a></li><li>Feed: posts from bChatX, CoinGeek, Hodlocker and RelayX, with tips</li><li>Tip buttons on posts, tracks and rooms</li><li><a href="/friends">Address book with import and export, and finding friends who already use bWalletX</a></li></ul></section><section class="rcard"><h3>Music</h3><ul><li><a href="https://bmusicx.com">bMusicX: album store, artist pages and free first tracks</a></li><li><a href="/streaming-payments">Pay-per-second listening, and Back this artist pays the artist directly</a></li><li><a href="/artists">Artist rank by money paid to the artist</a></li><li>Add a release: publish your music with a square cover, on chain</li></ul></section><section class="rcard"><h3>Video</h3><ul><li><a href="https://bvideox.com">bVideoX: creators record their videos on chain in their own wallet</a></li><li>Full-screen video reels in the Feed</li><li>Video NFTs with cover art that play on iPhone</li></ul></section><section class="rcard"><h3>Games</h3><ul><li><a href="https://bgamesx.com">bGamesX: games and game tokens in one place</a></li><li>TERRORNODE: play to earn its coin, with its own room and shop</li><li><a href="/tokenblaster">TokenBlaster: launch and trade coins, with a TokenBlaster shop in the Store</a></li><li>Game rooms dressed in each game’s colours</li></ul></section><section class="rcard"><h3>Names</h3><ul><li><a href="/names">Get a $name that is also your paymail and chat handle</a></li><li><a href="/name-bindings">Names are signed by your own wallet, with a public log of every change</a></li><li>Name Store: buy, sell and give names</li><li><a href="/identity">Link your X and Google accounts to your name</a></li></ul></section><section class="rcard"><h3>Agents and b</h3><ul><li><a href="/ask-b">Ask b: talk or type to b in the wallet</a></li><li><a href="/bugs">Report to b: bug reports that never get lost</a></li><li><a href="/agents">Agent accounts for your own bots, with the CLI and MCP server</a></li><li><a href="/b-bots">bBots</a></li><li><a href="/strategies">Strategies with wallet-enforced rules and paper mode</a></li><li><a href="/business-agents">Business agent from a single link, with checkout in chat</a></li></ul></section><section class="rcard"><h3>Site</h3><ul><li><a href="/releases">Release notes for every version</a></li><li><a href="/creative">b Creative: campaign films and pages</a></li><li><a href="/bapps">bApps directory</a></li><li><a href="/ideas">Ideas and bug boards</a></li><li><a href="/developers">Developer guides and open-source kit</a></li><li><a href="/brand">Brand guide</a></li></ul></section></div>
+      <h2 id="building"><span class="tag build">Building</span> Building now</h2>
+      <div class="rgrid"><section class="rcard"><h3>In progress</h3><ul><li>iPhone App Store edition of the latest version</li><li>Seedless sign-up: your 12 words sealed with your passkey, never shown</li><li>One web wallet at web.bwalletx.com with phone, tablet and desktop layouts</li><li>TERRORNODE album and soundtrack on bMusicX</li><li>Linking GitHub and LinkedIn to your name</li><li>Opening the Store to your own shops</li></ul></section></div>
+      <h2 id="planned"><span class="tag soon">Planned</span> Planned</h2>
+      <p class="small">Planned, not promised. Ideas you would like to see? Post them on <a href="/ideas">Ideas</a>.</p>
+      <div class="rgrid"><section class="rcard"><h3>Wallet</h3><ul><li>BTC and BCH cards beside BSV, view-only first</li><li>Link wallets from other networks to your bWalletX identity</li><li>Cross-chain atomic swaps, with no bridges or custodians</li><li>A page: keep BSV, BCH and BTC in one wallet</li><li>Auto-update for the Mac Desktop app</li><li>Wallet Frames: private content shown only inside the wallet</li></ul></section><section class="rcard"><h3>Chat and mail</h3><ul><li>Real email in bMail at bmailx.com</li><li>One Messages view for bMail and bChatX rooms</li><li>Paid Spaces that pay on-stage speakers directly</li><li>A public calendar of scheduled Spaces</li></ul></section><section class="rcard"><h3>Music, video and games</h3><ul><li>Numbered copies of albums, videos and games, bought straight from the creator</li><li>A resale exchange where every resale pays the creator</li><li>Creators list their own work on bMusicX, bVideoX and bGamesX</li><li>A copies shelf and receipts in the wallet</li></ul></section><section class="rcard"><h3>Names and domains</h3><ul><li>bDNSX: link, verify and resolve your domains</li></ul></section><section class="rcard"><h3>Apps</h3><ul><li>bWriterX: write straight to the chain</li><li>bDriveX: paid storage for recordings and files</li><li>bSignX: written signatures</li><li>bJobsX: jobs paid in BSV</li></ul></section></div>
+      <p class="small">bWalletX is in beta: test with small amounts. Questions: <a href="mailto:support@bwalletx.com">support@bwalletx.com</a></p>
+    </main>
+  </body>
+</html>

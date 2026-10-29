@@ -7526,6 +7526,146 @@ bWalletX is in beta: test with small amounts. Questions: [support@bwalletx.com](
 
 ---
 
+Source: https://bwalletx.com/roadmap
+
+# Roadmap.
+
+What bWalletX does today, what we are building now, and what is planned. No dates: things move to Live when they ship.
+
+[Live now](#live)[Building now](#building)[Planned](#planned)[Releases](https://bwalletx.com/releases)
+
+## Live Live now
+
+Shipped and working today. Every release is listed on [Releases](https://bwalletx.com/releases).
+
+### Wallet
+
+- [Web wallet, Android app, Chrome extension and a Mac Desktop app](https://bwalletx.com/get)
+- Sign in with a passkey (Face ID or fingerprint)
+- Send to a $name or address, with dollars shown first on every approval
+- Encrypted backups and restore from your 12 words
+- [Lock BSV and tokens until a date, recoverable from your 12 words](https://bwalletx.com/lock)
+- [Pots, standing orders and subscriptions, with one switch to pause spending](https://bwalletx.com/pots)
+- [bTrust: recovery slices for people you trust and an inheritance plan](https://bwalletx.com/btrust)
+- Themes and a card designer, with theme packs in the Store
+- Choose what sits on your home screen
+- [Restore old RelayX wallets and find their NFTs](https://bwalletx.com/migrate)
+- [NFTs: view, send, receive, full-screen viewer and 3D models](https://bwalletx.com/nfts)
+- [Swap into BSV and Buy BSV from the wallet](https://bwalletx.com/buy)
+- [Exchange: markets, token pages with charts, swipe to buy, sell or chat](https://bwalletx.com/exchange)
+- [Launch your own coin with a holders’ room and a launch curve](https://bwalletx.com/launchpad)
+- [Airdrop tokens or BSV to every holder with one approval](https://bwalletx.com/airdrops)
+- The Store: shops, departments and themes paid in BSV
+- [Sign in with bWalletX for other sites](https://bwalletx.com/connect)
+
+### Chat
+
+- [Token rooms with live chat, in the wallet and on bChatX](https://bwalletx.com/chat)
+- [Live Spaces with camera and screen sharing, and a calendar of scheduled Spaces](https://bwalletx.com/bspaces)
+- [Calls with screen sharing](https://bwalletx.com/bphone)
+- [bMail: one inbox with price-to-reach and signed agreements](https://bwalletx.com/bmail)
+- Feed: posts from bChatX, CoinGeek, Hodlocker and RelayX, with tips
+- Tip buttons on posts, tracks and rooms
+- [Address book with import and export, and finding friends who already use bWalletX](https://bwalletx.com/friends)
+
+### Music
+
+- [bMusicX: album store, artist pages and free first tracks](https://bmusicx.com)
+- [Pay-per-second listening, and Back this artist pays the artist directly](https://bwalletx.com/streaming-payments)
+- [Artist rank by money paid to the artist](https://bwalletx.com/artists)
+- Add a release: publish your music with a square cover, on chain
+
+### Video
+
+- [bVideoX: creators record their videos on chain in their own wallet](https://bvideox.com)
+- Full-screen video reels in the Feed
+- Video NFTs with cover art that play on iPhone
+
+### Games
+
+- [bGamesX: games and game tokens in one place](https://bgamesx.com)
+- TERRORNODE: play to earn its coin, with its own room and shop
+- [TokenBlaster: launch and trade coins, with a TokenBlaster shop in the Store](https://bwalletx.com/tokenblaster)
+- Game rooms dressed in each game’s colours
+
+### Names
+
+- [Get a $name that is also your paymail and chat handle](https://bwalletx.com/names)
+- [Names are signed by your own wallet, with a public log of every change](https://bwalletx.com/name-bindings)
+- Name Store: buy, sell and give names
+- [Link your X and Google accounts to your name](https://bwalletx.com/identity)
+
+### Agents and b
+
+- [Ask b: talk or type to b in the wallet](https://bwalletx.com/ask-b)
+- [Report to b: bug reports that never get lost](https://bwalletx.com/bugs)
+- [Agent accounts for your own bots, with the CLI and MCP server](https://bwalletx.com/agents)
+- [bBots](https://bwalletx.com/b-bots)
+- [Strategies with wallet-enforced rules and paper mode](https://bwalletx.com/strategies)
+- [Business agent from a single link, with checkout in chat](https://bwalletx.com/business-agents)
+
+### Site
+
+- [Release notes for every version](https://bwalletx.com/releases)
+- [b Creative: campaign films and pages](https://bwalletx.com/creative)
+- [bApps directory](https://bwalletx.com/bapps)
+- [Ideas and bug boards](https://bwalletx.com/ideas)
+- [Developer guides and open-source kit](https://bwalletx.com/developers)
+- [Brand guide](https://bwalletx.com/brand)
+
+## Building Building now
+
+### In progress
+
+- iPhone App Store edition of the latest version
+- Seedless sign-up: your 12 words sealed with your passkey, never shown
+- One web wallet at web.bwalletx.com with phone, tablet and desktop layouts
+- TERRORNODE album and soundtrack on bMusicX
+- Linking GitHub and LinkedIn to your name
+- Opening the Store to your own shops
+
+## Planned Planned
+
+Planned, not promised. Ideas you would like to see? Post them on [Ideas](https://bwalletx.com/ideas).
+
+### Wallet
+
+- BTC and BCH cards beside BSV, view-only first
+- Link wallets from other networks to your bWalletX identity
+- Cross-chain atomic swaps, with no bridges or custodians
+- A page: keep BSV, BCH and BTC in one wallet
+- Auto-update for the Mac Desktop app
+- Wallet Frames: private content shown only inside the wallet
+
+### Chat and mail
+
+- Real email in bMail at bmailx.com
+- One Messages view for bMail and bChatX rooms
+- Paid Spaces that pay on-stage speakers directly
+- A public calendar of scheduled Spaces
+
+### Music, video and games
+
+- Numbered copies of albums, videos and games, bought straight from the creator
+- A resale exchange where every resale pays the creator
+- Creators list their own work on bMusicX, bVideoX and bGamesX
+- A copies shelf and receipts in the wallet
+
+### Names and domains
+
+- bDNSX: link, verify and resolve your domains
+
+### Apps
+
+- bWriterX: write straight to the chain
+- bDriveX: paid storage for recordings and files
+- bSignX: written signatures
+- bJobsX: jobs paid in BSV
+
+bWalletX is in beta: test with small amounts. Questions: [support@bwalletx.com](mailto:support@bwalletx.com)
+
+---
+
 Source: https://bwalletx.com/seedless-login
 
 Live
