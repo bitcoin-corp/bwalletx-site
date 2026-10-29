@@ -1486,3 +1486,16 @@ body {
 .hodl-sticker .hs-s{font:600 10px/1 var(--mono,ui-monospace,monospace);letter-spacing:.12em;text-transform:uppercase}
 @media (max-width:640px){.hodl-sticker{top:140px;right:12px;width:92px}.hodl-sticker .hs-t{font-size:13px}}
 @media (prefers-reduced-motion:reduce){.hodl-sticker{transition:none}.hodl-sticker:hover{transform:rotate(-10deg)}}
+
+/* Android testers wanted box (download, android, testers) */
+.testers-box { margin: 28px 0; padding: 22px 20px; border-radius: 18px; background: #101114; border: 1px solid #F5B80088; max-width: 40em; }
+.testers-box h2 { margin: 0 0 8px; font-size: clamp(1.25rem, 4vw, 1.6rem); line-height: 1.25; }
+.testers-box p { margin: 0 0 12px; color: #c9ccd2; }
+.testers-box ol { margin: 0 0 16px; padding-left: 1.4em; line-height: 1.6; background: none; border: 0; }
+.testers-box li { margin: 6px 0; }
+.testers-box .tb-row { display: flex; flex-wrap: wrap; gap: 10px; margin: 0 0 12px; }
+.testers-box .tb-row .btn { text-decoration: none; text-align: center; flex: 1 1 200px; display: inline-flex; justify-content: center; }
+.testers-box .tb-note { font-size: 0.85rem; color: #8a8a86; margin: 0; }
+.testers-box .tb-row .btn { font: 600 1rem var(--hf); padding: 14px 22px; border-radius: 16px; }
+.testers-iphone { font-size: 0.9rem; color: #8a8a86; margin: -12px 0 28px; }
+.t a[href*="play.google.com"] { overflow-wrap: anywhere; }
