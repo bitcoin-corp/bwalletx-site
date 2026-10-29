@@ -3353,7 +3353,7 @@ Every Bitcoin SV app you already use, together in one wallet.
 
 One-off campaigns and stories.
 
-[Happy b-day cardsMake a card with b, mint it, send it by bMail.](https://bwalletx.com/happy-b)[FLICK OFFMove your X and YouTube history onto Bitcoin with bMintX.](https://bwalletx.com/flick-off)[Digital Ice-CreamThree friends, one token, every cone splits itself.](https://bwalletx.com/digital-ice-cream)
+[Happy b-day cardsMake a card with b, mint it, send it by bMail.](https://bwalletx.com/happy-b)[FLICK OFFYour X and YouTube history, on Bitcoin, in your name.](https://bwalletx.com/flick-off)[Digital Ice-CreamThree friends, one token, every cone splits itself.](https://bwalletx.com/digital-ice-cream)
 
 Want one made for your brand? [bAds](https://bwalletx.com/bads) are made by b. Branded wallets: [see how](https://bwalletx.com/clients).
 
@@ -4233,16 +4233,6 @@ See also: [Ideas](https://bwalletx.com/ideas) · [Known issues](https://bwalletx
 
 Source: https://bwalletx.com/flick-off
 
-FLICK OFF
-
-# Move your X and YouTube history onto Bitcoin
-
-Almost every app lets you download everything you have put into it. FLICK OFF takes that download and writes it to Bitcoin in your own name. bWalletX signs each piece with your key and holds it in your vault.
-
-1. Download your data→
-2. Drop it on bMintX→
-3. Own it in bWalletX
-
 ## How it works
 
 ### 1. Download your data
@@ -4333,12 +4323,6 @@ LIVE
 
 Where your YouTube videos land.
 [bvideox.com →](https://bvideox.com)
-
-[Get bWalletX](https://bwalletx.com/get)
-[Start on bMintX](https://bmintx.com/flick-off)
-[All features](https://bwalletx.com/features)
-
-bWalletX is in beta. What you mint is public and permanent. Questions: [support@bwalletx.com](mailto:support@bwalletx.com)
 
 ---
 
