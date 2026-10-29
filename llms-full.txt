@@ -1,6 +1,6 @@
 # bWalletX: full site text
 
-Generated 2026-10-28 from https://bwalletx.com. Source pages are linked above each section.
+Generated 2026-10-29 from https://bwalletx.com. Source pages are linked above each section.
 
 ---
 
@@ -10165,9 +10165,9 @@ Source: https://bwalletx.com/games
 
 ## tokenblaster.lol is the front door
 
-Every game from The Bitcoin Corporation is listed on one site. Pick a game, practise free, then load a few sats from your wallet when you want to play for real.
+Every game from The Bitcoin Corporation is listed on one site. Pick a game and try it: a short demo runs under a flashing INSERT $b TO PLAY banner. Insert $b from your wallet to play properly.
 
-Free practice in every gameLIVE: every action is a real tx
+Try any game, then insert $bEach play is paid on chain
 
 [tokenblaster.lol on a computer](https://www.tokenblaster.lol)
 
@@ -10176,12 +10176,11 @@ Free practice in every gameLIVE: every action is a real tx
 Real screenshots, taken 18 Oct 2026. Tap one to play.
 
 [bRacerAnti-gravity racing at 700 km/h. Every rival ship is a mainnet transaction.](https://www.tokenblaster.lol/arcade/bracer)
-[Ninja Punk Girls: ArenaOne-on-one 3D fighting with twelve NPG fighters.](https://www.tokenblaster.lol/arcade/npg-arena)
 [Mempool InvadersEvery ship is a live transaction. Shoot the gold token ships.](https://www.tokenblaster.lol/arcade/invaders)
 [BSVGunA neon shooting range where the targets are the live chain.](https://www.tokenblaster.lol/arcade/bsvgun)
 [Chain FroggerCross a 3D city where every vehicle is a real transaction.](https://www.tokenblaster.lol/arcade/frogger)
 [Highway 21MOutRun-style racing; the billboards scroll real token moves.](https://www.tokenblaster.lol/arcade/highway21)
-[The arcadeAll 18 games, each with a free practice mode.](https://www.tokenblaster.lol/arcade)
+[The arcadeAll 19 games. Try any one, then insert $b to play.](https://www.tokenblaster.lol/arcade)
 
 ## Play with bWalletX
 
@@ -10193,28 +10192,28 @@ The games ask a BRC-100 wallet for permission, the same way any app on Bitcoin S
 On your phone: in bWalletX, open the Apps tab and tap Games. Games open in the wallet’s own browser, so the wallet is already there. On a computer: visit tokenblaster.lol with the [bWalletX extension](https://bwalletx.com/extension) installed, or tap Connect and scan the QR code with bWalletX on your phone.
 
 -
-### Load your gun
+### Try it, then insert $b
 
-Choose LIVE and approve one load of 1,000, 10,000 or 100,000 sats. That is the only approval: the game then plays from those sats without asking again. Unload any time to send what’s left back to your wallet.
+Every game opens at its cabinet. Tap Try a demo for a short taste: the game runs for a few seconds under a flashing INSERT $b TO PLAY banner, with no score. To play properly, insert $b: one wallet approval loads credit into your gun, and each play is paid from it. Unload any time to send what’s left back to your wallet.
 
 -
 ### Play
 
-In LIVE mode each shot, jump or card is one transaction: 1 sat to The Bitcoin Corporation plus the network fee (about 26 sats). In Arena you can fire tokens from your wallet instead; hit another player and that token lands in their gun. Your best runs go on the leaderboards.
+Each play is paid from your credit to The Bitcoin Corporation in one on-chain transaction; the cabinet shows the price before you start (from 10 cents a play). Some games also have a LIVE mode where each shot or bite is its own small transaction, paid from the ammo you load. In Arena you can fire tokens from your wallet instead; hit another player and that token lands in their gun. Your best runs go on the leaderboards.
 
-Nothing here is a bet: games don’t pay out prizes. Coin Pop and Token Potions cost 10p a game, or you can practise free. Play with small amounts.
+Nothing here is a bet: games don’t pay out prizes. Each play is paid from the credit you insert; a demo is free but short and has no score. Play with small amounts.
 
 [bRacer on a phonePick a circuit, mode, hull and team.](https://www.tokenblaster.lol/arcade/bracer)
 
 ## Status
 
-- ✓18 TokenBlaster games live on tokenblaster.lol, each with free practice
+- ✓19 TokenBlaster games live on tokenblaster.lol: try any one, then insert $b to play
 
 - ✓Apps › Games in bWalletX lists the arcade and opens each game with your wallet
 
 - ✓Connect on a computer with the bWalletX extension, or pair your phone by QR
 
-- ✓LIVE mode: one approval to load sats, then every action is a real transaction
+- ✓Coin-op credit: one wallet approval loads credit, then each play is paid from it on chain
 
 - ✓Arena multiplayer: tokens you hit another player with land in their gun
 
@@ -10234,13 +10233,10 @@ Eat, grow, don’t hit the wallsPlay →](https://bitcoin-gaming.vercel.app)
 [2
 ### 2048
 Merge tiles to reach 2048Play →](https://bitcoin-gaming.vercel.app)
-[N
-### Ninja Punk Girls
-Collect and battle cyberpunk NFT cardsPlay →](https://ninjapunkgirls.online)
 
 ## The whole TokenBlaster arcade
 
-18 games on tokenblaster.lol. Every one has a free practice mode; in LIVE mode every shot, jump or bite is a real transaction.
+19 games on tokenblaster.lol; the full list is at [tokenblaster.lol/arcade](https://www.tokenblaster.lol/arcade). Each one has a short demo under an INSERT $b TO PLAY banner; insert $b to play properly.
 
 [### Double-O Satoshi
 Spy shooter: every bullet is a token on chainPlay →](https://www.tokenblaster.lol/arcade/doubleosatoshi)
@@ -10260,12 +10256,6 @@ Sub through the chain hunting hidden $KWEGPlay →](https://www.tokenblaster.lol
 Neon 3D snake: every bite is a real transactionPlay →](https://www.tokenblaster.lol/arcade/snake)
 [### Satoshi City
 Open-world city where every car is a live txPlay →](https://www.tokenblaster.lol/arcade/city)
-[### NPG: Card Battle
-Ninja Punk Girls card battle, AI or onlinePlay →](https://www.tokenblaster.lol/arcade/npg-cards)
-[### NPG: Arena
-Ninja Punk Girls 3D fighter, best of threePlay →](https://www.tokenblaster.lol/arcade/npg-arena)
-[### NPG: Erobot Uprising
-Ninja Punk Girls platformer, three bossesPlay →](https://www.tokenblaster.lol/arcade/npg-runner)
 [### Token Rally
 Rally racing against live chain trafficPlay →](https://www.tokenblaster.lol/arcade/rally)
 [### Sat Stack 2048
@@ -16551,91 +16541,91 @@ How bWallet and bWalletX were built, one chapter at a time. Every post is writte
 
 Newest first. Dates come from commits. bWallet is a fork of [Yours Wallet](https://github.com/yours-org/yours-wallet) (MIT licence).
 
-- 060 · 24 Oct 2026
+- [](https://bwalletx.com/blog/060-bvideox)060 · 24 Oct 2026
 [bVideoX: your YouTube videos, on Bitcoin, in your name](https://bwalletx.com/blog/060-bvideox)
 Connect bWalletX, link your YouTube channel with a short code, and mint a private record of each video in your own name. About 1¢ (1p) a video. Your videos stay on YouTube.
 
-- 059 · 20 Oct 2026
+- [](https://bwalletx.com/blog/059-b-aware)059 · 20 Oct 2026
 [b-Aware: find a hole in bWalletX, get paid in BSV](https://bwalletx.com/blog/059-b-aware)
 bWalletX now has a responsible disclosure policy and a bug bounty, paid in BSV: 10 BSV for a critical, a 20 BSV quarterly pool, a safe harbour, and our public answer to today’s BRC-100 advisory.
 
-- 058 · 17 Oct 2026
+- [](https://bwalletx.com/blog/058-signed-names)058 · 17 Oct 2026
 [We could move your name. Now you can see if we do.](https://bwalletx.com/blog/058-signed-names)
 A bWalletX name is a row in our database, so we could point it at another key. On 17 Oct we did, for the owner’s own names. Now names are signed by their owners, and every change goes in a public log.
 
-- 057 · 15 Oct 2026
+- [](https://bwalletx.com/blog/057-handcash-and-invites)057 · 15 Oct 2026
 [Sign in with HandCash, and invites with tokens](https://bwalletx.com/blog/057-handcash-and-invites)
 New accounts can now start with HandCash as well as X. Your HandCash handle carries over as name@bwalletx.com, your friends can come with you, and invites with tokens bring people into Spaces.
 
-- 056 · 15 Oct 2026
+- [](https://bwalletx.com/blog/056-bshares)056 · 15 Oct 2026
 [bShares: a register for any company](https://bwalletx.com/blog/056-bshares)
 bShares keeps a company’s register of members, lets directors approve new shares, and locks shares so they can’t move without the right people. It’s in testing; the first register is our own company.
 
-- 055 · 15 Oct 2026
+- [](https://bwalletx.com/blog/055-digital-ice-cream)055 · 15 Oct 2026
 [Digital Ice-Cream](https://bwalletx.com/blog/055-digital-ice-cream)
 A story about three friends, an ice-cream stand and digital cash, and where we’re taking bWalletX next.
 
-- 054 · 15 Oct 2026
+- [](https://bwalletx.com/blog/054-bradio-live-audio)054 · 15 Oct 2026
 [bRadio: live audio in bWalletX](https://bwalletx.com/blog/054-bradio-live-audio)
 Host a live audio Space, bring people up to speak, and keep listening while you use the rest of the wallet. Recorded Spaces can become podcast episodes.
 
-- 053 · 13 Oct 2026
+- [](https://bwalletx.com/blog/053-friends-bpics-and-video)053 · 13 Oct 2026
 [Friends, bPics and video in rooms](https://bwalletx.com/blog/053-friends-bpics-and-video)
 Friends has its own page on bWalletX Desktop, bPics looks like a photo app, and video links play inside the Feed and chat rooms.
 
-- 052 · 13 Oct 2026
+- [](https://bwalletx.com/blog/052-tip-buttons)052 · 13 Oct 2026
 [Tip buttons](https://bwalletx.com/blog/052-tip-buttons)
 bWalletX Desktop has a Tip button for artists, NFT creators, rooms, people in chat, friends and speakers in Spaces. Pick an amount, tap Allow once, and all of it goes to them.
 
-- 051 · 13 Oct 2026
+- [](https://bwalletx.com/blog/051-spaces-schedule-and-ask-b)051 · 13 Oct 2026
 [Spaces on a schedule, b on every page](https://bwalletx.com/blog/051-spaces-schedule-and-ask-b)
 Spaces in bWalletX Desktop have a weekly schedule in your own time zone, with Add to calendar. And Ask b is now a small bar at the bottom of every page.
 
-- 050 · 13 Oct 2026
+- [](https://bwalletx.com/blog/050-aivj-tv-vexvoid-live)050 · 13 Oct 2026
 [AIVJ — VexVoid, live](https://bwalletx.com/blog/050-aivj-tv-vexvoid-live)
 AIVJ is where VexVoid plays live audio-visual sets. Watch the first three minutes without signing in. After that it’s 1p a minute from your bWalletX, straight to the artist.
 
-- 049 · 13 Oct 2026
+- [](https://bwalletx.com/blog/049-the-exchange-sorted)049 · 13 Oct 2026
 [The Exchange, sorted](https://bwalletx.com/blog/049-the-exchange-sorted)
 The Market in bWalletX Desktop is now the Exchange. Browse by category, platform and tag, swap in place, and find your friends: buy a little of someone’s own token and open their room in one go.
 
-- 048 · 13 Oct 2026
+- [](https://bwalletx.com/blog/048-your-nfts-edge-to-edge)048 · 13 Oct 2026
 [Your NFTs, edge to edge](https://bwalletx.com/blog/048-your-nfts-edge-to-edge)
 bWalletX Desktop has an NFT library. Every picture, clip and song you own is in one grid, opens edge to edge, and a moment from a video can become the art on your card.
 
-- 047 · 13 Oct 2026
+- [](https://bwalletx.com/blog/047-pay-the-artist)047 · 13 Oct 2026
 [Pay the artist](https://bwalletx.com/blog/047-pay-the-artist)
 bMusic is on bWalletX Desktop. Anyone can open an artist page and hear the first track without signing in. The next tracks are paid for by the artist, and after that your money goes straight to them.
 
-- 046 · 12 Oct 2026
+- [](https://bwalletx.com/blog/046-stays-unlocked-sends-exactly)046 · 12 Oct 2026
 [Stays unlocked, sends exactly](https://bwalletx.com/blog/046-stays-unlocked-sends-exactly)
 bWalletX no longer locks itself after a few minutes, and fingerprint unlock on Android works again. Token sends show the exact amount before anything is paid.
 
-- 045 · 12 Oct 2026
+- [](https://bwalletx.com/blog/045-your-card-your-art)045 · 12 Oct 2026
 [Your card, your art](https://bwalletx.com/blog/045-your-card-your-art)
 The card in bWalletX can wear your own pictures or your NFTs, with standard colour sliders. And bPics lets you mint a picture from your phone.
 
-- 044 · 12 Oct 2026
+- [](https://bwalletx.com/blog/044-your-tokens-own-page-and-agent)044 · 12 Oct 2026
 [Your token's own page and agent](https://bwalletx.com/blog/044-your-tokens-own-page-and-agent)
 Every token on bChatX has a full page: price, chart, holders, posts and a Buy button. Its creator can give it an agent, and holders can show a badge name.
 
-- 043 · 12 Oct 2026
+- [](https://bwalletx.com/blog/043-ask-b)043 · 12 Oct 2026
 [Ask b](https://bwalletx.com/blog/043-ask-b)
 b, the helper inside bWalletX, has a calmer home. Hold the gold b to talk, and your chats on bChatX now have their own links.
 
-- 042 · 12 Oct 2026
+- [](https://bwalletx.com/blog/042-chats-that-feel-like-telegram)042 · 12 Oct 2026
 [Chats that feel like Telegram](https://bwalletx.com/blog/042-chats-that-feel-like-telegram)
 Chats in bWalletX open straight away and the list stays still. Swipe a chat to pin, mute, archive or mark it read.
 
-- 041 · 12 Oct 2026
+- [](https://bwalletx.com/blog/041-nfts-that-just-work)041 · 12 Oct 2026
 [NFTs that just work](https://bwalletx.com/blog/041-nfts-that-just-work)
 Sending an NFT is now two steps. NFTs sent to you say who sent them, open in a viewer, and wait for you to keep them. Video NFTs show their cover, and duplicates can be burned.
 
-- 040 · 12 Oct 2026
+- [](https://bwalletx.com/blog/040-pay-artists-by-the-second)040 · 12 Oct 2026
 [Pay artists by the second](https://bwalletx.com/blog/040-pay-artists-by-the-second)
 Echoes in the Abyss by VexVoid is in bWalletX. The first six tracks are free, the rest cost 1 sat a second, and the money goes straight to the artist.
 
-- 039 · 11 Oct 2026
+- [](https://bwalletx.com/blog/039-bgigs-your-stage-your-fans)039 · 11 Oct 2026
 [bGigs: your stage, your fans](https://bwalletx.com/blog/039-bgigs-your-stage-your-fans)
 Artists can play live to their fans from anywhere, sell tickets at the door or by the minute, and get paid straight away. It works today in bWalletX.
 
