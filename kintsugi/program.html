@@ -139,7 +139,7 @@
 
 
       <h2 id="apply">Register interest</h2>
-      <p>We are taking names now and will invite people in as the first paid tasks open. No ID documents here: the identity check happens later with Veriff.</p>
+      <p>We are taking names now and will invite people in as the first paid tasks open. No ID documents here: the identity check happens later with Veriff. Everyone who signs up gets the b Kintsugi wallet theme free: black obsidian mended with gold.</p>
       <form id="kform" novalidate>
         <label>Name <input type="text" name="name" required maxlength="120" autocomplete="name" /></label>
         <label>Email <input type="email" name="email" required maxlength="200" autocomplete="email" /></label>
@@ -163,6 +163,11 @@
         <button class="btn" type="submit">Register interest</button>
         <p id="kmsg" class="small" role="status"></p>
       </form>
+      <div id="ktheme" hidden>
+        <p><strong>Your b Kintsugi theme.</strong> Black obsidian mended with gold, free for signing up. It goes on in one tap and you can switch back any time in Settings › Theme.</p>
+        <button class="btn" type="button" id="kwear">Wear b Kintsugi in bWalletX</button>
+        <p id="kwmsg" class="small" role="status"></p>
+      </div>
       <script>
       (function () {
         var f = document.getElementById('kform'), m = document.getElementById('kmsg');
@@ -173,8 +178,25 @@
           m.textContent = 'Sending...';
           fetch('https://www.bchatx.com/api/kintsugi/apply', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(d) })
             .then(function (r) { return r.json().then(function (j) { if (!r.ok) throw new Error(j.error || 'Failed'); }); })
-            .then(function () { f.reset(); m.textContent = 'Thanks, you are on the list. We will email you when tasks open.'; })
+            .then(function () { f.reset(); m.textContent = 'Thanks, you are on the list. We will email you when tasks open.'; document.getElementById('ktheme').hidden = false; })
             .catch(function (err) { m.textContent = 'Could not send: ' + err.message + '. You can also message us in bChatX.'; });
+        });
+      })();
+      (function () {
+        var LOOK = {"id": "kintsugi", "label": "b Kintsugi", "blurb": "Black obsidian mended with gold", "scheme": "dark", "accent": "#F5B800", "hi": "#FFD978", "lo": "#A87A00", "on": "#0B0A08", "bg": "#050506", "surface": "#0F0E0C", "surface2": "#17150F", "nav": "#050506", "text": "#F3E7C2", "muted": "#B8A77A", "line": "#6B5418", "success": "#7FCB6B", "danger": "#FF6B5E"};
+        var b = document.getElementById('kwear'), w = document.getElementById('kwmsg');
+        b.addEventListener('click', function () {
+          var t = window.CWI && window.CWI.theme;
+          if (!t || !t.offer) { w.textContent = 'Open this page in Chrome with the bWalletX extension unlocked, then tap again. Get it at bwalletx.com.'; return; }
+          t.offer(LOOK).then(function (r) {
+            var x = r && r.result;
+            w.textContent = x === 'used' ? 'Done. Your wallet is wearing b Kintsugi.'
+              : x === 'declined' ? 'No problem. Tap again any time.'
+              : x === 'never' ? 'Theme offers from this site are turned off in your wallet.'
+              : (r && r.reason === 'locked') ? 'Unlock bWalletX, then tap again.'
+              : (r && r.reason === 'worn') ? 'Your wallet is already wearing b Kintsugi.'
+              : 'Your wallet did not show the theme this time. Try again later.';
+          }).catch(function () { w.textContent = 'Your wallet could not take the theme. Try again in a moment.'; });
         });
       })();
       </script>
