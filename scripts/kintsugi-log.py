@@ -376,7 +376,78 @@ def contract(it, n):
           </dl>
           {terms_html(founder=True)}
           <div class="sigs">{sig}</div>
+          {proof_html(n)}
         </div>'''
+
+
+STAMPS = {}   # contract number -> b's stamp txid, from data/kintsugi-stamps.json
+CT_DIR = os.path.join(ROOT, 'data', 'kintsugi-contracts')
+
+
+def proof_html(n):
+    txt = f'<a href="/data/kintsugi-contracts/{n}.txt">contract text</a>'
+    if n in STAMPS:
+        return (f'<p class="ct-proof">Proof: <a href="https://whatsonchain.com/tx/{STAMPS[n]}" rel="noopener">stamped on chain by b</a>'
+                f' · {txt} (sha256 of this text is in the stamp)</p>')
+    return f'<p class="ct-proof">Plain text: {txt}</p>'
+
+
+def canonical(text):
+    """Same as canonicalText() in bit-sign src/lib/b-stamp-rules.ts: NFC, LF line ends, no trailing
+    spaces/tabs/NBSP per line, no leading or trailing blank lines."""
+    import unicodedata
+    t = unicodedata.normalize('NFC', text).replace('\r\n', '\n').replace('\r', '\n')
+    t = '\n'.join(l.rstrip(' \t\u00a0') for l in t.split('\n'))
+    return t.lstrip('\n').rstrip('\n')
+
+
+def plain(h):
+    return html.unescape(re.sub(r'<[^>]+>', '', h))
+
+
+def contract_text(it, n):
+    """The canonical plain text of an example contract: the same facts as the HTML panel."""
+    t = it['time']; h = t['hours']
+    task = f'{it["title"]} (bwalletx.com{it["url"]})' if it['url'] else it['title']
+    terms = [plain(x) for x in re.findall(r'<li>(.*?)</li>', terms_html(founder=True), re.S)]
+    lines = [
+        'Kintsugi example contract',
+        'Example contract: shows what a Kintsugi contract for this job looks like. Not signed, not an invoice.',
+        '',
+        f'Contract: {n}',
+        f'Client: {CLIENT}, company no. {CLIENT_NO}, registered in England & Wales. Commissioned the work.',
+        f'Developer: {DEV} · paymail {PAYMAIL} ($b0asex)',
+        f'Escrow and review: Kintsugi, run by {CLIENT}',
+        f'Task: {task}',
+        f'Description: {it["desc"]}',
+        f'Estimate: {hrs(h)} (wall-clock)',
+        f'Price: {money(h)} ({hrs(h)} × $20), paid in BSV at the BSV/USD rate on the day of payment · {bsv(h)} at ${PRICE["usd"]:,.2f}/BSV',
+        f'Estimated value of work: {money(t["value_hours"])}',
+        f'Started: {fdate(t["first"])}',
+        f'Delivered: {fdate(t["last"])}',
+        '',
+        'Terms',
+    ] + [f'{k}. {x}' for k, x in enumerate(terms, 1)] + [
+        '',
+        'Client: Example — not signed',
+        'Developer: Example — not signed',
+        'Kintsugi: Example — not signed',
+    ]
+    return canonical('\n'.join(lines)) + '\n'
+
+
+def write_contracts(d):
+    import hashlib
+    os.makedirs(CT_DIR, exist_ok=True)
+    for f in glob.glob(os.path.join(CT_DIR, 'KS-*.txt')): os.remove(f)
+    idx = []
+    for it in sorted(d['items'], key=lambda x: x['ks']):
+        txt = contract_text(it, it['ks'])
+        open(os.path.join(CT_DIR, it['ks'] + '.txt'), 'w', encoding='utf-8', newline='\n').write(txt)
+        idx.append(dict(id=it['ks'], url=it['url'], title=it['title'], first=it['time']['first'], last=it['time']['last'],
+                        file=f'data/kintsugi-contracts/{it["ks"]}.txt', sha256=hashlib.sha256(canonical(txt).encode()).hexdigest()))
+    json.dump(dict(canonical='bit-sign b-stamp-rules canonicalText (NFC, LF, trailing whitespace and blank edge lines removed); sha256 over UTF-8',
+                   contracts=idx), open(os.path.join(CT_DIR, 'index.json'), 'w'), indent=1)
 
 
 def render(d):
@@ -395,6 +466,7 @@ def render(d):
         for it in g:
             t = it['time']
             it['desc'] = describe(it)
+            it['ks'] = num[id(it)]
             name = (f'<span class="nm">{E(it["title"])}</span><span class="u">{E(it["url"])}</span>' if it['url']
                     else f'<span class="nm">{E(it["title"])}</span><span class="u">Commits not tied to one page</span>')
             chips = '<span class="chip live">Live</span>'
@@ -482,6 +554,8 @@ CSS = '''<style>
       .bb .ct h3 { font-size: 0.95rem; margin: 18px 0 6px; }
       .bb .ct-terms { margin: 0; padding-left: 20px; color: #d4d6dc; font-size: 0.88rem; line-height: 1.6; }
       .bb .sigs { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; margin-top: 18px; }
+      .bb .ct-proof { margin: 14px 0 0; color: #c9ced8; font-size: 0.86rem; overflow-wrap: anywhere; }
+      .bb .ct-proof a { color: #F5B800; }
       .bb .sig { border-top: 1px solid #ffffff33; padding-top: 6px; font-size: 0.82rem; }
       .bb .sig span { display: block; color: #9aa1ad; }
       .bb .sig i { color: #8a8a86; }
@@ -647,7 +721,10 @@ if __name__ == '__main__':
     os.makedirs(os.path.join(ROOT, 'kintsugi'), exist_ok=True)
     PRICE.update(d['price'])
     cap_hours(d)
+    sp = os.path.join(ROOT, 'data', 'kintsugi-stamps.json')
+    if os.path.exists(sp): STAMPS.update({r['contract_id']: r['txid'] for r in json.load(open(sp))})
     open(os.path.join(ROOT, 'kintsugi', 'work.html'), 'w').write(page(d))
+    write_contracts(d)
     inject(d)
     th = sum(i['time']['hours'] for i in d['items'])
     print(f"items={len(d['items'])} hours={th:.0f} cost={money(th)} / {bsv(th)} open={len(d['open'])}")

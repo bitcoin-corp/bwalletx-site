@@ -1,0 +1,30 @@
+Kintsugi example contract
+Example contract: shows what a Kintsugi contract for this job looks like. Not signed, not an invoice.
+
+Contract: KS-2026-0099
+Client: The Bitcoin Corporation Ltd, company no. 16735102, registered in England & Wales. Commissioned the work.
+Developer: b0ase · paymail b0asex@bwalletx.com ($b0asex)
+Escrow and review: Kintsugi, run by The Bitcoin Corporation Ltd
+Task: Peck on b (bwalletx.com/peck-on-b)
+Description: Read Peck posts in the bWalletX Feed from its public overlay, see each author’s posts, tip signed authors in BSV and lock behind posts.
+Estimate: 0.4 h (wall-clock)
+Price: $9 (0.4 h × $20), paid in BSV at the BSV/USD rate on the day of payment · ~0.52 BSV at $17.01/BSV
+Estimated value of work: $25
+Started: 6 Oct 2026
+Delivered: 25 Oct 2026
+
+Terms
+1. The client locks 100% of the price in escrow before work starts, so the money is there before a line is written.
+2. Up to 8 billable hours per day.
+3. Done means: the pull request is merged into the agreed repo, the change is live on the stated page, and the security tool results are attached.
+4. Security tools: Shannon for any change that touches sign-in, payments, keys or signing; Semgrep, gitleaks, pnpm audit and OSV-Scanner, CodeQL, OWASP ZAP (baseline scan) and Claude Code /security-review. Tool and AI usage costs are the developer's and are not billable hours.
+5. Kintsugi checks the spec, holds the payment, reviews the work and releases the pay to the developer's $handle in bWalletX when the work is accepted.
+6. Disputes: if the client and developer disagree about whether the work is done, Kintsugi reviews it and decides.
+7. Delivered work belongs to the client once it is paid for.
+8. Code under the Open BSV licence; specs and docs CC BY 4.0.
+9. All three parties sign the same contract in bChatX before work starts.
+10. This log is the founder's own work, counted at up to 18 hours a day. It comes from before the 8-hour daily cap that applies to Kintsugi developers.
+
+Client: Example — not signed
+Developer: Example — not signed
+Kintsugi: Example — not signed
