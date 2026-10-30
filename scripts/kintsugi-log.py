@@ -273,6 +273,110 @@ def fetch_price():
 def hrs(h): return ('{:.1f}'.format(h) if h < 10 else '{:,.0f}'.format(h)) + ' h'
 
 
+CLIENT = 'The Bitcoin Corporation Ltd'
+CLIENT_NO = '16735102'
+PAYMAIL = 'b0asex@bwalletx.com'
+GENERIC = 'Shared code behind several pages: components, fixes and plumbing used across {repo}.'
+DESC_BAD = re.compile(r'coming soon|soon|invest', re.I)
+
+
+def describe(it):
+    """One plain sentence for an item, from its page's meta description (or og:description)."""
+    if not it['url']:
+        return GENERIC.format(repo=it['title'].split(':')[0])
+    u = it['url'].strip('/') or 'index'
+    for f in (u + '.html', u + '/index.html'):
+        fp = os.path.join(ROOT, f)
+        if os.path.exists(fp):
+            t = rd(fp)
+            m = (re.search(r'<meta\s+name="description"\s+content="([^"]*)"', t, re.I)
+                 or re.search(r'<meta\s+property="og:description"\s+content="([^"]*)"', t, re.I))
+            if m:
+                txt = html.unescape(m.group(1)).strip()
+                sents = [x for x in re.split(r'(?<=[.!?])\s+', txt) if x and not DENY.search(x) and not DESC_BAD.search(x)]
+                out = ''
+                for x in sents:
+                    if len(out) >= 60 or len(out) + len(x) > 240: break
+                    out = (out + ' ' + x).strip()
+                if out: return out
+            break
+    return f'The {it["title"]} page on bwalletx.com.'
+
+
+def fdate(s): return datetime.date.fromisoformat(s).strftime('%-d %b %Y')
+
+
+FOUNDER = "This log is the founder's own work, counted at up to 18 hours a day. It comes from before the 8-hour daily cap that applies to Kintsugi developers."
+OPEN_H = {'page': 2, 'post': 1}   # fixed estimates for open offers
+
+
+def terms_html(founder=False, done='the change is live on the stated page'):
+    t = f'''          <h3>Terms</h3>
+          <ol class="ct-terms">
+            <li>The client locks 100% of the price in escrow before work starts, so the money is there before a line is written.</li>
+            <li>Up to 8 billable hours per day.</li>
+            <li>Done means: the pull request is merged into the agreed repo, {done}, and the security tool results are attached.</li>
+            <li>Security tools: Shannon for any change that touches sign-in, payments, keys or signing; Semgrep, gitleaks, pnpm audit and OSV-Scanner, CodeQL, OWASP ZAP (baseline scan) and Claude Code /security-review. Tool and AI usage costs are the developer's and are not billable hours.</li>
+            <li>Kintsugi checks the spec, holds the payment, reviews the work and releases the pay to the developer's $handle in bWalletX when the work is accepted.</li>
+            <li>Delivered work belongs to the client once it is paid for.</li>
+            <li>Code under the Open BSV licence; specs and docs CC BY 4.0.</li>
+            <li>All three parties sign the same contract in bChatX before work starts.</li>
+'''
+    if founder: t += f'            <li>{FOUNDER}</li>\n'
+    return t + '          </ol>'
+
+
+def offer(o, n):
+    h = OPEN_H[o['kind']]
+    if o['kind'] == 'page':
+        task = f'Write and publish a blog post for <a href="{E(o["url"])}">{E(o["title"])}</a> <span class="u">bwalletx.com{E(o["url"])}</span>'
+        dep = 'None'; done = 'the post is live on bwalletx.com/blog and linked from the page'
+    else:
+        task = f'Publish post “{E(o["title"])}” once its feature ships in a release build'
+        dep = 'The feature the post describes must be in a release build first. The post is already written.'
+        done = 'the post is live on bwalletx.com/blog after the feature is in a release build'
+    sig = ''.join(f'<div class="sig"><span>{r}</span><i>Example — not signed</i></div>' for r in ('Client', 'Developer', 'Kintsugi'))
+    return f'''<div class="ct" role="region" aria-label="Open offer {n}">
+          <p class="ct-note"><strong>Open offer</strong>: example of how this job will be offered. Not open for acceptance yet. <a href="/kintsugi/program#apply">Register interest</a> to be told when tasks open.</p>
+          <dl class="ct-dl">
+            <dt>Offer</dt><dd class="tn">{n}</dd>
+            <dt>Client</dt><dd>{CLIENT}, company no. {CLIENT_NO}, registered in England &amp; Wales</dd>
+            <dt>Developer</dt><dd>Open: first accepted developer</dd>
+            <dt>Escrow and review</dt><dd>Kintsugi, run by {CLIENT}</dd>
+            <dt>Task</dt><dd>{task}</dd>
+            <dt>Depends on</dt><dd>{dep}</dd>
+            <dt>Estimate</dt><dd class="tn">{h} h (fixed)</dd>
+            <dt>Price</dt><dd class="tn"><span class="gold">{money(h)}</span> ({h} h × $20), paid in BSV at the BSV/USD rate on the day of payment · {bsv(h)} at ${PRICE["usd"]:,.2f}/BSV</dd>
+            <dt>Status</dt><dd>Not open yet</dd>
+          </dl>
+          {terms_html(done=done)}
+          <div class="sigs">{sig}</div>
+        </div>'''
+
+
+def contract(it, n):
+    t = it['time']; h = t['hours']
+    task = (f'<a href="{E(it["url"])}">{E(it["title"])}</a> <span class="u">bwalletx.com{E(it["url"])}</span>' if it['url'] else E(it['title']))
+    sig = ''.join(f'<div class="sig"><span>{r}</span><i>Example — not signed</i></div>' for r in ('Client', 'Developer', 'Kintsugi'))
+    return f'''<div class="ct" role="region" aria-label="Example contract {n}">
+          <p class="ct-note"><strong>Example contract</strong> — shows what a Kintsugi contract for this job looks like. Not signed, not an invoice.</p>
+          <dl class="ct-dl">
+            <dt>Contract</dt><dd class="tn">{n}</dd>
+            <dt>Client</dt><dd>{CLIENT}, company no. {CLIENT_NO}, registered in England &amp; Wales. Commissioned the work.</dd>
+            <dt>Developer</dt><dd>{E(DEV)} · paymail <span class="pm">{PAYMAIL}</span> ($b0asex)</dd>
+            <dt>Escrow and review</dt><dd>Kintsugi, run by {CLIENT}</dd>
+            <dt>Task</dt><dd>{task}<span class="sub">{E(it["desc"])}</span></dd>
+            <dt>Estimate</dt><dd class="tn">{hrs(h)} (wall-clock)</dd>
+            <dt>Price</dt><dd class="tn"><span class="gold">{money(h)}</span> ({hrs(h)} × $20), paid in BSV at the BSV/USD rate on the day of payment · {bsv(h)} at ${PRICE["usd"]:,.2f}/BSV</dd>
+            <dt>Estimated value of work</dt><dd class="tn"><span class="val">{money(t["value_hours"])}</span></dd>
+            <dt>Started</dt><dd class="tn">{fdate(t["first"])}</dd>
+            <dt>Delivered</dt><dd class="tn">{fdate(t["last"])}</dd>
+          </dl>
+          {terms_html(founder=True)}
+          <div class="sigs">{sig}</div>
+        </div>'''
+
+
 def render(d):
     order = [t for t, _ in TOP] + ['Other pages', PLATFORM]
     groups = {}
@@ -280,6 +384,7 @@ def render(d):
     tot_h = sum(it['time']['hours'] for it in d['items'])
     tot_v = sum(it['time']['value_hours'] for it in d['items'])
     sections, toc = '', []
+    num = {id(it): f'KS-2026-{k:04d}' for k, it in enumerate(sorted(d['items'], key=lambda x: (x['url'] or '~', x['title'])), 1)}
     for tp in [t for t in order if t in groups]:
         rows = ''
         g = sorted(groups[tp], key=lambda x: -x['time']['hours'])
@@ -287,24 +392,35 @@ def render(d):
         gv = sum(it['time']['value_hours'] for it in g)
         for it in g:
             t = it['time']
-            name = (f'<a href="{E(it["url"])}">{E(it["title"])}</a><span class="u">{E(it["url"])}</span>' if it['url']
+            it['desc'] = describe(it)
+            name = (f'<span class="nm">{E(it["title"])}</span><span class="u">{E(it["url"])}</span>' if it['url']
                     else f'<span class="nm">{E(it["title"])}</span><span class="u">Commits not tied to one page</span>')
             chips = '<span class="chip live">Live</span>'
             if it['posts']: chips += f'<span class="chip post">{len(it["posts"])} post{"s" if len(it["posts"]) != 1 else ""}</span>'
             if it['on_x']: chips += '<span class="chip x">On X</span>'
             pl = ''.join(f'<a href="{E(p["url"])}" title="{E(p["title"])}">{E(p["n"])}</a>' for p in it['posts'][:8])
             pr = f'{t["prs"]} PR{"s" if t["prs"] != 1 else ""}, median {t["pr_median_h"]:g} h open to merge' if t['prs'] else 'No PRs matched'
-            rows += (f'<tr><td class="it">{name}{f"<span class=pl>Posts: {pl}</span>" if pl else ""}</td><td>{chips}</td>'
-                     f'<td class="n">{hrs(t["hours"])}<span class="sub">{t["sessions"]} session{"s" if t["sessions"] != 1 else ""} · '
-                     f'{t["elapsed_days"]} day{"s" if t["elapsed_days"] != 1 else ""} elapsed</span><span class="sub">{pr}</span></td>'
-                     f'<td class="n c">{money(t["hours"])}<span class="sub">{bsv(t["hours"])} pay</span><span class="sub">{money(t["value_hours"])} estimated value of work</span></td></tr>')
+            rows += (f'<details class="job"><summary><span class="it">{name}<span class="ds">{E(it["desc"])}</span><span class="chips">{chips}</span></span>'
+                     f'<span class="n">{hrs(t["hours"])}<span class="sub">{t["sessions"]} session{"s" if t["sessions"] != 1 else ""} · '
+                     f'{t["elapsed_days"]} day{"s" if t["elapsed_days"] != 1 else ""} elapsed</span><span class="sub">{pr}</span></span>'
+                     f'<span class="n c">{money(t["hours"])}<span class="sub">{bsv(t["hours"])} pay</span><span class="sub val">{money(t["value_hours"])} estimated value of work</span></span>'
+                     f'<span class="cv" aria-hidden="true"></span></summary>'
+                     f'{f"<p class=pl>Posts: {pl}</p>" if pl else ""}{contract(it, num[id(it)])}</details>')
         sid = re.sub(r'[^a-z]+', '-', tp.lower()).strip('-')
         toc.append(f'<a href="#{sid}">{E(tp)}</a>')
         sections += (f'<section id="{sid}"><div class="sh"><h2>{E(tp)}</h2><p class="st"><span>{len(g)} item{"s" if len(g) != 1 else ""}</span>'
-                     f'<span>{hrs(gh)}</span><span class="c">{money(gh)}</span><span>{bsv(gh)}</span> <span class="est">{money(gv)} estimated value of work</span></p></div>'
-                     f'<div class="tw"><table><thead><tr><th>Item</th><th>Status</th><th class="n">Time taken</th><th class="n">At the Kintsugi rate</th></tr></thead>'
-                     f'<tbody>{rows}</tbody></table></div></section>')
-    ow = ''.join(f'<li>{f"<a href={chr(34)}{E(o["url"])}{chr(34)}>{E(o["title"])}</a>" if o["url"] else E(o["title"])}<span>{E(o["what"])}</span></li>' for o in d['open'])
+                     f'<span>{hrs(gh)}</span><span class="c">{money(gh)}</span><span>{bsv(gh)}</span> <span class="est val">{money(gv)} estimated value of work</span></p></div>'
+                     f'<div class="jobs"><div class="jh" aria-hidden="true"><span>Item · tap to see an example contract</span><span class="n">Time taken</span><span class="n">At the Kintsugi rate</span><span></span></div>'
+                     f'{rows}</div></section>')
+    ow = ''
+    for k, o in enumerate(d['open'], 1):
+        h = OPEN_H[o['kind']]
+        nm = f'Blog post for {E(o["title"])}' if o['kind'] == 'page' else f'Publish “{E(o["title"])}”'
+        ow += (f'<details class="job"><summary><span class="it"><span class="nm">{nm}</span><span class="u">{E(o["url"] or "Held until its feature is in a release build")}</span>'
+               f'<span class="ds">{E(o["what"])}.</span><span class="chips"><span class="chip x">Not open yet</span></span></span>'
+               f'<span class="n">{h} h<span class="sub">fixed estimate</span></span><span class="n c">{money(h)}<span class="sub">{bsv(h)}</span></span>'
+               f'<span class="cv" aria-hidden="true"></span></summary>{offer(o, f"KS-OFFER-{k:04d}")}</details>')
+    oh = sum(OPEN_H[o['kind']] for o in d['open'])
     repos = ', '.join(f'{E(r["repo"])} ({r["commits"]:,} commits)' for r in d['repos'])
     body = f'''<main class="bb">
       <h1><b>Kintsugi</b> work log: a month of work, in the open</h1>
@@ -313,13 +429,15 @@ def render(d):
         <div class="tot"><b class="tn">{len(d["items"])}</b><span>items shipped</span></div>
         <div class="tot"><b class="tn">{tot_h:,.0f} h</b><span>wall-clock hours (estimate, at most {CAP_H_DAY} a day)</span></div>
         <div class="tot big"><b class="tn">{money(tot_h)}</b><span>pay at the Kintsugi rate ($20 per hour, paid in BSV), about {bsv(tot_h)[1:]} at ${PRICE["usd"]:,.2f}/BSV on {E(PRICE["date"])}</span></div>
-        <div class="tot big"><b class="tn">{money(tot_v)}</b><span>estimated value of work: {tot_v:,.0f} hours of work at $20, across parallel sessions. What a developer creates over and above the pay.</span></div>
+        <div class="tot big val"><b class="tn">{money(tot_v)}</b><span>estimated value of work: {tot_v:,.0f} hours of work at $20, across parallel sessions. What a developer creates over and above the pay.</span></div>
       </div>
       <p class="how"><strong>How Kintsugi works.</strong> Work is written up as tasks that an AI-assisted coder can pick up with Cursor, GitHub and a Claude account. The rate is $20 per hour, paid in BSV at the BSV/USD rate on the day of payment.</p>
+      <p class="how">Tap any job to see an example contract for it: the offer, the terms, who commissioned it ({CLIENT}) and the paymail of the developer who did it.</p>
+      <p class="how">{FOUNDER}</p>
       <p class="warn">Every figure here is an estimate, derived from git timestamps. It is not an invoice, a valuation or a claim.</p>
       <nav class="toc" aria-label="Topics">{"".join(toc)}<a href="#open-work">Open work</a><a href="#method">Method</a></nav>
       {sections}
-      <section id="open-work"><h2>Open work</h2><p>Pages that have no blog post yet, and posts held back until the feature they describe is in a release build.</p><ul class="open">{ow}</ul></section>
+      <section id="open-work"><h2>Open work</h2><p>Pages that have no blog post yet, and posts held back until the feature they describe is in a release build. Each is shown as an open offer.</p><p class="st"><span>{len(d["open"])} open offers, about <b class="c">{money(oh)}</b> ({oh} h at $20, paid in BSV). Not open yet: <a href="/kintsugi/program#apply">register interest</a> to be told when tasks open.</span></p><div class="jobs" style="margin-top:12px"><div class="jh" aria-hidden="true"><span>Offer · tap to see how it will be offered</span><span class="n">Estimate</span><span class="n">Price</span><span></span></div>{ow}</div></section>
       <section id="method"><h2>How the numbers are made</h2>
         <ol class="method">
           <li><strong>Items.</strong> Every public page on bwalletx.com that is in the sitemap. Internal company matters are left out on purpose.</li>
@@ -335,6 +453,48 @@ def render(d):
 
 
 CSS = '''<style>
+      :root { --kw-green: #3ddc84; }
+      .bb .val, .bb .tot.big.val b, .bb .sub.val, .bb .est.val { color: var(--kw-green); }
+      .bb .jobs { border: 1px solid #ffffff14; border-radius: 14px; overflow: hidden; }
+      .bb .jh, .bb .job > summary { display: grid; grid-template-columns: minmax(0, 1fr) 230px 240px 18px; gap: 16px; padding: 12px 16px; }
+      .bb .jh { background: #0e0f12; color: #9aa1ad; font-weight: 600; font-size: 0.82rem; }
+      .bb .job { border-top: 1px solid #ffffff12; }
+      .bb .job > summary { list-style: none; cursor: pointer; font-size: 0.94rem; }
+      .bb .job > summary::-webkit-details-marker { display: none; }
+      .bb .job > summary:hover { background: #ffffff08; }
+      .bb .job > summary:focus-visible { outline: 2px solid #F5B800; outline-offset: -2px; border-radius: 4px; }
+      .bb .job .n.c { color: #F5B800; font-weight: 700; }
+      .bb .job .sub.val { color: var(--kw-green); font-weight: 600; }
+      .bb .ds { display: block; color: #c9ced8; font-size: 0.86rem; line-height: 1.5; margin: 4px 0 6px; }
+      .bb .cv { width: 8px; height: 8px; margin-top: 6px; border-right: 2px solid #9aa1ad; border-bottom: 2px solid #9aa1ad; transform: rotate(45deg); }
+      .bb .job[open] .cv { transform: rotate(225deg); margin-top: 10px; }
+      .bb .job > .pl { padding: 0 16px; margin: 0 0 8px; }
+      .bb .ct { margin: 0 16px 16px; padding: 18px 20px; background: #0e0f12; border: 1px solid #ffffff14; border-radius: 12px; }
+      .bb .ct-note { margin: 0 0 14px; color: #c9ced8; font-size: 0.88rem; }
+      .bb .ct-dl { display: grid; grid-template-columns: 180px minmax(0, 1fr); gap: 8px 18px; margin: 0; font-size: 0.9rem; }
+      .bb .ct-dl dt { color: #9aa1ad; }
+      .bb .ct-dl dd { margin: 0; color: #e8e6e1; overflow-wrap: anywhere; }
+      .bb .ct-dl dd .val { font-weight: 700; }
+      .bb .ct-dl dd .gold { color: #F5B800; font-weight: 700; }
+      .bb .ct .pm { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 0.86rem; }
+      .bb .ct h3 { font-size: 0.95rem; margin: 18px 0 6px; }
+      .bb .ct-terms { margin: 0; padding-left: 20px; color: #d4d6dc; font-size: 0.88rem; line-height: 1.6; }
+      .bb .sigs { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; margin-top: 18px; }
+      .bb .sig { border-top: 1px solid #ffffff33; padding-top: 6px; font-size: 0.82rem; }
+      .bb .sig span { display: block; color: #9aa1ad; }
+      .bb .sig i { color: #8a8a86; }
+      @media (prefers-reduced-motion: no-preference) { .bb .cv { transition: transform .15s ease; } }
+      @media (max-width: 720px) {
+        .bb .jh { display: none; }
+        .bb .job > summary { grid-template-columns: minmax(0, 1fr) 18px; gap: 6px 12px; }
+        .bb .job > summary .it { grid-column: 1; }
+        .bb .job > summary .n { grid-column: 1; text-align: left; white-space: normal; }
+        .bb .job > summary .cv { grid-column: 2; grid-row: 1; }
+        .bb .ct { margin: 0 8px 12px; padding: 14px; }
+        .bb .ct-dl { grid-template-columns: minmax(0, 1fr); gap: 2px; }
+        .bb .ct-dl dd { margin-bottom: 8px; }
+        .bb .sigs { grid-template-columns: minmax(0, 1fr); }
+      }
       .bb { max-width: 1040px; margin: 0 auto; padding: 120px 16px 80px; }
       .bb h1 { font-size: clamp(2rem, 6vw, 3.2rem); line-height: 1.08; margin: 0 0 12px; letter-spacing: -0.02em; }
       .bb h1 b, .bb .gold { color: #F5B800; }
@@ -432,8 +592,8 @@ def summary_html(d):
         <p>Since the project began on {start}: {len(d["items"])} pages and features, about {th:,.0f} wall-clock hours, worth $20 an hour in pay. Running work in parallel with Claude produced about {tv:,.0f} hours of work, the estimated value of work.</p>
         <div class="kw-tw"><table class="kw-t">
           <thead><tr><th>Developer</th><th class="n">Jobs</th><th class="n">Hours</th><th class="n">Pay at $20/h</th><th class="n">Estimated value of work</th></tr></thead>
-          <tbody><tr><td><strong>{E(DEV)}</strong> · with Claude</td><td class="n">{len(d["items"])}</td><td class="n">{th:,.0f}</td><td class="n"><strong>≈ {money(th)}</strong> · ≈ {bsv(th)[1:]}</td><td class="n">≈ {money(tv)}</td></tr></tbody>
-          <tfoot><tr><td>Running total</td><td class="n">{len(d["items"])}</td><td class="n">{th:,.0f}</td><td class="n">≈ {money(th)} · ≈ {bsv(th)[1:]}</td><td class="n">≈ {money(tv)}</td></tr></tfoot>
+          <tbody><tr><td><strong>{E(DEV)}</strong> · with Claude</td><td class="n">{len(d["items"])}</td><td class="n">{th:,.0f}</td><td class="n"><strong>≈ {money(th)}</strong> · ≈ {bsv(th)[1:]}</td><td class="n kw-g">≈ {money(tv)}</td></tr></tbody>
+          <tfoot><tr><td>Running total</td><td class="n">{len(d["items"])}</td><td class="n">{th:,.0f}</td><td class="n">≈ {money(th)} · ≈ {bsv(th)[1:]}</td><td class="n kw-g">≈ {money(tv)}</td></tr></tfoot>
         </table></div>
         <p class="kw-note">Estimate from git history, capped at {CAP_H_DAY} hours a day for {d["cap"]["days"]} days; not an invoice or payment. BSV at ${PRICE["usd"]:,.2f} per BSV on {E(PRICE["date"])}. Updated {E(d["generated"])}.</p>
         <p><a href="/kintsugi/work">See every job &rarr;</a></p>
@@ -444,6 +604,7 @@ def summary_html(d):
           .kw-t thead th {{ border-top: 0; color: #9aa1ad; font-size: 0.82rem; font-weight: 600; }}
           .kw-t .n {{ text-align: right; white-space: nowrap; }}
           .kw-t tfoot td {{ color: #F5B800; font-weight: 700; }}
+          .kw-t .kw-g, .kw-t tfoot td.kw-g {{ color: #3ddc84; font-weight: 700; }}
           .kw-note {{ color: #8a8a86; font-size: 0.88rem; }}
         </style>
       </section>
