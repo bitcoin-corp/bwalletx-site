@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>090 Safer by default · bWalletX blog</title>
+    <meta name="description" content="bWalletX protects you without asking you to be an expert: you see exactly what you approve, sites never touch the wallet&#x27;s own keys, and apps can only spend what you set aside for them." />
+    <link rel="canonical" href="https://bwalletx.com/blog/090-safer-by-default" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://bwalletx.com/blog/090-safer-by-default" />
+    <meta property="og:site_name" content="bWalletX" />
+    <meta property="og:title" content="Safer by default" />
+    <meta property="og:description" content="bWalletX protects you without asking you to be an expert: you see exactly what you approve, sites never touch the wallet&#x27;s own keys, and apps can only spend what you set aside for them." />
+    <meta property="og:image" content="https://bwalletx.com/og/og-blog-090-safer-by-default.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@bWalletX" />
+    <meta name="twitter:title" content="Safer by default" />
+    <meta name="twitter:description" content="bWalletX protects you without asking you to be an expert: you see exactly what you approve, sites never touch the wallet&#x27;s own keys, and apps can only spend what you set aside for them." />
+    <meta name="twitter:image" content="https://bwalletx.com/og/og-blog-090-safer-by-default.png" />
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="stylesheet" href="/styles.css" />
+    <style>
+      .ext { max-width: 760px; margin: 0 auto; padding: 120px 20px 80px; }
+      .ext h1 { font-size: clamp(2rem, 6vw, 3rem); margin: 10px 0 10px; line-height: 1.15; }
+      .ext h2 { margin: 44px 0 10px; font-size: 1.4rem; }
+      .ext p, .ext li { line-height: 1.7; }
+      .ext code { background: #17191e; padding: 2px 7px; border-radius: 6px; overflow-wrap: anywhere; }
+      .ext a { overflow-wrap: anywhere; }
+      .meta { color: #8a8a86; font-size: 0.9rem; margin: 0; }
+      .num { color: #F5B800; font-weight: 700; letter-spacing: .04em; }
+      .box { background: #101114; border: 1px solid #ffffff12; border-radius: 16px; padding: 18px 22px; margin: 28px 0; }
+      .box h2 { margin: 0 0 8px; font-size: 1.1rem; }
+      .box ul { margin: 0; padding-left: 1.2em; }
+      .related { color: #a7adb8; }
+      .pn { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; margin-top: 40px; border-top: 1px solid #ffffff14; padding-top: 20px; }
+      .pn a { color: #F5B800; text-decoration: none; max-width: 100%; }
+      .posts { list-style: none; padding: 0; margin: 28px 0; }
+      .posts li { background: #101114; border: 1px solid #ffffff12; border-radius: 16px; padding: 16px 20px; margin: 12px 0; }
+      .posts a { color: #fff; text-decoration: none; font-weight: 700; font-size: 1.1rem; }
+      .posts a:hover { color: #F5B800; }
+      .posts p { margin: 4px 0 0; color: #a7adb8; line-height: 1.55; }
+      .ext .small { color: #8a8a86; font-size: 0.85rem; }
+      .box ul.chk { list-style: none; padding-left: 0; }
+      .box ul.chk li { margin: 6px 0; }
+      .ext pre { background: #101114; border: 1px solid #ffffff12; border-radius: 12px; padding: 14px 16px; overflow-x: auto; font-size: 0.85rem; }
+      .ext pre code { background: none; padding: 0; overflow-wrap: normal; }
+          .hold { background: #2a1f00; border: 2px dashed #F5B800; border-radius: 16px; padding: 16px 20px; margin: 0 0 28px; }
+      .hold h2 { margin: 0 0 8px; font-size: 1.05rem; color: #F5B800; }
+    </style>
+    <!-- ld:start -->
+    <script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "BlogPosting",
+   "headline": "Safer by default",
+   "description": "bWalletX protects you without asking you to be an expert: you see exactly what you approve, sites never touch the wallet's own keys, and apps can only spend what you set aside for them.",
+   "url": "https://bwalletx.com/blog/090-safer-by-default",
+   "mainEntityOfPage": "https://bwalletx.com/blog/090-safer-by-default",
+   "image": "https://bwalletx.com/og/og-blog-090-safer-by-default.png",
+   "inLanguage": "en",
+   "author": {
+    "@type": "Organization",
+    "name": "The Bitcoin Corporation Ltd",
+    "url": "https://bwalletx.com/"
+   },
+   "publisher": {
+    "@type": "Organization",
+    "name": "The Bitcoin Corporation Ltd",
+    "logo": {
+     "@type": "ImageObject",
+     "url": "https://bwalletx.com/icon-512.png"
+    }
+   },
+   "datePublished": "2026-10-30"
+  }
+ ]
+}
+    </script>
+    <!-- ld:end -->
+  </head>
+  <body>
+    <div class="beta-banner">bWalletX is in <strong>beta</strong>: test with small amounts.</div>
+    <header class="topbar">
+      <div class="wrap topbar-in">
+        <a class="brand" href="/"><img src="/logo.svg" alt="" width="34" height="30" /><span>bWallet<span class="gold">X</span></span></a>
+        <nav aria-label="Pages">
+          <a href="/features">Features</a><a href="/exchange">Exchange</a><a href="/social">Social</a><a href="/agent">Agents</a><a href="/extension">Extension</a><a href="/developers">Developers</a>
+        </nav>
+        <span class="nav-cta"><a class="dl-btn" href="/get">Download</a><a class="web-btn" href="https://web.bwalletx.com" target="_blank" rel="noopener">Web &rarr;</a></span>
+      </div>
+    </header>
+    <script src="/nav.js"></script>
+    <main class="ext">
+      <p class="meta"><a href="/blog">Development blog</a> · <span class="num">090</span> · 30 Oct 2026</p>
+      <h1>Safer by default</h1>
+      <p class="lede">bWalletX protects you without asking you to be an expert. You see exactly what you approve, sites never touch the wallet&rsquo;s own keys, and apps can only spend what you set aside for them. It works with every BRC-100 app.</p>
+
+      <h2>What you see is what you grant</h2>
+      <p>Every approval sheet shows every line it grants, amounts in dollars first. Each request gets its own sheet. A site&rsquo;s full address is always shown, so a look-alike like <code>tokenblaster.com.ab1.io</code> can never pass for the real thing.</p>
+      <h2>Envelopes for apps</h2>
+      <p>Let an app pay small amounts without asking by giving it an envelope. It can spend only what fits, the money stays in your wallet until each payment, and forgetting the app returns the rest. Signing in never sets up spending.</p>
+      <h2>The wallet's keys stay the wallet's</h2>
+      <p>The keys bWalletX uses for itself, including those behind bTrust, are never offered to outside apps. Nothing is pre-ticked for you.</p>
+      <h2>Sign in and pair with a code</h2>
+      <p>Sign in with bWalletX asks you to type the code the site shows, and pairing your phone compares an 8-digit code over our own relay. Each pairing keeps its own permissions, and Disconnect removes them.</p>
+      <h2>Your password, your words</h2>
+      <p>Changing your password needs your current one, Face ID or your 12 words. Passwords are protected by a strong 600,000-round key, and on the web your unlock stays in memory only. Recovery words never leave your device in a report or an Ask b chat.</p>
+      <h2>A bounty pool you can watch</h2>
+      <p>Find a hole and get paid in BSV through <a href="/blog/059-b-aware">b-Aware</a>. The <a href="/bounties">bounty pool</a> is live from the chain: what&rsquo;s left this quarter, what&rsquo;s been paid, and a link to every payout.</p>
+
+      <div class="box">
+        <h2>Live today, 30 Oct 2026</h2>
+        <ul class="chk">
+          <li>&check; Every line shown; dollars first; full site addresses (5.2.41)</li>
+          <li>&check; Envelopes for apps; sign-in never stores spending (bWalletX editions)</li>
+          <li>&check; Wallet's own keys refused to outside apps (5.2.35)</li>
+          <li>&check; Sign-in match code; 8-digit pairing; per-pairing permissions</li>
+          <li>&check; Password change needs proof; 600k-round password key</li>
+          <li>&check; Live bounty pool at /bounties</li>
+        </ul>
+      </div>
+      <p class="related"><b>Part of:</b> <a href="/blog#safe">Safety &amp; control</a> · Related: <a href="/blog/063-dollars-first">063 Dollars first, and fewer prompts</a> · <a href="/blog/078-look-alikes">078 Names that can't pretend</a> · <a href="/blog/059-b-aware">059 b-Aware: find a hole in bWalletX, get paid in BSV</a></p>
+      <div class="pn"><a href="/blog/088-a-card-for-every-balance">&larr; 088 A card for every balance, and an address book</a><a href="/blog">All posts &rarr;</a></div>
+    </main>
+  </body>
+</html>
