@@ -7516,6 +7516,8 @@ Have an old BSV wallet? Its 12 words still work. bWalletX can open it as an acco
 
 [Get bWalletX](https://bwalletx.com/get)
 
+Step-by-step guides: [SimplyCash](https://bwalletx.com/restore/simplycash) · [RelayX](https://bwalletx.com/restore/relayx) · [Twetch](https://bwalletx.com/restore/twetch) · [Yours](https://bwalletx.com/restore/yours) · [Panda](https://bwalletx.com/restore/panda) · [Money Button](https://bwalletx.com/restore/moneybutton)
+
 ## Restore or sweep?
 
 Restore opens the old wallet as an account in bWalletX. The keys are the same, so nothing moves on chain. Use it when bWalletX knows the wallet’s layout.
@@ -7526,20 +7528,20 @@ Sweep moves the coins and tokens out of the old wallet into an account you alrea
 
 WalletHowYou needDerivation pathWhat comes across
 
-bWalletX, Yours, Panda
+bWalletX, [Yours](https://bwalletx.com/restore/yours), [Panda](https://bwalletx.com/restore/panda)
 LiveRestore as an account12 words`m/44'/236'/0'/1/0` payment
 `m/44'/236'/1'/0/0` ordinals
 `m/0'/236'/0'/0/0` identityEverything: BSV, ordinals, BSV-20 and BSV-21 tokens, names. Coins on Yours' older payment key (`m/44'/236'/0'/0/0`) are moved across automatically.
 
-RelayX
+[RelayX](https://bwalletx.com/restore/relayx)
 LiveRestore as an account12 words`m/44'/236'/0'/1/0` payment
 `m/44'/236'/0'/2/0` ordinals
 `m/44'/236'/0'/0/0` swept onceEverything on those keys, plus your RelayX NFTs (Run) via [Your RelayX collection](#relayx).
 
-Twetch
+[Twetch](https://bwalletx.com/restore/twetch)
 LiveRestore as an account12 words`m/0/0` paymentEverything on that key.
 
-SimplyCash
+[SimplyCash](https://bwalletx.com/restore/simplycash)
 LiveNew wallet, then sweep12 words, or SimplyCash’s recovery string (words:path:passphrase)`m/44'/145'/0'`, receive and change chains, gap limit 20. Early SimplyCash wallets’ older derivation is tried too.BSV, ordinals, BSV-21 tokens. SimplyCash spreads coins over many addresses, so it can’t be one account; it is swept instead.
 
 Other BIP44 wallets
@@ -7557,7 +7559,7 @@ LiveSweep into an accountxprvWalked from the key you pasteBSV, ordinals, BSV-21 
 bWalletX master backup or USB key
 LiveRestore a whole walletThe backup file or USB key, and its passwordAll accounts in the backupEverything.
 
-Money Button
+[Money Button](https://bwalletx.com/restore/moneybutton)
 LiveSweep into an account12 words, passphrase if it had one`m/44'/0'/0'`, receive chainBSV and anything else on those addresses. Money Button tokens (SFP) are found, listed and left where they are.
 
 ## RelayX wallets
@@ -7611,6 +7613,305 @@ RelayX has closed, but everything your RelayX words hold is still on chain. bWal
 The story behind this page: [022 Bring your coins home](https://bwalletx.com/blog/022-bring-your-coins-home).
 
 bWalletX is in beta: test with small amounts. Questions: [support@bwalletx.com](mailto:support@bwalletx.com)
+
+---
+
+Source: https://bwalletx.com/restore/moneybutton
+
+[← All wallets](https://bwalletx.com/restore)
+
+# Coming from Money Button? Your coins never left.
+
+Money Button (Yours Inc, 2018 to 2022) has shut down, but the coins are still on chain, at keys made from your 12 words. bWalletX finds them and moves them into your account, all on your device.
+
+[Get bWalletX](https://bwalletx.com/get)
+
+## What you need
+
+Your Money Button 12 words, and the passphrase if you set one. There is no server copy and no reset: the words are the wallet.
+
+## Steps in bWalletX
+
+- Install bWalletX and open it, then create or restore a wallet.
+- Open Settings › Account data › Sweep into this account.
+- Paste your 12 words. If you set a passphrase, add it under Advanced: passphrase, custom path.
+- bWalletX scans Money Button’s addresses and shows the balance. Check it, then tap Sweep.
+
+## What comes across
+
+- BSV on your Money Button addresses, moved into your bWalletX account.
+- Money Button tokens (SFP) are found and listed, but left untouched. Each one needs a signature from Money Button’s token server, gone since 2022. bWalletX keeps them out of the sweep so nothing gets destroyed.
+- Old $name@moneybutton.com paymails no longer work. Claim a new $name in bWalletX.
+
+## Fees
+
+A sweep moves coins in new transactions, so it pays the BSV network fee: a few sats. Nothing else. bWalletX doesn’t charge for restoring or sweeping.
+
+## Stay safe
+
+- Only type your words inside the bWalletX app. Never into a website, a chat, a form, or for anyone offering to “recover” your wallet for you.
+- bWalletX works out every key on your device. Your words are not sent anywhere.
+- bWalletX is in beta: try a small amount first. The sweep screen offers a test sweep before the rest.
+
+## Ready?
+
+Get bWalletX on Android, iPhone, Chrome or the web, and bring your Money Button wallet home.
+
+[Get bWalletX](https://bwalletx.com/get)[Other wallets](https://bwalletx.com/restore)
+
+For the technical: Path `m/44'/0'/0'`, receive chain.
+
+Stuck? [support@bwalletx.com](mailto:support@bwalletx.com?subject=Restore%20from%20Money%20Button)
+
+---
+
+Source: https://bwalletx.com/restore/panda
+
+[← All wallets](https://bwalletx.com/restore)
+
+# Coming from Panda Wallet? Panda became Yours. Yours fits here.
+
+Panda Wallet was renamed Yours Wallet, and bWalletX uses the same keys as both. Your old Panda 12 words open your account as it was.
+
+[Get bWalletX](https://bwalletx.com/get)
+
+## What you need
+
+Your Panda 12 words. Nothing else: no extension, no old app.
+
+## Steps in bWalletX
+
+- Install bWalletX and open it.
+- On the welcome screen choose Restore, then bWalletX. Panda wallets use the same layout, so that is the one to pick.
+- Type your 12 words and set a password.
+- Your coins, ordinals and tokens show in the new account.
+
+## What comes across
+
+- Everything: BSV, 1Sat ordinals, BSV-20 and BSV-21 tokens, and names.
+- Coins on Yours’ older payment key are moved across for you.
+
+## Fees
+
+Restoring is free: the keys are the same, so nothing moves. Moving coins off the older payment key pays the BSV network fee, a few sats. bWalletX doesn’t charge for restoring or sweeping.
+
+## Stay safe
+
+- Only type your words inside the bWalletX app. Never into a website, a chat, a form, or for anyone offering to “recover” your wallet for you.
+- bWalletX works out every key on your device. Your words are not sent anywhere.
+- bWalletX is in beta: try a small amount first. The sweep screen offers a test sweep before the rest.
+
+## Ready?
+
+Get bWalletX on Android, iPhone, Chrome or the web, and bring your Panda wallet home.
+
+[Get bWalletX](https://bwalletx.com/get)[Other wallets](https://bwalletx.com/restore)
+
+For the technical: Paths `m/44'/236'/0'/1/0` payment, `m/44'/236'/1'/0/0` ordinals, `m/0'/236'/0'/0/0` identity. Older payment key `m/44'/236'/0'/0/0`.
+
+Stuck? [support@bwalletx.com](mailto:support@bwalletx.com?subject=Restore%20from%20Panda)
+
+---
+
+Source: https://bwalletx.com/restore/relayx
+
+[← All wallets](https://bwalletx.com/restore)
+
+# Coming from RelayX? Everything is still on chain.
+
+RelayX has closed, but your coins, ordinals and NFTs are still on chain at the keys in your RelayX words. bWalletX opens them as an account, with the same keys.
+
+[Get bWalletX](https://bwalletx.com/get)
+
+## What you need
+
+Your RelayX 12 words.
+
+## Steps in bWalletX
+
+- Install bWalletX and open it.
+- On the welcome screen choose Restore, then RelayX. (Already have bWalletX? Settings › Add account › RelayX.)
+- Type your 12 words and set a password. Your BSV and ordinals show straight away.
+- For your RelayX NFTs, tap the blue Your RelayX collection card at the top of the account. They then show in the NFTs tab under Run.
+- If it finds BSV on older RelayX addresses, tap Move it into this account.
+
+Just want to look first? [Recover RelayX collections](https://bwalletx.com/recover-relayx) shows your NFTs from your words without adding an account. Nothing moves.
+
+## What comes across
+
+- BSV and 1Sat ordinals on your RelayX payment and ordinals keys.
+- Your RelayX NFTs (Run tokens), kept exactly as they are.
+- BSV on older RelayX addresses, moved in with one tap.
+
+## Fees
+
+Restoring is free: the keys are the same, so nothing moves. Moving coins from older addresses pays the BSV network fee, a few sats. bWalletX doesn’t charge for restoring or sweeping.
+
+## Stay safe
+
+- Only type your words inside the bWalletX app. Never into a website, a chat, a form, or for anyone offering to “recover” your wallet for you.
+- bWalletX works out every key on your device. Your words are not sent anywhere.
+- bWalletX is in beta: try a small amount first. The sweep screen offers a test sweep before the rest.
+
+## Ready?
+
+Get bWalletX on Android, iPhone, Chrome or the web, and bring your RelayX wallet home.
+
+[Get bWalletX](https://bwalletx.com/get)[Other wallets](https://bwalletx.com/restore)
+
+For the technical: Paths `m/44'/236'/0'/1/0` payment, `m/44'/236'/0'/2/0` ordinals, `m/44'/236'/0'/0/0` swept once.
+
+Stuck? [support@bwalletx.com](mailto:support@bwalletx.com?subject=Restore%20from%20RelayX)
+
+---
+
+Source: https://bwalletx.com/restore/simplycash
+
+[← All wallets](https://bwalletx.com/restore)
+
+# Coming from SimplyCash? Your coins can come home.
+
+SimplyCash spreads your coins over many addresses. bWalletX walks all of them from your 12 words and moves what it finds into a bWalletX account in one sweep.
+
+[Get bWalletX](https://bwalletx.com/get)
+
+## What you need
+
+Your SimplyCash 12 words. If you saved SimplyCash’s recovery string instead (it looks like `words:path:passphrase`), paste the whole thing: bWalletX reads the path and passphrase out of it.
+
+## Steps in bWalletX
+
+- Install bWalletX and open it.
+- On the welcome screen choose Restore, then SimplyCash. bWalletX makes you a new wallet first: set a password.
+- The sweep opens by itself. Paste your 12 words or recovery string.
+- bWalletX scans and shows what it found. Check it, then tap Sweep. You get a link to each transaction.
+
+Already have bWalletX? Open Settings › Account data › Sweep into this account and paste your words there.
+
+## What comes across
+
+- BSV from every address, receive and change, up to 20 unused addresses past the last one used.
+- 1Sat ordinals and BSV-21 tokens.
+- Early SimplyCash wallets used an older way of making keys. bWalletX tries that too, so nothing is missed.
+- Left where they are: names, BSV-20 tokens and locked coins. The sweep screen tells you how many it found.
+
+## Fees
+
+A sweep moves coins in new transactions, so it pays the BSV network fee: a few sats. Nothing else. bWalletX doesn’t charge for restoring or sweeping.
+
+## Stay safe
+
+- Only type your words inside the bWalletX app. Never into a website, a chat, a form, or for anyone offering to “recover” your wallet for you.
+- bWalletX works out every key on your device. Your words are not sent anywhere.
+- bWalletX is in beta: try a small amount first. The sweep screen offers a test sweep before the rest.
+
+## Ready?
+
+Get bWalletX on Android, iPhone, Chrome or the web, and bring your SimplyCash wallet home.
+
+[Get bWalletX](https://bwalletx.com/get)[Other wallets](https://bwalletx.com/restore)
+
+For the technical: Path `m/44'/145'/0'`, receive and change chains, gap limit 20.
+
+Stuck? [support@bwalletx.com](mailto:support@bwalletx.com?subject=Restore%20from%20SimplyCash)
+
+---
+
+Source: https://bwalletx.com/restore/twetch
+
+[← All wallets](https://bwalletx.com/restore)
+
+# Coming from Twetch? Bring your wallet across.
+
+Your Twetch wallet lives at one key made from your 12 words. bWalletX opens that key as an account, so your coins are there the moment you finish.
+
+[Get bWalletX](https://bwalletx.com/get)
+
+## What you need
+
+Your Twetch 12 words.
+
+## Steps in bWalletX
+
+- Install bWalletX and open it.
+- On the welcome screen choose Restore, then Twetch. (Already have bWalletX? Settings › Add account › Twetch.)
+- Type your 12 words and set a password.
+- Your Twetch balance and anything else on that key shows in the new account.
+
+Rather have it all in an account you already use? Open Settings › Account data › Sweep into this account and paste your Twetch words.
+
+## What comes across
+
+- Everything on your Twetch key: BSV, ordinals and tokens.
+- Your Twetch posts stay on chain where they are. Find bWalletX’s own Twetch room at [b on Twetch](https://bwalletx.com/b-on-twetch).
+
+## Fees
+
+Restoring is free: the key is the same, so nothing moves. Sweeping into another account pays the BSV network fee, a few sats. bWalletX doesn’t charge for restoring or sweeping.
+
+## Stay safe
+
+- Only type your words inside the bWalletX app. Never into a website, a chat, a form, or for anyone offering to “recover” your wallet for you.
+- bWalletX works out every key on your device. Your words are not sent anywhere.
+- bWalletX is in beta: try a small amount first. The sweep screen offers a test sweep before the rest.
+
+## Ready?
+
+Get bWalletX on Android, iPhone, Chrome or the web, and bring your Twetch wallet home.
+
+[Get bWalletX](https://bwalletx.com/get)[Other wallets](https://bwalletx.com/restore)
+
+For the technical: Path `m/0/0`.
+
+Stuck? [support@bwalletx.com](mailto:support@bwalletx.com?subject=Restore%20from%20Twetch)
+
+---
+
+Source: https://bwalletx.com/restore/yours
+
+[← All wallets](https://bwalletx.com/restore)
+
+# Coming from Yours Wallet? You already know the way.
+
+bWalletX grew from Yours Wallet and uses the same keys. Your 12 words open the same account, with your coins, ordinals, tokens and names all there.
+
+[Get bWalletX](https://bwalletx.com/get)
+
+## What you need
+
+Your Yours 12 words. You don’t need the Yours extension installed.
+
+## Steps in bWalletX
+
+- Install bWalletX and open it.
+- On the welcome screen choose Restore, then the first option, bWalletX. That one covers Yours too. (Already have bWalletX? Settings › Add account › bWalletX.)
+- Type your 12 words and set a password.
+- Your account opens as it was in Yours.
+
+## What comes across
+
+- Everything: BSV, 1Sat ordinals, BSV-20 and BSV-21 tokens, and names.
+- Coins on Yours’ older payment key are moved across for you.
+
+## Fees
+
+Restoring is free: the keys are the same, so nothing moves. Moving coins off the older payment key pays the BSV network fee, a few sats. bWalletX doesn’t charge for restoring or sweeping.
+
+## Stay safe
+
+- Only type your words inside the bWalletX app. Never into a website, a chat, a form, or for anyone offering to “recover” your wallet for you.
+- bWalletX works out every key on your device. Your words are not sent anywhere.
+- bWalletX is in beta: try a small amount first. The sweep screen offers a test sweep before the rest.
+
+## Ready?
+
+Get bWalletX on Android, iPhone, Chrome or the web, and bring your Yours wallet home.
+
+[Get bWalletX](https://bwalletx.com/get)[Other wallets](https://bwalletx.com/restore)
+
+For the technical: Paths `m/44'/236'/0'/1/0` payment, `m/44'/236'/1'/0/0` ordinals, `m/0'/236'/0'/0/0` identity. Older payment key `m/44'/236'/0'/0/0`.
+
+Stuck? [support@bwalletx.com](mailto:support@bwalletx.com?subject=Restore%20from%20Yours)
 
 ---
 
@@ -11969,7 +12270,7 @@ A wallet has one main name. It can keep older names that still receive, and Sett
 
 ## 2. Link X or Google after you create your wallet
 
-New wallets are made with a passkey. Afterwards, On your wallet’s home, tap the Link your accounts card, or go to Settings › Identity › Link your accounts. Linking proves the account is yours. It doesn't give you a name: you choose your own handle.
+After you create your wallet (a password and your 12 words), on your wallet’s home tap the Link your accounts card, or go to Settings › Identity › Link your accounts. Linking proves the account is yours. It doesn't give you a name: you choose your own handle.
 
 ### X
 
@@ -14122,7 +14423,7 @@ The design changed during the day. First the chat server (bit-sign) handled the 
 
 Social sign-in is off in the store build, pending Apple's guideline 4.8 on sign-in options.
 
-Update, 30 Oct 2026: the welcome screen is now passkey-only: X, Google and HandCash are no longer on Create Account. You can link X or Google later, under Link your accounts. We also stopped giving out `.gmail` names, because they gave away people’s email addresses.
+Update, 30 Oct 2026: Create New Wallet now uses a password and your 12 words. The welcome screen can start linking X or Google, finished once your wallet is set up, and you can link them any time under Settings › Link your accounts. A linked account gives a verified badge; you choose your own handle.
 
 ## A detail that took longer than expected
 
@@ -14955,7 +15256,7 @@ How-to page: [bwalletx.com/x](https://bwalletx.com/x).
 
 Related: [Sign in with X](https://bwalletx.com/x) · [Sign in with Gmail](https://bwalletx.com/gmail) · [004 Names, handles and paymail](https://bwalletx.com/blog/004-names-and-paymail) · [005 Personal tokens and token rooms](https://bwalletx.com/blog/005-personal-tokens-and-rooms)
 
-Update, 30 Oct 2026: Continue with X is no longer on Create account; the welcome is passkey-only. You can link X afterwards, in Settings › Link your accounts › X.
+Update, 30 Oct 2026: you now create a wallet with a password and your 12 words. The welcome screen can start linking your X account, and the link finishes once your wallet is set up. You can also link X any time in Settings › Link your accounts.
 
 [← 019 Blur slurs, show swearing](https://bwalletx.com/blog/019-language-filter)[021 Coordinate on BSV →](https://bwalletx.com/blog/021-coordinate-on-bsv)
 
@@ -16507,7 +16808,7 @@ Link HandCash to your bWalletX account. Your HandCash handle carries over as nam
 
 If you already use HandCash, you don’t need to start from nothing.
 
-Update, 30 Oct 2026: new accounts now start with a passkey; X, Google and HandCash are no longer on the welcome screen. You link HandCash afterwards, under Link your accounts.
+Update, 30 Oct 2026: new wallets are created with a password and your 12 words, and HandCash is no longer a way to sign in. Link HandCash afterwards, under Settings › Link your accounts.
 
 - Your handle carries over. Your HandCash handle becomes your paymail: name@bwalletx.com.
 
