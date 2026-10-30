@@ -5810,13 +5810,13 @@ Every task delivered through Kintsugi, with time, cost and links.
 
 ## Work done so far
 
-Since the project began on 3 Oct 2026: 153 pages and features, about 486 hours of work, valued at $20 an hour.
+Since the project began on 3 Oct 2026: 153 pages and features, about 486 wall-clock hours, worth $20 an hour in pay. Running work in parallel with Claude produced about 1,376 hours of work, the estimated value of work.
 
-DeveloperJobsHoursValue of work at the Kintsugi rate
+DeveloperJobsHoursPay at $20/hEstimated value of work
 
-b0ase · with Claude153486≈ $9,720 · ≈ 571 BSV at today's price
+b0ase · with Claude153486≈ $9,720 · ≈ 571 BSV≈ $27,526
 
-Running total153486≈ $9,720 · ≈ 571 BSV
+Running total153486≈ $9,720 · ≈ 571 BSV≈ $27,526
 
 Estimate from git history, capped at 18 hours a day for 27 days; not an invoice or payment. BSV at $17.01 per BSV on 30 Oct 2026. Updated 30 Oct 2026.
 

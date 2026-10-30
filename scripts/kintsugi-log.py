@@ -278,11 +278,13 @@ def render(d):
     groups = {}
     for it in d['items']: groups.setdefault(it['topic'], []).append(it)
     tot_h = sum(it['time']['hours'] for it in d['items'])
+    tot_v = sum(it['time']['value_hours'] for it in d['items'])
     sections, toc = '', []
     for tp in [t for t in order if t in groups]:
         rows = ''
         g = sorted(groups[tp], key=lambda x: -x['time']['hours'])
         gh = sum(it['time']['hours'] for it in g)
+        gv = sum(it['time']['value_hours'] for it in g)
         for it in g:
             t = it['time']
             name = (f'<a href="{E(it["url"])}">{E(it["title"])}</a><span class="u">{E(it["url"])}</span>' if it['url']
@@ -295,11 +297,11 @@ def render(d):
             rows += (f'<tr><td class="it">{name}{f"<span class=pl>Posts: {pl}</span>" if pl else ""}</td><td>{chips}</td>'
                      f'<td class="n">{hrs(t["hours"])}<span class="sub">{t["sessions"]} session{"s" if t["sessions"] != 1 else ""} · '
                      f'{t["elapsed_days"]} day{"s" if t["elapsed_days"] != 1 else ""} elapsed</span><span class="sub">{pr}</span></td>'
-                     f'<td class="n c">{money(t["hours"])}<span class="sub">{bsv(t["hours"])}</span><span class="sub">estimate</span></td></tr>')
+                     f'<td class="n c">{money(t["hours"])}<span class="sub">{bsv(t["hours"])} pay</span><span class="sub">{money(t["value_hours"])} estimated value of work</span></td></tr>')
         sid = re.sub(r'[^a-z]+', '-', tp.lower()).strip('-')
         toc.append(f'<a href="#{sid}">{E(tp)}</a>')
         sections += (f'<section id="{sid}"><div class="sh"><h2>{E(tp)}</h2><p class="st"><span>{len(g)} item{"s" if len(g) != 1 else ""}</span>'
-                     f'<span>{hrs(gh)}</span><span class="c">{money(gh)}</span><span>{bsv(gh)}</span> <span class="est">estimate</span></p></div>'
+                     f'<span>{hrs(gh)}</span><span class="c">{money(gh)}</span><span>{bsv(gh)}</span> <span class="est">{money(gv)} estimated value of work</span></p></div>'
                      f'<div class="tw"><table><thead><tr><th>Item</th><th>Status</th><th class="n">Time taken</th><th class="n">At the Kintsugi rate</th></tr></thead>'
                      f'<tbody>{rows}</tbody></table></div></section>')
     ow = ''.join(f'<li>{f"<a href={chr(34)}{E(o["url"])}{chr(34)}>{E(o["title"])}</a>" if o["url"] else E(o["title"])}<span>{E(o["what"])}</span></li>' for o in d['open'])
@@ -309,8 +311,9 @@ def render(d):
       <p class="lede">Every page and feature shipped since the project began, between {E(datetime.date.fromisoformat(d["since"]).strftime("%-d %b"))} and {E(d["generated"])}, with the time it took and what it would cost at the Kintsugi rate. Built from git history.</p>
       <div class="totals">
         <div class="tot"><b class="tn">{len(d["items"])}</b><span>items shipped</span></div>
-        <div class="tot"><b class="tn">{tot_h:,.0f} h</b><span>active time (estimate)</span></div>
-        <div class="tot big"><b class="tn">{money(tot_h)}</b><span>estimate at the Kintsugi rate ($20 per hour, paid in BSV), about {bsv(tot_h)[1:]} at ${PRICE["usd"]:,.2f}/BSV on {E(PRICE["date"])}</span></div>
+        <div class="tot"><b class="tn">{tot_h:,.0f} h</b><span>wall-clock hours (estimate, at most {CAP_H_DAY} a day)</span></div>
+        <div class="tot big"><b class="tn">{money(tot_h)}</b><span>pay at the Kintsugi rate ($20 per hour, paid in BSV), about {bsv(tot_h)[1:]} at ${PRICE["usd"]:,.2f}/BSV on {E(PRICE["date"])}</span></div>
+        <div class="tot big"><b class="tn">{money(tot_v)}</b><span>estimated value of work: {tot_v:,.0f} hours of work at $20, across parallel sessions. What a developer creates over and above the pay.</span></div>
       </div>
       <p class="how"><strong>How Kintsugi works.</strong> Work is written up as tasks that an AI-assisted coder can pick up with Cursor, GitHub and a Claude account. The rate is $20 per hour, paid in BSV at the BSV/USD rate on the day of payment.</p>
       <p class="warn">Every figure here is an estimate, derived from git timestamps. It is not an invoice, a valuation or a claim.</p>
@@ -421,15 +424,16 @@ def page(d):
 def summary_html(d):
     """Overview block for /kintsugi, injected between <!-- kintsugi-work:start --> and <!-- kintsugi-work:end -->."""
     th = sum(i['time']['hours'] for i in d['items'])
+    tv = sum(i['time']['value_hours'] for i in d['items'])
     start = datetime.date.fromisoformat(d['since']).strftime('%-d %b %Y')
     return f'''<!-- kintsugi-work:start -->
       <section class="kw" aria-labelledby="kw-h">
         <h2 id="kw-h">Work done so far</h2>
-        <p>Since the project began on {start}: {len(d["items"])} pages and features, about {th:,.0f} hours of work, valued at $20 an hour.</p>
+        <p>Since the project began on {start}: {len(d["items"])} pages and features, about {th:,.0f} wall-clock hours, worth $20 an hour in pay. Running work in parallel with Claude produced about {tv:,.0f} hours of work, the estimated value of work.</p>
         <div class="kw-tw"><table class="kw-t">
-          <thead><tr><th>Developer</th><th class="n">Jobs</th><th class="n">Hours</th><th class="n">Value of work at the Kintsugi rate</th></tr></thead>
-          <tbody><tr><td><strong>{E(DEV)}</strong> · with Claude</td><td class="n">{len(d["items"])}</td><td class="n">{th:,.0f}</td><td class="n"><strong>≈ {money(th)}</strong> · ≈ {bsv(th)[1:]} at today's price</td></tr></tbody>
-          <tfoot><tr><td>Running total</td><td class="n">{len(d["items"])}</td><td class="n">{th:,.0f}</td><td class="n">≈ {money(th)} · ≈ {bsv(th)[1:]}</td></tr></tfoot>
+          <thead><tr><th>Developer</th><th class="n">Jobs</th><th class="n">Hours</th><th class="n">Pay at $20/h</th><th class="n">Estimated value of work</th></tr></thead>
+          <tbody><tr><td><strong>{E(DEV)}</strong> · with Claude</td><td class="n">{len(d["items"])}</td><td class="n">{th:,.0f}</td><td class="n"><strong>≈ {money(th)}</strong> · ≈ {bsv(th)[1:]}</td><td class="n">≈ {money(tv)}</td></tr></tbody>
+          <tfoot><tr><td>Running total</td><td class="n">{len(d["items"])}</td><td class="n">{th:,.0f}</td><td class="n">≈ {money(th)} · ≈ {bsv(th)[1:]}</td><td class="n">≈ {money(tv)}</td></tr></tfoot>
         </table></div>
         <p class="kw-note">Estimate from git history, capped at {CAP_H_DAY} hours a day for {d["cap"]["days"]} days; not an invoice or payment. BSV at ${PRICE["usd"]:,.2f} per BSV on {E(PRICE["date"])}. Updated {E(d["generated"])}.</p>
         <p><a href="/kintsugi/work">See every job &rarr;</a></p>
@@ -451,6 +455,7 @@ def cap_hours(d):
     days = max(1, (datetime.datetime.strptime(d['generated'], '%d %b %Y').date() - datetime.date.fromisoformat(d['since'])).days)
     tot, cap = sum(i['time']['hours'] for i in d['items']), CAP_H_DAY * days
     d['cap'] = dict(days=days, hours=cap, applied=tot > cap)
+    for i in d['items']: i['time']['value_hours'] = i['time']['hours']
     if tot > cap:
         for i in d['items']: i['time']['hours'] *= cap / tot
 
