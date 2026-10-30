@@ -5802,7 +5802,7 @@ A program for developers who build with Claude. Verify your ID, show your setup,
 
 ### [The program](https://bwalletx.com/kintsugi/program)
 
-Who it is for, the four steps, how work arrives, the pay, and the application form.
+Who it is for, the four steps, how work arrives, the pay, and where to register interest.
 
 ### [Work done so far](https://bwalletx.com/kintsugi/work)
 
@@ -5824,7 +5824,7 @@ Estimate from git history; not an invoice or payment. BSV at $17.01 per BSV on 3
 
 ## Open source
 
-The Kintsugi code (task templates, review tools, bounty sync) is open source under the Open BSV licence: [github.com/b0ase/kintsugi](https://github.com/b0ase/kintsugi). Specs and docs are CC BY 4.0.
+The Kintsugi code (task templates, review tools, bounty sync) is open source under the Open BSV licence: [github.com/bitcoin-corp/kintsugi](https://github.com/bitcoin-corp/kintsugi). Specs and docs are CC BY 4.0.
 
 ---
 
@@ -6835,7 +6835,16 @@ Each release ships to the Android APK, the Chrome extension and the web wallet. 
 
 [Download bWalletX](https://bwalletx.com/download)
 
-## 5.2.46 2026-10-29
+## 5.2.46 2026-10-30
+
+- On your phone, Face ID or your fingerprint is asked before a site signs or pays from your wallet.
+- Payments still go through when the online storage fails: the wallet switches to This device, and Repair wallet fixes stuck coins.
+- Tokens, names and BSV at your older addresses now count in your balance and can be spent. “Rescan the chain” keeps your balance complete, and it refreshes every 5 minutes.
+- Token sales in bChatX settle in one step, and you can link your wallet to bChatX in one tap.
+- The token send screen is redesigned with a big Send button and clear labels, and the From the Store cards on Home now swipe.
+- The iPhone App Store build of this version is coming soon. Android, Chrome and web have it now.
+
+## 5.2.45 2026-10-29
 
 - Paying a site from the wallet, such as TERRORNODE, now gives a plain reason when something goes wrong, and coin lookups keep working when a service is slow.
 - Every failed BSV send now tells you why, and a message that did not arrive is sent again once.
