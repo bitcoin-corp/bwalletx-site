@@ -108,6 +108,19 @@
       </div>
       <p>All three sign the same contract in bChatX before work starts. It sets the task, the price, the deadline and what counts as done. Delivered work belongs to the client once it is paid for.</p>
 
+      <h2>Security tools you must run</h2>
+      <p>Every pull request is checked before it is paid. You run these tools yourself, at your own cost. Tool and AI usage costs are yours and are not billable hours.</p>
+      <ul>
+        <li><b>Shannon</b> (KeygraphHQ, open source): AI penetration testing. Required for any change that touches sign-in, payments, keys or signing. You pay for the AI model usage it runs on. Run it only against your own local or test copy with test wallets, never against live sites or real funds.</li>
+        <li><b>Semgrep</b>: static code analysis on every pull request.</li>
+        <li><b>gitleaks</b>: secret scanning before every commit. A key, seed phrase or password in a commit means the work is rejected.</li>
+        <li><b>pnpm audit</b> and <b>OSV-Scanner</b>: known holes in the packages you depend on.</li>
+        <li><b>CodeQL</b>: deeper code analysis.</li>
+        <li><b>OWASP ZAP</b> (baseline scan): for web pages and APIs.</li>
+        <li><b>Claude Code /security-review</b>: on every pull request, using the Claude subscription you already need.</li>
+      </ul>
+      <p>Attach the results to your pull request. Work without them is not reviewed or paid.</p>
+
       <h2>Where it stands</h2>
       <ul class="status">
         <li>Bounties paid in public, every payout linked to its transaction (<a href="/bounties">/bounties</a>)</li>

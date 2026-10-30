@@ -26,6 +26,7 @@ DEV = 'b0ase'          # all current work is credited to this developer (with Cl
 GAP_H = 2.0          # a gap longer than this starts a new session
 PAD_H = 0.5          # each session gets this added (work before the first commit)
 DAY_H = 7.5
+CAP_H_DAY = 18  # owner 30 Oct: the founder's own log counts at most 18 hours a day since the start
 USD_H = 20   # Kintsugi rate: $20 per hour, paid in BSV at the BSV/USD rate on payment day
 PRICE = {}   # filled once per build: {'usd': float, 'date': 'D Mon YYYY'}
 
@@ -430,7 +431,7 @@ def summary_html(d):
           <tbody><tr><td><strong>{E(DEV)}</strong> · with Claude</td><td class="n">{len(d["items"])}</td><td class="n">{th:,.0f}</td><td class="n"><strong>≈ {money(th)}</strong> · ≈ {bsv(th)[1:]} at today's price</td></tr></tbody>
           <tfoot><tr><td>Running total</td><td class="n">{len(d["items"])}</td><td class="n">{th:,.0f}</td><td class="n">≈ {money(th)} · ≈ {bsv(th)[1:]}</td></tr></tfoot>
         </table></div>
-        <p class="kw-note">Estimate from git history; not an invoice or payment. BSV at ${PRICE["usd"]:,.2f} per BSV on {E(PRICE["date"])}. Updated {E(d["generated"])}.</p>
+        <p class="kw-note">Estimate from git history, capped at {CAP_H_DAY} hours a day for {d["cap"]["days"]} days; not an invoice or payment. BSV at ${PRICE["usd"]:,.2f} per BSV on {E(PRICE["date"])}. Updated {E(d["generated"])}.</p>
         <p><a href="/kintsugi/work">See every job &rarr;</a></p>
         <style>
           .kw-tw {{ overflow-x: auto; border: 1px solid #ffffff14; border-radius: 14px; margin: 12px 0 8px; }}
@@ -443,6 +444,15 @@ def summary_html(d):
         </style>
       </section>
       <!-- kintsugi-work:end -->'''
+
+
+def cap_hours(d):
+    """Parallel sessions overlap, so summed estimates can exceed the clock. Scale all items down to CAP_H_DAY a day."""
+    days = max(1, (datetime.datetime.strptime(d['generated'], '%d %b %Y').date() - datetime.date.fromisoformat(d['since'])).days)
+    tot, cap = sum(i['time']['hours'] for i in d['items']), CAP_H_DAY * days
+    d['cap'] = dict(days=days, hours=cap, applied=tot > cap)
+    if tot > cap:
+        for i in d['items']: i['time']['hours'] *= cap / tot
 
 
 def inject(d):
@@ -468,6 +478,7 @@ if __name__ == '__main__':
         json.dump(d, open(DATA, 'w'), indent=1)
     os.makedirs(os.path.join(ROOT, 'kintsugi'), exist_ok=True)
     PRICE.update(d['price'])
+    cap_hours(d)
     open(os.path.join(ROOT, 'kintsugi', 'work.html'), 'w').write(page(d))
     inject(d)
     th = sum(i['time']['hours'] for i in d['items'])
