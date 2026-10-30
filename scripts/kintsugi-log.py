@@ -21,7 +21,8 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 PROJ = os.path.dirname(ROOT)
 DATA = os.path.join(ROOT, 'data', 'kintsugi-log.json')
 XPOSTED = os.path.join(ROOT, 'data', 'kintsugi-log-x-posted.json')
-DAYS = 31
+START = '2026-10-03'   # the project began 3 Oct 2026; the log covers START to today
+DEV = 'b0ase'          # all current work is credited to this developer (with Claude)
 GAP_H = 2.0          # a gap longer than this starts a new session
 PAD_H = 0.5          # each session gets this added (work before the first commit)
 DAY_H = 7.5
@@ -173,7 +174,7 @@ def kw_re(u):
 
 
 def gather():
-    since = (datetime.date.today() - datetime.timedelta(days=DAYS)).isoformat()
+    since = START
     pages, posts = site_inventory()
     match = match_posts(pages, posts)
     xp = {nu(k) for k in json.load(open(XPOSTED))} if os.path.exists(XPOSTED) else set()
@@ -252,7 +253,7 @@ def gather():
     held = os.path.join(ROOT, 'data', 'kintsugi-log-held.json')
     for h in (json.load(open(held)) if os.path.exists(held) else []):
         open_work.append(dict(kind='post', url=None, title=h['title'], what='Blog post written, held back until the feature it describes is in a release build'))
-    return dict(generated=datetime.datetime.now().strftime('%-d %b %Y'), since=since, days=DAYS, gap_h=GAP_H, pad_h=PAD_H,
+    return dict(generated=datetime.datetime.now().strftime('%-d %b %Y'), since=since, days=(datetime.date.today() - datetime.date.fromisoformat(since)).days + 1, gap_h=GAP_H, pad_h=PAD_H,
                 usd_h=USD_H, price=fetch_price(), repos=repo_stats, items=out_items, open=open_work)
 
 
@@ -304,7 +305,7 @@ def render(d):
     repos = ', '.join(f'{E(r["repo"])} ({r["commits"]:,} commits)' for r in d['repos'])
     body = f'''<main class="bb">
       <h1><b>Kintsugi</b> work log: a month of work, in the open</h1>
-      <p class="lede">Every page and feature we shipped between {E(datetime.date.fromisoformat(d["since"]).strftime("%-d %b"))} and {E(d["generated"])}, with the time it took and what it would cost at the Kintsugi rate. Built from git history.</p>
+      <p class="lede">Every page and feature shipped since the project began, between {E(datetime.date.fromisoformat(d["since"]).strftime("%-d %b"))} and {E(d["generated"])}, with the time it took and what it would cost at the Kintsugi rate. Built from git history.</p>
       <div class="totals">
         <div class="tot"><b class="tn">{len(d["items"])}</b><span>items shipped</span></div>
         <div class="tot"><b class="tn">{tot_h:,.0f} h</b><span>active time (estimate)</span></div>
@@ -318,7 +319,7 @@ def render(d):
       <section id="method"><h2>How the numbers are made</h2>
         <ol class="method">
           <li><strong>Items.</strong> Every public page on bwalletx.com that is in the sitemap. Internal company matters are left out on purpose.</li>
-          <li><strong>Commits.</strong> The last {d["days"]} days of commits from: {repos}. A site commit counts towards the pages and share images it touched. An app commit counts towards a page when a file path names that feature (for example a <code>pots</code> folder counts towards Pots). A commit that touches several items is split evenly between them. App commits that match no page go into "shared code". Commit messages are never published.</li>
+          <li><strong>Commits.</strong> Every commit since the project began on {E(datetime.date.fromisoformat(d["since"]).strftime("%-d %b %Y"))}, from: {repos}. A site commit counts towards the pages and share images it touched. An app commit counts towards a page when a file path names that feature (for example a <code>pots</code> folder counts towards Pots). A commit that touches several items is split evenly between them. App commits that match no page go into "shared code". Commit messages are never published.</li>
           <li><strong>Time taken.</strong> Commits are grouped into sessions: a gap of more than {d["gap_h"]:g} hours starts a new one. Each session counts as last commit minus first commit, plus {d["pad_h"] * 60:.0f} minutes for the work before the first commit. Elapsed days and PR open-to-merge times are shown for context only.</li>
           <li><strong>Cost.</strong> Hours × the Kintsugi rate of $20 an hour, paid in BSV at the BSV/USD rate on the day of payment. BSV figures are approximate, converted at ${PRICE["usd"]:,.2f} per BSV, the price fetched once from WhatsOnChain on {E(PRICE["date"])}. This is what the same output would cost an AI-assisted coder on Kintsugi, not what it cost us.</li>
           <li><strong>Limits.</strong> Commit gaps miss design and thinking time, and quick AI-assisted bursts look short. Treat each figure as a rough range.</li>
@@ -416,6 +417,45 @@ def page(d):
     return head + CSS + '\n  </head>\n  ' + chrome + render(d) + '\n  </body>\n</html>\n'
 
 
+def summary_html(d):
+    """Overview block for /kintsugi, injected between <!-- kintsugi-work:start --> and <!-- kintsugi-work:end -->."""
+    th = sum(i['time']['hours'] for i in d['items'])
+    start = datetime.date.fromisoformat(d['since']).strftime('%-d %b %Y')
+    return f'''<!-- kintsugi-work:start -->
+      <section class="kw" aria-labelledby="kw-h">
+        <h2 id="kw-h">Work done so far</h2>
+        <p>Since the project began on {start}: {len(d["items"])} pages and features, about {th:,.0f} hours of work, valued at $20 an hour.</p>
+        <div class="kw-tw"><table class="kw-t">
+          <thead><tr><th>Developer</th><th class="n">Jobs</th><th class="n">Hours</th><th class="n">Value of work at the Kintsugi rate</th></tr></thead>
+          <tbody><tr><td><strong>{E(DEV)}</strong> · with Claude</td><td class="n">{len(d["items"])}</td><td class="n">{th:,.0f}</td><td class="n"><strong>≈ {money(th)}</strong> · ≈ {bsv(th)[1:]} at today's price</td></tr></tbody>
+          <tfoot><tr><td>Running total</td><td class="n">{len(d["items"])}</td><td class="n">{th:,.0f}</td><td class="n">≈ {money(th)} · ≈ {bsv(th)[1:]}</td></tr></tfoot>
+        </table></div>
+        <p class="kw-note">Estimate from git history; not an invoice or payment. BSV at ${PRICE["usd"]:,.2f} per BSV on {E(PRICE["date"])}. Updated {E(d["generated"])}.</p>
+        <p><a href="/kintsugi/work">See every job &rarr;</a></p>
+        <style>
+          .kw-tw {{ overflow-x: auto; border: 1px solid #ffffff14; border-radius: 14px; margin: 12px 0 8px; }}
+          .kw-t {{ border-collapse: collapse; width: 100%; min-width: 560px; font-variant-numeric: tabular-nums; }}
+          .kw-t th, .kw-t td {{ text-align: left; padding: 10px 14px; border-top: 1px solid #ffffff12; vertical-align: top; }}
+          .kw-t thead th {{ border-top: 0; color: #9aa1ad; font-size: 0.82rem; font-weight: 600; }}
+          .kw-t .n {{ text-align: right; white-space: nowrap; }}
+          .kw-t tfoot td {{ color: #F5B800; font-weight: 700; }}
+          .kw-note {{ color: #8a8a86; font-size: 0.88rem; }}
+        </style>
+      </section>
+      <!-- kintsugi-work:end -->'''
+
+
+def inject(d):
+    p = os.path.join(ROOT, 'kintsugi.html')
+    if not os.path.exists(p): return
+    s = rd(p); block = summary_html(d)
+    if '<!-- kintsugi-work:start -->' in s:
+        s = re.sub(r'<!-- kintsugi-work:start -->.*?<!-- kintsugi-work:end -->', lambda m: block, s, flags=re.S)
+    else:
+        s = s.replace('<hr class="seam" />', '<hr class="seam" />\n      ' + block, 1)
+    open(p, 'w').write(s)
+
+
 if __name__ == '__main__':
     if '--render' in sys.argv:
         d = json.load(open(DATA))
@@ -428,5 +468,6 @@ if __name__ == '__main__':
     os.makedirs(os.path.join(ROOT, 'kintsugi'), exist_ok=True)
     PRICE.update(d['price'])
     open(os.path.join(ROOT, 'kintsugi', 'work.html'), 'w').write(page(d))
+    inject(d)
     th = sum(i['time']['hours'] for i in d['items'])
     print(f"items={len(d['items'])} hours={th:.0f} cost={money(th)} / {bsv(th)} open={len(d['open'])}")
