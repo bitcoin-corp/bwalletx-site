@@ -376,11 +376,11 @@ gl_FragColor=vec4(col,1.);}`;
         var still = matchMedia('(prefers-reduced-motion: reduce)').matches, t0 = performance.now();
         (function loop() { gl.uniform2f(U('r'), el.width, el.height); gl.uniform1f(U('t'), 8 + (still ? 0 : (performance.now() - t0) / 1000)); gl.drawArrays(gl.TRIANGLES, 0, 3); requestAnimationFrame(loop); })();
       })();
-      // Voice-over: plays with the music when audio/b-kintsugi-voice.mp3 exists; music dips under it.
+      // Voice-over: plays with the music when audio/b-paid-voice.mp3 exists; music dips under it.
       (function () {
         var music = document.getElementById('music'), vo = new Audio(), ok = false;
         vo.preload = 'auto'; vo.oncanplaythrough = function () { ok = true; }; vo.onerror = function () { ok = false; };
-        vo.src = 'audio/b-kintsugi-voice.mp3';
+        // voice version lives at /b-paid-voice
         music.addEventListener('play', function () { if (!ok) return; music.volume = 0.4; vo.currentTime = music.currentTime; vo.muted = music.muted; vo.play().catch(function () {}); });
         music.addEventListener('pause', function () { vo.pause(); });
         music.addEventListener('volumechange', function () { vo.muted = music.muted; });
