@@ -313,11 +313,11 @@ OPEN_H = {'page': 2, 'post': 1}   # fixed estimates for open offers
 def terms_html(founder=False, done='the change is live on the stated page'):
     t = f'''          <h3>Terms</h3>
           <ol class="ct-terms">
-            <li>The client locks 100% of the price in escrow before work starts, so the money is there before a line is written.</li>
+            <li>Payment is peer to peer: the client pays the developer directly, wallet to wallet. Kintsugi never holds the money.</li>
             <li>Up to 8 billable hours per day.</li>
             <li>Done means: the pull request is merged into the agreed repo, {done}, and the security tool results are attached.</li>
             <li>Security tools: Shannon for any change that touches sign-in, payments, keys or signing; Semgrep, gitleaks, pnpm audit and OSV-Scanner, CodeQL, OWASP ZAP (baseline scan) and Claude Code /security-review. Tool and AI usage costs are the developer's and are not billable hours.</li>
-            <li>Kintsugi checks the spec, holds the payment, reviews the work and releases the pay to the developer's $handle in bWalletX when the work is accepted.</li>
+            <li>Kintsugi checks the spec and reviews the work. When the work is accepted, the client pays the developer's $handle in bWalletX, with Kintsugi's fee as a separate payment in the same transaction.</li>
             <li>Disputes: if the client and developer disagree about whether the work is done, Kintsugi reviews it and decides.</li>
             <li>Delivered work belongs to the client once it is paid for.</li>
             <li>Code under the Open BSV licence; specs and docs CC BY 4.0.</li>
@@ -343,7 +343,7 @@ def offer(o, n):
             <dt>Offer</dt><dd class="tn">{n}</dd>
             <dt>Client</dt><dd>{CLIENT}, company no. {CLIENT_NO}, registered in England &amp; Wales</dd>
             <dt>Developer</dt><dd>Open: first accepted developer</dd>
-            <dt>Escrow and review</dt><dd>Kintsugi, run by {CLIENT}</dd>
+            <dt>Review</dt><dd>Kintsugi, run by {CLIENT}</dd>
             <dt>Task</dt><dd>{task}</dd>
             <dt>Depends on</dt><dd>{dep}</dd>
             <dt>Estimate</dt><dd class="tn">{h} h (fixed)</dd>
@@ -365,7 +365,7 @@ def contract(it, n):
             <dt>Contract</dt><dd class="tn">{n}</dd>
             <dt>Client</dt><dd>{CLIENT}, company no. {CLIENT_NO}, registered in England &amp; Wales. Commissioned the work.</dd>
             <dt>Developer</dt><dd>{E(DEV)} · paymail <span class="pm">{PAYMAIL}</span> ($b0asex)</dd>
-            <dt>Escrow and review</dt><dd>Kintsugi, run by {CLIENT}</dd>
+            <dt>Review</dt><dd>Kintsugi, run by {CLIENT}</dd>
             <dt>Task</dt><dd>{task}<span class="sub">{E(it["desc"])}</span></dd>
             <dt>Estimate</dt><dd class="tn">{hrs(h)} (wall-clock)</dd>
             <dt>Price</dt><dd class="tn"><span class="gold">{money(h)}</span> ({hrs(h)} × $20), paid in BSV at the BSV/USD rate on the day of payment · {bsv(h)} at ${PRICE["usd"]:,.2f}/BSV</dd>
