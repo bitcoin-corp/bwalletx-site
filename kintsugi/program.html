@@ -74,7 +74,7 @@
       <p style="font-size:1.15rem"><b>Get paid in BSV to build and grow bWalletX and its apps.</b> Kintsugi is how we fix and build our own products: bWalletX, bChatX and the b*X apps. Verify your ID, show your setup, pass one entry task, and take paid work.</p>
       <p class="small">Kintsugi jobs also appear in bJobs. For other BSV-paid work, see <a href="https://bjobsx.com" target="_blank" rel="noopener">bJobsX.com</a>.</p>
       <div class="cta">
-        <a class="btn" href="#apply">Apply</a>
+        <a class="btn" href="#apply">Register interest</a>
         <a class="btn alt" href="/bounties">See paid bounties</a>
       </div>
       <hr class="seam" />
@@ -90,7 +90,7 @@
 
       <h2>The pay</h2>
       <p class="rate">$20 an hour, paid in BSV</p>
-      <p>Converted at the BSV/USD rate on the day you are paid. Up to 18 billable hours per day. Each task is priced before you start, from its estimate, and the price is written into the contract. You are paid to your $handle in bWalletX when the work is accepted.</p>
+      <p>Converted at the BSV/USD rate on the day you are paid. Up to 18 billable hours per day. Each task is priced before you start, from its estimate, and the price is written into the contract. The client locks 100% of it in escrow before you start, so the money is there before you write a line. You are paid to your $handle in bWalletX when the work is accepted.</p>
 
       <h2>Four steps</h2>
       <ol class="steps">
@@ -102,7 +102,7 @@
 
       <h2>Three signatures on every job</h2>
       <div class="grid">
-        <div class="card"><h3>The client</h3><p>Wants the work and funds the task.</p></div>
+        <div class="card"><h3>The client</h3><p>Wants the work and locks the full price in escrow before work starts.</p></div>
         <div class="card"><h3>The developer</h3><p>Builds it to the spec and opens the pull request.</p></div>
         <div class="card"><h3>Kintsugi</h3><p>Checks the spec, holds the payment, reviews the work and releases the pay.</p></div>
       </div>
@@ -115,16 +115,17 @@
         <li>GitHub account linking</li>
         <li>Contracts signed by several parties in bChatX</li>
         <li>Pull requests claimed against a bounty tag</li>
-        <li class="next">Developer applications and the entry test</li>
-        <li class="next">Hourly pricing and held payment for Kintsugi tasks</li>
+        <li>Register interest (this page)</li>
+        <li class="next">Invitations and the entry test</li>
+        <li class="next">Hourly pricing and full escrow for Kintsugi tasks</li>
         <li class="next">Developer and client terms</li>
       </ul>
       <p>Want to build? Say hello in the bChatX Lounge and tell us what you do.</p>
       <div class="cta"><a class="btn" href="https://chat.bwalletx.com/u/bwalletx" target="_blank" rel="noopener">Talk to us in bChatX</a></div>
 
 
-      <h2 id="apply">Apply</h2>
-      <p>No ID documents here. If we take you on, the identity check happens later with Veriff.</p>
+      <h2 id="apply">Register interest</h2>
+      <p>We are taking names now and will invite people in as the first paid tasks open. No ID documents here: the identity check happens later with Veriff.</p>
       <form id="kform" novalidate>
         <label>Name <input type="text" name="name" required maxlength="120" autocomplete="name" /></label>
         <label>Email <input type="email" name="email" required maxlength="200" autocomplete="email" /></label>
@@ -144,8 +145,8 @@
         <label class="chk"><input type="checkbox" name="claude" required /> I build with Claude Code on an Anthropic subscription. No local AI, no ChatGPT.</label>
         <label class="chk"><input type="checkbox" name="contact" required /> You may contact me about Kintsugi.</label>
         <input class="hp" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" />
-        <p class="small">The Bitcoin Corporation Ltd stores what you send here to review your application, under UK GDPR. See our <a href="/privacy.html">privacy policy</a>.</p>
-        <button class="btn" type="submit">Send application</button>
+        <p class="small">The Bitcoin Corporation Ltd stores what you send here to contact you about Kintsugi, under UK GDPR. See our <a href="/privacy.html">privacy policy</a>.</p>
+        <button class="btn" type="submit">Register interest</button>
         <p id="kmsg" class="small" role="status"></p>
       </form>
       <script>
@@ -158,7 +159,7 @@
           m.textContent = 'Sending...';
           fetch('https://www.bchatx.com/api/kintsugi/apply', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(d) })
             .then(function (r) { return r.json().then(function (j) { if (!r.ok) throw new Error(j.error || 'Failed'); }); })
-            .then(function () { f.reset(); m.textContent = 'Thanks. We will be in touch by email.'; })
+            .then(function () { f.reset(); m.textContent = 'Thanks, you are on the list. We will email you when tasks open.'; })
             .catch(function (err) { m.textContent = 'Could not send: ' + err.message + '. You can also message us in bChatX.'; });
         });
       })();
