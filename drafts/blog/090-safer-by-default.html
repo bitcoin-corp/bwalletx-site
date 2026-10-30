@@ -4,21 +4,21 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>090 Safer by default: what the reports taught us · bWalletX blog</title>
-    <meta name="description" content="A security audit and a steady stream of reports from b-Aware led to a long list of fixes. What you approve is now exactly what happens, sites can&#x27;t borrow the wallet&#x27;s own keys, and nothing is granted that you didn&#x27;t see." />
+    <title>090 Safer by default · bWalletX blog</title>
+    <meta name="description" content="bWalletX protects you without asking you to be an expert: you see exactly what you approve, sites never touch the wallet&#x27;s own keys, and apps can only spend what you set aside for them." />
     <link rel="canonical" href="https://bwalletx.com/blog/090-safer-by-default" />
     <meta property="og:type" content="article" />
     <meta property="og:url" content="https://bwalletx.com/blog/090-safer-by-default" />
     <meta property="og:site_name" content="bWalletX" />
-    <meta property="og:title" content="Safer by default: what the reports taught us" />
-    <meta property="og:description" content="A security audit and a steady stream of reports from b-Aware led to a long list of fixes. What you approve is now exactly what happens, sites can&#x27;t borrow the wallet&#x27;s own keys, and nothing is granted that you didn&#x27;t see." />
+    <meta property="og:title" content="Safer by default" />
+    <meta property="og:description" content="bWalletX protects you without asking you to be an expert: you see exactly what you approve, sites never touch the wallet&#x27;s own keys, and apps can only spend what you set aside for them." />
     <meta property="og:image" content="https://bwalletx.com/og/og-blog-090-safer-by-default.png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@bWalletX" />
-    <meta name="twitter:title" content="Safer by default: what the reports taught us" />
-    <meta name="twitter:description" content="A security audit and a steady stream of reports from b-Aware led to a long list of fixes. What you approve is now exactly what happens, sites can&#x27;t borrow the wallet&#x27;s own keys, and nothing is granted that you didn&#x27;t see." />
+    <meta name="twitter:title" content="Safer by default" />
+    <meta name="twitter:description" content="bWalletX protects you without asking you to be an expert: you see exactly what you approve, sites never touch the wallet&#x27;s own keys, and apps can only spend what you set aside for them." />
     <meta name="twitter:image" content="https://bwalletx.com/og/og-blog-090-safer-by-default.png" />
     <link rel="icon" href="/favicon.ico" />
     <link rel="stylesheet" href="/styles.css" />
@@ -57,8 +57,8 @@
  "@graph": [
   {
    "@type": "BlogPosting",
-   "headline": "Safer by default: what the reports taught us",
-   "description": "A security audit and a steady stream of reports from b-Aware led to a long list of fixes. What you approve is now exactly what happens, sites can't borrow the wallet's own keys, and nothing is granted that you didn't see.",
+   "headline": "Safer by default",
+   "description": "bWalletX protects you without asking you to be an expert: you see exactly what you approve, sites never touch the wallet's own keys, and apps can only spend what you set aside for them.",
    "url": "https://bwalletx.com/blog/090-safer-by-default",
    "mainEntityOfPage": "https://bwalletx.com/blog/090-safer-by-default",
    "image": "https://bwalletx.com/og/og-blog-090-safer-by-default.png",
@@ -97,29 +97,28 @@
     <script src="/nav.js"></script>
     <main class="ext">
       <p class="meta"><a href="/blog">Development blog</a> · <span class="num">090</span> · 30 Oct 2026</p>
-      <h1>Safer by default: what the reports taught us</h1>
-      <p class="lede">A security audit and a steady stream of reports through <a href="/blog/059-b-aware">b-Aware</a> led to a long list of fixes. The short version: what you approve is exactly what happens, and nothing is granted that you didn&rsquo;t see.</p>
+      <h1>Safer by default</h1>
+      <p class="lede">bWalletX protects you without asking you to be an expert. You see exactly what you approve, sites never touch the wallet&rsquo;s own keys, and apps can only spend what you set aside for them. It works with every BRC-100 app.</p>
 
-      <h2>The wallet's own keys stay the wallet's</h2>
-      <p>The most serious finding was that an outside site could ask for a key the wallet uses for itself, including the keys behind bTrust. Outside apps are now refused those keys before you&rsquo;re even asked. Permission lines are no longer ticked for you.</p>
       <h2>What you see is what you grant</h2>
-      <p>Approval sheets show every line they grant. If a request arrives while a sheet is open, it waits and gets its own sheet. A look-alike address such as <code>tokenblaster.com.ab1.io</code> is shown in full, never shortened to the name it imitates. If a site isn&rsquo;t sure to be who it says, the sheet says &ldquo;a site that claims to be&rdquo;.</p>
-      <p>A plain sign-in no longer stores a monthly allowance. Instead, a site can only pay without asking when the payment fits that site&rsquo;s envelope, and the money stays in your wallet until each payment is made. Forget the site and its envelope comes back to you.</p>
-      <h2>Signing in and pairing</h2>
-      <p>Sign in with bWalletX asks you to type the code the site shows, so a forwarded link can&rsquo;t be approved blind. Pairing your phone uses only our own relay, each pairing keeps its own permissions, and new pairings compare an 8-digit code. Disconnecting a site removes its permissions.</p>
-      <h2>Passwords and your words</h2>
-      <p>Changing your password needs proof it&rsquo;s you: your current password, Face ID or passcode, or your 12 words. New wallets use a much stronger password key, and older ones upgrade on the next unlock. On the web the unlock key stays in memory only. Recovery words are caught in reports and Ask b before they leave your device.</p>
-      <p>Paymail payments are checked against the person&rsquo;s key before you sign, and pausing spending also stops standing orders and subscriptions.</p>
+      <p>Every approval sheet shows every line it grants, amounts in dollars first. Each request gets its own sheet. A site&rsquo;s full address is always shown, so a look-alike like <code>tokenblaster.com.ab1.io</code> can never pass for the real thing.</p>
+      <h2>Envelopes for apps</h2>
+      <p>Let an app pay small amounts without asking by giving it an envelope. It can spend only what fits, the money stays in your wallet until each payment, and forgetting the app returns the rest. Signing in never sets up spending.</p>
+      <h2>The wallet's keys stay the wallet's</h2>
+      <p>The keys bWalletX uses for itself, including those behind bTrust, are never offered to outside apps. Nothing is pre-ticked for you.</p>
+      <h2>Sign in and pair with a code</h2>
+      <p>Sign in with bWalletX asks you to type the code the site shows, and pairing your phone compares an 8-digit code over our own relay. Each pairing keeps its own permissions, and Disconnect removes them.</p>
+      <h2>Your password, your words</h2>
+      <p>Changing your password needs your current one, Face ID or your 12 words. Passwords are protected by a strong 600,000-round key, and on the web your unlock stays in memory only. Recovery words never leave your device in a report or an Ask b chat.</p>
 
       <div class="box">
         <h2>Live today, 30 Oct 2026</h2>
         <ul class="chk">
-          <li>&check; Outside apps refused the wallet's own keys (5.2.35)</li>
-          <li>&check; Sign-in match code; own relay for pairing; password change needs proof (5.2.35)</li>
-          <li>&check; Every line shown; queued requests get their own sheet; full look-alike hosts</li>
-          <li>&check; Envelopes instead of stored allowances (bWalletX editions)</li>
-          <li>&check; 8-digit pairing code; per-pairing permissions (5.2.41 onward)</li>
-          <li>&check; Stronger password key with upgrade on unlock; memory-only unlock on the web</li>
+          <li>&check; Every line shown; dollars first; full site addresses (5.2.41)</li>
+          <li>&check; Envelopes for apps; sign-in never stores spending (bWalletX editions)</li>
+          <li>&check; Wallet's own keys refused to outside apps (5.2.35)</li>
+          <li>&check; Sign-in match code; 8-digit pairing; per-pairing permissions</li>
+          <li>&check; Password change needs proof; 600k-round password key</li>
         </ul>
       </div>
       <p class="related">Related: <a href="/blog/059-b-aware">b-Aware</a> · <a href="/releases">Releases</a></p>
