@@ -129,9 +129,11 @@
       @media (prefers-reduced-motion: reduce) { .askbar .q::after { animation: none; } }
       .floatb { position: absolute; left: 0; right: 0; margin: 0 auto; bottom: calc(50% - 2vh); height: clamp(84px, 15vh, 150px); width: auto; display: block;
         filter: drop-shadow(0 0 36px rgba(245,184,0,.55)) drop-shadow(0 10px 28px rgba(0,0,0,.85)); opacity: 0; transform: translateY(14px); transition: opacity 1.2s .2s ease, transform 1.4s .2s cubic-bezier(.2,.7,.2,1); }
-      .scene.on .floatb { opacity: 1; transform: none; animation: floatb 6s 1.6s ease-in-out infinite; }
+      .film.float .floatb { opacity: 1; transform: none; animation: floatb 6s 1.6s ease-in-out infinite; }
+      .floatb { z-index: 3; pointer-events: none; }
+      .scene.hasart .slogan { font-size: clamp(2.4rem, min(7.5vw, 11vh), 6.5rem); }
+      @media (prefers-reduced-motion: reduce) { .film.float .floatb { animation: none; transition: none; } }
       @keyframes floatb { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
-      @media (prefers-reduced-motion: reduce) { .scene.on .floatb { animation: none; transition: none; } }
       .tools { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 10px; }
       .tools span { font-size: .72rem; padding: 3px 8px; border-radius: 999px; border: 1px solid rgba(245,184,0,.35); color: var(--accent-hi); }
       .scene { z-index: 2; }
@@ -179,6 +181,7 @@
   </head>
   <body>
     <section class="film" id="film" aria-label="b paid: a 90-second film">
+      <img class="floatb" src="og-glyph-tight.svg" alt="" aria-hidden="true" />
       <div class="askbar" id="askbar" aria-hidden="true"><img src="b-paid-glyph.svg" alt=""><span class="q" id="askq"></span><span class="who" id="askwho"></span><span class="send"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
       <canvas id="pool" aria-hidden="true"></canvas>
       <!-- Scenes are generated from SCENES below. -->
@@ -262,8 +265,8 @@
         }
         var html = '';
         SCENES.forEach(function (s) {
-          if (!s.art && s.slogan.indexOf('{L}') < 0) s.art = '<img class="floatb" src="og-glyph-tight.svg" alt="" />';
-          html += '<div class="scene' + (s.art ? ' hasart' : '') + '" data-at="' + s.at + '">';
+          var fl = !s.art && s.slogan.indexOf('{L}') < 0;
+          html += '<div class="scene' + (s.art || fl ? ' hasart' : '') + '"' + (fl ? ' data-float="1"' : '') + ' data-at="' + s.at + '">';
           if (s.photo) html += '<img class="ph" src="' + esc(s.photo) + '" alt="" decoding="async" /><div class="shade"></div>';
           if (s.art) html += '<div class="art" aria-hidden="true">' + s.art + '</div>';
           html += '<div class="cap"><h2 class="slogan">' + slogan(s.slogan || '') + '</h2>';
@@ -283,7 +286,7 @@
         var start = 0, raf = 0, withSound = false, cur = -1;
         // With sound the film follows the track's own clock; silent, the wall clock.
         function now() { return withSound ? music.currentTime : performance.now() / 1000 - start; }
-        function show(k) { if (k === cur) return; cur = k; scenes.forEach(function (s, j) { s.classList.toggle('on', j === k); }); }
+        function show(k) { if (k === cur) return; cur = k; scenes.forEach(function (s, j) { s.classList.toggle('on', j === k); }); film.classList.toggle('float', !!(scenes[k] && scenes[k].dataset.float)); }
         function frame() {
           var t = now(), k = 0;
           scenes.forEach(function (s, j) { if (t >= parseFloat(s.dataset.at)) k = j; });
