@@ -1,6 +1,6 @@
 # bWalletX: full site text
 
-Generated 2026-10-29 from https://bwalletx.com. Source pages are linked above each section.
+Generated 2026-10-30 from https://bwalletx.com. Source pages are linked above each section.
 
 ---
 
@@ -11969,7 +11969,7 @@ A wallet has one main name. It can keep older names that still receive, and Sett
 
 ## 2. Link X or Google after you create your wallet
 
-New wallets are made with a passkey. Afterwards, On your wallet’s home, tap the Link your accounts card, or go to Settings › Identity › Link your accounts. Linking proves the account is yours. It doesn't give you a name: you choose your own handle.
+After you create your wallet (a password and your 12 words), on your wallet’s home tap the Link your accounts card, or go to Settings › Identity › Link your accounts. Linking proves the account is yours. It doesn't give you a name: you choose your own handle.
 
 ### X
 
@@ -14098,11 +14098,11 @@ Source: https://bwalletx.com/blog/004-names-and-paymail
 
 # Names, handles and paymail
 
-Send to $handle, name@bwalletx.com or an OpNS name. The paymail server moved domain twice, and social sign-in became a verified name.
+Send to $handle or name@bwalletx.com. The paymail server moved domain twice, and social sign-in became a verified name.
 
 ## Sending to a name
 
-Bitcoin addresses are hard to read aloud. On 1 October we added sending to a `$handle`, a paymail address or an OpNS name. We also added on-device OpNS mining: the phone runs the proof of work in a Web Worker and builds the mint transactions for a new name.
+Bitcoin addresses are hard to read aloud. On 1 October we added sending to a `$handle` or a paymail address.
 
 ## Our own paymail server
 
@@ -14116,11 +14116,13 @@ New wallets get a "Choose your handle" step after create or restore. Claiming a 
 
 ## Continue with X or Google
 
-On 4 October we added "Continue with X / Google" on Create Account. If you sign in, you get a verified name such as `name.x` or `name.gmail`. A plain name can be claimed by anyone; a verified name shows that the person behind it controls that X or Google account.
+On 4 October we added "Continue with X / Google" on Create Account. If you sign in, you get a verified name such as `name.x`. A plain name can be claimed by anyone; a verified name shows that the person behind it controls that X or Google account.
 
 The design changed during the day. First the chat server (bit-sign) handled the sign-in. Then we moved it to bWalletX's own server, and bit-sign keeps nothing: it only confirms the sign-in ticket. Then we decided one wallet has one identity, and a verified social name always wins over a plain one.
 
 Social sign-in is off in the store build, pending Apple's guideline 4.8 on sign-in options.
+
+Update, 30 Oct 2026: Create New Wallet now uses a password and your 12 words. The welcome screen can start linking X or Google, finished once your wallet is set up, and you can link them any time under Settings › Link your accounts. A linked account gives a verified badge; you choose your own handle.
 
 ## A detail that took longer than expected
 
@@ -14469,11 +14471,13 @@ The vault script can't check other inputs, so it can't prove that real notes wer
 
 Note transfers themselves need no co-signer. Releases and burns do.
 
+Update, 30 Oct 2026: opening vaults is on hold until the non-custodial fixes are done: closing a vault without our server, and vault keys derived from your seed.
+
 ## What's not done
 
 - Independent price signers.
 - An on-chain check that burned notes are real, replacing the issuer co-signer. Shieldpool is one route we are watching; it is testnet only.
-- The stability pool (backers earn from liquidations) is design only.
+- The stability pool is design only.
 - A testnet run, and a review of the scripts, before any meaningful amount.
 - Wallet screens for opening and closing vaults. The PNEEs card is there; vault management is not.
 - Legal review before the stability pool opens to the public. Store editions stay browse-only.
@@ -14573,7 +14577,7 @@ Source: https://bwalletx.com/blog/014-open-feed
 
 # One feed for BSV
 
-Every BSV social app keeps its own feed. bChat shows all of them, credits them, and pays the people who wrote the posts.
+Every BSV social app keeps its own feed. bChat shows all of them, credits them, and sends tips straight to the people who wrote the posts.
 
 ## The odd thing about BSV social apps
 
@@ -14609,9 +14613,7 @@ The rule we've written down is simple: a post belongs to the person who wrote it
 
 ## Apps get paid too
 
-When a bChat user tips a post that came from another app, bChat adds 5% on top for that app, in the same transaction. The author still gets the full tip.
-
-So a $0.05 tip on a Treechat post pays the author $0.05 and Treechat $0.0025. Treechat earns from its posts being read in bChat without doing anything.
+When a bChat user tips a post that came from another app, bChat can add 5% on top for that app, in the same transaction. The author still gets the full tip. That share switches on only once an app publishes a payment address for it, and no app has yet, so today the 5% isn’t paid.
 
 That's the bit I think the other apps haven't seen yet. Syndication isn't someone taking your content. It's your content earning in more places.
 
@@ -14626,6 +14628,8 @@ Two small things:
 And if they want to show bChat posts back, with a bChat badge, it's one line of code.
 
 ## Join
+
+Update, 30 Oct 2026: bChat is now bChatX, at [bchatx.com](https://bchatx.com); bitcoinchat.online has been retired.
 
 The format is an open spec: [bitcoinchat.online/docs/feed-protocol](https://www.bitcoinchat.online/docs/feed-protocol)
 
@@ -14757,10 +14761,6 @@ Update, 7 Oct 2026: bWallet is not in the App Store or Google Play yet. What is 
 
 Pots are free. We have written down a possible charge of 1 cent a day for later, but it is switched off, and it will never be on in the store builds. If it ever comes on, pausing, cancelling and taking your money out of a pot will still be free.
 
-## Next
-
-After that, we want payments that go out on time with the app closed, still without us holding keys. The wallet would sign a few payments in advance, each locked with nLockTime so it can't be broadcast before its date. That is the next step, not part of 5.1.75.
-
 — Richard
 
 Related: [Agent accounts](https://bwalletx.com/agents) · [010 Agent accounts, strategies, CLI and MCP](https://bwalletx.com/blog/010-agents-strategies-cli)
@@ -14775,7 +14775,7 @@ Source: https://bwalletx.com/blog/017-sign-in-and-lounge
 
 # Sign in with bWalletX, and the Lounge
 
-bChat now has one gold button to sign in with your wallet. Every account starts in the bWallet Lounge.
+bChat (now bChatX) has one gold button to sign in with your wallet. Every account starts in the bWallet Lounge.
 
 ## One button
 
@@ -14805,6 +14805,8 @@ You can get there at [bchatx.com/room/LOUNGE](https://chat.bwalletx.com/room/LOU
 
 — Richard
 
+Update, 30 Oct 2026: bChat is now bChatX, at [bchatx.com](https://bchatx.com). The Lounge is the same room, and every account still starts in it.
+
 Related: [Social](https://bwalletx.com/social) · [Lounge](https://bwalletx.com/lounge) · [014 One feed for BSV](https://bwalletx.com/blog/014-open-feed)
 
 [← 016 Subscriptions, paid from pots](https://bwalletx.com/blog/016-pots)[018 1 BSV for testing bWallet on Android →](https://bwalletx.com/blog/018-testers)
@@ -14817,7 +14819,7 @@ Source: https://bwalletx.com/blog/018-testers
 
 # 1 BSV for testing bWallet on Android
 
-Google needs 12 people to test bWallet for 14 days before it can go on the Play Store. We are paying 1 BSV for that time.
+Google needs 12 people to test bWallet for 14 days before it can go on the Play Store. We paid 1 BSV for that time. This test has closed.
 
 Update, 7 Oct 2026: Google required an organisation developer account for bWallet, so the closed test has to be set up and submitted again. We have no new start date yet. The tester payments described below have not changed; the [Testers](https://bwalletx.com/testers) page has the current state.
 
@@ -14859,6 +14861,8 @@ While you test, the app sends a random install id, your tester code, whether it 
 
 Related: [Testers](https://bwalletx.com/testers) · [Android](https://bwalletx.com/android) · [007 Store rules, open rooms and moderation](https://bwalletx.com/blog/007-store-and-private)
 
+Update, 30 Oct 2026: this paid test has closed. bWallet on Android is in Google Play internal testing only, and the 14-day closed test has not restarted, so we are not taking applications.
+
 [← 017 Sign in with bWalletX, and the Lounge](https://bwalletx.com/blog/017-sign-in-and-lounge)[019 Blur slurs, show swearing →](https://bwalletx.com/blog/019-language-filter)
 
 ---
@@ -14899,7 +14903,7 @@ The feed API returns names as they were posted, so each app makes its own choice
 
 ## The store edition
 
-bWallet, the version in the App Store and Google Play, is stricter because the stores require it. Slurs are hidden with no reveal, those names show as "Hidden name", and strong language is blurred.
+bWallet, the store edition (not yet published in the App Store or Google Play), is stricter because the stores require it. Slurs are hidden with no reveal, those names show as "Hidden name", and strong language is blurred.
 
 — Richard
 
@@ -14915,7 +14919,7 @@ Source: https://bwalletx.com/blog/020-sign-in-with-x
 
 # Sign in with X
 
-bWalletX can make a wallet from your X account. You get your X username as a verified paymail, alice.x@bwalletx.com for example, with your picture, a token and a room.
+Link your X account to bWalletX. You get your X username as a verified paymail, alice.x@bwalletx.com for example, with your picture, a token and a room.
 
 ## What it does
 
@@ -14950,6 +14954,8 @@ How-to page: [bwalletx.com/x](https://bwalletx.com/x).
 — Richard
 
 Related: [Sign in with X](https://bwalletx.com/x) · [Sign in with Gmail](https://bwalletx.com/gmail) · [004 Names, handles and paymail](https://bwalletx.com/blog/004-names-and-paymail) · [005 Personal tokens and token rooms](https://bwalletx.com/blog/005-personal-tokens-and-rooms)
+
+Update, 30 Oct 2026: you now create a wallet with a password and your 12 words. The welcome screen can start linking your X account, and the link finishes once your wallet is set up. You can also link X any time in Settings › Link your accounts.
 
 [← 019 Blur slurs, show swearing](https://bwalletx.com/blog/019-language-filter)[021 Coordinate on BSV →](https://bwalletx.com/blog/021-coordinate-on-bsv)
 
@@ -15007,25 +15013,17 @@ That is the rule: advertise there, coordinate here.
 
 ## Where we are taking this
 
-A rule like that is only useful if there is a “here”. So we built Chat into bWalletX, with bChat as the full version on the web. Your wallet is your account. Rooms, private messages and calls sit next to your coins and tokens. Some of it is live, and the paid parts are still being built. What works today, and what doesn’t yet, is on [bwalletx.com/chat](https://bwalletx.com/chat).
+A rule like that is only useful if there is a “here”. So we built Chat into bWalletX, with bChat as the full version on the web. Your wallet is your account. Rooms, private messages and calls sit next to your coins and tokens. What works today is on [bwalletx.com/chat](https://bwalletx.com/chat).
 
 The tools matter less than the habit. If BSV people plan in BSV rooms, and point to them from everywhere else, the conversation stops depending on a feed that someone else ranks. Start a room for your project. Post the link on Twitter. Then go back to the room and do the work. App builders can let users sign in with their wallet: [bwalletx.com/connect](https://bwalletx.com/connect).
 
 — Richard
 
-## Next in this series
+## More in this series
 
-- Token rooms: hold to enter
+- [026 Paying to be heard](https://bwalletx.com/blog/026-paying-to-be-heard)
 
-- Paying to be heard: priced messages and calls
-
-- Pay-per-second calls and streams
-
-- Private messages and keys
-
-- Message boards versus feeds
-
-- Agents in chat
+- [030 bPhone: charge to receive calls](https://bwalletx.com/blog/030-bphone)
 
 Related: [Chat in bWalletX](https://bwalletx.com/chat) · [005 Personal tokens and token rooms](https://bwalletx.com/blog/005-personal-tokens-and-rooms) · [014 One feed for BSV](https://bwalletx.com/blog/014-open-feed) · [017 Sign in with bWalletX, and the Lounge](https://bwalletx.com/blog/017-sign-in-and-lounge)
 
@@ -15283,7 +15281,7 @@ We didn’t want that, so we run our own small push server at `push.bwalletx.com
 
 - Group messages. Only if you ask for them. Each room has a bell with three settings: All, Mentions and Off. Groups start on Mentions, so a busy room doesn’t buzz your phone all day.
 
-- Calls. An incoming call rings through.
+- Calls. An incoming call rings while the app is open (in the Chrome extension, while the wallet is unlocked), and a missed call shows up as a notification.
 
 - Answers from b. When the assistant replies in a room.
 
@@ -15421,7 +15419,9 @@ Source: https://bwalletx.com/blog/027-airdrops-not-dividends
 
 Why bWalletX issuers reward holders with airdrops, not payouts: the returns-wording block, the airdrop inbox, and the security audit behind it (sandboxed NFT content, address poisoning).
 
-Status: built, not released. The airdrop inbox, the airdrop address, the returns-wording filter and the safety changes below are built on a development branch. They are not in the released app (5.1.84) and will ship in a later release.
+Status: built, not released at the time (5.1.84).
+
+Update, 30 Oct 2026: the airdrop inbox has since shipped, and so has sending airdrops of tokens or BSV to every holder of a token. See [releases](https://bwalletx.com/releases).
 
 Update, 15 Oct 2026: all of this shipped in [5.1.85](https://bwalletx.com/releases#v5.1.85) and is in the current release, 5.2.24. Sending airdrops to holders, followers or room members is still not built, and airdrops that unlock over time wait on token locking, which is in development.
 
@@ -15445,7 +15445,7 @@ It matches whole words and ignores obvious look-alikes such as “free returns�
 
 ## Your airdrop address
 
-Every bWalletX account already has an ordinals address: the address that holds your tokens and NFTs. That is your airdrop address. Receive now has two tabs, Payments and Airdrops, and the Airdrops tab shows that address with a QR code and a copy button. The plan is to show it on your public page as well, so issuers can find it.
+Every bWalletX account already has an ordinals address: the address that holds your tokens and NFTs. That is your airdrop address. Receive now has two tabs, Payments and Airdrops, and the Airdrops tab shows that address with a QR code and a copy button.
 
 ## The airdrop inbox
 
@@ -15467,9 +15467,7 @@ Address poisoning. This scam is common on every chain. Someone sends you a tiny 
 
 No links from the inbox. A token’s name and picture can say anything, including “claim your reward at this site”. The inbox never shows issuer links. Links only appear on a token’s own page, behind a confirmation. The standing rule is printed in the inbox: never type your 12 words on a site an airdrop points to.
 
-## What comes later
-
-Sending airdrops is next: to the followers of an account, to the holders of a token, or to the members of a room, with limits so they can’t be used for spam. Later, airdrops that unlock over time. We have also proposed retiring a TokenBlaster launch option that would pay BSV to holders, which looks too much like a dividend, and replacing it with holder airdrops. No coin uses that option today. Everything we know about the plan is on the [Airdrops page](https://bwalletx.com/airdrops).
+More on the [Airdrops page](https://bwalletx.com/airdrops).
 
 [← 026 Paying to be heard](https://bwalletx.com/blog/026-paying-to-be-heard)[028 Launch something with your coin →](https://bwalletx.com/blog/028-launch-something)
 
@@ -15481,9 +15479,9 @@ Source: https://bwalletx.com/blog/028-launch-something
 
 # Launch something with your coin
 
-A coin should launch with something: token links for website, app, X, Telegram and bChat; the room as the default right; “Issuer says” for the rest; no company field; advanced launch options as plans.
+A coin should launch with something: token links for website, app, X, Telegram and bChat; the room as the default right; “Issuer says” for the rest; no company field.
 
-Status: partly built. Buying and selling Launchpad coins is live (since 5.1.74). The Launch your own coin button and token links shipped in [5.1.85](https://bwalletx.com/releases#v5.1.85) (8 Oct 2026). The advanced options at the end are plans.
+Status: partly built. Buying and selling Launchpad coins is live (since 5.1.74). The Launch your own coin button and token links shipped in [5.1.85](https://bwalletx.com/releases#v5.1.85) (8 Oct 2026).
 
 ## A coin with nothing behind it
 
@@ -15497,13 +15495,13 @@ Since 5.1.85 there is a full-width gold button at the top of the Launchpad: Laun
 
 ## Token links
 
-Token pages in bWalletX (on the Exchange, on the Launchpad and in your Wallet) get room for a coin’s links, shown as chips: website, app, X, Telegram and bChat. Each chip shows the domain it goes to.
+Token pages in bWalletX (on the Exchange, on the Launchpad and in your Wallet) have room for a coin’s links, shown as chips when a token carries them: website, app, X, Telegram and bChat. Each chip shows the domain it goes to.
 
 Links are a way in for scammers, so they are strict. A link must be https with a real hostname, an X link must be on X and a Telegram link on Telegram. Tapping a chip shows a warning first: this is an outside site, not checked by us, and you should never enter your recovery phrase there.
 
-There is one honest catch. Today, no source publishes these links. Token deploy records don’t have the fields, TokenBlaster’s launch form doesn’t ask for them, and neither does the 1Sat index. The wallet reads them as soon as any of those sources does, and shows nothing until then. Adding them to TokenBlaster’s form, signed by the creator, is the next step. Longer term we have proposed a small on-chain “token profile” that only the issuer can sign, so any wallet or market can read it.
+There is one honest catch. Today, no source publishes these links. Token deploy records don’t have the fields, TokenBlaster’s launch form doesn’t ask for them, and neither does the 1Sat index. The wallet reads them as soon as any of those sources does, and shows nothing until then.
 
-Should links be required? We decided not, at first. A coin can launch without them, and the plan is that coins with them rank higher on the board.
+Should links be required? We decided not, at first. A coin can launch without them.
 
 ## The room is the default right
 
@@ -15519,99 +15517,11 @@ The same goes for wording. When you create a token in bWalletX, the wallet won�
 
 Company tokens may come one day, but as a separate product with identity checks, never as a field on ordinary coins.
 
-## Advanced options: plans
-
-Today every TokenBlaster coin launches on the same curve with the same settings. We have written up a set of advanced options for the launch form. None of this is built. It would be built in TokenBlaster, behind a collapsed Advanced panel, with the one-tap standard launch staying first.
-
-- Curve presets. A few named shapes (Standard, Gentle, Steep, Late graduation) instead of free-form numbers, with bounds so no preset can trap buyers. The wallet’s own trade check has to read each coin’s curve before any of these can launch.
-
-- Fee mix. Splitting the creator’s share of fees between the creator, a group of wallets and buybacks, fixed at launch.
-
-- Buybacks. Part of each fee buys the coin and burns it, with limits on how often and how much one buy can move the price.
-
-- Tranches. Releasing supply on a schedule instead of all at once, using the same curve shapes as [Lock BSV](https://bwalletx.com/lock), with a preview chart and each tranche time-locked on chain once token locks are proven to index correctly.
-
-- Milestones. Releases tied to events, such as the coin graduating from its curve or witnesses confirming that an app shipped, each with a deadline after which the tranche releases or burns, as the issuer chose at launch.
-
-We describe all of these as a supply schedule or a fee setting, never as rewards. A buyback isn’t a promise about the price, and a tranche isn’t a promise of anything.
-
 ## Where to start
 
 Open Exchange in bWalletX and tap the Launchpad bar to trade coins today. The full picture, with what is live and what is coming, is on the [Launchpad page](https://bwalletx.com/launchpad).
 
 [← 027 Airdrops, not dividends](https://bwalletx.com/blog/027-airdrops-not-dividends)[029 bPositive: gifts, not investments →](https://bwalletx.com/blog/029-bpositive)
-
----
-
-Source: https://bwalletx.com/blog/029-bpositive
-
-[Development blog](https://bwalletx.com/blog) · 029 · 8 Oct 2026
-
-# bPositive: gifts, not investments
-
-bPositive lets you sponsor someone’s journey in bWalletX: monthly support, witness-confirmed milestone pledges, thank-you NFTs. Why it is gifts only, and the decisions behind it.
-
-Status: plan, with the owner’s decisions made (8 Oct 2026). No bPositive code exists yet. Everything below is Coming.
-
-Update, 15 Oct 2026: still a plan. No bPositive code exists, and nothing below is in the current release (5.2.24). To go live it needs journey records, pledges held in pots, witness confirmation with verified identities, and thank-you NFTs, all built and tested.
-
-## Backing a person, not a coin
-
-A lot of what happens around a wallet is about tokens and prices. bPositive is about people. It lets you back someone who is working towards something: a student saving for an exam, an athlete training for a race, someone in recovery counting days, a developer learning a new stack, an artist finishing an album.
-
-People already do this informally. A friend sends money every month. A relative promises a sum if you pass. The trouble is that the promise lives in someone’s head, the proof is “trust me”, and strangers who would like to help have no way in. bPositive puts the money, the proof and the people in one place, which is bWalletX.
-
-## Gifts, not investments
-
-The first rule, before any screen was drawn: sponsoring is a gift. A sponsor gets no returns, no share of future earnings, no equity and no repayment.
-
-We could have built the other thing. “Back a young developer, get 2% of what they earn” is an obvious pitch. It is also an income-share agreement, which in many places is a regulated financial product. It puts pressure on the person in exactly the wrong way: their success becomes someone else’s return. And it pulls in the people who want a return rather than the people who want to help.
-
-So there is nothing to get back. The single exception is your own money that was never released: if you pledge to a milestone and it isn’t confirmed by the deadline, the pledge comes back to you. That is not a return. It is a gift that didn’t happen.
-
-For the same reason there is no bPositive token. A token would muddy the rule straight away. And bPositive will never be combined with a launchpad coin on the same journey. It is the same thinking as [027 Airdrops, not dividends](https://bwalletx.com/blog/027-airdrops-not-dividends).
-
-## Three building blocks
-
-bPositive is mostly made of parts bWalletX already has.
-
-Monthly support uses pots. “Support monthly” is a standing order from one of your pots to the person’s paymail, tagged to their journey. You can pause or cancel it any time. A gift that has been paid is final, but nothing more goes out once you stop.
-
-Milestones use witnesses. The person names a milestone (“Pass the AWS Associate exam”, “Run a sub-4 marathon”, “90 days sober”), what will count as evidence, and a deadline. They choose witnesses, and each witness has to accept. When the person says they’ve done it, witnesses confirm or decline with a signed seal recorded on chain. By default 2 of 3 must confirm.
-
-Recognition uses NFTs. Sponsors get a thank-you receipt NFT. Later, the person gets an achievement badge when a milestone is confirmed. Neither unlocks anything in the app, and neither has any promised value.
-
-## A pledge before a lock
-
-The hardest design question was how to hold a milestone pledge. The strong version is an on-chain lock: a script that can pay the person only when witnesses sign, and can pay the sponsor back only after the deadline. Nobody, including us, could move the money any other way. It is also new script code, and new script code holding other people’s money needs testing and an independent review before it goes anywhere near mainnet.
-
-So we are doing it in two steps, and saying so. In the first version a pledge stays in a pot in the sponsor’s own wallet. When the witnesses confirm, the sponsor’s wallet sends it the next time it is open. That is a promise, not a lock: the sponsor could cancel, and the money waits for their wallet. The app labels it honestly as “Pledged (paid when confirmed, from the sponsor’s wallet)”, never as locked.
-
-The second version is the real lock, with the release pinned to the person’s own key. Even the person plus all the witnesses couldn’t send it anywhere else. Refunds after the deadline happen automatically when the sponsor next opens the wallet.
-
-## Witnesses need to be real
-
-The obvious abuse is a fake milestone confirmed by friends. Witnesses need a verified identity, are shown publicly on the journey page with their identity strength, and can’t be the person’s other accounts or a sponsor of the same milestone. Larger amounts need stronger identities. Witnesses are not paid for witnessing: a fee for saying yes is the wrong incentive. Sponsors see who the witnesses are before they pledge, and decide for themselves.
-
-## The other decisions
-
-- 18+ at launch. Recipients, witnesses and milestone sponsors must be adults. Journeys for younger people raise problems we’d rather solve properly later than badly now.
-
-- 0% fee. The Bitcoin Corporation takes nothing from gifts, as with tips in bChat. You pay the normal network fee.
-
-- Sponsor count, not totals. Journey pages show how many people sponsor. Showing amounts is the person’s choice. No countdowns, no leaderboards: those reward urgency, which is what scams use.
-
-- Sponsors’ rooms are opt-in. The person can open a room for sponsors who hold a thank-you NFT. Sponsoring gives no right to contact the person, and they can block a sponsor.
-
-- Not in the store edition at first. A public page with a goal and a list of sponsors looks like fundraising to App Store and Google Play reviewers, which brings its own rules. bWallet, the store edition, keeps ordinary person-to-person payments and standing orders, and bPositive lives in bWalletX.
-
-## What happens next
-
-The first phase is journey pages, monthly support and thank-you NFTs, with pledges labelled as pledges. Witness-confirmed milestones with the on-chain lock come second, after the script has been tested and reviewed. The rules as they stand are on the [bPositive page](https://bwalletx.com/bpositive).
-
-Only give what you would give a friend. Gifts can have tax consequences where you live; we can’t advise on them.
-
-[← 028 Launch something with your coin](https://bwalletx.com/blog/028-launch-something)[030 bPhone: charge to receive calls →](https://bwalletx.com/blog/030-bphone)
 
 ---
 
@@ -15677,8 +15587,6 @@ There are no refunds either. A payment is a payment. The maximum the caller sets
 
 ## What is still to do
 
-- Apply the database change on the paymail server and ship the wallet build, then test with real money: BSV, MNEE, a token, a flat price, an old build calling a priced callee, the cap, an empty wallet.
-
 - A receipt ledger on the server, so “received” on the callee’s screen means “verified”.
 
 - Push ringing, so a booked call rings a phone with the app closed. Calls still ring only while the app is open.
@@ -15701,7 +15609,7 @@ Source: https://bwalletx.com/blog/031-calls-mics-menu
 
 # bWalletX 5.1.88: a new Calls tab, working mics, a new menu
 
-bWalletX 5.1.88 shipped on 8 Oct 2026. It is on the App Store (build 82), on Play (build 76), at web.bwalletx.com, in the Chrome extension and as a direct APK. Most of it is about talking to people: a proper Calls tab, microphones that work, and a menu that handles more than one account.
+bWalletX 5.1.88 shipped on 8 Oct 2026. It is on TestFlight (build 82), in Play internal testing (build 76), at web.bwalletx.com, in the Chrome extension and as a direct APK. Most of it is about talking to people: a proper Calls tab, microphones that work, and a menu that handles more than one account.
 
 The full list is in the [5.1.88 release notes](https://bwalletx.com/releases?v=5.1.88#v5.1.88). This is the short version.
 
@@ -15827,11 +15735,7 @@ A Space can have up to 12 speakers on stage at once. Everyone else is a listener
 
 Audio goes directly between devices where it can. Some networks block that: offices, hotels, some mobile carriers. We have added a TURN relay, which carries the audio through our server when a direct path fails. People on those networks can now join.
 
-## Coming: Game Spaces
-
-Game Spaces are coming: watch TokenBlaster matches live, with the players talking. More when it is ready.
-
-Update, 15 Oct 2026: Game Spaces are not built yet. Since this post, Spaces gained pay at the door, paid listening and Broadcast (share a tab or screen) in bWalletX.
+Update, 15 Oct 2026: since this post, Spaces gained pay at the door, paid listening and Broadcast (share a tab or screen) in bWalletX.
 
 The [bSpaces page](https://bwalletx.com/bspaces) has more on how Spaces work inside bWalletX.
 
@@ -15857,7 +15761,7 @@ Three parts: open-source apps, an open protocol, and a server that stays closed 
 
 ## Open-source apps
 
-bWalletX is already open source under the MIT licence. bChat desktop and the bChatX web app will follow under the same licence. MIT means you can read the code, change it, and ship your own version.
+bWalletX is open source. You can read the code, change it, and ship your own version.
 
 The names and logos are trademarks. You can fork the code, but your fork needs its own name.
 
@@ -15875,7 +15779,9 @@ What matters is what the server can’t do. Your keys never leave your wallet. T
 
 More on what is open and where to find it is on the [open source page](https://bwalletx.com/open-source).
 
-[← 033 Spaces you can just listen to](https://bwalletx.com/blog/033-spaces-you-can-listen-to)[035 Pots & Locks, and backing PNEEs →](https://bwalletx.com/blog/035-pots-and-locks)
+Update, 30 Oct 2026: this post first said bWalletX was under the MIT licence. Since 19 Oct 2026 it is under the Open BSV licence; the parts that came from Yours Wallet stay MIT. We have also taken out a line promising other apps would follow.
+
+[← 033 Spaces you can just listen to](https://bwalletx.com/blog/033-spaces-you-can-listen-to)[035 Pots & Locks, and a PNEEs pot →](https://bwalletx.com/blog/035-pots-and-locks)
 
 ---
 
@@ -15883,7 +15789,7 @@ Source: https://bwalletx.com/blog/035-pots-and-locks
 
 [Development blog](https://bwalletx.com/blog) · 035 · 10 Oct 2026
 
-# Pots & Locks, and backing PNEEs
+# Pots & Locks, and a PNEEs pot
 
 Locking BSV until a date, or paying it out to yourself over time, has been in bWalletX since 5.1.84. Today the Lock screen becomes Pots & Locks, so your locks are grouped by what they are for.
 
@@ -15899,11 +15805,13 @@ With no locks yet, you see a Start a pot card with the templates, so you can beg
 
 Every lock feature stays: one unlock date or payouts over time, the payout curves, templates, claim, re-lock, receipts and the public check at [bwalletx.com/lock/verify](https://bwalletx.com/lock/verify). A lock still can’t be broken early, not even by you. The grouping is just a label in your wallet. The coins don’t depend on it.
 
-## Backing PNEEs
+## A lock in your PNEEs pot
 
-PNEEs are our BSV-backed dollar token, in a small pilot since post [011](https://bwalletx.com/blog/011-pnees-pilot). The lock button on the PNEEs card now opens a Back PNEEs card that explains what backing means, then asks how much BSV to lock.
+PNEEs are our BSV-backed dollar token, in a small pilot since post [011](https://bwalletx.com/blog/011-pnees-pilot). The lock button on the PNEEs card opens a card that asks how much BSV to lock in your PNEEs pot.
 
-Continue opens the normal lock builder, filled in for you: a lock called “PNEEs backing”, one unlock date a year out, in the PNEEs pot. You review it and type LOCK to confirm, like any other lock. The lock then shows as your PNEEs pot, at the top of Pots & Locks.
+Continue opens the normal lock builder, filled in for you: one unlock date a year out, in the PNEEs pot. You review it and type LOCK to confirm, like any other lock. The lock then shows as your PNEEs pot, at the top of Pots & Locks.
+
+Update, 30 Oct 2026: a lock in your PNEEs pot is your own BSV, locked to you. It does not add collateral to PNEEs: PNEE vaults are on hold until the non-custodial fixes are done.
 
 ## Where it is
 
@@ -15947,7 +15855,7 @@ You can cancel any time.
 
 Live on [web.bwalletx.com](https://web.bwalletx.com) and the desktop beta at [beta.bwalletx.com](https://beta.bwalletx.com).
 
-[← 035 Pots & Locks, and backing PNEEs](https://bwalletx.com/blog/035-pots-and-locks)[037 Portfolio vs market →](https://bwalletx.com/blog/037-portfolio-vs-market)
+[← 035 Pots & Locks, and a PNEEs pot](https://bwalletx.com/blog/035-pots-and-locks)[037 Portfolio vs market →](https://bwalletx.com/blog/037-portfolio-vs-market)
 
 ---
 
@@ -16043,18 +15951,17 @@ Either way the money goes straight to the artist, as it comes in. No waiting wee
 
 ## Featured artists
 
-[VexVoidEchoes in the Dust · Artist Proof](https://vexvoid.com)
+[VexVoidEchoes in the Abyss · Artist Proof](https://vexvoid.com)
 [NPGXTokyo Gutter Punk](https://npgx.website)
-[VexVoidEchoes in the Dust · Ultra](https://vexvoid.com)
+[VexVoidEchoes in the Abyss · Ultra](https://vexvoid.com)
 [NPGXNeon Blood Riot](https://npgx.website)
-[VexVoidEchoes in the Dust · Ultra](https://vexvoid.com)
-[VexVoidEchoes in the Dust · Rare](https://vexvoid.com)
+[VexVoidEchoes in the Abyss · Ultra](https://vexvoid.com)
+[VexVoidEchoes in the Abyss · Rare](https://vexvoid.com)
 
 ## What's not done
 
 - Playing your music video into the room, in sync for everyone, on repeat if you like.
 - Album Spaces: a ticketed run of your music videos, one after another.
-- Your own banner on your Space and tile (in the next app build).
 - Splitting ticket money between promoter, label, artist and crew.
 - Tickets are in bWalletX (web, Android and Chrome), not the App Store or Google Play editions.
 
@@ -16348,6 +16255,8 @@ Your friend page shows their token too. New personal tokens start with a supply 
 
 Related: [Exchange](https://bwalletx.com/exchange) · [Friends](https://bwalletx.com/friends) · [Swap into BSV](https://bwalletx.com/swap)
 
+Update, 30 Oct 2026: the Friends filter has since been removed from the Exchange. Your friends’ own tokens are on the Friends page.
+
 [← 048 Your NFTs, edge to edge](https://bwalletx.com/blog/048-your-nfts-edge-to-edge)[050 AIVJ — VexVoid, live →](https://bwalletx.com/blog/050-aivj-tv-vexvoid-live)
 
 ---
@@ -16484,7 +16393,7 @@ Source: https://bwalletx.com/blog/054-bradio-live-audio
 
 # bRadio: live audio in bWalletX
 
-Host a live audio Space, bring people up to speak, and keep listening while you use the rest of the wallet. Recorded Spaces can become podcast episodes.
+Host a live audio Space, bring people up to speak, and keep listening while you use the rest of the wallet.
 
 ## Go live
 
@@ -16500,11 +16409,7 @@ Leave the Space screen and it keeps playing. A live bar sits at the top and a mi
 
 The [bRadio Lounge](https://chat.bwalletx.com/r/BRADIO) is the place to find people talking and to try it out. Drop in, listen, raise a hand.
 
-## Podcasts from Spaces
-
-A recorded Space can become a podcast episode. Anyone can play a free preview. This is off by default: nothing is recorded or published unless the host turns it on.
-
-An episode can also be an NFT. Whoever owns it can listen to the whole thing.
+Update, 30 Oct 2026: we took out a section on turning recorded Spaces into podcast episodes. It isn’t live for users yet.
 
 Related: [bRadio Lounge](https://chat.bwalletx.com/r/BRADIO) · [bSpaces](https://bwalletx.com/bspaces) · [Lounge](https://bwalletx.com/lounge)
 
@@ -16518,29 +16423,21 @@ Source: https://bwalletx.com/blog/055-digital-ice-cream
 
 # Digital Ice-Cream
 
-A story about three friends, an ice-cream stand and digital cash, and where we’re taking bWalletX next.
-
-Here’s where we’re taking bWalletX. It’s easiest to tell as a story.
+A story about three friends, an ice-cream stand and digital cash.
 
 ## Fred, Joe and You
 
 Fred, Joe and You open an ice-cream stand. Real ice cream, in real cones. Customers pay in digital cash from their phones.
 
-You agree the split up front: Fred 30%, Joe 30%, You 40%. Every sale is split the moment it’s paid. Nobody does the sums at the end of the month, and nobody has to trust whoever holds the till.
+They agree up front how the takings are split between the three of them. Every sale is split the moment it’s paid. Nobody does the sums at the end of the month, and nobody has to trust whoever holds the till.
 
-## Shares that stay put
+## The float stays put
 
-Each partner’s share is locked. It takes the partners together to move it, so no one can quietly sell out or hand theirs to a stranger.
+The stand’s float sits behind a lock that takes more than one of them to move, so no one can quietly walk off with it.
 
-## Max joins
+## Their own room
 
-Summer gets busy and Max comes in to help, for 10%. Everyone gives up a little: the split becomes Fred 27%, Joe 27%, You 36%, Max 10%. The partners agree it together, and from the next cone on, the money follows the new split.
-
-## b keeps the paperwork
-
-The partners talk in their own private chat. When they agree something, like Max joining, b drafts it there for everyone to read and approve.
-
-One day the stand may become a proper company. The same record carries over, so they don’t start from scratch.
+The three of them talk in their own private chat, a room only they can get into.
 
 ## What works today
 
@@ -16550,11 +16447,9 @@ One day the stand may become a proper company. The same record carries over, so 
 
 - Token rooms. A private chat for the people who hold a token.
 
-Coming: Partnership shares, which tie these together. They aren’t built yet.
+Update, 30 Oct 2026: we have cut this post back to what works today and taken out a section on partnership shares, which aren’t live.
 
-Update, 15 Oct 2026: partnership shares are being built and tested on a development branch, not in the current release (5.2.24) and not open to anyone. They need the partner lock finished and tested with real keys, the server changes deployed, and the owner’s sign-off.
-
-Related: [Digital Ice-Cream](https://bwalletx.com/digital-ice-cream) · [Partnership shares](https://bwalletx.com/partnership-shares)
+Related: [Digital Ice-Cream](https://bwalletx.com/digital-ice-cream)
 
 [← 054 bRadio: live audio in bWalletX](https://bwalletx.com/blog/054-bradio-live-audio)[056 bShares: a register for any company →](https://bwalletx.com/blog/056-bshares)
 
@@ -16566,9 +16461,13 @@ Source: https://bwalletx.com/blog/056-bshares
 
 # bShares: a register for any company
 
-bShares keeps a company’s register of members, lets directors approve new shares, and locks shares so they can’t move without the right people. It’s in testing; the first register is our own company.
+bShares keeps a company’s register of members, lets directors approve new shares, and locks shares so they can’t move without the right people. It’s in testing, on our own company’s register only.
 
 bShares is a record-keeping tool for any company. It’s in testing; the first register is our own company, The Bitcoin Corporation Ltd.
+
+## Status, 30 Oct 2026: in testing
+
+bShares is not open to other companies yet. The register, approvals and locks below are being tested on our own company’s register; this is how they are designed to work, not a finished product.
 
 ## The register
 
@@ -16586,11 +16485,11 @@ New shares are only allotted when the directors approve. bShares records the app
 
 ## From a token to a company
 
-Most things start small: a token, then a room of people around it. Some become partnerships, with [Partnership shares](https://bwalletx.com/partnership-shares). A few become companies. bShares is the last step: the record a company keeps.
+Most things start small: a token, then a room of people around it. A few become companies. bShares is the last step: the record a company keeps.
 
 Nothing here is an offer of shares.
 
-Related: [bShares](https://bwalletx.com/bshares) · [Partnership shares](https://bwalletx.com/partnership-shares)
+Related: [bShares](https://bwalletx.com/bshares)
 
 [← 055 Digital Ice-Cream](https://bwalletx.com/blog/055-digital-ice-cream)[All posts →](https://bwalletx.com/blog)
 
@@ -16602,11 +16501,13 @@ Source: https://bwalletx.com/blog/057-handcash-and-invites
 
 # Sign in with HandCash, and invites with tokens
 
-New accounts can now start with HandCash as well as X. Your HandCash handle carries over as name@bwalletx.com, your friends can come with you, and invites with tokens bring people into Spaces.
+Link HandCash to your bWalletX account. Your HandCash handle carries over as name@bwalletx.com, your friends can come with you, and invites with tokens bring people into Spaces.
 
 ## Sign in with HandCash
 
-“Sign in with HandCash” now sits next to “Sign in with X” when you make a new account. If you already use HandCash, you don’t need to start from nothing.
+If you already use HandCash, you don’t need to start from nothing.
+
+Update, 30 Oct 2026: new wallets are created with a password and your 12 words, and HandCash is no longer a way to sign in. Link HandCash afterwards, under Settings › Link your accounts.
 
 - Your handle carries over. Your HandCash handle becomes your paymail: name@bwalletx.com.
 
@@ -16620,33 +16521,25 @@ You can import an address book and export yours. It’s your list, and you can t
 
 ## Invites with tokens
 
-Invites come in two kinds. An Open Drop is a link holding some of a room’s token: the first person to open it claims it. A Named Invite is for one person: only the X account you name can claim it, and the token is sent to them automatically.
+An Open Drop is a link holding some of a room’s token: the first person to open it claims it.
 
-Either way, the person signs in with X or HandCash, gets bWalletX, and the token is their ticket into the Space.
+The person gets bWalletX, and the token is their ticket into the Space.
 
 ## Keep it safe
 
 - An Open Drop link carries the token: whoever opens it first claims it.
 
-- A Named Invite works only for the X account it names.
-
 - We never hold the tokens. They go from the host’s wallet to yours.
 
-## Status, 15 Oct 2026
+## Status, updated 30 Oct 2026
 
 - ✓ Address book import (CSV, contact cards, JSON, pasted lists) and export to CSV: in the app, shipping in 5.2.25
 
-- ✓ Sign in with HandCash on bchatx.com: switched on; first real sign-in being tested
+- ✓ Sign in with HandCash: shipped (link it under Link your accounts)
 
-- ✓ HandCash friends into your address book: the server side is live; the wallet button is coming
+- ✓ Find the contacts and people you follow on X who already use bWalletX: shipped
 
 - ✓ Open Drops: live in bWalletX 5.2.25 (first run pending). Each link is made for an @handle; whoever opens it first gets the token, and room entry is tied to that X account
-
-- ◻ Named Invites: the token sent automatically to the X account you name. Planned; depends on pre-signed payments
-
-- ◻ Import the people you follow on X: planned
-
-- ◻ Contacts auto-match to paymails as friends join: planned
 
 More on the [Invites](https://bwalletx.com/invite) page.
 
@@ -16715,9 +16608,7 @@ Our part is small: the owner signs, not the host; the signature rides in the pay
 
 - Until the log is anchored on chain, it lives in our database. The hash chain shows tampering only to someone who kept an earlier copy.
 
-## What’s next
-
-Once a day, the log’s latest hash goes into a Bitcoin transaction, so no one can rewrite it after the fact, us included. And for names that must never depend on us, OpNS names live on chain in your own wallet.
+## A draft for everyone
 
 We have also written the scheme up as a draft, so any paymail service could sign its names the same way. We have raised it with the authors of BRC-169 and BRC-174 in [BRCs issue #329](https://github.com/bsv-blockchain/BRCs/issues/329), asking whether it belongs inside their work.
 
@@ -16737,9 +16628,7 @@ We have also written the scheme up as a draft, so any paymail service could sign
 
 - ✓ Proposed to the BRC authors ([issue #329](https://github.com/bsv-blockchain/BRCs/issues/329))
 
-- ◻ Daily on-chain anchor of the log
-
-- ◻ OpNS names in the wallet
+- ◻ Daily on-chain anchor of the log, so no one can rewrite it after the fact, us included
 
 How to check a name yourself, with code: [Signed names](https://bwalletx.com/name-bindings).
 
@@ -16877,6 +16766,293 @@ How bWallet and bWalletX were built, one chapter at a time. Every post is writte
 
 Newest first. Dates come from commits. bWallet is a fork of [Yours Wallet](https://github.com/yours-org/yours-wallet) (MIT licence).
 
+## Read by topic
+
+Start here
+
+- [](https://bwalletx.com/blog/096-the-b-family)[096 The b family](https://bwalletx.com/blog/096-the-b-family)
+- [](https://bwalletx.com/blog/001-the-fork)[001 Forking Yours Wallet onto phones](https://bwalletx.com/blog/001-the-fork)
+- [](https://bwalletx.com/blog/032-meet-bchatx)[032 Meet bChatX.com](https://bwalletx.com/blog/032-meet-bchatx)
+- [](https://bwalletx.com/blog/034-open-apps-open-protocol)[034 Open apps, open protocol](https://bwalletx.com/blog/034-open-apps-open-protocol)
+- [](https://bwalletx.com/blog/103-just-b-films)[103 Just b: our films](https://bwalletx.com/blog/103-just-b-films)
+
+Your wallet & money
+
+- [](https://bwalletx.com/blog/022-bring-your-coins-home)[022 Bring your coins home](https://bwalletx.com/blog/022-bring-your-coins-home)
+- [](https://bwalletx.com/blog/016-pots)[016 Subscriptions, paid from pots](https://bwalletx.com/blog/016-pots)
+- [](https://bwalletx.com/blog/023-lock-bsv)[023 Locks you can’t break](https://bwalletx.com/blog/023-lock-bsv)
+- [](https://bwalletx.com/blog/035-pots-and-locks)[035 Pots & Locks, and a PNEEs pot](https://bwalletx.com/blog/035-pots-and-locks)
+- [](https://bwalletx.com/blog/036-subscriptions-in-dollars)[036 Subscriptions, priced in dollars](https://bwalletx.com/blog/036-subscriptions-in-dollars)
+- [](https://bwalletx.com/blog/037-portfolio-vs-market)[037 Portfolio vs market](https://bwalletx.com/blog/037-portfolio-vs-market)
+- [](https://bwalletx.com/blog/038-swap-into-bsv)[038 Swap into BSV](https://bwalletx.com/blog/038-swap-into-bsv)
+- [](https://bwalletx.com/blog/046-stays-unlocked-sends-exactly)[046 Stays unlocked, sends exactly](https://bwalletx.com/blog/046-stays-unlocked-sends-exactly)
+- [](https://bwalletx.com/blog/011-pnees-pilot)[011 From a dollar bond to PNEEs on mainnet](https://bwalletx.com/blog/011-pnees-pilot)
+- [](https://bwalletx.com/blog/055-digital-ice-cream)[055 Digital Ice-Cream](https://bwalletx.com/blog/055-digital-ice-cream)
+- [](https://bwalletx.com/blog/087-history-and-statements)[087 Your money, in plain words](https://bwalletx.com/blog/087-history-and-statements)
+- [](https://bwalletx.com/blog/088-a-card-for-every-balance)[088 A card for every balance, and an address book](https://bwalletx.com/blog/088-a-card-for-every-balance)
+- [](https://bwalletx.com/blog/077-landscape-and-bavatar-shuffle)[077 Turn it sideways, shuffle your bAvatar](https://bwalletx.com/blog/077-landscape-and-bavatar-shuffle)
+- [](https://bwalletx.com/blog/095-partnership-accounts)[095 Partnership accounts](https://bwalletx.com/blog/095-partnership-accounts)
+
+Your identity & names
+
+- [](https://bwalletx.com/blog/004-names-and-paymail)[004 Names, handles and paymail](https://bwalletx.com/blog/004-names-and-paymail)
+- [](https://bwalletx.com/blog/017-sign-in-and-lounge)[017 Sign in with bWalletX, and the Lounge](https://bwalletx.com/blog/017-sign-in-and-lounge)
+- [](https://bwalletx.com/blog/020-sign-in-with-x)[020 Sign in with X](https://bwalletx.com/blog/020-sign-in-with-x)
+- [](https://bwalletx.com/blog/057-handcash-and-invites)[057 Sign in with HandCash, and invites with tokens](https://bwalletx.com/blog/057-handcash-and-invites)
+- [](https://bwalletx.com/blog/058-signed-names)[058 We could move your name. Now you can see if we do.](https://bwalletx.com/blog/058-signed-names)
+- [](https://bwalletx.com/blog/081-paymail-names)[081 Your $name: free, yours, and easy to pay](https://bwalletx.com/blog/081-paymail-names)
+- [](https://bwalletx.com/blog/062-leave-x)[062 Bring your X posts, in three steps](https://bwalletx.com/blog/062-leave-x)
+- [](https://bwalletx.com/blog/079-link-your-other-wallets)[079 Link your other wallets](https://bwalletx.com/blog/079-link-your-other-wallets)
+
+Safety & control
+
+- [](https://bwalletx.com/blog/059-b-aware)[059 b-Aware: find a hole in bWalletX, get paid in BSV](https://bwalletx.com/blog/059-b-aware)
+- [](https://bwalletx.com/blog/063-dollars-first)[063 Dollars first, and fewer prompts](https://bwalletx.com/blog/063-dollars-first)
+- [](https://bwalletx.com/blog/090-safer-by-default)[090 Safer by default](https://bwalletx.com/blog/090-safer-by-default)
+- [](https://bwalletx.com/blog/078-look-alikes)[078 Names that can't pretend](https://bwalletx.com/blog/078-look-alikes)
+
+Rooms, chat & Spaces (bChatX)
+
+- [](https://bwalletx.com/blog/005-personal-tokens-and-rooms)[005 Personal tokens and token rooms](https://bwalletx.com/blog/005-personal-tokens-and-rooms)
+- [](https://bwalletx.com/blog/014-open-feed)[014 One feed for BSV](https://bwalletx.com/blog/014-open-feed)
+- [](https://bwalletx.com/blog/021-coordinate-on-bsv)[021 Coordinate on BSV](https://bwalletx.com/blog/021-coordinate-on-bsv)
+- [](https://bwalletx.com/blog/024-tips-and-paid-likes)[024 Pay the person who wrote it](https://bwalletx.com/blog/024-tips-and-paid-likes)
+- [](https://bwalletx.com/blog/026-paying-to-be-heard)[026 Paying to be heard](https://bwalletx.com/blog/026-paying-to-be-heard)
+- [](https://bwalletx.com/blog/032-meet-bchatx)[032 Meet bChatX.com](https://bwalletx.com/blog/032-meet-bchatx)
+- [](https://bwalletx.com/blog/033-spaces-you-can-listen-to)[033 Spaces you can just listen to](https://bwalletx.com/blog/033-spaces-you-can-listen-to)
+- [](https://bwalletx.com/blog/042-chats-that-feel-like-telegram)[042 Chats that feel like Telegram](https://bwalletx.com/blog/042-chats-that-feel-like-telegram)
+- [](https://bwalletx.com/blog/051-spaces-schedule-and-ask-b)[051 Spaces on a schedule, b on every page](https://bwalletx.com/blog/051-spaces-schedule-and-ask-b)
+- [](https://bwalletx.com/blog/053-friends-bpics-and-video)[053 Friends, bPics and video in rooms](https://bwalletx.com/blog/053-friends-bpics-and-video)
+- [](https://bwalletx.com/blog/054-bradio-live-audio)[054 bRadio: live audio in bWalletX](https://bwalletx.com/blog/054-bradio-live-audio)
+- [](https://bwalletx.com/blog/019-language-filter)[019 Blur slurs, show swearing](https://bwalletx.com/blog/019-language-filter)
+- [](https://bwalletx.com/blog/007-store-and-private)[007 Store rules, open rooms and moderation](https://bwalletx.com/blog/007-store-and-private)
+- [](https://bwalletx.com/blog/067-rooms-that-play)[067 Rooms that play](https://bwalletx.com/blog/067-rooms-that-play)
+- [](https://bwalletx.com/blog/069-invite-links)[069 Invite links that just work](https://bwalletx.com/blog/069-invite-links)
+- [](https://bwalletx.com/blog/101-spaces-anyone-can-start)[101 Spaces anyone can start](https://bwalletx.com/blog/101-spaces-anyone-can-start)
+- [](https://bwalletx.com/blog/102-fwuit)[102 FWUIT: 1,000 fruit, free](https://bwalletx.com/blog/102-fwuit)
+
+Calls (bPhone)
+
+- [](https://bwalletx.com/blog/030-bphone)[030 bPhone: charge to receive calls](https://bwalletx.com/blog/030-bphone)
+- [](https://bwalletx.com/blog/031-calls-mics-menu)[031 bWalletX 5.1.88: a new Calls tab, working mics, a new menu](https://bwalletx.com/blog/031-calls-mics-menu)
+- [](https://bwalletx.com/blog/025-push-notifications)[025 Push notifications, from our own server](https://bwalletx.com/blog/025-push-notifications)
+
+Mail, meetings & signing
+
+- [](https://bwalletx.com/blog/091-bmail-stamps-and-agreements)[091 bMail: pay for a stamp only when it's delivered](https://bwalletx.com/blog/091-bmail-stamps-and-agreements)
+- [](https://bwalletx.com/blog/070-meetings)[070 Meetings in bChatX](https://bwalletx.com/blog/070-meetings)
+- [](https://bwalletx.com/blog/072-sign-on-your-phone)[072 Sign on your phone](https://bwalletx.com/blog/072-sign-on-your-phone)
+- [](https://bwalletx.com/blog/100-contracts-in-rooms)[100 Contracts, right in the room](https://bwalletx.com/blog/100-contracts-in-rooms)
+- [](https://bwalletx.com/blog/056-bshares)[056 bShares: a register for any company](https://bwalletx.com/blog/056-bshares)
+
+Exchange, tokens & launches
+
+- [](https://bwalletx.com/blog/008-the-exchange)[008 Building the Exchange, and why buys broke](https://bwalletx.com/blog/008-the-exchange)
+- [](https://bwalletx.com/blog/006-paying-for-indexing)[006 Who pays for indexing](https://bwalletx.com/blog/006-paying-for-indexing)
+- [](https://bwalletx.com/blog/015-launchpad)[015 Launchpad, and checking what we sign](https://bwalletx.com/blog/015-launchpad)
+- [](https://bwalletx.com/blog/027-airdrops-not-dividends)[027 Airdrops, not dividends](https://bwalletx.com/blog/027-airdrops-not-dividends)
+- [](https://bwalletx.com/blog/028-launch-something)[028 Launch something with your coin](https://bwalletx.com/blog/028-launch-something)
+- [](https://bwalletx.com/blog/044-your-tokens-own-page-and-agent)[044 Your token's own page and agent](https://bwalletx.com/blog/044-your-tokens-own-page-and-agent)
+- [](https://bwalletx.com/blog/049-the-exchange-sorted)[049 The Exchange, sorted](https://bwalletx.com/blog/049-the-exchange-sorted)
+- [](https://bwalletx.com/blog/064-launch-curves)[064 Every launch gets a fair curve](https://bwalletx.com/blog/064-launch-curves)
+- [](https://bwalletx.com/blog/066-memepool)[066 Memepool, inside the Exchange](https://bwalletx.com/blog/066-memepool)
+- [](https://bwalletx.com/blog/082-blastpad)[082 BlastPad: launch a coin in one transaction](https://bwalletx.com/blog/082-blastpad)
+
+Store, creators & media
+
+- [](https://bwalletx.com/blog/039-bgigs-your-stage-your-fans)[039 bGigs: your stage, your fans](https://bwalletx.com/blog/039-bgigs-your-stage-your-fans)
+- [](https://bwalletx.com/blog/040-pay-artists-by-the-second)[040 Pay artists by the second](https://bwalletx.com/blog/040-pay-artists-by-the-second)
+- [](https://bwalletx.com/blog/047-pay-the-artist)[047 Pay the artist](https://bwalletx.com/blog/047-pay-the-artist)
+- [](https://bwalletx.com/blog/052-tip-buttons)[052 Tip buttons](https://bwalletx.com/blog/052-tip-buttons)
+- [](https://bwalletx.com/blog/041-nfts-that-just-work)[041 NFTs that just work](https://bwalletx.com/blog/041-nfts-that-just-work)
+- [](https://bwalletx.com/blog/048-your-nfts-edge-to-edge)[048 Your NFTs, edge to edge](https://bwalletx.com/blog/048-your-nfts-edge-to-edge)
+- [](https://bwalletx.com/blog/045-your-card-your-art)[045 Your card, your art](https://bwalletx.com/blog/045-your-card-your-art)
+- [](https://bwalletx.com/blog/050-aivj-tv-vexvoid-live)[050 AIVJ — VexVoid, live](https://bwalletx.com/blog/050-aivj-tv-vexvoid-live)
+- [](https://bwalletx.com/blog/060-bvideox)[060 bVideoX: your YouTube videos, on Bitcoin, in your name](https://bwalletx.com/blog/060-bvideox)
+- [](https://bwalletx.com/blog/061-private-by-default)[061 Private by default](https://bwalletx.com/blog/061-private-by-default)
+- [](https://bwalletx.com/blog/080-check-this-mint)[080 Check any mint yourself](https://bwalletx.com/blog/080-check-this-mint)
+- [](https://bwalletx.com/blog/074-bmarketx)[074 bMarketX: your eBay store, on Bitcoin](https://bwalletx.com/blog/074-bmarketx)
+- [](https://bwalletx.com/blog/076-your-music-your-player)[076 Your music, your player](https://bwalletx.com/blog/076-your-music-your-player)
+- [](https://bwalletx.com/blog/092-store-themes-with-receipts)[092 The Store: $1 themes, and a receipt that proves it](https://bwalletx.com/blog/092-store-themes-with-receipts)
+- [](https://bwalletx.com/blog/093-relayx-nfts-come-home)[093 Your RelayX NFTs, home again](https://bwalletx.com/blog/093-relayx-nfts-come-home)
+- [](https://bwalletx.com/blog/094-greeting-cards-and-site-colours)[094 Greeting cards, and sites in their own colours](https://bwalletx.com/blog/094-greeting-cards-and-site-colours)
+- [](https://bwalletx.com/blog/098-bmusicx)[098 bMusicX: every second pays the artist](https://bwalletx.com/blog/098-bmusicx)
+- [](https://bwalletx.com/blog/099-music-videos-and-films)[099 Music videos on bVideoX, films on bMoviesX](https://bwalletx.com/blog/099-music-videos-and-films)
+
+bApps, games & the open platform
+
+- [](https://bwalletx.com/blog/001-the-fork)[001 Forking Yours Wallet onto phones](https://bwalletx.com/blog/001-the-fork)
+- [](https://bwalletx.com/blog/002-four-names)[002 Four names in a week](https://bwalletx.com/blog/002-four-names)
+- [](https://bwalletx.com/blog/003-tabs-apps-feed)[003 Tabs, apps and a social feed](https://bwalletx.com/blog/003-tabs-apps-feed)
+- [](https://bwalletx.com/blog/012-extension-and-web)[012 The extension, the web app and pairing](https://bwalletx.com/blog/012-extension-and-web)
+- [](https://bwalletx.com/blog/013-sites-and-navigation)[013 Two sites from one](https://bwalletx.com/blog/013-sites-and-navigation)
+- [](https://bwalletx.com/blog/018-testers)[018 1 BSV for testing bWallet on Android](https://bwalletx.com/blog/018-testers)
+- [](https://bwalletx.com/blog/034-open-apps-open-protocol)[034 Open apps, open protocol](https://bwalletx.com/blog/034-open-apps-open-protocol)
+- [](https://bwalletx.com/blog/065-bapps-in-tiers)[065 The bApps screen](https://bwalletx.com/blog/065-bapps-in-tiers)
+- [](https://bwalletx.com/blog/068-tokenblaster-and-terrornode)[068 Tokenblaster.lol and WELCOME TO TERRORNODE](https://bwalletx.com/blog/068-tokenblaster-and-terrornode)
+- [](https://bwalletx.com/blog/097-bgamesx)[097 bGamesX: pick a game and play](https://bwalletx.com/blog/097-bgamesx)
+- [](https://bwalletx.com/blog/073-bgitx)[073 bGitX: your code, on b](https://bwalletx.com/blog/073-bgitx)
+
+Agents & b
+
+- [](https://bwalletx.com/blog/009-the-b-agent)[009 The b agent: paid, or your own key](https://bwalletx.com/blog/009-the-b-agent)
+- [](https://bwalletx.com/blog/010-agents-strategies-cli)[010 Agent accounts, strategies, CLI and MCP](https://bwalletx.com/blog/010-agents-strategies-cli)
+- [](https://bwalletx.com/blog/043-ask-b)[043 Ask b](https://bwalletx.com/blog/043-ask-b)
+- [](https://bwalletx.com/blog/071-bbots)[071 bBots: make your own bot](https://bwalletx.com/blog/071-bbots)
+- [](https://bwalletx.com/blog/104-give-your-agent-a-wallet)[104 Give your agent a wallet](https://bwalletx.com/blog/104-give-your-agent-a-wallet)
+
+- [](https://bwalletx.com/blog/104-give-your-agent-a-wallet)104 · 30 Oct 2026
+[Give your agent a wallet](https://bwalletx.com/blog/104-give-your-agent-a-wallet)
+The `bwalletx` command-line wallet lets an AI agent pay, buy and sell for you, with daily caps and per-site pairing so it never spends more than you allow.
+
+- [](https://bwalletx.com/blog/103-just-b-films)103 · 30 Oct 2026
+[Just b: our films](https://bwalletx.com/blog/103-just-b-films)
+Short films that say what bWalletX is for. Less noise. More life. Just b.
+
+- [](https://bwalletx.com/blog/102-fwuit)102 · 30 Oct 2026
+[FWUIT: 1,000 fruit, free](https://bwalletx.com/blog/102-fwuit)
+1,000 fruit NFTs for the first 1,000 bChatX accounts. Free to claim, one each. Then grab the low-hanging fruit in the FWUIT game.
+
+- [](https://bwalletx.com/blog/101-spaces-anyone-can-start)101 · 30 Oct 2026
+[Spaces anyone can start](https://bwalletx.com/blog/101-spaces-anyone-can-start)
+Anyone in a token room can start a live Space. Upcoming Spaces sit in a calendar with Remind me, and b can even host a show.
+
+- [](https://bwalletx.com/blog/100-contracts-in-rooms)100 · 30 Oct 2026
+[Contracts, right in the room](https://bwalletx.com/blog/100-contracts-in-rooms)
+Draft a contract with b in any bChatX room, send it as an offer, and sign with your wallet. A sale settles the moment it’s accepted: goods and payment change hands together.
+
+- [](https://bwalletx.com/blog/099-music-videos-and-films)099 · 30 Oct 2026
+[Music videos on bVideoX, films on bMoviesX](https://bwalletx.com/blog/099-music-videos-and-films)
+bVideoX now shows music-video demos with free previews, and bMoviesX lets filmmakers put films, clips and trailers on Bitcoin from their own wallet.
+
+- [](https://bwalletx.com/blog/098-bmusicx)098 · 30 Oct 2026
+[bMusicX: every second pays the artist](https://bwalletx.com/blog/098-bmusicx)
+[bMusicX](https://bmusicx.com), the Bitcoin Music Exchange, streams music by the second, and every second pays the artist directly.
+
+- [](https://bwalletx.com/blog/097-bgamesx)097 · 30 Oct 2026
+[bGamesX: pick a game and play](https://bwalletx.com/blog/097-bgamesx)
+[bGamesX](https://bgamesx.com) puts 19 games on one shelf, led by WELCOME TO TERRORNODE. Play full screen in bWallet or right in your browser.
+
+- [](https://bwalletx.com/blog/096-the-b-family)096 · 30 Oct 2026
+[The b family](https://bwalletx.com/blog/096-the-b-family)
+Everyday apps for chat, money, music, video, games and selling, all running on bWalletX. Sign in once with your wallet, and get paid in Bitcoin everywhere. Meet the family at [bwalletx.com/b-family](https://bwalletx.com/b-family).
+
+- [](https://bwalletx.com/blog/095-partnership-accounts)095 · 30 Oct 2026
+[Partnership accounts](https://bwalletx.com/blog/095-partnership-accounts)
+Running something with partners? Set it up in bWalletX. Everyone signs the agreement in their own wallet, money coming in splits by share automatically, and a shared account needs your partners’ approval to spend.
+
+- [](https://bwalletx.com/blog/094-greeting-cards-and-site-colours)094 · 30 Oct 2026
+[Greeting cards, and sites in their own colours](https://bwalletx.com/blog/094-greeting-cards-and-site-colours)
+Mint can make a greeting card or an AI picture and send it to a `$name`. And sites you connect to can show their own colours and logo on approval sheets, while the wallet always shows the real address.
+
+- [](https://bwalletx.com/blog/093-relayx-nfts-come-home)093 · 30 Oct 2026
+[Your RelayX NFTs, home again](https://bwalletx.com/blog/093-relayx-nfts-come-home)
+If you collected NFTs on RelayX, bWalletX can find them. Restore your RelayX wallet or type its 12 words, and your collection appears as it’s found, grouped by collection. Nothing moves unless you ask.
+
+- [](https://bwalletx.com/blog/092-store-themes-with-receipts)092 · 30 Oct 2026
+[The Store: $1 themes, and a receipt that proves it](https://bwalletx.com/blog/092-store-themes-with-receipts)
+The Store sells wallet themes for $1, paid in BSV with one approval. Each purchase comes with a receipt signed by the store, and the themes you buy work across all your accounts.
+
+- [](https://bwalletx.com/blog/091-bmail-stamps-and-agreements)091 · 30 Oct 2026
+[bMail: pay for a stamp only when it’s delivered](https://bwalletx.com/blog/091-bmail-stamps-and-agreements)
+bMail pays for your stamp only once a letter is delivered. Agreements live in your inbox, signed with your wallet, and a letter can carry a meeting invite.
+
+- [](https://bwalletx.com/blog/090-safer-by-default)090 · 30 Oct 2026
+[Safer by default](https://bwalletx.com/blog/090-safer-by-default)
+bWalletX protects you without asking you to be an expert. You see exactly what you approve, sites never touch the wallet’s own keys, and apps can only spend what you set aside for them. It works with every BRC-100 app.
+
+- [](https://bwalletx.com/blog/088-a-card-for-every-balance)088 · 30 Oct 2026
+[A card for every balance, and an address book](https://bwalletx.com/blog/088-a-card-for-every-balance)
+Swipe the wallet card to see each balance on a card of its own. Your contacts live in a proper address book, and Send shows exactly who you’re paying before any money moves.
+
+- [](https://bwalletx.com/blog/087-history-and-statements)087 · 30 Oct 2026
+[Your money, in plain words](https://bwalletx.com/blog/087-history-and-statements)
+History shows every payment with what it was worth on the day, totals for any dates, and statements to print or export. And every send ends on a cheerful Sent!
+
+- [](https://bwalletx.com/blog/082-blastpad)082 · 30 Oct 2026
+[BlastPad: launch a coin in one transaction](https://bwalletx.com/blog/082-blastpad)
+BlastPad on Tokenblaster.lol launches a coin from your wallet in one transaction, with its own page and short link.
+
+- [](https://bwalletx.com/blog/081-paymail-names)081 · 30 Oct 2026
+[Your $name: free, yours, and easy to pay](https://bwalletx.com/blog/081-paymail-names)
+Your `$name` is a paymail people pay instead of a long address. It’s free, works at bwalletx.com and bmailx.com, and is signed by your own wallet.
+
+- [](https://bwalletx.com/blog/080-check-this-mint)080 · 30 Oct 2026
+[Check any mint yourself](https://bwalletx.com/blog/080-check-this-mint)
+Check this mint lets anyone verify a mint in their own browser, without trusting us. And bVideoX keeps turning YouTube libraries into records in your own name.
+
+- [](https://bwalletx.com/blog/079-link-your-other-wallets)079 · 30 Oct 2026
+[Link your other wallets](https://bwalletx.com/blog/079-link-your-other-wallets)
+Prove you own an Ethereum, BNB, Solana or TRON wallet and show it on your profile, signed and checkable.
+
+- [](https://bwalletx.com/blog/078-look-alikes)078 · 30 Oct 2026
+[Names that can’t pretend](https://bwalletx.com/blog/078-look-alikes)
+bWalletX and bChatX flag look-alike and brand names, keep provider names for the people who prove them, and warn you before you trust someone posing as someone else.
+
+- [](https://bwalletx.com/blog/077-landscape-and-bavatar-shuffle)077 · 30 Oct 2026
+[Turn it sideways, shuffle your bAvatar](https://bwalletx.com/blog/077-landscape-and-bavatar-shuffle)
+Turn your phone sideways for a two-column wallet, shuffle through bAvatar designs before you mint, and watch approval sheets open faster.
+
+- [](https://bwalletx.com/blog/076-your-music-your-player)076 · 30 Oct 2026
+[Your music, your player](https://bwalletx.com/blog/076-your-music-your-player)
+Media in bWalletX has one clean player: your albums under Artists, and Now Playing that follows you through the whole app.
+
+- [](https://bwalletx.com/blog/074-bmarketx)074 · 30 Oct 2026
+[bMarketX: your eBay store, on Bitcoin](https://bwalletx.com/blog/074-bmarketx)
+[bMarketX.com](https://bmarketx.com) gives your eBay shop a second home. Move it in about a minute, and Buy It Now pays you straight to your wallet.
+
+- [](https://bwalletx.com/blog/073-bgitx)073 · 30 Oct 2026
+[bGitX: your code, on b](https://bwalletx.com/blog/073-bgitx)
+Connect your GitHub to [bGitX](https://bgitx.com) and each repo gets a room for the people who work on it. Kintsugi can open pull requests, and nothing merges without your OK.
+
+- [](https://bwalletx.com/blog/072-sign-on-your-phone)072 · 30 Oct 2026
+[Sign on your phone](https://bwalletx.com/blog/072-sign-on-your-phone)
+Sign documents with your finger on your phone. Scan the QR on your computer, or tap the notification, and sign in bWalletX.
+
+- [](https://bwalletx.com/blog/071-bbots)071 · 30 Oct 2026
+[bBots: make your own bot](https://bwalletx.com/blog/071-bbots)
+Create a bot on bChatX with its own `name.bot` handle. Every bot shows who runs it, so you always know who you’re talking to.
+
+- [](https://bwalletx.com/blog/070-meetings)070 · 30 Oct 2026
+[Meetings in bChatX](https://bwalletx.com/blog/070-meetings)
+Private rooms can book a meeting or meet right now. Invites go out as you book, and the letter in bMail shows Join meeting when it’s time.
+
+- [](https://bwalletx.com/blog/069-invite-links)069 · 30 Oct 2026
+[Invite links that just work](https://bwalletx.com/blog/069-invite-links)
+Invite anyone to a bChatX room with a link, or a ticket with its own share card. They tap, they’re in, and b says hello.
+
+- [](https://bwalletx.com/blog/068-tokenblaster-and-terrornode)068 · 30 Oct 2026
+[Tokenblaster.lol and WELCOME TO TERRORNODE](https://bwalletx.com/blog/068-tokenblaster-and-terrornode)
+[Tokenblaster.lol](https://tokenblaster.lol) is an arcade on the live BSV chain: every shot is a real transaction. Its biggest game, WELCOME TO TERRORNODE, plays in teams, in 64-player melees and full screen on phones.
+
+- [](https://bwalletx.com/blog/067-rooms-that-play)067 · 30 Oct 2026
+[Rooms that play](https://bwalletx.com/blog/067-rooms-that-play)
+Game rooms in bChatX now have a big PLAY button, a floating player you can drag anywhere, and GO LIVE to stream your game to the room.
+
+- [](https://bwalletx.com/blog/066-memepool)066 · 30 Oct 2026
+[Memepool, inside the Exchange](https://bwalletx.com/blog/066-memepool)
+The Exchange has a Memepool tab: browse the coins launched on Tokenblaster’s Memepool and buy or sell them right from your wallet.
+
+- [](https://bwalletx.com/blog/065-bapps-in-tiers)065 · 30 Oct 2026
+[The bApps screen](https://bwalletx.com/blog/065-bapps-in-tiers)
+bApps are now laid out in tiers: our own b…X apps first, then partner apps, then community apps that meet the bApp standard.
+
+- [](https://bwalletx.com/blog/064-launch-curves)064 · 30 Oct 2026
+[Every launch gets a fair curve](https://bwalletx.com/blog/064-launch-curves)
+Every token you launch in bWalletX gets a launch curve, written on chain when you mint: 1 billion tokens, the first at 1¢, and a height you choose.
+
+- [](https://bwalletx.com/blog/063-dollars-first)063 · 30 Oct 2026
+[Dollars first, and fewer prompts](https://bwalletx.com/blog/063-dollars-first)
+Every approval and payment sheet now shows the amount in dollars first, with sats small underneath. And everyday use asks you far less often.
+
+- [](https://bwalletx.com/blog/062-leave-x)062 · 30 Oct 2026
+[Bring your X posts, in three steps](https://bwalletx.com/blog/062-leave-x)
+[bchatx.com/migrate/x](https://www.bchatx.com/migrate/x) brings your X archive home. Every post keeps its date, lands in your own wallet, and stays private until you show it.
+
+- [](https://bwalletx.com/blog/061-private-by-default)061 · 30 Oct 2026
+[Private by default](https://bwalletx.com/blog/061-private-by-default)
+Everything you mint in bWalletX is encrypted to you until you choose to show it. Making it public is one tap.
+
 - [](https://bwalletx.com/blog/060-bvideox)060 · 24 Oct 2026
 [bVideoX: your YouTube videos, on Bitcoin, in your name](https://bwalletx.com/blog/060-bvideox)
 Connect bWalletX, link your YouTube channel with a short code, and mint a private record of each video in your own name. About 1¢ (1p) a video. Your videos stay on YouTube.
@@ -16891,19 +17067,19 @@ A bWalletX name is a row in our database, so we could point it at another key. O
 
 - [](https://bwalletx.com/blog/057-handcash-and-invites)057 · 15 Oct 2026
 [Sign in with HandCash, and invites with tokens](https://bwalletx.com/blog/057-handcash-and-invites)
-New accounts can now start with HandCash as well as X. Your HandCash handle carries over as name@bwalletx.com, your friends can come with you, and invites with tokens bring people into Spaces.
+Link HandCash to your bWalletX account. Your HandCash handle carries over as name@bwalletx.com, your friends can come with you, and invites with tokens bring people into Spaces.
 
 - [](https://bwalletx.com/blog/056-bshares)056 · 15 Oct 2026
 [bShares: a register for any company](https://bwalletx.com/blog/056-bshares)
-bShares keeps a company’s register of members, lets directors approve new shares, and locks shares so they can’t move without the right people. It’s in testing; the first register is our own company.
+bShares keeps a company’s register of members, lets directors approve new shares, and locks shares so they can’t move without the right people. It’s in testing, on our own company’s register only.
 
 - [](https://bwalletx.com/blog/055-digital-ice-cream)055 · 15 Oct 2026
 [Digital Ice-Cream](https://bwalletx.com/blog/055-digital-ice-cream)
-A story about three friends, an ice-cream stand and digital cash, and where we’re taking bWalletX next.
+A story about three friends, an ice-cream stand and digital cash.
 
 - [](https://bwalletx.com/blog/054-bradio-live-audio)054 · 15 Oct 2026
 [bRadio: live audio in bWalletX](https://bwalletx.com/blog/054-bradio-live-audio)
-Host a live audio Space, bring people up to speak, and keep listening while you use the rest of the wallet. Recorded Spaces can become podcast episodes.
+Host a live audio Space, bring people up to speak, and keep listening while you use the rest of the wallet.
 
 - [](https://bwalletx.com/blog/053-friends-bpics-and-video)053 · 13 Oct 2026
 [Friends, bPics and video in rooms](https://bwalletx.com/blog/053-friends-bpics-and-video)
@@ -16978,12 +17154,12 @@ Tap the price tile: your wallet against just holding BSV, holding BTC or keeping
 Priced in dollars, paid in BSV at that day’s rate, from a pot you choose. One list, Pause all, cancel any time. Nothing paid up front.
 
 - [](https://bwalletx.com/blog/035-pots-and-locks)035 · 10 Oct 2026
-[Pots & Locks, and backing PNEEs](https://bwalletx.com/blog/035-pots-and-locks)
-The Lock screen is now Pots & Locks: locks grouped into pots, every lock feature kept, and a PNEEs pot for BSV locked to back PNEEs.
+[Pots & Locks, and a PNEEs pot](https://bwalletx.com/blog/035-pots-and-locks)
+The Lock screen is now Pots & Locks: locks grouped into pots, every lock feature kept, and a PNEEs pot for BSV you lock to yourself.
 
 - [](https://bwalletx.com/blog/034-open-apps-open-protocol)034 · 8 Oct 2026
 [Open apps, open protocol](https://bwalletx.com/blog/034-open-apps-open-protocol)
-MIT-licensed apps, a public protocol on GitHub, a proposal for threads across Twetch, Treechat and peck.to, and why the server stays closed for now.
+Open-source apps, a public protocol on GitHub, a proposal for threads across Twetch, Treechat and peck.to, and why the server stays closed for now.
 
 - [](https://bwalletx.com/blog/033-spaces-you-can-listen-to)033 · 8 Oct 2026
 [Spaces you can just listen to](https://bwalletx.com/blog/033-spaces-you-can-listen-to)
@@ -17000,10 +17176,6 @@ Out on 8 Oct: a Calls tab with a keypad, mics and cameras that work in Spaces an
 - [](https://bwalletx.com/blog/030-bphone)030 · 8 Oct 2026
 [bPhone: charge to receive calls](https://bwalletx.com/blog/030-bphone)
 Put a price on your calls: per second, minute, hour or call, in BSV, MNEE or a token, paid wallet to wallet while you talk. How the meter works, why there is no middleman. Live since 5.1.87.
-
-- [](https://bwalletx.com/blog/029-bpositive)029 · 8 Oct 2026
-[bPositive: gifts, not investments](https://bwalletx.com/blog/029-bpositive)
-Sponsor someone’s journey: monthly support from pots, witness-confirmed milestones and thank-you NFTs. Gifts only, 18+, 0% fee. A plan: not built yet.
 
 - [](https://bwalletx.com/blog/028-launch-something)028 · 8 Oct 2026
 [Launch something with your coin](https://bwalletx.com/blog/028-launch-something)
@@ -17039,7 +17211,7 @@ Big platforms put every community in one room. BSV needs a place to plan that it
 
 - [](https://bwalletx.com/blog/020-sign-in-with-x)020 · 7 Oct 2026
 [Sign in with X](https://bwalletx.com/blog/020-sign-in-with-x)
-bWalletX can make a wallet from your X account. You get your X username as a verified paymail, alice.x@bwalletx.com for example, with your picture, a token and a room.
+Link your X account to bWalletX. You get your X username as a verified paymail, alice.x@bwalletx.com for example, with your picture, a token and a room.
 
 - [](https://bwalletx.com/blog/019-language-filter)019 · 7 Oct 2026
 [Blur slurs, show swearing](https://bwalletx.com/blog/019-language-filter)
@@ -17047,11 +17219,11 @@ The bChat feed and bWalletX now blur slurs behind a tap. Swearing is shown. Noth
 
 - [](https://bwalletx.com/blog/018-testers)018 · 7 Oct 2026
 [1 BSV for testing bWallet on Android](https://bwalletx.com/blog/018-testers)
-Google needs 12 people to test bWallet for 14 days before it can go on the Play Store. We are paying 1 BSV for that time.
+Google needs 12 people to test bWallet for 14 days before it can go on the Play Store. We paid 1 BSV for that time. This test has closed.
 
 - [](https://bwalletx.com/blog/017-sign-in-and-lounge)017 · 7 Oct 2026
 [Sign in with bWalletX, and the Lounge](https://bwalletx.com/blog/017-sign-in-and-lounge)
-bChat now has one gold button to sign in with your wallet. Every account starts in the bWallet Lounge.
+bChat (now bChatX) has one gold button to sign in with your wallet. Every account starts in the bWallet Lounge.
 
 - [](https://bwalletx.com/blog/016-pots)016 · 7 Oct 2026
 [Subscriptions, paid from pots](https://bwalletx.com/blog/016-pots)
@@ -17063,7 +17235,7 @@ bWalletX 5.1.74 can buy and sell bonding-curve coins. The wallet now checks ever
 
 - [](https://bwalletx.com/blog/014-open-feed)014 · 6 Oct 2026
 [One feed for BSV](https://bwalletx.com/blog/014-open-feed)
-Every BSV social app keeps its own feed. bChat shows all of them, credits them, and pays the people who wrote the posts.
+Every BSV social app keeps its own feed. bChat shows all of them, credits them, and sends tips straight to the people who wrote the posts.
 
 - [](https://bwalletx.com/blog/013-sites-and-navigation)013 · 29 Sep – 5 Oct 2026
 [Two sites from one](https://bwalletx.com/blog/013-sites-and-navigation)
@@ -17103,7 +17275,7 @@ Hold a token to enter its chat room. Your $NAME is a token with its own room. Ho
 
 - [](https://bwalletx.com/blog/004-names-and-paymail)004 · 1–4 Oct 2026
 [Names, handles and paymail](https://bwalletx.com/blog/004-names-and-paymail)
-Send to $handle, name@bwalletx.com or an OpNS name. The paymail server moved domain twice, and social sign-in became a verified name.
+Send to $handle or name@bwalletx.com. The paymail server moved domain twice, and social sign-in became a verified name.
 
 - [](https://bwalletx.com/blog/003-tabs-apps-feed)003 · 1–5 Oct 2026
 [Tabs, apps and a social feed](https://bwalletx.com/blog/003-tabs-apps-feed)

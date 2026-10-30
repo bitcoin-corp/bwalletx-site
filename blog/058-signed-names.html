@@ -130,8 +130,7 @@ curl "https://pay.bwallet.space/api/paymail/name-log?alias=npg"</code></pre>
         <li>Until the log is anchored on chain, it lives in our database. The hash chain shows tampering only to someone who kept an earlier copy.</li>
       </ul>
 
-      <h2>What&rsquo;s next</h2>
-      <p>Once a day, the log&rsquo;s latest hash goes into a Bitcoin transaction, so no one can rewrite it after the fact, us included. And for names that must never depend on us, OpNS names live on chain in your own wallet.</p>
+      <h2>A draft for everyone</h2>
       <p>We have also written the scheme up as a draft, so any paymail service could sign its names the same way. We have raised it with the authors of BRC-169 and BRC-174 in <a href="https://github.com/bsv-blockchain/BRCs/issues/329">BRCs issue #329</a>, asking whether it belongs inside their work.</p>
 
       <div class="box">
@@ -144,8 +143,7 @@ curl "https://pay.bwallet.space/api/paymail/name-log?alias=npg"</code></pre>
           <li>&check; No back door for lost keys</li>
           <li>&check; Key-change warning before paying</li>
           <li>&check; Proposed to the BRC authors (<a href="https://github.com/bsv-blockchain/BRCs/issues/329">issue #329</a>)</li>
-          <li>&#9723; Daily on-chain anchor of the log</li>
-          <li>&#9723; OpNS names in the wallet</li>
+          <li>&#9723; Daily on-chain anchor of the log, so no one can rewrite it after the fact, us included</li>
           
         </ul>
       </div>
