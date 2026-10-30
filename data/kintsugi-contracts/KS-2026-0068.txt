@@ -4,21 +4,21 @@ Example contract: shows what a Kintsugi contract for this job looks like. Not si
 Contract: KS-2026-0068
 Client: The Bitcoin Corporation Ltd, company no. 16735102, registered in England & Wales. Commissioned the work.
 Developer: b0ase · paymail b0asex@bwalletx.com ($b0asex)
-Escrow and review: Kintsugi, run by The Bitcoin Corporation Ltd
+Review: Kintsugi, run by The Bitcoin Corporation Ltd
 Task: Link your Google account (bwalletx.com/gmail)
 Description: Link your Google account to bWalletX: a Google badge and your Google picture on your wallet.
 Estimate: 0.6 h (wall-clock)
-Price: $12 (0.6 h × $20), paid in BSV at the BSV/USD rate on the day of payment · ~0.69 BSV at $17.01/BSV
+Price: Client pays $15 (0.6 h × $25): $12 to the developer (0.6 h × $20, ~0.69 BSV at $17.01/BSV) and $3 to Kintsugi as its fee. Paid in BSV at the BSV/USD rate on the day of payment, both from the client's wallet in one transaction.
 Estimated value of work: $33
 Started: 6 Oct 2026
 Delivered: 30 Oct 2026
 
 Terms
-1. The client locks 100% of the price in escrow before work starts, so the money is there before a line is written.
+1. Payment is peer to peer: the client pays the developer directly, wallet to wallet. Kintsugi never holds the money.
 2. Up to 8 billable hours per day.
 3. Done means: the pull request is merged into the agreed repo, the change is live on the stated page, and the security tool results are attached.
 4. Security tools: Shannon for any change that touches sign-in, payments, keys or signing; Semgrep, gitleaks, pnpm audit and OSV-Scanner, CodeQL, OWASP ZAP (baseline scan) and Claude Code /security-review. Tool and AI usage costs are the developer's and are not billable hours.
-5. Kintsugi checks the spec, holds the payment, reviews the work and releases the pay to the developer's $handle in bWalletX when the work is accepted.
+5. Kintsugi checks the spec and reviews the work. When the work is accepted, the client pays the developer's $handle in bWalletX, with Kintsugi's fee as a separate payment in the same transaction.
 6. Disputes: if the client and developer disagree about whether the work is done, Kintsugi reviews it and decides.
 7. Delivered work belongs to the client once it is paid for.
 8. Code under the Open BSV licence; specs and docs CC BY 4.0.

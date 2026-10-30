@@ -356,6 +356,13 @@ def offer(o, n):
         </div>'''
 
 
+def price_html(h):
+    """Price line of an example contract; shared by the HTML panel and the plain .txt so they never drift."""
+    return (f'Client pays <b>${h*CLIENT_H:,.0f}</b> ({h:.1f} h × ${CLIENT_H}): <span class="gold">{money(h)}</span> to the developer '
+            f'({h:.1f} h × ${USD_H}, {bsv(h)} at ${PRICE["usd"]:,.2f}/BSV) and ${h*(CLIENT_H-USD_H):,.0f} to Kintsugi as its fee. '
+            "Paid in BSV at the BSV/USD rate on the day of payment, both from the client's wallet in one transaction.")
+
+
 def contract(it, n):
     t = it['time']; h = t['hours']
     task = (f'<a href="{E(it["url"])}">{E(it["title"])}</a> <span class="u">bwalletx.com{E(it["url"])}</span>' if it['url'] else E(it['title']))
@@ -369,7 +376,7 @@ def contract(it, n):
             <dt>Review</dt><dd>Kintsugi, run by {CLIENT}</dd>
             <dt>Task</dt><dd>{task}<span class="sub">{E(it["desc"])}</span></dd>
             <dt>Estimate</dt><dd class="tn">{hrs(h)} (wall-clock)</dd>
-            <dt>Price</dt><dd class="tn">Client pays <b>${h*CLIENT_H:,.0f}</b> ({h:.1f} h × ${CLIENT_H}): <span class="gold">{money(h)}</span> to the developer ({h:.1f} h × $20, {bsv(h)} at ${PRICE["usd"]:,.2f}/BSV) and ${h*(CLIENT_H-USD_H):,.0f} to Kintsugi as its fee. Paid in BSV at the BSV/USD rate on the day of payment, both from the client's wallet in one transaction.</dd>
+            <dt>Price</dt><dd class="tn">{price_html(h)}</dd>
             <dt>Estimated value of work</dt><dd class="tn"><span class="val">{money(t["value_hours"])}</span></dd>
             <dt>Started</dt><dd class="tn">{fdate(t["first"])}</dd>
             <dt>Delivered</dt><dd class="tn">{fdate(t["last"])}</dd>
@@ -417,11 +424,11 @@ def contract_text(it, n):
         f'Contract: {n}',
         f'Client: {CLIENT}, company no. {CLIENT_NO}, registered in England & Wales. Commissioned the work.',
         f'Developer: {DEV} · paymail {PAYMAIL} ($b0asex)',
-        f'Escrow and review: Kintsugi, run by {CLIENT}',
+        f'Review: Kintsugi, run by {CLIENT}',
         f'Task: {task}',
         f'Description: {it["desc"]}',
         f'Estimate: {hrs(h)} (wall-clock)',
-        f'Price: {money(h)} ({hrs(h)} × $20), paid in BSV at the BSV/USD rate on the day of payment · {bsv(h)} at ${PRICE["usd"]:,.2f}/BSV',
+        f'Price: {plain(price_html(h))}',
         f'Estimated value of work: {money(t["value_hours"])}',
         f'Started: {fdate(t["first"])}',
         f'Delivered: {fdate(t["last"])}',

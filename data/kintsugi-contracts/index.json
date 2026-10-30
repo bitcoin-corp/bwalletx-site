@@ -8,7 +8,7 @@
    "first": "2026-10-03",
    "last": "2026-10-29",
    "file": "data/kintsugi-contracts/KS-2026-0001.txt",
-   "sha256": "60e46b5d4108163514100a1cfed5c74c3f60d120851a68596a17c76942db4574"
+   "sha256": "22b12a189769de30de27d6a521cb457fc7734b3525f638a7b79ea47ff6fc1995"
   },
   {
    "id": "KS-2026-0002",
@@ -17,7 +17,7 @@
    "first": "2026-10-03",
    "last": "2026-10-30",
    "file": "data/kintsugi-contracts/KS-2026-0002.txt",
-   "sha256": "a7aa4d353ab653fd17b8a37e6c75c593ae8b8c58a6906483e2ad749af6a6a13c"
+   "sha256": "caf3f2e92b09c1f84b0e698b3d9e1f9c3414b23e07f1addcd987a6c0bee95600"
   },
   {
    "id": "KS-2026-0003",
@@ -26,7 +26,7 @@
    "first": "2026-10-04",
    "last": "2026-10-29",
    "file": "data/kintsugi-contracts/KS-2026-0003.txt",
-   "sha256": "0a72783031f8a3e16988c1e194e0c24948d70764247eace56e3191bb71a729d7"
+   "sha256": "a66f39b849e25facc306952d2a1c4e28b32507588eeebd9f0b228abcaef0d48c"
   },
   {
    "id": "KS-2026-0004",
@@ -35,7 +35,7 @@
    "first": "2026-10-08",
    "last": "2026-10-29",
    "file": "data/kintsugi-contracts/KS-2026-0004.txt",
-   "sha256": "fb8a1cfca72c3fed1c08cfd0f6033e352a0cc64403b0f2c2fff8c35a66253665"
+   "sha256": "f73ec6a828c9089ff2c92c10499a6b333bb3425c66409c338a52b461b33e2f41"
   },
   {
    "id": "KS-2026-0005",
@@ -44,7 +44,7 @@
    "first": "2026-10-13",
    "last": "2026-10-28",
    "file": "data/kintsugi-contracts/KS-2026-0005.txt",
-   "sha256": "aaed0fe76a1f3429b05b80a4d07692c3d8fd1d7e8a24a673b4480f82111aa3da"
+   "sha256": "0bf4a70e4593bd0f9b97ddbe45d4509a5842b1bdf203d740b1c8e20a0aacd517"
   },
   {
    "id": "KS-2026-0006",
@@ -53,7 +53,7 @@
    "first": "2026-10-03",
    "last": "2026-10-29",
    "file": "data/kintsugi-contracts/KS-2026-0006.txt",
-   "sha256": "dc37e5ec8751176a3e0f528c81a5a2678119ed75627ae808e635a375f52e7b30"
+   "sha256": "ea9cd796336427535eb1e50c6e5a559d02743c7e87a328b18739d88bca3220ab"
   },
   {
    "id": "KS-2026-0007",
@@ -62,7 +62,7 @@
    "first": "2026-10-04",
    "last": "2026-10-18",
    "file": "data/kintsugi-contracts/KS-2026-0007.txt",
-   "sha256": "598932380aad91ff7274375a8f98e59dab2abdfb94a7ccc7995adc3f76692cc7"
+   "sha256": "55dccd571100e409c86e62fc97af5e617b693a1e805c06754dd27f97efc69b07"
   },
   {
    "id": "KS-2026-0008",
@@ -71,7 +71,7 @@
    "first": "2026-10-11",
    "last": "2026-10-26",
    "file": "data/kintsugi-contracts/KS-2026-0008.txt",
-   "sha256": "ea8bf0fbe8117323fdf24be5c42767dd6a3a2254e8752fa45560d97c3a930aa8"
+   "sha256": "d5bdc62c587847c52621721a34f38484fa5bb57ad0ada5db24b304fc9a4729f7"
   },
   {
    "id": "KS-2026-0009",
@@ -80,7 +80,7 @@
    "first": "2026-10-05",
    "last": "2026-10-28",
    "file": "data/kintsugi-contracts/KS-2026-0009.txt",
-   "sha256": "a831a2595860047c3ce16639ad5634fee3b53bf13ce0a47d4e90620b0e89e563"
+   "sha256": "12e4ee12246dca5e563e25157e4842308a0e779bd712d2a1ecb88e7c8f63f0f7"
   },
   {
    "id": "KS-2026-0010",
@@ -89,7 +89,7 @@
    "first": "2026-10-12",
    "last": "2026-10-28",
    "file": "data/kintsugi-contracts/KS-2026-0010.txt",
-   "sha256": "36bf190e25b2bfe5fcadb2bb4ca6a9858ff8ce7be06b7e16ffd313182bc191c5"
+   "sha256": "e32bfe041c96eb48d25ad618cc21d08089ebc7952ba6320887b9f684f2f33432"
   },
   {
    "id": "KS-2026-0011",
@@ -98,7 +98,7 @@
    "first": "2026-10-20",
    "last": "2026-10-26",
    "file": "data/kintsugi-contracts/KS-2026-0011.txt",
-   "sha256": "e18b52b011b3dd8eaa7585fb542bfa01fd89829c415127d3ecedc2eb0b0d4729"
+   "sha256": "ce5d0a4d9af0962cb5f6ad0be4203e14544f8baefa1b9a1df1d4220cf8a1cb53"
   },
   {
    "id": "KS-2026-0012",
@@ -107,7 +107,7 @@
    "first": "2026-10-19",
    "last": "2026-10-28",
    "file": "data/kintsugi-contracts/KS-2026-0012.txt",
-   "sha256": "9938d9934b15f42ec24c5e108bb660d2535c471d72b15a132750f714aed62c30"
+   "sha256": "910ede5ff4965418b8fff8790cd94bd1525fafd36563ad6ce005cfbf82e0c897"
   },
   {
    "id": "KS-2026-0013",
@@ -116,7 +116,7 @@
    "first": "2026-10-14",
    "last": "2026-10-29",
    "file": "data/kintsugi-contracts/KS-2026-0013.txt",
-   "sha256": "a803782837f704ac61dc65e8a0c012b4fb54c770a90731c8be160bfbd350b871"
+   "sha256": "d4e8ffbc8218c58df3843169a3996a1889c1dfc8a8746375d9d5127e991f3035"
   },
   {
    "id": "KS-2026-0014",
@@ -125,7 +125,7 @@
    "first": "2026-10-16",
    "last": "2026-10-29",
    "file": "data/kintsugi-contracts/KS-2026-0014.txt",
-   "sha256": "d99fad5bdb53f0d713e3354732f617bb763ae618bb9f591744e0256c0042d962"
+   "sha256": "3989294f8477965607a00729cdb3aa8e6224edbc24226931ae53d9315f204ac0"
   },
   {
    "id": "KS-2026-0015",
@@ -134,7 +134,7 @@
    "first": "2026-10-23",
    "last": "2026-10-30",
    "file": "data/kintsugi-contracts/KS-2026-0015.txt",
-   "sha256": "cc9548b958139f8b46c7c22fd541abf9133dc8d936e3a8fb6290a3a19346ad9a"
+   "sha256": "c7729b682b20c7b7fc209db8dd2e1a1d2ae976254ec60fca7b49096b910b3b21"
   },
   {
    "id": "KS-2026-0016",
@@ -143,7 +143,7 @@
    "first": "2026-10-08",
    "last": "2026-10-25",
    "file": "data/kintsugi-contracts/KS-2026-0016.txt",
-   "sha256": "42461f0c2f10bd4b10c7f752dde7c0eaf1414d3c9d89ed4f6d412931c335682a"
+   "sha256": "12c81aad59179bc15edcdad6a8d9928e5a41a05dccfb16dacec82d1f69b2188d"
   },
   {
    "id": "KS-2026-0017",
@@ -152,7 +152,7 @@
    "first": "2026-10-25",
    "last": "2026-10-29",
    "file": "data/kintsugi-contracts/KS-2026-0017.txt",
-   "sha256": "2ee495a9d4c7ab431fca87897a965abbf7c31ab62b4644ec63cd8449e0bed6a0"
+   "sha256": "14496caf74661da7b06272f1f4e0d7045060587aa653ce0abf8ecd7e552a5b1e"
   },
   {
    "id": "KS-2026-0018",
@@ -161,7 +161,7 @@
    "first": "2026-10-23",
    "last": "2026-10-30",
    "file": "data/kintsugi-contracts/KS-2026-0018.txt",
-   "sha256": "6584b6cd7f09fb0022726316244a9d945c2fce446b7b77e11046d44673c97eb3"
+   "sha256": "3dfce6b9c17d657bb7cdb6fed6bb4f348d0a18ce56067a0bfc962761d6056418"
   },
   {
    "id": "KS-2026-0019",
@@ -170,7 +170,7 @@
    "first": "2026-10-16",
    "last": "2026-10-30",
    "file": "data/kintsugi-contracts/KS-2026-0019.txt",
-   "sha256": "a66963719f90bb5567550e3fbbdb818b71685c4b5ea2e5b505b46ee3f485f89f"
+   "sha256": "67d496255ae90dc9a10d1cd0ef3ff2f80a853fea7b3e8e0efaddb976dccd0ca7"
   },
   {
    "id": "KS-2026-0020",
@@ -179,7 +179,7 @@
    "first": "2026-10-28",
    "last": "2026-10-30",
    "file": "data/kintsugi-contracts/KS-2026-0020.txt",
-   "sha256": "8337ce8cbc4a9576060bf4f4cbf54aa0fe8187ce9548501ecae82e2f8139adc6"
+   "sha256": "e6bf8c81085a4c7e52805d6f58f47ad3fefbe47e399a10745fab3352d3b1d4b9"
   },
   {
    "id": "KS-2026-0021",
@@ -188,7 +188,7 @@
    "first": "2026-10-26",
    "last": "2026-10-28",
    "file": "data/kintsugi-contracts/KS-2026-0021.txt",
-   "sha256": "a155f2f0294f9d8fab2f195883b9b882e6f44a4ba7434101d068617314139f1d"
+   "sha256": "0deb76e2f947d8416728d2ccc83a78a61078d3775ec174e2f0a9bab928f53eab"
   },
   {
    "id": "KS-2026-0022",
@@ -197,7 +197,7 @@
    "first": "2026-10-04",
    "last": "2026-10-27",
    "file": "data/kintsugi-contracts/KS-2026-0022.txt",
-   "sha256": "7a1e2e01bb071d073e6a419016e1cfef77a7d591893a4b7cea23065736e657dc"
+   "sha256": "6cb920c408558d1316b2d9464f966029ec866acd1ece5d1078c71c5156608587"
   },
   {
    "id": "KS-2026-0023",
@@ -206,7 +206,7 @@
    "first": "2026-10-29",
    "last": "2026-10-29",
    "file": "data/kintsugi-contracts/KS-2026-0023.txt",
-   "sha256": "24268484153f9b099b1dc75f733aed8aea7f299e7b4e5d96fbd72c4f83c2f80b"
+   "sha256": "4e2f00be6864b5d228a7c5cef7b72117b04035d86d2a26563f1347d932c09337"
   },
   {
    "id": "KS-2026-0024",
@@ -215,7 +215,7 @@
    "first": "2026-10-20",
    "last": "2026-10-21",
    "file": "data/kintsugi-contracts/KS-2026-0024.txt",
-   "sha256": "6e8ceeb7a968a4449dd14bc0e6b2fef798f535b7c16a632ac22f3f0c5af6b659"
+   "sha256": "20d788663e96b4400e60699e6b5aeced3dc714cecf9ee26b69877a0553b3ecbd"
   },
   {
    "id": "KS-2026-0025",
@@ -224,7 +224,7 @@
    "first": "2026-10-03",
    "last": "2026-10-30",
    "file": "data/kintsugi-contracts/KS-2026-0025.txt",
-   "sha256": "35e4e026f547fa1f2ceffa9c7c75153e3613494528120be8bffbae905c4cbcee"
+   "sha256": "b7c9213d4ac917066cbd9c7833758ced0963dd97d990cee8515ec690083a5943"
   },
   {
    "id": "KS-2026-0026",
@@ -233,7 +233,7 @@
    "first": "2026-10-23",
    "last": "2026-10-28",
    "file": "data/kintsugi-contracts/KS-2026-0026.txt",
-   "sha256": "207a77318d75ac43aa53913cf5177cdbb9db7f695496e236246741ca95df737c"
+   "sha256": "fbcaaca527d36007900fa91529439a00b7fcf12cdfb463b76247e93e050dc92b"
   },
   {
    "id": "KS-2026-0027",
@@ -242,7 +242,7 @@
    "first": "2026-10-03",
    "last": "2026-10-30",
    "file": "data/kintsugi-contracts/KS-2026-0027.txt",
-   "sha256": "d2459c43e2240c251efa271aee15dc4167ed388f08f053e7f9dd21ea0d3cd6e3"
+   "sha256": "fcb12e8c60dcecd452310c6f773c7290520edabe05774a09b8b38c4b7f388c9b"
   },
   {
    "id": "KS-2026-0028",
@@ -251,7 +251,7 @@
    "first": "2026-10-08",
    "last": "2026-10-23",
    "file": "data/kintsugi-contracts/KS-2026-0028.txt",
-   "sha256": "7e1f1b779543389042f33ff1cb3dde987f3e6c4dee4bbe7e73eeecaf0ab3ec4d"
+   "sha256": "7383b6711eb876d473ce2eb9b912ae39d46cb61cc42239dd02865e23dfbe159a"
   },
   {
    "id": "KS-2026-0029",
@@ -260,7 +260,7 @@
    "first": "2026-10-04",
    "last": "2026-10-28",
    "file": "data/kintsugi-contracts/KS-2026-0029.txt",
-   "sha256": "a07af5eff62c761ae022d69f6db9cffdc4bd3c4ef4a92afc4d939a3a8b8c785b"
+   "sha256": "c7b76c61b6e269dae0fc65d60887bedbed8bb0df6144621c9a987496824c8b4b"
   },
   {
    "id": "KS-2026-0030",
@@ -269,7 +269,7 @@
    "first": "2026-10-03",
    "last": "2026-10-30",
    "file": "data/kintsugi-contracts/KS-2026-0030.txt",
-   "sha256": "55589f1432f8c873671945d3385624c2ea27273717369f7bc626fc1edf584f9e"
+   "sha256": "45d11a8b71171c04aba0caaec5ba76c53137eb0ce1f2b1ff4d9f1d0ce26c64c3"
   },
   {
    "id": "KS-2026-0031",
@@ -278,7 +278,7 @@
    "first": "2026-10-26",
    "last": "2026-10-26",
    "file": "data/kintsugi-contracts/KS-2026-0031.txt",
-   "sha256": "2c63a468791ece4140e822c8f4e93e29b273d0dc795468a1b435876e0e0507d9"
+   "sha256": "8fdb9f86ed9e29c1449ce8a677f41f0fb0728cd80780cf9ff546994c87dd0c7b"
   },
   {
    "id": "KS-2026-0032",
@@ -287,7 +287,7 @@
    "first": "2026-10-26",
    "last": "2026-10-26",
    "file": "data/kintsugi-contracts/KS-2026-0032.txt",
-   "sha256": "379429255b21628a974dd86db0b0ea0c00081f9f4f529a54acbce77563973f80"
+   "sha256": "f784f1596d9a143f64bcd8a16c83d266e875b1d65c95871b0d664a8b459eb39a"
   },
   {
    "id": "KS-2026-0033",
@@ -296,7 +296,7 @@
    "first": "2026-10-26",
    "last": "2026-10-26",
    "file": "data/kintsugi-contracts/KS-2026-0033.txt",
-   "sha256": "cc0c8e039c597b257703149fb20c6995c764daeb9096c75473ebfa91f1e70375"
+   "sha256": "e66964b66adc245fbcb933aca4c4435a6a36c0e88dcaf8661b9ada6e7e0648dd"
   },
   {
    "id": "KS-2026-0034",
@@ -305,7 +305,7 @@
    "first": "2026-10-28",
    "last": "2026-10-30",
    "file": "data/kintsugi-contracts/KS-2026-0034.txt",
-   "sha256": "8c5bbd3f55347635811695d38093f4b26333bcc4db09bd938272a32d4a3abe30"
+   "sha256": "55ff8307b89103afcea269fd4641092c3c5bfc780ce8329b14c8dd16a226c041"
   },
   {
    "id": "KS-2026-0035",
@@ -314,7 +314,7 @@
    "first": "2026-10-09",
    "last": "2026-10-30",
    "file": "data/kintsugi-contracts/KS-2026-0035.txt",
-   "sha256": "76fc4aa07813cc22054d49181d61c65f12b0faf35beaaa71080b40e01b7d54ec"
+   "sha256": "bad4a83ff492fb6c45182c4a8b6f88a57e4f7530fe50feb2dddb22764781746f"
   },
   {
    "id": "KS-2026-0036",
@@ -323,7 +323,7 @@
    "first": "2026-10-23",
    "last": "2026-10-30",
    "file": "data/kintsugi-contracts/KS-2026-0036.txt",
-   "sha256": "d1846cb1c2f28a51f1dec56e1665c9b9f44ba5b5af438910c9177f0e2eff10d8"
+   "sha256": "9c44e2f08abf186cd2c0a7b3210bf8a501345e7b35eb7e774f1b66e7bcf4b96d"
   },
   {
    "id": "KS-2026-0037",
@@ -332,7 +332,7 @@
    "first": "2026-10-06",
    "last": "2026-10-30",
    "file": "data/kintsugi-contracts/KS-2026-0037.txt",
-   "sha256": "2d6a24748043465bf66038673a993a3d0c74d9390e02ee15c5d3fb8d37b71449"
+   "sha256": "7d18d8e00899c6fc722487122f0ea7010737ed7c889b4e6d0b288b164b1bf549"
   },
   {
    "id": "KS-2026-0038",
@@ -341,7 +341,7 @@
    "first": "2026-10-08",
    "last": "2026-10-17",
    "file": "data/kintsugi-contracts/KS-2026-0038.txt",
-   "sha256": "dc5a10ba1910861999083b85f410899405f3746b2d45f046922a5f37d5a767fc"
+   "sha256": "37de25b5197a2f7adc84e8a1048ddb2019ef456a9286eaf24ea6a4c6bc5a3b40"
   },
   {
    "id": "KS-2026-0039",
@@ -350,7 +350,7 @@
    "first": "2026-10-15",
    "last": "2026-10-23",
    "file": "data/kintsugi-contracts/KS-2026-0039.txt",
-   "sha256": "22b5bc0f03ac6f26c9cd45d8a14082e0372a5ebcba3de75497a840794de46522"
+   "sha256": "e8505c5e17790b3e7012c70b48ce4af43f53b53c91fee236b8b936bf5ee1b011"
   },
   {
    "id": "KS-2026-0040",
@@ -359,7 +359,7 @@
    "first": "2026-10-03",
    "last": "2026-10-29",
    "file": "data/kintsugi-contracts/KS-2026-0040.txt",
-   "sha256": "0ebd0b125b0c73d94b7e699f07d688718fc4099cea200b88840770806fc00c13"
+   "sha256": "4d1d0d1675ff44a27d17d1597b14fae94e4a2d38a885e5bf63a4347128adeec3"
   },
   {
    "id": "KS-2026-0041",
@@ -368,7 +368,7 @@
    "first": "2026-10-04",
    "last": "2026-10-30",
    "file": "data/kintsugi-contracts/KS-2026-0041.txt",
-   "sha256": "ff7d5b41e7c07a8c42bd25501158af0b66747ce58711f745966dd7c8db29f379"
+   "sha256": "4266d0f91605f0a70f4ad518e055d508d4d430e20780060fc13dd626d609162a"
   },
   {
    "id": "KS-2026-0042",
@@ -377,7 +377,7 @@
    "first": "2026-10-06",
    "last": "2026-10-26",
    "file": "data/kintsugi-contracts/KS-2026-0042.txt",
-   "sha256": "b7b1908a2582541eed191bd68a9f3205a29671f0ce9e4711eb474b557147a08c"
+   "sha256": "58153527ab43251e43d749b2b1e5d1bfa17ab349663ccd85c9644ca4aaebca51"
   },
   {
    "id": "KS-2026-0043",
@@ -386,7 +386,7 @@
    "first": "2026-10-04",
    "last": "2026-10-29",
    "file": "data/kintsugi-contracts/KS-2026-0043.txt",
-   "sha256": "db63e5a0d7ac2ea3b0ed0eee2dcad66cc4be8f56add5c1422374f06d873c2abd"
+   "sha256": "45751ff3e254cadef48f795ed3b85d3b7b6147a00fefc2a1af9a5314e3014d67"
   },
   {
    "id": "KS-2026-0044",
@@ -395,7 +395,7 @@
    "first": "2026-10-05",
    "last": "2026-10-18",
    "file": "data/kintsugi-contracts/KS-2026-0044.txt",
-   "sha256": "f0c529b108ea608a3088ecf530581ab9a0a6c7e4c325be34cf65ce3e3172e217"
+   "sha256": "8a7c7e4676fecc4201f4e9525c011e97ed05a24f8beda39ad3a193ff7cc106ac"
   },
   {
    "id": "KS-2026-0045",
@@ -404,7 +404,7 @@
    "first": "2026-10-08",
    "last": "2026-10-25",
    "file": "data/kintsugi-contracts/KS-2026-0045.txt",
-   "sha256": "9e22e57076b2791b4a2101d654748f1ef0be28a95ee7b71938e34f834f0a6a0c"
+   "sha256": "ea28419d1e239af73eca207454eda871b4d4bc4f089b49e8fc1d8bef6f8a034c"
   },
   {
    "id": "KS-2026-0046",
@@ -413,7 +413,7 @@
    "first": "2026-10-03",
    "last": "2026-10-30",
    "file": "data/kintsugi-contracts/KS-2026-0046.txt",
-   "sha256": "c30aa30b4570f633dd91c8e0378d567478888d9e0b37855ff27746e493906f40"
+   "sha256": "6e5abaa204410b921eb9aa255e162c73ff87c2bc0150661c47afd28145d92733"
   },
   {
    "id": "KS-2026-0047",
@@ -422,7 +422,7 @@
    "first": "2026-10-04",
    "last": "2026-10-23",
    "file": "data/kintsugi-contracts/KS-2026-0047.txt",
-   "sha256": "a661931521c57d56112ce0235086562f97e384e6735317c066c5724bafb37323"
+   "sha256": "e746c424911474899257dadfe7057020b2e236950628d010a8eee5e489896d8e"
   },
   {
    "id": "KS-2026-0048",
@@ -431,7 +431,7 @@
    "first": "2026-10-23",
    "last": "2026-10-24",
    "file": "data/kintsugi-contracts/KS-2026-0048.txt",
-   "sha256": "605778139f0983e011e2bf900283e9c2b905a21256b1a357ce644286dda6caa6"
+   "sha256": "24673f4110edac558ee1a8c777f2cfc19267235129872b006e7ce5abd97e07f0"
   },
   {
    "id": "KS-2026-0049",
@@ -440,7 +440,7 @@
    "first": "2026-10-25",
    "last": "2026-10-25",
    "file": "data/kintsugi-contracts/KS-2026-0049.txt",
-   "sha256": "624b9ec6920853cd526fdac245deeedff078c70a47a4a6f61e416bc0cf3fcf65"
+   "sha256": "949795c4019f3afd3599cd5ace8a5445f086e7b6407cf398a1c19f7b8ef9d1f8"
   },
   {
    "id": "KS-2026-0050",
@@ -449,7 +449,7 @@
    "first": "2026-10-04",
    "last": "2026-10-30",
    "file": "data/kintsugi-contracts/KS-2026-0050.txt",
-   "sha256": "4b19b91eed0aef9eb1f0cf8d00a9bcd2a0806c575266f6c6cec8e12acd928228"
+   "sha256": "37612a09978c8b08dfa099642c6ec3fc8398369164140eed4bf2896c4ecb30a1"
   },
   {
    "id": "KS-2026-0051",
@@ -458,7 +458,7 @@
    "first": "2026-10-05",
    "last": "2026-10-30",
    "file": "data/kintsugi-contracts/KS-2026-0051.txt",
-   "sha256": "f0f684aa718c9ae96e8acfc600903b5050f6badbdda9181f5c6460920ac9cd16"
+   "sha256": "06ffa3952d1005558a58d0237dee73ac5383df4b1f95d61633a28bae481db72c"
   },
   {
    "id": "KS-2026-0052",
@@ -467,7 +467,7 @@
    "first": "2026-10-16",
    "last": "2026-10-29",
    "file": "data/kintsugi-contracts/KS-2026-0052.txt",
-   "sha256": "670d5e86bcafccb5c0eaeaca0d30883651a0b10b67ec6f151a57f84f224461cc"
+   "sha256": "465d24e3de83c2740f53e47dd1c69f7717aa29754d444a3b193a4293a225f194"
   },
   {
    "id": "KS-2026-0053",
@@ -476,7 +476,7 @@
    "first": "2026-10-10",
    "last": "2026-10-23",
    "file": "data/kintsugi-contracts/KS-2026-0053.txt",
-   "sha256": "f6f0adc418abf9dc3daf964aa1333cb461310b4b3fecb91f7560ef5447c89c4b"
+   "sha256": "3b7405292b09506ba05fe6151327361460e112e603a403dab8cd7be8abca65f1"
   },
   {
    "id": "KS-2026-0054",
@@ -485,7 +485,7 @@
    "first": "2026-10-15",
    "last": "2026-10-15",
    "file": "data/kintsugi-contracts/KS-2026-0054.txt",
-   "sha256": "99f68a02a0523c497a051dd889f5abd59d529b2a44b1d09e0bdccf3575e0e38f"
+   "sha256": "96887801094ceb624b4e4ca4f00536b6b6c47ae466848d54c3af705228f0b70d"
   },
   {
    "id": "KS-2026-0055",
@@ -494,7 +494,7 @@
    "first": "2026-10-09",
    "last": "2026-10-24",
    "file": "data/kintsugi-contracts/KS-2026-0055.txt",
-   "sha256": "f29247cca6392d8535a66d8f7af065db6aa8bd8e71b2f9447606b8e48e8811ed"
+   "sha256": "254dfd6510580c5fff57a39f50cb020a3b60b37cd2a909221dfff6bad3961503"
   },
   {
    "id": "KS-2026-0056",
@@ -503,7 +503,7 @@
    "first": "2026-10-04",
    "last": "2026-10-29",
    "file": "data/kintsugi-contracts/KS-2026-0056.txt",
-   "sha256": "a2c2eb27c6c832692ee3da83e840090fc4f4a79e9c733b10be17005d3efde9dc"
+   "sha256": "3950ddb7f0fd4b2261f1cde26170c0209b57ce62c8e10c8af82b953a76197251"
   },
   {
    "id": "KS-2026-0057",
@@ -512,7 +512,7 @@
    "first": "2026-10-15",
    "last": "2026-10-23",
    "file": "data/kintsugi-contracts/KS-2026-0057.txt",
-   "sha256": "444520b4093622602c10626a9619e1a40fabe84515b9fbd1aaa10375f47428f8"
+   "sha256": "321c65c151fce3b38b2988af95f4718c2b42a267738c25093afdfb458de68627"
   },
   {
    "id": "KS-2026-0058",
@@ -521,7 +521,7 @@
    "first": "2026-10-03",
    "last": "2026-10-20",
    "file": "data/kintsugi-contracts/KS-2026-0058.txt",
-   "sha256": "89c48cbf08109ac68ecd36f895f26aab3e91f45c9c83e05c1d44d33f13a81fe3"
+   "sha256": "0b1a5d6c793fc3e4a3b97ce12ec0a82a4531f56e4d49a0db4f772b2f046bd6b3"
   },
   {
    "id": "KS-2026-0059",
@@ -530,7 +530,7 @@
    "first": "2026-10-03",
    "last": "2026-10-28",
    "file": "data/kintsugi-contracts/KS-2026-0059.txt",
-   "sha256": "9f75f0fe775a80cb703fe79ffa6b19282edd7d2854245077ded4f8ec849b603e"
+   "sha256": "71a434bd83d8991877a7a698e82acdaddb1fcde3d394d3616d27e2b6ce6be56b"
   },
   {
    "id": "KS-2026-0060",
@@ -539,7 +539,7 @@
    "first": "2026-10-05",
    "last": "2026-10-17",
    "file": "data/kintsugi-contracts/KS-2026-0060.txt",
-   "sha256": "880f7ec2226a3db9ed1e019f0aa2f302f9102bc0121f2b04d9f5d5f8346e03b4"
+   "sha256": "f7ce4bf839f78795e05c5e393ceaa282e74517868dab586fd7529da7c2e1e758"
   },
   {
    "id": "KS-2026-0061",
@@ -548,7 +548,7 @@
    "first": "2026-10-03",
    "last": "2026-10-29",
    "file": "data/kintsugi-contracts/KS-2026-0061.txt",
-   "sha256": "46d72187de0334c3b6c5721342c6b60ce43c8abc90f7c0234d8ab5fbadb7896e"
+   "sha256": "b88a719a9c4123e702767b135d2b462d7f7ea70e70b6a56439e25d471ee8e90f"
   },
   {
    "id": "KS-2026-0062",
@@ -557,7 +557,7 @@
    "first": "2026-10-04",
    "last": "2026-10-28",
    "file": "data/kintsugi-contracts/KS-2026-0062.txt",
-   "sha256": "17664da82f647bb18da8f3db05d871e6980d9b29bd5f512d0d3279f5b111e33d"
+   "sha256": "92227244d4a532a8f3dc0db2022f1e6dda24579ef696b02d6eef5495e4ac02b3"
   },
   {
    "id": "KS-2026-0063",
@@ -566,7 +566,7 @@
    "first": "2026-10-20",
    "last": "2026-10-29",
    "file": "data/kintsugi-contracts/KS-2026-0063.txt",
-   "sha256": "15a6c6435dca8a413f8e21bfef04023855dc3b259d83d3f26384ed17d08e42a6"
+   "sha256": "54b4446d5f57b511e9240c02695d14b1f501aece95daa99afd7b81f01ede4695"
   },
   {
    "id": "KS-2026-0064",
@@ -575,7 +575,7 @@
    "first": "2026-10-04",
    "last": "2026-10-30",
    "file": "data/kintsugi-contracts/KS-2026-0064.txt",
-   "sha256": "458c3b7337b95b5fbec7cf06a5aeaa73a8f6316bf0c26372617a49d9b5c55cbc"
+   "sha256": "405f08d27be4b835c78643bafa93c15a26d8775a8748179638f571c2ccb28e2e"
   },
   {
    "id": "KS-2026-0065",
@@ -584,7 +584,7 @@
    "first": "2026-10-07",
    "last": "2026-10-28",
    "file": "data/kintsugi-contracts/KS-2026-0065.txt",
-   "sha256": "b2139c71c36b8d996a66dda13a733440ae4692ab3b9fca2410d68d498c5387f2"
+   "sha256": "a9e17be0fefd41067c2761c4f4dd0601b2fbae194125e51f50dafc4fa750b4fb"
   },
   {
    "id": "KS-2026-0066",
@@ -593,7 +593,7 @@
    "first": "2026-10-04",
    "last": "2026-10-29",
    "file": "data/kintsugi-contracts/KS-2026-0066.txt",
-   "sha256": "50541cf67b4c2e625373f20dded8c4fb1caed9c25f1c7a16d63cc7e74eef20b7"
+   "sha256": "f095d6ea92e50a9e43d8613c54fae336d291aff49cdbd7fcdd5905ae83fb3c10"
   },
   {
    "id": "KS-2026-0067",
@@ -602,7 +602,7 @@
    "first": "2026-10-11",
    "last": "2026-10-16",
    "file": "data/kintsugi-contracts/KS-2026-0067.txt",
-   "sha256": "418782ce6ee5ab05efa16ca92c354e6f5fe5ab67dd17c76987fac63e4c69e5ea"
+   "sha256": "8359f773369e0201d0c28c5867ebbd322de59e31c49e3f98221f9c277ef11384"
   },
   {
    "id": "KS-2026-0068",
@@ -611,7 +611,7 @@
    "first": "2026-10-06",
    "last": "2026-10-30",
    "file": "data/kintsugi-contracts/KS-2026-0068.txt",
-   "sha256": "51a0379e310b99dbd22a87e724acf29e3678f34927c4b854d7fd0c8a7353674f"
+   "sha256": "b6ce6e351d01add2fed946ecdf9eb84df939c96daa22cbcc006281a9519e45f3"
   },
   {
    "id": "KS-2026-0069",
@@ -620,7 +620,7 @@
    "first": "2026-10-04",
    "last": "2026-10-30",
    "file": "data/kintsugi-contracts/KS-2026-0069.txt",
-   "sha256": "38df10287e9782df52ae058d61c6f1f7fcc2a750576ac69ddb304b77b27b4e30"
+   "sha256": "0d9eec5b4db8547ed89221673708b244e546476b8060db0d763a03e7b8de3872"
   },
   {
    "id": "KS-2026-0070",
@@ -629,7 +629,7 @@
    "first": "2026-10-23",
    "last": "2026-10-24",
    "file": "data/kintsugi-contracts/KS-2026-0070.txt",
-   "sha256": "89551bf2e09bf4b9dd7276066d95c393d711990f9cca76506185787f5594b6c7"
+   "sha256": "d530c90b3f79e01a1dc71b09dcc0ad833514fc5880befb60fa9c22d5b7c713e3"
   },
   {
    "id": "KS-2026-0071",
@@ -638,7 +638,7 @@
    "first": "2026-10-07",
    "last": "2026-10-30",
    "file": "data/kintsugi-contracts/KS-2026-0071.txt",
-   "sha256": "5b037064198536279c8aef986a0f551ad750a7919ee1ba21bf3c35ea8dbfb612"
+   "sha256": "aff6f5c35e4ab3cfe2182dd90a7eaa2f70884adffa7cb4f620e23c9740bd8b63"
   },
   {
    "id": "KS-2026-0072",
@@ -647,7 +647,7 @@
    "first": "2026-10-16",
    "last": "2026-10-18",
    "file": "data/kintsugi-contracts/KS-2026-0072.txt",
-   "sha256": "129abf01505aa910ef053cb9d329b22d8563b3e56f56478f0aebbe41d13286af"
+   "sha256": "92860a7adeb3f0f441ef1504b620eb5fec137eb1d01a765c4f8b612d1583682d"
   },
   {
    "id": "KS-2026-0073",
@@ -656,7 +656,7 @@
    "first": "2026-10-18",
    "last": "2026-10-25",
    "file": "data/kintsugi-contracts/KS-2026-0073.txt",
-   "sha256": "f89c4bbd018805956a71bafb1b72301aa46098af3f950b8e2cb05eb70b0b0082"
+   "sha256": "a2f3c728c5b6e315103417039dfc6d6fea976741e98d309dc36d591aeb66f178"
   },
   {
    "id": "KS-2026-0074",
@@ -665,7 +665,7 @@
    "first": "2026-10-16",
    "last": "2026-10-29",
    "file": "data/kintsugi-contracts/KS-2026-0074.txt",
-   "sha256": "cb764b7c78d5f92d966505e257cbafef7f7bd7d0995260d285dca014bf13cfeb"
+   "sha256": "a59964c7ed30e31143cb4e6c802930d4fed0b3aae25460c3546968cb3b6d01a9"
   },
   {
    "id": "KS-2026-0075",
@@ -674,7 +674,7 @@
    "first": "2026-10-25",
    "last": "2026-10-25",
    "file": "data/kintsugi-contracts/KS-2026-0075.txt",
-   "sha256": "163ccd465ab7777721917adf1d3902fde5afbb79ccf3ca64ce6ca14deb46fc9d"
+   "sha256": "4bc1e60874bd7bf323b0a613d73ddf22f0afe00c342be4c026498fe9568b2810"
   },
   {
    "id": "KS-2026-0076",
@@ -683,7 +683,7 @@
    "first": "2026-10-08",
    "last": "2026-10-25",
    "file": "data/kintsugi-contracts/KS-2026-0076.txt",
-   "sha256": "68810001c3d800032f5c7cfeadcf9cdc9c77db916578f6cb34e2e7c3dd6cba6c"
+   "sha256": "270c5f3fa8d90f5d04da917470a020001f577361078f13d81373ac16a5f75394"
   },
   {
    "id": "KS-2026-0077",
@@ -692,7 +692,7 @@
    "first": "2026-10-06",
    "last": "2026-10-28",
    "file": "data/kintsugi-contracts/KS-2026-0077.txt",
-   "sha256": "6b99fd6c28f8a28db6d90b13cd67d2827ed013d2a4df8c1f140fde3152e73b3c"
+   "sha256": "540682780bb64dcf92f88e32e488bb8d922d3aab87de987ff9bce79938f4d2ed"
   },
   {
    "id": "KS-2026-0078",
@@ -701,7 +701,7 @@
    "first": "2026-10-06",
    "last": "2026-10-28",
    "file": "data/kintsugi-contracts/KS-2026-0078.txt",
-   "sha256": "60d0dacf3c2d2d36742672b7edcaf3cabdeb85e96e03be35632c3e4f8faa5626"
+   "sha256": "abb7d982c1dc97ddad8418de32119707348ae67218d7fab7dc7dfbb6e95e8eec"
   },
   {
    "id": "KS-2026-0079",
@@ -710,7 +710,7 @@
    "first": "2026-10-06",
    "last": "2026-10-30",
    "file": "data/kintsugi-contracts/KS-2026-0079.txt",
-   "sha256": "fe55a3d00e203a36795aa2887993f0478d0d06406a5507b975884ec43a326fe0"
+   "sha256": "f83d13c820806cafaea10480830d9ead942eca806ba299b4a04631b14b013ef0"
   },
   {
    "id": "KS-2026-0080",
@@ -719,7 +719,7 @@
    "first": "2026-10-05",
    "last": "2026-10-14",
    "file": "data/kintsugi-contracts/KS-2026-0080.txt",
-   "sha256": "8f2ec043851482ace7dc0db629421bc1b3764b3600f6ed9a83253b1fd90073ba"
+   "sha256": "36e7fae906629bdc4fd2fb3abf1d4658a090941604c7c12f7f50327413898d31"
   },
   {
    "id": "KS-2026-0081",
@@ -728,7 +728,7 @@
    "first": "2026-10-24",
    "last": "2026-10-25",
    "file": "data/kintsugi-contracts/KS-2026-0081.txt",
-   "sha256": "d33d12865c0015d37f66a395155722f9f7ab9a0ffd214213b7a2c0fbadd9c08b"
+   "sha256": "266a74b1bdba910ba48f81de898afb163c8efb1256ddb8f6f52ff9fec07867af"
   },
   {
    "id": "KS-2026-0082",
@@ -737,7 +737,7 @@
    "first": "2026-10-09",
    "last": "2026-10-30",
    "file": "data/kintsugi-contracts/KS-2026-0082.txt",
-   "sha256": "d172fc0e491ac5e19782ea2c1e0c0505d18c0da27cf2cc00de7aab60139eef53"
+   "sha256": "6e76ad40e694eacf120bae11fc42a061e6a215bc45b3b1ffb5c208ab809c94fa"
   },
   {
    "id": "KS-2026-0083",
@@ -746,7 +746,7 @@
    "first": "2026-10-11",
    "last": "2026-10-30",
    "file": "data/kintsugi-contracts/KS-2026-0083.txt",
-   "sha256": "8c2813f7b707ddf1684ef0948d071c965270a787b74cf2dc3c9b286b27909509"
+   "sha256": "f76d269ee1a5c6b84195fb04124533b12e9820991d9af7cbec5fb8b0543d7175"
   },
   {
    "id": "KS-2026-0084",
@@ -755,7 +755,7 @@
    "first": "2026-10-06",
    "last": "2026-10-29",
    "file": "data/kintsugi-contracts/KS-2026-0084.txt",
-   "sha256": "d9bf0d6a0bdebec68d473882caca035517faa1b062d91a959e5b9f602d8b8e50"
+   "sha256": "14a7610eeb4856a56f07498810532020535a0eb9123d7455dab6f348ce4a9150"
   },
   {
    "id": "KS-2026-0085",
@@ -764,7 +764,7 @@
    "first": "2026-10-07",
    "last": "2026-10-29",
    "file": "data/kintsugi-contracts/KS-2026-0085.txt",
-   "sha256": "b53ab18779e24a113549ea7f4cff92fdadb01293f98d63e958d0a3420eaac51e"
+   "sha256": "a5472f4c821114871d443fceb1b1a172a29ab6ab4ac9931103ef885c48c7fd6c"
   },
   {
    "id": "KS-2026-0086",
@@ -773,7 +773,7 @@
    "first": "2026-10-03",
    "last": "2026-10-30",
    "file": "data/kintsugi-contracts/KS-2026-0086.txt",
-   "sha256": "678e0ad3cb842b1984286b8f8fa8b7645bea0133460edb5a327a1ad9e7c3bba2"
+   "sha256": "d6ab588c1c98692f0e4b779a5f4ad47eaf33e747eab540c7cdc638a64e143888"
   },
   {
    "id": "KS-2026-0087",
@@ -782,7 +782,7 @@
    "first": "2026-10-06",
    "last": "2026-10-28",
    "file": "data/kintsugi-contracts/KS-2026-0087.txt",
-   "sha256": "a3246ae436dae0b508a75b268b596dd315279402ab678ee175789dabd1008a6b"
+   "sha256": "5dcb0582df9ee518255210dd73574a0c6bd67b73019247fb61c127d3e298907d"
   },
   {
    "id": "KS-2026-0088",
@@ -791,7 +791,7 @@
    "first": "2026-10-06",
    "last": "2026-10-24",
    "file": "data/kintsugi-contracts/KS-2026-0088.txt",
-   "sha256": "144eb2952ec2c7deaf34a1ae6681d6493d7d210ad618a417458a9ec5d85986c9"
+   "sha256": "995f5df96ad89d53096f1c376c6f95fb88fba10402a5baa29925173f25bb6e5b"
   },
   {
    "id": "KS-2026-0089",
@@ -800,7 +800,7 @@
    "first": "2026-10-04",
    "last": "2026-10-23",
    "file": "data/kintsugi-contracts/KS-2026-0089.txt",
-   "sha256": "6ee0f65be43a0b7264eb4b4b9bf2a02cddabec2747cea5e03008997a4bd57f73"
+   "sha256": "20adcc5c66394b86be9d07673bb415d346e692d78aba7c7b13bdeac4d1f04dba"
   },
   {
    "id": "KS-2026-0090",
@@ -809,7 +809,7 @@
    "first": "2026-10-07",
    "last": "2026-10-28",
    "file": "data/kintsugi-contracts/KS-2026-0090.txt",
-   "sha256": "b45db6ab1db00501620a35c66f8b50eb9d8ea924c80ea9bde717b865d1b53ffc"
+   "sha256": "4b4c3017fb161bbff0da6e25565c944e92d02be39826ecc19d316b4216a8b86a"
   },
   {
    "id": "KS-2026-0091",
@@ -818,7 +818,7 @@
    "first": "2026-10-03",
    "last": "2026-10-30",
    "file": "data/kintsugi-contracts/KS-2026-0091.txt",
-   "sha256": "f72a33b9bd6099d62bf520293328d620b319b59ec28ec07db848b15808007190"
+   "sha256": "d621d1da6e771845d4aba478bf3cb11be637b6b370f6597ead87b6dd54b62945"
   },
   {
    "id": "KS-2026-0092",
@@ -827,7 +827,7 @@
    "first": "2026-10-04",
    "last": "2026-10-28",
    "file": "data/kintsugi-contracts/KS-2026-0092.txt",
-   "sha256": "e52ec1397f67b036fdced8d8d572f52483b613831c204901a2822199a36f4ec5"
+   "sha256": "de2728b2b3e40566724aed149121ad75f9957d8fa6d88378198434feb660a003"
   },
   {
    "id": "KS-2026-0093",
@@ -836,7 +836,7 @@
    "first": "2026-10-03",
    "last": "2026-10-30",
    "file": "data/kintsugi-contracts/KS-2026-0093.txt",
-   "sha256": "1646d1ea56b45fa75d96c986777abda683ca31bf8add23e81f996270d6773ad0"
+   "sha256": "52add10bb9298b0408c665d4cf1a97b3b9ec5c7930597f06885512c79bd53424"
   },
   {
    "id": "KS-2026-0094",
@@ -845,7 +845,7 @@
    "first": "2026-10-23",
    "last": "2026-10-23",
    "file": "data/kintsugi-contracts/KS-2026-0094.txt",
-   "sha256": "a55fae56ddd38156aacd6ea147da182f4ef8861fca50c11784ef4496c33b9bcf"
+   "sha256": "4982db00baca6e525eb40ecd45005fd7620540d4d8e29b5058cb08992111654e"
   },
   {
    "id": "KS-2026-0095",
@@ -854,7 +854,7 @@
    "first": "2026-10-05",
    "last": "2026-10-30",
    "file": "data/kintsugi-contracts/KS-2026-0095.txt",
-   "sha256": "68308bd7bb4fbf8ff39b75baaee0cf4ecef8b4f028eca2c89e5374a0987abb7d"
+   "sha256": "88f6546bad4e7dae1940394730dfbe5e4d240825a266f78dc95243f14bbb95f8"
   },
   {
    "id": "KS-2026-0096",
@@ -863,7 +863,7 @@
    "first": "2026-10-25",
    "last": "2026-10-30",
    "file": "data/kintsugi-contracts/KS-2026-0096.txt",
-   "sha256": "f53e1feb20da0db63d90876ec5dd59dc878eae24d06eff8fa395ea1547784f29"
+   "sha256": "fbd6c5133018e43951df2b0d6a789af09b966291c2163f3dba475ea472643753"
   },
   {
    "id": "KS-2026-0097",
@@ -872,7 +872,7 @@
    "first": "2026-10-06",
    "last": "2026-10-28",
    "file": "data/kintsugi-contracts/KS-2026-0097.txt",
-   "sha256": "be352fed797b295435331be976c84c39687c23952c560c210f811d0974389e65"
+   "sha256": "fecf5d73aee5dc1d64596e2e61c97c0d4b6a9c33a5cab7d3ddd30880109a011c"
   },
   {
    "id": "KS-2026-0098",
@@ -881,7 +881,7 @@
    "first": "2026-10-28",
    "last": "2026-10-28",
    "file": "data/kintsugi-contracts/KS-2026-0098.txt",
-   "sha256": "930e8693b035ee77ed7fe92196c923cb280a563ed705e94146d650f3e344388f"
+   "sha256": "1e5ac250b97487a86c2f22486858314045e8ba70d7d1162724e790187e6886b3"
   },
   {
    "id": "KS-2026-0099",
@@ -890,7 +890,7 @@
    "first": "2026-10-06",
    "last": "2026-10-25",
    "file": "data/kintsugi-contracts/KS-2026-0099.txt",
-   "sha256": "8e69cfde47000a742c9a3789736455828c014f14dc40e3f494b95461abc22966"
+   "sha256": "a88e006bc132d4068dd022bd913f4286eda5f670f9b0146d731d0b2db7c9db86"
   },
   {
    "id": "KS-2026-0100",
@@ -899,7 +899,7 @@
    "first": "2026-10-06",
    "last": "2026-10-28",
    "file": "data/kintsugi-contracts/KS-2026-0100.txt",
-   "sha256": "27432820ffc3115d5dbc92b769aa7226e7c11407acc031d92ef939455f5226e7"
+   "sha256": "455958131a84664db4f1ccb8ad4e640c89db20cf86c7c476bb91f7abff96db51"
   },
   {
    "id": "KS-2026-0101",
@@ -908,7 +908,7 @@
    "first": "2026-10-05",
    "last": "2026-10-15",
    "file": "data/kintsugi-contracts/KS-2026-0101.txt",
-   "sha256": "b7794c659214f11e17631d5289a6c06225181de8db89cf29018027ba44011042"
+   "sha256": "29212e40be92ea8021e3f318bc61d8701edeb2cb05e584c7b3cb15bede53dafd"
   },
   {
    "id": "KS-2026-0102",
@@ -917,7 +917,7 @@
    "first": "2026-10-07",
    "last": "2026-10-28",
    "file": "data/kintsugi-contracts/KS-2026-0102.txt",
-   "sha256": "557e55914a73201b7a3ff5a4da4572386cf41652fc6d259740f4249ed206bd29"
+   "sha256": "e43c5028365bf59cdf86481dd10da53bb58472eaa8c000a7837880a35340dbe5"
   },
   {
    "id": "KS-2026-0103",
@@ -926,7 +926,7 @@
    "first": "2026-10-03",
    "last": "2026-10-25",
    "file": "data/kintsugi-contracts/KS-2026-0103.txt",
-   "sha256": "59546a2757a6130b71f6de8c51b9f8a69fe7bf405f9fa04fcaebd750059f7888"
+   "sha256": "b7647e3b31de41519c16d84c12bcdf90cdab0e4f4f6ce018b9b4f4246f685375"
   },
   {
    "id": "KS-2026-0104",
@@ -935,7 +935,7 @@
    "first": "2026-10-06",
    "last": "2026-10-28",
    "file": "data/kintsugi-contracts/KS-2026-0104.txt",
-   "sha256": "1bfb31efb057dabb44913a5d94ac3c6040c074b60d6a1d450728c4dc6bbccd78"
+   "sha256": "fc63e06bbeb19828193be3aa60339c354eaddca39230bea3871256995a22ba8c"
   },
   {
    "id": "KS-2026-0105",
@@ -944,7 +944,7 @@
    "first": "2026-10-06",
    "last": "2026-10-30",
    "file": "data/kintsugi-contracts/KS-2026-0105.txt",
-   "sha256": "a7d5c873df2e4ee0c774a2f320999c48929f3a15abe53cdba8e1ea5b46769fce"
+   "sha256": "d950da2e25662035d4f3c8fa33c0d36430614bc491b4b5939ce5f06cb8a58f59"
   },
   {
    "id": "KS-2026-0106",
@@ -953,7 +953,7 @@
    "first": "2026-10-07",
    "last": "2026-10-25",
    "file": "data/kintsugi-contracts/KS-2026-0106.txt",
-   "sha256": "eb8ac34261a596ed391f4442145288fdefdb8efe3c3e76fa2f37a6189e362f67"
+   "sha256": "0148619ba54a1b3f458fe25175ef8988f69e5789558513a648ef234ae594a88e"
   },
   {
    "id": "KS-2026-0107",
@@ -962,7 +962,7 @@
    "first": "2026-10-17",
    "last": "2026-10-26",
    "file": "data/kintsugi-contracts/KS-2026-0107.txt",
-   "sha256": "7a6f7850ebfc2d8df07e31b97982fd88c9a140b003bf4f48c65bf1bc61ff4662"
+   "sha256": "8035cf9b7d56e92a0a134be4b7818b0b37e3f82c5d52f7c754fb2758d054bb8a"
   },
   {
    "id": "KS-2026-0108",
@@ -971,7 +971,7 @@
    "first": "2026-10-08",
    "last": "2026-10-29",
    "file": "data/kintsugi-contracts/KS-2026-0108.txt",
-   "sha256": "7c183f90555ee0a83249d776cddc7af2757fb740c2197e5f21872adf9eae461d"
+   "sha256": "b2a6ff5af9e46903bfccbc1f0400da91c444ab3ffa5c515b7ec112663efe4367"
   },
   {
    "id": "KS-2026-0109",
@@ -980,7 +980,7 @@
    "first": "2026-10-05",
    "last": "2026-10-30",
    "file": "data/kintsugi-contracts/KS-2026-0109.txt",
-   "sha256": "0190b619cf1a211658a3bd11534b474da791ccbe94bbffa4933ec942c9cc89c9"
+   "sha256": "ad043cb3b9d48416ac3f173f3f16a39781592a39f74c5ce995a9de7741b070d4"
   },
   {
    "id": "KS-2026-0110",
@@ -989,7 +989,7 @@
    "first": "2026-10-07",
    "last": "2026-10-30",
    "file": "data/kintsugi-contracts/KS-2026-0110.txt",
-   "sha256": "ca312323921e88f9d5ed83728fd520b683b25319ac601d35f402e5c534ef4d60"
+   "sha256": "01122fc67f06a13ffc67de2d9babf7a686caedf8e80153028ab9102d25af8786"
   },
   {
    "id": "KS-2026-0111",
@@ -998,7 +998,7 @@
    "first": "2026-10-30",
    "last": "2026-10-30",
    "file": "data/kintsugi-contracts/KS-2026-0111.txt",
-   "sha256": "cf80da4084da040a02c142c1a113d2144fbb8f297d93a02d42d1ce94a2e85626"
+   "sha256": "3b6d34452d5905684c9db779259f75301e68c2145defdc74b8f4b58e82cb16ed"
   },
   {
    "id": "KS-2026-0112",
@@ -1007,7 +1007,7 @@
    "first": "2026-10-17",
    "last": "2026-10-30",
    "file": "data/kintsugi-contracts/KS-2026-0112.txt",
-   "sha256": "cecbf313142ffd20e961bfbc1f8a0691a1d524bd3c3c4afcb5cb058554cc8e20"
+   "sha256": "55a7a21ff1134598dc44fa1c0d8087f2f474322579758c6212cc17f803532c9d"
   },
   {
    "id": "KS-2026-0113",
@@ -1016,7 +1016,7 @@
    "first": "2026-10-16",
    "last": "2026-10-30",
    "file": "data/kintsugi-contracts/KS-2026-0113.txt",
-   "sha256": "afda723ecf85a9643b1ebf38c8f7bc5630e851d278ecef4dd3b14cdfb8ba4fab"
+   "sha256": "6e675fce9afbc0259b62afebfae28290717ead17ca862df8c166ccf34f5f7f8b"
   },
   {
    "id": "KS-2026-0114",
@@ -1025,7 +1025,7 @@
    "first": "2026-10-04",
    "last": "2026-10-30",
    "file": "data/kintsugi-contracts/KS-2026-0114.txt",
-   "sha256": "81535d0d5a21abf9e4da6df8e446422e8b30c3fd44506062c0db8acafd8f7048"
+   "sha256": "4fe520b5475723674fc110e708766e21dfd7760ec021c51f835e525203c1c6ee"
   },
   {
    "id": "KS-2026-0115",
@@ -1034,7 +1034,7 @@
    "first": "2026-10-05",
    "last": "2026-10-30",
    "file": "data/kintsugi-contracts/KS-2026-0115.txt",
-   "sha256": "410beb50f85afaaf04cb65d1d0b48ab22b60ce2cafb25811090f52d0e27abc7e"
+   "sha256": "ff39718ddb636772dedd8e05b6bee5aa2a04d35429012a55c02cd15a71aa3360"
   },
   {
    "id": "KS-2026-0116",
@@ -1043,7 +1043,7 @@
    "first": "2026-10-29",
    "last": "2026-10-29",
    "file": "data/kintsugi-contracts/KS-2026-0116.txt",
-   "sha256": "847f18c20f7f9aab10fe4ab476fe584ffe995808c45150da28f32ea595626abb"
+   "sha256": "95e6e82d46e9f9648001eb164a78a8311a3fe70326a068b66fa001cb63078fdf"
   },
   {
    "id": "KS-2026-0117",
@@ -1052,7 +1052,7 @@
    "first": "2026-10-19",
    "last": "2026-10-25",
    "file": "data/kintsugi-contracts/KS-2026-0117.txt",
-   "sha256": "e1ed68650e68767a268d8575de9314e659fd29731d508e21dd2f133f3080146b"
+   "sha256": "d9f1470c89f667d25640199d71f1c94865b19355519657211adfd186e16790fe"
   },
   {
    "id": "KS-2026-0118",
@@ -1061,7 +1061,7 @@
    "first": "2026-10-06",
    "last": "2026-10-28",
    "file": "data/kintsugi-contracts/KS-2026-0118.txt",
-   "sha256": "f952bbfab0ab2964b3f17204bb238ec519aa026f42d14b07d7f9d2d0569d3804"
+   "sha256": "d63b6aa6694c83a346355c8db853f50f26240b89d220a1035695d31932ac3bb6"
   },
   {
    "id": "KS-2026-0119",
@@ -1070,7 +1070,7 @@
    "first": "2026-10-25",
    "last": "2026-10-25",
    "file": "data/kintsugi-contracts/KS-2026-0119.txt",
-   "sha256": "e4210c1be05b6cc38488494a3af6ab4b5d71c199b6a26e13b4c506230f54308a"
+   "sha256": "a02ef67e9ebd6bd959d8fe418db0f23ba447f2c9a58bf76982a2759d89882708"
   },
   {
    "id": "KS-2026-0120",
@@ -1079,7 +1079,7 @@
    "first": "2026-10-06",
    "last": "2026-10-30",
    "file": "data/kintsugi-contracts/KS-2026-0120.txt",
-   "sha256": "4d1265ea43d2e3974a7cf44437cd245f8c5adc27959bf08807a50ff54f4ef545"
+   "sha256": "c60ff41b93de1ae5203c3f570ae5635ea38cca0f299b7236b402eaff5dd52df2"
   },
   {
    "id": "KS-2026-0121",
@@ -1088,7 +1088,7 @@
    "first": "2026-10-06",
    "last": "2026-10-30",
    "file": "data/kintsugi-contracts/KS-2026-0121.txt",
-   "sha256": "62d9d8dabb08fe9687f51a8c15cfdd63716c0891c83905dda9096a182a69876d"
+   "sha256": "cab14c7a61825ab2d92e8ab0f3374a91366ca92368e0dd59f8a3e37f3f5483d0"
   },
   {
    "id": "KS-2026-0122",
@@ -1097,7 +1097,7 @@
    "first": "2026-10-06",
    "last": "2026-10-30",
    "file": "data/kintsugi-contracts/KS-2026-0122.txt",
-   "sha256": "42560129c7e3b792530042eee153bea5b71c4ef11fb4583f456136b4daae41a4"
+   "sha256": "9e64085b563881fc258cbe44924afd8b69b9218a884bf1714bdd73ef1f65ae7a"
   },
   {
    "id": "KS-2026-0123",
@@ -1106,7 +1106,7 @@
    "first": "2026-10-16",
    "last": "2026-10-24",
    "file": "data/kintsugi-contracts/KS-2026-0123.txt",
-   "sha256": "0b45039e52ef1b0263a970653afc589e4609ba27cd1db4c20b682cfb82342f4a"
+   "sha256": "0823cca4f52537330a43ba905ac92f7c6522c691f4a4333ea8dea191f52c45a8"
   },
   {
    "id": "KS-2026-0124",
@@ -1115,7 +1115,7 @@
    "first": "2026-10-03",
    "last": "2026-10-28",
    "file": "data/kintsugi-contracts/KS-2026-0124.txt",
-   "sha256": "71586234fed27545795ed91b7040090cccd9cf382172a464fb86a2e77294693a"
+   "sha256": "46c061873cd7f527eddd6ba9afe3a0671af8a627cee97a080e69507981379cdc"
   },
   {
    "id": "KS-2026-0125",
@@ -1124,7 +1124,7 @@
    "first": "2026-10-03",
    "last": "2026-10-30",
    "file": "data/kintsugi-contracts/KS-2026-0125.txt",
-   "sha256": "e57c8cbef2e23405a624c62bdab77a8b5f28dcc7f05df622f33c071d9f263abf"
+   "sha256": "d3f0803bfc4d9e0723f69999d75088e49685e27b30038f88de56758b67646ef5"
   },
   {
    "id": "KS-2026-0126",
@@ -1133,7 +1133,7 @@
    "first": "2026-10-04",
    "last": "2026-10-25",
    "file": "data/kintsugi-contracts/KS-2026-0126.txt",
-   "sha256": "bbb2901ee6afbf5324e3525fb0a8e70b56a95694879ccf33441c5965c17a1716"
+   "sha256": "b8bb9daa588a9e11948242d51eb83d6891fbda6a1fe23e85c9f92b29967521d9"
   },
   {
    "id": "KS-2026-0127",
@@ -1142,7 +1142,7 @@
    "first": "2026-10-04",
    "last": "2026-10-18",
    "file": "data/kintsugi-contracts/KS-2026-0127.txt",
-   "sha256": "d1b92c38d3c8184e5654236767309d63235fea199f063ac94ce04861894bebc4"
+   "sha256": "a83d0ee3770cbb3d5600bb76fb129f8a2e158060f9595fabfe8ca254b74cbc73"
   },
   {
    "id": "KS-2026-0128",
@@ -1151,7 +1151,7 @@
    "first": "2026-10-08",
    "last": "2026-10-26",
    "file": "data/kintsugi-contracts/KS-2026-0128.txt",
-   "sha256": "27d7781a616e8147d69836f887f19e80c8d4c70f5032ef2114f7e4e04fda6cbb"
+   "sha256": "099d3aef6436893ca61f57c2542574839d27e21e3904ec4cdd3d86e6d2eccbdb"
   },
   {
    "id": "KS-2026-0129",
@@ -1160,7 +1160,7 @@
    "first": "2026-10-07",
    "last": "2026-10-25",
    "file": "data/kintsugi-contracts/KS-2026-0129.txt",
-   "sha256": "afa823480da7b8cbac6db83e999ee3c3c0c837baac3327ae246a969006619334"
+   "sha256": "b38fed23651948d89cf014e84b8416717ca4f438dcf4b1f2093da8e8bbbcf45e"
   },
   {
    "id": "KS-2026-0130",
@@ -1169,7 +1169,7 @@
    "first": "2026-10-10",
    "last": "2026-10-30",
    "file": "data/kintsugi-contracts/KS-2026-0130.txt",
-   "sha256": "772a120d563b1f987354147fb4f2199c22667b55ed32891f59117a4ce6d635c1"
+   "sha256": "832e2f858d24d7280f0d8908f0248073a0540f440f6d8588efd3c01d5deaeb0b"
   },
   {
    "id": "KS-2026-0131",
@@ -1178,7 +1178,7 @@
    "first": "2026-10-05",
    "last": "2026-10-25",
    "file": "data/kintsugi-contracts/KS-2026-0131.txt",
-   "sha256": "551fec391b405a4898ff6e2ddf93d36e69826eeeab84be11dc3fc8666fdb2bfc"
+   "sha256": "421a8f9c9bd8d4ae5baa8953366043ca72be3cbf5e746c10c7ebac5d3b2366ad"
   },
   {
    "id": "KS-2026-0132",
@@ -1187,7 +1187,7 @@
    "first": "2026-10-05",
    "last": "2026-10-25",
    "file": "data/kintsugi-contracts/KS-2026-0132.txt",
-   "sha256": "a98ef4dbf7ffffc751c3f00287b864a7756b004a6b205fc60ab319b6ecf60626"
+   "sha256": "c7b7e3ae586ea43cf94a92e2907b457e1ee86c7b89a6dfa409647a2dc5bdf8bb"
   },
   {
    "id": "KS-2026-0133",
@@ -1196,7 +1196,7 @@
    "first": "2026-10-06",
    "last": "2026-10-29",
    "file": "data/kintsugi-contracts/KS-2026-0133.txt",
-   "sha256": "b6c9c5f4eda720cc87c6bc57ce896358dd6bb2246f6c30f58093472bc014cc79"
+   "sha256": "5770dd4dffcec920d681a4afebd3fc354e7039c6393963af38f024f5b8c51dc3"
   },
   {
    "id": "KS-2026-0134",
@@ -1205,7 +1205,7 @@
    "first": "2026-10-07",
    "last": "2026-10-29",
    "file": "data/kintsugi-contracts/KS-2026-0134.txt",
-   "sha256": "a3a6816602f53c6c0419455470e5410ca131efad22a88e5bfb09eedf3fd706ee"
+   "sha256": "9edd6f92a70612cd0cab743020b949593f541872dd218cbbced6e32f4d8764aa"
   },
   {
    "id": "KS-2026-0135",
@@ -1214,7 +1214,7 @@
    "first": "2026-10-03",
    "last": "2026-10-30",
    "file": "data/kintsugi-contracts/KS-2026-0135.txt",
-   "sha256": "9fa1524108b7cf8785ad826495fc4601e9fcd1f5651d4867d585a8e158663985"
+   "sha256": "6b9067e2b515b7cc4c104365ef280572819ebb71d7200f68f06ce66ab23764ed"
   },
   {
    "id": "KS-2026-0136",
@@ -1223,7 +1223,7 @@
    "first": "2026-10-15",
    "last": "2026-10-29",
    "file": "data/kintsugi-contracts/KS-2026-0136.txt",
-   "sha256": "2a33369e0345dd53b04569050e4a04a7e0ba24f424f7e3d96ad89270737ed924"
+   "sha256": "17cc8038285f2e4f43c3b6bd26e90f5464688b50e5e5c0c9c6d64e490e2d0567"
   },
   {
    "id": "KS-2026-0137",
@@ -1232,7 +1232,7 @@
    "first": "2026-10-06",
    "last": "2026-10-23",
    "file": "data/kintsugi-contracts/KS-2026-0137.txt",
-   "sha256": "3a2f5e4879fa53e5a33ac831fe0b410ea790bae6b8fe6b4b300543ac87c23b7b"
+   "sha256": "f22b36ca2b27060d7b4189a2ba5c7be0b2aea4024ce70993d289b04838b52f73"
   },
   {
    "id": "KS-2026-0138",
@@ -1241,7 +1241,7 @@
    "first": "2026-10-06",
    "last": "2026-10-25",
    "file": "data/kintsugi-contracts/KS-2026-0138.txt",
-   "sha256": "e185b1583512fe37908f679f7bf413c6dfd76fc9bedb37d1e695d2015e3a7d3b"
+   "sha256": "b90eac96e5ffa290c37c686141a352493eb15c55357f8a405b78dfa154c75e23"
   },
   {
    "id": "KS-2026-0139",
@@ -1250,7 +1250,7 @@
    "first": "2026-10-05",
    "last": "2026-10-29",
    "file": "data/kintsugi-contracts/KS-2026-0139.txt",
-   "sha256": "8b84943810b296801ab15e08d2005cca647a784779748612bf4d046d59352d27"
+   "sha256": "194b740e229ba10e17bb03e8856393a417163f510a641ab31b898e72d0c7a030"
   },
   {
    "id": "KS-2026-0140",
@@ -1259,7 +1259,7 @@
    "first": "2026-10-03",
    "last": "2026-10-30",
    "file": "data/kintsugi-contracts/KS-2026-0140.txt",
-   "sha256": "ec1bc3fcf0639f719032a7c5701aab2a57a70585c74158bb0bfb7995379b8e10"
+   "sha256": "673cfc1a85aec5eafb6f9bd48e3cd24c1f7f87e1e0b727f81d162857ef6caf5d"
   },
   {
    "id": "KS-2026-0141",
@@ -1268,7 +1268,7 @@
    "first": "2026-10-06",
    "last": "2026-10-25",
    "file": "data/kintsugi-contracts/KS-2026-0141.txt",
-   "sha256": "4c1608b4e2583ed35af959621aee3a6c6ea988e53bd8906b551aa30b1540d38f"
+   "sha256": "b7cce7910243690769a713c71811ea4a79c05249e963359d6571097f2313dd1c"
   },
   {
    "id": "KS-2026-0142",
@@ -1277,7 +1277,7 @@
    "first": "2026-10-04",
    "last": "2026-10-27",
    "file": "data/kintsugi-contracts/KS-2026-0142.txt",
-   "sha256": "b293c6a72ffc61b4280bbeb79fd31b8e2be6913004189ef6dd2e2f1664adb2f5"
+   "sha256": "23cfbea0f6f8411efb8a705def0b67fa3620d43ff8c6a07e728cac21dcc2ce69"
   },
   {
    "id": "KS-2026-0143",
@@ -1286,7 +1286,7 @@
    "first": "2026-10-06",
    "last": "2026-10-28",
    "file": "data/kintsugi-contracts/KS-2026-0143.txt",
-   "sha256": "9a908d195ad8d08c396813856d5ea999069125989b3d84c870b5468830de04e8"
+   "sha256": "c15ae45607e186888e7aaa16979e139d4f22209a06ef3d09d3c6235aeaf7d7d8"
   },
   {
    "id": "KS-2026-0144",
@@ -1295,7 +1295,7 @@
    "first": "2026-10-06",
    "last": "2026-10-26",
    "file": "data/kintsugi-contracts/KS-2026-0144.txt",
-   "sha256": "46d1f9cf63048b0f5b685ec8c21569f4f9d30905a89cbaa8b438bb8079f8fb7e"
+   "sha256": "e39bff007da0ad394a5cf1fe340ec08973c16353ed374fa0fa26e22ffb3d2e3d"
   },
   {
    "id": "KS-2026-0145",
@@ -1304,7 +1304,7 @@
    "first": "2026-10-08",
    "last": "2026-10-26",
    "file": "data/kintsugi-contracts/KS-2026-0145.txt",
-   "sha256": "c93c1f9bd9cc4d9cd18af578eec7516e21c54402016890d3c27779b0f6b53704"
+   "sha256": "b3f090e1a7386de29cf5c5d1f135f436a854c479caf58693e1a927c380c4f4b1"
   },
   {
    "id": "KS-2026-0146",
@@ -1313,7 +1313,7 @@
    "first": "2026-10-08",
    "last": "2026-10-08",
    "file": "data/kintsugi-contracts/KS-2026-0146.txt",
-   "sha256": "5da9c56d98828d1b2fbaa3c8bf821e6cae9e5b0713a2ab640f0ec24bd49df15b"
+   "sha256": "e1e427e9bbb2addccfeed7ae45c037a52b2df32942defe09708d10458410d194"
   },
   {
    "id": "KS-2026-0147",
@@ -1322,7 +1322,7 @@
    "first": "2026-10-07",
    "last": "2026-10-30",
    "file": "data/kintsugi-contracts/KS-2026-0147.txt",
-   "sha256": "324ec8aab9f44fd7f95bea7858458e606e7cf44c26488ec45d420171f456583c"
+   "sha256": "137e214acd485b65620cbd4026da5fc6a3b4de7a634f15aaa63f6aac868c1ffe"
   },
   {
    "id": "KS-2026-0148",
@@ -1331,7 +1331,7 @@
    "first": "2026-10-03",
    "last": "2026-10-29",
    "file": "data/kintsugi-contracts/KS-2026-0148.txt",
-   "sha256": "0e9f988760e6fa8334bf80362610e5765bed35997d59e1a5d23768718a989663"
+   "sha256": "388686a4c2b35e722da3e76637eee6de379b33e241a8683d9c014eee0573014a"
   },
   {
    "id": "KS-2026-0149",
@@ -1340,7 +1340,7 @@
    "first": "2026-10-19",
    "last": "2026-10-19",
    "file": "data/kintsugi-contracts/KS-2026-0149.txt",
-   "sha256": "c9ec4c2563e440868cfeb8fcd1e2652d64c91fe257e1c87dc8c8f47d8872a04b"
+   "sha256": "21d243886e96b4336bb951f23c4f4b65c3531a211ddeb6f7388cfb8c2b07f538"
   },
   {
    "id": "KS-2026-0150",
@@ -1349,7 +1349,7 @@
    "first": "2026-10-07",
    "last": "2026-10-29",
    "file": "data/kintsugi-contracts/KS-2026-0150.txt",
-   "sha256": "ee50422116200ecce7312cc66104ee96cb28a19e276b91e325ad72d371988373"
+   "sha256": "d2b236c12f010d8c8854b5369b367732b3f29331edf04da7094bbb222b58f30b"
   },
   {
    "id": "KS-2026-0151",
@@ -1358,7 +1358,7 @@
    "first": "2026-10-04",
    "last": "2026-10-30",
    "file": "data/kintsugi-contracts/KS-2026-0151.txt",
-   "sha256": "8db6181cb828be26e8e7758e58e2595bd85df5d39cd4f461073259f93eaf1591"
+   "sha256": "064e60c61609584364433ad7888260ff02cebd88b9d00c6bef7796f8d31dde11"
   },
   {
    "id": "KS-2026-0152",
@@ -1367,7 +1367,7 @@
    "first": "2026-10-28",
    "last": "2026-10-28",
    "file": "data/kintsugi-contracts/KS-2026-0152.txt",
-   "sha256": "5c4c7a13be48c336a16cb5b02f158b605edccc241225d2c69873011f6f9955f0"
+   "sha256": "f06c7ede9e2f709a5adaa690429a62f9222ab74a0ae1b28516fa30248fef5559"
   },
   {
    "id": "KS-2026-0153",
@@ -1376,7 +1376,7 @@
    "first": "2026-10-03",
    "last": "2026-10-30",
    "file": "data/kintsugi-contracts/KS-2026-0153.txt",
-   "sha256": "fe8f043451528195c500bf7837585dbe19dee541f853b5774ca9135cc1005860"
+   "sha256": "443788040a4478c67e7fcf288f4ee6dff2ffe2c2037ce89ee5144a50c6a21346"
   }
  ]
 }
