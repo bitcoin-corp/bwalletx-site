@@ -27,6 +27,7 @@ GAP_H = 2.0          # a gap longer than this starts a new session
 PAD_H = 0.5          # each session gets this added (work before the first commit)
 DAY_H = 7.5
 CAP_H_DAY = 18  # owner 30 Oct: the founder's own log counts at most 18 hours a day since the start
+CLIENT_H = 25  # owner 30 Oct: clients pay $25/h; $20 to the developer, $5 (20% of the client price) to Kintsugi
 USD_H = 20   # Kintsugi rate: $20 per hour, paid in BSV at the BSV/USD rate on payment day
 PRICE = {}   # filled once per build: {'usd': float, 'date': 'D Mon YYYY'}
 
@@ -347,7 +348,7 @@ def offer(o, n):
             <dt>Task</dt><dd>{task}</dd>
             <dt>Depends on</dt><dd>{dep}</dd>
             <dt>Estimate</dt><dd class="tn">{h} h (fixed)</dd>
-            <dt>Price</dt><dd class="tn"><span class="gold">{money(h)}</span> ({h} h × $20), paid in BSV at the BSV/USD rate on the day of payment · {bsv(h)} at ${PRICE["usd"]:,.2f}/BSV</dd>
+            <dt>Price</dt><dd class="tn">Client pays <b>${h*CLIENT_H:,.0f}</b> ({h} h × ${CLIENT_H}): <span class="gold">{money(h)}</span> to the developer ({h} h × $20, {bsv(h)} at ${PRICE["usd"]:,.2f}/BSV) and ${h*(CLIENT_H-USD_H):,.0f} to Kintsugi as its fee. Paid in BSV at the BSV/USD rate on the day of payment, both from the client's wallet in one transaction.</dd>
             <dt>Status</dt><dd>Not open yet</dd>
           </dl>
           {terms_html(done=done)}
@@ -368,7 +369,7 @@ def contract(it, n):
             <dt>Review</dt><dd>Kintsugi, run by {CLIENT}</dd>
             <dt>Task</dt><dd>{task}<span class="sub">{E(it["desc"])}</span></dd>
             <dt>Estimate</dt><dd class="tn">{hrs(h)} (wall-clock)</dd>
-            <dt>Price</dt><dd class="tn"><span class="gold">{money(h)}</span> ({hrs(h)} × $20), paid in BSV at the BSV/USD rate on the day of payment · {bsv(h)} at ${PRICE["usd"]:,.2f}/BSV</dd>
+            <dt>Price</dt><dd class="tn">Client pays <b>${h*CLIENT_H:,.0f}</b> ({h:.1f} h × ${CLIENT_H}): <span class="gold">{money(h)}</span> to the developer ({h:.1f} h × $20, {bsv(h)} at ${PRICE["usd"]:,.2f}/BSV) and ${h*(CLIENT_H-USD_H):,.0f} to Kintsugi as its fee. Paid in BSV at the BSV/USD rate on the day of payment, both from the client's wallet in one transaction.</dd>
             <dt>Estimated value of work</dt><dd class="tn"><span class="val">{money(t["value_hours"])}</span></dd>
             <dt>Started</dt><dd class="tn">{fdate(t["first"])}</dd>
             <dt>Delivered</dt><dd class="tn">{fdate(t["last"])}</dd>
