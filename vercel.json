@@ -729,6 +729,16 @@
       "source": "/advertising",
       "destination": "/bads",
       "permanent": true
+    },
+    {
+      "source": "/recover",
+      "destination": "/restore",
+      "permanent": true
+    },
+    {
+      "source": "/recovery",
+      "destination": "/restore",
+      "permanent": true
     }
   ],
   "headers": [

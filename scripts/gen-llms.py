@@ -53,7 +53,7 @@ def allowed(rel):
     parts = rel.split('/')
     if set(parts[:-1]) & BAD_DIRS or any(x.startswith('walkthrough-') for x in parts) or '-template' in rel or rel in DUPES or os.path.basename(rel) in SKIP: return False
     if rel.endswith('.html'):
-        return '/' not in rel or fnmatch.fnmatch(rel, 'blog/*.html') or rel in SUBPAGES
+        return '/' not in rel or fnmatch.fnmatch(rel, 'blog/*.html') or fnmatch.fnmatch(rel, 'restore/*.html') or rel in SUBPAGES
     return False
 pages = []
 for rel in sorted(r for r in tracked if allowed(r)):
@@ -65,7 +65,7 @@ for rel in sorted(r for r in tracked if allowed(r)):
 DOCS = [r for r in tracked if r.endswith('.md') and '/' not in r and r not in ('README.md', 'CLAUDE.md', 'AGENTS.md')]
 
 SECTIONS = {
-    'Product': ['index', 'get', 'android', 'iphone', 'extension', 'features', 'video', 'testers', 'buy', 'restore', 'restore-simplycash', 'history', 'push-notifications', 'web'],
+    'Product': ['index', 'get', 'android', 'iphone', 'extension', 'features', 'video', 'testers', 'buy', 'restore', 'restore/simplycash', 'restore/relayx', 'restore/twetch', 'restore/yours', 'restore/panda', 'restore/moneybutton', 'history', 'push-notifications', 'web'],
     'Wallet features': ['exchange', 'exchange/strategies', 'mint', 'pnees', 'pots', 'subscriptions', 'lock', 'lock/verify', 'token-locking', 'launchpad', 'identity', 'identity-map', 'handles', 'bavatars', 'themes', 'swap', 'sign', 'games'],
     'Social': ['social', 'b-socials', 'chat', 'bmail', 'friends', 'lounge', 'live', 'airdrops', 'gmail', 'x'],
     'Agents & developers': ['agent', 'b-bots', 'hold-to-talk', 'agents', 'strategies', 'strategies/spec', 'developers', 'connect', 'sign-in-button', 'cli', 'mcp', 'apps/add', 'open-source', 'partners'],
