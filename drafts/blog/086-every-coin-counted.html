@@ -1,0 +1,134 @@
+<!doctype html>
+<!-- DRAFT 086 for owner review (30 Oct 2026). Source: Superseded drafts ea135237 (11 Oct), f38e4bab (14 Oct), e12f9f12 (15 Oct), 840985b8 (19 Oct), 4ca670ef (23 Oct), 0e5f79df (25 Oct); releases 5.2.20, 5.2.23, 5.2.36, 5.2.40, 5.2.44. Not linked from /blog yet; needs og/og-blog-086-every-coin-counted.png before publishing. -->
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>086 Every coin, counted · bWalletX blog</title>
+    <meta name="description" content="Your balance is always the whole picture. bWalletX checks the chain and your own backups, so everything you own shows up, automatically, on every device." />
+    <link rel="canonical" href="https://bwalletx.com/blog/086-every-coin-counted" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://bwalletx.com/blog/086-every-coin-counted" />
+    <meta property="og:site_name" content="bWalletX" />
+    <meta property="og:title" content="Every coin, counted" />
+    <meta property="og:description" content="Your balance is always the whole picture. bWalletX checks the chain and your own backups, so everything you own shows up, automatically, on every device." />
+    <meta property="og:image" content="https://bwalletx.com/og/og-blog-086-every-coin-counted.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@bWalletX" />
+    <meta name="twitter:title" content="Every coin, counted" />
+    <meta name="twitter:description" content="Your balance is always the whole picture. bWalletX checks the chain and your own backups, so everything you own shows up, automatically, on every device." />
+    <meta name="twitter:image" content="https://bwalletx.com/og/og-blog-086-every-coin-counted.png" />
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="stylesheet" href="/styles.css" />
+    <style>
+      .ext { max-width: 760px; margin: 0 auto; padding: 120px 20px 80px; }
+      .ext h1 { font-size: clamp(2rem, 6vw, 3rem); margin: 10px 0 10px; line-height: 1.15; }
+      .ext h2 { margin: 44px 0 10px; font-size: 1.4rem; }
+      .ext p, .ext li { line-height: 1.7; }
+      .ext code { background: #17191e; padding: 2px 7px; border-radius: 6px; overflow-wrap: anywhere; }
+      .ext a { overflow-wrap: anywhere; }
+      .meta { color: #8a8a86; font-size: 0.9rem; margin: 0; }
+      .num { color: #F5B800; font-weight: 700; letter-spacing: .04em; }
+      .box { background: #101114; border: 1px solid #ffffff12; border-radius: 16px; padding: 18px 22px; margin: 28px 0; }
+      .box h2 { margin: 0 0 8px; font-size: 1.1rem; }
+      .box ul { margin: 0; padding-left: 1.2em; }
+      .related { color: #a7adb8; }
+      .pn { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; margin-top: 40px; border-top: 1px solid #ffffff14; padding-top: 20px; }
+      .pn a { color: #F5B800; text-decoration: none; max-width: 100%; }
+      .posts { list-style: none; padding: 0; margin: 28px 0; }
+      .posts li { background: #101114; border: 1px solid #ffffff12; border-radius: 16px; padding: 16px 20px; margin: 12px 0; }
+      .posts a { color: #fff; text-decoration: none; font-weight: 700; font-size: 1.1rem; }
+      .posts a:hover { color: #F5B800; }
+      .posts p { margin: 4px 0 0; color: #a7adb8; line-height: 1.55; }
+      .ext .small { color: #8a8a86; font-size: 0.85rem; }
+      .box ul.chk { list-style: none; padding-left: 0; }
+      .box ul.chk li { margin: 6px 0; }
+      .ext pre { background: #101114; border: 1px solid #ffffff12; border-radius: 12px; padding: 14px 16px; overflow-x: auto; font-size: 0.85rem; }
+      .ext pre code { background: none; padding: 0; overflow-wrap: normal; }
+          .hold { background: #2a1f00; border: 2px dashed #F5B800; border-radius: 16px; padding: 16px 20px; margin: 0 0 28px; }
+      .hold h2 { margin: 0 0 8px; font-size: 1.05rem; color: #F5B800; }
+    </style>
+    <!-- ld:start -->
+    <script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "BlogPosting",
+   "headline": "Every coin, counted",
+   "description": "Your balance is always the whole picture. bWalletX checks the chain and your own backups, so everything you own shows up, automatically, on every device.",
+   "url": "https://bwalletx.com/blog/086-every-coin-counted",
+   "mainEntityOfPage": "https://bwalletx.com/blog/086-every-coin-counted",
+   "image": "https://bwalletx.com/og/og-blog-086-every-coin-counted.png",
+   "inLanguage": "en",
+   "author": {
+    "@type": "Organization",
+    "name": "The Bitcoin Corporation Ltd",
+    "url": "https://bwalletx.com/"
+   },
+   "publisher": {
+    "@type": "Organization",
+    "name": "The Bitcoin Corporation Ltd",
+    "logo": {
+     "@type": "ImageObject",
+     "url": "https://bwalletx.com/icon-512.png"
+    }
+   },
+   "datePublished": "2026-10-30"
+  }
+ ]
+}
+    </script>
+    <!-- ld:end -->
+  </head>
+  <body>
+    <div class="beta-banner">bWalletX is in <strong>beta</strong>: test with small amounts.</div>
+    <header class="topbar">
+      <div class="wrap topbar-in">
+        <a class="brand" href="/"><img src="/logo.svg" alt="" width="34" height="30" /><span>bWallet<span class="gold">X</span></span></a>
+        <nav aria-label="Pages">
+          <a href="/features">Features</a><a href="/exchange">Exchange</a><a href="/social">Social</a><a href="/agent">Agents</a><a href="/extension">Extension</a><a href="/developers">Developers</a>
+        </nav>
+        <span class="nav-cta"><a class="dl-btn" href="/get">Download</a><a class="web-btn" href="https://web.bwalletx.com" target="_blank" rel="noopener">Web &rarr;</a></span>
+      </div>
+    </header>
+    <script src="/nav.js"></script>
+    <main class="ext">
+      <!-- REMOVE THIS BOX BEFORE PUBLISHING -->
+      <div class="hold">
+        <h2>HOLD UNTIL LIVE (owner review draft, not for publishing yet)</h2>
+        <p class="small">Publish only when every item below is true in a released build. Then delete this box.</p>
+        <ul class="chk"><li>&#9723; The wallet button is renamed to <b>Rescan the chain</b> (subtitle &ldquo;Make sure your balance includes everything you own&rdquo;) in a released build</li></ul>
+      </div>
+      <p class="meta"><a href="/blog">Development blog</a> · <span class="num">086</span> · 30 Oct 2026</p>
+      <h1>Every coin, counted</h1>
+      <p class="lede">Your balance is always the whole picture. bWalletX checks the chain and your own backups, so everything you own shows up, automatically, on every device you use.</p>
+
+      <h2>Checked against the chain</h2>
+      <p>When you unlock, bWalletX quietly compares what it shows with what the chain says, and keeps checking while you use it. Coins you spent from another device drop off; coins that arrived show up. Payments to your <code>$name</code> appear within seconds.</p>
+      <h2>Your backups, read too</h2>
+      <p>Your encrypted backups are part of the picture. On a new phone, bWalletX reads your backup before it goes live, so your history and every payment to your <code>$name</code> come with you. <b>Rescan the chain</b> in Settings &rsaquo; Storage makes sure your balance includes everything you own: it reads the chain and every backup the wallet holds, with one tap.</p>
+      <h2>One green button</h2>
+      <p>Want a fresh look? <b>REFRESH WALLET</b> at the bottom of Home syncs, re-checks every coin and shows a checklist as it goes. It never sends anything.</p>
+      <h2>Any payment, by its ID</h2>
+      <p>Know a payment happened? Paste its transaction ID in Settings &rsaquo; Troubleshooting and it&rsquo;s added to your wallet. Every row in History has <b>Copy ID</b>.</p>
+      <h2>Sends that just go</h2>
+      <p>Use the same wallet on your phone and your laptop and sends still go first time: the wallet uses only coins the chain confirms are yours, and finishes every payment it starts.</p>
+
+      <div class="box">
+        <h2>Live today, 30 Oct 2026</h2>
+        <ul class="chk">
+          <li>&check; Balance checked against the chain on unlock and while open (5.2.36, 5.2.45)</li>
+          <li>&check; Backups read on restore; paymail payments come back (5.2.20)</li>
+          <li>&check; Rescan the chain and REFRESH WALLET (5.2.44)</li>
+          <li>&check; Add a payment by transaction ID; Copy ID in History (5.2.23)</li>
+          <li>&check; Sends across devices go first time (5.2.40)</li>
+        </ul>
+      </div>
+      <p class="related"><b>Part of:</b> <a href="/blog#money">Your wallet &amp; money</a> · Related: <a href="/blog/087-history-and-statements">087 Your money, in plain words</a> · <a href="/blog/088-a-card-for-every-balance">088 A card for every balance, and an address book</a></p>
+      <div class="pn"><a href="/blog/085-bring-your-history-with-you">&larr; 085 Bring your history with you</a><a href="/blog">All posts &rarr;</a></div>
+    </main>
+  </body>
+</html>
