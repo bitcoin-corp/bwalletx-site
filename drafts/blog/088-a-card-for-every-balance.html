@@ -1,0 +1,127 @@
+<!doctype html>
+<!-- DRAFT 088 for owner review (30 Oct 2026). Source: Superseded drafts e12f9f12 (15 Oct), 08b427fb (16 Oct); releases 5.2.23, 5.2.24, 5.2.25, 5.2.27. Not linked from /blog yet; needs og/og-blog-088-a-card-for-every-balance.png before publishing. -->
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>088 A card for every balance, and an address book · bWalletX blog</title>
+    <meta name="description" content="Swipe the wallet card to see each real balance on its own card. Your contacts live in an address book, and Send now asks who first, then how much, with checks on the person before money moves." />
+    <link rel="canonical" href="https://bwalletx.com/blog/088-a-card-for-every-balance" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://bwalletx.com/blog/088-a-card-for-every-balance" />
+    <meta property="og:site_name" content="bWalletX" />
+    <meta property="og:title" content="A card for every balance, and an address book" />
+    <meta property="og:description" content="Swipe the wallet card to see each real balance on its own card. Your contacts live in an address book, and Send now asks who first, then how much, with checks on the person before money moves." />
+    <meta property="og:image" content="https://bwalletx.com/og/og-blog-088-a-card-for-every-balance.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@bWalletX" />
+    <meta name="twitter:title" content="A card for every balance, and an address book" />
+    <meta name="twitter:description" content="Swipe the wallet card to see each real balance on its own card. Your contacts live in an address book, and Send now asks who first, then how much, with checks on the person before money moves." />
+    <meta name="twitter:image" content="https://bwalletx.com/og/og-blog-088-a-card-for-every-balance.png" />
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="stylesheet" href="/styles.css" />
+    <style>
+      .ext { max-width: 760px; margin: 0 auto; padding: 120px 20px 80px; }
+      .ext h1 { font-size: clamp(2rem, 6vw, 3rem); margin: 10px 0 10px; line-height: 1.15; }
+      .ext h2 { margin: 44px 0 10px; font-size: 1.4rem; }
+      .ext p, .ext li { line-height: 1.7; }
+      .ext code { background: #17191e; padding: 2px 7px; border-radius: 6px; overflow-wrap: anywhere; }
+      .ext a { overflow-wrap: anywhere; }
+      .meta { color: #8a8a86; font-size: 0.9rem; margin: 0; }
+      .num { color: #F5B800; font-weight: 700; letter-spacing: .04em; }
+      .box { background: #101114; border: 1px solid #ffffff12; border-radius: 16px; padding: 18px 22px; margin: 28px 0; }
+      .box h2 { margin: 0 0 8px; font-size: 1.1rem; }
+      .box ul { margin: 0; padding-left: 1.2em; }
+      .related { color: #a7adb8; }
+      .pn { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; margin-top: 40px; border-top: 1px solid #ffffff14; padding-top: 20px; }
+      .pn a { color: #F5B800; text-decoration: none; max-width: 100%; }
+      .posts { list-style: none; padding: 0; margin: 28px 0; }
+      .posts li { background: #101114; border: 1px solid #ffffff12; border-radius: 16px; padding: 16px 20px; margin: 12px 0; }
+      .posts a { color: #fff; text-decoration: none; font-weight: 700; font-size: 1.1rem; }
+      .posts a:hover { color: #F5B800; }
+      .posts p { margin: 4px 0 0; color: #a7adb8; line-height: 1.55; }
+      .ext .small { color: #8a8a86; font-size: 0.85rem; }
+      .box ul.chk { list-style: none; padding-left: 0; }
+      .box ul.chk li { margin: 6px 0; }
+      .ext pre { background: #101114; border: 1px solid #ffffff12; border-radius: 12px; padding: 14px 16px; overflow-x: auto; font-size: 0.85rem; }
+      .ext pre code { background: none; padding: 0; overflow-wrap: normal; }
+          .hold { background: #2a1f00; border: 2px dashed #F5B800; border-radius: 16px; padding: 16px 20px; margin: 0 0 28px; }
+      .hold h2 { margin: 0 0 8px; font-size: 1.05rem; color: #F5B800; }
+    </style>
+    <!-- ld:start -->
+    <script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "BlogPosting",
+   "headline": "A card for every balance, and an address book",
+   "description": "Swipe the wallet card to see each real balance on its own card. Your contacts live in an address book, and Send now asks who first, then how much, with checks on the person before money moves.",
+   "url": "https://bwalletx.com/blog/088-a-card-for-every-balance",
+   "mainEntityOfPage": "https://bwalletx.com/blog/088-a-card-for-every-balance",
+   "image": "https://bwalletx.com/og/og-blog-088-a-card-for-every-balance.png",
+   "inLanguage": "en",
+   "author": {
+    "@type": "Organization",
+    "name": "The Bitcoin Corporation Ltd",
+    "url": "https://bwalletx.com/"
+   },
+   "publisher": {
+    "@type": "Organization",
+    "name": "The Bitcoin Corporation Ltd",
+    "logo": {
+     "@type": "ImageObject",
+     "url": "https://bwalletx.com/icon-512.png"
+    }
+   },
+   "datePublished": "2026-10-30"
+  }
+ ]
+}
+    </script>
+    <!-- ld:end -->
+  </head>
+  <body>
+    <div class="beta-banner">bWalletX is in <strong>beta</strong>: test with small amounts.</div>
+    <header class="topbar">
+      <div class="wrap topbar-in">
+        <a class="brand" href="/"><img src="/logo.svg" alt="" width="34" height="30" /><span>bWallet<span class="gold">X</span></span></a>
+        <nav aria-label="Pages">
+          <a href="/features">Features</a><a href="/exchange">Exchange</a><a href="/social">Social</a><a href="/agent">Agents</a><a href="/extension">Extension</a><a href="/developers">Developers</a>
+        </nav>
+        <span class="nav-cta"><a class="dl-btn" href="/get">Download</a><a class="web-btn" href="https://web.bwalletx.com" target="_blank" rel="noopener">Web &rarr;</a></span>
+      </div>
+    </header>
+    <script src="/nav.js"></script>
+    <main class="ext">
+      <p class="meta"><a href="/blog">Development blog</a> · <span class="num">088</span> · 30 Oct 2026</p>
+      <h1>A card for every balance, and an address book</h1>
+      <p class="lede">Swipe the wallet card to see each real balance on a card of its own. Your contacts live in an address book. Send asks who first, then how much, and checks who you&rsquo;re paying before any money moves.</p>
+
+      <h2>Swipe through your money</h2>
+      <p>The wallet card swipes to Tokens, bTickets, bShares, bCredits, MNEE, PNEEs and Top up, each with its real balance. No sample numbers. Swiping to a card filters the list under it, and each card turns over to explain what it holds. Press and hold for <b>All cards</b>.</p>
+      <h2>An address book</h2>
+      <p>Your contacts sit in an address book. A contact&rsquo;s card shows only what they&rsquo;ve published or can prove, plus private notes that stay on your device. You can import and export contacts. New people show by their name, never as &ldquo;Anonymous&rdquo;.</p>
+      <h2>Who, then how much</h2>
+      <p>Send opens on <b>Who are you paying?</b> with Paste, Scan and Contacts, and shows the real name and paymail of the person you picked. Then you choose the amount.</p>
+      <p>Before you confirm, a paymail payment shows the person&rsquo;s name, bAvatar and key fingerprint. The first time you pay someone, it says so.</p>
+      <h2>A black screen, fixed</h2>
+      <p>For a few days some people saw a black screen after unlocking. We fixed the cause, and if a screen ever fails to draw, you now get a safety screen with Reload instead of a blank page.</p>
+
+      <div class="box">
+        <h2>Live today, 30 Oct 2026</h2>
+        <ul class="chk">
+          <li>&check; Balance cards with real balances and All cards (5.2.23, 5.2.24)</li>
+          <li>&check; Address book with import and export (5.2.25)</li>
+          <li>&check; Send: who first, then how much (5.2.27)</li>
+          <li>&check; Payee name, bAvatar and fingerprint before you confirm</li>
+          <li>&check; Safety screen instead of a blank page (5.2.25)</li>
+        </ul>
+      </div>
+      <p class="related">Related: <a href="/blog/058-signed-names">Signed names</a> · <a href="/releases">Releases</a></p>
+      <div class="pn"><a href="/blog/087-history-and-statements">&larr; 087 History and statements</a><a href="/blog">All posts &rarr;</a></div>
+    </main>
+  </body>
+</html>
