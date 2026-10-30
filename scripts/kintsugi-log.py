@@ -318,6 +318,7 @@ def terms_html(founder=False, done='the change is live on the stated page'):
             <li>Done means: the pull request is merged into the agreed repo, {done}, and the security tool results are attached.</li>
             <li>Security tools: Shannon for any change that touches sign-in, payments, keys or signing; Semgrep, gitleaks, pnpm audit and OSV-Scanner, CodeQL, OWASP ZAP (baseline scan) and Claude Code /security-review. Tool and AI usage costs are the developer's and are not billable hours.</li>
             <li>Kintsugi checks the spec, holds the payment, reviews the work and releases the pay to the developer's $handle in bWalletX when the work is accepted.</li>
+            <li>Disputes: if the client and developer disagree about whether the work is done, Kintsugi reviews it and decides.</li>
             <li>Delivered work belongs to the client once it is paid for.</li>
             <li>Code under the Open BSV licence; specs and docs CC BY 4.0.</li>
             <li>All three parties sign the same contract in bChatX before work starts.</li>
