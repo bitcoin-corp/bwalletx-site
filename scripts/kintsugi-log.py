@@ -25,8 +25,8 @@ DAYS = 31
 GAP_H = 2.0          # a gap longer than this starts a new session
 PAD_H = 0.5          # each session gets this added (work before the first commit)
 DAY_H = 7.5
-USD_H = 20   # Kintsugi rate: $20 or 1 BSV per hour, payer's choice; max 24 BSV per day
-BSV_H = 1
+USD_H = 20   # Kintsugi rate: $20 per hour, paid in BSV at the BSV/USD rate on payment day
+PRICE = {}   # filled once per build: {'usd': float, 'date': 'D Mon YYYY'}
 
 # (label shown publicly, local directory under PROJ, ref). The site repo is ROOT itself.
 REPOS = [
@@ -253,14 +253,21 @@ def gather():
     for h in (json.load(open(held)) if os.path.exists(held) else []):
         open_work.append(dict(kind='post', url=None, title=h['title'], what='Blog post written, held back until the feature it describes is in a release build'))
     return dict(generated=datetime.datetime.now().strftime('%-d %b %Y'), since=since, days=DAYS, gap_h=GAP_H, pad_h=PAD_H,
-                usd_h=USD_H, bsv_h=BSV_H, repos=repo_stats, items=out_items, open=open_work)
+                usd_h=USD_H, price=fetch_price(), repos=repo_stats, items=out_items, open=open_work)
 
 
 E = html.escape
 
 
 def money(h): return '${:,.0f}'.format(h * USD_H)
-def bsv(h): return '{:,.1f} BSV'.format(h * BSV_H) if h < 100 else '{:,.0f} BSV'.format(h * BSV_H)
+def bsv(h):
+    v = h * USD_H / PRICE['usd']
+    return '~{:,.2f} BSV'.format(v) if v < 10 else '~{:,.1f} BSV'.format(v) if v < 100 else '~{:,.0f} BSV'.format(v)
+
+
+def fetch_price():
+    raw = sh(['curl', '-s', '--max-time', '20', 'https://api.whatsonchain.com/v1/bsv/main/exchangerate'])
+    return dict(usd=round(float(json.loads(raw)['rate']), 2), date=datetime.date.today().strftime('%-d %b %Y'))
 def hrs(h): return ('{:.1f}'.format(h) if h < 10 else '{:,.0f}'.format(h)) + ' h'
 
 
@@ -286,7 +293,7 @@ def render(d):
             rows += (f'<tr><td class="it">{name}{f"<span class=pl>Posts: {pl}</span>" if pl else ""}</td><td>{chips}</td>'
                      f'<td class="n">{hrs(t["hours"])}<span class="sub">{t["sessions"]} session{"s" if t["sessions"] != 1 else ""} · '
                      f'{t["elapsed_days"]} day{"s" if t["elapsed_days"] != 1 else ""} elapsed</span><span class="sub">{pr}</span></td>'
-                     f'<td class="n c">{money(t["hours"])}<span class="sub">or {bsv(t["hours"])}</span><span class="sub">estimate</span></td></tr>')
+                     f'<td class="n c">{money(t["hours"])}<span class="sub">{bsv(t["hours"])}</span><span class="sub">estimate</span></td></tr>')
         sid = re.sub(r'[^a-z]+', '-', tp.lower()).strip('-')
         toc.append(f'<a href="#{sid}">{E(tp)}</a>')
         sections += (f'<section id="{sid}"><div class="sh"><h2>{E(tp)}</h2><p class="st"><span>{len(g)} item{"s" if len(g) != 1 else ""}</span>'
@@ -301,9 +308,9 @@ def render(d):
       <div class="totals">
         <div class="tot"><b class="tn">{len(d["items"])}</b><span>items shipped</span></div>
         <div class="tot"><b class="tn">{tot_h:,.0f} h</b><span>active time (estimate)</span></div>
-        <div class="tot big"><b class="tn">{money(tot_h)}</b><span>or {bsv(tot_h)}: estimate at the Kintsugi rate ($20 or 1 BSV per hour)</span></div>
+        <div class="tot big"><b class="tn">{money(tot_h)}</b><span>estimate at the Kintsugi rate ($20 per hour, paid in BSV), about {bsv(tot_h)[1:]} at ${PRICE["usd"]:,.2f}/BSV on {E(PRICE["date"])}</span></div>
       </div>
-      <p class="how"><strong>How Kintsugi works.</strong> Work is written up as tasks that an AI-assisted coder can pick up with Cursor, GitHub and a Claude account. The rate is $20 or 1 BSV per hour, whichever the payer chooses, up to 24 BSV a day.</p>
+      <p class="how"><strong>How Kintsugi works.</strong> Work is written up as tasks that an AI-assisted coder can pick up with Cursor, GitHub and a Claude account. The rate is $20 per hour, paid in BSV at the BSV/USD rate on the day of payment.</p>
       <p class="warn">Every figure here is an estimate, derived from git timestamps. It is not an invoice, a valuation or a claim.</p>
       <nav class="toc" aria-label="Topics">{"".join(toc)}<a href="#open-work">Open work</a><a href="#method">Method</a></nav>
       {sections}
@@ -313,7 +320,7 @@ def render(d):
           <li><strong>Items.</strong> Every public page on bwalletx.com that is in the sitemap. Internal company matters are left out on purpose.</li>
           <li><strong>Commits.</strong> The last {d["days"]} days of commits from: {repos}. A site commit counts towards the pages and share images it touched. An app commit counts towards a page when a file path names that feature (for example a <code>pots</code> folder counts towards Pots). A commit that touches several items is split evenly between them. App commits that match no page go into "shared code". Commit messages are never published.</li>
           <li><strong>Time taken.</strong> Commits are grouped into sessions: a gap of more than {d["gap_h"]:g} hours starts a new one. Each session counts as last commit minus first commit, plus {d["pad_h"] * 60:.0f} minutes for the work before the first commit. Elapsed days and PR open-to-merge times are shown for context only.</li>
-          <li><strong>Cost.</strong> Hours × the Kintsugi rate: $20 an hour, or 1 BSV an hour, whichever the payer chooses, with a maximum of 24 BSV a day. This is what the same output would cost an AI-assisted coder on Kintsugi, not what it cost us.</li>
+          <li><strong>Cost.</strong> Hours × the Kintsugi rate of $20 an hour, paid in BSV at the BSV/USD rate on the day of payment. BSV figures are approximate, converted at ${PRICE["usd"]:,.2f} per BSV, the price fetched once from WhatsOnChain on {E(PRICE["date"])}. This is what the same output would cost an AI-assisted coder on Kintsugi, not what it cost us.</li>
           <li><strong>Limits.</strong> Commit gaps miss design and thinking time, and quick AI-assisted bursts look short. Treat each figure as a rough range.</li>
         </ol>
         <p class="gen">Generated {E(d["generated"])} by <code>scripts/kintsugi-log.py</code>.</p>
@@ -412,11 +419,14 @@ def page(d):
 if __name__ == '__main__':
     if '--render' in sys.argv:
         d = json.load(open(DATA))
+        if 'price' not in d:
+            d['price'] = fetch_price(); json.dump(d, open(DATA, 'w'), indent=1)
     else:
         d = gather()
         os.makedirs(os.path.dirname(DATA), exist_ok=True)
         json.dump(d, open(DATA, 'w'), indent=1)
     os.makedirs(os.path.join(ROOT, 'kintsugi'), exist_ok=True)
+    PRICE.update(d['price'])
     open(os.path.join(ROOT, 'kintsugi', 'work.html'), 'w').write(page(d))
     th = sum(i['time']['hours'] for i in d['items'])
     print(f"items={len(d['items'])} hours={th:.0f} cost={money(th)} / {bsv(th)} open={len(d['open'])}")

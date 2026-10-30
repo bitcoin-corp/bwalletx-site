@@ -3962,5 +3962,9 @@
    "title": "Sign in with your face or fingerprint",
    "what": "Blog post written, held back until the feature it describes is in a release build"
   }
- ]
+ ],
+ "price": {
+  "usd": 17.07,
+  "date": "30 Oct 2026"
+ }
 }
