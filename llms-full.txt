@@ -5789,6 +5789,45 @@ bWalletX is in beta: test with small amounts. [support@bwalletx.com](mailto:supp
 
 ---
 
+Source: https://bwalletx.com/kintsugi
+
+Kintsugi (金継ぎ): mending broken pottery with gold, so the repair shows.
+
+# Kintsugi: get paid in BSV to build apps
+
+A program for developers who build with Claude. Verify your ID, show your setup, pass one entry task, and take paid work on bWalletX, bChatX and the bApps.
+
+[Join the program](https://bwalletx.com/kintsugi/program)
+[Work done so far](https://bwalletx.com/kintsugi/work)
+
+### [The program](https://bwalletx.com/kintsugi/program)
+
+Who it is for, the four steps, how work arrives, the pay, and the application form.
+
+### [Work done so far](https://bwalletx.com/kintsugi/work)
+
+Every task delivered through Kintsugi, with time, cost and links.
+
+## Work done so far
+
+Since the project began on 3 Oct 2026: 153 pages and features, about 1,376 hours of work, valued at $20 an hour.
+
+DeveloperJobsHoursValue of work at the Kintsugi rate
+
+b0ase · with Claude1531,376≈ $27,526 · ≈ 1,618 BSV at today's price
+
+Running total1531,376≈ $27,526 · ≈ 1,618 BSV
+
+Estimate from git history; not an invoice or payment. BSV at $17.01 per BSV on 30 Oct 2026. Updated 30 Oct 2026.
+
+[See every job →](https://bwalletx.com/kintsugi/work)
+
+## Open source
+
+The Kintsugi code (task templates, review tools, bounty sync) is open source under the Open BSV licence: [github.com/b0ase/kintsugi](https://github.com/b0ase/kintsugi). Specs and docs are CC BY 4.0.
+
+---
+
 Source: https://bwalletx.com/migrate
 
 Move to bWalletX

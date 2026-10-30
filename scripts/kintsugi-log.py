@@ -452,7 +452,8 @@ def inject(d):
     if '<!-- kintsugi-work:start -->' in s:
         s = re.sub(r'<!-- kintsugi-work:start -->.*?<!-- kintsugi-work:end -->', lambda m: block, s, flags=re.S)
     else:
-        s = s.replace('<hr class="seam" />', '<hr class="seam" />\n      ' + block, 1)
+        anchor = '<h2>Open source</h2>' if '<h2>Open source</h2>' in s else '</main>'
+        s = s.replace(anchor, block + '\n\n      ' + anchor, 1)
     open(p, 'w').write(s)
 
 
