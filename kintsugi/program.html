@@ -50,7 +50,7 @@
       .ext form { display: grid; gap: 14px; margin-top: 14px; }
       .ext label { display: grid; gap: 6px; font-weight: 600; }
       .ext label.chk { display: flex; gap: 10px; align-items: flex-start; font-weight: 400; }
-      .ext input[type=text], .ext input[type=email], .ext textarea { font: inherit; padding: 12px 14px; border-radius: 12px; border: 1px solid #ffffff24; background: #101114; color: #fff; width: 100%; box-sizing: border-box; }
+      .ext input[type=text], .ext input[type=email], .ext input[type=url], .ext textarea { font: inherit; padding: 12px 14px; border-radius: 12px; border: 1px solid #ffffff24; background: #101114; color: #fff; width: 100%; box-sizing: border-box; }
       .ext .hp { position: absolute; left: -9999px; }
       .ext .small { color: #8a8a86; font-size: .85rem; }
     </style>
@@ -71,7 +71,8 @@
       <p class="meta">Kintsugi (金継ぎ): mending broken pottery with gold, so the repair shows.</p>
       <h1><b>Kintsugi</b> program</h1>
       <p class="meta"><a href="/kintsugi">Overview</a> · <a href="/kintsugi/work">Work done so far</a></p>
-      <p style="font-size:1.15rem">A program for developers who build with Claude. Verify your ID, show your setup, pass one entry task, and take paid work on bWalletX, bChatX and the bApps.</p>
+      <p style="font-size:1.15rem"><b>Get paid in BSV to build and grow bWalletX and its apps.</b> Kintsugi is how we fix and build our own products: bWalletX, bChatX and the b*X apps. Verify your ID, show your setup, pass one entry task, and take paid work.</p>
+      <p class="small">Kintsugi jobs also appear in bJobs. For other BSV-paid work, see <a href="https://bjobsx.com" target="_blank" rel="noopener">bJobsX.com</a>.</p>
       <div class="cta">
         <a class="btn" href="#apply">Apply</a>
         <a class="btn alt" href="/bounties">See paid bounties</a>
@@ -79,7 +80,7 @@
       <hr class="seam" />
 
       <h2>Who it is for</h2>
-      <p>Developers who already work AI-first with Claude Code and want steady, small, well-defined jobs paid in Bitcoin. You choose which tasks to take and when to work.</p>
+      <p>People who already work AI-first with Claude Code and want steady, small, well-defined jobs paid in Bitcoin: development, design, marketing, writing, testing. You choose which tasks to take and when to work.</p>
 
       <h2>How work arrives</h2>
       <div class="grid">
@@ -129,6 +130,16 @@
         <label>Email <input type="email" name="email" required maxlength="200" autocomplete="email" /></label>
         <label>GitHub username <input type="text" name="github" required maxlength="39" pattern="[A-Za-z0-9-]+" /></label>
         <label>bWalletX $name <span class="small">(optional)</span> <input type="text" name="handle" maxlength="64" placeholder="$yourname" /></label>
+        <label>LinkedIn profile <span class="small">(optional)</span> <input type="url" name="linkedin" maxlength="200" placeholder="https://www.linkedin.com/in/..." /></label>
+        <label>X handle <span class="small">(optional)</span> <input type="text" name="x" maxlength="16" pattern="@?[A-Za-z0-9_]{1,15}" placeholder="@yourhandle" /></label>
+        <fieldset style="border:0;padding:0;margin:0"><legend style="font-weight:600;margin-bottom:6px">What kind of work?</legend>
+          <label class="chk"><input type="checkbox" name="kinds" value="development" /> Development</label>
+          <label class="chk"><input type="checkbox" name="kinds" value="design" /> Design</label>
+          <label class="chk"><input type="checkbox" name="kinds" value="marketing" /> Marketing</label>
+          <label class="chk"><input type="checkbox" name="kinds" value="writing" /> Writing and content</label>
+          <label class="chk"><input type="checkbox" name="kinds" value="testing" /> Testing and QA</label>
+          <label class="chk"><input type="checkbox" name="kinds" value="other" /> Other</label>
+        </fieldset>
         <label>What would you like to build? <textarea name="build" rows="3" maxlength="600"></textarea></label>
         <label class="chk"><input type="checkbox" name="claude" required /> I build with Claude Code on an Anthropic subscription. No local AI, no ChatGPT.</label>
         <label class="chk"><input type="checkbox" name="contact" required /> You may contact me about Kintsugi.</label>
@@ -143,7 +154,7 @@
         f.addEventListener('submit', function (e) {
           e.preventDefault();
           if (!f.checkValidity()) { m.textContent = 'Please fill in the required fields and tick both boxes.'; return; }
-          var d = Object.fromEntries(new FormData(f)); d.claude = !!f.claude.checked; d.contact = !!f.contact.checked;
+          var d = Object.fromEntries(new FormData(f)); d.claude = !!f.claude.checked; d.contact = !!f.contact.checked; d.kinds = Array.prototype.map.call(f.querySelectorAll('input[name=kinds]:checked'), function (c) { return c.value; }); if (!d.kinds.length) { m.textContent = 'Pick at least one kind of work.'; return; }
           m.textContent = 'Sending...';
           fetch('https://www.bchatx.com/api/kintsugi/apply', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(d) })
             .then(function (r) { return r.json().then(function (j) { if (!r.ok) throw new Error(j.error || 'Failed'); }); })
