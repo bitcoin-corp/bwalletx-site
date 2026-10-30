@@ -1,0 +1,1382 @@
+{
+ "canonical": "bit-sign b-stamp-rules canonicalText (NFC, LF, trailing whitespace and blank edge lines removed); sha256 over UTF-8",
+ "contracts": [
+  {
+   "id": "KS-2026-0001",
+   "url": "/",
+   "title": "bWalletX: the smart social super wallet",
+   "first": "2026-10-03",
+   "last": "2026-10-29",
+   "file": "data/kintsugi-contracts/KS-2026-0001.txt",
+   "sha256": "22b12a189769de30de27d6a521cb457fc7734b3525f638a7b79ea47ff6fc1995"
+  },
+  {
+   "id": "KS-2026-0002",
+   "url": "/agent",
+   "title": "Ask b",
+   "first": "2026-10-03",
+   "last": "2026-10-30",
+   "file": "data/kintsugi-contracts/KS-2026-0002.txt",
+   "sha256": "caf3f2e92b09c1f84b0e698b3d9e1f9c3414b23e07f1addcd987a6c0bee95600"
+  },
+  {
+   "id": "KS-2026-0003",
+   "url": "/agents",
+   "title": "bWalletX Agent Accounts",
+   "first": "2026-10-04",
+   "last": "2026-10-29",
+   "file": "data/kintsugi-contracts/KS-2026-0003.txt",
+   "sha256": "a66f39b849e25facc306952d2a1c4e28b32507588eeebd9f0b228abcaef0d48c"
+  },
+  {
+   "id": "KS-2026-0004",
+   "url": "/airdrops",
+   "title": "Airdrops",
+   "first": "2026-10-08",
+   "last": "2026-10-29",
+   "file": "data/kintsugi-contracts/KS-2026-0004.txt",
+   "sha256": "f73ec6a828c9089ff2c92c10499a6b333bb3425c66409c338a52b461b33e2f41"
+  },
+  {
+   "id": "KS-2026-0005",
+   "url": "/aivj",
+   "title": "AIVJ: watch VexVoid play live",
+   "first": "2026-10-13",
+   "last": "2026-10-28",
+   "file": "data/kintsugi-contracts/KS-2026-0005.txt",
+   "sha256": "0bf4a70e4593bd0f9b97ddbe45d4509a5842b1bdf203d740b1c8e20a0aacd517"
+  },
+  {
+   "id": "KS-2026-0006",
+   "url": "/android",
+   "title": "bWalletX for Android",
+   "first": "2026-10-03",
+   "last": "2026-10-29",
+   "file": "data/kintsugi-contracts/KS-2026-0006.txt",
+   "sha256": "ea9cd796336427535eb1e50c6e5a559d02743c7e87a328b18739d88bca3220ab"
+  },
+  {
+   "id": "KS-2026-0007",
+   "url": "/apps/add",
+   "title": "Add your app to bWallet",
+   "first": "2026-10-04",
+   "last": "2026-10-18",
+   "file": "data/kintsugi-contracts/KS-2026-0007.txt",
+   "sha256": "55dccd571100e409c86e62fc97af5e617b693a1e805c06754dd27f97efc69b07"
+  },
+  {
+   "id": "KS-2026-0008",
+   "url": "/artists",
+   "title": "Artists on bWalletX",
+   "first": "2026-10-11",
+   "last": "2026-10-26",
+   "file": "data/kintsugi-contracts/KS-2026-0008.txt",
+   "sha256": "d5bdc62c587847c52621721a34f38484fa5bb57ad0ada5db24b304fc9a4729f7"
+  },
+  {
+   "id": "KS-2026-0009",
+   "url": "/artists/vexvoid",
+   "title": "VexVoid on bWalletX",
+   "first": "2026-10-05",
+   "last": "2026-10-28",
+   "file": "data/kintsugi-contracts/KS-2026-0009.txt",
+   "sha256": "12e4ee12246dca5e563e25157e4842308a0e779bd712d2a1ecb88e7c8f63f0f7"
+  },
+  {
+   "id": "KS-2026-0010",
+   "url": "/ask-b",
+   "title": "Ask b",
+   "first": "2026-10-12",
+   "last": "2026-10-28",
+   "file": "data/kintsugi-contracts/KS-2026-0010.txt",
+   "sha256": "e32bfe041c96eb48d25ad618cc21d08089ebc7952ba6320887b9f684f2f33432"
+  },
+  {
+   "id": "KS-2026-0011",
+   "url": "/b-aware",
+   "title": "b-Aware: responsible disclosure and bug bounty",
+   "first": "2026-10-20",
+   "last": "2026-10-26",
+   "file": "data/kintsugi-contracts/KS-2026-0011.txt",
+   "sha256": "ce5d0a4d9af0962cb5f6ad0be4203e14544f8baefa1b9a1df1d4220cf8a1cb53"
+  },
+  {
+   "id": "KS-2026-0012",
+   "url": "/b-bots",
+   "title": "bBots: little helpers that work for you",
+   "first": "2026-10-19",
+   "last": "2026-10-28",
+   "file": "data/kintsugi-contracts/KS-2026-0012.txt",
+   "sha256": "910ede5ff4965418b8fff8790cd94bd1525fafd36563ad6ce005cfbf82e0c897"
+  },
+  {
+   "id": "KS-2026-0013",
+   "url": "/b-cool",
+   "title": "b cool",
+   "first": "2026-10-14",
+   "last": "2026-10-29",
+   "file": "data/kintsugi-contracts/KS-2026-0013.txt",
+   "sha256": "d4e8ffbc8218c58df3843169a3996a1889c1dfc8a8746375d9d5127e991f3035"
+  },
+  {
+   "id": "KS-2026-0014",
+   "url": "/b-creative",
+   "title": "b Creative",
+   "first": "2026-10-16",
+   "last": "2026-10-29",
+   "file": "data/kintsugi-contracts/KS-2026-0014.txt",
+   "sha256": "3989294f8477965607a00729cdb3aa8e6224edbc24226931ae53d9315f204ac0"
+  },
+  {
+   "id": "KS-2026-0015",
+   "url": "/b-family",
+   "title": "The b family",
+   "first": "2026-10-23",
+   "last": "2026-10-30",
+   "file": "data/kintsugi-contracts/KS-2026-0015.txt",
+   "sha256": "c7729b682b20c7b7fc209db8dd2e1a1d2ae976254ec60fca7b49096b910b3b21"
+  },
+  {
+   "id": "KS-2026-0016",
+   "url": "/b-in-black",
+   "title": "b black",
+   "first": "2026-10-08",
+   "last": "2026-10-25",
+   "file": "data/kintsugi-contracts/KS-2026-0016.txt",
+   "sha256": "12c81aad59179bc15edcdad6a8d9928e5a41a05dccfb16dacec82d1f69b2188d"
+  },
+  {
+   "id": "KS-2026-0017",
+   "url": "/b-is-coming",
+   "title": "b is coming",
+   "first": "2026-10-25",
+   "last": "2026-10-29",
+   "file": "data/kintsugi-contracts/KS-2026-0017.txt",
+   "sha256": "14496caf74661da7b06272f1f4e0d7045060587aa653ce0abf8ecd7e552a5b1e"
+  },
+  {
+   "id": "KS-2026-0018",
+   "url": "/b-is-for-auteurs",
+   "title": "b is for auteurs",
+   "first": "2026-10-23",
+   "last": "2026-10-30",
+   "file": "data/kintsugi-contracts/KS-2026-0018.txt",
+   "sha256": "3dfce6b9c17d657bb7cdb6fed6bb4f348d0a18ce56067a0bfc962761d6056418"
+  },
+  {
+   "id": "KS-2026-0019",
+   "url": "/b-is-for-business",
+   "title": "b is for business",
+   "first": "2026-10-16",
+   "last": "2026-10-30",
+   "file": "data/kintsugi-contracts/KS-2026-0019.txt",
+   "sha256": "67d496255ae90dc9a10d1cd0ef3ff2f80a853fea7b3e8e0efaddb976dccd0ca7"
+  },
+  {
+   "id": "KS-2026-0020",
+   "url": "/b-is-for-shopkeepers",
+   "title": "b is for shopkeepers",
+   "first": "2026-10-28",
+   "last": "2026-10-30",
+   "file": "data/kintsugi-contracts/KS-2026-0020.txt",
+   "sha256": "e6bf8c81085a4c7e52805d6f58f47ad3fefbe47e399a10745fab3352d3b1d4b9"
+  },
+  {
+   "id": "KS-2026-0021",
+   "url": "/b-market",
+   "title": "bMarketX.com: your eBay store, on Bitcoin",
+   "first": "2026-10-26",
+   "last": "2026-10-28",
+   "file": "data/kintsugi-contracts/KS-2026-0021.txt",
+   "sha256": "0deb76e2f947d8416728d2ccc83a78a61078d3775ec174e2f0a9bab928f53eab"
+  },
+  {
+   "id": "KS-2026-0022",
+   "url": "/b-on-twetch",
+   "title": "b is on Twetch",
+   "first": "2026-10-04",
+   "last": "2026-10-27",
+   "file": "data/kintsugi-contracts/KS-2026-0022.txt",
+   "sha256": "6cb920c408558d1316b2d9464f966029ec866acd1ece5d1078c71c5156608587"
+  },
+  {
+   "id": "KS-2026-0023",
+   "url": "/b-socials",
+   "title": "Everything b",
+   "first": "2026-10-29",
+   "last": "2026-10-29",
+   "file": "data/kintsugi-contracts/KS-2026-0023.txt",
+   "sha256": "4e2f00be6864b5d228a7c5cef7b72117b04035d86d2a26563f1347d932c09337"
+  },
+  {
+   "id": "KS-2026-0024",
+   "url": "/b/acc",
+   "title": "bAcc: make Bitcoin faster, the goal is 1 billion transactions a second",
+   "first": "2026-10-20",
+   "last": "2026-10-21",
+   "file": "data/kintsugi-contracts/KS-2026-0024.txt",
+   "sha256": "20d788663e96b4400e60699e6b5aeced3dc714cecf9ee26b69877a0553b3ecbd"
+  },
+  {
+   "id": "KS-2026-0025",
+   "url": "/b/acc/store",
+   "title": "The bAcc theme for bWalletX, $1 | bAcc store",
+   "first": "2026-10-03",
+   "last": "2026-10-30",
+   "file": "data/kintsugi-contracts/KS-2026-0025.txt",
+   "sha256": "b7c9213d4ac917066cbd9c7833758ced0963dd97d990cee8515ec690083a5943"
+  },
+  {
+   "id": "KS-2026-0026",
+   "url": "/bads",
+   "title": "bAds \u00b7 we sell bAds, made by b",
+   "first": "2026-10-23",
+   "last": "2026-10-28",
+   "file": "data/kintsugi-contracts/KS-2026-0026.txt",
+   "sha256": "fbcaaca527d36007900fa91529439a00b7fcf12cdfb463b76247e93e050dc92b"
+  },
+  {
+   "id": "KS-2026-0027",
+   "url": "/bapps",
+   "title": "bApps: apps that run inside bWalletX",
+   "first": "2026-10-03",
+   "last": "2026-10-30",
+   "file": "data/kintsugi-contracts/KS-2026-0027.txt",
+   "sha256": "fcb12e8c60dcecd452310c6f773c7290520edabe05774a09b8b38c4b7f388c9b"
+  },
+  {
+   "id": "KS-2026-0028",
+   "url": "/bapps/bmovies",
+   "title": "bMovies inside bWalletX",
+   "first": "2026-10-08",
+   "last": "2026-10-23",
+   "file": "data/kintsugi-contracts/KS-2026-0028.txt",
+   "sha256": "7383b6711eb876d473ce2eb9b912ae39d46cb61cc42239dd02865e23dfbe159a"
+  },
+  {
+   "id": "KS-2026-0029",
+   "url": "/bavatars",
+   "title": "bAvatars: your name, as art you can scan",
+   "first": "2026-10-04",
+   "last": "2026-10-28",
+   "file": "data/kintsugi-contracts/KS-2026-0029.txt",
+   "sha256": "c7b76c61b6e269dae0fc65d60887bedbed8bb0df6144621c9a987496824c8b4b"
+  },
+  {
+   "id": "KS-2026-0030",
+   "url": "/bchatx",
+   "title": "bChatX: chat, rooms and Spaces",
+   "first": "2026-10-03",
+   "last": "2026-10-30",
+   "file": "data/kintsugi-contracts/KS-2026-0030.txt",
+   "sha256": "45d11a8b71171c04aba0caaec5ba76c53137eb0ce1f2b1ff4d9f1d0ce26c64c3"
+  },
+  {
+   "id": "KS-2026-0031",
+   "url": "/be-on-b",
+   "title": "be on b",
+   "first": "2026-10-26",
+   "last": "2026-10-26",
+   "file": "data/kintsugi-contracts/KS-2026-0031.txt",
+   "sha256": "8fdb9f86ed9e29c1449ce8a677f41f0fb0728cd80780cf9ff546994c87dd0c7b"
+  },
+  {
+   "id": "KS-2026-0032",
+   "url": "/be-on-b-2",
+   "title": "be on b",
+   "first": "2026-10-26",
+   "last": "2026-10-26",
+   "file": "data/kintsugi-contracts/KS-2026-0032.txt",
+   "sha256": "f784f1596d9a143f64bcd8a16c83d266e875b1d65c95871b0d664a8b459eb39a"
+  },
+  {
+   "id": "KS-2026-0033",
+   "url": "/be-on-b-3",
+   "title": "be on b",
+   "first": "2026-10-26",
+   "last": "2026-10-26",
+   "file": "data/kintsugi-contracts/KS-2026-0033.txt",
+   "sha256": "e66964b66adc245fbcb933aca4c4435a6a36c0e88dcaf8661b9ada6e7e0648dd"
+  },
+  {
+   "id": "KS-2026-0034",
+   "url": "/bgitx",
+   "title": "bGitX: your code, on b",
+   "first": "2026-10-28",
+   "last": "2026-10-30",
+   "file": "data/kintsugi-contracts/KS-2026-0034.txt",
+   "sha256": "55ff8307b89103afcea269fd4641092c3c5bfc780ce8329b14c8dd16a226c041"
+  },
+  {
+   "id": "KS-2026-0035",
+   "url": "/bmail",
+   "title": "bMail",
+   "first": "2026-10-09",
+   "last": "2026-10-30",
+   "file": "data/kintsugi-contracts/KS-2026-0035.txt",
+   "sha256": "bad4a83ff492fb6c45182c4a8b6f88a57e4f7530fe50feb2dddb22764781746f"
+  },
+  {
+   "id": "KS-2026-0036",
+   "url": "/bounties",
+   "title": "Bounties: live pool and payouts",
+   "first": "2026-10-23",
+   "last": "2026-10-30",
+   "file": "data/kintsugi-contracts/KS-2026-0036.txt",
+   "sha256": "9c44e2f08abf186cd2c0a7b3210bf8a501345e7b35eb7e774f1b66e7bcf4b96d"
+  },
+  {
+   "id": "KS-2026-0037",
+   "url": "/bphone",
+   "title": "bPhone",
+   "first": "2026-10-06",
+   "last": "2026-10-30",
+   "file": "data/kintsugi-contracts/KS-2026-0037.txt",
+   "sha256": "7d18d8e00899c6fc722487122f0ea7010737ed7c889b4e6d0b288b164b1bf549"
+  },
+  {
+   "id": "KS-2026-0038",
+   "url": "/bpositive",
+   "title": "bPositive",
+   "first": "2026-10-08",
+   "last": "2026-10-17",
+   "file": "data/kintsugi-contracts/KS-2026-0038.txt",
+   "sha256": "37de25b5197a2f7adc84e8a1048ddb2019ef456a9286eaf24ea6a4c6bc5a3b40"
+  },
+  {
+   "id": "KS-2026-0039",
+   "url": "/bradio",
+   "title": "bRadio: live audio Spaces in bWalletX",
+   "first": "2026-10-15",
+   "last": "2026-10-23",
+   "file": "data/kintsugi-contracts/KS-2026-0039.txt",
+   "sha256": "e8505c5e17790b3e7012c70b48ce4af43f53b53c91fee236b8b936bf5ee1b011"
+  },
+  {
+   "id": "KS-2026-0040",
+   "url": "/brand",
+   "title": "The bWalletX brand",
+   "first": "2026-10-03",
+   "last": "2026-10-29",
+   "file": "data/kintsugi-contracts/KS-2026-0040.txt",
+   "sha256": "4d1d0d1675ff44a27d17d1597b14fae94e4a2d38a885e5bf63a4347128adeec3"
+  },
+  {
+   "id": "KS-2026-0041",
+   "url": "/bspaces",
+   "title": "bSpaces",
+   "first": "2026-10-04",
+   "last": "2026-10-30",
+   "file": "data/kintsugi-contracts/KS-2026-0041.txt",
+   "sha256": "4266d0f91605f0a70f4ad518e055d508d4d430e20780060fc13dd626d609162a"
+  },
+  {
+   "id": "KS-2026-0042",
+   "url": "/btrust",
+   "title": "bTrust in bWalletX",
+   "first": "2026-10-06",
+   "last": "2026-10-26",
+   "file": "data/kintsugi-contracts/KS-2026-0042.txt",
+   "sha256": "58153527ab43251e43d749b2b1e5d1bfa17ab349663ccd85c9644ca4aaebca51"
+  },
+  {
+   "id": "KS-2026-0043",
+   "url": "/business-agents",
+   "title": "bRand business agents",
+   "first": "2026-10-04",
+   "last": "2026-10-29",
+   "file": "data/kintsugi-contracts/KS-2026-0043.txt",
+   "sha256": "45751ff3e254cadef48f795ed3b85d3b7b6147a00fefc2a1af9a5314e3014d67"
+  },
+  {
+   "id": "KS-2026-0044",
+   "url": "/buy",
+   "title": "Buy BSV in bWalletX",
+   "first": "2026-10-05",
+   "last": "2026-10-18",
+   "file": "data/kintsugi-contracts/KS-2026-0044.txt",
+   "sha256": "8a7c7e4676fecc4201f4e9525c011e97ed05a24f8beda39ad3a193ff7cc106ac"
+  },
+  {
+   "id": "KS-2026-0045",
+   "url": "/bweb",
+   "title": "bWeb: ask b to build your website",
+   "first": "2026-10-08",
+   "last": "2026-10-25",
+   "file": "data/kintsugi-contracts/KS-2026-0045.txt",
+   "sha256": "ea28419d1e239af73eca207454eda871b4d4bc4f089b49e8fc1d8bef6f8a034c"
+  },
+  {
+   "id": "KS-2026-0046",
+   "url": "/chat",
+   "title": "Chat in bWalletX",
+   "first": "2026-10-03",
+   "last": "2026-10-30",
+   "file": "data/kintsugi-contracts/KS-2026-0046.txt",
+   "sha256": "6e5abaa204410b921eb9aa255e162c73ff87c2bc0150661c47afd28145d92733"
+  },
+  {
+   "id": "KS-2026-0047",
+   "url": "/cli",
+   "title": "bWalletX CLI",
+   "first": "2026-10-04",
+   "last": "2026-10-23",
+   "file": "data/kintsugi-contracts/KS-2026-0047.txt",
+   "sha256": "e746c424911474899257dadfe7057020b2e236950628d010a8eee5e489896d8e"
+  },
+  {
+   "id": "KS-2026-0048",
+   "url": "/clients",
+   "title": "Your own branded wallet \u00b7 bWalletX for business",
+   "first": "2026-10-23",
+   "last": "2026-10-24",
+   "file": "data/kintsugi-contracts/KS-2026-0048.txt",
+   "sha256": "24673f4110edac558ee1a8c777f2cfc19267235129872b006e7ce5abd97e07f0"
+  },
+  {
+   "id": "KS-2026-0049",
+   "url": "/coingeek-on-b",
+   "title": "CoinGeek on b",
+   "first": "2026-10-25",
+   "last": "2026-10-25",
+   "file": "data/kintsugi-contracts/KS-2026-0049.txt",
+   "sha256": "949795c4019f3afd3599cd5ace8a5445f086e7b6407cf398a1c19f7b8ef9d1f8"
+  },
+  {
+   "id": "KS-2026-0050",
+   "url": "/connect",
+   "title": "Sign in with bWalletX \u00b7 Developer guide",
+   "first": "2026-10-04",
+   "last": "2026-10-30",
+   "file": "data/kintsugi-contracts/KS-2026-0050.txt",
+   "sha256": "37612a09978c8b08dfa099642c6ec3fc8398369164140eed4bf2896c4ecb30a1"
+  },
+  {
+   "id": "KS-2026-0051",
+   "url": "/contracts",
+   "title": "Contracts in chat",
+   "first": "2026-10-05",
+   "last": "2026-10-30",
+   "file": "data/kintsugi-contracts/KS-2026-0051.txt",
+   "sha256": "06ffa3952d1005558a58d0237dee73ac5383df4b1f95d61633a28bae481db72c"
+  },
+  {
+   "id": "KS-2026-0052",
+   "url": "/creative",
+   "title": "b Creative",
+   "first": "2026-10-16",
+   "last": "2026-10-29",
+   "file": "data/kintsugi-contracts/KS-2026-0052.txt",
+   "sha256": "465d24e3de83c2740f53e47dd1c69f7717aa29754d444a3b193a4293a225f194"
+  },
+  {
+   "id": "KS-2026-0053",
+   "url": "/credits",
+   "title": "Credits: prepaid credit for services",
+   "first": "2026-10-10",
+   "last": "2026-10-23",
+   "file": "data/kintsugi-contracts/KS-2026-0053.txt",
+   "sha256": "3b7405292b09506ba05fe6151327361460e112e603a403dab8cd7be8abca65f1"
+  },
+  {
+   "id": "KS-2026-0054",
+   "url": "/culture",
+   "title": "Culture: make it on BSV",
+   "first": "2026-10-15",
+   "last": "2026-10-15",
+   "file": "data/kintsugi-contracts/KS-2026-0054.txt",
+   "sha256": "96887801094ceb624b4e4ca4f00536b6b6c47ae466848d54c3af705228f0b70d"
+  },
+  {
+   "id": "KS-2026-0055",
+   "url": "/desktop",
+   "title": "bWalletX Desktop",
+   "first": "2026-10-09",
+   "last": "2026-10-24",
+   "file": "data/kintsugi-contracts/KS-2026-0055.txt",
+   "sha256": "254dfd6510580c5fff57a39f50cb020a3b60b37cd2a909221dfff6bad3961503"
+  },
+  {
+   "id": "KS-2026-0056",
+   "url": "/developers",
+   "title": "bWalletX for Developers",
+   "first": "2026-10-04",
+   "last": "2026-10-29",
+   "file": "data/kintsugi-contracts/KS-2026-0056.txt",
+   "sha256": "3950ddb7f0fd4b2261f1cde26170c0209b57ce62c8e10c8af82b953a76197251"
+  },
+  {
+   "id": "KS-2026-0057",
+   "url": "/digital-ice-cream",
+   "title": "Digital Ice-Cream: three friends, one token",
+   "first": "2026-10-15",
+   "last": "2026-10-23",
+   "file": "data/kintsugi-contracts/KS-2026-0057.txt",
+   "sha256": "321c65c151fce3b38b2988af95f4718c2b42a267738c25093afdfb458de68627"
+  },
+  {
+   "id": "KS-2026-0058",
+   "url": "/direct",
+   "title": "bWallet Direct: sign in straight from your own wallet",
+   "first": "2026-10-03",
+   "last": "2026-10-20",
+   "file": "data/kintsugi-contracts/KS-2026-0058.txt",
+   "sha256": "0b1a5d6c793fc3e4a3b97ce12ec0a82a4531f56e4d49a0db4f772b2f046bd6b3"
+  },
+  {
+   "id": "KS-2026-0059",
+   "url": "/exchange",
+   "title": "bWalletX Exchange",
+   "first": "2026-10-03",
+   "last": "2026-10-28",
+   "file": "data/kintsugi-contracts/KS-2026-0059.txt",
+   "sha256": "71a434bd83d8991877a7a698e82acdaddb1fcde3d394d3616d27e2b6ce6be56b"
+  },
+  {
+   "id": "KS-2026-0060",
+   "url": "/exchange/strategies",
+   "title": "bWalletX Exchange: Strategies",
+   "first": "2026-10-05",
+   "last": "2026-10-17",
+   "file": "data/kintsugi-contracts/KS-2026-0060.txt",
+   "sha256": "f7ce4bf839f78795e05c5e393ceaa282e74517868dab586fd7529da7c2e1e758"
+  },
+  {
+   "id": "KS-2026-0061",
+   "url": "/extension",
+   "title": "bWalletX for Chrome",
+   "first": "2026-10-03",
+   "last": "2026-10-29",
+   "file": "data/kintsugi-contracts/KS-2026-0061.txt",
+   "sha256": "b88a719a9c4123e702767b135d2b462d7f7ea70e70b6a56439e25d471ee8e90f"
+  },
+  {
+   "id": "KS-2026-0062",
+   "url": "/features",
+   "title": "bWalletX Features",
+   "first": "2026-10-04",
+   "last": "2026-10-28",
+   "file": "data/kintsugi-contracts/KS-2026-0062.txt",
+   "sha256": "92227244d4a532a8f3dc0db2022f1e6dda24579ef696b02d6eef5495e4ac02b3"
+  },
+  {
+   "id": "KS-2026-0063",
+   "url": "/flick-off",
+   "title": "FLICK OFF",
+   "first": "2026-10-20",
+   "last": "2026-10-29",
+   "file": "data/kintsugi-contracts/KS-2026-0063.txt",
+   "sha256": "54b4446d5f57b511e9240c02695d14b1f501aece95daa99afd7b81f01ede4695"
+  },
+  {
+   "id": "KS-2026-0064",
+   "url": "/friends",
+   "title": "bWalletX Friends",
+   "first": "2026-10-04",
+   "last": "2026-10-30",
+   "file": "data/kintsugi-contracts/KS-2026-0064.txt",
+   "sha256": "405f08d27be4b835c78643bafa93c15a26d8775a8748179638f571c2ccb28e2e"
+  },
+  {
+   "id": "KS-2026-0065",
+   "url": "/games",
+   "title": "Games in bWalletX",
+   "first": "2026-10-07",
+   "last": "2026-10-28",
+   "file": "data/kintsugi-contracts/KS-2026-0065.txt",
+   "sha256": "a9e17be0fefd41067c2761c4f4dd0601b2fbae194125e51f50dafc4fa750b4fb"
+  },
+  {
+   "id": "KS-2026-0066",
+   "url": "/get",
+   "title": "Get bWalletX",
+   "first": "2026-10-04",
+   "last": "2026-10-29",
+   "file": "data/kintsugi-contracts/KS-2026-0066.txt",
+   "sha256": "f095d6ea92e50a9e43d8613c54fae336d291aff49cdbd7fcdd5905ae83fb3c10"
+  },
+  {
+   "id": "KS-2026-0067",
+   "url": "/gigs",
+   "title": "bGigs in bWalletX",
+   "first": "2026-10-11",
+   "last": "2026-10-16",
+   "file": "data/kintsugi-contracts/KS-2026-0067.txt",
+   "sha256": "8359f773369e0201d0c28c5867ebbd322de59e31c49e3f98221f9c277ef11384"
+  },
+  {
+   "id": "KS-2026-0068",
+   "url": "/gmail",
+   "title": "Link your Google account",
+   "first": "2026-10-06",
+   "last": "2026-10-30",
+   "file": "data/kintsugi-contracts/KS-2026-0068.txt",
+   "sha256": "b6ce6e351d01add2fed946ecdf9eb84df939c96daa22cbcc006281a9519e45f3"
+  },
+  {
+   "id": "KS-2026-0069",
+   "url": "/handles",
+   "title": "Handles in bWalletX",
+   "first": "2026-10-04",
+   "last": "2026-10-30",
+   "file": "data/kintsugi-contracts/KS-2026-0069.txt",
+   "sha256": "0d9eec5b4db8547ed89221673708b244e546476b8060db0d763a03e7b8de3872"
+  },
+  {
+   "id": "KS-2026-0070",
+   "url": "/happy-b",
+   "title": "Happy b-day cards \u00b7 make with b, mint, send by bMail",
+   "first": "2026-10-23",
+   "last": "2026-10-24",
+   "file": "data/kintsugi-contracts/KS-2026-0070.txt",
+   "sha256": "d530c90b3f79e01a1dc71b09dcc0ad833514fc5880befb60fa9c22d5b7c713e3"
+  },
+  {
+   "id": "KS-2026-0071",
+   "url": "/history",
+   "title": "History in bWalletX",
+   "first": "2026-10-07",
+   "last": "2026-10-30",
+   "file": "data/kintsugi-contracts/KS-2026-0071.txt",
+   "sha256": "aff6f5c35e4ab3cfe2182dd90a7eaa2f70884adffa7cb4f620e23c9740bd8b63"
+  },
+  {
+   "id": "KS-2026-0072",
+   "url": "/hodl-my-b",
+   "title": "Hodl my b",
+   "first": "2026-10-16",
+   "last": "2026-10-18",
+   "file": "data/kintsugi-contracts/KS-2026-0072.txt",
+   "sha256": "92860a7adeb3f0f441ef1504b620eb5fec137eb1d01a765c4f8b612d1583682d"
+  },
+  {
+   "id": "KS-2026-0073",
+   "url": "/hodl-my-b/0",
+   "title": "Hodl my b, Edition 0: The whole story",
+   "first": "2026-10-18",
+   "last": "2026-10-25",
+   "file": "data/kintsugi-contracts/KS-2026-0073.txt",
+   "sha256": "a2f3c728c5b6e315103417039dfc6d6fea976741e98d309dc36d591aeb66f178"
+  },
+  {
+   "id": "KS-2026-0074",
+   "url": "/hodl-my-b/1",
+   "title": "Hodl my b, Edition 1: Don\u2019t be bland. Get bRanded.",
+   "first": "2026-10-16",
+   "last": "2026-10-29",
+   "file": "data/kintsugi-contracts/KS-2026-0074.txt",
+   "sha256": "a59964c7ed30e31143cb4e6c802930d4fed0b3aae25460c3546968cb3b6d01a9"
+  },
+  {
+   "id": "KS-2026-0075",
+   "url": "/hodlocker-on-b",
+   "title": "Hodlocker on b",
+   "first": "2026-10-25",
+   "last": "2026-10-25",
+   "file": "data/kintsugi-contracts/KS-2026-0075.txt",
+   "sha256": "4bc1e60874bd7bf323b0a613d73ddf22f0afe00c342be4c026498fe9568b2810"
+  },
+  {
+   "id": "KS-2026-0076",
+   "url": "/hold-to-talk",
+   "title": "Hold to talk to b",
+   "first": "2026-10-08",
+   "last": "2026-10-25",
+   "file": "data/kintsugi-contracts/KS-2026-0076.txt",
+   "sha256": "270c5f3fa8d90f5d04da917470a020001f577361078f13d81373ac16a5f75394"
+  },
+  {
+   "id": "KS-2026-0077",
+   "url": "/identity",
+   "title": "Identity in bWalletX",
+   "first": "2026-10-06",
+   "last": "2026-10-28",
+   "file": "data/kintsugi-contracts/KS-2026-0077.txt",
+   "sha256": "540682780bb64dcf92f88e32e488bb8d922d3aab87de987ff9bce79938f4d2ed"
+  },
+  {
+   "id": "KS-2026-0078",
+   "url": "/identity-map",
+   "title": "Identity map",
+   "first": "2026-10-06",
+   "last": "2026-10-28",
+   "file": "data/kintsugi-contracts/KS-2026-0078.txt",
+   "sha256": "abb7d982c1dc97ddad8418de32119707348ae67218d7fab7dc7dfbb6e95e8eec"
+  },
+  {
+   "id": "KS-2026-0079",
+   "url": "/invite",
+   "title": "You're invited to bWalletX",
+   "first": "2026-10-06",
+   "last": "2026-10-30",
+   "file": "data/kintsugi-contracts/KS-2026-0079.txt",
+   "sha256": "f83d13c820806cafaea10480830d9ead942eca806ba299b4a04631b14b013ef0"
+  },
+  {
+   "id": "KS-2026-0080",
+   "url": "/iphone",
+   "title": "bWalletX on iPhone",
+   "first": "2026-10-05",
+   "last": "2026-10-14",
+   "file": "data/kintsugi-contracts/KS-2026-0080.txt",
+   "sha256": "36e7fae906629bdc4fd2fb3abf1d4658a090941604c7c12f7f50327413898d31"
+  },
+  {
+   "id": "KS-2026-0081",
+   "url": "/jobs",
+   "title": "Jobs: paid work, paid in BSV",
+   "first": "2026-10-24",
+   "last": "2026-10-25",
+   "file": "data/kintsugi-contracts/KS-2026-0081.txt",
+   "sha256": "266a74b1bdba910ba48f81de898afb163c8efb1256ddb8f6f52ff9fec07867af"
+  },
+  {
+   "id": "KS-2026-0082",
+   "url": "/just-b",
+   "title": "Just b",
+   "first": "2026-10-09",
+   "last": "2026-10-30",
+   "file": "data/kintsugi-contracts/KS-2026-0082.txt",
+   "sha256": "6e76ad40e694eacf120bae11fc42a061e6a215bc45b3b1ffb5c208ab809c94fa"
+  },
+  {
+   "id": "KS-2026-0083",
+   "url": "/just-b-2",
+   "title": "Just b: less noise",
+   "first": "2026-10-11",
+   "last": "2026-10-30",
+   "file": "data/kintsugi-contracts/KS-2026-0083.txt",
+   "sha256": "f76d269ee1a5c6b84195fb04124533b12e9820991d9af7cbec5fb8b0543d7175"
+  },
+  {
+   "id": "KS-2026-0084",
+   "url": "/launchpad",
+   "title": "Launchpad",
+   "first": "2026-10-06",
+   "last": "2026-10-29",
+   "file": "data/kintsugi-contracts/KS-2026-0084.txt",
+   "sha256": "14a7610eeb4856a56f07498810532020535a0eb9123d7455dab6f348ce4a9150"
+  },
+  {
+   "id": "KS-2026-0085",
+   "url": "/live",
+   "title": "Live in bWalletX",
+   "first": "2026-10-07",
+   "last": "2026-10-29",
+   "file": "data/kintsugi-contracts/KS-2026-0085.txt",
+   "sha256": "a5472f4c821114871d443fceb1b1a172a29ab6ab4ac9931103ef885c48c7fd6c"
+  },
+  {
+   "id": "KS-2026-0086",
+   "url": "/lock",
+   "title": "Lock BSV",
+   "first": "2026-10-03",
+   "last": "2026-10-30",
+   "file": "data/kintsugi-contracts/KS-2026-0086.txt",
+   "sha256": "d6ab588c1c98692f0e4b779a5f4ad47eaf33e747eab540c7cdc638a64e143888"
+  },
+  {
+   "id": "KS-2026-0087",
+   "url": "/lock/verify",
+   "title": "Verify a lock",
+   "first": "2026-10-06",
+   "last": "2026-10-28",
+   "file": "data/kintsugi-contracts/KS-2026-0087.txt",
+   "sha256": "5dcb0582df9ee518255210dd73574a0c6bd67b73019247fb61c127d3e298907d"
+  },
+  {
+   "id": "KS-2026-0088",
+   "url": "/lounge",
+   "title": "bWallet Lounge on bChat",
+   "first": "2026-10-06",
+   "last": "2026-10-24",
+   "file": "data/kintsugi-contracts/KS-2026-0088.txt",
+   "sha256": "995f5df96ad89d53096f1c376c6f95fb88fba10402a5baa29925173f25bb6e5b"
+  },
+  {
+   "id": "KS-2026-0089",
+   "url": "/mcp",
+   "title": "bWalletX MCP",
+   "first": "2026-10-04",
+   "last": "2026-10-23",
+   "file": "data/kintsugi-contracts/KS-2026-0089.txt",
+   "sha256": "20adcc5c66394b86be9d07673bb415d346e692d78aba7c7b13bdeac4d1f04dba"
+  },
+  {
+   "id": "KS-2026-0090",
+   "url": "/migrate",
+   "title": "Move to bWalletX",
+   "first": "2026-10-07",
+   "last": "2026-10-28",
+   "file": "data/kintsugi-contracts/KS-2026-0090.txt",
+   "sha256": "4b4c3017fb161bbff0da6e25565c944e92d02be39826ecc19d316b4216a8b86a"
+  },
+  {
+   "id": "KS-2026-0091",
+   "url": "/mint",
+   "title": "Mint with bWalletX",
+   "first": "2026-10-03",
+   "last": "2026-10-30",
+   "file": "data/kintsugi-contracts/KS-2026-0091.txt",
+   "sha256": "d621d1da6e771845d4aba478bf3cb11be637b6b370f6597ead87b6dd54b62945"
+  },
+  {
+   "id": "KS-2026-0092",
+   "url": "/name-bindings",
+   "title": "Signed names and the public name log",
+   "first": "2026-10-04",
+   "last": "2026-10-28",
+   "file": "data/kintsugi-contracts/KS-2026-0092.txt",
+   "sha256": "de2728b2b3e40566724aed149121ad75f9957d8fa6d88378198434feb660a003"
+  },
+  {
+   "id": "KS-2026-0093",
+   "url": "/names",
+   "title": "Get your name",
+   "first": "2026-10-03",
+   "last": "2026-10-30",
+   "file": "data/kintsugi-contracts/KS-2026-0093.txt",
+   "sha256": "52add10bb9298b0408c665d4cf1a97b3b9ec5c7930597f06885512c79bd53424"
+  },
+  {
+   "id": "KS-2026-0094",
+   "url": "/newsletter",
+   "title": "Newsletter",
+   "first": "2026-10-23",
+   "last": "2026-10-23",
+   "file": "data/kintsugi-contracts/KS-2026-0094.txt",
+   "sha256": "4982db00baca6e525eb40ecd45005fd7620540d4d8e29b5058cb08992111654e"
+  },
+  {
+   "id": "KS-2026-0095",
+   "url": "/nfts",
+   "title": "NFTs: everything you own, edge to edge",
+   "first": "2026-10-05",
+   "last": "2026-10-30",
+   "file": "data/kintsugi-contracts/KS-2026-0095.txt",
+   "sha256": "88f6546bad4e7dae1940394730dfbe5e4d240825a266f78dc95243f14bbb95f8"
+  },
+  {
+   "id": "KS-2026-0096",
+   "url": "/on-b",
+   "title": "Your apps, on b",
+   "first": "2026-10-25",
+   "last": "2026-10-30",
+   "file": "data/kintsugi-contracts/KS-2026-0096.txt",
+   "sha256": "fbd6c5133018e43951df2b0d6a789af09b966291c2163f3dba475ea472643753"
+  },
+  {
+   "id": "KS-2026-0097",
+   "url": "/open-source",
+   "title": "Open source bWalletX",
+   "first": "2026-10-06",
+   "last": "2026-10-28",
+   "file": "data/kintsugi-contracts/KS-2026-0097.txt",
+   "sha256": "fecf5d73aee5dc1d64596e2e61c97c0d4b6a9c33a5cab7d3ddd30880109a011c"
+  },
+  {
+   "id": "KS-2026-0098",
+   "url": "/partners",
+   "title": "Partners: refer people, get a commission",
+   "first": "2026-10-28",
+   "last": "2026-10-28",
+   "file": "data/kintsugi-contracts/KS-2026-0098.txt",
+   "sha256": "1e5ac250b97487a86c2f22486858314045e8ba70d7d1162724e790187e6886b3"
+  },
+  {
+   "id": "KS-2026-0099",
+   "url": "/peck-on-b",
+   "title": "Peck on b",
+   "first": "2026-10-06",
+   "last": "2026-10-25",
+   "file": "data/kintsugi-contracts/KS-2026-0099.txt",
+   "sha256": "a88e006bc132d4068dd022bd913f4286eda5f670f9b0146d731d0b2db7c9db86"
+  },
+  {
+   "id": "KS-2026-0100",
+   "url": "/person",
+   "title": "Send a bMail",
+   "first": "2026-10-06",
+   "last": "2026-10-28",
+   "file": "data/kintsugi-contracts/KS-2026-0100.txt",
+   "sha256": "455958131a84664db4f1ccb8ad4e640c89db20cf86c7c476bb91f7abff96db51"
+  },
+  {
+   "id": "KS-2026-0101",
+   "url": "/pnees",
+   "title": "PNEEs: Penny Stablecoins",
+   "first": "2026-10-05",
+   "last": "2026-10-15",
+   "file": "data/kintsugi-contracts/KS-2026-0101.txt",
+   "sha256": "29212e40be92ea8021e3f318bc61d8701edeb2cb05e584c7b3cb15bede53dafd"
+  },
+  {
+   "id": "KS-2026-0102",
+   "url": "/pots",
+   "title": "Pots in bWalletX",
+   "first": "2026-10-07",
+   "last": "2026-10-28",
+   "file": "data/kintsugi-contracts/KS-2026-0102.txt",
+   "sha256": "e43c5028365bf59cdf86481dd10da53bb58472eaa8c000a7837880a35340dbe5"
+  },
+  {
+   "id": "KS-2026-0103",
+   "url": "/privacy",
+   "title": "Privacy Policy \u00b7 bWalletX (Beta)",
+   "first": "2026-10-03",
+   "last": "2026-10-25",
+   "file": "data/kintsugi-contracts/KS-2026-0103.txt",
+   "sha256": "b7647e3b31de41519c16d84c12bcdf90cdab0e4f4f6ce018b9b4f4246f685375"
+  },
+  {
+   "id": "KS-2026-0104",
+   "url": "/push-notifications",
+   "title": "Push notifications",
+   "first": "2026-10-06",
+   "last": "2026-10-28",
+   "file": "data/kintsugi-contracts/KS-2026-0104.txt",
+   "sha256": "fc63e06bbeb19828193be3aa60339c354eaddca39230bea3871256995a22ba8c"
+  },
+  {
+   "id": "KS-2026-0105",
+   "url": "/race-card",
+   "title": "bAcc RACE: the bAcc racing game",
+   "first": "2026-10-06",
+   "last": "2026-10-30",
+   "file": "data/kintsugi-contracts/KS-2026-0105.txt",
+   "sha256": "d950da2e25662035d4f3c8fa33c0d36430614bc491b4b5939ce5f06cb8a58f59"
+  },
+  {
+   "id": "KS-2026-0106",
+   "url": "/recover-relayx",
+   "title": "Your RelayX NFTs are still yours",
+   "first": "2026-10-07",
+   "last": "2026-10-25",
+   "file": "data/kintsugi-contracts/KS-2026-0106.txt",
+   "sha256": "0148619ba54a1b3f458fe25175ef8988f69e5789558513a648ef234ae594a88e"
+  },
+  {
+   "id": "KS-2026-0107",
+   "url": "/relayx-on-b",
+   "title": "RelayX on b",
+   "first": "2026-10-17",
+   "last": "2026-10-26",
+   "file": "data/kintsugi-contracts/KS-2026-0107.txt",
+   "sha256": "8035cf9b7d56e92a0a134be4b7818b0b37e3f82c5d52f7c754fb2758d054bb8a"
+  },
+  {
+   "id": "KS-2026-0108",
+   "url": "/releases",
+   "title": "Releases",
+   "first": "2026-10-08",
+   "last": "2026-10-29",
+   "file": "data/kintsugi-contracts/KS-2026-0108.txt",
+   "sha256": "b2a6ff5af9e46903bfccbc1f0400da91c444ab3ffa5c515b7ec112663efe4367"
+  },
+  {
+   "id": "KS-2026-0109",
+   "url": "/restore",
+   "title": "Restore into bWalletX",
+   "first": "2026-10-05",
+   "last": "2026-10-30",
+   "file": "data/kintsugi-contracts/KS-2026-0109.txt",
+   "sha256": "ad043cb3b9d48416ac3f173f3f16a39781592a39f74c5ce995a9de7741b070d4"
+  },
+  {
+   "id": "KS-2026-0110",
+   "url": "/restore/moneybutton",
+   "title": "Coming from Money Button?",
+   "first": "2026-10-07",
+   "last": "2026-10-30",
+   "file": "data/kintsugi-contracts/KS-2026-0110.txt",
+   "sha256": "01122fc67f06a13ffc67de2d9babf7a686caedf8e80153028ab9102d25af8786"
+  },
+  {
+   "id": "KS-2026-0111",
+   "url": "/restore/panda",
+   "title": "Coming from Panda Wallet?",
+   "first": "2026-10-30",
+   "last": "2026-10-30",
+   "file": "data/kintsugi-contracts/KS-2026-0111.txt",
+   "sha256": "3b6d34452d5905684c9db779259f75301e68c2145defdc74b8f4b58e82cb16ed"
+  },
+  {
+   "id": "KS-2026-0112",
+   "url": "/restore/relayx",
+   "title": "Coming from RelayX?",
+   "first": "2026-10-17",
+   "last": "2026-10-30",
+   "file": "data/kintsugi-contracts/KS-2026-0112.txt",
+   "sha256": "55a7a21ff1134598dc44fa1c0d8087f2f474322579758c6212cc17f803532c9d"
+  },
+  {
+   "id": "KS-2026-0113",
+   "url": "/restore/simplycash",
+   "title": "Coming from SimplyCash?",
+   "first": "2026-10-16",
+   "last": "2026-10-30",
+   "file": "data/kintsugi-contracts/KS-2026-0113.txt",
+   "sha256": "6e675fce9afbc0259b62afebfae28290717ead17ca862df8c166ccf34f5f7f8b"
+  },
+  {
+   "id": "KS-2026-0114",
+   "url": "/restore/twetch",
+   "title": "Coming from Twetch?",
+   "first": "2026-10-04",
+   "last": "2026-10-30",
+   "file": "data/kintsugi-contracts/KS-2026-0114.txt",
+   "sha256": "4fe520b5475723674fc110e708766e21dfd7760ec021c51f835e525203c1c6ee"
+  },
+  {
+   "id": "KS-2026-0115",
+   "url": "/restore/yours",
+   "title": "Coming from Yours Wallet?",
+   "first": "2026-10-05",
+   "last": "2026-10-30",
+   "file": "data/kintsugi-contracts/KS-2026-0115.txt",
+   "sha256": "ff39718ddb636772dedd8e05b6bee5aa2a04d35429012a55c02cd15a71aa3360"
+  },
+  {
+   "id": "KS-2026-0116",
+   "url": "/roadmap",
+   "title": "Roadmap",
+   "first": "2026-10-29",
+   "last": "2026-10-29",
+   "file": "data/kintsugi-contracts/KS-2026-0116.txt",
+   "sha256": "95e6e82d46e9f9648001eb164a78a8311a3fe70326a068b66fa001cb63078fdf"
+  },
+  {
+   "id": "KS-2026-0117",
+   "url": "/seedless-login",
+   "title": "Seedless login",
+   "first": "2026-10-19",
+   "last": "2026-10-25",
+   "file": "data/kintsugi-contracts/KS-2026-0117.txt",
+   "sha256": "d9f1470c89f667d25640199d71f1c94865b19355519657211adfd186e16790fe"
+  },
+  {
+   "id": "KS-2026-0118",
+   "url": "/seedless-signin",
+   "title": "Sign in with a passkey: open your wallet with your face or fingerprint",
+   "first": "2026-10-06",
+   "last": "2026-10-28",
+   "file": "data/kintsugi-contracts/KS-2026-0118.txt",
+   "sha256": "d63b6aa6694c83a346355c8db853f50f26240b89d220a1035695d31932ac3bb6"
+  },
+  {
+   "id": "KS-2026-0119",
+   "url": "/services",
+   "title": "Our b*X services",
+   "first": "2026-10-25",
+   "last": "2026-10-25",
+   "file": "data/kintsugi-contracts/KS-2026-0119.txt",
+   "sha256": "a02ef67e9ebd6bd959d8fe418db0f23ba447f2c9a58bf76982a2759d89882708"
+  },
+  {
+   "id": "KS-2026-0120",
+   "url": "/sign",
+   "title": "Your signature",
+   "first": "2026-10-06",
+   "last": "2026-10-30",
+   "file": "data/kintsugi-contracts/KS-2026-0120.txt",
+   "sha256": "c60ff41b93de1ae5203c3f570ae5635ea38cca0f299b7236b402eaff5dd52df2"
+  },
+  {
+   "id": "KS-2026-0121",
+   "url": "/sign-in-button",
+   "title": "Add Sign in with bWalletX to your site",
+   "first": "2026-10-06",
+   "last": "2026-10-30",
+   "file": "data/kintsugi-contracts/KS-2026-0121.txt",
+   "sha256": "cab14c7a61825ab2d92e8ab0f3374a91366ca92368e0dd59f8a3e37f3f5483d0"
+  },
+  {
+   "id": "KS-2026-0122",
+   "url": "/sign-in-with-handcash",
+   "title": "Sign in with HandCash",
+   "first": "2026-10-06",
+   "last": "2026-10-30",
+   "file": "data/kintsugi-contracts/KS-2026-0122.txt",
+   "sha256": "9e64085b563881fc258cbe44924afd8b69b9218a884bf1714bdd73ef1f65ae7a"
+  },
+  {
+   "id": "KS-2026-0123",
+   "url": "/sms",
+   "title": "Bitcoin by text",
+   "first": "2026-10-16",
+   "last": "2026-10-24",
+   "file": "data/kintsugi-contracts/KS-2026-0123.txt",
+   "sha256": "0823cca4f52537330a43ba905ac92f7c6522c691f4a4333ea8dea191f52c45a8"
+  },
+  {
+   "id": "KS-2026-0124",
+   "url": "/social",
+   "title": "bWalletX Social",
+   "first": "2026-10-03",
+   "last": "2026-10-28",
+   "file": "data/kintsugi-contracts/KS-2026-0124.txt",
+   "sha256": "46c061873cd7f527eddd6ba9afe3a0671af8a627cee97a080e69507981379cdc"
+  },
+  {
+   "id": "KS-2026-0125",
+   "url": "/store",
+   "title": "Start your store in bWalletX",
+   "first": "2026-10-03",
+   "last": "2026-10-30",
+   "file": "data/kintsugi-contracts/KS-2026-0125.txt",
+   "sha256": "d3f0803bfc4d9e0723f69999d75088e49685e27b30038f88de56758b67646ef5"
+  },
+  {
+   "id": "KS-2026-0126",
+   "url": "/strategies",
+   "title": "bWalletX Strategies",
+   "first": "2026-10-04",
+   "last": "2026-10-25",
+   "file": "data/kintsugi-contracts/KS-2026-0126.txt",
+   "sha256": "b8bb9daa588a9e11948242d51eb83d6891fbda6a1fe23e85c9f92b29967521d9"
+  },
+  {
+   "id": "KS-2026-0127",
+   "url": "/strategies/spec",
+   "title": "bWalletX Strategy Spec",
+   "first": "2026-10-04",
+   "last": "2026-10-18",
+   "file": "data/kintsugi-contracts/KS-2026-0127.txt",
+   "sha256": "a83d0ee3770cbb3d5600bb76fb129f8a2e158060f9595fabfe8ca254b74cbc73"
+  },
+  {
+   "id": "KS-2026-0128",
+   "url": "/streaming-payments",
+   "title": "Streaming payments: pay as you go",
+   "first": "2026-10-08",
+   "last": "2026-10-26",
+   "file": "data/kintsugi-contracts/KS-2026-0128.txt",
+   "sha256": "099d3aef6436893ca61f57c2542574839d27e21e3904ec4cdd3d86e6d2eccbdb"
+  },
+  {
+   "id": "KS-2026-0129",
+   "url": "/subscriptions",
+   "title": "Subscriptions in bWalletX",
+   "first": "2026-10-07",
+   "last": "2026-10-25",
+   "file": "data/kintsugi-contracts/KS-2026-0129.txt",
+   "sha256": "b38fed23651948d89cf014e84b8416717ca4f438dcf4b1f2093da8e8bbbcf45e"
+  },
+  {
+   "id": "KS-2026-0130",
+   "url": "/swap",
+   "title": "Swap into BSV: 1,000+ coins, straight to your wallet",
+   "first": "2026-10-10",
+   "last": "2026-10-30",
+   "file": "data/kintsugi-contracts/KS-2026-0130.txt",
+   "sha256": "832e2f858d24d7280f0d8908f0248073a0540f440f6d8588efd3c01d5deaeb0b"
+  },
+  {
+   "id": "KS-2026-0131",
+   "url": "/sweep-simplycash",
+   "title": "Sweep SimplyCash into bWalletX",
+   "first": "2026-10-05",
+   "last": "2026-10-25",
+   "file": "data/kintsugi-contracts/KS-2026-0131.txt",
+   "sha256": "421a8f9c9bd8d4ae5baa8953366043ca72be3cbf5e746c10c7ebac5d3b2366ad"
+  },
+  {
+   "id": "KS-2026-0132",
+   "url": "/talk-to-b",
+   "title": "Talk to b",
+   "first": "2026-10-05",
+   "last": "2026-10-25",
+   "file": "data/kintsugi-contracts/KS-2026-0132.txt",
+   "sha256": "c7b7e3ae586ea43cf94a92e2907b457e1ee86c7b89a6dfa409647a2dc5bdf8bb"
+  },
+  {
+   "id": "KS-2026-0133",
+   "url": "/terms",
+   "title": "Terms of Service \u00b7 bWalletX (Beta)",
+   "first": "2026-10-06",
+   "last": "2026-10-29",
+   "file": "data/kintsugi-contracts/KS-2026-0133.txt",
+   "sha256": "5770dd4dffcec920d681a4afebd3fc354e7039c6393963af38f024f5b8c51dc3"
+  },
+  {
+   "id": "KS-2026-0134",
+   "url": "/testers",
+   "title": "Get 1 BSV: test bWallet on Android",
+   "first": "2026-10-07",
+   "last": "2026-10-29",
+   "file": "data/kintsugi-contracts/KS-2026-0134.txt",
+   "sha256": "9edd6f92a70612cd0cab743020b949593f541872dd218cbbced6e32f4d8764aa"
+  },
+  {
+   "id": "KS-2026-0135",
+   "url": "/themes",
+   "title": "Themes: make bWallet yours",
+   "first": "2026-10-03",
+   "last": "2026-10-30",
+   "file": "data/kintsugi-contracts/KS-2026-0135.txt",
+   "sha256": "6b9067e2b515b7cc4c104365ef280572819ebb71d7200f68f06ce66ab23764ed"
+  },
+  {
+   "id": "KS-2026-0136",
+   "url": "/themes-custom",
+   "title": "Branded wallets for businesses",
+   "first": "2026-10-15",
+   "last": "2026-10-29",
+   "file": "data/kintsugi-contracts/KS-2026-0136.txt",
+   "sha256": "17cc8038285f2e4f43c3b6bd26e90f5464688b50e5e5c0c9c6d64e490e2d0567"
+  },
+  {
+   "id": "KS-2026-0137",
+   "url": "/tips",
+   "title": "Tips: pay the people who make things",
+   "first": "2026-10-06",
+   "last": "2026-10-23",
+   "file": "data/kintsugi-contracts/KS-2026-0137.txt",
+   "sha256": "f22b36ca2b27060d7b4189a2ba5c7be0b2aea4024ce70993d289b04838b52f73"
+  },
+  {
+   "id": "KS-2026-0138",
+   "url": "/token-curves",
+   "title": "Token curves: how a person's token is priced",
+   "first": "2026-10-06",
+   "last": "2026-10-25",
+   "file": "data/kintsugi-contracts/KS-2026-0138.txt",
+   "sha256": "b90eac96e5ffa290c37c686141a352493eb15c55357f8a405b78dfa154c75e23"
+  },
+  {
+   "id": "KS-2026-0139",
+   "url": "/token-locking",
+   "title": "Token locking",
+   "first": "2026-10-05",
+   "last": "2026-10-29",
+   "file": "data/kintsugi-contracts/KS-2026-0139.txt",
+   "sha256": "194b740e229ba10e17bb03e8856393a417163f510a641ab31b898e72d0c7a030"
+  },
+  {
+   "id": "KS-2026-0140",
+   "url": "/tokenblaster",
+   "title": "tokenblaster.lol: games on the live chain",
+   "first": "2026-10-03",
+   "last": "2026-10-30",
+   "file": "data/kintsugi-contracts/KS-2026-0140.txt",
+   "sha256": "673cfc1a85aec5eafb6f9bd48e3cd24c1f7f87e1e0b727f81d162857ef6caf5d"
+  },
+  {
+   "id": "KS-2026-0141",
+   "url": "/treechat-on-b",
+   "title": "Treechat on b",
+   "first": "2026-10-06",
+   "last": "2026-10-25",
+   "file": "data/kintsugi-contracts/KS-2026-0141.txt",
+   "sha256": "b7cce7910243690769a713c71811ea4a79c05249e963359d6571097f2313dd1c"
+  },
+  {
+   "id": "KS-2026-0142",
+   "url": "/twetch-on-b",
+   "title": "Twetch on b",
+   "first": "2026-10-04",
+   "last": "2026-10-27",
+   "file": "data/kintsugi-contracts/KS-2026-0142.txt",
+   "sha256": "23cfbea0f6f8411efb8a705def0b67fa3620d43ff8c6a07e728cac21dcc2ce69"
+  },
+  {
+   "id": "KS-2026-0143",
+   "url": "/verify-note",
+   "title": "Verify a signed note",
+   "first": "2026-10-06",
+   "last": "2026-10-28",
+   "file": "data/kintsugi-contracts/KS-2026-0143.txt",
+   "sha256": "c15ae45607e186888e7aaa16979e139d4f22209a06ef3d09d3c6235aeaf7d7d8"
+  },
+  {
+   "id": "KS-2026-0144",
+   "url": "/video",
+   "title": "Watch: bWalletX in one minute",
+   "first": "2026-10-06",
+   "last": "2026-10-26",
+   "file": "data/kintsugi-contracts/KS-2026-0144.txt",
+   "sha256": "e39bff007da0ad394a5cf1fe340ec08973c16353ed374fa0fa26e22ffb3d2e3d"
+  },
+  {
+   "id": "KS-2026-0145",
+   "url": "/wallet-frames",
+   "title": "Wallet Frames: your private things, drawn by your wallet",
+   "first": "2026-10-08",
+   "last": "2026-10-26",
+   "file": "data/kintsugi-contracts/KS-2026-0145.txt",
+   "sha256": "b3f090e1a7386de29cf5c5d1f135f436a854c479caf58693e1a927c380c4f4b1"
+  },
+  {
+   "id": "KS-2026-0146",
+   "url": "/web",
+   "title": "bWalletX web wallet",
+   "first": "2026-10-08",
+   "last": "2026-10-08",
+   "file": "data/kintsugi-contracts/KS-2026-0146.txt",
+   "sha256": "e1e427e9bbb2addccfeed7ae45c037a52b2df32942defe09708d10458410d194"
+  },
+  {
+   "id": "KS-2026-0147",
+   "url": "/x",
+   "title": "Link your X account",
+   "first": "2026-10-07",
+   "last": "2026-10-30",
+   "file": "data/kintsugi-contracts/KS-2026-0147.txt",
+   "sha256": "137e214acd485b65620cbd4026da5fc6a3b4de7a634f15aaa63f6aac868c1ffe"
+  },
+  {
+   "id": "KS-2026-0148",
+   "url": "/your-apps-on-b",
+   "title": "Your apps on b",
+   "first": "2026-10-03",
+   "last": "2026-10-29",
+   "file": "data/kintsugi-contracts/KS-2026-0148.txt",
+   "sha256": "388686a4c2b35e722da3e76637eee6de379b33e241a8683d9c014eee0573014a"
+  },
+  {
+   "id": "KS-2026-0149",
+   "url": "/your-character",
+   "title": "Your character",
+   "first": "2026-10-19",
+   "last": "2026-10-19",
+   "file": "data/kintsugi-contracts/KS-2026-0149.txt",
+   "sha256": "21d243886e96b4336bb951f23c4f4b65c3531a211ddeb6f7388cfb8c2b07f538"
+  },
+  {
+   "id": "KS-2026-0150",
+   "url": "/yours-on-b",
+   "title": "Yours on b",
+   "first": "2026-10-07",
+   "last": "2026-10-29",
+   "file": "data/kintsugi-contracts/KS-2026-0150.txt",
+   "sha256": "d2b236c12f010d8c8854b5369b367732b3f29331edf04da7094bbb222b58f30b"
+  },
+  {
+   "id": "KS-2026-0151",
+   "url": null,
+   "title": "bChatX: shared code",
+   "first": "2026-10-04",
+   "last": "2026-10-30",
+   "file": "data/kintsugi-contracts/KS-2026-0151.txt",
+   "sha256": "064e60c61609584364433ad7888260ff02cebd88b9d00c6bef7796f8d31dde11"
+  },
+  {
+   "id": "KS-2026-0152",
+   "url": null,
+   "title": "bGitX site: shared code",
+   "first": "2026-10-28",
+   "last": "2026-10-28",
+   "file": "data/kintsugi-contracts/KS-2026-0152.txt",
+   "sha256": "f06c7ede9e2f709a5adaa690429a62f9222ab74a0ae1b28516fa30248fef5559"
+  },
+  {
+   "id": "KS-2026-0153",
+   "url": null,
+   "title": "bWalletX app: shared code",
+   "first": "2026-10-03",
+   "last": "2026-10-30",
+   "file": "data/kintsugi-contracts/KS-2026-0153.txt",
+   "sha256": "443788040a4478c67e7fcf288f4ee6dff2ffe2c2037ce89ee5144a50c6a21346"
+  }
+ ]
+}

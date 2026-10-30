@@ -1,0 +1,30 @@
+Kintsugi example contract
+Example contract: shows what a Kintsugi contract for this job looks like. Not signed, not an invoice.
+
+Contract: KS-2026-0031
+Client: The Bitcoin Corporation Ltd, company no. 16735102, registered in England & Wales. Commissioned the work.
+Developer: b0ase · paymail b0asex@bwalletx.com ($b0asex)
+Review: Kintsugi, run by The Bitcoin Corporation Ltd
+Task: be on b (bwalletx.com/be-on-b)
+Description: All your Bitcoin SV apps, together on b. Twetch, RelayX, CoinGeek, Peck, Hodlocker, Treechat and Yours.
+Estimate: 0.1 h (wall-clock)
+Price: Client pays $2 (0.1 h × $25): $2 to the developer (0.1 h × $20, ~0.09 BSV at $17.01/BSV) and $0 to Kintsugi as its fee. Paid in BSV at the BSV/USD rate on the day of payment, both from the client's wallet in one transaction.
+Estimated value of work: $4
+Started: 26 Oct 2026
+Delivered: 26 Oct 2026
+
+Terms
+1. Payment is peer to peer: the client pays the developer directly, wallet to wallet. Kintsugi never holds the money.
+2. Up to 8 billable hours per day.
+3. Done means: the pull request is merged into the agreed repo, the change is live on the stated page, and the security tool results are attached.
+4. Security tools: Shannon for any change that touches sign-in, payments, keys or signing; Semgrep, gitleaks, pnpm audit and OSV-Scanner, CodeQL, OWASP ZAP (baseline scan) and Claude Code /security-review. Tool and AI usage costs are the developer's and are not billable hours.
+5. Kintsugi checks the spec and reviews the work. When the work is accepted, the client pays the developer's $handle in bWalletX, with Kintsugi's fee as a separate payment in the same transaction.
+6. Disputes: if the client and developer disagree about whether the work is done, Kintsugi reviews it and decides.
+7. Delivered work belongs to the client once it is paid for.
+8. Code under the Open BSV licence; specs and docs CC BY 4.0.
+9. All three parties sign the same contract in bChatX before work starts.
+10. This log is the founder's own work, counted at up to 18 hours a day. It comes from before the 8-hour daily cap that applies to Kintsugi developers.
+
+Client: Example — not signed
+Developer: Example — not signed
+Kintsugi: Example — not signed
