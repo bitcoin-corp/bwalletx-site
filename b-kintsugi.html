@@ -366,7 +366,7 @@ gl_FragColor=vec4(col,1.);}`;
       (function () {
         var music = document.getElementById('music'), vo = new Audio(), ok = false;
         vo.preload = 'auto'; vo.oncanplaythrough = function () { ok = true; }; vo.onerror = function () { ok = false; };
-        vo.src = 'audio/b-kintsugi-voice.mp3';
+        // voice version lives at /b-kintsugi-voice
         music.addEventListener('play', function () { if (!ok) return; music.volume = 0.4; vo.currentTime = music.currentTime; vo.muted = music.muted; vo.play().catch(function () {}); });
         music.addEventListener('pause', function () { vo.pause(); });
         music.addEventListener('volumechange', function () { vo.muted = music.muted; });
