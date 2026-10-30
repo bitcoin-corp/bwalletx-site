@@ -240,7 +240,7 @@
         { at: 54.65, art: '<div class="card"><p class="k"><img src="b-paid-glyph.svg" alt=""> Agreement</p><div class="sig" style="--d:0"><span>You</span><i></i><b>&#10003;</b></div><div class="sig" style="--d:1"><span>Them</span><i></i><b>&#10003;</b></div></div>', slogan: 'Deal', sub: 'One tap to take the job. You both sign.' },
         { at: 61.43, art: '<div class="card"><p class="k"><img src="b-paid-glyph.svg" alt=""> Delivered</p><div class="row"><span>File</span><span>bakery-logo.svg</span></div><div class="row"><span>Revisions</span><span>2 of 2</span></div><div class="btn">Signed off</div></div>', slogan: 'Done', sub: 'They deliver. You sign it off.' },
         { at: 68.21, art: '<div class="card"><p class="k"><img src="b-paid-glyph.svg" alt=""> Paid in BSV</p><div class="flow"><div class="w8"><strong>$40</strong>You</div><div class="ar"></div><div class="w8"><strong>$32</strong>Them</div></div><div class="flow" style="margin-top:10px"><div class="w8" style="visibility:hidden"></div><div class="ar"></div><div class="w8"><strong>$8</strong>b fee</div></div></div>', slogan: 'Get paid', sub: 'Wallet to wallet, peer to peer, in seconds. We never hold the money.' },
-        { at: 74.99, art: '<div class="card"><p class="k"><img src="b-paid-glyph.svg" alt=""> Room: Bakery app</p><div class="row"><span>@maya &middot; design</span><span>30%</span></div><div class="row"><span>@raj &middot; code</span><span>45%</span></div><div class="row"><span>@you &middot; the idea</span><span>25%</span></div><div class="tools"><span>bChat</span><span>bMail</span><span>bPhone</span><span>bWriter</span><span>bDrive</span><span>bSheets</span></div><div class="btn">Everyone signed</div></div>', slogan: 'Build together', sub: 'Split the work in a room, with b\u2019s office tools to hand. Share what you build.' },
+        { at: 74.99, art: '<div class="card"><p class="k"><img src="b-paid-glyph.svg" alt=""> Room: Bakery app</p><div class="row"><span>@maya &middot; design</span><span>30%</span></div><div class="row"><span>@raj &middot; code</span><span>45%</span></div><div class="row"><span>@you &middot; the idea</span><span>25%</span></div><div class="btn">Everyone signed</div></div>', slogan: 'Build together', sub: 'Split the work in a room. Share what you build.' },
         { at: 81.77, slogan: '{L} paid', sub: 'Ask for anything. Do what you\u2019re good at.', cta: true }
       ];
       // ---------------------------------
@@ -395,9 +395,7 @@ gl_FragColor=vec4(col,1.);}`;
           ['@aiko', 'Build me a one-page website for my band'],
           ['@sam', 'Proofread my CV tonight?'],
           ['@jo', 'Set up a BSV till for my caf\u00e9'],
-          ['@kwame', 'Voice-over for a 30-second ad, American accent'],
-          ['@nina', 'Draft our pitch in bWriter, budget in bSheets'],
-          ['@leo', 'Call me on bPhone when the designs are in bDrive']
+          ['@kwame', 'Voice-over for a 30-second ad, American accent']
         ];
         var q = document.getElementById('askq'), who = document.getElementById('askwho'), bar = document.getElementById('askbar');
         var still = matchMedia('(prefers-reduced-motion: reduce)').matches, i = 0;
