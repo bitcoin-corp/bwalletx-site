@@ -1,0 +1,3966 @@
+{
+ "generated": "30 Oct 2026",
+ "since": "2026-09-29",
+ "days": 31,
+ "gap_h": 2.0,
+ "pad_h": 0.5,
+ "usd_h": 20,
+ "bsv_h": 1,
+ "repos": [
+  {
+   "repo": "bwalletx.com site",
+   "commits": 887,
+   "attributed": 765
+  },
+  {
+   "repo": "bWalletX app",
+   "commits": 1930,
+   "attributed": 1304
+  },
+  {
+   "repo": "bChatX",
+   "commits": 660,
+   "attributed": 565
+  },
+  {
+   "repo": "bMailX site",
+   "commits": 13,
+   "attributed": 13
+  },
+  {
+   "repo": "bMarketX site",
+   "commits": 34,
+   "attributed": 34
+  },
+  {
+   "repo": "bGitX site",
+   "commits": 4,
+   "attributed": 3
+  }
+ ],
+ "items": [
+  {
+   "url": "/agent",
+   "title": "Ask b",
+   "topic": "Agents and b",
+   "live": true,
+   "posts": [
+    {
+     "n": "009",
+     "url": "/blog/009-the-b-agent",
+     "title": "009 The b agent: paid, or your own key \u00b7 bWalletX blog"
+    },
+    {
+     "n": "010",
+     "url": "/blog/010-agents-strategies-cli",
+     "title": "010 Agent accounts, strategies, CLI and MCP \u00b7 bWalletX blog"
+    },
+    {
+     "n": "044",
+     "url": "/blog/044-your-tokens-own-page-and-agent",
+     "title": "044 Your token's own page and agent \u00b7 bWalletX blog"
+    }
+   ],
+   "on_x": true,
+   "time": {
+    "hours": 37.78,
+    "sessions": 54,
+    "commits": 80.2,
+    "first": "2026-10-01",
+    "last": "2026-10-29",
+    "elapsed_days": 29,
+    "prs": 64,
+    "pr_median_h": 0.1
+   }
+  },
+  {
+   "url": "/agents",
+   "title": "bWalletX Agent Accounts",
+   "topic": "Agents and b",
+   "live": true,
+   "posts": [
+    {
+     "n": "010",
+     "url": "/blog/010-agents-strategies-cli",
+     "title": "010 Agent accounts, strategies, CLI and MCP \u00b7 bWalletX blog"
+    },
+    {
+     "n": "016",
+     "url": "/blog/016-pots",
+     "title": "016 Subscriptions, paid from pots \u00b7 bWalletX blog"
+    }
+   ],
+   "on_x": true,
+   "time": {
+    "hours": 7.52,
+    "sessions": 29,
+    "commits": 14.3,
+    "first": "2026-10-04",
+    "last": "2026-10-29",
+    "elapsed_days": 26,
+    "prs": 7,
+    "pr_median_h": 0.8
+   }
+  },
+  {
+   "url": "/airdrops",
+   "title": "Airdrops",
+   "topic": "Exchange, tokens and launches",
+   "live": true,
+   "posts": [],
+   "on_x": true,
+   "time": {
+    "hours": 10.94,
+    "sessions": 20,
+    "commits": 19.0,
+    "first": "2026-10-08",
+    "last": "2026-10-29",
+    "elapsed_days": 22,
+    "prs": 11,
+    "pr_median_h": 0.2
+   }
+  },
+  {
+   "url": "/aivj",
+   "title": "AIVJ: watch VexVoid play live",
+   "topic": "Store, creators and media",
+   "live": true,
+   "posts": [
+    {
+     "n": "050",
+     "url": "/blog/050-aivj-tv-vexvoid-live",
+     "title": "050 AIVJ \u2014 VexVoid, live \u00b7 bWalletX blog"
+    }
+   ],
+   "on_x": true,
+   "time": {
+    "hours": 0.78,
+    "sessions": 6,
+    "commits": 1.8,
+    "first": "2026-10-13",
+    "last": "2026-10-28",
+    "elapsed_days": 16,
+    "prs": 3,
+    "pr_median_h": 0.1
+   }
+  },
+  {
+   "url": "/android",
+   "title": "bWalletX for Android",
+   "topic": "bApps, games and the open platform",
+   "live": true,
+   "posts": [
+    {
+     "n": "001",
+     "url": "/blog/001-the-fork",
+     "title": "001 Forking Yours Wallet onto phones \u00b7 bWalletX blog"
+    },
+    {
+     "n": "012",
+     "url": "/blog/012-extension-and-web",
+     "title": "012 The extension, the web app and pairing \u00b7 bWalletX blog"
+    },
+    {
+     "n": "018",
+     "url": "/blog/018-testers",
+     "title": "018 1 BSV for testing bWallet on Android \u00b7 bWalletX blog"
+    }
+   ],
+   "on_x": true,
+   "time": {
+    "hours": 70.3,
+    "sessions": 65,
+    "commits": 167.0,
+    "first": "2026-09-29",
+    "last": "2026-10-29",
+    "elapsed_days": 31,
+    "prs": 15,
+    "pr_median_h": 0.1
+   }
+  },
+  {
+   "url": "/apps/add",
+   "title": "Add your app to bWallet",
+   "topic": "bApps, games and the open platform",
+   "live": true,
+   "posts": [
+    {
+     "n": "003",
+     "url": "/blog/003-tabs-apps-feed",
+     "title": "003 Tabs, apps and a social feed \u00b7 bWalletX blog"
+    }
+   ],
+   "on_x": true,
+   "time": {
+    "hours": 1.4,
+    "sessions": 5,
+    "commits": 2.0,
+    "first": "2026-10-04",
+    "last": "2026-10-18",
+    "elapsed_days": 14,
+    "prs": 1,
+    "pr_median_h": 0.0
+   }
+  },
+  {
+   "url": "/artists",
+   "title": "Artists on bWalletX",
+   "topic": "Store, creators and media",
+   "live": true,
+   "posts": [
+    {
+     "n": "040",
+     "url": "/blog/040-pay-artists-by-the-second",
+     "title": "040 Pay artists by the second \u00b7 bWalletX blog"
+    },
+    {
+     "n": "047",
+     "url": "/blog/047-pay-the-artist",
+     "title": "047 Pay the artist \u00b7 bWalletX blog"
+    }
+   ],
+   "on_x": true,
+   "time": {
+    "hours": 3.42,
+    "sessions": 7,
+    "commits": 10.2,
+    "first": "2026-10-11",
+    "last": "2026-10-26",
+    "elapsed_days": 15,
+    "prs": 4,
+    "pr_median_h": 0.1
+   }
+  },
+  {
+   "url": "/artists/vexvoid",
+   "title": "VexVoid on bWalletX",
+   "topic": "Store, creators and media",
+   "live": true,
+   "posts": [
+    {
+     "n": "047",
+     "url": "/blog/047-pay-the-artist",
+     "title": "047 Pay the artist \u00b7 bWalletX blog"
+    },
+    {
+     "n": "050",
+     "url": "/blog/050-aivj-tv-vexvoid-live",
+     "title": "050 AIVJ \u2014 VexVoid, live \u00b7 bWalletX blog"
+    }
+   ],
+   "on_x": true,
+   "time": {
+    "hours": 1.34,
+    "sessions": 9,
+    "commits": 2.9,
+    "first": "2026-10-05",
+    "last": "2026-10-28",
+    "elapsed_days": 23,
+    "prs": 3,
+    "pr_median_h": 0.1
+   }
+  },
+  {
+   "url": "/ask-b",
+   "title": "Ask b",
+   "topic": "Agents and b",
+   "live": true,
+   "posts": [
+    {
+     "n": "043",
+     "url": "/blog/043-ask-b",
+     "title": "043 Ask b \u00b7 bWalletX blog"
+    },
+    {
+     "n": "051",
+     "url": "/blog/051-spaces-schedule-and-ask-b",
+     "title": "051 Spaces on a schedule, b on every page \u00b7 bWalletX blog"
+    }
+   ],
+   "on_x": true,
+   "time": {
+    "hours": 4.25,
+    "sessions": 9,
+    "commits": 8.2,
+    "first": "2026-10-12",
+    "last": "2026-10-28",
+    "elapsed_days": 17,
+    "prs": 3,
+    "pr_median_h": 0.1
+   }
+  },
+  {
+   "url": "/b-aware",
+   "title": "b-Aware: responsible disclosure and bug bounty",
+   "topic": "Safety and control",
+   "live": true,
+   "posts": [
+    {
+     "n": "059",
+     "url": "/blog/059-b-aware",
+     "title": "059 b-Aware: find a hole in bWalletX, get paid in BSV \u00b7 bWalletX blog"
+    }
+   ],
+   "on_x": true,
+   "time": {
+    "hours": 5.05,
+    "sessions": 8,
+    "commits": 12.2,
+    "first": "2026-10-20",
+    "last": "2026-10-26",
+    "elapsed_days": 6,
+    "prs": 3,
+    "pr_median_h": 0.1
+   }
+  },
+  {
+   "url": "/b-bots",
+   "title": "bBots: little helpers that work for you",
+   "topic": "Agents and b",
+   "live": true,
+   "posts": [],
+   "on_x": false,
+   "time": {
+    "hours": 0.91,
+    "sessions": 2,
+    "commits": 2.4,
+    "first": "2026-10-19",
+    "last": "2026-10-28",
+    "elapsed_days": 10,
+    "prs": 3,
+    "pr_median_h": 0.8
+   }
+  },
+  {
+   "url": "/b-cool",
+   "title": "b cool",
+   "topic": "Start here, brand and campaigns",
+   "live": true,
+   "posts": [],
+   "on_x": true,
+   "time": {
+    "hours": 1.96,
+    "sessions": 5,
+    "commits": 19.0,
+    "first": "2026-10-14",
+    "last": "2026-10-29",
+    "elapsed_days": 15,
+    "prs": 1,
+    "pr_median_h": 0.0
+   }
+  },
+  {
+   "url": "/b-creative",
+   "title": "b Creative",
+   "topic": "Start here, brand and campaigns",
+   "live": true,
+   "posts": [],
+   "on_x": true,
+   "time": {
+    "hours": 4.7,
+    "sessions": 6,
+    "commits": 22.5,
+    "first": "2026-10-16",
+    "last": "2026-10-29",
+    "elapsed_days": 13,
+    "prs": 10,
+    "pr_median_h": 0.1
+   }
+  },
+  {
+   "url": "/b-family",
+   "title": "The b family",
+   "topic": "Start here, brand and campaigns",
+   "live": true,
+   "posts": [],
+   "on_x": true,
+   "time": {
+    "hours": 6.23,
+    "sessions": 8,
+    "commits": 12.5,
+    "first": "2026-10-23",
+    "last": "2026-10-29",
+    "elapsed_days": 7,
+    "prs": 4,
+    "pr_median_h": 0.0
+   }
+  },
+  {
+   "url": "/b-in-black",
+   "title": "b black",
+   "topic": "Start here, brand and campaigns",
+   "live": true,
+   "posts": [],
+   "on_x": true,
+   "time": {
+    "hours": 0.62,
+    "sessions": 2,
+    "commits": 1.2,
+    "first": "2026-10-08",
+    "last": "2026-10-25",
+    "elapsed_days": 18,
+    "prs": 1,
+    "pr_median_h": 1.2
+   }
+  },
+  {
+   "url": "/b-is-coming",
+   "title": "b is coming",
+   "topic": "Start here, brand and campaigns",
+   "live": true,
+   "posts": [],
+   "on_x": true,
+   "time": {
+    "hours": 4.91,
+    "sessions": 4,
+    "commits": 11.8,
+    "first": "2026-10-25",
+    "last": "2026-10-29",
+    "elapsed_days": 4,
+    "prs": 14,
+    "pr_median_h": 0.0
+   }
+  },
+  {
+   "url": "/b-is-for-auteurs",
+   "title": "b is for auteurs",
+   "topic": "Start here, brand and campaigns",
+   "live": true,
+   "posts": [],
+   "on_x": true,
+   "time": {
+    "hours": 1.19,
+    "sessions": 3,
+    "commits": 4.1,
+    "first": "2026-10-23",
+    "last": "2026-10-29",
+    "elapsed_days": 7,
+    "prs": 5,
+    "pr_median_h": 0.1
+   }
+  },
+  {
+   "url": "/b-is-for-business",
+   "title": "b is for business",
+   "topic": "Start here, brand and campaigns",
+   "live": true,
+   "posts": [],
+   "on_x": true,
+   "time": {
+    "hours": 1.48,
+    "sessions": 5,
+    "commits": 11.2,
+    "first": "2026-10-16",
+    "last": "2026-10-29",
+    "elapsed_days": 13,
+    "prs": 4,
+    "pr_median_h": 0.3
+   }
+  },
+  {
+   "url": "/b-is-for-shopkeepers",
+   "title": "b is for shopkeepers",
+   "topic": "Start here, brand and campaigns",
+   "live": true,
+   "posts": [],
+   "on_x": true,
+   "time": {
+    "hours": 0.3,
+    "sessions": 2,
+    "commits": 0.6,
+    "first": "2026-10-28",
+    "last": "2026-10-29",
+    "elapsed_days": 1,
+    "prs": 2,
+    "pr_median_h": 0.0
+   }
+  },
+  {
+   "url": "/b-market",
+   "title": "bMarketX.com: your eBay store, on Bitcoin",
+   "topic": "Exchange, tokens and launches",
+   "live": true,
+   "posts": [],
+   "on_x": true,
+   "time": {
+    "hours": 11.44,
+    "sessions": 6,
+    "commits": 34.6,
+    "first": "2026-10-26",
+    "last": "2026-10-28",
+    "elapsed_days": 2,
+    "prs": 4,
+    "pr_median_h": 0.0
+   }
+  },
+  {
+   "url": "/b-on-twetch",
+   "title": "b is on Twetch",
+   "topic": "Start here, brand and campaigns",
+   "live": true,
+   "posts": [],
+   "on_x": true,
+   "time": {
+    "hours": 2.21,
+    "sessions": 9,
+    "commits": 4.6,
+    "first": "2026-10-01",
+    "last": "2026-10-27",
+    "elapsed_days": 26,
+    "prs": 9,
+    "pr_median_h": 0.1
+   }
+  },
+  {
+   "url": "/b-socials",
+   "title": "Everything b",
+   "topic": "Start here, brand and campaigns",
+   "live": true,
+   "posts": [],
+   "on_x": false,
+   "time": {
+    "hours": 0.5,
+    "sessions": 1,
+    "commits": 1.0,
+    "first": "2026-10-29",
+    "last": "2026-10-29",
+    "elapsed_days": 1,
+    "prs": 1,
+    "pr_median_h": 0.0
+   }
+  },
+  {
+   "url": "/b/acc",
+   "title": "bAcc: make Bitcoin faster, the goal is 1 billion transactions a second",
+   "topic": "Store, creators and media",
+   "live": true,
+   "posts": [],
+   "on_x": true,
+   "time": {
+    "hours": 1.52,
+    "sessions": 2,
+    "commits": 5.5,
+    "first": "2026-10-20",
+    "last": "2026-10-21",
+    "elapsed_days": 1,
+    "prs": 6,
+    "pr_median_h": 0.1
+   }
+  },
+  {
+   "url": "/b/acc/store",
+   "title": "The bAcc theme for bWalletX, $1 | bAcc store",
+   "topic": "Store, creators and media",
+   "live": true,
+   "posts": [
+    {
+     "n": "007",
+     "url": "/blog/007-store-and-private",
+     "title": "007 Store rules, open rooms and moderation \u00b7 bWalletX blog"
+    }
+   ],
+   "on_x": true,
+   "time": {
+    "hours": 27.02,
+    "sessions": 77,
+    "commits": 51.3,
+    "first": "2026-09-29",
+    "last": "2026-10-28",
+    "elapsed_days": 29,
+    "prs": 90,
+    "pr_median_h": 0.2
+   }
+  },
+  {
+   "url": "/bads",
+   "title": "bAds \u00b7 we sell bAds, made by b",
+   "topic": "Store, creators and media",
+   "live": true,
+   "posts": [],
+   "on_x": true,
+   "time": {
+    "hours": 7.37,
+    "sessions": 7,
+    "commits": 14.0,
+    "first": "2026-10-23",
+    "last": "2026-10-28",
+    "elapsed_days": 5,
+    "prs": 13,
+    "pr_median_h": 0.1
+   }
+  },
+  {
+   "url": "/bapps",
+   "title": "bApps: apps that run inside bWalletX",
+   "topic": "bApps, games and the open platform",
+   "live": true,
+   "posts": [],
+   "on_x": false,
+   "time": {
+    "hours": 16.36,
+    "sessions": 30,
+    "commits": 32.5,
+    "first": "2026-10-01",
+    "last": "2026-10-26",
+    "elapsed_days": 26,
+    "prs": 14,
+    "pr_median_h": 0.2
+   }
+  },
+  {
+   "url": "/bapps/bmovies",
+   "title": "bMovies inside bWalletX",
+   "topic": "bApps, games and the open platform",
+   "live": true,
+   "posts": [],
+   "on_x": false,
+   "time": {
+    "hours": 2.8,
+    "sessions": 8,
+    "commits": 7.6,
+    "first": "2026-10-01",
+    "last": "2026-10-23",
+    "elapsed_days": 22,
+    "prs": 8,
+    "pr_median_h": 0.3
+   }
+  },
+  {
+   "url": "/bavatars",
+   "title": "bAvatars: your name, as art you can scan",
+   "topic": "Your identity and names",
+   "live": true,
+   "posts": [],
+   "on_x": true,
+   "time": {
+    "hours": 12.31,
+    "sessions": 28,
+    "commits": 28.0,
+    "first": "2026-10-01",
+    "last": "2026-10-28",
+    "elapsed_days": 27,
+    "prs": 33,
+    "pr_median_h": 0.1
+   }
+  },
+  {
+   "url": "/bchatx",
+   "title": "bChatX: chat, rooms and Spaces",
+   "topic": "Rooms, chat and Spaces (bChatX)",
+   "live": true,
+   "posts": [
+    {
+     "n": "032",
+     "url": "/blog/032-meet-bchatx",
+     "title": "032 Meet bChatX.com \u00b7 bWalletX blog"
+    }
+   ],
+   "on_x": true,
+   "time": {
+    "hours": 74.08,
+    "sessions": 62,
+    "commits": 191.4,
+    "first": "2026-10-01",
+    "last": "2026-10-30",
+    "elapsed_days": 29,
+    "prs": 281,
+    "pr_median_h": 0.1
+   }
+  },
+  {
+   "url": "/be-on-b-2",
+   "title": "be on b",
+   "topic": "Start here, brand and campaigns",
+   "live": true,
+   "posts": [],
+   "on_x": false,
+   "time": {
+    "hours": 0.58,
+    "sessions": 2,
+    "commits": 1.9,
+    "first": "2026-10-26",
+    "last": "2026-10-26",
+    "elapsed_days": 1,
+    "prs": 5,
+    "pr_median_h": 0.0
+   }
+  },
+  {
+   "url": "/be-on-b-3",
+   "title": "be on b",
+   "topic": "Start here, brand and campaigns",
+   "live": true,
+   "posts": [],
+   "on_x": false,
+   "time": {
+    "hours": 0.58,
+    "sessions": 2,
+    "commits": 1.9,
+    "first": "2026-10-26",
+    "last": "2026-10-26",
+    "elapsed_days": 1,
+    "prs": 5,
+    "pr_median_h": 0.0
+   }
+  },
+  {
+   "url": "/be-on-b",
+   "title": "be on b",
+   "topic": "Start here, brand and campaigns",
+   "live": true,
+   "posts": [],
+   "on_x": false,
+   "time": {
+    "hours": 0.22,
+    "sessions": 1,
+    "commits": 0.9,
+    "first": "2026-10-26",
+    "last": "2026-10-26",
+    "elapsed_days": 1,
+    "prs": 3,
+    "pr_median_h": 0.0
+   }
+  },
+  {
+   "url": "/bgitx",
+   "title": "bGitX: your code, on b",
+   "topic": "Your identity and names",
+   "live": true,
+   "posts": [],
+   "on_x": false,
+   "time": {
+    "hours": 1.48,
+    "sessions": 3,
+    "commits": 3.4,
+    "first": "2026-10-28",
+    "last": "2026-10-28",
+    "elapsed_days": 1,
+    "prs": 3,
+    "pr_median_h": 0.3
+   }
+  },
+  {
+   "url": "/bmail",
+   "title": "bMail",
+   "topic": "Mail, meetings and signing",
+   "live": true,
+   "posts": [
+    {
+     "n": "057",
+     "url": "/blog/057-handcash-and-invites",
+     "title": "057 Sign in with HandCash, and invites with tokens \u00b7 bWalletX blog"
+    }
+   ],
+   "on_x": true,
+   "time": {
+    "hours": 19.53,
+    "sessions": 32,
+    "commits": 48.6,
+    "first": "2026-10-01",
+    "last": "2026-10-30",
+    "elapsed_days": 29,
+    "prs": 26,
+    "pr_median_h": 0.1
+   }
+  },
+  {
+   "url": "/bounties",
+   "title": "Bounties: live pool and payouts",
+   "topic": "Safety and control",
+   "live": true,
+   "posts": [],
+   "on_x": false,
+   "time": {
+    "hours": 0.67,
+    "sessions": 3,
+    "commits": 1.3,
+    "first": "2026-10-01",
+    "last": "2026-10-23",
+    "elapsed_days": 23,
+    "prs": 1,
+    "pr_median_h": 0.0
+   }
+  },
+  {
+   "url": "/bphone",
+   "title": "bPhone",
+   "topic": "Calls (bPhone)",
+   "live": true,
+   "posts": [
+    {
+     "n": "026",
+     "url": "/blog/026-paying-to-be-heard",
+     "title": "026 Paying to be heard \u00b7 bWalletX blog"
+    },
+    {
+     "n": "030",
+     "url": "/blog/030-bphone",
+     "title": "030 bPhone: charge to receive calls \u00b7 bWalletX blog"
+    },
+    {
+     "n": "031",
+     "url": "/blog/031-calls-mics-menu",
+     "title": "031 bWalletX 5.1.88: a new Calls tab, working mics, a new menu \u00b7 bWalletX blog"
+    },
+    {
+     "n": "051",
+     "url": "/blog/051-spaces-schedule-and-ask-b",
+     "title": "051 Spaces on a schedule, b on every page \u00b7 bWalletX blog"
+    }
+   ],
+   "on_x": true,
+   "time": {
+    "hours": 27.41,
+    "sessions": 46,
+    "commits": 49.6,
+    "first": "2026-10-01",
+    "last": "2026-10-30",
+    "elapsed_days": 30,
+    "prs": 37,
+    "pr_median_h": 0.1
+   }
+  },
+  {
+   "url": "/bpositive",
+   "title": "bPositive",
+   "topic": "Exchange, tokens and launches",
+   "live": true,
+   "posts": [],
+   "on_x": true,
+   "time": {
+    "hours": 0.89,
+    "sessions": 4,
+    "commits": 2.2,
+    "first": "2026-10-08",
+    "last": "2026-10-17",
+    "elapsed_days": 9,
+    "prs": 2,
+    "pr_median_h": 0.4
+   }
+  },
+  {
+   "url": "/bradio",
+   "title": "bRadio: live audio Spaces in bWalletX",
+   "topic": "Rooms, chat and Spaces (bChatX)",
+   "live": true,
+   "posts": [
+    {
+     "n": "054",
+     "url": "/blog/054-bradio-live-audio",
+     "title": "054 bRadio: live audio in bWalletX \u00b7 bWalletX blog"
+    }
+   ],
+   "on_x": true,
+   "time": {
+    "hours": 0.69,
+    "sessions": 3,
+    "commits": 3.3,
+    "first": "2026-10-15",
+    "last": "2026-10-23",
+    "elapsed_days": 9,
+    "prs": 0,
+    "pr_median_h": null
+   }
+  },
+  {
+   "url": "/brand",
+   "title": "The bWalletX brand",
+   "topic": "Start here, brand and campaigns",
+   "live": true,
+   "posts": [],
+   "on_x": true,
+   "time": {
+    "hours": 34.04,
+    "sessions": 38,
+    "commits": 59.8,
+    "first": "2026-09-29",
+    "last": "2026-10-29",
+    "elapsed_days": 31,
+    "prs": 29,
+    "pr_median_h": 0.1
+   }
+  },
+  {
+   "url": "/bspaces",
+   "title": "bSpaces",
+   "topic": "Rooms, chat and Spaces (bChatX)",
+   "live": true,
+   "posts": [
+    {
+     "n": "031",
+     "url": "/blog/031-calls-mics-menu",
+     "title": "031 bWalletX 5.1.88: a new Calls tab, working mics, a new menu \u00b7 bWalletX blog"
+    },
+    {
+     "n": "033",
+     "url": "/blog/033-spaces-you-can-listen-to",
+     "title": "033 Spaces you can just listen to \u00b7 bWalletX blog"
+    },
+    {
+     "n": "051",
+     "url": "/blog/051-spaces-schedule-and-ask-b",
+     "title": "051 Spaces on a schedule, b on every page \u00b7 bWalletX blog"
+    },
+    {
+     "n": "054",
+     "url": "/blog/054-bradio-live-audio",
+     "title": "054 bRadio: live audio in bWalletX \u00b7 bWalletX blog"
+    },
+    {
+     "n": "057",
+     "url": "/blog/057-handcash-and-invites",
+     "title": "057 Sign in with HandCash, and invites with tokens \u00b7 bWalletX blog"
+    }
+   ],
+   "on_x": true,
+   "time": {
+    "hours": 26.85,
+    "sessions": 45,
+    "commits": 81.6,
+    "first": "2026-10-04",
+    "last": "2026-10-30",
+    "elapsed_days": 26,
+    "prs": 105,
+    "pr_median_h": 0.1
+   }
+  },
+  {
+   "url": "/btrust",
+   "title": "bTrust in bWalletX",
+   "topic": "Your wallet and money",
+   "live": true,
+   "posts": [],
+   "on_x": true,
+   "time": {
+    "hours": 4.38,
+    "sessions": 8,
+    "commits": 13.6,
+    "first": "2026-10-06",
+    "last": "2026-10-26",
+    "elapsed_days": 20,
+    "prs": 8,
+    "pr_median_h": 0.2
+   }
+  },
+  {
+   "url": "/business-agents",
+   "title": "bRand business agents",
+   "topic": "Start here, brand and campaigns",
+   "live": true,
+   "posts": [],
+   "on_x": true,
+   "time": {
+    "hours": 8.18,
+    "sessions": 31,
+    "commits": 15.4,
+    "first": "2026-10-04",
+    "last": "2026-10-29",
+    "elapsed_days": 26,
+    "prs": 10,
+    "pr_median_h": 0.3
+   }
+  },
+  {
+   "url": "/buy",
+   "title": "Buy BSV in bWalletX",
+   "topic": "Your wallet and money",
+   "live": true,
+   "posts": [],
+   "on_x": true,
+   "time": {
+    "hours": 2.36,
+    "sessions": 4,
+    "commits": 4.1,
+    "first": "2026-10-05",
+    "last": "2026-10-18",
+    "elapsed_days": 13,
+    "prs": 1,
+    "pr_median_h": 0.0
+   }
+  },
+  {
+   "url": "/bweb",
+   "title": "bWeb: ask b to build your website",
+   "topic": "bApps, games and the open platform",
+   "live": true,
+   "posts": [],
+   "on_x": false,
+   "time": {
+    "hours": 1.37,
+    "sessions": 4,
+    "commits": 3.6,
+    "first": "2026-10-08",
+    "last": "2026-10-25",
+    "elapsed_days": 17,
+    "prs": 2,
+    "pr_median_h": 0.1
+   }
+  },
+  {
+   "url": "/chat",
+   "title": "Chat in bWalletX",
+   "topic": "Rooms, chat and Spaces (bChatX)",
+   "live": true,
+   "posts": [
+    {
+     "n": "021",
+     "url": "/blog/021-coordinate-on-bsv",
+     "title": "021 Coordinate on BSV \u00b7 bWalletX blog"
+    },
+    {
+     "n": "024",
+     "url": "/blog/024-tips-and-paid-likes",
+     "title": "024 Pay the person who wrote it \u00b7 bWalletX blog"
+    },
+    {
+     "n": "025",
+     "url": "/blog/025-push-notifications",
+     "title": "025 Push notifications, from our own server \u00b7 bWalletX blog"
+    },
+    {
+     "n": "026",
+     "url": "/blog/026-paying-to-be-heard",
+     "title": "026 Paying to be heard \u00b7 bWalletX blog"
+    },
+    {
+     "n": "053",
+     "url": "/blog/053-friends-bpics-and-video",
+     "title": "053 Friends, bPics and video in rooms \u00b7 bWalletX blog"
+    }
+   ],
+   "on_x": true,
+   "time": {
+    "hours": 31.1,
+    "sessions": 66,
+    "commits": 58.1,
+    "first": "2026-10-01",
+    "last": "2026-10-30",
+    "elapsed_days": 29,
+    "prs": 77,
+    "pr_median_h": 0.2
+   }
+  },
+  {
+   "url": "/cli",
+   "title": "bWalletX CLI",
+   "topic": "Agents and b",
+   "live": true,
+   "posts": [
+    {
+     "n": "010",
+     "url": "/blog/010-agents-strategies-cli",
+     "title": "010 Agent accounts, strategies, CLI and MCP \u00b7 bWalletX blog"
+    }
+   ],
+   "on_x": true,
+   "time": {
+    "hours": 1.62,
+    "sessions": 6,
+    "commits": 2.6,
+    "first": "2026-10-04",
+    "last": "2026-10-23",
+    "elapsed_days": 19,
+    "prs": 0,
+    "pr_median_h": null
+   }
+  },
+  {
+   "url": "/clients",
+   "title": "Your own branded wallet \u00b7 bWalletX for business",
+   "topic": "Start here, brand and campaigns",
+   "live": true,
+   "posts": [],
+   "on_x": true,
+   "time": {
+    "hours": 0.44,
+    "sessions": 3,
+    "commits": 1.5,
+    "first": "2026-10-23",
+    "last": "2026-10-24",
+    "elapsed_days": 1,
+    "prs": 0,
+    "pr_median_h": null
+   }
+  },
+  {
+   "url": "/coingeek-on-b",
+   "title": "CoinGeek on b",
+   "topic": "bApps, games and the open platform",
+   "live": true,
+   "posts": [],
+   "on_x": true,
+   "time": {
+    "hours": 0.5,
+    "sessions": 2,
+    "commits": 1.2,
+    "first": "2026-10-25",
+    "last": "2026-10-25",
+    "elapsed_days": 1,
+    "prs": 5,
+    "pr_median_h": 0.2
+   }
+  },
+  {
+   "url": "/connect",
+   "title": "Sign in with bWalletX \u00b7 Developer guide",
+   "topic": "Your identity and names",
+   "live": true,
+   "posts": [
+    {
+     "n": "021",
+     "url": "/blog/021-coordinate-on-bsv",
+     "title": "021 Coordinate on BSV \u00b7 bWalletX blog"
+    }
+   ],
+   "on_x": true,
+   "time": {
+    "hours": 6.07,
+    "sessions": 22,
+    "commits": 11.1,
+    "first": "2026-10-04",
+    "last": "2026-10-30",
+    "elapsed_days": 26,
+    "prs": 10,
+    "pr_median_h": 0.2
+   }
+  },
+  {
+   "url": "/contracts",
+   "title": "Contracts in chat",
+   "topic": "Rooms, chat and Spaces (bChatX)",
+   "live": true,
+   "posts": [],
+   "on_x": false,
+   "time": {
+    "hours": 3.44,
+    "sessions": 10,
+    "commits": 5.9,
+    "first": "2026-10-05",
+    "last": "2026-10-29",
+    "elapsed_days": 25,
+    "prs": 7,
+    "pr_median_h": 0.2
+   }
+  },
+  {
+   "url": "/creative",
+   "title": "b Creative",
+   "topic": "Store, creators and media",
+   "live": true,
+   "posts": [],
+   "on_x": false,
+   "time": {
+    "hours": 1.26,
+    "sessions": 4,
+    "commits": 2.6,
+    "first": "2026-10-16",
+    "last": "2026-10-29",
+    "elapsed_days": 13,
+    "prs": 10,
+    "pr_median_h": 0.1
+   }
+  },
+  {
+   "url": "/credits",
+   "title": "Credits: prepaid credit for services",
+   "topic": "Store, creators and media",
+   "live": true,
+   "posts": [],
+   "on_x": false,
+   "time": {
+    "hours": 4.5,
+    "sessions": 12,
+    "commits": 7.5,
+    "first": "2026-10-01",
+    "last": "2026-10-23",
+    "elapsed_days": 23,
+    "prs": 9,
+    "pr_median_h": 0.3
+   }
+  },
+  {
+   "url": "/culture",
+   "title": "Culture: make it on BSV",
+   "topic": "Store, creators and media",
+   "live": true,
+   "posts": [],
+   "on_x": false,
+   "time": {
+    "hours": 0.51,
+    "sessions": 1,
+    "commits": 2.0,
+    "first": "2026-10-15",
+    "last": "2026-10-15",
+    "elapsed_days": 1,
+    "prs": 0,
+    "pr_median_h": null
+   }
+  },
+  {
+   "url": "/desktop",
+   "title": "bWalletX Desktop",
+   "topic": "bApps, games and the open platform",
+   "live": true,
+   "posts": [],
+   "on_x": true,
+   "time": {
+    "hours": 13.56,
+    "sessions": 21,
+    "commits": 32.4,
+    "first": "2026-10-09",
+    "last": "2026-10-24",
+    "elapsed_days": 15,
+    "prs": 25,
+    "pr_median_h": 0.1
+   }
+  },
+  {
+   "url": "/developers",
+   "title": "bWalletX for Developers",
+   "topic": "bApps, games and the open platform",
+   "live": true,
+   "posts": [],
+   "on_x": true,
+   "time": {
+    "hours": 15.58,
+    "sessions": 46,
+    "commits": 24.8,
+    "first": "2026-10-04",
+    "last": "2026-10-29",
+    "elapsed_days": 26,
+    "prs": 2,
+    "pr_median_h": 0.0
+   }
+  },
+  {
+   "url": "/digital-ice-cream",
+   "title": "Digital Ice-Cream: three friends, one token",
+   "topic": "Your wallet and money",
+   "live": true,
+   "posts": [
+    {
+     "n": "055",
+     "url": "/blog/055-digital-ice-cream",
+     "title": "055 Digital Ice-Cream \u00b7 bWalletX blog"
+    }
+   ],
+   "on_x": true,
+   "time": {
+    "hours": 1.89,
+    "sessions": 3,
+    "commits": 6.5,
+    "first": "2026-10-15",
+    "last": "2026-10-23",
+    "elapsed_days": 9,
+    "prs": 0,
+    "pr_median_h": null
+   }
+  },
+  {
+   "url": "/direct",
+   "title": "bWallet Direct: sign in straight from your own wallet",
+   "topic": "Your wallet and money",
+   "live": true,
+   "posts": [],
+   "on_x": false,
+   "time": {
+    "hours": 2.79,
+    "sessions": 10,
+    "commits": 4.4,
+    "first": "2026-10-01",
+    "last": "2026-10-20",
+    "elapsed_days": 20,
+    "prs": 6,
+    "pr_median_h": 0.1
+   }
+  },
+  {
+   "url": "/exchange",
+   "title": "bWalletX Exchange",
+   "topic": "Exchange, tokens and launches",
+   "live": true,
+   "posts": [
+    {
+     "n": "008",
+     "url": "/blog/008-the-exchange",
+     "title": "008 Building the Exchange, and why buys broke \u00b7 bWalletX blog"
+    },
+    {
+     "n": "049",
+     "url": "/blog/049-the-exchange-sorted",
+     "title": "049 The Exchange, sorted \u00b7 bWalletX blog"
+    }
+   ],
+   "on_x": true,
+   "time": {
+    "hours": 38.49,
+    "sessions": 50,
+    "commits": 73.3,
+    "first": "2026-10-01",
+    "last": "2026-10-28",
+    "elapsed_days": 28,
+    "prs": 34,
+    "pr_median_h": 0.2
+   }
+  },
+  {
+   "url": "/exchange/strategies",
+   "title": "bWalletX Exchange: Strategies",
+   "topic": "Exchange, tokens and launches",
+   "live": true,
+   "posts": [
+    {
+     "n": "008",
+     "url": "/blog/008-the-exchange",
+     "title": "008 Building the Exchange, and why buys broke \u00b7 bWalletX blog"
+    },
+    {
+     "n": "010",
+     "url": "/blog/010-agents-strategies-cli",
+     "title": "010 Agent accounts, strategies, CLI and MCP \u00b7 bWalletX blog"
+    }
+   ],
+   "on_x": true,
+   "time": {
+    "hours": 2.47,
+    "sessions": 11,
+    "commits": 5.9,
+    "first": "2026-10-05",
+    "last": "2026-10-17",
+    "elapsed_days": 13,
+    "prs": 2,
+    "pr_median_h": 0.1
+   }
+  },
+  {
+   "url": "/extension",
+   "title": "bWalletX for Chrome",
+   "topic": "bApps, games and the open platform",
+   "live": true,
+   "posts": [
+    {
+     "n": "012",
+     "url": "/blog/012-extension-and-web",
+     "title": "012 The extension, the web app and pairing \u00b7 bWalletX blog"
+    }
+   ],
+   "on_x": true,
+   "time": {
+    "hours": 22.47,
+    "sessions": 53,
+    "commits": 41.3,
+    "first": "2026-10-01",
+    "last": "2026-10-29",
+    "elapsed_days": 28,
+    "prs": 3,
+    "pr_median_h": 0.2
+   }
+  },
+  {
+   "url": "/features",
+   "title": "bWalletX Features",
+   "topic": "bApps, games and the open platform",
+   "live": true,
+   "posts": [],
+   "on_x": true,
+   "time": {
+    "hours": 6.64,
+    "sessions": 23,
+    "commits": 12.8,
+    "first": "2026-10-04",
+    "last": "2026-10-28",
+    "elapsed_days": 24,
+    "prs": 7,
+    "pr_median_h": 0.1
+   }
+  },
+  {
+   "url": "/flick-off",
+   "title": "FLICK OFF",
+   "topic": "Start here, brand and campaigns",
+   "live": true,
+   "posts": [],
+   "on_x": true,
+   "time": {
+    "hours": 0.84,
+    "sessions": 4,
+    "commits": 2.6,
+    "first": "2026-10-20",
+    "last": "2026-10-29",
+    "elapsed_days": 10,
+    "prs": 3,
+    "pr_median_h": 0.0
+   }
+  },
+  {
+   "url": "/friends",
+   "title": "bWalletX Friends",
+   "topic": "Rooms, chat and Spaces (bChatX)",
+   "live": true,
+   "posts": [
+    {
+     "n": "049",
+     "url": "/blog/049-the-exchange-sorted",
+     "title": "049 The Exchange, sorted \u00b7 bWalletX blog"
+    },
+    {
+     "n": "052",
+     "url": "/blog/052-tip-buttons",
+     "title": "052 Tip buttons \u00b7 bWalletX blog"
+    },
+    {
+     "n": "053",
+     "url": "/blog/053-friends-bpics-and-video",
+     "title": "053 Friends, bPics and video in rooms \u00b7 bWalletX blog"
+    }
+   ],
+   "on_x": true,
+   "time": {
+    "hours": 4.93,
+    "sessions": 21,
+    "commits": 12.0,
+    "first": "2026-10-01",
+    "last": "2026-10-30",
+    "elapsed_days": 29,
+    "prs": 5,
+    "pr_median_h": 0.3
+   }
+  },
+  {
+   "url": "/games",
+   "title": "Games in bWalletX",
+   "topic": "bApps, games and the open platform",
+   "live": true,
+   "posts": [],
+   "on_x": true,
+   "time": {
+    "hours": 6.14,
+    "sessions": 15,
+    "commits": 12.8,
+    "first": "2026-10-07",
+    "last": "2026-10-28",
+    "elapsed_days": 21,
+    "prs": 11,
+    "pr_median_h": 0.1
+   }
+  },
+  {
+   "url": "/get",
+   "title": "Get bWalletX",
+   "topic": "bApps, games and the open platform",
+   "live": true,
+   "posts": [],
+   "on_x": true,
+   "time": {
+    "hours": 16.28,
+    "sessions": 47,
+    "commits": 30.1,
+    "first": "2026-10-04",
+    "last": "2026-10-29",
+    "elapsed_days": 25,
+    "prs": 4,
+    "pr_median_h": 0.0
+   }
+  },
+  {
+   "url": "/gigs",
+   "title": "bGigs in bWalletX",
+   "topic": "Store, creators and media",
+   "live": true,
+   "posts": [],
+   "on_x": true,
+   "time": {
+    "hours": 1.62,
+    "sessions": 3,
+    "commits": 4.3,
+    "first": "2026-10-11",
+    "last": "2026-10-16",
+    "elapsed_days": 5,
+    "prs": 0,
+    "pr_median_h": null
+   }
+  },
+  {
+   "url": "/gmail",
+   "title": "Link your Google account",
+   "topic": "Your identity and names",
+   "live": true,
+   "posts": [
+    {
+     "n": "020",
+     "url": "/blog/020-sign-in-with-x",
+     "title": "020 Sign in with X \u00b7 bWalletX blog"
+    }
+   ],
+   "on_x": true,
+   "time": {
+    "hours": 1.66,
+    "sessions": 10,
+    "commits": 3.4,
+    "first": "2026-10-06",
+    "last": "2026-10-30",
+    "elapsed_days": 24,
+    "prs": 1,
+    "pr_median_h": 0.0
+   }
+  },
+  {
+   "url": "/handles",
+   "title": "Handles in bWalletX",
+   "topic": "Your identity and names",
+   "live": true,
+   "posts": [
+    {
+     "n": "004",
+     "url": "/blog/004-names-and-paymail",
+     "title": "004 Names, handles and paymail \u00b7 bWalletX blog"
+    },
+    {
+     "n": "005",
+     "url": "/blog/005-personal-tokens-and-rooms",
+     "title": "005 Personal tokens and token rooms \u00b7 bWalletX blog"
+    },
+    {
+     "n": "058",
+     "url": "/blog/058-signed-names",
+     "title": "058 We could move your name. Now you can see if we do. \u00b7 bWalletX blog"
+    }
+   ],
+   "on_x": true,
+   "time": {
+    "hours": 29.57,
+    "sessions": 56,
+    "commits": 64.8,
+    "first": "2026-09-30",
+    "last": "2026-10-30",
+    "elapsed_days": 31,
+    "prs": 80,
+    "pr_median_h": 0.2
+   }
+  },
+  {
+   "url": "/happy-b",
+   "title": "Happy b-day cards \u00b7 make with b, mint, send by bMail",
+   "topic": "Start here, brand and campaigns",
+   "live": true,
+   "posts": [],
+   "on_x": true,
+   "time": {
+    "hours": 1.81,
+    "sessions": 2,
+    "commits": 7.0,
+    "first": "2026-10-23",
+    "last": "2026-10-24",
+    "elapsed_days": 1,
+    "prs": 0,
+    "pr_median_h": null
+   }
+  },
+  {
+   "url": "/history",
+   "title": "History in bWalletX",
+   "topic": "Your identity and names",
+   "live": true,
+   "posts": [],
+   "on_x": true,
+   "time": {
+    "hours": 5.36,
+    "sessions": 9,
+    "commits": 9.4,
+    "first": "2026-10-07",
+    "last": "2026-10-29",
+    "elapsed_days": 23,
+    "prs": 7,
+    "pr_median_h": 0.1
+   }
+  },
+  {
+   "url": "/hodl-my-b",
+   "title": "Hodl my b",
+   "topic": "Your wallet and money",
+   "live": true,
+   "posts": [],
+   "on_x": true,
+   "time": {
+    "hours": 2.38,
+    "sessions": 3,
+    "commits": 7.9,
+    "first": "2026-10-16",
+    "last": "2026-10-18",
+    "elapsed_days": 2,
+    "prs": 3,
+    "pr_median_h": 0.0
+   }
+  },
+  {
+   "url": "/hodl-my-b/0",
+   "title": "Hodl my b, Edition 0: The whole story",
+   "topic": "Your wallet and money",
+   "live": true,
+   "posts": [],
+   "on_x": true,
+   "time": {
+    "hours": 2.59,
+    "sessions": 5,
+    "commits": 4.9,
+    "first": "2026-10-18",
+    "last": "2026-10-25",
+    "elapsed_days": 7,
+    "prs": 10,
+    "pr_median_h": 0.0
+   }
+  },
+  {
+   "url": "/hodl-my-b/1",
+   "title": "Hodl my b, Edition 1: Don\u2019t be bland. Get bRanded.",
+   "topic": "Start here, brand and campaigns",
+   "live": true,
+   "posts": [],
+   "on_x": false,
+   "time": {
+    "hours": 3.09,
+    "sessions": 6,
+    "commits": 9.0,
+    "first": "2026-10-16",
+    "last": "2026-10-29",
+    "elapsed_days": 13,
+    "prs": 8,
+    "pr_median_h": 0.0
+   }
+  },
+  {
+   "url": "/hodlocker-on-b",
+   "title": "Hodlocker on b",
+   "topic": "Your wallet and money",
+   "live": true,
+   "posts": [],
+   "on_x": true,
+   "time": {
+    "hours": 0.28,
+    "sessions": 2,
+    "commits": 0.5,
+    "first": "2026-10-25",
+    "last": "2026-10-25",
+    "elapsed_days": 1,
+    "prs": 3,
+    "pr_median_h": 0.3
+   }
+  },
+  {
+   "url": "/hold-to-talk",
+   "title": "Hold to talk to b",
+   "topic": "Calls (bPhone)",
+   "live": true,
+   "posts": [],
+   "on_x": true,
+   "time": {
+    "hours": 0.51,
+    "sessions": 4,
+    "commits": 1.0,
+    "first": "2026-10-08",
+    "last": "2026-10-25",
+    "elapsed_days": 17,
+    "prs": 0,
+    "pr_median_h": null
+   }
+  },
+  {
+   "url": "/identity-map",
+   "title": "Identity map",
+   "topic": "Your identity and names",
+   "live": true,
+   "posts": [
+    {
+     "n": "031",
+     "url": "/blog/031-calls-mics-menu",
+     "title": "031 bWalletX 5.1.88: a new Calls tab, working mics, a new menu \u00b7 bWalletX blog"
+    }
+   ],
+   "on_x": true,
+   "time": {
+    "hours": 1.7,
+    "sessions": 11,
+    "commits": 3.4,
+    "first": "2026-10-06",
+    "last": "2026-10-28",
+    "elapsed_days": 22,
+    "prs": 8,
+    "pr_median_h": 0.2
+   }
+  },
+  {
+   "url": "/identity",
+   "title": "Identity in bWalletX",
+   "topic": "Your identity and names",
+   "live": true,
+   "posts": [
+    {
+     "n": "058",
+     "url": "/blog/058-signed-names",
+     "title": "058 We could move your name. Now you can see if we do. \u00b7 bWalletX blog"
+    }
+   ],
+   "on_x": true,
+   "time": {
+    "hours": 3.28,
+    "sessions": 12,
+    "commits": 6.8,
+    "first": "2026-10-06",
+    "last": "2026-10-28",
+    "elapsed_days": 22,
+    "prs": 9,
+    "pr_median_h": 0.1
+   }
+  },
+  {
+   "url": "/",
+   "title": "bWalletX: the smart social super wallet",
+   "topic": "Start here, brand and campaigns",
+   "live": true,
+   "posts": [],
+   "on_x": true,
+   "time": {
+    "hours": 29.51,
+    "sessions": 53,
+    "commits": 53.9,
+    "first": "2026-10-03",
+    "last": "2026-10-29",
+    "elapsed_days": 26,
+    "prs": 11,
+    "pr_median_h": 0.0
+   }
+  },
+  {
+   "url": "/invite",
+   "title": "You're invited to bWalletX",
+   "topic": "Your identity and names",
+   "live": true,
+   "posts": [
+    {
+     "n": "057",
+     "url": "/blog/057-handcash-and-invites",
+     "title": "057 Sign in with HandCash, and invites with tokens \u00b7 bWalletX blog"
+    }
+   ],
+   "on_x": true,
+   "time": {
+    "hours": 9.28,
+    "sessions": 24,
+    "commits": 18.1,
+    "first": "2026-10-01",
+    "last": "2026-10-30",
+    "elapsed_days": 29,
+    "prs": 36,
+    "pr_median_h": 0.1
+   }
+  },
+  {
+   "url": "/iphone",
+   "title": "bWalletX on iPhone",
+   "topic": "bApps, games and the open platform",
+   "live": true,
+   "posts": [
+    {
+     "n": "012",
+     "url": "/blog/012-extension-and-web",
+     "title": "012 The extension, the web app and pairing \u00b7 bWalletX blog"
+    }
+   ],
+   "on_x": true,
+   "time": {
+    "hours": 1.65,
+    "sessions": 5,
+    "commits": 3.4,
+    "first": "2026-10-05",
+    "last": "2026-10-14",
+    "elapsed_days": 10,
+    "prs": 0,
+    "pr_median_h": null
+   }
+  },
+  {
+   "url": "/jobs",
+   "title": "Jobs: paid work, paid in BSV",
+   "topic": "Agents and b",
+   "live": true,
+   "posts": [],
+   "on_x": false,
+   "time": {
+    "hours": 1.66,
+    "sessions": 3,
+    "commits": 3.2,
+    "first": "2026-10-24",
+    "last": "2026-10-25",
+    "elapsed_days": 1,
+    "prs": 3,
+    "pr_median_h": 0.1
+   }
+  },
+  {
+   "url": "/just-b-2",
+   "title": "Just b: less noise",
+   "topic": "Start here, brand and campaigns",
+   "live": true,
+   "posts": [],
+   "on_x": true,
+   "time": {
+    "hours": 1.54,
+    "sessions": 2,
+    "commits": 7.3,
+    "first": "2026-10-11",
+    "last": "2026-10-29",
+    "elapsed_days": 19,
+    "prs": 7,
+    "pr_median_h": 0.0
+   }
+  },
+  {
+   "url": "/just-b",
+   "title": "Just b",
+   "topic": "Start here, brand and campaigns",
+   "live": true,
+   "posts": [],
+   "on_x": true,
+   "time": {
+    "hours": 5.23,
+    "sessions": 8,
+    "commits": 41.5,
+    "first": "2026-10-09",
+    "last": "2026-10-29",
+    "elapsed_days": 21,
+    "prs": 1,
+    "pr_median_h": 0.0
+   }
+  },
+  {
+   "url": "/launchpad",
+   "title": "Launchpad",
+   "topic": "Exchange, tokens and launches",
+   "live": true,
+   "posts": [
+    {
+     "n": "015",
+     "url": "/blog/015-launchpad",
+     "title": "015 Launchpad, and checking what we sign \u00b7 bWalletX blog"
+    },
+    {
+     "n": "028",
+     "url": "/blog/028-launch-something",
+     "title": "028 Launch something with your coin \u00b7 bWalletX blog"
+    }
+   ],
+   "on_x": true,
+   "time": {
+    "hours": 5.11,
+    "sessions": 18,
+    "commits": 9.3,
+    "first": "2026-10-06",
+    "last": "2026-10-29",
+    "elapsed_days": 23,
+    "prs": 2,
+    "pr_median_h": 1.1
+   }
+  },
+  {
+   "url": "/live",
+   "title": "Live in bWalletX",
+   "topic": "Rooms, chat and Spaces (bChatX)",
+   "live": true,
+   "posts": [
+    {
+     "n": "050",
+     "url": "/blog/050-aivj-tv-vexvoid-live",
+     "title": "050 AIVJ \u2014 VexVoid, live \u00b7 bWalletX blog"
+    },
+    {
+     "n": "054",
+     "url": "/blog/054-bradio-live-audio",
+     "title": "054 bRadio: live audio in bWalletX \u00b7 bWalletX blog"
+    }
+   ],
+   "on_x": true,
+   "time": {
+    "hours": 6.34,
+    "sessions": 19,
+    "commits": 11.5,
+    "first": "2026-10-02",
+    "last": "2026-10-29",
+    "elapsed_days": 28,
+    "prs": 19,
+    "pr_median_h": 0.1
+   }
+  },
+  {
+   "url": "/lock",
+   "title": "Lock BSV",
+   "topic": "Your wallet and money",
+   "live": true,
+   "posts": [
+    {
+     "n": "023",
+     "url": "/blog/023-lock-bsv",
+     "title": "023 Locks you can\u2019t break \u00b7 bWalletX blog"
+    }
+   ],
+   "on_x": true,
+   "time": {
+    "hours": 19.13,
+    "sessions": 37,
+    "commits": 39.3,
+    "first": "2026-09-29",
+    "last": "2026-10-30",
+    "elapsed_days": 31,
+    "prs": 18,
+    "pr_median_h": 0.7
+   }
+  },
+  {
+   "url": "/lock/verify",
+   "title": "Verify a lock",
+   "topic": "Safety and control",
+   "live": true,
+   "posts": [
+    {
+     "n": "023",
+     "url": "/blog/023-lock-bsv",
+     "title": "023 Locks you can\u2019t break \u00b7 bWalletX blog"
+    },
+    {
+     "n": "035",
+     "url": "/blog/035-pots-and-locks",
+     "title": "035 Pots & Locks, and a PNEEs pot \u00b7 bWalletX blog"
+    }
+   ],
+   "on_x": true,
+   "time": {
+    "hours": 4.01,
+    "sessions": 25,
+    "commits": 8.6,
+    "first": "2026-09-30",
+    "last": "2026-10-28",
+    "elapsed_days": 29,
+    "prs": 19,
+    "pr_median_h": 0.2
+   }
+  },
+  {
+   "url": "/lounge",
+   "title": "bWallet Lounge on bChat",
+   "topic": "Rooms, chat and Spaces (bChatX)",
+   "live": true,
+   "posts": [
+    {
+     "n": "017",
+     "url": "/blog/017-sign-in-and-lounge",
+     "title": "017 Sign in with bWalletX, and the Lounge \u00b7 bWalletX blog"
+    },
+    {
+     "n": "054",
+     "url": "/blog/054-bradio-live-audio",
+     "title": "054 bRadio: live audio in bWalletX \u00b7 bWalletX blog"
+    }
+   ],
+   "on_x": true,
+   "time": {
+    "hours": 2.3,
+    "sessions": 16,
+    "commits": 6.3,
+    "first": "2026-10-02",
+    "last": "2026-10-24",
+    "elapsed_days": 23,
+    "prs": 4,
+    "pr_median_h": 0.1
+   }
+  },
+  {
+   "url": "/mcp",
+   "title": "bWalletX MCP",
+   "topic": "Agents and b",
+   "live": true,
+   "posts": [
+    {
+     "n": "010",
+     "url": "/blog/010-agents-strategies-cli",
+     "title": "010 Agent accounts, strategies, CLI and MCP \u00b7 bWalletX blog"
+    }
+   ],
+   "on_x": true,
+   "time": {
+    "hours": 1.67,
+    "sessions": 6,
+    "commits": 2.9,
+    "first": "2026-10-04",
+    "last": "2026-10-23",
+    "elapsed_days": 19,
+    "prs": 1,
+    "pr_median_h": 0.0
+   }
+  },
+  {
+   "url": "/migrate",
+   "title": "Move to bWalletX",
+   "topic": "Your identity and names",
+   "live": true,
+   "posts": [],
+   "on_x": false,
+   "time": {
+    "hours": 4.11,
+    "sessions": 5,
+    "commits": 7.1,
+    "first": "2026-10-07",
+    "last": "2026-10-28",
+    "elapsed_days": 22,
+    "prs": 13,
+    "pr_median_h": 0.2
+   }
+  },
+  {
+   "url": "/mint",
+   "title": "Mint with bWalletX",
+   "topic": "Store, creators and media",
+   "live": true,
+   "posts": [],
+   "on_x": true,
+   "time": {
+    "hours": 12.46,
+    "sessions": 31,
+    "commits": 24.1,
+    "first": "2026-10-01",
+    "last": "2026-10-28",
+    "elapsed_days": 27,
+    "prs": 10,
+    "pr_median_h": 0.2
+   }
+  },
+  {
+   "url": "/name-bindings",
+   "title": "Signed names and the public name log",
+   "topic": "Safety and control",
+   "live": true,
+   "posts": [
+    {
+     "n": "058",
+     "url": "/blog/058-signed-names",
+     "title": "058 We could move your name. Now you can see if we do. \u00b7 bWalletX blog"
+    }
+   ],
+   "on_x": true,
+   "time": {
+    "hours": 9.09,
+    "sessions": 33,
+    "commits": 16.5,
+    "first": "2026-10-01",
+    "last": "2026-10-28",
+    "elapsed_days": 28,
+    "prs": 30,
+    "pr_median_h": 0.1
+   }
+  },
+  {
+   "url": "/names",
+   "title": "Get your name",
+   "topic": "Your identity and names",
+   "live": true,
+   "posts": [
+    {
+     "n": "002",
+     "url": "/blog/002-four-names",
+     "title": "002 Four names in a week \u00b7 bWalletX blog"
+    },
+    {
+     "n": "004",
+     "url": "/blog/004-names-and-paymail",
+     "title": "004 Names, handles and paymail \u00b7 bWalletX blog"
+    },
+    {
+     "n": "058",
+     "url": "/blog/058-signed-names",
+     "title": "058 We could move your name. Now you can see if we do. \u00b7 bWalletX blog"
+    }
+   ],
+   "on_x": true,
+   "time": {
+    "hours": 45.26,
+    "sessions": 67,
+    "commits": 103.3,
+    "first": "2026-10-01",
+    "last": "2026-10-30",
+    "elapsed_days": 29,
+    "prs": 60,
+    "pr_median_h": 0.2
+   }
+  },
+  {
+   "url": "/newsletter",
+   "title": "Newsletter",
+   "topic": "Start here, brand and campaigns",
+   "live": true,
+   "posts": [],
+   "on_x": true,
+   "time": {
+    "hours": 0.52,
+    "sessions": 1,
+    "commits": 2.0,
+    "first": "2026-10-23",
+    "last": "2026-10-23",
+    "elapsed_days": 1,
+    "prs": 0,
+    "pr_median_h": null
+   }
+  },
+  {
+   "url": "/nfts",
+   "title": "NFTs: everything you own, edge to edge",
+   "topic": "Store, creators and media",
+   "live": true,
+   "posts": [
+    {
+     "n": "041",
+     "url": "/blog/041-nfts-that-just-work",
+     "title": "041 NFTs that just work \u00b7 bWalletX blog"
+    },
+    {
+     "n": "048",
+     "url": "/blog/048-your-nfts-edge-to-edge",
+     "title": "048 Your NFTs, edge to edge \u00b7 bWalletX blog"
+    }
+   ],
+   "on_x": true,
+   "time": {
+    "hours": 4.15,
+    "sessions": 13,
+    "commits": 9.7,
+    "first": "2026-10-05",
+    "last": "2026-10-28",
+    "elapsed_days": 23,
+    "prs": 6,
+    "pr_median_h": 0.1
+   }
+  },
+  {
+   "url": "/on-b",
+   "title": "Your apps, on b",
+   "topic": "bApps, games and the open platform",
+   "live": true,
+   "posts": [],
+   "on_x": true,
+   "time": {
+    "hours": 0.55,
+    "sessions": 1,
+    "commits": 0.7,
+    "first": "2026-10-25",
+    "last": "2026-10-25",
+    "elapsed_days": 1,
+    "prs": 3,
+    "pr_median_h": 0.0
+   }
+  },
+  {
+   "url": "/open-source",
+   "title": "Open source bWalletX",
+   "topic": "bApps, games and the open platform",
+   "live": true,
+   "posts": [
+    {
+     "n": "034",
+     "url": "/blog/034-open-apps-open-protocol",
+     "title": "034 Open apps, open protocol \u00b7 bWalletX blog"
+    },
+    {
+     "n": "059",
+     "url": "/blog/059-b-aware",
+     "title": "059 b-Aware: find a hole in bWalletX, get paid in BSV \u00b7 bWalletX blog"
+    }
+   ],
+   "on_x": true,
+   "time": {
+    "hours": 9.12,
+    "sessions": 25,
+    "commits": 18.8,
+    "first": "2026-10-01",
+    "last": "2026-10-28",
+    "elapsed_days": 28,
+    "prs": 26,
+    "pr_median_h": 0.2
+   }
+  },
+  {
+   "url": "/partners",
+   "title": "Partners: refer people, get a commission",
+   "topic": "bApps, games and the open platform",
+   "live": true,
+   "posts": [],
+   "on_x": false,
+   "time": {
+    "hours": 0.5,
+    "sessions": 1,
+    "commits": 1.0,
+    "first": "2026-10-28",
+    "last": "2026-10-28",
+    "elapsed_days": 1,
+    "prs": 1,
+    "pr_median_h": 0.0
+   }
+  },
+  {
+   "url": "/peck-on-b",
+   "title": "Peck on b",
+   "topic": "bApps, games and the open platform",
+   "live": true,
+   "posts": [],
+   "on_x": true,
+   "time": {
+    "hours": 1.25,
+    "sessions": 3,
+    "commits": 2.1,
+    "first": "2026-10-06",
+    "last": "2026-10-25",
+    "elapsed_days": 19,
+    "prs": 4,
+    "pr_median_h": 0.4
+   }
+  },
+  {
+   "url": "/person",
+   "title": "Send a bMail",
+   "topic": "Your identity and names",
+   "live": true,
+   "posts": [
+    {
+     "n": "024",
+     "url": "/blog/024-tips-and-paid-likes",
+     "title": "024 Pay the person who wrote it \u00b7 bWalletX blog"
+    }
+   ],
+   "on_x": true,
+   "time": {
+    "hours": 2.27,
+    "sessions": 12,
+    "commits": 5.4,
+    "first": "2026-10-06",
+    "last": "2026-10-28",
+    "elapsed_days": 22,
+    "prs": 6,
+    "pr_median_h": 0.1
+   }
+  },
+  {
+   "url": "/pnees",
+   "title": "PNEEs: Penny Stablecoins",
+   "topic": "Your wallet and money",
+   "live": true,
+   "posts": [
+    {
+     "n": "011",
+     "url": "/blog/011-pnees-pilot",
+     "title": "011 From a dollar bond to PNEEs on mainnet \u00b7 bWalletX blog"
+    },
+    {
+     "n": "035",
+     "url": "/blog/035-pots-and-locks",
+     "title": "035 Pots & Locks, and a PNEEs pot \u00b7 bWalletX blog"
+    }
+   ],
+   "on_x": true,
+   "time": {
+    "hours": 4.05,
+    "sessions": 9,
+    "commits": 18.4,
+    "first": "2026-10-05",
+    "last": "2026-10-15",
+    "elapsed_days": 11,
+    "prs": 1,
+    "pr_median_h": 1.0
+   }
+  },
+  {
+   "url": "/pots",
+   "title": "Pots in bWalletX",
+   "topic": "Your wallet and money",
+   "live": true,
+   "posts": [
+    {
+     "n": "016",
+     "url": "/blog/016-pots",
+     "title": "016 Subscriptions, paid from pots \u00b7 bWalletX blog"
+    },
+    {
+     "n": "035",
+     "url": "/blog/035-pots-and-locks",
+     "title": "035 Pots & Locks, and a PNEEs pot \u00b7 bWalletX blog"
+    }
+   ],
+   "on_x": true,
+   "time": {
+    "hours": 11.49,
+    "sessions": 20,
+    "commits": 19.7,
+    "first": "2026-10-07",
+    "last": "2026-10-28",
+    "elapsed_days": 22,
+    "prs": 8,
+    "pr_median_h": 0.8
+   }
+  },
+  {
+   "url": "/privacy",
+   "title": "Privacy Policy \u00b7 bWalletX (Beta)",
+   "topic": "Safety and control",
+   "live": true,
+   "posts": [
+    {
+     "n": "007",
+     "url": "/blog/007-store-and-private",
+     "title": "007 Store rules, open rooms and moderation \u00b7 bWalletX blog"
+    },
+    {
+     "n": "018",
+     "url": "/blog/018-testers",
+     "title": "018 1 BSV for testing bWallet on Android \u00b7 bWalletX blog"
+    },
+    {
+     "n": "025",
+     "url": "/blog/025-push-notifications",
+     "title": "025 Push notifications, from our own server \u00b7 bWalletX blog"
+    },
+    {
+     "n": "059",
+     "url": "/blog/059-b-aware",
+     "title": "059 b-Aware: find a hole in bWalletX, get paid in BSV \u00b7 bWalletX blog"
+    }
+   ],
+   "on_x": true,
+   "time": {
+    "hours": 8.78,
+    "sessions": 19,
+    "commits": 15.4,
+    "first": "2026-09-29",
+    "last": "2026-10-25",
+    "elapsed_days": 26,
+    "prs": 4,
+    "pr_median_h": 0.1
+   }
+  },
+  {
+   "url": "/push-notifications",
+   "title": "Push notifications",
+   "topic": "Calls (bPhone)",
+   "live": true,
+   "posts": [
+    {
+     "n": "025",
+     "url": "/blog/025-push-notifications",
+     "title": "025 Push notifications, from our own server \u00b7 bWalletX blog"
+    }
+   ],
+   "on_x": true,
+   "time": {
+    "hours": 3.2,
+    "sessions": 12,
+    "commits": 10.9,
+    "first": "2026-10-06",
+    "last": "2026-10-28",
+    "elapsed_days": 23,
+    "prs": 6,
+    "pr_median_h": 0.2
+   }
+  },
+  {
+   "url": "/race-card",
+   "title": "bAcc RACE: the bAcc racing game",
+   "topic": "Rooms, chat and Spaces (bChatX)",
+   "live": true,
+   "posts": [],
+   "on_x": false,
+   "time": {
+    "hours": 6.9,
+    "sessions": 27,
+    "commits": 13.8,
+    "first": "2026-10-01",
+    "last": "2026-10-30",
+    "elapsed_days": 29,
+    "prs": 28,
+    "pr_median_h": 0.1
+   }
+  },
+  {
+   "url": "/recover-relayx",
+   "title": "Your RelayX NFTs are still yours",
+   "topic": "Your wallet and money",
+   "live": true,
+   "posts": [],
+   "on_x": true,
+   "time": {
+    "hours": 2.7,
+    "sessions": 14,
+    "commits": 9.0,
+    "first": "2026-10-02",
+    "last": "2026-10-25",
+    "elapsed_days": 24,
+    "prs": 8,
+    "pr_median_h": 0.4
+   }
+  },
+  {
+   "url": "/relayx-on-b",
+   "title": "RelayX on b",
+   "topic": "Your wallet and money",
+   "live": true,
+   "posts": [],
+   "on_x": true,
+   "time": {
+    "hours": 1.64,
+    "sessions": 5,
+    "commits": 2.2,
+    "first": "2026-10-02",
+    "last": "2026-10-26",
+    "elapsed_days": 24,
+    "prs": 7,
+    "pr_median_h": 0.1
+   }
+  },
+  {
+   "url": "/releases",
+   "title": "Releases",
+   "topic": "bApps, games and the open platform",
+   "live": true,
+   "posts": [
+    {
+     "n": "026",
+     "url": "/blog/026-paying-to-be-heard",
+     "title": "026 Paying to be heard \u00b7 bWalletX blog"
+    },
+    {
+     "n": "028",
+     "url": "/blog/028-launch-something",
+     "title": "028 Launch something with your coin \u00b7 bWalletX blog"
+    },
+    {
+     "n": "030",
+     "url": "/blog/030-bphone",
+     "title": "030 bPhone: charge to receive calls \u00b7 bWalletX blog"
+    },
+    {
+     "n": "031",
+     "url": "/blog/031-calls-mics-menu",
+     "title": "031 bWalletX 5.1.88: a new Calls tab, working mics, a new menu \u00b7 bWalletX blog"
+    }
+   ],
+   "on_x": true,
+   "time": {
+    "hours": 34.87,
+    "sessions": 41,
+    "commits": 60.6,
+    "first": "2026-10-08",
+    "last": "2026-10-29",
+    "elapsed_days": 22,
+    "prs": 4,
+    "pr_median_h": 0.0
+   }
+  },
+  {
+   "url": "/restore",
+   "title": "Restore into bWalletX",
+   "topic": "Your wallet and money",
+   "live": true,
+   "posts": [
+    {
+     "n": "022",
+     "url": "/blog/022-bring-your-coins-home",
+     "title": "022 Bring your coins home \u00b7 bWalletX blog"
+    }
+   ],
+   "on_x": true,
+   "time": {
+    "hours": 12.39,
+    "sessions": 22,
+    "commits": 30.8,
+    "first": "2026-10-02",
+    "last": "2026-10-30",
+    "elapsed_days": 28,
+    "prs": 40,
+    "pr_median_h": 0.1
+   }
+  },
+  {
+   "url": "/restore/moneybutton",
+   "title": "Coming from Money Button?",
+   "topic": "Your wallet and money",
+   "live": true,
+   "posts": [],
+   "on_x": false,
+   "time": {
+    "hours": 0.33,
+    "sessions": 2,
+    "commits": 1.1,
+    "first": "2026-10-07",
+    "last": "2026-10-30",
+    "elapsed_days": 23,
+    "prs": 1,
+    "pr_median_h": 0.0
+   }
+  },
+  {
+   "url": "/restore/panda",
+   "title": "Coming from Panda Wallet?",
+   "topic": "Your wallet and money",
+   "live": true,
+   "posts": [],
+   "on_x": false,
+   "time": {
+    "hours": 0.07,
+    "sessions": 1,
+    "commits": 0.1,
+    "first": "2026-10-30",
+    "last": "2026-10-30",
+    "elapsed_days": 1,
+    "prs": 1,
+    "pr_median_h": 0.0
+   }
+  },
+  {
+   "url": "/restore/relayx",
+   "title": "Coming from RelayX?",
+   "topic": "Your wallet and money",
+   "live": true,
+   "posts": [],
+   "on_x": false,
+   "time": {
+    "hours": 0.54,
+    "sessions": 7,
+    "commits": 1.1,
+    "first": "2026-10-02",
+    "last": "2026-10-30",
+    "elapsed_days": 28,
+    "prs": 5,
+    "pr_median_h": 0.1
+   }
+  },
+  {
+   "url": "/restore/simplycash",
+   "title": "Coming from SimplyCash?",
+   "topic": "Your wallet and money",
+   "live": true,
+   "posts": [],
+   "on_x": true,
+   "time": {
+    "hours": 0.7,
+    "sessions": 3,
+    "commits": 1.4,
+    "first": "2026-10-02",
+    "last": "2026-10-30",
+    "elapsed_days": 28,
+    "prs": 1,
+    "pr_median_h": 0.0
+   }
+  },
+  {
+   "url": "/restore/twetch",
+   "title": "Coming from Twetch?",
+   "topic": "Your wallet and money",
+   "live": true,
+   "posts": [],
+   "on_x": false,
+   "time": {
+    "hours": 1.28,
+    "sessions": 8,
+    "commits": 2.8,
+    "first": "2026-10-01",
+    "last": "2026-10-30",
+    "elapsed_days": 29,
+    "prs": 10,
+    "pr_median_h": 0.1
+   }
+  },
+  {
+   "url": "/restore/yours",
+   "title": "Coming from Yours Wallet?",
+   "topic": "Your wallet and money",
+   "live": true,
+   "posts": [
+    {
+     "n": "001",
+     "url": "/blog/001-the-fork",
+     "title": "001 Forking Yours Wallet onto phones \u00b7 bWalletX blog"
+    }
+   ],
+   "on_x": true,
+   "time": {
+    "hours": 5.57,
+    "sessions": 31,
+    "commits": 9.3,
+    "first": "2026-09-29",
+    "last": "2026-10-30",
+    "elapsed_days": 31,
+    "prs": 11,
+    "pr_median_h": 0.5
+   }
+  },
+  {
+   "url": "/roadmap",
+   "title": "Roadmap",
+   "topic": "bApps, games and the open platform",
+   "live": true,
+   "posts": [],
+   "on_x": true,
+   "time": {
+    "hours": 0.5,
+    "sessions": 1,
+    "commits": 1.0,
+    "first": "2026-10-29",
+    "last": "2026-10-29",
+    "elapsed_days": 1,
+    "prs": 1,
+    "pr_median_h": 0.0
+   }
+  },
+  {
+   "url": "/seedless-login",
+   "title": "Seedless login",
+   "topic": "Safety and control",
+   "live": true,
+   "posts": [],
+   "on_x": false,
+   "time": {
+    "hours": 13.8,
+    "sessions": 8,
+    "commits": 24.4,
+    "first": "2026-10-19",
+    "last": "2026-10-25",
+    "elapsed_days": 7,
+    "prs": 4,
+    "pr_median_h": 2.9
+   }
+  },
+  {
+   "url": "/seedless-signin",
+   "title": "Sign in with a passkey: open your wallet with your face or fingerprint",
+   "topic": "Safety and control",
+   "live": true,
+   "posts": [],
+   "on_x": true,
+   "time": {
+    "hours": 6.0,
+    "sessions": 18,
+    "commits": 12.4,
+    "first": "2026-09-30",
+    "last": "2026-10-28",
+    "elapsed_days": 29,
+    "prs": 14,
+    "pr_median_h": 0.2
+   }
+  },
+  {
+   "url": "/services",
+   "title": "Our b*X services",
+   "topic": "Agents and b",
+   "live": true,
+   "posts": [],
+   "on_x": false,
+   "time": {
+    "hours": 0.25,
+    "sessions": 1,
+    "commits": 0.5,
+    "first": "2026-10-25",
+    "last": "2026-10-25",
+    "elapsed_days": 1,
+    "prs": 1,
+    "pr_median_h": 0.0
+   }
+  },
+  {
+   "url": "/sign-in-button",
+   "title": "Add Sign in with bWalletX to your site",
+   "topic": "Your identity and names",
+   "live": true,
+   "posts": [],
+   "on_x": false,
+   "time": {
+    "hours": 3.81,
+    "sessions": 25,
+    "commits": 7.3,
+    "first": "2026-10-06",
+    "last": "2026-10-30",
+    "elapsed_days": 24,
+    "prs": 22,
+    "pr_median_h": 0.2
+   }
+  },
+  {
+   "url": "/sign-in-with-handcash",
+   "title": "Sign in with HandCash",
+   "topic": "Your identity and names",
+   "live": true,
+   "posts": [
+    {
+     "n": "057",
+     "url": "/blog/057-handcash-and-invites",
+     "title": "057 Sign in with HandCash, and invites with tokens \u00b7 bWalletX blog"
+    }
+   ],
+   "on_x": false,
+   "time": {
+    "hours": 5.59,
+    "sessions": 32,
+    "commits": 11.5,
+    "first": "2026-10-02",
+    "last": "2026-10-30",
+    "elapsed_days": 29,
+    "prs": 28,
+    "pr_median_h": 0.2
+   }
+  },
+  {
+   "url": "/sign",
+   "title": "Your signature",
+   "topic": "Safety and control",
+   "live": true,
+   "posts": [
+    {
+     "n": "015",
+     "url": "/blog/015-launchpad",
+     "title": "015 Launchpad, and checking what we sign \u00b7 bWalletX blog"
+    },
+    {
+     "n": "017",
+     "url": "/blog/017-sign-in-and-lounge",
+     "title": "017 Sign in with bWalletX, and the Lounge \u00b7 bWalletX blog"
+    },
+    {
+     "n": "020",
+     "url": "/blog/020-sign-in-with-x",
+     "title": "020 Sign in with X \u00b7 bWalletX blog"
+    },
+    {
+     "n": "057",
+     "url": "/blog/057-handcash-and-invites",
+     "title": "057 Sign in with HandCash, and invites with tokens \u00b7 bWalletX blog"
+    }
+   ],
+   "on_x": true,
+   "time": {
+    "hours": 5.41,
+    "sessions": 31,
+    "commits": 11.9,
+    "first": "2026-10-06",
+    "last": "2026-10-30",
+    "elapsed_days": 24,
+    "prs": 24,
+    "pr_median_h": 0.2
+   }
+  },
+  {
+   "url": "/sms",
+   "title": "Bitcoin by text",
+   "topic": "Calls (bPhone)",
+   "live": true,
+   "posts": [],
+   "on_x": true,
+   "time": {
+    "hours": 0.26,
+    "sessions": 3,
+    "commits": 1.1,
+    "first": "2026-10-16",
+    "last": "2026-10-24",
+    "elapsed_days": 8,
+    "prs": 1,
+    "pr_median_h": 0.3
+   }
+  },
+  {
+   "url": "/social",
+   "title": "bWalletX Social",
+   "topic": "Rooms, chat and Spaces (bChatX)",
+   "live": true,
+   "posts": [],
+   "on_x": true,
+   "time": {
+    "hours": 61.81,
+    "sessions": 64,
+    "commits": 166.6,
+    "first": "2026-10-01",
+    "last": "2026-10-28",
+    "elapsed_days": 27,
+    "prs": 118,
+    "pr_median_h": 0.1
+   }
+  },
+  {
+   "url": "/store",
+   "title": "Start your store in bWalletX",
+   "topic": "Store, creators and media",
+   "live": true,
+   "posts": [
+    {
+     "n": "007",
+     "url": "/blog/007-store-and-private",
+     "title": "007 Store rules, open rooms and moderation \u00b7 bWalletX blog"
+    }
+   ],
+   "on_x": true,
+   "time": {
+    "hours": 28.42,
+    "sessions": 77,
+    "commits": 54.9,
+    "first": "2026-09-29",
+    "last": "2026-10-28",
+    "elapsed_days": 29,
+    "prs": 93,
+    "pr_median_h": 0.2
+   }
+  },
+  {
+   "url": "/strategies",
+   "title": "bWalletX Strategies",
+   "topic": "Exchange, tokens and launches",
+   "live": true,
+   "posts": [
+    {
+     "n": "009",
+     "url": "/blog/009-the-b-agent",
+     "title": "009 The b agent: paid, or your own key \u00b7 bWalletX blog"
+    },
+    {
+     "n": "010",
+     "url": "/blog/010-agents-strategies-cli",
+     "title": "010 Agent accounts, strategies, CLI and MCP \u00b7 bWalletX blog"
+    }
+   ],
+   "on_x": true,
+   "time": {
+    "hours": 3.18,
+    "sessions": 13,
+    "commits": 6.9,
+    "first": "2026-10-04",
+    "last": "2026-10-25",
+    "elapsed_days": 21,
+    "prs": 2,
+    "pr_median_h": 0.1
+   }
+  },
+  {
+   "url": "/strategies/spec",
+   "title": "bWalletX Strategy Spec",
+   "topic": "Exchange, tokens and launches",
+   "live": true,
+   "posts": [
+    {
+     "n": "010",
+     "url": "/blog/010-agents-strategies-cli",
+     "title": "010 Agent accounts, strategies, CLI and MCP \u00b7 bWalletX blog"
+    }
+   ],
+   "on_x": true,
+   "time": {
+    "hours": 8.12,
+    "sessions": 9,
+    "commits": 23.7,
+    "first": "2026-10-01",
+    "last": "2026-10-18",
+    "elapsed_days": 17,
+    "prs": 1,
+    "pr_median_h": 0.7
+   }
+  },
+  {
+   "url": "/streaming-payments",
+   "title": "Streaming payments: pay as you go",
+   "topic": "Store, creators and media",
+   "live": true,
+   "posts": [],
+   "on_x": false,
+   "time": {
+    "hours": 5.17,
+    "sessions": 11,
+    "commits": 11.2,
+    "first": "2026-10-01",
+    "last": "2026-10-26",
+    "elapsed_days": 25,
+    "prs": 4,
+    "pr_median_h": 0.2
+   }
+  },
+  {
+   "url": "/subscriptions",
+   "title": "Subscriptions in bWalletX",
+   "topic": "Your wallet and money",
+   "live": true,
+   "posts": [
+    {
+     "n": "016",
+     "url": "/blog/016-pots",
+     "title": "016 Subscriptions, paid from pots \u00b7 bWalletX blog"
+    },
+    {
+     "n": "036",
+     "url": "/blog/036-subscriptions-in-dollars",
+     "title": "036 Subscriptions, priced in dollars \u00b7 bWalletX blog"
+    }
+   ],
+   "on_x": true,
+   "time": {
+    "hours": 1.59,
+    "sessions": 5,
+    "commits": 3.8,
+    "first": "2026-10-07",
+    "last": "2026-10-25",
+    "elapsed_days": 19,
+    "prs": 1,
+    "pr_median_h": 1.1
+   }
+  },
+  {
+   "url": "/swap",
+   "title": "Swap into BSV: 1,000+ coins, straight to your wallet",
+   "topic": "Your wallet and money",
+   "live": true,
+   "posts": [
+    {
+     "n": "038",
+     "url": "/blog/038-swap-into-bsv",
+     "title": "038 Swap into BSV \u00b7 bWalletX blog"
+    },
+    {
+     "n": "049",
+     "url": "/blog/049-the-exchange-sorted",
+     "title": "049 The Exchange, sorted \u00b7 bWalletX blog"
+    }
+   ],
+   "on_x": true,
+   "time": {
+    "hours": 10.98,
+    "sessions": 22,
+    "commits": 24.0,
+    "first": "2026-10-02",
+    "last": "2026-10-30",
+    "elapsed_days": 29,
+    "prs": 26,
+    "pr_median_h": 0.2
+   }
+  },
+  {
+   "url": "/sweep-simplycash",
+   "title": "Sweep SimplyCash into bWalletX",
+   "topic": "Your wallet and money",
+   "live": true,
+   "posts": [],
+   "on_x": true,
+   "time": {
+    "hours": 7.7,
+    "sessions": 18,
+    "commits": 20.0,
+    "first": "2026-10-02",
+    "last": "2026-10-25",
+    "elapsed_days": 23,
+    "prs": 26,
+    "pr_median_h": 0.1
+   }
+  },
+  {
+   "url": "/talk-to-b",
+   "title": "Talk to b",
+   "topic": "Rooms, chat and Spaces (bChatX)",
+   "live": true,
+   "posts": [
+    {
+     "n": "009",
+     "url": "/blog/009-the-b-agent",
+     "title": "009 The b agent: paid, or your own key \u00b7 bWalletX blog"
+    },
+    {
+     "n": "043",
+     "url": "/blog/043-ask-b",
+     "title": "043 Ask b \u00b7 bWalletX blog"
+    }
+   ],
+   "on_x": true,
+   "time": {
+    "hours": 2.25,
+    "sessions": 5,
+    "commits": 5.2,
+    "first": "2026-10-05",
+    "last": "2026-10-25",
+    "elapsed_days": 21,
+    "prs": 0,
+    "pr_median_h": null
+   }
+  },
+  {
+   "url": "/terms",
+   "title": "Terms of Service \u00b7 bWalletX (Beta)",
+   "topic": "Safety and control",
+   "live": true,
+   "posts": [],
+   "on_x": false,
+   "time": {
+    "hours": 3.6,
+    "sessions": 7,
+    "commits": 5.3,
+    "first": "2026-10-02",
+    "last": "2026-10-29",
+    "elapsed_days": 28,
+    "prs": 8,
+    "pr_median_h": 0.0
+   }
+  },
+  {
+   "url": "/testers",
+   "title": "Get 1 BSV: test bWallet on Android",
+   "topic": "bApps, games and the open platform",
+   "live": true,
+   "posts": [
+    {
+     "n": "018",
+     "url": "/blog/018-testers",
+     "title": "018 1 BSV for testing bWallet on Android \u00b7 bWalletX blog"
+    }
+   ],
+   "on_x": true,
+   "time": {
+    "hours": 3.54,
+    "sessions": 17,
+    "commits": 7.9,
+    "first": "2026-10-07",
+    "last": "2026-10-29",
+    "elapsed_days": 23,
+    "prs": 3,
+    "pr_median_h": 0.0
+   }
+  },
+  {
+   "url": "/themes-custom",
+   "title": "Branded wallets for businesses",
+   "topic": "Start here, brand and campaigns",
+   "live": true,
+   "posts": [],
+   "on_x": false,
+   "time": {
+    "hours": 8.12,
+    "sessions": 24,
+    "commits": 26.0,
+    "first": "2026-10-15",
+    "last": "2026-10-29",
+    "elapsed_days": 15,
+    "prs": 33,
+    "pr_median_h": 0.2
+   }
+  },
+  {
+   "url": "/themes",
+   "title": "Themes: make bWallet yours",
+   "topic": "Store, creators and media",
+   "live": true,
+   "posts": [],
+   "on_x": false,
+   "time": {
+    "hours": 20.01,
+    "sessions": 42,
+    "commits": 54.6,
+    "first": "2026-09-29",
+    "last": "2026-10-29",
+    "elapsed_days": 30,
+    "prs": 55,
+    "pr_median_h": 0.2
+   }
+  },
+  {
+   "url": "/tips",
+   "title": "Tips: pay the people who make things",
+   "topic": "Store, creators and media",
+   "live": true,
+   "posts": [
+    {
+     "n": "024",
+     "url": "/blog/024-tips-and-paid-likes",
+     "title": "024 Pay the person who wrote it \u00b7 bWalletX blog"
+    },
+    {
+     "n": "047",
+     "url": "/blog/047-pay-the-artist",
+     "title": "047 Pay the artist \u00b7 bWalletX blog"
+    },
+    {
+     "n": "052",
+     "url": "/blog/052-tip-buttons",
+     "title": "052 Tip buttons \u00b7 bWalletX blog"
+    }
+   ],
+   "on_x": true,
+   "time": {
+    "hours": 1.85,
+    "sessions": 5,
+    "commits": 4.2,
+    "first": "2026-10-06",
+    "last": "2026-10-23",
+    "elapsed_days": 18,
+    "prs": 0,
+    "pr_median_h": null
+   }
+  },
+  {
+   "url": "/token-curves",
+   "title": "Token curves: how a person's token is priced",
+   "topic": "Exchange, tokens and launches",
+   "live": true,
+   "posts": [],
+   "on_x": false,
+   "time": {
+    "hours": 2.16,
+    "sessions": 9,
+    "commits": 3.9,
+    "first": "2026-10-06",
+    "last": "2026-10-25",
+    "elapsed_days": 19,
+    "prs": 3,
+    "pr_median_h": 0.2
+   }
+  },
+  {
+   "url": "/token-locking",
+   "title": "Token locking",
+   "topic": "Your wallet and money",
+   "live": true,
+   "posts": [],
+   "on_x": true,
+   "time": {
+    "hours": 9.24,
+    "sessions": 35,
+    "commits": 18.3,
+    "first": "2026-10-01",
+    "last": "2026-10-29",
+    "elapsed_days": 29,
+    "prs": 33,
+    "pr_median_h": 0.1
+   }
+  },
+  {
+   "url": "/tokenblaster",
+   "title": "tokenblaster.lol: games on the live chain",
+   "topic": "Exchange, tokens and launches",
+   "live": true,
+   "posts": [],
+   "on_x": false,
+   "time": {
+    "hours": 0.5,
+    "sessions": 3,
+    "commits": 0.7,
+    "first": "2026-10-03",
+    "last": "2026-10-28",
+    "elapsed_days": 25,
+    "prs": 1,
+    "pr_median_h": 0.1
+   }
+  },
+  {
+   "url": "/treechat-on-b",
+   "title": "Treechat on b",
+   "topic": "Rooms, chat and Spaces (bChatX)",
+   "live": true,
+   "posts": [],
+   "on_x": true,
+   "time": {
+    "hours": 0.71,
+    "sessions": 4,
+    "commits": 1.4,
+    "first": "2026-10-01",
+    "last": "2026-10-25",
+    "elapsed_days": 24,
+    "prs": 6,
+    "pr_median_h": 0.2
+   }
+  },
+  {
+   "url": "/twetch-on-b",
+   "title": "Twetch on b",
+   "topic": "bApps, games and the open platform",
+   "live": true,
+   "posts": [],
+   "on_x": true,
+   "time": {
+    "hours": 1.36,
+    "sessions": 7,
+    "commits": 2.9,
+    "first": "2026-10-01",
+    "last": "2026-10-27",
+    "elapsed_days": 26,
+    "prs": 11,
+    "pr_median_h": 0.1
+   }
+  },
+  {
+   "url": "/verify-note",
+   "title": "Verify a signed note",
+   "topic": "Safety and control",
+   "live": true,
+   "posts": [],
+   "on_x": false,
+   "time": {
+    "hours": 3.81,
+    "sessions": 25,
+    "commits": 7.8,
+    "first": "2026-09-30",
+    "last": "2026-10-28",
+    "elapsed_days": 29,
+    "prs": 20,
+    "pr_median_h": 0.2
+   }
+  },
+  {
+   "url": "/video",
+   "title": "Watch: bWalletX in one minute",
+   "topic": "Store, creators and media",
+   "live": true,
+   "posts": [
+    {
+     "n": "053",
+     "url": "/blog/053-friends-bpics-and-video",
+     "title": "053 Friends, bPics and video in rooms \u00b7 bWalletX blog"
+    }
+   ],
+   "on_x": true,
+   "time": {
+    "hours": 3.24,
+    "sessions": 19,
+    "commits": 7.0,
+    "first": "2026-10-01",
+    "last": "2026-10-26",
+    "elapsed_days": 26,
+    "prs": 9,
+    "pr_median_h": 0.1
+   }
+  },
+  {
+   "url": "/wallet-frames",
+   "title": "Wallet Frames: your private things, drawn by your wallet",
+   "topic": "Store, creators and media",
+   "live": true,
+   "posts": [],
+   "on_x": false,
+   "time": {
+    "hours": 1.45,
+    "sessions": 4,
+    "commits": 2.7,
+    "first": "2026-10-02",
+    "last": "2026-10-26",
+    "elapsed_days": 25,
+    "prs": 2,
+    "pr_median_h": 0.4
+   }
+  },
+  {
+   "url": "/web",
+   "title": "bWalletX web wallet",
+   "topic": "bApps, games and the open platform",
+   "live": true,
+   "posts": [],
+   "on_x": true,
+   "time": {
+    "hours": 0.5,
+    "sessions": 1,
+    "commits": 1.0,
+    "first": "2026-10-08",
+    "last": "2026-10-08",
+    "elapsed_days": 1,
+    "prs": 0,
+    "pr_median_h": null
+   }
+  },
+  {
+   "url": "/x",
+   "title": "Link your X account",
+   "topic": "Your identity and names",
+   "live": true,
+   "posts": [
+    {
+     "n": "020",
+     "url": "/blog/020-sign-in-with-x",
+     "title": "020 Sign in with X \u00b7 bWalletX blog"
+    },
+    {
+     "n": "057",
+     "url": "/blog/057-handcash-and-invites",
+     "title": "057 Sign in with HandCash, and invites with tokens \u00b7 bWalletX blog"
+    }
+   ],
+   "on_x": true,
+   "time": {
+    "hours": 1.34,
+    "sessions": 10,
+    "commits": 3.6,
+    "first": "2026-10-07",
+    "last": "2026-10-30",
+    "elapsed_days": 24,
+    "prs": 2,
+    "pr_median_h": 0.6
+   }
+  },
+  {
+   "url": "/your-apps-on-b",
+   "title": "Your apps on b",
+   "topic": "bApps, games and the open platform",
+   "live": true,
+   "posts": [],
+   "on_x": false,
+   "time": {
+    "hours": 3.61,
+    "sessions": 13,
+    "commits": 7.9,
+    "first": "2026-10-01",
+    "last": "2026-10-29",
+    "elapsed_days": 28,
+    "prs": 5,
+    "pr_median_h": 2.9
+   }
+  },
+  {
+   "url": "/your-character",
+   "title": "Your character",
+   "topic": "Your identity and names",
+   "live": true,
+   "posts": [],
+   "on_x": false,
+   "time": {
+    "hours": 0.51,
+    "sessions": 1,
+    "commits": 2.0,
+    "first": "2026-10-19",
+    "last": "2026-10-19",
+    "elapsed_days": 1,
+    "prs": 1,
+    "pr_median_h": 174.9
+   }
+  },
+  {
+   "url": "/yours-on-b",
+   "title": "Yours on b",
+   "topic": "bApps, games and the open platform",
+   "live": true,
+   "posts": [],
+   "on_x": true,
+   "time": {
+    "hours": 5.5,
+    "sessions": 28,
+    "commits": 9.2,
+    "first": "2026-09-29",
+    "last": "2026-10-29",
+    "elapsed_days": 31,
+    "prs": 12,
+    "pr_median_h": 0.4
+   }
+  },
+  {
+   "url": null,
+   "title": "bWalletX app: shared code",
+   "topic": "Platform and shared code",
+   "live": true,
+   "posts": [],
+   "on_x": false,
+   "time": {
+    "hours": 263.43,
+    "sessions": 83,
+    "commits": 626.0,
+    "first": "2026-09-29",
+    "last": "2026-10-30",
+    "elapsed_days": 31,
+    "prs": 119,
+    "pr_median_h": 0.1
+   }
+  },
+  {
+   "url": null,
+   "title": "bChatX: shared code",
+   "topic": "Platform and shared code",
+   "live": true,
+   "posts": [],
+   "on_x": false,
+   "time": {
+    "hours": 44.57,
+    "sessions": 48,
+    "commits": 95.0,
+    "first": "2026-09-30",
+    "last": "2026-10-30",
+    "elapsed_days": 30,
+    "prs": 68,
+    "pr_median_h": 0.1
+   }
+  },
+  {
+   "url": null,
+   "title": "bGitX site: shared code",
+   "topic": "Platform and shared code",
+   "live": true,
+   "posts": [],
+   "on_x": false,
+   "time": {
+    "hours": 0.5,
+    "sessions": 1,
+    "commits": 1.0,
+    "first": "2026-10-28",
+    "last": "2026-10-28",
+    "elapsed_days": 1,
+    "prs": 0,
+    "pr_median_h": null
+   }
+  }
+ ],
+ "open": [
+  {
+   "kind": "page",
+   "url": "/airdrops",
+   "title": "Airdrops",
+   "what": "Page with no blog post yet"
+  },
+  {
+   "kind": "page",
+   "url": "/b-bots",
+   "title": "bBots: little helpers that work for you",
+   "what": "Page with no blog post yet"
+  },
+  {
+   "kind": "page",
+   "url": "/b-cool",
+   "title": "b cool",
+   "what": "Page with no blog post yet"
+  },
+  {
+   "kind": "page",
+   "url": "/b-creative",
+   "title": "b Creative",
+   "what": "Page with no blog post yet"
+  },
+  {
+   "kind": "page",
+   "url": "/b-family",
+   "title": "The b family",
+   "what": "Page with no blog post yet"
+  },
+  {
+   "kind": "page",
+   "url": "/b-in-black",
+   "title": "b black",
+   "what": "Page with no blog post yet"
+  },
+  {
+   "kind": "page",
+   "url": "/b-is-coming",
+   "title": "b is coming",
+   "what": "Page with no blog post yet"
+  },
+  {
+   "kind": "page",
+   "url": "/b-is-for-auteurs",
+   "title": "b is for auteurs",
+   "what": "Page with no blog post yet"
+  },
+  {
+   "kind": "page",
+   "url": "/b-is-for-business",
+   "title": "b is for business",
+   "what": "Page with no blog post yet"
+  },
+  {
+   "kind": "page",
+   "url": "/b-is-for-shopkeepers",
+   "title": "b is for shopkeepers",
+   "what": "Page with no blog post yet"
+  },
+  {
+   "kind": "page",
+   "url": "/b-market",
+   "title": "bMarketX.com: your eBay store, on Bitcoin",
+   "what": "Page with no blog post yet"
+  },
+  {
+   "kind": "page",
+   "url": "/b-on-twetch",
+   "title": "b is on Twetch",
+   "what": "Page with no blog post yet"
+  },
+  {
+   "kind": "page",
+   "url": "/b-socials",
+   "title": "Everything b",
+   "what": "Page with no blog post yet"
+  },
+  {
+   "kind": "page",
+   "url": "/b/acc",
+   "title": "bAcc: make Bitcoin faster, the goal is 1 billion transactions a second",
+   "what": "Page with no blog post yet"
+  },
+  {
+   "kind": "page",
+   "url": "/bads",
+   "title": "bAds \u00b7 we sell bAds, made by b",
+   "what": "Page with no blog post yet"
+  },
+  {
+   "kind": "page",
+   "url": "/bapps",
+   "title": "bApps: apps that run inside bWalletX",
+   "what": "Page with no blog post yet"
+  },
+  {
+   "kind": "page",
+   "url": "/bapps/bmovies",
+   "title": "bMovies inside bWalletX",
+   "what": "Page with no blog post yet"
+  },
+  {
+   "kind": "page",
+   "url": "/bavatars",
+   "title": "bAvatars: your name, as art you can scan",
+   "what": "Page with no blog post yet"
+  },
+  {
+   "kind": "page",
+   "url": "/be-on-b-2",
+   "title": "be on b",
+   "what": "Page with no blog post yet"
+  },
+  {
+   "kind": "page",
+   "url": "/be-on-b-3",
+   "title": "be on b",
+   "what": "Page with no blog post yet"
+  },
+  {
+   "kind": "page",
+   "url": "/be-on-b",
+   "title": "be on b",
+   "what": "Page with no blog post yet"
+  },
+  {
+   "kind": "page",
+   "url": "/bgitx",
+   "title": "bGitX: your code, on b",
+   "what": "Page with no blog post yet"
+  },
+  {
+   "kind": "page",
+   "url": "/bounties",
+   "title": "Bounties: live pool and payouts",
+   "what": "Page with no blog post yet"
+  },
+  {
+   "kind": "page",
+   "url": "/bpositive",
+   "title": "bPositive",
+   "what": "Page with no blog post yet"
+  },
+  {
+   "kind": "page",
+   "url": "/brand",
+   "title": "The bWalletX brand",
+   "what": "Page with no blog post yet"
+  },
+  {
+   "kind": "page",
+   "url": "/btrust",
+   "title": "bTrust in bWalletX",
+   "what": "Page with no blog post yet"
+  },
+  {
+   "kind": "page",
+   "url": "/business-agents",
+   "title": "bRand business agents",
+   "what": "Page with no blog post yet"
+  },
+  {
+   "kind": "page",
+   "url": "/buy",
+   "title": "Buy BSV in bWalletX",
+   "what": "Page with no blog post yet"
+  },
+  {
+   "kind": "page",
+   "url": "/bweb",
+   "title": "bWeb: ask b to build your website",
+   "what": "Page with no blog post yet"
+  },
+  {
+   "kind": "page",
+   "url": "/clients",
+   "title": "Your own branded wallet \u00b7 bWalletX for business",
+   "what": "Page with no blog post yet"
+  },
+  {
+   "kind": "page",
+   "url": "/coingeek-on-b",
+   "title": "CoinGeek on b",
+   "what": "Page with no blog post yet"
+  },
+  {
+   "kind": "page",
+   "url": "/contracts",
+   "title": "Contracts in chat",
+   "what": "Page with no blog post yet"
+  },
+  {
+   "kind": "page",
+   "url": "/creative",
+   "title": "b Creative",
+   "what": "Page with no blog post yet"
+  },
+  {
+   "kind": "page",
+   "url": "/credits",
+   "title": "Credits: prepaid credit for services",
+   "what": "Page with no blog post yet"
+  },
+  {
+   "kind": "page",
+   "url": "/culture",
+   "title": "Culture: make it on BSV",
+   "what": "Page with no blog post yet"
+  },
+  {
+   "kind": "page",
+   "url": "/desktop",
+   "title": "bWalletX Desktop",
+   "what": "Page with no blog post yet"
+  },
+  {
+   "kind": "page",
+   "url": "/developers",
+   "title": "bWalletX for Developers",
+   "what": "Page with no blog post yet"
+  },
+  {
+   "kind": "page",
+   "url": "/direct",
+   "title": "bWallet Direct: sign in straight from your own wallet",
+   "what": "Page with no blog post yet"
+  },
+  {
+   "kind": "page",
+   "url": "/features",
+   "title": "bWalletX Features",
+   "what": "Page with no blog post yet"
+  },
+  {
+   "kind": "page",
+   "url": "/flick-off",
+   "title": "FLICK OFF",
+   "what": "Page with no blog post yet"
+  },
+  {
+   "kind": "page",
+   "url": "/games",
+   "title": "Games in bWalletX",
+   "what": "Page with no blog post yet"
+  },
+  {
+   "kind": "page",
+   "url": "/get",
+   "title": "Get bWalletX",
+   "what": "Page with no blog post yet"
+  },
+  {
+   "kind": "page",
+   "url": "/gigs",
+   "title": "bGigs in bWalletX",
+   "what": "Page with no blog post yet"
+  },
+  {
+   "kind": "page",
+   "url": "/happy-b",
+   "title": "Happy b-day cards \u00b7 make with b, mint, send by bMail",
+   "what": "Page with no blog post yet"
+  },
+  {
+   "kind": "page",
+   "url": "/history",
+   "title": "History in bWalletX",
+   "what": "Page with no blog post yet"
+  },
+  {
+   "kind": "page",
+   "url": "/hodl-my-b",
+   "title": "Hodl my b",
+   "what": "Page with no blog post yet"
+  },
+  {
+   "kind": "page",
+   "url": "/hodl-my-b/0",
+   "title": "Hodl my b, Edition 0: The whole story",
+   "what": "Page with no blog post yet"
+  },
+  {
+   "kind": "page",
+   "url": "/hodl-my-b/1",
+   "title": "Hodl my b, Edition 1: Don\u2019t be bland. Get bRanded.",
+   "what": "Page with no blog post yet"
+  },
+  {
+   "kind": "page",
+   "url": "/hodlocker-on-b",
+   "title": "Hodlocker on b",
+   "what": "Page with no blog post yet"
+  },
+  {
+   "kind": "page",
+   "url": "/hold-to-talk",
+   "title": "Hold to talk to b",
+   "what": "Page with no blog post yet"
+  },
+  {
+   "kind": "page",
+   "url": "/jobs",
+   "title": "Jobs: paid work, paid in BSV",
+   "what": "Page with no blog post yet"
+  },
+  {
+   "kind": "page",
+   "url": "/just-b-2",
+   "title": "Just b: less noise",
+   "what": "Page with no blog post yet"
+  },
+  {
+   "kind": "page",
+   "url": "/just-b",
+   "title": "Just b",
+   "what": "Page with no blog post yet"
+  },
+  {
+   "kind": "page",
+   "url": "/migrate",
+   "title": "Move to bWalletX",
+   "what": "Page with no blog post yet"
+  },
+  {
+   "kind": "page",
+   "url": "/mint",
+   "title": "Mint with bWalletX",
+   "what": "Page with no blog post yet"
+  },
+  {
+   "kind": "page",
+   "url": "/newsletter",
+   "title": "Newsletter",
+   "what": "Page with no blog post yet"
+  },
+  {
+   "kind": "page",
+   "url": "/on-b",
+   "title": "Your apps, on b",
+   "what": "Page with no blog post yet"
+  },
+  {
+   "kind": "page",
+   "url": "/partners",
+   "title": "Partners: refer people, get a commission",
+   "what": "Page with no blog post yet"
+  },
+  {
+   "kind": "page",
+   "url": "/peck-on-b",
+   "title": "Peck on b",
+   "what": "Page with no blog post yet"
+  },
+  {
+   "kind": "page",
+   "url": "/race-card",
+   "title": "bAcc RACE: the bAcc racing game",
+   "what": "Page with no blog post yet"
+  },
+  {
+   "kind": "page",
+   "url": "/recover-relayx",
+   "title": "Your RelayX NFTs are still yours",
+   "what": "Page with no blog post yet"
+  },
+  {
+   "kind": "page",
+   "url": "/relayx-on-b",
+   "title": "RelayX on b",
+   "what": "Page with no blog post yet"
+  },
+  {
+   "kind": "page",
+   "url": "/restore/moneybutton",
+   "title": "Coming from Money Button?",
+   "what": "Page with no blog post yet"
+  },
+  {
+   "kind": "page",
+   "url": "/restore/panda",
+   "title": "Coming from Panda Wallet?",
+   "what": "Page with no blog post yet"
+  },
+  {
+   "kind": "page",
+   "url": "/restore/relayx",
+   "title": "Coming from RelayX?",
+   "what": "Page with no blog post yet"
+  },
+  {
+   "kind": "page",
+   "url": "/restore/simplycash",
+   "title": "Coming from SimplyCash?",
+   "what": "Page with no blog post yet"
+  },
+  {
+   "kind": "page",
+   "url": "/restore/twetch",
+   "title": "Coming from Twetch?",
+   "what": "Page with no blog post yet"
+  },
+  {
+   "kind": "page",
+   "url": "/roadmap",
+   "title": "Roadmap",
+   "what": "Page with no blog post yet"
+  },
+  {
+   "kind": "page",
+   "url": "/seedless-login",
+   "title": "Seedless login",
+   "what": "Page with no blog post yet"
+  },
+  {
+   "kind": "page",
+   "url": "/seedless-signin",
+   "title": "Sign in with a passkey: open your wallet with your face or fingerprint",
+   "what": "Page with no blog post yet"
+  },
+  {
+   "kind": "page",
+   "url": "/services",
+   "title": "Our b*X services",
+   "what": "Page with no blog post yet"
+  },
+  {
+   "kind": "page",
+   "url": "/sign-in-button",
+   "title": "Add Sign in with bWalletX to your site",
+   "what": "Page with no blog post yet"
+  },
+  {
+   "kind": "page",
+   "url": "/sms",
+   "title": "Bitcoin by text",
+   "what": "Page with no blog post yet"
+  },
+  {
+   "kind": "page",
+   "url": "/social",
+   "title": "bWalletX Social",
+   "what": "Page with no blog post yet"
+  },
+  {
+   "kind": "page",
+   "url": "/streaming-payments",
+   "title": "Streaming payments: pay as you go",
+   "what": "Page with no blog post yet"
+  },
+  {
+   "kind": "page",
+   "url": "/sweep-simplycash",
+   "title": "Sweep SimplyCash into bWalletX",
+   "what": "Page with no blog post yet"
+  },
+  {
+   "kind": "page",
+   "url": "/terms",
+   "title": "Terms of Service \u00b7 bWalletX (Beta)",
+   "what": "Page with no blog post yet"
+  },
+  {
+   "kind": "page",
+   "url": "/themes-custom",
+   "title": "Branded wallets for businesses",
+   "what": "Page with no blog post yet"
+  },
+  {
+   "kind": "page",
+   "url": "/themes",
+   "title": "Themes: make bWallet yours",
+   "what": "Page with no blog post yet"
+  },
+  {
+   "kind": "page",
+   "url": "/token-curves",
+   "title": "Token curves: how a person's token is priced",
+   "what": "Page with no blog post yet"
+  },
+  {
+   "kind": "page",
+   "url": "/token-locking",
+   "title": "Token locking",
+   "what": "Page with no blog post yet"
+  },
+  {
+   "kind": "page",
+   "url": "/tokenblaster",
+   "title": "tokenblaster.lol: games on the live chain",
+   "what": "Page with no blog post yet"
+  },
+  {
+   "kind": "page",
+   "url": "/treechat-on-b",
+   "title": "Treechat on b",
+   "what": "Page with no blog post yet"
+  },
+  {
+   "kind": "page",
+   "url": "/twetch-on-b",
+   "title": "Twetch on b",
+   "what": "Page with no blog post yet"
+  },
+  {
+   "kind": "page",
+   "url": "/verify-note",
+   "title": "Verify a signed note",
+   "what": "Page with no blog post yet"
+  },
+  {
+   "kind": "page",
+   "url": "/wallet-frames",
+   "title": "Wallet Frames: your private things, drawn by your wallet",
+   "what": "Page with no blog post yet"
+  },
+  {
+   "kind": "page",
+   "url": "/web",
+   "title": "bWalletX web wallet",
+   "what": "Page with no blog post yet"
+  },
+  {
+   "kind": "page",
+   "url": "/your-apps-on-b",
+   "title": "Your apps on b",
+   "what": "Page with no blog post yet"
+  },
+  {
+   "kind": "page",
+   "url": "/your-character",
+   "title": "Your character",
+   "what": "Page with no blog post yet"
+  },
+  {
+   "kind": "page",
+   "url": "/yours-on-b",
+   "title": "Yours on b",
+   "what": "Page with no blog post yet"
+  },
+  {
+   "kind": "post",
+   "url": null,
+   "title": "Bring your history with you",
+   "what": "Blog post written, held back until the feature it describes is in a release build"
+  },
+  {
+   "kind": "post",
+   "url": null,
+   "title": "Every coin, counted",
+   "what": "Blog post written, held back until the feature it describes is in a release build"
+  },
+  {
+   "kind": "post",
+   "url": null,
+   "title": "Sign in with your face or fingerprint",
+   "what": "Blog post written, held back until the feature it describes is in a release build"
+  }
+ ]
+}
