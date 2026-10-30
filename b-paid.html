@@ -127,6 +127,13 @@
       .askbar.sent .send { transform: scale(1.18); }
       @keyframes blink { 50% { opacity: 0; } }
       @media (prefers-reduced-motion: reduce) { .askbar .q::after { animation: none; } }
+      .floatb { position: absolute; left: 0; right: 0; margin: 0 auto; bottom: calc(50% - 2vh); height: clamp(84px, 15vh, 150px); width: auto; display: block;
+        filter: drop-shadow(0 0 36px rgba(245,184,0,.55)) drop-shadow(0 10px 28px rgba(0,0,0,.85)); opacity: 0; transform: translateY(14px); transition: opacity 1.2s .2s ease, transform 1.4s .2s cubic-bezier(.2,.7,.2,1); }
+      .scene.on .floatb { opacity: 1; transform: none; animation: floatb 6s 1.6s ease-in-out infinite; }
+      @keyframes floatb { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
+      @media (prefers-reduced-motion: reduce) { .scene.on .floatb { animation: none; transition: none; } }
+      .tools { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 10px; }
+      .tools span { font-size: .72rem; padding: 3px 8px; border-radius: 999px; border: 1px solid rgba(245,184,0,.35); color: var(--accent-hi); }
       .scene { z-index: 2; }
       .scene { background: transparent !important; }
       .scene.hasart .cap { top: calc(50% + 4vh); transform: none; }
@@ -233,7 +240,7 @@
         { at: 54.65, art: '<div class="card"><p class="k"><img src="b-paid-glyph.svg" alt=""> Agreement</p><div class="sig" style="--d:0"><span>You</span><i></i><b>&#10003;</b></div><div class="sig" style="--d:1"><span>Them</span><i></i><b>&#10003;</b></div></div>', slogan: 'Deal', sub: 'One tap to take the job. You both sign.' },
         { at: 61.43, art: '<div class="card"><p class="k"><img src="b-paid-glyph.svg" alt=""> Delivered</p><div class="row"><span>File</span><span>bakery-logo.svg</span></div><div class="row"><span>Revisions</span><span>2 of 2</span></div><div class="btn">Signed off</div></div>', slogan: 'Done', sub: 'They deliver. You sign it off.' },
         { at: 68.21, art: '<div class="card"><p class="k"><img src="b-paid-glyph.svg" alt=""> Paid in BSV</p><div class="flow"><div class="w8"><strong>$40</strong>You</div><div class="ar"></div><div class="w8"><strong>$32</strong>Them</div></div><div class="flow" style="margin-top:10px"><div class="w8" style="visibility:hidden"></div><div class="ar"></div><div class="w8"><strong>$8</strong>b fee</div></div></div>', slogan: 'Get paid', sub: 'Wallet to wallet, peer to peer, in seconds. We never hold the money.' },
-        { at: 74.99, art: '<div class="card"><p class="k"><img src="b-paid-glyph.svg" alt=""> Room: Bakery app</p><div class="row"><span>@maya &middot; design</span><span>30%</span></div><div class="row"><span>@raj &middot; code</span><span>45%</span></div><div class="row"><span>@you &middot; the idea</span><span>25%</span></div><div class="btn">Everyone signed</div></div>', slogan: 'Build together', sub: 'Split the work in a room. Share what you build.' },
+        { at: 74.99, art: '<div class="card"><p class="k"><img src="b-paid-glyph.svg" alt=""> Room: Bakery app</p><div class="row"><span>@maya &middot; design</span><span>30%</span></div><div class="row"><span>@raj &middot; code</span><span>45%</span></div><div class="row"><span>@you &middot; the idea</span><span>25%</span></div><div class="tools"><span>bChat</span><span>bMail</span><span>bPhone</span><span>bWriter</span><span>bDrive</span><span>bSheets</span></div><div class="btn">Everyone signed</div></div>', slogan: 'Build together', sub: 'Split the work in a room, with b\u2019s office tools to hand. Share what you build.' },
         { at: 81.77, slogan: '{L} paid', sub: 'Ask for anything. Do what you\u2019re good at.', cta: true }
       ];
       // ---------------------------------
@@ -255,6 +262,7 @@
         }
         var html = '';
         SCENES.forEach(function (s) {
+          if (!s.art && s.slogan.indexOf('{L}') < 0) s.art = '<img class="floatb" src="og-glyph-tight.svg" alt="" />';
           html += '<div class="scene' + (s.art ? ' hasart' : '') + '" data-at="' + s.at + '">';
           if (s.photo) html += '<img class="ph" src="' + esc(s.photo) + '" alt="" decoding="async" /><div class="shade"></div>';
           if (s.art) html += '<div class="art" aria-hidden="true">' + s.art + '</div>';
@@ -387,7 +395,9 @@ gl_FragColor=vec4(col,1.);}`;
           ['@aiko', 'Build me a one-page website for my band'],
           ['@sam', 'Proofread my CV tonight?'],
           ['@jo', 'Set up a BSV till for my caf\u00e9'],
-          ['@kwame', 'Voice-over for a 30-second ad, American accent']
+          ['@kwame', 'Voice-over for a 30-second ad, American accent'],
+          ['@nina', 'Draft our pitch in bWriter, budget in bSheets'],
+          ['@leo', 'Call me on bPhone when the designs are in bDrive']
         ];
         var q = document.getElementById('askq'), who = document.getElementById('askwho'), bar = document.getElementById('askbar');
         var still = matchMedia('(prefers-reduced-motion: reduce)').matches, i = 0;
