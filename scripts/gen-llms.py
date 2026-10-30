@@ -5,7 +5,7 @@ import glob, html, os, re, datetime
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 BASE = 'https://bwalletx.com'
-SKIP = {'404.html'}
+SKIP = {'404.html', '029-bpositive.html'}  # dropped idea, kept at its URL with noindex
 
 def url_of(path):
     rel = os.path.relpath(path, ROOT).replace(os.sep, '/')

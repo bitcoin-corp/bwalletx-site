@@ -4,20 +4,20 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>014 One feed for BSV · bWalletX blog</title>
-    <meta name="description" content="Every BSV social app keeps its own feed. bChat shows all of them, credits them, and pays the people who wrote the posts." />
+    <meta name="description" content="Every BSV social app keeps its own feed. bChat shows all of them, credits them, and sends tips straight to the people who wrote the posts." />
     <link rel="canonical" href="https://bwalletx.com/blog/014-open-feed" />
     <meta property="og:type" content="article" />
     <meta property="og:url" content="https://bwalletx.com/blog/014-open-feed" />
     <meta property="og:site_name" content="bWalletX" />
     <meta property="og:title" content="One feed for BSV" />
-    <meta property="og:description" content="Every BSV social app keeps its own feed. bChat shows all of them, credits them, and pays the people who wrote the posts." />
+    <meta property="og:description" content="Every BSV social app keeps its own feed. bChat shows all of them, credits them, and sends tips straight to the people who wrote the posts." />
     <meta property="og:image" content="https://bwalletx.com/og/og-blog-014.png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@bWalletX" />
     <meta name="twitter:title" content="One feed for BSV" />
-    <meta name="twitter:description" content="Every BSV social app keeps its own feed. bChat shows all of them, credits them, and pays the people who wrote the posts." />
+    <meta name="twitter:description" content="Every BSV social app keeps its own feed. bChat shows all of them, credits them, and sends tips straight to the people who wrote the posts." />
     <meta name="twitter:image" content="https://bwalletx.com/og/og-blog-014.png" />
     <link rel="icon" href="/favicon.ico" />
     <link rel="stylesheet" href="/styles.css" />
@@ -53,7 +53,7 @@
   {
    "@type": "BlogPosting",
    "headline": "One feed for BSV",
-   "description": "Every BSV social app keeps its own feed. bChat shows all of them, credits them, and pays the people who wrote the posts.",
+   "description": "Every BSV social app keeps its own feed. bChat shows all of them, credits them, and sends tips straight to the people who wrote the posts.",
    "url": "https://bwalletx.com/blog/014-open-feed",
    "mainEntityOfPage": "https://bwalletx.com/blog/014-open-feed",
    "image": "https://bwalletx.com/og/og-blog-014.png",
@@ -93,7 +93,7 @@
     <main class="ext">
       <p class="meta"><a href="/blog">Development blog</a> · <span class="num">014</span> · 6 Oct 2026</p>
       <h1>One feed for BSV</h1>
-      <p class="lede">Every BSV social app keeps its own feed. bChat shows all of them, credits them, and pays the people who wrote the posts.</p>
+      <p class="lede">Every BSV social app keeps its own feed. bChat shows all of them, credits them, and sends tips straight to the people who wrote the posts.</p>
 
       <h2>The odd thing about BSV social apps</h2>
       <p>Everything you post on Twetch, Treechat, Peck or Fwetch goes on-chain. It's public. Anyone can read it.</p>
@@ -119,8 +119,7 @@
       </ul>
 
       <h2>Apps get paid too</h2>
-      <p>When a bChat user tips a post that came from another app, bChat adds 5% on top for that app, in the same transaction. The author still gets the full tip.</p>
-      <p>So a $0.05 tip on a Treechat post pays the author $0.05 and Treechat $0.0025. Treechat earns from its posts being read in bChat without doing anything.</p>
+      <p>When a bChat user tips a post that came from another app, bChat can add 5% on top for that app, in the same transaction. The author still gets the full tip. That share switches on only once an app publishes a payment address for it, and no app has yet, so today the 5% isn&rsquo;t paid.</p>
       <p>That's the bit I think the other apps haven't seen yet. Syndication isn't someone taking your content. It's your content earning in more places.</p>
 
       <h2>What we need from the other apps</h2>
@@ -132,6 +131,7 @@
       <p>And if they want to show bChat posts back, with a bChat badge, it's one line of code.</p>
 
       <h2>Join</h2>
+      <p class="update"><strong>Update, 30 Oct 2026:</strong> bChat is now bChatX, at <a href="https://bchatx.com">bchatx.com</a>; bitcoinchat.online has been retired.</p>
       <p>The format is an open spec: <a href="https://www.bitcoinchat.online/docs/feed-protocol">bitcoinchat.online/docs/feed-protocol</a></p>
       <p>There's a free public indexer and a drop-in embed:</p>
       <pre><code>&lt;script src="https://www.bitcoinchat.online/embed/feed.js" data-source="all"&gt;&lt;/script&gt;</code></pre>

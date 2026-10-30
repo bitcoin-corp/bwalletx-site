@@ -4,21 +4,21 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>004 Names, handles and paymail · bWalletX blog</title>
-    <meta name="description" content="Send to $handle, name@bwalletx.com or an OpNS name. The paymail server moved domain twice, and social sign-in became a verified name." />
+    <meta name="description" content="Send to $handle or name@bwalletx.com. The paymail server moved domain twice, and social sign-in became a verified name." />
     <link rel="canonical" href="https://bwalletx.com/blog/004-names-and-paymail" />
     <meta property="og:type" content="article" />
     <meta property="og:url" content="https://bwalletx.com/blog/004-names-and-paymail" />
     <meta property="og:site_name" content="bWalletX" />
     <meta property="og:title" content="Names, handles and paymail" />
-    <meta property="og:description" content="Send to $handle, name@bwalletx.com or an OpNS name. The paymail server moved domain twice, and social sign-in became a verified name." />
-    <meta property="og:image" content="https://bwalletx.com/og/og-blog-004.png" />
+    <meta property="og:description" content="Send to $handle or name@bwalletx.com. The paymail server moved domain twice, and social sign-in became a verified name." />
+    <meta property="og:image" content="https://bwalletx.com/og/og-blog-004-v3.png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@bWalletX" />
     <meta name="twitter:title" content="Names, handles and paymail" />
-    <meta name="twitter:description" content="Send to $handle, name@bwalletx.com or an OpNS name. The paymail server moved domain twice, and social sign-in became a verified name." />
-    <meta name="twitter:image" content="https://bwalletx.com/og/og-blog-004.png" />
+    <meta name="twitter:description" content="Send to $handle or name@bwalletx.com. The paymail server moved domain twice, and social sign-in became a verified name." />
+    <meta name="twitter:image" content="https://bwalletx.com/og/og-blog-004-v3.png" />
     <link rel="icon" href="/favicon.ico" />
     <link rel="stylesheet" href="/styles.css" />
     <style>
@@ -51,10 +51,10 @@
   {
    "@type": "BlogPosting",
    "headline": "Names, handles and paymail",
-   "description": "Send to $handle, name@bwalletx.com or an OpNS name. The paymail server moved domain twice, and social sign-in became a verified name.",
+   "description": "Send to $handle or name@bwalletx.com. The paymail server moved domain twice, and social sign-in became a verified name.",
    "url": "https://bwalletx.com/blog/004-names-and-paymail",
    "mainEntityOfPage": "https://bwalletx.com/blog/004-names-and-paymail",
-   "image": "https://bwalletx.com/og/og-blog-004.png",
+   "image": "https://bwalletx.com/og/og-blog-004-v3.png",
    "inLanguage": "en",
    "author": {
     "@type": "Organization",
@@ -92,10 +92,10 @@
     <main class="ext">
       <p class="meta"><a href="/blog">Development blog</a> · <span class="num">004</span> · 1–4 Oct 2026</p>
       <h1>Names, handles and paymail</h1>
-      <p class="lede">Send to $handle, name@bwalletx.com or an OpNS name. The paymail server moved domain twice, and social sign-in became a verified name.</p>
+      <p class="lede">Send to $handle or name@bwalletx.com. The paymail server moved domain twice, and social sign-in became a verified name.</p>
 
       <h2>Sending to a name</h2>
-      <p>Bitcoin addresses are hard to read aloud. On 1 October we added sending to a <code>$handle</code>, a paymail address or an OpNS name. We also added on-device OpNS mining: the phone runs the proof of work in a Web Worker and builds the mint transactions for a new name.</p>
+      <p>Bitcoin addresses are hard to read aloud. On 1 October we added sending to a <code>$handle</code> or a paymail address.</p>
 
       <h2>Our own paymail server</h2>
       <p>We wrote a paymail server with no server keys. Names are registered with a signed request, payment destinations are derived from the wallet's public key, and incoming payments wait in an inbox until the wallet collects them.</p>
@@ -105,9 +105,10 @@
       <p>New wallets get a "Choose your handle" step after create or restore. Claiming a paymail name is free. The same step offers a personal <code>$NAME</code> token and room (post 005), which costs a fee and is shown before you pay.</p>
 
       <h2>Continue with X or Google</h2>
-      <p>On 4 October we added "Continue with X / Google" on Create Account. If you sign in, you get a verified name such as <code>name.x</code> or <code>name.gmail</code>. A plain name can be claimed by anyone; a verified name shows that the person behind it controls that X or Google account.</p>
+      <p>On 4 October we added "Continue with X / Google" on Create Account. If you sign in, you get a verified name such as <code>name.x</code>. A plain name can be claimed by anyone; a verified name shows that the person behind it controls that X or Google account.</p>
       <p>The design changed during the day. First the chat server (bit-sign) handled the sign-in. Then we moved it to bWalletX's own server, and bit-sign keeps nothing: it only confirms the sign-in ticket. Then we decided one wallet has one identity, and a verified social name always wins over a plain one.</p>
       <p>Social sign-in is off in the store build, pending Apple's guideline 4.8 on sign-in options.</p>
+      <p class="update"><strong>Update, 30 Oct 2026:</strong> the welcome screen is now passkey-only: X, Google and HandCash are no longer on Create Account. You can link X or Google later, under Link your accounts. We also stopped giving out <code>.gmail</code> names, because they gave away people&rsquo;s email addresses.</p>
 
       <h2>A detail that took longer than expected</h2>
       <p>Placeholder names such as "Anonymous" or "Account 1" kept showing up in places where a real name should be. We now never show them; the paymail name is used instead.</p>
