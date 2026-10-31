@@ -63,7 +63,7 @@ def main():
         x = h * CLIENT_H if v1 else OPEN_USD[e['kind']]
         r = row(e['id'], 'tender', e['title'], task, h, e.get('status', 'open'), f'{SITE}/kintsugi/work',
                 text_url=f'{SITE}/{e["file"]}', page_url=SITE + e['url'] if e.get('url') else None,
-                usd=(x, x * 0.8, x * 0.2))
+                usd=(x, x * 0.8, x * 0.2) if v1 else (x, x, 0))   # reissue: developer paid in full, no Kintsugi fee
         r.update(client_handle=CLIENT_HANDLE, signers=['client', 'developer'],
                  replaces=e.get('replaces'), replaced_by=e.get('replaced_by'))
         rows.append(r)

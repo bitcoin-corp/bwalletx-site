@@ -310,7 +310,7 @@ def fdate(s): return datetime.date.fromisoformat(s).strftime('%-d %b %Y')
 FOUNDER = "This log is the founder's own work, counted at up to 18 hours a day. It comes from before the 8-hour daily cap that applies to Kintsugi developers."
 OPEN_H = {'page': 2, 'post': 1}   # first-issue estimates (KS-OFFER-xxxx, withdrawn 31 Oct)
 # Reissue (owner 31 Oct, after b did KS-OFFER-0001 in ~3.5 min): content jobs priced for AI-assisted work.
-OPEN_USD = {'page': 1.00, 'post': 0.50}   # client price; 80% developer, 20% Kintsugi
+OPEN_USD = {'page': 1.00, 'post': 0.50}   # paid to the developer in full; no Kintsugi fee on bCorp's own offers
 OPEN_MIN = {'page': 15, 'post': 5}        # fixed time estimate, minutes
 DONE_OFFERS = {'KS-OFFER-0001': ('/blog/105-airdrops', '105 Airdrops')}   # first-issue offers already delivered
 def v2(n): return n + '-v2'
@@ -321,6 +321,9 @@ def bsv_usd(x): return f'~{x / PRICE["usd"]:.4f} BSV'
 def terms_html(founder=False, done='the change is live on the stated page', content=False):
     SEC_LI = ('<li>Content only: no security tools are needed. Any change to code, sign-in, payments, keys or signing is a separate job with the full security tool list.</li>' if content else
               '<li>Security tools: Shannon for any change that touches sign-in, payments, keys or signing; Semgrep, gitleaks, pnpm audit and OSV-Scanner, CodeQL, OWASP ZAP (baseline scan) and Claude Code /security-review. Tool and AI usage costs are the developer\'s and are not billable hours.</li>')
+    # Owner 31 Oct: Kintsugi is bCorp hiring outside developers, so its own offers carry no fee (the 20% fee is bJobsX's).
+    PAY_LI = ("<li>Kintsugi checks the spec and reviews the work. When the work is accepted, the client pays the developer's $handle in bWalletX, in full. There is no Kintsugi fee.</li>" if content else
+              "<li>Kintsugi checks the spec and reviews the work. When the work is accepted, the client pays the developer's $handle in bWalletX, with Kintsugi's fee as a separate payment in the same transaction.</li>")
     DONE_LI = (f'<li>Done means: {done}.</li>' if content else
                f'<li>Done means: the pull request is merged into the agreed repo, {done}, and the security tool results are attached.</li>')
     t = f'''          <h3>Terms</h3>
@@ -329,7 +332,7 @@ def terms_html(founder=False, done='the change is live on the stated page', cont
             <li>Up to 8 billable hours per day.</li>
             {DONE_LI}
             {SEC_LI}
-            <li>Kintsugi checks the spec and reviews the work. When the work is accepted, the client pays the developer's $handle in bWalletX, with Kintsugi's fee as a separate payment in the same transaction.</li>
+            {PAY_LI}
             <li>Disputes: if the client and developer disagree about whether the work is done, Kintsugi reviews it and decides.</li>
             <li>Delivered work belongs to the client once it is paid for.</li>
             <li>Code under the Open BSV licence; specs and docs CC BY 4.0.</li>
@@ -357,7 +360,7 @@ def offer(o, n, old):
             <dt>Task</dt><dd>{task}</dd>
             <dt>Depends on</dt><dd>{E(dep)}</dd>
             <dt>Estimate</dt><dd class="tn">{mins} min (fixed)</dd>
-            <dt>Price</dt><dd class="tn">Client pays <b>{usd(x)}</b>: <span class="gold">{usd(x*0.8)}</span> to the developer ({bsv_usd(x*0.8)} at ${PRICE["usd"]:,.2f}/BSV) and {usd(x*0.2)} to Kintsugi as its fee. Paid in BSV at the BSV/USD rate on the day of payment, both from the client's wallet in one transaction.</dd>
+            <dt>Price</dt><dd class="tn">The client pays the developer <b class="gold">{usd(x)}</b> ({bsv_usd(x)} at ${PRICE["usd"]:,.2f}/BSV), in full, with no Kintsugi fee. Paid in BSV at the BSV/USD rate on the day of payment.</dd>
             <dt>Status</dt><dd>Open for tender</dd>
           </dl>
           {terms_html(done=done, content=True)}
@@ -533,7 +536,7 @@ def offer_text_v2(o, n, old):
         f'Task: {task}',
         f'Depends on: {dep}',
         f'Estimate: {OPEN_MIN[o["kind"]]} min (fixed)',
-        f'Price: Client pays {usd(x)}: {usd(x*0.8)} to the developer ({bsv_usd(x*0.8)} at ${PRICE["usd"]:,.2f}/BSV) and {usd(x*0.2)} to Kintsugi as its fee. Paid in BSV at the BSV/USD rate on the day of payment, both from the client\'s wallet in one transaction.',
+        f'Price: The client pays the developer {usd(x)} ({bsv_usd(x)} at ${PRICE["usd"]:,.2f}/BSV), in full, with no Kintsugi fee. Paid in BSV at the BSV/USD rate on the day of payment.',
         'Status: Open for tender',
         '',
         'Terms',
@@ -630,7 +633,7 @@ def render(d):
         nm = f'Blog post for {E(o["title"])}' if o['kind'] == 'page' else f'Publish “{E(o["title"])}”'
         ow += (f'<details class="job"><summary><span class="it"><span class="nm">{nm}</span><span class="u">{E(o["url"] or "Held until its feature is in a release build")}</span>'
                f'<span class="ds">{E(o["what"])}.</span><span class="chips"><span class="chip">{"Done" if n in DONE_OFFERS else "Open for tender"}</span></span></span>'
-               f'<span class="n">{OPEN_MIN[o["kind"]]} min<span class="sub">fixed estimate</span></span><span class="n c">{usd(x*0.8)}<span class="sub">client pays {usd(x)}</span></span>'
+               f'<span class="n">{OPEN_MIN[o["kind"]]} min<span class="sub">fixed estimate</span></span><span class="n c">{usd(x)}<span class="sub">no fee</span></span>'
                f'<span class="cv" aria-hidden="true"></span></summary>'
                + (f'<div class="ct"><p class="ct-note"><strong>Done</strong>: delivered 31 Oct 2026 as <a href="{DONE_OFFERS[n][0]}">{E(DONE_OFFERS[n][1])}</a> (about 3½ minutes with AI).</p></div>' if n in DONE_OFFERS else offer(o, v2(n), n))
                + '</details>')
@@ -651,7 +654,7 @@ def render(d):
       <p class="warn">Every figure here is an estimate, derived from git timestamps. It is not an invoice, a valuation or a claim.</p>
       <nav class="toc" aria-label="Topics">{"".join(toc)}<a href="#open-work">Open work</a><a href="#method">Method</a></nav>
       {sections}
-      <section id="open-work"><h2>Open work</h2><p>Pages that have no blog post yet, and posts held back until the feature they describe is in a release build. Each is shown as an open offer.</p><p class="st"><span>{len(d["open"]) - len(DONE_OFFERS)} open offers, <b class="c">{usd(oh)}</b> in all at the client price ({usd(oh*0.8)} to developers, paid in BSV); {len(DONE_OFFERS)} done. Reissued 31 Oct at prices for AI-assisted work; the first offers are withdrawn. All open for tender: <a href="/kintsugi/program#apply">register</a> to take one on.</span></p><div class="jobs" style="margin-top:12px"><div class="jh" aria-hidden="true"><span>Offer · tap to see the offer</span><span class="n">Estimate</span><span class="n">Developer gets</span><span></span></div>{ow}</div></section>
+      <section id="open-work"><h2>Open work</h2><p>Pages that have no blog post yet, and posts held back until the feature they describe is in a release build. Each is shown as an open offer.</p><p class="st"><span>{len(d["open"]) - len(DONE_OFFERS)} open offers, <b class="c">{usd(oh)}</b> in all, paid to developers in full in BSV, no Kintsugi fee; {len(DONE_OFFERS)} done. Reissued 31 Oct at prices for AI-assisted work; the first offers are withdrawn. All open for tender: <a href="/kintsugi/program#apply">register</a> to take one on.</span></p><div class="jobs" style="margin-top:12px"><div class="jh" aria-hidden="true"><span>Offer · tap to see the offer</span><span class="n">Estimate</span><span class="n">Developer gets</span><span></span></div>{ow}</div></section>
       <section id="method"><h2>How the numbers are made</h2>
         <ol class="method">
           <li><strong>Items.</strong> Every public page on bwalletx.com that is in the sitemap. Internal company matters are left out on purpose.</li>

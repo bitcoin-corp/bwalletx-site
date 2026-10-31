@@ -27,7 +27,7 @@
    "title": "bBots: little helpers that work for you",
    "kind": "page",
    "file": "data/kintsugi-offers/KS-OFFER-0002-v2.txt",
-   "sha256": "55ea86213c46c201ae7dd9b6e442201f398d45681d03f1819474bca8d257a6f3",
+   "sha256": "4439006a6f10b02264d36bba6191eeb4e1abbc25c5f8ef613ac06faddafa194f",
    "status": "open",
    "replaces": "KS-OFFER-0002"
   },
@@ -47,7 +47,7 @@
    "title": "b cool",
    "kind": "page",
    "file": "data/kintsugi-offers/KS-OFFER-0003-v2.txt",
-   "sha256": "7545c25ff2a4339f3c0eb9dfca789911c047e43c2bfe8608f4131b92b2a5f58c",
+   "sha256": "dc717b31aa689d619f7fca3c3d07d9b397bec61e840e127ee12612d05e22e379",
    "status": "open",
    "replaces": "KS-OFFER-0003"
   },
@@ -67,7 +67,7 @@
    "title": "b Creative",
    "kind": "page",
    "file": "data/kintsugi-offers/KS-OFFER-0004-v2.txt",
-   "sha256": "b46063a1029b00c1c6c45d0fcc9c7a02adcf7209a4fc3fe42ab0e8a5d1006139",
+   "sha256": "f5d4c885dd5241e5ac9b1a1de7cb7525490c30eb72ab92d9efcc1947d6f33a8c",
    "status": "open",
    "replaces": "KS-OFFER-0004"
   },
@@ -87,7 +87,7 @@
    "title": "b black",
    "kind": "page",
    "file": "data/kintsugi-offers/KS-OFFER-0005-v2.txt",
-   "sha256": "bdae328c09d82470862e1369155db9c840cbb1dee473ef8e4c3c7e0ffb9507b4",
+   "sha256": "0e3d1a6776dd7365c91fcd678f29596090b99165fbf634f1edfb10b7061ed523",
    "status": "open",
    "replaces": "KS-OFFER-0005"
   },
@@ -107,7 +107,7 @@
    "title": "b is coming",
    "kind": "page",
    "file": "data/kintsugi-offers/KS-OFFER-0006-v2.txt",
-   "sha256": "d04e2bcf3fbef253f2ab3b21d5a665adcc5ce9ba6bb9770be8fcc6190f33e465",
+   "sha256": "5c5e2ab89e37ae60d237da73278e1a73d02f772c5eb09824a1b4280c51cc0505",
    "status": "open",
    "replaces": "KS-OFFER-0006"
   },
@@ -127,7 +127,7 @@
    "title": "bMarketX.com: your eBay store, on Bitcoin",
    "kind": "page",
    "file": "data/kintsugi-offers/KS-OFFER-0007-v2.txt",
-   "sha256": "b804e91d8940194668b05a58c2b42ad761907b14d6483dd1a53f2e43fcd71a61",
+   "sha256": "99047b92de5ea6b2d647e9264c5aefb2c715d13f108cc34d801b45cf70674bb5",
    "status": "open",
    "replaces": "KS-OFFER-0007"
   },
@@ -147,7 +147,7 @@
    "title": "b is on Twetch",
    "kind": "page",
    "file": "data/kintsugi-offers/KS-OFFER-0008-v2.txt",
-   "sha256": "5454121b395f88e9d1802bd64c736570fe6f3ac38cc247efacc39197fe51f6ca",
+   "sha256": "a3fd2a7146f092550fbb14dfc21964bfddb0d36c8ec8467390512b4eed72fe20",
    "status": "open",
    "replaces": "KS-OFFER-0008"
   },
@@ -167,7 +167,7 @@
    "title": "Everything b",
    "kind": "page",
    "file": "data/kintsugi-offers/KS-OFFER-0009-v2.txt",
-   "sha256": "5b4712cc7ff4e2250f2e314533b94182097d0c929cb52edc67a4fdaff539dc31",
+   "sha256": "e4fbc6150e6ec58a8794da2dde9515dda69a915f4e0974e3e161bec925a42238",
    "status": "open",
    "replaces": "KS-OFFER-0009"
   },
@@ -187,7 +187,7 @@
    "title": "bAcc: make Bitcoin faster, the goal is 1 billion transactions a second",
    "kind": "page",
    "file": "data/kintsugi-offers/KS-OFFER-0010-v2.txt",
-   "sha256": "9da5b29380f514b5344d18bc055fb98968c791f9b524dd240a4e679c8425d069",
+   "sha256": "2e8462ea78d5c3e14aae7e6f61a5473bf8010a2b471283fef052799b9e979959",
    "status": "open",
    "replaces": "KS-OFFER-0010"
   },
@@ -207,7 +207,7 @@
    "title": "bAds \u00b7 we sell bAds, made by b",
    "kind": "page",
    "file": "data/kintsugi-offers/KS-OFFER-0011-v2.txt",
-   "sha256": "1c92757a29636cf91ec0ba420cf645e58f3344a2fe60dce6bb603a2336b4a722",
+   "sha256": "b91a343aa403dc293275854ed0aa295880bed58b6013e385869d442f2f0f3b00",
    "status": "open",
    "replaces": "KS-OFFER-0011"
   },
@@ -227,7 +227,7 @@
    "title": "bMovies inside bWalletX",
    "kind": "page",
    "file": "data/kintsugi-offers/KS-OFFER-0012-v2.txt",
-   "sha256": "3ef6472fc6c84f4af0e26b65a937abf3c36dc670e3ea3a5db5bbbf86f9e8ceac",
+   "sha256": "5d43a6831c514ec716962d748a7834f6906ef214fe53ab152b180942777ed243",
    "status": "open",
    "replaces": "KS-OFFER-0012"
   },
@@ -247,7 +247,7 @@
    "title": "bAvatars: your name, as art you can scan",
    "kind": "page",
    "file": "data/kintsugi-offers/KS-OFFER-0013-v2.txt",
-   "sha256": "f59f465366f6aeda755970e7026c51b60094316f8a7a2fc6a9f84c5a851a14da",
+   "sha256": "9a2bbcbbc67a8e330df31ca3250f6705412023e1d8a7c64fa2ccd9737e740be1",
    "status": "open",
    "replaces": "KS-OFFER-0013"
   },
@@ -267,7 +267,7 @@
    "title": "be on b",
    "kind": "page",
    "file": "data/kintsugi-offers/KS-OFFER-0014-v2.txt",
-   "sha256": "d819a5a48bba61dd6e250f81bb90d63922af46b6a6a4f0ec5db651868d57da38",
+   "sha256": "8e6019f4943fc7042e248f556fca0acb1bd39b67fbfaf1ca752d98fe7a487927",
    "status": "open",
    "replaces": "KS-OFFER-0014"
   },
@@ -287,7 +287,7 @@
    "title": "be on b",
    "kind": "page",
    "file": "data/kintsugi-offers/KS-OFFER-0015-v2.txt",
-   "sha256": "9dc4545d9442b834c01dd9a78ab75826a7e1a7d2cf7ff26a5f26c6ec1c222efd",
+   "sha256": "19d2bff8d9c3d27b8492bb16f96ae817904b07690073bf5ebfb030246bc24578",
    "status": "open",
    "replaces": "KS-OFFER-0015"
   },
@@ -307,7 +307,7 @@
    "title": "be on b",
    "kind": "page",
    "file": "data/kintsugi-offers/KS-OFFER-0016-v2.txt",
-   "sha256": "21f3b192142aa2586ab46acba376b2fbcdce5d46cb1ee7240bd6b16546c7024f",
+   "sha256": "5f7431c84a29298662ce5b88f8467cbe8f4f08d20241340252329bb4e5b11b7d",
    "status": "open",
    "replaces": "KS-OFFER-0016"
   },
@@ -327,7 +327,7 @@
    "title": "bPositive",
    "kind": "page",
    "file": "data/kintsugi-offers/KS-OFFER-0017-v2.txt",
-   "sha256": "e9f57b7aed3f33013157d4f51917a29844c24b4439824fa1e7c5d5479b49aa8b",
+   "sha256": "81e71b7092a77a27ef33667c2e821a39b679cc167d79c3bb41ef39e73f8a6fcf",
    "status": "open",
    "replaces": "KS-OFFER-0017"
   },
@@ -347,7 +347,7 @@
    "title": "The bWalletX brand",
    "kind": "page",
    "file": "data/kintsugi-offers/KS-OFFER-0018-v2.txt",
-   "sha256": "3f066cde851b8eb5a5d80e406977a9419b46130a46ea123eaf096430f002b70f",
+   "sha256": "739c582e40aa8124992d2b66ed9cc9c748e45406338a89746e39e59db5b7af78",
    "status": "open",
    "replaces": "KS-OFFER-0018"
   },
@@ -367,7 +367,7 @@
    "title": "bTrust in bWalletX",
    "kind": "page",
    "file": "data/kintsugi-offers/KS-OFFER-0019-v2.txt",
-   "sha256": "51aca2a6ffb473c75c84ebff73cbaa8ff600743e499f049a0a3ab48054ec83fb",
+   "sha256": "431e5cbc338387aeb74f74b3cdd019e20d8fcbce316e961b8345417ef0feda48",
    "status": "open",
    "replaces": "KS-OFFER-0019"
   },
@@ -387,7 +387,7 @@
    "title": "bRand business agents",
    "kind": "page",
    "file": "data/kintsugi-offers/KS-OFFER-0020-v2.txt",
-   "sha256": "e0798e027a8bb470dee6f86a8d28a72d2709d6b6e191a0c2fe375fc9927624f3",
+   "sha256": "744860c51044202c6c5f8625b9c4a38d7b374602faae830f9459cbd68effa358",
    "status": "open",
    "replaces": "KS-OFFER-0020"
   },
@@ -407,7 +407,7 @@
    "title": "Buy BSV in bWalletX",
    "kind": "page",
    "file": "data/kintsugi-offers/KS-OFFER-0021-v2.txt",
-   "sha256": "a53d08df053e5710ce8e11fc0ac4fce5196341618e2fac9dda077e76bffbbfc6",
+   "sha256": "bf445abe7f4e5b6c98d97ed69b5fd0502a70a4597bb6d73c79344bfa404a5d8f",
    "status": "open",
    "replaces": "KS-OFFER-0021"
   },
@@ -427,7 +427,7 @@
    "title": "bWeb: ask b to build your website",
    "kind": "page",
    "file": "data/kintsugi-offers/KS-OFFER-0022-v2.txt",
-   "sha256": "40dfccafaa45a3b46a35d3a4a19cfd2fe8d209a39f53b8610ce423bb979a0942",
+   "sha256": "edcebb638bae9df71eba99ba926377ea4b84cfdb19a2e7e8bc8527b04a6cd8c5",
    "status": "open",
    "replaces": "KS-OFFER-0022"
   },
@@ -447,7 +447,7 @@
    "title": "Your own branded wallet \u00b7 bWalletX for business",
    "kind": "page",
    "file": "data/kintsugi-offers/KS-OFFER-0023-v2.txt",
-   "sha256": "695fbc42861bae9e5ff52f05f1094e6c595132ca5fb98d209c9b92acd5e37f17",
+   "sha256": "729b85a718bd8d1841b8c2ad7e500553457de8dcc8e8cb451565c9293a40353c",
    "status": "open",
    "replaces": "KS-OFFER-0023"
   },
@@ -467,7 +467,7 @@
    "title": "CoinGeek on b",
    "kind": "page",
    "file": "data/kintsugi-offers/KS-OFFER-0024-v2.txt",
-   "sha256": "dee2ef74140365118320d59cca9bf74df55c83a645dd24d5090a7b4e60c5b275",
+   "sha256": "523a9cede5a4885535aea4db0abe6f801a96e52e363cd21a4a1f2574fb3e9b30",
    "status": "open",
    "replaces": "KS-OFFER-0024"
   },
@@ -487,7 +487,7 @@
    "title": "b Creative",
    "kind": "page",
    "file": "data/kintsugi-offers/KS-OFFER-0025-v2.txt",
-   "sha256": "8cdd47432973f6fbd21812b2ac8a6cdba499ccadff8b79423149a2d4aac09b42",
+   "sha256": "97d912015d61c20630cacefe0a773731d82c5afbbe7fbe7fe01a25cd9fb87e0e",
    "status": "open",
    "replaces": "KS-OFFER-0025"
   },
@@ -507,7 +507,7 @@
    "title": "Credits: prepaid credit for services",
    "kind": "page",
    "file": "data/kintsugi-offers/KS-OFFER-0026-v2.txt",
-   "sha256": "05ffc62747c3a457363a3fc5391b9380234d24433210a488fa692edab35dd87f",
+   "sha256": "b8d2d2af2bf6a1f69896d3b70856db7c24db66048247cf800a9838aad7913f10",
    "status": "open",
    "replaces": "KS-OFFER-0026"
   },
@@ -527,7 +527,7 @@
    "title": "Culture: make it on BSV",
    "kind": "page",
    "file": "data/kintsugi-offers/KS-OFFER-0027-v2.txt",
-   "sha256": "6514ef7b223ce110ae26e36e5f27ea73c4169c25f7f38262d7ade064c7389810",
+   "sha256": "de8e8bec2b33fe1586c24d00facbc4c4683022ad098c838ab0637382c12967fb",
    "status": "open",
    "replaces": "KS-OFFER-0027"
   },
@@ -547,7 +547,7 @@
    "title": "bWalletX Desktop",
    "kind": "page",
    "file": "data/kintsugi-offers/KS-OFFER-0028-v2.txt",
-   "sha256": "92284cabb40a8ed8637ed934c2c6a4019f8d78cf419f3ace0d3d8d7d5e99e5a6",
+   "sha256": "482a95a59dd425893699eb6adb4389f61c68aa2092d9213e1120c2d1cee88b0a",
    "status": "open",
    "replaces": "KS-OFFER-0028"
   },
@@ -567,7 +567,7 @@
    "title": "bWalletX for Developers",
    "kind": "page",
    "file": "data/kintsugi-offers/KS-OFFER-0029-v2.txt",
-   "sha256": "3e4b605d64f65a9444aef7ee3eb2def7a251bd704a98c37bcd60816dff953a32",
+   "sha256": "396aea23c537b9a77fa242a3dc6ecc861dc7cf311298ca0e6dd7b4dbd308d334",
    "status": "open",
    "replaces": "KS-OFFER-0029"
   },
@@ -587,7 +587,7 @@
    "title": "bWallet Direct: sign in straight from your own wallet",
    "kind": "page",
    "file": "data/kintsugi-offers/KS-OFFER-0030-v2.txt",
-   "sha256": "ca7db75481ebb82b8e723086c73d3a228cd7d79f919c2107e2c6f0d371a92c79",
+   "sha256": "fc3906462f7b0f467264d877b7f1457fb1259a76776d33a365a918c9bf8233b7",
    "status": "open",
    "replaces": "KS-OFFER-0030"
   },
@@ -607,7 +607,7 @@
    "title": "bWalletX Features",
    "kind": "page",
    "file": "data/kintsugi-offers/KS-OFFER-0031-v2.txt",
-   "sha256": "72b937de463ddaaaf0ae01ae892464190172864f23960fe3dfba73297b8222d9",
+   "sha256": "04a07458fcf57fe897d15d6b12bf2b07df46843edba06b6b1da751725cc89098",
    "status": "open",
    "replaces": "KS-OFFER-0031"
   },
@@ -627,7 +627,7 @@
    "title": "FLICK OFF",
    "kind": "page",
    "file": "data/kintsugi-offers/KS-OFFER-0032-v2.txt",
-   "sha256": "19818874682231ea4e32eeb2aaf4dc2b64fedc456d827c409900a9d802755165",
+   "sha256": "9d027dca029dd892921b7bd8809d3be3b73d81090348d8b744006b42bdebed98",
    "status": "open",
    "replaces": "KS-OFFER-0032"
   },
@@ -647,7 +647,7 @@
    "title": "Games in bWalletX",
    "kind": "page",
    "file": "data/kintsugi-offers/KS-OFFER-0033-v2.txt",
-   "sha256": "fd5fb929fdd93de910f1fb997b4315709759b391cbe7dd5c6199e2589d065ac4",
+   "sha256": "8eea55d7deae1109fa32efa356a18f8c036d444fef45be94bdf114f98daa7f2b",
    "status": "open",
    "replaces": "KS-OFFER-0033"
   },
@@ -667,7 +667,7 @@
    "title": "Get bWalletX",
    "kind": "page",
    "file": "data/kintsugi-offers/KS-OFFER-0034-v2.txt",
-   "sha256": "9bbedf3ab85bca969ca29824d76cb1d2b7d1e1bee945838e9f2b05045714e512",
+   "sha256": "183c6ff106a773add8440ee38d6fe663b694035ad8be15d34b463a064f1f84fb",
    "status": "open",
    "replaces": "KS-OFFER-0034"
   },
@@ -687,7 +687,7 @@
    "title": "bGigs in bWalletX",
    "kind": "page",
    "file": "data/kintsugi-offers/KS-OFFER-0035-v2.txt",
-   "sha256": "b6b2e6ead6a348476d925a1a4ba34bedd6ec0cec9a59f9cc0b175de44ce6057f",
+   "sha256": "374362acbd14f6127398ab137bcbfc9b5dad7a3765bb4b682bfcc9beff683c44",
    "status": "open",
    "replaces": "KS-OFFER-0035"
   },
@@ -707,7 +707,7 @@
    "title": "Happy b-day cards \u00b7 make with b, mint, send by bMail",
    "kind": "page",
    "file": "data/kintsugi-offers/KS-OFFER-0036-v2.txt",
-   "sha256": "9cfe8a5cd29635cc6db1a9c0b59e37b34b74295d78caa35d7149ea915bf546a8",
+   "sha256": "3d078252a9ac6ed196e72ed7cc17962f1ec94f0942bafb92e8e012d0acaf2c5f",
    "status": "open",
    "replaces": "KS-OFFER-0036"
   },
@@ -727,7 +727,7 @@
    "title": "Hodl my b",
    "kind": "page",
    "file": "data/kintsugi-offers/KS-OFFER-0037-v2.txt",
-   "sha256": "4e322604b61181b70a629ccf0606653b220cc611519ac45be11bb6d1b34ea67a",
+   "sha256": "23e9234a3f219c6eff223aa9644eaaf58cb126880e5dc36ad615844cbfa70ebe",
    "status": "open",
    "replaces": "KS-OFFER-0037"
   },
@@ -747,7 +747,7 @@
    "title": "Hodl my b, Edition 0: The whole story",
    "kind": "page",
    "file": "data/kintsugi-offers/KS-OFFER-0038-v2.txt",
-   "sha256": "86069eb53f14515b1f60be220b979cfd9bc5261224450683d5688e5d21e34cb6",
+   "sha256": "1538083a61736fe1e1e1631db4a52cf25aff58dc1ea996381062b3af6b1eb8a3",
    "status": "open",
    "replaces": "KS-OFFER-0038"
   },
@@ -767,7 +767,7 @@
    "title": "Hodl my b, Edition 1: Don\u2019t be bland. Get bRanded.",
    "kind": "page",
    "file": "data/kintsugi-offers/KS-OFFER-0039-v2.txt",
-   "sha256": "9e3e7fbf7ab3e1cf7183e950c6c01c56bb443bf6663d07242e6ef5f5629ae050",
+   "sha256": "d9f2b992d566a30b94f2234ffa9011fb9816937f03298cfd620a2d96da7ea190",
    "status": "open",
    "replaces": "KS-OFFER-0039"
   },
@@ -787,7 +787,7 @@
    "title": "Hodlocker on b",
    "kind": "page",
    "file": "data/kintsugi-offers/KS-OFFER-0040-v2.txt",
-   "sha256": "df777d95da676a36faeb549ce6b21e43f049346f7db7b5eed20d2f7ce18d63b2",
+   "sha256": "68021a180506209a3798c66b769bf4d01a9169e53730610811aa3e06884ec6d7",
    "status": "open",
    "replaces": "KS-OFFER-0040"
   },
@@ -807,7 +807,7 @@
    "title": "Hold to talk to b",
    "kind": "page",
    "file": "data/kintsugi-offers/KS-OFFER-0041-v2.txt",
-   "sha256": "effd6c4101420b8f0b55d12a3f4e5c25ae1ade3fafb8966c2efb9933ffbcf75d",
+   "sha256": "419c32061a1d5e852225fb24bb400c7f3564035dc66bcc4b2e193bef72566b23",
    "status": "open",
    "replaces": "KS-OFFER-0041"
   },
@@ -827,7 +827,7 @@
    "title": "Jobs: paid work, paid in BSV",
    "kind": "page",
    "file": "data/kintsugi-offers/KS-OFFER-0042-v2.txt",
-   "sha256": "e6cc76d281c2ec9cb2b1b4817c2abf80157b5583ba5014d8f62c7db798175cb3",
+   "sha256": "4889f65b53f3ee91e8b8eabba5dbced26f83c5a0ef0718c2b11725aaed9582fb",
    "status": "open",
    "replaces": "KS-OFFER-0042"
   },
@@ -847,7 +847,7 @@
    "title": "Move to bWalletX",
    "kind": "page",
    "file": "data/kintsugi-offers/KS-OFFER-0043-v2.txt",
-   "sha256": "2cf610a81c1c50c3130be53b44b2a90ec7c46faf2a5b162d61a66fd87ccc5ec7",
+   "sha256": "9b9d43f22a0e74cbab0b08e76591d285ab47046cb1fa24bb4bd77f2daefc72f0",
    "status": "open",
    "replaces": "KS-OFFER-0043"
   },
@@ -867,7 +867,7 @@
    "title": "Newsletter",
    "kind": "page",
    "file": "data/kintsugi-offers/KS-OFFER-0044-v2.txt",
-   "sha256": "d827d5d792bcfc62357651d368b0877baf9bd8833c9c8fce8d4b3f5e62c2b971",
+   "sha256": "568ab359ef9d8606ae0491471208587c541854f4d3844b7962166659e48ccc8b",
    "status": "open",
    "replaces": "KS-OFFER-0044"
   },
@@ -887,7 +887,7 @@
    "title": "Partners: refer people, get a commission",
    "kind": "page",
    "file": "data/kintsugi-offers/KS-OFFER-0045-v2.txt",
-   "sha256": "75ee19cbf104f66c1ea5ecb7c8b7872d2db962b71032c52f72af1996e733ba12",
+   "sha256": "f86ef213f3aa1c5a5fa4267b7978957a8eebb1908f627f5927664274a2e335c2",
    "status": "open",
    "replaces": "KS-OFFER-0045"
   },
@@ -907,7 +907,7 @@
    "title": "Peck on b",
    "kind": "page",
    "file": "data/kintsugi-offers/KS-OFFER-0046-v2.txt",
-   "sha256": "1e46794512101a9ccca512f40a9de11a87285307c53c7b92f25aacb02fa684ce",
+   "sha256": "68309bc3c3bb1bee46480dc7fbb0bd58d4d71825f68d1d8848b139cecd04d769",
    "status": "open",
    "replaces": "KS-OFFER-0046"
   },
@@ -927,7 +927,7 @@
    "title": "bAcc RACE: the bAcc racing game",
    "kind": "page",
    "file": "data/kintsugi-offers/KS-OFFER-0047-v2.txt",
-   "sha256": "2924beb80cd3eb3249cd622f8538e4400292cc0321cf92262d787145ee7d490f",
+   "sha256": "16e0c7aa3ec5bf7f1af37d7f12c93db3e5475136b2bd500c8568d784d2b8386e",
    "status": "open",
    "replaces": "KS-OFFER-0047"
   },
@@ -947,7 +947,7 @@
    "title": "Your RelayX NFTs are still yours",
    "kind": "page",
    "file": "data/kintsugi-offers/KS-OFFER-0048-v2.txt",
-   "sha256": "d6e0dd2b568eb3856d425feacee787cd11db9ecb2fff46f89e45d9c1387ad452",
+   "sha256": "98e2fbdae50839e15366f47fe5bfe9f15d9c8249d0bb31cc52397061a02eb6ff",
    "status": "open",
    "replaces": "KS-OFFER-0048"
   },
@@ -967,7 +967,7 @@
    "title": "RelayX on b",
    "kind": "page",
    "file": "data/kintsugi-offers/KS-OFFER-0049-v2.txt",
-   "sha256": "37b2cc0a46434d6a1d609b56ae6934be5cd871bf9f67c7e4018531e2296ec129",
+   "sha256": "d06ddc5837421db95c533c2d26ee62b8054e5b07302bf12f8701e5e5ff5a798f",
    "status": "open",
    "replaces": "KS-OFFER-0049"
   },
@@ -987,7 +987,7 @@
    "title": "Coming from Money Button?",
    "kind": "page",
    "file": "data/kintsugi-offers/KS-OFFER-0050-v2.txt",
-   "sha256": "61786b1e15769247544e245cb36a6ac86a00bd1c2bdb470dd5e750b56337aa5f",
+   "sha256": "c7d5c55655f7c8eb0bc0ecccf22e5a88f3bf0bf46481cc8cce039b78506028cd",
    "status": "open",
    "replaces": "KS-OFFER-0050"
   },
@@ -1007,7 +1007,7 @@
    "title": "Coming from Panda Wallet?",
    "kind": "page",
    "file": "data/kintsugi-offers/KS-OFFER-0051-v2.txt",
-   "sha256": "e36eb03c81e7a90a17bdb547e3a241699a1b36a7b33d2a06b86d0420b6849ae6",
+   "sha256": "8115c82ab391f6a2e630af0ef76cacc8b5e2f8b846bdad4b548c289087666852",
    "status": "open",
    "replaces": "KS-OFFER-0051"
   },
@@ -1027,7 +1027,7 @@
    "title": "Coming from SimplyCash?",
    "kind": "page",
    "file": "data/kintsugi-offers/KS-OFFER-0052-v2.txt",
-   "sha256": "a0a3c31237559ec740ea7ccd605f91eed5b97b6f535450d9554a300f5e26616a",
+   "sha256": "d15728956c97fa33fd1d4ce5e60e607a34af7d2580d8507cf4b7198eae3fc59f",
    "status": "open",
    "replaces": "KS-OFFER-0052"
   },
@@ -1047,7 +1047,7 @@
    "title": "Coming from Twetch?",
    "kind": "page",
    "file": "data/kintsugi-offers/KS-OFFER-0053-v2.txt",
-   "sha256": "40b74bcf29cfad3a685c8d69699dd895def74d58448fa9e970d2556902876757",
+   "sha256": "e63129dd3ee23d081e0c7e1faa66e02fb6ceef48aa71b5e9f7f2d9e7debc6318",
    "status": "open",
    "replaces": "KS-OFFER-0053"
   },
@@ -1067,7 +1067,7 @@
    "title": "Roadmap",
    "kind": "page",
    "file": "data/kintsugi-offers/KS-OFFER-0054-v2.txt",
-   "sha256": "70a06d417d92a582e16a76156c9a9771ba2ae8f9a92b27dbb0f6408f36cb9104",
+   "sha256": "2162042f13fffcc1672040e3e5d5d299f2f7ebb064e532c8ecd3d39bda4a1ba7",
    "status": "open",
    "replaces": "KS-OFFER-0054"
   },
@@ -1087,7 +1087,7 @@
    "title": "Seedless login",
    "kind": "page",
    "file": "data/kintsugi-offers/KS-OFFER-0055-v2.txt",
-   "sha256": "f99da972cfc3c9e211b56f0d6d336bfa3c655db70fc4b383f08bac0204b3d687",
+   "sha256": "7f4620dec4c8bba8ca68b63814b9fe5f311b04af8a5c7dcfb584a92057d1adae",
    "status": "open",
    "replaces": "KS-OFFER-0055"
   },
@@ -1107,7 +1107,7 @@
    "title": "Sign in with a passkey: open your wallet with your face or fingerprint",
    "kind": "page",
    "file": "data/kintsugi-offers/KS-OFFER-0056-v2.txt",
-   "sha256": "e9da5a5bc01f41529d2abdfd882844cb6215822d86a7e5eb0c892d20876bf326",
+   "sha256": "8b5b2c59f0bef870aa58abc8cb0a5e95ee650632b76b760dd8d26ec24f9c1387",
    "status": "open",
    "replaces": "KS-OFFER-0056"
   },
@@ -1127,7 +1127,7 @@
    "title": "Our b*X services",
    "kind": "page",
    "file": "data/kintsugi-offers/KS-OFFER-0057-v2.txt",
-   "sha256": "ce99c863fd0b5fffb7b228a6f1188bc3d6d64a7b2fc6834be24e8d4e05021a6b",
+   "sha256": "c21e20f64c68a69d321b2a58a221936dd9443f826d7fe93d94ec5e04c4361ab7",
    "status": "open",
    "replaces": "KS-OFFER-0057"
   },
@@ -1147,7 +1147,7 @@
    "title": "Add Sign in with bWalletX to your site",
    "kind": "page",
    "file": "data/kintsugi-offers/KS-OFFER-0058-v2.txt",
-   "sha256": "f66dd6ee67fb7b9e72f73930a413d1edc3be9d42a087d9a3276ad8f91921d472",
+   "sha256": "b66d73baabfca1a84d8171f91e790915b4b416ea01f07cf4d676999f32dfb100",
    "status": "open",
    "replaces": "KS-OFFER-0058"
   },
@@ -1167,7 +1167,7 @@
    "title": "Bitcoin by text",
    "kind": "page",
    "file": "data/kintsugi-offers/KS-OFFER-0059-v2.txt",
-   "sha256": "6224d4c7d9958a48ec0836b0b53dcfafb063b084734887901669de0fbed3569c",
+   "sha256": "878b916d0aab7b577adf362855b9835c0875404290de1dc4c8e170b214774ede",
    "status": "open",
    "replaces": "KS-OFFER-0059"
   },
@@ -1187,7 +1187,7 @@
    "title": "bWalletX Social",
    "kind": "page",
    "file": "data/kintsugi-offers/KS-OFFER-0060-v2.txt",
-   "sha256": "94288792658956b475af590a7b99710260813b45306f32cd470b8c11498ffb3f",
+   "sha256": "b486f832c4331869be1bb4c606d1266ba4afdde6154b80308848d44271dc0ac5",
    "status": "open",
    "replaces": "KS-OFFER-0060"
   },
@@ -1207,7 +1207,7 @@
    "title": "Streaming payments: pay as you go",
    "kind": "page",
    "file": "data/kintsugi-offers/KS-OFFER-0061-v2.txt",
-   "sha256": "05ad747d3bd2af15d41e7fc4d93b4cde3b025d0329718ddd07212d4350fba912",
+   "sha256": "c40db25354fb9ada33d00cc171afb1942a08f6aa8e4db7848ffa89990e13ae4a",
    "status": "open",
    "replaces": "KS-OFFER-0061"
   },
@@ -1227,7 +1227,7 @@
    "title": "Sweep SimplyCash into bWalletX",
    "kind": "page",
    "file": "data/kintsugi-offers/KS-OFFER-0062-v2.txt",
-   "sha256": "d7dd9757040a2328440adf58e77d0a61c56eb02d5410c63f20a7ad03ffd8ecb7",
+   "sha256": "d445cc4248ed2fdf8ae5058172560ac2468dc9aa8a6102594c8b7d13232b3d2b",
    "status": "open",
    "replaces": "KS-OFFER-0062"
   },
@@ -1247,7 +1247,7 @@
    "title": "Terms of Service \u00b7 bWalletX (Beta)",
    "kind": "page",
    "file": "data/kintsugi-offers/KS-OFFER-0063-v2.txt",
-   "sha256": "9db60c97165e6ab3295a932d6a4bc93b30c3ae2f79f68c49ec3e6e3e199aa518",
+   "sha256": "20e500fa6781d910fd9c99f2eb7bad34fd3f9a2814bdd43c5fc5d3555d82223a",
    "status": "open",
    "replaces": "KS-OFFER-0063"
   },
@@ -1267,7 +1267,7 @@
    "title": "Branded wallets for businesses",
    "kind": "page",
    "file": "data/kintsugi-offers/KS-OFFER-0064-v2.txt",
-   "sha256": "256b516bfb552d2bee58272ea0bc627bea3e0353d414fb6e07646f3586ccf0e5",
+   "sha256": "9d780616c1f0b8f723854de4ae75198d2edef4899be62f3b255d944938f6eb01",
    "status": "open",
    "replaces": "KS-OFFER-0064"
   },
@@ -1287,7 +1287,7 @@
    "title": "Token curves: how a person's token is priced",
    "kind": "page",
    "file": "data/kintsugi-offers/KS-OFFER-0065-v2.txt",
-   "sha256": "01285ee7a8a21040921e402fe1085435a1f42cd7d5be4bb92e42dbc92af12c3a",
+   "sha256": "289ace14c24671f4736e2e653eb07b753cddf658213ba2bd20db59649bd9e761",
    "status": "open",
    "replaces": "KS-OFFER-0065"
   },
@@ -1307,7 +1307,7 @@
    "title": "Token locking",
    "kind": "page",
    "file": "data/kintsugi-offers/KS-OFFER-0066-v2.txt",
-   "sha256": "37eb90f607be652f148e35c03c229dfa7d33670697747ed551a7a8d7afe712d1",
+   "sha256": "888b0c0c95b60783dee088f83eb938241beea637a45bc67539df0b746e87f5b9",
    "status": "open",
    "replaces": "KS-OFFER-0066"
   },
@@ -1327,7 +1327,7 @@
    "title": "Treechat on b",
    "kind": "page",
    "file": "data/kintsugi-offers/KS-OFFER-0067-v2.txt",
-   "sha256": "9b41e564502add8e3ae7e8c76e672398aee5801c21d951453ce94cbec2385a41",
+   "sha256": "4897cb3b7147583404ab466aabdd0bfd85e82350136c04be0f5047a5639c50ce",
    "status": "open",
    "replaces": "KS-OFFER-0067"
   },
@@ -1347,7 +1347,7 @@
    "title": "Twetch on b",
    "kind": "page",
    "file": "data/kintsugi-offers/KS-OFFER-0068-v2.txt",
-   "sha256": "e7dd09ed669d39700f9d0221f90501d47d293ee37da2657ef834bdc9d1f2b949",
+   "sha256": "ad86df187fc08ae8899d21e83e7baa4b99c35fed0043986e835c63591d4f2c26",
    "status": "open",
    "replaces": "KS-OFFER-0068"
   },
@@ -1367,7 +1367,7 @@
    "title": "Verify a signed note",
    "kind": "page",
    "file": "data/kintsugi-offers/KS-OFFER-0069-v2.txt",
-   "sha256": "08bf49415cf119a5ce47979246ea8366b3f48191627f0fbff9c0fabcffa01c69",
+   "sha256": "ce05d7ae02f71e1f7987bcf2ff4e70784492899c60b3403b18f66070f1cb64cc",
    "status": "open",
    "replaces": "KS-OFFER-0069"
   },
@@ -1387,7 +1387,7 @@
    "title": "Wallet Frames: your private things, drawn by your wallet",
    "kind": "page",
    "file": "data/kintsugi-offers/KS-OFFER-0070-v2.txt",
-   "sha256": "4416a3338ea9c546c06ee0810e6eac8c4e3da74d6a783666900de2125ef90eb0",
+   "sha256": "1a4f9ad3c29f189b63195f2f297a8a7b303a3a2e9289b6e069ad33e1bba780dc",
    "status": "open",
    "replaces": "KS-OFFER-0070"
   },
@@ -1407,7 +1407,7 @@
    "title": "bWalletX web wallet",
    "kind": "page",
    "file": "data/kintsugi-offers/KS-OFFER-0071-v2.txt",
-   "sha256": "e32f855f17b04c85c97b0c2bc1c1efd1c4bc74f243d35523a905136fde8e2e4c",
+   "sha256": "ab20da8af2fa8cd7f81dd617b9505274b15e844d6ef851d09fd42be42e090f89",
    "status": "open",
    "replaces": "KS-OFFER-0071"
   },
@@ -1427,7 +1427,7 @@
    "title": "Your apps on b",
    "kind": "page",
    "file": "data/kintsugi-offers/KS-OFFER-0072-v2.txt",
-   "sha256": "eb74de2890ed7a12d54fcab06130cbc35e60a2e8cbf282cedaf209f0177d7fe8",
+   "sha256": "5a99ec993ecea8407c99b7e123314d616a603244661d7b5fb5bb40e051eaae4b",
    "status": "open",
    "replaces": "KS-OFFER-0072"
   },
@@ -1447,7 +1447,7 @@
    "title": "Your character",
    "kind": "page",
    "file": "data/kintsugi-offers/KS-OFFER-0073-v2.txt",
-   "sha256": "42b99c4bb9929769a5a42d19d28fe371d6b05e2121c25b616c14b0ed5b8445d9",
+   "sha256": "1d0917086bca8e314cb24ddfba42f2d8ae41f12a90d6057887a2b642aab8d677",
    "status": "open",
    "replaces": "KS-OFFER-0073"
   },
@@ -1467,7 +1467,7 @@
    "title": "Yours on b",
    "kind": "page",
    "file": "data/kintsugi-offers/KS-OFFER-0074-v2.txt",
-   "sha256": "29ec84e2594df64e127511011aa7759097637216b4818b7bf8cacba4d91872a1",
+   "sha256": "9ba8383435ebb50c67808c43743ad535a73fa1b46da6a682e53c944870104f97",
    "status": "open",
    "replaces": "KS-OFFER-0074"
   },
@@ -1487,7 +1487,7 @@
    "title": "Bring your history with you",
    "kind": "post",
    "file": "data/kintsugi-offers/KS-OFFER-0075-v2.txt",
-   "sha256": "25f1495a63f64257c0a674718a3a203d909f123e283b1d33b33cfac97a5aca86",
+   "sha256": "43d94621e03b48e280b71ef62648828b18e60c1de39aa8d13c7b0c7a3525483b",
    "status": "open",
    "replaces": "KS-OFFER-0075"
   },
@@ -1507,7 +1507,7 @@
    "title": "Every coin, counted",
    "kind": "post",
    "file": "data/kintsugi-offers/KS-OFFER-0076-v2.txt",
-   "sha256": "b03fba07782318e003cbc27dcd22786ab5252f86460b62cd2f520d497ed2b600",
+   "sha256": "fa8a665d41dc68534c9d13d7e47dafa34474624d6a73a2a6e7990102a1cf4c1f",
    "status": "open",
    "replaces": "KS-OFFER-0076"
   },
@@ -1527,7 +1527,7 @@
    "title": "Sign in with your face or fingerprint",
    "kind": "post",
    "file": "data/kintsugi-offers/KS-OFFER-0077-v2.txt",
-   "sha256": "50147d56f98cdac8b99bcc5df717f6548da7431224e948c7375916c811f36d4b",
+   "sha256": "cb4024e73979577b6b0c4c6ca39981f831c5cdc82487c844856bb01093a84c8f",
    "status": "open",
    "replaces": "KS-OFFER-0077"
   }
