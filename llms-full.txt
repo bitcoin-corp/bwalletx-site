@@ -1107,8 +1107,6 @@ b Kintsugi
 
 -
 
--
-
 #
 
 Play the film
@@ -1136,8 +1134,6 @@ Kintsugi is in development. The film shows what we are building; some steps are 
 Source: https://bwalletx.com/b-kintsugi
 
 b Kintsugi
-
--
 
 -
 
@@ -1306,8 +1302,6 @@ b paid
 
 -
 
--
-
 #
 
 Play the film
@@ -1337,8 +1331,6 @@ Paid jobs on b are in development. The film shows what we are building; some ste
 Source: https://bwalletx.com/b-paid
 
 b paid
-
--
 
 -
 
@@ -12231,7 +12223,7 @@ By default, holding a token gives you one thing: entry to that token’s bChat r
 
 Airdrops that unlock over time are planned too: see [Token locking](https://bwalletx.com/token-locking).
 
-bWalletX is in beta: test with small amounts. Nothing here is investment advice. Questions: [support@bwalletx.com](mailto:support@bwalletx.com)
+bWalletX is in beta: test with small amounts. Nothing here is investment advice. Read the blog post: [105 Airdrops](https://bwalletx.com/blog/105-airdrops). Questions: [support@bwalletx.com](mailto:support@bwalletx.com)
 
 ---
 
@@ -18543,6 +18535,56 @@ New accounts start with a daily cap. Each site must pair before it can ask, ever
 Part of: [Agents & b](https://bwalletx.com/blog#agents) · Related: [071 bBots: make your own bot](https://bwalletx.com/blog/071-bbots) · [010 Agent accounts, strategies, CLI and MCP](https://bwalletx.com/blog/010-agents-strategies-cli) · [043 Ask b](https://bwalletx.com/blog/043-ask-b)
 
 [← 103 Just b: our films](https://bwalletx.com/blog/103-just-b-films)[105 Airdrops →](https://bwalletx.com/blog/105-airdrops)
+
+---
+
+Source: https://bwalletx.com/blog/105-airdrops
+
+[Development blog](https://bwalletx.com/blog) · 105 · 31 Oct 2026
+
+# Airdrops: tokens straight to your holders
+
+An airdrop is a token or NFT that turns up in your wallet without you buying or minting it. Issuers use them to reward the people who hold their token. In bWalletX, airdrops get their own address, their own inbox and their own safety rules.
+
+## Your airdrop address
+
+Every bWalletX account has an ordinals address: the one that holds your tokens and NFTs. That is your airdrop address. Find it, with a QR code, in Receive › Airdrops, and give it to anyone who wants to send you a token.
+
+## An inbox for things you didn't ask for
+
+Anything that arrives unasked goes to the Airdrops inbox instead of mixing into your wallet. Something counts as an airdrop when it was paid to you by a transaction you didn't fund and didn't start, so anything you bought, minted, launched, recovered or swapped stays where it is.
+
+- A badge counts new airdrops since you last looked.
+
+- Keep moves an airdrop into your wallet. Hide hides it, and every future airdrop from the same issuer.
+
+- Only from issuers I kept before shows airdrops only from issuers you've kept something from.
+
+- Each airdrop shows who sent it: the token's ID or the sending address. We don't vouch for what a stranger's token claims to be.
+
+## Safe by default
+
+A token's name, picture or link can say anything. No real airdrop ever needs your 12 words, and bWalletX never asks for them outside the wallet. NFT content is shown in an empty sandbox with no scripts and no access to the wallet. And if you try to send to an address that looks like one you've paid before (same first and last characters, a common scam), the wallet warns you and shows the address it resembles.
+
+## For issuers: airdrops, not promises
+
+Reward your holders by sending them tokens, not by promising returns. When you create a token in bWalletX, the wallet won't sign a description that promises profits; it asks you to describe airdrops or room access instead. Holding a token gives one thing by default: entry to that token's bChatX room.
+
+## Live today, 31 Oct 2026
+
+- ✓ Airdrop address with QR in Receive › Airdrops
+
+- ✓ Airdrops inbox with new-item badge
+
+- ✓ Keep, Hide, and issuer filter
+
+- ✓ Sandboxed NFT content and look-alike address warnings
+
+Full details on the [Airdrops page](https://bwalletx.com/airdrops).
+
+Part of: [Exchange & tokens](https://bwalletx.com/blog#ex) · Related: [Token locking](https://bwalletx.com/token-locking)
+
+[← 104 Give your agent a wallet](https://bwalletx.com/blog/104-give-your-agent-a-wallet)[All posts →](https://bwalletx.com/blog)
 
 ---
 
