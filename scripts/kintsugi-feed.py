@@ -31,21 +31,25 @@ def main():
     paid = load(D('kintsugi-payments.json'), {})   # id -> [txid, ...]
     hours = {(it['url'], it['title']): it['time']['hours'] for it in log['items']}
 
-    def row(id, kind, title, task, h, status, contract_url, text_url=None, page_url=None, developer=None):
+    def row(id, kind, title, task, h, status, contract_url, text_url=None, page_url=None, developer=None, usd=None):
+        price, dev, fee = usd or (h * CLIENT_H, h * DEV_H, h * (CLIENT_H - DEV_H))
         return dict(source='kintsugi', id=id, kind=kind, title=title, task=task, client=CLIENT, developer=developer,
-                    estimate_h=round(h, 2), price_usd=round(h * CLIENT_H, 2), dev_usd=round(h * DEV_H, 2),
-                    fee_usd=round(h * (CLIENT_H - DEV_H), 2), status=status, contract_url=contract_url,
+                    estimate_h=round(h, 2), price_usd=round(price, 2), dev_usd=round(dev, 2),
+                    fee_usd=round(fee, 2), status=status, contract_url=contract_url,
                     text_url=text_url, page_url=page_url, stamp_txid=stamps.get(id), paid_txids=paid.get(id, []))
 
     rows = []
     for c in index:
-        # Hours come from the stamped text itself (the log has been re-gathered since stamping).
-        m = re.search(r'Client pays \$[\d,]+ \(([\d.]+) h ×', open(os.path.join(ROOT, c['file']), encoding='utf-8').read())
-        h = float(m.group(1)) if m else hours.get((c['url'], c['title']), 0)
+        # Hours and amounts come from the stamped text itself (the log has been re-gathered since stamping).
+        m = re.search(r'Client pays \$([\d,]+) \(([\d.]+) h × \$\d+\): \$([\d,]+) to the developer .*? and \$([\d,]+) to Kintsugi',
+                      open(os.path.join(ROOT, c['file']), encoding='utf-8').read())
+        num = lambda s: float(s.replace(',', ''))
+        h = num(m.group(2)) if m else hours.get((c['url'], c['title']), 0)
+        usd = (num(m.group(1)), num(m.group(3)), num(m.group(4))) if m else None
         rows.append(row(c['id'], 'fund', c['title'], f'Delivered work: {c["title"]}', h,
                         'paid' if paid.get(c['id']) else 'delivered', f'{SITE}/kintsugi/work',
                         text_url=f'{SITE}/{c["file"]}', page_url=SITE + c['url'] if c['url'] else None,
-                        developer=DEV_HANDLE))
+                        developer=DEV_HANDLE, usd=usd))
     for k, o in enumerate(log['open'], 1):
         if o['kind'] == 'page':
             task = f'Write and publish a blog post for {o["title"]} (bwalletx.com{o["url"]})'
