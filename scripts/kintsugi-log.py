@@ -272,6 +272,7 @@ def fetch_price():
     raw = sh(['curl', '-s', '--max-time', '20', 'https://api.whatsonchain.com/v1/bsv/main/exchangerate'])
     return dict(usd=round(float(json.loads(raw)['rate']), 2), date=datetime.date.today().strftime('%-d %b %Y'))
 def hrs(h): return ('{:.1f}'.format(h) if h < 10 else '{:,.0f}'.format(h)) + ' h'
+def hrs1(h): return '{:,.1f} h'.format(h)   # contract estimates: same rounding as the price line, so 83.5 h never shows as 83 h
 
 
 CLIENT = 'The Bitcoin Corporation Ltd'
@@ -307,7 +308,9 @@ def describe(it):
 def fdate(s): return datetime.date.fromisoformat(s).strftime('%-d %b %Y')
 
 
-FOUNDER = "This log is the founder's own work, counted at up to 18 hours a day. It comes from before the 8-hour daily cap that applies to Kintsugi developers."
+FOUNDER = "This log is the founder's own work, counted at up to 18 hours a day. The 8-hour daily cap for Kintsugi developers does not apply to it."
+# Wording stamped on chain on 30 Oct (KS-2026-0001..0153); stamped panels must keep showing exactly what was stamped.
+FOUNDER_V1 = "This log is the founder's own work, counted at up to 18 hours a day. It comes from before the 8-hour daily cap that applies to Kintsugi developers."
 OPEN_H = {'page': 2, 'post': 1}   # first-issue estimates (KS-OFFER-xxxx, withdrawn 31 Oct)
 # Reissue (owner 31 Oct, after b did KS-OFFER-0001 in ~3.5 min): content jobs priced for AI-assisted work.
 OPEN_USD = {'page': 1.00, 'post': 0.50}   # paid to the developer in full; no Kintsugi fee on bCorp's own offers
@@ -318,7 +321,7 @@ def usd(x): return f'${x:,.2f}'
 def bsv_usd(x): return f'~{x / PRICE["usd"]:.4f} BSV'
 
 
-def terms_html(founder=False, done='the change is live on the stated page', content=False):
+def terms_html(founder=False, done='the change is live on the stated page', content=False, stamped=False):
     SEC_LI = ('<li>Content only: no security tools are needed. Any change to code, sign-in, payments, keys or signing is a separate job with the full security tool list.</li>' if content else
               '<li>Security tools: Shannon for any change that touches sign-in, payments, keys or signing; Semgrep, gitleaks, pnpm audit and OSV-Scanner, CodeQL, OWASP ZAP (baseline scan) and Claude Code /security-review. Tool and AI usage costs are the developer\'s and are not billable hours.</li>')
     # Owner 31 Oct: Kintsugi is bCorp hiring outside developers, so its own offers carry no fee (the 20% fee is bJobsX's).
@@ -340,7 +343,7 @@ def terms_html(founder=False, done='the change is live on the stated page', cont
     # Founder contracts are stamped with the three-party wording; offers (owner 31 Oct) are client + developer only.
     t += ('            <li>All three parties sign the same contract in bChatX before work starts.</li>\n' if founder else
           '            <li>The client and the developer sign the same contract in bChatX before work starts. Kintsugi reviews and settles disputes but does not sign.</li>\n')
-    if founder: t += f'            <li>{FOUNDER}</li>\n'
+    if founder: t += f'            <li>{FOUNDER_V1 if stamped else FOUNDER}</li>\n'
     return t + '          </ol>'
 
 
@@ -417,13 +420,13 @@ def contract(it, n):
             <dt>Developer</dt><dd>{E(DEV)} · paymail <span class="pm">{PAYMAIL}</span> ($b0asex)</dd>
             <dt>Review</dt><dd>Kintsugi, run by {CLIENT}</dd>
             <dt>Task</dt><dd>{task}<span class="sub">{E(it["desc"])}</span></dd>
-            <dt>Estimate</dt><dd class="tn">{hrs(h)} (wall-clock)</dd>
+            <dt>Estimate</dt><dd class="tn">{(hrs if n in STAMPS else hrs1)(h)} (wall-clock)</dd>
             <dt>Price</dt><dd class="tn">{price_html(h)}</dd>
             <dt>Estimated value of work</dt><dd class="tn"><span class="val">{money(t["value_hours"])}</span></dd>
             <dt>Started</dt><dd class="tn">{fdate(t["first"])}</dd>
             <dt>Delivered</dt><dd class="tn">{fdate(t["last"])}</dd>
           </dl>
-          {terms_html(founder=True)}
+          {terms_html(founder=True, stamped=n in STAMPS)}
           <div class="sigs">{sig}</div>
           {proof_html(n)}
         </div>'''
@@ -458,7 +461,7 @@ def contract_text(it, n):
     """The canonical plain text of an example contract: the same facts as the HTML panel."""
     t = it['time']; h = t['hours']
     task = f'{it["title"]} (bwalletx.com{it["url"]})' if it['url'] else it['title']
-    terms = [plain(x) for x in re.findall(r'<li>(.*?)</li>', terms_html(founder=True), re.S)]
+    terms = [plain(x) for x in re.findall(r'<li>(.*?)</li>', terms_html(founder=True, stamped=n in STAMPS), re.S)]
     lines = [
         'Kintsugi example contract',
         'Example contract: shows what a Kintsugi contract for this job looks like. Not signed, not an invoice.',
@@ -469,7 +472,7 @@ def contract_text(it, n):
         f'Review: Kintsugi, run by {CLIENT}',
         f'Task: {task}',
         f'Description: {it["desc"]}',
-        f'Estimate: {hrs(h)} (wall-clock)',
+        f'Estimate: {(hrs if n in STAMPS else hrs1)(h)} (wall-clock)',
         f'Price: {plain(price_html(h))}',
         f'Estimated value of work: {money(t["value_hours"])}',
         f'Started: {fdate(t["first"])}',
@@ -580,11 +583,15 @@ def write_offers(d):
 def write_contracts(d):
     import hashlib
     os.makedirs(CT_DIR, exist_ok=True)
-    for f in glob.glob(os.path.join(CT_DIR, 'KS-*.txt')): os.remove(f)
+    # Stamped texts are permanent: only unstamped contracts are (re)written.
+    for f in glob.glob(os.path.join(CT_DIR, 'KS-*.txt')):
+        if os.path.basename(f)[:-4] not in STAMPS: os.remove(f)
     idx = []
     for it in sorted(d['items'], key=lambda x: x['ks']):
-        txt = contract_text(it, it['ks'])
-        open(os.path.join(CT_DIR, it['ks'] + '.txt'), 'w', encoding='utf-8', newline='\n').write(txt)
+        f = os.path.join(CT_DIR, it['ks'] + '.txt')
+        if it['ks'] not in STAMPS or not os.path.exists(f):
+            open(f, 'w', encoding='utf-8', newline='\n').write(contract_text(it, it['ks']))
+        txt = open(f, encoding='utf-8').read()
         idx.append(dict(id=it['ks'], url=it['url'], title=it['title'], first=it['time']['first'], last=it['time']['last'],
                         file=f'data/kintsugi-contracts/{it["ks"]}.txt', sha256=hashlib.sha256(canonical(txt).encode()).hexdigest()))
     json.dump(dict(canonical='bit-sign b-stamp-rules canonicalText (NFC, LF, trailing whitespace and blank edge lines removed); sha256 over UTF-8',
