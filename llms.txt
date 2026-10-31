@@ -91,7 +91,7 @@ Full text of every page below: https://bwalletx.com/llms-full.txt
 - [Just b: less noise](https://bwalletx.com/just-b-2): A busy phone full of apps. Then the b arrives, takes its place in the dock, and the noise goes, one app at a time. Less noise. More life. Just b.
 - [Just b](https://bwalletx.com/just-b): Just b
 - [b Kintsugi AI · bWalletX](https://bwalletx.com/kintsugi-ai): Kintsugi AI: a black obsidian pool laced with gold seams, with the gold b of bWalletX at its centre. What work is open?
-- [b Kintsugi · bWalletX](https://bwalletx.com/kintsugi): b Kintsugi: help us build b. Users pay other users, peer to peer in BSV, to build bWalletX, bChatX and the bApps. Developers earn $20 an hour.
+- [b Kintsugi · bWalletX](https://bwalletx.com/kintsugi): b Kintsugi: help us build b. We pay developers in BSV, in full, to build bWalletX, bChatX and the bApps, and you can pay us to build the feature you want.
 - [Move to bWalletX](https://bwalletx.com/migrate): Move your coins, NFTs, tokens, names and posts into bWalletX. Sweep from Yours, RelayX, Twetch, SimplyCash, Money Button or a paper key, on your own device. Keys never leave it.
 - [Signed names and the public name log · bWalletX](https://bwalletx.com/name-bindings): A bWalletX name is a row in our database. Now each name is signed by the wallet that owns it, every wallet checks that before paying, and every change of who a name points to goes in a public log anyone can read.
 - [Get your name](https://bwalletx.com/names): Your @bwalletx.com name is free. Short names cost more: 4 letters $10, 3 letters $100, 1–2 letters $1000. Search it and get it in bWalletX.
