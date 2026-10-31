@@ -1,6 +1,6 @@
 {
  "source": "kintsugi",
- "updated_at": "2026-10-31T01:40:08Z",
+ "updated_at": "2026-10-31T01:51:59Z",
  "rates": {
   "client_usd_h": 25,
   "dev_usd_h": 20,
@@ -9,8 +9,9 @@
  "statuses": {
   "delivered": "work done, not paid",
   "paid": "a payment is recorded against the stamp",
-  "not_open": "offer published, not open for acceptance yet",
-  "open": "open for tender"
+  "open": "open for tender",
+  "withdrawn": "replaced by a reissued offer (see replaced_by)",
+  "done": "delivered"
  },
  "offers": [
   {
@@ -2930,9 +2931,9 @@
    "developer": null,
    "estimate_h": 2,
    "price_usd": 50,
-   "dev_usd": 40,
-   "fee_usd": 10,
-   "status": "open",
+   "dev_usd": 40.0,
+   "fee_usd": 10.0,
+   "status": "done",
    "contract_url": "https://bwalletx.com/kintsugi/work",
    "text_url": "https://bwalletx.com/data/kintsugi-offers/KS-OFFER-0001.txt",
    "page_url": "https://bwalletx.com/airdrops",
@@ -2942,7 +2943,9 @@
    "signers": [
     "client",
     "developer"
-   ]
+   ],
+   "replaces": null,
+   "replaced_by": null
   },
   {
    "source": "kintsugi",
@@ -2954,9 +2957,9 @@
    "developer": null,
    "estimate_h": 2,
    "price_usd": 50,
-   "dev_usd": 40,
-   "fee_usd": 10,
-   "status": "open",
+   "dev_usd": 40.0,
+   "fee_usd": 10.0,
+   "status": "withdrawn",
    "contract_url": "https://bwalletx.com/kintsugi/work",
    "text_url": "https://bwalletx.com/data/kintsugi-offers/KS-OFFER-0002.txt",
    "page_url": "https://bwalletx.com/b-bots",
@@ -2966,7 +2969,35 @@
    "signers": [
     "client",
     "developer"
-   ]
+   ],
+   "replaces": null,
+   "replaced_by": "KS-OFFER-0002-v2"
+  },
+  {
+   "source": "kintsugi",
+   "id": "KS-OFFER-0002-v2",
+   "kind": "tender",
+   "title": "bBots: little helpers that work for you",
+   "task": "Write and publish a blog post for bBots: little helpers that work for you (bwalletx.com/b-bots)",
+   "client": "The Bitcoin Corporation Ltd",
+   "developer": null,
+   "estimate_h": 0.25,
+   "price_usd": 1.0,
+   "dev_usd": 0.8,
+   "fee_usd": 0.2,
+   "status": "open",
+   "contract_url": "https://bwalletx.com/kintsugi/work",
+   "text_url": "https://bwalletx.com/data/kintsugi-offers/KS-OFFER-0002-v2.txt",
+   "page_url": "https://bwalletx.com/b-bots",
+   "stamp_txid": null,
+   "paid_txids": [],
+   "client_handle": null,
+   "signers": [
+    "client",
+    "developer"
+   ],
+   "replaces": "KS-OFFER-0002",
+   "replaced_by": null
   },
   {
    "source": "kintsugi",
@@ -2978,9 +3009,9 @@
    "developer": null,
    "estimate_h": 2,
    "price_usd": 50,
-   "dev_usd": 40,
-   "fee_usd": 10,
-   "status": "open",
+   "dev_usd": 40.0,
+   "fee_usd": 10.0,
+   "status": "withdrawn",
    "contract_url": "https://bwalletx.com/kintsugi/work",
    "text_url": "https://bwalletx.com/data/kintsugi-offers/KS-OFFER-0003.txt",
    "page_url": "https://bwalletx.com/b-cool",
@@ -2990,7 +3021,35 @@
    "signers": [
     "client",
     "developer"
-   ]
+   ],
+   "replaces": null,
+   "replaced_by": "KS-OFFER-0003-v2"
+  },
+  {
+   "source": "kintsugi",
+   "id": "KS-OFFER-0003-v2",
+   "kind": "tender",
+   "title": "b cool",
+   "task": "Write and publish a blog post for b cool (bwalletx.com/b-cool)",
+   "client": "The Bitcoin Corporation Ltd",
+   "developer": null,
+   "estimate_h": 0.25,
+   "price_usd": 1.0,
+   "dev_usd": 0.8,
+   "fee_usd": 0.2,
+   "status": "open",
+   "contract_url": "https://bwalletx.com/kintsugi/work",
+   "text_url": "https://bwalletx.com/data/kintsugi-offers/KS-OFFER-0003-v2.txt",
+   "page_url": "https://bwalletx.com/b-cool",
+   "stamp_txid": null,
+   "paid_txids": [],
+   "client_handle": null,
+   "signers": [
+    "client",
+    "developer"
+   ],
+   "replaces": "KS-OFFER-0003",
+   "replaced_by": null
   },
   {
    "source": "kintsugi",
@@ -3002,9 +3061,9 @@
    "developer": null,
    "estimate_h": 2,
    "price_usd": 50,
-   "dev_usd": 40,
-   "fee_usd": 10,
-   "status": "open",
+   "dev_usd": 40.0,
+   "fee_usd": 10.0,
+   "status": "withdrawn",
    "contract_url": "https://bwalletx.com/kintsugi/work",
    "text_url": "https://bwalletx.com/data/kintsugi-offers/KS-OFFER-0004.txt",
    "page_url": "https://bwalletx.com/b-creative",
@@ -3014,7 +3073,35 @@
    "signers": [
     "client",
     "developer"
-   ]
+   ],
+   "replaces": null,
+   "replaced_by": "KS-OFFER-0004-v2"
+  },
+  {
+   "source": "kintsugi",
+   "id": "KS-OFFER-0004-v2",
+   "kind": "tender",
+   "title": "b Creative",
+   "task": "Write and publish a blog post for b Creative (bwalletx.com/b-creative)",
+   "client": "The Bitcoin Corporation Ltd",
+   "developer": null,
+   "estimate_h": 0.25,
+   "price_usd": 1.0,
+   "dev_usd": 0.8,
+   "fee_usd": 0.2,
+   "status": "open",
+   "contract_url": "https://bwalletx.com/kintsugi/work",
+   "text_url": "https://bwalletx.com/data/kintsugi-offers/KS-OFFER-0004-v2.txt",
+   "page_url": "https://bwalletx.com/b-creative",
+   "stamp_txid": null,
+   "paid_txids": [],
+   "client_handle": null,
+   "signers": [
+    "client",
+    "developer"
+   ],
+   "replaces": "KS-OFFER-0004",
+   "replaced_by": null
   },
   {
    "source": "kintsugi",
@@ -3026,9 +3113,9 @@
    "developer": null,
    "estimate_h": 2,
    "price_usd": 50,
-   "dev_usd": 40,
-   "fee_usd": 10,
-   "status": "open",
+   "dev_usd": 40.0,
+   "fee_usd": 10.0,
+   "status": "withdrawn",
    "contract_url": "https://bwalletx.com/kintsugi/work",
    "text_url": "https://bwalletx.com/data/kintsugi-offers/KS-OFFER-0005.txt",
    "page_url": "https://bwalletx.com/b-in-black",
@@ -3038,7 +3125,35 @@
    "signers": [
     "client",
     "developer"
-   ]
+   ],
+   "replaces": null,
+   "replaced_by": "KS-OFFER-0005-v2"
+  },
+  {
+   "source": "kintsugi",
+   "id": "KS-OFFER-0005-v2",
+   "kind": "tender",
+   "title": "b black",
+   "task": "Write and publish a blog post for b black (bwalletx.com/b-in-black)",
+   "client": "The Bitcoin Corporation Ltd",
+   "developer": null,
+   "estimate_h": 0.25,
+   "price_usd": 1.0,
+   "dev_usd": 0.8,
+   "fee_usd": 0.2,
+   "status": "open",
+   "contract_url": "https://bwalletx.com/kintsugi/work",
+   "text_url": "https://bwalletx.com/data/kintsugi-offers/KS-OFFER-0005-v2.txt",
+   "page_url": "https://bwalletx.com/b-in-black",
+   "stamp_txid": null,
+   "paid_txids": [],
+   "client_handle": null,
+   "signers": [
+    "client",
+    "developer"
+   ],
+   "replaces": "KS-OFFER-0005",
+   "replaced_by": null
   },
   {
    "source": "kintsugi",
@@ -3050,9 +3165,9 @@
    "developer": null,
    "estimate_h": 2,
    "price_usd": 50,
-   "dev_usd": 40,
-   "fee_usd": 10,
-   "status": "open",
+   "dev_usd": 40.0,
+   "fee_usd": 10.0,
+   "status": "withdrawn",
    "contract_url": "https://bwalletx.com/kintsugi/work",
    "text_url": "https://bwalletx.com/data/kintsugi-offers/KS-OFFER-0006.txt",
    "page_url": "https://bwalletx.com/b-is-coming",
@@ -3062,7 +3177,35 @@
    "signers": [
     "client",
     "developer"
-   ]
+   ],
+   "replaces": null,
+   "replaced_by": "KS-OFFER-0006-v2"
+  },
+  {
+   "source": "kintsugi",
+   "id": "KS-OFFER-0006-v2",
+   "kind": "tender",
+   "title": "b is coming",
+   "task": "Write and publish a blog post for b is coming (bwalletx.com/b-is-coming)",
+   "client": "The Bitcoin Corporation Ltd",
+   "developer": null,
+   "estimate_h": 0.25,
+   "price_usd": 1.0,
+   "dev_usd": 0.8,
+   "fee_usd": 0.2,
+   "status": "open",
+   "contract_url": "https://bwalletx.com/kintsugi/work",
+   "text_url": "https://bwalletx.com/data/kintsugi-offers/KS-OFFER-0006-v2.txt",
+   "page_url": "https://bwalletx.com/b-is-coming",
+   "stamp_txid": null,
+   "paid_txids": [],
+   "client_handle": null,
+   "signers": [
+    "client",
+    "developer"
+   ],
+   "replaces": "KS-OFFER-0006",
+   "replaced_by": null
   },
   {
    "source": "kintsugi",
@@ -3074,9 +3217,9 @@
    "developer": null,
    "estimate_h": 2,
    "price_usd": 50,
-   "dev_usd": 40,
-   "fee_usd": 10,
-   "status": "open",
+   "dev_usd": 40.0,
+   "fee_usd": 10.0,
+   "status": "withdrawn",
    "contract_url": "https://bwalletx.com/kintsugi/work",
    "text_url": "https://bwalletx.com/data/kintsugi-offers/KS-OFFER-0007.txt",
    "page_url": "https://bwalletx.com/b-market",
@@ -3086,7 +3229,35 @@
    "signers": [
     "client",
     "developer"
-   ]
+   ],
+   "replaces": null,
+   "replaced_by": "KS-OFFER-0007-v2"
+  },
+  {
+   "source": "kintsugi",
+   "id": "KS-OFFER-0007-v2",
+   "kind": "tender",
+   "title": "bMarketX.com: your eBay store, on Bitcoin",
+   "task": "Write and publish a blog post for bMarketX.com: your eBay store, on Bitcoin (bwalletx.com/b-market)",
+   "client": "The Bitcoin Corporation Ltd",
+   "developer": null,
+   "estimate_h": 0.25,
+   "price_usd": 1.0,
+   "dev_usd": 0.8,
+   "fee_usd": 0.2,
+   "status": "open",
+   "contract_url": "https://bwalletx.com/kintsugi/work",
+   "text_url": "https://bwalletx.com/data/kintsugi-offers/KS-OFFER-0007-v2.txt",
+   "page_url": "https://bwalletx.com/b-market",
+   "stamp_txid": null,
+   "paid_txids": [],
+   "client_handle": null,
+   "signers": [
+    "client",
+    "developer"
+   ],
+   "replaces": "KS-OFFER-0007",
+   "replaced_by": null
   },
   {
    "source": "kintsugi",
@@ -3098,9 +3269,9 @@
    "developer": null,
    "estimate_h": 2,
    "price_usd": 50,
-   "dev_usd": 40,
-   "fee_usd": 10,
-   "status": "open",
+   "dev_usd": 40.0,
+   "fee_usd": 10.0,
+   "status": "withdrawn",
    "contract_url": "https://bwalletx.com/kintsugi/work",
    "text_url": "https://bwalletx.com/data/kintsugi-offers/KS-OFFER-0008.txt",
    "page_url": "https://bwalletx.com/b-on-twetch",
@@ -3110,7 +3281,35 @@
    "signers": [
     "client",
     "developer"
-   ]
+   ],
+   "replaces": null,
+   "replaced_by": "KS-OFFER-0008-v2"
+  },
+  {
+   "source": "kintsugi",
+   "id": "KS-OFFER-0008-v2",
+   "kind": "tender",
+   "title": "b is on Twetch",
+   "task": "Write and publish a blog post for b is on Twetch (bwalletx.com/b-on-twetch)",
+   "client": "The Bitcoin Corporation Ltd",
+   "developer": null,
+   "estimate_h": 0.25,
+   "price_usd": 1.0,
+   "dev_usd": 0.8,
+   "fee_usd": 0.2,
+   "status": "open",
+   "contract_url": "https://bwalletx.com/kintsugi/work",
+   "text_url": "https://bwalletx.com/data/kintsugi-offers/KS-OFFER-0008-v2.txt",
+   "page_url": "https://bwalletx.com/b-on-twetch",
+   "stamp_txid": null,
+   "paid_txids": [],
+   "client_handle": null,
+   "signers": [
+    "client",
+    "developer"
+   ],
+   "replaces": "KS-OFFER-0008",
+   "replaced_by": null
   },
   {
    "source": "kintsugi",
@@ -3122,9 +3321,9 @@
    "developer": null,
    "estimate_h": 2,
    "price_usd": 50,
-   "dev_usd": 40,
-   "fee_usd": 10,
-   "status": "open",
+   "dev_usd": 40.0,
+   "fee_usd": 10.0,
+   "status": "withdrawn",
    "contract_url": "https://bwalletx.com/kintsugi/work",
    "text_url": "https://bwalletx.com/data/kintsugi-offers/KS-OFFER-0009.txt",
    "page_url": "https://bwalletx.com/b-socials",
@@ -3134,7 +3333,35 @@
    "signers": [
     "client",
     "developer"
-   ]
+   ],
+   "replaces": null,
+   "replaced_by": "KS-OFFER-0009-v2"
+  },
+  {
+   "source": "kintsugi",
+   "id": "KS-OFFER-0009-v2",
+   "kind": "tender",
+   "title": "Everything b",
+   "task": "Write and publish a blog post for Everything b (bwalletx.com/b-socials)",
+   "client": "The Bitcoin Corporation Ltd",
+   "developer": null,
+   "estimate_h": 0.25,
+   "price_usd": 1.0,
+   "dev_usd": 0.8,
+   "fee_usd": 0.2,
+   "status": "open",
+   "contract_url": "https://bwalletx.com/kintsugi/work",
+   "text_url": "https://bwalletx.com/data/kintsugi-offers/KS-OFFER-0009-v2.txt",
+   "page_url": "https://bwalletx.com/b-socials",
+   "stamp_txid": null,
+   "paid_txids": [],
+   "client_handle": null,
+   "signers": [
+    "client",
+    "developer"
+   ],
+   "replaces": "KS-OFFER-0009",
+   "replaced_by": null
   },
   {
    "source": "kintsugi",
@@ -3146,9 +3373,9 @@
    "developer": null,
    "estimate_h": 2,
    "price_usd": 50,
-   "dev_usd": 40,
-   "fee_usd": 10,
-   "status": "open",
+   "dev_usd": 40.0,
+   "fee_usd": 10.0,
+   "status": "withdrawn",
    "contract_url": "https://bwalletx.com/kintsugi/work",
    "text_url": "https://bwalletx.com/data/kintsugi-offers/KS-OFFER-0010.txt",
    "page_url": "https://bwalletx.com/b/acc",
@@ -3158,7 +3385,35 @@
    "signers": [
     "client",
     "developer"
-   ]
+   ],
+   "replaces": null,
+   "replaced_by": "KS-OFFER-0010-v2"
+  },
+  {
+   "source": "kintsugi",
+   "id": "KS-OFFER-0010-v2",
+   "kind": "tender",
+   "title": "bAcc: make Bitcoin faster, the goal is 1 billion transactions a second",
+   "task": "Write and publish a blog post for bAcc: make Bitcoin faster, the goal is 1 billion transactions a second (bwalletx.com/b/acc)",
+   "client": "The Bitcoin Corporation Ltd",
+   "developer": null,
+   "estimate_h": 0.25,
+   "price_usd": 1.0,
+   "dev_usd": 0.8,
+   "fee_usd": 0.2,
+   "status": "open",
+   "contract_url": "https://bwalletx.com/kintsugi/work",
+   "text_url": "https://bwalletx.com/data/kintsugi-offers/KS-OFFER-0010-v2.txt",
+   "page_url": "https://bwalletx.com/b/acc",
+   "stamp_txid": null,
+   "paid_txids": [],
+   "client_handle": null,
+   "signers": [
+    "client",
+    "developer"
+   ],
+   "replaces": "KS-OFFER-0010",
+   "replaced_by": null
   },
   {
    "source": "kintsugi",
@@ -3170,9 +3425,9 @@
    "developer": null,
    "estimate_h": 2,
    "price_usd": 50,
-   "dev_usd": 40,
-   "fee_usd": 10,
-   "status": "open",
+   "dev_usd": 40.0,
+   "fee_usd": 10.0,
+   "status": "withdrawn",
    "contract_url": "https://bwalletx.com/kintsugi/work",
    "text_url": "https://bwalletx.com/data/kintsugi-offers/KS-OFFER-0011.txt",
    "page_url": "https://bwalletx.com/bads",
@@ -3182,7 +3437,35 @@
    "signers": [
     "client",
     "developer"
-   ]
+   ],
+   "replaces": null,
+   "replaced_by": "KS-OFFER-0011-v2"
+  },
+  {
+   "source": "kintsugi",
+   "id": "KS-OFFER-0011-v2",
+   "kind": "tender",
+   "title": "bAds · we sell bAds, made by b",
+   "task": "Write and publish a blog post for bAds · we sell bAds, made by b (bwalletx.com/bads)",
+   "client": "The Bitcoin Corporation Ltd",
+   "developer": null,
+   "estimate_h": 0.25,
+   "price_usd": 1.0,
+   "dev_usd": 0.8,
+   "fee_usd": 0.2,
+   "status": "open",
+   "contract_url": "https://bwalletx.com/kintsugi/work",
+   "text_url": "https://bwalletx.com/data/kintsugi-offers/KS-OFFER-0011-v2.txt",
+   "page_url": "https://bwalletx.com/bads",
+   "stamp_txid": null,
+   "paid_txids": [],
+   "client_handle": null,
+   "signers": [
+    "client",
+    "developer"
+   ],
+   "replaces": "KS-OFFER-0011",
+   "replaced_by": null
   },
   {
    "source": "kintsugi",
@@ -3194,9 +3477,9 @@
    "developer": null,
    "estimate_h": 2,
    "price_usd": 50,
-   "dev_usd": 40,
-   "fee_usd": 10,
-   "status": "open",
+   "dev_usd": 40.0,
+   "fee_usd": 10.0,
+   "status": "withdrawn",
    "contract_url": "https://bwalletx.com/kintsugi/work",
    "text_url": "https://bwalletx.com/data/kintsugi-offers/KS-OFFER-0012.txt",
    "page_url": "https://bwalletx.com/bapps/bmovies",
@@ -3206,7 +3489,35 @@
    "signers": [
     "client",
     "developer"
-   ]
+   ],
+   "replaces": null,
+   "replaced_by": "KS-OFFER-0012-v2"
+  },
+  {
+   "source": "kintsugi",
+   "id": "KS-OFFER-0012-v2",
+   "kind": "tender",
+   "title": "bMovies inside bWalletX",
+   "task": "Write and publish a blog post for bMovies inside bWalletX (bwalletx.com/bapps/bmovies)",
+   "client": "The Bitcoin Corporation Ltd",
+   "developer": null,
+   "estimate_h": 0.25,
+   "price_usd": 1.0,
+   "dev_usd": 0.8,
+   "fee_usd": 0.2,
+   "status": "open",
+   "contract_url": "https://bwalletx.com/kintsugi/work",
+   "text_url": "https://bwalletx.com/data/kintsugi-offers/KS-OFFER-0012-v2.txt",
+   "page_url": "https://bwalletx.com/bapps/bmovies",
+   "stamp_txid": null,
+   "paid_txids": [],
+   "client_handle": null,
+   "signers": [
+    "client",
+    "developer"
+   ],
+   "replaces": "KS-OFFER-0012",
+   "replaced_by": null
   },
   {
    "source": "kintsugi",
@@ -3218,9 +3529,9 @@
    "developer": null,
    "estimate_h": 2,
    "price_usd": 50,
-   "dev_usd": 40,
-   "fee_usd": 10,
-   "status": "open",
+   "dev_usd": 40.0,
+   "fee_usd": 10.0,
+   "status": "withdrawn",
    "contract_url": "https://bwalletx.com/kintsugi/work",
    "text_url": "https://bwalletx.com/data/kintsugi-offers/KS-OFFER-0013.txt",
    "page_url": "https://bwalletx.com/bavatars",
@@ -3230,7 +3541,35 @@
    "signers": [
     "client",
     "developer"
-   ]
+   ],
+   "replaces": null,
+   "replaced_by": "KS-OFFER-0013-v2"
+  },
+  {
+   "source": "kintsugi",
+   "id": "KS-OFFER-0013-v2",
+   "kind": "tender",
+   "title": "bAvatars: your name, as art you can scan",
+   "task": "Write and publish a blog post for bAvatars: your name, as art you can scan (bwalletx.com/bavatars)",
+   "client": "The Bitcoin Corporation Ltd",
+   "developer": null,
+   "estimate_h": 0.25,
+   "price_usd": 1.0,
+   "dev_usd": 0.8,
+   "fee_usd": 0.2,
+   "status": "open",
+   "contract_url": "https://bwalletx.com/kintsugi/work",
+   "text_url": "https://bwalletx.com/data/kintsugi-offers/KS-OFFER-0013-v2.txt",
+   "page_url": "https://bwalletx.com/bavatars",
+   "stamp_txid": null,
+   "paid_txids": [],
+   "client_handle": null,
+   "signers": [
+    "client",
+    "developer"
+   ],
+   "replaces": "KS-OFFER-0013",
+   "replaced_by": null
   },
   {
    "source": "kintsugi",
@@ -3242,9 +3581,9 @@
    "developer": null,
    "estimate_h": 2,
    "price_usd": 50,
-   "dev_usd": 40,
-   "fee_usd": 10,
-   "status": "open",
+   "dev_usd": 40.0,
+   "fee_usd": 10.0,
+   "status": "withdrawn",
    "contract_url": "https://bwalletx.com/kintsugi/work",
    "text_url": "https://bwalletx.com/data/kintsugi-offers/KS-OFFER-0014.txt",
    "page_url": "https://bwalletx.com/be-on-b-2",
@@ -3254,7 +3593,35 @@
    "signers": [
     "client",
     "developer"
-   ]
+   ],
+   "replaces": null,
+   "replaced_by": "KS-OFFER-0014-v2"
+  },
+  {
+   "source": "kintsugi",
+   "id": "KS-OFFER-0014-v2",
+   "kind": "tender",
+   "title": "be on b",
+   "task": "Write and publish a blog post for be on b (bwalletx.com/be-on-b-2)",
+   "client": "The Bitcoin Corporation Ltd",
+   "developer": null,
+   "estimate_h": 0.25,
+   "price_usd": 1.0,
+   "dev_usd": 0.8,
+   "fee_usd": 0.2,
+   "status": "open",
+   "contract_url": "https://bwalletx.com/kintsugi/work",
+   "text_url": "https://bwalletx.com/data/kintsugi-offers/KS-OFFER-0014-v2.txt",
+   "page_url": "https://bwalletx.com/be-on-b-2",
+   "stamp_txid": null,
+   "paid_txids": [],
+   "client_handle": null,
+   "signers": [
+    "client",
+    "developer"
+   ],
+   "replaces": "KS-OFFER-0014",
+   "replaced_by": null
   },
   {
    "source": "kintsugi",
@@ -3266,9 +3633,9 @@
    "developer": null,
    "estimate_h": 2,
    "price_usd": 50,
-   "dev_usd": 40,
-   "fee_usd": 10,
-   "status": "open",
+   "dev_usd": 40.0,
+   "fee_usd": 10.0,
+   "status": "withdrawn",
    "contract_url": "https://bwalletx.com/kintsugi/work",
    "text_url": "https://bwalletx.com/data/kintsugi-offers/KS-OFFER-0015.txt",
    "page_url": "https://bwalletx.com/be-on-b-3",
@@ -3278,7 +3645,35 @@
    "signers": [
     "client",
     "developer"
-   ]
+   ],
+   "replaces": null,
+   "replaced_by": "KS-OFFER-0015-v2"
+  },
+  {
+   "source": "kintsugi",
+   "id": "KS-OFFER-0015-v2",
+   "kind": "tender",
+   "title": "be on b",
+   "task": "Write and publish a blog post for be on b (bwalletx.com/be-on-b-3)",
+   "client": "The Bitcoin Corporation Ltd",
+   "developer": null,
+   "estimate_h": 0.25,
+   "price_usd": 1.0,
+   "dev_usd": 0.8,
+   "fee_usd": 0.2,
+   "status": "open",
+   "contract_url": "https://bwalletx.com/kintsugi/work",
+   "text_url": "https://bwalletx.com/data/kintsugi-offers/KS-OFFER-0015-v2.txt",
+   "page_url": "https://bwalletx.com/be-on-b-3",
+   "stamp_txid": null,
+   "paid_txids": [],
+   "client_handle": null,
+   "signers": [
+    "client",
+    "developer"
+   ],
+   "replaces": "KS-OFFER-0015",
+   "replaced_by": null
   },
   {
    "source": "kintsugi",
@@ -3290,9 +3685,9 @@
    "developer": null,
    "estimate_h": 2,
    "price_usd": 50,
-   "dev_usd": 40,
-   "fee_usd": 10,
-   "status": "open",
+   "dev_usd": 40.0,
+   "fee_usd": 10.0,
+   "status": "withdrawn",
    "contract_url": "https://bwalletx.com/kintsugi/work",
    "text_url": "https://bwalletx.com/data/kintsugi-offers/KS-OFFER-0016.txt",
    "page_url": "https://bwalletx.com/be-on-b",
@@ -3302,7 +3697,35 @@
    "signers": [
     "client",
     "developer"
-   ]
+   ],
+   "replaces": null,
+   "replaced_by": "KS-OFFER-0016-v2"
+  },
+  {
+   "source": "kintsugi",
+   "id": "KS-OFFER-0016-v2",
+   "kind": "tender",
+   "title": "be on b",
+   "task": "Write and publish a blog post for be on b (bwalletx.com/be-on-b)",
+   "client": "The Bitcoin Corporation Ltd",
+   "developer": null,
+   "estimate_h": 0.25,
+   "price_usd": 1.0,
+   "dev_usd": 0.8,
+   "fee_usd": 0.2,
+   "status": "open",
+   "contract_url": "https://bwalletx.com/kintsugi/work",
+   "text_url": "https://bwalletx.com/data/kintsugi-offers/KS-OFFER-0016-v2.txt",
+   "page_url": "https://bwalletx.com/be-on-b",
+   "stamp_txid": null,
+   "paid_txids": [],
+   "client_handle": null,
+   "signers": [
+    "client",
+    "developer"
+   ],
+   "replaces": "KS-OFFER-0016",
+   "replaced_by": null
   },
   {
    "source": "kintsugi",
@@ -3314,9 +3737,9 @@
    "developer": null,
    "estimate_h": 2,
    "price_usd": 50,
-   "dev_usd": 40,
-   "fee_usd": 10,
-   "status": "open",
+   "dev_usd": 40.0,
+   "fee_usd": 10.0,
+   "status": "withdrawn",
    "contract_url": "https://bwalletx.com/kintsugi/work",
    "text_url": "https://bwalletx.com/data/kintsugi-offers/KS-OFFER-0017.txt",
    "page_url": "https://bwalletx.com/bpositive",
@@ -3326,7 +3749,35 @@
    "signers": [
     "client",
     "developer"
-   ]
+   ],
+   "replaces": null,
+   "replaced_by": "KS-OFFER-0017-v2"
+  },
+  {
+   "source": "kintsugi",
+   "id": "KS-OFFER-0017-v2",
+   "kind": "tender",
+   "title": "bPositive",
+   "task": "Write and publish a blog post for bPositive (bwalletx.com/bpositive)",
+   "client": "The Bitcoin Corporation Ltd",
+   "developer": null,
+   "estimate_h": 0.25,
+   "price_usd": 1.0,
+   "dev_usd": 0.8,
+   "fee_usd": 0.2,
+   "status": "open",
+   "contract_url": "https://bwalletx.com/kintsugi/work",
+   "text_url": "https://bwalletx.com/data/kintsugi-offers/KS-OFFER-0017-v2.txt",
+   "page_url": "https://bwalletx.com/bpositive",
+   "stamp_txid": null,
+   "paid_txids": [],
+   "client_handle": null,
+   "signers": [
+    "client",
+    "developer"
+   ],
+   "replaces": "KS-OFFER-0017",
+   "replaced_by": null
   },
   {
    "source": "kintsugi",
@@ -3338,9 +3789,9 @@
    "developer": null,
    "estimate_h": 2,
    "price_usd": 50,
-   "dev_usd": 40,
-   "fee_usd": 10,
-   "status": "open",
+   "dev_usd": 40.0,
+   "fee_usd": 10.0,
+   "status": "withdrawn",
    "contract_url": "https://bwalletx.com/kintsugi/work",
    "text_url": "https://bwalletx.com/data/kintsugi-offers/KS-OFFER-0018.txt",
    "page_url": "https://bwalletx.com/brand",
@@ -3350,7 +3801,35 @@
    "signers": [
     "client",
     "developer"
-   ]
+   ],
+   "replaces": null,
+   "replaced_by": "KS-OFFER-0018-v2"
+  },
+  {
+   "source": "kintsugi",
+   "id": "KS-OFFER-0018-v2",
+   "kind": "tender",
+   "title": "The bWalletX brand",
+   "task": "Write and publish a blog post for The bWalletX brand (bwalletx.com/brand)",
+   "client": "The Bitcoin Corporation Ltd",
+   "developer": null,
+   "estimate_h": 0.25,
+   "price_usd": 1.0,
+   "dev_usd": 0.8,
+   "fee_usd": 0.2,
+   "status": "open",
+   "contract_url": "https://bwalletx.com/kintsugi/work",
+   "text_url": "https://bwalletx.com/data/kintsugi-offers/KS-OFFER-0018-v2.txt",
+   "page_url": "https://bwalletx.com/brand",
+   "stamp_txid": null,
+   "paid_txids": [],
+   "client_handle": null,
+   "signers": [
+    "client",
+    "developer"
+   ],
+   "replaces": "KS-OFFER-0018",
+   "replaced_by": null
   },
   {
    "source": "kintsugi",
@@ -3362,9 +3841,9 @@
    "developer": null,
    "estimate_h": 2,
    "price_usd": 50,
-   "dev_usd": 40,
-   "fee_usd": 10,
-   "status": "open",
+   "dev_usd": 40.0,
+   "fee_usd": 10.0,
+   "status": "withdrawn",
    "contract_url": "https://bwalletx.com/kintsugi/work",
    "text_url": "https://bwalletx.com/data/kintsugi-offers/KS-OFFER-0019.txt",
    "page_url": "https://bwalletx.com/btrust",
@@ -3374,7 +3853,35 @@
    "signers": [
     "client",
     "developer"
-   ]
+   ],
+   "replaces": null,
+   "replaced_by": "KS-OFFER-0019-v2"
+  },
+  {
+   "source": "kintsugi",
+   "id": "KS-OFFER-0019-v2",
+   "kind": "tender",
+   "title": "bTrust in bWalletX",
+   "task": "Write and publish a blog post for bTrust in bWalletX (bwalletx.com/btrust)",
+   "client": "The Bitcoin Corporation Ltd",
+   "developer": null,
+   "estimate_h": 0.25,
+   "price_usd": 1.0,
+   "dev_usd": 0.8,
+   "fee_usd": 0.2,
+   "status": "open",
+   "contract_url": "https://bwalletx.com/kintsugi/work",
+   "text_url": "https://bwalletx.com/data/kintsugi-offers/KS-OFFER-0019-v2.txt",
+   "page_url": "https://bwalletx.com/btrust",
+   "stamp_txid": null,
+   "paid_txids": [],
+   "client_handle": null,
+   "signers": [
+    "client",
+    "developer"
+   ],
+   "replaces": "KS-OFFER-0019",
+   "replaced_by": null
   },
   {
    "source": "kintsugi",
@@ -3386,9 +3893,9 @@
    "developer": null,
    "estimate_h": 2,
    "price_usd": 50,
-   "dev_usd": 40,
-   "fee_usd": 10,
-   "status": "open",
+   "dev_usd": 40.0,
+   "fee_usd": 10.0,
+   "status": "withdrawn",
    "contract_url": "https://bwalletx.com/kintsugi/work",
    "text_url": "https://bwalletx.com/data/kintsugi-offers/KS-OFFER-0020.txt",
    "page_url": "https://bwalletx.com/business-agents",
@@ -3398,7 +3905,35 @@
    "signers": [
     "client",
     "developer"
-   ]
+   ],
+   "replaces": null,
+   "replaced_by": "KS-OFFER-0020-v2"
+  },
+  {
+   "source": "kintsugi",
+   "id": "KS-OFFER-0020-v2",
+   "kind": "tender",
+   "title": "bRand business agents",
+   "task": "Write and publish a blog post for bRand business agents (bwalletx.com/business-agents)",
+   "client": "The Bitcoin Corporation Ltd",
+   "developer": null,
+   "estimate_h": 0.25,
+   "price_usd": 1.0,
+   "dev_usd": 0.8,
+   "fee_usd": 0.2,
+   "status": "open",
+   "contract_url": "https://bwalletx.com/kintsugi/work",
+   "text_url": "https://bwalletx.com/data/kintsugi-offers/KS-OFFER-0020-v2.txt",
+   "page_url": "https://bwalletx.com/business-agents",
+   "stamp_txid": null,
+   "paid_txids": [],
+   "client_handle": null,
+   "signers": [
+    "client",
+    "developer"
+   ],
+   "replaces": "KS-OFFER-0020",
+   "replaced_by": null
   },
   {
    "source": "kintsugi",
@@ -3410,9 +3945,9 @@
    "developer": null,
    "estimate_h": 2,
    "price_usd": 50,
-   "dev_usd": 40,
-   "fee_usd": 10,
-   "status": "open",
+   "dev_usd": 40.0,
+   "fee_usd": 10.0,
+   "status": "withdrawn",
    "contract_url": "https://bwalletx.com/kintsugi/work",
    "text_url": "https://bwalletx.com/data/kintsugi-offers/KS-OFFER-0021.txt",
    "page_url": "https://bwalletx.com/buy",
@@ -3422,7 +3957,35 @@
    "signers": [
     "client",
     "developer"
-   ]
+   ],
+   "replaces": null,
+   "replaced_by": "KS-OFFER-0021-v2"
+  },
+  {
+   "source": "kintsugi",
+   "id": "KS-OFFER-0021-v2",
+   "kind": "tender",
+   "title": "Buy BSV in bWalletX",
+   "task": "Write and publish a blog post for Buy BSV in bWalletX (bwalletx.com/buy)",
+   "client": "The Bitcoin Corporation Ltd",
+   "developer": null,
+   "estimate_h": 0.25,
+   "price_usd": 1.0,
+   "dev_usd": 0.8,
+   "fee_usd": 0.2,
+   "status": "open",
+   "contract_url": "https://bwalletx.com/kintsugi/work",
+   "text_url": "https://bwalletx.com/data/kintsugi-offers/KS-OFFER-0021-v2.txt",
+   "page_url": "https://bwalletx.com/buy",
+   "stamp_txid": null,
+   "paid_txids": [],
+   "client_handle": null,
+   "signers": [
+    "client",
+    "developer"
+   ],
+   "replaces": "KS-OFFER-0021",
+   "replaced_by": null
   },
   {
    "source": "kintsugi",
@@ -3434,9 +3997,9 @@
    "developer": null,
    "estimate_h": 2,
    "price_usd": 50,
-   "dev_usd": 40,
-   "fee_usd": 10,
-   "status": "open",
+   "dev_usd": 40.0,
+   "fee_usd": 10.0,
+   "status": "withdrawn",
    "contract_url": "https://bwalletx.com/kintsugi/work",
    "text_url": "https://bwalletx.com/data/kintsugi-offers/KS-OFFER-0022.txt",
    "page_url": "https://bwalletx.com/bweb",
@@ -3446,7 +4009,35 @@
    "signers": [
     "client",
     "developer"
-   ]
+   ],
+   "replaces": null,
+   "replaced_by": "KS-OFFER-0022-v2"
+  },
+  {
+   "source": "kintsugi",
+   "id": "KS-OFFER-0022-v2",
+   "kind": "tender",
+   "title": "bWeb: ask b to build your website",
+   "task": "Write and publish a blog post for bWeb: ask b to build your website (bwalletx.com/bweb)",
+   "client": "The Bitcoin Corporation Ltd",
+   "developer": null,
+   "estimate_h": 0.25,
+   "price_usd": 1.0,
+   "dev_usd": 0.8,
+   "fee_usd": 0.2,
+   "status": "open",
+   "contract_url": "https://bwalletx.com/kintsugi/work",
+   "text_url": "https://bwalletx.com/data/kintsugi-offers/KS-OFFER-0022-v2.txt",
+   "page_url": "https://bwalletx.com/bweb",
+   "stamp_txid": null,
+   "paid_txids": [],
+   "client_handle": null,
+   "signers": [
+    "client",
+    "developer"
+   ],
+   "replaces": "KS-OFFER-0022",
+   "replaced_by": null
   },
   {
    "source": "kintsugi",
@@ -3458,9 +4049,9 @@
    "developer": null,
    "estimate_h": 2,
    "price_usd": 50,
-   "dev_usd": 40,
-   "fee_usd": 10,
-   "status": "open",
+   "dev_usd": 40.0,
+   "fee_usd": 10.0,
+   "status": "withdrawn",
    "contract_url": "https://bwalletx.com/kintsugi/work",
    "text_url": "https://bwalletx.com/data/kintsugi-offers/KS-OFFER-0023.txt",
    "page_url": "https://bwalletx.com/clients",
@@ -3470,7 +4061,35 @@
    "signers": [
     "client",
     "developer"
-   ]
+   ],
+   "replaces": null,
+   "replaced_by": "KS-OFFER-0023-v2"
+  },
+  {
+   "source": "kintsugi",
+   "id": "KS-OFFER-0023-v2",
+   "kind": "tender",
+   "title": "Your own branded wallet · bWalletX for business",
+   "task": "Write and publish a blog post for Your own branded wallet · bWalletX for business (bwalletx.com/clients)",
+   "client": "The Bitcoin Corporation Ltd",
+   "developer": null,
+   "estimate_h": 0.25,
+   "price_usd": 1.0,
+   "dev_usd": 0.8,
+   "fee_usd": 0.2,
+   "status": "open",
+   "contract_url": "https://bwalletx.com/kintsugi/work",
+   "text_url": "https://bwalletx.com/data/kintsugi-offers/KS-OFFER-0023-v2.txt",
+   "page_url": "https://bwalletx.com/clients",
+   "stamp_txid": null,
+   "paid_txids": [],
+   "client_handle": null,
+   "signers": [
+    "client",
+    "developer"
+   ],
+   "replaces": "KS-OFFER-0023",
+   "replaced_by": null
   },
   {
    "source": "kintsugi",
@@ -3482,9 +4101,9 @@
    "developer": null,
    "estimate_h": 2,
    "price_usd": 50,
-   "dev_usd": 40,
-   "fee_usd": 10,
-   "status": "open",
+   "dev_usd": 40.0,
+   "fee_usd": 10.0,
+   "status": "withdrawn",
    "contract_url": "https://bwalletx.com/kintsugi/work",
    "text_url": "https://bwalletx.com/data/kintsugi-offers/KS-OFFER-0024.txt",
    "page_url": "https://bwalletx.com/coingeek-on-b",
@@ -3494,7 +4113,35 @@
    "signers": [
     "client",
     "developer"
-   ]
+   ],
+   "replaces": null,
+   "replaced_by": "KS-OFFER-0024-v2"
+  },
+  {
+   "source": "kintsugi",
+   "id": "KS-OFFER-0024-v2",
+   "kind": "tender",
+   "title": "CoinGeek on b",
+   "task": "Write and publish a blog post for CoinGeek on b (bwalletx.com/coingeek-on-b)",
+   "client": "The Bitcoin Corporation Ltd",
+   "developer": null,
+   "estimate_h": 0.25,
+   "price_usd": 1.0,
+   "dev_usd": 0.8,
+   "fee_usd": 0.2,
+   "status": "open",
+   "contract_url": "https://bwalletx.com/kintsugi/work",
+   "text_url": "https://bwalletx.com/data/kintsugi-offers/KS-OFFER-0024-v2.txt",
+   "page_url": "https://bwalletx.com/coingeek-on-b",
+   "stamp_txid": null,
+   "paid_txids": [],
+   "client_handle": null,
+   "signers": [
+    "client",
+    "developer"
+   ],
+   "replaces": "KS-OFFER-0024",
+   "replaced_by": null
   },
   {
    "source": "kintsugi",
@@ -3506,9 +4153,9 @@
    "developer": null,
    "estimate_h": 2,
    "price_usd": 50,
-   "dev_usd": 40,
-   "fee_usd": 10,
-   "status": "open",
+   "dev_usd": 40.0,
+   "fee_usd": 10.0,
+   "status": "withdrawn",
    "contract_url": "https://bwalletx.com/kintsugi/work",
    "text_url": "https://bwalletx.com/data/kintsugi-offers/KS-OFFER-0025.txt",
    "page_url": "https://bwalletx.com/creative",
@@ -3518,7 +4165,35 @@
    "signers": [
     "client",
     "developer"
-   ]
+   ],
+   "replaces": null,
+   "replaced_by": "KS-OFFER-0025-v2"
+  },
+  {
+   "source": "kintsugi",
+   "id": "KS-OFFER-0025-v2",
+   "kind": "tender",
+   "title": "b Creative",
+   "task": "Write and publish a blog post for b Creative (bwalletx.com/creative)",
+   "client": "The Bitcoin Corporation Ltd",
+   "developer": null,
+   "estimate_h": 0.25,
+   "price_usd": 1.0,
+   "dev_usd": 0.8,
+   "fee_usd": 0.2,
+   "status": "open",
+   "contract_url": "https://bwalletx.com/kintsugi/work",
+   "text_url": "https://bwalletx.com/data/kintsugi-offers/KS-OFFER-0025-v2.txt",
+   "page_url": "https://bwalletx.com/creative",
+   "stamp_txid": null,
+   "paid_txids": [],
+   "client_handle": null,
+   "signers": [
+    "client",
+    "developer"
+   ],
+   "replaces": "KS-OFFER-0025",
+   "replaced_by": null
   },
   {
    "source": "kintsugi",
@@ -3530,9 +4205,9 @@
    "developer": null,
    "estimate_h": 2,
    "price_usd": 50,
-   "dev_usd": 40,
-   "fee_usd": 10,
-   "status": "open",
+   "dev_usd": 40.0,
+   "fee_usd": 10.0,
+   "status": "withdrawn",
    "contract_url": "https://bwalletx.com/kintsugi/work",
    "text_url": "https://bwalletx.com/data/kintsugi-offers/KS-OFFER-0026.txt",
    "page_url": "https://bwalletx.com/credits",
@@ -3542,7 +4217,35 @@
    "signers": [
     "client",
     "developer"
-   ]
+   ],
+   "replaces": null,
+   "replaced_by": "KS-OFFER-0026-v2"
+  },
+  {
+   "source": "kintsugi",
+   "id": "KS-OFFER-0026-v2",
+   "kind": "tender",
+   "title": "Credits: prepaid credit for services",
+   "task": "Write and publish a blog post for Credits: prepaid credit for services (bwalletx.com/credits)",
+   "client": "The Bitcoin Corporation Ltd",
+   "developer": null,
+   "estimate_h": 0.25,
+   "price_usd": 1.0,
+   "dev_usd": 0.8,
+   "fee_usd": 0.2,
+   "status": "open",
+   "contract_url": "https://bwalletx.com/kintsugi/work",
+   "text_url": "https://bwalletx.com/data/kintsugi-offers/KS-OFFER-0026-v2.txt",
+   "page_url": "https://bwalletx.com/credits",
+   "stamp_txid": null,
+   "paid_txids": [],
+   "client_handle": null,
+   "signers": [
+    "client",
+    "developer"
+   ],
+   "replaces": "KS-OFFER-0026",
+   "replaced_by": null
   },
   {
    "source": "kintsugi",
@@ -3554,9 +4257,9 @@
    "developer": null,
    "estimate_h": 2,
    "price_usd": 50,
-   "dev_usd": 40,
-   "fee_usd": 10,
-   "status": "open",
+   "dev_usd": 40.0,
+   "fee_usd": 10.0,
+   "status": "withdrawn",
    "contract_url": "https://bwalletx.com/kintsugi/work",
    "text_url": "https://bwalletx.com/data/kintsugi-offers/KS-OFFER-0027.txt",
    "page_url": "https://bwalletx.com/culture",
@@ -3566,7 +4269,35 @@
    "signers": [
     "client",
     "developer"
-   ]
+   ],
+   "replaces": null,
+   "replaced_by": "KS-OFFER-0027-v2"
+  },
+  {
+   "source": "kintsugi",
+   "id": "KS-OFFER-0027-v2",
+   "kind": "tender",
+   "title": "Culture: make it on BSV",
+   "task": "Write and publish a blog post for Culture: make it on BSV (bwalletx.com/culture)",
+   "client": "The Bitcoin Corporation Ltd",
+   "developer": null,
+   "estimate_h": 0.25,
+   "price_usd": 1.0,
+   "dev_usd": 0.8,
+   "fee_usd": 0.2,
+   "status": "open",
+   "contract_url": "https://bwalletx.com/kintsugi/work",
+   "text_url": "https://bwalletx.com/data/kintsugi-offers/KS-OFFER-0027-v2.txt",
+   "page_url": "https://bwalletx.com/culture",
+   "stamp_txid": null,
+   "paid_txids": [],
+   "client_handle": null,
+   "signers": [
+    "client",
+    "developer"
+   ],
+   "replaces": "KS-OFFER-0027",
+   "replaced_by": null
   },
   {
    "source": "kintsugi",
@@ -3578,9 +4309,9 @@
    "developer": null,
    "estimate_h": 2,
    "price_usd": 50,
-   "dev_usd": 40,
-   "fee_usd": 10,
-   "status": "open",
+   "dev_usd": 40.0,
+   "fee_usd": 10.0,
+   "status": "withdrawn",
    "contract_url": "https://bwalletx.com/kintsugi/work",
    "text_url": "https://bwalletx.com/data/kintsugi-offers/KS-OFFER-0028.txt",
    "page_url": "https://bwalletx.com/desktop",
@@ -3590,7 +4321,35 @@
    "signers": [
     "client",
     "developer"
-   ]
+   ],
+   "replaces": null,
+   "replaced_by": "KS-OFFER-0028-v2"
+  },
+  {
+   "source": "kintsugi",
+   "id": "KS-OFFER-0028-v2",
+   "kind": "tender",
+   "title": "bWalletX Desktop",
+   "task": "Write and publish a blog post for bWalletX Desktop (bwalletx.com/desktop)",
+   "client": "The Bitcoin Corporation Ltd",
+   "developer": null,
+   "estimate_h": 0.25,
+   "price_usd": 1.0,
+   "dev_usd": 0.8,
+   "fee_usd": 0.2,
+   "status": "open",
+   "contract_url": "https://bwalletx.com/kintsugi/work",
+   "text_url": "https://bwalletx.com/data/kintsugi-offers/KS-OFFER-0028-v2.txt",
+   "page_url": "https://bwalletx.com/desktop",
+   "stamp_txid": null,
+   "paid_txids": [],
+   "client_handle": null,
+   "signers": [
+    "client",
+    "developer"
+   ],
+   "replaces": "KS-OFFER-0028",
+   "replaced_by": null
   },
   {
    "source": "kintsugi",
@@ -3602,9 +4361,9 @@
    "developer": null,
    "estimate_h": 2,
    "price_usd": 50,
-   "dev_usd": 40,
-   "fee_usd": 10,
-   "status": "open",
+   "dev_usd": 40.0,
+   "fee_usd": 10.0,
+   "status": "withdrawn",
    "contract_url": "https://bwalletx.com/kintsugi/work",
    "text_url": "https://bwalletx.com/data/kintsugi-offers/KS-OFFER-0029.txt",
    "page_url": "https://bwalletx.com/developers",
@@ -3614,7 +4373,35 @@
    "signers": [
     "client",
     "developer"
-   ]
+   ],
+   "replaces": null,
+   "replaced_by": "KS-OFFER-0029-v2"
+  },
+  {
+   "source": "kintsugi",
+   "id": "KS-OFFER-0029-v2",
+   "kind": "tender",
+   "title": "bWalletX for Developers",
+   "task": "Write and publish a blog post for bWalletX for Developers (bwalletx.com/developers)",
+   "client": "The Bitcoin Corporation Ltd",
+   "developer": null,
+   "estimate_h": 0.25,
+   "price_usd": 1.0,
+   "dev_usd": 0.8,
+   "fee_usd": 0.2,
+   "status": "open",
+   "contract_url": "https://bwalletx.com/kintsugi/work",
+   "text_url": "https://bwalletx.com/data/kintsugi-offers/KS-OFFER-0029-v2.txt",
+   "page_url": "https://bwalletx.com/developers",
+   "stamp_txid": null,
+   "paid_txids": [],
+   "client_handle": null,
+   "signers": [
+    "client",
+    "developer"
+   ],
+   "replaces": "KS-OFFER-0029",
+   "replaced_by": null
   },
   {
    "source": "kintsugi",
@@ -3626,9 +4413,9 @@
    "developer": null,
    "estimate_h": 2,
    "price_usd": 50,
-   "dev_usd": 40,
-   "fee_usd": 10,
-   "status": "open",
+   "dev_usd": 40.0,
+   "fee_usd": 10.0,
+   "status": "withdrawn",
    "contract_url": "https://bwalletx.com/kintsugi/work",
    "text_url": "https://bwalletx.com/data/kintsugi-offers/KS-OFFER-0030.txt",
    "page_url": "https://bwalletx.com/direct",
@@ -3638,7 +4425,35 @@
    "signers": [
     "client",
     "developer"
-   ]
+   ],
+   "replaces": null,
+   "replaced_by": "KS-OFFER-0030-v2"
+  },
+  {
+   "source": "kintsugi",
+   "id": "KS-OFFER-0030-v2",
+   "kind": "tender",
+   "title": "bWallet Direct: sign in straight from your own wallet",
+   "task": "Write and publish a blog post for bWallet Direct: sign in straight from your own wallet (bwalletx.com/direct)",
+   "client": "The Bitcoin Corporation Ltd",
+   "developer": null,
+   "estimate_h": 0.25,
+   "price_usd": 1.0,
+   "dev_usd": 0.8,
+   "fee_usd": 0.2,
+   "status": "open",
+   "contract_url": "https://bwalletx.com/kintsugi/work",
+   "text_url": "https://bwalletx.com/data/kintsugi-offers/KS-OFFER-0030-v2.txt",
+   "page_url": "https://bwalletx.com/direct",
+   "stamp_txid": null,
+   "paid_txids": [],
+   "client_handle": null,
+   "signers": [
+    "client",
+    "developer"
+   ],
+   "replaces": "KS-OFFER-0030",
+   "replaced_by": null
   },
   {
    "source": "kintsugi",
@@ -3650,9 +4465,9 @@
    "developer": null,
    "estimate_h": 2,
    "price_usd": 50,
-   "dev_usd": 40,
-   "fee_usd": 10,
-   "status": "open",
+   "dev_usd": 40.0,
+   "fee_usd": 10.0,
+   "status": "withdrawn",
    "contract_url": "https://bwalletx.com/kintsugi/work",
    "text_url": "https://bwalletx.com/data/kintsugi-offers/KS-OFFER-0031.txt",
    "page_url": "https://bwalletx.com/features",
@@ -3662,7 +4477,35 @@
    "signers": [
     "client",
     "developer"
-   ]
+   ],
+   "replaces": null,
+   "replaced_by": "KS-OFFER-0031-v2"
+  },
+  {
+   "source": "kintsugi",
+   "id": "KS-OFFER-0031-v2",
+   "kind": "tender",
+   "title": "bWalletX Features",
+   "task": "Write and publish a blog post for bWalletX Features (bwalletx.com/features)",
+   "client": "The Bitcoin Corporation Ltd",
+   "developer": null,
+   "estimate_h": 0.25,
+   "price_usd": 1.0,
+   "dev_usd": 0.8,
+   "fee_usd": 0.2,
+   "status": "open",
+   "contract_url": "https://bwalletx.com/kintsugi/work",
+   "text_url": "https://bwalletx.com/data/kintsugi-offers/KS-OFFER-0031-v2.txt",
+   "page_url": "https://bwalletx.com/features",
+   "stamp_txid": null,
+   "paid_txids": [],
+   "client_handle": null,
+   "signers": [
+    "client",
+    "developer"
+   ],
+   "replaces": "KS-OFFER-0031",
+   "replaced_by": null
   },
   {
    "source": "kintsugi",
@@ -3674,9 +4517,9 @@
    "developer": null,
    "estimate_h": 2,
    "price_usd": 50,
-   "dev_usd": 40,
-   "fee_usd": 10,
-   "status": "open",
+   "dev_usd": 40.0,
+   "fee_usd": 10.0,
+   "status": "withdrawn",
    "contract_url": "https://bwalletx.com/kintsugi/work",
    "text_url": "https://bwalletx.com/data/kintsugi-offers/KS-OFFER-0032.txt",
    "page_url": "https://bwalletx.com/flick-off",
@@ -3686,7 +4529,35 @@
    "signers": [
     "client",
     "developer"
-   ]
+   ],
+   "replaces": null,
+   "replaced_by": "KS-OFFER-0032-v2"
+  },
+  {
+   "source": "kintsugi",
+   "id": "KS-OFFER-0032-v2",
+   "kind": "tender",
+   "title": "FLICK OFF",
+   "task": "Write and publish a blog post for FLICK OFF (bwalletx.com/flick-off)",
+   "client": "The Bitcoin Corporation Ltd",
+   "developer": null,
+   "estimate_h": 0.25,
+   "price_usd": 1.0,
+   "dev_usd": 0.8,
+   "fee_usd": 0.2,
+   "status": "open",
+   "contract_url": "https://bwalletx.com/kintsugi/work",
+   "text_url": "https://bwalletx.com/data/kintsugi-offers/KS-OFFER-0032-v2.txt",
+   "page_url": "https://bwalletx.com/flick-off",
+   "stamp_txid": null,
+   "paid_txids": [],
+   "client_handle": null,
+   "signers": [
+    "client",
+    "developer"
+   ],
+   "replaces": "KS-OFFER-0032",
+   "replaced_by": null
   },
   {
    "source": "kintsugi",
@@ -3698,9 +4569,9 @@
    "developer": null,
    "estimate_h": 2,
    "price_usd": 50,
-   "dev_usd": 40,
-   "fee_usd": 10,
-   "status": "open",
+   "dev_usd": 40.0,
+   "fee_usd": 10.0,
+   "status": "withdrawn",
    "contract_url": "https://bwalletx.com/kintsugi/work",
    "text_url": "https://bwalletx.com/data/kintsugi-offers/KS-OFFER-0033.txt",
    "page_url": "https://bwalletx.com/games",
@@ -3710,7 +4581,35 @@
    "signers": [
     "client",
     "developer"
-   ]
+   ],
+   "replaces": null,
+   "replaced_by": "KS-OFFER-0033-v2"
+  },
+  {
+   "source": "kintsugi",
+   "id": "KS-OFFER-0033-v2",
+   "kind": "tender",
+   "title": "Games in bWalletX",
+   "task": "Write and publish a blog post for Games in bWalletX (bwalletx.com/games)",
+   "client": "The Bitcoin Corporation Ltd",
+   "developer": null,
+   "estimate_h": 0.25,
+   "price_usd": 1.0,
+   "dev_usd": 0.8,
+   "fee_usd": 0.2,
+   "status": "open",
+   "contract_url": "https://bwalletx.com/kintsugi/work",
+   "text_url": "https://bwalletx.com/data/kintsugi-offers/KS-OFFER-0033-v2.txt",
+   "page_url": "https://bwalletx.com/games",
+   "stamp_txid": null,
+   "paid_txids": [],
+   "client_handle": null,
+   "signers": [
+    "client",
+    "developer"
+   ],
+   "replaces": "KS-OFFER-0033",
+   "replaced_by": null
   },
   {
    "source": "kintsugi",
@@ -3722,9 +4621,9 @@
    "developer": null,
    "estimate_h": 2,
    "price_usd": 50,
-   "dev_usd": 40,
-   "fee_usd": 10,
-   "status": "open",
+   "dev_usd": 40.0,
+   "fee_usd": 10.0,
+   "status": "withdrawn",
    "contract_url": "https://bwalletx.com/kintsugi/work",
    "text_url": "https://bwalletx.com/data/kintsugi-offers/KS-OFFER-0034.txt",
    "page_url": "https://bwalletx.com/get",
@@ -3734,7 +4633,35 @@
    "signers": [
     "client",
     "developer"
-   ]
+   ],
+   "replaces": null,
+   "replaced_by": "KS-OFFER-0034-v2"
+  },
+  {
+   "source": "kintsugi",
+   "id": "KS-OFFER-0034-v2",
+   "kind": "tender",
+   "title": "Get bWalletX",
+   "task": "Write and publish a blog post for Get bWalletX (bwalletx.com/get)",
+   "client": "The Bitcoin Corporation Ltd",
+   "developer": null,
+   "estimate_h": 0.25,
+   "price_usd": 1.0,
+   "dev_usd": 0.8,
+   "fee_usd": 0.2,
+   "status": "open",
+   "contract_url": "https://bwalletx.com/kintsugi/work",
+   "text_url": "https://bwalletx.com/data/kintsugi-offers/KS-OFFER-0034-v2.txt",
+   "page_url": "https://bwalletx.com/get",
+   "stamp_txid": null,
+   "paid_txids": [],
+   "client_handle": null,
+   "signers": [
+    "client",
+    "developer"
+   ],
+   "replaces": "KS-OFFER-0034",
+   "replaced_by": null
   },
   {
    "source": "kintsugi",
@@ -3746,9 +4673,9 @@
    "developer": null,
    "estimate_h": 2,
    "price_usd": 50,
-   "dev_usd": 40,
-   "fee_usd": 10,
-   "status": "open",
+   "dev_usd": 40.0,
+   "fee_usd": 10.0,
+   "status": "withdrawn",
    "contract_url": "https://bwalletx.com/kintsugi/work",
    "text_url": "https://bwalletx.com/data/kintsugi-offers/KS-OFFER-0035.txt",
    "page_url": "https://bwalletx.com/gigs",
@@ -3758,7 +4685,35 @@
    "signers": [
     "client",
     "developer"
-   ]
+   ],
+   "replaces": null,
+   "replaced_by": "KS-OFFER-0035-v2"
+  },
+  {
+   "source": "kintsugi",
+   "id": "KS-OFFER-0035-v2",
+   "kind": "tender",
+   "title": "bGigs in bWalletX",
+   "task": "Write and publish a blog post for bGigs in bWalletX (bwalletx.com/gigs)",
+   "client": "The Bitcoin Corporation Ltd",
+   "developer": null,
+   "estimate_h": 0.25,
+   "price_usd": 1.0,
+   "dev_usd": 0.8,
+   "fee_usd": 0.2,
+   "status": "open",
+   "contract_url": "https://bwalletx.com/kintsugi/work",
+   "text_url": "https://bwalletx.com/data/kintsugi-offers/KS-OFFER-0035-v2.txt",
+   "page_url": "https://bwalletx.com/gigs",
+   "stamp_txid": null,
+   "paid_txids": [],
+   "client_handle": null,
+   "signers": [
+    "client",
+    "developer"
+   ],
+   "replaces": "KS-OFFER-0035",
+   "replaced_by": null
   },
   {
    "source": "kintsugi",
@@ -3770,9 +4725,9 @@
    "developer": null,
    "estimate_h": 2,
    "price_usd": 50,
-   "dev_usd": 40,
-   "fee_usd": 10,
-   "status": "open",
+   "dev_usd": 40.0,
+   "fee_usd": 10.0,
+   "status": "withdrawn",
    "contract_url": "https://bwalletx.com/kintsugi/work",
    "text_url": "https://bwalletx.com/data/kintsugi-offers/KS-OFFER-0036.txt",
    "page_url": "https://bwalletx.com/happy-b",
@@ -3782,7 +4737,35 @@
    "signers": [
     "client",
     "developer"
-   ]
+   ],
+   "replaces": null,
+   "replaced_by": "KS-OFFER-0036-v2"
+  },
+  {
+   "source": "kintsugi",
+   "id": "KS-OFFER-0036-v2",
+   "kind": "tender",
+   "title": "Happy b-day cards · make with b, mint, send by bMail",
+   "task": "Write and publish a blog post for Happy b-day cards · make with b, mint, send by bMail (bwalletx.com/happy-b)",
+   "client": "The Bitcoin Corporation Ltd",
+   "developer": null,
+   "estimate_h": 0.25,
+   "price_usd": 1.0,
+   "dev_usd": 0.8,
+   "fee_usd": 0.2,
+   "status": "open",
+   "contract_url": "https://bwalletx.com/kintsugi/work",
+   "text_url": "https://bwalletx.com/data/kintsugi-offers/KS-OFFER-0036-v2.txt",
+   "page_url": "https://bwalletx.com/happy-b",
+   "stamp_txid": null,
+   "paid_txids": [],
+   "client_handle": null,
+   "signers": [
+    "client",
+    "developer"
+   ],
+   "replaces": "KS-OFFER-0036",
+   "replaced_by": null
   },
   {
    "source": "kintsugi",
@@ -3794,9 +4777,9 @@
    "developer": null,
    "estimate_h": 2,
    "price_usd": 50,
-   "dev_usd": 40,
-   "fee_usd": 10,
-   "status": "open",
+   "dev_usd": 40.0,
+   "fee_usd": 10.0,
+   "status": "withdrawn",
    "contract_url": "https://bwalletx.com/kintsugi/work",
    "text_url": "https://bwalletx.com/data/kintsugi-offers/KS-OFFER-0037.txt",
    "page_url": "https://bwalletx.com/hodl-my-b",
@@ -3806,7 +4789,35 @@
    "signers": [
     "client",
     "developer"
-   ]
+   ],
+   "replaces": null,
+   "replaced_by": "KS-OFFER-0037-v2"
+  },
+  {
+   "source": "kintsugi",
+   "id": "KS-OFFER-0037-v2",
+   "kind": "tender",
+   "title": "Hodl my b",
+   "task": "Write and publish a blog post for Hodl my b (bwalletx.com/hodl-my-b)",
+   "client": "The Bitcoin Corporation Ltd",
+   "developer": null,
+   "estimate_h": 0.25,
+   "price_usd": 1.0,
+   "dev_usd": 0.8,
+   "fee_usd": 0.2,
+   "status": "open",
+   "contract_url": "https://bwalletx.com/kintsugi/work",
+   "text_url": "https://bwalletx.com/data/kintsugi-offers/KS-OFFER-0037-v2.txt",
+   "page_url": "https://bwalletx.com/hodl-my-b",
+   "stamp_txid": null,
+   "paid_txids": [],
+   "client_handle": null,
+   "signers": [
+    "client",
+    "developer"
+   ],
+   "replaces": "KS-OFFER-0037",
+   "replaced_by": null
   },
   {
    "source": "kintsugi",
@@ -3818,9 +4829,9 @@
    "developer": null,
    "estimate_h": 2,
    "price_usd": 50,
-   "dev_usd": 40,
-   "fee_usd": 10,
-   "status": "open",
+   "dev_usd": 40.0,
+   "fee_usd": 10.0,
+   "status": "withdrawn",
    "contract_url": "https://bwalletx.com/kintsugi/work",
    "text_url": "https://bwalletx.com/data/kintsugi-offers/KS-OFFER-0038.txt",
    "page_url": "https://bwalletx.com/hodl-my-b/0",
@@ -3830,7 +4841,35 @@
    "signers": [
     "client",
     "developer"
-   ]
+   ],
+   "replaces": null,
+   "replaced_by": "KS-OFFER-0038-v2"
+  },
+  {
+   "source": "kintsugi",
+   "id": "KS-OFFER-0038-v2",
+   "kind": "tender",
+   "title": "Hodl my b, Edition 0: The whole story",
+   "task": "Write and publish a blog post for Hodl my b, Edition 0: The whole story (bwalletx.com/hodl-my-b/0)",
+   "client": "The Bitcoin Corporation Ltd",
+   "developer": null,
+   "estimate_h": 0.25,
+   "price_usd": 1.0,
+   "dev_usd": 0.8,
+   "fee_usd": 0.2,
+   "status": "open",
+   "contract_url": "https://bwalletx.com/kintsugi/work",
+   "text_url": "https://bwalletx.com/data/kintsugi-offers/KS-OFFER-0038-v2.txt",
+   "page_url": "https://bwalletx.com/hodl-my-b/0",
+   "stamp_txid": null,
+   "paid_txids": [],
+   "client_handle": null,
+   "signers": [
+    "client",
+    "developer"
+   ],
+   "replaces": "KS-OFFER-0038",
+   "replaced_by": null
   },
   {
    "source": "kintsugi",
@@ -3842,9 +4881,9 @@
    "developer": null,
    "estimate_h": 2,
    "price_usd": 50,
-   "dev_usd": 40,
-   "fee_usd": 10,
-   "status": "open",
+   "dev_usd": 40.0,
+   "fee_usd": 10.0,
+   "status": "withdrawn",
    "contract_url": "https://bwalletx.com/kintsugi/work",
    "text_url": "https://bwalletx.com/data/kintsugi-offers/KS-OFFER-0039.txt",
    "page_url": "https://bwalletx.com/hodl-my-b/1",
@@ -3854,7 +4893,35 @@
    "signers": [
     "client",
     "developer"
-   ]
+   ],
+   "replaces": null,
+   "replaced_by": "KS-OFFER-0039-v2"
+  },
+  {
+   "source": "kintsugi",
+   "id": "KS-OFFER-0039-v2",
+   "kind": "tender",
+   "title": "Hodl my b, Edition 1: Don’t be bland. Get bRanded.",
+   "task": "Write and publish a blog post for Hodl my b, Edition 1: Don’t be bland. Get bRanded. (bwalletx.com/hodl-my-b/1)",
+   "client": "The Bitcoin Corporation Ltd",
+   "developer": null,
+   "estimate_h": 0.25,
+   "price_usd": 1.0,
+   "dev_usd": 0.8,
+   "fee_usd": 0.2,
+   "status": "open",
+   "contract_url": "https://bwalletx.com/kintsugi/work",
+   "text_url": "https://bwalletx.com/data/kintsugi-offers/KS-OFFER-0039-v2.txt",
+   "page_url": "https://bwalletx.com/hodl-my-b/1",
+   "stamp_txid": null,
+   "paid_txids": [],
+   "client_handle": null,
+   "signers": [
+    "client",
+    "developer"
+   ],
+   "replaces": "KS-OFFER-0039",
+   "replaced_by": null
   },
   {
    "source": "kintsugi",
@@ -3866,9 +4933,9 @@
    "developer": null,
    "estimate_h": 2,
    "price_usd": 50,
-   "dev_usd": 40,
-   "fee_usd": 10,
-   "status": "open",
+   "dev_usd": 40.0,
+   "fee_usd": 10.0,
+   "status": "withdrawn",
    "contract_url": "https://bwalletx.com/kintsugi/work",
    "text_url": "https://bwalletx.com/data/kintsugi-offers/KS-OFFER-0040.txt",
    "page_url": "https://bwalletx.com/hodlocker-on-b",
@@ -3878,7 +4945,35 @@
    "signers": [
     "client",
     "developer"
-   ]
+   ],
+   "replaces": null,
+   "replaced_by": "KS-OFFER-0040-v2"
+  },
+  {
+   "source": "kintsugi",
+   "id": "KS-OFFER-0040-v2",
+   "kind": "tender",
+   "title": "Hodlocker on b",
+   "task": "Write and publish a blog post for Hodlocker on b (bwalletx.com/hodlocker-on-b)",
+   "client": "The Bitcoin Corporation Ltd",
+   "developer": null,
+   "estimate_h": 0.25,
+   "price_usd": 1.0,
+   "dev_usd": 0.8,
+   "fee_usd": 0.2,
+   "status": "open",
+   "contract_url": "https://bwalletx.com/kintsugi/work",
+   "text_url": "https://bwalletx.com/data/kintsugi-offers/KS-OFFER-0040-v2.txt",
+   "page_url": "https://bwalletx.com/hodlocker-on-b",
+   "stamp_txid": null,
+   "paid_txids": [],
+   "client_handle": null,
+   "signers": [
+    "client",
+    "developer"
+   ],
+   "replaces": "KS-OFFER-0040",
+   "replaced_by": null
   },
   {
    "source": "kintsugi",
@@ -3890,9 +4985,9 @@
    "developer": null,
    "estimate_h": 2,
    "price_usd": 50,
-   "dev_usd": 40,
-   "fee_usd": 10,
-   "status": "open",
+   "dev_usd": 40.0,
+   "fee_usd": 10.0,
+   "status": "withdrawn",
    "contract_url": "https://bwalletx.com/kintsugi/work",
    "text_url": "https://bwalletx.com/data/kintsugi-offers/KS-OFFER-0041.txt",
    "page_url": "https://bwalletx.com/hold-to-talk",
@@ -3902,7 +4997,35 @@
    "signers": [
     "client",
     "developer"
-   ]
+   ],
+   "replaces": null,
+   "replaced_by": "KS-OFFER-0041-v2"
+  },
+  {
+   "source": "kintsugi",
+   "id": "KS-OFFER-0041-v2",
+   "kind": "tender",
+   "title": "Hold to talk to b",
+   "task": "Write and publish a blog post for Hold to talk to b (bwalletx.com/hold-to-talk)",
+   "client": "The Bitcoin Corporation Ltd",
+   "developer": null,
+   "estimate_h": 0.25,
+   "price_usd": 1.0,
+   "dev_usd": 0.8,
+   "fee_usd": 0.2,
+   "status": "open",
+   "contract_url": "https://bwalletx.com/kintsugi/work",
+   "text_url": "https://bwalletx.com/data/kintsugi-offers/KS-OFFER-0041-v2.txt",
+   "page_url": "https://bwalletx.com/hold-to-talk",
+   "stamp_txid": null,
+   "paid_txids": [],
+   "client_handle": null,
+   "signers": [
+    "client",
+    "developer"
+   ],
+   "replaces": "KS-OFFER-0041",
+   "replaced_by": null
   },
   {
    "source": "kintsugi",
@@ -3914,9 +5037,9 @@
    "developer": null,
    "estimate_h": 2,
    "price_usd": 50,
-   "dev_usd": 40,
-   "fee_usd": 10,
-   "status": "open",
+   "dev_usd": 40.0,
+   "fee_usd": 10.0,
+   "status": "withdrawn",
    "contract_url": "https://bwalletx.com/kintsugi/work",
    "text_url": "https://bwalletx.com/data/kintsugi-offers/KS-OFFER-0042.txt",
    "page_url": "https://bwalletx.com/jobs",
@@ -3926,7 +5049,35 @@
    "signers": [
     "client",
     "developer"
-   ]
+   ],
+   "replaces": null,
+   "replaced_by": "KS-OFFER-0042-v2"
+  },
+  {
+   "source": "kintsugi",
+   "id": "KS-OFFER-0042-v2",
+   "kind": "tender",
+   "title": "Jobs: paid work, paid in BSV",
+   "task": "Write and publish a blog post for Jobs: paid work, paid in BSV (bwalletx.com/jobs)",
+   "client": "The Bitcoin Corporation Ltd",
+   "developer": null,
+   "estimate_h": 0.25,
+   "price_usd": 1.0,
+   "dev_usd": 0.8,
+   "fee_usd": 0.2,
+   "status": "open",
+   "contract_url": "https://bwalletx.com/kintsugi/work",
+   "text_url": "https://bwalletx.com/data/kintsugi-offers/KS-OFFER-0042-v2.txt",
+   "page_url": "https://bwalletx.com/jobs",
+   "stamp_txid": null,
+   "paid_txids": [],
+   "client_handle": null,
+   "signers": [
+    "client",
+    "developer"
+   ],
+   "replaces": "KS-OFFER-0042",
+   "replaced_by": null
   },
   {
    "source": "kintsugi",
@@ -3938,9 +5089,9 @@
    "developer": null,
    "estimate_h": 2,
    "price_usd": 50,
-   "dev_usd": 40,
-   "fee_usd": 10,
-   "status": "open",
+   "dev_usd": 40.0,
+   "fee_usd": 10.0,
+   "status": "withdrawn",
    "contract_url": "https://bwalletx.com/kintsugi/work",
    "text_url": "https://bwalletx.com/data/kintsugi-offers/KS-OFFER-0043.txt",
    "page_url": "https://bwalletx.com/migrate",
@@ -3950,7 +5101,35 @@
    "signers": [
     "client",
     "developer"
-   ]
+   ],
+   "replaces": null,
+   "replaced_by": "KS-OFFER-0043-v2"
+  },
+  {
+   "source": "kintsugi",
+   "id": "KS-OFFER-0043-v2",
+   "kind": "tender",
+   "title": "Move to bWalletX",
+   "task": "Write and publish a blog post for Move to bWalletX (bwalletx.com/migrate)",
+   "client": "The Bitcoin Corporation Ltd",
+   "developer": null,
+   "estimate_h": 0.25,
+   "price_usd": 1.0,
+   "dev_usd": 0.8,
+   "fee_usd": 0.2,
+   "status": "open",
+   "contract_url": "https://bwalletx.com/kintsugi/work",
+   "text_url": "https://bwalletx.com/data/kintsugi-offers/KS-OFFER-0043-v2.txt",
+   "page_url": "https://bwalletx.com/migrate",
+   "stamp_txid": null,
+   "paid_txids": [],
+   "client_handle": null,
+   "signers": [
+    "client",
+    "developer"
+   ],
+   "replaces": "KS-OFFER-0043",
+   "replaced_by": null
   },
   {
    "source": "kintsugi",
@@ -3962,9 +5141,9 @@
    "developer": null,
    "estimate_h": 2,
    "price_usd": 50,
-   "dev_usd": 40,
-   "fee_usd": 10,
-   "status": "open",
+   "dev_usd": 40.0,
+   "fee_usd": 10.0,
+   "status": "withdrawn",
    "contract_url": "https://bwalletx.com/kintsugi/work",
    "text_url": "https://bwalletx.com/data/kintsugi-offers/KS-OFFER-0044.txt",
    "page_url": "https://bwalletx.com/newsletter",
@@ -3974,7 +5153,35 @@
    "signers": [
     "client",
     "developer"
-   ]
+   ],
+   "replaces": null,
+   "replaced_by": "KS-OFFER-0044-v2"
+  },
+  {
+   "source": "kintsugi",
+   "id": "KS-OFFER-0044-v2",
+   "kind": "tender",
+   "title": "Newsletter",
+   "task": "Write and publish a blog post for Newsletter (bwalletx.com/newsletter)",
+   "client": "The Bitcoin Corporation Ltd",
+   "developer": null,
+   "estimate_h": 0.25,
+   "price_usd": 1.0,
+   "dev_usd": 0.8,
+   "fee_usd": 0.2,
+   "status": "open",
+   "contract_url": "https://bwalletx.com/kintsugi/work",
+   "text_url": "https://bwalletx.com/data/kintsugi-offers/KS-OFFER-0044-v2.txt",
+   "page_url": "https://bwalletx.com/newsletter",
+   "stamp_txid": null,
+   "paid_txids": [],
+   "client_handle": null,
+   "signers": [
+    "client",
+    "developer"
+   ],
+   "replaces": "KS-OFFER-0044",
+   "replaced_by": null
   },
   {
    "source": "kintsugi",
@@ -3986,9 +5193,9 @@
    "developer": null,
    "estimate_h": 2,
    "price_usd": 50,
-   "dev_usd": 40,
-   "fee_usd": 10,
-   "status": "open",
+   "dev_usd": 40.0,
+   "fee_usd": 10.0,
+   "status": "withdrawn",
    "contract_url": "https://bwalletx.com/kintsugi/work",
    "text_url": "https://bwalletx.com/data/kintsugi-offers/KS-OFFER-0045.txt",
    "page_url": "https://bwalletx.com/partners",
@@ -3998,7 +5205,35 @@
    "signers": [
     "client",
     "developer"
-   ]
+   ],
+   "replaces": null,
+   "replaced_by": "KS-OFFER-0045-v2"
+  },
+  {
+   "source": "kintsugi",
+   "id": "KS-OFFER-0045-v2",
+   "kind": "tender",
+   "title": "Partners: refer people, get a commission",
+   "task": "Write and publish a blog post for Partners: refer people, get a commission (bwalletx.com/partners)",
+   "client": "The Bitcoin Corporation Ltd",
+   "developer": null,
+   "estimate_h": 0.25,
+   "price_usd": 1.0,
+   "dev_usd": 0.8,
+   "fee_usd": 0.2,
+   "status": "open",
+   "contract_url": "https://bwalletx.com/kintsugi/work",
+   "text_url": "https://bwalletx.com/data/kintsugi-offers/KS-OFFER-0045-v2.txt",
+   "page_url": "https://bwalletx.com/partners",
+   "stamp_txid": null,
+   "paid_txids": [],
+   "client_handle": null,
+   "signers": [
+    "client",
+    "developer"
+   ],
+   "replaces": "KS-OFFER-0045",
+   "replaced_by": null
   },
   {
    "source": "kintsugi",
@@ -4010,9 +5245,9 @@
    "developer": null,
    "estimate_h": 2,
    "price_usd": 50,
-   "dev_usd": 40,
-   "fee_usd": 10,
-   "status": "open",
+   "dev_usd": 40.0,
+   "fee_usd": 10.0,
+   "status": "withdrawn",
    "contract_url": "https://bwalletx.com/kintsugi/work",
    "text_url": "https://bwalletx.com/data/kintsugi-offers/KS-OFFER-0046.txt",
    "page_url": "https://bwalletx.com/peck-on-b",
@@ -4022,7 +5257,35 @@
    "signers": [
     "client",
     "developer"
-   ]
+   ],
+   "replaces": null,
+   "replaced_by": "KS-OFFER-0046-v2"
+  },
+  {
+   "source": "kintsugi",
+   "id": "KS-OFFER-0046-v2",
+   "kind": "tender",
+   "title": "Peck on b",
+   "task": "Write and publish a blog post for Peck on b (bwalletx.com/peck-on-b)",
+   "client": "The Bitcoin Corporation Ltd",
+   "developer": null,
+   "estimate_h": 0.25,
+   "price_usd": 1.0,
+   "dev_usd": 0.8,
+   "fee_usd": 0.2,
+   "status": "open",
+   "contract_url": "https://bwalletx.com/kintsugi/work",
+   "text_url": "https://bwalletx.com/data/kintsugi-offers/KS-OFFER-0046-v2.txt",
+   "page_url": "https://bwalletx.com/peck-on-b",
+   "stamp_txid": null,
+   "paid_txids": [],
+   "client_handle": null,
+   "signers": [
+    "client",
+    "developer"
+   ],
+   "replaces": "KS-OFFER-0046",
+   "replaced_by": null
   },
   {
    "source": "kintsugi",
@@ -4034,9 +5297,9 @@
    "developer": null,
    "estimate_h": 2,
    "price_usd": 50,
-   "dev_usd": 40,
-   "fee_usd": 10,
-   "status": "open",
+   "dev_usd": 40.0,
+   "fee_usd": 10.0,
+   "status": "withdrawn",
    "contract_url": "https://bwalletx.com/kintsugi/work",
    "text_url": "https://bwalletx.com/data/kintsugi-offers/KS-OFFER-0047.txt",
    "page_url": "https://bwalletx.com/race-card",
@@ -4046,7 +5309,35 @@
    "signers": [
     "client",
     "developer"
-   ]
+   ],
+   "replaces": null,
+   "replaced_by": "KS-OFFER-0047-v2"
+  },
+  {
+   "source": "kintsugi",
+   "id": "KS-OFFER-0047-v2",
+   "kind": "tender",
+   "title": "bAcc RACE: the bAcc racing game",
+   "task": "Write and publish a blog post for bAcc RACE: the bAcc racing game (bwalletx.com/race-card)",
+   "client": "The Bitcoin Corporation Ltd",
+   "developer": null,
+   "estimate_h": 0.25,
+   "price_usd": 1.0,
+   "dev_usd": 0.8,
+   "fee_usd": 0.2,
+   "status": "open",
+   "contract_url": "https://bwalletx.com/kintsugi/work",
+   "text_url": "https://bwalletx.com/data/kintsugi-offers/KS-OFFER-0047-v2.txt",
+   "page_url": "https://bwalletx.com/race-card",
+   "stamp_txid": null,
+   "paid_txids": [],
+   "client_handle": null,
+   "signers": [
+    "client",
+    "developer"
+   ],
+   "replaces": "KS-OFFER-0047",
+   "replaced_by": null
   },
   {
    "source": "kintsugi",
@@ -4058,9 +5349,9 @@
    "developer": null,
    "estimate_h": 2,
    "price_usd": 50,
-   "dev_usd": 40,
-   "fee_usd": 10,
-   "status": "open",
+   "dev_usd": 40.0,
+   "fee_usd": 10.0,
+   "status": "withdrawn",
    "contract_url": "https://bwalletx.com/kintsugi/work",
    "text_url": "https://bwalletx.com/data/kintsugi-offers/KS-OFFER-0048.txt",
    "page_url": "https://bwalletx.com/recover-relayx",
@@ -4070,7 +5361,35 @@
    "signers": [
     "client",
     "developer"
-   ]
+   ],
+   "replaces": null,
+   "replaced_by": "KS-OFFER-0048-v2"
+  },
+  {
+   "source": "kintsugi",
+   "id": "KS-OFFER-0048-v2",
+   "kind": "tender",
+   "title": "Your RelayX NFTs are still yours",
+   "task": "Write and publish a blog post for Your RelayX NFTs are still yours (bwalletx.com/recover-relayx)",
+   "client": "The Bitcoin Corporation Ltd",
+   "developer": null,
+   "estimate_h": 0.25,
+   "price_usd": 1.0,
+   "dev_usd": 0.8,
+   "fee_usd": 0.2,
+   "status": "open",
+   "contract_url": "https://bwalletx.com/kintsugi/work",
+   "text_url": "https://bwalletx.com/data/kintsugi-offers/KS-OFFER-0048-v2.txt",
+   "page_url": "https://bwalletx.com/recover-relayx",
+   "stamp_txid": null,
+   "paid_txids": [],
+   "client_handle": null,
+   "signers": [
+    "client",
+    "developer"
+   ],
+   "replaces": "KS-OFFER-0048",
+   "replaced_by": null
   },
   {
    "source": "kintsugi",
@@ -4082,9 +5401,9 @@
    "developer": null,
    "estimate_h": 2,
    "price_usd": 50,
-   "dev_usd": 40,
-   "fee_usd": 10,
-   "status": "open",
+   "dev_usd": 40.0,
+   "fee_usd": 10.0,
+   "status": "withdrawn",
    "contract_url": "https://bwalletx.com/kintsugi/work",
    "text_url": "https://bwalletx.com/data/kintsugi-offers/KS-OFFER-0049.txt",
    "page_url": "https://bwalletx.com/relayx-on-b",
@@ -4094,7 +5413,35 @@
    "signers": [
     "client",
     "developer"
-   ]
+   ],
+   "replaces": null,
+   "replaced_by": "KS-OFFER-0049-v2"
+  },
+  {
+   "source": "kintsugi",
+   "id": "KS-OFFER-0049-v2",
+   "kind": "tender",
+   "title": "RelayX on b",
+   "task": "Write and publish a blog post for RelayX on b (bwalletx.com/relayx-on-b)",
+   "client": "The Bitcoin Corporation Ltd",
+   "developer": null,
+   "estimate_h": 0.25,
+   "price_usd": 1.0,
+   "dev_usd": 0.8,
+   "fee_usd": 0.2,
+   "status": "open",
+   "contract_url": "https://bwalletx.com/kintsugi/work",
+   "text_url": "https://bwalletx.com/data/kintsugi-offers/KS-OFFER-0049-v2.txt",
+   "page_url": "https://bwalletx.com/relayx-on-b",
+   "stamp_txid": null,
+   "paid_txids": [],
+   "client_handle": null,
+   "signers": [
+    "client",
+    "developer"
+   ],
+   "replaces": "KS-OFFER-0049",
+   "replaced_by": null
   },
   {
    "source": "kintsugi",
@@ -4106,9 +5453,9 @@
    "developer": null,
    "estimate_h": 2,
    "price_usd": 50,
-   "dev_usd": 40,
-   "fee_usd": 10,
-   "status": "open",
+   "dev_usd": 40.0,
+   "fee_usd": 10.0,
+   "status": "withdrawn",
    "contract_url": "https://bwalletx.com/kintsugi/work",
    "text_url": "https://bwalletx.com/data/kintsugi-offers/KS-OFFER-0050.txt",
    "page_url": "https://bwalletx.com/restore/moneybutton",
@@ -4118,7 +5465,35 @@
    "signers": [
     "client",
     "developer"
-   ]
+   ],
+   "replaces": null,
+   "replaced_by": "KS-OFFER-0050-v2"
+  },
+  {
+   "source": "kintsugi",
+   "id": "KS-OFFER-0050-v2",
+   "kind": "tender",
+   "title": "Coming from Money Button?",
+   "task": "Write and publish a blog post for Coming from Money Button? (bwalletx.com/restore/moneybutton)",
+   "client": "The Bitcoin Corporation Ltd",
+   "developer": null,
+   "estimate_h": 0.25,
+   "price_usd": 1.0,
+   "dev_usd": 0.8,
+   "fee_usd": 0.2,
+   "status": "open",
+   "contract_url": "https://bwalletx.com/kintsugi/work",
+   "text_url": "https://bwalletx.com/data/kintsugi-offers/KS-OFFER-0050-v2.txt",
+   "page_url": "https://bwalletx.com/restore/moneybutton",
+   "stamp_txid": null,
+   "paid_txids": [],
+   "client_handle": null,
+   "signers": [
+    "client",
+    "developer"
+   ],
+   "replaces": "KS-OFFER-0050",
+   "replaced_by": null
   },
   {
    "source": "kintsugi",
@@ -4130,9 +5505,9 @@
    "developer": null,
    "estimate_h": 2,
    "price_usd": 50,
-   "dev_usd": 40,
-   "fee_usd": 10,
-   "status": "open",
+   "dev_usd": 40.0,
+   "fee_usd": 10.0,
+   "status": "withdrawn",
    "contract_url": "https://bwalletx.com/kintsugi/work",
    "text_url": "https://bwalletx.com/data/kintsugi-offers/KS-OFFER-0051.txt",
    "page_url": "https://bwalletx.com/restore/panda",
@@ -4142,7 +5517,35 @@
    "signers": [
     "client",
     "developer"
-   ]
+   ],
+   "replaces": null,
+   "replaced_by": "KS-OFFER-0051-v2"
+  },
+  {
+   "source": "kintsugi",
+   "id": "KS-OFFER-0051-v2",
+   "kind": "tender",
+   "title": "Coming from Panda Wallet?",
+   "task": "Write and publish a blog post for Coming from Panda Wallet? (bwalletx.com/restore/panda)",
+   "client": "The Bitcoin Corporation Ltd",
+   "developer": null,
+   "estimate_h": 0.25,
+   "price_usd": 1.0,
+   "dev_usd": 0.8,
+   "fee_usd": 0.2,
+   "status": "open",
+   "contract_url": "https://bwalletx.com/kintsugi/work",
+   "text_url": "https://bwalletx.com/data/kintsugi-offers/KS-OFFER-0051-v2.txt",
+   "page_url": "https://bwalletx.com/restore/panda",
+   "stamp_txid": null,
+   "paid_txids": [],
+   "client_handle": null,
+   "signers": [
+    "client",
+    "developer"
+   ],
+   "replaces": "KS-OFFER-0051",
+   "replaced_by": null
   },
   {
    "source": "kintsugi",
@@ -4154,9 +5557,9 @@
    "developer": null,
    "estimate_h": 2,
    "price_usd": 50,
-   "dev_usd": 40,
-   "fee_usd": 10,
-   "status": "open",
+   "dev_usd": 40.0,
+   "fee_usd": 10.0,
+   "status": "withdrawn",
    "contract_url": "https://bwalletx.com/kintsugi/work",
    "text_url": "https://bwalletx.com/data/kintsugi-offers/KS-OFFER-0052.txt",
    "page_url": "https://bwalletx.com/restore/simplycash",
@@ -4166,7 +5569,35 @@
    "signers": [
     "client",
     "developer"
-   ]
+   ],
+   "replaces": null,
+   "replaced_by": "KS-OFFER-0052-v2"
+  },
+  {
+   "source": "kintsugi",
+   "id": "KS-OFFER-0052-v2",
+   "kind": "tender",
+   "title": "Coming from SimplyCash?",
+   "task": "Write and publish a blog post for Coming from SimplyCash? (bwalletx.com/restore/simplycash)",
+   "client": "The Bitcoin Corporation Ltd",
+   "developer": null,
+   "estimate_h": 0.25,
+   "price_usd": 1.0,
+   "dev_usd": 0.8,
+   "fee_usd": 0.2,
+   "status": "open",
+   "contract_url": "https://bwalletx.com/kintsugi/work",
+   "text_url": "https://bwalletx.com/data/kintsugi-offers/KS-OFFER-0052-v2.txt",
+   "page_url": "https://bwalletx.com/restore/simplycash",
+   "stamp_txid": null,
+   "paid_txids": [],
+   "client_handle": null,
+   "signers": [
+    "client",
+    "developer"
+   ],
+   "replaces": "KS-OFFER-0052",
+   "replaced_by": null
   },
   {
    "source": "kintsugi",
@@ -4178,9 +5609,9 @@
    "developer": null,
    "estimate_h": 2,
    "price_usd": 50,
-   "dev_usd": 40,
-   "fee_usd": 10,
-   "status": "open",
+   "dev_usd": 40.0,
+   "fee_usd": 10.0,
+   "status": "withdrawn",
    "contract_url": "https://bwalletx.com/kintsugi/work",
    "text_url": "https://bwalletx.com/data/kintsugi-offers/KS-OFFER-0053.txt",
    "page_url": "https://bwalletx.com/restore/twetch",
@@ -4190,7 +5621,35 @@
    "signers": [
     "client",
     "developer"
-   ]
+   ],
+   "replaces": null,
+   "replaced_by": "KS-OFFER-0053-v2"
+  },
+  {
+   "source": "kintsugi",
+   "id": "KS-OFFER-0053-v2",
+   "kind": "tender",
+   "title": "Coming from Twetch?",
+   "task": "Write and publish a blog post for Coming from Twetch? (bwalletx.com/restore/twetch)",
+   "client": "The Bitcoin Corporation Ltd",
+   "developer": null,
+   "estimate_h": 0.25,
+   "price_usd": 1.0,
+   "dev_usd": 0.8,
+   "fee_usd": 0.2,
+   "status": "open",
+   "contract_url": "https://bwalletx.com/kintsugi/work",
+   "text_url": "https://bwalletx.com/data/kintsugi-offers/KS-OFFER-0053-v2.txt",
+   "page_url": "https://bwalletx.com/restore/twetch",
+   "stamp_txid": null,
+   "paid_txids": [],
+   "client_handle": null,
+   "signers": [
+    "client",
+    "developer"
+   ],
+   "replaces": "KS-OFFER-0053",
+   "replaced_by": null
   },
   {
    "source": "kintsugi",
@@ -4202,9 +5661,9 @@
    "developer": null,
    "estimate_h": 2,
    "price_usd": 50,
-   "dev_usd": 40,
-   "fee_usd": 10,
-   "status": "open",
+   "dev_usd": 40.0,
+   "fee_usd": 10.0,
+   "status": "withdrawn",
    "contract_url": "https://bwalletx.com/kintsugi/work",
    "text_url": "https://bwalletx.com/data/kintsugi-offers/KS-OFFER-0054.txt",
    "page_url": "https://bwalletx.com/roadmap",
@@ -4214,7 +5673,35 @@
    "signers": [
     "client",
     "developer"
-   ]
+   ],
+   "replaces": null,
+   "replaced_by": "KS-OFFER-0054-v2"
+  },
+  {
+   "source": "kintsugi",
+   "id": "KS-OFFER-0054-v2",
+   "kind": "tender",
+   "title": "Roadmap",
+   "task": "Write and publish a blog post for Roadmap (bwalletx.com/roadmap)",
+   "client": "The Bitcoin Corporation Ltd",
+   "developer": null,
+   "estimate_h": 0.25,
+   "price_usd": 1.0,
+   "dev_usd": 0.8,
+   "fee_usd": 0.2,
+   "status": "open",
+   "contract_url": "https://bwalletx.com/kintsugi/work",
+   "text_url": "https://bwalletx.com/data/kintsugi-offers/KS-OFFER-0054-v2.txt",
+   "page_url": "https://bwalletx.com/roadmap",
+   "stamp_txid": null,
+   "paid_txids": [],
+   "client_handle": null,
+   "signers": [
+    "client",
+    "developer"
+   ],
+   "replaces": "KS-OFFER-0054",
+   "replaced_by": null
   },
   {
    "source": "kintsugi",
@@ -4226,9 +5713,9 @@
    "developer": null,
    "estimate_h": 2,
    "price_usd": 50,
-   "dev_usd": 40,
-   "fee_usd": 10,
-   "status": "open",
+   "dev_usd": 40.0,
+   "fee_usd": 10.0,
+   "status": "withdrawn",
    "contract_url": "https://bwalletx.com/kintsugi/work",
    "text_url": "https://bwalletx.com/data/kintsugi-offers/KS-OFFER-0055.txt",
    "page_url": "https://bwalletx.com/seedless-login",
@@ -4238,7 +5725,35 @@
    "signers": [
     "client",
     "developer"
-   ]
+   ],
+   "replaces": null,
+   "replaced_by": "KS-OFFER-0055-v2"
+  },
+  {
+   "source": "kintsugi",
+   "id": "KS-OFFER-0055-v2",
+   "kind": "tender",
+   "title": "Seedless login",
+   "task": "Write and publish a blog post for Seedless login (bwalletx.com/seedless-login)",
+   "client": "The Bitcoin Corporation Ltd",
+   "developer": null,
+   "estimate_h": 0.25,
+   "price_usd": 1.0,
+   "dev_usd": 0.8,
+   "fee_usd": 0.2,
+   "status": "open",
+   "contract_url": "https://bwalletx.com/kintsugi/work",
+   "text_url": "https://bwalletx.com/data/kintsugi-offers/KS-OFFER-0055-v2.txt",
+   "page_url": "https://bwalletx.com/seedless-login",
+   "stamp_txid": null,
+   "paid_txids": [],
+   "client_handle": null,
+   "signers": [
+    "client",
+    "developer"
+   ],
+   "replaces": "KS-OFFER-0055",
+   "replaced_by": null
   },
   {
    "source": "kintsugi",
@@ -4250,9 +5765,9 @@
    "developer": null,
    "estimate_h": 2,
    "price_usd": 50,
-   "dev_usd": 40,
-   "fee_usd": 10,
-   "status": "open",
+   "dev_usd": 40.0,
+   "fee_usd": 10.0,
+   "status": "withdrawn",
    "contract_url": "https://bwalletx.com/kintsugi/work",
    "text_url": "https://bwalletx.com/data/kintsugi-offers/KS-OFFER-0056.txt",
    "page_url": "https://bwalletx.com/seedless-signin",
@@ -4262,7 +5777,35 @@
    "signers": [
     "client",
     "developer"
-   ]
+   ],
+   "replaces": null,
+   "replaced_by": "KS-OFFER-0056-v2"
+  },
+  {
+   "source": "kintsugi",
+   "id": "KS-OFFER-0056-v2",
+   "kind": "tender",
+   "title": "Sign in with a passkey: open your wallet with your face or fingerprint",
+   "task": "Write and publish a blog post for Sign in with a passkey: open your wallet with your face or fingerprint (bwalletx.com/seedless-signin)",
+   "client": "The Bitcoin Corporation Ltd",
+   "developer": null,
+   "estimate_h": 0.25,
+   "price_usd": 1.0,
+   "dev_usd": 0.8,
+   "fee_usd": 0.2,
+   "status": "open",
+   "contract_url": "https://bwalletx.com/kintsugi/work",
+   "text_url": "https://bwalletx.com/data/kintsugi-offers/KS-OFFER-0056-v2.txt",
+   "page_url": "https://bwalletx.com/seedless-signin",
+   "stamp_txid": null,
+   "paid_txids": [],
+   "client_handle": null,
+   "signers": [
+    "client",
+    "developer"
+   ],
+   "replaces": "KS-OFFER-0056",
+   "replaced_by": null
   },
   {
    "source": "kintsugi",
@@ -4274,9 +5817,9 @@
    "developer": null,
    "estimate_h": 2,
    "price_usd": 50,
-   "dev_usd": 40,
-   "fee_usd": 10,
-   "status": "open",
+   "dev_usd": 40.0,
+   "fee_usd": 10.0,
+   "status": "withdrawn",
    "contract_url": "https://bwalletx.com/kintsugi/work",
    "text_url": "https://bwalletx.com/data/kintsugi-offers/KS-OFFER-0057.txt",
    "page_url": "https://bwalletx.com/services",
@@ -4286,7 +5829,35 @@
    "signers": [
     "client",
     "developer"
-   ]
+   ],
+   "replaces": null,
+   "replaced_by": "KS-OFFER-0057-v2"
+  },
+  {
+   "source": "kintsugi",
+   "id": "KS-OFFER-0057-v2",
+   "kind": "tender",
+   "title": "Our b*X services",
+   "task": "Write and publish a blog post for Our b*X services (bwalletx.com/services)",
+   "client": "The Bitcoin Corporation Ltd",
+   "developer": null,
+   "estimate_h": 0.25,
+   "price_usd": 1.0,
+   "dev_usd": 0.8,
+   "fee_usd": 0.2,
+   "status": "open",
+   "contract_url": "https://bwalletx.com/kintsugi/work",
+   "text_url": "https://bwalletx.com/data/kintsugi-offers/KS-OFFER-0057-v2.txt",
+   "page_url": "https://bwalletx.com/services",
+   "stamp_txid": null,
+   "paid_txids": [],
+   "client_handle": null,
+   "signers": [
+    "client",
+    "developer"
+   ],
+   "replaces": "KS-OFFER-0057",
+   "replaced_by": null
   },
   {
    "source": "kintsugi",
@@ -4298,9 +5869,9 @@
    "developer": null,
    "estimate_h": 2,
    "price_usd": 50,
-   "dev_usd": 40,
-   "fee_usd": 10,
-   "status": "open",
+   "dev_usd": 40.0,
+   "fee_usd": 10.0,
+   "status": "withdrawn",
    "contract_url": "https://bwalletx.com/kintsugi/work",
    "text_url": "https://bwalletx.com/data/kintsugi-offers/KS-OFFER-0058.txt",
    "page_url": "https://bwalletx.com/sign-in-button",
@@ -4310,7 +5881,35 @@
    "signers": [
     "client",
     "developer"
-   ]
+   ],
+   "replaces": null,
+   "replaced_by": "KS-OFFER-0058-v2"
+  },
+  {
+   "source": "kintsugi",
+   "id": "KS-OFFER-0058-v2",
+   "kind": "tender",
+   "title": "Add Sign in with bWalletX to your site",
+   "task": "Write and publish a blog post for Add Sign in with bWalletX to your site (bwalletx.com/sign-in-button)",
+   "client": "The Bitcoin Corporation Ltd",
+   "developer": null,
+   "estimate_h": 0.25,
+   "price_usd": 1.0,
+   "dev_usd": 0.8,
+   "fee_usd": 0.2,
+   "status": "open",
+   "contract_url": "https://bwalletx.com/kintsugi/work",
+   "text_url": "https://bwalletx.com/data/kintsugi-offers/KS-OFFER-0058-v2.txt",
+   "page_url": "https://bwalletx.com/sign-in-button",
+   "stamp_txid": null,
+   "paid_txids": [],
+   "client_handle": null,
+   "signers": [
+    "client",
+    "developer"
+   ],
+   "replaces": "KS-OFFER-0058",
+   "replaced_by": null
   },
   {
    "source": "kintsugi",
@@ -4322,9 +5921,9 @@
    "developer": null,
    "estimate_h": 2,
    "price_usd": 50,
-   "dev_usd": 40,
-   "fee_usd": 10,
-   "status": "open",
+   "dev_usd": 40.0,
+   "fee_usd": 10.0,
+   "status": "withdrawn",
    "contract_url": "https://bwalletx.com/kintsugi/work",
    "text_url": "https://bwalletx.com/data/kintsugi-offers/KS-OFFER-0059.txt",
    "page_url": "https://bwalletx.com/sms",
@@ -4334,7 +5933,35 @@
    "signers": [
     "client",
     "developer"
-   ]
+   ],
+   "replaces": null,
+   "replaced_by": "KS-OFFER-0059-v2"
+  },
+  {
+   "source": "kintsugi",
+   "id": "KS-OFFER-0059-v2",
+   "kind": "tender",
+   "title": "Bitcoin by text",
+   "task": "Write and publish a blog post for Bitcoin by text (bwalletx.com/sms)",
+   "client": "The Bitcoin Corporation Ltd",
+   "developer": null,
+   "estimate_h": 0.25,
+   "price_usd": 1.0,
+   "dev_usd": 0.8,
+   "fee_usd": 0.2,
+   "status": "open",
+   "contract_url": "https://bwalletx.com/kintsugi/work",
+   "text_url": "https://bwalletx.com/data/kintsugi-offers/KS-OFFER-0059-v2.txt",
+   "page_url": "https://bwalletx.com/sms",
+   "stamp_txid": null,
+   "paid_txids": [],
+   "client_handle": null,
+   "signers": [
+    "client",
+    "developer"
+   ],
+   "replaces": "KS-OFFER-0059",
+   "replaced_by": null
   },
   {
    "source": "kintsugi",
@@ -4346,9 +5973,9 @@
    "developer": null,
    "estimate_h": 2,
    "price_usd": 50,
-   "dev_usd": 40,
-   "fee_usd": 10,
-   "status": "open",
+   "dev_usd": 40.0,
+   "fee_usd": 10.0,
+   "status": "withdrawn",
    "contract_url": "https://bwalletx.com/kintsugi/work",
    "text_url": "https://bwalletx.com/data/kintsugi-offers/KS-OFFER-0060.txt",
    "page_url": "https://bwalletx.com/social",
@@ -4358,7 +5985,35 @@
    "signers": [
     "client",
     "developer"
-   ]
+   ],
+   "replaces": null,
+   "replaced_by": "KS-OFFER-0060-v2"
+  },
+  {
+   "source": "kintsugi",
+   "id": "KS-OFFER-0060-v2",
+   "kind": "tender",
+   "title": "bWalletX Social",
+   "task": "Write and publish a blog post for bWalletX Social (bwalletx.com/social)",
+   "client": "The Bitcoin Corporation Ltd",
+   "developer": null,
+   "estimate_h": 0.25,
+   "price_usd": 1.0,
+   "dev_usd": 0.8,
+   "fee_usd": 0.2,
+   "status": "open",
+   "contract_url": "https://bwalletx.com/kintsugi/work",
+   "text_url": "https://bwalletx.com/data/kintsugi-offers/KS-OFFER-0060-v2.txt",
+   "page_url": "https://bwalletx.com/social",
+   "stamp_txid": null,
+   "paid_txids": [],
+   "client_handle": null,
+   "signers": [
+    "client",
+    "developer"
+   ],
+   "replaces": "KS-OFFER-0060",
+   "replaced_by": null
   },
   {
    "source": "kintsugi",
@@ -4370,9 +6025,9 @@
    "developer": null,
    "estimate_h": 2,
    "price_usd": 50,
-   "dev_usd": 40,
-   "fee_usd": 10,
-   "status": "open",
+   "dev_usd": 40.0,
+   "fee_usd": 10.0,
+   "status": "withdrawn",
    "contract_url": "https://bwalletx.com/kintsugi/work",
    "text_url": "https://bwalletx.com/data/kintsugi-offers/KS-OFFER-0061.txt",
    "page_url": "https://bwalletx.com/streaming-payments",
@@ -4382,7 +6037,35 @@
    "signers": [
     "client",
     "developer"
-   ]
+   ],
+   "replaces": null,
+   "replaced_by": "KS-OFFER-0061-v2"
+  },
+  {
+   "source": "kintsugi",
+   "id": "KS-OFFER-0061-v2",
+   "kind": "tender",
+   "title": "Streaming payments: pay as you go",
+   "task": "Write and publish a blog post for Streaming payments: pay as you go (bwalletx.com/streaming-payments)",
+   "client": "The Bitcoin Corporation Ltd",
+   "developer": null,
+   "estimate_h": 0.25,
+   "price_usd": 1.0,
+   "dev_usd": 0.8,
+   "fee_usd": 0.2,
+   "status": "open",
+   "contract_url": "https://bwalletx.com/kintsugi/work",
+   "text_url": "https://bwalletx.com/data/kintsugi-offers/KS-OFFER-0061-v2.txt",
+   "page_url": "https://bwalletx.com/streaming-payments",
+   "stamp_txid": null,
+   "paid_txids": [],
+   "client_handle": null,
+   "signers": [
+    "client",
+    "developer"
+   ],
+   "replaces": "KS-OFFER-0061",
+   "replaced_by": null
   },
   {
    "source": "kintsugi",
@@ -4394,9 +6077,9 @@
    "developer": null,
    "estimate_h": 2,
    "price_usd": 50,
-   "dev_usd": 40,
-   "fee_usd": 10,
-   "status": "open",
+   "dev_usd": 40.0,
+   "fee_usd": 10.0,
+   "status": "withdrawn",
    "contract_url": "https://bwalletx.com/kintsugi/work",
    "text_url": "https://bwalletx.com/data/kintsugi-offers/KS-OFFER-0062.txt",
    "page_url": "https://bwalletx.com/sweep-simplycash",
@@ -4406,7 +6089,35 @@
    "signers": [
     "client",
     "developer"
-   ]
+   ],
+   "replaces": null,
+   "replaced_by": "KS-OFFER-0062-v2"
+  },
+  {
+   "source": "kintsugi",
+   "id": "KS-OFFER-0062-v2",
+   "kind": "tender",
+   "title": "Sweep SimplyCash into bWalletX",
+   "task": "Write and publish a blog post for Sweep SimplyCash into bWalletX (bwalletx.com/sweep-simplycash)",
+   "client": "The Bitcoin Corporation Ltd",
+   "developer": null,
+   "estimate_h": 0.25,
+   "price_usd": 1.0,
+   "dev_usd": 0.8,
+   "fee_usd": 0.2,
+   "status": "open",
+   "contract_url": "https://bwalletx.com/kintsugi/work",
+   "text_url": "https://bwalletx.com/data/kintsugi-offers/KS-OFFER-0062-v2.txt",
+   "page_url": "https://bwalletx.com/sweep-simplycash",
+   "stamp_txid": null,
+   "paid_txids": [],
+   "client_handle": null,
+   "signers": [
+    "client",
+    "developer"
+   ],
+   "replaces": "KS-OFFER-0062",
+   "replaced_by": null
   },
   {
    "source": "kintsugi",
@@ -4418,9 +6129,9 @@
    "developer": null,
    "estimate_h": 2,
    "price_usd": 50,
-   "dev_usd": 40,
-   "fee_usd": 10,
-   "status": "open",
+   "dev_usd": 40.0,
+   "fee_usd": 10.0,
+   "status": "withdrawn",
    "contract_url": "https://bwalletx.com/kintsugi/work",
    "text_url": "https://bwalletx.com/data/kintsugi-offers/KS-OFFER-0063.txt",
    "page_url": "https://bwalletx.com/terms",
@@ -4430,7 +6141,35 @@
    "signers": [
     "client",
     "developer"
-   ]
+   ],
+   "replaces": null,
+   "replaced_by": "KS-OFFER-0063-v2"
+  },
+  {
+   "source": "kintsugi",
+   "id": "KS-OFFER-0063-v2",
+   "kind": "tender",
+   "title": "Terms of Service · bWalletX (Beta)",
+   "task": "Write and publish a blog post for Terms of Service · bWalletX (Beta) (bwalletx.com/terms)",
+   "client": "The Bitcoin Corporation Ltd",
+   "developer": null,
+   "estimate_h": 0.25,
+   "price_usd": 1.0,
+   "dev_usd": 0.8,
+   "fee_usd": 0.2,
+   "status": "open",
+   "contract_url": "https://bwalletx.com/kintsugi/work",
+   "text_url": "https://bwalletx.com/data/kintsugi-offers/KS-OFFER-0063-v2.txt",
+   "page_url": "https://bwalletx.com/terms",
+   "stamp_txid": null,
+   "paid_txids": [],
+   "client_handle": null,
+   "signers": [
+    "client",
+    "developer"
+   ],
+   "replaces": "KS-OFFER-0063",
+   "replaced_by": null
   },
   {
    "source": "kintsugi",
@@ -4442,9 +6181,9 @@
    "developer": null,
    "estimate_h": 2,
    "price_usd": 50,
-   "dev_usd": 40,
-   "fee_usd": 10,
-   "status": "open",
+   "dev_usd": 40.0,
+   "fee_usd": 10.0,
+   "status": "withdrawn",
    "contract_url": "https://bwalletx.com/kintsugi/work",
    "text_url": "https://bwalletx.com/data/kintsugi-offers/KS-OFFER-0064.txt",
    "page_url": "https://bwalletx.com/themes-custom",
@@ -4454,7 +6193,35 @@
    "signers": [
     "client",
     "developer"
-   ]
+   ],
+   "replaces": null,
+   "replaced_by": "KS-OFFER-0064-v2"
+  },
+  {
+   "source": "kintsugi",
+   "id": "KS-OFFER-0064-v2",
+   "kind": "tender",
+   "title": "Branded wallets for businesses",
+   "task": "Write and publish a blog post for Branded wallets for businesses (bwalletx.com/themes-custom)",
+   "client": "The Bitcoin Corporation Ltd",
+   "developer": null,
+   "estimate_h": 0.25,
+   "price_usd": 1.0,
+   "dev_usd": 0.8,
+   "fee_usd": 0.2,
+   "status": "open",
+   "contract_url": "https://bwalletx.com/kintsugi/work",
+   "text_url": "https://bwalletx.com/data/kintsugi-offers/KS-OFFER-0064-v2.txt",
+   "page_url": "https://bwalletx.com/themes-custom",
+   "stamp_txid": null,
+   "paid_txids": [],
+   "client_handle": null,
+   "signers": [
+    "client",
+    "developer"
+   ],
+   "replaces": "KS-OFFER-0064",
+   "replaced_by": null
   },
   {
    "source": "kintsugi",
@@ -4466,9 +6233,9 @@
    "developer": null,
    "estimate_h": 2,
    "price_usd": 50,
-   "dev_usd": 40,
-   "fee_usd": 10,
-   "status": "open",
+   "dev_usd": 40.0,
+   "fee_usd": 10.0,
+   "status": "withdrawn",
    "contract_url": "https://bwalletx.com/kintsugi/work",
    "text_url": "https://bwalletx.com/data/kintsugi-offers/KS-OFFER-0065.txt",
    "page_url": "https://bwalletx.com/token-curves",
@@ -4478,7 +6245,35 @@
    "signers": [
     "client",
     "developer"
-   ]
+   ],
+   "replaces": null,
+   "replaced_by": "KS-OFFER-0065-v2"
+  },
+  {
+   "source": "kintsugi",
+   "id": "KS-OFFER-0065-v2",
+   "kind": "tender",
+   "title": "Token curves: how a person's token is priced",
+   "task": "Write and publish a blog post for Token curves: how a person's token is priced (bwalletx.com/token-curves)",
+   "client": "The Bitcoin Corporation Ltd",
+   "developer": null,
+   "estimate_h": 0.25,
+   "price_usd": 1.0,
+   "dev_usd": 0.8,
+   "fee_usd": 0.2,
+   "status": "open",
+   "contract_url": "https://bwalletx.com/kintsugi/work",
+   "text_url": "https://bwalletx.com/data/kintsugi-offers/KS-OFFER-0065-v2.txt",
+   "page_url": "https://bwalletx.com/token-curves",
+   "stamp_txid": null,
+   "paid_txids": [],
+   "client_handle": null,
+   "signers": [
+    "client",
+    "developer"
+   ],
+   "replaces": "KS-OFFER-0065",
+   "replaced_by": null
   },
   {
    "source": "kintsugi",
@@ -4490,9 +6285,9 @@
    "developer": null,
    "estimate_h": 2,
    "price_usd": 50,
-   "dev_usd": 40,
-   "fee_usd": 10,
-   "status": "open",
+   "dev_usd": 40.0,
+   "fee_usd": 10.0,
+   "status": "withdrawn",
    "contract_url": "https://bwalletx.com/kintsugi/work",
    "text_url": "https://bwalletx.com/data/kintsugi-offers/KS-OFFER-0066.txt",
    "page_url": "https://bwalletx.com/token-locking",
@@ -4502,7 +6297,35 @@
    "signers": [
     "client",
     "developer"
-   ]
+   ],
+   "replaces": null,
+   "replaced_by": "KS-OFFER-0066-v2"
+  },
+  {
+   "source": "kintsugi",
+   "id": "KS-OFFER-0066-v2",
+   "kind": "tender",
+   "title": "Token locking",
+   "task": "Write and publish a blog post for Token locking (bwalletx.com/token-locking)",
+   "client": "The Bitcoin Corporation Ltd",
+   "developer": null,
+   "estimate_h": 0.25,
+   "price_usd": 1.0,
+   "dev_usd": 0.8,
+   "fee_usd": 0.2,
+   "status": "open",
+   "contract_url": "https://bwalletx.com/kintsugi/work",
+   "text_url": "https://bwalletx.com/data/kintsugi-offers/KS-OFFER-0066-v2.txt",
+   "page_url": "https://bwalletx.com/token-locking",
+   "stamp_txid": null,
+   "paid_txids": [],
+   "client_handle": null,
+   "signers": [
+    "client",
+    "developer"
+   ],
+   "replaces": "KS-OFFER-0066",
+   "replaced_by": null
   },
   {
    "source": "kintsugi",
@@ -4514,9 +6337,9 @@
    "developer": null,
    "estimate_h": 2,
    "price_usd": 50,
-   "dev_usd": 40,
-   "fee_usd": 10,
-   "status": "open",
+   "dev_usd": 40.0,
+   "fee_usd": 10.0,
+   "status": "withdrawn",
    "contract_url": "https://bwalletx.com/kintsugi/work",
    "text_url": "https://bwalletx.com/data/kintsugi-offers/KS-OFFER-0067.txt",
    "page_url": "https://bwalletx.com/treechat-on-b",
@@ -4526,7 +6349,35 @@
    "signers": [
     "client",
     "developer"
-   ]
+   ],
+   "replaces": null,
+   "replaced_by": "KS-OFFER-0067-v2"
+  },
+  {
+   "source": "kintsugi",
+   "id": "KS-OFFER-0067-v2",
+   "kind": "tender",
+   "title": "Treechat on b",
+   "task": "Write and publish a blog post for Treechat on b (bwalletx.com/treechat-on-b)",
+   "client": "The Bitcoin Corporation Ltd",
+   "developer": null,
+   "estimate_h": 0.25,
+   "price_usd": 1.0,
+   "dev_usd": 0.8,
+   "fee_usd": 0.2,
+   "status": "open",
+   "contract_url": "https://bwalletx.com/kintsugi/work",
+   "text_url": "https://bwalletx.com/data/kintsugi-offers/KS-OFFER-0067-v2.txt",
+   "page_url": "https://bwalletx.com/treechat-on-b",
+   "stamp_txid": null,
+   "paid_txids": [],
+   "client_handle": null,
+   "signers": [
+    "client",
+    "developer"
+   ],
+   "replaces": "KS-OFFER-0067",
+   "replaced_by": null
   },
   {
    "source": "kintsugi",
@@ -4538,9 +6389,9 @@
    "developer": null,
    "estimate_h": 2,
    "price_usd": 50,
-   "dev_usd": 40,
-   "fee_usd": 10,
-   "status": "open",
+   "dev_usd": 40.0,
+   "fee_usd": 10.0,
+   "status": "withdrawn",
    "contract_url": "https://bwalletx.com/kintsugi/work",
    "text_url": "https://bwalletx.com/data/kintsugi-offers/KS-OFFER-0068.txt",
    "page_url": "https://bwalletx.com/twetch-on-b",
@@ -4550,7 +6401,35 @@
    "signers": [
     "client",
     "developer"
-   ]
+   ],
+   "replaces": null,
+   "replaced_by": "KS-OFFER-0068-v2"
+  },
+  {
+   "source": "kintsugi",
+   "id": "KS-OFFER-0068-v2",
+   "kind": "tender",
+   "title": "Twetch on b",
+   "task": "Write and publish a blog post for Twetch on b (bwalletx.com/twetch-on-b)",
+   "client": "The Bitcoin Corporation Ltd",
+   "developer": null,
+   "estimate_h": 0.25,
+   "price_usd": 1.0,
+   "dev_usd": 0.8,
+   "fee_usd": 0.2,
+   "status": "open",
+   "contract_url": "https://bwalletx.com/kintsugi/work",
+   "text_url": "https://bwalletx.com/data/kintsugi-offers/KS-OFFER-0068-v2.txt",
+   "page_url": "https://bwalletx.com/twetch-on-b",
+   "stamp_txid": null,
+   "paid_txids": [],
+   "client_handle": null,
+   "signers": [
+    "client",
+    "developer"
+   ],
+   "replaces": "KS-OFFER-0068",
+   "replaced_by": null
   },
   {
    "source": "kintsugi",
@@ -4562,9 +6441,9 @@
    "developer": null,
    "estimate_h": 2,
    "price_usd": 50,
-   "dev_usd": 40,
-   "fee_usd": 10,
-   "status": "open",
+   "dev_usd": 40.0,
+   "fee_usd": 10.0,
+   "status": "withdrawn",
    "contract_url": "https://bwalletx.com/kintsugi/work",
    "text_url": "https://bwalletx.com/data/kintsugi-offers/KS-OFFER-0069.txt",
    "page_url": "https://bwalletx.com/verify-note",
@@ -4574,7 +6453,35 @@
    "signers": [
     "client",
     "developer"
-   ]
+   ],
+   "replaces": null,
+   "replaced_by": "KS-OFFER-0069-v2"
+  },
+  {
+   "source": "kintsugi",
+   "id": "KS-OFFER-0069-v2",
+   "kind": "tender",
+   "title": "Verify a signed note",
+   "task": "Write and publish a blog post for Verify a signed note (bwalletx.com/verify-note)",
+   "client": "The Bitcoin Corporation Ltd",
+   "developer": null,
+   "estimate_h": 0.25,
+   "price_usd": 1.0,
+   "dev_usd": 0.8,
+   "fee_usd": 0.2,
+   "status": "open",
+   "contract_url": "https://bwalletx.com/kintsugi/work",
+   "text_url": "https://bwalletx.com/data/kintsugi-offers/KS-OFFER-0069-v2.txt",
+   "page_url": "https://bwalletx.com/verify-note",
+   "stamp_txid": null,
+   "paid_txids": [],
+   "client_handle": null,
+   "signers": [
+    "client",
+    "developer"
+   ],
+   "replaces": "KS-OFFER-0069",
+   "replaced_by": null
   },
   {
    "source": "kintsugi",
@@ -4586,9 +6493,9 @@
    "developer": null,
    "estimate_h": 2,
    "price_usd": 50,
-   "dev_usd": 40,
-   "fee_usd": 10,
-   "status": "open",
+   "dev_usd": 40.0,
+   "fee_usd": 10.0,
+   "status": "withdrawn",
    "contract_url": "https://bwalletx.com/kintsugi/work",
    "text_url": "https://bwalletx.com/data/kintsugi-offers/KS-OFFER-0070.txt",
    "page_url": "https://bwalletx.com/wallet-frames",
@@ -4598,7 +6505,35 @@
    "signers": [
     "client",
     "developer"
-   ]
+   ],
+   "replaces": null,
+   "replaced_by": "KS-OFFER-0070-v2"
+  },
+  {
+   "source": "kintsugi",
+   "id": "KS-OFFER-0070-v2",
+   "kind": "tender",
+   "title": "Wallet Frames: your private things, drawn by your wallet",
+   "task": "Write and publish a blog post for Wallet Frames: your private things, drawn by your wallet (bwalletx.com/wallet-frames)",
+   "client": "The Bitcoin Corporation Ltd",
+   "developer": null,
+   "estimate_h": 0.25,
+   "price_usd": 1.0,
+   "dev_usd": 0.8,
+   "fee_usd": 0.2,
+   "status": "open",
+   "contract_url": "https://bwalletx.com/kintsugi/work",
+   "text_url": "https://bwalletx.com/data/kintsugi-offers/KS-OFFER-0070-v2.txt",
+   "page_url": "https://bwalletx.com/wallet-frames",
+   "stamp_txid": null,
+   "paid_txids": [],
+   "client_handle": null,
+   "signers": [
+    "client",
+    "developer"
+   ],
+   "replaces": "KS-OFFER-0070",
+   "replaced_by": null
   },
   {
    "source": "kintsugi",
@@ -4610,9 +6545,9 @@
    "developer": null,
    "estimate_h": 2,
    "price_usd": 50,
-   "dev_usd": 40,
-   "fee_usd": 10,
-   "status": "open",
+   "dev_usd": 40.0,
+   "fee_usd": 10.0,
+   "status": "withdrawn",
    "contract_url": "https://bwalletx.com/kintsugi/work",
    "text_url": "https://bwalletx.com/data/kintsugi-offers/KS-OFFER-0071.txt",
    "page_url": "https://bwalletx.com/web",
@@ -4622,7 +6557,35 @@
    "signers": [
     "client",
     "developer"
-   ]
+   ],
+   "replaces": null,
+   "replaced_by": "KS-OFFER-0071-v2"
+  },
+  {
+   "source": "kintsugi",
+   "id": "KS-OFFER-0071-v2",
+   "kind": "tender",
+   "title": "bWalletX web wallet",
+   "task": "Write and publish a blog post for bWalletX web wallet (bwalletx.com/web)",
+   "client": "The Bitcoin Corporation Ltd",
+   "developer": null,
+   "estimate_h": 0.25,
+   "price_usd": 1.0,
+   "dev_usd": 0.8,
+   "fee_usd": 0.2,
+   "status": "open",
+   "contract_url": "https://bwalletx.com/kintsugi/work",
+   "text_url": "https://bwalletx.com/data/kintsugi-offers/KS-OFFER-0071-v2.txt",
+   "page_url": "https://bwalletx.com/web",
+   "stamp_txid": null,
+   "paid_txids": [],
+   "client_handle": null,
+   "signers": [
+    "client",
+    "developer"
+   ],
+   "replaces": "KS-OFFER-0071",
+   "replaced_by": null
   },
   {
    "source": "kintsugi",
@@ -4634,9 +6597,9 @@
    "developer": null,
    "estimate_h": 2,
    "price_usd": 50,
-   "dev_usd": 40,
-   "fee_usd": 10,
-   "status": "open",
+   "dev_usd": 40.0,
+   "fee_usd": 10.0,
+   "status": "withdrawn",
    "contract_url": "https://bwalletx.com/kintsugi/work",
    "text_url": "https://bwalletx.com/data/kintsugi-offers/KS-OFFER-0072.txt",
    "page_url": "https://bwalletx.com/your-apps-on-b",
@@ -4646,7 +6609,35 @@
    "signers": [
     "client",
     "developer"
-   ]
+   ],
+   "replaces": null,
+   "replaced_by": "KS-OFFER-0072-v2"
+  },
+  {
+   "source": "kintsugi",
+   "id": "KS-OFFER-0072-v2",
+   "kind": "tender",
+   "title": "Your apps on b",
+   "task": "Write and publish a blog post for Your apps on b (bwalletx.com/your-apps-on-b)",
+   "client": "The Bitcoin Corporation Ltd",
+   "developer": null,
+   "estimate_h": 0.25,
+   "price_usd": 1.0,
+   "dev_usd": 0.8,
+   "fee_usd": 0.2,
+   "status": "open",
+   "contract_url": "https://bwalletx.com/kintsugi/work",
+   "text_url": "https://bwalletx.com/data/kintsugi-offers/KS-OFFER-0072-v2.txt",
+   "page_url": "https://bwalletx.com/your-apps-on-b",
+   "stamp_txid": null,
+   "paid_txids": [],
+   "client_handle": null,
+   "signers": [
+    "client",
+    "developer"
+   ],
+   "replaces": "KS-OFFER-0072",
+   "replaced_by": null
   },
   {
    "source": "kintsugi",
@@ -4658,9 +6649,9 @@
    "developer": null,
    "estimate_h": 2,
    "price_usd": 50,
-   "dev_usd": 40,
-   "fee_usd": 10,
-   "status": "open",
+   "dev_usd": 40.0,
+   "fee_usd": 10.0,
+   "status": "withdrawn",
    "contract_url": "https://bwalletx.com/kintsugi/work",
    "text_url": "https://bwalletx.com/data/kintsugi-offers/KS-OFFER-0073.txt",
    "page_url": "https://bwalletx.com/your-character",
@@ -4670,7 +6661,35 @@
    "signers": [
     "client",
     "developer"
-   ]
+   ],
+   "replaces": null,
+   "replaced_by": "KS-OFFER-0073-v2"
+  },
+  {
+   "source": "kintsugi",
+   "id": "KS-OFFER-0073-v2",
+   "kind": "tender",
+   "title": "Your character",
+   "task": "Write and publish a blog post for Your character (bwalletx.com/your-character)",
+   "client": "The Bitcoin Corporation Ltd",
+   "developer": null,
+   "estimate_h": 0.25,
+   "price_usd": 1.0,
+   "dev_usd": 0.8,
+   "fee_usd": 0.2,
+   "status": "open",
+   "contract_url": "https://bwalletx.com/kintsugi/work",
+   "text_url": "https://bwalletx.com/data/kintsugi-offers/KS-OFFER-0073-v2.txt",
+   "page_url": "https://bwalletx.com/your-character",
+   "stamp_txid": null,
+   "paid_txids": [],
+   "client_handle": null,
+   "signers": [
+    "client",
+    "developer"
+   ],
+   "replaces": "KS-OFFER-0073",
+   "replaced_by": null
   },
   {
    "source": "kintsugi",
@@ -4682,9 +6701,9 @@
    "developer": null,
    "estimate_h": 2,
    "price_usd": 50,
-   "dev_usd": 40,
-   "fee_usd": 10,
-   "status": "open",
+   "dev_usd": 40.0,
+   "fee_usd": 10.0,
+   "status": "withdrawn",
    "contract_url": "https://bwalletx.com/kintsugi/work",
    "text_url": "https://bwalletx.com/data/kintsugi-offers/KS-OFFER-0074.txt",
    "page_url": "https://bwalletx.com/yours-on-b",
@@ -4694,7 +6713,35 @@
    "signers": [
     "client",
     "developer"
-   ]
+   ],
+   "replaces": null,
+   "replaced_by": "KS-OFFER-0074-v2"
+  },
+  {
+   "source": "kintsugi",
+   "id": "KS-OFFER-0074-v2",
+   "kind": "tender",
+   "title": "Yours on b",
+   "task": "Write and publish a blog post for Yours on b (bwalletx.com/yours-on-b)",
+   "client": "The Bitcoin Corporation Ltd",
+   "developer": null,
+   "estimate_h": 0.25,
+   "price_usd": 1.0,
+   "dev_usd": 0.8,
+   "fee_usd": 0.2,
+   "status": "open",
+   "contract_url": "https://bwalletx.com/kintsugi/work",
+   "text_url": "https://bwalletx.com/data/kintsugi-offers/KS-OFFER-0074-v2.txt",
+   "page_url": "https://bwalletx.com/yours-on-b",
+   "stamp_txid": null,
+   "paid_txids": [],
+   "client_handle": null,
+   "signers": [
+    "client",
+    "developer"
+   ],
+   "replaces": "KS-OFFER-0074",
+   "replaced_by": null
   },
   {
    "source": "kintsugi",
@@ -4706,9 +6753,9 @@
    "developer": null,
    "estimate_h": 1,
    "price_usd": 25,
-   "dev_usd": 20,
-   "fee_usd": 5,
-   "status": "open",
+   "dev_usd": 20.0,
+   "fee_usd": 5.0,
+   "status": "withdrawn",
    "contract_url": "https://bwalletx.com/kintsugi/work",
    "text_url": "https://bwalletx.com/data/kintsugi-offers/KS-OFFER-0075.txt",
    "page_url": null,
@@ -4718,7 +6765,35 @@
    "signers": [
     "client",
     "developer"
-   ]
+   ],
+   "replaces": null,
+   "replaced_by": "KS-OFFER-0075-v2"
+  },
+  {
+   "source": "kintsugi",
+   "id": "KS-OFFER-0075-v2",
+   "kind": "tender",
+   "title": "Bring your history with you",
+   "task": "Publish post \"Bring your history with you\" once its feature ships in a release build",
+   "client": "The Bitcoin Corporation Ltd",
+   "developer": null,
+   "estimate_h": 0.08,
+   "price_usd": 0.5,
+   "dev_usd": 0.4,
+   "fee_usd": 0.1,
+   "status": "open",
+   "contract_url": "https://bwalletx.com/kintsugi/work",
+   "text_url": "https://bwalletx.com/data/kintsugi-offers/KS-OFFER-0075-v2.txt",
+   "page_url": null,
+   "stamp_txid": null,
+   "paid_txids": [],
+   "client_handle": null,
+   "signers": [
+    "client",
+    "developer"
+   ],
+   "replaces": "KS-OFFER-0075",
+   "replaced_by": null
   },
   {
    "source": "kintsugi",
@@ -4730,9 +6805,9 @@
    "developer": null,
    "estimate_h": 1,
    "price_usd": 25,
-   "dev_usd": 20,
-   "fee_usd": 5,
-   "status": "open",
+   "dev_usd": 20.0,
+   "fee_usd": 5.0,
+   "status": "withdrawn",
    "contract_url": "https://bwalletx.com/kintsugi/work",
    "text_url": "https://bwalletx.com/data/kintsugi-offers/KS-OFFER-0076.txt",
    "page_url": null,
@@ -4742,7 +6817,35 @@
    "signers": [
     "client",
     "developer"
-   ]
+   ],
+   "replaces": null,
+   "replaced_by": "KS-OFFER-0076-v2"
+  },
+  {
+   "source": "kintsugi",
+   "id": "KS-OFFER-0076-v2",
+   "kind": "tender",
+   "title": "Every coin, counted",
+   "task": "Publish post \"Every coin, counted\" once its feature ships in a release build",
+   "client": "The Bitcoin Corporation Ltd",
+   "developer": null,
+   "estimate_h": 0.08,
+   "price_usd": 0.5,
+   "dev_usd": 0.4,
+   "fee_usd": 0.1,
+   "status": "open",
+   "contract_url": "https://bwalletx.com/kintsugi/work",
+   "text_url": "https://bwalletx.com/data/kintsugi-offers/KS-OFFER-0076-v2.txt",
+   "page_url": null,
+   "stamp_txid": null,
+   "paid_txids": [],
+   "client_handle": null,
+   "signers": [
+    "client",
+    "developer"
+   ],
+   "replaces": "KS-OFFER-0076",
+   "replaced_by": null
   },
   {
    "source": "kintsugi",
@@ -4754,9 +6857,9 @@
    "developer": null,
    "estimate_h": 1,
    "price_usd": 25,
-   "dev_usd": 20,
-   "fee_usd": 5,
-   "status": "open",
+   "dev_usd": 20.0,
+   "fee_usd": 5.0,
+   "status": "withdrawn",
    "contract_url": "https://bwalletx.com/kintsugi/work",
    "text_url": "https://bwalletx.com/data/kintsugi-offers/KS-OFFER-0077.txt",
    "page_url": null,
@@ -4766,7 +6869,35 @@
    "signers": [
     "client",
     "developer"
-   ]
+   ],
+   "replaces": null,
+   "replaced_by": "KS-OFFER-0077-v2"
+  },
+  {
+   "source": "kintsugi",
+   "id": "KS-OFFER-0077-v2",
+   "kind": "tender",
+   "title": "Sign in with your face or fingerprint",
+   "task": "Publish post \"Sign in with your face or fingerprint\" once its feature ships in a release build",
+   "client": "The Bitcoin Corporation Ltd",
+   "developer": null,
+   "estimate_h": 0.08,
+   "price_usd": 0.5,
+   "dev_usd": 0.4,
+   "fee_usd": 0.1,
+   "status": "open",
+   "contract_url": "https://bwalletx.com/kintsugi/work",
+   "text_url": "https://bwalletx.com/data/kintsugi-offers/KS-OFFER-0077-v2.txt",
+   "page_url": null,
+   "stamp_txid": null,
+   "paid_txids": [],
+   "client_handle": null,
+   "signers": [
+    "client",
+    "developer"
+   ],
+   "replaces": "KS-OFFER-0077",
+   "replaced_by": null
   }
  ]
 }

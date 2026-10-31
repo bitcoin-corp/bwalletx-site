@@ -1,0 +1,27 @@
+Kintsugi open offer
+Open for tender: any developer can offer to take this job on.
+
+Offer: KS-OFFER-0055-v2
+Replaces: KS-OFFER-0055 (withdrawn: first price was too high)
+Client: The Bitcoin Corporation Ltd, company no. 16735102, registered in England & Wales
+Developer: Open: first accepted developer
+Review: Kintsugi, run by The Bitcoin Corporation Ltd
+Task: Write and publish a blog post for Seedless login (bwalletx.com/seedless-login)
+Depends on: None
+Estimate: 15 min (fixed)
+Price: Client pays $1.00: $0.80 to the developer (~0.0470 BSV at $17.01/BSV) and $0.20 to Kintsugi as its fee. Paid in BSV at the BSV/USD rate on the day of payment, both from the client's wallet in one transaction.
+Status: Open for tender
+
+Terms
+1. Payment is peer to peer: the client pays the developer directly, wallet to wallet. Kintsugi never holds the money.
+2. Up to 8 billable hours per day.
+3. Done means: the post is live on bwalletx.com/blog and linked from the page.
+4. Content only: no security tools are needed. Any change to code, sign-in, payments, keys or signing is a separate job with the full security tool list.
+5. Kintsugi checks the spec and reviews the work. When the work is accepted, the client pays the developer's $handle in bWalletX, with Kintsugi's fee as a separate payment in the same transaction.
+6. Disputes: if the client and developer disagree about whether the work is done, Kintsugi reviews it and decides.
+7. Delivered work belongs to the client once it is paid for.
+8. Code under the Open BSV licence; specs and docs CC BY 4.0.
+9. The client and the developer sign the same contract in bChatX before work starts. Kintsugi reviews and settles disputes but does not sign.
+
+Client: Not signed yet
+Developer: Not signed yet

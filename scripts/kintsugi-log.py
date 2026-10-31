@@ -308,16 +308,27 @@ def fdate(s): return datetime.date.fromisoformat(s).strftime('%-d %b %Y')
 
 
 FOUNDER = "This log is the founder's own work, counted at up to 18 hours a day. It comes from before the 8-hour daily cap that applies to Kintsugi developers."
-OPEN_H = {'page': 2, 'post': 1}   # fixed estimates for open offers
+OPEN_H = {'page': 2, 'post': 1}   # first-issue estimates (KS-OFFER-xxxx, withdrawn 31 Oct)
+# Reissue (owner 31 Oct, after b did KS-OFFER-0001 in ~3.5 min): content jobs priced for AI-assisted work.
+OPEN_USD = {'page': 1.00, 'post': 0.50}   # client price; 80% developer, 20% Kintsugi
+OPEN_MIN = {'page': 15, 'post': 5}        # fixed time estimate, minutes
+DONE_OFFERS = {'KS-OFFER-0001': ('/blog/105-airdrops', '105 Airdrops')}   # first-issue offers already delivered
+def v2(n): return n + '-v2'
+def usd(x): return f'${x:,.2f}'
+def bsv_usd(x): return f'~{x / PRICE["usd"]:.4f} BSV'
 
 
-def terms_html(founder=False, done='the change is live on the stated page'):
+def terms_html(founder=False, done='the change is live on the stated page', content=False):
+    SEC_LI = ('<li>Content only: no security tools are needed. Any change to code, sign-in, payments, keys or signing is a separate job with the full security tool list.</li>' if content else
+              '<li>Security tools: Shannon for any change that touches sign-in, payments, keys or signing; Semgrep, gitleaks, pnpm audit and OSV-Scanner, CodeQL, OWASP ZAP (baseline scan) and Claude Code /security-review. Tool and AI usage costs are the developer\'s and are not billable hours.</li>')
+    DONE_LI = (f'<li>Done means: {done}.</li>' if content else
+               f'<li>Done means: the pull request is merged into the agreed repo, {done}, and the security tool results are attached.</li>')
     t = f'''          <h3>Terms</h3>
           <ol class="ct-terms">
             <li>Payment is peer to peer: the client pays the developer directly, wallet to wallet. Kintsugi never holds the money.</li>
             <li>Up to 8 billable hours per day.</li>
-            <li>Done means: the pull request is merged into the agreed repo, {done}, and the security tool results are attached.</li>
-            <li>Security tools: Shannon for any change that touches sign-in, payments, keys or signing; Semgrep, gitleaks, pnpm audit and OSV-Scanner, CodeQL, OWASP ZAP (baseline scan) and Claude Code /security-review. Tool and AI usage costs are the developer's and are not billable hours.</li>
+            {DONE_LI}
+            {SEC_LI}
             <li>Kintsugi checks the spec and reviews the work. When the work is accepted, the client pays the developer's $handle in bWalletX, with Kintsugi's fee as a separate payment in the same transaction.</li>
             <li>Disputes: if the client and developer disagree about whether the work is done, Kintsugi reviews it and decides.</li>
             <li>Delivered work belongs to the client once it is paid for.</li>
@@ -330,7 +341,31 @@ def terms_html(founder=False, done='the change is live on the stated page'):
     return t + '          </ol>'
 
 
-def offer(o, n):
+def offer(o, n, old):
+    x = OPEN_USD[o['kind']]; mins = OPEN_MIN[o['kind']]; task, dep, done = offer_parts(o)
+    task = E(task)
+    sig = ''.join(f'<div class="sig"><span>{r}</span><i>Not signed yet</i></div>' for r in ('Client', 'Developer'))
+    proof = (f' <a href="https://whatsonchain.com/tx/{STAMPS[n]}" rel="noopener">Stamped on chain by b</a> · <a href="/data/kintsugi-offers/{n}.txt">offer text</a>'
+             if n in STAMPS else f' <a href="/data/kintsugi-offers/{n}.txt">Offer text</a>')
+    return f'''<div class="ct" role="region" aria-label="Open offer {n}">
+          <p class="ct-note"><strong>Open for tender</strong>: any developer can offer to take this job on. <a href="/kintsugi/program#apply">Register</a> to take it on.{proof} Replaces {old} (withdrawn: first price was too high).</p>
+          <dl class="ct-dl">
+            <dt>Offer</dt><dd class="tn">{n}</dd>
+            <dt>Client</dt><dd>{CLIENT}, company no. {CLIENT_NO}, registered in England &amp; Wales</dd>
+            <dt>Developer</dt><dd>Open: first accepted developer</dd>
+            <dt>Review</dt><dd>Kintsugi, run by {CLIENT}</dd>
+            <dt>Task</dt><dd>{task}</dd>
+            <dt>Depends on</dt><dd>{E(dep)}</dd>
+            <dt>Estimate</dt><dd class="tn">{mins} min (fixed)</dd>
+            <dt>Price</dt><dd class="tn">Client pays <b>{usd(x)}</b>: <span class="gold">{usd(x*0.8)}</span> to the developer ({bsv_usd(x*0.8)} at ${PRICE["usd"]:,.2f}/BSV) and {usd(x*0.2)} to Kintsugi as its fee. Paid in BSV at the BSV/USD rate on the day of payment, both from the client's wallet in one transaction.</dd>
+            <dt>Status</dt><dd>Open for tender</dd>
+          </dl>
+          {terms_html(done=done, content=True)}
+          <div class="sigs">{sig}</div>
+        </div>'''
+
+
+def offer_v1(o, n):
     h = OPEN_H[o['kind']]
     if o['kind'] == 'page':
         task = f'Write and publish a blog post for <a href="{E(o["url"])}">{E(o["title"])}</a> <span class="u">bwalletx.com{E(o["url"])}</span>'
@@ -483,6 +518,33 @@ def offer_text(o, n):
     return canonical('\n'.join(lines)) + '\n'
 
 
+def offer_text_v2(o, n, old):
+    x = OPEN_USD[o['kind']]; task, dep, done = offer_parts(o)
+    terms = [plain(t) for t in re.findall(r'<li>(.*?)</li>', terms_html(done=done, content=True), re.S)]
+    lines = [
+        'Kintsugi open offer',
+        'Open for tender: any developer can offer to take this job on.',
+        '',
+        f'Offer: {n}',
+        f'Replaces: {old} (withdrawn: first price was too high)',
+        f'Client: {CLIENT}, company no. {CLIENT_NO}, registered in England & Wales',
+        'Developer: Open: first accepted developer',
+        f'Review: Kintsugi, run by {CLIENT}',
+        f'Task: {task}',
+        f'Depends on: {dep}',
+        f'Estimate: {OPEN_MIN[o["kind"]]} min (fixed)',
+        f'Price: Client pays {usd(x)}: {usd(x*0.8)} to the developer ({bsv_usd(x*0.8)} at ${PRICE["usd"]:,.2f}/BSV) and {usd(x*0.2)} to Kintsugi as its fee. Paid in BSV at the BSV/USD rate on the day of payment, both from the client\'s wallet in one transaction.',
+        'Status: Open for tender',
+        '',
+        'Terms',
+    ] + [f'{k}. {t}' for k, t in enumerate(terms, 1)] + [
+        '',
+        'Client: Not signed yet',
+        'Developer: Not signed yet',
+    ]
+    return canonical('\n'.join(lines)) + '\n'
+
+
 OF_DIR = os.path.join(ROOT, 'data', 'kintsugi-offers')
 
 
@@ -499,7 +561,15 @@ def write_offers(d):
             open(f, 'w', encoding='utf-8', newline='\n').write(offer_text(o, n))
         txt = open(f, encoding='utf-8').read()
         idx.append(dict(id=n, url=o['url'], title=o['title'], kind=o['kind'], file=f'data/kintsugi-offers/{n}.txt',
-                        sha256=hashlib.sha256(canonical(txt).encode()).hexdigest()))
+                        sha256=hashlib.sha256(canonical(txt).encode()).hexdigest(),
+                        status='done' if n in DONE_OFFERS else 'withdrawn', replaced_by=None if n in DONE_OFFERS else v2(n)))
+        if n in DONE_OFFERS: continue
+        m = v2(n); f2 = os.path.join(OF_DIR, m + '.txt')
+        if m not in STAMPS or not os.path.exists(f2):
+            open(f2, 'w', encoding='utf-8', newline='\n').write(offer_text_v2(o, m, n))
+        t2 = open(f2, encoding='utf-8').read()
+        idx.append(dict(id=m, url=o['url'], title=o['title'], kind=o['kind'], file=f'data/kintsugi-offers/{m}.txt',
+                        sha256=hashlib.sha256(canonical(t2).encode()).hexdigest(), status='open', replaces=n))
     json.dump(dict(canonical='bit-sign b-stamp-rules canonicalText (NFC, LF, trailing whitespace and blank edge lines removed); sha256 over UTF-8',
                    offers=idx), open(ip, 'w'), indent=1)
 
@@ -556,13 +626,15 @@ def render(d):
                      f'{rows}</div></section>')
     ow = ''
     for k, o in enumerate(d['open'], 1):
-        h = OPEN_H[o['kind']]
+        n = f'KS-OFFER-{k:04d}'; x = OPEN_USD[o['kind']]
         nm = f'Blog post for {E(o["title"])}' if o['kind'] == 'page' else f'Publish “{E(o["title"])}”'
         ow += (f'<details class="job"><summary><span class="it"><span class="nm">{nm}</span><span class="u">{E(o["url"] or "Held until its feature is in a release build")}</span>'
-               f'<span class="ds">{E(o["what"])}.</span><span class="chips"><span class="chip">Open for tender</span></span></span>'
-               f'<span class="n">{h} h<span class="sub">fixed estimate</span></span><span class="n c">{money(h)}<span class="sub">{bsv(h)}</span></span>'
-               f'<span class="cv" aria-hidden="true"></span></summary>{offer(o, f"KS-OFFER-{k:04d}")}</details>')
-    oh = sum(OPEN_H[o['kind']] for o in d['open'])
+               f'<span class="ds">{E(o["what"])}.</span><span class="chips"><span class="chip">{"Done" if n in DONE_OFFERS else "Open for tender"}</span></span></span>'
+               f'<span class="n">{OPEN_MIN[o["kind"]]} min<span class="sub">fixed estimate</span></span><span class="n c">{usd(x*0.8)}<span class="sub">client pays {usd(x)}</span></span>'
+               f'<span class="cv" aria-hidden="true"></span></summary>'
+               + (f'<div class="ct"><p class="ct-note"><strong>Done</strong>: delivered 31 Oct 2026 as <a href="{DONE_OFFERS[n][0]}">{E(DONE_OFFERS[n][1])}</a> (about 3½ minutes with AI).</p></div>' if n in DONE_OFFERS else offer(o, v2(n), n))
+               + '</details>')
+    oh = sum(OPEN_USD[o['kind']] for k, o in enumerate(d['open'], 1) if f'KS-OFFER-{k:04d}' not in DONE_OFFERS)
     repos = ', '.join(f'{E(r["repo"])} ({r["commits"]:,} commits)' for r in d['repos'])
     body = f'''<main class="bb">
       <h1><b>Kintsugi</b> work log: a month of work, in the open</h1>
@@ -579,7 +651,7 @@ def render(d):
       <p class="warn">Every figure here is an estimate, derived from git timestamps. It is not an invoice, a valuation or a claim.</p>
       <nav class="toc" aria-label="Topics">{"".join(toc)}<a href="#open-work">Open work</a><a href="#method">Method</a></nav>
       {sections}
-      <section id="open-work"><h2>Open work</h2><p>Pages that have no blog post yet, and posts held back until the feature they describe is in a release build. Each is shown as an open offer.</p><p class="st"><span>{len(d["open"])} open offers, about <b class="c">{money(oh)}</b> ({oh} h at $20, paid in BSV). All open for tender: <a href="/kintsugi/program#apply">register</a> to take one on.</span></p><div class="jobs" style="margin-top:12px"><div class="jh" aria-hidden="true"><span>Offer · tap to see the offer</span><span class="n">Estimate</span><span class="n">Price</span><span></span></div>{ow}</div></section>
+      <section id="open-work"><h2>Open work</h2><p>Pages that have no blog post yet, and posts held back until the feature they describe is in a release build. Each is shown as an open offer.</p><p class="st"><span>{len(d["open"]) - len(DONE_OFFERS)} open offers, <b class="c">{usd(oh)}</b> in all at the client price ({usd(oh*0.8)} to developers, paid in BSV); {len(DONE_OFFERS)} done. Reissued 31 Oct at prices for AI-assisted work; the first offers are withdrawn. All open for tender: <a href="/kintsugi/program#apply">register</a> to take one on.</span></p><div class="jobs" style="margin-top:12px"><div class="jh" aria-hidden="true"><span>Offer · tap to see the offer</span><span class="n">Estimate</span><span class="n">Developer gets</span><span></span></div>{ow}</div></section>
       <section id="method"><h2>How the numbers are made</h2>
         <ol class="method">
           <li><strong>Items.</strong> Every public page on bwalletx.com that is in the sitemap. Internal company matters are left out on purpose.</li>

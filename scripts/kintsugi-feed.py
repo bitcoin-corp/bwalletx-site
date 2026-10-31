@@ -51,21 +51,27 @@ def main():
                         'paid' if paid.get(c['id']) else 'delivered', f'{SITE}/kintsugi/work',
                         text_url=f'{SITE}/{c["file"]}', page_url=SITE + c['url'] if c['url'] else None,
                         developer=DEV_HANDLE, usd=usd))
-    for k, o in enumerate(log['open'], 1):
-        if o['kind'] == 'page':
-            task = f'Write and publish a blog post for {o["title"]} (bwalletx.com{o["url"]})'
+    # Offers: first issue (withdrawn 31 Oct, except KS-OFFER-0001 = done) and the -v2 reissue at content-job prices.
+    OPEN_USD = {'page': 1.00, 'post': 0.50}; OPEN_MIN = {'page': 15, 'post': 5}
+    for e in json.load(open(D('kintsugi-offers', 'index.json')))['offers']:
+        if e['kind'] == 'page':
+            task = f'Write and publish a blog post for {e["title"]} (bwalletx.com{e["url"]})'
         else:
-            task = f'Publish post "{o["title"]}" once its feature ships in a release build'
-        n = f'KS-OFFER-{k:04d}'   # owner 31 Oct: all offers open for tender, client + developer sign
-        r = row(n, 'tender', o['title'], task, OPEN_H[o['kind']], 'open', f'{SITE}/kintsugi/work',
-                text_url=f'{SITE}/data/kintsugi-offers/{n}.txt', page_url=SITE + o['url'] if o.get('url') else None)
-        r.update(client_handle=CLIENT_HANDLE, signers=['client', 'developer'])
+            task = f'Publish post "{e["title"]}" once its feature ships in a release build'
+        v1 = not e['id'].endswith('-v2')
+        h = OPEN_H[e['kind']] if v1 else OPEN_MIN[e['kind']] / 60
+        x = h * CLIENT_H if v1 else OPEN_USD[e['kind']]
+        r = row(e['id'], 'tender', e['title'], task, h, e.get('status', 'open'), f'{SITE}/kintsugi/work',
+                text_url=f'{SITE}/{e["file"]}', page_url=SITE + e['url'] if e.get('url') else None,
+                usd=(x, x * 0.8, x * 0.2))
+        r.update(client_handle=CLIENT_HANDLE, signers=['client', 'developer'],
+                 replaces=e.get('replaces'), replaced_by=e.get('replaced_by'))
         rows.append(r)
 
     out = dict(source='kintsugi', updated_at=datetime.datetime.now(datetime.timezone.utc).strftime('%Y-%m-%dT%H:%M:%SZ'),
                rates=dict(client_usd_h=CLIENT_H, dev_usd_h=DEV_H, paid_in='BSV at the BSV/USD rate on payment day'),
                statuses=dict(delivered='work done, not paid', paid='a payment is recorded against the stamp',
-                             not_open='offer published, not open for acceptance yet', open='open for tender'),
+                             open='open for tender', withdrawn='replaced by a reissued offer (see replaced_by)', done='delivered'),
                offers=rows)
     json.dump(out, open(D('kintsugi-offers.json'), 'w'), indent=1, ensure_ascii=False)
     f = sum(r['kind'] == 'fund' for r in rows)
