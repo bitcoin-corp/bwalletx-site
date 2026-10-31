@@ -1,6 +1,6 @@
 # bWalletX: full site text
 
-Generated 2026-10-30 from https://bwalletx.com. Source pages are linked above each section.
+Generated 2026-10-31 from https://bwalletx.com. Source pages are linked above each section.
 
 ---
 
@@ -73,7 +73,7 @@ It isn't on Google Play yet, so install it by hand. (The store edition, bWallet,
 
 Updating from an older version? Install over the top and your wallet stays. If Android says the app can't be updated, write down your 12 words first, then uninstall and reinstall.
 
-Version 5.2.47 beta · 24.1 MB · Android 7+ · SHA-256 be0d3c54ab48963fd0fe507f9e4604342188c5eae829188a192cc6bc7af20db3
+Version 5.2.47 beta · 23.0 MB · Android 7+ · SHA-256 be0d3c54ab48963fd0fe507f9e4604342188c5eae829188a192cc6bc7af20db3
 
 Also: [Chrome extension](https://bwalletx.com/extension) · [Developers](https://bwalletx.com/developers)
 
@@ -1101,6 +1101,70 @@ bMarketX is not affiliated with or endorsed by eBay. bWalletX is in beta: test w
 
 ---
 
+Source: https://bwalletx.com/b-kintsugi-voice
+
+b Kintsugi
+
+-
+
+-
+
+#
+
+Play the film
+
+Watch without sound
+
+Work, agreed in chat. Paid wallet to wallet.
+
+Ask b. Tell b what you need. b drafts a contract with the scope, the price and the deadline, and puts the job out to tender.
+
+Everyone signs. Developers running b get the job as a notification. One taps Accept, and the client, the developer and Kintsugi all sign the same contract.
+
+Pay direct. The developer delivers a PR or a release link, and the client signs it off. Then the client pays in BSV, wallet to wallet: $25 an hour, $20 to the developer and $5 to Kintsugi. No escrow. We never hold the money.
+
+We’re building it now.
+
+##
+
+[Get bWalletX](https://bwalletx.com/?from=b-kintsugi)
+
+Kintsugi is in development. The film shows what we are building; some steps are not live yet.
+
+---
+
+Source: https://bwalletx.com/b-kintsugi
+
+b Kintsugi
+
+-
+
+-
+
+#
+
+Play the film
+
+Watch without sound
+
+Work, agreed in chat. Paid wallet to wallet.
+
+Ask b. Tell b what you need. b drafts a contract with the scope, the price and the deadline, and puts the job out to tender.
+
+Everyone signs. Developers running b get the job as a notification. One taps Accept, and the client, the developer and Kintsugi all sign the same contract.
+
+Pay direct. The developer delivers a PR or a release link, and the client signs it off. Then the client pays in BSV, wallet to wallet: $25 an hour, $20 to the developer and $5 to Kintsugi. No escrow. We never hold the money.
+
+We’re building it now.
+
+##
+
+[Get bWalletX](https://bwalletx.com/?from=b-kintsugi)
+
+Kintsugi is in development. The film shows what we are building; some steps are not live yet.
+
+---
+
 Source: https://bwalletx.com/b-market
 
 .com
@@ -1233,6 +1297,74 @@ bWalletX is a self-custody wallet for Bitcoin SV: your keys stay with you. It ho
 [Get bWalletX](https://bwalletx.com/get)
 [@bWalletX on Twetch](https://twetch.com/u/220501)
 [Ask b](https://bwalletx.com/ask-b)
+
+---
+
+Source: https://bwalletx.com/b-paid-voice
+
+b paid
+
+-
+
+-
+
+#
+
+Play the film
+
+Watch without sound
+
+Ask for anything. Get paid for what you’re good at.
+
+Ask b. Say what you need: a logo, a website, a translation, a fix. b writes it up with a price and a deadline.
+
+Shake on it. People with the right skills see the job on b. One taps to take it, and you both sign the same short agreement.
+
+Pay direct. They deliver, you sign it off, and you pay them in BSV, wallet to wallet, in seconds. b takes a small fee in the same payment. No escrow. We never hold the money.
+
+Build together. Bigger idea? Start a room, split the work between you, and agree who owns what share of the project. Everyone signs, and the room keeps the record.
+
+We’re building it now.
+
+##
+
+[Get bWalletX](https://bwalletx.com/?from=b-paid)
+
+Paid jobs on b are in development. The film shows what we are building; some steps are not live yet.
+
+---
+
+Source: https://bwalletx.com/b-paid
+
+b paid
+
+-
+
+-
+
+#
+
+Play the film
+
+Watch without sound
+
+Ask for anything. Get paid for what you’re good at.
+
+Ask b. Say what you need: a logo, a website, a translation, a fix. b writes it up with a price and a deadline.
+
+Shake on it. People with the right skills see the job on b. One taps to take it, and you both sign the same short agreement.
+
+Pay direct. They deliver, you sign it off, and you pay them in BSV, wallet to wallet, in seconds. b takes a small fee in the same payment. No escrow. We never hold the money.
+
+Build together. Bigger idea? Start a room, split the work between you, and agree who owns what share of the project. Everyone signs, and the room keeps the record.
+
+We’re building it now.
+
+##
+
+[Get bWalletX](https://bwalletx.com/?from=b-paid)
+
+Paid jobs on b are in development. The film shows what we are building; some steps are not live yet.
 
 ---
 
@@ -3766,7 +3898,7 @@ The full bWalletX wallet in Chrome's side panel, and a wallet websites like Toke
 
 [Add to Chrome →](https://chromewebstore.google.com/detail/choopkcgggoaehffickjojkohmpbladd)
 
-From the Chrome Web Store. Works in Brave too. Updates itself.
+From the Chrome Web Store: version 5.2.41 today. Works in Brave too. Updates itself. The newest version, 5.2.47, is the direct build below.
 
 ## Latest build, direct (experimental)
 
@@ -4348,7 +4480,7 @@ Source: https://bwalletx.com/get
 The full bWalletX on every device. Your keys stay on your device.
 
 [AndroidAPK download · v5.2.47 beta](https://bwalletx.com/android)
-[ChromeExtension · v5.2.47 beta](https://bwalletx.com/extension)
+[ChromeExtension · Web Store v5.2.41 · direct v5.2.47](https://bwalletx.com/extension)
 [WebOpen in your browser](https://web.bwalletx.com)
 [iPhoneWeb app · install from Safari, no App Store](https://bwalletx.com/iphone)
 
@@ -5799,12 +5931,13 @@ Source: https://bwalletx.com/kintsugi
 
 Kintsugi (金継ぎ): mending broken pottery with gold, so the repair shows.
 
-# Kintsugi: get paid in BSV to build apps
+# b Kintsugi: help us build b
 
-A program for developers who build with Claude. Verify your ID, show your setup, pass one entry task, and take paid work on bWalletX, bChatX and the bApps. Clients pay developers directly, peer to peer; Kintsugi takes a fee and never holds the money.
+Our program for building b: bWalletX, bChatX and the bApps. Users who want a feature or a fix pay other users to build it, peer to peer, wallet to wallet. Developers who build with Claude verify their ID, pass one entry task and take the work. Kintsugi takes a fee and never holds the money.
 
-[Join the program](https://bwalletx.com/kintsugi/program)
+[Help us build b](https://bwalletx.com/kintsugi/program)
 [Work done so far](https://bwalletx.com/kintsugi/work)
+[Watch the film](https://bwalletx.com/b-kintsugi)
 
 ### [The program](https://bwalletx.com/kintsugi/program)
 
@@ -6843,7 +6976,7 @@ Each release ships to the Android APK, the Chrome extension and the web wallet. 
 
 [Download bWalletX](https://bwalletx.com/download)
 
-## 5.2.47 2026-10-30
+## 5.2.46 2026-10-30
 
 - On your phone, Face ID or your fingerprint is asked before a site signs or pays from your wallet.
 - Payments still go through when the online storage fails: the wallet switches to This device, and Repair wallet fixes stuck coins.
@@ -18409,7 +18542,7 @@ New accounts start with a daily cap. Each site must pair before it can ask, ever
 
 Part of: [Agents & b](https://bwalletx.com/blog#agents) · Related: [071 bBots: make your own bot](https://bwalletx.com/blog/071-bbots) · [010 Agent accounts, strategies, CLI and MCP](https://bwalletx.com/blog/010-agents-strategies-cli) · [043 Ask b](https://bwalletx.com/blog/043-ask-b)
 
-[← 103 Just b: our films](https://bwalletx.com/blog/103-just-b-films)[All posts →](https://bwalletx.com/blog)
+[← 103 Just b: our films](https://bwalletx.com/blog/103-just-b-films)[105 Airdrops →](https://bwalletx.com/blog/105-airdrops)
 
 ---
 
@@ -18512,6 +18645,7 @@ Exchange, tokens & launches
 - [](https://bwalletx.com/blog/064-launch-curves)[064 Every launch gets a fair curve](https://bwalletx.com/blog/064-launch-curves)
 - [](https://bwalletx.com/blog/066-memepool)[066 Memepool, inside the Exchange](https://bwalletx.com/blog/066-memepool)
 - [](https://bwalletx.com/blog/082-blastpad)[082 BlastPad: launch a coin in one transaction](https://bwalletx.com/blog/082-blastpad)
+- [](https://bwalletx.com/blog/105-airdrops)[105 Airdrops](https://bwalletx.com/blog/105-airdrops)
 
 Store, creators & media
 

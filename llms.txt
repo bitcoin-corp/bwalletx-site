@@ -40,8 +40,12 @@ Full text of every page below: https://bwalletx.com/llms-full.txt
 - [b is for auteurs](https://bwalletx.com/b-is-for-auteurs): b is for auteurs. Filmmakers, animators, musicians, writers and artists: make it, keep the credit, and every film gets its own token and room. Watch the house films on bMovies.app.
 - [b is for business](https://bwalletx.com/b-is-for-business): b is for business. Get paid in seconds, with a receipt anyone can check. Less paperwork. More business. Just b.
 - [b is for shopkeepers](https://bwalletx.com/b-is-for-shopkeepers): b is for shopkeepers. Bring your eBay shop to bMarketX in about a minute, keep your stars, and own every listing. Just b.
+- [b Kintsugi](https://bwalletx.com/b-kintsugi-voice): Ask b to put a job out to tender. Developers accept, everyone signs, the work ships, and the client pays wallet to wallet in BSV. We are building it now.
+- [b Kintsugi](https://bwalletx.com/b-kintsugi): Ask b to put a job out to tender. Developers accept, everyone signs, the work ships, and the client pays wallet to wallet in BSV. We are building it now.
 - [bMarketX.com: your eBay store, on Bitcoin](https://bwalletx.com/b-market): bMarketX is your eBay store, on Bitcoin. Move your shop over in about a minute, keep your feedback, sign in with bWalletX and mint your listings into your own wallet.
 - [b is on Twetch · bWalletX](https://bwalletx.com/b-on-twetch): Press release, 24 Oct 2026: b, the assistant in bWalletX, is on Twetch as @bWalletX. It posts bWalletX updates and answers questions people ask it there.
+- [b paid](https://bwalletx.com/b-paid-voice): Ask b for anything you need done. Someone with the skills says yes, does it, and you pay them directly, wallet to wallet in BSV. Get paid the same way.
+- [b paid](https://bwalletx.com/b-paid): Ask b for anything you need done. Someone with the skills says yes, does it, and you pay them directly, wallet to wallet in BSV. Get paid the same way.
 - [bAcc: make Bitcoin faster, the goal is 1 billion transactions a second | bWalletX](https://bwalletx.com/b/acc): bAcc is the Bitcoin accelerationist movement: make Bitcoin faster. BTC handles a few transactions a second; BSV is built to scale. Our goal: 1 billion transactions per second (1b TPS). Play the bAcc race game.
 - [The bAcc theme for bWalletX, $1 | bAcc store | bWalletX](https://bwalletx.com/b/acc/store): The bAcc theme: black and yellow racing stripes for your bWalletX. Coming to the Store inside bWalletX for $1, paid in BSV.
 - [bAds](https://bwalletx.com/bad): We sell bAds: ads made by b, the agent in your bWalletX.
@@ -86,8 +90,8 @@ Full text of every page below: https://bwalletx.com/llms-full.txt
 - [Jobs: paid work, paid in BSV · bWalletX](https://bwalletx.com/jobs): Paid work on bWalletX: security testing, paid Android testing and, soon, feature bounties. Sign up with bWalletX and submit work now. Payouts in BSV open once identity checks (Veriff) are live.
 - [Just b: less noise](https://bwalletx.com/just-b-2): A busy phone full of apps. Then the b arrives, takes its place in the dock, and the noise goes, one app at a time. Less noise. More life. Just b.
 - [Just b](https://bwalletx.com/just-b): Just b
-- [Kintsugi AI · bWalletX](https://bwalletx.com/kintsugi-ai): Kintsugi AI: a black obsidian pool laced with gold seams, with the gold b of bWalletX at its centre. What work is open?
-- [Kintsugi · bWalletX](https://bwalletx.com/kintsugi): Kintsugi: get paid in BSV to build apps. A program for verified developers who build with Claude: $20 an hour, paid in BSV.
+- [b Kintsugi AI · bWalletX](https://bwalletx.com/kintsugi-ai): Kintsugi AI: a black obsidian pool laced with gold seams, with the gold b of bWalletX at its centre. What work is open?
+- [b Kintsugi · bWalletX](https://bwalletx.com/kintsugi): b Kintsugi: help us build b. Users pay other users, peer to peer in BSV, to build bWalletX, bChatX and the bApps. Developers earn $20 an hour.
 - [Move to bWalletX](https://bwalletx.com/migrate): Move your coins, NFTs, tokens, names and posts into bWalletX. Sweep from Yours, RelayX, Twetch, SimplyCash, Money Button or a paper key, on your own device. Keys never leave it.
 - [Signed names and the public name log · bWalletX](https://bwalletx.com/name-bindings): A bWalletX name is a row in our database. Now each name is signed by the wallet that owns it, every wallet checks that before paying, and every change of who a name points to goes in a public log anyone can read.
 - [Get your name](https://bwalletx.com/names): Your @bwalletx.com name is free. Short names cost more: 4 letters $10, 3 letters $100, 1–2 letters $1000. Search it and get it in bWalletX.
