@@ -322,8 +322,10 @@ def terms_html(founder=False, done='the change is live on the stated page'):
             <li>Disputes: if the client and developer disagree about whether the work is done, Kintsugi reviews it and decides.</li>
             <li>Delivered work belongs to the client once it is paid for.</li>
             <li>Code under the Open BSV licence; specs and docs CC BY 4.0.</li>
-            <li>All three parties sign the same contract in bChatX before work starts.</li>
 '''
+    # Founder contracts are stamped with the three-party wording; offers (owner 31 Oct) are client + developer only.
+    t += ('            <li>All three parties sign the same contract in bChatX before work starts.</li>\n' if founder else
+          '            <li>The client and the developer sign the same contract in bChatX before work starts. Kintsugi reviews and settles disputes but does not sign.</li>\n')
     if founder: t += f'            <li>{FOUNDER}</li>\n'
     return t + '          </ol>'
 
@@ -337,9 +339,11 @@ def offer(o, n):
         task = f'Publish post “{E(o["title"])}” once its feature ships in a release build'
         dep = 'The feature the post describes must be in a release build first. The post is already written.'
         done = 'the post is live on bwalletx.com/blog after the feature is in a release build'
-    sig = ''.join(f'<div class="sig"><span>{r}</span><i>Example — not signed</i></div>' for r in ('Client', 'Developer', 'Kintsugi'))
+    sig = ''.join(f'<div class="sig"><span>{r}</span><i>Not signed yet</i></div>' for r in ('Client', 'Developer'))
+    proof = (f' <a href="https://whatsonchain.com/tx/{STAMPS[n]}" rel="noopener">Stamped on chain by b</a> · <a href="/data/kintsugi-offers/{n}.txt">offer text</a>'
+             if n in STAMPS else f' <a href="/data/kintsugi-offers/{n}.txt">Offer text</a>')
     return f'''<div class="ct" role="region" aria-label="Open offer {n}">
-          <p class="ct-note"><strong>Open offer</strong>: example of how this job will be offered. Not open for acceptance yet. <a href="/kintsugi/program#apply">Register interest</a> to be told when tasks open.</p>
+          <p class="ct-note"><strong>Open for tender</strong>: any developer can offer to take this job on. <a href="/kintsugi/program#apply">Register</a> to take it on.{proof}</p>
           <dl class="ct-dl">
             <dt>Offer</dt><dd class="tn">{n}</dd>
             <dt>Client</dt><dd>{CLIENT}, company no. {CLIENT_NO}, registered in England &amp; Wales</dd>
@@ -349,7 +353,7 @@ def offer(o, n):
             <dt>Depends on</dt><dd>{dep}</dd>
             <dt>Estimate</dt><dd class="tn">{h} h (fixed)</dd>
             <dt>Price</dt><dd class="tn">Client pays <b>${h*CLIENT_H:,.0f}</b> ({h} h × ${CLIENT_H}): <span class="gold">{money(h)}</span> to the developer ({h} h × $20, {bsv(h)} at ${PRICE["usd"]:,.2f}/BSV) and ${h*(CLIENT_H-USD_H):,.0f} to Kintsugi as its fee. Paid in BSV at the BSV/USD rate on the day of payment, both from the client's wallet in one transaction.</dd>
-            <dt>Status</dt><dd>Not open yet</dd>
+            <dt>Status</dt><dd>Open for tender</dd>
           </dl>
           {terms_html(done=done)}
           <div class="sigs">{sig}</div>
@@ -443,6 +447,63 @@ def contract_text(it, n):
     return canonical('\n'.join(lines)) + '\n'
 
 
+def offer_parts(o):
+    if o['kind'] == 'page':
+        return (f'Write and publish a blog post for {o["title"]} (bwalletx.com{o["url"]})', 'None',
+                'the post is live on bwalletx.com/blog and linked from the page')
+    return (f'Publish post “{o["title"]}” once its feature ships in a release build',
+            'The feature the post describes must be in a release build first. The post is already written.',
+            'the post is live on bwalletx.com/blog after the feature is in a release build')
+
+
+def offer_text(o, n):
+    """The canonical plain text of an open offer: the same facts as the HTML panel."""
+    h = OPEN_H[o['kind']]; task, dep, done = offer_parts(o)
+    terms = [plain(x) for x in re.findall(r'<li>(.*?)</li>', terms_html(done=done), re.S)]
+    lines = [
+        'Kintsugi open offer',
+        'Open for tender: any developer can offer to take this job on.',
+        '',
+        f'Offer: {n}',
+        f'Client: {CLIENT}, company no. {CLIENT_NO}, registered in England & Wales',
+        'Developer: Open: first accepted developer',
+        f'Review: Kintsugi, run by {CLIENT}',
+        f'Task: {task}',
+        f'Depends on: {dep}',
+        f'Estimate: {h} h (fixed)',
+        f'Price: Client pays ${h*CLIENT_H:,.0f} ({h} h × ${CLIENT_H}): {money(h)} to the developer ({h} h × $20, {bsv(h)} at ${PRICE["usd"]:,.2f}/BSV) and ${h*(CLIENT_H-USD_H):,.0f} to Kintsugi as its fee. Paid in BSV at the BSV/USD rate on the day of payment, both from the client\'s wallet in one transaction.',
+        'Status: Open for tender',
+        '',
+        'Terms',
+    ] + [f'{k}. {x}' for k, x in enumerate(terms, 1)] + [
+        '',
+        'Client: Not signed yet',
+        'Developer: Not signed yet',
+    ]
+    return canonical('\n'.join(lines)) + '\n'
+
+
+OF_DIR = os.path.join(ROOT, 'data', 'kintsugi-offers')
+
+
+def write_offers(d):
+    """Offer texts are written once; a stamped offer's text is never rewritten."""
+    import hashlib
+    os.makedirs(OF_DIR, exist_ok=True)
+    ip = os.path.join(OF_DIR, 'index.json')
+    old = {e['id']: e for e in json.load(open(ip))['offers']} if os.path.exists(ip) else {}
+    idx = []
+    for k, o in enumerate(d['open'], 1):
+        n = f'KS-OFFER-{k:04d}'; f = os.path.join(OF_DIR, n + '.txt')
+        if n not in STAMPS or not os.path.exists(f):
+            open(f, 'w', encoding='utf-8', newline='\n').write(offer_text(o, n))
+        txt = open(f, encoding='utf-8').read()
+        idx.append(dict(id=n, url=o['url'], title=o['title'], kind=o['kind'], file=f'data/kintsugi-offers/{n}.txt',
+                        sha256=hashlib.sha256(canonical(txt).encode()).hexdigest()))
+    json.dump(dict(canonical='bit-sign b-stamp-rules canonicalText (NFC, LF, trailing whitespace and blank edge lines removed); sha256 over UTF-8',
+                   offers=idx), open(ip, 'w'), indent=1)
+
+
 def write_contracts(d):
     import hashlib
     os.makedirs(CT_DIR, exist_ok=True)
@@ -498,7 +559,7 @@ def render(d):
         h = OPEN_H[o['kind']]
         nm = f'Blog post for {E(o["title"])}' if o['kind'] == 'page' else f'Publish “{E(o["title"])}”'
         ow += (f'<details class="job"><summary><span class="it"><span class="nm">{nm}</span><span class="u">{E(o["url"] or "Held until its feature is in a release build")}</span>'
-               f'<span class="ds">{E(o["what"])}.</span><span class="chips"><span class="chip x">Not open yet</span></span></span>'
+               f'<span class="ds">{E(o["what"])}.</span><span class="chips"><span class="chip">Open for tender</span></span></span>'
                f'<span class="n">{h} h<span class="sub">fixed estimate</span></span><span class="n c">{money(h)}<span class="sub">{bsv(h)}</span></span>'
                f'<span class="cv" aria-hidden="true"></span></summary>{offer(o, f"KS-OFFER-{k:04d}")}</details>')
     oh = sum(OPEN_H[o['kind']] for o in d['open'])
@@ -518,7 +579,7 @@ def render(d):
       <p class="warn">Every figure here is an estimate, derived from git timestamps. It is not an invoice, a valuation or a claim.</p>
       <nav class="toc" aria-label="Topics">{"".join(toc)}<a href="#open-work">Open work</a><a href="#method">Method</a></nav>
       {sections}
-      <section id="open-work"><h2>Open work</h2><p>Pages that have no blog post yet, and posts held back until the feature they describe is in a release build. Each is shown as an open offer.</p><p class="st"><span>{len(d["open"])} open offers, about <b class="c">{money(oh)}</b> ({oh} h at $20, paid in BSV). Not open yet: <a href="/kintsugi/program#apply">register interest</a> to be told when tasks open.</span></p><div class="jobs" style="margin-top:12px"><div class="jh" aria-hidden="true"><span>Offer · tap to see how it will be offered</span><span class="n">Estimate</span><span class="n">Price</span><span></span></div>{ow}</div></section>
+      <section id="open-work"><h2>Open work</h2><p>Pages that have no blog post yet, and posts held back until the feature they describe is in a release build. Each is shown as an open offer.</p><p class="st"><span>{len(d["open"])} open offers, about <b class="c">{money(oh)}</b> ({oh} h at $20, paid in BSV). All open for tender: <a href="/kintsugi/program#apply">register</a> to take one on.</span></p><div class="jobs" style="margin-top:12px"><div class="jh" aria-hidden="true"><span>Offer · tap to see the offer</span><span class="n">Estimate</span><span class="n">Price</span><span></span></div>{ow}</div></section>
       <section id="method"><h2>How the numbers are made</h2>
         <ol class="method">
           <li><strong>Items.</strong> Every public page on bwalletx.com that is in the sitemap. Internal company matters are left out on purpose.</li>
@@ -731,7 +792,8 @@ if __name__ == '__main__':
     sp = os.path.join(ROOT, 'data', 'kintsugi-stamps.json')
     if os.path.exists(sp): STAMPS.update({r['contract_id']: r['txid'] for r in json.load(open(sp))})
     open(os.path.join(ROOT, 'kintsugi', 'work.html'), 'w').write(page(d))
-    write_contracts(d)
+    if '--offers' not in sys.argv: write_contracts(d)
+    write_offers(d)
     inject(d)
     th = sum(i['time']['hours'] for i in d['items'])
     print(f"items={len(d['items'])} hours={th:.0f} cost={money(th)} / {bsv(th)} open={len(d['open'])}")

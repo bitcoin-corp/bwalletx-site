@@ -1,0 +1,621 @@
+{
+ "canonical": "bit-sign b-stamp-rules canonicalText (NFC, LF, trailing whitespace and blank edge lines removed); sha256 over UTF-8",
+ "offers": [
+  {
+   "id": "KS-OFFER-0001",
+   "url": "/airdrops",
+   "title": "Airdrops",
+   "kind": "page",
+   "file": "data/kintsugi-offers/KS-OFFER-0001.txt",
+   "sha256": "6f8b728e704b6723ada944ba9401540ad8b90620aac246d83ec44d03e17aaa90"
+  },
+  {
+   "id": "KS-OFFER-0002",
+   "url": "/b-bots",
+   "title": "bBots: little helpers that work for you",
+   "kind": "page",
+   "file": "data/kintsugi-offers/KS-OFFER-0002.txt",
+   "sha256": "40e895f99cc66d8c3beeed75480bc4dab5409655c5916936dcbd7d33900be740"
+  },
+  {
+   "id": "KS-OFFER-0003",
+   "url": "/b-cool",
+   "title": "b cool",
+   "kind": "page",
+   "file": "data/kintsugi-offers/KS-OFFER-0003.txt",
+   "sha256": "fcb18ac4671017f278cbaa5eaa84b3c628dd2725b144cd888c6c4c9eca194925"
+  },
+  {
+   "id": "KS-OFFER-0004",
+   "url": "/b-creative",
+   "title": "b Creative",
+   "kind": "page",
+   "file": "data/kintsugi-offers/KS-OFFER-0004.txt",
+   "sha256": "7994350750119bf5f6ed982826b6130075e174163fc13230d775e120a8c5dd92"
+  },
+  {
+   "id": "KS-OFFER-0005",
+   "url": "/b-in-black",
+   "title": "b black",
+   "kind": "page",
+   "file": "data/kintsugi-offers/KS-OFFER-0005.txt",
+   "sha256": "97d7ed23aafa8b198b76a0faa57c72cc6b7c73f08ec4bdb65267c929bb0ab93d"
+  },
+  {
+   "id": "KS-OFFER-0006",
+   "url": "/b-is-coming",
+   "title": "b is coming",
+   "kind": "page",
+   "file": "data/kintsugi-offers/KS-OFFER-0006.txt",
+   "sha256": "17ad830e00e110e6498b64c00282168de9c35e2ff614f2b418a72e15c149a82c"
+  },
+  {
+   "id": "KS-OFFER-0007",
+   "url": "/b-market",
+   "title": "bMarketX.com: your eBay store, on Bitcoin",
+   "kind": "page",
+   "file": "data/kintsugi-offers/KS-OFFER-0007.txt",
+   "sha256": "43b22b4aab2ff83b1afd4bced64a6fee024348099ce6dae8f8d5003db008894c"
+  },
+  {
+   "id": "KS-OFFER-0008",
+   "url": "/b-on-twetch",
+   "title": "b is on Twetch",
+   "kind": "page",
+   "file": "data/kintsugi-offers/KS-OFFER-0008.txt",
+   "sha256": "157cdee94151d5d0610773ba40c4fbd8771700f3a974048e6fa16117a9809cf9"
+  },
+  {
+   "id": "KS-OFFER-0009",
+   "url": "/b-socials",
+   "title": "Everything b",
+   "kind": "page",
+   "file": "data/kintsugi-offers/KS-OFFER-0009.txt",
+   "sha256": "327ac27f6c6c4b14b7d8c4cc47916cd9c16b097e7e9c784501d57ff07c5f60ef"
+  },
+  {
+   "id": "KS-OFFER-0010",
+   "url": "/b/acc",
+   "title": "bAcc: make Bitcoin faster, the goal is 1 billion transactions a second",
+   "kind": "page",
+   "file": "data/kintsugi-offers/KS-OFFER-0010.txt",
+   "sha256": "c18929df3f186a7ed980b8f1ced985f58bfe6e103a2c9a6f05c76d7511a0f972"
+  },
+  {
+   "id": "KS-OFFER-0011",
+   "url": "/bads",
+   "title": "bAds \u00b7 we sell bAds, made by b",
+   "kind": "page",
+   "file": "data/kintsugi-offers/KS-OFFER-0011.txt",
+   "sha256": "fe7b12e5caaf408b46045f8e82a0997ec6c249d36a772db29f2f268dabe3fb35"
+  },
+  {
+   "id": "KS-OFFER-0012",
+   "url": "/bapps/bmovies",
+   "title": "bMovies inside bWalletX",
+   "kind": "page",
+   "file": "data/kintsugi-offers/KS-OFFER-0012.txt",
+   "sha256": "147b78c5933c8e6fc1cf035fcfa31cc04ccd15b51e9f654a38eeb0c45ebdfe1a"
+  },
+  {
+   "id": "KS-OFFER-0013",
+   "url": "/bavatars",
+   "title": "bAvatars: your name, as art you can scan",
+   "kind": "page",
+   "file": "data/kintsugi-offers/KS-OFFER-0013.txt",
+   "sha256": "3233dd9ec0a3a449e1af525fb4abab727c21925cd8868d857ffa22d4045d57f6"
+  },
+  {
+   "id": "KS-OFFER-0014",
+   "url": "/be-on-b-2",
+   "title": "be on b",
+   "kind": "page",
+   "file": "data/kintsugi-offers/KS-OFFER-0014.txt",
+   "sha256": "215f597e8f7b87baca9a846d61b8b123928dee6e6881c3b453fade1eeaa65bd1"
+  },
+  {
+   "id": "KS-OFFER-0015",
+   "url": "/be-on-b-3",
+   "title": "be on b",
+   "kind": "page",
+   "file": "data/kintsugi-offers/KS-OFFER-0015.txt",
+   "sha256": "940935d2405a7dfb8e5e758aef259d5c64cb7005b0ff6dba05aa77ac36129d20"
+  },
+  {
+   "id": "KS-OFFER-0016",
+   "url": "/be-on-b",
+   "title": "be on b",
+   "kind": "page",
+   "file": "data/kintsugi-offers/KS-OFFER-0016.txt",
+   "sha256": "1bf90b78fdad358626c43223c0f3c659604477957e5f149f7a59c8a5d1b75d01"
+  },
+  {
+   "id": "KS-OFFER-0017",
+   "url": "/bpositive",
+   "title": "bPositive",
+   "kind": "page",
+   "file": "data/kintsugi-offers/KS-OFFER-0017.txt",
+   "sha256": "e80ab28fecdaacb49b81bb746b5f17375acf9d32ae607f515ed7ce42a629863e"
+  },
+  {
+   "id": "KS-OFFER-0018",
+   "url": "/brand",
+   "title": "The bWalletX brand",
+   "kind": "page",
+   "file": "data/kintsugi-offers/KS-OFFER-0018.txt",
+   "sha256": "ac68ed8240dee7d24968217c08dbf59aec43fc224dbbc62c10c0d4a7bcb07465"
+  },
+  {
+   "id": "KS-OFFER-0019",
+   "url": "/btrust",
+   "title": "bTrust in bWalletX",
+   "kind": "page",
+   "file": "data/kintsugi-offers/KS-OFFER-0019.txt",
+   "sha256": "ce768008bb1bd7a7276be8b22074b982b3f62566b11a9139a345357439f157a4"
+  },
+  {
+   "id": "KS-OFFER-0020",
+   "url": "/business-agents",
+   "title": "bRand business agents",
+   "kind": "page",
+   "file": "data/kintsugi-offers/KS-OFFER-0020.txt",
+   "sha256": "61a69633a075789ae83e61d79e99bd03808b865ccb5c8ce507b718fd6cb828d5"
+  },
+  {
+   "id": "KS-OFFER-0021",
+   "url": "/buy",
+   "title": "Buy BSV in bWalletX",
+   "kind": "page",
+   "file": "data/kintsugi-offers/KS-OFFER-0021.txt",
+   "sha256": "f01486dcd49fb6a85f2d2ae5091880908d9c6f1b82b0a38157734c6ea476da20"
+  },
+  {
+   "id": "KS-OFFER-0022",
+   "url": "/bweb",
+   "title": "bWeb: ask b to build your website",
+   "kind": "page",
+   "file": "data/kintsugi-offers/KS-OFFER-0022.txt",
+   "sha256": "1519d2d820c2fbb8f2e03eb46a1b1aebbd9a212ee4990c5bffb83ca02dd7f921"
+  },
+  {
+   "id": "KS-OFFER-0023",
+   "url": "/clients",
+   "title": "Your own branded wallet \u00b7 bWalletX for business",
+   "kind": "page",
+   "file": "data/kintsugi-offers/KS-OFFER-0023.txt",
+   "sha256": "db1bf5fc2ac0606a0940bed52a9a80058b922251422c61d6b724b22d812c55b4"
+  },
+  {
+   "id": "KS-OFFER-0024",
+   "url": "/coingeek-on-b",
+   "title": "CoinGeek on b",
+   "kind": "page",
+   "file": "data/kintsugi-offers/KS-OFFER-0024.txt",
+   "sha256": "0e3f760850d6c316516b4c8141e0360d00a30847469227725a3ab3c3c986608f"
+  },
+  {
+   "id": "KS-OFFER-0025",
+   "url": "/creative",
+   "title": "b Creative",
+   "kind": "page",
+   "file": "data/kintsugi-offers/KS-OFFER-0025.txt",
+   "sha256": "45d6f1863c9aec371104106aa269cb9ee0b6c9b3e049d686d2a5be1848a9c4f8"
+  },
+  {
+   "id": "KS-OFFER-0026",
+   "url": "/credits",
+   "title": "Credits: prepaid credit for services",
+   "kind": "page",
+   "file": "data/kintsugi-offers/KS-OFFER-0026.txt",
+   "sha256": "480e06a085d10504a73944075811fb11b988903f225899ea50847f8f213199d5"
+  },
+  {
+   "id": "KS-OFFER-0027",
+   "url": "/culture",
+   "title": "Culture: make it on BSV",
+   "kind": "page",
+   "file": "data/kintsugi-offers/KS-OFFER-0027.txt",
+   "sha256": "7cc2a102c00b59d918a4e9f04f29eaa81512cd867e94ecfd91f6bbd20aed7620"
+  },
+  {
+   "id": "KS-OFFER-0028",
+   "url": "/desktop",
+   "title": "bWalletX Desktop",
+   "kind": "page",
+   "file": "data/kintsugi-offers/KS-OFFER-0028.txt",
+   "sha256": "e45ec04a7b10578216d3ba3bc1b4c23db22165bf0ab248c054c25d9d93440610"
+  },
+  {
+   "id": "KS-OFFER-0029",
+   "url": "/developers",
+   "title": "bWalletX for Developers",
+   "kind": "page",
+   "file": "data/kintsugi-offers/KS-OFFER-0029.txt",
+   "sha256": "71d20150f4c43e7579242b7a4c1146d4c00384c1bc9d59eff788d168ee969646"
+  },
+  {
+   "id": "KS-OFFER-0030",
+   "url": "/direct",
+   "title": "bWallet Direct: sign in straight from your own wallet",
+   "kind": "page",
+   "file": "data/kintsugi-offers/KS-OFFER-0030.txt",
+   "sha256": "75242ec36f5f1074a9ef664ac7fe7c389870b224a4f569e6690d23f2a3a75db7"
+  },
+  {
+   "id": "KS-OFFER-0031",
+   "url": "/features",
+   "title": "bWalletX Features",
+   "kind": "page",
+   "file": "data/kintsugi-offers/KS-OFFER-0031.txt",
+   "sha256": "cfca4a3cc5fdd5e949705fada5bc32185423b470fcd9861f599360c1f668bafb"
+  },
+  {
+   "id": "KS-OFFER-0032",
+   "url": "/flick-off",
+   "title": "FLICK OFF",
+   "kind": "page",
+   "file": "data/kintsugi-offers/KS-OFFER-0032.txt",
+   "sha256": "2b47fa28ebf66c7ba915eaefa465160c28108e62cb7cfe652d1c35f48b1c24dd"
+  },
+  {
+   "id": "KS-OFFER-0033",
+   "url": "/games",
+   "title": "Games in bWalletX",
+   "kind": "page",
+   "file": "data/kintsugi-offers/KS-OFFER-0033.txt",
+   "sha256": "e1345c40572eebae510224efbd48a6c6e383331748b5a6840030d627760ca4b1"
+  },
+  {
+   "id": "KS-OFFER-0034",
+   "url": "/get",
+   "title": "Get bWalletX",
+   "kind": "page",
+   "file": "data/kintsugi-offers/KS-OFFER-0034.txt",
+   "sha256": "04874287a57efad6fb8c5f85e4b00d58280ad84d47799f324a288ef2bdbe31bd"
+  },
+  {
+   "id": "KS-OFFER-0035",
+   "url": "/gigs",
+   "title": "bGigs in bWalletX",
+   "kind": "page",
+   "file": "data/kintsugi-offers/KS-OFFER-0035.txt",
+   "sha256": "f94cff5841a415ae66810a1eb0fe78bb7e2d2c894f649ba012eb3c2787122dd4"
+  },
+  {
+   "id": "KS-OFFER-0036",
+   "url": "/happy-b",
+   "title": "Happy b-day cards \u00b7 make with b, mint, send by bMail",
+   "kind": "page",
+   "file": "data/kintsugi-offers/KS-OFFER-0036.txt",
+   "sha256": "2ae04f4851d423964bd62ff49caec73db0b6b041ef6453e418a2f46dfb9481d1"
+  },
+  {
+   "id": "KS-OFFER-0037",
+   "url": "/hodl-my-b",
+   "title": "Hodl my b",
+   "kind": "page",
+   "file": "data/kintsugi-offers/KS-OFFER-0037.txt",
+   "sha256": "623b24b192c4b6c95029bd591a47640b34adeb326bc4a9d953416500da1f7b26"
+  },
+  {
+   "id": "KS-OFFER-0038",
+   "url": "/hodl-my-b/0",
+   "title": "Hodl my b, Edition 0: The whole story",
+   "kind": "page",
+   "file": "data/kintsugi-offers/KS-OFFER-0038.txt",
+   "sha256": "6de883d00874f36c52025bd918ebdd083d90266dcc10bf0132c03807a443ef53"
+  },
+  {
+   "id": "KS-OFFER-0039",
+   "url": "/hodl-my-b/1",
+   "title": "Hodl my b, Edition 1: Don\u2019t be bland. Get bRanded.",
+   "kind": "page",
+   "file": "data/kintsugi-offers/KS-OFFER-0039.txt",
+   "sha256": "ffc414d257ed755bd6a10fac7a63259a8734a293fb04b29a95eeabcb1f75e440"
+  },
+  {
+   "id": "KS-OFFER-0040",
+   "url": "/hodlocker-on-b",
+   "title": "Hodlocker on b",
+   "kind": "page",
+   "file": "data/kintsugi-offers/KS-OFFER-0040.txt",
+   "sha256": "02b0e4b88c03ef2349812a4cbd2af8566ec97adef37025b139b3d8ae9cbf1b7b"
+  },
+  {
+   "id": "KS-OFFER-0041",
+   "url": "/hold-to-talk",
+   "title": "Hold to talk to b",
+   "kind": "page",
+   "file": "data/kintsugi-offers/KS-OFFER-0041.txt",
+   "sha256": "6604c5eab43914082133e7d4a06d115d42c5faffc7509ebd59ec71d42dd83ad6"
+  },
+  {
+   "id": "KS-OFFER-0042",
+   "url": "/jobs",
+   "title": "Jobs: paid work, paid in BSV",
+   "kind": "page",
+   "file": "data/kintsugi-offers/KS-OFFER-0042.txt",
+   "sha256": "2224527bd2184eabac5582b39964c02bdce0c794996fe8c8e50b03080d2e2a2f"
+  },
+  {
+   "id": "KS-OFFER-0043",
+   "url": "/migrate",
+   "title": "Move to bWalletX",
+   "kind": "page",
+   "file": "data/kintsugi-offers/KS-OFFER-0043.txt",
+   "sha256": "70d1ebe3e6709aac66380722f10955716c91ed40d266493232cd465c2010165b"
+  },
+  {
+   "id": "KS-OFFER-0044",
+   "url": "/newsletter",
+   "title": "Newsletter",
+   "kind": "page",
+   "file": "data/kintsugi-offers/KS-OFFER-0044.txt",
+   "sha256": "4339147ea0efcfd3ef468bc4feee2dd4ad791e20a87d44048b4adc43680a8b86"
+  },
+  {
+   "id": "KS-OFFER-0045",
+   "url": "/partners",
+   "title": "Partners: refer people, get a commission",
+   "kind": "page",
+   "file": "data/kintsugi-offers/KS-OFFER-0045.txt",
+   "sha256": "85fe33565e45d91a6ee90dc42fd49996772c9ed65453070284498577537cf651"
+  },
+  {
+   "id": "KS-OFFER-0046",
+   "url": "/peck-on-b",
+   "title": "Peck on b",
+   "kind": "page",
+   "file": "data/kintsugi-offers/KS-OFFER-0046.txt",
+   "sha256": "feaeaae21dc0d5d3ff53d5281967f3db62490d36f39d6cfedba21b8e8d80549f"
+  },
+  {
+   "id": "KS-OFFER-0047",
+   "url": "/race-card",
+   "title": "bAcc RACE: the bAcc racing game",
+   "kind": "page",
+   "file": "data/kintsugi-offers/KS-OFFER-0047.txt",
+   "sha256": "e26e0d5994d6d1295546fc749153a52d1f92974d643539ac07f43b76d5d2354a"
+  },
+  {
+   "id": "KS-OFFER-0048",
+   "url": "/recover-relayx",
+   "title": "Your RelayX NFTs are still yours",
+   "kind": "page",
+   "file": "data/kintsugi-offers/KS-OFFER-0048.txt",
+   "sha256": "37121d061ded685476fcca5574bf55a648e65b27d08249eb47085beea2f119bc"
+  },
+  {
+   "id": "KS-OFFER-0049",
+   "url": "/relayx-on-b",
+   "title": "RelayX on b",
+   "kind": "page",
+   "file": "data/kintsugi-offers/KS-OFFER-0049.txt",
+   "sha256": "56136e56bd9e9b7627bdee6c448065b2574dd2d91e1011e5579ba22055da46af"
+  },
+  {
+   "id": "KS-OFFER-0050",
+   "url": "/restore/moneybutton",
+   "title": "Coming from Money Button?",
+   "kind": "page",
+   "file": "data/kintsugi-offers/KS-OFFER-0050.txt",
+   "sha256": "c4fd789f4819a050ce3ccf010429fe1d882078bd4b1171d1f08643fe0aefb2fc"
+  },
+  {
+   "id": "KS-OFFER-0051",
+   "url": "/restore/panda",
+   "title": "Coming from Panda Wallet?",
+   "kind": "page",
+   "file": "data/kintsugi-offers/KS-OFFER-0051.txt",
+   "sha256": "0025c24c30457947e518595796386fe0d70bbc2851169b9c056b84aedbc22fa9"
+  },
+  {
+   "id": "KS-OFFER-0052",
+   "url": "/restore/simplycash",
+   "title": "Coming from SimplyCash?",
+   "kind": "page",
+   "file": "data/kintsugi-offers/KS-OFFER-0052.txt",
+   "sha256": "97f9dd1d4a34d67a21759ab79f5c90db3d3df69cd291ad84a4df7bd1ab21eb3c"
+  },
+  {
+   "id": "KS-OFFER-0053",
+   "url": "/restore/twetch",
+   "title": "Coming from Twetch?",
+   "kind": "page",
+   "file": "data/kintsugi-offers/KS-OFFER-0053.txt",
+   "sha256": "9aaee4e1471c13f6c5d1d17aaedb817d3321b4bc6077428bb6752f1b1d508069"
+  },
+  {
+   "id": "KS-OFFER-0054",
+   "url": "/roadmap",
+   "title": "Roadmap",
+   "kind": "page",
+   "file": "data/kintsugi-offers/KS-OFFER-0054.txt",
+   "sha256": "5890387038b4e7c8400f79f489be47c4163db9fde2dbab3c51735bc0254b2ed8"
+  },
+  {
+   "id": "KS-OFFER-0055",
+   "url": "/seedless-login",
+   "title": "Seedless login",
+   "kind": "page",
+   "file": "data/kintsugi-offers/KS-OFFER-0055.txt",
+   "sha256": "e9be3d2f4e38594a6e7520b969dafac6cbe6068c382db7ae574a11fcd2d8ba68"
+  },
+  {
+   "id": "KS-OFFER-0056",
+   "url": "/seedless-signin",
+   "title": "Sign in with a passkey: open your wallet with your face or fingerprint",
+   "kind": "page",
+   "file": "data/kintsugi-offers/KS-OFFER-0056.txt",
+   "sha256": "35319e290728634aca42b74464dda2e0a5d7cf2eac3b9f57d0f3a4e92891b8b1"
+  },
+  {
+   "id": "KS-OFFER-0057",
+   "url": "/services",
+   "title": "Our b*X services",
+   "kind": "page",
+   "file": "data/kintsugi-offers/KS-OFFER-0057.txt",
+   "sha256": "f69a9ca0e2f2baea8b9d4f40361a0aadb567ad50b49209f6ad517211e8fd2d2a"
+  },
+  {
+   "id": "KS-OFFER-0058",
+   "url": "/sign-in-button",
+   "title": "Add Sign in with bWalletX to your site",
+   "kind": "page",
+   "file": "data/kintsugi-offers/KS-OFFER-0058.txt",
+   "sha256": "fed4b8a9a054b5f147383583c1c7af1a7bfe527bb93c66fd8a1a69a9dd5bf29f"
+  },
+  {
+   "id": "KS-OFFER-0059",
+   "url": "/sms",
+   "title": "Bitcoin by text",
+   "kind": "page",
+   "file": "data/kintsugi-offers/KS-OFFER-0059.txt",
+   "sha256": "39c5a8bb116967dec34123ec836be94cefc697aa9afeb610e70b4ccb885bff92"
+  },
+  {
+   "id": "KS-OFFER-0060",
+   "url": "/social",
+   "title": "bWalletX Social",
+   "kind": "page",
+   "file": "data/kintsugi-offers/KS-OFFER-0060.txt",
+   "sha256": "aaa1326d2f5adfca1e7b84d2740bbc6954072c90600f07fe4068ce744134b65b"
+  },
+  {
+   "id": "KS-OFFER-0061",
+   "url": "/streaming-payments",
+   "title": "Streaming payments: pay as you go",
+   "kind": "page",
+   "file": "data/kintsugi-offers/KS-OFFER-0061.txt",
+   "sha256": "1f12c013e959e62eb4bd12ca06f96772365617a670bc832b1e577dff76de3d17"
+  },
+  {
+   "id": "KS-OFFER-0062",
+   "url": "/sweep-simplycash",
+   "title": "Sweep SimplyCash into bWalletX",
+   "kind": "page",
+   "file": "data/kintsugi-offers/KS-OFFER-0062.txt",
+   "sha256": "8b7a50ba8b100ee4726c1381c0029f522e7df6935ca16ddff530935c30f18a11"
+  },
+  {
+   "id": "KS-OFFER-0063",
+   "url": "/terms",
+   "title": "Terms of Service \u00b7 bWalletX (Beta)",
+   "kind": "page",
+   "file": "data/kintsugi-offers/KS-OFFER-0063.txt",
+   "sha256": "c61db50138d6e48b5caa8201ecea16257dd3ddd5c98349387f3d3823c6861283"
+  },
+  {
+   "id": "KS-OFFER-0064",
+   "url": "/themes-custom",
+   "title": "Branded wallets for businesses",
+   "kind": "page",
+   "file": "data/kintsugi-offers/KS-OFFER-0064.txt",
+   "sha256": "febc9202c4a02bce6b62fc5246abe70799caffa49ecc92954a592aa8d9cdb948"
+  },
+  {
+   "id": "KS-OFFER-0065",
+   "url": "/token-curves",
+   "title": "Token curves: how a person's token is priced",
+   "kind": "page",
+   "file": "data/kintsugi-offers/KS-OFFER-0065.txt",
+   "sha256": "e29e265f1b7b8639d8da34950fa4d6f16030a8f6c68f5fdbfa7d5d8ccf0b841a"
+  },
+  {
+   "id": "KS-OFFER-0066",
+   "url": "/token-locking",
+   "title": "Token locking",
+   "kind": "page",
+   "file": "data/kintsugi-offers/KS-OFFER-0066.txt",
+   "sha256": "48399adab1dd83c9fec7543885130621e02aeac62dd431b1cf2b2073f9259254"
+  },
+  {
+   "id": "KS-OFFER-0067",
+   "url": "/treechat-on-b",
+   "title": "Treechat on b",
+   "kind": "page",
+   "file": "data/kintsugi-offers/KS-OFFER-0067.txt",
+   "sha256": "8fcf91a43daf2cf17aebc053a3661edc4ca95534140f551e943ff14bb6200846"
+  },
+  {
+   "id": "KS-OFFER-0068",
+   "url": "/twetch-on-b",
+   "title": "Twetch on b",
+   "kind": "page",
+   "file": "data/kintsugi-offers/KS-OFFER-0068.txt",
+   "sha256": "504c55415637ee8c514d10c06ccfb42101b49c3ff709582c47305e9494782596"
+  },
+  {
+   "id": "KS-OFFER-0069",
+   "url": "/verify-note",
+   "title": "Verify a signed note",
+   "kind": "page",
+   "file": "data/kintsugi-offers/KS-OFFER-0069.txt",
+   "sha256": "e981b12df4c6c43385088f51cdf6761a6b990f768c7d32d4ec807213523fb757"
+  },
+  {
+   "id": "KS-OFFER-0070",
+   "url": "/wallet-frames",
+   "title": "Wallet Frames: your private things, drawn by your wallet",
+   "kind": "page",
+   "file": "data/kintsugi-offers/KS-OFFER-0070.txt",
+   "sha256": "ac42c845613854e3dd5c88994fc639d8892af2b92642f6e4e3513f47d8742134"
+  },
+  {
+   "id": "KS-OFFER-0071",
+   "url": "/web",
+   "title": "bWalletX web wallet",
+   "kind": "page",
+   "file": "data/kintsugi-offers/KS-OFFER-0071.txt",
+   "sha256": "5782334e5399ebc5915a60fac2a6f1211604bb21c580809731f1b72eddfa16f7"
+  },
+  {
+   "id": "KS-OFFER-0072",
+   "url": "/your-apps-on-b",
+   "title": "Your apps on b",
+   "kind": "page",
+   "file": "data/kintsugi-offers/KS-OFFER-0072.txt",
+   "sha256": "9f5d246bf4d0fa896c24e705f134014df1ec1eb528c7a75bdb79a9e2b8356cfb"
+  },
+  {
+   "id": "KS-OFFER-0073",
+   "url": "/your-character",
+   "title": "Your character",
+   "kind": "page",
+   "file": "data/kintsugi-offers/KS-OFFER-0073.txt",
+   "sha256": "d39338cb4d2af9517a758d6d0eb1d179df3ecc510b2d00d0bf604cd9112228cd"
+  },
+  {
+   "id": "KS-OFFER-0074",
+   "url": "/yours-on-b",
+   "title": "Yours on b",
+   "kind": "page",
+   "file": "data/kintsugi-offers/KS-OFFER-0074.txt",
+   "sha256": "d46891626a5577dca97e8d94a9df550be3f378ecfc424fe576b40fbd02bad851"
+  },
+  {
+   "id": "KS-OFFER-0075",
+   "url": null,
+   "title": "Bring your history with you",
+   "kind": "post",
+   "file": "data/kintsugi-offers/KS-OFFER-0075.txt",
+   "sha256": "312c1a89f829450ca526b48af4db22b10c132edfe602ff09a4163f118863d2a1"
+  },
+  {
+   "id": "KS-OFFER-0076",
+   "url": null,
+   "title": "Every coin, counted",
+   "kind": "post",
+   "file": "data/kintsugi-offers/KS-OFFER-0076.txt",
+   "sha256": "40d60d9040c6435a439450125eea8e0320b62cc1dae3d36517af3d0d441802bd"
+  },
+  {
+   "id": "KS-OFFER-0077",
+   "url": null,
+   "title": "Sign in with your face or fingerprint",
+   "kind": "post",
+   "file": "data/kintsugi-offers/KS-OFFER-0077.txt",
+   "sha256": "b8e0dff0473ca63c96ebe83c7ac4eb7d8ff10a58fad77f7359c7a3e691b96217"
+  }
+ ]
+}
