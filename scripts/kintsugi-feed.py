@@ -18,6 +18,7 @@ CLIENT_H, DEV_H = 25, 20               # same rates as scripts/kintsugi-log.py
 OPEN_H = {'page': 2, 'post': 1}        # same fixed estimates as scripts/kintsugi-log.py
 CLIENT = 'The Bitcoin Corporation Ltd'
 DEV_HANDLE = '$b0asex'
+CLIENT_HANDLE = None   # bChatX $handle of The Bitcoin Corporation Ltd; bChatX shows "Take this job" only when set
 
 
 def load(p, default):
@@ -55,8 +56,11 @@ def main():
             task = f'Write and publish a blog post for {o["title"]} (bwalletx.com{o["url"]})'
         else:
             task = f'Publish post "{o["title"]}" once its feature ships in a release build'
-        rows.append(row(f'KS-OFFER-{k:04d}', 'tender', o['title'], task, OPEN_H[o['kind']], 'not_open',
-                        f'{SITE}/kintsugi/work', page_url=SITE + o['url'] if o.get('url') else None))
+        n = f'KS-OFFER-{k:04d}'   # owner 31 Oct: all offers open for tender, client + developer sign
+        r = row(n, 'tender', o['title'], task, OPEN_H[o['kind']], 'open', f'{SITE}/kintsugi/work',
+                text_url=f'{SITE}/data/kintsugi-offers/{n}.txt', page_url=SITE + o['url'] if o.get('url') else None)
+        r.update(client_handle=CLIENT_HANDLE, signers=['client', 'developer'])
+        rows.append(r)
 
     out = dict(source='kintsugi', updated_at=datetime.datetime.now(datetime.timezone.utc).strftime('%Y-%m-%dT%H:%M:%SZ'),
                rates=dict(client_usd_h=CLIENT_H, dev_usd_h=DEV_H, paid_in='BSV at the BSV/USD rate on payment day'),

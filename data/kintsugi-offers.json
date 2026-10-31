@@ -1,6 +1,6 @@
 {
  "source": "kintsugi",
- "updated_at": "2026-10-31T01:32:01Z",
+ "updated_at": "2026-10-31T01:40:08Z",
  "rates": {
   "client_usd_h": 25,
   "dev_usd_h": 20,
@@ -2932,12 +2932,17 @@
    "price_usd": 50,
    "dev_usd": 40,
    "fee_usd": 10,
-   "status": "not_open",
+   "status": "open",
    "contract_url": "https://bwalletx.com/kintsugi/work",
-   "text_url": null,
+   "text_url": "https://bwalletx.com/data/kintsugi-offers/KS-OFFER-0001.txt",
    "page_url": "https://bwalletx.com/airdrops",
-   "stamp_txid": null,
-   "paid_txids": []
+   "stamp_txid": "9dfb09ebb811441d6431ca01a7bb7ad9925b13fcf6fd023bd4de658fb7391683",
+   "paid_txids": [],
+   "client_handle": null,
+   "signers": [
+    "client",
+    "developer"
+   ]
   },
   {
    "source": "kintsugi",
@@ -2951,12 +2956,17 @@
    "price_usd": 50,
    "dev_usd": 40,
    "fee_usd": 10,
-   "status": "not_open",
+   "status": "open",
    "contract_url": "https://bwalletx.com/kintsugi/work",
-   "text_url": null,
+   "text_url": "https://bwalletx.com/data/kintsugi-offers/KS-OFFER-0002.txt",
    "page_url": "https://bwalletx.com/b-bots",
-   "stamp_txid": null,
-   "paid_txids": []
+   "stamp_txid": "4d28748bbb8ec80c45e56c10068c4b76abf98c176a6a3372fa6f0f2bfc5ce249",
+   "paid_txids": [],
+   "client_handle": null,
+   "signers": [
+    "client",
+    "developer"
+   ]
   },
   {
    "source": "kintsugi",
@@ -2970,12 +2980,17 @@
    "price_usd": 50,
    "dev_usd": 40,
    "fee_usd": 10,
-   "status": "not_open",
+   "status": "open",
    "contract_url": "https://bwalletx.com/kintsugi/work",
-   "text_url": null,
+   "text_url": "https://bwalletx.com/data/kintsugi-offers/KS-OFFER-0003.txt",
    "page_url": "https://bwalletx.com/b-cool",
-   "stamp_txid": null,
-   "paid_txids": []
+   "stamp_txid": "d82829c133f04c9d4997c77d159fb4b8f8dd44cb370a712854e9275bdb7ab1d7",
+   "paid_txids": [],
+   "client_handle": null,
+   "signers": [
+    "client",
+    "developer"
+   ]
   },
   {
    "source": "kintsugi",
@@ -2989,12 +3004,17 @@
    "price_usd": 50,
    "dev_usd": 40,
    "fee_usd": 10,
-   "status": "not_open",
+   "status": "open",
    "contract_url": "https://bwalletx.com/kintsugi/work",
-   "text_url": null,
+   "text_url": "https://bwalletx.com/data/kintsugi-offers/KS-OFFER-0004.txt",
    "page_url": "https://bwalletx.com/b-creative",
-   "stamp_txid": null,
-   "paid_txids": []
+   "stamp_txid": "54fb37a584a3cc253d825b0b7320e792bc650b82a1c7e8d0c68993ca7fa91273",
+   "paid_txids": [],
+   "client_handle": null,
+   "signers": [
+    "client",
+    "developer"
+   ]
   },
   {
    "source": "kintsugi",
@@ -3008,12 +3028,17 @@
    "price_usd": 50,
    "dev_usd": 40,
    "fee_usd": 10,
-   "status": "not_open",
+   "status": "open",
    "contract_url": "https://bwalletx.com/kintsugi/work",
-   "text_url": null,
+   "text_url": "https://bwalletx.com/data/kintsugi-offers/KS-OFFER-0005.txt",
    "page_url": "https://bwalletx.com/b-in-black",
-   "stamp_txid": null,
-   "paid_txids": []
+   "stamp_txid": "2cfcc003709f3f09b03a957e68d7c85f5a720c7df644ad623d355586bd561787",
+   "paid_txids": [],
+   "client_handle": null,
+   "signers": [
+    "client",
+    "developer"
+   ]
   },
   {
    "source": "kintsugi",
@@ -3027,12 +3052,17 @@
    "price_usd": 50,
    "dev_usd": 40,
    "fee_usd": 10,
-   "status": "not_open",
+   "status": "open",
    "contract_url": "https://bwalletx.com/kintsugi/work",
-   "text_url": null,
+   "text_url": "https://bwalletx.com/data/kintsugi-offers/KS-OFFER-0006.txt",
    "page_url": "https://bwalletx.com/b-is-coming",
-   "stamp_txid": null,
-   "paid_txids": []
+   "stamp_txid": "d442ed2c095720d351aa6a6a0ec26197a9ba78bdfba0b1ed0946038000a9ef20",
+   "paid_txids": [],
+   "client_handle": null,
+   "signers": [
+    "client",
+    "developer"
+   ]
   },
   {
    "source": "kintsugi",
@@ -3046,12 +3076,17 @@
    "price_usd": 50,
    "dev_usd": 40,
    "fee_usd": 10,
-   "status": "not_open",
+   "status": "open",
    "contract_url": "https://bwalletx.com/kintsugi/work",
-   "text_url": null,
+   "text_url": "https://bwalletx.com/data/kintsugi-offers/KS-OFFER-0007.txt",
    "page_url": "https://bwalletx.com/b-market",
-   "stamp_txid": null,
-   "paid_txids": []
+   "stamp_txid": "c93c319c3021a07b7ca267e5173290ea93b2b8cba9282a73816d5cb61ad6dcb2",
+   "paid_txids": [],
+   "client_handle": null,
+   "signers": [
+    "client",
+    "developer"
+   ]
   },
   {
    "source": "kintsugi",
@@ -3065,12 +3100,17 @@
    "price_usd": 50,
    "dev_usd": 40,
    "fee_usd": 10,
-   "status": "not_open",
+   "status": "open",
    "contract_url": "https://bwalletx.com/kintsugi/work",
-   "text_url": null,
+   "text_url": "https://bwalletx.com/data/kintsugi-offers/KS-OFFER-0008.txt",
    "page_url": "https://bwalletx.com/b-on-twetch",
-   "stamp_txid": null,
-   "paid_txids": []
+   "stamp_txid": "24a6d8693e6ae90e0771d601ed6c2079d5c50e8d6baf1c2a624c5aac486e5418",
+   "paid_txids": [],
+   "client_handle": null,
+   "signers": [
+    "client",
+    "developer"
+   ]
   },
   {
    "source": "kintsugi",
@@ -3084,12 +3124,17 @@
    "price_usd": 50,
    "dev_usd": 40,
    "fee_usd": 10,
-   "status": "not_open",
+   "status": "open",
    "contract_url": "https://bwalletx.com/kintsugi/work",
-   "text_url": null,
+   "text_url": "https://bwalletx.com/data/kintsugi-offers/KS-OFFER-0009.txt",
    "page_url": "https://bwalletx.com/b-socials",
-   "stamp_txid": null,
-   "paid_txids": []
+   "stamp_txid": "e963bee2706f7baa1e5c11756b41b2047d481c78339fa7f2cce37bc86bc227ee",
+   "paid_txids": [],
+   "client_handle": null,
+   "signers": [
+    "client",
+    "developer"
+   ]
   },
   {
    "source": "kintsugi",
@@ -3103,12 +3148,17 @@
    "price_usd": 50,
    "dev_usd": 40,
    "fee_usd": 10,
-   "status": "not_open",
+   "status": "open",
    "contract_url": "https://bwalletx.com/kintsugi/work",
-   "text_url": null,
+   "text_url": "https://bwalletx.com/data/kintsugi-offers/KS-OFFER-0010.txt",
    "page_url": "https://bwalletx.com/b/acc",
-   "stamp_txid": null,
-   "paid_txids": []
+   "stamp_txid": "994c5b9eae500c216194a61b6c67a699ee7ed5a2d29b86489623420da4f43afc",
+   "paid_txids": [],
+   "client_handle": null,
+   "signers": [
+    "client",
+    "developer"
+   ]
   },
   {
    "source": "kintsugi",
@@ -3122,12 +3172,17 @@
    "price_usd": 50,
    "dev_usd": 40,
    "fee_usd": 10,
-   "status": "not_open",
+   "status": "open",
    "contract_url": "https://bwalletx.com/kintsugi/work",
-   "text_url": null,
+   "text_url": "https://bwalletx.com/data/kintsugi-offers/KS-OFFER-0011.txt",
    "page_url": "https://bwalletx.com/bads",
-   "stamp_txid": null,
-   "paid_txids": []
+   "stamp_txid": "cca3de608ec9e10dd5e420691c80e53b81664005118d2a0378f12c6044bad880",
+   "paid_txids": [],
+   "client_handle": null,
+   "signers": [
+    "client",
+    "developer"
+   ]
   },
   {
    "source": "kintsugi",
@@ -3141,12 +3196,17 @@
    "price_usd": 50,
    "dev_usd": 40,
    "fee_usd": 10,
-   "status": "not_open",
+   "status": "open",
    "contract_url": "https://bwalletx.com/kintsugi/work",
-   "text_url": null,
+   "text_url": "https://bwalletx.com/data/kintsugi-offers/KS-OFFER-0012.txt",
    "page_url": "https://bwalletx.com/bapps/bmovies",
-   "stamp_txid": null,
-   "paid_txids": []
+   "stamp_txid": "6d018c798f634f0d75c0952c1969c60cf25ace4211424714a5e64fab26c6e70e",
+   "paid_txids": [],
+   "client_handle": null,
+   "signers": [
+    "client",
+    "developer"
+   ]
   },
   {
    "source": "kintsugi",
@@ -3160,12 +3220,17 @@
    "price_usd": 50,
    "dev_usd": 40,
    "fee_usd": 10,
-   "status": "not_open",
+   "status": "open",
    "contract_url": "https://bwalletx.com/kintsugi/work",
-   "text_url": null,
+   "text_url": "https://bwalletx.com/data/kintsugi-offers/KS-OFFER-0013.txt",
    "page_url": "https://bwalletx.com/bavatars",
-   "stamp_txid": null,
-   "paid_txids": []
+   "stamp_txid": "cb8c647a744875d3cc4ac76eeceba3e30882b74adf93ae6f5d8f945253854379",
+   "paid_txids": [],
+   "client_handle": null,
+   "signers": [
+    "client",
+    "developer"
+   ]
   },
   {
    "source": "kintsugi",
@@ -3179,12 +3244,17 @@
    "price_usd": 50,
    "dev_usd": 40,
    "fee_usd": 10,
-   "status": "not_open",
+   "status": "open",
    "contract_url": "https://bwalletx.com/kintsugi/work",
-   "text_url": null,
+   "text_url": "https://bwalletx.com/data/kintsugi-offers/KS-OFFER-0014.txt",
    "page_url": "https://bwalletx.com/be-on-b-2",
-   "stamp_txid": null,
-   "paid_txids": []
+   "stamp_txid": "8672846e074a3b0a4a2910982242e789c0fb112811a62981956e08b027f93179",
+   "paid_txids": [],
+   "client_handle": null,
+   "signers": [
+    "client",
+    "developer"
+   ]
   },
   {
    "source": "kintsugi",
@@ -3198,12 +3268,17 @@
    "price_usd": 50,
    "dev_usd": 40,
    "fee_usd": 10,
-   "status": "not_open",
+   "status": "open",
    "contract_url": "https://bwalletx.com/kintsugi/work",
-   "text_url": null,
+   "text_url": "https://bwalletx.com/data/kintsugi-offers/KS-OFFER-0015.txt",
    "page_url": "https://bwalletx.com/be-on-b-3",
-   "stamp_txid": null,
-   "paid_txids": []
+   "stamp_txid": "5220b3e0fc3182ce6acc28ac044f7d9b657c9a183ee29ffa2c18bd8843df3c33",
+   "paid_txids": [],
+   "client_handle": null,
+   "signers": [
+    "client",
+    "developer"
+   ]
   },
   {
    "source": "kintsugi",
@@ -3217,12 +3292,17 @@
    "price_usd": 50,
    "dev_usd": 40,
    "fee_usd": 10,
-   "status": "not_open",
+   "status": "open",
    "contract_url": "https://bwalletx.com/kintsugi/work",
-   "text_url": null,
+   "text_url": "https://bwalletx.com/data/kintsugi-offers/KS-OFFER-0016.txt",
    "page_url": "https://bwalletx.com/be-on-b",
-   "stamp_txid": null,
-   "paid_txids": []
+   "stamp_txid": "11978e879771a21a3dc951b6edd93907d97ca25f57d1c72491c37a70d93925bf",
+   "paid_txids": [],
+   "client_handle": null,
+   "signers": [
+    "client",
+    "developer"
+   ]
   },
   {
    "source": "kintsugi",
@@ -3236,12 +3316,17 @@
    "price_usd": 50,
    "dev_usd": 40,
    "fee_usd": 10,
-   "status": "not_open",
+   "status": "open",
    "contract_url": "https://bwalletx.com/kintsugi/work",
-   "text_url": null,
+   "text_url": "https://bwalletx.com/data/kintsugi-offers/KS-OFFER-0017.txt",
    "page_url": "https://bwalletx.com/bpositive",
-   "stamp_txid": null,
-   "paid_txids": []
+   "stamp_txid": "c23330d2e11bc90347fa188a111615f71f99a5fca522802bfdc32b45a70493fa",
+   "paid_txids": [],
+   "client_handle": null,
+   "signers": [
+    "client",
+    "developer"
+   ]
   },
   {
    "source": "kintsugi",
@@ -3255,12 +3340,17 @@
    "price_usd": 50,
    "dev_usd": 40,
    "fee_usd": 10,
-   "status": "not_open",
+   "status": "open",
    "contract_url": "https://bwalletx.com/kintsugi/work",
-   "text_url": null,
+   "text_url": "https://bwalletx.com/data/kintsugi-offers/KS-OFFER-0018.txt",
    "page_url": "https://bwalletx.com/brand",
-   "stamp_txid": null,
-   "paid_txids": []
+   "stamp_txid": "ba1da86ad6c7c52c267ec43c240a2765a0994411556e6abcbb14f52cc1f982b0",
+   "paid_txids": [],
+   "client_handle": null,
+   "signers": [
+    "client",
+    "developer"
+   ]
   },
   {
    "source": "kintsugi",
@@ -3274,12 +3364,17 @@
    "price_usd": 50,
    "dev_usd": 40,
    "fee_usd": 10,
-   "status": "not_open",
+   "status": "open",
    "contract_url": "https://bwalletx.com/kintsugi/work",
-   "text_url": null,
+   "text_url": "https://bwalletx.com/data/kintsugi-offers/KS-OFFER-0019.txt",
    "page_url": "https://bwalletx.com/btrust",
-   "stamp_txid": null,
-   "paid_txids": []
+   "stamp_txid": "67c9c3918892136f4c6a31b6e36873473b2145f83aa1b467eaf957c63b228217",
+   "paid_txids": [],
+   "client_handle": null,
+   "signers": [
+    "client",
+    "developer"
+   ]
   },
   {
    "source": "kintsugi",
@@ -3293,12 +3388,17 @@
    "price_usd": 50,
    "dev_usd": 40,
    "fee_usd": 10,
-   "status": "not_open",
+   "status": "open",
    "contract_url": "https://bwalletx.com/kintsugi/work",
-   "text_url": null,
+   "text_url": "https://bwalletx.com/data/kintsugi-offers/KS-OFFER-0020.txt",
    "page_url": "https://bwalletx.com/business-agents",
-   "stamp_txid": null,
-   "paid_txids": []
+   "stamp_txid": "770dcb2c50b286cf50940868c2db6cb6b8b6621b18a38387ac77c4e0c94020bb",
+   "paid_txids": [],
+   "client_handle": null,
+   "signers": [
+    "client",
+    "developer"
+   ]
   },
   {
    "source": "kintsugi",
@@ -3312,12 +3412,17 @@
    "price_usd": 50,
    "dev_usd": 40,
    "fee_usd": 10,
-   "status": "not_open",
+   "status": "open",
    "contract_url": "https://bwalletx.com/kintsugi/work",
-   "text_url": null,
+   "text_url": "https://bwalletx.com/data/kintsugi-offers/KS-OFFER-0021.txt",
    "page_url": "https://bwalletx.com/buy",
-   "stamp_txid": null,
-   "paid_txids": []
+   "stamp_txid": "15ab58baa30863a9fcc5888f57d9281f914e5799d26eed5fde33adac0948faeb",
+   "paid_txids": [],
+   "client_handle": null,
+   "signers": [
+    "client",
+    "developer"
+   ]
   },
   {
    "source": "kintsugi",
@@ -3331,12 +3436,17 @@
    "price_usd": 50,
    "dev_usd": 40,
    "fee_usd": 10,
-   "status": "not_open",
+   "status": "open",
    "contract_url": "https://bwalletx.com/kintsugi/work",
-   "text_url": null,
+   "text_url": "https://bwalletx.com/data/kintsugi-offers/KS-OFFER-0022.txt",
    "page_url": "https://bwalletx.com/bweb",
-   "stamp_txid": null,
-   "paid_txids": []
+   "stamp_txid": "fb236b1779332fb96bbc4c4f078d77caac2f9e1637141ba233e3953a73d46758",
+   "paid_txids": [],
+   "client_handle": null,
+   "signers": [
+    "client",
+    "developer"
+   ]
   },
   {
    "source": "kintsugi",
@@ -3350,12 +3460,17 @@
    "price_usd": 50,
    "dev_usd": 40,
    "fee_usd": 10,
-   "status": "not_open",
+   "status": "open",
    "contract_url": "https://bwalletx.com/kintsugi/work",
-   "text_url": null,
+   "text_url": "https://bwalletx.com/data/kintsugi-offers/KS-OFFER-0023.txt",
    "page_url": "https://bwalletx.com/clients",
-   "stamp_txid": null,
-   "paid_txids": []
+   "stamp_txid": "5150d05b96559ab5197bb340498161d8b2beb9739cb9c8e7580f07c3b34a1a81",
+   "paid_txids": [],
+   "client_handle": null,
+   "signers": [
+    "client",
+    "developer"
+   ]
   },
   {
    "source": "kintsugi",
@@ -3369,12 +3484,17 @@
    "price_usd": 50,
    "dev_usd": 40,
    "fee_usd": 10,
-   "status": "not_open",
+   "status": "open",
    "contract_url": "https://bwalletx.com/kintsugi/work",
-   "text_url": null,
+   "text_url": "https://bwalletx.com/data/kintsugi-offers/KS-OFFER-0024.txt",
    "page_url": "https://bwalletx.com/coingeek-on-b",
-   "stamp_txid": null,
-   "paid_txids": []
+   "stamp_txid": "c04a9ea91a91262a4c0829ca4aaa17ebd6b5279a2e880e1c0d526bf82a377427",
+   "paid_txids": [],
+   "client_handle": null,
+   "signers": [
+    "client",
+    "developer"
+   ]
   },
   {
    "source": "kintsugi",
@@ -3388,12 +3508,17 @@
    "price_usd": 50,
    "dev_usd": 40,
    "fee_usd": 10,
-   "status": "not_open",
+   "status": "open",
    "contract_url": "https://bwalletx.com/kintsugi/work",
-   "text_url": null,
+   "text_url": "https://bwalletx.com/data/kintsugi-offers/KS-OFFER-0025.txt",
    "page_url": "https://bwalletx.com/creative",
-   "stamp_txid": null,
-   "paid_txids": []
+   "stamp_txid": "0bf9ab4885c34e4d45333271ba42bd75ca7a3ba2b2d377ccadf788ae426f8051",
+   "paid_txids": [],
+   "client_handle": null,
+   "signers": [
+    "client",
+    "developer"
+   ]
   },
   {
    "source": "kintsugi",
@@ -3407,12 +3532,17 @@
    "price_usd": 50,
    "dev_usd": 40,
    "fee_usd": 10,
-   "status": "not_open",
+   "status": "open",
    "contract_url": "https://bwalletx.com/kintsugi/work",
-   "text_url": null,
+   "text_url": "https://bwalletx.com/data/kintsugi-offers/KS-OFFER-0026.txt",
    "page_url": "https://bwalletx.com/credits",
-   "stamp_txid": null,
-   "paid_txids": []
+   "stamp_txid": "4f3c0a60b120090f8021eca7ea7f079e325a15130abc771f007a47452f048693",
+   "paid_txids": [],
+   "client_handle": null,
+   "signers": [
+    "client",
+    "developer"
+   ]
   },
   {
    "source": "kintsugi",
@@ -3426,12 +3556,17 @@
    "price_usd": 50,
    "dev_usd": 40,
    "fee_usd": 10,
-   "status": "not_open",
+   "status": "open",
    "contract_url": "https://bwalletx.com/kintsugi/work",
-   "text_url": null,
+   "text_url": "https://bwalletx.com/data/kintsugi-offers/KS-OFFER-0027.txt",
    "page_url": "https://bwalletx.com/culture",
-   "stamp_txid": null,
-   "paid_txids": []
+   "stamp_txid": "0e4d409df95448020600cff2d4de084f193a6bbd13e605095a41b78111d2136a",
+   "paid_txids": [],
+   "client_handle": null,
+   "signers": [
+    "client",
+    "developer"
+   ]
   },
   {
    "source": "kintsugi",
@@ -3445,12 +3580,17 @@
    "price_usd": 50,
    "dev_usd": 40,
    "fee_usd": 10,
-   "status": "not_open",
+   "status": "open",
    "contract_url": "https://bwalletx.com/kintsugi/work",
-   "text_url": null,
+   "text_url": "https://bwalletx.com/data/kintsugi-offers/KS-OFFER-0028.txt",
    "page_url": "https://bwalletx.com/desktop",
-   "stamp_txid": null,
-   "paid_txids": []
+   "stamp_txid": "e975c8a583c8ae7a63b249a0dbdd0e0821b934ac7074c33252e17f0fad49c737",
+   "paid_txids": [],
+   "client_handle": null,
+   "signers": [
+    "client",
+    "developer"
+   ]
   },
   {
    "source": "kintsugi",
@@ -3464,12 +3604,17 @@
    "price_usd": 50,
    "dev_usd": 40,
    "fee_usd": 10,
-   "status": "not_open",
+   "status": "open",
    "contract_url": "https://bwalletx.com/kintsugi/work",
-   "text_url": null,
+   "text_url": "https://bwalletx.com/data/kintsugi-offers/KS-OFFER-0029.txt",
    "page_url": "https://bwalletx.com/developers",
-   "stamp_txid": null,
-   "paid_txids": []
+   "stamp_txid": "dadf1ce4e63b4bc723631c710e3c1d874f04f028262fab9839c34be5a62a26cb",
+   "paid_txids": [],
+   "client_handle": null,
+   "signers": [
+    "client",
+    "developer"
+   ]
   },
   {
    "source": "kintsugi",
@@ -3483,12 +3628,17 @@
    "price_usd": 50,
    "dev_usd": 40,
    "fee_usd": 10,
-   "status": "not_open",
+   "status": "open",
    "contract_url": "https://bwalletx.com/kintsugi/work",
-   "text_url": null,
+   "text_url": "https://bwalletx.com/data/kintsugi-offers/KS-OFFER-0030.txt",
    "page_url": "https://bwalletx.com/direct",
-   "stamp_txid": null,
-   "paid_txids": []
+   "stamp_txid": "ce7d9b1ec1eb9fdbb682b40c35ef4117d23d82799fd441973db5e3eddde16a26",
+   "paid_txids": [],
+   "client_handle": null,
+   "signers": [
+    "client",
+    "developer"
+   ]
   },
   {
    "source": "kintsugi",
@@ -3502,12 +3652,17 @@
    "price_usd": 50,
    "dev_usd": 40,
    "fee_usd": 10,
-   "status": "not_open",
+   "status": "open",
    "contract_url": "https://bwalletx.com/kintsugi/work",
-   "text_url": null,
+   "text_url": "https://bwalletx.com/data/kintsugi-offers/KS-OFFER-0031.txt",
    "page_url": "https://bwalletx.com/features",
-   "stamp_txid": null,
-   "paid_txids": []
+   "stamp_txid": "1648bce773e626a063311eceb351e08d21d1df8914b7ef271d704930ebbd8f73",
+   "paid_txids": [],
+   "client_handle": null,
+   "signers": [
+    "client",
+    "developer"
+   ]
   },
   {
    "source": "kintsugi",
@@ -3521,12 +3676,17 @@
    "price_usd": 50,
    "dev_usd": 40,
    "fee_usd": 10,
-   "status": "not_open",
+   "status": "open",
    "contract_url": "https://bwalletx.com/kintsugi/work",
-   "text_url": null,
+   "text_url": "https://bwalletx.com/data/kintsugi-offers/KS-OFFER-0032.txt",
    "page_url": "https://bwalletx.com/flick-off",
-   "stamp_txid": null,
-   "paid_txids": []
+   "stamp_txid": "af24fa816c69fbd69f8ea880a3c95d1d7c59674e3864a8311ecc38f3ef2dae0a",
+   "paid_txids": [],
+   "client_handle": null,
+   "signers": [
+    "client",
+    "developer"
+   ]
   },
   {
    "source": "kintsugi",
@@ -3540,12 +3700,17 @@
    "price_usd": 50,
    "dev_usd": 40,
    "fee_usd": 10,
-   "status": "not_open",
+   "status": "open",
    "contract_url": "https://bwalletx.com/kintsugi/work",
-   "text_url": null,
+   "text_url": "https://bwalletx.com/data/kintsugi-offers/KS-OFFER-0033.txt",
    "page_url": "https://bwalletx.com/games",
-   "stamp_txid": null,
-   "paid_txids": []
+   "stamp_txid": "a00323eaac6a2ffb6c698467e72ffa9b84e69d6415497f48837fa86270d5ff54",
+   "paid_txids": [],
+   "client_handle": null,
+   "signers": [
+    "client",
+    "developer"
+   ]
   },
   {
    "source": "kintsugi",
@@ -3559,12 +3724,17 @@
    "price_usd": 50,
    "dev_usd": 40,
    "fee_usd": 10,
-   "status": "not_open",
+   "status": "open",
    "contract_url": "https://bwalletx.com/kintsugi/work",
-   "text_url": null,
+   "text_url": "https://bwalletx.com/data/kintsugi-offers/KS-OFFER-0034.txt",
    "page_url": "https://bwalletx.com/get",
-   "stamp_txid": null,
-   "paid_txids": []
+   "stamp_txid": "7ed0c57786abbec231e3f128ec42e99ed87f22acb0d2fe21b594ddc48e131b0b",
+   "paid_txids": [],
+   "client_handle": null,
+   "signers": [
+    "client",
+    "developer"
+   ]
   },
   {
    "source": "kintsugi",
@@ -3578,12 +3748,17 @@
    "price_usd": 50,
    "dev_usd": 40,
    "fee_usd": 10,
-   "status": "not_open",
+   "status": "open",
    "contract_url": "https://bwalletx.com/kintsugi/work",
-   "text_url": null,
+   "text_url": "https://bwalletx.com/data/kintsugi-offers/KS-OFFER-0035.txt",
    "page_url": "https://bwalletx.com/gigs",
-   "stamp_txid": null,
-   "paid_txids": []
+   "stamp_txid": "225ed3e67fd13db86236ccc0522c205aa2dcec52613feb08ece0097cb4cdb85b",
+   "paid_txids": [],
+   "client_handle": null,
+   "signers": [
+    "client",
+    "developer"
+   ]
   },
   {
    "source": "kintsugi",
@@ -3597,12 +3772,17 @@
    "price_usd": 50,
    "dev_usd": 40,
    "fee_usd": 10,
-   "status": "not_open",
+   "status": "open",
    "contract_url": "https://bwalletx.com/kintsugi/work",
-   "text_url": null,
+   "text_url": "https://bwalletx.com/data/kintsugi-offers/KS-OFFER-0036.txt",
    "page_url": "https://bwalletx.com/happy-b",
-   "stamp_txid": null,
-   "paid_txids": []
+   "stamp_txid": "890be2be7a6d1fca588ec5a18efe9bae90ab9cd6790d9081040e961c81935b91",
+   "paid_txids": [],
+   "client_handle": null,
+   "signers": [
+    "client",
+    "developer"
+   ]
   },
   {
    "source": "kintsugi",
@@ -3616,12 +3796,17 @@
    "price_usd": 50,
    "dev_usd": 40,
    "fee_usd": 10,
-   "status": "not_open",
+   "status": "open",
    "contract_url": "https://bwalletx.com/kintsugi/work",
-   "text_url": null,
+   "text_url": "https://bwalletx.com/data/kintsugi-offers/KS-OFFER-0037.txt",
    "page_url": "https://bwalletx.com/hodl-my-b",
-   "stamp_txid": null,
-   "paid_txids": []
+   "stamp_txid": "321d4b4eb9efbb3a1370f327e0b8b139431b3619ddc5b4f2918b7befd40cf662",
+   "paid_txids": [],
+   "client_handle": null,
+   "signers": [
+    "client",
+    "developer"
+   ]
   },
   {
    "source": "kintsugi",
@@ -3635,12 +3820,17 @@
    "price_usd": 50,
    "dev_usd": 40,
    "fee_usd": 10,
-   "status": "not_open",
+   "status": "open",
    "contract_url": "https://bwalletx.com/kintsugi/work",
-   "text_url": null,
+   "text_url": "https://bwalletx.com/data/kintsugi-offers/KS-OFFER-0038.txt",
    "page_url": "https://bwalletx.com/hodl-my-b/0",
-   "stamp_txid": null,
-   "paid_txids": []
+   "stamp_txid": "7bca194f28e113788dcff00208044e19ece29dc07fc1a5bff17a74e0eadf0eed",
+   "paid_txids": [],
+   "client_handle": null,
+   "signers": [
+    "client",
+    "developer"
+   ]
   },
   {
    "source": "kintsugi",
@@ -3654,12 +3844,17 @@
    "price_usd": 50,
    "dev_usd": 40,
    "fee_usd": 10,
-   "status": "not_open",
+   "status": "open",
    "contract_url": "https://bwalletx.com/kintsugi/work",
-   "text_url": null,
+   "text_url": "https://bwalletx.com/data/kintsugi-offers/KS-OFFER-0039.txt",
    "page_url": "https://bwalletx.com/hodl-my-b/1",
-   "stamp_txid": null,
-   "paid_txids": []
+   "stamp_txid": "28339e436f562698f9dbe8da62cd42853e4426732419720ee2d298ef3632a4b4",
+   "paid_txids": [],
+   "client_handle": null,
+   "signers": [
+    "client",
+    "developer"
+   ]
   },
   {
    "source": "kintsugi",
@@ -3673,12 +3868,17 @@
    "price_usd": 50,
    "dev_usd": 40,
    "fee_usd": 10,
-   "status": "not_open",
+   "status": "open",
    "contract_url": "https://bwalletx.com/kintsugi/work",
-   "text_url": null,
+   "text_url": "https://bwalletx.com/data/kintsugi-offers/KS-OFFER-0040.txt",
    "page_url": "https://bwalletx.com/hodlocker-on-b",
-   "stamp_txid": null,
-   "paid_txids": []
+   "stamp_txid": "dedbaf3f33208a8b73936fc5b4145b93f0a987fd8db195f0466bfdbe82380984",
+   "paid_txids": [],
+   "client_handle": null,
+   "signers": [
+    "client",
+    "developer"
+   ]
   },
   {
    "source": "kintsugi",
@@ -3692,12 +3892,17 @@
    "price_usd": 50,
    "dev_usd": 40,
    "fee_usd": 10,
-   "status": "not_open",
+   "status": "open",
    "contract_url": "https://bwalletx.com/kintsugi/work",
-   "text_url": null,
+   "text_url": "https://bwalletx.com/data/kintsugi-offers/KS-OFFER-0041.txt",
    "page_url": "https://bwalletx.com/hold-to-talk",
-   "stamp_txid": null,
-   "paid_txids": []
+   "stamp_txid": "57428a6305927e5df83da37cca0b1e621168f99c75d29739dae9ff356ae663a3",
+   "paid_txids": [],
+   "client_handle": null,
+   "signers": [
+    "client",
+    "developer"
+   ]
   },
   {
    "source": "kintsugi",
@@ -3711,12 +3916,17 @@
    "price_usd": 50,
    "dev_usd": 40,
    "fee_usd": 10,
-   "status": "not_open",
+   "status": "open",
    "contract_url": "https://bwalletx.com/kintsugi/work",
-   "text_url": null,
+   "text_url": "https://bwalletx.com/data/kintsugi-offers/KS-OFFER-0042.txt",
    "page_url": "https://bwalletx.com/jobs",
-   "stamp_txid": null,
-   "paid_txids": []
+   "stamp_txid": "15cf7a81640ae3060bbc09d9ead63cc4344b0f8222247da2d1660cb7aca778f0",
+   "paid_txids": [],
+   "client_handle": null,
+   "signers": [
+    "client",
+    "developer"
+   ]
   },
   {
    "source": "kintsugi",
@@ -3730,12 +3940,17 @@
    "price_usd": 50,
    "dev_usd": 40,
    "fee_usd": 10,
-   "status": "not_open",
+   "status": "open",
    "contract_url": "https://bwalletx.com/kintsugi/work",
-   "text_url": null,
+   "text_url": "https://bwalletx.com/data/kintsugi-offers/KS-OFFER-0043.txt",
    "page_url": "https://bwalletx.com/migrate",
-   "stamp_txid": null,
-   "paid_txids": []
+   "stamp_txid": "f47c6243c352b08d599bed1c912041ec4f4ecee64d06e22c5ecaa2b79e9db616",
+   "paid_txids": [],
+   "client_handle": null,
+   "signers": [
+    "client",
+    "developer"
+   ]
   },
   {
    "source": "kintsugi",
@@ -3749,12 +3964,17 @@
    "price_usd": 50,
    "dev_usd": 40,
    "fee_usd": 10,
-   "status": "not_open",
+   "status": "open",
    "contract_url": "https://bwalletx.com/kintsugi/work",
-   "text_url": null,
+   "text_url": "https://bwalletx.com/data/kintsugi-offers/KS-OFFER-0044.txt",
    "page_url": "https://bwalletx.com/newsletter",
-   "stamp_txid": null,
-   "paid_txids": []
+   "stamp_txid": "143735fd96725d220f57f80571de78bacc7483e9c3e5a098881ff8935f4e5c58",
+   "paid_txids": [],
+   "client_handle": null,
+   "signers": [
+    "client",
+    "developer"
+   ]
   },
   {
    "source": "kintsugi",
@@ -3768,12 +3988,17 @@
    "price_usd": 50,
    "dev_usd": 40,
    "fee_usd": 10,
-   "status": "not_open",
+   "status": "open",
    "contract_url": "https://bwalletx.com/kintsugi/work",
-   "text_url": null,
+   "text_url": "https://bwalletx.com/data/kintsugi-offers/KS-OFFER-0045.txt",
    "page_url": "https://bwalletx.com/partners",
-   "stamp_txid": null,
-   "paid_txids": []
+   "stamp_txid": "a559165aa53924cfedda39928963522f511431ab91996129bdc8ad231d55167b",
+   "paid_txids": [],
+   "client_handle": null,
+   "signers": [
+    "client",
+    "developer"
+   ]
   },
   {
    "source": "kintsugi",
@@ -3787,12 +4012,17 @@
    "price_usd": 50,
    "dev_usd": 40,
    "fee_usd": 10,
-   "status": "not_open",
+   "status": "open",
    "contract_url": "https://bwalletx.com/kintsugi/work",
-   "text_url": null,
+   "text_url": "https://bwalletx.com/data/kintsugi-offers/KS-OFFER-0046.txt",
    "page_url": "https://bwalletx.com/peck-on-b",
-   "stamp_txid": null,
-   "paid_txids": []
+   "stamp_txid": "889e9120f7efbba4b6d219f64fd72081e1939ebe92a27754f8b038433a86ede1",
+   "paid_txids": [],
+   "client_handle": null,
+   "signers": [
+    "client",
+    "developer"
+   ]
   },
   {
    "source": "kintsugi",
@@ -3806,12 +4036,17 @@
    "price_usd": 50,
    "dev_usd": 40,
    "fee_usd": 10,
-   "status": "not_open",
+   "status": "open",
    "contract_url": "https://bwalletx.com/kintsugi/work",
-   "text_url": null,
+   "text_url": "https://bwalletx.com/data/kintsugi-offers/KS-OFFER-0047.txt",
    "page_url": "https://bwalletx.com/race-card",
-   "stamp_txid": null,
-   "paid_txids": []
+   "stamp_txid": "046870f0b3a43fab066d6a78fb34e78e55d26bc7e475c9ed84b94a049738da78",
+   "paid_txids": [],
+   "client_handle": null,
+   "signers": [
+    "client",
+    "developer"
+   ]
   },
   {
    "source": "kintsugi",
@@ -3825,12 +4060,17 @@
    "price_usd": 50,
    "dev_usd": 40,
    "fee_usd": 10,
-   "status": "not_open",
+   "status": "open",
    "contract_url": "https://bwalletx.com/kintsugi/work",
-   "text_url": null,
+   "text_url": "https://bwalletx.com/data/kintsugi-offers/KS-OFFER-0048.txt",
    "page_url": "https://bwalletx.com/recover-relayx",
-   "stamp_txid": null,
-   "paid_txids": []
+   "stamp_txid": "b1926705be4f5565a0e90c5fdafaa706c331f34072d4fe8df9f50b24bb89a3ab",
+   "paid_txids": [],
+   "client_handle": null,
+   "signers": [
+    "client",
+    "developer"
+   ]
   },
   {
    "source": "kintsugi",
@@ -3844,12 +4084,17 @@
    "price_usd": 50,
    "dev_usd": 40,
    "fee_usd": 10,
-   "status": "not_open",
+   "status": "open",
    "contract_url": "https://bwalletx.com/kintsugi/work",
-   "text_url": null,
+   "text_url": "https://bwalletx.com/data/kintsugi-offers/KS-OFFER-0049.txt",
    "page_url": "https://bwalletx.com/relayx-on-b",
-   "stamp_txid": null,
-   "paid_txids": []
+   "stamp_txid": "b8a4bc61a17f68ff55948e176b14c0561c8bd4dd97554c83c6939ff4cb972fe7",
+   "paid_txids": [],
+   "client_handle": null,
+   "signers": [
+    "client",
+    "developer"
+   ]
   },
   {
    "source": "kintsugi",
@@ -3863,12 +4108,17 @@
    "price_usd": 50,
    "dev_usd": 40,
    "fee_usd": 10,
-   "status": "not_open",
+   "status": "open",
    "contract_url": "https://bwalletx.com/kintsugi/work",
-   "text_url": null,
+   "text_url": "https://bwalletx.com/data/kintsugi-offers/KS-OFFER-0050.txt",
    "page_url": "https://bwalletx.com/restore/moneybutton",
-   "stamp_txid": null,
-   "paid_txids": []
+   "stamp_txid": "c219aef7e623da6259a2728afcb2f8ecb103daff881067c810d0a4cc82c096fc",
+   "paid_txids": [],
+   "client_handle": null,
+   "signers": [
+    "client",
+    "developer"
+   ]
   },
   {
    "source": "kintsugi",
@@ -3882,12 +4132,17 @@
    "price_usd": 50,
    "dev_usd": 40,
    "fee_usd": 10,
-   "status": "not_open",
+   "status": "open",
    "contract_url": "https://bwalletx.com/kintsugi/work",
-   "text_url": null,
+   "text_url": "https://bwalletx.com/data/kintsugi-offers/KS-OFFER-0051.txt",
    "page_url": "https://bwalletx.com/restore/panda",
-   "stamp_txid": null,
-   "paid_txids": []
+   "stamp_txid": "b08face4f8c855b5f530a10caf2f8342110a388e708629a8743f267776bf8029",
+   "paid_txids": [],
+   "client_handle": null,
+   "signers": [
+    "client",
+    "developer"
+   ]
   },
   {
    "source": "kintsugi",
@@ -3901,12 +4156,17 @@
    "price_usd": 50,
    "dev_usd": 40,
    "fee_usd": 10,
-   "status": "not_open",
+   "status": "open",
    "contract_url": "https://bwalletx.com/kintsugi/work",
-   "text_url": null,
+   "text_url": "https://bwalletx.com/data/kintsugi-offers/KS-OFFER-0052.txt",
    "page_url": "https://bwalletx.com/restore/simplycash",
-   "stamp_txid": null,
-   "paid_txids": []
+   "stamp_txid": "c9ea4d758215b84a5b19ba97b92c35cba56465a6b12b83e6712087cb8ca06a4c",
+   "paid_txids": [],
+   "client_handle": null,
+   "signers": [
+    "client",
+    "developer"
+   ]
   },
   {
    "source": "kintsugi",
@@ -3920,12 +4180,17 @@
    "price_usd": 50,
    "dev_usd": 40,
    "fee_usd": 10,
-   "status": "not_open",
+   "status": "open",
    "contract_url": "https://bwalletx.com/kintsugi/work",
-   "text_url": null,
+   "text_url": "https://bwalletx.com/data/kintsugi-offers/KS-OFFER-0053.txt",
    "page_url": "https://bwalletx.com/restore/twetch",
-   "stamp_txid": null,
-   "paid_txids": []
+   "stamp_txid": "d58ef2bd2a0cd578dcc72578464a86eb661099f5812284c32f1c08b4ce6225b0",
+   "paid_txids": [],
+   "client_handle": null,
+   "signers": [
+    "client",
+    "developer"
+   ]
   },
   {
    "source": "kintsugi",
@@ -3939,12 +4204,17 @@
    "price_usd": 50,
    "dev_usd": 40,
    "fee_usd": 10,
-   "status": "not_open",
+   "status": "open",
    "contract_url": "https://bwalletx.com/kintsugi/work",
-   "text_url": null,
+   "text_url": "https://bwalletx.com/data/kintsugi-offers/KS-OFFER-0054.txt",
    "page_url": "https://bwalletx.com/roadmap",
-   "stamp_txid": null,
-   "paid_txids": []
+   "stamp_txid": "82f33d37ad612dbfc04b902f68fb364cf976a5a8a837ad552f4111570164dd1d",
+   "paid_txids": [],
+   "client_handle": null,
+   "signers": [
+    "client",
+    "developer"
+   ]
   },
   {
    "source": "kintsugi",
@@ -3958,12 +4228,17 @@
    "price_usd": 50,
    "dev_usd": 40,
    "fee_usd": 10,
-   "status": "not_open",
+   "status": "open",
    "contract_url": "https://bwalletx.com/kintsugi/work",
-   "text_url": null,
+   "text_url": "https://bwalletx.com/data/kintsugi-offers/KS-OFFER-0055.txt",
    "page_url": "https://bwalletx.com/seedless-login",
-   "stamp_txid": null,
-   "paid_txids": []
+   "stamp_txid": "fa0d85f6900f4d6676d381a1b1e94d09407c9e848abcd90b6bce272ea1503223",
+   "paid_txids": [],
+   "client_handle": null,
+   "signers": [
+    "client",
+    "developer"
+   ]
   },
   {
    "source": "kintsugi",
@@ -3977,12 +4252,17 @@
    "price_usd": 50,
    "dev_usd": 40,
    "fee_usd": 10,
-   "status": "not_open",
+   "status": "open",
    "contract_url": "https://bwalletx.com/kintsugi/work",
-   "text_url": null,
+   "text_url": "https://bwalletx.com/data/kintsugi-offers/KS-OFFER-0056.txt",
    "page_url": "https://bwalletx.com/seedless-signin",
-   "stamp_txid": null,
-   "paid_txids": []
+   "stamp_txid": "c220e9bd66a11c3676f97ae379ad23fa0fc52a8b40c5ce58b6509cc67dd678f6",
+   "paid_txids": [],
+   "client_handle": null,
+   "signers": [
+    "client",
+    "developer"
+   ]
   },
   {
    "source": "kintsugi",
@@ -3996,12 +4276,17 @@
    "price_usd": 50,
    "dev_usd": 40,
    "fee_usd": 10,
-   "status": "not_open",
+   "status": "open",
    "contract_url": "https://bwalletx.com/kintsugi/work",
-   "text_url": null,
+   "text_url": "https://bwalletx.com/data/kintsugi-offers/KS-OFFER-0057.txt",
    "page_url": "https://bwalletx.com/services",
-   "stamp_txid": null,
-   "paid_txids": []
+   "stamp_txid": "5052ba55ffd99a853278bad0d7c62522de62d58dc32fccdcc71c2e58367e8433",
+   "paid_txids": [],
+   "client_handle": null,
+   "signers": [
+    "client",
+    "developer"
+   ]
   },
   {
    "source": "kintsugi",
@@ -4015,12 +4300,17 @@
    "price_usd": 50,
    "dev_usd": 40,
    "fee_usd": 10,
-   "status": "not_open",
+   "status": "open",
    "contract_url": "https://bwalletx.com/kintsugi/work",
-   "text_url": null,
+   "text_url": "https://bwalletx.com/data/kintsugi-offers/KS-OFFER-0058.txt",
    "page_url": "https://bwalletx.com/sign-in-button",
-   "stamp_txid": null,
-   "paid_txids": []
+   "stamp_txid": "c1bab9a35d4578fdec86579869b9add4f5c0aa331958041883ea94e0ede22a77",
+   "paid_txids": [],
+   "client_handle": null,
+   "signers": [
+    "client",
+    "developer"
+   ]
   },
   {
    "source": "kintsugi",
@@ -4034,12 +4324,17 @@
    "price_usd": 50,
    "dev_usd": 40,
    "fee_usd": 10,
-   "status": "not_open",
+   "status": "open",
    "contract_url": "https://bwalletx.com/kintsugi/work",
-   "text_url": null,
+   "text_url": "https://bwalletx.com/data/kintsugi-offers/KS-OFFER-0059.txt",
    "page_url": "https://bwalletx.com/sms",
-   "stamp_txid": null,
-   "paid_txids": []
+   "stamp_txid": "06c01af24e0f467eb3bc3458f6f7e73353a842b3cecf775ee8670d75ac2d2770",
+   "paid_txids": [],
+   "client_handle": null,
+   "signers": [
+    "client",
+    "developer"
+   ]
   },
   {
    "source": "kintsugi",
@@ -4053,12 +4348,17 @@
    "price_usd": 50,
    "dev_usd": 40,
    "fee_usd": 10,
-   "status": "not_open",
+   "status": "open",
    "contract_url": "https://bwalletx.com/kintsugi/work",
-   "text_url": null,
+   "text_url": "https://bwalletx.com/data/kintsugi-offers/KS-OFFER-0060.txt",
    "page_url": "https://bwalletx.com/social",
-   "stamp_txid": null,
-   "paid_txids": []
+   "stamp_txid": "efccb6783482d0bb7552f3479f7effc72cccae88f1aa28268b81e5f4b1506688",
+   "paid_txids": [],
+   "client_handle": null,
+   "signers": [
+    "client",
+    "developer"
+   ]
   },
   {
    "source": "kintsugi",
@@ -4072,12 +4372,17 @@
    "price_usd": 50,
    "dev_usd": 40,
    "fee_usd": 10,
-   "status": "not_open",
+   "status": "open",
    "contract_url": "https://bwalletx.com/kintsugi/work",
-   "text_url": null,
+   "text_url": "https://bwalletx.com/data/kintsugi-offers/KS-OFFER-0061.txt",
    "page_url": "https://bwalletx.com/streaming-payments",
-   "stamp_txid": null,
-   "paid_txids": []
+   "stamp_txid": "b07efa8532c665c6b12f908b6c40d363a6ebad673776a3406706eeb324e95875",
+   "paid_txids": [],
+   "client_handle": null,
+   "signers": [
+    "client",
+    "developer"
+   ]
   },
   {
    "source": "kintsugi",
@@ -4091,12 +4396,17 @@
    "price_usd": 50,
    "dev_usd": 40,
    "fee_usd": 10,
-   "status": "not_open",
+   "status": "open",
    "contract_url": "https://bwalletx.com/kintsugi/work",
-   "text_url": null,
+   "text_url": "https://bwalletx.com/data/kintsugi-offers/KS-OFFER-0062.txt",
    "page_url": "https://bwalletx.com/sweep-simplycash",
-   "stamp_txid": null,
-   "paid_txids": []
+   "stamp_txid": "408fa04fb50e4b9eb832f00d5a343fa0037ddd7343609c2a67f47d9d9aa2f6bc",
+   "paid_txids": [],
+   "client_handle": null,
+   "signers": [
+    "client",
+    "developer"
+   ]
   },
   {
    "source": "kintsugi",
@@ -4110,12 +4420,17 @@
    "price_usd": 50,
    "dev_usd": 40,
    "fee_usd": 10,
-   "status": "not_open",
+   "status": "open",
    "contract_url": "https://bwalletx.com/kintsugi/work",
-   "text_url": null,
+   "text_url": "https://bwalletx.com/data/kintsugi-offers/KS-OFFER-0063.txt",
    "page_url": "https://bwalletx.com/terms",
-   "stamp_txid": null,
-   "paid_txids": []
+   "stamp_txid": "a15394e14687d86e893839fce9f28b7211cfa6632e66bb3230e88e8315b65bc6",
+   "paid_txids": [],
+   "client_handle": null,
+   "signers": [
+    "client",
+    "developer"
+   ]
   },
   {
    "source": "kintsugi",
@@ -4129,12 +4444,17 @@
    "price_usd": 50,
    "dev_usd": 40,
    "fee_usd": 10,
-   "status": "not_open",
+   "status": "open",
    "contract_url": "https://bwalletx.com/kintsugi/work",
-   "text_url": null,
+   "text_url": "https://bwalletx.com/data/kintsugi-offers/KS-OFFER-0064.txt",
    "page_url": "https://bwalletx.com/themes-custom",
-   "stamp_txid": null,
-   "paid_txids": []
+   "stamp_txid": "440c6674a5f95fe832da7f6df7a1a8fcf13dd9169f2f40261f4f454341b8e190",
+   "paid_txids": [],
+   "client_handle": null,
+   "signers": [
+    "client",
+    "developer"
+   ]
   },
   {
    "source": "kintsugi",
@@ -4148,12 +4468,17 @@
    "price_usd": 50,
    "dev_usd": 40,
    "fee_usd": 10,
-   "status": "not_open",
+   "status": "open",
    "contract_url": "https://bwalletx.com/kintsugi/work",
-   "text_url": null,
+   "text_url": "https://bwalletx.com/data/kintsugi-offers/KS-OFFER-0065.txt",
    "page_url": "https://bwalletx.com/token-curves",
-   "stamp_txid": null,
-   "paid_txids": []
+   "stamp_txid": "51191780cf22401a04bce68b7c322340c4ac7446e8432d0c3da808b8b2d49232",
+   "paid_txids": [],
+   "client_handle": null,
+   "signers": [
+    "client",
+    "developer"
+   ]
   },
   {
    "source": "kintsugi",
@@ -4167,12 +4492,17 @@
    "price_usd": 50,
    "dev_usd": 40,
    "fee_usd": 10,
-   "status": "not_open",
+   "status": "open",
    "contract_url": "https://bwalletx.com/kintsugi/work",
-   "text_url": null,
+   "text_url": "https://bwalletx.com/data/kintsugi-offers/KS-OFFER-0066.txt",
    "page_url": "https://bwalletx.com/token-locking",
-   "stamp_txid": null,
-   "paid_txids": []
+   "stamp_txid": "4a7a0eb2383b0eaf0700c25b50b137239d559592280695e7a74d7c569c14e251",
+   "paid_txids": [],
+   "client_handle": null,
+   "signers": [
+    "client",
+    "developer"
+   ]
   },
   {
    "source": "kintsugi",
@@ -4186,12 +4516,17 @@
    "price_usd": 50,
    "dev_usd": 40,
    "fee_usd": 10,
-   "status": "not_open",
+   "status": "open",
    "contract_url": "https://bwalletx.com/kintsugi/work",
-   "text_url": null,
+   "text_url": "https://bwalletx.com/data/kintsugi-offers/KS-OFFER-0067.txt",
    "page_url": "https://bwalletx.com/treechat-on-b",
-   "stamp_txid": null,
-   "paid_txids": []
+   "stamp_txid": "793a270f08fe9f2e7a575d2a185247fb53eceeea9ef683b3e60f7f5c4ea7b548",
+   "paid_txids": [],
+   "client_handle": null,
+   "signers": [
+    "client",
+    "developer"
+   ]
   },
   {
    "source": "kintsugi",
@@ -4205,12 +4540,17 @@
    "price_usd": 50,
    "dev_usd": 40,
    "fee_usd": 10,
-   "status": "not_open",
+   "status": "open",
    "contract_url": "https://bwalletx.com/kintsugi/work",
-   "text_url": null,
+   "text_url": "https://bwalletx.com/data/kintsugi-offers/KS-OFFER-0068.txt",
    "page_url": "https://bwalletx.com/twetch-on-b",
-   "stamp_txid": null,
-   "paid_txids": []
+   "stamp_txid": "1e62412aac5e6bf124257b134603b6058414cf34e340ddd1ba1a652b1cf30b7e",
+   "paid_txids": [],
+   "client_handle": null,
+   "signers": [
+    "client",
+    "developer"
+   ]
   },
   {
    "source": "kintsugi",
@@ -4224,12 +4564,17 @@
    "price_usd": 50,
    "dev_usd": 40,
    "fee_usd": 10,
-   "status": "not_open",
+   "status": "open",
    "contract_url": "https://bwalletx.com/kintsugi/work",
-   "text_url": null,
+   "text_url": "https://bwalletx.com/data/kintsugi-offers/KS-OFFER-0069.txt",
    "page_url": "https://bwalletx.com/verify-note",
-   "stamp_txid": null,
-   "paid_txids": []
+   "stamp_txid": "550b7469dd775e013a3d28df157b5a1685f8f6d72fe9ea0e3418f6eb2edc86b0",
+   "paid_txids": [],
+   "client_handle": null,
+   "signers": [
+    "client",
+    "developer"
+   ]
   },
   {
    "source": "kintsugi",
@@ -4243,12 +4588,17 @@
    "price_usd": 50,
    "dev_usd": 40,
    "fee_usd": 10,
-   "status": "not_open",
+   "status": "open",
    "contract_url": "https://bwalletx.com/kintsugi/work",
-   "text_url": null,
+   "text_url": "https://bwalletx.com/data/kintsugi-offers/KS-OFFER-0070.txt",
    "page_url": "https://bwalletx.com/wallet-frames",
-   "stamp_txid": null,
-   "paid_txids": []
+   "stamp_txid": "0afb2a27b3cfe68b3b01823532ca8dc231949a0fc80c08d9fa4642ddfd58a232",
+   "paid_txids": [],
+   "client_handle": null,
+   "signers": [
+    "client",
+    "developer"
+   ]
   },
   {
    "source": "kintsugi",
@@ -4262,12 +4612,17 @@
    "price_usd": 50,
    "dev_usd": 40,
    "fee_usd": 10,
-   "status": "not_open",
+   "status": "open",
    "contract_url": "https://bwalletx.com/kintsugi/work",
-   "text_url": null,
+   "text_url": "https://bwalletx.com/data/kintsugi-offers/KS-OFFER-0071.txt",
    "page_url": "https://bwalletx.com/web",
-   "stamp_txid": null,
-   "paid_txids": []
+   "stamp_txid": "6557c65930aa160cc70f4450ddde43661088864591da9ebfb8edc4b864539127",
+   "paid_txids": [],
+   "client_handle": null,
+   "signers": [
+    "client",
+    "developer"
+   ]
   },
   {
    "source": "kintsugi",
@@ -4281,12 +4636,17 @@
    "price_usd": 50,
    "dev_usd": 40,
    "fee_usd": 10,
-   "status": "not_open",
+   "status": "open",
    "contract_url": "https://bwalletx.com/kintsugi/work",
-   "text_url": null,
+   "text_url": "https://bwalletx.com/data/kintsugi-offers/KS-OFFER-0072.txt",
    "page_url": "https://bwalletx.com/your-apps-on-b",
-   "stamp_txid": null,
-   "paid_txids": []
+   "stamp_txid": "39051bf584c67c654edfe4cb441ca2a9cd5918552e4ad771a84a7ce75675628c",
+   "paid_txids": [],
+   "client_handle": null,
+   "signers": [
+    "client",
+    "developer"
+   ]
   },
   {
    "source": "kintsugi",
@@ -4300,12 +4660,17 @@
    "price_usd": 50,
    "dev_usd": 40,
    "fee_usd": 10,
-   "status": "not_open",
+   "status": "open",
    "contract_url": "https://bwalletx.com/kintsugi/work",
-   "text_url": null,
+   "text_url": "https://bwalletx.com/data/kintsugi-offers/KS-OFFER-0073.txt",
    "page_url": "https://bwalletx.com/your-character",
-   "stamp_txid": null,
-   "paid_txids": []
+   "stamp_txid": "f1bb5ef94ab4be1fd6482fea6d4769333d78209c294e7038e7d7000a3ee1a290",
+   "paid_txids": [],
+   "client_handle": null,
+   "signers": [
+    "client",
+    "developer"
+   ]
   },
   {
    "source": "kintsugi",
@@ -4319,12 +4684,17 @@
    "price_usd": 50,
    "dev_usd": 40,
    "fee_usd": 10,
-   "status": "not_open",
+   "status": "open",
    "contract_url": "https://bwalletx.com/kintsugi/work",
-   "text_url": null,
+   "text_url": "https://bwalletx.com/data/kintsugi-offers/KS-OFFER-0074.txt",
    "page_url": "https://bwalletx.com/yours-on-b",
-   "stamp_txid": null,
-   "paid_txids": []
+   "stamp_txid": "c20fd64987e3f187f3d26e50e155445d850bbcf98afad486391fcb631955fbdc",
+   "paid_txids": [],
+   "client_handle": null,
+   "signers": [
+    "client",
+    "developer"
+   ]
   },
   {
    "source": "kintsugi",
@@ -4338,12 +4708,17 @@
    "price_usd": 25,
    "dev_usd": 20,
    "fee_usd": 5,
-   "status": "not_open",
+   "status": "open",
    "contract_url": "https://bwalletx.com/kintsugi/work",
-   "text_url": null,
+   "text_url": "https://bwalletx.com/data/kintsugi-offers/KS-OFFER-0075.txt",
    "page_url": null,
-   "stamp_txid": null,
-   "paid_txids": []
+   "stamp_txid": "34fb57be55b56a4d98f2c9d6b1f89a97b35550f178754ba3186dfb48c566d2e7",
+   "paid_txids": [],
+   "client_handle": null,
+   "signers": [
+    "client",
+    "developer"
+   ]
   },
   {
    "source": "kintsugi",
@@ -4357,12 +4732,17 @@
    "price_usd": 25,
    "dev_usd": 20,
    "fee_usd": 5,
-   "status": "not_open",
+   "status": "open",
    "contract_url": "https://bwalletx.com/kintsugi/work",
-   "text_url": null,
+   "text_url": "https://bwalletx.com/data/kintsugi-offers/KS-OFFER-0076.txt",
    "page_url": null,
-   "stamp_txid": null,
-   "paid_txids": []
+   "stamp_txid": "f36c71c489df9c99611fc0753d358de7826f0cae906f3f166c4c87f58a150685",
+   "paid_txids": [],
+   "client_handle": null,
+   "signers": [
+    "client",
+    "developer"
+   ]
   },
   {
    "source": "kintsugi",
@@ -4376,12 +4756,17 @@
    "price_usd": 25,
    "dev_usd": 20,
    "fee_usd": 5,
-   "status": "not_open",
+   "status": "open",
    "contract_url": "https://bwalletx.com/kintsugi/work",
-   "text_url": null,
+   "text_url": "https://bwalletx.com/data/kintsugi-offers/KS-OFFER-0077.txt",
    "page_url": null,
-   "stamp_txid": null,
-   "paid_txids": []
+   "stamp_txid": "ed71f4be2dd751d0dcca888e98c6f05f0daa4fba238bc025ca81f65b392ecff7",
+   "paid_txids": [],
+   "client_handle": null,
+   "signers": [
+    "client",
+    "developer"
+   ]
   }
  ]
 }
