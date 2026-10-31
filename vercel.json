@@ -671,13 +671,13 @@
       "statusCode": 301
     },
     {
-      "source": "/download/:file(bwalletx-android(?!-5.2.46\\.apk$)[^/]*\\.apk)",
-      "destination": "/download/bwalletx-android-5.2.46.apk",
+      "source": "/download/:file(bwalletx-android(?!-5.2.47\\.apk$)[^/]*\\.apk)",
+      "destination": "/download/bwalletx-android-5.2.47.apk",
       "statusCode": 302
     },
     {
-      "source": "/download/:file(bwalletx-extension(?!-5.2.46\\.zip$)[^/]*\\.zip)",
-      "destination": "/download/bwalletx-extension-5.2.46.zip",
+      "source": "/download/:file(bwalletx-extension(?!-5.2.47\\.zip$)[^/]*\\.zip)",
+      "destination": "/download/bwalletx-extension-5.2.47.zip",
       "statusCode": 302
     },
     {
