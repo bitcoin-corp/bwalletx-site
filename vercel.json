@@ -168,6 +168,16 @@
   ],
   "redirects": [
     {
+      "source": "/pownotes",
+      "destination": "/pow-notes",
+      "permanent": true
+    },
+    {
+      "source": "/pownotes/:path*",
+      "destination": "/pow-notes/:path*",
+      "permanent": true
+    },
+    {
       "source": "/mint-a-team",
       "destination": "/your-character",
       "permanent": false
