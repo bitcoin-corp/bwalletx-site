@@ -1107,6 +1107,8 @@ b Kintsugi
 
 -
 
+-
+
 #
 
 Play the film
@@ -1134,6 +1136,8 @@ Kintsugi is in development. The film shows what we are building; some steps are 
 Source: https://bwalletx.com/b-kintsugi
 
 b Kintsugi
+
+-
 
 -
 
@@ -1302,6 +1306,8 @@ b paid
 
 -
 
+-
+
 #
 
 Play the film
@@ -1331,6 +1337,8 @@ Paid jobs on b are in development. The film shows what we are building; some ste
 Source: https://bwalletx.com/b-paid
 
 b paid
+
+-
 
 -
 
@@ -1509,6 +1517,63 @@ STATUS
 The theme is being made. This page will change the day you can buy it.
 
 The picture above is a mockup of the design. Prices and details may change before it goes on sale. bWalletX is in beta: test with small amounts. Questions: [support@bwalletx.com](mailto:support@bwalletx.com)
+
+---
+
+Source: https://bwalletx.com/bacon
+
+bChatX · six degrees
+
+# $BACON: a thank-you for bringing friends.
+
+Your X profile is already on bChatX. Claim it, bring your friends, and collect $BACON and Bacon Notes along the way. Less noise. More life. Just b.
+
+[Find your profile on bChatX](https://www.bchatx.com)[About Bacon Notes](https://bwalletx.com/pow-notes/bacon)
+
+## What works today
+
+- LiveSyndicated bChatX profiles with Claim it, at [bchatx.com/x/<handle>](https://bchatx.com/x/bWalletX)
+
+- Not open yetClaim rewards: bring 7 friends
+
+- Live$BACON created on chain: 1,000,000,000 supply, held by The Bitcoin Corporation Mint (31 Oct 2026)
+
+- LiveBacon Note No. 1 minted: a test note, shown under Fresh from the Mint
+
+- Not open yetEarning $BACON and Bacon Notes for friends who claim
+
+- Minting coming soonPoWNotes
+
+$BACON exists and the first test note is minted. Earning them for friends is not open yet. We will tick each line here when it ships.
+
+## Six degrees
+
+bChatX shows profiles syndicated from X at `bchatx.com/x/<handle>`. When you claim yours by signing in with X, you can bring 7 friends free. Everyone is only a few friends away.
+
+## $BACON
+
+$BACON is a BSV-21 memecoin with a supply of 1,000,000,000. You get $BACON for each friend you bring who claims their profile. It is a collectible and a thank-you, nothing more.
+
+## Bacon Notes
+
+Bacon Notes are one-of-a-kind, banknote-style collectibles. You get one for every 6 friends who claim their profile.
+
+- Rasher guilloche and filigree, a pig portrait and a serial number on every note.
+
+- Face values of 1K, 10K, 100K and 1M $BACON.
+
+- Rare golden notes and misprints.
+
+- Each note holds its $BACON, just like a [PoWNote](https://bwalletx.com/pow-notes).
+
+A sample design. Real notes carry their own serial.
+A sample golden note. Golden and misprint notes are rare.
+
+More: [PoWNotes](https://bwalletx.com/pow-notes) · [Bacon PoWNotes](https://bwalletx.com/pow-notes/bacon) · [Blog 106](https://bwalletx.com/blog/106-bacon-pownotes)
+
+[Part of the bWalletX familySee every b app and what works today →](https://bwalletx.com/b-family)
+
+bWalletX is in beta: test with small amounts. Questions: [support@bwalletx.com](mailto:support@bwalletx.com)
 
 ---
 
@@ -6716,6 +6781,70 @@ Linked sign-ins show how many accounts this person has connected. It is not iden
 
 ---
 
+Source: https://bwalletx.com/pow-notes
+
+The Bitcoin Corporation Mint
+
+# PoWNotes: notes that hold their value.
+
+A PoWNote is a bearer note on Bitcoin. Hand it on like cash, or melt it and get the value back.
+
+## Fresh from the Mint
+
+Loading…
+
+## What works today
+
+- LiveSyndicated bChatX profiles with Claim it, at [bchatx.com/x/<handle>](https://bchatx.com/x/bWalletX)
+
+- Not open yetClaim rewards: bring 7 friends
+
+- Live$BACON created on chain: 1,000,000,000 supply, held by The Bitcoin Corporation Mint (31 Oct 2026)
+
+- LiveBacon Note No. 1 minted: a test note, shown under Fresh from the Mint
+
+- Not open yetEarning $BACON and Bacon Notes for friends who claim
+
+- Minting coming soonPoWNotes
+
+$BACON exists and the first test note is minted. Earning them for friends is not open yet. We will tick each line here when it ships.
+
+## How a PoWNote works
+
+- It holds its value. Each note is a 1Sat NFT, and its coin holds the note’s face value.
+
+- Send it like cash. When you send a note, the person you send it to gets a new edition, and you keep a shell with no value in it.
+
+- Melt it. Melting a note returns the value it holds.
+
+- Yours alone. Once a note is issued, only the holder controls it. We cannot move it for you.
+
+## How you know a note is genuine
+
+Official PoWNotes, including Bacon Notes, are issued only by The Bitcoin Corporation Mint. That is how you know they are genuine.
+
+- The Mint signs each note’s origin, serial and face value together.
+
+- A note is genuine only if its on-chain origin is in the Mint’s signed registry.
+
+- Copies and duplicate serials are refused.
+
+- Fakes are never delivered, never shown as genuine and never listed on our markets. If one is shown at all, it carries the label “Not issued by The Bitcoin Corporation Mint”.
+
+## Safe pictures
+
+We draw every note ourselves, using only shapes, colours and text, with no code inside. Notes are always shown as pictures.
+
+## The first series: Bacon Notes
+
+Bacon Notes are PoWNotes you get for bringing friends to bChatX. [See Bacon PoWNotes →](https://bwalletx.com/pow-notes/bacon)
+
+[Part of the bWalletX familySee every b app and what works today →](https://bwalletx.com/b-family)
+
+bWalletX is in beta: test with small amounts. Questions: [support@bwalletx.com](mailto:support@bwalletx.com)
+
+---
+
 Source: https://bwalletx.com/push-notifications
 
 # Push notifications
@@ -6967,6 +7096,13 @@ Every bWalletX release and what it added, newest first.
 Each release ships to the Android APK, the Chrome extension and the web wallet. Android also goes to Google Play internal testing. The App Store build is not yet submitted.
 
 [Download bWalletX](https://bwalletx.com/download)
+
+## 5.2.48 2026-10-31
+
+- Make your own PoWNote in bMint (web, extension and Android direct).
+- Each signable document in a chat room now has its own Review & sign button.
+- A document only shows Sealed when the seal really names that document.
+- The iPhone App Store build of this version is coming soon. Android, Chrome and web have it now.
 
 ## 5.2.46 2026-10-30
 
@@ -18588,6 +18724,73 @@ Part of: [Exchange & tokens](https://bwalletx.com/blog#ex) · Related: [Token lo
 
 ---
 
+Source: https://bwalletx.com/blog/106-bacon-pownotes
+
+[Development blog](https://bwalletx.com/blog) · 106 · 31 Oct 2026
+
+# Bacon PoWNotes
+
+Bacon Notes are one-of-a-kind PoWNotes that hold their own $BACON, a thank-you for bringing friends to bChatX. Nothing is minted yet: here is the plan, and what works today.
+
+## Six degrees
+
+Your X profile is already on bChatX at `bchatx.com/x/<handle>`. Claim it by signing in with X, and you can bring 7 friends free.
+
+## $BACON and Bacon Notes
+
+$BACON is a BSV-21 memecoin, 1,000,000,000 supply. You get $BACON for each friend who claims their profile, and a Bacon Note for every 6. Each note has a pig portrait, rasher guilloche, a serial number and a face value of 1K, 10K, 100K or 1M $BACON, with rare golden and misprint notes. Each one holds its $BACON.
+
+A sample design. Real notes carry their own serial.
+A sample golden note. Golden and misprint notes are rare.
+
+## How a PoWNote works
+
+- It holds its value. Each note is a 1Sat NFT, and its coin holds the note’s face value.
+
+- Send it like cash. When you send a note, the person you send it to gets a new edition, and you keep a shell with no value in it.
+
+- Melt it. Melting a note returns the value it holds.
+
+- Yours alone. Once a note is issued, only the holder controls it. We cannot move it for you.
+
+## How you know a note is genuine
+
+Official PoWNotes, including Bacon Notes, are issued only by The Bitcoin Corporation Mint. That is how you know they are genuine.
+
+- The Mint signs each note’s origin, serial and face value together.
+
+- A note is genuine only if its on-chain origin is in the Mint’s signed registry.
+
+- Copies and duplicate serials are refused.
+
+- Fakes are never delivered, never shown as genuine and never listed on our markets. If one is shown at all, it carries the label “Not issued by The Bitcoin Corporation Mint”.
+
+## Safe pictures
+
+We draw every note ourselves, using only shapes, colours and text, with no code inside. Notes are always shown as pictures.
+
+## What works today
+
+- LiveSyndicated bChatX profiles with Claim it, at [bchatx.com/x/<handle>](https://bchatx.com/x/bWalletX)
+
+- Not open yetClaim rewards: bring 7 friends
+
+- Live$BACON created on chain: 1,000,000,000 supply, held by The Bitcoin Corporation Mint (31 Oct 2026)
+
+- LiveBacon Note No. 1 minted: a test note, shown under Fresh from the Mint
+
+- Not open yetEarning $BACON and Bacon Notes for friends who claim
+
+- Minting coming soonPoWNotes
+
+$BACON exists and the first test note is minted. Earning them for friends is not open yet. We will tick each line here when it ships.
+
+Pages: [$BACON](https://bwalletx.com/bacon) · [PoWNotes](https://bwalletx.com/pow-notes) · [Bacon PoWNotes](https://bwalletx.com/pow-notes/bacon)
+
+[← 105 Airdrops](https://bwalletx.com/blog/105-airdrops)[All posts →](https://bwalletx.com/blog)
+
+---
+
 Source: https://bwalletx.com/blog/
 
 # Development blog
@@ -18730,7 +18933,15 @@ Agents & b
 - [](https://bwalletx.com/blog/010-agents-strategies-cli)[010 Agent accounts, strategies, CLI and MCP](https://bwalletx.com/blog/010-agents-strategies-cli)
 - [](https://bwalletx.com/blog/043-ask-b)[043 Ask b](https://bwalletx.com/blog/043-ask-b)
 - [](https://bwalletx.com/blog/071-bbots)[071 bBots: make your own bot](https://bwalletx.com/blog/071-bbots)
+- [](https://bwalletx.com/blog/105-airdrops)105 · 31 Oct 2026
+[Airdrops](https://bwalletx.com/blog/105-airdrops)
+Every bWalletX account has an airdrop address and an Airdrops inbox: unasked tokens wait there until you keep or hide them, with safety rules built in.
+
 - [](https://bwalletx.com/blog/104-give-your-agent-a-wallet)[104 Give your agent a wallet](https://bwalletx.com/blog/104-give-your-agent-a-wallet)
+
+- [](https://bwalletx.com/blog/106-bacon-pownotes)106 · 31 Oct 2026
+[Bacon PoWNotes](https://bwalletx.com/blog/106-bacon-pownotes)
+Bacon Notes are one-of-a-kind PoWNotes that hold their own $BACON, a thank-you for bringing friends to bChatX. Minting coming soon.
 
 - [](https://bwalletx.com/blog/104-give-your-agent-a-wallet)104 · 30 Oct 2026
 [Give your agent a wallet](https://bwalletx.com/blog/104-give-your-agent-a-wallet)

@@ -48,6 +48,7 @@ Full text of every page below: https://bwalletx.com/llms-full.txt
 - [b paid](https://bwalletx.com/b-paid): Ask b for anything you need done. Someone with the skills says yes, does it, and you pay them directly, wallet to wallet in BSV. Get paid the same way.
 - [bAcc: make Bitcoin faster, the goal is 1 billion transactions a second | bWalletX](https://bwalletx.com/b/acc): bAcc is the Bitcoin accelerationist movement: make Bitcoin faster. BTC handles a few transactions a second; BSV is built to scale. Our goal: 1 billion transactions per second (1b TPS). Play the bAcc race game.
 - [The bAcc theme for bWalletX, $1 | bAcc store | bWalletX](https://bwalletx.com/b/acc/store): The bAcc theme: black and yellow racing stripes for your bWalletX. Coming to the Store inside bWalletX for $1, paid in BSV.
+- [$BACON and Bacon Notes · bWalletX](https://bwalletx.com/bacon): Bring your friends to bChatX and get $BACON and one-of-a-kind Bacon Notes as a thank-you. Minting coming soon.
 - [bAds](https://bwalletx.com/bad): We sell bAds: ads made by b, the agent in your bWalletX.
 - [bAds · we sell bAds, made by b · bWalletX](https://bwalletx.com/bads): We sell bAds: ads made by b, the agent in your bWalletX. Tell b about your business and b makes the film, the logo or the whole brand at bAdvertisingX, for one fixed price in Bitcoin.
 - [bApps: apps that run inside bWalletX](https://bwalletx.com/bapps): bApps are Bitcoin apps that open inside bWalletX: sign in with your wallet, pay from your wallet, one bar across every app. bChatX, bMovies, bMusic, bMint, bWriter and more.
@@ -101,10 +102,11 @@ Full text of every page below: https://bwalletx.com/llms-full.txt
 - [Partnership shares: start with friends, incorporate later](https://bwalletx.com/partnership-shares): Start something with friends. Share it fairly with Partnership shares in bWalletX. b drafts the agreement in a chat only the partners are in. Incorporate when you're ready.
 - [Peck on b · bWalletX](https://bwalletx.com/peck-on-b): Read Peck posts in the bWalletX Feed from its public overlay, see each author’s posts, tip signed authors in BSV and lock behind posts.
 - [Send a bMail · bWalletX](https://bwalletx.com/person): Everything you can do with a person on bWalletX: send a bMail for a penny, call, pay or tip, and chat. Write your message now; bWalletX sends it.
+- [PoWNotes · bWalletX](https://bwalletx.com/pow-notes): PoWNotes are bearer notes that hold their own value. Send one like cash, melt it to get the value back. Minting coming soon.
 - [bAcc RACE: the bAcc racing game | bWalletX](https://bwalletx.com/race-card): bAcc RACE: make Bitcoin faster. A racing game in your browser, in black and yellow. In progress. Game engine by VexVoid.
 - [Your RelayX NFTs are still yours · bWalletX](https://bwalletx.com/recover-relayx): RelayX has closed, but the NFTs bought and minted there are still on chain at their owners' keys. bWalletX finds them from your RelayX 12 words. Your words stay on your phone, and finding them moves nothing.
 - [RelayX on b · bWalletX](https://bwalletx.com/relayx-on-b): RelayX has closed, but your RelayX NFTs and BSV are still on chain. bWalletX finds them from your 12 words, keeps them in your wallet and cancels old listings.
-- [Releases](https://bwalletx.com/releases): Every bWalletX release and what it added, newest first. Latest: 5.2.46.
+- [Releases](https://bwalletx.com/releases): Every bWalletX release and what it added, newest first. Latest: 5.2.48.
 - [Roadmap](https://bwalletx.com/roadmap): What bWalletX does today, what we are building now, and what is planned next.
 - [Seedless login · bWalletX](https://bwalletx.com/seedless-login): Live in bWalletX: create and open your wallet with a passkey, Face ID, fingerprint or PIN. No seed phrase to manage. Your 12 words still exist, and we never hold your keys.
 - [Sign in with a passkey: open your wallet with your face or fingerprint | bWalletX](https://bwalletx.com/seedless-signin): Create a bWalletX wallet with a passkey. Face ID, fingerprint or your device PIN opens it: no password to invent. Your 12 words are sealed with the passkey and saved as a locked recovery file.
@@ -301,6 +303,7 @@ Every payment is a BRC-100 action from the user's own bWalletX (non-custodial); 
 - [103 Just b: our films · bWalletX blog](https://bwalletx.com/blog/103-just-b-films): Short films that say what bWalletX is for: less noise, more life. Watch Just b, Just b 2, and b is for auteurs, business and shopkeepers.
 - [104 Give your agent a wallet · bWalletX blog](https://bwalletx.com/blog/104-give-your-agent-a-wallet): The bwalletx command-line wallet lets an AI agent pay, buy and sell for you, with daily caps and per-site pairing so it never spends more than you allow.
 - [105 Airdrops · bWalletX blog](https://bwalletx.com/blog/105-airdrops): Every bWalletX account has an airdrop address and an Airdrops inbox: unasked tokens wait there until you keep or hide them, with safety rules built in.
+- [106 Bacon PoWNotes · bWalletX blog](https://bwalletx.com/blog/106-bacon-pownotes): Bacon Notes are one-of-a-kind PoWNotes that hold their own $BACON, a thank-you for bringing friends to bChatX. Minting coming soon.
 - [bWalletX development blog](https://bwalletx.com/blog/): How bWallet and bWalletX were built from a fork of Yours Wallet: numbered posts from the git history, including what broke, what we reversed and what is still not done.
 
 ## Support
