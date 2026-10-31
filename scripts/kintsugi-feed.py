@@ -18,7 +18,8 @@ CLIENT_H, DEV_H = 25, 20               # same rates as scripts/kintsugi-log.py
 OPEN_H = {'page': 2, 'post': 1}        # same fixed estimates as scripts/kintsugi-log.py
 CLIENT = 'The Bitcoin Corporation Ltd'
 DEV_HANDLE = '$b0asex'
-CLIENT_HANDLE = None   # bChatX $handle of The Bitcoin Corporation Ltd; bChatX shows "Take this job" only when set
+CLIENT_HANDLE = '$bCorp'   # owner 31 Oct: The Bitcoin Corporation Ltd = bCorp@bwalletx.com
+CLIENT_PAYMAIL = 'bCorp@bwalletx.com'
 
 
 def load(p, default):
@@ -64,7 +65,7 @@ def main():
         r = row(e['id'], 'tender', e['title'], task, h, e.get('status', 'open'), f'{SITE}/kintsugi/work',
                 text_url=f'{SITE}/{e["file"]}', page_url=SITE + e['url'] if e.get('url') else None,
                 usd=(x, x * 0.8, x * 0.2) if v1 else (x, x, 0))   # reissue: developer paid in full, no Kintsugi fee
-        r.update(client_handle=CLIENT_HANDLE, signers=['client', 'developer'],
+        r.update(client_handle=CLIENT_HANDLE, client_paymail=CLIENT_PAYMAIL, signers=['client', 'developer'],
                  replaces=e.get('replaces'), replaced_by=e.get('replaced_by'))
         rows.append(r)
 
