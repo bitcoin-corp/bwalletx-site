@@ -104,7 +104,9 @@ for rel in tracked:
     if ld:
         block = '    <!-- ld:start -->\n    <script type="application/ld+json">\n%s\n    </script>\n    <!-- ld:end -->\n' % \
                 json.dumps(ld, ensure_ascii=False, indent=1).replace('</', '<\\/')
-        s = s.replace('</head>', block + '  </head>', 1)
+        # Insert at the start of the </head> line so the block keeps its 4-space indent run after run
+        # (inserting before the tag itself added the line's indent on top and re-touched 40 pages every release).
+        s = re.sub(r'\n([ \t]*)</head>', lambda m: '\n' + block + m.group(1) + '</head>', s, count=1)
     if s != s0:
         open(p, 'w', encoding='utf-8').write(s); changed += 1
 print(changed, 'pages updated')
