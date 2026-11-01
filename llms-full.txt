@@ -1564,18 +1564,15 @@ $BACON is a BSV-21 memecoin with a supply of 1,000,000,000. You get $BACON for e
 
 ## Bacon Notes
 
-Bacon Notes are one-of-a-kind, banknote-style collectibles. You get one for every 6 friends who claim their profile.
+Bacon Notes are numbered, banknote-style collectibles. You get one for every friend who joins bChatX because of you, and one more each time one of their friends joins.
 
-- Rasher guilloche and filigree, a pig portrait and a serial number on every note.
+- A propaganda-print banknote on streaky bacon, with the Leader, a boar, in a cap, beret, ushanka or top hat.
 
-- Face values of 1K, 10K, 100K and 1M $BACON.
+- Mined on your own device: the proof-of-work hash seeds the art.
 
-- Rare golden notes and misprints.
+- Golden notes 1 in 50, misprints 1 in 100. Every note is the same kind of note; only the number and the art differ.
 
-- Each note holds its $BACON, just like a [PoWNote](https://bwalletx.com/pow-notes).
-
-A sample design. Real notes carry their own serial.
-A sample golden note. Golden and misprint notes are rare.
+- Minting coming soon. See [Bacon Notes](https://bwalletx.com/pow-notes/bacon).
 
 More: [PoWNotes](https://bwalletx.com/pow-notes) · [Bacon PoWNotes](https://bwalletx.com/pow-notes/bacon) · [Blog 106](https://bwalletx.com/blog/106-bacon-pownotes)
 
@@ -9612,7 +9609,11 @@ The iPhone beta is open through TestFlight and has no application step: install 
 
 - 0.75 BSV once you've checked in on at least 12 of the 14 days.
 
-- Paid to your own bWallet receive address. I pay each one by hand and you'll see the transaction id here.
+- Paid from our tester pot to your own bWallet receive address. Every payment is listed below with its transaction.
+
+## Payments
+
+Loading payments…
 
 ## The rules
 
