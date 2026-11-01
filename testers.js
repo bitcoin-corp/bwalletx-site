@@ -120,8 +120,26 @@
     r.j.application ? status(r.j) : form(r.j);
   }
 
+  // Public ledger: amounts, transaction ids and dates only.
+  async function payments() {
+    const totals = document.getElementById('pay-totals');
+    const list = document.getElementById('pay-list');
+    try {
+      const j = await fetch(API + '/payouts').then((r) => r.json());
+      const t = j.totals;
+      totals.textContent = `Paid so far: ${t.paidBsv} BSV to ${t.testersPaid} tester${t.testersPaid === 1 ? '' : 's'}.` + (t.owedBsv !== '0' ? ` Earned and waiting to be paid: ${t.owedBsv} BSV.` : '');
+      list.replaceChildren(...j.paid.map((p) => el('li', {},
+        el('span', { class: 'pay-when' }, new Date(p.paid).toLocaleDateString(undefined, { day: 'numeric', month: 'short' })), ' ',
+        el('b', {}, `${p.bsv} BSV`), ` ${p.kind === 'first_open' ? 'first open' : '14 days'} · `,
+        el('a', { href: `https://whatsonchain.com/tx/${p.txid}`, target: '_blank', rel: 'noopener' }, p.txid.slice(0, 10) + '…'))));
+    } catch {
+      totals.textContent = 'Can\'t load payments right now.';
+    }
+  }
+
   async function start() {
     places();
+    payments();
     const q = new URLSearchParams(location.hash.slice(1));
     if (q.get('t') || q.get('error')) history.replaceState(null, '', location.pathname);
     if (q.get('error')) return signedOut(q.get('error') === 'cancelled' ? 'Sign-in cancelled.' : q.get('error'));

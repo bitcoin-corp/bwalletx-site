@@ -1493,6 +1493,9 @@ body {
 .testers-box p { margin: 0 0 12px; color: #c9ccd2; }
 .testers-box ol { margin: 0 0 16px; padding-left: 1.4em; line-height: 1.6; background: none; border: 0; }
 .testers-box li { margin: 6px 0; }
+.pay-list { list-style: none; padding: 0; margin: 0 0 16px; }
+.pay-list li { padding: 8px 0; border-bottom: 1px solid #ffffff14; }
+.pay-list .pay-when { color: #9a9ea6; display: inline-block; min-width: 4.5em; }
 .testers-box .tb-row { display: flex; flex-wrap: wrap; gap: 10px; margin: 0 0 12px; }
 .testers-box .tb-row .btn { text-decoration: none; text-align: center; flex: 1 1 200px; display: inline-flex; justify-content: center; }
 .testers-box .tb-note { font-size: 0.85rem; color: #8a8a86; margin: 0; }
