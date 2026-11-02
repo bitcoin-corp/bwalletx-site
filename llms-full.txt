@@ -3883,7 +3883,7 @@ Direct
 
 For companies without engineers. Bring your website, even a broken one. We add Sign in with bWalletX, payments and paymail, fix what’s broken, and tell you the price before we start.
 
-[Ask for a quoteIn the $BWALLETX room](https://chat.bwalletx.com/chat?room=BWALLETX)
+[Ask for a quoteIn the bWallet Help Desk](https://chat.bwalletx.com/chat?room=LOUNGE)
 [Email ussupport@bwalletx.com](mailto:support@bwalletx.com?subject=bWalletX%20Direct%20quote)
 
 ## What we add
@@ -3908,7 +3908,7 @@ If your site has problems that stand in the way, we fix them as part of the same
 
 ### 1. Ask
 
-Tell us your website and what you want: in the $BWALLETX room, where b takes the details, or by email.
+Tell us your website and what you want: in the bWallet Help Desk, where b takes the details, or by email.
 
 ### 2. Quote
 
@@ -8790,7 +8790,7 @@ NEW TO BWALLETX?
 A site asked you to sign in or pay with bWalletX. This page explains what that means, how to get the wallet, and what to tap. It’s free.
 
 [Get bWalletXExtension, Android, iPhone or web](https://bwalletx.com/get)
-[Ask b for helpIn the $BWALLETX room](#help)
+[Ask b for helpIn the bWallet Help Desk](#help)
 
 - [What it is](#what)
 
@@ -8917,11 +8917,11 @@ Not b, not our team, not a site you sign in to. Never type your 12 words into a 
 
 ## Help, any time
 
-### Ask b in the $BWALLETX room
+### Ask b in the bWallet Help Desk
 
 b is our assistant. Ask it anything about getting started, signing in or paying, and it will answer or pass the problem to our team. Sign in to the room with your bWalletX.
 
-[Open the $BWALLETX roomOn bChatX](https://chat.bwalletx.com/chat?room=BWALLETX)
+[Open the bWallet Help DeskAsk b or a person, free](https://chat.bwalletx.com/chat?room=LOUNGE)
 [Email ussupport@bwalletx.com](mailto:support@bwalletx.com)
 
 Run a website? Engineers can add the button themselves with the free kit at [/connect](https://bwalletx.com/connect). No engineers? We can add it for you: [bWalletX Direct](https://bwalletx.com/direct).
