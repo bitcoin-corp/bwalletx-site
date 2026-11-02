@@ -1,6 +1,6 @@
 # bWalletX: full site text
 
-Generated 2026-11-01 from https://bwalletx.com. Source pages are linked above each section.
+Generated 2026-11-02 from https://bwalletx.com. Source pages are linked above each section.
 
 ---
 
@@ -736,7 +736,8 @@ Creators get paid directly, in Bitcoin.
 [### bMoviesXLive
 Upload your movies. Mint them on Bitcoin.bmoviesx.com →](https://bmoviesx.com)[### bVideoXLive
 Your channel, owned by you.bvideox.com →](https://bvideox.com)[### bPicsXEarly
-Your pictures: AI pictures, cards and your photos.bpicsx.com →](https://bpicsx.com)[### bMusicXEarly
+Your pictures: AI pictures and cards.bpicsx.com →](https://bpicsx.com)[### bPhotosXEarly
+Your photos, private to your wallet. Sell the ones you choose.bphotosx.com →](https://bphotosx.com)[### bMusicXEarly
 The Bitcoin music exchange.bmusicx.com →](https://bmusicx.com)[### bRadioXEarly
 Radio you can join.bradiox.com →](https://bradiox.com)[### bNewsXEarly
 News you can trust, paid fairly.bnewsx.com →](https://bnewsx.com)[### bWriterXEarly
@@ -762,7 +763,7 @@ Get paid, sell, advertise and ship.
 Work, paid in Bitcoin.bjobsx.com →](https://bjobsx.com)[### bStoreXEarly
 Sell digital things, paid in Bitcoin.bstorex.com →](https://bstorex.com)[### bAdvertisingXLive
 Tell b about your business. Get the ad.badvertisingx.com →](https://badvertisingx.com)[### bDriveXEarly
-Your files and recordings, kept on chain.bdrivex.com →](https://bdrivex.com)[### bSearchXComing
+Your files, sealed on your device.bdrivex.com →](https://bdrivex.com)[### bSearchXComing
 Search the chain: fast search across posts, apps and tokens.bsearchx.com →](https://bsearchx.com)[### b0-xEarly
 Deploy to Bitcoin.b0-x.com →](https://b0-x.com)[### bWebXComing
 Your websites, on chain for good.bwebx.com →](https://bwebx.com)[### bSignXLive
@@ -5506,7 +5507,7 @@ Each of these sites runs on bWalletX. Sign in once with your wallet and they all
 [LivebVideoXYour YouTube channel, owned by you. Every video keeps its original date.](https://bvideox.com)
 [ComingbFriendsXBring your people with you: your friends graph, owned by your wallet.](https://bfriendsx.com)
 [LivebDojoXA launchpad for startups on chain: form your company and raise in BSV.](https://bdojox.com)
-[ComingbDriveXYour files and recordings, kept on chain and paid for month by month.](https://bdrivex.com)
+[ComingbDriveXSend and keep any file, sealed on your device and paid for month by month.](https://bdrivex.com)
 [ComingbSearchXSearch the chain: fast search across posts, apps and tokens.](https://bwalletx.com/b-family#bsearchx)
 
 bApps
