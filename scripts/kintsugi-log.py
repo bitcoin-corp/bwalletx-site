@@ -27,7 +27,12 @@ GAP_H = 2.0          # a gap longer than this starts a new session
 PAD_H = 0.5          # each session gets this added (work before the first commit)
 DAY_H = 7.5
 CAP_H_DAY = 18  # owner 30 Oct: the founder's own log counts at most 18 hours a day since the start
-CLIENT_H = 25  # owner 30 Oct: clients pay $25/h; $20 to the developer, $5 (20% of the client price) to Kintsugi
+CLIENT_H = 20  # owner + CFO 2 Nov 2026: the client pays $20/h, all of it to the developer; Kintsugi takes no fee
+RATES_FROM = '2026-11-02'
+# Stamped on chain 30 Oct (KS-2026-0001..0153, KS-OFFER-0001..0077): $25/h client price, $5/h Kintsugi fee.
+# Kept exactly as recorded, as history. CFO 2 Nov: those fees were not invoiced, not collected, and are not revenue.
+CLIENT_H_V1 = 25
+FEE_STATUS = 'not invoiced, not collected; not revenue'
 USD_H = 20   # Kintsugi rate: $20 per hour, paid in BSV at the BSV/USD rate on payment day
 PRICE = {}   # filled once per build: {'usd': float, 'date': 'D Mon YYYY'}
 
@@ -325,8 +330,9 @@ def terms_html(founder=False, done='the change is live on the stated page', cont
     SEC_LI = ('<li>Content only: no security tools are needed. Any change to code, sign-in, payments, keys or signing is a separate job with the full security tool list.</li>' if content else
               '<li>Security tools: Shannon for any change that touches sign-in, payments, keys or signing; Semgrep, gitleaks, pnpm audit and OSV-Scanner, CodeQL, OWASP ZAP (baseline scan) and Claude Code /security-review. Tool and AI usage costs are the developer\'s and are not billable hours.</li>')
     # Owner 31 Oct: Kintsugi is bCorp hiring outside developers, so its own offers carry no fee (the 20% fee is bJobsX's).
-    PAY_LI = ("<li>Kintsugi checks the spec and reviews the work. When the work is accepted, the client pays the developer's $handle in bWalletX, in full. There is no Kintsugi fee.</li>" if content else
-              "<li>Kintsugi checks the spec and reviews the work. When the work is accepted, the client pays the developer's $handle in bWalletX, with Kintsugi's fee as a separate payment in the same transaction.</li>")
+    # Owner + CFO 2 Nov 2026: no Kintsugi fee on anything new; stamped texts keep the wording they were stamped with.
+    PAY_LI = ("<li>Kintsugi checks the spec and reviews the work. When the work is accepted, the client pays the developer's $handle in bWalletX, with Kintsugi's fee as a separate payment in the same transaction.</li>" if stamped and not content else
+              "<li>Kintsugi checks the spec and reviews the work. When the work is accepted, the client pays the developer's $handle in bWalletX, in full. There is no Kintsugi fee.</li>")
     DONE_LI = (f'<li>Done means: {done}.</li>' if content else
                f'<li>Done means: the pull request is merged into the agreed repo, {done}, and the security tool results are attached.</li>')
     t = f'''          <h3>Terms</h3>
@@ -393,25 +399,48 @@ def offer_v1(o, n):
             <dt>Task</dt><dd>{task}</dd>
             <dt>Depends on</dt><dd>{dep}</dd>
             <dt>Estimate</dt><dd class="tn">{h} h (fixed)</dd>
-            <dt>Price</dt><dd class="tn">Client pays <b>${h*CLIENT_H:,.0f}</b> ({h} h × ${CLIENT_H}): <span class="gold">{money(h)}</span> to the developer ({h} h × $20, {bsv(h)} at ${PRICE["usd"]:,.2f}/BSV) and ${h*(CLIENT_H-USD_H):,.0f} to Kintsugi as its fee. Paid in BSV at the BSV/USD rate on the day of payment, both from the client's wallet in one transaction.</dd>
+            <dt>Price</dt><dd class="tn">Client pays <b>${h*CLIENT_H_V1:,.0f}</b> ({h} h × ${CLIENT_H_V1}): <span class="gold">{money(h)}</span> to the developer ({h} h × $20, {bsv(h)} at ${PRICE["usd"]:,.2f}/BSV) and ${h*(CLIENT_H_V1-USD_H):,.0f} to Kintsugi as its fee. Paid in BSV at the BSV/USD rate on the day of payment, both from the client's wallet in one transaction.</dd>
+            <dt>Kintsugi fee</dt><dd>As recorded: {FEE_STATUS}. From {fdate(RATES_FROM)} Kintsugi takes no fee.</dd>
             <dt>Status</dt><dd>Open for tender</dd>
           </dl>
-          {terms_html(done=done)}
+          {terms_html(done=done, stamped=n in STAMPS)}
           <div class="sigs">{sig}</div>
         </div>'''
 
 
-def price_html(h):
-    """Price line of an example contract; shared by the HTML panel and the plain .txt so they never drift."""
-    return (f'Client pays <b>${h*CLIENT_H:,.0f}</b> ({h:.1f} h × ${CLIENT_H}): <span class="gold">{money(h)}</span> to the developer '
-            f'({h:.1f} h × ${USD_H}, {bsv(h)} at ${PRICE["usd"]:,.2f}/BSV) and ${h*(CLIENT_H-USD_H):,.0f} to Kintsugi as its fee. '
-            "Paid in BSV at the BSV/USD rate on the day of payment, both from the client's wallet in one transaction.")
+def price_html(h, stamped=False):
+    """Price line of an example contract; shared by the HTML panel and the plain .txt so they never drift.
+    stamped=True reproduces the wording stamped on chain on 30 Oct exactly ($25/h with a Kintsugi fee: history)."""
+    if stamped:
+        return (f'Client pays <b>${h*CLIENT_H_V1:,.0f}</b> ({h:.1f} h × ${CLIENT_H_V1}): <span class="gold">{money(h)}</span> to the developer '
+                f'({h:.1f} h × ${USD_H}, {bsv(h)} at ${PRICE["usd"]:,.2f}/BSV) and ${h*(CLIENT_H_V1-USD_H):,.0f} to Kintsugi as its fee. '
+                "Paid in BSV at the BSV/USD rate on the day of payment, both from the client's wallet in one transaction.")
+    return (f'Client pays <b class="gold">${h*CLIENT_H:,.0f}</b> ({h:.1f} h × ${CLIENT_H}), all of it to the developer '
+            f'({bsv(h)} at ${PRICE["usd"]:,.2f}/BSV). Kintsugi takes no fee. '
+            "Paid in BSV at the BSV/USD rate on the day of payment.")
+
+
+def price_panel(h, n):
+    """Price shown on a contract panel. A stamped contract always shows exactly its stamped price line."""
+    if n not in STAMPS: return price_html(h)
+    rec, mine = stamped_field(n, 'Price'), price_html(h, stamped=True)
+    return mine if rec is None or plain(mine) == rec else E(rec)
+
+
+def stamped_field(n, key):
+    """A field exactly as it reads in a stamped contract text (data/kintsugi-contracts/<n>.txt), or None."""
+    f = os.path.join(CT_DIR, n + '.txt')
+    if n not in STAMPS or not os.path.exists(f): return None
+    m = re.search(rf'^{key}: (.*)$', open(f, encoding='utf-8').read(), re.M)
+    return m.group(1) if m else None
 
 
 def contract(it, n):
     t = it['time']; h = t['hours']
     task = (f'<a href="{E(it["url"])}">{E(it["title"])}</a> <span class="u">bwalletx.com{E(it["url"])}</span>' if it['url'] else E(it['title']))
     sig = ''.join(f'<div class="sig"><span>{r}</span><i>Example — not signed</i></div>' for r in ('Client', 'Developer', 'Kintsugi'))
+    fee_row = (f'\n            <dt>Kintsugi fee</dt><dd>As recorded in the stamped text: {FEE_STATUS}. From {fdate(RATES_FROM)} the client pays ${CLIENT_H}/h, all of it to the developer; Kintsugi takes no fee.</dd>'
+               if n in STAMPS else '')
     return f'''<div class="ct" role="region" aria-label="Example contract {n}">
           <p class="ct-note"><strong>Example contract</strong> — shows what a Kintsugi contract for this job looks like. Not signed, not an invoice.</p>
           <dl class="ct-dl">
@@ -419,9 +448,9 @@ def contract(it, n):
             <dt>Client</dt><dd>{CLIENT}, company no. {CLIENT_NO}, registered in England &amp; Wales. Commissioned the work.</dd>
             <dt>Developer</dt><dd>{E(DEV)} · paymail <span class="pm">{PAYMAIL}</span> ($b0asex)</dd>
             <dt>Review</dt><dd>Kintsugi, run by {CLIENT}</dd>
-            <dt>Task</dt><dd>{task}<span class="sub">{E(it["desc"])}</span></dd>
+            <dt>Task</dt><dd>{task}<span class="sub">{E(stamped_field(n, 'Description') or it["desc"])}</span></dd>
             <dt>Estimate</dt><dd class="tn">{(hrs if n in STAMPS else hrs1)(h)} (wall-clock)</dd>
-            <dt>Price</dt><dd class="tn">{price_html(h)}</dd>
+            <dt>Price</dt><dd class="tn">{price_panel(h, n)}</dd>{fee_row}
             <dt>Estimated value of work</dt><dd class="tn"><span class="val">{money(t["value_hours"])}</span></dd>
             <dt>Started</dt><dd class="tn">{fdate(t["first"])}</dd>
             <dt>Delivered</dt><dd class="tn">{fdate(t["last"])}</dd>
@@ -473,7 +502,7 @@ def contract_text(it, n):
         f'Task: {task}',
         f'Description: {it["desc"]}',
         f'Estimate: {(hrs if n in STAMPS else hrs1)(h)} (wall-clock)',
-        f'Price: {plain(price_html(h))}',
+        f'Price: {plain(price_html(h, stamped=n in STAMPS))}',
         f'Estimated value of work: {money(t["value_hours"])}',
         f'Started: {fdate(t["first"])}',
         f'Delivered: {fdate(t["last"])}',
@@ -500,7 +529,7 @@ def offer_parts(o):
 def offer_text(o, n):
     """The canonical plain text of an open offer: the same facts as the HTML panel."""
     h = OPEN_H[o['kind']]; task, dep, done = offer_parts(o)
-    terms = [plain(x) for x in re.findall(r'<li>(.*?)</li>', terms_html(done=done), re.S)]
+    terms = [plain(x) for x in re.findall(r'<li>(.*?)</li>', terms_html(done=done, stamped=n in STAMPS), re.S)]
     lines = [
         'Kintsugi open offer',
         'Open for tender: any developer can offer to take this job on.',
@@ -512,7 +541,7 @@ def offer_text(o, n):
         f'Task: {task}',
         f'Depends on: {dep}',
         f'Estimate: {h} h (fixed)',
-        f'Price: Client pays ${h*CLIENT_H:,.0f} ({h} h × ${CLIENT_H}): {money(h)} to the developer ({h} h × $20, {bsv(h)} at ${PRICE["usd"]:,.2f}/BSV) and ${h*(CLIENT_H-USD_H):,.0f} to Kintsugi as its fee. Paid in BSV at the BSV/USD rate on the day of payment, both from the client\'s wallet in one transaction.',
+        f'Price: Client pays ${h*CLIENT_H:,.0f} ({h} h × ${CLIENT_H}), all of it to the developer ({bsv(h)} at ${PRICE["usd"]:,.2f}/BSV). Kintsugi takes no fee. Paid in BSV at the BSV/USD rate on the day of payment.',
         'Status: Open for tender',
         '',
         'Terms',
@@ -655,7 +684,7 @@ def render(d):
         <div class="tot big"><b class="tn">{money(tot_h)}</b><span>pay at the Kintsugi rate ($20 per hour, paid in BSV), about {bsv(tot_h)[1:]} at ${PRICE["usd"]:,.2f}/BSV on {E(PRICE["date"])}</span></div>
         <div class="tot big val"><b class="tn">{money(tot_v)}</b><span>estimated value of work: {tot_v:,.0f} hours of work at $20, across parallel sessions. What a developer creates over and above the pay.</span></div>
       </div>
-      <p class="how"><strong>How Kintsugi works.</strong> Work is written up as tasks that an AI-assisted coder can pick up with Cursor, GitHub and a Claude account. The rate is $20 per hour, paid in BSV at the BSV/USD rate on the day of payment.</p>
+      <p class="how"><strong>How Kintsugi works.</strong> Work is written up as tasks that an AI-assisted coder can pick up with Cursor, GitHub and a Claude account. The rate is $20 per hour, paid in BSV at the BSV/USD rate on the day of payment. From {fdate(RATES_FROM)} the client pays ${CLIENT_H} an hour, all of it to the developer: Kintsugi takes no fee, on our own tasks or on features funded by others. The example contracts below were stamped on chain on 30 Oct and show their recorded figures ($25 an hour, with a $5-an-hour Kintsugi fee). Those are kept as history: the fees were not invoiced, not collected, and are not revenue.</p>
       <p class="how">Tap any job to see an example contract for it: the offer, the terms, who commissioned it ({CLIENT}) and the paymail of the developer who did it.</p>
       <p class="how">{FOUNDER}</p>
       <p class="warn">Every figure here is an estimate, derived from git timestamps. It is not an invoice, a valuation or a claim.</p>

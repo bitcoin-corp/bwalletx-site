@@ -14,7 +14,9 @@ import datetime, json, os, re
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 D = lambda *p: os.path.join(ROOT, 'data', *p)
 SITE = 'https://bwalletx.com'
-CLIENT_H, DEV_H = 25, 20               # same rates as scripts/kintsugi-log.py
+CLIENT_H, DEV_H = 20, 20               # same rates as scripts/kintsugi-log.py (owner + CFO 2 Nov 2026: no Kintsugi fee)
+RATES_FROM = '2026-11-02'
+FEE_STATUS = 'not invoiced, not collected; not revenue'   # CFO 2 Nov 2026: the fee in each stamped contract is history
 OPEN_H = {'page': 2, 'post': 1}        # same fixed estimates as scripts/kintsugi-log.py
 CLIENT = 'The Bitcoin Corporation Ltd'
 DEV_HANDLE = '$b0asex'
@@ -48,10 +50,12 @@ def main():
         num = lambda s: float(s.replace(',', ''))
         h = num(m.group(2)) if m else hours.get((c['url'], c['title']), 0)
         usd = (num(m.group(1)), num(m.group(3)), num(m.group(4))) if m else None
-        rows.append(row(c['id'], 'fund', c['title'], f'Delivered work: {c["title"]}', h,
-                        'paid' if paid.get(c['id']) else 'delivered', f'{SITE}/kintsugi/work',
-                        text_url=f'{SITE}/{c["file"]}', page_url=SITE + c['url'] if c['url'] else None,
-                        developer=DEV_HANDLE, usd=usd))
+        r = row(c['id'], 'fund', c['title'], f'Delivered work: {c["title"]}', h,
+                'paid' if paid.get(c['id']) else 'delivered', f'{SITE}/kintsugi/work',
+                text_url=f'{SITE}/{c["file"]}', page_url=SITE + c['url'] if c['url'] else None,
+                developer=DEV_HANDLE, usd=usd)
+        r['fee_status'] = FEE_STATUS   # amounts above are the stamped figures, kept as recorded
+        rows.append(r)
     # Offers: first issue (withdrawn 31 Oct, except KS-OFFER-0001 = done) and the -v2 reissue at content-job prices.
     OPEN_USD = {'page': 1.00, 'post': 0.50}; OPEN_MIN = {'page': 15, 'post': 5}
     for e in json.load(open(D('kintsugi-offers', 'index.json')))['offers']:
@@ -70,7 +74,10 @@ def main():
         rows.append(r)
 
     out = dict(source='kintsugi', updated_at=datetime.datetime.now(datetime.timezone.utc).strftime('%Y-%m-%dT%H:%M:%SZ'),
-               rates=dict(client_usd_h=CLIENT_H, dev_usd_h=DEV_H, paid_in='BSV at the BSV/USD rate on payment day'),
+               rates=dict(client_usd_h=CLIENT_H, dev_usd_h=DEV_H, kintsugi_fee_usd_h=CLIENT_H - DEV_H, **{'from': RATES_FROM},
+                          paid_in='BSV at the BSV/USD rate on payment day',
+                          note=('Kintsugi takes no fee from 2 Nov 2026, on its own tasks or on features funded by others. '
+                                'Past contracts show their stamped figures, which are history: not invoiced, not collected, not revenue.')),
                statuses=dict(delivered='work done, not paid', paid='a payment is recorded against the stamp',
                              open='open for tender', withdrawn='replaced by a reissued offer (see replaced_by)', done='delivered'),
                offers=rows)
