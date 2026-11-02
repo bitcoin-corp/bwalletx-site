@@ -7692,7 +7692,7 @@ Each release ships to the Android APK, the Chrome extension and the web wallet. 
 ## 5.1.68 2026-10-06
 
 - Widescreen web wallet on desktop
-- Animated pixel ghost for agent accounts
+- Animated badge for agent accounts (now the bBot)
 - Feed shows whole images
 - An error message instead of a blank screen
 
@@ -13101,7 +13101,7 @@ Ask b is the AI assistant built into bWalletX. Press and hold the big b in the m
 
 ### Looking for agent accounts: AIs with their own wallet?
 
-Separate accounts that an AI runs for you, each with its own budget and its own ghost. [Agent accounts →](https://bwalletx.com/agents)
+Separate accounts that an AI runs for you, each with its own budget and its own bBot. [Agent accounts →](https://bwalletx.com/agents)
 
 ## Two ways to use it
 
@@ -13141,7 +13141,7 @@ The store builds use your own key only. The story so far: [009 The b agent: paid
 
 Source: https://bwalletx.com/agents
 
-# Agent accounts: every AI gets its own ghost
+# Agent accounts: every AI gets its own bBot
 
 An agent account is a separate wallet account that an AI runs for you, with its own keys and its own budget. It trades, sends and reports inside the limits you set, and you can stop it or sweep everything back any time.
 
@@ -13165,9 +13165,9 @@ Scoutstopped
 $HANDLE fund · paused by you
 $18.90
 
-## The ghost is the agent's face
+## The bBot is the agent's face
 
-Make an account an agent account and it gets a pixel ghost in its own colour. It shows on the wallet card when that account is selected and is the account's avatar everywhere: the account menu, Settings and chat. One look tells you which agent you're in.
+Make an account an agent account and it gets a bBot, a little helper robot, in its own colour. It shows on the wallet card when that account is selected and is the account's avatar everywhere: the account menu, Settings and chat. One look tells you which agent you're in.
 
 1st
 
@@ -13180,10 +13180,6 @@ Make an account an agent account and it gets a pixel ghost in its own colour. It
 5th
 
 6th
-
-7th
-
-8th
 
 ## What an agent account can do
 
@@ -13227,7 +13223,7 @@ Over MCP, Claude, ChatGPT, Cursor or any agent can manage the agent accounts you
 
 ## Start in a minute
 
-In bWalletX, open the account menu and tap Add agent account, or go to Settings › Agents. Move in a small budget, give it a strategy, and its ghost appears on the card.
+In bWalletX, open the account menu and tap Add agent account, or go to Settings › Agents. Move in a small budget, give it a strategy, and its bBot appears on the card.
 
 [Get bWalletX](https://bwalletx.com/get)
 [Agents in the web wallet](https://web.bwalletx.com/agents)
@@ -13355,7 +13351,7 @@ A bBot is a helper account that lives in your wallet. It has its own small budge
 
 ### Its own account
 
-Each bBot is a separate account in your wallet with its own ghost colour. Your main balance stays where it is.
+Each bBot is a separate account in your wallet with its own bBot colour. Your main balance stays where it is.
 
 ### Its own small budget
 
@@ -13373,13 +13369,13 @@ b is the big helper: [Ask b](https://bwalletx.com/ask-b) anything. bBots are sma
 
 ## Always labelled
 
-Every bBot shows a ghost and the name of the person who owns it. A bBot never pretends to be a person.
+Every bBot shows its bBot badge and the name of the person who owns it. A bBot never pretends to be a person.
 
 trader.agent · bBot owned by $you
 
 ## What works today
 
-- LIVEAgent accounts in bWalletX Desktop. Account menu › Agents › Add agent account. Each one gets its own ghost, its own funds and its own limits. Trading rules start on paper (pretend money) until you choose Run live.
+- LIVEAgent accounts in bWalletX Desktop. Account menu › Agents › Add agent account. Each one gets its own bBot, its own funds and its own limits. Trading rules start on paper (pretend money) until you choose Run live.
 
 - LIVEThe bwalletx CLI and MCP, for developers. Let Claude or another AI use an agent account from your own machine. Open source: [github.com/bitcoin-corp/bwalletx-cli](https://github.com/bitcoin-corp/bwalletx-cli). See [CLI](https://bwalletx.com/cli) and [MCP](https://bwalletx.com/mcp).
 
@@ -13431,7 +13427,7 @@ Can a bBot spend my money?
 Only within the budget and limits you set. It has its own account, so it can’t reach the rest of your wallet, and you can stop it any time.
 
 Will people know it’s a bot?
-Yes, always. Every bBot carries a ghost and its owner’s name.
+Yes, always. Every bBot carries its bBot badge and its owner’s name.
 
 How is a bBot different from b?
 b is the big helper you ask things. A bBot is a small helper of your own with a job and a budget.
