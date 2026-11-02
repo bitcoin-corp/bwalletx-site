@@ -13143,14 +13143,14 @@ Source: https://bwalletx.com/agents
 
 # Agent accounts: every AI gets its own bBot
 
-An agent account is a separate wallet account that an AI runs for you, with its own keys and its own budget. It trades, sends and reports inside the limits you set, and you can stop it or sweep everything back any time.
+An agent account is a separate wallet account that an AI runs for you, with its own keys and its own budget. It pays, saves and reports inside the limits you set, and you can stop it or sweep everything back any time.
 
 ### Looking for Ask b?
 
 The assistant you chat with inside the wallet is Ask b. [Ask b →](https://bwalletx.com/agent)
 
-Traderrunning
-Slow accumulator · cap $20/day
+Saverrunning
+Saves a little each week · cap $20/day
 $120.00
 
 Treasurerrunning
@@ -13189,7 +13189,7 @@ Its balance is all it can ever spend. Fund it from any of your accounts in one t
 
 ### Follow a strategy
 
-Agree the rules in plain words, or load a strategy, and it trades by those rules and nothing else. [Strategies →](https://bwalletx.com/strategies)
+Agree the rules in plain words, or load a strategy, and it acts by those rules and nothing else. [Strategies →](https://bwalletx.com/strategies)
 
 ### Show its work
 
@@ -13201,7 +13201,7 @@ Stop one agent or Stop all agents. A stopped account refuses every spend until y
 
 ## Many agents
 
-Run one AI per account, or one across several. A Trader on two strategy accounts, a Treasurer that tops them up, a Reporter that only reads: each sees only the accounts you give it.
+Run one AI per account, or one across several. A Saver on two accounts, a Treasurer that tops them up, a Reporter that only reads: each sees only the accounts you give it.
 
 ## bAgents
 
@@ -13214,7 +13214,7 @@ The bWalletX CLI runs agent accounts on a laptop or a server. Pair it with your 
 `# install (Node 20+)
 npm i -g bwalletx
 bwalletx login --account phone # scan the QR in your agent account
-bwalletx agent run trader # run its strategy
+bwalletx agent run saver # run its strategy
 bwalletx stop # kill switch
 # Claude Code, over MCP
 claude mcp add bwalletx -- npx -y bwalletx mcp`
@@ -13363,7 +13363,7 @@ Daily caps and rules you choose. Stop it any time, in one tap.
 
 ### Jobs, not chat
 
-Trade within your rules, look after a token’s room, sort your mail. Small, useful, repeatable.
+Pay within your rules, look after a token’s room, sort your mail. Small, useful, repeatable.
 
 b is the big helper: [Ask b](https://bwalletx.com/ask-b) anything. bBots are smaller. They’re yours, and they work for you.
 
@@ -13371,11 +13371,11 @@ b is the big helper: [Ask b](https://bwalletx.com/ask-b) anything. bBots are sma
 
 Every bBot shows its bBot badge and the name of the person who owns it. A bBot never pretends to be a person.
 
-trader.agent · bBot owned by $you
+saver.agent · bBot owned by $you
 
 ## What works today
 
-- LIVEAgent accounts in bWalletX Desktop. Account menu › Agents › Add agent account. Each one gets its own bBot, its own funds and its own limits. Trading rules start on paper (pretend money) until you choose Run live.
+- LIVEAgent accounts in bWalletX Desktop. Account menu › Agents › Add agent account. Each one gets its own bBot, its own funds and its own limits. Its rules start on paper (pretend money) until you choose Run live.
 
 - LIVEThe bwalletx CLI and MCP, for developers. Let Claude or another AI use an agent account from your own machine. Open source: [github.com/bitcoin-corp/bwalletx-cli](https://github.com/bitcoin-corp/bwalletx-cli). See [CLI](https://bwalletx.com/cli) and [MCP](https://bwalletx.com/mcp).
 

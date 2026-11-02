@@ -81,11 +81,11 @@
         <span class="g" data-bot="#F5B800" data-size="64"></span><span class="g" data-bot="#8B7CFF" data-size="64"></span><span class="g" data-bot="#3D8BFF" data-size="64"></span><span class="g" data-bot="#2FD58E" data-size="64"></span>
       </div>
       <h1>Agent accounts: every AI gets <em>its own bBot</em></h1>
-      <p class="lede">An agent account is a separate wallet account that an AI runs for you, with its own keys and its own budget. It trades, sends and reports inside the limits you set, and you can stop it or sweep everything back any time.</p>
+      <p class="lede">An agent account is a separate wallet account that an AI runs for you, with its own keys and its own budget. It pays, saves and reports inside the limits you set, and you can stop it or sweep everything back any time.</p>
       <div class="box xlink"><h3>Looking for Ask b?</h3><p>The assistant you chat with inside the wallet is Ask b. <a href="/agent">Ask b &rarr;</a></p></div>
 
       <div class="menu" aria-label="Example account menu">
-        <div class="acct on"><span class="av" style="--c:#F5B800"><span data-bot="#F5B800" data-size="26"></span></span><span><span class="nm">Trader</span><span class="tag run">running</span><div class="sub">Slow accumulator &middot; cap $20/day</div></span><span class="bal">$120.00</span></div>
+        <div class="acct on"><span class="av" style="--c:#F5B800"><span data-bot="#F5B800" data-size="26"></span></span><span><span class="nm">Saver</span><span class="tag run">running</span><div class="sub">Saves a little each week &middot; cap $20/day</div></span><span class="bal">$120.00</span></div>
         <div class="acct"><span class="av" style="--c:#3D8BFF"><span data-bot="#3D8BFF" data-size="26"></span></span><span><span class="nm">Treasurer</span><span class="tag run">running</span><div class="sub">Tops up the other agents</div></span><span class="bal">$64.25</span></div>
         <div class="acct"><span class="av" style="--c:#8B7CFF"><span data-bot="#8B7CFF" data-size="26"></span></span><span><span class="nm">Reporter</span><span class="tag read">read only</span><div class="sub">Daily summary to chat</div></span><span class="bal">$0.00</span></div>
         <div class="acct"><span class="av" style="--c:#2FD58E"><span data-bot="#2FD58E" data-size="26"></span></span><span><span class="nm">Scout</span><span class="tag stop">stopped</span><div class="sub">$HANDLE fund &middot; paused by you</div></span><span class="bal">$18.90</span></div>
@@ -98,13 +98,13 @@
       <h2>What an agent account can do</h2>
       <div class="grid">
         <div class="box"><div class="ic"><span data-bot="#F5B800" data-size="28"></span></div><h3>Spend only its budget</h3><p>Its balance is all it can ever spend. Fund it from any of your accounts in one tap; your other accounts are never touched.</p></div>
-        <div class="box"><div class="ic"><span data-bot="#3D8BFF" data-size="28"></span></div><h3>Follow a strategy</h3><p>Agree the rules in plain words, or load a strategy, and it trades by those rules and nothing else. <a href="/strategies">Strategies &rarr;</a></p></div>
+        <div class="box"><div class="ic"><span data-bot="#3D8BFF" data-size="28"></span></div><h3>Follow a strategy</h3><p>Agree the rules in plain words, or load a strategy, and it acts by those rules and nothing else. <a href="/strategies">Strategies &rarr;</a></p></div>
         <div class="box"><div class="ic"><span data-bot="#8B7CFF" data-size="28"></span></div><h3>Show its work</h3><p>An activity log lists every action, with links to the transactions. Add labels and an optional daily spending cap in dollars.</p></div>
         <div class="box"><div class="ic"><span data-bot="#2FD58E" data-size="28"></span></div><h3>Stop on your word</h3><p>Stop one agent or <b>Stop all agents</b>. A stopped account refuses every spend until you resume it, and <b>Sweep back</b> moves every token, NFT and all the BSV home.</p></div>
       </div>
 
       <h2>Many agents</h2>
-      <p>Run one AI per account, or one across several. A Trader on two strategy accounts, a Treasurer that tops them up, a Reporter that only reads: each sees only the accounts you give it.</p>
+      <p>Run one AI per account, or one across several. A Saver on two accounts, a Treasurer that tops them up, a Reporter that only reads: each sees only the accounts you give it.</p>
 
       <h2>bAgents</h2>
       <p>bAgents is the home for agents on bWalletX: browse, set up and manage the AIs that run your agent accounts. <a href="https://agents.bwalletx.com" target="_blank" rel="noopener">agents.bwalletx.com &rarr;</a></p>
@@ -114,7 +114,7 @@
 <pre><span class="c"># install (Node 20+)</span>
 npm i -g bwalletx
 bwalletx login --account phone   <span class="c"># scan the QR in your agent account</span>
-bwalletx agent run trader        <span class="c"># run its strategy</span>
+bwalletx agent run saver         <span class="c"># run its strategy</span>
 bwalletx stop                    <span class="c"># kill switch</span>
 <span class="c"># Claude Code, over MCP</span>
 claude mcp add bwalletx -- npx -y bwalletx mcp</pre>
