@@ -24,9 +24,10 @@
     // wallet button on the right, everything else in the footer. Owner decisions: Identity, Creators,
     // bApps as a tab (A-Z, ignoring the leading b), bAcc as its own tab (a movement, not a bApp).
     full: [
-      { key: 'wallet', label: 'Wallet', href: '/features', pages: ['/features', '/buy', '/swap', '/pots', '/lock', '/lock/verify', '/subscriptions', '/history', '/push-notifications', '/restore', '/recover-relayx', '/migrate', '/sweep-simplycash', '/seedless-login', '/seedless-signin', '/btrust', '/wallet-frames'],
+      { key: 'wallet', label: 'Wallet', href: '/features', pages: ['/features', '/start', '/buy', '/swap', '/pots', '/lock', '/lock/verify', '/subscriptions', '/history', '/push-notifications', '/restore', '/recover-relayx', '/migrate', '/sweep-simplycash', '/seedless-login', '/seedless-signin', '/btrust', '/wallet-frames'],
         sub: [
           { label: 'Features overview', href: '/features', ov: 1 },
+          { label: 'New? Start here', href: '/start' },
           { label: 'Buy BSV', href: '/buy' },
           { label: 'Swap into BSV', href: '/swap' },
           { label: 'Pots', href: '/pots' },
@@ -77,7 +78,7 @@
           { label: 'bPhone', href: '/bphone' },
           { label: 'bMail', href: '/bmail', also: ['/verify-note'] }
         ] },
-      { key: 'create', label: 'Creators', href: '/culture', pages: ['/culture', '/artists', '/artists/vexvoid', '/vexvoid', '/aivj', '/digital-ice-cream', '/mint', '/streaming-payments', '/credits', '/bads', '/bad', '/creative', '/b-creative', '/happy-b', '/partners', '/bshares', '/clients'],
+      { key: 'create', label: 'Creators', href: '/culture', pages: ['/culture', '/artists', '/artists/vexvoid', '/vexvoid', '/aivj', '/digital-ice-cream', '/mint', '/streaming-payments', '/credits', '/bads', '/bad', '/creative', '/b-creative', '/happy-b', '/partners', '/bshares', '/clients', '/direct'],
         sub: [
           { label: 'Overview', href: '/culture', ov: 1 },
           { label: 'Artists', href: '/artists', also: ['/artists/vexvoid', '/vexvoid', '/aivj', '/digital-ice-cream'] },
@@ -88,9 +89,10 @@
           { label: 'b Creative', href: '/creative', also: ['/b-creative', '/happy-b'] },
           { label: 'Partners', href: '/partners' },
           { label: 'bShares', href: '/bshares' },
-          { label: 'Branded wallets', href: '/clients' }
+          { label: 'Branded wallets', href: '/clients' },
+          { label: 'Add bWalletX to your site', href: '/direct' }
         ] },
-      { key: 'build', label: 'Build', href: '/developers', pages: ['/developers', '/agent', '/ask-b', '/talk-to-b', '/agents', '/strategies', '/strategies/spec', '/cli', '/mcp', '/connect', '/direct', '/sign-in-button', '/apps/add', '/open-source', '/releases', '/roadmap', '/on-b', '/your-apps-on-b', '/hold-to-talk'],
+      { key: 'build', label: 'Build', href: '/developers', pages: ['/developers', '/agent', '/ask-b', '/talk-to-b', '/agents', '/strategies', '/strategies/spec', '/cli', '/mcp', '/connect', '/sign-in-button', '/apps/add', '/open-source', '/releases', '/roadmap', '/on-b', '/your-apps-on-b', '/hold-to-talk'],
         sub: [
           { label: 'Developers', href: '/developers', ov: 1 },
           { label: 'b agent', href: '/agent', also: ['/ask-b', '/talk-to-b', '/hold-to-talk'] },
@@ -98,7 +100,7 @@
           { label: 'Strategies', href: '/strategies', also: ['/strategies/spec'] },
           { label: 'CLI', href: '/cli' },
           { label: 'MCP', href: '/mcp' },
-          { label: 'Sign in with bWalletX', href: '/connect', also: ['/direct', '/sign-in-button'] },
+          { label: 'Sign in with bWalletX', href: '/connect', also: ['/sign-in-button'] },
           { label: 'Add your app', href: '/apps/add', also: ['/on-b', '/your-apps-on-b'] },
           { label: 'Open source', href: '/open-source' },
           { label: 'Releases', href: '/releases' },
@@ -143,7 +145,7 @@
     ],
     // Footer columns (built by this script on every page).
     foot: [
-      ['Get bWalletX', [['Get bWalletX', '/get'], ['Web wallet', '/web'], ['iPhone', '/iphone'], ['Android', '/android'], ['Chrome extension', '/extension'], ['Desktop', '/desktop'], ['Testers', '/testers']]],
+      ['Get bWalletX', [['New to bWalletX?', '/start'], ['Get bWalletX', '/get'], ['Web wallet', '/web'], ['iPhone', '/iphone'], ['Android', '/android'], ['Chrome extension', '/extension'], ['Desktop', '/desktop'], ['Testers', '/testers']]],
       ['Help &amp; trust', [['Feedback', '/feedback'], ['Ideas', '/ideas'], ['Bugs', '/bugs'], ['b-Aware', '/b-Aware'], ['Bounties', '/bounties'], ['bTrust', '/btrust'], ['Hold to talk', '/hold-to-talk']]],
       ['Company', [['The b family', '/b-family'], ['Blog', '/blog'], ['Hodl my b', '/hodl-my-b'], ['Newsletter', '/newsletter'], ['Brand', '/brand'], ['Jobs', '/jobs'], ['Gigs', '/gigs']]],
       ['More', [['Sign in with HandCash', '/sign-in-with-handcash'], ['Sign in with Gmail', '/gmail'], ['Wallet Frames', '/wallet-frames'], ['Your apps on b', '/on-b'], ['Contracts in chat', '/contracts'], ['bRadio', '/bradio']]],

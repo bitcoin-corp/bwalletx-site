@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>New to bWalletX? Start here | bWalletX</title>
+    <link rel="canonical" href="https://bwalletx.com/start" />
+    <meta name="description" content="A site asked you to sign in or pay with bWalletX. What bWalletX is, how to get it, what the approval sheet means, how to sign in and pay, how to back up, and where to ask b for help. Free." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://bwalletx.com/start" />
+    <meta property="og:site_name" content="bWalletX" />
+    <meta property="og:title" content="New to bWalletX? Start here" />
+    <meta property="og:description" content="Get the wallet, sign in, pay, back up. Sign in shares only your public identity key and moves no money." />
+    <meta property="og:image" content="https://bwalletx.com/og-start-v1.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="New to bWalletX? Start here. An approval sheet with Allow, gold on black." />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@bWalletX" />
+    <meta name="twitter:title" content="New to bWalletX? Start here" />
+    <meta name="twitter:description" content="Get the wallet, sign in, pay, back up. Sign in shares only your public identity key and moves no money." />
+    <meta name="twitter:image" content="https://bwalletx.com/og-start-v1.png" />
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="stylesheet" href="/styles.css" />
+    <style>
+      .ext h1 { font-size: clamp(2.1rem, 6vw, 3.2rem); line-height: 1.08; margin: 10px 0 14px; letter-spacing: -0.02em; }
+      .ext h2 { margin: 56px 0 10px; font-size: 1.5rem; }
+      .ext p, .ext li { line-height: 1.65; }
+      .ext .small { color: #8a8a86; font-size: 0.85rem; }
+      .cta { display: flex; gap: 12px; flex-wrap: wrap; margin: 26px 0 0; }
+      .strap { font-weight: 800; letter-spacing: 0.14em; color: var(--gold); margin: 0; font-size: 0.85rem; }
+      .start-hero { position: relative; margin: 8px 0 0; padding: 30px 24px 28px; border-radius: 24px; background: radial-gradient(120% 90% at 100% 0%, #f5b8002b, transparent 55%), #08080a; border: 1px solid #f5b80040; overflow: hidden; }
+      .start-hero .lede { max-width: 30em; }
+      .jump { display: flex; flex-wrap: wrap; gap: 8px; margin: 22px 0 0; padding: 0; list-style: none; }
+      .jump a { display: inline-block; padding: 6px 12px; border-radius: 999px; border: 1px solid #f5b80055; color: var(--ink); text-decoration: none; font-size: 0.88rem; }
+      .jump a:hover { background: #f5b8001a; }
+      .box { background: #101114; border: 1px solid #ffffff12; border-left: 4px solid var(--gold); border-radius: 4px 16px 16px 4px; padding: 18px 20px; margin: 14px 0; }
+      .box h3 { margin: 0 0 6px; font-size: 1.02rem; }
+      .box p { margin: 0; color: #b4b8c1; }
+      .box p + p { margin-top: 8px; }
+      .get { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 12px; margin: 18px 0 10px; }
+      .get a { display: flex; flex-direction: column; gap: 4px; padding: 16px 16px 14px; border-radius: 16px; background: #101114; border: 1px solid #f5b80038; color: var(--ink); text-decoration: none; min-width: 0; }
+      .get a:hover { border-color: var(--gold); background: #15140f; }
+      .get b { font: 700 1.05rem var(--hf); color: var(--gold-hi); }
+      .get span { color: #b4b8c1; font-size: 0.9rem; line-height: 1.45; }
+      .steps { counter-reset: s; list-style: none; padding: 0; margin: 16px 0; }
+      .steps li { counter-increment: s; position: relative; padding: 0 0 18px 50px; }
+      .steps li::before { content: counter(s); position: absolute; left: 0; top: 0; width: 34px; height: 34px; border-radius: 50%; background: var(--grad); color: #1a1300; font: 700 1rem/34px var(--hf); text-align: center; }
+      .steps li b { display: block; color: var(--ink); }
+      .steps li span { color: #b4b8c1; }
+      /* Example approval sheets: drawn in HTML so they stay sharp and readable. */
+      .sheets { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 16px; margin: 20px 0 8px; }
+      .sheet { background: #121317; border: 1px solid #ffffff1a; border-radius: 22px; padding: 18px; box-shadow: 0 24px 50px -24px #000; min-width: 0; }
+      .sheet .eg { font-size: 0.7rem; letter-spacing: 0.14em; font-weight: 800; color: var(--gold); margin: 0 0 10px; }
+      .sheet .site { display: flex; align-items: center; gap: 8px; font-size: 0.85rem; color: #b4b8c1; background: #0a0a0c; border: 1px solid #ffffff14; border-radius: 10px; padding: 7px 10px; overflow-wrap: anywhere; }
+      .sheet .site i { width: 8px; height: 8px; border-radius: 50%; background: var(--gold); flex: none; }
+      .sheet h4 { font: 700 1.15rem/1.25 var(--hf); margin: 14px 0 10px; }
+      .sheet .tick { display: flex; gap: 10px; align-items: flex-start; font-size: 0.92rem; color: var(--ink); line-height: 1.4; }
+      .sheet .tick em { flex: none; width: 20px; height: 20px; border-radius: 6px; background: var(--grad); color: #1a1300; font: 800 0.8rem/20px var(--hf); text-align: center; font-style: normal; }
+      .sheet .amt { font: 700 2.2rem/1 var(--hf); color: var(--ink); margin: 6px 0 2px; }
+      .sheet .sats { font-size: 0.85rem; color: #8a8a86; }
+      .sheet .btns { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 16px; }
+      .sheet .btns span { text-align: center; border-radius: 12px; padding: 10px 6px; font: 700 0.95rem var(--hf); }
+      .sheet .no { background: #ffffff0d; color: var(--ink); box-shadow: inset 0 0 0 1px #ffffff22; }
+      .sheet .yes { background: var(--grad); color: #1a1300; }
+      .help { margin: 18px 0; padding: 22px 22px 20px; border-radius: 20px; background: linear-gradient(135deg, #f5b8001f, #f5b80008); border: 1px solid #f5b80055; }
+      .help h3 { margin: 0 0 6px; font: 700 1.2rem var(--hf); }
+      .help p { margin: 0; color: #c9ccd3; }
+      .forsites { margin-top: 48px; padding-top: 18px; border-top: 1px solid #ffffff14; }
+      @media (max-width: 480px) { .start-hero { padding: 24px 18px 22px; } .cta .btn-store { min-width: 0; flex: 1 1 100%; } .box { padding: 16px; } }
+    </style>
+  </head>
+  <body>
+    <div class="beta-banner">bWalletX is in <strong>beta</strong>: test with small amounts.</div>
+    <header class="topbar">
+      <div class="wrap topbar-in">
+        <a class="brand" href="/"><img src="/logo.svg" alt="" width="34" height="30" /><span>bWallet<span class="gold">X</span></span></a>
+        <nav aria-label="Pages">
+          <a href="/features">Features</a><a href="/exchange">Exchange</a><a href="/social">Social</a><a href="/agent">Agents</a><a href="/extension">Extension</a><a href="/developers">Developers</a>
+        </nav>
+        <span class="nav-cta"><a class="dl-btn" href="/get">Download</a><a class="web-btn" href="https://web.bwalletx.com" target="_blank" rel="noopener">Web &rarr;</a></span>
+      </div>
+    </header>
+    <script src="/nav.js"></script>
+    <main class="ext">
+      <section class="start-hero">
+        <p class="strap">NEW TO BWALLETX?</p>
+        <h1>Start here.</h1>
+        <p class="lede">A site asked you to sign in or pay with bWalletX. This page explains what that means, how to get the wallet, and what to tap. It&rsquo;s free.</p>
+        <div class="cta">
+          <a class="btn btn-store" href="/get">Get bWalletX<small>Extension, Android, iPhone or web</small></a>
+          <a class="btn btn-store btn-ghost" href="#help">Ask b for help<small>In the $BWALLETX room</small></a>
+        </div>
+        <ul class="jump" aria-label="On this page">
+          <li><a href="#what">What it is</a></li>
+          <li><a href="#get">Get it</a></li>
+          <li><a href="#sheet">The approval sheet</a></li>
+          <li><a href="#sign-in">Sign in</a></li>
+          <li><a href="#pay">Pay</a></li>
+          <li><a href="#backup">Back up</a></li>
+          <li><a href="#help">Help</a></li>
+        </ul>
+      </section>
+
+      <h2 id="what">What bWalletX is</h2>
+      <p>bWalletX is a Bitcoin wallet you hold yourself. Your keys stay on your device: we can&rsquo;t see your money and we can&rsquo;t move it.</p>
+      <p>The same wallet also lets you into websites. Instead of making an account and a password, you press <strong>Sign in with bWalletX</strong> and your wallet proves it&rsquo;s you. The site checks the proof itself.</p>
+      <div class="box"><h3>Have bWallet from the app store?</h3><p>bWallet is the store edition of the same wallet. It signs in the same way, so everything on this page applies to it too.</p></div>
+
+      <h2 id="get">Get it</h2>
+      <p>Pick the one that suits where you are. Each takes about a minute.</p>
+      <div class="get">
+        <a href="/extension"><b>Chrome extension</b><span>For Chrome or Brave on a computer. Sites find it straight away.</span></a>
+        <a href="/android"><b>Android</b><span>Download the app from this site.</span></a>
+        <a href="/iphone"><b>iPhone</b><span>Open it in Safari and add it to your Home Screen.</span></a>
+        <a href="https://web.bwalletx.com"><b>Web</b><span>Nothing to install. Opens in any browser tab.</span></a>
+      </div>
+      <p>On the web wallet and the Android download you can make your wallet with a passkey: Face ID, a fingerprint or your device PIN opens it.</p>
+      <p class="small">Every option, with version numbers, is on <a href="/get">Get bWalletX</a>.</p>
+
+      <h2 id="sheet">What the approval sheet means</h2>
+      <p>Whenever a site asks your wallet for something, bWalletX shows one sheet. It names the site and says plainly what the site wants. Nothing happens until you tap <strong>Allow</strong>.</p>
+      <div class="sheets" aria-label="Examples of approval sheets">
+        <div class="sheet" role="img" aria-label="Example sign-in sheet: shop.example asks to see your public identity. Buttons: Not now, Allow.">
+          <p class="eg">EXAMPLE &middot; SIGN IN</p>
+          <div class="site"><i></i>shop.example</div>
+          <h4>Sign in to shop.example</h4>
+          <div class="tick"><em>&#10003;</em><span>See your public identity (the key that names you)</span></div>
+          <div class="btns"><span class="no">Not now</span><span class="yes">Allow</span></div>
+        </div>
+        <div class="sheet" role="img" aria-label="Example payment sheet: shop.example asks for $1.00, shown in dollars with sats underneath. Buttons: Not now, Allow.">
+          <p class="eg">EXAMPLE &middot; PAY</p>
+          <div class="site"><i></i>shop.example</div>
+          <h4>Pay shop.example</h4>
+          <p class="amt">$1.00</p>
+          <p class="sats">paid in sats at today&rsquo;s rate</p>
+          <div class="btns"><span class="no">Not now</span><span class="yes">Allow</span></div>
+        </div>
+      </div>
+      <div class="box"><h3>Sign in shares only your public identity key and moves no money</h3><p>The site doesn&rsquo;t get your email, name, $name, paymail or picture. It gets a signature from your public key, and that&rsquo;s all. Nothing is spent.</p></div>
+      <div class="box"><h3>Check the site&rsquo;s address</h3><p>The wallet shows the true address of the site that is asking, even if the site uses its own colours and logo on the sheet. If it isn&rsquo;t the site you meant to use, tap Not now.</p></div>
+      <div class="box"><h3>You stay in charge</h3><p>If you disconnect a site, or haven&rsquo;t used it for a day, its next request asks &ldquo;Reconnect to &hellip;?&rdquo; first.</p></div>
+
+      <h2 id="sign-in">How to sign in on a site</h2>
+      <ol class="steps">
+        <li><b>Press &ldquo;Sign in with bWalletX&rdquo;</b><span>It&rsquo;s a gold button with the b logo. It may also say &ldquo;also works with bWallet&rdquo;.</span></li>
+        <li><b>Your wallet is found</b><span>On a computer with the extension, it&rsquo;s found straight away. Inside the bWalletX app&rsquo;s own browser, the same. Otherwise the site shows a QR code: scan it with bWalletX on your phone, or paste the link into the web wallet.</span></li>
+        <li><b>If you used a QR code, match the numbers</b><span>Both screens show a 4-digit code. Check they match, then tap Connect.</span></li>
+        <li><b>Read the sheet and tap Allow</b><span>You&rsquo;re in. No password to remember. Sign in with the same wallet next time and the site knows it&rsquo;s you again.</span></li>
+      </ol>
+
+      <h2 id="pay">How to pay</h2>
+      <ol class="steps">
+        <li><b>Have some BSV in your wallet</b><span>Tap Receive in bWalletX to see your address, then send BSV to it from another wallet or an exchange.</span></li>
+        <li><b>Press pay on the site</b><span>Your wallet opens a payment sheet with the site&rsquo;s address and the amount, in dollars first with sats underneath.</span></li>
+        <li><b>Tap Allow, or Not now</b><span>The money leaves only when you tap Allow. Tap Not now and nothing is sent.</span></li>
+      </ol>
+      <p class="small">bWalletX is in beta: start with small amounts.</p>
+
+      <h2 id="backup">Back up and recovery</h2>
+      <p>Your wallet lives on your device, so a backup is the only way back in if you lose it. Do this first.</p>
+      <div class="box"><h3>Write down your 12 words</h3><p>Your recovery phrase is 12 words. Write them on paper and keep them somewhere safe. Anyone with them can take your money.</p></div>
+      <div class="box"><h3>Or save an encrypted backup file</h3><p>The file is locked with your wallet password. Save it to your files or email it to yourself, and remember the password.</p></div>
+      <div class="box"><h3>Restore on any device</h3><p>Open bWalletX on the new device and restore with your 12 words, a private key or your backup file. Old BSV wallets work too: see <a href="/restore">Restore</a>.</p></div>
+      <div class="box"><h3>Opened your wallet with a passkey?</h3><p>A passkey lives in your Apple or Google account. One saved to iCloud can&rsquo;t open a wallet on an Android phone, and the other way round. Keep your 12 words or your backup file as well.</p></div>
+      <div class="box"><h3>Using the Chrome extension?</h3><p>Removing the extension deletes the wallet inside it. Have your 12 words written down before you remove or reinstall it.</p></div>
+      <div class="box"><h3>Nobody will ask for your words</h3><p>Not b, not our team, not a site you sign in to. Never type your 12 words into a website or a chat.</p></div>
+
+      <h2 id="help">Help, any time</h2>
+      <div class="help">
+        <h3>Ask b in the $BWALLETX room</h3>
+        <p>b is our assistant. Ask it anything about getting started, signing in or paying, and it will answer or pass the problem to our team. Sign in to the room with your bWalletX.</p>
+        <div class="cta">
+          <a class="btn btn-store" href="https://chat.bwalletx.com/chat?room=BWALLETX" target="_blank" rel="noopener">Open the $BWALLETX room<small>On bChatX</small></a>
+          <a class="btn btn-store btn-ghost" href="mailto:support@bwalletx.com">Email us<small>support@bwalletx.com</small></a>
+        </div>
+      </div>
+
+      <p class="small forsites">Run a website? Engineers can add the button themselves with the free kit at <a href="/connect">/connect</a>. No engineers? We can add it for you: <a href="/direct">bWalletX Direct</a>.</p>
+    </main>
+  </body>
+</html>

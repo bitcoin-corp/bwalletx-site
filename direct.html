@@ -3,23 +3,23 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>bWallet Direct: sign in straight from your own wallet | bWalletX</title>
+    <title>bWalletX Direct: add bWalletX to your site, done for you | bWalletX</title>
     <link rel="canonical" href="https://bwalletx.com/direct" />
-    <meta name="description" content="Sign in to websites straight from your own wallet, opened with a passkey. No account, no password, no middleman. One script tag for businesses." />
+    <meta name="description" content="No engineers? We add Sign in with bWalletX, payments and paymail to your website, fix what's broken, and quote the price before we start. Done when you can sign in and pay on your own site." />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://bwalletx.com/direct" />
     <meta property="og:site_name" content="bWalletX" />
-    <meta property="og:title" content="bWallet Direct" />
-    <meta property="og:description" content="Sign in straight from your own wallet. No account, no password, no middleman." />
-    <meta property="og:image" content="https://bwalletx.com/og-direct-v1.png" />
+    <meta property="og:title" content="bWalletX Direct: add bWalletX to your site" />
+    <meta property="og:description" content="We add sign-in, payments and paymail, fix what's broken, and quote before we start." />
+    <meta property="og:image" content="https://bwalletx.com/og-direct-v2.png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
-    <meta property="og:image:alt" content="bWallet Direct: black and yellow racing stripes, bWalletX" />
+    <meta property="og:image:alt" content="bWalletX Direct: add bWalletX to your site, done for you. Black and yellow racing stripes." />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@bWalletX" />
-    <meta name="twitter:title" content="bWallet Direct" />
-    <meta name="twitter:description" content="Sign in straight from your own wallet. No account, no password, no middleman." />
-    <meta name="twitter:image" content="https://bwalletx.com/og-direct-v1.png" />
+    <meta name="twitter:title" content="bWalletX Direct: add bWalletX to your site" />
+    <meta name="twitter:description" content="We add sign-in, payments and paymail, fix what's broken, and quote before we start." />
+    <meta name="twitter:image" content="https://bwalletx.com/og-direct-v2.png" />
     <link rel="icon" href="/favicon.ico" />
     <link rel="stylesheet" href="/styles.css" />
     <style>
@@ -27,7 +27,7 @@
       .ext h2 { margin: 48px 0 10px; font-size: 1.5rem; }
       .ext p, .ext li { line-height: 1.65; }
       .ext .small { color: #8a8a86; font-size: 0.85rem; }
-      .ext .row { display: flex; gap: 12px; flex-wrap: wrap; margin: 26px 0; }
+      .cta { display: flex; gap: 12px; flex-wrap: wrap; margin: 26px 0 0; }
       .strap { font-weight: 800; letter-spacing: 0.14em; color: #F5B800; margin: 0; font-size: 0.85rem; }
       /* Black and yellow racing stripes. */
       .bacc-stripes { height: 38px; margin: 0 -20px; background: repeating-linear-gradient(to bottom, #F5B800 0 11px, #050505 11px 19px); }
@@ -42,20 +42,10 @@
       .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 14px; margin: 18px 0; }
       .grid .box { margin: 0; display: flex; flex-direction: column; gap: 6px; }
       .grid .box a.go { margin-top: auto; padding-top: 8px; color: #F5B800; font-weight: 700; text-decoration: none; }
-      .tag { align-self: flex-start; font-size: 0.72rem; font-weight: 800; letter-spacing: 0.1em; padding: 3px 9px; border-radius: 999px; border: 1px solid #ffffff22; color: #a7adb8; }
-      .tag.live { color: #7ee0a1; border-color: #7ee0a155; }
-      .bacc-table { margin: 18px 0; border: 1px solid #ffffff14; border-radius: 12px; overflow: hidden; }
-      .bacc-row { display: grid; grid-template-columns: 1.1fr 1fr 1fr; gap: 12px; padding: 12px 16px; border-top: 1px solid #ffffff10; font-size: 0.95rem; line-height: 1.5; color: #a7adb8; }
-      .bacc-row:first-child { border-top: 0; }
-      .bacc-head { background: #101114; font-weight: 800; color: #F5B800; }
-      .bacc-row span:first-child { color: #fff; font-weight: 700; }
-      @media (max-width: 560px) { .bacc-row { grid-template-columns: 1fr; gap: 4px; } .bacc-head { display: none; } .bacc-row span:nth-child(2)::before { content: "BTC: "; font-weight: 800; color: #fff; } .bacc-row span:nth-child(3)::before { content: "BSV: "; font-weight: 800; color: #F5B800; } }
-      .tag.wip { color: #F5B800; border-color: #F5B80066; }
-      .shots { display: flex; flex-wrap: wrap; gap: 18px; justify-content: center; margin: 22px 0; align-items: flex-start; }
-      .shots figure { margin: 0; text-align: center; max-width: 320px; }
-      .shots img { width: 100%; height: auto; border-radius: 22px; border: 1px solid #F5B80033; display: block; }
-      .shots figcaption { color: #8a8a86; font-size: 0.82rem; margin-top: 8px; }
-      .btn.off { opacity: 0.5; pointer-events: none; }
+      .test { margin: 34px 0 8px; padding: 26px 24px; border-radius: 18px; background: #050505; border: 1px solid #F5B80055; text-align: center; }
+      .test-line { font-size: clamp(1.5rem, 4.4vw, 2.2rem); font-weight: 900; font-style: italic; line-height: 1.15; letter-spacing: -0.01em; margin: 10px 0 6px; color: #fff; }
+      @media (max-width: 640px) { .bacc-hero::after { display: none; } }
+      @media (max-width: 480px) { .cta .btn-store { min-width: 0; flex: 1 1 100%; } }
     </style>
   </head>
   <body>
@@ -73,43 +63,49 @@
     <main class="ext">
       <div class="bacc-stripes" aria-hidden="true"></div>
       <section class="bacc-hero">
-        <p class="strap">BWALLET DIRECT</p>
+        <p class="strap">BWALLETX DIRECT &middot; DONE FOR YOU</p>
         <p class="bacc-word">Dir<span class="y">ect</span></p>
-        <h1>Sign in straight from your own wallet</h1>
-        <p class="lede">bWallet Direct is a bWalletX wallet you open with a passkey, and the way a website lets you in with it. No account to make, no password to invent, no middleman holding your login. Your wallet proves it is you; the site checks it.</p>
-        <div class="row">
-          <a class="btn btn-store" href="https://web.bwalletx.com">Make a wallet with a passkey</a>
-          <a class="btn btn-store btn-ghost" href="/connect">Add it to your site</a>
+        <h1>Add bWalletX to your site</h1>
+        <p class="lede">For companies without engineers. Bring your website, even a broken one. We add Sign in with bWalletX, payments and paymail, fix what&rsquo;s broken, and tell you the price before we start.</p>
+        <div class="cta">
+          <a class="btn btn-store" href="https://chat.bwalletx.com/chat?room=BWALLETX" target="_blank" rel="noopener">Ask for a quote<small>In the $BWALLETX room</small></a>
+          <a class="btn btn-store btn-ghost" href="mailto:support@bwalletx.com?subject=bWalletX%20Direct%20quote">Email us<small>support@bwalletx.com</small></a>
         </div>
       </section>
       <div class="bacc-stripes" aria-hidden="true"></div>
 
-      <h2>For customers</h2>
-      <div class="box"><h3>1. Make your wallet with a passkey</h3><p>Face ID, a fingerprint or your device PIN opens it. Nothing to write down first. <a href="/direct">How passkey sign-in works</a>.</p></div>
-      <div class="box"><h3>2. Press &ldquo;Sign in with bWalletX&rdquo; on a site</h3><p>Your wallet is found in your browser, in the app, or by scanning a QR code with your phone, and it asks you to approve.</p></div>
-      <div class="box"><h3>3. You are in</h3><p>The site gets a signature from your wallet&rsquo;s identity key, nothing else: no email, name or password.</p></div>
-
-      <h2>For businesses</h2>
-      <p>One script tag and two routes on your server. There is no API key, no client ID and no account with us: your server checks the signature itself. The same wallet gives the same ID every time they come back.</p>
-      <div class="row">
-        <a class="btn btn-store" href="/connect">Read the guide</a>
-        <a class="btn btn-store btn-ghost" href="/connect.md">Plain-text version</a>
-      </div>
-
-      <h2>What works today</h2>
+      <h2>What we add</h2>
       <div class="grid">
-        <div class="box"><span class="tag live">LIVE</span><h3>Sign in with bWalletX</h3><p>Chrome extension, the app&rsquo;s browser, and phone or web wallet by QR code.</p></div>
-        <div class="box"><span class="tag live">LIVE</span><h3>Passkey wallets</h3><p>Web, Chrome extension and the Android download.</p></div>
-        <div class="box"><span class="tag wip">PRIVATE</span><h3>Passkeys on iPhone</h3><p>In the private build for now.</p></div>
-        <div class="box"><span class="tag">COMING</span><h3>Pay from the same button</h3><p>Not packaged yet. Today the button signs people in only.</p></div>
-        <div class="box"><span class="tag">COMING</span><h3>Passkeys in the App Store and Google Play editions</h3><p>Not in the store editions yet.</p></div>
-        <div class="box"><span class="tag">COMING</span><h3>Sign in to HandCash with bWalletX</h3><p>Not built.</p></div>
+        <div class="box"><h3>Sign in with bWalletX</h3><p>The gold button on your site. Your customers sign in from their own wallet: no passwords for you to store, no accounts to reset.</p></div>
+        <div class="box"><h3>Payments</h3><p>Customers pay from their wallet on your site. They see the amount on their own approval sheet and tap Allow. The money comes to you, not to us.</p></div>
+        <div class="box"><h3>Paymail</h3><p>A paymail for your business, so people can pay you by name instead of a long address.</p></div>
+        <div class="box"><h3>Fix what&rsquo;s broken</h3><p>If your site has problems that stand in the way, we fix them as part of the same job, and say so in the quote.</p></div>
       </div>
 
-      <h2>Good to know</h2>
-      <div class="box"><h3>Passkeys stay in your Apple or Google account</h3><p>A passkey saved to iCloud cannot open a wallet on an Android phone, and the other way round. Keep your recovery file or 12 words as well.</p></div>
-      <div class="box"><h3>Not the same as the Android &ldquo;direct&rdquo; download</h3><p>That is the bWalletX Android app you download from this site instead of Google Play. bWallet Direct is the sign-in service.</p></div>
-      <p class="small">bWalletX is in beta: test with small amounts. Questions: <a href="mailto:support@bwalletx.com">support@bwalletx.com</a></p>
+      <h2>How it works</h2>
+      <div class="box"><h3>1. Ask</h3><p>Tell us your website and what you want: in the $BWALLETX room, where b takes the details, or by email.</p></div>
+      <div class="box"><h3>2. Quote</h3><p>You get a written quote before any work starts: what we&rsquo;ll do, the price, the deadline and the test it must pass. Nothing is charged unless you accept it.</p></div>
+      <div class="box"><h3>3. Contract</h3><p>You accept the quote as a contract. It says that you own the work we deliver for your site.</p></div>
+      <div class="box"><h3>4. Build and check</h3><p>We do the work and you try it on your own site.</p></div>
+      <div class="box"><h3>5. Invoice</h3><p>Once it passes the test, we invoice you for the quoted price.</p></div>
+
+      <div class="test">
+        <p class="strap">THE ACCEPTANCE TEST</p>
+        <p class="test-line">You can sign in and pay on your own site.</p>
+        <p class="small">That&rsquo;s when the job is done.</p>
+      </div>
+
+      <h2>Your site stays yours</h2>
+      <div class="box"><h3>No passwords or keys in chat</h3><p>We never ask for your passwords or your wallet keys. Access to your site is a limited deploy key or a change you review and accept yourself.</p></div>
+      <div class="box"><h3>Your secrets stay with your host</h3><p>Any settings your site needs, you add in your own hosting account.</p></div>
+      <div class="box"><h3>What we turn down</h3><p>Scams, phishing, copying someone else&rsquo;s brand, gambling and financial promotions.</p></div>
+
+      <h2>Not the right page?</h2>
+      <div class="grid">
+        <div class="box"><h3>You have engineers</h3><p>The kit is free and self-serve: one script tag, two routes on your server, no API key.</p><a class="go" href="/connect">The free kit at /connect &rarr;</a></div>
+        <div class="box"><h3>You&rsquo;re a customer of a site</h3><p>New to bWalletX and a site asked you to sign in or pay? Start here, for free.</p><a class="go" href="/start">New to bWalletX? /start &rarr;</a></div>
+      </div>
+      <p class="small">Not the same as the Android &ldquo;direct&rdquo; download: that&rsquo;s the bWalletX Android app from <a href="/android">this site</a> instead of Google Play.</p>
       <div class="bacc-stripes" aria-hidden="true"></div>
     </main>
   </body>

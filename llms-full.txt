@@ -3875,81 +3875,90 @@ bWalletX is in beta: test with small amounts. Questions: [support@bwalletx.com](
 
 Source: https://bwalletx.com/direct
 
-BWALLET DIRECT
+BWALLETX DIRECT · DONE FOR YOU
 
 Direct
 
-# Sign in straight from your own wallet
+# Add bWalletX to your site
 
-bWallet Direct is a bWalletX wallet you open with a passkey, and the way a website lets you in with it. No account to make, no password to invent, no middleman holding your login. Your wallet proves it is you; the site checks it.
+For companies without engineers. Bring your website, even a broken one. We add Sign in with bWalletX, payments and paymail, fix what’s broken, and tell you the price before we start.
 
-[Make a wallet with a passkey](https://web.bwalletx.com)
-[Add it to your site](https://bwalletx.com/connect)
+[Ask for a quoteIn the $BWALLETX room](https://chat.bwalletx.com/chat?room=BWALLETX)
+[Email ussupport@bwalletx.com](mailto:support@bwalletx.com?subject=bWalletX%20Direct%20quote)
 
-## For customers
+## What we add
 
-### 1. Make your wallet with a passkey
-
-Face ID, a fingerprint or your device PIN opens it. Nothing to write down first. [How passkey sign-in works](https://bwalletx.com/direct).
-
-### 2. Press “Sign in with bWalletX” on a site
-
-Your wallet is found in your browser, in the app, or by scanning a QR code with your phone, and it asks you to approve.
-
-### 3. You are in
-
-The site gets a signature from your wallet’s identity key, nothing else: no email, name or password.
-
-## For businesses
-
-One script tag and two routes on your server. There is no API key, no client ID and no account with us: your server checks the signature itself. The same wallet gives the same ID every time they come back.
-
-[Read the guide](https://bwalletx.com/connect)
-[Plain-text version](https://bwalletx.com/connect.md)
-
-## What works today
-
-LIVE
 ### Sign in with bWalletX
 
-Chrome extension, the app’s browser, and phone or web wallet by QR code.
+The gold button on your site. Your customers sign in from their own wallet: no passwords for you to store, no accounts to reset.
 
-LIVE
-### Passkey wallets
+### Payments
 
-Web, Chrome extension and the Android download.
+Customers pay from their wallet on your site. They see the amount on their own approval sheet and tap Allow. The money comes to you, not to us.
 
-PRIVATE
-### Passkeys on iPhone
+### Paymail
 
-In the private build for now.
+A paymail for your business, so people can pay you by name instead of a long address.
 
-COMING
-### Pay from the same button
+### Fix what’s broken
 
-Not packaged yet. Today the button signs people in only.
+If your site has problems that stand in the way, we fix them as part of the same job, and say so in the quote.
 
-COMING
-### Passkeys in the App Store and Google Play editions
+## How it works
 
-Not in the store editions yet.
+### 1. Ask
 
-COMING
-### Sign in to HandCash with bWalletX
+Tell us your website and what you want: in the $BWALLETX room, where b takes the details, or by email.
 
-Not built.
+### 2. Quote
 
-## Good to know
+You get a written quote before any work starts: what we’ll do, the price, the deadline and the test it must pass. Nothing is charged unless you accept it.
 
-### Passkeys stay in your Apple or Google account
+### 3. Contract
 
-A passkey saved to iCloud cannot open a wallet on an Android phone, and the other way round. Keep your recovery file or 12 words as well.
+You accept the quote as a contract. It says that you own the work we deliver for your site.
 
-### Not the same as the Android “direct” download
+### 4. Build and check
 
-That is the bWalletX Android app you download from this site instead of Google Play. bWallet Direct is the sign-in service.
+We do the work and you try it on your own site.
 
-bWalletX is in beta: test with small amounts. Questions: [support@bwalletx.com](mailto:support@bwalletx.com)
+### 5. Invoice
+
+Once it passes the test, we invoice you for the quoted price.
+
+THE ACCEPTANCE TEST
+
+You can sign in and pay on your own site.
+
+That’s when the job is done.
+
+## Your site stays yours
+
+### No passwords or keys in chat
+
+We never ask for your passwords or your wallet keys. Access to your site is a limited deploy key or a change you review and accept yourself.
+
+### Your secrets stay with your host
+
+Any settings your site needs, you add in your own hosting account.
+
+### What we turn down
+
+Scams, phishing, copying someone else’s brand, gambling and financial promotions.
+
+## Not the right page?
+
+### You have engineers
+
+The kit is free and self-serve: one script tag, two routes on your server, no API key.
+[The free kit at /connect →](https://bwalletx.com/connect)
+
+### You’re a customer of a site
+
+New to bWalletX and a site asked you to sign in or pay? Start here, for free.
+[New to bWalletX? /start →](https://bwalletx.com/start)
+
+Not the same as the Android “direct” download: that’s the bWalletX Android app from [this site](https://bwalletx.com/android) instead of Google Play.
 
 ---
 
@@ -8772,6 +8781,153 @@ A [business agent](https://bwalletx.com/business-agents) can answer by text too:
 
 ---
 
+Source: https://bwalletx.com/start
+
+NEW TO BWALLETX?
+
+# Start here.
+
+A site asked you to sign in or pay with bWalletX. This page explains what that means, how to get the wallet, and what to tap. It’s free.
+
+[Get bWalletXExtension, Android, iPhone or web](https://bwalletx.com/get)
+[Ask b for helpIn the $BWALLETX room](#help)
+
+- [What it is](#what)
+
+- [Get it](#get)
+
+- [The approval sheet](#sheet)
+
+- [Sign in](#sign-in)
+
+- [Pay](#pay)
+
+- [Back up](#backup)
+
+- [Help](#help)
+
+## What bWalletX is
+
+bWalletX is a Bitcoin wallet you hold yourself. Your keys stay on your device: we can’t see your money and we can’t move it.
+
+The same wallet also lets you into websites. Instead of making an account and a password, you press Sign in with bWalletX and your wallet proves it’s you. The site checks the proof itself.
+
+### Have bWallet from the app store?
+
+bWallet is the store edition of the same wallet. It signs in the same way, so everything on this page applies to it too.
+
+## Get it
+
+Pick the one that suits where you are. Each takes about a minute.
+
+[Chrome extensionFor Chrome or Brave on a computer. Sites find it straight away.](https://bwalletx.com/extension)
+[AndroidDownload the app from this site.](https://bwalletx.com/android)
+[iPhoneOpen it in Safari and add it to your Home Screen.](https://bwalletx.com/iphone)
+[WebNothing to install. Opens in any browser tab.](https://web.bwalletx.com)
+
+On the web wallet and the Android download you can make your wallet with a passkey: Face ID, a fingerprint or your device PIN opens it.
+
+Every option, with version numbers, is on [Get bWalletX](https://bwalletx.com/get).
+
+## What the approval sheet means
+
+Whenever a site asks your wallet for something, bWalletX shows one sheet. It names the site and says plainly what the site wants. Nothing happens until you tap Allow.
+
+EXAMPLE · SIGN IN
+
+shop.example
+
+Sign in to shop.example
+
+✓See your public identity (the key that names you)
+
+Not nowAllow
+
+EXAMPLE · PAY
+
+shop.example
+
+Pay shop.example
+
+$1.00
+
+paid in sats at today’s rate
+
+Not nowAllow
+
+### Sign in shares only your public identity key and moves no money
+
+The site doesn’t get your email, name, $name, paymail or picture. It gets a signature from your public key, and that’s all. Nothing is spent.
+
+### Check the site’s address
+
+The wallet shows the true address of the site that is asking, even if the site uses its own colours and logo on the sheet. If it isn’t the site you meant to use, tap Not now.
+
+### You stay in charge
+
+If you disconnect a site, or haven’t used it for a day, its next request asks “Reconnect to …?” first.
+
+## How to sign in on a site
+
+- Press “Sign in with bWalletX”It’s a gold button with the b logo. It may also say “also works with bWallet”.
+
+- Your wallet is foundOn a computer with the extension, it’s found straight away. Inside the bWalletX app’s own browser, the same. Otherwise the site shows a QR code: scan it with bWalletX on your phone, or paste the link into the web wallet.
+
+- If you used a QR code, match the numbersBoth screens show a 4-digit code. Check they match, then tap Connect.
+
+- Read the sheet and tap AllowYou’re in. No password to remember. Sign in with the same wallet next time and the site knows it’s you again.
+
+## How to pay
+
+- Have some BSV in your walletTap Receive in bWalletX to see your address, then send BSV to it from another wallet or an exchange.
+
+- Press pay on the siteYour wallet opens a payment sheet with the site’s address and the amount, in dollars first with sats underneath.
+
+- Tap Allow, or Not nowThe money leaves only when you tap Allow. Tap Not now and nothing is sent.
+
+bWalletX is in beta: start with small amounts.
+
+## Back up and recovery
+
+Your wallet lives on your device, so a backup is the only way back in if you lose it. Do this first.
+
+### Write down your 12 words
+
+Your recovery phrase is 12 words. Write them on paper and keep them somewhere safe. Anyone with them can take your money.
+
+### Or save an encrypted backup file
+
+The file is locked with your wallet password. Save it to your files or email it to yourself, and remember the password.
+
+### Restore on any device
+
+Open bWalletX on the new device and restore with your 12 words, a private key or your backup file. Old BSV wallets work too: see [Restore](https://bwalletx.com/restore).
+
+### Opened your wallet with a passkey?
+
+A passkey lives in your Apple or Google account. One saved to iCloud can’t open a wallet on an Android phone, and the other way round. Keep your 12 words or your backup file as well.
+
+### Using the Chrome extension?
+
+Removing the extension deletes the wallet inside it. Have your 12 words written down before you remove or reinstall it.
+
+### Nobody will ask for your words
+
+Not b, not our team, not a site you sign in to. Never type your 12 words into a website or a chat.
+
+## Help, any time
+
+### Ask b in the $BWALLETX room
+
+b is our assistant. Ask it anything about getting started, signing in or paying, and it will answer or pass the problem to our team. Sign in to the room with your bWalletX.
+
+[Open the $BWALLETX roomOn bChatX](https://chat.bwalletx.com/chat?room=BWALLETX)
+[Email ussupport@bwalletx.com](mailto:support@bwalletx.com)
+
+Run a website? Engineers can add the button themselves with the free kit at [/connect](https://bwalletx.com/connect). No engineers? We can add it for you: [bWalletX Direct](https://bwalletx.com/direct).
+
+---
+
 Source: https://bwalletx.com/store
 
 The Store · inside bWalletX
@@ -12405,7 +12561,7 @@ Everything b, in one place.
 
 ## Work and business
 
-[bJobsXWork, paid in Bitcoin.→](https://bjobsx.com)[bStoreXSell digital things, paid in Bitcoin.→](https://bstorex.com)[bAdvertisingXTell b about your business. Get the ad.→](https://badvertisingx.com)[bDriveXYour files, sealed on your device.→](https://bdrivex.com)[bSignXContracts both sides sign.→](https://bsignx.com)[bGitXConnect your GitHub repos and give each one a room.→](https://bgitx.com)
+[bJobsXWork, paid in Bitcoin.→](https://bjobsx.com)[bStoreXSell digital things, paid in Bitcoin.→](https://bstorex.com)[bAdvertisingXTell b about your business. Get the ad.→](https://badvertisingx.com)[bDriveXYour files and recordings, kept on chain.→](https://bdrivex.com)[bSignXContracts both sides sign.→](https://bsignx.com)[bGitXConnect your GitHub repos and give each one a room.→](https://bgitx.com)
 
 ## Play
 
