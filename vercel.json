@@ -278,6 +278,16 @@
       "permanent": true
     },
     {
+      "source": "/btickets",
+      "destination": "/tickets",
+      "permanent": false
+    },
+    {
+      "source": "/bticketsx",
+      "destination": "/tickets",
+      "permanent": false
+    },
+    {
       "source": "/(.*)",
       "has": [
         {

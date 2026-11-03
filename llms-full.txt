@@ -3273,6 +3273,8 @@ Help keeping your company's register of members with [bSharesX](https://bsharesx
 - Communities
 - Token issuers
 
+Building a whole company, not just a wallet? See [bWalletX Enterprise](https://bwalletx.com/enterprise): a custom build in a month.
+
 Want to see a full edition? [The VexVoid edition](https://bwalletx.com/themes/vexvoid) is our artist showcase. Other businesses we work with keep their own brand: [we never put our b on theirs](https://bwalletx.com/b-family).
 
 ## Please read
@@ -10463,6 +10465,68 @@ Tell us your brand, your colours, a link to your logo and which edition you want
 - QuoteNative app, by quote
 
 [← Back to themes](https://bwalletx.com/themes)
+
+---
+
+Source: https://bwalletx.com/tickets
+
+Part of the b family · Coming
+
+# bTicketsX: tickets you actually own.
+
+Event tickets that land in your bWalletX. At the door you show a code that changes every few seconds, so a screenshot or a copied PDF won’t get anyone in. Can’t go? Pass your ticket on at face value. Nothing here is live yet: this page says what we’re building.
+
+[See bticketsx.com](https://bticketsx.com)[Get bWalletX](https://bwalletx.com/get)
+
+GENERAL ADMISSIONEXAMPLE
+
+Friday Night Live
+
+Doors 19:00 · No. 0142
+
+CODE CHANGESSigned by your wallet. A screenshot stops working.
+
+An example of how a ticket will look in your wallet. The event is made up.
+
+## For fans
+
+- It lands in your walletBuy or RSVP, and the ticket goes straight into bWalletX with the event, your tier and the doors time.
+
+- One all-in priceWhat you see is what you pay. No fees added at the end.
+
+- A code that changes at the doorYour wallet signs a fresh code every few seconds. Staff scan it, and a copy is no use to anyone.
+
+- Pass it on at face valueCan’t make it? Pass your ticket to someone else through bTicketsX, at face value.
+
+- Keep the stubAfter the show the ticket stays in your wallet as a stub: proof you were there.
+
+## For organisers
+
+- Make an eventSign in with bWalletX. Set the tiers, how many, the sale window and any age limit.
+
+- Paid as you sellMoney from each ticket goes straight to your wallet as it sells.
+
+- A door scanner on any phoneOpen the scanner on a phone and check people in. It keeps working if the signal drops.
+
+- A room for the eventEvery event gets a room in [bChatX](https://www.bchatx.com) for the crowd and the crew.
+
+- Splits everyone signedAgree the venue and artist splits in [bSignX](https://bsignx.com) before tickets go on sale.
+
+## Where it is
+
+- FirstNo-cost RSVP tickets, starting with our own events
+
+- ComingPaid tickets, straight to the organiser’s wallet
+
+- ComingPaying by card
+
+- ComingPassing a ticket on at face value
+
+None of this is live yet. We’ll mark each line Live here when it ships.
+
+[Part of the bWalletX familySee every b app and what works today →](https://bwalletx.com/b-family)
+
+bTicketsX is in design. bWalletX is in beta: test with small amounts. Questions: [support@bwalletx.com](mailto:support@bwalletx.com)
 
 ---
 

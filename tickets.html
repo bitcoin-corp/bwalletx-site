@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>bTicketsX: tickets you actually own · bWalletX</title>
+    <link rel="canonical" href="https://bwalletx.com/tickets" />
+    <meta name="description" content="bTicketsX is coming to bWalletX: event tickets that land in your wallet, a code that changes at the door, and passing a ticket on at face value. Nothing is live yet." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://bwalletx.com/tickets" />
+    <meta property="og:site_name" content="bWalletX" />
+    <meta property="og:title" content="bTicketsX: tickets you actually own" />
+    <meta property="og:description" content="Coming to bWalletX: tickets in your wallet, a code that changes at the door, and pass it on at face value." />
+    <meta property="og:image" content="https://bwalletx.com/og-tickets-v1.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="bTicketsX, coming to bWalletX: tickets you actually own. An example ticket with a code that changes at the door." />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@bWalletX" />
+    <meta name="twitter:title" content="bTicketsX: tickets you actually own" />
+    <meta name="twitter:description" content="Coming to bWalletX: tickets in your wallet, a code that changes at the door, and pass it on at face value." />
+    <meta name="twitter:image" content="https://bwalletx.com/og-tickets-v1.png" />
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="stylesheet" href="/styles.css" />
+    <style>
+      .ext h1 { font-size: clamp(2.2rem, 6vw, 3.4rem); margin: 18px 0 10px; letter-spacing: -.03em; }
+      .ext h1 i { font-style: normal; color: var(--c, #C8F03C); }
+      .ext h2 { margin: 48px 0 10px; font-size: 1.5rem; }
+      .ext p, .ext li { line-height: 1.65; }
+      .ext .lede { font-size: 1.15rem; color: #d8d4c8; max-width: 44em; }
+      .ext .small { color: #8a8a86; font-size: 0.85rem; }
+      .ext .row { display: flex; gap: 12px; flex-wrap: wrap; margin: 26px 0; }
+      .kicker { font: 600 .78rem 'IBM Plex Mono', ui-monospace, monospace; letter-spacing: .14em; text-transform: uppercase; color: #8a8a86; margin: 8px 0 0; }
+      .kicker b { color: var(--c, #C8F03C); font-weight: 600; }
+      .tk { max-width: 420px; margin: 28px 0 8px; border-radius: 22px; background: #0d0e11; border: 1px solid #23252b; box-shadow: 0 30px 60px -34px rgba(200, 240, 60, .4); overflow: hidden; }
+      .tk-h { position: relative; padding: 20px 24px 18px; border-bottom: 2px dashed #26282e; }
+      .tk-h::before, .tk-h::after { content: ''; position: absolute; bottom: -12px; width: 22px; height: 22px; border-radius: 50%; background: var(--bg, #050506); }
+      .tk-h::before { left: -12px; } .tk-h::after { right: -12px; }
+      .tk-r { display: flex; justify-content: space-between; align-items: center; gap: 10px; font: 600 .72rem 'IBM Plex Mono', ui-monospace, monospace; letter-spacing: .12em; color: #8a8a86; }
+      .tk-ex { padding: 3px 9px; border-radius: 99px; border: 1px solid #3a3d44; color: #a9a69c; }
+      .tk-ev { margin: 10px 0 4px; font-size: 1.5rem; font-weight: 700; letter-spacing: -.02em; color: #f4f1e8; }
+      .tk-m { margin: 0; color: #a9a69c; }
+      .tk-b { display: flex; gap: 18px; align-items: center; padding: 18px 24px 22px; }
+      .tk-q { flex: none; width: 112px; height: 112px; border-radius: 12px; background: #f4f1e8; padding: 8px; }
+      .tk-q svg { display: block; width: 100%; height: 100%; }
+      .tk-s { margin: 0; color: #a9a69c; font-size: .92rem; line-height: 1.45; }
+      .tk-s b { display: block; margin-bottom: 6px; font: 600 .76rem 'IBM Plex Mono', ui-monospace, monospace; letter-spacing: .1em; color: var(--c, #C8F03C); }
+      .tk-bar { display: block; margin-top: 12px; height: 4px; border-radius: 4px; background: #23252b; overflow: hidden; }
+      .tk-bar i { display: block; height: 100%; width: 62%; background: var(--c, #C8F03C); }
+      .steps { list-style: none; padding: 0; margin: 14px 0; display: grid; gap: 12px; grid-template-columns: repeat(auto-fit, minmax(min(100%, 250px), 1fr)); }
+      .steps li { padding: 16px 18px; border-radius: 14px; border: 1px solid #ffffff12; background: #101114; }
+      .steps b { display: block; color: #f1ead9; margin-bottom: 4px; }
+      .steps span { color: #a7adb8; font-size: .95rem; }
+      .tag { display: inline-block; font-size: 0.72rem; font-weight: 700; padding: 2px 9px; border-radius: 999px; background: #ffffff14; color: #cfcabd; }
+      .tag.first { background: #C8F03C; color: #000; }
+      .status { list-style: none; padding: 0; margin: 12px 0; }
+      .status li { padding: 10px 0; border-bottom: 1px solid #ffffff0d; display: flex; gap: 12px; align-items: baseline; }
+      .status .tag { flex: none; min-width: 64px; text-align: center; }
+      .fam { display: flex; gap: 14px; align-items: center; margin: 40px 0 10px; padding: 18px 20px; border-radius: 16px; border: 1px solid #ffffff12; background: #101114; color: inherit; text-decoration: none; }
+      .fam:hover { border-color: #C8F03C80; }
+      .fam img { flex: none; }
+      .fam span { color: #a7adb8; }
+    </style>
+  </head>
+  <body>
+    <div class="beta-banner">bWalletX is in <strong>beta</strong>: test with small amounts.</div>
+    <header class="topbar">
+      <div class="wrap topbar-in">
+        <a class="brand" href="/"><img src="/logo.svg" alt="" width="34" height="30" /><span>bWallet<span class="gold">X</span></span></a>
+        <nav aria-label="Pages">
+          <a href="/features">Features</a><a href="/exchange">Exchange</a><a href="/social">Social</a><a href="/agent">Agents</a><a href="/extension">Extension</a><a href="/developers">Developers</a>
+        </nav>
+        <span class="nav-cta"><a class="dl-btn" href="/get">Download</a><a class="web-btn" href="https://web.bwalletx.com" target="_blank" rel="noopener">Web &rarr;</a></span>
+      </div>
+    </header>
+    <script src="/nav.js"></script>
+    <main class="ext" style="--c:#C8F03C">
+      <p class="kicker">Part of the b family · <b>Coming</b></p>
+      <h1>bTickets<i>X</i>: tickets you actually own.</h1>
+      <p class="lede">Event tickets that land in your bWalletX. At the door you show a code that changes every few seconds, so a screenshot or a copied PDF won&rsquo;t get anyone in. Can&rsquo;t go? Pass your ticket on at face value. Nothing here is live yet: this page says what we&rsquo;re building.</p>
+      <div class="row"><a class="btn btn-store" href="https://bticketsx.com" target="_blank" rel="noopener">See bticketsx.com</a><a class="btn btn-store btn-ghost" href="/get">Get bWalletX</a></div>
+
+      <div class="tk" role="img" aria-label="An example ticket: Friday Night Live, general admission, doors 19:00, ticket number 0142, with a code that changes at the door.">
+        <div class="tk-h">
+          <div class="tk-r"><span>GENERAL ADMISSION</span><span class="tk-ex">EXAMPLE</span></div>
+          <p class="tk-ev">Friday Night Live</p>
+          <p class="tk-m">Doors 19:00 · No. 0142</p>
+        </div>
+        <div class="tk-b">
+          <div class="tk-q"><svg id="tk-q" viewBox="0 0 25 25" shape-rendering="crispEdges" aria-hidden="true"></svg></div>
+          <p class="tk-s"><b>CODE CHANGES</b>Signed by your wallet. A screenshot stops working.<span class="tk-bar"><i></i></span></p>
+        </div>
+      </div>
+      <p class="small">An example of how a ticket will look in your wallet. The event is made up.</p>
+
+      <h2>For fans</h2>
+      <ol class="steps">
+        <li><b>It lands in your wallet</b><span>Buy or RSVP, and the ticket goes straight into bWalletX with the event, your tier and the doors time.</span></li>
+        <li><b>One all-in price</b><span>What you see is what you pay. No fees added at the end.</span></li>
+        <li><b>A code that changes at the door</b><span>Your wallet signs a fresh code every few seconds. Staff scan it, and a copy is no use to anyone.</span></li>
+        <li><b>Pass it on at face value</b><span>Can&rsquo;t make it? Pass your ticket to someone else through bTicketsX, at face value.</span></li>
+        <li><b>Keep the stub</b><span>After the show the ticket stays in your wallet as a stub: proof you were there.</span></li>
+      </ol>
+
+      <h2>For organisers</h2>
+      <ol class="steps">
+        <li><b>Make an event</b><span>Sign in with bWalletX. Set the tiers, how many, the sale window and any age limit.</span></li>
+        <li><b>Paid as you sell</b><span>Money from each ticket goes straight to your wallet as it sells.</span></li>
+        <li><b>A door scanner on any phone</b><span>Open the scanner on a phone and check people in. It keeps working if the signal drops.</span></li>
+        <li><b>A room for the event</b><span>Every event gets a room in <a href="https://www.bchatx.com">bChatX</a> for the crowd and the crew.</span></li>
+        <li><b>Splits everyone signed</b><span>Agree the venue and artist splits in <a href="https://bsignx.com">bSignX</a> before tickets go on sale.</span></li>
+      </ol>
+
+      <h2>Where it is</h2>
+      <ul class="status">
+        <li><span class="tag first">First</span>No-cost RSVP tickets, starting with our own events</li>
+        <li><span class="tag">Coming</span>Paid tickets, straight to the organiser&rsquo;s wallet</li>
+        <li><span class="tag">Coming</span>Paying by card</li>
+        <li><span class="tag">Coming</span>Passing a ticket on at face value</li>
+      </ul>
+      <p>None of this is live yet. We&rsquo;ll mark each line Live here when it ships.</p>
+
+      <a class="fam" href="/b-family"><img src="/logo.svg" alt="" width="34" height="30" /><div><b>Part of the bWalletX family</b><br /><span>See every b app and what works today &rarr;</span></div></a>
+      <p class="small">bTicketsX is in design. bWalletX is in beta: test with small amounts. Questions: <a href="mailto:support@bwalletx.com">support@bwalletx.com</a></p>
+    </main>
+    <footer class="foot">
+      <div class="wrap">
+        <p><a href="/b-family">The b family</a> · <a href="https://bticketsx.com">bticketsx.com</a> · <a href="https://x.com/bWalletX" target="_blank" rel="noopener">@bWalletX on X</a> · <a href="/privacy.html">Privacy policy</a></p>
+      </div>
+    </footer>
+    <script>
+      // Decorative code pattern for the example ticket (not a real code).
+      (function () { var q = document.getElementById('tk-q'); if (!q) return; var n = 25, s = 1337, o = '';
+        function r() { s = (s * 1103515245 + 12345) & 2147483647; return s / 2147483647; }
+        function fin(x, y) { o += '<rect x="' + x + '" y="' + y + '" width="7" height="7" fill="#0b0c0f"/><rect x="' + (x + 1) + '" y="' + (y + 1) + '" width="5" height="5" fill="#f4f1e8"/><rect x="' + (x + 2) + '" y="' + (y + 2) + '" width="3" height="3" fill="#0b0c0f"/>'; }
+        for (var y = 0; y < n; y++) for (var x = 0; x < n; x++) { var f = (x < 8 && y < 8) || (x > n - 9 && y < 8) || (x < 8 && y > n - 9); if (!f && r() > .52) o += '<rect x="' + x + '" y="' + y + '" width="1" height="1" fill="#0b0c0f"/>'; }
+        fin(0, 0); fin(n - 7, 0); fin(0, n - 7); q.innerHTML = o; })();
+    </script>
+  </body>
+</html>

@@ -106,7 +106,7 @@
           { label: 'Releases', href: '/releases' },
           { label: 'Roadmap', href: '/roadmap' }
         ] },
-      { key: 'bapps', label: 'bApps', href: '/bapps', icon: 1, pages: ['/bapps', '/bapps/bmovies', '/b-bots', '/services', '/b-market', '/bgitx', '/flick-off', '/tokenblaster'],
+      { key: 'bapps', label: 'bApps', href: '/bapps', icon: 1, pages: ['/bapps', '/bapps/bmovies', '/b-bots', '/services', '/b-market', '/bgitx', '/tickets', '/flick-off', '/tokenblaster'],
         sub: [
           { label: 'All bApps', href: '/bapps', ov: 1 },
           { label: 'bBots', href: '/b-bots' },
@@ -128,6 +128,7 @@
           { label: 'bRadioX', href: 'https://bradiox.com' },
           { label: 'bSharesX', href: 'https://bsharesx.com' },
           { label: 'bStoreX', href: 'https://bstorex.com' },
+          { label: 'bTicketsX', href: '/tickets' },
           { label: 'tokenblaster', href: '/tokenblaster' },
           { label: 'bVaultX', href: 'https://bvaultx.com' },
           { label: 'bVideoX', href: 'https://bvideox.com' },
