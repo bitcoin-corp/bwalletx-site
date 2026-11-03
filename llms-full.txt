@@ -10470,7 +10470,7 @@ Part of the b family · Coming
 
 # bTicketsX: tickets you actually own.
 
-Event tickets that land in your bWalletX. At the door you show a code that changes every few seconds, so a screenshot or a copied PDF won’t get anyone in. Can’t go? Pass your ticket on at face value. Nothing here is live yet: this page says what we’re building.
+Event tickets that land in your bWalletX. At the door you show a code that changes every few seconds, so a screenshot or a copied PDF won’t get anyone in. Can’t go? Resell it through bTicketsX. Nothing here is live yet: this page says what we’re building.
 
 [See bticketsx.com](https://bticketsx.com)[Get bWalletX](https://bwalletx.com/get)
 
@@ -10492,7 +10492,7 @@ An example of how a ticket will look in your wallet. The event is made up.
 
 - A code that changes at the doorYour wallet signs a fresh code every few seconds. Staff scan it, and a copy is no use to anyone.
 
-- Pass it on at face valueCan’t make it? Pass your ticket to someone else through bTicketsX, at face value.
+- Resell itCan’t make it? Resell your ticket through bTicketsX. The old one is cancelled and the buyer’s is issued fresh, so the ticket at the door is always the real one.
 
 - Keep the stubAfter the show the ticket stays in your wallet as a stub: proof you were there.
 
@@ -10512,11 +10512,9 @@ An example of how a ticket will look in your wallet. The event is made up.
 
 - FirstNo-cost RSVP tickets, starting with our own events
 
-- ComingPaid tickets, straight to the organiser’s wallet
+- ComingPaid tickets in BSV, straight to the organiser’s wallet
 
-- ComingPaying by card
-
-- ComingPassing a ticket on at face value
+- ComingReselling tickets through bTicketsX
 
 None of this is live yet. We’ll mark each line Live here when it ships.
 
