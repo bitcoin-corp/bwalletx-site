@@ -3224,9 +3224,9 @@ $999to set up, then $99 a year
 
 - Built for you, and you approve it before it goes live
 
-- A token for your business, issued with your wallet
+- A membership or access token for your community, issued from your own wallet
 
-- The option to go through the bDojoX programme
+We don't create tokens that represent shares, property, art or any investment; if you issue those, they're yours to issue under your own legal advice.
 
 Branded editions are only for the verified owner of the brand. We check. The wallet keeps a small “powered by bWalletX”. We can decline a design that impersonates someone or misleads people. Smaller and larger options are on [Custom editions](https://bwalletx.com/themes/custom).
 
@@ -3244,15 +3244,11 @@ A website for your business that works with your wallet: sign in with it, take p
 
 ### Advertising and marketing
 
-Campaigns, share images and launch posts around your edition and your token. Quoted to your brief.
+Campaigns, share images and launch posts around your edition and launch. Quoted to your brief. We don't promote investments, share offers or tokens sold for a return.
 
 ### Share register support Testing
 
 Help keeping your company's register of members with [bSharesX](https://bsharesx.com). Registers are in testing: the first one is our own company's.
-
-### The bDojoX programme Early
-
-[bDojoX](https://bdojox.com) takes a company step by step, belt by belt, from its first token to a register kept on chain. We can bring you in as it opens up.
 
 ## How it works
 
@@ -3312,7 +3308,7 @@ Which services?
 Branded wallet
 Brand kit / ad film
 Share register support
-Token launch
+Membership/access token
 Other
 
 Leave this empty
