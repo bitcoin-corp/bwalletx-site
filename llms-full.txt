@@ -1053,6 +1053,8 @@ Less paperwork. More business. Just b.
 
 [Get bWalletX](https://bwalletx.com/get?from=b-is-for-business)
 
+[Plans for business: from $99 a month →](https://bwalletx.com/clients#plans)
+
 Music: [Phantom Echoes by VexVoid](https://chat.bwalletx.com/u/vexvoid). Questions from a business? [Write to us](mailto:support@bwalletx.com?subject=bWalletX%20for%20my%20business)
 
 [just b](https://bwalletx.com/just-b) · [b cool](https://bwalletx.com/b-cool) · [b Creative](https://bwalletx.com/b-creative) · [b is for business](https://bwalletx.com/b-is-for-business)
@@ -3201,50 +3203,84 @@ For the details, read the [bWeb build plan](https://docs.bwalletx.com/plans/bweb
 
 Source: https://bwalletx.com/clients
 
-# Your brand. Your wallet.
+FOR BUSINESSES ONLY · NOT FOR CONSUMERS
 
-Give your customers, fans or members a wallet with your name, your colours and your logo. We build it on bWalletX, so it is self-custody from day one: each user keeps their own keys.
+# Your business, on bWalletX.
 
-[Tell us what you want to build](#enquire)
-[See the editions](https://bwalletx.com/themes/custom)
+A member room with its own key, a wallet, and signing from a computer, live today. Add a brand kit, a website and your first documents in 5 working days. Self-custody throughout: each person keeps their own keys.
 
-## The basic package
+[Start on Starter](#start)
+[See the plans](#plans)
 
-$999to set up, then $99 a year
+## Plans
 
-### A branded edition of bWalletX
+### Starter
 
-- Your name and brand throughout
+$99 a month
 
-- Your colours and your logo on the wallet
+or $990 a year. No setup fee. In the UK: £75 a month or £750 a year.
 
-- Your own domain, for example wallet.yourbrand.com
+- Your company live today: a member room with its own key, a wallet, and signing from a computer
 
-- Still runs on bWalletX: self-custody, keys stay with each user
+- Self-serve, with support from b in your room
 
-- Built for you, and you approve it before it goes live
+- New features added as each one goes live
 
-- A membership or access token for your community, issued from your own wallet
+- Cancel with 30 days' notice
 
-We don't create tokens that represent shares, property, art or any investment; if you issue those, they're yours to issue under your own legal advice.
+[Start on Starter](#start)
 
-Branded editions are only for the verified owner of the brand. We check. The wallet keeps a small “powered by bWalletX”. We can decline a design that impersonates someone or misleads people. Smaller and larger options are on [Custom editions](https://bwalletx.com/themes/custom).
+For businesses only. Prices exclude VAT, which is added where it applies. We do not issue securities, and nothing here is an offer of shares or tokens.
+
+### Setup
+
+$999 one-off
+
+Optional, on top of Starter. In the UK: £750.
+
+- Brand kit, website, room and first documents, done in 5 working days
+
+- A website from our template
+
+- Your room set up, with your people invited
+
+- One round of changes
+
+[Order Setup](#start)
+
+For businesses only. Prices exclude VAT, which is added where it applies. We do not issue securities, and nothing here is an offer of shares or tokens.
+
+Need custom software? [bWalletX Enterprise](https://bwalletx.com/enterprise): custom builds, quoted for your company.
+
+Want a wallet in your own name and colours? That's a separate product: [custom wallet editions](https://bwalletx.com/themes/custom). With one, you can issue a membership or access token for your community from your own wallet. We don't create tokens that represent shares, property, art or any investment.
+
+## Where things stand
+
+Live works in production now. Testing works, with our own company as the first user. Coming is not ready yet.
+
+- Live A member room with its own key on [bChatX](https://chat.bwalletx.com), invite by link
+
+- Live A wallet for each person: bWalletX, self-custody
+
+- Live Signed documents and board minutes, signed from a computer and sealed on chain
+
+- Being fixed Signing on the phone
+
+- Coming Card or BSV checkout on this page. Until then, send the form below and we email your invoice
+
+- Testing Share registers with [bSharesX](https://bsharesx.com): the first one is our own company's
 
 ## Add-ons
 
 Priced separately. We quote before any work starts.
 
-### Brand kit and ad film Live
+### Ad film Live
 
-Logo, colours, type and voice, or a short animated ad film, made by b at [bAdvertisingX](https://badvertisingx.com). One fixed price, quoted first.
-
-### Web design
-
-A website for your business that works with your wallet: sign in with it, take payments in it. Quoted to your brief.
+A short animated ad film for your launch, made by b at [bAdvertisingX](https://badvertisingx.com). One fixed price, quoted first.
 
 ### Advertising and marketing
 
-Campaigns, share images and launch posts around your edition and launch. Quoted to your brief. We don't promote investments, share offers or tokens sold for a return.
+Campaigns, share images and launch posts. Quoted to your brief. We don't promote investments, share offers or tokens sold for a return.
 
 ### Share register support Testing
 
@@ -3252,71 +3288,69 @@ Help keeping your company's register of members with [bSharesX](https://bsharesx
 
 ## How it works
 
-- EnquireFill in the form below. Tell us what you want to build.
+- Sign upSend the form below with your company name.
 
-- CallWe reply within 2 working days and set up a call.
+- InvoiceWe email your invoice within 2 working days. Pay in BSV or by bank transfer.
 
-- We build your editionYour name, colours and logo. You check it and approve it.
+- LiveYour room, wallet and signing are ready. b helps in your room.
 
-- LaunchYour edition goes live and your people sign up.
+- Setup, if you want itBrand kit, website, room and documents in 5 working days.
 
 ## Who it's for
 
-- Artists
+- Startups
+- Small firms
+- Studios
+- Shops
+- Clubs
 - Collectives
-- Art projects
-- Property projects
-- Communities
-- Token issuers
 
-Building a whole company, not just a wallet? See [bWalletX Enterprise](https://bwalletx.com/enterprise): a custom build in a month.
-
-Want to see a full edition? [The VexVoid edition](https://bwalletx.com/themes/vexvoid) is our artist showcase. Other businesses we work with keep their own brand: [we never put our b on theirs](https://bwalletx.com/b-family).
+Other businesses we work with keep their own brand: [we never put our b on theirs](https://bwalletx.com/b-family).
 
 ## Please read
 
-Tokenised art, property and shares can be securities or other regulated products. We build software: wallets, brand work and register tools. We do not issue securities, raise money for you, give investment advice, or get regulatory approval for you.
+For businesses only. Not for consumers.
 
-You are responsible for your own legal and regulatory advice, and for what you offer to others. Talk to a qualified lawyer in each country where you operate before you launch.
+Prices exclude VAT, which is added where it applies. You can pay in BSV through bWalletX or by bank transfer. The Bitcoin Corporation Ltd is the supplier and sends the invoices.
 
-bSharesX share registers are in testing. Nothing on this page is an offer of shares or tokens, and we make no promise of returns.
+We build software: rooms, wallets, signing, brand work and register tools. Starter and Setup don't include custom code, calls or set response times. Tokenised art, property and shares can be securities or other regulated products, and they're never part of Starter or Setup. We do not issue securities, raise money for you, give investment advice, or get regulatory approval for you.
 
-## Tell us what you want to build
+You are responsible for your own legal and regulatory advice, and for what you offer to others. Nothing on this page is an offer of shares or tokens, and we make no promise of returns.
+
+## Start on Starter
+
+Card and BSV checkout aren't on this page yet. Send this form and we'll email your invoice and next steps within 2 working days.
+
+Your plan
+
+Starter, monthly: $99 a month (£75)
+Starter, yearly: $990 a year (£750)
+
+Add Setup: $999 one-off (£750)
+
+Prices exclude VAT, which is added where it applies.
 
 Your name
 
-Company or project
+Company name
 
-Email
+Work email
 
 Phone (optional)
 
 Website (optional)
 
-Budget
-
-Not sure
-Up to $1k
-$1k–$5k
-$5k–$25k
-$25k+
-
-What do you want to build?
-
-Which services?
-
-Branded wallet
-Brand kit / ad film
-Share register support
-Membership/access token
-Other
+Anything we should know? (optional)
 
 Leave this empty
 
-You may contact me about this enquiry by email or phone. See our [privacy policy](https://bwalletx.com/privacy).
-Send enquiry
+I'm buying for a business.
+You may contact me about this by email or phone. We use these details only to reply and to keep a record, and we never sell them. See our [privacy policy](https://bwalletx.com/privacy).
+Send sign-up
 
-Prefer email? [support@bwalletx.com](mailto:support@bwalletx.com)
+Prefer email? [support@bwalletx.com](mailto:support@bwalletx.com?subject=Starter)
+
+Supplier: The Bitcoin Corporation Ltd, company no. 16735102, registered in England & Wales. Registered office: Flat 6, 315 Barking Road, London, E13 8EE, United Kingdom. Contact: [support@bwalletx.com](mailto:support@bwalletx.com).
 
 ---
 
@@ -3964,48 +3998,70 @@ Source: https://bwalletx.com/enterprise
 
 FOR BUSINESSES ONLY · NOT FOR CONSUMERS
 
-# Your company, built in a month.
+# Your company, live today.
 
-We design and build your startup's software on bWalletX: signed documents and board minutes, a room for your team and members, a wallet in your brand, payments, your website and your brand. Then we keep it running.
+Your room, wallet and signed board minutes on day one. Then we build the rest of your software with you, a month at a time.
+
+[See the plans](#tiers)
+[Book a scoping call](#enquire)
+
+On day one you get a member room with its own key, a wallet, and signing from a computer. Everything else on this page shows where it stands today.
+
+## Three plans
+
+### Starter
+
+$99 a month
+
+or $990 a year. No setup fee. In the UK: £75 a month or £750 a year.
+
+- Your company live today: a member room with its own key, a wallet, and signing from a computer
+
+- Self-serve, with support from b in your room
+
+- New features added as each one goes live
+
+- Cancel with 30 days' notice
+
+[Start on Starter](https://bwalletx.com/clients#start)
+
+For businesses only. Prices exclude VAT, which is added where it applies. We do not issue securities, and nothing here is an offer of shares or tokens.
+
+### Setup
+
+$999 one-off
+
+Optional, on top of Starter. In the UK: £750.
+
+- Brand kit, website, room and first documents, done in 5 working days
+
+- A website from our template
+
+- Your room set up, with your people invited
+
+- One round of changes
+
+[Order Setup](https://bwalletx.com/clients?plan=setup#start)
+
+For businesses only. Prices exclude VAT, which is added where it applies. We do not issue securities, and nothing here is an offer of shares or tokens.
+
+### Enterprise
+
+By quote
+
+Custom builds, quoted for your company. Most projects start from $10,000. Ongoing support is quoted with the build.
 
 [Book a scoping call](#enquire)
-[What you get](#what)
 
-## The price
+For businesses only. Prices exclude VAT, which is added where it applies. We do not issue securities, and nothing here is an offer of shares or tokens.
 
-### Build
-from $10,000
-per month of build. We start with a free scoping call, then send a fixed written quote for the agreed scope before any work starts. Bigger builds take more months.
-
-### Priority support
-from $1,000
-a month, rolling. Cancel with 30 days' notice. Monitoring, fixes, security updates and small changes, with priority replies. If you need set response times, we put them in your quote.
-
-### Equity
-1%
-of your company, once. Ordinary shares, the same class as the founders', issued to The Bitcoin Corporation Ltd when the first month's work is delivered.
-
-### How the 1% works
-
-- One-off: 1% in total, not 1% a month
-
-- The shares are fully paid by the work we deliver. You don't pay cash for them
-
-- Same class of ordinary shares as the founders hold
-
-- No board seat, no anti-dilution rights, no clawback
-
-- Recorded as a share issue in your own register of members, with your own lawyer
-
-We receive shares in your company. We don't offer shares in ours.
-
-## What we can build in your first month
+## What you get, and where each part stands
 
 Every item shows where it is today. Live means it works in production now. Testing means it works, with our own company as the first user. In build means we are building it now.
 
 ### Signed documents and board minutes Live
 
-Share a contract or minute in your room. Each director reads it and signs from a computer, and the signature is sealed on chain with a record anyone can check. Signing on the phone is in testing.
+Share a contract or minute in your room. Each director reads it and signs from a computer, and the signature is sealed on chain with a record anyone can check. Signing on the phone: being fixed.
 
 ### A member room with its own key Live
 
@@ -4013,7 +4069,7 @@ A private room on [bChatX](https://www.bchatx.com) for your board, team or membe
 
 ### A wallet in your brand Testing
 
-Our [branded wallet edition](https://bwalletx.com/clients) is included: your name, colours and logo, self-custody for every user. The first client edition is in trial.
+Our [branded wallet edition](https://bwalletx.com/themes/custom) can be part of your build: your name, colours and logo, self-custody for every user. The first client edition is in trial.
 
 ### Payments, tips and receipts Live
 
@@ -4069,13 +4125,13 @@ Prices exclude VAT, which is added where it applies. You can pay in BSV through 
 
 We build software. We do not issue securities, raise money for you, give investment advice, or get regulatory approval for you. You are responsible for your own legal and regulatory advice, and for what you offer to others. Talk to a qualified lawyer in each country where you operate.
 
-The shares we receive are recorded in your own register under your own lawyer's advice. Nothing on this page is an offer of shares or tokens, and we make no promise of returns. Our Enterprise Services Terms come with your quote.
+Nothing on this page is an offer of shares or tokens, and we make no promise of returns. Tokens we set up are membership or room keys only. Your terms come with your quote.
 
 ## Book a scoping call
 
 Your name
 
-Company
+Company name
 
 Work email
 
@@ -4085,8 +4141,9 @@ Website (optional)
 
 Budget
 
-$25k+
+Under $10k
 $10k–$25k
+$25k+
 Not sure yet
 
 What does your company do, and what should we build?
@@ -4100,6 +4157,7 @@ Share register
 
 Leave this empty
 
+I'm buying for a business.
 You may contact me about this enquiry by email or phone. We use these details only to reply and to keep a record of your enquiry, and we never sell them. See our [privacy policy](https://bwalletx.com/privacy).
 Send enquiry
 
@@ -10356,6 +10414,8 @@ Spec A
 
 $99 a year
 
+In the UK: £75 a year
+
 ### Theme edition
 
 - Custom colours, card art and app icon
@@ -10368,11 +10428,15 @@ $99 a year
 
 - bWalletX Connect on your website, set up by us: your customers sign in and pay with their wallet ([how it works](https://bwalletx.com/connect))
 
+Prices exclude VAT, which is added where it applies.
+
 Renews yearly
 
 Spec B
 
 $999 set-up + $99 a year
+
+In the UK: £750 set-up + £75 a year
 
 ### Branded edition
 
@@ -10382,13 +10446,13 @@ $999 set-up + $99 a year
 
 - Still runs on bWalletX: self-custody, keys stay with each user
 
-- Your own token: a token for your business, issued with your branded wallet
-
-- The option to go through [bDojoX](#route), if you want to
+- A membership or access token for your community, issued from your own wallet. We don’t create tokens that represent shares, property, art or any investment.
 
 Priced low so businesses can get started. Tokens and shares may be regulated; we don’t sell them for you.
 
-Renews yearly · [Enquire](https://bwalletx.com/clients)
+Prices exclude VAT, which is added where it applies.
+
+Renews yearly · [Order](https://bwalletx.com/themes/custom/orderform)
 
 Spec C
 
@@ -10420,11 +10484,9 @@ A branded wallet is where it starts. If your company has shareholders, the same 
 
 - Testing2. Your share register on [bSharesX](https://bsharesx.com). Keep your company’s register of members with bSharesX. The company keeps the register as the law asks, and its directors approve every entry; a token mirrors it on chain, and if the two ever differ, the register wins. Holders see their holding in their own wallet. Registers are in testing: the first register in testing is The Bitcoin Corporation Ltd, our own company. Setting up other companies’ registers is coming. [More on bShares](https://bwalletx.com/bshares)
 
-- Early3. Optional: [bDojoX](https://bdojox.com). If you want to go that route, bDojoX is a programme for companies on chain, belt by belt, from its first token to a register kept on chain. Five belts, five stages: token launched, partnership shares locked, registered company, capital raised, public listing. The first two use tools that are live in bWalletX; the register is in testing; the later belts are coming or planned, and none of them is open yet.
-
 Please read this. Shares are securities. We don’t issue or sell shares for you, raise money for you, give investment or legal advice, or get regulatory approval for you. You need your own legal advice before offering shares to anyone. bShares registers are in testing. Nothing on this page is an offer of securities.
 
-[Talk to us](https://bwalletx.com/clients)[bSharesX](https://bsharesx.com)[bDojoX](https://bdojox.com)
+[Talk to us](https://bwalletx.com/clients)[bSharesX](https://bsharesx.com)
 
 04 / 06  The rules, in short
 
