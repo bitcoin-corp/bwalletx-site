@@ -4009,15 +4009,15 @@ Every item shows where it is today. Live means it works in production now. Testi
 
 ### Signed documents and board minutes Live
 
-Share a contract or minute in your room. Each director reads it and signs on their phone, and the signature is sealed on chain with a record anyone can check.
+Share a contract or minute in your room. Each director reads it and signs from a computer, and the signature is sealed on chain with a record anyone can check. Signing on the phone is in testing.
 
 ### A member room with its own key Live
 
-A private room on [bChatX](https://www.bchatx.com) for your board, team or members, with its own key. Invite people by email; they sign in from their phone.
+A private room on [bChatX](https://www.bchatx.com) for your board, team or members, with its own key. Invite people with a link; they sign in with bWalletX, Google or HandCash.
 
-### A wallet in your brand Live
+### A wallet in your brand Testing
 
-Our [branded wallet edition](https://bwalletx.com/clients) is included: your name, colours and logo, self-custody for every user.
+Our [branded wallet edition](https://bwalletx.com/clients) is included: your name, colours and logo, self-custody for every user. The first client edition is in trial.
 
 ### Payments, tips and receipts Live
 
