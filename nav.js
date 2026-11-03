@@ -78,7 +78,7 @@
           { label: 'bPhone', href: '/bphone' },
           { label: 'bMail', href: '/bmail', also: ['/verify-note'] }
         ] },
-      { key: 'create', label: 'Creators', href: '/culture', pages: ['/culture', '/artists', '/artists/vexvoid', '/vexvoid', '/aivj', '/digital-ice-cream', '/mint', '/streaming-payments', '/credits', '/bads', '/bad', '/creative', '/b-creative', '/happy-b', '/partners', '/bshares', '/clients', '/direct'],
+      { key: 'create', label: 'Creators', href: '/culture', pages: ['/culture', '/artists', '/artists/vexvoid', '/vexvoid', '/aivj', '/digital-ice-cream', '/mint', '/streaming-payments', '/credits', '/bads', '/bad', '/creative', '/b-creative', '/happy-b', '/marketing', '/partners', '/bshares', '/clients', '/direct'],
         sub: [
           { label: 'Overview', href: '/culture', ov: 1 },
           { label: 'Artists', href: '/artists', also: ['/artists/vexvoid', '/vexvoid', '/aivj', '/digital-ice-cream'] },
@@ -87,6 +87,7 @@
           { label: 'Credits', href: '/credits' },
           { label: 'bAds', href: '/bads', also: ['/bad'] },
           { label: 'b Creative', href: '/creative', also: ['/b-creative', '/happy-b'] },
+          { label: 'Marketing', href: '/marketing' },
           { label: 'Partners', href: '/partners' },
           { label: 'bShares', href: '/bshares' },
           { label: 'Branded wallets', href: '/clients' },
