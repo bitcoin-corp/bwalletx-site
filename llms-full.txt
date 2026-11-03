@@ -71,7 +71,7 @@ It isn't on Google Play yet, so install it by hand. (The store edition, bWallet,
 
 - Open bWalletX and create or restore your wallet.
 
-Updating from an older version? Install over the top and your wallet stays. If Android says the app can't be updated, write down your 12 words first, then uninstall and reinstall.
+Updating from an older version? Install over the top and your wallet stays. If Android says the app can't be updated, don't uninstall yet: email support@bwalletx.com first. Uninstalling deletes this phone's wallet data, and until our next update some recent change from Store and room payments is recorded only there.
 
 Version 5.2.49 beta · 23.0 MB · Android 7+ · SHA-256 2b5adfce9f4f6e61017371bde905708332af00c5cb5dca4bf40976d9a4b85751
 
@@ -317,7 +317,7 @@ Stuck, or something not working? Here is how to reach us.
 
 Quick answers
 
-Lost or new phone? Install bWalletX and choose Restore, then use your 12 words or your encrypted backup file. [How restoring works](https://bwalletx.com/restore).
+Lost or new phone? Install bWalletX and choose Restore, then use your 12 words or your encrypted backup file. If the old phone still works, keep bWalletX on it until the new one shows the right balance: until our next update, some recent change is recorded only on the device that made it. [How restoring works](https://bwalletx.com/restore).
 
 Can you get my money back? No. bWalletX is self-custody: your keys stay on your device and we never hold them, so we can’t see, move or recover your funds. Keep your 12 words safe and offline.
 
@@ -9226,7 +9226,7 @@ A passkey lives in your Apple or Google account. One saved to iCloud can’t ope
 
 ### Using the Chrome extension?
 
-Removing the extension deletes the wallet inside it. Have your 12 words written down before you remove or reinstall it.
+Removing the extension deletes the wallet inside it. Don't remove or reinstall it to fix a problem: email support@bwalletx.com first. Your 12 words restore your account, but until our next update some recent change is recorded only in the extension.
 
 ### Nobody will ask for your words
 
