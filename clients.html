@@ -3,23 +3,23 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Your own branded wallet · bWalletX for business</title>
+    <title>bWalletX for business: plans from $99 a month</title>
     <link rel="canonical" href="https://bwalletx.com/clients" />
-    <meta name="description" content="A wallet with your name, colours and logo, built on bWalletX. $999 to set up, then $99 a year. Tell us what you want to build and we'll reply within 2 working days." />
+    <meta name="description" content="For businesses only. Starter: a member room, a wallet and signing from a computer, live today, $99 a month or $990 a year. Setup: brand kit, website, room and first documents in 5 working days, $999 one-off." />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://bwalletx.com/clients" />
     <meta property="og:site_name" content="bWalletX" />
-    <meta property="og:title" content="Your brand. Your wallet. Built on bWalletX." />
-    <meta property="og:description" content="A wallet with your name, colours and logo. $999 to set up, then $99 a year. Self-custody: your users keep their own keys." />
-    <meta property="og:image" content="https://bwalletx.com/og-clients-v1.jpg" />
+    <meta property="og:title" content="Your business on bWalletX. From $99 a month." />
+    <meta property="og:description" content="For businesses only. Starter $99 a month or $990 a year: a member room, a wallet and signing, live today. Setup $999 one-off." />
+    <meta property="og:image" content="https://bwalletx.com/og-clients-v2.jpg" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
-    <meta property="og:image:alt" content="Your brand, your wallet: a branded wallet card on bWalletX, $999 set-up then $99 a year" />
+    <meta property="og:image:alt" content="bWalletX for business: Starter $99 a month or $990 a year, Setup $999 one-off. For businesses only" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@bWalletX" />
-    <meta name="twitter:title" content="Your brand. Your wallet. Built on bWalletX." />
-    <meta name="twitter:description" content="A wallet with your name, colours and logo. $999 to set up, then $99 a year. Self-custody: your users keep their own keys." />
-    <meta name="twitter:image" content="https://bwalletx.com/og-clients-v1.jpg" />
+    <meta name="twitter:title" content="Your business on bWalletX. From $99 a month." />
+    <meta name="twitter:description" content="For businesses only. Starter $99 a month or $990 a year: a member room, a wallet and signing, live today. Setup $999 one-off." />
+    <meta name="twitter:image" content="https://bwalletx.com/og-clients-v2.jpg" />
     <link rel="icon" href="/favicon.ico" />
     <link rel="stylesheet" href="/styles.css" />
     <style>
@@ -30,9 +30,6 @@
       .ext .lede { font-size: 1.15rem; color: #d8d4c8; max-width: 44em; }
       .ext .small { color: #8a8a86; font-size: 0.85rem; }
       .ext .ctas { display: flex; gap: 12px; flex-wrap: wrap; margin: 26px 0; }
-      .price { display: flex; flex-wrap: wrap; gap: 10px 26px; align-items: baseline; margin: 6px 0 14px; }
-      .price b { font: 700 2.4rem var(--hf); color: #F5B800; }
-      .price span { color: #a7adb8; }
       .box { background: #101114; border: 1px solid #ffffff12; border-radius: 16px; padding: 18px 20px; margin: 16px 0; }
       .box h3 { margin: 0 0 6px; font-size: 1.05rem; }
       .box p { margin: 0; color: #a7adb8; }
@@ -72,6 +69,19 @@
       .out { margin: 14px 0 0; font-weight: 600; min-height: 1.4em; }
       .out.ok { color: #5fd38d; } .out.err { color: #ff8a8a; }
       .hp { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
+      .biz { display: inline-block; font-size: 0.8rem; font-weight: 700; letter-spacing: .04em; padding: 5px 12px; border-radius: 999px; border: 1px solid #F5B80077; color: #F5B800; }
+      .tiers { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 14px; margin: 16px 0; align-items: stretch; }
+      .tiers .box { margin: 0; display: flex; flex-direction: column; }
+      .tiers .amt { display: block; white-space: nowrap; font: 700 2.2rem var(--hf); color: #F5B800; margin: 4px 0 4px; }
+      .tiers .amt small { font-size: 1rem; color: #a7adb8; font-weight: 500; }
+      .tiers .alt { color: #d8d4c8; margin: 0 0 6px; }
+      .tiers .ticks { margin-bottom: 16px; }
+      .tiers .btn { align-self: flex-start; margin-top: auto; }
+      .tiers .fine { color: #8a8a86; font-size: 0.8rem; line-height: 1.5; margin: 14px 0 0; }
+      .status { list-style: none; padding: 0; margin: 10px 0 0; }
+      .status li { padding: 9px 0; border-bottom: 1px solid #ffffff0d; }
+      .status .tag { margin: 0 8px 0 0; }
+      .supplier { color: #a7adb8; font-size: 0.9rem; line-height: 1.6; }
     </style>
   </head>
   <body>
@@ -86,96 +96,121 @@
       </div>
     </header>
     <script src="/nav.js"></script>
+    <script src="/js/uk-prices.js"></script>
     <main class="ext">
       <img src="/logo.svg" alt="bWalletX" width="72" height="64" />
-      <h1>Your brand. <em>Your wallet.</em></h1>
-      <p class="lede">Give your customers, fans or members a wallet with your name, your colours and your logo. We build it on bWalletX, so it is self-custody from day one: each user keeps their own keys.</p>
+      <p><span class="biz">FOR BUSINESSES ONLY &middot; NOT FOR CONSUMERS</span></p>
+      <h1>Your business, <em>on bWalletX.</em></h1>
+      <p class="lede">A member room with its own key, a wallet, and signing from a computer, live today. Add a brand kit, a website and your first documents in 5 working days. Self-custody throughout: each person keeps their own keys.</p>
       <div class="ctas">
-        <a class="btn btn-store" href="#enquire">Tell us what you want to build</a>
-        <a class="btn btn-store btn-ghost" href="/themes/custom">See the editions</a>
+        <a class="btn btn-store" href="#start">Start on Starter</a>
+        <a class="btn btn-store btn-ghost" href="#plans">See the plans</a>
       </div>
 
-      <h2>The basic package</h2>
-      <div class="box gold-box">
-        <div class="price"><b>$999</b><span>to set up, then <b style="font-size:1.4rem">$99</b> a year</span></div>
-        <h3>A branded edition of bWalletX</h3>
-        <ul class="ticks">
-          <li>Your name and brand throughout</li>
-          <li>Your colours and your logo on the wallet</li>
-          <li>Your own domain, for example wallet.yourbrand.com</li>
-          <li>Still runs on bWalletX: self-custody, keys stay with each user</li>
-          <li>Built for you, and you approve it before it goes live</li>
-          <li>A membership or access token for your community, issued from your own wallet</li>
-        </ul>
-        <p class="small">We don't create tokens that represent shares, property, art or any investment; if you issue those, they're yours to issue under your own legal advice.</p>
+      <h2 id="plans">Plans</h2>
+      <div class="tiers">
+        <div class="box gold-box tier">
+          <h3>Starter</h3>
+          <span class="amt">$99<small> a month</small></span>
+          <p class="alt">or $990 a year. No setup fee.<span class="gbp" hidden> In the UK: &pound;75 a month or &pound;750 a year.</span></p>
+          <ul class="ticks">
+            <li>Your company live today: a member room with its own key, a wallet, and signing from a computer</li>
+            <li>Self-serve, with support from b in your room</li>
+            <li>New features added as each one goes live</li>
+            <li>Cancel with 30 days' notice</li>
+          </ul>
+          <a class="btn btn-store" href="#start" data-plan="starter">Start on Starter</a>
+          <p class="fine">For businesses only. Prices exclude VAT, which is added where it applies. We do not issue securities, and nothing here is an offer of shares or tokens.</p>
+        </div>
+        <div class="box gold-box tier">
+          <h3>Setup</h3>
+          <span class="amt">$999<small> one-off</small></span>
+          <p class="alt">Optional, on top of Starter.<span class="gbp" hidden> In the UK: &pound;750.</span></p>
+          <ul class="ticks">
+            <li>Brand kit, website, room and first documents, done in 5 working days</li>
+            <li>A website from our template</li>
+            <li>Your room set up, with your people invited</li>
+            <li>One round of changes</li>
+          </ul>
+          <a class="btn btn-store" href="#start" data-plan="setup">Order Setup</a>
+          <p class="fine">For businesses only. Prices exclude VAT, which is added where it applies. We do not issue securities, and nothing here is an offer of shares or tokens.</p>
+        </div>
       </div>
-      <p class="small">Branded editions are only for the verified owner of the brand. We check. The wallet keeps a small &ldquo;powered by bWalletX&rdquo;. We can decline a design that impersonates someone or misleads people. Smaller and larger options are on <a href="/themes/custom">Custom editions</a>.</p>
+      <p>Need custom software? <a href="/enterprise">bWalletX Enterprise</a>: custom builds, quoted for your company.</p>
+      <p>Want a wallet in your own name and colours? That's a separate product: <a href="/themes/custom">custom wallet editions</a>. With one, you can issue a membership or access token for your community from your own wallet. We don't create tokens that represent shares, property, art or any investment.</p>
+
+      <h2>Where things stand</h2>
+      <p><span class="tag live">Live</span> works in production now. <span class="tag">Testing</span> works, with our own company as the first user. <span class="tag">Coming</span> is not ready yet.</p>
+      <ul class="status">
+        <li><span class="tag live">Live</span> A member room with its own key on <a href="https://chat.bwalletx.com">bChatX</a>, invite by link</li>
+        <li><span class="tag live">Live</span> A wallet for each person: bWalletX, self-custody</li>
+        <li><span class="tag live">Live</span> Signed documents and board minutes, signed from a computer and sealed on chain</li>
+        <li><span class="tag">Being fixed</span> Signing on the phone</li>
+        <li><span class="tag">Coming</span> Card or BSV checkout on this page. Until then, send the form below and we email your invoice</li>
+        <li><span class="tag">Testing</span> Share registers with <a href="https://bsharesx.com">bSharesX</a>: the first one is our own company's</li>
+      </ul>
 
       <h2>Add-ons</h2>
       <p>Priced separately. We quote before any work starts.</p>
       <div class="grid">
-        <div class="box"><h3>Brand kit and ad film <span class="tag live">Live</span></h3><p>Logo, colours, type and voice, or a short animated ad film, made by b at <a href="https://badvertisingx.com">bAdvertisingX</a>. One fixed price, quoted first.</p></div>
-          <div class="box"><h3>Web design</h3><p>A website for your business that works with your wallet: sign in with it, take payments in it. Quoted to your brief.</p></div>
-          <div class="box"><h3>Advertising and marketing</h3><p>Campaigns, share images and launch posts around your edition and launch. Quoted to your brief. We don't promote investments, share offers or tokens sold for a return.</p></div>
+        <div class="box"><h3>Ad film <span class="tag live">Live</span></h3><p>A short animated ad film for your launch, made by b at <a href="https://badvertisingx.com">bAdvertisingX</a>. One fixed price, quoted first.</p></div>
+        <div class="box"><h3>Advertising and marketing</h3><p>Campaigns, share images and launch posts. Quoted to your brief. We don't promote investments, share offers or tokens sold for a return.</p></div>
         <div class="box"><h3>Share register support <span class="tag">Testing</span></h3><p>Help keeping your company's register of members with <a href="https://bsharesx.com">bSharesX</a>. Registers are in testing: the first one is our own company's.</p></div>
       </div>
 
       <h2>How it works</h2>
       <ol class="steps">
-        <li><b>Enquire</b><span>Fill in the form below. Tell us what you want to build.</span></li>
-        <li><b>Call</b><span>We reply within 2 working days and set up a call.</span></li>
-        <li><b>We build your edition</b><span>Your name, colours and logo. You check it and approve it.</span></li>
-        <li><b>Launch</b><span>Your edition goes live and your people sign up.</span></li>
+        <li><b>Sign up</b><span>Send the form below with your company name.</span></li>
+        <li><b>Invoice</b><span>We email your invoice within 2 working days. Pay in BSV or by bank transfer.</span></li>
+        <li><b>Live</b><span>Your room, wallet and signing are ready. b helps in your room.</span></li>
+        <li><b>Setup, if you want it</b><span>Brand kit, website, room and documents in 5 working days.</span></li>
       </ol>
 
       <h2>Who it's for</h2>
       <ul class="who">
-        <li>Artists</li><li>Collectives</li><li>Art projects</li><li>Property projects</li><li>Communities</li><li>Token issuers</li>
+        <li>Startups</li><li>Small firms</li><li>Studios</li><li>Shops</li><li>Clubs</li><li>Collectives</li>
       </ul>
-      <p>Building a whole company, not just a wallet? See <a href="/enterprise">bWalletX Enterprise</a>: a custom build in a month.</p>
-      <p>Want to see a full edition? <a href="/themes/vexvoid">The VexVoid edition</a> is our artist showcase. Other businesses we work with keep their own brand: <a href="/b-family">we never put our b on theirs</a>.</p>
+      <p>Other businesses we work with keep their own brand: <a href="/b-family">we never put our b on theirs</a>.</p>
 
       <h2>Please read</h2>
       <div class="legal">
-        <p>Tokenised art, property and shares can be securities or other regulated products. We build software: wallets, brand work and register tools. We do not issue securities, raise money for you, give investment advice, or get regulatory approval for you.</p>
-        <p>You are responsible for your own legal and regulatory advice, and for what you offer to others. Talk to a qualified lawyer in each country where you operate before you launch.</p>
-        <p>bSharesX share registers are in testing. Nothing on this page is an offer of shares or tokens, and we make no promise of returns.</p>
+        <p><strong>For businesses only. Not for consumers.</strong></p>
+        <p>Prices exclude VAT, which is added where it applies. You can pay in BSV through bWalletX or by bank transfer. The Bitcoin Corporation Ltd is the supplier and sends the invoices.</p>
+        <p>We build software: rooms, wallets, signing, brand work and register tools. Starter and Setup don't include custom code, calls or set response times. Tokenised art, property and shares can be securities or other regulated products, and they're never part of Starter or Setup. We do not issue securities, raise money for you, give investment advice, or get regulatory approval for you.</p>
+        <p>You are responsible for your own legal and regulatory advice, and for what you offer to others. Nothing on this page is an offer of shares or tokens, and we make no promise of returns.</p>
       </div>
 
-      <h2 id="enquire">Tell us what you want to build</h2>
+      <h2 id="start">Start on Starter</h2>
+      <p>Card and BSV checkout aren't on this page yet. Send this form and we'll email your invoice and next steps within 2 working days.</p>
       <form class="enq" id="enq" novalidate>
-        <div class="fgrid">
+        <fieldset class="plan">
+          <legend>Your plan</legend>
+          <div class="checks">
+            <label><input type="radio" name="billing" value="monthly" checked /> <span>Starter, monthly: $99 a month<span class="gbp" hidden> (&pound;75)</span></span></label>
+            <label><input type="radio" name="billing" value="yearly" /> <span>Starter, yearly: $990 a year<span class="gbp" hidden> (&pound;750)</span></span></label>
+          </div>
+          <div class="checks" style="margin-top:10px">
+            <label><input type="checkbox" id="f-setup" /> <span>Add Setup: $999 one-off<span class="gbp" hidden> (&pound;750)</span></span></label>
+          </div>
+          <p class="small" style="margin:10px 0 0">Prices exclude VAT, which is added where it applies.</p>
+        </fieldset>
+        <div class="fgrid" style="margin-top:18px">
           <div><label for="f-name">Your name</label><input type="text" id="f-name" name="name" required maxlength="120" autocomplete="name" /></div>
-          <div><label for="f-company">Company or project</label><input type="text" id="f-company" name="company" required maxlength="160" autocomplete="organization" /></div>
-          <div><label for="f-email">Email</label><input type="email" id="f-email" name="email" required maxlength="254" autocomplete="email" /></div>
+          <div><label for="f-company">Company name</label><input type="text" id="f-company" name="company" required maxlength="160" autocomplete="organization" /></div>
+          <div><label for="f-email">Work email</label><input type="email" id="f-email" name="email" required maxlength="254" autocomplete="email" /></div>
           <div><label for="f-phone">Phone <small>(optional)</small></label><input type="tel" id="f-phone" name="phone" maxlength="40" autocomplete="tel" /></div>
           <div><label for="f-website">Website <small>(optional)</small></label><input type="url" id="f-website" name="website" maxlength="300" placeholder="https://" autocomplete="url" /></div>
-          <div><label for="f-budget">Budget</label>
-            <select id="f-budget" name="budget">
-              <option value="not-sure">Not sure</option>
-              <option value="up-to-1k">Up to $1k</option>
-              <option value="1k-5k">$1k&ndash;$5k</option>
-              <option value="5k-25k">$5k&ndash;$25k</option>
-              <option value="25k-plus">$25k+</option>
-            </select></div>
         </div>
-        <div class="full"><label for="f-message">What do you want to build?</label><textarea id="f-message" name="message" required maxlength="5000" placeholder="Who is it for, and what should it do?"></textarea></div>
-        <fieldset>
-          <legend>Which services?</legend>
-          <div class="checks">
-            <label><input type="checkbox" name="services" value="branded-wallet" checked /> Branded wallet</label>
-            <label><input type="checkbox" name="services" value="brand-kit" /> Brand kit / ad film</label>
-            <label><input type="checkbox" name="services" value="share-register" /> Share register support</label>
-            <label><input type="checkbox" name="services" value="token-launch" /> Membership/access token</label>
-            <label><input type="checkbox" name="services" value="other" /> Other</label>
-          </div>
-        </fieldset>
+        <div class="full"><label for="f-message">Anything we should know? <small>(optional)</small></label><textarea id="f-message" name="message" maxlength="4500" placeholder="What your company does, and who should be in your room."></textarea></div>
         <div class="hp" aria-hidden="true"><label for="f-hp">Leave this empty</label><input type="text" id="f-hp" tabindex="-1" autocomplete="off" /></div>
-        <label class="consent"><input type="checkbox" id="f-consent" required /> <span>You may contact me about this enquiry by email or phone. See our <a href="/privacy">privacy policy</a>.</span></label>
-        <button class="btn btn-store" type="submit" id="f-send">Send enquiry</button>
+        <label class="consent"><input type="checkbox" id="f-business" required /> <span>I'm buying for a business.</span></label>
+        <label class="consent"><input type="checkbox" id="f-consent" required /> <span>You may contact me about this by email or phone. We use these details only to reply and to keep a record, and we never sell them. See our <a href="/privacy">privacy policy</a>.</span></label>
+        <button class="btn btn-store" type="submit" id="f-send">Send sign-up</button>
         <p class="out" id="f-out" role="status" aria-live="polite"></p>
       </form>
-      <p class="small">Prefer email? <a href="mailto:support@bwalletx.com">support@bwalletx.com</a></p>
+      <p class="small">Prefer email? <a href="mailto:support@bwalletx.com?subject=Starter">support@bwalletx.com</a></p>
+
+      <p class="supplier">Supplier: The Bitcoin Corporation Ltd, company no. 16735102, registered in England &amp; Wales. Registered office: Flat 6, 315 Barking Road, London, E13 8EE, United Kingdom. Contact: <a href="mailto:support@bwalletx.com">support@bwalletx.com</a>.</p>
     </main>
     <footer class="foot">
       <div class="wrap foot-in">
@@ -186,25 +221,34 @@
     </footer>
     <script>
       (function () {
-        var f = document.getElementById('enq'), out = document.getElementById('f-out'), btn = document.getElementById('f-send');
+        var f = document.getElementById('enq'), out = document.getElementById('f-out'), btn = document.getElementById('f-send'), setup = document.getElementById('f-setup');
         var v = function (id) { return document.getElementById(id).value.trim(); };
         var say = function (t, cls) { out.textContent = t; out.className = 'out ' + (cls || ''); };
+        // "Order Setup" buttons (here and on /enterprise via ?plan=setup) tick Setup in the form.
+        try { if (new URLSearchParams(location.search).get('plan') === 'setup') setup.checked = true; } catch (e) { /* old browser */ }
+        [].forEach.call(document.querySelectorAll('[data-plan]'), function (a) {
+          a.addEventListener('click', function () { setup.checked = a.getAttribute('data-plan') === 'setup' ? true : setup.checked; });
+        });
         f.addEventListener('submit', function (e) {
           e.preventDefault();
-          if (v('f-hp')) return say("Thanks — we'll be in touch within 2 working days.", 'ok');
-          if (!v('f-name') || !v('f-company') || !v('f-message')) return say('Please fill in your name, company and what you want to build.', 'err');
+          if (v('f-hp')) return say("Thanks. We'll email you within 2 working days.", 'ok');
+          if (!v('f-name') || !v('f-company')) return say('Please fill in your name and your company name.', 'err');
           if (!/^[^\s@]+@[^\s@]+\.[a-z]{2,}$/i.test(v('f-email'))) return say('Please enter a valid email address.', 'err');
+          if (!document.getElementById('f-business').checked) return say("Please confirm you're buying for a business. Our plans are for businesses only.", 'err');
           if (!document.getElementById('f-consent').checked) return say('Please tick the box so we can contact you.', 'err');
-          var services = Array.prototype.map.call(f.querySelectorAll('input[name=services]:checked'), function (x) { return x.value; });
+          var billing = (f.querySelector('input[name=billing]:checked') || {}).value || 'monthly';
+          var plan = 'Starter ' + (billing === 'yearly' ? 'yearly ($990 a year)' : 'monthly ($99 a month)') + (setup.checked ? ' + Setup ($999 one-off)' : '');
           var body = { name: v('f-name'), company: v('f-company'), email: v('f-email'), phone: v('f-phone') || null, website: v('f-website') || null,
-            message: v('f-message'), services: services, budget: v('f-budget'), consent: true, source: 'bwalletx.com/clients' };
+            message: '[Sign-up] ' + plan + ' [Buying for a business: yes]' + (v('f-message') ? '\n\n' + v('f-message') : ''),
+            services: setup.checked ? ['brand-kit', 'other'] : ['other'], budget: 'not-sure',
+            plan: { tier: 'starter', billing: billing, setup: setup.checked }, business: true, consent: true, source: 'bwalletx.com/clients' };
           btn.disabled = true; say('Sending…');
           fetch('https://push.bwalletx.com/clients/enquire', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify(body) })
             .then(function (r) {
               if (!r.ok) throw new Error(String(r.status));
-              f.reset(); say("Thanks — we'll be in touch within 2 working days.", 'ok');
+              f.reset(); say("Thanks. We'll email your invoice and next steps within 2 working days.", 'ok');
             })
-            .catch(function () { say('Something went wrong — email support@bwalletx.com', 'err'); })
+            .catch(function () { say('Something went wrong. Please email support@bwalletx.com', 'err'); })
             .then(function () { btn.disabled = false; });
         });
       })();

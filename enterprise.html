@@ -3,23 +3,23 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Enterprise: your company, built in a month · bWalletX</title>
+    <title>Enterprise: your company, live today · bWalletX</title>
     <link rel="canonical" href="https://bwalletx.com/enterprise" />
-    <meta name="description" content="For businesses only. We build your startup's software on bWalletX in a month: signed documents, a member room, a branded wallet, payments, brand and website. From $10,000 a month of build, plus 1% of your company." />
+    <meta name="description" content="For businesses only. Your room, wallet and signed board minutes on day one, then we build the rest of your software with you, a month at a time. Starter $99 a month, Setup $999, Enterprise by quote." />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://bwalletx.com/enterprise" />
     <meta property="og:site_name" content="bWalletX" />
-    <meta property="og:title" content="Your company, built in a month. bWalletX Enterprise." />
-    <meta property="og:description" content="For businesses only. Custom builds on bWalletX: signing, member room, branded wallet, payments, brand. From $10,000 a month of build, plus 1% of your company." />
-    <meta property="og:image" content="https://bwalletx.com/og-enterprise-v1.jpg" />
+    <meta property="og:title" content="Your company, live today. bWalletX Enterprise." />
+    <meta property="og:description" content="For businesses only. A room, a wallet and signing on desktop today; custom builds quoted for your company. Starter $99 a month, Setup $999, Enterprise by quote." />
+    <meta property="og:image" content="https://bwalletx.com/og-enterprise-v2.jpg" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
-    <meta property="og:image:alt" content="bWalletX Enterprise: your company, built in a month. From $10,000 a month of build, plus 1% equity" />
+    <meta property="og:image:alt" content="bWalletX Enterprise: your company, live today. A member room, a wallet and signing on desktop on day one. Starter $99 a month, Setup $999, Enterprise by quote" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@bWalletX" />
-    <meta name="twitter:title" content="Your company, built in a month. bWalletX Enterprise." />
-    <meta name="twitter:description" content="For businesses only. Custom builds on bWalletX: signing, member room, branded wallet, payments, brand. From $10,000 a month of build, plus 1% of your company." />
-    <meta name="twitter:image" content="https://bwalletx.com/og-enterprise-v1.jpg" />
+    <meta name="twitter:title" content="Your company, live today. bWalletX Enterprise." />
+    <meta name="twitter:description" content="For businesses only. A room, a wallet and signing on desktop today; custom builds quoted for your company. Starter $99 a month, Setup $999, Enterprise by quote." />
+    <meta name="twitter:image" content="https://bwalletx.com/og-enterprise-v2.jpg" />
     <link rel="icon" href="/favicon.ico" />
     <link rel="stylesheet" href="/styles.css" />
     <style>
@@ -31,12 +31,14 @@
       .ext .small { color: #8a8a86; font-size: 0.85rem; }
       .ext .ctas { display: flex; gap: 12px; flex-wrap: wrap; margin: 26px 0; }
       .biz { display: inline-block; font-size: 0.8rem; font-weight: 700; letter-spacing: .04em; padding: 5px 12px; border-radius: 999px; border: 1px solid #F5B80077; color: #F5B800; }
-      .price { display: flex; flex-wrap: wrap; gap: 10px 26px; align-items: baseline; margin: 6px 0 14px; }
-      .price b { font: 700 2.4rem var(--hf); color: #F5B800; }
-      .price span { color: #a7adb8; }
-      .terms3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 14px; margin: 16px 0; }
-      .terms3 .box { margin: 0; }
-      .terms3 .amt { display: block; white-space: nowrap; font: 700 1.75rem var(--hf); color: #F5B800; margin: 2px 0 6px; }
+      .tiers { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 14px; margin: 16px 0; align-items: stretch; }
+      .tiers .box { margin: 0; display: flex; flex-direction: column; }
+      .tiers .amt { display: block; white-space: nowrap; font: 700 2.2rem var(--hf); color: #F5B800; margin: 4px 0 4px; }
+      .tiers .amt small { font-size: 1rem; color: #a7adb8; font-weight: 500; }
+      .tiers .alt { color: #d8d4c8; margin: 0 0 6px; }
+      .tiers .ticks { margin-bottom: 16px; }
+      .tiers .btn { align-self: flex-start; margin-top: auto; }
+      .tiers .fine { color: #8a8a86; font-size: 0.8rem; line-height: 1.5; margin: 14px 0 0; }
       .box { background: #101114; border: 1px solid #ffffff12; border-radius: 16px; padding: 18px 20px; margin: 16px 0; }
       .box h3 { margin: 0 0 6px; font-size: 1.05rem; }
       .box p { margin: 0; color: #a7adb8; }
@@ -90,40 +92,62 @@
       </div>
     </header>
     <script src="/nav.js"></script>
+    <script src="/js/uk-prices.js"></script>
     <main class="ext">
       <img src="/logo.svg" alt="bWalletX" width="72" height="64" />
       <p><span class="biz">FOR BUSINESSES ONLY · NOT FOR CONSUMERS</span></p>
-      <h1>Your company, <em>built in a month.</em></h1>
-      <p class="lede">We design and build your startup's software on bWalletX: signed documents and board minutes, a room for your team and members, a wallet in your brand, payments, your website and your brand. Then we keep it running.</p>
+      <h1>Your company, <em>live today.</em></h1>
+      <p class="lede">Your room, wallet and signed board minutes on day one. Then we build the rest of your software with you, a month at a time.</p>
       <div class="ctas">
-        <a class="btn btn-store" href="#enquire">Book a scoping call</a>
-        <a class="btn btn-store btn-ghost" href="#what">What you get</a>
+        <a class="btn btn-store" href="#tiers">See the plans</a>
+        <a class="btn btn-store btn-ghost" href="#enquire">Book a scoping call</a>
+      </div>
+      <p class="small">On day one you get a member room with its own key, a wallet, and signing from a computer. Everything else on this page shows where it stands today.</p>
+
+      <h2 id="tiers">Three plans</h2>
+      <div class="tiers">
+        <div class="box gold-box tier">
+          <h3>Starter</h3>
+          <span class="amt">$99<small> a month</small></span>
+          <p class="alt">or $990 a year. No setup fee.<span class="gbp" hidden> In the UK: &pound;75 a month or &pound;750 a year.</span></p>
+          <ul class="ticks">
+            <li>Your company live today: a member room with its own key, a wallet, and signing from a computer</li>
+            <li>Self-serve, with support from b in your room</li>
+            <li>New features added as each one goes live</li>
+            <li>Cancel with 30 days' notice</li>
+          </ul>
+          <!-- PLACEHOLDER: there is no self-serve checkout yet (Stripe/BSV checkout not built). This goes to the Starter sign-up form on /clients until it exists. -->
+          <a class="btn btn-store" href="/clients#start" data-placeholder="starter-signup">Start on Starter</a>
+          <p class="fine">For businesses only. Prices exclude VAT, which is added where it applies. We do not issue securities, and nothing here is an offer of shares or tokens.</p>
+        </div>
+        <div class="box gold-box tier">
+          <h3>Setup</h3>
+          <span class="amt">$999<small> one-off</small></span>
+          <p class="alt">Optional, on top of Starter.<span class="gbp" hidden> In the UK: &pound;750.</span></p>
+          <ul class="ticks">
+            <li>Brand kit, website, room and first documents, done in 5 working days</li>
+            <li>A website from our template</li>
+            <li>Your room set up, with your people invited</li>
+            <li>One round of changes</li>
+          </ul>
+          <a class="btn btn-store" href="/clients?plan=setup#start">Order Setup</a>
+          <p class="fine">For businesses only. Prices exclude VAT, which is added where it applies. We do not issue securities, and nothing here is an offer of shares or tokens.</p>
+        </div>
+        <div class="box gold-box tier">
+          <h3>Enterprise</h3>
+          <span class="amt">By quote</span>
+          <p class="alt">Custom builds, quoted for your company. Most projects start from $10,000. Ongoing support is quoted with the build.</p>
+          <a class="btn btn-store" href="#enquire">Book a scoping call</a>
+          <p class="fine">For businesses only. Prices exclude VAT, which is added where it applies. We do not issue securities, and nothing here is an offer of shares or tokens.</p>
+        </div>
       </div>
 
-      <h2>The price</h2>
-      <div class="terms3">
-        <div class="box gold-box"><h3>Build</h3><span class="amt">from $10,000</span><p>per month of build. We start with a free scoping call, then send a fixed written quote for the agreed scope before any work starts. Bigger builds take more months.</p></div>
-        <div class="box gold-box"><h3>Priority support</h3><span class="amt">from $1,000</span><p>a month, rolling. Cancel with 30 days' notice. Monitoring, fixes, security updates and small changes, with priority replies. If you need set response times, we put them in your quote.</p></div>
-        <div class="box gold-box"><h3>Equity</h3><span class="amt">1%</span><p>of your company, once. Ordinary shares, the same class as the founders', issued to The Bitcoin Corporation Ltd when the first month's work is delivered.</p></div>
-      </div>
-      <div class="box">
-        <h3>How the 1% works</h3>
-        <ul class="ticks">
-          <li>One-off: 1% in total, not 1% a month</li>
-          <li>The shares are fully paid by the work we deliver. You don't pay cash for them</li>
-          <li>Same class of ordinary shares as the founders hold</li>
-          <li>No board seat, no anti-dilution rights, no clawback</li>
-          <li>Recorded as a share issue in your own register of members, with your own lawyer</li>
-        </ul>
-      </div>
-      <p class="small">We receive shares in your company. We don't offer shares in ours.</p>
-
-      <h2 id="what">What we can build in your first month</h2>
+      <h2 id="what">What you get, and where each part stands</h2>
       <p>Every item shows where it is today. <span class="tag live">Live</span> means it works in production now. <span class="tag">Testing</span> means it works, with our own company as the first user. <span class="tag build">In build</span> means we are building it now.</p>
       <div class="grid">
-        <div class="box"><h3>Signed documents and board minutes <span class="tag live">Live</span></h3><p>Share a contract or minute in your room. Each director reads it and signs from a computer, and the signature is sealed on chain with a record anyone can check. Signing on the phone is in testing.</p></div>
+        <div class="box"><h3>Signed documents and board minutes <span class="tag live">Live</span></h3><p>Share a contract or minute in your room. Each director reads it and signs from a computer, and the signature is sealed on chain with a record anyone can check. Signing on the phone: being fixed.</p></div>
         <div class="box"><h3>A member room with its own key <span class="tag live">Live</span></h3><p>A private room on <a href="https://www.bchatx.com">bChatX</a> for your board, team or members, with its own key. Invite people with a link; they sign in with bWalletX, Google or HandCash.</p></div>
-        <div class="box"><h3>A wallet in your brand <span class="tag">Testing</span></h3><p>Our <a href="/clients">branded wallet edition</a> is included: your name, colours and logo, self-custody for every user. The first client edition is in trial.</p></div>
+        <div class="box"><h3>A wallet in your brand <span class="tag">Testing</span></h3><p>Our <a href="/themes/custom">branded wallet edition</a> can be part of your build: your name, colours and logo, self-custody for every user. The first client edition is in trial.</p></div>
         <div class="box"><h3>Payments, tips and receipts <span class="tag live">Live</span></h3><p>Take payments in BSV through bWalletX, with a receipt for each one that anyone can check.</p></div>
         <div class="box"><h3>Brand, website and launch film <span class="tag live">Live</span></h3><p>Logo, colours, type and voice, a website that works with your wallet, share images and a short launch film, made at <a href="https://badvertisingx.com">bAdvertisingX</a>.</p></div>
         <div class="box"><h3>Your team's wallet on a big screen <span class="tag live">Live</span></h3><p><a href="https://desktop.bwalletx.com">bWalletX Desktop</a> in the browser: money, chat and documents side by side, installable as an app.</p></div>
@@ -154,22 +178,23 @@
         <p><strong>For businesses only. Not for consumers.</strong></p>
         <p>Prices exclude VAT, which is added where it applies. You can pay in BSV through bWalletX or by bank transfer. The Bitcoin Corporation Ltd is the supplier and sends the invoices.</p>
         <p>We build software. We do not issue securities, raise money for you, give investment advice, or get regulatory approval for you. You are responsible for your own legal and regulatory advice, and for what you offer to others. Talk to a qualified lawyer in each country where you operate.</p>
-        <p>The shares we receive are recorded in your own register under your own lawyer's advice. Nothing on this page is an offer of shares or tokens, and we make no promise of returns. Our Enterprise Services Terms come with your quote.</p>
+        <p>Nothing on this page is an offer of shares or tokens, and we make no promise of returns. Tokens we set up are membership or room keys only. Your terms come with your quote.</p>
       </div>
 
       <h2 id="enquire">Book a scoping call</h2>
       <form class="enq" id="enq" novalidate>
         <div class="fgrid">
           <div><label for="f-name">Your name</label><input type="text" id="f-name" name="name" required maxlength="120" autocomplete="name" /></div>
-          <div><label for="f-company">Company</label><input type="text" id="f-company" name="company" required maxlength="160" autocomplete="organization" /></div>
+          <div><label for="f-company">Company name</label><input type="text" id="f-company" name="company" required maxlength="160" autocomplete="organization" /></div>
           <div><label for="f-email">Work email</label><input type="email" id="f-email" name="email" required maxlength="254" autocomplete="email" /></div>
           <div><label for="f-phone">Phone <small>(optional)</small></label><input type="tel" id="f-phone" name="phone" maxlength="40" autocomplete="tel" /></div>
           <div><label for="f-website">Website <small>(optional)</small></label><input type="url" id="f-website" name="website" maxlength="300" placeholder="https://" autocomplete="url" /></div>
           <div><label for="f-budget">Budget</label>
             <select id="f-budget" name="budget">
-              <option value="25k-plus">$25k+</option>
+              <option value="under-10k">Under $10k</option>
               <option value="5k-25k">$10k&ndash;$25k</option>
-              <option value="not-sure">Not sure yet</option>
+              <option value="25k-plus">$25k+</option>
+              <option value="not-sure" selected>Not sure yet</option>
             </select></div>
         </div>
         <div class="full"><label for="f-message">What does your company do, and what should we build?</label><textarea id="f-message" name="message" required maxlength="4900" placeholder="Your company, who it serves, and what you need in the first month."></textarea></div>
@@ -183,6 +208,7 @@
           </div>
         </fieldset>
         <div class="hp" aria-hidden="true"><label for="f-hp">Leave this empty</label><input type="text" id="f-hp" tabindex="-1" autocomplete="off" /></div>
+        <label class="consent"><input type="checkbox" id="f-business" required /> <span>I'm buying for a business.</span></label>
         <label class="consent"><input type="checkbox" id="f-consent" required /> <span>You may contact me about this enquiry by email or phone. We use these details only to reply and to keep a record of your enquiry, and we never sell them. See our <a href="/privacy">privacy policy</a>.</span></label>
         <button class="btn btn-store" type="submit" id="f-send">Send enquiry</button>
         <p class="out" id="f-out" role="status" aria-live="polite"></p>
@@ -205,20 +231,24 @@
         var say = function (t, cls) { out.textContent = t; out.className = 'out ' + (cls || ''); };
         f.addEventListener('submit', function (e) {
           e.preventDefault();
-          if (v('f-hp')) return say("Thanks — we'll be in touch within 2 working days.", 'ok');
+          if (v('f-hp')) return say("Thanks. We'll be in touch within 2 working days.", 'ok');
           if (!v('f-name') || !v('f-company') || !v('f-message')) return say('Please fill in your name, company and what you want to build.', 'err');
           if (!/^[^\s@]+@[^\s@]+\.[a-z]{2,}$/i.test(v('f-email'))) return say('Please enter a valid email address.', 'err');
+          if (!document.getElementById('f-business').checked) return say("Please confirm you're buying for a business. We only work with businesses.", 'err');
           if (!document.getElementById('f-consent').checked) return say('Please tick the box so we can contact you.', 'err');
           var services = Array.prototype.map.call(f.querySelectorAll('input[name=services]:checked'), function (x) { return x.value; });
+          // The server's budget list has no "under $10k" yet: send it as not-sure and keep the real band in the message.
+          var budget = v('f-budget'), under = budget === 'under-10k';
           var body = { name: v('f-name'), company: v('f-company'), email: v('f-email'), phone: v('f-phone') || null, website: v('f-website') || null,
-            message: '[Enterprise] ' + v('f-message'), services: services, budget: v('f-budget'), consent: true, source: 'bwalletx.com/enterprise' };
+            message: '[Enterprise] [Buying for a business: yes]' + (under ? ' [Budget: under $10k]' : '') + ' ' + v('f-message'),
+            services: services, budget: under ? 'not-sure' : budget, business: true, tier: 'enterprise', consent: true, source: 'bwalletx.com/enterprise' };
           btn.disabled = true; say('Sending…');
           fetch('https://push.bwalletx.com/clients/enquire', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify(body) })
             .then(function (r) {
               if (!r.ok) throw new Error(String(r.status));
-              f.reset(); say("Thanks — we'll be in touch within 2 working days.", 'ok');
+              f.reset(); say("Thanks. We'll be in touch within 2 working days.", 'ok');
             })
-            .catch(function () { say('Something went wrong — email support@bwalletx.com', 'err'); })
+            .catch(function () { say('Something went wrong. Please email support@bwalletx.com', 'err'); })
             .then(function () { btn.disabled = false; });
         });
       })();
