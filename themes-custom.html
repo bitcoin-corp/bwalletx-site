@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Branded wallets for businesses</title>
     <link rel="canonical" href="https://bwalletx.com/themes/custom" />
-    <meta name="description" content="A self-custody wallet in your company&rsquo;s name for your customers, members or shareholders, from $99 a year. Plus the route from a branded wallet to a share register kept with bSharesX, and optionally bDojoX. Powered by bWalletX." />
+    <meta name="description" content="A self-custody wallet in your company&rsquo;s name for your customers, members or shareholders, from $99 a year. Plus the route from a branded wallet to a share register kept with bSharesX. Powered by bWalletX." />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://bwalletx.com/themes/custom" />
     <meta property="og:site_name" content="bWalletX" />
@@ -209,6 +209,8 @@
       .spec ul { margin: 18px 0 0; padding-left: 18px; color: var(--muted); font-size: .94rem; line-height: 1.6; flex: 1; }
       .spec .foot2 { margin: 22px 0 0; font-size: .66rem; border-top: .5px solid var(--ink); padding-top: 10px; }
       @media (max-width: 820px) { .specs { grid-template-columns: 1fr; } }
+      .spec .gbpl { margin: 4px 0 0; font: 500 .9rem var(--hf); color: var(--muted); }
+      .spec .vat { margin: 16px 0 0; font-size: .78rem; color: var(--muted); }
 
       /* diagonal split hero: free mono bWallet | your brand's wallet */
       .tp section.hero { overflow: hidden; background: var(--sheet); }
@@ -279,6 +281,7 @@
       </div>
     </header>
     <script src="/nav.js"></script>
+    <script src="/js/uk-prices.js"></script>
     <svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs><symbol id="b-outline" viewBox="20 6 80 104"><g fill="none" stroke="currentColor" stroke-width="4" stroke-linejoin="round" stroke-linecap="round"><path d="M29 28 L45 12 L45 44.87 A31 31 0 1 1 29 72 Z" /><path d="M74 72 A14 14 0 1 1 46 72 A14 14 0 1 1 74 72 Z" /></g></symbol></defs></svg>
     <main class="tp">
       <section class="hero">
@@ -350,6 +353,7 @@
             <article class="spec">
               <p class="lbl sno">Spec A</p>
               <p class="price">$99 <small>a year</small></p>
+              <p class="gbpl gbp" hidden>In the UK: &pound;75 a year</p>
               <h3>Theme edition</h3>
               <ul>
                 <li>Custom colours, card art and app icon</li>
@@ -358,21 +362,23 @@
                 <li>Built for you; you approve it</li>
                 <li>bWalletX Connect on your website, set up by us: your customers sign in and pay with their wallet (<a href="/connect">how it works</a>)</li>
               </ul>
+              <p class="vat">Prices exclude VAT, which is added where it applies.</p>
               <p class="lbl foot2">Renews yearly</p>
             </article>
             <article class="spec">
               <p class="lbl sno">Spec B</p>
               <p class="price">$999 <small>set-up + $99 a year</small></p>
+              <p class="gbpl gbp" hidden>In the UK: &pound;750 set-up + &pound;75 a year</p>
               <h3>Branded edition</h3>
               <ul>
                 <li>Your own domain, e.g. wallet.yourbrand.com</li>
                 <li>Your name and brand throughout</li>
                 <li>Still runs on bWalletX: self-custody, keys stay with each user</li>
-                <li>Your own token: a token for your business, issued with your branded wallet</li>
-                <li>The option to go through <a href="#route">bDojoX</a>, if you want to</li>
+                <li>A membership or access token for your community, issued from your own wallet. We don&rsquo;t create tokens that represent shares, property, art or any investment.</li>
               </ul>
               <p class="lbl foot2" style="text-transform:none;letter-spacing:0">Priced low so businesses can get started. Tokens and shares may be regulated; we don&rsquo;t sell them for you.</p>
-              <p class="lbl foot2">Renews yearly · <a href="/clients">Enquire</a></p>
+              <p class="vat">Prices exclude VAT, which is added where it applies.</p>
+              <p class="lbl foot2">Renews yearly · <a href="/themes/custom/orderform">Order</a></p>
             </article>
             <article class="spec">
               <p class="lbl sno">Spec C</p>
@@ -402,10 +408,9 @@
           <ul class="status">
             <li><span class="pill live">Live</span><span><b>1. Your branded wallet.</b> Your customers, members or shareholders use a wallet with your name on it (Branded edition, above). Each person keeps their own keys.</span></li>
             <li><span class="pill soon">Testing</span><span><b>2. Your share register on <a href="https://bsharesx.com" target="_blank" rel="noopener">bSharesX</a>.</b> Keep your company&rsquo;s register of members with bSharesX. The company keeps the register as the law asks, and its directors approve every entry; a token mirrors it on chain, and if the two ever differ, the register wins. Holders see their holding in their own wallet. Registers are in testing: the first register in testing is The Bitcoin Corporation Ltd, our own company. Setting up other companies&rsquo; registers is coming. <a href="/bshares">More on bShares</a></span></li>
-            <li><span class="pill soon">Early</span><span><b>3. Optional: <a href="https://bdojox.com" target="_blank" rel="noopener">bDojoX</a>.</b> If you want to go that route, bDojoX is a programme for companies on chain, belt by belt, from its first token to a register kept on chain. Five belts, five stages: token launched, partnership shares locked, registered company, capital raised, public listing. The first two use tools that are live in bWalletX; the register is in testing; the later belts are coming or planned, and none of them is open yet.</span></li>
           </ul>
           <p class="sub"><b>Please read this.</b> Shares are securities. We don&rsquo;t issue or sell shares for you, raise money for you, give investment or legal advice, or get regulatory approval for you. You need your own legal advice before offering shares to anyone. bShares registers are in testing. Nothing on this page is an offer of securities.</p>
-          <div class="cta"><a class="pri" href="/clients">Talk to us</a><a class="sec" href="https://bsharesx.com" target="_blank" rel="noopener">bSharesX</a><a class="sec" href="https://bdojox.com" target="_blank" rel="noopener">bDojoX</a></div>
+          <div class="cta"><a class="pri" href="/clients">Talk to us</a><a class="sec" href="https://bsharesx.com" target="_blank" rel="noopener">bSharesX</a></div>
         </div>
       </section>
 

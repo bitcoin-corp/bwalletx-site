@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Order a branded wallet</title>
     <link rel="canonical" href="https://bwalletx.com/themes/custom/orderform" />
-    <meta name="description" content="Order your own wallet edition: tell us your brand, colours and logo, pick Theme edition ($99 a year), Branded edition (from $999) or Native app (by quote), and we reply with next steps." />
+    <meta name="description" content="Order your own wallet edition: tell us your brand, colours and logo, pick Theme edition ($99 a year), Branded edition ($999 set-up plus $99 a year) or Native app (by quote), and we reply with next steps." />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://bwalletx.com/themes/custom/orderform" />
     <meta property="og:site_name" content="bWalletX" />
@@ -87,6 +87,9 @@
       .ofacts .pri { background: var(--ink); color: var(--paper); }
       .ofacts button[disabled] { opacity: .45; cursor: not-allowed; }
       .msg { margin: 14px 0 0; min-height: 1.4em; font-size: .95rem; }
+      .vat { margin: 12px 0 0; font-size: .82rem; color: var(--muted); }
+      .consent { display: flex; gap: 10px; align-items: flex-start; margin: 0 0 16px; font-size: .92rem; line-height: 1.5; color: var(--muted); }
+      .consent input { margin-top: 4px; flex: none; }
       .msg.err { color: #8a1010; }
       .note { margin-top: 14px; padding: 14px 16px; border: 1px dashed var(--ink); color: var(--muted); font-size: .92rem; line-height: 1.55; }
       .note b { color: var(--ink); }
@@ -110,6 +113,7 @@
       </div>
     </header>
     <script src="/nav.js"></script>
+    <script src="/js/uk-prices.js"></script>
 
     <main class="tp">
       <section class="intro">
@@ -129,10 +133,11 @@
             <fieldset>
               <legend>What you want</legend>
               <div class="tiers" role="radiogroup" aria-label="Edition">
-                <label class="tier"><input type="radio" name="tier" value="theme" checked /><span><b>Theme edition</b><i>$99</i><em>A year. Your colours, card art and icon, a page and an install link.</em></span></label>
-                <label class="tier"><input type="radio" name="tier" value="branded" /><span><b>Branded edition</b><i>from $999</i><em>Set-up plus monthly. Your own domain and your name throughout.</em></span></label>
+                <label class="tier"><input type="radio" name="tier" value="theme" checked /><span><b>Theme edition</b><i>$99</i><em>A year.<span class="gbp" hidden> In the UK: &pound;75 a year.</span> Your colours, card art and icon, a page and an install link.</em></span></label>
+                <label class="tier"><input type="radio" name="tier" value="branded" /><span><b>Branded edition</b><i>$999</i><em>Set-up, then $99 a year.<span class="gbp" hidden> In the UK: &pound;750 set-up, then &pound;75 a year.</span> Your own domain and your name throughout.</em></span></label>
                 <label class="tier"><input type="radio" name="tier" value="native" /><span><b>Native app</b><i>By quote</i><em>Listed under your own App Store and Google Play accounts.</em></span></label>
               </div>
+              <p class="vat">Prices exclude VAT, which is added where it applies.</p>
               <p class="note" id="themeNote"><b>Fastest for a Theme edition:</b> order and pay inside bWalletX. Open &#9776; &rsaquo; Settings &rsaquo; Theme &rsaquo; Get your own edition. Or send this form and we&rsquo;ll help.</p>
             </fieldset>
             <fieldset>
@@ -156,8 +161,9 @@
             </fieldset>
             <fieldset>
               <legend>Send it</legend>
+              <label class="consent"><input type="checkbox" id="consent" required /> <span>You may contact me about this order. We keep your brief on our order list to reply and keep a record, and we never sell it. See our <a href="/privacy">privacy policy</a>.</span></label>
               <div class="ofacts">
-                <button type="submit" class="pri">Email the brief</button>
+                <button type="submit" class="pri">Send the brief</button>
                 <button type="button" id="copy">Copy the brief</button>
                 <a href="https://chat.bwalletx.com/u/bwalletx" target="_blank" rel="noopener">Message us on bChatX</a>
               </div>
@@ -176,8 +182,8 @@
           <p class="num">02 / 02 &nbsp;What&rsquo;s live</p>
           <h2>Where things stand.</h2>
           <ul class="status">
-            <li><span class="pill live">Live</span><span>This form: email or copy your brief, and we reply with next steps.</span></li>
-            <li><span class="pill live">Live</span><span>Theme edition ($99 a year), ordered and paid inside bWalletX: Settings &rsaquo; Theme &rsaquo; Get your own edition.</span></li>
+            <li><span class="pill live">Live</span><span>This form: sends your brief to our order list, opens an email with it filled in, and we reply with next steps.</span></li>
+            <li><span class="pill live">Live</span><span>Theme edition ($99 a year<span class="gbp" hidden>, &pound;75 in the UK</span>), ordered and paid inside bWalletX: Settings &rsaquo; Theme &rsaquo; Get your own edition.</span></li>
             <li><span class="pill live">Live</span><span>Branded edition and Native app, quoted by reply.</span></li>
             <li><span class="pill live">Live</span><span>Pay a $99 deposit for a Branded edition or Native app here, with Sign in with bWalletX.</span></li>
           </ul>
@@ -199,7 +205,22 @@
         // Then set DEPOSITS_LIVE = true; the button still only shows when the server says deposits are configured.
         var DEPOSITS_LIVE = true;
         var API = 'https://www.bwallet.space/api/theme-orders/';
-        var TIERS = { theme: 'Theme edition ($99 a year)', branded: 'Branded edition (from $999)', native: 'Native app (by quote)' };
+        var TIERS = { theme: 'Theme edition ($99 a year)', branded: 'Branded edition ($999 set-up + $99 a year)', native: 'Native app (by quote)' };
+        // Briefs are also stored server-side: push.bwalletx.com/clients/enquire (the client-enquiries list, owner admin at /clients/admin).
+        // That endpoint needs an email address, so a brief with only a $handle / @handle goes by email/copy alone.
+        var STORE = 'https://push.bwalletx.com/clients/enquire';
+        var isEmail = function (c) { return /^[^\s@]+@[^\s@]+\.[a-z]{2,}$/i.test(c); };
+        function store() {
+          var c = $('contact').value.trim(), t = tier(), link = $('link').value.trim();
+          if (!isEmail(c)) return Promise.resolve(false);
+          var body = { name: $('brand').value.trim(), company: $('brand').value.trim(), email: c, phone: null,
+            website: /^https:\/\/[^\s<>"]+\.[^\s<>"]+$/i.test(link) ? link : null,
+            message: '[Wallet edition order] ' + brief(), services: ['branded-wallet'],
+            budget: t === 'theme' ? 'up-to-1k' : t === 'branded' ? '1k-5k' : 'not-sure', tier: t, consent: true,
+            source: 'bwalletx.com/themes/custom/orderform' };
+          return fetch(STORE, { method: 'POST', keepalive: true, headers: { 'content-type': 'application/json' }, body: JSON.stringify(body) })
+            .then(function (r) { return r.ok; }, function () { return false; });
+        }
         var form = document.getElementById('of'), msg = document.getElementById('msg');
         var $ = function (id) { return document.getElementById(id); };
         function say(t, err) { msg.textContent = t; msg.className = 'msg' + (err ? ' err' : ''); }
@@ -216,6 +237,7 @@
           if (!/^[^\s@]+@[^\s@]+\.[a-z]{2,}$/i.test(c) && !/^[@$]?[a-z0-9_.-]{2,40}$/i.test(c)) return ['contact', 'Add an email address or a handle so we can reply.'];
           if (!httpsOk($('link').value.trim())) return ['link', 'The website link should start with https://'];
           if (!httpsOk($('logo').value.trim())) return ['logo', 'The logo link should start with https://'];
+          if (!$('consent').checked) return ['consent', 'Please tick the box so we can contact you about your order.'];
           return null;
         }
         function brief() {
@@ -236,8 +258,13 @@
           e.preventDefault();
           if (bad()) return;
           var subject = 'Branded wallet: ' + $('brand').value.trim() + ' (' + TIERS[tier()] + ')';
+          var saved = store();
           location.href = 'mailto:support@bwalletx.com?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(brief());
-          say('Your email app should open with the brief filled in. If it doesn’t, copy the brief and send it to support@bwalletx.com.');
+          say('Sending…');
+          saved.then(function (ok) {
+            say(ok ? 'Got it: your brief is on our order list. Your email app should also open with a copy; sending it is optional.'
+              : 'Your email app should open with the brief filled in. If it doesn’t, copy the brief and send it to support@bwalletx.com.');
+          });
         });
         $('copy').addEventListener('click', function () {
           if (bad()) return;
