@@ -1,6 +1,6 @@
 # bWalletX: full site text
 
-Generated 2026-11-02 from https://bwalletx.com. Source pages are linked above each section.
+Generated 2026-11-03 from https://bwalletx.com. Source pages are linked above each section.
 
 ---
 
@@ -3959,6 +3959,155 @@ New to bWalletX and a site asked you to sign in or pay? Start here, for free.
 [New to bWalletX? /start →](https://bwalletx.com/start)
 
 Not the same as the Android “direct” download: that’s the bWalletX Android app from [this site](https://bwalletx.com/android) instead of Google Play.
+
+---
+
+Source: https://bwalletx.com/enterprise
+
+FOR BUSINESSES ONLY · NOT FOR CONSUMERS
+
+# Your company, built in a month.
+
+We design and build your startup's software on bWalletX: signed documents and board minutes, a room for your team and members, a wallet in your brand, payments, your website and your brand. Then we keep it running.
+
+[Book a scoping call](#enquire)
+[What you get](#what)
+
+## The price
+
+### Build
+from $10,000
+per month of build. We start with a free scoping call, then send a fixed written quote for the agreed scope before any work starts. Bigger builds take more months.
+
+### Priority support
+from $1,000
+a month, rolling. Cancel with 30 days' notice. Monitoring, fixes, security updates and small changes, with priority replies. If you need set response times, we put them in your quote.
+
+### Equity
+1%
+of your company, once. Ordinary shares, the same class as the founders', issued to The Bitcoin Corporation Ltd when the first month's work is delivered.
+
+### How the 1% works
+
+- One-off: 1% in total, not 1% a month
+
+- The shares are fully paid by the work we deliver. You don't pay cash for them
+
+- Same class of ordinary shares as the founders hold
+
+- No board seat, no anti-dilution rights, no clawback
+
+- Recorded as a share issue in your own register of members, with your own lawyer
+
+We receive shares in your company. We don't offer shares in ours.
+
+## What we can build in your first month
+
+Every item shows where it is today. Live means it works in production now. Testing means it works, with our own company as the first user. In build means we are building it now.
+
+### Signed documents and board minutes Live
+
+Share a contract or minute in your room. Each director reads it and signs on their phone, and the signature is sealed on chain with a record anyone can check.
+
+### A member room with its own key Live
+
+A private room on [bChatX](https://www.bchatx.com) for your board, team or members, with its own key. Invite people by email; they sign in from their phone.
+
+### A wallet in your brand Live
+
+Our [branded wallet edition](https://bwalletx.com/clients) is included: your name, colours and logo, self-custody for every user.
+
+### Payments, tips and receipts Live
+
+Take payments in BSV through bWalletX, with a receipt for each one that anyone can check.
+
+### Brand, website and launch film Live
+
+Logo, colours, type and voice, a website that works with your wallet, share images and a short launch film, made at [bAdvertisingX](https://badvertisingx.com).
+
+### Your team's wallet on a big screen Live
+
+[bWalletX Desktop](https://desktop.bwalletx.com) in the browser: money, chat and documents side by side, installable as an app.
+
+### Your share register Testing
+
+Your register of members and cap table kept with [bSharesX](https://bsharesx.com). Registers are in testing; the first one is our own company's.
+
+### The Enterprise desktop app In build
+
+A signed Mac app for running a company: many accounts, everyday accounts kept apart from the treasury, multisig, approvals for each account, an audit log, and registers for keys, domains and email.
+
+### Private code snapshots on chain In build
+
+Seal a snapshot of your code on chain, encrypted so only your wallet can open it, through [bGitX](https://bgitx.com).
+
+## How we build
+
+- Our engineers build with AI agents, so a month goes a long way
+
+- You approve every change before it goes live
+
+- Your code lives in your own repository. Ownership and licences are set out in your quote
+
+- Self-custody throughout: your keys stay with you and your users, never on our servers
+
+## How it works
+
+- EnquireTell us about your company with the form below.
+
+- Scoping callFree. We reply within 2 working days.
+
+- Fixed quoteThe scope, the price and the terms, in writing.
+
+- Build monthYou see progress as we go and approve each change.
+
+- Launch and supportWe go live together, then keep it running.
+
+## Please read
+
+For businesses only. Not for consumers.
+
+Prices exclude VAT, which is added where it applies. You can pay in BSV through bWalletX or by bank transfer. The Bitcoin Corporation Ltd is the supplier and sends the invoices.
+
+We build software. We do not issue securities, raise money for you, give investment advice, or get regulatory approval for you. You are responsible for your own legal and regulatory advice, and for what you offer to others. Talk to a qualified lawyer in each country where you operate.
+
+The shares we receive are recorded in your own register under your own lawyer's advice. Nothing on this page is an offer of shares or tokens, and we make no promise of returns. Our Enterprise Services Terms come with your quote.
+
+## Book a scoping call
+
+Your name
+
+Company
+
+Work email
+
+Phone (optional)
+
+Website (optional)
+
+Budget
+
+$25k+
+$10k–$25k
+Not sure yet
+
+What does your company do, and what should we build?
+
+Which parts interest you?
+
+Custom build
+Branded wallet
+Brand, website, film
+Share register
+
+Leave this empty
+
+You may contact me about this enquiry by email or phone. We use these details only to reply and to keep a record of your enquiry, and we never sell them. See our [privacy policy](https://bwalletx.com/privacy).
+Send enquiry
+
+Prefer email? [support@bwalletx.com](mailto:support@bwalletx.com?subject=Enterprise)
+
+Supplier: The Bitcoin Corporation Ltd, company no. 16735102, registered in England & Wales. Registered office: Flat 6, 315 Barking Road, London, E13 8EE, United Kingdom. Contact: [support@bwalletx.com](mailto:support@bwalletx.com).
 
 ---
 
