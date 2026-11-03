@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>Marketing, made by b · bWalletX</title>
+    <link rel="canonical" href="https://bwalletx.com/marketing" />
+    <meta name="description" content="Marketing, made by b. Tell b about your business and b makes the ad, the film, the logo or the whole brand, with your name on it. Quick bAds in the web wallet, a studio at bAdvertisingX, and a wallet in your own colours." />
+    <meta name="theme-color" content="#000000" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://bwalletx.com/marketing" />
+    <meta property="og:site_name" content="bWalletX" />
+    <meta property="og:title" content="Marketing, made by b." />
+    <meta property="og:description" content="Tell b about your business. b makes the ad, the film, the logo or the whole brand. In your colours, not ours." />
+    <meta property="og:image" content="https://bwalletx.com/og-marketing-v1.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Marketing, made by b: quick ads, ad films, logos, brand kits and your own branded wallet. bwalletx.com/marketing" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@bWalletX" />
+    <meta name="twitter:title" content="Marketing, made by b." />
+    <meta name="twitter:description" content="Tell b about your business. b makes the ad, the film, the logo or the whole brand. In your colours, not ours." />
+    <meta name="twitter:image" content="https://bwalletx.com/og-marketing-v1.png" />
+    <link rel="icon" href="/favicon.ico" sizes="48x48" />
+    <link rel="icon" href="/logo.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" />
+    <link rel="stylesheet" href="/styles.css" />
+    <style>
+      /* Marketing (3 Nov 2026): the front door to what b does for a business's marketing. Links out to the
+         pages that sell each service; describes only what is live. Wrapping grids only, no sideways scroll. */
+      .mk h1 { font-size: clamp(2.6rem, 9vw, 4.4rem); margin: 18px 0 12px; line-height: 1.02; letter-spacing: -.045em; }
+      .mk h1 em { font-style: normal; color: #F5B800; }
+      .mk h2 { margin: 60px 0 10px; font-size: 1.6rem; letter-spacing: -.02em; }
+      .mk p, .mk li { line-height: 1.65; }
+      .mk .lede { font-size: 1.15rem; color: #d8d4c8; max-width: 44em; }
+      .mk .small { color: #8a8a86; font-size: 0.85rem; }
+      .mk .ctas { display: flex; gap: 12px; flex-wrap: wrap; margin: 24px 0; }
+      .mk .ctas .btn { min-height: 48px; justify-content: center; }
+      .mk a:not(.btn):not(.cc) { color: var(--gold-hi); }
+      .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); gap: 14px; margin: 16px 0; }
+      .box { background: #101114; border: 1px solid #ffffff12; border-radius: 16px; padding: 18px 20px; min-width: 0; }
+      .box h3 { margin: 0 0 6px; font-size: 1.05rem; }
+      .box p { margin: 0; color: #a7adb8; }
+      .tag { display: inline-block; font-size: 0.72rem; font-weight: 700; padding: 2px 9px; border-radius: 999px; margin-left: 6px; vertical-align: middle; background: #ffffff14; color: #cfcabd; }
+      .tag.live { background: #F5B800; color: #000; }
+      .more { display: inline-flex; align-items: center; min-height: 44px; font-weight: 600; }
+      .cgrid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr)); gap: 14px; margin-top: 18px; }
+      .cc { display: flex; flex-direction: column; min-width: 0; text-decoration: none; color: inherit; border: 1px solid rgba(255,255,255,.08); border-radius: 16px; overflow: hidden; background: linear-gradient(180deg, #111215, #0a0b0d); transition: border-color .2s, transform .2s; }
+      .cc:hover { border-color: rgba(255,210,77,.55); transform: translateY(-2px); }
+      .cc:focus-visible { outline: 2px solid #ffd24d; outline-offset: 3px; }
+      .cc img { display: block; width: 100%; height: auto; aspect-ratio: 1200 / 630; object-fit: cover; background: #000; }
+      .cc b { display: block; padding: 12px 16px 0; font: 700 1.05rem var(--hf); letter-spacing: -.01em; }
+      .cc span { display: block; padding: 4px 16px 16px; color: #a9a69c; line-height: 1.5; font-size: .92rem; }
+      .status { list-style: none; padding: 0; margin: 12px 0; }
+      .status li { padding: 10px 0; border-bottom: 1px solid #ffffff0d; display: flex; gap: 12px; align-items: baseline; }
+      .status .tag { margin: 0; flex: none; min-width: 64px; text-align: center; }
+      .status a { display: inline-block; padding: 11px 0; margin: -11px 0; }
+      .end { margin-top: 64px; padding: 26px 22px; border: 1px solid #F5B80055; border-radius: 18px; background: #0d0e10; text-align: center; }
+      .end h2 { margin: 0 0 8px; }
+      .end .ctas { justify-content: center; margin-bottom: 4px; }
+      @media (max-width: 480px) { .mk.ext { padding-left: 16px; padding-right: 16px; } .mk .ctas .btn { flex: 1 1 100%; min-width: 0; } }
+      @media (prefers-reduced-motion: reduce) { .cc { transition: none; } }
+    </style>
+  </head>
+  <body>
+    <div class="beta-banner">bWalletX is in <strong>beta</strong>: test with small amounts.</div>
+    <header class="topbar">
+      <div class="wrap topbar-in">
+        <a class="brand" href="/"><img src="/logo.svg" alt="" width="34" height="30" /><span>bWallet<span class="gold">X</span></span></a>
+        <nav aria-label="Pages">
+          <a href="/features">Features</a><a href="/exchange">Exchange</a><a href="/social">Social</a><a href="/agent">Agents</a><a href="/extension">Extension</a><a href="/developers">Developers</a>
+        </nav>
+        <span class="nav-cta"><a class="dl-btn" href="/get">Download</a><a class="web-btn" href="https://web.bwalletx.com" target="_blank" rel="noopener">Web &rarr;</a></span>
+      </div>
+    </header>
+    <script src="/nav.js"></script>
+    <main class="ext mk">
+      <span class="pill">Marketing</span>
+      <h1>Marketing, made by <em>b</em>.</h1>
+      <p class="lede">Tell b about your business in a sentence. b makes the ad, the film, the logo or the whole brand, in your colours, not ours. It works today, from the wallet you already have.</p>
+      <div class="ctas">
+        <a class="btn btn-store" href="https://web.bwalletx.com/m/ask-b?ask=I%27d%20like%20a%20bAd%20for%20my%20business.">Ask b for a bAd</a>
+        <a class="btn btn-store btn-ghost" href="#work">See b&rsquo;s work</a>
+      </div>
+
+      <h2>A quick ad, in about a minute</h2>
+      <p>For a post, a story or a banner, b makes the ad on the spot. You see the price before you pay, and the ad is yours to keep.</p>
+      <div class="grid">
+        <div class="box"><h3>1. Describe your business</h3><p>Your name, what you sell and, if you like, who it&rsquo;s for and your colours.</p></div>
+        <div class="box"><h3>2. b makes the ad</h3><p>A clean layout, a short headline spelled right, your name on it.</p></div>
+        <div class="box"><h3>3. Pay in BSV</h3><p>One pay sheet in your wallet, nothing else.</p></div>
+        <div class="box"><h3>4. Keep it</h3><p>Mint it in your name, or download it and post it anywhere.</p></div>
+      </div>
+      <div class="ctas">
+        <a class="btn btn-store" href="https://web.bwalletx.com/m/bmint/mint/ad">Order a bAd</a>
+        <a class="more" href="/bads">More about bAds &rarr;</a>
+      </div>
+
+      <h2>Films, logos and brand kits</h2>
+      <p>For bigger work, b runs a studio at bAdvertisingX. One fixed price, quoted before anything starts, and nothing is charged until the work has passed our quality check.</p>
+      <div class="grid">
+        <div class="box"><h3>Ad film</h3><p>A short animated film, about 45 seconds, with licensed music, a clear call to action, its own page and share image.</p></div>
+        <div class="box"><h3>Brand kit</h3><p>Logo, colours, type, voice and rules, with a public brand page and a download pack.</p></div>
+        <div class="box"><h3>Logo</h3><p>A mark and wordmark in SVG and PNG, with app-icon sizes.</p></div>
+        <div class="box"><h3>Share images</h3><p>Link previews that look right on X, iMessage and WhatsApp.</p></div>
+      </div>
+      <p>To order, open b in your wallet and say what you need, or sign in at bAdvertisingX with bWalletX and send b a brief. b asks a question or two, then quotes.</p>
+      <div class="ctas">
+        <a class="btn btn-store" href="https://badvertisingx.com">Send b a brief</a>
+        <a class="more" href="/bads">How bAds work &rarr;</a>
+      </div>
+
+      <h2>Your brand&rsquo;s own wallet</h2>
+      <p>Give your customers, fans or members a wallet with your name, your colours and your logo. We build it on bWalletX, so each person keeps their own keys, and you check and approve it before it goes live. If your community has a token, it&rsquo;s a membership key: it opens your rooms and perks.</p>
+      <div class="ctas">
+        <a class="btn btn-store" href="/clients">See plans</a>
+        <a class="more" href="/b-creative">Watch the ad &rarr;</a>
+      </div>
+
+      <h2>Put your app where people already are</h2>
+      <p>Built something on Bitcoin SV? List it on the Apps screen of bWallet and bWalletX, one tap away for everyone who opens the wallet. It&rsquo;s free, with no cut of your sales, and a person reviews every app.</p>
+      <div class="ctas">
+        <a class="btn btn-store btn-ghost" href="/apps/add">Add your app</a>
+      </div>
+
+      <h2 id="work">Our first client was us</h2>
+      <p>Everything below was made by b for the bWalletX family. Your brand keeps its own look: we never put our b on your business.</p>
+      <div class="cgrid">
+        <a class="cc" href="/b-is-for-business"><img src="/og-b-is-for-business-v3.jpg" alt="" width="1200" height="630" loading="lazy" /><b>b is for business</b><span>A short ad film, with music by VexVoid.</span></a>
+        <a class="cc" href="/brand"><img src="/og-brand-v2.jpg" alt="" width="1200" height="630" loading="lazy" /><b>The bWalletX brand</b><span>Brand kit: logo, colour, type, voice and a download pack.</span></a>
+        <a class="cc" href="/b-family"><img src="/og-family-v3.png" alt="" width="1200" height="630" loading="lazy" /><b>The b family</b><span>One colour for each app, in one system.</span></a>
+        <a class="cc" href="/creative"><img src="/og-creative-v1.png" alt="" width="1200" height="630" loading="lazy" /><b>b Creative</b><span>Every campaign we&rsquo;ve run, in one place.</span></a>
+      </div>
+
+      <h2>Where we are</h2>
+      <ul class="status">
+        <li><span class="tag live">Live</span><span>Order a quick bAd in the web wallet: describe your business, b makes the ad, pay in BSV, mint or download it</span></li>
+        <li><span class="tag live">Live</span><span>Talk to b about your ad in your wallet</span></li>
+        <li><span class="tag live">Live</span><span>Send b a brief at bAdvertisingX, signed in with bWalletX</span></li>
+        <li><span class="tag live">Live</span><span>Ad films, brand kits, logos and share images, at one fixed price quoted first</span></li>
+        <li><span class="tag live">Live</span><span>Branded wallets: tell us what you want to build on <a href="/clients">/clients</a></span></li>
+        <li><span class="tag live">Live</span><span>Free listing on the wallet&rsquo;s Apps screen, reviewed by a person</span></li>
+        <li><span class="tag">Coming</span><span>Order a quick bAd in the Chrome extension and the phone apps</span></li>
+        <li><span class="tag">Coming</span><span>Placing your bAds across bChatX and the b family</span></li>
+        <li><span class="tag">Coming</span><span>A shop agent that answers customers and takes payment in chat: <a href="/business-agents">business agents</a></span></li>
+      </ul>
+
+      <section class="end">
+        <h2>Tell b about your business.</h2>
+        <p>Less noise. More life. Just b.</p>
+        <div class="ctas">
+          <a class="btn btn-store" href="https://web.bwalletx.com/m/ask-b?ask=I%27d%20like%20a%20bAd%20for%20my%20business.">Ask b for a bAd</a>
+          <a class="btn btn-store btn-ghost" href="/get">Get bWalletX</a>
+        </div>
+      </section>
+    </main>
+    <footer class="foot">
+      <div class="wrap foot-in">
+        <a class="brand" href="/"><img src="/logo.svg" alt="" width="27" height="24" /><span>bWallet<span class="gold">X</span></span></a>
+        <p>By The Bitcoin Corporation Ltd (company no. 16735102, registered in England &amp; Wales).</p>
+        <p><a href="https://x.com/bWalletX" target="_blank" rel="noopener">@bWalletX on X</a> · <a href="https://bwalletx.com/twetch" target="_blank" rel="noopener">Twetch</a> · <a href="https://chat.bwalletx.com/u/bwalletx" target="_blank" rel="noopener">bChatX</a> · <a href="/privacy.html">Privacy policy</a></p>
+      </div>
+    </footer>
+  </body>
+</html>
