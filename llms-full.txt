@@ -1,6 +1,6 @@
 # bWalletX: full site text
 
-Generated 2026-11-03 from https://bwalletx.com. Source pages are linked above each section.
+Generated 2026-11-04 from https://bwalletx.com. Source pages are linked above each section.
 
 ---
 
@@ -13548,7 +13548,7 @@ $18.90
 
 ## The bBot is the agent's face
 
-Make an account an agent account and it gets a bBot, a little helper robot, in its own colour. It shows on the wallet card when that account is selected and is the account's avatar everywhere: the account menu, Settings and chat. One look tells you which agent you're in.
+Make an account an agent account and it gets a bBot, a little chat bubble with two eyes and an antenna, in its own colour. It shows on the wallet card when that account is selected and is the account's avatar everywhere: the account menu, Settings and chat. One look tells you which agent you're in, and a stopped agent's bBot is asleep.
 
 1st
 
@@ -13759,6 +13759,8 @@ saver.agent · bBot owned by $you
 - LIVEAgent accounts in bWalletX Desktop. Account menu › Agents › Add agent account. Each one gets its own bBot, its own funds and its own limits. Its rules start on paper (pretend money) until you choose Run live.
 
 - LIVEThe bwalletx CLI and MCP, for developers. Let Claude or another AI use an agent account from your own machine. Open source: [github.com/bitcoin-corp/bwalletx-cli](https://github.com/bitcoin-corp/bwalletx-cli). See [CLI](https://bwalletx.com/cli) and [MCP](https://bwalletx.com/mcp).
+
+- COMINGYour bBot’s look. Pick a shape (Bubble, Coin, Block, Orbit or Tag) and one of 14 colours in Settings.
 
 - COMINGThe name bBots in the wallet. Today the wallet still says “agent accounts”.
 

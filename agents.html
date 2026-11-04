@@ -11,17 +11,18 @@
     <meta property="og:site_name" content="bWalletX" />
     <meta property="og:title" content="bWalletX agent accounts: one account, one budget, one bBot per AI" />
     <meta property="og:description" content="Give each AI its own bWalletX account, its own budget and its own bBot. Daily caps, Stop all, an activity log, and the CLI or MCP for Claude and other agents." />
-    <meta property="og:image" content="https://bwalletx.com/og-agents-v2.png" />
+    <meta property="og:image" content="https://bwalletx.com/og-agents-v3.png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
-    <meta property="og:image:alt" content="A big gold bBot, a little helper robot with an antenna, a visor and a hover-base, beside five more in mint, iris, azure, lime and steel: bWalletX agent accounts" />
+    <meta property="og:image:alt" content="A big gold bBot, a chat bubble with two eyes and an antenna, above five more in iris, azure, mint, coral and steel: bWalletX agent accounts" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@bWalletX" />
     <meta name="twitter:title" content="bWalletX agent accounts: one account, one budget, one bBot per AI" />
     <meta name="twitter:description" content="Give each AI its own bWalletX account, its own budget and its own bBot. Daily caps, Stop all, an activity log, and the CLI or MCP for Claude and other agents." />
-    <meta name="twitter:image" content="https://bwalletx.com/og-agents-v2.png" />
+    <meta name="twitter:image" content="https://bwalletx.com/og-agents-v3.png" />
     <link rel="icon" href="/favicon.ico" />
     <link rel="stylesheet" href="/styles.css" />
+    <link rel="stylesheet" href="/brand/bbot/bbot.css" />
     <style>
       .ext h1 { font-size: clamp(2.2rem, 6vw, 3.4rem); margin: 18px 0 10px; }
       .ext h1 em { font-style: normal; color: #F5B800; }
@@ -35,9 +36,6 @@
       .ext .small { color: #8a8a86; font-size: 0.85rem; }
       .ext .row { display: flex; gap: 12px; flex-wrap: wrap; margin: 26px 0; }
       .parade { display: flex; gap: 14px; align-items: flex-end; margin: 22px 0; }
-      .parade .g { animation: float 2.4s ease-in-out infinite; }
-      .parade .g:nth-child(2) { animation-delay: .3s; } .parade .g:nth-child(3) { animation-delay: .6s; } .parade .g:nth-child(4) { animation-delay: .9s; }
-      @keyframes float { 50% { transform: translateY(-6px); } }
       .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; margin: 16px 0; }
       .grid .box { margin: 0; min-width: 0; }
       .grid .ic { margin-bottom: 8px; }
@@ -53,15 +51,6 @@
       .run { color: #7ee2a8; } .stop { color: #f97066; } .read { color: #a7adb8; }
       pre { background: #0b0b0c; border: 1px solid #ffffff14; border-radius: 12px; padding: 16px; overflow-x: auto; font: 13px/1.6 ui-monospace, monospace; color: #e8e2cf; }
       pre .c { color: #6f7682; }
-      /* bBot idle: a gentle hover-bob, a blink and an antenna pulse. */
-      .bbot{display:inline-block;flex-shrink:0;overflow:visible}
-      .bbot-bob{animation:bbot-bob 3.2s ease-in-out infinite}
-      .bbot-eyes{transform-box:fill-box;transform-origin:center;animation:bbot-blink 5.5s ease-in-out infinite}
-      .bbot-tip{animation:bbot-pulse 2.4s ease-in-out infinite}
-      @keyframes bbot-bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-.45px)}}
-      @keyframes bbot-blink{0%,44%,50%,100%{transform:scaleY(1)}47%{transform:scaleY(.12)}}
-      @keyframes bbot-pulse{0%,100%{opacity:1}50%{opacity:.55}}
-      @media (prefers-reduced-motion: reduce) { .parade .g, .bbot-bob, .bbot-eyes, .bbot-tip { animation: none; } }
     </style>
   </head>
   <body>
@@ -78,29 +67,29 @@
     <script src="/nav.js"></script>
     <main class="ext">
       <div class="parade">
-        <span class="g" data-bot="#F5B800" data-size="64"></span><span class="g" data-bot="#8B7CFF" data-size="64"></span><span class="g" data-bot="#3D8BFF" data-size="64"></span><span class="g" data-bot="#2FD58E" data-size="64"></span>
+        <span class="g" data-bbot data-colour="gold" data-size="64"></span><span class="g" data-bbot data-colour="iris" data-size="64"></span><span class="g" data-bbot data-colour="azure" data-size="64"></span><span class="g" data-bbot data-colour="mint" data-size="64"></span>
       </div>
       <h1>Agent accounts: every AI gets <em>its own bBot</em></h1>
       <p class="lede">An agent account is a separate wallet account that an AI runs for you, with its own keys and its own budget. It pays, saves and reports inside the limits you set, and you can stop it or sweep everything back any time.</p>
       <div class="box xlink"><h3>Looking for Ask b?</h3><p>The assistant you chat with inside the wallet is Ask b. <a href="/agent">Ask b &rarr;</a></p></div>
 
       <div class="menu" aria-label="Example account menu">
-        <div class="acct on"><span class="av" style="--c:#F5B800"><span data-bot="#F5B800" data-size="26"></span></span><span><span class="nm">Saver</span><span class="tag run">running</span><div class="sub">Saves a little each week &middot; cap $20/day</div></span><span class="bal">$120.00</span></div>
-        <div class="acct"><span class="av" style="--c:#3D8BFF"><span data-bot="#3D8BFF" data-size="26"></span></span><span><span class="nm">Treasurer</span><span class="tag run">running</span><div class="sub">Tops up the other agents</div></span><span class="bal">$64.25</span></div>
-        <div class="acct"><span class="av" style="--c:#8B7CFF"><span data-bot="#8B7CFF" data-size="26"></span></span><span><span class="nm">Reporter</span><span class="tag read">read only</span><div class="sub">Daily summary to chat</div></span><span class="bal">$0.00</span></div>
-        <div class="acct"><span class="av" style="--c:#2FD58E"><span data-bot="#2FD58E" data-size="26"></span></span><span><span class="nm">Scout</span><span class="tag stop">stopped</span><div class="sub">$HANDLE fund &middot; paused by you</div></span><span class="bal">$18.90</span></div>
+        <div class="acct on"><span class="av" style="--c:#F5B800"><span data-bbot data-colour="gold" data-size="26"></span></span><span><span class="nm">Saver</span><span class="tag run">running</span><div class="sub">Saves a little each week &middot; cap $20/day</div></span><span class="bal">$120.00</span></div>
+        <div class="acct"><span class="av" style="--c:#3D8BFF"><span data-bbot data-colour="azure" data-size="26"></span></span><span><span class="nm">Treasurer</span><span class="tag run">running</span><div class="sub">Tops up the other agents</div></span><span class="bal">$64.25</span></div>
+        <div class="acct"><span class="av" style="--c:#8B7CFF"><span data-bbot data-colour="iris" data-size="26"></span></span><span><span class="nm">Reporter</span><span class="tag read">read only</span><div class="sub">Daily summary to chat</div></span><span class="bal">$0.00</span></div>
+        <div class="acct"><span class="av" style="--c:#2FD58E"><span data-bbot data-colour="mint" data-mood="sleep" data-size="26"></span></span><span><span class="nm">Scout</span><span class="tag stop">stopped</span><div class="sub">$HANDLE fund &middot; paused by you</div></span><span class="bal">$18.90</span></div>
       </div>
 
       <h2>The bBot is the agent's face</h2>
-      <p>Make an account an agent account and it gets a bBot, a little helper robot, in its own colour. It shows on the wallet card when that account is selected and is the account's avatar everywhere: the account menu, Settings and chat. One look tells you which agent you're in.</p>
-      <div class="colours"><div><span data-bot="#F5B800" data-size="48"></span><br />1st</div><div><span data-bot="#8B7CFF" data-size="48"></span><br />2nd</div><div><span data-bot="#3D8BFF" data-size="48"></span><br />3rd</div><div><span data-bot="#2FD58E" data-size="48"></span><br />4th</div><div><span data-bot="#A8E03A" data-size="48"></span><br />5th</div><div><span data-bot="#AEB6C2" data-size="48"></span><br />6th</div></div>
+      <p>Make an account an agent account and it gets a bBot, a little chat bubble with two eyes and an antenna, in its own colour. It shows on the wallet card when that account is selected and is the account's avatar everywhere: the account menu, Settings and chat. One look tells you which agent you're in, and a stopped agent's bBot is asleep.</p>
+      <div class="colours"><div><span data-bbot data-colour="gold" data-size="48"></span><br />1st</div><div><span data-bbot data-colour="iris" data-size="48"></span><br />2nd</div><div><span data-bbot data-colour="azure" data-size="48"></span><br />3rd</div><div><span data-bbot data-colour="mint" data-size="48"></span><br />4th</div><div><span data-bbot data-colour="lime" data-size="48"></span><br />5th</div><div><span data-bbot data-colour="steel" data-size="48"></span><br />6th</div></div>
 
       <h2>What an agent account can do</h2>
       <div class="grid">
-        <div class="box"><div class="ic"><span data-bot="#F5B800" data-size="28"></span></div><h3>Spend only its budget</h3><p>Its balance is all it can ever spend. Fund it from any of your accounts in one tap; your other accounts are never touched.</p></div>
-        <div class="box"><div class="ic"><span data-bot="#3D8BFF" data-size="28"></span></div><h3>Follow a strategy</h3><p>Agree the rules in plain words, or load a strategy, and it acts by those rules and nothing else. <a href="/strategies">Strategies &rarr;</a></p></div>
-        <div class="box"><div class="ic"><span data-bot="#8B7CFF" data-size="28"></span></div><h3>Show its work</h3><p>An activity log lists every action, with links to the transactions. Add labels and an optional daily spending cap in dollars.</p></div>
-        <div class="box"><div class="ic"><span data-bot="#2FD58E" data-size="28"></span></div><h3>Stop on your word</h3><p>Stop one agent or <b>Stop all agents</b>. A stopped account refuses every spend until you resume it, and <b>Sweep back</b> moves every token, NFT and all the BSV home.</p></div>
+        <div class="box"><div class="ic"><span data-bbot data-colour="gold" data-size="28"></span></div><h3>Spend only its budget</h3><p>Its balance is all it can ever spend. Fund it from any of your accounts in one tap; your other accounts are never touched.</p></div>
+        <div class="box"><div class="ic"><span data-bbot data-colour="azure" data-size="28"></span></div><h3>Follow a strategy</h3><p>Agree the rules in plain words, or load a strategy, and it acts by those rules and nothing else. <a href="/strategies">Strategies &rarr;</a></p></div>
+        <div class="box"><div class="ic"><span data-bbot data-colour="iris" data-size="28"></span></div><h3>Show its work</h3><p>An activity log lists every action, with links to the transactions. Add labels and an optional daily spending cap in dollars.</p></div>
+        <div class="box"><div class="ic"><span data-bbot data-colour="mint" data-size="28"></span></div><h3>Stop on your word</h3><p>Stop one agent or <b>Stop all agents</b>. A stopped account refuses every spend until you resume it, and <b>Sweep back</b> moves every token, NFT and all the BSV home.</p></div>
       </div>
 
       <h2>Many agents</h2>
@@ -128,23 +117,6 @@ claude mcp add bwalletx -- npx -y bwalletx mcp</pre>
       </div>
       <p class="small">Agent accounts spend real money: start with small amounts. Questions: <a href="mailto:support@bwalletx.com">support@bwalletx.com</a></p>
     </main>
-    <script>
-      // bBot (agents/BBot.tsx in the wallet): our own helper-robot mascot. Compact drawing below 40px.
-      (function () {
-        var DEEP = {"#F5B800":"#8A6400","#2FD58E":"#0E7A4C","#8B7CFF":"#4B3BC4","#3D8BFF":"#1D4FB8","#A8E03A":"#56800E","#AEB6C2":"#59626F"};
-        var FULL = '<rect x="4.6" y="20.6" width="14.8" height="2.1" rx="1.05" fill="var(--bb-deep)"/><rect x="6.4" y="20.95" width="11.2" height=".5" rx=".25" fill="var(--bb)" fill-opacity=".55"/><g class="bbot-bob"><rect x="11.35" y="1.9" width="1.3" height="2.8" rx=".65" fill="var(--bb-deep)"/><circle class="bbot-tip" cx="12" cy="1.9" r="1.35" fill="var(--bb)" stroke="var(--bb-deep)" stroke-width=".5"/><rect x="2.7" y="7.2" width="1.7" height="3.4" rx=".7" fill="var(--bb-deep)"/><rect x="19.6" y="7.2" width="1.7" height="3.4" rx=".7" fill="var(--bb-deep)"/><rect x="10.2" y="13.4" width="3.6" height="1.4" fill="var(--bb-deep)"/><rect x="4" y="4.4" width="16" height="9.4" rx="3" fill="var(--bb)" stroke="var(--bb-deep)" stroke-width=".7"/><rect x="6.3" y="5.25" width="3.6" height=".6" rx=".3" fill="#fff" fill-opacity=".5"/><rect x="5.8" y="6.6" width="12.4" height="5.4" rx="2.7" fill="#0F1013"/><rect x="6.9" y="7.2" width="10.2" height=".5" rx=".25" fill="#fff" fill-opacity=".14"/><g class="bbot-eyes"><rect x="8" y="7.9" width="2.8" height="2.8" rx="1.1" fill="var(--bb)"/><rect x="13.2" y="7.9" width="2.8" height="2.8" rx="1.1" fill="var(--bb)"/></g><rect x="6.6" y="14.5" width="10.8" height="5.6" rx="1.8" fill="var(--bb)" stroke="var(--bb-deep)" stroke-width=".7"/><path d="M11.05 15.55V19.1M11.05 18.15a.95 .95 0 1 0 1.9 0a.95 .95 0 1 0-1.9 0" fill="none" stroke="var(--bb-deep)" stroke-width=".6" stroke-linecap="round"/></g>';
-        var COMPACT = '<rect x="4" y="20.5" width="16" height="2.7" rx="1.35" fill="var(--bb-deep)"/><g class="bbot-bob"><rect x="11" y="1.8" width="2" height="2.8" rx="1" fill="var(--bb-deep)"/><circle class="bbot-tip" cx="12" cy="2.1" r="1.8" fill="var(--bb)" stroke="var(--bb-deep)" stroke-width=".7"/><rect x="9.4" y="14.4" width="5.2" height="1.6" fill="var(--bb-deep)"/><rect x="2.8" y="4.3" width="18.4" height="10.6" rx="3.2" fill="var(--bb)" stroke="var(--bb-deep)" stroke-width=".9"/><rect x="4.8" y="6.4" width="14.4" height="6.3" rx="3.15" fill="#0F1013"/><g class="bbot-eyes"><rect x="7" y="7.85" width="3.6" height="3.4" rx="1.4" fill="var(--bb)"/><rect x="13.4" y="7.85" width="3.6" height="3.4" rx="1.4" fill="var(--bb)"/></g><rect x="6.2" y="15.6" width="11.6" height="4.3" rx="1.6" fill="var(--bb)" stroke="var(--bb-deep)" stroke-width=".9"/></g>';
-        function bot(c, n) {
-          var d = DEEP[c.toUpperCase()] || c;
-          return (
-            '<svg class="bbot" width="' + n + '" height="' + n + '" viewBox="0 0 24 24" aria-hidden="true" style="--bb:' +
-            c + ';--bb-deep:' + d + '">' + (n < 40 ? COMPACT : FULL) + '</svg>'
-          );
-        }
-        document.querySelectorAll('[data-bot]').forEach(function (el) {
-          el.innerHTML = bot(el.getAttribute('data-bot'), +el.getAttribute('data-size') || 28);
-        });
-      })();
-    </script>
+    <script src="/brand/bbot/bbot.js"></script>
   </body>
 </html>

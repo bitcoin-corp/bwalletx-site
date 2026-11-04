@@ -1,0 +1,26 @@
+<svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" class="bbot bbot-st-idle" width="256" height="256" role="img" aria-label="Bubble bBot, Iris"><style>.bbot { display: inline-block; flex-shrink: 0; overflow: visible; }
+.bbot-body { transform-box: fill-box; transform-origin: 50% 100%; }
+.bbot-st-idle .bbot-body, .bbot-st-working .bbot-body, .bbot-st-typing .bbot-body { animation: bbot-bob 3.2s ease-in-out infinite; }
+.bbot-st-done .bbot-body { animation: bbot-hop 1.6s ease-in-out infinite; }
+.bbot-st-attention .bbot-body { animation: bbot-wiggle 1.5s ease-in-out infinite; }
+.bbot-st-sleep .bbot-body { animation: bbot-bob 6s ease-in-out infinite; }
+@keyframes bbot-bob { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-1.3px); } }
+@keyframes bbot-hop { 0%, 100% { transform: translateY(0) scale(1); } 18% { transform: translateY(0) scale(1.05, .93); } 42% { transform: translateY(-5px) scale(.97, 1.04); } 66% { transform: translateY(0) scale(1.03, .97); } 80% { transform: translateY(0) scale(1); } }
+@keyframes bbot-wiggle { 0%, 55%, 100% { transform: rotate(0); } 8% { transform: rotate(-7deg); } 18% { transform: rotate(6deg); } 28% { transform: rotate(-4deg); } 38% { transform: rotate(2deg); } }
+.bbot-blink { transform-box: fill-box; transform-origin: center; animation: bbot-blink 5.5s ease-in-out infinite; }
+.bbot-look { animation: bbot-look 2.6s ease-in-out infinite; }
+@keyframes bbot-blink { 0%, 45%, 51%, 100% { transform: scaleY(1); } 48% { transform: scaleY(.1); } }
+@keyframes bbot-look { 0%, 100% { transform: translateX(0); } 25% { transform: translateX(-2px); } 50% { transform: translateX(0); } 75% { transform: translateX(2px); } }
+.bbot-dot { animation: bbot-dot 1.1s ease-in-out infinite; }
+.bbot-d2 { animation-delay: .15s; } .bbot-d3 { animation-delay: .3s; }
+@keyframes bbot-dot { 0%, 60%, 100% { transform: translateY(0); opacity: .5; } 30% { transform: translateY(-2.4px); opacity: 1; } }
+.bbot-tip { animation: bbot-tip 2.4s ease-in-out infinite; }
+.bbot-st-attention .bbot-tip { animation-duration: .6s; }
+.bbot-st-sleep .bbot-tip { animation: none; opacity: .35; }
+@keyframes bbot-tip { 50% { opacity: .3; } }
+.bbot-st-working .bbot-led1, .bbot-st-typing .bbot-led1 { animation: bbot-tip .8s ease-in-out infinite; }
+.bbot-st-working .bbot-led2, .bbot-st-typing .bbot-led2 { animation: bbot-tip .8s ease-in-out .4s infinite; }
+.bbot-zz { animation: bbot-zz 3s ease-in-out infinite; }
+.bbot-zz2 { animation-delay: 1.5s; }
+@keyframes bbot-zz { 0% { opacity: 0; transform: translate(0, 2px); } 30% { opacity: 1; } 100% { opacity: 0; transform: translate(4px, -7px); } }
+@media (prefers-reduced-motion: reduce) { .bbot, .bbot * { animation: none !important; } }</style><g class="bbot-body"><rect x="30.8" y="3" width="2.4" height="7" rx="1.2" fill="#4B3BC4"/><circle class="bbot-tip" cx="32" cy="3.6" r="2.8" fill="#D4CDFF" stroke="#4B3BC4" stroke-width="1.5"/><path d="M22 9 H42 A14 14 0 0 1 56 23 V32 A14 14 0 0 1 42 46 H30 L17 57 L20 45.2 A14 14 0 0 1 8 32 V23 A14 14 0 0 1 22 9 Z" fill="#8B7CFF" stroke="#4B3BC4" stroke-width="2.5" stroke-linejoin="round"/><g><g class="bbot-blink"><rect x="19.5" y="19" width="8" height="13" rx="4" fill="#0F1013"/><circle cx="24.6" cy="23" r="1.5" fill="#fff" fill-opacity=".9"/><rect x="36.5" y="19" width="8" height="13" rx="4" fill="#0F1013"/><circle cx="41.6" cy="23" r="1.5" fill="#fff" fill-opacity=".9"/></g></g></g></svg>
