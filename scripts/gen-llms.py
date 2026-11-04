@@ -112,7 +112,7 @@ for g in order:
             '- Premium and artist themes: $1 each (VexVoid, NPG, NPGX, emoji themes), in the in-app Store or by agents through the Store API.',
             '- Theme edition (a branded wallet for a token community): $99 a year, inside bWalletX (Theme > Get your own edition) or through the Store API.',
             '- Branded edition with a business agent: from $999, by quote via %s/business-agents; agents can pay the deposit and send the brief through the Store API.' % BASE,
-            '- Store API for agents: GET %s/api/agent/products, POST /api/agent/quote (5-minute single-use quote in USD, sats and MNEE), POST /api/agent/buy (signed by the identity key, paid from the agent\'s BRC-100 wallet, granted to that key). MCP tools `list_products`, `quote`, `buy_product`. Discovery: %s/.well-known/agent.json and %s/.well-known/mcp.json.' % (BASE, BASE, BASE),
+            '- Store API for agents: GET %s/api/agent/products, POST /api/agent/quote (5-minute single-use quote in USD, sats and MNEE), POST /api/agent/buy (signed by the identity key, paid from the agent\'s BRC-100 wallet, granted to that key). Buy answers: 200 = bought; 202 = the payment is pending, not bought yet (repeat the same buy request until it answers 200, and don\'t pay again); 409 `payment_pending` = a payment for it is already on its way. MCP tools `list_products`, `quote`, `buy_product`. Discovery: %s/.well-known/agent.json and %s/.well-known/mcp.json.' % (BASE, BASE, BASE),
             '- Partners programme (earn, not buy): commission for referrals, see %s/partners.' % BASE]
     if g == 'Support':
         lines.append('- [Email support](mailto:support@bwalletx.com): support@bwalletx.com')

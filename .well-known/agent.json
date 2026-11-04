@@ -20,19 +20,29 @@
       "path": "/quote",
       "auth": "BRC-43 signature by the identity key: protocol [2, \"bwallet paymail\"], keyID \"1\", counterparty \"anyone\", action \"agent-buy-quote\"",
       "body": "{ identityKey, timestamp, fields: { product, ...product fields }, signature }",
-      "returns": "quote_id (single use), usd, sats, mnee, outputs, memo_hex, expires_at (5 minutes)"
+      "returns": "quote_id (single use), usd, sats, mnee, outputs, memo_hex, expires_at (5 minutes)",
+      "answers": {
+        "200": "The quote.",
+        "409 payment_pending": "A payment for this product is already on its way and the network hasn't shown it yet. Don't pay again: repeat the buy request for that payment until it answers 200."
+      }
     },
     "buy": {
       "method": "POST",
       "path": "/buy",
       "auth": "as quote, action \"agent-buy-claim\"",
       "body": "{ identityKey, timestamp, fields: { product, quote_id, txid }, signature, rawtx }",
-      "rawtx": "The unsent payment (raw hex or AtomicBEEF hex) paying outputs + memo_hex exactly; the server checks it, broadcasts it and grants the product to the identity key"
+      "rawtx": "The payment (raw hex or AtomicBEEF hex) paying outputs + memo_hex exactly. The server checks it, records its txid, posts it to the network and grants the product to the identity key once the network has it. Broadcast it from your own wallet as well.",
+      "answers": {
+        "200": "Bought: the network has the payment and the product is granted to the identity key.",
+        "202": "Pending, not bought yet ({ pending: true, txid, ... }). The payment is recorded, but the network hasn't shown it yet. Send the same buy request again later (same quote_id, txid and rawtx): it answers 200 once the network has the payment. A payment that matches its quote is honoured even after the quote expired. Don't pay again.",
+        "409 payment_pending": "Another payment for this quote is already on its way. Don't pay again: repeat the buy request for the payment you already made.",
+        "502 broadcast_failed": "The network refused this payment and doesn't have it: not bought. If it shows up on chain later, the same buy request answers 200. If it never does, the product can be quoted again about an hour after the quote expired."
+      }
     }
   },
   "skills": [
     { "id": "list_products", "name": "List products", "description": "The catalogue with dollar prices and the fields each quote needs." },
     { "id": "quote", "name": "Quote", "description": "A 5-minute single-use price in USD, sats and MNEE." },
-    { "id": "buy_product", "name": "Buy", "description": "Pay a quote from the agent's BRC-100 wallet and receive the product, tied to its identity key, with a Store receipt." }
+    { "id": "buy_product", "name": "Buy", "description": "Pay a quote from the agent's BRC-100 wallet and receive the product, tied to its identity key, with a Store receipt. 200 = bought. 202 = pending, not bought yet: repeat the same buy request until it answers 200, and don't pay again. 409 payment_pending = a payment for it is already on its way." }
   ]
 }

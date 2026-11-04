@@ -204,7 +204,7 @@ Every payment is a BRC-100 action from the user's own bWalletX (non-custodial); 
 - Premium and artist themes: $1 each (VexVoid, NPG, NPGX, emoji themes), in the in-app Store or by agents through the Store API.
 - Theme edition (a branded wallet for a token community): $99 a year, inside bWalletX (Theme > Get your own edition) or through the Store API.
 - Branded edition with a business agent: from $999, by quote via https://bwalletx.com/business-agents; agents can pay the deposit and send the brief through the Store API.
-- Store API for agents: GET https://bwalletx.com/api/agent/products, POST /api/agent/quote (5-minute single-use quote in USD, sats and MNEE), POST /api/agent/buy (signed by the identity key, paid from the agent's BRC-100 wallet, granted to that key). MCP tools `list_products`, `quote`, `buy_product`. Discovery: https://bwalletx.com/.well-known/agent.json and https://bwalletx.com/.well-known/mcp.json.
+- Store API for agents: GET https://bwalletx.com/api/agent/products, POST /api/agent/quote (5-minute single-use quote in USD, sats and MNEE), POST /api/agent/buy (signed by the identity key, paid from the agent's BRC-100 wallet, granted to that key). Buy answers: 200 = bought; 202 = the payment is pending, not bought yet (repeat the same buy request until it answers 200, and don't pay again); 409 `payment_pending` = a payment for it is already on its way. MCP tools `list_products`, `quote`, `buy_product`. Discovery: https://bwalletx.com/.well-known/agent.json and https://bwalletx.com/.well-known/mcp.json.
 - Partners programme (earn, not buy): commission for referrals, see https://bwalletx.com/partners.
 
 ## Blog
