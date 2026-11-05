@@ -53,6 +53,7 @@
       .steps span { color: #a7adb8; font-size: .95rem; }
       .tag { display: inline-block; font-size: 0.72rem; font-weight: 700; padding: 2px 9px; border-radius: 999px; background: #ffffff14; color: #cfcabd; }
       .tag.first { background: #C8F03C; color: #000; }
+      .tag.live { background: #F5B800; color: #000; }
       .status { list-style: none; padding: 0; margin: 12px 0; }
       .status li { padding: 10px 0; border-bottom: 1px solid #ffffff0d; display: flex; gap: 12px; align-items: baseline; }
       .status .tag { flex: none; min-width: 64px; text-align: center; }
@@ -75,9 +76,9 @@
     </header>
     <script src="/nav.js"></script>
     <main class="ext" style="--c:#C8F03C">
-      <p class="kicker">Part of the b family · <b>Coming</b></p>
+      <p class="kicker">Part of the b family · <b>Livestreams live · events coming</b></p>
       <h1>bTickets<i>X</i>: tickets you actually own.</h1>
-      <p class="lede">Event tickets that land in your bWalletX. At the door you show a code that changes every few seconds, so a screenshot or a copied PDF won&rsquo;t get anyone in. Can&rsquo;t go? Resell it through bTicketsX. Nothing here is live yet: this page says what we&rsquo;re building.</p>
+      <p class="lede">Event tickets that land in your bWalletX. At the door you show a code that changes every few seconds, so a screenshot or a copied PDF won&rsquo;t get anyone in. Can&rsquo;t go? Resell it through bTicketsX. Tickets to <a href="#livestream">livestreams</a> work today in bWalletX; tickets to events are what we&rsquo;re building next.</p>
       <div class="row"><a class="btn btn-store" href="https://bticketsx.com" target="_blank" rel="noopener">See bticketsx.com</a><a class="btn btn-store btn-ghost" href="/get">Get bWalletX</a></div>
 
       <div class="tk" role="img" aria-label="An example ticket: Friday Night Live, general admission, doors 19:00, ticket number 0142, with a code that changes at the door.">
@@ -111,16 +112,27 @@
         <li><b>Splits everyone signed</b><span>Agree the venue and artist splits in <a href="https://bsignx.com">bSignX</a> before tickets go on sale.</span></li>
       </ol>
 
+      <h2 id="livestream">Tickets to a livestream</h2>
+      <p>For a livestream, your ticket is the creator&rsquo;s token. Hold it and you&rsquo;re in their live room in bWalletX. See <a href="/live">Live in bWalletX</a>.</p>
+      <ol class="steps">
+        <li><b>Hold the token, you&rsquo;re in</b><span>A creator sets their room to &ldquo;hold the token to enter&rdquo;. The server checks on every visit, so selling the token closes the door.</span></li>
+        <li><b>Watch and chat live</b><span>The creator goes live in a Space in the room: audio and video, with chat. They can bring you on stage.</span></li>
+        <li><b>Or pay as you watch</b><span>A creator can charge by the minute instead, paid wallet to wallet with a spending cap you set. Tip whoever&rsquo;s on stage.</span></li>
+      </ol>
+
       <h2>Where it is</h2>
       <ul class="status">
+        <li><span class="tag live">Live</span>Livestream tickets: hold a creator&rsquo;s token to enter their live room (bWalletX; not the store edition)</li>
+        <li><span class="tag live">Live</span>Pay-per-minute livestreams with a spending cap, and tips on stage (bWalletX; not the store edition)</li>
+        <li><span class="tag">Coming</span>A one-off livestream ticket that&rsquo;s used up when you enter</li>
         <li><span class="tag first">First</span>No-cost RSVP tickets, starting with our own events</li>
         <li><span class="tag">Coming</span>Paid tickets in BSV, straight to the organiser&rsquo;s wallet</li>
         <li><span class="tag">Coming</span>Reselling tickets through bTicketsX</li>
       </ul>
-      <p>None of this is live yet. We&rsquo;ll mark each line Live here when it ships.</p>
+      <p>Event tickets aren&rsquo;t live yet. We&rsquo;ll mark each line Live here when it ships.</p>
 
       <a class="fam" href="/b-family"><img src="/logo.svg" alt="" width="34" height="30" /><div><b>Part of the bWalletX family</b><br /><span>See every b app and what works today &rarr;</span></div></a>
-      <p class="small">bTicketsX is in design. bWalletX is in beta: test with small amounts. Questions: <a href="mailto:support@bwalletx.com">support@bwalletx.com</a></p>
+      <p class="small">Event tickets in bTicketsX are in design. bWalletX is in beta: test with small amounts. Questions: <a href="mailto:support@bwalletx.com">support@bwalletx.com</a></p>
     </main>
     <footer class="foot">
       <div class="wrap">

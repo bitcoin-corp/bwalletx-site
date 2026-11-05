@@ -168,6 +168,11 @@
   ],
   "redirects": [
     {
+      "source": "/livestream",
+      "destination": "/live",
+      "permanent": false
+    },
+    {
       "source": "/pownotes",
       "destination": "/pow-notes",
       "permanent": true

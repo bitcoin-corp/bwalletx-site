@@ -10640,11 +10640,11 @@ Tell us your brand, your colours, a link to your logo and which edition you want
 
 Source: https://bwalletx.com/tickets
 
-Part of the b family · Coming
+Part of the b family · Livestreams live · events coming
 
 # bTicketsX: tickets you actually own.
 
-Event tickets that land in your bWalletX. At the door you show a code that changes every few seconds, so a screenshot or a copied PDF won’t get anyone in. Can’t go? Resell it through bTicketsX. Nothing here is live yet: this page says what we’re building.
+Event tickets that land in your bWalletX. At the door you show a code that changes every few seconds, so a screenshot or a copied PDF won’t get anyone in. Can’t go? Resell it through bTicketsX. Tickets to [livestreams](#livestream) work today in bWalletX; tickets to events are what we’re building next.
 
 [See bticketsx.com](https://bticketsx.com)[Get bWalletX](https://bwalletx.com/get)
 
@@ -10682,7 +10682,23 @@ An example of how a ticket will look in your wallet. The event is made up.
 
 - Splits everyone signedAgree the venue and artist splits in [bSignX](https://bsignx.com) before tickets go on sale.
 
+## Tickets to a livestream
+
+For a livestream, your ticket is the creator’s token. Hold it and you’re in their live room in bWalletX. See [Live in bWalletX](https://bwalletx.com/live).
+
+- Hold the token, you’re inA creator sets their room to “hold the token to enter”. The server checks on every visit, so selling the token closes the door.
+
+- Watch and chat liveThe creator goes live in a Space in the room: audio and video, with chat. They can bring you on stage.
+
+- Or pay as you watchA creator can charge by the minute instead, paid wallet to wallet with a spending cap you set. Tip whoever’s on stage.
+
 ## Where it is
+
+- LiveLivestream tickets: hold a creator’s token to enter their live room (bWalletX; not the store edition)
+
+- LivePay-per-minute livestreams with a spending cap, and tips on stage (bWalletX; not the store edition)
+
+- ComingA one-off livestream ticket that’s used up when you enter
 
 - FirstNo-cost RSVP tickets, starting with our own events
 
@@ -10690,11 +10706,11 @@ An example of how a ticket will look in your wallet. The event is made up.
 
 - ComingReselling tickets through bTicketsX
 
-None of this is live yet. We’ll mark each line Live here when it ships.
+Event tickets aren’t live yet. We’ll mark each line Live here when it ships.
 
 [Part of the bWalletX familySee every b app and what works today →](https://bwalletx.com/b-family)
 
-bTicketsX is in design. bWalletX is in beta: test with small amounts. Questions: [support@bwalletx.com](mailto:support@bwalletx.com)
+Event tickets in bTicketsX are in design. bWalletX is in beta: test with small amounts. Questions: [support@bwalletx.com](mailto:support@bwalletx.com)
 
 ---
 
