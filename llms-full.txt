@@ -1,6 +1,6 @@
 # bWalletX: full site text
 
-Generated 2026-11-04 from https://bwalletx.com. Source pages are linked above each section.
+Generated 2026-11-05 from https://bwalletx.com. Source pages are linked above each section.
 
 ---
 
@@ -19892,7 +19892,7 @@ Source: https://bwalletx.com/privacy
 
 # Privacy Policy
 
-bWalletX (Beta) · Effective 6 October 2026 · Updated 25 October 2026
+bWalletX (Beta) · Effective 6 October 2026 · Updated 5 November 2026
 
 bWalletX is published by The Bitcoin Corporation Ltd and is based on the open-source Yours Wallet (MIT licence).
 It is not made, reviewed or endorsed by the Yours Wallet authors. This policy covers bWalletX (the full-feature
@@ -20123,6 +20123,69 @@ Settings › Testing, the app sends one check-in a day while it is open: a rando
 phone, your tester code or email, which app store installed it (so we know it came from Google Play) and the app
 version. It sends nothing about your keys, addresses, balances or activity. Unlink in Settings › Testing to
 stop. Payment never depends on ratings or reviews. Ask us to delete your tester record at any time.
+
+## Newsletter, tester news and investor updates
+
+Who we are. The Bitcoin Corporation Ltd (company no. 16735102), Flat 6, 315 Barking Road, London E13 8EE,
+is the controller. Contact: support@bwalletx.com.
+
+What we collect, and why.
+
+-
+Your email, your name if you give it, and the lists you choose (monthly round-up, tester news): to send
+you what you asked for. Lawful basis: your consent (UK GDPR Art 6(1)(a)).
+
+-
+When you signed up and confirmed, the page you signed up on, and your IP address at sign-up: to show you
+agreed, as the law requires, and to spot abuse. Lawful basis: legal obligation (6(1)(c)) for the record of your
+consent, and legitimate interests (6(1)(f)) for your IP address and spotting abuse.
+
+-
+For investor updates: your name, email and anything you tell us: to check you're on our register of
+members, then send the updates. Lawful basis: your consent (6(1)(a)); the check is in our legitimate interests
+(6(1)(f)), so updates go only to shareholders.
+
+We email only after you confirm. If you don't click the confirmation link, we may send you one
+reminder to confirm, and nothing else. No newsletter goes to an unconfirmed address.
+
+Who handles it.
+
+-
+It is stored by The Bitcoin Corporation Ltd on our own server (`push.bwalletx.com`, which we rent
+from Hetzner).
+
+-
+Resend sends our emails for us, as our processor under a data processing agreement. Your email address
+may be processed in the United States, under the UK Addendum to the EU Standard Contractual Clauses in our
+agreement with Resend.
+
+- Never sold or shared for advertising. We never put it on chain.
+
+How long we keep it.
+
+-
+While you're subscribed. If you unsubscribe, we stop emailing you at once and keep your record, marked
+unsubscribed, so we never email you again by mistake. Ask us and we'll delete everything except your email
+address and the date.
+
+- Unconfirmed sign-ups: 3 years from the day you signed up, then deleted.
+
+- Proof of your consent: while you're subscribed, plus 3 years.
+
+- Investor-update requests: kept with our decision; ask us to delete them at any time.
+
+Your choices and rights.
+
+-
+Unsubscribe in one click from the link in any email. It takes effect at once and stops all our
+newsletter emails.
+
+- You can ask to see, correct or delete your data, or object to how we use it: write to support@bwalletx.com.
+
+- You can complain to the Information Commissioner's Office: ico.org.uk, 0303 123 1113.
+
+Investor updates aren't offers. They go only to existing shareholders. Nothing we email is an offer of
+shares or tokens.
 
 ## Your choices
 
