@@ -20223,7 +20223,9 @@ What we send:
 
 - if you don't confirm, one reminder after 3 days, and nothing more;
 
-- once you've confirmed, one email when applications open.
+- once you've confirmed, we'll email you once when applications open.
+
+When you confirm, your name, email and portfolio link are also emailed to our director, so he can contact you when applications open.
 
 Why, and the lawful basis:
 
@@ -20236,11 +20238,11 @@ support@bwalletx.com, and we'll delete your sign-up.
 How long we keep it:
 
 -
-If you confirmed: until 6 months after applications open, then deleted. If applications haven't opened
-within 12 months of your sign-up, we delete it then.
+If you confirmed: until 6 months after applications open, then deleted or anonymised. If applications haven't opened
+within 12 months of your sign-up, we delete or anonymise it then.
 
 -
-If you never confirmed: we keep the unconfirmed request for 3 years from sign-up, then delete it. We never
+If you never confirmed: we keep the unconfirmed request for 3 years from sign-up, then delete or anonymise it. We never
 email it again after the one reminder.
 
 Who handles it. It's stored on our own server (`push.bwalletx.com`, which we rent from Hetzner).
