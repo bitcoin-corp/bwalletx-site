@@ -1,6 +1,6 @@
 # bWalletX: full site text
 
-Generated 2026-11-05 from https://bwalletx.com. Source pages are linked above each section.
+Generated 2026-11-06 from https://bwalletx.com. Source pages are linked above each section.
 
 ---
 
@@ -2720,7 +2720,7 @@ Reported 22 Oct 2026
 -
 
 ### Show my 12 words asked for a password you never set
-Fixed in 5.2.50
+Fixed in 5.2.49
 
 If you made your wallet with a passkey, Show my 12 words now has Use my passkey, so you can see your words without a password.
 
@@ -2729,7 +2729,7 @@ Fixed 23 Oct 2026
 -
 
 ### Passkey sign-in in the Chrome extension
-Fixed in 5.2.50
+Fixed in 5.2.49
 
 Passkey sign-in was briefly taken out of the extension, then restored in the next release. A user confirmed it works.
 
@@ -2738,7 +2738,7 @@ Fixed 22 Oct 2026
 -
 
 ### Crash when opening the wallet after signing out and back in
-Fixed in 5.2.50
+Fixed in 5.2.49
 
 The wallet showed an error about “identityAddress” instead of opening. It now opens normally.
 
@@ -2747,7 +2747,7 @@ Fixed 22 Oct 2026
 -
 
 ### Balance stuck on “Still syncing” after a backup at sign-up
-Fixed in 5.2.50
+Fixed in 5.2.49
 
 Making a backup during sign-up no longer stalls your balance, and encrypted backups save every time.
 
@@ -7429,7 +7429,12 @@ Each release ships to the Android APK, the Chrome extension and the web wallet. 
 
 [Download bWalletX](https://bwalletx.com/download)
 
-## 5.2.50 2026-11-01
+## 5.2.50 2026-11-06
+
+- Privacy: photos and videos that still carry the place they were taken (GPS location data) can no longer be revealed, made public or posted to the feed. Private mints say so. This stays until the wallet can strip location data itself.
+- The iPhone App Store build of this version is coming soon. Android, Chrome and web have it now.
+
+## 5.2.49 2026-11-01
 
 - bCredits now show in dollars and cents ($ and ¢), the same currency b charges in.
 - Recovery phrases in Spanish, and other languages with accented words, are now recognised when you restore your wallet.
@@ -11981,7 +11986,7 @@ By default, one thing: holders can enter the coin’s bChat room. Anything else 
 
 ## Creator vesting and airdrops
 
-- LiveCreator vesting. Creators can keep 0 to 20% (default 10%), always time-locked: by default a 12-month cliff, then 24 months of linear unlocking, never less than 6 months, with a public receipt. Live since 5.2.32. Personal token locks are live too (5.2.50). See [Token locking](https://bwalletx.com/token-locking).
+- LiveCreator vesting. Creators can keep 0 to 20% (default 10%), always time-locked: by default a 12-month cliff, then 24 months of linear unlocking, never less than 6 months, with a public receipt. Live since 5.2.32. Personal token locks are live too (5.2.49). See [Token locking](https://bwalletx.com/token-locking).
 
 - LiveAirdrops to holders. The way to reward holders is to send them tokens. Holders receive and keep airdrops in the inbox (5.1.85). Issuers can send tokens or BSV to every holder with one approval (5.2.32, bWalletX only). See [Airdrops](https://bwalletx.com/airdrops).
 
@@ -12856,7 +12861,7 @@ Source: https://bwalletx.com/token-locking
 
 [Lock BSV](https://bwalletx.com/lock) is live: BSV locked until a block height, and nobody can move it before then, not even you. Token locking does the same for tokens.
 
-Live Personal token locks shipped in 5.2.50. Creator vesting at launch shipped in 5.2.32. Locked airdrops are still coming.
+Live Personal token locks shipped in 5.2.49. Creator vesting at launch shipped in 5.2.32. Locked airdrops are still coming.
 
 ## Creator vesting at launch: prove you won’t dump
 
@@ -12870,7 +12875,7 @@ When you launch a coin, you can keep a share for yourself, locked so you can’t
 
 ## Personal token locks
 
-Live Lock BSV-21 tokens until a date, with an on-chain receipt. In the Wallet, swipe a token row and tap Lock. Your token locks are listed in Locks & Pots › Locks, under Token locks. On a new device, Find my token locks finds them again from your recovery phrase. Live since 5.2.50.
+Live Lock BSV-21 tokens until a date, with an on-chain receipt. In the Wallet, swipe a token row and tap Lock. Your token locks are listed in Locks & Pots › Locks, under Token locks. On a new device, Find my token locks finds them again from your recovery phrase. Live since 5.2.49.
 
 ## Locked airdrops
 
