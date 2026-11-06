@@ -2898,6 +2898,241 @@ See also: [b-Aware](https://bwalletx.com/b-Aware) · [Feedback](https://bwalletx
 
 ---
 
+Source: https://bwalletx.com/build-on-b
+
+## Start building on b
+
+bWalletX is our BRC-100 wallet. Around it we build open tools: sign-in and payments for your site, a wallet for your AI agents, on-chain sites with b0-x, and paid work on our own apps through Kintsugi. Here is what works today, and what is coming.
+
+## Start in 5 minutes
+
+-
+
+### Get bWalletX Live
+
+Install the wallet you will build and test with: the web app, the Chrome extension or Android. It is in beta, so test with small amounts.
+
+[Get bWalletX →](https://bwalletx.com/get?from=build-on-b) · [Which edition to test with](https://docs.bwalletx.com/use/editions/)
+
+-
+
+### Add Connect to your site Live
+
+One script tag and one button give your site a BRC-100 wallet. No API keys and no account with us.
+
+``<script src="https://bwalletx.com/connect.js"></script>``Copy
+
+[The quick start →](https://bwalletx.com/developers) · [Sign in with bWalletX, with server code](https://bwalletx.com/connect)
+
+-
+
+### Check your site with b0-x Live Early access
+
+Drop your built site folder into b0-x. In your browser, it lists what would go on chain, flags links that would break and estimates the cost. Nothing is uploaded. Publishing on chain is in early access; deploys from Vercel or GitHub are coming.
+
+[Open b0-x New project →](https://b0-x.com/new) · [The b0-x docs (draft)](https://b0-x.com/docs)
+
+-
+
+### Put your app in the wallet Live
+
+Send us your app for the Apps screen in bWalletX. A person reviews it, and approved apps ship in the next wallet release. Apps open in the wallet's own browser with BRC-100 sign-in and payments. To try it on your own phone now, open Apps in the wallet and tap + Add app.
+
+[Add your app →](https://bwalletx.com/apps/add)
+
+-
+
+### Take a paid Kintsugi task Live
+
+Kintsugi is how The Bitcoin Corporation contracts the work on bWalletX, bChatX and the b*X apps. Pick a task with a fixed price, sign the contract in bChatX, deliver, and get paid in BSV, in full. There is no Kintsugi fee.
+
+[See the open tasks →](https://www.bchatx.com/kintsugi) · [How Kintsugi works](https://bkintsugix.com)
+
+## The tools
+
+Each one links to its real docs, package or source. Checked on 6 November 2026.
+
+-
+
+### bWalletX
+Live
+
+Our wallet, built on the open BRC-100 interface. Web, Chrome extension and Android, with CLI and MCP editions for agents.
+
+[Get it](https://bwalletx.com/get?from=build-on-b)[Docs](https://docs.bwalletx.com/)[Source](https://github.com/bitcoin-corp/bwallet)
+
+-
+
+### Connect `@bwalletx/connect`
+Live
+
+Version 0.7.0. Sign in with bWalletX, a React provider, Next.js routes, pay and tip helpers, server-side payment checks and a wallet picker. Works with any BRC-100 wallet, including Metanet Desktop on its own tap.
+
+[npm](https://www.npmjs.com/package/@bwalletx/connect)[GitHub](https://github.com/bitcoin-corp/bwalletx-connect)[The button](https://bwalletx.com/sign-in-button)
+
+-
+
+### bwalletx CLI
+Live
+
+Version 0.5.0. Run bWalletX agent accounts from the terminal: balances, sends, buys and strategies, behind a kill switch, a daily cap and a rate limit.
+
+[npm](https://www.npmjs.com/package/bwalletx)[GitHub](https://github.com/bitcoin-corp/bwalletx-cli)[CLI page](https://bwalletx.com/cli)
+
+-
+
+### MCP server
+Live
+
+`bwalletx mcp` lets Claude, Cursor or any MCP agent use an agent account you give it, within its budget and limits. Agents can stop everything, but never loosen a limit.
+
+[Set it up](https://bwalletx.com/mcp)[Agent docs](https://docs.bwalletx.com/use/agents/)
+
+-
+
+### `bwalletx serve`
+Live
+
+Turns a key-file agent account into a full BRC-100 wallet on localhost:3321, where BRC-100 sites already look for a desktop wallet. Only the origins you allow get an answer.
+
+[README](https://github.com/bitcoin-corp/bwalletx-cli#brc-100-wallet-for-sites-serve)
+
+-
+
+### b0-x New project
+Live
+
+Checks a built site folder the way the publisher does: what gets inscribed, what is skipped, which links would break, and an estimate of the cost. It stays in your browser.
+
+[Open it](https://b0-x.com/new)[Pricing](https://b0-x.com/pricing)
+
+-
+
+### b0-x gateway
+Live
+
+Serves sites published on Bitcoin SV at `b0-x.com/s/<name>/`: each file an inscription, plus an ORDFS directory. bFriendsX and bVideoX are there now.
+
+[Storage](https://b0-x.com/storage)[See one](https://b0-x.com/s/bfriendsx/)
+
+-
+
+### b0-x publisher
+Early access
+
+`pnpm publish-site` puts a static site on chain. A dry run lists every file, flags broken links and prints the fee. Broadcasting signs with b0-x's own key, so for now b0-x runs it.
+
+[Source](https://github.com/bitcoin-corp/b0x-site/tree/main/tools/publish)[Docs](https://b0-x.com/docs)[How it works](https://b0-x.com/publish)
+
+-
+
+### b0-x Deploy, Names and CLI
+Coming soon
+
+Import a project from Vercel or GitHub, build it, publish it, and point an OpNS name at the version you choose. The `b0-x` commands in the docs are a draft and don't exist yet.
+
+[Deploy](https://b0-x.com/deploy)[Names](https://b0-x.com/names)
+
+-
+
+### Apps in bWalletX
+Live
+
+Submit your site for the Apps screen. A person reviews it; approved apps ship in the next wallet release, and open with BRC-100 sign-in and payments.
+
+[Add your app](https://bwalletx.com/apps/add)[What users see](https://docs.bwalletx.com/use/apps-websites/)
+
+-
+
+### bApp shell
+Coming soon
+
+A `/.well-known/bapp.json` manifest and the five-slot bar (Wallet, Exchange, b, Feed, Chat) for your app. The web components are in `@bwalletx/connect/shell` now; bWalletX driving your app from its own dock is coming.
+
+[Shell protocol](https://github.com/bitcoin-corp/bwalletx-connect/blob/main/docs/SHELL-PROTOCOL.md)
+
+-
+
+### Kintsugi
+Live
+
+Paid tasks on bWalletX, bChatX and the b*X apps. Each has a fixed price in a contract you sign before you start. Paid in BSV to your wallet, in full. Larger development work for verified builders is coming.
+
+[Task board](https://www.bchatx.com/kintsugi)[bkintsugix.com](https://bkintsugix.com)
+
+-
+
+### bGitX
+Live
+
+Connect your GitHub repos, give each one a room in bChatX, and let Kintsugi fix and build by pull request. Nothing merges without your OK.
+
+[bgitx.com](https://bgitx.com)[On bWalletX](https://bwalletx.com/bgitx)
+
+-
+
+### BRC standards
+Open standard
+
+The open BSV standards our tools follow. BRC-100 is the wallet interface: build against it once and every BRC-100 wallet works.
+
+[BRC-100](https://github.com/bitcoin-sv/BRCs/blob/master/wallet/0100.md)[All BRCs](https://github.com/bitcoin-sv/BRCs)
+
+## Code you can copy
+
+Copied from the real READMEs and pages, linked under each one.
+
+### A Connect button on any page Live
+
+``<script src="https://bwalletx.com/connect.js"></script>``Copy
+
+``<button id="connect">Connect with bWalletX</button>
+<script>
+bWalletX.button('#connect', async ({ wallet, identityKey }) => {
+// wallet is a BRC-100 WalletInterface, the same API as window.CWI
+console.log('Connected', identityKey);
+});
+</script>``CopyFrom [bwalletx.com/developers](https://bwalletx.com/developers)
+
+### Sign-in with a bundler Live
+
+``pnpm add @bwalletx/connect @bsv/sdk``Copy
+
+``<BwalletXProvider challengeUrl="/api/bwalletx/challenge" verifyUrl="/api/bwalletx/verify"
+logoutUrl="/api/bwalletx/logout" sessionUrl="/api/bwalletx/session">
+<BwalletxSignin size="sm" /> {/* in your header; that's all */}
+</BwalletXProvider>``CopyThe three routes come from `@bwalletx/connect/next`. From the [@bwalletx/connect README](https://github.com/bitcoin-corp/bwalletx-connect#drop-in-provider--one-element--3-routes)
+
+### Give your AI agent a wallet Live
+
+``npm i -g bwalletx
+bwalletx login --account phone # pair with your agent account in bWalletX``Copy
+
+``claude mcp add bwalletx -- npx -y bwalletx mcp``CopyPaired accounts need no passphrase: your phone signs. From [bwalletx.com/mcp](https://bwalletx.com/mcp)
+
+### Check a site for on-chain publishing Early access
+
+``$ pnpm publish-site <dir> [--name x] [--owner <pubkey>] [--source <domain>]
+[--fee 100] [--relative] [--max-tx-mb 9.5] [--broadcast]``CopyA dry run by default: nothing is broadcast. `--broadcast` is owner only for now. From the [b0-x docs](https://b0-x.com/docs)
+
+### The bApp shell Coming soon in the wallet
+
+``<bwalletx-topbar drawer="sections"></bwalletx-topbar>
+<main>…</main>
+<bwalletx-drawer id="sections"></bwalletx-drawer>
+<bwalletx-bar active="feed"></bwalletx-bar>
+<script type="module">
+import { defineBappShell, loadManifest, applyManifest, startShellBridge } from '@bwalletx/connect/shell';
+defineBappShell();
+const manifest = await loadManifest(); // fetches and validates /.well-known/bapp.json
+applyManifest(manifest);
+startShellBridge({ manifest }); // inside bWalletX: hide the bar, follow the wallet's dock
+</script>``CopyOn the web the package draws the bar today. From the [@bwalletx/connect README](https://github.com/bitcoin-corp/bwalletx-connect#bapp-shell)
+
+Questions: [support@bwalletx.com](mailto:support@bwalletx.com) · Docs: [docs.bwalletx.com](https://docs.bwalletx.com/) · Everything we build through Kintsugi is open source under the Open BSV License. Related: [Developers](https://bwalletx.com/developers) · [Open source](https://bwalletx.com/open-source) · [Roadmap](https://bwalletx.com/roadmap).
+
+---
+
 Source: https://bwalletx.com/business-agents
 
 bRand  Business agents
@@ -14396,6 +14631,8 @@ Source: https://bwalletx.com/developers
 One script gives your site a standard BRC-100 wallet. No API keys, no sign-up, and nothing passes through our servers: your page talks straight to the user's wallet.
 
 [Read the docs →](https://docs.bwalletx.com/)
+
+New to our stack? [Build on b](https://bwalletx.com/build-on-b) walks through every tool, from Connect to the CLI, b0-x and paid Kintsugi tasks.
 
 The full developer guides live at [docs.bwalletx.com](https://docs.bwalletx.com/): [connect your site](https://docs.bwalletx.com/developers/connect/), [payments](https://docs.bwalletx.com/developers/payments/), [public APIs](https://docs.bwalletx.com/developers/public-apis/), [name bindings](https://docs.bwalletx.com/developers/name-bindings/), [strategy format](https://docs.bwalletx.com/developers/strategy-format/), [store receipts](https://docs.bwalletx.com/developers/store-receipts/), [stack recipes](https://docs.bwalletx.com/developers/stack-recipes/), [open source](https://docs.bwalletx.com/developers/open-source/) and [error codes](https://docs.bwalletx.com/errors/). This page is the quick start.
 
