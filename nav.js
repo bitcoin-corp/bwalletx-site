@@ -93,9 +93,10 @@
           { label: 'Branded wallets', href: '/clients' },
           { label: 'Add bWalletX to your site', href: '/direct' }
         ] },
-      { key: 'build', label: 'Build', href: '/developers', pages: ['/developers', '/build-on-b', '/agent', '/ask-b', '/talk-to-b', '/agents', '/strategies', '/strategies/spec', '/cli', '/mcp', '/connect', '/sign-in-button', '/apps/add', '/open-source', '/releases', '/roadmap', '/on-b', '/your-apps-on-b', '/hold-to-talk'],
+      { key: 'build', label: 'Build', href: '/developers', pages: ['/developers', '/api', '/build-on-b', '/agent', '/ask-b', '/talk-to-b', '/agents', '/strategies', '/strategies/spec', '/cli', '/mcp', '/connect', '/sign-in-button', '/apps/add', '/open-source', '/releases', '/roadmap', '/on-b', '/your-apps-on-b', '/hold-to-talk'],
         sub: [
           { label: 'Developers', href: '/developers', ov: 1 },
+          { label: 'API', href: '/api' },
           { label: 'Build on b', href: '/build-on-b' },
           { label: 'b agent', href: '/agent', also: ['/ask-b', '/talk-to-b', '/hold-to-talk'] },
           { label: 'Agent accounts', href: '/agents' },

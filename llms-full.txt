@@ -1,6 +1,6 @@
 # bWalletX: full site text
 
-Generated 2026-11-06 from https://bwalletx.com. Source pages are linked above each section.
+Generated 2026-11-07 from https://bwalletx.com. Source pages are linked above each section.
 
 ---
 
@@ -13869,6 +13869,112 @@ Agent accounts spend real money: start with small amounts. Questions: [support@b
 
 ---
 
+Source: https://bwalletx.com/api
+
+bWalletX API
+
+# Connect to the bWalletX API
+
+bWalletX speaks BRC-100, the open wallet standard. Connect your wallet below to see it answer. Then pick how you want to build. No API keys, no sign-up.
+
+## Try it now
+
+Read-only. This page never asks for a payment and never spends.
+
+Connect bWalletX
+Sign a test message
+Disconnect
+
+Not connected.
+
+Identity keyCopy
+Network
+Wallet version
+Connected via
+Name
+
+- On a computer: [install the bWalletX extension](https://bwalletx.com/extension) for Chrome or Brave, then reload this page.
+
+- On a phone: open bwalletx.com/api in the browser inside the bWalletX app.
+
+- Phone or web wallet with a QR code: see [Sign in with bWalletX](https://bwalletx.com/connect).
+
+Signed with your identity key (protocol `[1, "bwalletx api test"]`, key ID `1`, counterparty `anyone`). Nothing was sent anywhere.
+
+````
+
+The name comes from our public paymail lookup (`pay.bwallet.space`), which is the only request this page makes for you. Disconnect makes this page forget your wallet.
+
+## Pick your route
+
+### Connect in the browser
+
+One script finds bWalletX by BRC-100 discovery. You get the full wallet interface, the same as `window.CWI`.
+
+``<script src="https://bwalletx.com/connect.js"></script>
+const { wallet, identityKey } = await bWalletX.connect();
+const { signature } = await wallet.createSignature({ data, protocolID: [1, 'my app'], keyID: '1' });``
+
+[Developers quick start →](https://bwalletx.com/developers) · [@bwalletx/connect](https://www.npmjs.com/package/@bwalletx/connect)
+
+### Sign in with bWalletX
+
+The wallet signs a one-time challenge from your server. Your server checks it with `@bsv/sdk`. The identity key is the user ID.
+
+``<script src="https://bwalletx.com/connect.js"></script>
+const r = await bWalletX.signIn({ challenge: (identityKey) => post('/auth/bwalletx/challenge', { identityKey }) });
+await post('/auth/bwalletx/verify', { identityKey: r.identityKey, nonce: r.nonce, signature: r.signature });``
+
+[Sign-in guide →](https://bwalletx.com/connect) · [the button](https://bwalletx.com/sign-in-button)
+
+### Local agent API and MCP
+
+`bwalletx serve` runs an agent account as a BRC-100 wallet on `localhost:3321`, where sites already look for a desktop wallet. `bwalletx mcp` gives AI agents the same account, inside your limits.
+
+``npm i -g bwalletx
+bwalletx serve -a trader --origin localhost:3000 # key-file agent accounts only
+claude mcp add bwalletx -- npx -y bwalletx mcp``
+
+[CLI →](https://bwalletx.com/cli) · [MCP →](https://bwalletx.com/mcp)
+
+### Public read APIs
+
+Open endpoints, no key: look up names and profiles for a wallet, and let agents list and buy Store items with their own wallet.
+
+``curl 'https://pay.bwallet.space/api/paymail/lookup?key=<identityKey>'
+curl https://pay.bwallet.space/api/paymail/id/npg@bwalletx.com
+curl https://bwalletx.com/api/agent/products``
+
+[Public APIs →](https://docs.bwalletx.com/developers/public-apis/) · [agent.json](https://bwalletx.com/.well-known/agent.json)
+
+## What works today
+
+- ✓ LiveConnect from Chrome or Brave with the bWalletX extension, or from the browser inside the bWalletX app
+
+- ✓ LiveEvery BRC-100 call (sign, encrypt, pay, keys), each one approved by the user in their wallet
+
+- ✓ LiveSign in with bWalletX: `connect.js` and `@bwalletx/connect` 0.7.0 on npm. You run the two server routes
+
+- ✓ LivePhone and web wallet pairing by QR code, on the [sign-in guide](https://bwalletx.com/connect)
+
+- ✓ Live`bwalletx serve` on localhost:3321 and `bwalletx mcp` (CLI 0.5.0 on npm)
+
+- ✓ LivePublic read APIs: paymail names, profiles and the name log, and the agent Store API
+
+- Not builtPhone pairing on this page. Use the [sign-in guide](https://bwalletx.com/connect) for now.
+
+- Not builtWebhooks. Nothing calls your server when something happens in a wallet.
+
+- Not builtAn account API with API keys. No server-side access to a user's wallet or balance; everything goes through the user's own wallet.
+
+- Not builtHosted sign-in or an OAuth-style redirect. You verify the signature on your own server.
+
+- Not builtA test wallet. No testnet build or headless bWalletX; test your server with `ProtoWallet` from `@bsv/sdk`.
+
+Full guides: [docs.bwalletx.com](https://docs.bwalletx.com/developers/connect/) · All the tools: [Build on b](https://bwalletx.com/build-on-b) · Questions: [support@bwalletx.com](mailto:support@bwalletx.com)
+
+---
+
 Source: https://bwalletx.com/apps/add
 
 # Add your app to bWallet
@@ -14631,6 +14737,8 @@ Source: https://bwalletx.com/developers
 One script gives your site a standard BRC-100 wallet. No API keys, no sign-up, and nothing passes through our servers: your page talks straight to the user's wallet.
 
 [Read the docs →](https://docs.bwalletx.com/)
+
+Want to try it first? [Connect your wallet on the API page](https://bwalletx.com/api), then pick a route: browser, sign-in or a local agent wallet.
 
 New to our stack? [Build on b](https://bwalletx.com/build-on-b) walks through every tool, from Connect to the CLI, b0-x and paid Kintsugi tasks.
 

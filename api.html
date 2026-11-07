@@ -1,0 +1,291 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>bWalletX API · Connect your wallet</title>
+    <link rel="canonical" href="https://bwalletx.com/api" />
+    <meta name="description" content="Connect to the bWalletX API: try it live with your wallet, then pick a route. BRC-100 in the browser, Sign in with bWalletX, or a local agent wallet and MCP server. No API keys." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://bwalletx.com/api" />
+    <meta property="og:site_name" content="bWalletX" />
+    <meta property="og:title" content="Connect to the bWalletX API" />
+    <meta property="og:description" content="Connect your wallet right on the page, then pick a route: the browser, sign-in, or a local agent wallet. No API keys." />
+    <meta property="og:image" content="https://bwalletx.com/og-api.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Connect to the bWalletX API: the browser, sign-in, or a local agent wallet. No API keys." />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@bWalletX" />
+    <meta name="twitter:title" content="Connect to the bWalletX API" />
+    <meta name="twitter:description" content="Connect your wallet right on the page, then pick a route: the browser, sign-in, or a local agent wallet. No API keys." />
+    <meta name="twitter:image" content="https://bwalletx.com/og-api.png" />
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="stylesheet" href="/styles.css" />
+    <style>
+      .ext h1 { font-size: clamp(2.2rem, 6vw, 3.4rem); margin: 18px 0 10px; letter-spacing: -.03em; }
+      .ext h2 { margin: 48px 0 10px; font-size: 1.4rem; }
+      .ext p, .ext li { line-height: 1.6; }
+      .ext .small { color: #8a8a86; font-size: 0.85rem; }
+      .ext code { background: #17191e; padding: 2px 7px; border-radius: 6px; overflow-wrap: anywhere; }
+      /* Code wraps instead of scrolling sideways, so nothing hides off the edge on a phone. */
+      .ext pre { background: #0b0c0f; border: 1px solid #ffffff12; border-radius: 12px; padding: 12px 14px; margin: 12px 0; font-size: 0.8rem; line-height: 1.55; white-space: pre-wrap; overflow-wrap: anywhere; }
+      .ext pre code { background: none; padding: 0; }
+      .kicker { font: 600 .78rem 'IBM Plex Mono', ui-monospace, monospace; letter-spacing: .14em; text-transform: uppercase; color: #8a8a86; margin: 8px 0 0; }
+
+      .try { margin: 28px 0 8px; padding: 22px 20px; border-radius: 20px; background: #101114; border: 1px solid #F5B80055; box-shadow: 0 0 60px -20px rgba(245, 184, 0, .45); }
+      .try h2 { margin: 0 0 6px; }
+      .try .btns { display: flex; flex-wrap: wrap; gap: 10px; margin: 16px 0 4px; }
+      .try .btn { padding: 12px 20px; border-radius: 14px; }
+      .try .btn-store { min-width: 0; }
+      .try .btn[disabled] { opacity: .55; cursor: default; }
+      .say { margin: 12px 0 0; color: #d8d4c8; min-height: 1.6em; }
+      .say.err { color: #ffb4a8; }
+      .facts { display: grid; grid-template-columns: max-content 1fr; gap: 8px 16px; margin: 16px 0 0; padding: 14px 16px; border-radius: 14px; background: #0b0c0f; border: 1px solid #ffffff10; }
+      .facts dt { color: #8a8a86; font-size: .85rem; }
+      .facts dd { margin: 0; font: 500 .9rem 'IBM Plex Mono', ui-monospace, monospace; color: #f1ead9; overflow-wrap: anywhere; min-width: 0; }
+      .facts .copy { margin-left: 8px; font: 600 .72rem var(--hf); color: #F5B800; background: none; border: 1px solid #F5B80066; border-radius: 999px; padding: 2px 9px; cursor: pointer; }
+      .get { margin: 14px 0 0; padding-left: 20px; }
+      .sig { margin-top: 14px; }
+      .sig b { color: #f1ead9; }
+      [hidden] { display: none !important; }
+
+      .routes { display: grid; grid-template-columns: 1fr; gap: 16px; margin: 18px 0; }
+      .route { display: flex; flex-direction: column; padding: 18px; border-radius: 18px; background: #101114; border: 1px solid #ffffff12; min-width: 0; }
+      .route h3 { margin: 0 0 4px; font: 700 1.1rem var(--hf); }
+      .route p { margin: 0; color: #c9c4b6; font-size: .92rem; }
+      .route .more { margin-top: auto; padding-top: 6px; font-size: .9rem; }
+      .route .more a { color: #F5B800; }
+
+      .tag { display: inline-block; font-size: 0.72rem; font-weight: 700; padding: 2px 9px; border-radius: 999px; background: #ffffff14; color: #cfcabd; }
+      .tag.live { background: #F5B800; color: #000; }
+      .status { list-style: none; padding: 0; margin: 12px 0; }
+      .status li { padding: 10px 0; border-bottom: 1px solid #ffffff0d; display: flex; gap: 12px; align-items: baseline; }
+      .status .tag { flex: none; min-width: 78px; text-align: center; }
+      .status small { color: #8a8a86; }
+      .status code, .route p code { font-size: .82em; }
+    </style>
+  </head>
+  <body>
+    <div class="beta-banner">bWalletX is in <strong>beta</strong>: test with small amounts.</div>
+    <header class="topbar">
+      <div class="wrap topbar-in">
+        <a class="brand" href="/"><img src="/logo.svg" alt="" width="34" height="30" /><span>bWallet<span class="gold">X</span></span></a>
+        <nav aria-label="Pages">
+          <a href="/features">Features</a><a href="/exchange">Exchange</a><a href="/social">Social</a><a href="/agent">Agents</a><a href="/extension">Extension</a><a href="/developers">Developers</a>
+        </nav>
+        <span class="nav-cta"><a class="dl-btn" href="/get">Download</a><a class="web-btn" href="https://web.bwalletx.com" target="_blank" rel="noopener">Web &rarr;</a></span>
+      </div>
+    </header>
+    <script src="/nav.js"></script>
+    <main class="ext">
+      <p class="kicker">bWalletX API</p>
+      <h1>Connect to the bWallet<span class="gold">X</span> API</h1>
+      <p class="lede">bWalletX speaks BRC-100, the open wallet standard. Connect your wallet below to see it answer. Then pick how you want to build. No API keys, no sign-up.</p>
+
+      <section class="try" aria-labelledby="try-h">
+        <h2 id="try-h">Try it now</h2>
+        <p class="small">Read-only. This page never asks for a payment and never spends.</p>
+        <div class="btns">
+          <button type="button" class="btn btn-store" id="bwx-connect">Connect bWalletX</button>
+          <button type="button" class="btn btn-ghost" id="bwx-sign" hidden>Sign a test message</button>
+          <button type="button" class="btn btn-ghost" id="bwx-off" hidden>Disconnect</button>
+        </div>
+        <p class="say" id="bwx-say" aria-live="polite">Not connected.</p>
+
+        <dl class="facts" id="bwx-facts" hidden>
+          <dt>Identity key</dt><dd><span id="f-key"></span><button type="button" class="copy" id="f-copy">Copy</button></dd>
+          <dt>Network</dt><dd id="f-net"></dd>
+          <dt>Wallet version</dt><dd id="f-ver"></dd>
+          <dt>Connected via</dt><dd id="f-via"></dd>
+          <dt>Name</dt><dd id="f-name"></dd>
+        </dl>
+
+        <div id="bwx-get" hidden>
+          <ul class="get">
+            <li>On a computer: <a href="/extension">install the bWalletX extension</a> for Chrome or Brave, then reload this page.</li>
+            <li>On a phone: open <b>bwalletx.com/api</b> in the browser inside the bWalletX app.</li>
+            <li>Phone or web wallet with a QR code: see <a href="/connect">Sign in with bWalletX</a>.</li>
+          </ul>
+        </div>
+
+        <div class="sig" id="bwx-sig" hidden>
+          <p class="small">Signed with your identity key (protocol <code>[1, "bwalletx api test"]</code>, key ID <code>1</code>, counterparty <code>anyone</code>). Nothing was sent anywhere.</p>
+          <pre><code id="bwx-sig-out"></code></pre>
+        </div>
+        <p class="small" id="bwx-note" hidden>The name comes from our public paymail lookup (<code>pay.bwallet.space</code>), which is the only request this page makes for you. Disconnect makes this page forget your wallet.</p>
+      </section>
+
+      <h2>Pick your route</h2>
+      <div class="routes">
+        <div class="route">
+          <h3>Connect in the browser</h3>
+          <p>One script finds bWalletX by BRC-100 discovery. You get the full wallet interface, the same as <code>window.CWI</code>.</p>
+          <pre><code>&lt;script src="https://bwalletx.com/connect.js"&gt;&lt;/script&gt;
+const { wallet, identityKey } = await bWalletX.connect();
+const { signature } = await wallet.createSignature({ data, protocolID: [1, 'my app'], keyID: '1' });</code></pre>
+          <p class="more"><a href="/developers">Developers quick start &rarr;</a> · <a href="https://www.npmjs.com/package/@bwalletx/connect">@bwalletx/connect</a></p>
+        </div>
+        <div class="route">
+          <h3>Sign in with bWalletX</h3>
+          <p>The wallet signs a one-time challenge from your server. Your server checks it with <code>@bsv/sdk</code>. The identity key is the user ID.</p>
+          <pre><code>&lt;script src="https://bwalletx.com/connect.js"&gt;&lt;/script&gt;
+const r = await bWalletX.signIn({ challenge: (identityKey) =&gt; post('/auth/bwalletx/challenge', { identityKey }) });
+await post('/auth/bwalletx/verify', { identityKey: r.identityKey, nonce: r.nonce, signature: r.signature });</code></pre>
+          <p class="more"><a href="/connect">Sign-in guide &rarr;</a> · <a href="/sign-in-button">the button</a></p>
+        </div>
+        <div class="route">
+          <h3>Local agent API and MCP</h3>
+          <p><code>bwalletx serve</code> runs an agent account as a BRC-100 wallet on <code>localhost:3321</code>, where sites already look for a desktop wallet. <code>bwalletx mcp</code> gives AI agents the same account, inside your limits.</p>
+          <pre><code>npm i -g bwalletx
+bwalletx serve -a trader --origin localhost:3000   # key-file agent accounts only
+claude mcp add bwalletx -- npx -y bwalletx mcp</code></pre>
+          <p class="more"><a href="/cli">CLI &rarr;</a> · <a href="/mcp">MCP &rarr;</a></p>
+        </div>
+        <div class="route">
+          <h3>Public read APIs</h3>
+          <p>Open endpoints, no key: look up names and profiles for a wallet, and let agents list and buy Store items with their own wallet.</p>
+          <pre><code>curl 'https://pay.bwallet.space/api/paymail/lookup?key=&lt;identityKey&gt;'
+curl https://pay.bwallet.space/api/paymail/id/npg@bwalletx.com
+curl https://bwalletx.com/api/agent/products</code></pre>
+          <p class="more"><a href="https://docs.bwalletx.com/developers/public-apis/">Public APIs &rarr;</a> · <a href="/.well-known/agent.json">agent.json</a></p>
+        </div>
+      </div>
+
+      <h2>What works today</h2>
+      <ul class="status">
+        <li><span class="tag live">&check; Live</span><span>Connect from Chrome or Brave with the bWalletX extension, or from the browser inside the bWalletX app</span></li>
+        <li><span class="tag live">&check; Live</span><span>Every BRC-100 call (sign, encrypt, pay, keys), each one approved by the user in their wallet</span></li>
+        <li><span class="tag live">&check; Live</span><span>Sign in with bWalletX: <code>connect.js</code> and <code>@bwalletx/connect</code> 0.7.0 on npm. You run the two server routes</span></li>
+        <li><span class="tag live">&check; Live</span><span>Phone and web wallet pairing by QR code, on the <a href="/connect">sign-in guide</a></span></li>
+        <li><span class="tag live">&check; Live</span><span><code>bwalletx serve</code> on localhost:3321 and <code>bwalletx mcp</code> (CLI 0.5.0 on npm)</span></li>
+        <li><span class="tag live">&check; Live</span><span>Public read APIs: paymail names, profiles and the name log, and the agent Store API</span></li>
+        <li><span class="tag">Not built</span><span>Phone pairing on this page. <small>Use the <a href="/connect">sign-in guide</a> for now.</small></span></li>
+        <li><span class="tag">Not built</span><span>Webhooks. <small>Nothing calls your server when something happens in a wallet.</small></span></li>
+        <li><span class="tag">Not built</span><span>An account API with API keys. <small>No server-side access to a user's wallet or balance; everything goes through the user's own wallet.</small></span></li>
+        <li><span class="tag">Not built</span><span>Hosted sign-in or an OAuth-style redirect. <small>You verify the signature on your own server.</small></span></li>
+        <li><span class="tag">Not built</span><span>A test wallet. <small>No testnet build or headless bWalletX; test your server with <code>ProtoWallet</code> from <code>@bsv/sdk</code>.</small></span></li>
+      </ul>
+
+      <p class="small" style="margin-top: 40px">Full guides: <a href="https://docs.bwalletx.com/developers/connect/">docs.bwalletx.com</a> · All the tools: <a href="/build-on-b">Build on b</a> · Questions: <a href="mailto:support@bwalletx.com">support@bwalletx.com</a></p>
+    </main>
+    <!-- @bwalletx/connect 0.7.0 (pinned, checked by SRI). connect.js is the fallback if the CDN is blocked. -->
+    <script src="https://cdn.jsdelivr.net/npm/@bwalletx/connect@0.7.0/dist/bwalletx-connect.global.js" integrity="sha384-VkIrDOw3Hmv7qnytbLGT1hNz7DbJ3IJiI91HSOTqjWu146/hl1KINi4v/hPzTfvI" crossorigin="anonymous" defer></script>
+    <script src="/connect.js" defer></script>
+    <script>
+      (function () {
+        var $ = function (id) { return document.getElementById(id); };
+        var wallet = null, method = null, identityKey = null;
+        var btnConnect = $('bwx-connect'), btnSign = $('bwx-sign'), btnOff = $('bwx-off');
+        var VIA = { extension: 'bWalletX extension', 'in-app': 'bWalletX app', pairing: 'Paired phone', wallet: 'Wallet' };
+
+        function say(msg, isErr) { var el = $('bwx-say'); el.textContent = msg; el.className = 'say' + (isErr ? ' err' : ''); }
+        function short(k) { return k && k.length > 12 ? k.slice(0, 4) + '…' + k.slice(-4) : k || ''; }
+        function why(e) {
+          var m = (e && e.message) || String(e || '');
+          if (/denied|reject|cancel|declin|refus/i.test(m)) return 'You said no in the wallet. Nothing happened.';
+          return m || 'Something went wrong.';
+        }
+        function show(id, on) { $(id).hidden = !on; }
+
+        async function findWallet() {
+          var lib = window.bWalletXConnect;
+          if (lib && lib.connectBwalletX) return lib.connectBwalletX({ reusePairing: false });
+          if (window.bWalletX && window.bWalletX.connect) {
+            var r = await window.bWalletX.connect();
+            return { wallet: r.wallet, method: 'extension' };
+          }
+          throw new Error('The connect script did not load. Check your connection and reload.');
+        }
+
+        async function lookupName(key) {
+          try {
+            var ctl = new AbortController();
+            var t = setTimeout(function () { ctl.abort(); }, 5000);
+            var res = await fetch('https://pay.bwallet.space/api/paymail/lookup?key=' + encodeURIComponent(key), { signal: ctl.signal });
+            clearTimeout(t);
+            if (!res.ok) return 'No name yet';
+            var j = await res.json();
+            return j && j.paymail ? '$' + j.alias + ' (' + j.paymail + ')' : 'No name yet';
+          } catch (e) {
+            return 'Lookup failed';
+          }
+        }
+
+        btnConnect.addEventListener('click', async function () {
+          btnConnect.disabled = true;
+          show('bwx-get', false);
+          say('Looking for bWalletX…');
+          try {
+            var found = await findWallet();
+            wallet = found.wallet; method = found.method;
+            say('Found it. Approve in bWalletX…');
+            var lib = window.bWalletXConnect;
+            if (lib && lib.waitIfLocked) await lib.waitIfLocked(wallet);
+            else await wallet.waitForAuthentication({}).catch(function () {});
+            identityKey = (await wallet.getPublicKey({ identityKey: true })).publicKey;
+            var net = await wallet.getNetwork({}).then(function (r) { return r.network; }, function () { return 'not reported'; });
+            var ver = await wallet.getVersion({}).then(function (r) { return r.version; }, function () { return 'not reported'; });
+            $('f-key').textContent = short(identityKey);
+            $('f-key').title = identityKey;
+            $('f-net').textContent = net;
+            $('f-ver').textContent = ver;
+            $('f-via').textContent = VIA[method] || method;
+            $('f-name').textContent = 'Looking up…';
+            show('bwx-facts', true); show('bwx-note', true);
+            btnConnect.hidden = true; btnSign.hidden = false; btnOff.hidden = false;
+            say('Connected.');
+            $('f-name').textContent = await lookupName(identityKey);
+          } catch (e) {
+            wallet = null;
+            if (e && (e.code === 'NOT_FOUND' || e.code === 'NOT_INSTALLED')) {
+              say('bWalletX isn’t in this browser.', true);
+              show('bwx-get', true);
+            } else {
+              say('Could not connect: ' + why(e), true);
+            }
+          } finally {
+            btnConnect.disabled = false;
+          }
+        });
+
+        btnSign.addEventListener('click', async function () {
+          if (!wallet) return;
+          btnSign.disabled = true;
+          say('Approve the signature in bWalletX…');
+          try {
+            var msg = 'bwalletx.com/api test ' + new Date().toISOString();
+            var res = await wallet.createSignature({
+              data: Array.from(new TextEncoder().encode(msg)),
+              protocolID: [1, 'bwalletx api test'],
+              keyID: '1',
+              counterparty: 'anyone',
+            });
+            var hex = res.signature.map(function (b) { return ('0' + (b & 255).toString(16)).slice(-2); }).join('');
+            $('bwx-sig-out').textContent = 'Message:   ' + msg + '\nSignature: ' + hex;
+            show('bwx-sig', true);
+            say('Signed.');
+          } catch (e) {
+            say('Not signed: ' + why(e), true);
+          } finally {
+            btnSign.disabled = false;
+          }
+        });
+
+        btnOff.addEventListener('click', function () {
+          var lib = window.bWalletXConnect;
+          if (method === 'pairing' && lib && lib.clearPairing) { try { lib.clearPairing(); } catch (e) {} }
+          wallet = null; method = null; identityKey = null;
+          ['bwx-facts', 'bwx-sig', 'bwx-note', 'bwx-get'].forEach(function (id) { show(id, false); });
+          btnConnect.hidden = false; btnSign.hidden = true; btnOff.hidden = true;
+          say('Disconnected. This page has forgotten your wallet.');
+        });
+
+        $('f-copy').addEventListener('click', function () {
+          if (!identityKey || !navigator.clipboard) return;
+          navigator.clipboard.writeText(identityKey).then(function () { $('f-copy').textContent = 'Copied'; setTimeout(function () { $('f-copy').textContent = 'Copy'; }, 1500); });
+        });
+      })();
+    </script>
+  </body>
+</html>

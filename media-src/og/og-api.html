@@ -1,0 +1,39 @@
+<!doctype html>
+<!-- Source for /og-api.png (1200x630). Serve the repo root on :8767, open /media-src/og/og-api.html at 1200x630, screenshot. -->
+<html lang="en"><head><meta charset="utf-8">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+html,body{margin:0;width:1200px;height:630px;overflow:hidden;background:#000}
+.og{position:relative;width:1200px;height:630px;overflow:hidden;font-family:'Space Grotesk',sans-serif;color:#fff;background:#000}
+.bg{position:absolute;inset:0;background:url(http://localhost:8767/media/hero-poster.jpg) center/cover;filter:brightness(.42) saturate(1.2);transform:scale(1.2) translateX(300px)}
+.fade{position:absolute;inset:0;background:linear-gradient(90deg,#000 0,#000 36%,rgba(0,0,0,.55) 62%,rgba(0,0,0,.2) 100%)}
+.mark{position:absolute;left:72px;top:58px;display:flex;align-items:center;gap:14px}
+.mark img{width:46px;filter:drop-shadow(0 0 22px rgba(245,184,0,.65))}
+.mark span{font-weight:700;font-size:34px;letter-spacing:-1px}.gold{color:#F5B800}
+h1{position:absolute;left:72px;top:128px;width:620px;margin:0;font-weight:700;font-size:64px;line-height:1.04;letter-spacing:-2.2px}
+h1 em{font-style:normal;background:linear-gradient(180deg,#FFD84D,#E8A100);-webkit-background-clip:text;color:transparent}
+.chips{position:absolute;left:72px;top:362px;display:flex;gap:10px;flex-wrap:wrap;width:600px}
+.chip{border:1.5px solid #F5B80088;color:#FFD84D;border-radius:999px;padding:7px 16px;font-weight:600;font-size:19px}
+.line{position:absolute;left:72px;top:428px;width:560px;font-family:'IBM Plex Sans';font-size:25px;line-height:1.38;color:#e6e2d6}
+.url{position:absolute;left:72px;bottom:46px;font-size:26px;color:#c9ced8}.url b{color:#fff}
+.card{position:absolute;right:62px;top:92px;width:420px;background:#0c0d10f2;border:1px solid #F5B80066;border-radius:24px;padding:22px 24px 18px;box-shadow:0 0 70px rgba(245,184,0,.3);transform:rotate(2deg)}
+.btn{display:block;text-align:center;background:linear-gradient(135deg,#ffd24d,#eab300);color:#1a1300;font-weight:700;font-size:22px;border-radius:14px;padding:14px 0;box-shadow:0 10px 30px -8px rgba(245,184,0,.6)}
+.card h3{font-size:15px;color:#F5B800;letter-spacing:.12em;margin:20px 0 4px}
+.r{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:13px 0;border-top:1px solid #ffffff18;font-size:21px;font-weight:600}
+.r small{display:block;color:#9aa1ad;font-size:15px;font-weight:500;font-family:'IBM Plex Mono'}
+.lv{flex:none;font-weight:700;color:#1a1300;background:#F5B800;border-radius:999px;padding:4px 12px;font-size:15px}
+</style></head><body><div class="og">
+<div class="bg"></div><div class="fade"></div>
+<div class="mark"><img src="http://localhost:8767/logo.svg"><span>bWallet<span class="gold">X</span> API</span></div>
+<h1>Connect to the<br>bWalletX API.<br><em>No API keys.</em></h1>
+<div class="chips"><span class="chip">BRC-100</span><span class="chip">Sign in</span><span class="chip">localhost:3321</span><span class="chip">MCP</span></div>
+<div class="line">Connect your wallet right on the page, then pick how you build.</div>
+<div class="card">
+<div class="btn">Connect bWalletX</div>
+<h3>PICK YOUR ROUTE</h3>
+<div class="r"><span>In the browser<small>connect.js · window.CWI</small></span><span class="lv">Live</span></div>
+<div class="r"><span>Sign in with bWalletX<small>@bwalletx/connect 0.7.0</small></span><span class="lv">Live</span></div>
+<div class="r"><span>Local agent wallet<small>bwalletx serve · bwalletx mcp</small></span><span class="lv">Live</span></div>
+</div>
+<div class="url"><b>bwalletx.com/api</b> · free · open standard</div>
+</div></body></html>
