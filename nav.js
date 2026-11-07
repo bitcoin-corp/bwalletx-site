@@ -317,11 +317,14 @@
     var on = bar.querySelector('.section-nav');
     if (on) bar.insertBefore(sub, on); else bar.appendChild(sub);
     document.documentElement.classList.add('has-subnav');
-    var fitNav = function () { document.documentElement.style.setProperty('--nav-h', (bar.offsetTop + bar.offsetHeight) + 'px'); };
-    if (window.ResizeObserver) new ResizeObserver(fitNav).observe(bar); else { fitNav(); window.addEventListener('resize', fitNav); }
   }
 
   if (sRow) bar.appendChild(sRow);
+  // --nav-h = the fixed bar's bottom edge (banner + bar + sub-nav + search row), for padding and anchor jumps.
+  if (bar) {
+    var fitNav = function () { document.documentElement.style.setProperty('--nav-h', (bar.offsetTop + bar.offsetHeight) + 'px'); };
+    if (window.ResizeObserver) new ResizeObserver(fitNav).observe(bar); else { fitNav(); window.addEventListener('resize', fitNav); }
+  }
 
   // Footer: the proposal's columns, on every page (added on top of a page's own footer, or as a new one).
   if (!store && NAV.foot) {
@@ -342,6 +345,10 @@
     '.topbar .sub-nav a[aria-current="page"]{color:#000!important;background:#F5B800;border-color:#F5B800}' +
     '.sub-nav{padding-top:0}' +
     'html.has-subnav main.ext{padding-top:max(190px,calc(var(--nav-h,0px) + 66px))!important}' +
+    // Content pages: a solid bar, so text never shows through behind the nav and sub-nav buttons (owner, 7 Nov 2026);
+    // links to #anchors land below the bar instead of under it.
+    'html:has(main.ext) .topbar{background:var(--bg,#000);box-shadow:0 1px 0 #ffffff14}' +
+    'html{scroll-padding-top:calc(var(--nav-h,140px) + 16px)}' +
     '.nd{position:relative;display:inline-flex;align-items:center}' +
     '.nd-menu{display:none;position:absolute;top:100%;left:-14px;width:440px;padding:10px;background:#0d0e11;border:1px solid #ffffff1f;border-radius:12px;box-shadow:0 12px 30px #0009;grid-template-columns:1fr 1fr;gap:2px 8px;z-index:60}' +
     '.nd-menu.nd-3{width:560px;grid-template-columns:1fr 1fr 1fr}' +
