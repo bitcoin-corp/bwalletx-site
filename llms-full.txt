@@ -7664,7 +7664,16 @@ Each release ships to the Android APK, the Chrome extension and the web wallet. 
 
 [Download bWalletX](https://bwalletx.com/download)
 
-## 5.2.51 2026-11-06
+## 5.2.51 2026-11-07
+
+- Signing on your phone now opens straight to the pad on the back of your card. Turn your phone sideways: Review and Sign & seal are on the right.
+- Signing and sealing on your phone is much faster.
+- Your phone and Chrome extension now show the same balance. Backup sync is fixed.
+- The app icon shows a badge for unread chats and mail.
+- “BSV” is back on your card.
+- The iPhone build of this version follows once Apple finishes setting up our company account. Android, Chrome and web have it now.
+
+## 5.2.50 2026-11-06
 
 - Privacy: photos and videos that still carry the place they were taken (GPS location data) can no longer be revealed, made public or posted to the feed. Private mints say so. This stays until the wallet can strip location data itself.
 - The iPhone App Store build of this version is coming soon. Android, Chrome and web have it now.
