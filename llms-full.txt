@@ -7666,6 +7666,15 @@ Each release ships to the Android APK, the Chrome extension and the web wallet. 
 
 ## 5.2.52 2026-11-07
 
+- The chat bar is now one row. Tap “+” for photos, files and emoji, and links show a preview card. It works the same on your phone, in Chrome and on the web.
+- On your phone, Settings › Security has an “Unlock with Face ID” switch (fingerprint on Android). You can turn it on even if you said “Not now” before.
+- Sites with a light look no longer leave text you can’t read.
+- The official PNEE token shows as verified with its icon. Tokens without an icon get a tidy letter instead.
+- Smaller fixes: the passkey button stays dimmed until you type your password, “Not now” on the start screen takes you back to the welcome page, and Verify your identity opens your Verified identity card.
+- The iPhone build of this version follows once Apple finishes setting up our company account. Android, Chrome and web have it now.
+
+## 5.2.51 2026-11-07
+
 - Signing on your phone now opens straight to the pad on the back of your card. Turn your phone sideways: Review and Sign & seal are on the right.
 - Signing and sealing on your phone is much faster.
 - Your phone and Chrome extension now show the same balance. Backup sync is fixed.
