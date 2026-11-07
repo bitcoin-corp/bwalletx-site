@@ -13875,14 +13875,13 @@ bWalletX API
 
 # Connect to the bWalletX API
 
-bWalletX speaks BRC-100, the open wallet standard. Connect your wallet below to see it answer. Then pick how you want to build. No API keys, no sign-up.
+bWalletX speaks BRC-100, the open wallet standard. Connect your wallet below and run real calls against it in the console. Then pick how you want to build. No API keys, no sign-up.
 
 ## Try it now
 
 Read-only. This page never asks for a payment and never spends.
 
 Connect bWalletX
-Sign a test message
 Disconnect
 
 Not connected.
@@ -13899,8 +13898,21 @@ Name
 
 - Phone or web wallet with a QR code: see [Sign in with bWalletX](https://bwalletx.com/connect).
 
-Signed with your identity key (protocol `[1, "bwalletx api test"]`, key ID `1`, counterparty `anyone`). Nothing was sent anywhere.
+### Console
 
+Pick a call to run it against your own wallet. Edit the arguments and press Run to try again. Only read-only calls and a test signature are on the list; nothing here can pay or change your wallet.
+
+Message
+
+Arguments (JSON)
+
+Run
+Copy code
+Reset
+
+Request
+````
+Response Copy full
 ````
 
 The name comes from our public paymail lookup (`pay.bwallet.space`), which is the only request this page makes for you. Disconnect makes this page forget your wallet.
@@ -13948,6 +13960,8 @@ curl https://bwalletx.com/api/agent/products``
 [Public APIs →](https://docs.bwalletx.com/developers/public-apis/) · [agent.json](https://bwalletx.com/.well-known/agent.json)
 
 ## What works today
+
+- ✓ LiveTry-it console ✓ on this page: run read-only BRC-100 calls (`getPublicKey`, `listOutputs`, `listActions` and more) and a test `createSignature` against your own wallet, then copy the code
 
 - ✓ LiveConnect from Chrome or Brave with the bWalletX extension, or from the browser inside the bWalletX app
 

@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>bWalletX API · Connect your wallet</title>
     <link rel="canonical" href="https://bwalletx.com/api" />
-    <meta name="description" content="Connect to the bWalletX API: try it live with your wallet, then pick a route. BRC-100 in the browser, Sign in with bWalletX, or a local agent wallet and MCP server. No API keys." />
+    <meta name="description" content="Connect to the bWalletX API: try BRC-100 calls live with your wallet, then pick a route. BRC-100 in the browser, Sign in with bWalletX, or a local agent wallet and MCP server. No API keys." />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://bwalletx.com/api" />
     <meta property="og:site_name" content="bWalletX" />
@@ -46,8 +46,28 @@
       .facts dd { margin: 0; font: 500 .9rem 'IBM Plex Mono', ui-monospace, monospace; color: #f1ead9; overflow-wrap: anywhere; min-width: 0; }
       .facts .copy { margin-left: 8px; font: 600 .72rem var(--hf); color: #F5B800; background: none; border: 1px solid #F5B80066; border-radius: 999px; padding: 2px 9px; cursor: pointer; }
       .get { margin: 14px 0 0; padding-left: 20px; }
-      .sig { margin-top: 14px; }
-      .sig b { color: #f1ead9; }
+      /* Try-it console: phone-first, everything wraps, nothing scrolls sideways. */
+      .con { margin: 22px 0 0; padding: 18px 0 0; border-top: 1px solid #ffffff12; min-width: 0; }
+      .con h3 { margin: 0 0 4px; font: 700 1.1rem var(--hf); }
+      .calls { display: flex; flex-wrap: wrap; gap: 8px; margin: 14px 0 0; padding: 0; list-style: none; }
+      .calls button { font: 500 .8rem 'IBM Plex Mono', ui-monospace, monospace; color: #d8d4c8; background: #0b0c0f; border: 1px solid #ffffff1c; border-radius: 999px; padding: 7px 12px; cursor: pointer; }
+      .calls button:hover { border-color: #F5B80088; color: #f1ead9; }
+      .calls button[aria-pressed="true"] { background: #F5B800; border-color: #F5B800; color: #000; font-weight: 600; }
+      .pane { margin: 16px 0 0; padding: 16px; border-radius: 16px; background: #0b0c0f; border: 1px solid #ffffff10; min-width: 0; }
+      .pane .what { margin: 0 0 12px; color: #c9c4b6; font-size: .92rem; }
+      .pane label { display: block; margin: 12px 0 6px; font: 600 .78rem 'IBM Plex Mono', ui-monospace, monospace; letter-spacing: .08em; text-transform: uppercase; color: #8a8a86; }
+      .pane textarea, .pane input { display: block; width: 100%; box-sizing: border-box; background: #101114; color: #f1ead9; border: 1px solid #ffffff1c; border-radius: 10px; padding: 10px 12px; font: 500 .85rem/1.5 'IBM Plex Mono', ui-monospace, monospace; }
+      .pane textarea { min-height: 84px; resize: vertical; }
+      .pane textarea:focus, .pane input:focus { outline: none; border-color: #F5B800aa; }
+      .pane .btns { margin: 14px 0 0; }
+      .pane .btn { padding: 10px 18px; border-radius: 12px; font-size: .92rem; }
+      .pane .btn-store { min-width: 0; }
+      .io { margin: 14px 0 0; }
+      .io h4 { margin: 14px 0 0; font: 600 .78rem 'IBM Plex Mono', ui-monospace, monospace; letter-spacing: .08em; text-transform: uppercase; color: #8a8a86; display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+      @media (max-width: 480px) { .try { padding: 18px 14px; } .pane { padding: 12px; } }
+      .io pre { margin: 6px 0 0; max-height: 360px; overflow-y: auto; overflow-x: hidden; }
+      .io pre.err code { color: #ffb4a8; }
+      .io .copy { font: 600 .72rem var(--hf); letter-spacing: 0; text-transform: none; color: #F5B800; background: none; border: 1px solid #F5B80066; border-radius: 999px; padding: 2px 9px; cursor: pointer; }
       [hidden] { display: none !important; }
 
       .routes { display: grid; grid-template-columns: 1fr; gap: 16px; margin: 18px 0; }
@@ -81,14 +101,13 @@
     <main class="ext">
       <p class="kicker">bWalletX API</p>
       <h1>Connect to the bWallet<span class="gold">X</span> API</h1>
-      <p class="lede">bWalletX speaks BRC-100, the open wallet standard. Connect your wallet below to see it answer. Then pick how you want to build. No API keys, no sign-up.</p>
+      <p class="lede">bWalletX speaks BRC-100, the open wallet standard. Connect your wallet below and run real calls against it in the console. Then pick how you want to build. No API keys, no sign-up.</p>
 
       <section class="try" aria-labelledby="try-h">
         <h2 id="try-h">Try it now</h2>
         <p class="small">Read-only. This page never asks for a payment and never spends.</p>
         <div class="btns">
           <button type="button" class="btn btn-store" id="bwx-connect">Connect bWalletX</button>
-          <button type="button" class="btn btn-ghost" id="bwx-sign" hidden>Sign a test message</button>
           <button type="button" class="btn btn-ghost" id="bwx-off" hidden>Disconnect</button>
         </div>
         <p class="say" id="bwx-say" aria-live="polite">Not connected.</p>
@@ -109,9 +128,31 @@
           </ul>
         </div>
 
-        <div class="sig" id="bwx-sig" hidden>
-          <p class="small">Signed with your identity key (protocol <code>[1, "bwalletx api test"]</code>, key ID <code>1</code>, counterparty <code>anyone</code>). Nothing was sent anywhere.</p>
-          <pre><code id="bwx-sig-out"></code></pre>
+        <div class="con" id="bwx-con" hidden>
+          <h3>Console</h3>
+          <p class="small">Pick a call to run it against your own wallet. Edit the arguments and press Run to try again. Only read-only calls and a test signature are on the list; nothing here can pay or change your wallet.</p>
+          <ul class="calls" id="con-calls" aria-label="BRC-100 calls"></ul>
+          <div class="pane" id="con-pane">
+            <p class="what" id="con-what"></p>
+            <div id="con-msg-box" hidden>
+              <label for="con-msg">Message</label>
+              <input id="con-msg" type="text" autocomplete="off" spellcheck="false" />
+            </div>
+            <label for="con-args">Arguments (JSON)</label>
+            <textarea id="con-args" spellcheck="false" autocomplete="off" autocapitalize="off"></textarea>
+            <div class="btns">
+              <button type="button" class="btn btn-store" id="con-run">Run</button>
+              <button type="button" class="btn btn-ghost" id="con-code">Copy code</button>
+              <button type="button" class="btn btn-ghost" id="con-reset">Reset</button>
+            </div>
+            <p class="say" id="con-say" aria-live="polite"></p>
+            <div class="io" id="con-io" hidden>
+              <h4>Request</h4>
+              <pre><code id="con-req"></code></pre>
+              <h4>Response <button type="button" class="copy" id="con-copy">Copy full</button></h4>
+              <pre id="con-res-pre"><code id="con-res"></code></pre>
+            </div>
+          </div>
         </div>
         <p class="small" id="bwx-note" hidden>The name comes from our public paymail lookup (<code>pay.bwallet.space</code>), which is the only request this page makes for you. Disconnect makes this page forget your wallet.</p>
       </section>
@@ -154,6 +195,7 @@ curl https://bwalletx.com/api/agent/products</code></pre>
 
       <h2>What works today</h2>
       <ul class="status">
+        <li><span class="tag live">&check; Live</span><span>Try-it console &check; on this page: run read-only BRC-100 calls (<code>getPublicKey</code>, <code>listOutputs</code>, <code>listActions</code> and more) and a test <code>createSignature</code> against your own wallet, then copy the code</span></li>
         <li><span class="tag live">&check; Live</span><span>Connect from Chrome or Brave with the bWalletX extension, or from the browser inside the bWalletX app</span></li>
         <li><span class="tag live">&check; Live</span><span>Every BRC-100 call (sign, encrypt, pay, keys), each one approved by the user in their wallet</span></li>
         <li><span class="tag live">&check; Live</span><span>Sign in with bWalletX: <code>connect.js</code> and <code>@bwalletx/connect</code> 0.7.0 on npm. You run the two server routes</span></li>
@@ -176,10 +218,32 @@ curl https://bwalletx.com/api/agent/products</code></pre>
       (function () {
         var $ = function (id) { return document.getElementById(id); };
         var wallet = null, method = null, identityKey = null;
-        var btnConnect = $('bwx-connect'), btnSign = $('bwx-sign'), btnOff = $('bwx-off');
+        var btnConnect = $('bwx-connect'), btnOff = $('bwx-off');
         var VIA = { extension: 'bWalletX extension', 'in-app': 'bWalletX app', pairing: 'Paired phone', wallet: 'Wallet' };
+        var LIB_TAG = '<script src="https://cdn.jsdelivr.net/npm/@bwalletx/connect@0.7.0/dist/bwalletx-connect.global.js"\n  integrity="sha384-VkIrDOw3Hmv7qnytbLGT1hNz7DbJ3IJiI91HSOTqjWu146/hl1KINi4v/hPzTfvI" crossorigin="anonymous"></' + 'script>';
+
+        // The console's allowlist. These are the ONLY wallet methods this page will ever call from the console:
+        // read-only calls plus createSignature. Nothing that spends or changes state (createAction, signAction,
+        // internalizeAction, relinquish*, acquireCertificate, ...) is here, and run() refuses any name not listed.
+        var CALLS = Object.freeze({
+          getPublicKey: Object.freeze({ args: { identityKey: true }, what: 'Your identity public key. Apps use it as your user ID.' }),
+          getNetwork: Object.freeze({ args: {}, what: 'Which network the wallet is on: mainnet or testnet.' }),
+          getVersion: Object.freeze({ args: {}, what: 'The wallet’s name and version.' }),
+          getHeight: Object.freeze({ args: {}, what: 'The current block height, as the wallet sees it.' }),
+          isAuthenticated: Object.freeze({ args: {}, what: 'Whether the wallet is unlocked and ready.' }),
+          listOutputs: Object.freeze({ args: { basket: 'default', limit: 5 }, what: 'Coins in a basket of your wallet. Read-only: it lists, it doesn’t move anything.' }),
+          listActions: Object.freeze({ args: { labels: [], limit: 5 }, what: 'Your recent transactions (actions). Read-only.' }),
+          createSignature: Object.freeze({ args: { protocolID: [1, 'bwalletx api test'], keyID: '1', counterparty: 'anyone' }, sign: true, what: 'Signs your message with a key derived from your identity key. Your wallet asks you first. Nothing is sent anywhere.' }),
+        });
+        var ORDER = ['getPublicKey', 'getNetwork', 'getVersion', 'getHeight', 'isAuthenticated', 'listOutputs', 'listActions', 'createSignature'];
+        // createSignature takes only these keys from the box; the data always comes from the Message field.
+        var SIG_KEYS = ['protocolID', 'keyID', 'counterparty'];
+        var PAYMENT_PROTOCOL = '3241645161d8'; // BRC-29 payment keys: never sign with these here.
+
+        function allowed(name) { return Object.prototype.hasOwnProperty.call(CALLS, name); }
 
         function say(msg, isErr) { var el = $('bwx-say'); el.textContent = msg; el.className = 'say' + (isErr ? ' err' : ''); }
+        function conSay(msg, isErr) { var el = $('con-say'); el.textContent = msg; el.className = 'say' + (isErr ? ' err' : ''); }
         function short(k) { return k && k.length > 12 ? k.slice(0, 4) + '…' + k.slice(-4) : k || ''; }
         function why(e) {
           var m = (e && e.message) || String(e || '');
@@ -187,6 +251,20 @@ curl https://bwalletx.com/api/agent/products</code></pre>
           return m || 'Something went wrong.';
         }
         function show(id, on) { $(id).hidden = !on; }
+        function copy(text, btn, label) {
+          function done(ok) { btn.textContent = ok ? 'Copied' : 'Copy failed'; setTimeout(function () { btn.textContent = label; }, 1500); }
+          function fallback() {
+            var t = document.createElement('textarea');
+            t.value = text; t.setAttribute('readonly', ''); t.style.position = 'fixed'; t.style.opacity = '0';
+            document.body.appendChild(t); t.select();
+            var ok = false;
+            try { ok = document.execCommand('copy'); } catch (e) {}
+            document.body.removeChild(t);
+            done(ok);
+          }
+          if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(text).then(function () { done(true); }, fallback);
+          else fallback();
+        }
 
         async function findWallet() {
           var lib = window.bWalletXConnect;
@@ -212,6 +290,180 @@ curl https://bwalletx.com/api/agent/products</code></pre>
           }
         }
 
+        /* ---------- console ---------- */
+        var current = null, runId = 0, fullResponse = '';
+
+        function isBytes(v) { return v.length > 8 && v.every(function (n) { return typeof n === 'number' && n >= 0 && n < 256 && n % 1 === 0; }); }
+        function hexOf(a) { return a.map(function (b) { return ('0' + (b & 255).toString(16)).slice(-2); }).join(''); }
+        // A shortened copy for display: long strings and byte arrays are cut, long lists show the first 10.
+        function trunc(v, depth) {
+          depth = depth || 0;
+          if (typeof v === 'string') return v.length > 72 ? v.slice(0, 40) + '…' + v.slice(-16) + ' (' + v.length + ' chars)' : v;
+          if (Array.isArray(v)) {
+            if (isBytes(v)) { var h = hexOf(v); return '<' + v.length + ' bytes> ' + (h.length > 48 ? h.slice(0, 28) + '…' + h.slice(-12) : h); }
+            if (depth > 6) return '[…]';
+            var out = v.slice(0, 10).map(function (x) { return trunc(x, depth + 1); });
+            if (v.length > 10) out.push('… ' + (v.length - 10) + ' more');
+            return out;
+          }
+          if (v && typeof v === 'object') {
+            if (depth > 6) return '{…}';
+            var o = {};
+            Object.keys(v).forEach(function (k) { o[k] = trunc(v[k], depth + 1); });
+            return o;
+          }
+          return v;
+        }
+        // JSON with short lists of plain values kept on one line, e.g. "protocolID": [1, "bwalletx api test"].
+        function pretty(v, ind) {
+          ind = ind || '';
+          var n = ind + '  ';
+          if (Array.isArray(v)) {
+            if (!v.length) return '[]';
+            if (v.every(function (x) { return x === null || typeof x !== 'object'; })) {
+              var one = '[' + v.map(function (x) { return JSON.stringify(x === undefined ? null : x); }).join(', ') + ']';
+              if (one.length <= 60) return one;
+            }
+            return '[\n' + v.map(function (x) { return n + pretty(x, n); }).join(',\n') + '\n' + ind + ']';
+          }
+          if (v && typeof v === 'object') {
+            var ks = Object.keys(v).filter(function (k) { return v[k] !== undefined && typeof v[k] !== 'function'; });
+            if (!ks.length) return '{}';
+            return '{\n' + ks.map(function (k) { return n + JSON.stringify(k) + ': ' + pretty(v[k], n); }).join(',\n') + '\n' + ind + '}';
+          }
+          var j = JSON.stringify(v);
+          return j === undefined ? 'null' : j;
+        }
+        function fitArgs() { var t = $('con-args'); t.rows = Math.min(14, Math.max(3, t.value.split('\n').length + 1)); }
+
+        function parseArgs() {
+          var text = $('con-args').value.trim() || '{}';
+          var a;
+          try { a = JSON.parse(text); } catch (e) { throw { plain: 'The arguments aren’t valid JSON: ' + e.message }; }
+          if (!a || typeof a !== 'object' || Array.isArray(a)) throw { plain: 'The arguments must be a JSON object, like {}.' };
+          return a;
+        }
+
+        // Build the exact args object the wallet gets.
+        function buildArgs(name, a) {
+          if (!CALLS[name].sign) return a;
+          var out = {};
+          SIG_KEYS.forEach(function (k) { if (k in a) out[k] = a[k]; });
+          if (Array.isArray(out.protocolID) && String(out.protocolID[1]).trim() === PAYMENT_PROTOCOL) {
+            throw { plain: 'That protocol ID is for payment keys. This page won’t sign with it.' };
+          }
+          out.data = Array.from(new TextEncoder().encode($('con-msg').value));
+          return out;
+        }
+
+        function select(name) {
+          if (!allowed(name)) return;
+          current = name;
+          runId++; // a reply to an older run won't show up under this call
+          [].forEach.call($('con-calls').querySelectorAll('button'), function (b) { b.setAttribute('aria-pressed', b.dataset.call === name ? 'true' : 'false'); });
+          $('con-what').textContent = CALLS[name].what;
+          $('con-args').value = pretty(CALLS[name].args);
+          fitArgs();
+          show('con-msg-box', !!CALLS[name].sign);
+          if (CALLS[name].sign) $('con-msg').value = 'bwalletx.com/api test ' + new Date().toISOString();
+          $('con-run').disabled = false;
+          show('con-io', false);
+          conSay(CALLS[name].sign ? 'Edit the message if you like, then press Run. Your wallet will ask you to approve.' : '');
+          if (!CALLS[name].sign) run();
+        }
+
+        async function run() {
+          var name = current;
+          if (!allowed(name)) { conSay('That call isn’t allowed on this page.', true); return; }
+          if (!wallet) { conSay('Not connected. Press Connect bWalletX first.', true); return; }
+          var args;
+          try { args = buildArgs(name, parseArgs()); } catch (e) { conSay(e.plain || why(e), true); return; }
+          var my = ++runId;
+          $('con-req').textContent = 'await wallet.' + name + '(' + pretty(trunc(args)) + ')';
+          $('con-res').textContent = '…';
+          $('con-res-pre').className = '';
+          fullResponse = '';
+          show('con-io', true);
+          if (typeof wallet[name] !== 'function') { showError(my, name, { message: 'not supported' }, true); return; }
+          $('con-run').disabled = true;
+          conSay(CALLS[name].sign ? 'Approve the signature in bWalletX…' : 'Waiting for the wallet…');
+          try {
+            var res = await wallet[name].call(wallet, args);
+            if (my !== runId) return;
+            fullResponse = JSON.stringify(res === undefined ? null : res, null, 2);
+            $('con-res').textContent = pretty(trunc(res === undefined ? null : res));
+            conSay('Done.');
+          } catch (e) {
+            showError(my, name, e, false);
+          } finally {
+            if (my === runId) $('con-run').disabled = false;
+          }
+        }
+
+        function showError(my, name, e, missing) {
+          if (my !== runId) return;
+          var m = (e && e.message) || String(e || '');
+          var msg;
+          if (missing || /not (yet )?(implemented|supported)|unsupported|unknown (method|call)|no such method|is not a function/i.test(m) || (e && /NOT_IMPLEMENTED|UNSUPPORTED/.test(e.code || ''))) {
+            msg = 'Your wallet doesn’t support ' + name + '.';
+          } else if (/denied|reject|cancel|declin|refus/i.test(m)) {
+            msg = 'You said no in the wallet. Nothing happened.';
+          } else if (/lock|not authenticated/i.test(m)) {
+            msg = 'Your wallet is locked. Unlock it and press Run again.';
+          } else {
+            msg = 'The wallet answered with an error: ' + (m || 'no details');
+          }
+          var detail = { error: { code: (e && e.code) || null, message: m || null } };
+          fullResponse = pretty(detail);
+          $('con-res').textContent = fullResponse;
+          $('con-res-pre').className = 'err';
+          $('con-run').disabled = false;
+          conSay(msg, true);
+        }
+
+        function snippet(name) {
+          var a;
+          try { a = parseArgs(); } catch (e) { a = CALLS[name].args; }
+          var lines = [LIB_TAG, '<script type="module">', '  const { wallet } = await bWalletXConnect.connectBwalletX();', '  await bWalletXConnect.waitIfLocked(wallet);'];
+          if (CALLS[name].sign) {
+            lines.push('  const message = ' + JSON.stringify($('con-msg').value) + ';');
+            lines.push('  const result = await wallet.createSignature({');
+            lines.push('    data: Array.from(new TextEncoder().encode(message)),');
+            SIG_KEYS.forEach(function (k) { if (k in a) lines.push('    ' + k + ': ' + pretty(a[k], '    ') + ','); });
+            lines.push('  });');
+          } else {
+            lines.push('  const result = await wallet.' + name + '(' + JSON.stringify(a, null, 2).replace(/\n/g, '\n  ') + ');');
+          }
+          lines.push('  console.log(result);', '</' + 'script>');
+          return lines.join('\n');
+        }
+
+        ORDER.forEach(function (name) {
+          var li = document.createElement('li');
+          var b = document.createElement('button');
+          b.type = 'button'; b.dataset.call = name; b.textContent = name; b.setAttribute('aria-pressed', 'false');
+          b.addEventListener('click', function () { select(name); });
+          li.appendChild(b); $('con-calls').appendChild(li);
+        });
+        $('con-run').addEventListener('click', run);
+        $('con-args').addEventListener('input', fitArgs);
+        $('con-reset').addEventListener('click', function () { if (current) select(current); });
+        $('con-code').addEventListener('click', function () { if (current) copy(snippet(current), $('con-code'), 'Copy code'); });
+        $('con-copy').addEventListener('click', function () { if (fullResponse) copy(fullResponse, $('con-copy'), 'Copy full'); });
+
+        function resetConsole() {
+          current = null; runId++; fullResponse = '';
+          [].forEach.call($('con-calls').querySelectorAll('button'), function (b) { b.setAttribute('aria-pressed', 'false'); });
+          $('con-what').textContent = 'Pick a call above.';
+          $('con-args').value = '';
+          fitArgs();
+          $('con-run').disabled = true;
+          show('con-msg-box', false); show('con-io', false);
+          conSay('');
+        }
+        resetConsole();
+
+        /* ---------- connect ---------- */
         btnConnect.addEventListener('click', async function () {
           btnConnect.disabled = true;
           show('bwx-get', false);
@@ -232,9 +484,9 @@ curl https://bwalletx.com/api/agent/products</code></pre>
             $('f-ver').textContent = ver;
             $('f-via').textContent = VIA[method] || method;
             $('f-name').textContent = 'Looking up…';
-            show('bwx-facts', true); show('bwx-note', true);
-            btnConnect.hidden = true; btnSign.hidden = false; btnOff.hidden = false;
-            say('Connected.');
+            show('bwx-facts', true); show('bwx-note', true); show('bwx-con', true);
+            btnConnect.hidden = true; btnOff.hidden = false;
+            say('Connected. Try a call in the console below.');
             $('f-name').textContent = await lookupName(identityKey);
           } catch (e) {
             wallet = null;
@@ -249,42 +501,17 @@ curl https://bwalletx.com/api/agent/products</code></pre>
           }
         });
 
-        btnSign.addEventListener('click', async function () {
-          if (!wallet) return;
-          btnSign.disabled = true;
-          say('Approve the signature in bWalletX…');
-          try {
-            var msg = 'bwalletx.com/api test ' + new Date().toISOString();
-            var res = await wallet.createSignature({
-              data: Array.from(new TextEncoder().encode(msg)),
-              protocolID: [1, 'bwalletx api test'],
-              keyID: '1',
-              counterparty: 'anyone',
-            });
-            var hex = res.signature.map(function (b) { return ('0' + (b & 255).toString(16)).slice(-2); }).join('');
-            $('bwx-sig-out').textContent = 'Message:   ' + msg + '\nSignature: ' + hex;
-            show('bwx-sig', true);
-            say('Signed.');
-          } catch (e) {
-            say('Not signed: ' + why(e), true);
-          } finally {
-            btnSign.disabled = false;
-          }
-        });
-
         btnOff.addEventListener('click', function () {
           var lib = window.bWalletXConnect;
           if (method === 'pairing' && lib && lib.clearPairing) { try { lib.clearPairing(); } catch (e) {} }
           wallet = null; method = null; identityKey = null;
-          ['bwx-facts', 'bwx-sig', 'bwx-note', 'bwx-get'].forEach(function (id) { show(id, false); });
-          btnConnect.hidden = false; btnSign.hidden = true; btnOff.hidden = true;
+          ['bwx-facts', 'bwx-con', 'bwx-note', 'bwx-get'].forEach(function (id) { show(id, false); });
+          resetConsole();
+          btnConnect.hidden = false; btnOff.hidden = true;
           say('Disconnected. This page has forgotten your wallet.');
         });
 
-        $('f-copy').addEventListener('click', function () {
-          if (!identityKey || !navigator.clipboard) return;
-          navigator.clipboard.writeText(identityKey).then(function () { $('f-copy').textContent = 'Copied'; setTimeout(function () { $('f-copy').textContent = 'Copy'; }, 1500); });
-        });
+        $('f-copy').addEventListener('click', function () { if (identityKey) copy(identityKey, $('f-copy'), 'Copy'); });
       })();
     </script>
   </body>
