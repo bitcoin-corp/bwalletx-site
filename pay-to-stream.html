@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Pay to stream: podcasts by the minute</title>
+    <link rel="canonical" href="https://bwalletx.com/pay-to-stream" />
+    <meta name="description" content="Podcasts in bWalletX: hear a free preview first, then buy a ticket or pay as you listen. Stop any time. The money goes to the host." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://bwalletx.com/pay-to-stream" />
+    <meta property="og:site_name" content="bWalletX" />
+    <meta property="og:title" content="Hear it first. Then pay as you listen." />
+    <meta property="og:description" content="Podcasts in bWalletX: hear a free preview first, then buy a ticket or pay as you listen. Stop any time. The money goes to the host." />
+    <meta property="og:image" content="https://bwalletx.com/og-pay-to-stream-v1.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="A podcast timeline: a free first minute, then a ticket or pay as you listen." />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@bWalletX" />
+    <meta name="twitter:title" content="Hear it first. Then pay as you listen." />
+    <meta name="twitter:description" content="Podcasts in bWalletX: hear a free preview first, then buy a ticket or pay as you listen. Stop any time. The money goes to the host." />
+    <meta name="twitter:image" content="https://bwalletx.com/og-pay-to-stream-v1.png" />
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="stylesheet" href="/styles.css" />
+    <style>
+      .ext h1 { font-size: clamp(2.2rem, 6vw, 3.4rem); margin: 18px 0 10px; }
+      .ext h2 { margin: 48px 0 8px; font-size: 1.5rem; }
+      .ext p, .ext li { line-height: 1.7; }
+      .ext .small { color: #8a8a86; font-size: 0.85rem; }
+      .ft-steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 230px), 1fr)); gap: 14px; margin: 18px 0; counter-reset: s; }
+      .ft-steps div { background: #101114; border: 1px solid #ffffff12; border-radius: 16px; padding: 16px; }
+      .ft-steps div::before { counter-increment: s; content: counter(s); display: inline-grid; place-items: center; width: 30px; height: 30px; border-radius: 50%; background: linear-gradient(180deg, #F2C230, #E6B020); color: #000; font: 700 0.95rem var(--hf); margin-bottom: 8px; }
+      .ft-steps h3 { margin: 0 0 4px; font-size: 1.05rem; }
+      .ft-steps p { margin: 0; color: #a7adb8; font-size: 0.92rem; line-height: 1.5; }
+      .ft-note { background: #101114; border: 1px solid #ffffff12; border-radius: 16px; padding: 16px 18px; margin: 18px 0; }
+      .ft-note p { margin: 0 0 8px; }
+          .tl { margin: 22px 0 8px; }
+      .tl-bar { display: flex; height: 46px; border-radius: 14px; overflow: hidden; border: 1px solid #ffffff18; }
+      .tl-free { flex: 0 0 18%; background: #ffffff14; display: grid; place-items: center; font: 600 0.9rem var(--hf); color: #e8e8e4; }
+      .tl-paid { flex: 1; background: linear-gradient(90deg, #E6B02055, #F2C23022); display: grid; place-items: center; font: 600 0.9rem var(--hf); color: #F2C230; text-align: center; padding: 0 8px; }
+      .tl-axis { display: flex; justify-content: space-between; color: #8a8a86; font-size: 0.8rem; margin-top: 6px; }
+      .bc { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 230px), 1fr)); gap: 14px; }
+      .bc h3 { margin: 0 0 6px; font-size: 1rem; }
+      .bc ul { margin: 0; padding-left: 18px; }
+      .px { width: 100%; border-collapse: collapse; margin: 14px 0 4px; font-size: 0.92rem; }
+      .px th, .px td { text-align: left; padding: 8px 10px; border-bottom: 1px solid #ffffff14; }
+      .px th { color: #a7adb8; font-weight: 600; }
+    </style>
+  </head>
+  <body>
+    <div class="beta-banner">bWalletX is in <strong>beta</strong>: test with small amounts.</div>
+    <header class="topbar">
+      <div class="wrap topbar-in">
+        <a class="brand" href="/"><img src="/logo.svg" alt="" width="34" height="30" /><span>bWallet<span class="gold">X</span></span></a>
+        <nav aria-label="Pages">
+          <a href="/features">Features</a><a href="/exchange">Exchange</a><a href="/social">Social</a><a href="/agent">Agents</a><a href="/extension">Extension</a><a href="/developers">Developers</a>
+        </nav>
+        <span class="nav-cta"><a class="dl-btn" href="/get">Download</a><a class="web-btn" href="https://web.bwalletx.com" target="_blank" rel="noopener">Web &rarr;</a></span>
+      </div>
+    </header>
+    <script src="/nav.js"></script>
+    <main class="ext">
+      <h1>Hear it first. <span class="gold">Then pay as you listen.</span></h1>
+      <p class="lede">When a host keeps a recorded Space as a podcast, you can always hear the start for free. If you want the rest, buy a ticket, or pay by the minute and stop whenever you like. The money goes to the host.</p>
+      <div class="tl" role="img" aria-label="A podcast timeline: a free preview first, then a ticket or pay as you listen.">
+        <div class="tl-bar"><div class="tl-free">Free</div><div class="tl-paid">Ticket or pay as you listen</div></div>
+        <div class="tl-axis"><span>0:00</span><span>end</span></div>
+      </div>
+      <h2>A free preview, always</h2>
+      <p>Every paid podcast starts with something free: the first minute, or a clip the host picks. Hosts choose it with simple tools, like trimming a clip on YouTube: drag a start, drag an end, done.</p>
+      <h2>Two ways to listen</h2>
+      <div class="ft-steps">
+        <div><h3>Pay as you listen</h3><p>1p a minute. The first minute is free. Pause or leave and the payments stop.</p></div>
+        <div><h3>Ticket</h3><p>Buy the whole episode up front for less: usually 40% of the full streaming cost.</p></div>
+      </div>
+      <p>Streaming stops charging once your payments reach the ticket price, so you never pay more than a ticket. Hosts can also make an episode completely free.</p>
+      <table class="px">
+        <thead><tr><th>Episode length</th><th>Ticket (buy upfront)</th><th>Pay as you listen (1p/min after the free minute, never more than the ticket)</th></tr></thead>
+        <tbody>
+          <tr><td>10 min</td><td>4p</td><td>stops at 4p (after 4 paid minutes)</td></tr>
+          <tr><td>30 min</td><td>12p</td><td>stops at 12p</td></tr>
+          <tr><td>60 min</td><td>24p</td><td>stops at 24p</td></tr>
+        </tbody>
+      </table>
+      <p>Listen for a few minutes and stop, and you pay only for those minutes.</p>
+      <p class="small">Default prices. Hosts can set their own.</p>
+      <h2>Your Listening budget</h2>
+      <div class="ft-note">
+        <p>Paying by the minute uses bWalletX&rsquo;s <a href="/streaming-payments">streaming payments</a>. You set a Listening budget once, and nothing goes over it.</p>
+        <p>No popup for every payment. Stop any time and you stop paying.</p>
+      </div>
+      <h2>For hosts</h2>
+      <ul>
+        <li>Recording is opt-in. A Space only becomes a podcast if the host says so.</li>
+        <li>Default: 1p a minute, ticket at 40% of the full stream. Change either, or make an episode free.</li>
+        <li>Choose the free preview: the first minute, or your own clip.</li>
+        <li>Payments go to you, wallet to wallet.</li>
+      </ul>
+      <h2>Built and coming</h2>
+      <div class="ft-note bc">
+        <div><h3>Built</h3><ul><li>Streaming payments</li><li>Listening budget</li><li>Recorded Spaces (host opt-in)</li></ul></div>
+        <div><h3>Coming</h3><ul><li>Podcast tickets</li><li>Pay-to-stream for podcasts</li><li>Host free-clip picker</li></ul></div>
+      </div>
+      <div class="row" style="display:flex;gap:12px;flex-wrap:wrap;margin:26px 0"><a class="btn btn-store" href="/get">Get bWalletX</a></div>
+      <p class="small">Less noise. More life. Just b. &middot; bWalletX is in beta: test with small amounts. Questions: <a href="mailto:support@bwalletx.com">support@bwalletx.com</a></p>
+    </main>
+  </body>
+</html>
