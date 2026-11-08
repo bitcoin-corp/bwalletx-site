@@ -87,7 +87,7 @@ def ld_for(rel, s):
 tracked = subprocess.check_output(['git', 'ls-files', '*.html'], cwd=ROOT).decode().split()
 changed = 0
 for rel in tracked:
-    if rel.split('/')[0] in ('media-src', 'download', 'scripts', 'og') or rel == '404.html': continue
+    if rel.split('/')[0] in ('media-src', 'download', 'scripts', 'og') or rel in ('404.html', 'passwords-txt.html'): continue  # passwords-txt: private joke, noindex
     p = os.path.join(ROOT, rel)
     s0 = s = open(p, encoding='utf-8').read()
     if '</head>' not in s: continue
