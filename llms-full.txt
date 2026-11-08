@@ -2956,7 +2956,7 @@ The same steps whether you want something built or you are the one building it. 
 
 ### Say what you want built Live
 
-On bchatx.com/b, tell b what you need. b writes it up as a priced task: a quote. Accept it, and you pay the developer in BSV.
+Someone says what they need on bchatx.com/b, and b writes it up as a priced task. Take it on, and the client pays you in BSV when it’s done.
 
 [Ask b for a quote →](https://www.bchatx.com/b)
 
@@ -2980,17 +2980,19 @@ The builder and whoever pays sign the same contract in bChatX: the task, the pri
 
 ### A fingerprint on Bitcoin Live
 
-Only hashes go on chain, never the contract or your signature. Each party keeps a copy, and anyone with a copy can check it hasn't changed.
+Only the document’s hash goes on chain, never the contract text or your drawn signature. The seal also records each signer’s handle and name. Both of you keep the signed copy in your bChatX room, and anyone with a copy can check it hasn’t changed.
 
 [What goes on chain →](https://bwalletx.com/contracts)
 
 -
 
-### Deliver, get paid in full Live
+### Deliver, and the client pays you Live
 
-The pull request is merged, or the post goes live. You're paid in BSV, straight to your wallet, in full. The payer pays you directly: Kintsugi never holds the money, and there is no Kintsugi fee. Everything built through Kintsugi is open source under the Open BSV License.
+When your pull request is merged, or the post goes live, the client pays you in BSV, straight to your wallet, in full. Kintsugi never holds the money, and there is no Kintsugi fee. Everything built through Kintsugi is open source under the Open BSV License.
 
 [The program and its terms →](https://bkintsugix.com)
+
+Payment is between you and the client. Kintsugi doesn’t hold or guarantee it, and BSV payments can’t be reversed.
 
 - Coming Development work for verified builders, after an ID check and an entry task. [Details](https://bkintsugix.com)
 
@@ -3113,7 +3115,7 @@ Paid tasks on bWalletX, bChatX and the b*X apps. Each has a fixed price in a con
 ### Commission on `bchatx.com/b`
 Live
 
-Say what you want built. b writes it up as a priced task, you accept, and you pay the developer in BSV. The builder and you sign one contract in bChatX.
+Someone says what they want built, and b writes it up as a priced task. Take it on, sign one contract in bChatX with the client, and the client pays you in BSV when it’s done.
 
 [Ask b for a quote](https://www.bchatx.com/b)[How a contract works](#contracts)
 
@@ -3122,7 +3124,7 @@ Say what you want built. b writes it up as a priced task, you accept, and you pa
 ### Contracts in chat
 Live
 
-b drafts, everyone accepts with their own wallet, and each signer signs by hand and with their wallet key. Only a fingerprint goes on Bitcoin; each party keeps a copy.
+b drafts, everyone accepts with their own wallet, and each signer signs by hand and with their wallet key. Only the document’s hash goes on Bitcoin, and both of you keep the signed copy in your bChatX room.
 
 [How it works](https://bwalletx.com/contracts)
 
