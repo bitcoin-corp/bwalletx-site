@@ -2992,7 +2992,7 @@ When your pull request is merged, or the post goes live, the client pays you in 
 
 [The program and its terms →](https://bkintsugix.com)
 
-Payment is between you and the client. Kintsugi doesn’t hold or guarantee it, and BSV payments can’t be reversed.
+On commissions, payment is between you and the client. Kintsugi doesn’t hold or guarantee it, and BSV payments can’t be reversed.
 
 - Coming Development work for verified builders, after an ID check and an entry task. [Details](https://bkintsugix.com)
 
