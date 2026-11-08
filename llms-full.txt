@@ -7363,9 +7363,10 @@ What works in bWalletX today, and what doesn’t yet.
 [Get bWalletX](https://bwalletx.com/get?from=peck-on-b)
 
 
+Your keys stay with you: bWalletX is self-custody. Peck is a separate service; bWalletX is not affiliated with it. Logos belong to their owners. [More apps on b](https://bwalletx.com/on-b).
+
 ---
 
-Your keys stay with you: bWalletX is self-custody. Peck is a separate service; bWalletX is not affiliated with it. Logos belong to their owners. [More apps on b](https://bwalletx.com/on-b).
 Source: https://bwalletx.com/pay-to-stream
 
 # Hear it first. Then pay as you listen.
