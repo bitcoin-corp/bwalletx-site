@@ -41,6 +41,21 @@
     .rel{border-bottom:1px solid #ffffff10;padding:6px 0 14px}.rel h2{margin:22px 0 6px}.rel small,summary small{color:#8a8a86;font-size:.85rem;font-weight:400}
       details{margin:22px 0;border:1px solid #ffffff14;border-radius:14px;padding:10px 16px}summary{cursor:pointer;font-weight:700;font-size:1.1rem}
     </style>
+    <script>
+      // Share links point at a release (#v5.2.52). For the newest one, open at the top so the
+      // "Releases" heading shows under the nav; older ones still land on their release, below the bar.
+      (function () {
+        var h = location.hash;
+        if (!/^#v\d/.test(h)) return;
+        var bare = location.pathname + location.search;
+        history.replaceState(null, '', bare);
+        addEventListener('load', function () {
+          var t = document.getElementById(h.slice(1));
+          history.replaceState(null, '', bare + h);
+          if (t && t !== document.querySelector('article.rel')) t.scrollIntoView();
+        });
+      })();
+    </script>
   </head>
   <body>
     <div class="beta-banner">bWalletX is in <strong>beta</strong>: test with small amounts.</div>
