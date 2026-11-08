@@ -1,11 +1,16 @@
 <!doctype html>
 <!--
-  /build-on-b (6 Nov 2026): the builders' page. A b-ad-film style hero (full-screen scenes, letter-by-letter
-  slogans, CTA end card) with little bots building on b, then a quick start, the tools and real snippets.
-  The theme tune is ORIGINAL and made in the browser with the Web Audio API (no track, no licence needed).
+  /build-on-b (6 Nov 2026; film rebuilt 8 Nov 2026): the builders' page. A b-ad-film style hero (full-screen scenes,
+  letter-by-letter slogans, CTA end card) with our bBots (the Bubble shape from brand/bbot/), then a quick start,
+  how a contract works, the tools and real snippets.
+  Music: "Shadows Past (Alt)" by VexVoid, from the VexVoid catalogue, cut to 50 s (audio/build-on-b-shadows-past.mp3).
+  The 8 Nov rebuild follows RB's notes: a real catalogue track instead of the synthesised theme, our own bBots
+  instead of legged robots, and the contract story told properly (ask b for a priced task, one contract signed by
+  both sides with a fingerprint on Bitcoin, paid peer to peer in BSV, in full). Live features only, worded as
+  bkintsugix.com and /contracts word them; the only fee line is "no Kintsugi fee".
   Every tool line was checked against the live product on 6 Nov 2026: b0-x.com, bkintsugix.com, bgitx.com,
-  the @bwalletx/connect 0.7.0 README and the bwalletx 0.5.0 CLI README. Snippets are copied from those READMEs
-  and from /developers and /mcp, never made up.
+  the @bwalletx/connect 0.7.0 README and the bwalletx 0.5.0 CLI README. Contract copy follows bkintsugix.com and
+  /contracts (8 Nov 2026). Snippets are copied from those READMEs and from /developers and /mcp, never made up.
   This page never loads connect.js and never calls localhost:3321.
 -->
 <html lang="en">
@@ -14,22 +19,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Build on b · tools for builders · bWalletX</title>
     <link rel="canonical" href="https://bwalletx.com/build-on-b" />
-    <meta name="description" content="Start building on our stack: Connect bWalletX on your site, the bwalletx CLI and MCP server for agents, b0-x for on-chain sites, apps in the wallet, and paid Kintsugi tasks in BSV." />
+    <meta name="description" content="Start building on our stack: Connect bWalletX on your site, the bwalletx CLI and MCP server for agents, b0-x for on-chain sites, and contracts in bChatX: ask b for a priced task or take a Kintsugi task, sign one contract, get paid in BSV, in full." />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://bwalletx.com/build-on-b" />
     <meta property="og:site_name" content="bWalletX" />
     <meta property="og:title" content="Build on b" />
-    <meta property="og:description" content="Connect bWalletX, the bwalletx CLI and MCP server, b0-x and Kintsugi: the tools to start building on our stack today." />
-    <meta property="og:image" content="https://bwalletx.com/og-build-on-b-v1.png" />
+    <meta property="og:description" content="Connect bWalletX, the bwalletx CLI and MCP server, b0-x, and contracts in bChatX: ask b for a priced task, sign one contract, get paid in BSV, in full." />
+    <meta property="og:image" content="https://bwalletx.com/og-build-on-b-v2.png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
-    <meta property="og:image:alt" content="Build on b: two little robots stacking gold blocks into a b, beside the tools Connect, CLI and MCP, b0-x and Kintsugi, and a gold Start building button." />
+    <meta property="og:image:alt" content="Build on b: three bBots, speech-bubble shaped helpers with antennas, beside a gold b made of blocks and a signed contract card, with the tools Connect, CLI and MCP, b0-x and contracts, and a gold Start building button." />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@bWalletX" />
     <meta name="twitter:title" content="Build on b" />
-    <meta name="twitter:description" content="Connect bWalletX, the bwalletx CLI and MCP server, b0-x and Kintsugi: the tools to start building on our stack today." />
-    <meta name="twitter:image" content="https://bwalletx.com/og-build-on-b-v1.png" />
-    <meta name="twitter:image:alt" content="Build on b: two little robots stacking gold blocks into a b, beside the tools Connect, CLI and MCP, b0-x and Kintsugi, and a gold Start building button." />
+    <meta name="twitter:description" content="Connect bWalletX, the bwalletx CLI and MCP server, b0-x, and contracts in bChatX: ask b for a priced task, sign one contract, get paid in BSV, in full." />
+    <meta name="twitter:image" content="https://bwalletx.com/og-build-on-b-v2.png" />
+    <meta name="twitter:image:alt" content="Build on b: three bBots, speech-bubble shaped helpers with antennas, beside a gold b made of blocks and a signed contract card, with the tools Connect, CLI and MCP, b0-x and contracts, and a gold Start building button." />
     <meta name="theme-color" content="#120d2e" />
     <link rel="icon" href="/favicon.ico" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -66,61 +71,83 @@
       .scap .ctas { justify-content: center; margin: 22px 0 0; opacity: 0; }
       .on .scap .ctas { animation: rise 1s 1.6s ease forwards; }
 
-      /* Drawn bits. Everything animates only while its scene is on. */
+      /* Drawn bits. Everything animates only while its scene is on. Natural positions are the END state,
+         so prefers-reduced-motion simply shows where each scene lands. */
       .stage svg * { transform-box: fill-box; }
       .drop { opacity: 0; transform-origin: 50% 100%; }
       .on .drop, .shown .drop { animation: drop .7s var(--d) cubic-bezier(.3,1.45,.5,1) both; }
       @keyframes drop { 0% { opacity: 0; transform: translateY(-320px); } 25% { opacity: 1; } 80% { transform: translateY(0) scale(1.08, .9); } 100% { opacity: 1; transform: none; } }
+      /* bBots: no arms or legs, so they hop, bob, float and nudge things with their bodies (motion from brand/bbot/bbot.css). */
       .hop { transform-origin: 50% 100%; }
-      .on .hop, .shown .hop { animation: hop 1.1s var(--d, 0s) cubic-bezier(.3,0,.5,1) infinite; }
-      @keyframes hop { 0%, 100% { transform: none; } 15% { transform: scale(1.06, .92); } 45% { transform: translateY(-16px) scale(.97, 1.04); } 70% { transform: none; } }
-      .on .sway, .shown .sway { animation: sway 2.4s ease-in-out infinite; transform-origin: 50% 100%; }
-      @keyframes sway { 0%, 100% { transform: rotate(-4deg); } 50% { transform: rotate(4deg) translateY(-4px); } }
+      .on .hop { animation: hop 1.6s var(--d, 0s) ease-in-out infinite; }
+      @keyframes hop { 0%, 100% { transform: none; } 18% { transform: scale(1.05, .93); } 42% { transform: translateY(-14px) scale(.97, 1.04); } 66% { transform: scale(1.03, .97); } 80% { transform: none; } }
+      .on .bob, .shown .bob { animation: bob 3.2s var(--d, 0s) ease-in-out infinite; }
+      @keyframes bob { 0%, 100% { transform: none; } 50% { transform: translateY(-5px); } }
+      .float { transform-origin: 50% 50%; }
+      .on .float, .shown .float { animation: float 4.2s var(--d, 0s) ease-in-out infinite; }
+      @keyframes float { 0%, 100% { transform: translateY(0) rotate(-4deg); } 50% { transform: translateY(-12px) rotate(4deg); } }
+      .wob { transform-origin: 50% 100%; }
+      .on .wob, .shown .wob { animation: wob 1.8s ease-in-out infinite; }
+      @keyframes wob { 0%, 100% { transform: rotate(-7deg); } 50% { transform: rotate(7deg); } }
+      .nbot { transform-origin: 50% 100%; }
+      .on .nbot { animation: nbot 2.2s var(--d, .6s) cubic-bezier(.4,0,.2,1) both; }
+      @keyframes nbot { 0% { transform: translateX(-62px); } 38% { transform: translateX(-30px) rotate(0); } 46% { transform: translateX(-28px) scale(.94, 1.05) rotate(7deg); } 76% { transform: translateX(0) rotate(7deg); } 88% { transform: scale(1.05, .95); } 100% { transform: none; } }
+      .on .nblk { animation: nblk 2.2s var(--d, .6s) cubic-bezier(.4,0,.2,1) both; }
+      @keyframes nblk { 0%, 42% { transform: translateX(-30px); } 76%, 100% { transform: none; } }
       .pop { opacity: 0; transform-origin: 50% 50%; }
       .on .pop { animation: pop .7s var(--d, .2s) cubic-bezier(.2,1.6,.4,1) both; }
       @keyframes pop { from { opacity: 0; transform: scale(.2); } to { opacity: 1; transform: none; } }
       .fade { opacity: 0; }
-      .on .fade { animation: fadein .5s var(--d, 0s) ease both; }
+      .on .fade { animation: fadein .4s var(--d, 0s) ease both; }
       @keyframes fadein { to { opacity: 1; } }
-      .on .fadeout { animation: fadeout .4s var(--d, 0s) ease both; }
+      .on .fadeout { animation: fadeout .3s var(--d, 0s) ease both; }
       @keyframes fadeout { to { opacity: 0; } }
-      .on .carry { animation: carry 2.2s ease-in-out infinite; }
-      @keyframes carry { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-6px); } }
-      /* Connect: the gold piece flies in and snaps into the site. */
+      /* Get b: the gold Connect piece flies over from the wallet and snaps into the site. */
       .snap { transform-origin: 50% 50%; }
-      .on .snap { animation: snap .75s .75s cubic-bezier(.3,1.35,.5,1) both; }
-      @keyframes snap { from { transform: translate(-300px, 40px) rotate(-14deg); } to { transform: none; } }
-      .on .push { animation: push .75s .75s cubic-bezier(.3,1.2,.5,1) both; }
-      @keyframes push { from { transform: translateX(-120px); } to { transform: none; } }
+      .on .snap { animation: snap .8s .8s cubic-bezier(.3,1.35,.5,1) both; }
+      @keyframes snap { from { transform: translate(-190px, 26px) rotate(-12deg) scale(.6); } to { transform: none; } }
       .ring { opacity: 0; transform-origin: 50% 50%; }
       .on .ring { animation: ring .8s var(--d, 1.5s) ease-out both; }
-      @keyframes ring { 0% { opacity: .9; transform: scale(.7); } 100% { opacity: 0; transform: scale(1.5); } }
+      @keyframes ring { 0% { opacity: .9; transform: scale(.7); } 100% { opacity: 0; transform: scale(1.6); } }
       /* b0-x: files hop out of the folder into a checked list. */
       .fly { opacity: 0; }
       .on .fly { animation: fly .8s var(--d) cubic-bezier(.4,0,.3,1) both; }
       @keyframes fly { 0% { opacity: 0; transform: translate(-190px, 90px) scale(.4) rotate(-20deg); } 20% { opacity: 1; } 55% { transform: translate(-90px, -30px) scale(.8) rotate(-8deg); } 100% { opacity: 1; transform: none; } }
-      /* bApp: a new tile drops into the Apps grid. */
-      .tile { opacity: 0; transform-origin: 50% 100%; }
-      .on .tile { animation: drop .8s 1s cubic-bezier(.3,1.45,.5,1) both; }
       /* CLI: commands type themselves. */
       .cover { transform-origin: 100% 50%; }
       .on .cover { animation: type 1.1s var(--d) steps(18) both; }
       @keyframes type { from { transform: scaleX(1); } to { transform: scaleX(0); } }
       .cur { opacity: 0; }
-      .on .cur { animation: fadein .3s 2.8s both, blink 1s 3.1s steps(1) infinite; }
+      .on .cur { animation: fadein .3s 2.6s both, blink 1s 2.9s steps(1) infinite; }
       @keyframes blink { 50% { opacity: 0; } }
-      /* Kintsugi: press the button, coins hop to the bot. */
-      .on .press { animation: press .3s 1s ease both; transform-origin: 50% 50%; }
+      /* Commission: b types, then the quote arrives; Accept is pressed. */
+      .tdots { opacity: 0; }
+      .on .tdots { animation: tdots 1.3s .9s ease both; }
+      @keyframes tdots { 0% { opacity: 0; } 15%, 85% { opacity: 1; } 100% { opacity: 0; } }
+      .on .press { animation: press .35s var(--d, 1s) ease both; transform-origin: 50% 50%; }
       @keyframes press { 50% { transform: scale(.93); } }
+      /* Sign it: two signatures draw themselves, then the fingerprint drops onto the chain. */
+      .sig { stroke-dasharray: 1; stroke-dashoffset: 1; }
+      .on .sig { animation: sig 1s var(--d) ease-in-out both; }
+      @keyframes sig { to { stroke-dashoffset: 0; } }
+      .fp { opacity: 0; transform-origin: 50% 50%; }
+      .on .fp { animation: fp 1.2s var(--d) cubic-bezier(.5,0,.3,1) both; }
+      @keyframes fp { 0% { opacity: 0; transform: translate(-158px, -70px) scale(.7); } 15% { opacity: 1; } 60% { transform: translate(-60px, -64px) scale(1.1); } 100% { opacity: 1; transform: none; } }
+      /* Paid in full: coins go straight from the payer's wallet to the builder's. */
       .coin { opacity: 0; }
-      .on .coin { animation: coin .6s var(--d) cubic-bezier(.3,0,.6,1) both; }
-      @keyframes coin { 0% { opacity: 0; transform: translate(0, 0) scale(.6); } 15% { opacity: 1; } 50% { transform: translate(95px, -110px) scale(1.15); } 92% { opacity: 1; } 100% { opacity: 0; transform: translate(190px, -10px) scale(.7); } }
-      .on .catch { animation: catch .35s var(--d) ease-out 3 both; transform-origin: 50% 100%; }
-      @keyframes catch { 50% { transform: translateY(-12px); } }
+      .on .coin { animation: coin 1s var(--d) cubic-bezier(.35,0,.55,1) both; }
+      @keyframes coin { 0% { opacity: 0; transform: translate(0, 0) scale(.6); } 12% { opacity: 1; } 50% { transform: translate(106px, -82px) scale(1.12); } 90% { opacity: 1; } 100% { opacity: 0; transform: translate(212px, 0) scale(.8); } }
       /* End: pixel confetti. */
       .conf rect { opacity: 0; }
       .on .conf rect { animation: fall 3.4s var(--d) linear infinite; }
       @keyframes fall { 0% { opacity: 1; transform: translateY(-60px) rotate(0); } 100% { opacity: 1; transform: translateY(420px) rotate(380deg); } }
+      /* bBot colours (the Bubble set, brand/bbot/bbot.js): main, dark, light. */
+      .c-gold { --bm: #F5B800; --bd: #8A6400; --bl: #FFE27A; }
+      .c-azure { --bm: #3D8BFF; --bd: #1D4FB8; --bl: #B9D6FF; }
+      .c-mint { --bm: #2FD58E; --bd: #0E7A4C; --bl: #B6F5D8; }
+      .c-coral { --bm: #FF7A59; --bd: #B23A1E; --bl: #FFC9B8; }
+      .c-iris { --bm: #8B7CFF; --bd: #4B3BC4; --bl: #D4CDFF; }
+      .c-magenta { --bm: #E44CE0; --bd: #8A1C87; --bl: #F6C2F4; }
 
       /* Gate: nothing plays until the visitor presses. */
       .gate { position: absolute; inset: 0; z-index: 6; isolation: isolate; display: grid; grid-template-rows: auto auto; align-content: center; padding: calc(var(--navh) + 8px) 16px 40px;
@@ -198,6 +225,7 @@
       .endcard p { margin: 16px auto 0; max-width: 32em; color: #e6e1d4; font: 500 1.1rem/1.5 var(--hf); }
       .endcard .ctas { justify-content: center; }
       .endcard .credit { margin-top: 28px; font: 400 .82rem var(--hf); letter-spacing: .03em; color: rgba(255,255,255,.66); }
+      .endcard .credit a { color: inherit; }
       @media (max-width: 600px) {
         .fm { min-height: 600px; }
         .sc { padding-bottom: 70px; }
@@ -209,11 +237,15 @@
         a.bp { padding: 13px 20px; }
       }
       @media (max-height: 700px) { .slg { font-size: clamp(2.2rem, 7vw, 4.4rem); } }
+      .slg.long { font-size: clamp(2.2rem, 6.2vw, 4.8rem); }
+      .soon { list-style: none; padding: 0; margin: 4px 0 0; }
+      .soon li { display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 10px; padding: 10px 0; border-top: 1px solid #ffffff14; color: #cfcabd; }
       @media (prefers-reduced-motion: reduce) {
         .sc *, .gate *, .endcard * { animation: none !important; }
         .sc, .gate { transition: none !important; }
-        .ch, .slg .lb, .scap p, .scap .ctas, .drop, .pop, .fade, .fly, .tile, .cur { opacity: 1 !important; filter: none !important; transform: none !important; }
-        .cover, .ring, .fadeout, .conf, .coin { display: none; }
+        .ch, .slg .lb, .scap p, .scap .ctas, .drop, .pop, .fade, .fly, .cur, .fp { opacity: 1 !important; filter: none !important; transform: none !important; }
+        .sig { stroke-dashoffset: 0; }
+        .cover, .ring, .fadeout, .conf, .coin, .tdots { display: none; }
       }
     </style>
   </head>
@@ -230,7 +262,10 @@
     </header>
     <script src="/nav.js"></script>
 
-    <!-- Our own drawings: a little bot, the b, a gold block, a coin. Reused in every scene. -->
+    <!-- Our own drawings, reused in every scene: the b, a gold block, a coin, a fingerprint and the bBots.
+         bBot = the Bubble shape from brand/bbot/ (bbot-gold.svg and the mood SVGs), same geometry; its colours come
+         from --bm / --bd / --bl via the .c-* classes. Four faces: #bb and #bb2 idle (blinking out of step),
+         #bbw working (eyes look left and right), #bbd done (happy eyes). No arms or legs, ever. -->
     <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
       <defs>
         <linearGradient id="gold" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFE58A" /><stop offset=".55" stop-color="#FFD24D" /><stop offset="1" stop-color="#C98F00" /></linearGradient>
@@ -238,89 +273,71 @@
         <symbol id="blogo" viewBox="23 8 74 100"><path fill="url(#gold)" fill-rule="evenodd" d="M27 30L45 12V42.606A33 33 0 1 1 27 72ZM60 57A15 15 0 1 0 60 87A15 15 0 1 0 60 57Z" /></symbol>
         <symbol id="blk" viewBox="0 0 26 26"><rect x="1.2" y="1.2" width="23.6" height="23.6" rx="5" fill="url(#gold)" stroke="#111" stroke-width="2.2" /><rect x="5" y="5" width="8" height="3.6" rx="1.8" fill="#fff" opacity=".6" /></symbol>
         <symbol id="coin" viewBox="0 0 30 30"><circle cx="15" cy="15" r="13" fill="url(#gold)" stroke="#111" stroke-width="2.2" /><circle cx="15" cy="15" r="8.6" fill="none" stroke="#a87600" stroke-width="1.6" /><use href="#blogo" x="10.5" y="8.5" width="9" height="13" /></symbol>
-        <symbol id="bot" viewBox="0 0 60 84">
-          <line x1="30" y1="15" x2="30" y2="6.5" stroke="#111" stroke-width="2.6" stroke-linecap="round" />
-          <circle cx="30" cy="5.2" r="4.4" fill="#FFD24D" stroke="#111" stroke-width="2" />
-          <path d="M15 57 q-9 1 -10 11" stroke="#111" stroke-width="3.4" fill="none" stroke-linecap="round" />
-          <path d="M45 57 q9 1 10 11" stroke="#111" stroke-width="3.4" fill="none" stroke-linecap="round" />
-          <rect x="18" y="71" width="9" height="9" rx="3.5" fill="#111" /><rect x="33" y="71" width="9" height="9" rx="3.5" fill="#111" />
-          <rect x="14.5" y="49" width="31" height="24" rx="10" style="fill: var(--body, #F5B800)" stroke="#111" stroke-width="2.5" />
-          <circle cx="30" cy="61" r="4.2" fill="#fff" opacity=".8" />
-          <rect x="7" y="14" width="46" height="35" rx="13" fill="#F4F1FA" stroke="#111" stroke-width="2.5" />
-          <rect x="12.5" y="19.5" width="35" height="22" rx="8.5" fill="#1A1C2E" />
-          <ellipse cx="23" cy="30" rx="3.4" ry="3.9" fill="#7CF5E6"><animate attributeName="ry" values="3.9;3.9;0.5;3.9" keyTimes="0;0.9;0.95;1" dur="3.4s" repeatCount="indefinite" /></ellipse>
-          <ellipse cx="37" cy="30" rx="3.4" ry="3.9" fill="#7CF5E6"><animate attributeName="ry" values="3.9;3.9;0.5;3.9" keyTimes="0;0.9;0.95;1" dur="3.4s" repeatCount="indefinite" /></ellipse>
-          <path d="M25.5 36 q4.5 3.6 9 0" stroke="#7CF5E6" stroke-width="2" fill="none" stroke-linecap="round" />
-          <circle cx="11" cy="42.5" r="2.5" fill="#FF8CC6" opacity=".85" /><circle cx="49" cy="42.5" r="2.5" fill="#FF8CC6" opacity=".85" />
-        </symbol>
+        <symbol id="fpr" viewBox="0 0 36 36"><circle cx="18" cy="18" r="16" fill="url(#gold)" stroke="#111" stroke-width="2" /><g fill="none" stroke="#5a3e00" stroke-width="1.7" stroke-linecap="round"><path d="M8.6 15.5C10.2 11.4 13.8 8.8 18 8.8s7.8 2.6 9.4 6.7" /><path d="M11.2 21.5c-.3-5 2.6-8.5 6.8-8.5s7.1 3.5 6.8 8.5" /><path d="M14.4 25.6c-.6-1.4-1-3-1-4.6 0-3 2-5 4.6-5s4.6 2 4.6 5c0 2-.4 3.6-1 5" /><path d="M18 19.6v7.6" /></g></symbol>
+        <g id="bbody">
+          <rect x="30.8" y="3" width="2.4" height="7" rx="1.2" style="fill: var(--bd, #8A6400)" />
+          <circle cx="32" cy="3.6" r="2.8" stroke-width="1.5" style="fill: var(--bl, #FFE27A); stroke: var(--bd, #8A6400)"><animate attributeName="opacity" values="1;.3;1" dur="2.4s" repeatCount="indefinite" /></circle>
+          <path d="M22 9 H42 A14 14 0 0 1 56 23 V32 A14 14 0 0 1 42 46 H30 L17 57 L20 45.2 A14 14 0 0 1 8 32 V23 A14 14 0 0 1 22 9 Z" stroke-width="2.5" stroke-linejoin="round" style="fill: var(--bm, #F5B800); stroke: var(--bd, #8A6400)" />
+        </g>
+        <g id="beyes"><rect x="19.5" y="19" width="8" height="13" rx="4" fill="#0F1013" /><circle cx="24.6" cy="23" r="1.5" fill="#fff" fill-opacity=".9" /><rect x="36.5" y="19" width="8" height="13" rx="4" fill="#0F1013" /><circle cx="41.6" cy="23" r="1.5" fill="#fff" fill-opacity=".9" /></g>
+        <symbol id="bb" viewBox="0 0 64 64" overflow="visible"><use href="#bbody" /><g transform="translate(32 25.5)"><g><animateTransform attributeName="transform" type="scale" values="1 1;1 1;1 .1;1 1" keyTimes="0;.9;.95;1" dur="4.6s" repeatCount="indefinite" /><use href="#beyes" transform="translate(-32 -25.5)" /></g></g></symbol>
+        <symbol id="bb2" viewBox="0 0 64 64" overflow="visible"><use href="#bbody" /><g transform="translate(32 25.5)"><g><animateTransform attributeName="transform" type="scale" values="1 1;1 1;1 .1;1 1" keyTimes="0;.9;.95;1" dur="6.1s" begin="-2.3s" repeatCount="indefinite" /><use href="#beyes" transform="translate(-32 -25.5)" /></g></g></symbol>
+        <symbol id="bbw" viewBox="0 0 64 64" overflow="visible"><use href="#bbody" /><g><animateTransform attributeName="transform" type="translate" values="0 0;-2 0;0 0;2 0;0 0" dur="2.6s" repeatCount="indefinite" /><use href="#beyes" /></g></symbol>
+        <symbol id="bbd" viewBox="0 0 64 64" overflow="visible"><use href="#bbody" /><path d="M19.9 27.32 Q23.5 19.52 27.1 27.32" stroke="#0F1013" stroke-width="2.56" fill="none" stroke-linecap="round" /><path d="M36.9 27.32 Q40.5 19.52 44.1 27.32" stroke="#0F1013" stroke-width="2.56" fill="none" stroke-linecap="round" /></symbol>
       </defs>
     </svg>
 
-    <section class="fm" id="film" aria-label="Build on b: a 48-second animated film with an original chiptune. Little robots build a b out of gold blocks, then show the tools: bWalletX, Connect, b0-x, apps in the wallet, the bwalletx CLI and Kintsugi.">
-      <!-- 1 · 0s · b is for builders -->
+    <section class="fm" id="film" aria-label="Build on b: a 50-second animated film with music by VexVoid. bBots, our little speech-bubble helpers, build a b out of gold blocks. Then: get bWalletX and Connect, ship a site with b0-x, give your AI agent its own budget, and how a contract works: tell b what you want built, sign one contract, and the builder is paid in BSV, in full.">
+      <!-- Scene times are beat-snapped to the cut (88.0 bpm, beat 0.6817 s, first beat 0.065 s): every change lands on a downbeat. -->
+      <!-- 1 · 0s · b is for builders: bBots build a b. One nudges a block with its body, one balances a block on its antenna. -->
       <div class="sc" data-at="0" style="--bg: radial-gradient(ellipse at 50% 35%, #3a2a8f, #120d2e 72%)">
         <div class="stage" aria-hidden="true">
           <svg viewBox="0 0 480 300">
             <ellipse cx="240" cy="284" rx="210" ry="9" fill="#000" opacity=".28" />
             <g class="pixb" data-cell="22" data-x="174" data-y="104"></g>
-            <use href="#bot" class="hop" x="62" y="198" width="60" height="84" style="--body: #4CC9F0" />
-            <g class="carry"><use href="#bot" x="358" y="198" width="60" height="84" style="--body: #FF8CC6" /><use href="#blk" x="375" y="168" width="26" height="26" /></g>
+            <g class="float" style="--d: .3s"><use href="#bb2" class="c-mint" x="60" y="40" width="46" height="46" /></g>
+            <g class="float" style="--d: 1.4s"><use href="#bbd" class="c-iris" x="390" y="50" width="38" height="38" /></g>
+            <use href="#blk" class="nblk" x="128" y="258" width="26" height="26" />
+            <g class="nbot"><use href="#bbw" class="c-azure" x="72" y="227" width="64" height="64" /></g>
+            <g class="bob"><use href="#bb" class="c-coral" x="358" y="227" width="64" height="64" /><g class="wob"><use href="#blk" x="377" y="202" width="26" height="26" /></g></g>
           </svg>
         </div>
         <div class="scap"><h2 class="slg" data-slogan="{L} is for builders"></h2><p>Tools for people who build on Bitcoin, from the team that makes bWalletX.</p></div>
       </div>
 
-      <!-- 2 · 6s · Get b -->
-      <div class="sc" data-at="6" style="--bg: radial-gradient(ellipse at 50% 35%, #157a7e, #06222a 72%)">
+      <!-- 2 · 4.84s · Get b: the wallet, then the gold Connect piece snaps into your site. -->
+      <div class="sc" data-at="4.84" style="--bg: radial-gradient(ellipse at 50% 35%, #157a7e, #06222a 72%)">
         <div class="stage" aria-hidden="true">
           <svg viewBox="0 0 480 300">
-            <ellipse cx="240" cy="284" rx="210" ry="9" fill="#000" opacity=".28" />
+            <ellipse cx="250" cy="284" rx="210" ry="9" fill="#000" opacity=".28" />
             <g class="pop" style="--d: .15s">
-              <rect x="178" y="30" width="124" height="236" rx="24" fill="#111" />
-              <rect x="186" y="40" width="108" height="216" rx="17" fill="url(#scr)" />
-              <rect x="222" y="47" width="36" height="7" rx="3.5" fill="#000" />
-              <use href="#blogo" x="208" y="88" width="64" height="86" />
-              <text x="240" y="206" text-anchor="middle" font-family="Space Grotesk, sans-serif" font-weight="700" font-size="17" fill="#fff">bWallet<tspan fill="#FFD24D">X</tspan></text>
-              <rect x="206" y="222" width="68" height="20" rx="10" fill="#FFD24D" /><text x="240" y="236" text-anchor="middle" font-family="Space Grotesk, sans-serif" font-weight="700" font-size="11" fill="#111">Ready</text>
+              <rect x="34" y="52" width="108" height="214" rx="22" fill="#111" />
+              <rect x="41" y="60" width="94" height="198" rx="16" fill="url(#scr)" />
+              <rect x="72" y="66" width="32" height="6" rx="3" fill="#000" />
+              <use href="#blogo" x="66" y="96" width="44" height="60" />
+              <text x="88" y="184" text-anchor="middle" font-family="Space Grotesk, sans-serif" font-weight="700" font-size="15" fill="#fff">bWallet<tspan fill="#FFD24D">X</tspan></text>
+              <rect x="60" y="198" width="56" height="20" rx="10" fill="#FFD24D" /><text x="88" y="212" text-anchor="middle" font-family="Space Grotesk, sans-serif" font-weight="700" font-size="11" fill="#111">Ready</text>
             </g>
-            <use href="#bot" class="hop" x="74" y="198" width="60" height="84" style="--body: #FFD24D" />
-            <g class="pop" style="--d: .9s"><rect x="36" y="140" width="96" height="36" rx="14" fill="#fff" stroke="#111" stroke-width="2" /><path d="M92 175 l6 12 l6 -12" fill="#fff" stroke="#111" stroke-width="2" stroke-linejoin="round" /><rect x="93" y="172" width="11" height="5" fill="#fff" /><text x="84" y="164" text-anchor="middle" font-family="Space Grotesk, sans-serif" font-weight="700" font-size="15" fill="#111">Get b!</text></g>
-            <g font-family="Space Grotesk, sans-serif" font-weight="600" font-size="14" fill="#fff" text-anchor="middle">
-              <g class="pop" style="--d: 1.2s"><rect x="330" y="78" width="104" height="34" rx="17" fill="rgba(255,255,255,.12)" stroke="#FFD24D" stroke-width="1.6" /><text x="382" y="100">Web</text></g>
-              <g class="pop" style="--d: 1.45s"><rect x="330" y="124" width="104" height="34" rx="17" fill="rgba(255,255,255,.12)" stroke="#FFD24D" stroke-width="1.6" /><text x="382" y="146">Chrome</text></g>
-              <g class="pop" style="--d: 1.7s"><rect x="330" y="170" width="104" height="34" rx="17" fill="rgba(255,255,255,.12)" stroke="#FFD24D" stroke-width="1.6" /><text x="382" y="192">Android</text></g>
-            </g>
-          </svg>
-        </div>
-        <div class="scap"><h2 class="slg" data-slogan="Get {L}"></h2><p>Start with bWalletX, our BRC-100 wallet: on the web, in Chrome or on Android.</p></div>
-      </div>
-
-      <!-- 3 · 12s · Connect -->
-      <div class="sc" data-at="12" style="--bg: radial-gradient(ellipse at 50% 35%, #7a2a7c, #1d0820 72%)">
-        <div class="stage" aria-hidden="true">
-          <svg viewBox="0 0 480 300">
-            <ellipse cx="240" cy="284" rx="210" ry="9" fill="#000" opacity=".28" />
-            <rect x="118" y="34" width="320" height="214" rx="16" fill="#FFF8EA" stroke="#111" stroke-width="2.5" />
-            <path d="M118 50 a16 16 0 0 1 16 -16 h288 a16 16 0 0 1 16 16 v14 h-320z" fill="#EDE3CF" stroke="#111" stroke-width="2.5" />
-            <circle cx="138" cy="50" r="4.5" fill="#FF6B6B" /><circle cx="153" cy="50" r="4.5" fill="#FFD24D" /><circle cx="168" cy="50" r="4.5" fill="#5BD69A" />
-            <rect x="200" y="41" width="168" height="18" rx="9" fill="#fff" /><text x="284" y="54.5" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="11" fill="#555">your-site.com</text>
-            <rect x="142" y="88" width="150" height="12" rx="6" fill="#E4DAC6" /><rect x="142" y="110" width="232" height="9" rx="4.5" fill="#EEE6D6" /><rect x="142" y="126" width="196" height="9" rx="4.5" fill="#EEE6D6" />
-            <rect x="198" y="168" width="204" height="48" rx="24" fill="none" stroke="#B9AE98" stroke-width="2" stroke-dasharray="7 6" />
-            <circle class="ring" cx="300" cy="192" r="40" fill="none" stroke="#FFD24D" stroke-width="4" style="--d: 1.45s" />
+            <rect x="166" y="44" width="290" height="208" rx="16" fill="#FFF8EA" stroke="#111" stroke-width="2.5" />
+            <path d="M166 60 a16 16 0 0 1 16 -16 h258 a16 16 0 0 1 16 16 v14 h-290z" fill="#EDE3CF" stroke="#111" stroke-width="2.5" />
+            <circle cx="185" cy="60" r="4.5" fill="#FF6B6B" /><circle cx="200" cy="60" r="4.5" fill="#FFD24D" /><circle cx="215" cy="60" r="4.5" fill="#5BD69A" />
+            <rect x="240" y="51" width="150" height="18" rx="9" fill="#fff" /><text x="315" y="64.5" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="11" fill="#555">your-site.com</text>
+            <rect x="188" y="96" width="140" height="12" rx="6" fill="#E4DAC6" /><rect x="188" y="118" width="230" height="9" rx="4.5" fill="#EEE6D6" /><rect x="188" y="134" width="190" height="9" rx="4.5" fill="#EEE6D6" />
+            <rect x="208" y="170" width="206" height="48" rx="24" fill="none" stroke="#B9AE98" stroke-width="2" stroke-dasharray="7 6" />
+            <circle class="ring" cx="311" cy="194" r="40" fill="none" stroke="#FFD24D" stroke-width="4" style="--d: 1.5s" />
             <g class="snap">
-              <rect x="198" y="168" width="204" height="48" rx="24" fill="url(#gold)" stroke="#111" stroke-width="2.5" />
-              <g class="fadeout" style="--d: 1.6s"><text x="300" y="197" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-weight="600" font-size="13" fill="#111">&lt;bwalletx-button&gt;</text></g>
-              <g class="fade" style="--d: 1.7s"><use href="#blogo" x="222" y="180" width="17" height="23" style="filter: brightness(.25)" /><text x="310" y="197.5" text-anchor="middle" font-family="Space Grotesk, sans-serif" font-weight="700" font-size="15" fill="#111">Connect bWalletX</text></g>
+              <rect x="208" y="170" width="206" height="48" rx="24" fill="url(#gold)" stroke="#111" stroke-width="2.5" />
+              <use href="#blogo" x="230" y="182" width="17" height="23" style="filter: brightness(.25)" /><text x="320" y="199.5" text-anchor="middle" font-family="Space Grotesk, sans-serif" font-weight="700" font-size="15" fill="#111">Connect bWalletX</text>
             </g>
-            <g class="push"><use href="#bot" x="42" y="198" width="60" height="84" style="--body: #B79CFF" /></g>
-            <g class="pop" fill="#FFD24D" style="--d: 1.6s"><path d="M418 160 l3 8 l8 3 l-8 3 l-3 8 l-3 -8 l-8 -3 l8 -3z" /><path d="M186 152 l2 5 l5 2 l-5 2 l-2 5 l-2 -5 l-5 -2 l5 -2z" /></g>
+            <g class="bob" style="--d: .4s"><use href="#bb" class="c-gold fadeout" x="392" y="8" width="50" height="50" style="--d: 1.6s" /><use href="#bbd" class="c-gold fade" x="392" y="8" width="50" height="50" style="--d: 1.6s" /></g>
+            <g class="pop" fill="#FFD24D" style="--d: 1.7s"><path d="M438 158 l3 8 l8 3 l-8 3 l-3 8 l-3 -8 l-8 -3 l8 -3z" /><path d="M192 160 l2 5 l5 2 l-5 2 l-2 5 l-2 -5 l-5 -2 l5 -2z" /></g>
           </svg>
         </div>
-        <div class="scap"><h2 class="slg" data-slogan="Connect"></h2><p>One script adds Connect bWalletX to your site. Any BRC-100 wallet can sign in.</p></div>
+        <div class="scap"><h2 class="slg" data-slogan="Get {L}"></h2><p>Get bWalletX on the web, in Chrome or on Android. One script adds Connect bWalletX to your site.</p></div>
       </div>
 
-      <!-- 4 · 18s · Ship it (b0-x) -->
-      <div class="sc" data-at="18" style="--bg: radial-gradient(ellipse at 50% 35%, #1f4f9e, #08132e 72%)">
+      <!-- 3 · 10.29s · Ship it (b0-x) -->
+      <div class="sc" data-at="10.29" style="--bg: radial-gradient(ellipse at 50% 35%, #1f4f9e, #08132e 72%)">
         <div class="stage" aria-hidden="true">
           <svg viewBox="0 0 480 300">
             <ellipse cx="240" cy="284" rx="210" ry="9" fill="#000" opacity=".28" />
@@ -335,103 +352,166 @@
               <g class="fly" style="--d: 1.5s"><rect x="268" y="162" width="176" height="36" rx="10" fill="#fff" stroke="#111" stroke-width="2" /><text x="282" y="185">img/logo.png</text><circle cx="424" cy="180" r="9" fill="#5BD69A" stroke="#111" stroke-width="1.6" /><path d="M419.5 180 l3 3 l6 -6" stroke="#111" stroke-width="2" fill="none" stroke-linecap="round" /></g>
             </g>
             <g class="pop" style="--d: 2.1s"><rect x="268" y="212" width="176" height="32" rx="16" fill="rgba(255,255,255,.14)" stroke="#FFD24D" stroke-width="1.6" /><text x="356" y="233" text-anchor="middle" font-family="Space Grotesk, sans-serif" font-weight="600" font-size="13" fill="#fff">Files, links, cost: checked</text></g>
-            <use href="#bot" class="hop" x="176" y="198" width="60" height="84" style="--body: #5BD69A; --d: .2s" />
+            <use href="#bbw" class="hop c-mint" x="172" y="227" width="64" height="64" style="--d: .2s" />
           </svg>
         </div>
         <div class="scap"><h2 class="slg" data-slogan="Ship it"></h2><p>Drop your built site into b0-x. It checks every file and link in your browser, and estimates the cost on chain.</p></div>
       </div>
 
-      <!-- 5 · 24s · Be a bApp -->
-      <div class="sc" data-at="24" style="--bg: radial-gradient(ellipse at 50% 35%, #1d7a4d, #061f13 72%)">
+      <!-- 4 · 15.74s · Bots welcome (CLI + MCP): a bBot with its own account, budget, daily cap and stop switch. -->
+      <div class="sc" data-at="15.74" style="--bg: radial-gradient(ellipse at 50% 35%, #2d3c66, #0a0f1f 72%)">
         <div class="stage" aria-hidden="true">
           <svg viewBox="0 0 480 300">
-            <ellipse cx="240" cy="284" rx="210" ry="9" fill="#000" opacity=".28" />
-            <rect x="168" y="22" width="144" height="250" rx="26" fill="#111" />
-            <rect x="176" y="32" width="128" height="230" rx="19" fill="#F7F3EA" />
-            <text x="192" y="66" font-family="Space Grotesk, sans-serif" font-weight="700" font-size="17" fill="#111">Apps</text>
-            <g stroke="#111" stroke-width="2">
-              <rect x="192" y="82" width="28" height="28" rx="8" fill="#FF8CC6" /><rect x="226" y="82" width="28" height="28" rx="8" fill="#4CC9F0" /><rect x="260" y="82" width="28" height="28" rx="8" fill="#B79CFF" />
-              <rect x="192" y="118" width="28" height="28" rx="8" fill="#5BD69A" /><rect x="226" y="118" width="28" height="28" rx="8" fill="#FF8A3D" /><rect x="260" y="118" width="28" height="28" rx="8" fill="#FFD24D" />
-              <rect x="192" y="154" width="28" height="28" rx="8" fill="#7CF5E6" /><rect x="226" y="154" width="28" height="28" rx="8" fill="#FF6B6B" />
-            </g>
-            <rect x="260" y="154" width="28" height="28" rx="8" fill="none" stroke="#A39E92" stroke-width="2" stroke-dasharray="5 4" />
-            <g class="tile"><rect x="260" y="154" width="28" height="28" rx="8" fill="#111" /><rect x="264" y="160" width="20" height="13" rx="5" fill="#1A1C2E" /><circle cx="270" cy="166.5" r="2" fill="#7CF5E6" /><circle cx="278" cy="166.5" r="2" fill="#7CF5E6" /><circle cx="274" cy="157" r="2.2" fill="#FFD24D" /></g>
-            <circle class="ring" cx="274" cy="168" r="22" fill="none" stroke="#FFD24D" stroke-width="3" style="--d: 1.65s" />
-            <g class="pop" style="--d: 1.9s"><rect x="196" y="204" width="88" height="28" rx="14" fill="#111" /><text x="240" y="223" text-anchor="middle" font-family="Space Grotesk, sans-serif" font-weight="700" font-size="13" fill="#FFD24D">Your app</text></g>
-            <use href="#bot" class="hop" x="360" y="198" width="60" height="84" style="--body: #FF8A3D" />
-            <use href="#bot" class="hop" x="62" y="198" width="60" height="84" style="--body: #4CC9F0; --d: .45s" />
-          </svg>
-        </div>
-        <div class="scap"><h2 class="slg" data-slogan="Be a {L}App"></h2><p>Send us your app for the Apps screen in bWalletX. A person reviews it, and it ships in the next release.</p></div>
-      </div>
-
-      <!-- 6 · 30s · Bots welcome (CLI + MCP) -->
-      <div class="sc" data-at="30" style="--bg: radial-gradient(ellipse at 50% 35%, #2d3c66, #0a0f1f 72%)">
-        <div class="stage" aria-hidden="true">
-          <svg viewBox="0 0 480 300">
-            <ellipse cx="240" cy="284" rx="210" ry="9" fill="#000" opacity=".28" />
-            <rect x="52" y="24" width="376" height="150" rx="14" fill="#0C0E16" stroke="#3a4266" stroke-width="2" />
-            <circle cx="72" cy="42" r="4.5" fill="#FF6B6B" /><circle cx="87" cy="42" r="4.5" fill="#FFD24D" /><circle cx="102" cy="42" r="4.5" fill="#5BD69A" />
+            <rect x="52" y="14" width="376" height="120" rx="14" fill="#0C0E16" stroke="#3a4266" stroke-width="2" />
+            <circle cx="72" cy="32" r="4.5" fill="#FF6B6B" /><circle cx="87" cy="32" r="4.5" fill="#FFD24D" /><circle cx="102" cy="32" r="4.5" fill="#5BD69A" />
             <g font-family="IBM Plex Mono, monospace" font-weight="500" font-size="16" fill="#E8E6F0">
-              <text x="74" y="86"><tspan fill="#FFD24D">$</tspan> npm i -g bwalletx</text>
-              <rect class="cover" x="70" y="68" width="350" height="26" fill="#0C0E16" style="--d: .5s" />
-              <text x="74" y="120"><tspan fill="#FFD24D">$</tspan> bwalletx mcp</text>
-              <rect class="cover" x="70" y="102" width="350" height="26" fill="#0C0E16" style="--d: 1.8s" />
-              <rect class="cur" x="74" y="138" width="10" height="18" fill="#7CF5E6" style="--d: 2.8s" />
+              <text x="74" y="70"><tspan fill="#FFD24D">$</tspan> npm i -g bwalletx</text>
+              <rect class="cover" x="70" y="52" width="350" height="26" fill="#0C0E16" style="--d: .4s" />
+              <text x="74" y="102"><tspan fill="#FFD24D">$</tspan> bwalletx mcp</text>
+              <rect class="cover" x="70" y="84" width="350" height="26" fill="#0C0E16" style="--d: 1.5s" />
+              <rect class="cur" x="74" y="111" width="10" height="16" fill="#7CF5E6" />
             </g>
-            <use href="#bot" class="hop" x="210" y="196" width="60" height="84" style="--body: #FFD24D" />
+            <ellipse cx="240" cy="219" rx="34" ry="5" fill="#000" opacity=".35" />
+            <use href="#bbw" class="bob c-gold" x="204" y="150" width="72" height="72" />
             <g font-family="Space Grotesk, sans-serif" font-weight="600" font-size="13" fill="#fff" text-anchor="middle">
-              <g class="pop" style="--d: 2.6s"><rect x="62" y="206" width="112" height="30" rx="15" fill="rgba(255,255,255,.12)" stroke="#7CF5E6" stroke-width="1.6" /><text x="118" y="226">Own budget</text></g>
-              <g class="pop" style="--d: 2.85s"><rect x="306" y="206" width="112" height="30" rx="15" fill="rgba(255,255,255,.12)" stroke="#7CF5E6" stroke-width="1.6" /><text x="362" y="226">Daily cap</text></g>
-              <g class="pop" style="--d: 3.1s"><rect x="62" y="246" width="112" height="30" rx="15" fill="rgba(255,255,255,.12)" stroke="#7CF5E6" stroke-width="1.6" /><text x="118" y="266">Stop switch</text></g>
-              <g class="pop" style="--d: 3.35s"><rect x="306" y="246" width="112" height="30" rx="15" fill="rgba(255,255,255,.12)" stroke="#7CF5E6" stroke-width="1.6" /><text x="362" y="266">BRC-100</text></g>
+              <g class="pop" style="--d: 2.5s"><rect x="58" y="152" width="116" height="30" rx="15" fill="rgba(255,255,255,.12)" stroke="#7CF5E6" stroke-width="1.6" /><text x="116" y="172">Own budget</text></g>
+              <g class="pop" style="--d: 2.75s"><rect x="306" y="152" width="116" height="30" rx="15" fill="rgba(255,255,255,.12)" stroke="#7CF5E6" stroke-width="1.6" /><text x="364" y="172">Daily cap</text></g>
+              <g class="pop" style="--d: 3s"><rect x="58" y="192" width="116" height="30" rx="15" fill="rgba(255,255,255,.12)" stroke="#7CF5E6" stroke-width="1.6" /><text x="116" y="212">Stop switch</text></g>
+              <g class="pop" style="--d: 3.25s"><rect x="306" y="192" width="116" height="30" rx="15" fill="rgba(255,255,255,.12)" stroke="#7CF5E6" stroke-width="1.6" /><text x="364" y="212">BRC-100</text></g>
             </g>
+            <g class="pop" style="--d: 1.9s"><rect x="112" y="236" width="256" height="30" rx="15" fill="#101114" stroke="rgba(255,255,255,.22)" stroke-width="1.2" /><use href="#bb" class="c-gold" x="120" y="240" width="22" height="22" /><text x="148" y="256" font-family="Space Grotesk, sans-serif" font-size="13" fill="#9a9a94"><tspan font-weight="700" fill="#fff">build.agent</tspan> · bBot owned by $you</text></g>
           </svg>
         </div>
         <div class="scap"><h2 class="slg" data-slogan="Bots welcome"></h2><p>The bwalletx CLI and MCP server give your AI agent its own account, with a budget, a daily cap and a stop switch.</p></div>
       </div>
 
-      <!-- 7 · 36s · Get paid (Kintsugi) -->
-      <div class="sc" data-at="36" style="--bg: radial-gradient(ellipse at 50% 35%, #8a4a10, #221004 72%)">
+      <!-- 5 · 21.2s · Commission: say what you want built on bchatx.com/b; b writes it up as a priced task (a quote). -->
+      <div class="sc" data-at="21.2" style="--bg: radial-gradient(ellipse at 50% 35%, #7a2a7c, #1d0820 72%)">
+        <div class="stage" aria-hidden="true">
+          <svg viewBox="0 0 480 300">
+            <rect x="28" y="8" width="424" height="280" rx="18" fill="#0F1117" stroke="#343a5c" stroke-width="2" />
+            <path d="M28 26 a18 18 0 0 1 18 -18 h388 a18 18 0 0 1 18 18 v18 h-424z" fill="#171a26" />
+            <use href="#blogo" x="46" y="15" width="16" height="22" />
+            <text x="70" y="31" font-family="IBM Plex Mono, monospace" font-weight="500" font-size="12" fill="#c3c8dc">bchatx.com/b</text>
+            <text x="434" y="31" text-anchor="end" font-family="Space Grotesk, sans-serif" font-weight="600" font-size="12" fill="#8a90a8">Ask b</text>
+            <g class="pop" style="--d: .35s"><rect x="150" y="56" width="284" height="34" rx="17" fill="#2C6BDB" /><text x="292" y="78" text-anchor="middle" font-family="Space Grotesk, sans-serif" font-weight="500" font-size="13" fill="#fff">I want b to add a tip button to my site</text></g>
+            <g class="pop" style="--d: .8s"><circle cx="56" cy="121" r="16" fill="#1a1b20" stroke="#F5B800" stroke-width="1.6" /><use href="#blogo" x="49" y="111" width="14" height="19" /></g>
+            <g class="tdots"><rect x="80" y="106" width="60" height="30" rx="15" fill="#22263a" /><g fill="#cfd6ea"><circle cx="97" cy="121" r="3.4"><animate attributeName="cy" values="121;117;121;121" dur="1s" repeatCount="indefinite" /></circle><circle cx="110" cy="121" r="3.4"><animate attributeName="cy" values="121;117;121;121" dur="1s" begin=".15s" repeatCount="indefinite" /></circle><circle cx="123" cy="121" r="3.4"><animate attributeName="cy" values="121;117;121;121" dur="1s" begin=".3s" repeatCount="indefinite" /></circle></g></g>
+            <g class="pop" style="--d: 2.25s">
+              <rect x="80" y="104" width="300" height="168" rx="14" fill="#FFFDF6" stroke="#111" stroke-width="2" />
+              <text x="98" y="127" font-family="Space Grotesk, sans-serif" font-weight="700" font-size="10.5" letter-spacing="1.4" fill="#8a5a00">A PRICED TASK FROM b · EXAMPLE</text>
+              <text x="98" y="152" font-family="Space Grotesk, sans-serif" font-weight="700" font-size="19" fill="#111">Add a tip button</text>
+              <g font-family="Space Grotesk, sans-serif" font-size="13">
+                <line x1="98" y1="163" x2="362" y2="163" stroke="#eee4cf" stroke-width="1.5" />
+                <text x="98" y="181" fill="#6b6658">Price</text><text x="362" y="181" text-anchor="end" font-weight="600" fill="#111">Fixed, in BSV</text>
+                <line x1="98" y1="189" x2="362" y2="189" stroke="#eee4cf" stroke-width="1.5" />
+                <text x="98" y="207" fill="#6b6658">Deadline</text><text x="362" y="207" text-anchor="end" font-weight="600" fill="#111">5 days</text>
+                <line x1="98" y1="215" x2="362" y2="215" stroke="#eee4cf" stroke-width="1.5" />
+                <text x="98" y="233" fill="#6b6658">Done when</text><text x="362" y="233" text-anchor="end" font-weight="600" fill="#111">The pull request is merged</text>
+              </g>
+              <circle class="ring" cx="230" cy="256" r="26" fill="none" stroke="#FFD24D" stroke-width="3" style="--d: 4.75s" />
+              <g class="press" style="--d: 4.6s"><rect x="98" y="242" width="264" height="24" rx="12" fill="url(#gold)" stroke="#111" stroke-width="1.8" />
+                <text class="fadeout" x="230" y="258.5" text-anchor="middle" font-family="Space Grotesk, sans-serif" font-weight="700" font-size="13" fill="#111" style="--d: 4.85s">Accept</text>
+                <text class="fade" x="230" y="258.5" text-anchor="middle" font-family="Space Grotesk, sans-serif" font-weight="700" font-size="13" fill="#111" style="--d: 4.95s">Accepted ✓</text></g>
+            </g>
+          </svg>
+        </div>
+        <div class="scap"><h2 class="slg long" data-slogan="What do you want built?"></h2><p>Say what you need on bchatx.com/b, and b writes it up as a priced task. Accept it, and you pay the developer in BSV.</p></div>
+      </div>
+
+      <!-- 6 · 29.38s · Sign it: one task, one contract. Two signatures (hand + wallet key), then only a fingerprint goes on Bitcoin. -->
+      <div class="sc" data-at="29.38" style="--bg: radial-gradient(ellipse at 50% 35%, #1d6a5a, #04201a 72%)">
+        <div class="stage" aria-hidden="true">
+          <svg viewBox="0 0 480 300">
+            <g class="pop" style="--d: .15s">
+              <rect x="22" y="10" width="256" height="276" rx="16" fill="#FFFDF6" stroke="#111" stroke-width="2.5" />
+              <text x="42" y="36" font-family="Space Grotesk, sans-serif" font-weight="700" font-size="10.5" letter-spacing="1.4" fill="#8a5a00">ONE TASK · ONE CONTRACT</text>
+              <text x="42" y="62" font-family="Space Grotesk, sans-serif" font-weight="700" font-size="19" fill="#111">Add a tip button</text>
+              <g font-family="Space Grotesk, sans-serif" font-size="12.5">
+                <line x1="42" y1="74" x2="258" y2="74" stroke="#eee4cf" stroke-width="1.5" />
+                <text x="42" y="91" fill="#6b6658">Price</text><text x="258" y="91" text-anchor="end" font-weight="600" fill="#111">Fixed, in BSV</text>
+                <line x1="42" y1="99" x2="258" y2="99" stroke="#eee4cf" stroke-width="1.5" />
+                <text x="42" y="116" fill="#6b6658">Deadline</text><text x="258" y="116" text-anchor="end" font-weight="600" fill="#111">5 days</text>
+                <line x1="42" y1="124" x2="258" y2="124" stroke="#eee4cf" stroke-width="1.5" />
+                <text x="42" y="141" fill="#6b6658">Done when</text><text x="258" y="141" text-anchor="end" font-weight="600" fill="#111">Pull request merged</text>
+                <line x1="42" y1="149" x2="258" y2="149" stroke="#eee4cf" stroke-width="1.5" />
+              </g>
+              <rect x="42" y="162" width="102" height="62" rx="9" fill="#fff" stroke="#d9cfb8" stroke-width="1.5" />
+              <rect x="156" y="162" width="102" height="62" rx="9" fill="#fff" stroke="#d9cfb8" stroke-width="1.5" />
+              <g font-family="Space Grotesk, sans-serif" font-size="12" font-weight="600" fill="#6b6658" text-anchor="middle"><text x="93" y="242">Builder</text><text x="207" y="242">Payer</text></g>
+              <text x="150" y="270" text-anchor="middle" font-family="Space Grotesk, sans-serif" font-size="11.5" fill="#6b6658">Signed by hand and with each wallet key</text>
+            </g>
+            <path class="sig" pathLength="1" d="M54 206 c6 -24 12 -28 15 -10 c2 12 7 10 11 -4 c3 -10 7 -10 8 2 c1 9 6 9 11 -1 c4 -7 9 -6 12 1 c3 5 8 4 16 -2" fill="none" stroke="#1d2a6b" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" style="--d: 1.2s" />
+            <path class="sig" pathLength="1" d="M168 204 c10 -2 14 -26 20 -20 c5 5 -8 26 -2 24 c6 -2 10 -16 15 -14 c4 2 0 12 5 11 c5 -1 9 -9 14 -8 c4 1 4 6 12 4" fill="none" stroke="#1d2a6b" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" style="--d: 2.2s" />
+            <g class="pop" style="--d: 2.15s"><circle cx="136" cy="170" r="9" fill="#5BD69A" stroke="#111" stroke-width="1.6" /><path d="M131.5 170 l3 3 l6 -6" stroke="#111" stroke-width="2" fill="none" stroke-linecap="round" /></g>
+            <g class="pop" style="--d: 3.15s"><circle cx="250" cy="170" r="9" fill="#5BD69A" stroke="#111" stroke-width="1.6" /><path d="M245.5 170 l3 3 l6 -6" stroke="#111" stroke-width="2" fill="none" stroke-linecap="round" /></g>
+            <g font-family="Space Grotesk, sans-serif" font-weight="600" font-size="12.5" fill="#fff" text-anchor="middle">
+              <g class="pop" style="--d: 4.9s"><rect x="298" y="30" width="166" height="30" rx="15" fill="rgba(255,255,255,.12)" stroke="#FFD24D" stroke-width="1.6" /><text x="381" y="50">Only hashes on chain</text></g>
+              <g class="pop" style="--d: 5.25s"><rect x="298" y="70" width="166" height="30" rx="15" fill="rgba(255,255,255,.12)" stroke="#FFD24D" stroke-width="1.6" /><text x="381" y="90">Each of you keeps a copy</text></g>
+            </g>
+            <text x="381" y="190" text-anchor="middle" font-family="Space Grotesk, sans-serif" font-weight="700" font-size="10.5" letter-spacing="1.6" fill="#bfe9dc">BITCOIN</text>
+            <g stroke="#FFD24D" stroke-width="2.4"><line x1="338" y1="226" x2="352" y2="226" /><line x1="390" y1="226" x2="404" y2="226" /></g>
+            <g fill="#14233a" stroke="#FFD24D" stroke-width="2"><rect x="298" y="206" width="40" height="40" rx="8" /><rect x="350" y="206" width="40" height="40" rx="8" /><rect x="402" y="206" width="40" height="40" rx="8" /></g>
+            <g stroke="#5f7aa8" stroke-width="2" stroke-linecap="round"><line x1="308" y1="219" x2="328" y2="219" /><line x1="308" y1="227" x2="322" y2="227" /><line x1="308" y1="235" x2="326" y2="235" /><line x1="360" y1="219" x2="380" y2="219" /><line x1="360" y1="227" x2="374" y2="227" /><line x1="360" y1="235" x2="378" y2="235" /></g>
+            <circle class="ring" cx="422" cy="226" r="26" fill="none" stroke="#FFD24D" stroke-width="3" style="--d: 4.55s" />
+            <use href="#fpr" class="fp" x="406" y="210" width="32" height="32" style="--d: 3.4s" />
+            <text class="fade" x="370" y="270" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="11" fill="#bfe9dc" style="--d: 4.7s">fingerprint a3f9…c41e</text>
+          </svg>
+        </div>
+        <div class="scap"><h2 class="slg" data-slogan="Sign it"></h2><p>You and whoever pays sign one contract in bChatX: the task, the price, the deadline and what counts as done.</p></div>
+      </div>
+
+      <!-- 7 · 37.56s · Paid in full: the pull request is merged; BSV goes straight from the payer's wallet to the builder's. No box in the middle. -->
+      <div class="sc" data-at="37.56" style="--bg: radial-gradient(ellipse at 50% 35%, #8a4a10, #221004 72%)">
         <div class="stage" aria-hidden="true">
           <svg viewBox="0 0 480 300">
             <ellipse cx="240" cy="284" rx="210" ry="9" fill="#000" opacity=".28" />
-            <rect x="58" y="28" width="250" height="232" rx="18" fill="#FFFDF6" stroke="#111" stroke-width="2.5" />
-            <text x="80" y="58" font-family="Space Grotesk, sans-serif" font-weight="700" font-size="12" letter-spacing="1.5" fill="#8a5a00">KINTSUGI · EXAMPLE TASK</text>
-            <text x="80" y="88" font-family="Space Grotesk, sans-serif" font-weight="700" font-size="21" fill="#111">Fix a button</text>
-            <g font-family="Space Grotesk, sans-serif" font-size="14">
-              <line x1="80" y1="104" x2="286" y2="104" stroke="#eee4cf" stroke-width="1.5" />
-              <text x="80" y="126" fill="#6b6658">Price</text><text x="286" y="126" text-anchor="end" font-weight="600" fill="#111">Fixed, agreed first</text>
-              <line x1="80" y1="140" x2="286" y2="140" stroke="#eee4cf" stroke-width="1.5" />
-              <text x="80" y="162" fill="#6b6658">Paid</text><text x="286" y="162" text-anchor="end" font-weight="600" fill="#111">In BSV, in full</text>
-              <line x1="80" y1="176" x2="286" y2="176" stroke="#eee4cf" stroke-width="1.5" />
-              <text x="80" y="198" fill="#6b6658">Kintsugi fee</text><text x="286" y="198" text-anchor="end" font-weight="600" fill="#111">None</text>
+            <g class="pop" style="--d: .2s">
+              <rect x="104" y="12" width="272" height="52" rx="12" fill="#0d1117" stroke="#30363d" stroke-width="1.6" />
+              <g fill="none" stroke="#a371f7" stroke-width="2.2" stroke-linecap="round"><circle cx="128" cy="30" r="3.6" /><circle cx="128" cy="48" r="3.6" /><circle cx="142" cy="40" r="3.6" /><path d="M128 33.6 v10.8 M128 34 q0 6 10.4 6" /></g>
+              <text x="156" y="35" font-family="Space Grotesk, sans-serif" font-weight="700" font-size="14" fill="#e6edf3">Add a tip button</text>
+              <text x="156" y="53" font-family="Space Grotesk, sans-serif" font-size="11.5" fill="#8b949e">pull request</text>
             </g>
-            <g class="press"><rect x="80" y="212" width="206" height="34" rx="17" fill="url(#gold)" stroke="#111" stroke-width="2.2" /><text x="183" y="234" text-anchor="middle" font-family="Space Grotesk, sans-serif" font-weight="700" font-size="14" fill="#111">Take this job</text></g>
-            <use href="#coin" class="coin" x="190" y="200" width="30" height="30" style="--d: 2.15s" />
-            <use href="#coin" class="coin" x="190" y="200" width="30" height="30" style="--d: 2.4s" />
-            <use href="#coin" class="coin" x="190" y="200" width="30" height="30" style="--d: 2.65s" />
-            <g class="catch" style="--d: 2.7s"><use href="#bot" x="358" y="198" width="60" height="84" style="--body: #5BD69A" /></g>
+            <g class="pop" style="--d: .85s"><rect x="290" y="26" width="74" height="24" rx="12" fill="#8957e5" /><text x="327" y="42.5" text-anchor="middle" font-family="Space Grotesk, sans-serif" font-weight="700" font-size="12" fill="#fff">Merged ✓</text></g>
+            <path d="M140 168 Q240 74 340 168" fill="none" stroke="rgba(255,255,255,.3)" stroke-width="2" stroke-dasharray="4 7" />
+            <g>
+              <rect x="44" y="104" width="96" height="172" rx="18" fill="#111" /><rect x="51" y="112" width="82" height="156" rx="13" fill="url(#scr)" />
+              <use href="#blogo" x="77" y="134" width="30" height="40" />
+              <text x="92" y="200" text-anchor="middle" font-family="Space Grotesk, sans-serif" font-weight="700" font-size="14" fill="#fff">$you</text>
+              <text x="92" y="218" text-anchor="middle" font-family="Space Grotesk, sans-serif" font-size="11" fill="#c9c2e6">pays</text>
+            </g>
+            <g>
+              <rect x="340" y="104" width="96" height="172" rx="18" fill="#111" /><rect x="347" y="112" width="82" height="156" rx="13" fill="url(#scr)" />
+              <use href="#blogo" x="373" y="134" width="30" height="40" />
+              <text x="388" y="200" text-anchor="middle" font-family="Space Grotesk, sans-serif" font-weight="700" font-size="14" fill="#fff">$builder</text>
+              <text x="388" y="218" text-anchor="middle" font-family="Space Grotesk, sans-serif" font-size="11" fill="#c9c2e6">gets paid</text>
+            </g>
+            <use href="#coin" class="coin" x="122" y="152" width="30" height="30" style="--d: 1.3s" />
+            <use href="#coin" class="coin" x="122" y="152" width="30" height="30" style="--d: 1.6s" />
+            <use href="#coin" class="coin" x="122" y="152" width="30" height="30" style="--d: 1.9s" />
+            <g class="pop" style="--d: 2.9s"><rect x="347" y="234" width="82" height="24" rx="12" fill="#FFD24D" /><text x="388" y="250.5" text-anchor="middle" font-family="Space Grotesk, sans-serif" font-weight="700" font-size="12" fill="#111">In full ✓</text></g>
+            <text class="fade" x="240" y="112" text-anchor="middle" font-family="Space Grotesk, sans-serif" font-weight="700" font-size="11" letter-spacing="1.6" fill="#ffe0b0" style="--d: 1.1s">PEER TO PEER</text>
+            <g class="pop" style="--d: 2.2s"><rect x="166" y="214" width="148" height="30" rx="15" fill="rgba(255,255,255,.12)" stroke="#FFD24D" stroke-width="1.6" /><text x="240" y="234" text-anchor="middle" font-family="Space Grotesk, sans-serif" font-weight="600" font-size="12.5" fill="#fff">No Kintsugi fee</text></g>
           </svg>
         </div>
-        <div class="scap"><h2 class="slg" data-slogan="Get paid"></h2><p>Take a priced task on our apps with Kintsugi. Do the work, get paid in BSV, in full.</p></div>
+        <div class="scap"><h2 class="slg" data-slogan="Paid in full"></h2><p>When the pull request is merged, you're paid in BSV, straight to your wallet, in full. Kintsugi never holds the money.</p></div>
       </div>
 
-      <!-- 8 · 42s · Build on b (CTA) -->
-      <div class="sc" data-at="42" style="--bg: radial-gradient(ellipse at 50% 35%, #4a35b0, #120d2e 72%)">
+      <!-- 8 · 43.01s · Build on b (CTA) -->
+      <div class="sc" data-at="43.01" style="--bg: radial-gradient(ellipse at 50% 35%, #4a35b0, #120d2e 72%)">
         <div class="stage" aria-hidden="true">
           <svg viewBox="0 0 480 300">
             <g class="conf"></g>
             <ellipse cx="240" cy="284" rx="210" ry="9" fill="#000" opacity=".28" />
-            <use href="#bot" class="hop" x="100" y="198" width="60" height="84" style="--body: #4CC9F0" />
-            <use href="#bot" class="hop" x="170" y="198" width="60" height="84" style="--body: #FF8CC6; --d: .25s" />
-            <use href="#bot" class="hop" x="250" y="198" width="60" height="84" style="--body: #FFD24D; --d: .5s" />
-            <use href="#bot" class="hop" x="320" y="198" width="60" height="84" style="--body: #5BD69A; --d: .75s" />
-            <g class="sway"><use href="#blk" x="225" y="120" width="30" height="30" /><use href="#blk" x="195" y="150" width="30" height="30" /><use href="#blk" x="225" y="150" width="30" height="30" /><use href="#blk" x="255" y="150" width="30" height="30" /></g>
+            <use href="#bbd" class="hop c-azure" x="72" y="234" width="56" height="56" />
+            <use href="#bbd" class="hop c-mint" x="142" y="234" width="56" height="56" style="--d: .2s" />
+            <g class="hop" style="--d: .4s"><use href="#bbd" class="c-gold" x="212" y="234" width="56" height="56" /><g class="wob"><use href="#blk" x="227" y="209" width="26" height="26" /></g></g>
+            <use href="#bbd" class="hop c-coral" x="282" y="234" width="56" height="56" style="--d: .6s" />
+            <use href="#bbd" class="hop c-iris" x="352" y="234" width="56" height="56" style="--d: .8s" />
           </svg>
         </div>
         <div class="scap"><h2 class="slg" data-slogan="Build on {L}"></h2>
-          <div class="ctas"><a class="bp gold" href="/get?from=build-on-b">Get bWalletX</a><a class="bp line" href="https://docs.bwalletx.com/developers/connect/">Read the docs</a><a class="bp line" href="https://www.bchatx.com/kintsugi">Take a task</a></div>
+          <div class="ctas"><a class="bp gold" href="/get?from=build-on-b">Get bWalletX</a><a class="bp line" href="https://www.bchatx.com/b">Ask b for a quote</a><a class="bp line" href="https://www.bchatx.com/kintsugi">Take a task</a></div>
         </div>
       </div>
 
@@ -440,17 +520,18 @@
           <svg viewBox="0 0 480 300">
             <ellipse cx="240" cy="284" rx="210" ry="9" fill="#000" opacity=".28" />
             <g class="pixb shown" data-cell="22" data-x="174" data-y="104" data-still="1"></g>
-            <use href="#bot" x="62" y="198" width="60" height="84" style="--body: #4CC9F0" />
-            <use href="#bot" x="358" y="198" width="60" height="84" style="--body: #FF8CC6" />
+            <use href="#bb2" class="c-azure" x="72" y="227" width="64" height="64" />
+            <g class="bob shown"><use href="#bb" class="c-coral" x="358" y="227" width="64" height="64" /><use href="#blk" x="377" y="202" width="26" height="26" /></g>
           </svg>
         </div>
         <div class="gate-in">
           <h1 class="slg shown" data-slogan="Build on {L}"></h1>
           <button type="button" class="play" id="play" aria-label="Play with sound"><svg viewBox="5 3 18 18" aria-hidden="true"><path d="M8 5.5v13l11-6.5z" fill="currentColor" /></svg></button>
-          <p class="gate-l">&#9654; Play with sound &middot; 0:48</p>
+          <p class="gate-l">&#9654; Play with sound &middot; 0:50</p>
           <button type="button" class="quiet" id="quiet">Watch without sound</button>
         </div>
       </div>
+      <audio id="music" preload="auto" src="/audio/build-on-b-shadows-past.mp3"></audio>
       <button type="button" class="ctl" id="mute" aria-pressed="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 5 6 9H3v6h3l5 4z" /><path class="w1" d="M15.5 8.5a5 5 0 0 1 0 7" /><path class="x1" d="M16 9l5 6M21 9l-5 6" style="display:none" /></svg><span>Sound on</span></button>
       <button type="button" class="ctl" id="again"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M3 12a9 9 0 1 0 3-6.7" /><path d="M3 4v5h5" /></svg><span>Replay</span></button>
       <div class="pbar" id="pbar"></div>
@@ -458,7 +539,7 @@
 
     <main class="ext bob">
       <h2>Start building on b</h2>
-      <p class="lede">bWalletX is our BRC-100 wallet. Around it we build open tools: sign-in and payments for your site, a wallet for your AI agents, on-chain sites with b0-x, and paid work on our own apps through Kintsugi. Here is what works today, and what is coming.</p>
+      <p class="lede">bWalletX is our BRC-100 wallet. Around it we build open tools: sign-in and payments for your site, a wallet for your AI agents, on-chain sites with b0-x, and contracts in bChatX: ask b for a priced task, or take paid work on our own apps through Kintsugi. Here is what works today, and what is coming.</p>
 
       <h2 id="start">Start in 5 minutes</h2>
       <ol class="steps">
@@ -490,6 +571,39 @@
         </li>
       </ol>
 
+      <h2 id="contracts">How a contract works</h2>
+      <p>The same steps whether you want something built or you are the one building it. Everything below works today; the two items at the end are coming.</p>
+      <ol class="steps">
+        <li>
+          <h3>Say what you want built <span class="tag live">Live</span></h3>
+          <p>On bchatx.com/b, tell b what you need. b writes it up as a priced task: a quote. Accept it, and you pay the developer in BSV.</p>
+          <a class="go" href="https://www.bchatx.com/b">Ask b for a quote &rarr;</a>
+        </li>
+        <li>
+          <h3>Or take a task <span class="tag live">Live</span></h3>
+          <p>Kintsugi is how The Bitcoin Corporation contracts the work on bWalletX, bChatX and the b*X apps. Pick an open task on the board in bChatX and press Take this job.</p>
+          <a class="go" href="https://www.bchatx.com/kintsugi">See the open tasks &rarr;</a> &middot; <a class="go" href="https://bkintsugix.com">How Kintsugi works</a>
+        </li>
+        <li>
+          <h3>One task, one contract <span class="tag live">Live</span></h3>
+          <p>The builder and whoever pays sign the same contract in bChatX: the task, the price, the deadline and what counts as done. Each of you signs with your hand and your wallet key.</p>
+          <a class="go" href="/contracts">Contracts in chat &rarr;</a>
+        </li>
+        <li>
+          <h3>A fingerprint on Bitcoin <span class="tag live">Live</span></h3>
+          <p>Only hashes go on chain, never the contract or your signature. Each party keeps a copy, and anyone with a copy can check it hasn't changed.</p>
+          <a class="go" href="/contracts">What goes on chain &rarr;</a>
+        </li>
+        <li>
+          <h3>Deliver, get paid in full <span class="tag live">Live</span></h3>
+          <p>The pull request is merged, or the post goes live. You're paid in BSV, straight to your wallet, in full. The payer pays you directly: Kintsugi never holds the money, and there is no Kintsugi fee. Everything built through Kintsugi is open source under the Open BSV License.</p>
+          <a class="go" href="https://bkintsugix.com">The program and its terms &rarr;</a>
+        </li>
+      </ol>
+      <ul class="soon">
+        <li><span class="tag">Coming</span> Development work for verified builders, after an ID check and an entry task. <a href="https://bkintsugix.com">Details</a></li>
+        <li><span class="tag">Coming</span> One-tap sign and seal: one screen in bWalletX with the document, your box, your signature and the cost. <a href="/contracts">Details</a></li>
+      </ul>
       <h2 id="tools">The tools</h2>
       <p>Each one links to its real docs, package or source. Checked on 6 November 2026.</p>
       <ul class="tools">
@@ -529,6 +643,12 @@
         <li class="tool"><div class="hd"><h3>Kintsugi</h3><span class="tag live">Live</span></div>
           <p>Paid tasks on bWalletX, bChatX and the b*X apps. Each has a fixed price in a contract you sign before you start. Paid in BSV to your wallet, in full. Larger development work for verified builders is coming.</p>
           <p class="lk"><a href="https://www.bchatx.com/kintsugi">Task board</a><a href="https://bkintsugix.com">bkintsugix.com</a></p></li>
+        <li class="tool"><div class="hd"><h3>Commission on <code>bchatx.com/b</code></h3><span class="tag live">Live</span></div>
+          <p>Say what you want built. b writes it up as a priced task, you accept, and you pay the developer in BSV. The builder and you sign one contract in bChatX.</p>
+          <p class="lk"><a href="https://www.bchatx.com/b">Ask b for a quote</a><a href="#contracts">How a contract works</a></p></li>
+        <li class="tool"><div class="hd"><h3>Contracts in chat</h3><span class="tag live">Live</span></div>
+          <p>b drafts, everyone accepts with their own wallet, and each signer signs by hand and with their wallet key. Only a fingerprint goes on Bitcoin; each party keeps a copy.</p>
+          <p class="lk"><a href="/contracts">How it works</a></p></li>
         <li class="tool"><div class="hd"><h3>bGitX</h3><span class="tag live">Live</span></div>
           <p>Connect your GitHub repos, give each one a room in bChatX, and let Kintsugi fix and build by pull request. Nothing merges without your OK.</p>
           <p class="lk"><a href="https://bgitx.com">bgitx.com</a><a href="/bgitx">On bWalletX</a></p></li>
@@ -584,9 +704,9 @@ bwalletx login --account phone             # pair with your agent account in bWa
 
     <section class="endcard" id="endcard" aria-label="Build on b">
       <h2 class="slg" data-slogan="Build on {L}"></h2>
-      <p>Get the wallet, add Connect, and pick a task. We'll see you in bChatX.</p>
-      <div class="ctas"><a class="bp gold" href="/get?from=build-on-b">Get bWalletX</a><a class="bp line" href="https://docs.bwalletx.com/developers/connect/">Read the docs</a><a class="bp line" href="https://www.bchatx.com/kintsugi">Take a task</a></div>
-      <p class="credit">Music: &ldquo;Build on b&rdquo;, an original chiptune by b, played live in your browser with the Web Audio API. Sound starts only when you press Play.</p>
+      <p>Get the wallet, tell b what you want built, or pick a task. We'll see you in bChatX.</p>
+      <div class="ctas"><a class="bp gold" href="/get?from=build-on-b">Get bWalletX</a><a class="bp line" href="https://www.bchatx.com/b">Ask b for a quote</a><a class="bp line" href="https://docs.bwalletx.com/developers/connect/">Read the docs</a></div>
+      <p class="credit">Music: <a href="https://chat.bwalletx.com/u/vexvoid">Shadows Past (Alt) by VexVoid</a></p>
     </section>
     <footer class="foot">
       <div class="wrap">
@@ -619,7 +739,7 @@ bwalletx login --account phone             # pair with your agent account in bWa
           g.innerHTML = html;
         });
         // End scene confetti: pixel squares in the family colours.
-        var CC = ['#FFD24D', '#FF8CC6', '#4CC9F0', '#5BD69A', '#B79CFF', '#FF8A3D'], conf = document.querySelector('.conf'), ch = '';
+        var CC = ['#F5B800', '#3D8BFF', '#2FD58E', '#FF7A59', '#8B7CFF', '#E44CE0'], conf = document.querySelector('.conf'), ch = '';
         for (var q = 0; q < 22; q++) ch += '<rect x="' + (12 + q * 21.5) + '" y="0" width="9" height="9" rx="2" fill="' + CC[q % 6] + '" style="--d:' + ((q * 0.37) % 3.4).toFixed(2) + 's" />';
         conf.innerHTML = ch;
         if (still) [].forEach.call(document.querySelectorAll('svg'), function (s) { if (s.pauseAnimations) s.pauseAnimations(); });
@@ -639,137 +759,63 @@ bwalletx login --account phone             # pair with your agent account in bWa
       })();
     </script>
     <script>
-      /* The film and its theme tune.
-         "Build on b" (b, 6 Nov 2026): an original 12-bar chiptune in C major at 120 bpm, 24 s a loop.
-         Pulse-wave lead, triangle bass, noise drums. It plays twice (the second time with a sparkle arpeggio),
-         then a short ending. Nothing makes a sound until the visitor presses Play. The film follows the
-         audio clock while the tune plays, so picture and sound never drift. */
+      /* The film and its music: "Shadows Past (Alt)" by VexVoid, from the VexVoid catalogue, cut to 50 s with
+         fades (/audio/build-on-b-shadows-past.mp3). Nothing plays until the visitor presses Play. While the
+         music plays the film follows the track's own clock, so picture and sound never drift; silent, it follows
+         the wall clock. Scene times (data-at) sit on the track's downbeats. */
       (function () {
-        var BPM = 120, SX = 60 / BPM / 4, LOOP = 192, END = 48, TAIL = 2.5, TOTAL = LOOP * 2 + 20;
+        var END = 50, TAIL = 1.5;
         var film = document.getElementById('film'), gate = document.getElementById('gate'), bar = document.getElementById('pbar');
-        var muteBtn = document.getElementById('mute'), againBtn = document.getElementById('again');
+        var muteBtn = document.getElementById('mute'), againBtn = document.getElementById('again'), music = document.getElementById('music');
         var scenes = [].slice.call(film.querySelectorAll('.sc')), AT = scenes.map(function (s) { return parseFloat(s.dataset.at); });
-        var ctx = null, master = null, P25, P12, nb, leadBus, arpBus, drumBus, mix;
-        var useCtx = false, muted = false, ctxStart = 0, wallStart = 0, nextStep = 0, timer = 0, raf = 0, cur = -1;
+        var withSound = false, muted = false, wallStart = 0, raf = 0, cur = -1;
 
-        function mtof(m) { return 440 * Math.pow(2, (m - 69) / 12); }
-        function pulse(d) { var n = 40, re = new Float32Array(n), im = new Float32Array(n); for (var k = 1; k < n; k++) re[k] = (2 / (k * Math.PI)) * Math.sin(k * Math.PI * d); return ctx.createPeriodicWave(re, im); }
-        function setup() {
-          ctx = new (window.AudioContext || window.webkitAudioContext)();
-          var comp = ctx.createDynamicsCompressor(); comp.threshold.value = -16; comp.ratio.value = 3; comp.attack.value = 0.005; comp.release.value = 0.2;
-          master = ctx.createGain(); master.gain.value = 0.0001; master.connect(comp); comp.connect(ctx.destination);
-          var lp = ctx.createBiquadFilter(); lp.type = 'lowpass'; lp.frequency.value = 7200; lp.connect(master);
-          mix = ctx.createGain(); mix.connect(lp);
-          leadBus = ctx.createGain(); leadBus.connect(mix);
-          var echo = ctx.createDelay(1), fb = ctx.createGain(), wet = ctx.createGain(); echo.delayTime.value = SX * 3; fb.gain.value = 0.28; wet.gain.value = 0.16;
-          leadBus.connect(echo); echo.connect(fb); fb.connect(echo); echo.connect(wet); wet.connect(mix);
-          arpBus = ctx.createGain(); arpBus.gain.value = 1;
-          if (ctx.createStereoPanner) { var pn = ctx.createStereoPanner(); pn.pan.value = 0.35; arpBus.connect(pn); pn.connect(mix); } else arpBus.connect(mix);
-          drumBus = ctx.createGain(); drumBus.connect(mix);
-          P25 = pulse(0.25); P12 = pulse(0.125);
-          nb = ctx.createBuffer(1, ctx.sampleRate, ctx.sampleRate); var d = nb.getChannelData(0); for (var i = 0; i < d.length; i++) d[i] = Math.random() * 2 - 1;
-          document.addEventListener('visibilitychange', function () { if (!ctx) return; if (document.hidden) ctx.suspend(); else ctx.resume(); });
-        }
-        function tone(t, m, len, wave, v, bus, att) {
-          var o = ctx.createOscillator(), g = ctx.createGain();
-          if (typeof wave === 'string') o.type = wave; else o.setPeriodicWave(wave);
-          o.frequency.value = mtof(m);
-          g.gain.setValueAtTime(0.0001, t); g.gain.exponentialRampToValueAtTime(v, t + (att || 0.006));
-          g.gain.exponentialRampToValueAtTime(v * 0.6, t + Math.min(0.1, len * 0.6)); g.gain.setValueAtTime(v * 0.6, t + len * 0.9); g.gain.exponentialRampToValueAtTime(0.0001, t + len + 0.04);
-          o.connect(g); g.connect(bus); o.start(t); o.stop(t + len + 0.06); return o;
-        }
-        function lead(t, m, len) { var o = tone(t, m, len, P25, 0.085, leadBus);
-          if (len > 0.4) { var l = ctx.createOscillator(), lg = ctx.createGain(); l.frequency.value = 5.6; lg.gain.setValueAtTime(0, t); lg.gain.linearRampToValueAtTime(14, t + 0.35); l.connect(lg); lg.connect(o.detune); l.start(t); l.stop(t + len + 0.06); } }
-        function noise(t, type, f, v, dec, q) { var s = ctx.createBufferSource(), fl = ctx.createBiquadFilter(), g = ctx.createGain(); s.buffer = nb; fl.type = type; fl.frequency.value = f; if (q) fl.Q.value = q;
-          g.gain.setValueAtTime(0.0001, t); g.gain.exponentialRampToValueAtTime(v, t + 0.002); g.gain.exponentialRampToValueAtTime(0.0001, t + dec); s.connect(fl); fl.connect(g); g.connect(drumBus); s.start(t, Math.random() * 0.5); s.stop(t + dec + 0.02); }
-        function kick(t, v) { var o = ctx.createOscillator(), g = ctx.createGain(); o.frequency.setValueAtTime(170, t); o.frequency.exponentialRampToValueAtTime(48, t + 0.09);
-          g.gain.setValueAtTime(0.0001, t); g.gain.exponentialRampToValueAtTime(0.42 * (v || 1), t + 0.003); g.gain.exponentialRampToValueAtTime(0.0001, t + 0.22); o.connect(g); g.connect(drumBus); o.start(t); o.stop(t + 0.25); }
-        function snare(t, v) { v = v || 1; noise(t, 'bandpass', 1900, 0.2 * v, 0.13, 0.8); var o = ctx.createOscillator(), g = ctx.createGain(); o.type = 'triangle'; o.frequency.setValueAtTime(200, t); o.frequency.exponentialRampToValueAtTime(150, t + 0.05);
-          g.gain.setValueAtTime(0.0001, t); g.gain.exponentialRampToValueAtTime(0.12 * v, t + 0.002); g.gain.exponentialRampToValueAtTime(0.0001, t + 0.07); o.connect(g); g.connect(drumBus); o.start(t); o.stop(t + 0.09); }
-        function hat(t, v) { noise(t, 'highpass', 7600, 0.05 * v, 0.035); }
-        function crash(t) { noise(t, 'highpass', 5200, 0.07, 1.4); }
-        function blip(t, a, b) { tone(t, a, 0.06, P25, 0.06, arpBus, 0.003); tone(t + 0.07, b, 0.16, P25, 0.06, arpBus, 0.003); }
-
-        // The score. Bars: C G Am F | F G Em Am | C G F G. MEL[bar] = {sixteenth: [midi, length in sixteenths]}.
-        var A1 = { 0: [76, 2], 2: [79, 2], 4: [84, 2], 6: [79, 2], 8: [81, 1], 9: [79, 1], 10: [76, 2], 12: [79, 4] };
-        var A2 = { 0: [74, 2], 2: [79, 2], 4: [83, 2], 6: [86, 2], 8: [84, 1], 9: [83, 1], 10: [79, 2], 12: [74, 4] };
-        var MEL = [A1, A2,
-          { 0: [84, 2], 2: [81, 2], 4: [76, 2], 6: [81, 2], 8: [83, 1], 9: [84, 1], 10: [83, 2], 12: [81, 2], 14: [79, 2] },
-          { 0: [81, 3], 3: [79, 1], 4: [77, 2], 6: [81, 2], 8: [84, 6] },
-          { 0: [77, 1], 1: [81, 1], 2: [84, 2], 4: [81, 1], 5: [84, 1], 6: [86, 2], 8: [84, 2], 10: [81, 2], 12: [84, 4] },
-          { 0: [79, 1], 1: [83, 1], 2: [86, 2], 4: [83, 1], 5: [86, 1], 6: [88, 2], 8: [86, 2], 10: [83, 2], 12: [79, 4] },
-          { 0: [76, 2], 2: [79, 2], 4: [83, 2], 6: [88, 2], 8: [86, 1], 9: [88, 1], 10: [86, 2], 12: [83, 2], 14: [79, 2] },
-          { 0: [81, 2], 2: [84, 2], 4: [88, 4], 8: [86, 1], 9: [84, 1], 10: [83, 1], 11: [81, 1], 12: [79, 4] },
-          A1, A2,
-          { 0: [81, 2], 2: [84, 2], 4: [77, 2], 6: [81, 2], 8: [79, 1], 9: [81, 1], 10: [84, 2], 12: [86, 4] },
-          { 0: [83, 2], 2: [86, 2], 4: [79, 2], 6: [83, 2], 8: [86, 1], 9: [84, 1], 10: [83, 1], 11: [81, 1], 12: [79, 2], 14: [74, 2] }];
-        var ROOT = [48, 43, 45, 41, 41, 43, 40, 45, 48, 43, 41, 43];
-        var ARP = { 48: [72, 76, 79, 84], 43: [71, 74, 79, 83], 45: [69, 72, 76, 81], 41: [69, 72, 77, 81], 40: [67, 71, 76, 79] };
-        function step(s, t) {
-          if (s >= LOOP * 2) { var e = s - LOOP * 2; // the ending: a bright C with a run up
-            if (e === 0) { kick(t); crash(t); lead(t, 84, 1.5); tone(t, 36, 1.4, 'triangle', 0.2, mix); }
-            if (e < 10 && e % 2 === 0) tone(t, [72, 76, 79, 84, 88][e / 2] + 12, SX * 1.6, P12, 0.04, arpBus, 0.003);
-            return; }
-          var pass = s >= LOOP ? 1 : 0, l = s % LOOP, b = l >> 4, i = l & 15, n = MEL[b][i], r = ROOT[b], full = pass === 1 || b >= 4;
-          if (n) lead(t, n[0], n[1] * SX * 0.95);
-          if (i % 2 === 0) tone(t, i % 4 === 0 ? r : r + 12, SX * 1.7, 'triangle', 0.19, mix, 0.004);
-          if (i === 0 || (full && i === 8) || (full && i === 10 && b % 2 === 1)) kick(t);
-          if (full && (i === 4 || i === 12)) snare(t);
-          if (pass === 1 && b === 11 && i >= 8 && i % 2 === 1) snare(t, 0.55);
-          if (i % 2 === 0) hat(t, i % 4 === 2 ? 1 : 0.55); else if (full) hat(t, 0.3);
-          if (l === 0 && pass === 1) crash(t);
-          if (pass === 1) tone(t, ARP[r][i % 4] + 12, SX * 0.8, P12, 0.028, arpBus, 0.003);
-          // Little sounds that land with the pictures.
-          if (s === 108 || s === 112) blip(t, 84, 91);                         // Connect: the piece snaps in (12 s + 1.5 s)
-          if (s === 296 || s === 298 || s === 300) blip(t, 83, 88);           // Kintsugi: a coin lands (36 s + 2.75 s)
-        }
-        function sched() {
-          var ahead = ctx.currentTime + 0.12;
-          while (nextStep < TOTAL) { var t = ctxStart + nextStep * SX; if (t > ahead) break; if (t >= ctx.currentTime - 0.02) step(nextStep, t); nextStep++; }
-          if (nextStep >= TOTAL) { clearInterval(timer); timer = 0; }
-        }
-        function now() { return useCtx ? ctx.currentTime - ctxStart : performance.now() / 1000 - wallStart; }
-        function show(k) { if (k === cur) return; cur = k; scenes.forEach(function (s, j) { s.classList.toggle('on', j === k); if (j === k) s.inert = false; else s.inert = true; }); }
+        function now() { return withSound ? music.currentTime : performance.now() / 1000 - wallStart; }
+        function show(k) { if (k === cur) return; cur = k; scenes.forEach(function (s, j) { s.classList.toggle('on', j === k); s.inert = j !== k; }); }
         function frame() {
           var t = now(), k = 0; for (var j = 0; j < AT.length; j++) if (t >= AT[j]) k = j;
           show(k); bar.style.width = Math.min(100, (t / END) * 100) + '%';
-          if (t < END + TAIL) raf = requestAnimationFrame(frame); else { bar.style.width = '0'; film.classList.add('done'); }
+          var over = withSound ? (music.ended || t >= END) : t >= END + TAIL;
+          if (!over) raf = requestAnimationFrame(frame); else { bar.style.width = '0'; film.classList.add('done'); }
         }
         function label() {
-          var on = useCtx && !muted; muteBtn.setAttribute('aria-pressed', String(!on));
+          var on = withSound && !muted; muteBtn.setAttribute('aria-pressed', String(!on));
           muteBtn.querySelector('span').textContent = on ? 'Sound on' : 'Sound off';
           muteBtn.setAttribute('aria-label', on ? 'Mute the music' : 'Turn the music on');
           muteBtn.querySelector('.w1').style.display = on ? '' : 'none'; muteBtn.querySelector('.x1').style.display = on ? 'none' : '';
         }
-        function gain() { if (master) master.gain.setTargetAtTime(muted ? 0.0001 : 1.15, ctx.currentTime, 0.12); }
-        function startAudio(at) { // at: film time to join from (inside the tap, so browsers allow it)
-          if (!ctx) setup(); if (ctx.state !== 'running') ctx.resume();
-          ctxStart = ctx.currentTime + 0.05 - at; nextStep = Math.max(0, Math.ceil(at / SX)); useCtx = true;
-          clearInterval(timer); timer = setInterval(sched, 25); sched(); gain();
+        function silentFrom(t) { withSound = false; music.pause(); wallStart = performance.now() / 1000 - t; label(); }
+        function soundFrom(t) { // inside the tap, so browsers allow it
+          withSound = true; muted = false; music.muted = false;
+          try { music.currentTime = t; } catch (e) { /* not seekable yet: starts from 0 */ }
+          var p = music.play(); if (p && p.catch) p.catch(function () { silentFrom(t); });
+          label();
         }
-        function stopAudio() { clearInterval(timer); timer = 0; if (master) { master.gain.cancelScheduledValues(ctx.currentTime); master.gain.setTargetAtTime(0.0001, ctx.currentTime, 0.03); } }
         function play(sound, from) {
           cancelAnimationFrame(raf); cur = -1; film.classList.remove('done');
           scenes.forEach(function (s) { s.classList.remove('on'); });
           var t0 = from || 0;
-          if (sound) { stopAudio(); muted = false; startAudio(t0); }
-          else { stopAudio(); useCtx = false; wallStart = performance.now() / 1000 - t0; }
+          if (sound) soundFrom(t0); else silentFrom(t0);
           gate.classList.add('gone'); gate.inert = true; film.classList.add('started'); label();
           raf = requestAnimationFrame(frame);
         }
         document.getElementById('play').addEventListener('click', function () { play(true); });
         document.getElementById('quiet').addEventListener('click', function () { play(false); });
-        againBtn.addEventListener('click', function () { play(useCtx); });
+        againBtn.addEventListener('click', function () { play(withSound); });
         muteBtn.addEventListener('click', function () {
-          if (!useCtx) { var t = now(); muted = false; if (t < END + TAIL) startAudio(t); }
-          else { muted = !muted; gain(); }
-          label();
+          if (!withSound) { var t = now(); if (t < END) soundFrom(t); }
+          else { muted = !muted; music.muted = muted; label(); }
+        });
+        var hid = false; // a hidden tab pauses the film and its music together; coming back carries on
+        document.addEventListener('visibilitychange', function () {
+          if (document.hidden) { if (withSound && !music.paused && !music.ended) { hid = true; music.pause(); } }
+          else if (hid) { hid = false; var p = music.play(); if (p && p.catch) p.catch(function () { silentFrom(music.currentTime); }); }
         });
         scenes.forEach(function (s) { s.inert = true; });
         // Test / recording hooks: ?autoplay=silent starts at once (no sound); ?t=12 jumps to a time.
         var q = new URLSearchParams(location.search);
         if (q.get('autoplay') === 'silent' || q.has('t')) play(false, parseFloat(q.get('t')) || 0);
-        window.__film = { scenes: scenes.length, end: END, play: play };
+        window.__film = { scenes: scenes.length, end: END, at: AT, play: play };
       })();
     </script>
   </body>

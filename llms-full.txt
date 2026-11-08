@@ -1,6 +1,6 @@
 # bWalletX: full site text
 
-Generated 2026-11-07 from https://bwalletx.com. Source pages are linked above each section.
+Generated 2026-11-08 from https://bwalletx.com. Source pages are linked above each section.
 
 ---
 
@@ -2902,7 +2902,7 @@ Source: https://bwalletx.com/build-on-b
 
 ## Start building on b
 
-bWalletX is our BRC-100 wallet. Around it we build open tools: sign-in and payments for your site, a wallet for your AI agents, on-chain sites with b0-x, and paid work on our own apps through Kintsugi. Here is what works today, and what is coming.
+bWalletX is our BRC-100 wallet. Around it we build open tools: sign-in and payments for your site, a wallet for your AI agents, on-chain sites with b0-x, and contracts in bChatX: ask b for a priced task, or take paid work on our own apps through Kintsugi. Here is what works today, and what is coming.
 
 ## Start in 5 minutes
 
@@ -2947,6 +2947,54 @@ Send us your app for the Apps screen in bWalletX. A person reviews it, and appro
 Kintsugi is how The Bitcoin Corporation contracts the work on bWalletX, bChatX and the b*X apps. Pick a task with a fixed price, sign the contract in bChatX, deliver, and get paid in BSV, in full. There is no Kintsugi fee.
 
 [See the open tasks →](https://www.bchatx.com/kintsugi) · [How Kintsugi works](https://bkintsugix.com)
+
+## How a contract works
+
+The same steps whether you want something built or you are the one building it. Everything below works today; the two items at the end are coming.
+
+-
+
+### Say what you want built Live
+
+On bchatx.com/b, tell b what you need. b writes it up as a priced task: a quote. Accept it, and you pay the developer in BSV.
+
+[Ask b for a quote →](https://www.bchatx.com/b)
+
+-
+
+### Or take a task Live
+
+Kintsugi is how The Bitcoin Corporation contracts the work on bWalletX, bChatX and the b*X apps. Pick an open task on the board in bChatX and press Take this job.
+
+[See the open tasks →](https://www.bchatx.com/kintsugi) · [How Kintsugi works](https://bkintsugix.com)
+
+-
+
+### One task, one contract Live
+
+The builder and whoever pays sign the same contract in bChatX: the task, the price, the deadline and what counts as done. Each of you signs with your hand and your wallet key.
+
+[Contracts in chat →](https://bwalletx.com/contracts)
+
+-
+
+### A fingerprint on Bitcoin Live
+
+Only hashes go on chain, never the contract or your signature. Each party keeps a copy, and anyone with a copy can check it hasn't changed.
+
+[What goes on chain →](https://bwalletx.com/contracts)
+
+-
+
+### Deliver, get paid in full Live
+
+The pull request is merged, or the post goes live. You're paid in BSV, straight to your wallet, in full. The payer pays you directly: Kintsugi never holds the money, and there is no Kintsugi fee. Everything built through Kintsugi is open source under the Open BSV License.
+
+[The program and its terms →](https://bkintsugix.com)
+
+- Coming Development work for verified builders, after an ID check and an entry task. [Details](https://bkintsugix.com)
+
+- Coming One-tap sign and seal: one screen in bWalletX with the document, your box, your signature and the cost. [Details](https://bwalletx.com/contracts)
 
 ## The tools
 
@@ -3059,6 +3107,24 @@ Live
 Paid tasks on bWalletX, bChatX and the b*X apps. Each has a fixed price in a contract you sign before you start. Paid in BSV to your wallet, in full. Larger development work for verified builders is coming.
 
 [Task board](https://www.bchatx.com/kintsugi)[bkintsugix.com](https://bkintsugix.com)
+
+-
+
+### Commission on `bchatx.com/b`
+Live
+
+Say what you want built. b writes it up as a priced task, you accept, and you pay the developer in BSV. The builder and you sign one contract in bChatX.
+
+[Ask b for a quote](https://www.bchatx.com/b)[How a contract works](#contracts)
+
+-
+
+### Contracts in chat
+Live
+
+b drafts, everyone accepts with their own wallet, and each signer signs by hand and with their wallet key. Only a fingerprint goes on Bitcoin; each party keeps a copy.
+
+[How it works](https://bwalletx.com/contracts)
 
 -
 
