@@ -6015,7 +6015,7 @@ Each of these sites runs on bWalletX. Sign in once with your wallet and they all
 
 [LivebChatXChat, token rooms and live Spaces. Sign in with bWalletX.](https://chat.bwalletx.com)
 [LivebMailXEmail that pays. Your name@bmailx.com comes with your bWalletX name.](https://bmailx.com)
-[ComingbMessageXPrivate messages and calls, end-to-end encrypted. Your wallet is your identity, no phone number.](https://bmessagex.com)
+[LivebMessageXChannels and direct messages, Slack-style, on your bChatX rooms. Sign in with bWalletX.](https://bmessagex.com)
 [LivebRadioXLive shows in the bRadio Lounge. Raise your hand to speak.](https://bradiox.com)
 [LivebCalXThe calendar of live Spaces. Add one to your calendar in a tap.](https://bcalx.com)
 [LivebJobsXWork paid in Bitcoin, person to person. Your $name already takes payments.](https://bjobsx.com)
@@ -9225,6 +9225,8 @@ Your work history, in your own wallet: import your LinkedIn export and choose wh
 Bring your people with you: find who you know on Bitcoin and invite the rest.bfriendsx.com](https://bfriendsx.com)
 [### bAdvertisingX ✓ Live
 Tell b about your business and get the ad, for one fixed price in Bitcoin.badvertisingx.com](https://badvertisingx.com)
+[### bMessageX ✓ Live
+Channels and direct messages for your team and your community, Slack-style, on your bChatX rooms. Sign in with bWalletX.bmessagex.com](https://bmessagex.com)
 [### bMoviesX ○ Coming
 Coming.bmoviesx.com](https://bmoviesx.com)
 [### bDriveX ○ Coming
@@ -9237,8 +9239,6 @@ Coming.bsharesx.com](https://bsharesx.com)
 Coming.bdojox.com](https://bdojox.com)
 [### bMoneyX ○ Coming
 Coming.bmoneyx.com](https://bmoneyx.com)
-[### bMessageX ○ Coming
-Coming.bmessagex.com](https://bmessagex.com)
 [### bSearchX ○ Coming
 Coming.bsearchx.com](https://bsearchx.com)
 [### bSocialX ○ Coming
@@ -9274,6 +9274,8 @@ Which sites work today, and which don’t yet. Items move to Live when you can u
 
 - ✓ Live[bAdvertisingX](https://badvertisingx.com)
 
+- ✓ Live[bMessageX](https://bmessagex.com)
+
 - ○ Coming[bMoviesX](https://bmoviesx.com)
 
 - ○ Coming[bDriveX](https://bdrivex.com)
@@ -9285,8 +9287,6 @@ Which sites work today, and which don’t yet. Items move to Live when you can u
 - ○ Coming[bDojoX](https://bdojox.com)
 
 - ○ Coming[bMoneyX](https://bmoneyx.com)
-
-- ○ Coming[bMessageX](https://bmessagex.com)
 
 - ○ Coming[bSearchX](https://bsearchx.com)
 
