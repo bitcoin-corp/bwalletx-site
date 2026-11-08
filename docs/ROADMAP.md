@@ -123,4 +123,4 @@ When an item changes, update its page and this file in the same PR.
 - bWeb (settings, Ask b add-ons, own versions). bweb.html, bapps.html
 - Like = 1¢ to fund and join the room. bapps.html, bapps/bmovies.html
 - bMovies: per-second streaming, Twatch comments, friend movies, "make me a movie" (not checked in the bMovies repo; bMovies is on hold). bapps/bmovies.html
-- Server licence change to FSL (bit-sign is Open BSV License v4 today). open-source.html
+- Publish the server (bit-sign, bChatX) source-available under the Open BSV License v4. open-source.html

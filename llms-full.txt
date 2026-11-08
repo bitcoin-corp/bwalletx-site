@@ -2988,7 +2988,7 @@ Only the document’s hash goes on chain, never the contract text or your drawn 
 
 ### Deliver, and the client pays you Live
 
-When your pull request is merged, or the post goes live, the client pays you in BSV, straight to your wallet, in full. Kintsugi never holds the money. Everything built through Kintsugi is open source under the Open BSV License.
+When your pull request is merged, or the post goes live, the client pays you in BSV, straight to your wallet, in full. Kintsugi never holds the money. Everything built through Kintsugi is source-available under the Open BSV License.
 
 [The program and its terms →](https://bkintsugix.com)
 
@@ -3197,7 +3197,7 @@ applyManifest(manifest);
 startShellBridge({ manifest }); // inside bWalletX: hide the bar, follow the wallet's dock
 </script>``CopyOn the web the package draws the bar today. From the [@bwalletx/connect README](https://github.com/bitcoin-corp/bwalletx-connect#bapp-shell)
 
-Questions: [support@bwalletx.com](mailto:support@bwalletx.com) · Docs: [docs.bwalletx.com](https://docs.bwalletx.com/) · Everything we build through Kintsugi is open source under the Open BSV License. Related: [Developers](https://bwalletx.com/developers) · [Open source](https://bwalletx.com/open-source) · [Roadmap](https://bwalletx.com/roadmap).
+Questions: [support@bwalletx.com](mailto:support@bwalletx.com) · Docs: [docs.bwalletx.com](https://docs.bwalletx.com/) · Everything we build through Kintsugi is source-available under the Open BSV License. Related: [Developers](https://bwalletx.com/developers) · [Open source](https://bwalletx.com/open-source) · [Roadmap](https://bwalletx.com/roadmap).
 
 ---
 
@@ -6251,7 +6251,7 @@ Source: https://bwalletx.com/jobs
 
 # Jobs
 
-Paid work on bWalletX. The code is open source; the pay is in BSV; every payout is public on [/bounties](https://bwalletx.com/bounties).
+Paid work on bWalletX. The wallet code is open source (MIT); the pay is in BSV; every payout is public on [/bounties](https://bwalletx.com/bounties).
 
 Sign up now. Payouts open soon. You can sign in with bWalletX, fill in your profile and submit work today. Payouts start once identity checks with Veriff are live, which is coming soon. Work you submit now is paid once you are verified.
 
@@ -6300,7 +6300,7 @@ Coming
 
 Set per contract
 
-Build or fix a named feature in our open-source code. Each bounty will list the task, the price and how b checks the work.
+Build or fix a named feature in our public code. Each bounty will list the task, the price and how b checks the work.
 
 - Not open yet. The first contracts will appear here.
 
@@ -6545,9 +6545,9 @@ Estimate from git history, capped at 18 hours a day for 27 days; not an invoice 
 
 The break stays visible. The gold makes it part of the piece.
 
-## Open source
+## Source-available
 
-The Kintsugi code (task templates, review tools, bounty sync) is open source under the Open BSV licence: [github.com/bitcoin-corp/kintsugi](https://github.com/bitcoin-corp/kintsugi). Specs and docs are CC BY 4.0.
+The Kintsugi code (task templates, review tools, bounty sync) is source-available under the Open BSV License: [github.com/bitcoin-corp/kintsugi](https://github.com/bitcoin-corp/kintsugi). Specs and docs are CC BY 4.0.
 
 ---
 
@@ -14222,7 +14222,7 @@ saver.agent · bBot owned by $you
 
 - LIVEAgent accounts in bWalletX Desktop. Account menu › Agents › Add agent account. Each one gets its own bBot, its own funds and its own limits. Its rules start on paper (pretend money) until you choose Run live.
 
-- LIVEThe bwalletx CLI and MCP, for developers. Let Claude or another AI use an agent account from your own machine. Open source: [github.com/bitcoin-corp/bwalletx-cli](https://github.com/bitcoin-corp/bwalletx-cli). See [CLI](https://bwalletx.com/cli) and [MCP](https://bwalletx.com/mcp).
+- LIVEThe bwalletx CLI and MCP, for developers. Let Claude or another AI use an agent account from your own machine. Open source (MIT): [github.com/bitcoin-corp/bwalletx-cli](https://github.com/bitcoin-corp/bwalletx-cli). See [CLI](https://bwalletx.com/cli) and [MCP](https://bwalletx.com/mcp).
 
 - COMINGYour bBot’s look. Pick a shape (Bubble, Coin, Block, Orbit or Tag) and one of 14 colours in Settings.
 
@@ -15104,11 +15104,13 @@ PartLicence todayCode
 
 The wallet (web, extension, phone apps). Forked from the open-source Yours Wallet.MIT[bitcoin-corp/bwallet](https://github.com/bitcoin-corp/bwallet)
 
-The CLI and MCP server ([bwalletx CLI](https://bwalletx.com/cli))MIT[b0ase/bwalletx-cli](https://github.com/bitcoin-corp/bwalletx-cli)
+The CLI and MCP server ([bwalletx CLI](https://bwalletx.com/cli))MIT[bitcoin-corp/bwalletx-cli](https://github.com/bitcoin-corp/bwalletx-cli)
 
-The server (bChatX)Open BSV License v4 today. A source-available licence is planned (FSL, the Functional Source License).Not public yet
+The server (bChatX)Open BSV License v4: source-available, not open sourceNot public yet
 
 The wallet stays MIT.
+
+Open source here means the MIT licence: anyone may use, change and share the code. Code under the Open BSV License is source-available: you can read it, but it may only be used on the Bitcoin SV blockchain, so we don’t call it open source.
 
 ## Does it depend on us still being around?
 

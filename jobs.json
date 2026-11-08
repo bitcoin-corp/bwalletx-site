@@ -43,7 +43,7 @@
       "title": "Feature bounties",
       "status": "coming",
       "pay": "Set per contract",
-      "what": "Build or fix a named feature in our open-source code. Each bounty will list the task, the price and how b checks the work.",
+      "what": "Build or fix a named feature in our public code. Each bounty will list the task, the price and how b checks the work.",
       "rules": [
         "Not open yet. The first contracts will appear here."
       ],
