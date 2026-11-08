@@ -74,10 +74,7 @@ def main():
         rows.append(r)
 
     out = dict(source='kintsugi', updated_at=datetime.datetime.now(datetime.timezone.utc).strftime('%Y-%m-%dT%H:%M:%SZ'),
-               rates=dict(client_usd_h=CLIENT_H, dev_usd_h=DEV_H, kintsugi_fee_usd_h=CLIENT_H - DEV_H, **{'from': RATES_FROM},
-                          paid_in='BSV at the BSV/USD rate on payment day',
-                          note=('Kintsugi takes no fee from 2 Nov 2026, on its own tasks or on features funded by others. '
-                                'Past contracts show their stamped figures, which are history: not invoiced, not collected, not revenue.')),
+               # No `rates` block (CEO ruling 8 Nov 2026): Kintsugi doesn't price by the hour; each offer's stamped terms are its record.
                statuses=dict(delivered='work done, not paid', paid='a payment is recorded against the stamp',
                              open='open for tender', withdrawn='replaced by a reissued offer (see replaced_by)', done='delivered'),
                offers=rows)

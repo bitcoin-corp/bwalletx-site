@@ -452,7 +452,7 @@ def contract(it, n):
     sig = ''.join(f'<div class="sig"><span>{r}</span><i>Example — not signed</i></div>' for r in ('Client', 'Developer', 'Kintsugi'))
     fee_row = (f'\n            <dt>Kintsugi fee</dt><dd>As recorded in the stamped text: {FEE_STATUS}.</dd>'
                if n in STAMPS else '')
-    asst = (' Shown as stamped on 30 Oct, under the first pricing model. Kintsugi no longer prices by the hour: each job is now a microcontract with a fixed price.'
+    asst = (' Shown as stamped on 30 Oct, under the first pricing model; the full stamped text is linked below. Kintsugi no longer prices by the hour: each job is now a microcontract with a fixed price.'
             if n in STAMPS else '')
     return f'''<div class="ct" role="region" aria-label="Example contract {n}">
           <p class="ct-note"><strong>Example contract</strong> — shows what a Kintsugi contract for this job looks like. Not signed, not an invoice.{asst}</p>
@@ -464,7 +464,6 @@ def contract(it, n):
             <dt>Task</dt><dd>{task}<span class="sub">{E(stamped_field(n, 'Description') or it["desc"])}</span></dd>
             <dt>Estimate</dt><dd class="tn">{(hrs if n in STAMPS else hrs1)(h)} (wall-clock)</dd>
             <dt>Price</dt><dd class="tn">{price_panel(h, n)}</dd>{fee_row}
-            <dt>Estimated value of work</dt><dd class="tn"><span class="val">{money(t["value_hours"])}</span></dd>
             <dt>Started</dt><dd class="tn">{fdate(t["first"])}</dd>
             <dt>Delivered</dt><dd class="tn">{fdate(t["last"])}</dd>
           </dl>
@@ -667,13 +666,13 @@ def render(d):
             rows += (f'<details class="job"><summary><span class="it">{name}<span class="ds">{E(it["desc"])}</span><span class="chips">{chips}</span></span>'
                      f'<span class="n">{hrs(t["hours"])}<span class="sub">{t["sessions"]} session{"s" if t["sessions"] != 1 else ""} · '
                      f'{t["elapsed_days"]} day{"s" if t["elapsed_days"] != 1 else ""} elapsed</span><span class="sub">{pr}</span></span>'
-                     f'<span class="n c">{money(t["hours"])}<span class="sub">{bsv(t["hours"])}</span><span class="sub val">{money(t["value_hours"])} estimated value of work</span></span>'
+                     f'<span class="n c">{money(t["hours"])}<span class="sub">{bsv(t["hours"])}</span></span>'
                      f'<span class="cv" aria-hidden="true"></span></summary>'
                      f'{f"<p class=pl>Posts: {pl}</p>" if pl else ""}{contract(it, num[id(it)])}</details>')
         sid = re.sub(r'[^a-z]+', '-', tp.lower()).strip('-')
         toc.append(f'<a href="#{sid}">{E(tp)}</a>')
         sections += (f'<section id="{sid}"><div class="sh"><h2>{E(tp)}</h2><p class="st"><span>{len(g)} item{"s" if len(g) != 1 else ""}</span>'
-                     f'<span>{hrs(gh)}</span><span class="c">{money(gh)}</span><span>{bsv(gh)}</span> <span class="est val">{money(gv)} estimated value of work</span></p></div>'
+                     f'<span>{hrs(gh)}</span><span class="c">{money(gh)}</span><span>{bsv(gh)}</span></p></div>'
                      f'<div class="jobs"><div class="jh" aria-hidden="true"><span>Item · tap to see an example contract</span><span class="n">Time taken</span><span class="n">Price as stamped</span><span></span></div>'
                      f'{rows}</div></section>')
     ow = ''
@@ -695,7 +694,6 @@ def render(d):
         <div class="tot"><b class="tn">{len(d["items"])}</b><span>items shipped</span></div>
         <div class="tot"><b class="tn">{tot_h:,.0f} h</b><span>wall-clock hours (estimate, at most {CAP_H_DAY} a day)</span></div>
         <div class="tot big"><b class="tn">{money(tot_h)}</b><span>the developer's price for this work as stamped in its contracts on 30 Oct, about {bsv(tot_h)[1:]} at ${PRICE["usd"]:,.2f}/BSV on {E(PRICE["date"])}</span></div>
-        <div class="tot big val"><b class="tn">{money(tot_v)}</b><span>estimated value of work: {tot_v:,.0f} hours of work across parallel sessions, priced the same way. What a developer creates over and above the stamped price.</span></div>
       </div>
       <p class="how"><strong>How Kintsugi works.</strong> Kintsugi is how {CLIENT} contracts the work on bWalletX, bChatX and the b*X apps. Work is written up as tasks that an AI-assisted coder can pick up with Cursor, GitHub and a Claude account. Each job is a microcontract with a fixed price, paid in BSV at the BSV/USD rate on the day of payment. Most Kintsugi work is paid for by {CLIENT}: on those jobs you get the stated price in full. When someone else commissions a job through b, any Kintsugi fee is shown in b&rsquo;s quote before you sign. The example contracts below were stamped on chain on 30 Oct under the first pricing model, and show their recorded figures, including a Kintsugi fee. They are kept as history: those fees were not invoiced, not collected, and are not revenue.</p>
       <p class="how">Tap any job to see an example contract for it: the offer, the terms, who commissioned it ({CLIENT}) and the paymail of the developer who did it.</p>
@@ -857,11 +855,11 @@ def summary_html(d):
     return f'''<!-- kintsugi-work:start -->
       <section class="kw" aria-labelledby="kw-h">
         <h2 id="kw-h">Work done so far</h2>
-        <p>Since the project began on {start}: {len(d["items"])} pages and features, about {th:,.0f} wall-clock hours, each job priced in a contract stamped on chain on 30 Oct. Running work in parallel with Claude produced about {tv:,.0f} hours of work, the estimated value of work.</p>
+        <p>Since the project began on {start}: {len(d["items"])} pages and features, about {th:,.0f} wall-clock hours, each job priced in a contract stamped on chain on 30 Oct. Running work in parallel with Claude sessions, that came to about {tv:,.0f} hours of session time.</p>
         <div class="kw-tw"><table class="kw-t">
-          <thead><tr><th>Developer</th><th class="n">Jobs</th><th class="n">Hours</th><th class="n">Price as stamped</th><th class="n">Estimated value of work</th></tr></thead>
-          <tbody><tr><td><strong>{E(DEV)}</strong> · with Claude</td><td class="n">{len(d["items"])}</td><td class="n">{th:,.0f}</td><td class="n"><strong>≈ {money(th)}</strong> · ≈ {bsv(th)[1:]}</td><td class="n kw-g">≈ {money(tv)}</td></tr></tbody>
-          <tfoot><tr><td>Running total</td><td class="n">{len(d["items"])}</td><td class="n">{th:,.0f}</td><td class="n">≈ {money(th)} · ≈ {bsv(th)[1:]}</td><td class="n kw-g">≈ {money(tv)}</td></tr></tfoot>
+          <thead><tr><th>Developer</th><th class="n">Jobs</th><th class="n">Hours</th><th class="n">Price as stamped</th></tr></thead>
+          <tbody><tr><td><strong>{E(DEV)}</strong> · with Claude</td><td class="n">{len(d["items"])}</td><td class="n">{th:,.0f}</td><td class="n"><strong>≈ {money(th)}</strong> · ≈ {bsv(th)[1:]}</td></tr></tbody>
+          <tfoot><tr><td>Running total</td><td class="n">{len(d["items"])}</td><td class="n">{th:,.0f}</td><td class="n">≈ {money(th)} · ≈ {bsv(th)[1:]}</td></tr></tfoot>
         </table></div>
         <p class="kw-note">Estimate from git history, capped at {CAP_H_DAY} hours a day for {d["cap"]["days"]} days; not an invoice or payment. BSV at ${PRICE["usd"]:,.2f} per BSV on {E(PRICE["date"])}. Updated {E(d["generated"])}.</p>
         <p><a href="/kintsugi/work">See every job &rarr;</a></p>

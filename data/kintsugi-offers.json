@@ -1,14 +1,6 @@
 {
  "source": "kintsugi",
  "updated_at": "2026-11-02T06:07:28Z",
- "rates": {
-  "client_usd_h": 20,
-  "dev_usd_h": 20,
-  "kintsugi_fee_usd_h": 0,
-  "from": "2026-11-02",
-  "paid_in": "BSV at the BSV/USD rate on payment day",
-  "note": "Kintsugi takes no fee from 2 Nov 2026, on its own tasks or on features funded by others. Past contracts show their stamped figures, which are history: not invoiced, not collected, not revenue."
- },
  "statuses": {
   "delivered": "work done, not paid",
   "paid": "a payment is recorded against the stamp",
