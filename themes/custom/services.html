@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Services for branded wallets</title>
+    <link rel="canonical" href="https://bwalletx.com/themes/custom/services" />
+    <meta name="description" content="Monthly services for businesses running on a bWalletX branded edition: support, site care, your own domain, a company workspace and more. Fixed prices." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://bwalletx.com/themes/custom/services" />
+    <meta property="og:site_name" content="bWalletX" />
+    <meta property="og:title" content="Services for branded wallets" />
+    <meta property="og:description" content="Support, site care, your own domain and more for businesses running on a bWalletX branded edition. Fixed prices, pick only what you need." />
+    <meta property="og:image" content="https://bwalletx.com/og-themes-services.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="A list of services, rooms and support, site care, your own domain and a company workspace, beside a navy wallet card for a fictional brand, Northgate, headed Services for your branded wallet." />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@bWalletX" />
+    <meta name="twitter:title" content="Services for branded wallets" />
+    <meta name="twitter:description" content="Support, site care, your own domain and more for businesses running on a bWalletX branded edition. Fixed prices, pick only what you need." />
+    <meta name="twitter:image" content="https://bwalletx.com/og-themes-services.png" />
+    <link rel="icon" href="/favicon.ico" />
+    <meta name="theme-color" content="#f7f6f2" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/styles.css" />
+    <style>
+      body.paper { --paper: #f7f6f2; --sheet: #ffffff; --ink: #111111; --muted: #5d5b56; --dim: #8a8780; --hair: #d9d6ce; --hover: #f0eee8; --mono: 'IBM Plex Mono', ui-monospace, Menlo, monospace;
+        color-scheme: light; background-color: var(--paper); color: var(--ink);
+        background-image: linear-gradient(rgba(17,17,17,.055) 1px, transparent 1px), linear-gradient(90deg, rgba(17,17,17,.055) 1px, transparent 1px);
+        background-size: 40px 40px, 40px 40px; }
+      body.paper .beta-banner { background: var(--paper); color: var(--muted); border-bottom: 1px solid var(--hair); }
+      body.paper .topbar { background: var(--paper) !important; border-bottom: 1px solid var(--hair); }
+      body.paper .topbar a, body.paper .brand { color: var(--ink); }
+      body.paper .topbar nav a { color: var(--muted); }
+      body.paper .dl-btn, body.paper .web-btn { background: var(--ink) !important; color: var(--paper) !important; box-shadow: none !important; border: 0 !important; }
+      body.paper .topbar, body.paper * { backdrop-filter: none !important; -webkit-backdrop-filter: none !important; text-shadow: none !important; }
+      body.paper .nd-menu { background: var(--sheet) !important; border: 1px solid var(--ink) !important; }
+      body.paper .nd-menu a, body.paper .m-menu summary, body.paper .m-menu a, body.paper .m-menu a.m-top { color: var(--ink) !important; }
+      body.paper .m-menu { background: var(--paper) !important; border-top: 1px solid var(--ink) !important; }
+      body.paper .menu-btn, body.paper .nav-cta .x-link { color: var(--ink) !important; border-color: var(--ink) !important; }
+      body.paper .foot { background: var(--paper); border-top: 1px solid var(--hair); color: var(--muted); }
+      body.paper .foot a { color: var(--ink); }
+      body.paper .gold { color: inherit; }
+      .tp { overflow-x: clip; padding-top: 64px; }
+      .tp .wrapx { max-width: 880px; margin: 0 auto; padding-inline: 16px; }
+      .tp section { padding-block: 64px; border-top: .5px solid var(--ink); }
+      .tp section.intro { border-top: 0; padding-block: 56px 40px; }
+      .tp .num { font: 500 .72rem var(--mono); letter-spacing: .16em; text-transform: uppercase; display: flex; align-items: center; gap: 14px; margin: 0 0 18px; }
+      .tp .num::after { content: ""; flex: 1; border-top: .5px solid var(--ink); }
+      .tp h1, .tp h2, .tp h3 { font-family: var(--hf); letter-spacing: -0.03em; margin: 0; color: var(--ink); text-wrap: balance; }
+      .tp h1 { font-size: clamp(2.4rem, 6vw, 4.2rem); line-height: 1; font-weight: 600; }
+      .tp h2 { font-size: clamp(1.7rem, 4vw, 2.4rem); line-height: 1.05; font-weight: 600; }
+      .tp .lede { font-size: clamp(1.05rem, 2vw, 1.25rem); max-width: 34em; margin: 22px 0 0; line-height: 1.6; }
+      .tp .sub { color: var(--muted); max-width: 40em; margin: 14px 0 0; line-height: 1.6; }
+      .tp a { color: var(--ink); text-underline-offset: 3px; }
+      .vat { margin: 14px 0 0; font-size: .9rem; color: var(--ink); font-weight: 600; }
+      [hidden] { display: none !important; }
+      .tp .pill { display: inline-block; flex: none; min-width: 74px; margin: 0; border: 1px solid var(--ink); border-radius: 0; text-align: center; font: 500 .68rem/1.4 var(--mono); letter-spacing: .1em; text-transform: uppercase; padding: 2px 9px; white-space: nowrap; }
+      .tp .pill.live { background: var(--ink); color: var(--paper); }
+      .tp .pill.soon { color: var(--ink); background: var(--paper); }
+      /* the service list: name and status, price, what you get */
+      .svcs { list-style: none; padding: 0; margin: 32px 0 0; background: var(--sheet); border: 1px solid var(--ink); }
+      .svc { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 8px 24px; padding: 20px; border-bottom: .5px solid var(--ink); }
+      .svc:last-child { border-bottom: 0; }
+      .svc-h { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+      .svc h3 { font-size: 1.15rem; font-weight: 600; letter-spacing: -.01em; }
+      .svc-p { margin: 0; text-align: right; font: 600 1.15rem/1.3 var(--hf); letter-spacing: -.01em; }
+      .svc-p small { display: block; font: 400 .86rem/1.4 var(--bf); color: var(--muted); letter-spacing: 0; }
+      .svc-d { grid-column: 1 / -1; margin: 0; max-width: 46em; color: var(--muted); line-height: 1.6; }
+      .one .svc { align-items: baseline; }
+      .one .svc h3 { font-family: var(--bf); font-size: 1rem; letter-spacing: 0; }
+      .one .svc h3 small { display: block; margin-top: 4px; font-weight: 400; font-size: .9rem; color: var(--muted); line-height: 1.5; }
+      .gk { list-style: none; padding: 0; margin: 28px 0 0; border-top: .5px solid var(--ink); }
+      .gk li { padding: 16px 0; border-bottom: .5px solid var(--ink); line-height: 1.6; color: var(--muted); }
+      .gk li b { color: var(--ink); }
+      .callout { margin-top: 18px; padding: 16px 18px; border: 1px dashed var(--ink); line-height: 1.55; }
+      .callout + .callout { margin-top: 10px; }
+      .cta { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 28px; }
+      .cta a { font: 500 .8rem var(--mono); text-transform: uppercase; letter-spacing: .12em; padding: 0 18px; min-height: 48px; display: inline-flex; align-items: center; border: 1px solid var(--ink); background: var(--sheet); color: var(--ink); text-decoration: none; transition: background-color .15s, color .15s; }
+      .cta a:hover { background: var(--hover); }
+      .cta a.pri { background: var(--ink); color: var(--paper); }
+      .cta a.pri:hover { background: #2a2a2a; }
+      .cta a:focus-visible { outline: 2px solid var(--ink); outline-offset: 2px; }
+      @media (max-width: 640px) {
+        .tp section { padding-block: 48px; }
+        .svc { grid-template-columns: 1fr; padding: 18px 16px; }
+        .svc-p { text-align: left; }
+      }
+    </style>
+  </head>
+  <body class="paper">
+    <div class="beta-banner">bWalletX is in <strong>beta</strong>: test with small amounts.</div>
+    <header class="topbar">
+      <div class="wrap topbar-in">
+        <a class="brand" href="/"><img src="/logo.svg" alt="" width="34" height="30" /><span>bWallet<span class="gold">X</span></span></a>
+        <nav aria-label="Pages">
+          <a href="/features">Features</a><a href="/exchange">Exchange</a><a href="/social">Social</a><a href="/agent">Agents</a><a href="/extension">Extension</a><a href="/developers">Developers</a>
+        </nav>
+        <span class="nav-cta"><a class="dl-btn" href="/get">Download</a><a class="web-btn" href="https://web.bwalletx.com" target="_blank" rel="noopener">Web &rarr;</a></span>
+      </div>
+    </header>
+    <script src="/nav.js"></script>
+    <script src="/js/uk-prices.js"></script>
+
+    <main class="tp">
+      <section class="intro">
+        <div class="wrapx">
+          <p class="num">Services &middot; Branded wallets</p>
+          <h1>Services for your branded wallet.</h1>
+          <p class="lede">Your Branded edition gives you your own wallet ($999 set-up + $99 a year<span class="gbp" hidden>; in the UK &pound;750 set-up + &pound;75 a year</span>). If you run your business on it, these services keep it going. Each one is a fixed monthly price, added to one bill. Pick only what you need.</p>
+          <p class="vat">Prices exclude VAT. If we become VAT-registered, VAT will be added. For businesses only.</p>
+        </div>
+      </section>
+
+      <section id="monthly">
+        <div class="wrapx">
+          <p class="num">01 / 04 &nbsp;Monthly</p>
+          <h2>Monthly services.</h2>
+          <ul class="svcs">
+            <li class="svc">
+              <div class="svc-h"><h3>Business rooms and support</h3><span class="pill live">Live</span></div>
+              <p class="svc-p">$99 a month<small class="gbp" hidden>&pound;75 a month</small></p>
+              <p class="svc-d">Private rooms for your company with their own key, signing and sealing of documents, and support from b and our agents in your room, plus email.</p>
+            </li>
+            <li class="svc">
+              <div class="svc-h"><h3>Site care</h3><span class="pill live">Live</span></div>
+              <p class="svc-p">$199 a month<small class="gbp" hidden>&pound;150 a month</small></p>
+              <p class="svc-d">We look after a standard site we built for you: updates, security fixes, deploys, uptime checks, and up to 2 small changes a month.</p>
+            </li>
+            <li class="svc">
+              <div class="svc-h"><h3>Site care for apps</h3><span class="pill live">Live</span></div>
+              <p class="svc-p">$399 a month<small class="gbp" hidden>&pound;300 a month</small></p>
+              <p class="svc-d">The same, for a custom or white-label site such as a marketplace running on our rooms.</p>
+            </li>
+            <li class="svc">
+              <div class="svc-h"><h3>Your own domain and paymails</h3><span class="pill live">Live</span></div>
+              <p class="svc-p">$49 a month<small>or $490 a year</small><small class="gbp" hidden>&pound;39 a month, or &pound;390 a year</small></p>
+              <p class="svc-d">Rooms and wallet sign-in on your own domain (e.g. rooms.yourbrand.com), and paymails at your domain for up to 10 names. More names $5 a month each.</p>
+            </li>
+            <li class="svc">
+              <div class="svc-h"><h3>Company workspace</h3><span class="pill soon">In build</span></div>
+              <p class="svc-p">$199 a month<small>or $1,990 a year</small><small class="gbp" hidden>&pound;150 a month, or &pound;1,500 a year</small></p>
+              <p class="svc-d">A private area for your directors and shareholders: a mirror of your share register, a document vault, proposals and votes, and a treasury view.</p>
+            </li>
+            <li class="svc">
+              <div class="svc-h"><h3>Deal record</h3><span class="pill soon">In build</span></div>
+              <p class="svc-p">$99 a month<small>or $990 a year</small><small class="gbp" hidden>&pound;75 a month, or &pound;750 a year</small></p>
+              <p class="svc-d">A record of each deal for your compliance officer: who the other side is, whether their ID check passed, where the money came from, the amount and the signed contract&rsquo;s fingerprint, kept 5 years. Only your compliance officer sees it. Needs the workspace.</p>
+            </li>
+            <li class="svc">
+              <div class="svc-h"><h3>Hosting</h3><span class="pill live">Live</span></div>
+              <p class="svc-p">At cost</p>
+              <p class="svc-d">Servers and any service bought only for you, passed on with no mark-up, shown as its own line.</p>
+            </li>
+            <li class="svc">
+              <div class="svc-h"><h3>ID checks</h3><span class="pill live">Live</span></div>
+              <p class="svc-p">At cost<small>or contract with Veriff directly</small></p>
+              <p class="svc-d">Identity checks for your own users.</p>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="one-off">
+        <div class="wrapx">
+          <p class="num">02 / 04 &nbsp;One-off</p>
+          <h2>One-off work.</h2>
+          <ul class="svcs one">
+            <li class="svc"><h3>Small change<small>Copy, image or layout on existing pages; usually done in 2 working days.</small></h3><p class="svc-p">$149<small>or 5 for $599</small><small class="gbp" hidden>&pound;115, or 5 for &pound;450</small></p></li>
+            <li class="svc"><h3>Extra round of changes<small>On your set-up.</small></h3><p class="svc-p">$249<small class="gbp" hidden>&pound;190</small></p></li>
+            <li class="svc"><h3>One-page website</h3><p class="svc-p">$299<small class="gbp" hidden>&pound;249</small></p></li>
+            <li class="svc"><h3>New feature<small>Scoped and priced before we start.</small></h3><p class="svc-p">Fixed quote<small>from $499</small><small class="gbp" hidden>from &pound;375</small></p></li>
+            <li class="svc"><h3>Your data if you leave</h3><p class="svc-p">Free</p></li>
+          </ul>
+          <p class="callout">Bigger projects: <b>custom builds are quoted for your company</b>; most start from $10,000.</p>
+          <p class="callout"><b>Pay in BSV through bWalletX and get 10% off.</b></p>
+        </div>
+      </section>
+
+      <section id="good-to-know">
+        <div class="wrapx">
+          <p class="num">03 / 04 &nbsp;Good to know</p>
+          <h2>Good to know.</h2>
+          <ul class="gk">
+            <li><b>The share register mirror isn&rsquo;t your legal register.</b> Your company keeps its register of members as the law requires. If the two differ, the register wins.</li>
+            <li><b>The deal record is a record-keeping tool.</b> It isn&rsquo;t legal or compliance advice and doesn&rsquo;t make your business compliant on its own. Your compliance duties stay yours.</li>
+            <li><b>We never hold your money, your users&rsquo; money, art or keys.</b> Every wallet is self-custody.</li>
+            <li><b>We don&rsquo;t issue, sell or promote shares or tokens for you,</b> and we don&rsquo;t arrange your deals.</li>
+            <li><b>No calls or response-time promises</b> below a custom build. Support is in your room and by email.</li>
+            <li>Cancel any monthly service on 30 days&rsquo; notice.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="order">
+        <div class="wrapx">
+          <p class="num">04 / 04 &nbsp;Order</p>
+          <h2>Ready to start?</h2>
+          <div class="cta">
+            <a class="pri" href="/themes/custom/orderform">Order on the form &rarr;</a>
+            <a href="https://chat.bwalletx.com/u/bwalletx" target="_blank" rel="noopener">Message us on bChatX &rarr;</a>
+          </div>
+          <p class="sub"><a href="/themes/custom">&larr; Back to custom editions</a> &middot; <a href="/themes">All themes</a></p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="foot">
+      <div class="wrap foot-in">
+        <a class="brand" href="/"><img src="/logo.svg" alt="" width="27" height="24" /><span>bWallet<span class="gold">X</span></span></a>
+        <p>By The Bitcoin Corporation Ltd.</p>
+        <p><a href="https://x.com/bWalletX" target="_blank" rel="noopener">@bWalletX on X</a> · <a href="https://chat.bwalletx.com/u/bwalletx" target="_blank" rel="noopener">bChatX</a> · <a href="mailto:support@bwalletx.com">support@bwalletx.com</a> · <a href="/privacy.html">Privacy policy</a></p>
+      </div>
+    </footer>
+  </body>
+</html>
