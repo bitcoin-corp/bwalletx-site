@@ -7,7 +7,7 @@
   The 8 Nov rebuild follows RB's notes: a real catalogue track instead of the synthesised theme, our own bBots
   instead of legged robots, and the contract story told properly (ask b for a priced task, one contract signed by
   both sides with a fingerprint on Bitcoin, paid peer to peer in BSV, in full). Live features only, worded as
-  bkintsugix.com and /contracts word them; the only fee line is "no Kintsugi fee".
+  bkintsugix.com and /contracts word them; no fee claims: per the CEO ruling of 8 Nov, any Kintsugi fee is "shown in b's quote before you sign".
   Every tool line was checked against the live product on 6 Nov 2026: b0-x.com, bkintsugix.com, bgitx.com,
   the @bwalletx/connect 0.7.0 README and the bwalletx 0.5.0 CLI README. Contract copy follows bkintsugix.com and
   /contracts (8 Nov 2026). Snippets are copied from those READMEs and from /developers and /mcp, never made up.
@@ -491,7 +491,7 @@
             <use href="#coin" class="coin" x="122" y="152" width="30" height="30" style="--d: 1.9s" />
             <g class="pop" style="--d: 2.9s"><rect x="347" y="234" width="82" height="24" rx="12" fill="#FFD24D" /><text x="388" y="250.5" text-anchor="middle" font-family="Space Grotesk, sans-serif" font-weight="700" font-size="12" fill="#111">In full ✓</text></g>
             <text class="fade" x="240" y="112" text-anchor="middle" font-family="Space Grotesk, sans-serif" font-weight="700" font-size="11" letter-spacing="1.6" fill="#ffe0b0" style="--d: 1.1s">PEER TO PEER</text>
-            <g class="pop" style="--d: 2.2s"><rect x="166" y="214" width="148" height="30" rx="15" fill="rgba(255,255,255,.12)" stroke="#FFD24D" stroke-width="1.6" /><text x="240" y="234" text-anchor="middle" font-family="Space Grotesk, sans-serif" font-weight="600" font-size="12.5" fill="#fff">No Kintsugi fee</text></g>
+            <g class="pop" style="--d: 2.2s"><rect x="166" y="214" width="148" height="30" rx="15" fill="rgba(255,255,255,.12)" stroke="#FFD24D" stroke-width="1.6" /><text x="240" y="234" text-anchor="middle" font-family="Space Grotesk, sans-serif" font-weight="600" font-size="12.5" fill="#fff">Fixed price</text></g>
           </svg>
         </div>
         <div class="scap"><h2 class="slg" data-slogan="Paid in full"></h2><p>When your pull request is merged, the client pays you in BSV, straight to your wallet, in full. Kintsugi never holds the money.</p></div>
@@ -566,7 +566,7 @@
         </li>
         <li>
           <h3>Take a paid Kintsugi task <span class="tag live">Live</span></h3>
-          <p>Kintsugi is how The Bitcoin Corporation contracts the work on bWalletX, bChatX and the b*X apps. Pick a task with a fixed price, sign the contract in bChatX, deliver, and get paid in BSV, in full. There is no Kintsugi fee.</p>
+          <p>Kintsugi is how The Bitcoin Corporation contracts the work on bWalletX, bChatX and the b*X apps. Each job is a microcontract with a fixed price. Pick a task, sign the contract in bChatX, deliver, and you get the stated price in full, in BSV.</p>
           <a class="go" href="https://www.bchatx.com/kintsugi">See the open tasks &rarr;</a> &middot; <a class="go" href="https://bkintsugix.com">How Kintsugi works</a>
         </li>
       </ol>
@@ -576,7 +576,7 @@
       <ol class="steps">
         <li>
           <h3>Say what you want built <span class="tag live">Live</span></h3>
-          <p>Someone says what they need on bchatx.com/b, and b writes it up as a priced task. Take it on, and the client pays you in BSV when it&rsquo;s done.</p>
+          <p>Someone says what they need on bchatx.com/b, and b writes it up as a priced task. Take it on, and the client pays you in BSV when it&rsquo;s done. Any Kintsugi fee is shown in b&rsquo;s quote before you sign.</p>
           <a class="go" href="https://www.bchatx.com/b">Ask b for a quote &rarr;</a>
         </li>
         <li>
@@ -596,7 +596,7 @@
         </li>
         <li>
           <h3>Deliver, and the client pays you <span class="tag live">Live</span></h3>
-          <p>When your pull request is merged, or the post goes live, the client pays you in BSV, straight to your wallet, in full. Kintsugi never holds the money, and there is no Kintsugi fee. Everything built through Kintsugi is open source under the Open BSV License.</p>
+          <p>When your pull request is merged, or the post goes live, the client pays you in BSV, straight to your wallet, in full. Kintsugi never holds the money. Everything built through Kintsugi is open source under the Open BSV License.</p>
           <a class="go" href="https://bkintsugix.com">The program and its terms &rarr;</a>
         </li>
       </ol>
@@ -642,7 +642,7 @@
           <p>A <code>/.well-known/bapp.json</code> manifest and the five-slot bar (Wallet, Exchange, b, Feed, Chat) for your app. The web components are in <code>@bwalletx/connect/shell</code> now; bWalletX driving your app from its own dock is coming.</p>
           <p class="lk"><a href="https://github.com/bitcoin-corp/bwalletx-connect/blob/main/docs/SHELL-PROTOCOL.md">Shell protocol</a></p></li>
         <li class="tool"><div class="hd"><h3>Kintsugi</h3><span class="tag live">Live</span></div>
-          <p>Paid tasks on bWalletX, bChatX and the b*X apps. Each has a fixed price in a contract you sign before you start. Paid in BSV to your wallet, in full. Larger development work for verified builders is coming.</p>
+          <p>Paid tasks on bWalletX, bChatX and the b*X apps. Each job is a microcontract with a fixed price, written into a contract you sign before you start. You get the stated price in full, in BSV. Larger development work for verified builders is coming.</p>
           <p class="lk"><a href="https://www.bchatx.com/kintsugi">Task board</a><a href="https://bkintsugix.com">bkintsugix.com</a></p></li>
         <li class="tool"><div class="hd"><h3>Commission on <code>bchatx.com/b</code></h3><span class="tag live">Live</span></div>
           <p>Someone says what they want built, and b writes it up as a priced task. Take it on, sign one contract in bChatX with the client, and the client pays you in BSV when it&rsquo;s done.</p>

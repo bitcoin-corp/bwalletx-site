@@ -2944,7 +2944,7 @@ Send us your app for the Apps screen in bWalletX. A person reviews it, and appro
 
 ### Take a paid Kintsugi task Live
 
-Kintsugi is how The Bitcoin Corporation contracts the work on bWalletX, bChatX and the b*X apps. Pick a task with a fixed price, sign the contract in bChatX, deliver, and get paid in BSV, in full. There is no Kintsugi fee.
+Kintsugi is how The Bitcoin Corporation contracts the work on bWalletX, bChatX and the b*X apps. Each job is a microcontract with a fixed price. Pick a task, sign the contract in bChatX, deliver, and you get the stated price in full, in BSV.
 
 [See the open tasks →](https://www.bchatx.com/kintsugi) · [How Kintsugi works](https://bkintsugix.com)
 
@@ -2956,7 +2956,7 @@ The same steps whether you want something built or you are the one building it. 
 
 ### Say what you want built Live
 
-Someone says what they need on bchatx.com/b, and b writes it up as a priced task. Take it on, and the client pays you in BSV when it’s done.
+Someone says what they need on bchatx.com/b, and b writes it up as a priced task. Take it on, and the client pays you in BSV when it’s done. Any Kintsugi fee is shown in b’s quote before you sign.
 
 [Ask b for a quote →](https://www.bchatx.com/b)
 
@@ -2988,7 +2988,7 @@ Only the document’s hash goes on chain, never the contract text or your drawn 
 
 ### Deliver, and the client pays you Live
 
-When your pull request is merged, or the post goes live, the client pays you in BSV, straight to your wallet, in full. Kintsugi never holds the money, and there is no Kintsugi fee. Everything built through Kintsugi is open source under the Open BSV License.
+When your pull request is merged, or the post goes live, the client pays you in BSV, straight to your wallet, in full. Kintsugi never holds the money. Everything built through Kintsugi is open source under the Open BSV License.
 
 [The program and its terms →](https://bkintsugix.com)
 
@@ -3106,7 +3106,7 @@ A `/.well-known/bapp.json` manifest and the five-slot bar (Wallet, Exchange, b, 
 ### Kintsugi
 Live
 
-Paid tasks on bWalletX, bChatX and the b*X apps. Each has a fixed price in a contract you sign before you start. Paid in BSV to your wallet, in full. Larger development work for verified builders is coming.
+Paid tasks on bWalletX, bChatX and the b*X apps. Each job is a microcontract with a fixed price, written into a contract you sign before you start. You get the stated price in full, in BSV. Larger development work for verified builders is coming.
 
 [Task board](https://www.bchatx.com/kintsugi)[bkintsugix.com](https://bkintsugix.com)
 
