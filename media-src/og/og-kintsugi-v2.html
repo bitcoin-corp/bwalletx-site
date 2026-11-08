@@ -1,0 +1,40 @@
+<!doctype html><html><head><meta charset="utf-8">
+<!--
+  Share card for bwalletx.com/kintsugi and /kintsugi/program (og-kintsugi-v2.jpg) and bkintsugix.com (?site=bkintsugix, og-kintsugi-v2.jpg there).
+  Replaces og-kintsugi-v1.png, which showed an hourly rate (withdrawn: CEO ruling 8 Nov 2026, microcontracts with a fixed price).
+  Render: serve the site root, open /media-src/og/og-kintsugi-v2.html at 1200x630, screenshot, then save as JPEG at quality 85 (magick in.png -strip -quality 85 out.jpg).
+-->
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+<style>
+html,body{margin:0;width:1200px;height:630px;overflow:hidden;background:#050506}
+.og{position:relative;width:1200px;height:630px;overflow:hidden;font-family:'Space Grotesk',sans-serif;color:#fff}
+.bg{position:absolute;inset:-40px;background:url(/kintsugi/img/bowl-hero.webp) center/cover;filter:blur(28px) brightness(.32) saturate(1.2)}
+.tint{position:absolute;inset:0;background:radial-gradient(circle at 76% 50%,rgba(245,184,0,.20),transparent 46%),linear-gradient(90deg,rgba(5,5,6,.94) 0%,rgba(5,5,6,.78) 50%,rgba(5,5,6,.35) 100%)}
+.grain{position:absolute;inset:0;opacity:.07;background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2'/></filter><rect width='160' height='160' filter='url(%23n)'/></svg>")}
+.mark{position:absolute;left:72px;top:58px;display:flex;align-items:center;gap:12px}
+.mark img{width:34px;filter:drop-shadow(0 0 18px rgba(245,184,0,.55))}
+.mark span{font-weight:700;font-size:32px;letter-spacing:-1px}.gold{color:#F5B800}
+.eye{position:absolute;left:72px;top:150px;font:600 17px 'IBM Plex Sans',sans-serif;letter-spacing:.2em;color:#F5B800}.eye .nt{letter-spacing:.06em}
+h1{position:absolute;left:72px;top:184px;width:600px;margin:0;font-weight:700;font-size:70px;line-height:1.02;letter-spacing:-2.6px}
+.meta{position:absolute;left:72px;top:356px;width:560px;font:500 25px/1.38 'IBM Plex Sans',sans-serif;color:#e4dfd2}
+.pill{position:absolute;left:72px;top:468px;background:linear-gradient(180deg,#FFD84D,#E8A100);color:#1a1300;font-weight:700;font-size:23px;padding:14px 28px;border-radius:999px;box-shadow:0 8px 30px rgba(245,184,0,.3)}
+.url{position:absolute;left:72px;bottom:42px;font:500 21px 'IBM Plex Sans',sans-serif;color:#b9b4a8}
+.hero{position:absolute;right:64px;top:80px;width:470px;height:470px;border-radius:28px;overflow:hidden;border:1.5px solid rgba(245,184,0,.7);box-shadow:0 30px 80px rgba(0,0,0,.6),0 0 60px rgba(245,184,0,.18)}
+.hero img{width:100%;height:100%;object-fit:cover;object-position:52% 40%}
+</style></head><body><div class="og">
+<div class="bg"></div><div class="tint"></div><div class="grain"></div>
+<div class="mark"><img src="/logo.svg" alt=""><span>Kintsugi<span class="gold">X</span></span></div>
+<div class="eye">HOW WE BUILD <span class="nt">bWalletX</span></div>
+<h1>Get paid in BSV to build our apps.</h1>
+<div class="meta">Fixed-price microcontracts on bWalletX, bChatX and the b*X apps.</div>
+<div class="pill" id="cta">Help us build b</div>
+<div class="url" id="url">bwalletx.com/kintsugi</div>
+<div class="hero"><img src="/kintsugi/img/bowl-hero.webp" alt=""></div>
+</div>
+<script>
+  if (new URLSearchParams(location.search).get('site') === 'bkintsugix') {
+    document.getElementById('cta').textContent = 'See open tasks';
+    document.getElementById('url').textContent = 'bkintsugix.com';
+  }
+</script>
+</body></html>

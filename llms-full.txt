@@ -1130,11 +1130,11 @@ Watch without sound
 
 Work, agreed in chat. Paid wallet to wallet.
 
-Ask b. Tell b what you need. b drafts a contract with the scope, the price and the deadline, and puts the job out to tender.
+Ask b. Tell b what you need. b drafts a contract with the scope, a fixed price and the deadline, and puts the job out to tender. Any Kintsugi fee is shown in b’s quote before you sign.
 
 Everyone signs. Developers running b get the job as a notification. One taps Accept, and the client and the developer sign the same contract.
 
-Pay direct. The developer delivers a PR or a release link, and the client signs it off. Then the client pays the developer in BSV, wallet to wallet, in full, with no Kintsugi fee. No escrow. We never hold the money.
+Pay direct. The developer delivers a PR or a release link, and the client signs it off. Then the client pays the developer in BSV, wallet to wallet: the stated price, in full. No escrow. We never hold the money.
 
 We’re building it now.
 
@@ -1162,11 +1162,11 @@ Watch without sound
 
 Work, agreed in chat. Paid wallet to wallet.
 
-Ask b. Tell b what you need. b drafts a contract with the scope, the price and the deadline, and puts the job out to tender.
+Ask b. Tell b what you need. b drafts a contract with the scope, a fixed price and the deadline, and puts the job out to tender. Any Kintsugi fee is shown in b’s quote before you sign.
 
 Everyone signs. Developers running b get the job as a notification. One taps Accept, and the client and the developer sign the same contract.
 
-Pay direct. The developer delivers a PR or a release link, and the client signs it off. Then the client pays the developer in BSV, wallet to wallet, in full, with no Kintsugi fee. No escrow. We never hold the money.
+Pay direct. The developer delivers a PR or a release link, and the client signs it off. Then the client pays the developer in BSV, wallet to wallet: the stated price, in full. No escrow. We never hold the money.
 
 We’re building it now.
 
@@ -6515,7 +6515,7 @@ Kintsugi (金継ぎ): mending broken pottery with gold, so the repair shows.
 
 # b Kintsugi: help us build b
 
-Our program for building b: bWalletX, bChatX and the bApps. It works both ways. We pay developers to build b, wallet to wallet and in full: no fee. And if you want a feature or a fix, you can pay us to build it. Developers who build with Claude verify their ID, pass one entry task and take the work. For jobs between users, there is [bJobsX](https://bjobsx.com).
+Our program for building b: bWalletX, bChatX and the bApps. It works both ways. We pay developers to build b, wallet to wallet: each job is a microcontract with a fixed price, and you get the stated price in full. And if you want a feature or a fix, you can pay us to build it. Developers who build with Claude verify their ID, pass one entry task and take the work. For jobs between users, there is [bJobsX](https://bjobsx.com).
 
 [Help us build b](https://bwalletx.com/kintsugi/program)
 [Work done so far](https://bwalletx.com/kintsugi/work)
@@ -6531,9 +6531,9 @@ Every task delivered through Kintsugi, with time, cost and links.
 
 ## Work done so far
 
-Since the project began on 3 Oct 2026: 153 pages and features, about 486 wall-clock hours, worth $20 an hour in pay. Running work in parallel with Claude produced about 1,376 hours of work, the estimated value of work.
+Since the project began on 3 Oct 2026: 153 pages and features, about 486 wall-clock hours, each job priced in a contract stamped on chain on 30 Oct. Running work in parallel with Claude produced about 1,376 hours of work, the estimated value of work.
 
-DeveloperJobsHoursPay at $20/hEstimated value of work
+DeveloperJobsHoursPrice as stampedEstimated value of work
 
 b0ase · with Claude153486≈ $9,720 · ≈ 571 BSV≈ $27,526
 
