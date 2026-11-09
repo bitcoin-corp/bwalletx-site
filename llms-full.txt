@@ -1,6 +1,6 @@
 # bWalletX: full site text
 
-Generated 2026-11-08 from https://bwalletx.com. Source pages are linked above each section.
+Generated 2026-11-09 from https://bwalletx.com. Source pages are linked above each section.
 
 ---
 
@@ -7732,7 +7732,15 @@ Each release ships to the Android APK, the Chrome extension and the web wallet. 
 
 [Download bWalletX](https://bwalletx.com/download)
 
-## 5.2.53 2026-11-07
+## 5.2.53 2026-11-09
+
+- Stronger protection for the coins your wallet sets aside. We recommend updating.
+- Tighter checks whenever a $name is claimed, renamed or handed over.
+- Agent strategy screens now say plainly what a percent stop does and doesn’t do.
+- The VexVoid theme now has black buttons.
+- The Nautical theme’s Scan button is easier to read.
+
+## 5.2.52 2026-11-07
 
 - The chat bar is now one row. Tap “+” for photos, files and emoji, and links show a preview card. It works the same on your phone, in Chrome and on the web.
 - On your phone, Settings › Security has an “Unlock with Face ID” switch (fingerprint on Android). You can turn it on even if you said “Not now” before.
@@ -10062,6 +10070,10 @@ b is us. b is the bWalletX team’s assistant. What you tell b reaches our team,
 We fix it. We’re a small team listening to everyone at once. Your words become the next fix.
 
 Your keys stay yours. b knows your wallet’s world, not your secrets. Your keys and 12 words never leave your phone, so never type them to anyone, b included.
+
+What we keep. We read these chats to fix bugs and improve b, free and paid alike. Secrets are stripped out, and chats are kept for up to 180 days.
+
+What it costs. When a message is paid for, you pay what it costs us to answer. We add no margin.
 
 [How we handle your chats](https://bwalletx.com/ask-b#b-is-us) · [Privacy](https://bwalletx.com/privacy#b)
 
@@ -20362,7 +20374,7 @@ Source: https://bwalletx.com/privacy
 
 # Privacy Policy
 
-bWalletX (Beta) · Effective 6 October 2026 · Updated 5 November 2026
+bWalletX (Beta) · Effective 6 October 2026 · Updated 9 November 2026
 
 bWalletX is published by The Bitcoin Corporation Ltd and is based on the open-source Yours Wallet (MIT licence).
 It is not made, reviewed or endorsed by the Yours Wallet authors. This policy covers bWalletX (the full-feature
@@ -20376,8 +20388,8 @@ Ltd) keeps the data listed under
 [What our service keeps](#service), linked to your wallet's identity key. If you use bChat on a
 phone, our push server also keeps your device's push token and notification settings so it can notify you (see
 [Notifications](#push)). We use all of this only to run those features. Conversations with b, our
-assistant, are different: b is our team, and we read and keep them to fix bugs and improve the app (see
-[Conversations with b](#b)). We don't collect your email
+assistant, are different: b is our team, and we read and keep them to fix bugs and improve the app, whether a
+message was free or paid (see [Conversations with b](#b)). We don't collect your email
 address, phone number, location, advertising identifiers, analytics or crash
 reports, and we don't track you, sell your data or use it for advertising.
 
@@ -20480,34 +20492,55 @@ Corporation Ltd, answering on our behalf. When you talk to b, you are talking to
 secret from us, because b is us. They travel encrypted over HTTPS, and our team reads them so we can help you.
 Your keys and 12 words are different: they never leave your device.
 
--
-What we keep: the messages you send b and b's replies, linked to your account, on our server.
+- Free and paid alike: all of this applies the same way, whether a message came from your free allowance or you paid for it.
 
 -
-Why: to fix bugs and improve the app. We are a small team and we read what people tell b so we can act
+What we keep: each message you send b and b's reply, linked to your account, encrypted on our server.
+
+-
+Why: to fix bugs and improve the app and b. We are a small team and we read what people tell b so we can act
 on it quickly. We never sell conversations, and we don't use them for advertising.
 
-- Improving b: We may use conversations, with personal details removed, to improve b. You can opt out: email [support@bwalletx.com](mailto:support@bwalletx.com?subject=b%20opt-out) with the subject ‘b opt-out’ and we’ll exclude your chats.
+- Training: if we ever use conversations to train or tune a model, we’ll remove personal details first and leave out anyone who has opted out. To opt out, email [support@bwalletx.com](mailto:support@bwalletx.com?subject=b%20opt-out) with the subject ‘b opt-out’. This doesn’t stop our team reading your chats. Using your own AI key does.
 
-- Who can read them: only our team and our server.
+- Who can read them: only our team and our server can read what we keep. Anthropic processes each message to write the reply.
 
-- How long: up to 180 days, then they are deleted.
+- How long: up to 180 days. Our team removes older chats.
 
 -
-Secrets removed: the wallet strips anything that looks like a recovery phrase or private key before a
-message leaves your device, and our server strips secrets again before anything is kept. Never type your
-recovery phrase, private keys or passwords to b.
+Bug reports: if b sees that a message is a bug, an idea or a complaint, we also put a copy on our
+team's bug list, with your account and the kind of device you use, so we can follow it up. That copy is not
+deleted after 180 days. A short summary with no names or quotes may appear on
+[bwalletx.com/bugs](https://bwalletx.com/bugs) or [/ideas](https://bwalletx.com/ideas) once we have reviewed it. Ask us and we'll remove your reports.
+
+-
+Secrets removed: the wallet refuses to send anything that looks like a recovery phrase, private key or
+password, and our server strips secrets again before a chat is kept. That check looks only for secrets.
+Names, amounts and anything else you type stay in the chat. Never type your recovery phrase, private keys or
+passwords to b.
 
 -
 AI provider: each message, with the recent conversation, is sent to our AI provider (Anthropic) to
 write b's reply. If you use your own AI key instead, your messages go from your device to the provider you
-chose, under its terms.
+chose, under its terms, and they don't come through us. Anything you report to b still comes to us.
+
+-
+If a message is paid for: the price is what it costs us to answer, with no margin added. Our server
+works it out before b replies, from the length of the conversation and the longest reply b could give, so it
+is a ceiling, and a short reply costs us less than was paid. There is a very small minimum, and a tiny extra
+amount that ties each payment to its message. Older versions of the app pay a higher fixed price instead.
+
+-
+Payment records: the amount, the time, the transaction id and your account, so we can check each
+payment and stop it being used twice. We keep these until you delete your account. We keep b's answer for 24
+hours in case it gets lost on the way to you.
 
 -
 Deletion: email [support@bwalletx.com](mailto:support@bwalletx.com) to ask us to delete
-your conversations with b.
+your conversations with b and your reports. Deleting your account in Settings doesn't remove these, so please
+email us as well.
 
-We are rolling out this storage on our server now; we describe it here before it is fully live. More at [bwalletx.com/ask-b](https://bwalletx.com/ask-b#b-is-us).
+More at [bwalletx.com/ask-b](https://bwalletx.com/ask-b#b-is-us).
 
 ## Verified identity (KYC certificates)
 
@@ -20659,7 +20692,7 @@ shares or tokens.
 
 ## Your choices
 
-- You can delete your account and the data our service keeps from Settings (Delete account).
+- You can delete your account and the data our service keeps from Settings (Delete account). Your conversations with b and your reports are separate: email support@bwalletx.com to have those deleted.
 
 - You can delete all app data on your device by signing out in Settings, or by uninstalling the app.
 
