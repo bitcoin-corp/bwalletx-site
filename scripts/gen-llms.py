@@ -6,7 +6,8 @@ import glob, html, os, re, datetime
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 BASE = 'https://bwalletx.com'
 SKIP = {'404.html', '029-bpositive.html',  # dropped idea, kept at its URL with noindex
-        'passwords-txt.html'}  # private joke served at /passwords.txt: never in sitemap/llms, noindex
+        'passwords-txt.html',  # private joke served at /passwords.txt: never in sitemap/llms, noindex
+        'partnership-shares.html', 'digital-ice-cream.html'}  # retired wording (CEO, 10 Nov): out of sitemap/llms until the founders' interest page exists
 
 def url_of(path):
     rel = os.path.relpath(path, ROOT).replace(os.sep, '/')

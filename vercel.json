@@ -172,6 +172,11 @@
   ],
   "redirects": [
     {
+      "source": "/digital-ice-cream",
+      "destination": "/partnership-shares",
+      "permanent": true
+    },
+    {
       "source": "/livestream",
       "destination": "/live",
       "permanent": false
