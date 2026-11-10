@@ -153,7 +153,7 @@
       ['Help &amp; trust', [['Feedback', '/feedback'], ['Ideas', '/ideas'], ['Bugs', '/bugs'], ['b-Aware', '/b-Aware'], ['Bounties', '/bounties'], ['bTrust', '/btrust'], ['Hold to talk', '/hold-to-talk']]],
       ['Company', [['The b family', '/b-family'], ['Blog', '/blog'], ['Hodl my b', '/hodl-my-b'], ['Newsletter', '/newsletter'], ['Brand', '/brand'], ['Jobs', '/jobs'], ['Gigs', '/gigs']]],
       ['More', [['Sign in with HandCash', '/sign-in-with-handcash'], ['Sign in with Gmail', '/gmail'], ['Wallet Frames', '/wallet-frames'], ['Your apps on b', '/on-b'], ['Contracts in chat', '/contracts'], ['bRadio', '/bradio']]],
-      ['Coming', [['Business agents', '/business-agents'], ['SMS', '/sms'], ['bPositive', '/bpositive'], ['Partnership shares', '/partnership-shares'], ['bWeb', '/bweb']]],
+      ['Coming', [['Business agents', '/business-agents'], ['SMS', '/sms'], ['bPositive', '/bpositive'], ['bWeb', '/bweb']]],
       ['Follow', [['Everything b', '/b-socials'], ['bChatX', 'https://www.bchatx.com'], ['X', 'https://x.com/bWalletX'], ['Twetch', '/twetch'], ['GitHub', 'https://github.com/bitcoin-corp/bwallet'], ['YouTube', 'https://www.youtube.com/@bWalletX'], ['bChatX Lounge', 'https://chat.bwalletx.com/room/LOUNGE'], ['Privacy', '/privacy'], ['Terms', '/terms']]]
     ],
     // Store edition (bWallet): browse-only Market, no trading, everything else lives on bWalletX.

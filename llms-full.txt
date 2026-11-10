@@ -1,6 +1,6 @@
 # bWalletX: full site text
 
-Generated 2026-11-09 from https://bwalletx.com. Source pages are linked above each section.
+Generated 2026-11-10 from https://bwalletx.com. Source pages are linked above each section.
 
 ---
 
@@ -1871,6 +1871,103 @@ Dates are when each feature shipped in 2026. Screenshots are of the live site, t
 
 ---
 
+Source: https://bwalletx.com/bcorp
+
+THE BITCOIN CORPORATION LTD · LONDON
+
+# We make bWalletX and the b family of apps.
+
+bWalletX is a wallet you sign in, pay and sign with. Every b app runs on it, so one wallet takes you everywhere.
+
+[Work with us](#work)
+[See the apps](https://b0-x.com)
+
+## Everything we make runs on bWalletX.
+
+[### The b family →
+
+The apps grouped by what they're for: money, watching and listening, people, work and business, developers and games.
+bwalletx.com/b-family](https://bwalletx.com/b-family)
+[### b0-x →
+
+Every app in one place, and where each one stands today: live, coming soon or a placeholder.
+b0-x.com](https://b0-x.com)
+
+Each app's status is kept on those pages.
+
+## Work with us
+
+For businesses only. Not for consumers.
+
+### Put your company on bWalletX
+
+### Starter
+
+$99 a month
+
+or $990 a year. No setup fee. In the UK: £75 a month or £750 a year.
+
+A member room with its own key, a wallet, and signing from a computer. Self-serve, with support from b in your room. Cancel with 30 days' notice.
+
+### Setup
+
+$999 one-off
+
+Optional, on top of Starter. In the UK: £750.
+
+A brand kit, a website from our template, your room set up with your people invited, and your first documents loaded. Done in 5 working days, with one round of changes.
+
+### Enterprise
+
+By quote
+
+Most projects start from $10,000.
+
+Custom builds, quoted for your company.
+
+[See the plans](https://bwalletx.com/enterprise)
+[Book a scoping call](mailto:support@bwalletx.com?subject=Scoping%20call)
+
+### bAds: ads made by b
+
+b, the agent in your bWalletX, makes the ad. One fixed price, confirmed before work starts.
+
+- Ad film$499 / £399about 5 days
+
+- Brand kit$299 / £249about 3 days
+
+- Logo$149 / £119about 2 days
+
+- Share images$49 / £39same day
+
+Every job includes two rounds of changes, paid half up front and half when you approve the final files.
+
+[Order at bAdvertisingX](https://badvertisingx.com)
+
+### Build with us
+
+Developers: take fixed-price microcontracts on bKintsugiX and get paid in BSV. Every job shows its price before you take it.
+
+[Go to bKintsugiX](https://bkintsugix.com)
+
+Prices exclude VAT. If we become VAT-registered, VAT will be added. The Bitcoin Corporation Ltd is the supplier and invoices for every job. Nothing on this page is an offer of shares or tokens.
+
+## Investors
+
+Existing and prospective investors: contact us at [support@bwalletx.com](mailto:support@bwalletx.com?subject=Investors).
+
+## Contact
+
+Email [support@bwalletx.com](mailto:support@bwalletx.com) for business, press or anything else.
+
+Post: The Bitcoin Corporation Ltd, Flat 6, 315 Barking Road, London E13 8EE.
+
+The Bitcoin Corporation Ltd, registered in England and Wales, company number 16735102, registered office Flat 6, 315 Barking Road, London E13 8EE.
+
+[Privacy](https://bwalletx.com/privacy) · [Terms](https://bwalletx.com/terms)
+
+---
+
 Source: https://bwalletx.com/be-on-b-2
 
 be on b · bWalletX
@@ -3535,7 +3632,7 @@ or $990 a year. No setup fee. In the UK: £75 a month or £750 a year.
 
 [Start on Starter](#start)
 
-For businesses only. Prices exclude VAT. If we become VAT-registered, VAT will be added. We do not issue securities, and nothing here is an offer of shares or tokens.
+For businesses only. Prices exclude VAT. If we become VAT-registered, VAT will be added. Nothing here is an offer of shares or tokens.
 
 ### Setup
 
@@ -3553,7 +3650,7 @@ Optional, on top of Starter. In the UK: £750.
 
 [Order Setup](#start)
 
-For businesses only. Prices exclude VAT. If we become VAT-registered, VAT will be added. We do not issue securities, and nothing here is an offer of shares or tokens.
+For businesses only. Prices exclude VAT. If we become VAT-registered, VAT will be added. Nothing here is an offer of shares or tokens.
 
 Need custom software? [bWalletX Enterprise](https://bwalletx.com/enterprise): custom builds, quoted for your company.
 
@@ -3618,7 +3715,7 @@ For businesses only. Not for consumers.
 
 Prices exclude VAT. If we become VAT-registered, VAT will be added. You can pay in BSV through bWalletX or by bank transfer. The Bitcoin Corporation Ltd is the supplier and sends the invoices.
 
-We build software: rooms, wallets, signing, brand work and register tools. Starter and Setup don't include custom code, calls or set response times. Tokenised art, property and shares can be securities or other regulated products, and they're never part of Starter or Setup. We do not issue securities, raise money for you, give investment advice, or get regulatory approval for you.
+We build software: rooms, wallets, signing, brand work and register tools. Starter and Setup don't include custom code, calls or set response times. Tokenised art, property and shares can be securities or other regulated products, and they're never part of Starter or Setup. We don't raise money for you, give investment advice, or get regulatory approval for you.
 
 You are responsible for your own legal and regulatory advice, and for what you offer to others. Nothing on this page is an offer of shares or tokens, and we make no promise of returns.
 
@@ -4330,7 +4427,7 @@ or $990 a year. No setup fee. In the UK: £75 a month or £750 a year.
 
 [Start on Starter](https://bwalletx.com/clients#start)
 
-For businesses only. Prices exclude VAT. If we become VAT-registered, VAT will be added. We do not issue securities, and nothing here is an offer of shares or tokens.
+For businesses only. Prices exclude VAT. If we become VAT-registered, VAT will be added. Nothing here is an offer of shares or tokens.
 
 ### Setup
 
@@ -4348,7 +4445,7 @@ Optional, on top of Starter. In the UK: £750.
 
 [Order Setup](https://bwalletx.com/clients?plan=setup#start)
 
-For businesses only. Prices exclude VAT. If we become VAT-registered, VAT will be added. We do not issue securities, and nothing here is an offer of shares or tokens.
+For businesses only. Prices exclude VAT. If we become VAT-registered, VAT will be added. Nothing here is an offer of shares or tokens.
 
 ### Enterprise
 
@@ -4358,7 +4455,7 @@ Custom builds, quoted for your company. Most projects start from $10,000. Ongoin
 
 [Book a scoping call](#enquire)
 
-For businesses only. Prices exclude VAT. If we become VAT-registered, VAT will be added. We do not issue securities, and nothing here is an offer of shares or tokens.
+For businesses only. Prices exclude VAT. If we become VAT-registered, VAT will be added. Nothing here is an offer of shares or tokens.
 
 ## What you get, and where each part stands
 
@@ -4428,7 +4525,7 @@ For businesses only. Not for consumers.
 
 Prices exclude VAT. If we become VAT-registered, VAT will be added. You can pay in BSV through bWalletX or by bank transfer. The Bitcoin Corporation Ltd is the supplier and sends the invoices.
 
-We build software. We do not issue securities, raise money for you, give investment advice, or get regulatory approval for you. You are responsible for your own legal and regulatory advice, and for what you offer to others. Talk to a qualified lawyer in each country where you operate.
+We build software. We don't raise money for you, give investment advice, or get regulatory approval for you. You are responsible for your own legal and regulatory advice, and for what you offer to others. Talk to a qualified lawyer in each country where you operate.
 
 Nothing on this page is an offer of shares or tokens, and we make no promise of returns. Tokens we set up are membership or room keys only. Your terms come with your quote.
 
