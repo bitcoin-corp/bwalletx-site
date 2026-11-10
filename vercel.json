@@ -711,7 +711,7 @@
     },
     {
       "source": "/download/:file(bwalletx-extension(?!-5.2.53\\.zip$)[^/]*\\.zip)",
-      "destination": "/download/bwalletx-extension-5.2.53.zip",
+      "destination": "/download/bwalletx-extension-5.2.54.zip",
       "statusCode": 302
     },
     {

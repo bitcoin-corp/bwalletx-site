@@ -4527,7 +4527,7 @@ From the Chrome Web Store: version 5.2.41 today. Works in Brave too. Updates its
 
 The newest version before the Web Store has reviewed it. You install it by hand and update it by hand.
 
-[Download the latest build (.zip) ↓](https://bwalletx.com/download/bwalletx-extension-5.2.53.zip)
+[Download the latest build (.zip) ↓](https://bwalletx.com/download/bwalletx-extension-5.2.54.zip)
 
 Two separate wallets. The Web Store version and the direct build are different installs, and each keeps its own wallet. If you switch, write down your recovery words first and restore them in the new one. Never click Remove on the old one until you have: removing an extension deletes its wallet's records.
 
@@ -4535,7 +4535,7 @@ Updating the direct build? Use the ↻ reload button on `chrome://extensions`, o
 
 To install the direct build:
 
-- Unzip `bwalletx-extension-5.2.53.zip`.
+- Unzip `bwalletx-extension-5.2.54.zip`.
 
 - Open `chrome://extensions` in Chrome.
 
@@ -4549,7 +4549,7 @@ To install the direct build:
 
 Same extension, same file. Brave runs Chrome extensions, so:
 
-- Unzip `bwalletx-extension-5.2.53.zip`.
+- Unzip `bwalletx-extension-5.2.54.zip`.
 
 - Open `brave://extensions` in Brave.
 
@@ -14786,7 +14786,7 @@ The full developer guides live at [docs.bwalletx.com](https://docs.bwalletx.com/
 
 Install the wallet you'll connect to (version 5.2.53 beta). Checksums are on each download page.
 
-- [Chrome / Brave extension (zip)](https://bwalletx.com/download/bwalletx-extension-5.2.53.zip) · [install steps](https://bwalletx.com/extension)
+- [Chrome / Brave extension (zip)](https://bwalletx.com/download/bwalletx-extension-5.2.54.zip) · [install steps](https://bwalletx.com/extension)
 
 - [Android APK](https://bwalletx.com/download/bwalletx-android-5.2.53.apk) · [install steps](https://bwalletx.com/android)
 
