@@ -2629,7 +2629,7 @@ Each holding is a token in the holder’s wallet, locked 2-of-2: one key for the
 
 And holders never depend on us. After a set block height, the holder can move their token alone, from their own seed. No server, no director needed.
 
-## Private placements
+## Your own private share offer
 
 A company can invite people it already knows to buy shares privately, under its own rules and the law where it is registered; bShares only keeps the record. A member pays in BSV to a 2-of-3 company treasury, with director keys on separate devices. Pay too much and you choose: a refund within 14 days, or treat it as share premium.
 
@@ -19329,7 +19329,7 @@ Partnership shares belong to the partners. They’re held under multi-signature 
 
 - ✓ Partners, b-drafted agreement, signed in each wallet (5.2.32)
 
-- ✓ Payments split by share (5.2.32)
+- Payments split by share: not built yet
 
 - ✓ Shared account with partner approvals (bWalletX editions)
 
