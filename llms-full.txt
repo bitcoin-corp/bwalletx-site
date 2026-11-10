@@ -2641,8 +2641,7 @@ Most things start small. bShares is one step on a longer path:
 - Rooms
 - Founders’ agreement
 - Company
-- Private placements
-- IPO
+- Your own private share offer
 
 ## What works today
 
@@ -7831,6 +7830,7 @@ Each release ships to the Android APK, the Chrome extension and the web wallet. 
 - Airdrop tokens or BSV to every holder of a token with one approval, and BSV drops now show in your airdrop inbox.
 - Launching a coin: keep 0–20% for yourself, time-locked (by default a 12-month cliff, then monthly unlocks) with a public receipt. The real launch cost is shown: a 0.1 BSV indexing deposit, paid under the same Allow.
 - Partnership shares: set up partners, b drafts the agreement, everyone signs it in their wallet, and payments to the partnership split by share.
+- Correction, 10 Nov 2026: splitting payments by share wasn’t part of 5.2.32 and isn’t available yet.
 - Token sends no longer fail with “OP_DUP”: the wallet repairs the token record and retries once.
 - Exchange rows swipe to Buy · Sell · Chat and Pin · Hide; a Themes tab for themes you bought, with NPGX, VexVoid and NPG art on your card; theme install links; mint screen fixes; “Your reports” shows what happened to each bug report you sent b; and agent spending limits hold when requests arrive at once.
 
@@ -19314,6 +19314,8 @@ Add your partners and their shares, and b drafts the agreement. Each partner sig
 ## Money splits itself
 
 Payments to the partnership split by share, straight to each partner’s wallet. Nobody has to divide anything by hand at the end of the month.
+
+Correction, 10 Nov 2026: splitting payments by share wasn’t part of 5.2.32 and isn’t available yet.
 
 ## A shared account
 
