@@ -103,6 +103,7 @@ Full text of every page below: https://bwalletx.com/llms-full.txt
 - [NFTs: everything you own, edge to edge](https://bwalletx.com/nfts): The NFT library in bWalletX Desktop: pictures, clips, music and documents in one grid, opened edge to edge with no frames. Turn a moment from a clip into your card art.
 - [Your apps, on b · bWalletX](https://bwalletx.com/on-b): Use the Bitcoin SV apps you already know with bWalletX: Twetch, RelayX, CoinGeek, Peck, Hodlocker, Treechat and Yours. What works today, app by app.
 - [Peck on b · bWalletX](https://bwalletx.com/peck-on-b): Read Peck posts in the bWalletX Feed from its public overlay, see each author’s posts, tip signed authors in BSV and lock behind posts.
+- [Pay to stream: podcasts by the minute](https://bwalletx.com/pay-to-stream): Podcasts in bWalletX: hear a free preview first, then buy a ticket or pay as you listen. Stop any time. The money goes to the host.
 - [Send a bMail · bWalletX](https://bwalletx.com/person): Everything you can do with a person on bWalletX: send a bMail for a penny, call, pay or tip, and chat. Write your message now; bWalletX sends it.
 - [PoWNotes · bWalletX](https://bwalletx.com/pow-notes): PoWNotes are bearer notes that hold their own value. Send one like cash, melt it to get the value back. Minting coming soon.
 - [bAcc RACE: the bAcc racing game | bWalletX](https://bwalletx.com/race-card): bAcc RACE: make Bitcoin faster. A racing game in your browser, in black and yellow. In progress. Game engine by VexVoid.
