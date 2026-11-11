@@ -20385,7 +20385,7 @@ Source: https://bwalletx.com/privacy
 
 # Privacy Policy
 
-bWalletX (Beta) · Effective 6 October 2026 · Updated 9 November 2026
+bWalletX (Beta) · Effective 6 October 2026 · Updated 11 November 2026
 
 bWalletX is published by The Bitcoin Corporation Ltd and is based on the open-source Yours Wallet (MIT licence).
 It is not made, reviewed or endorsed by the Yours Wallet authors. This policy covers bWalletX (the full-feature
@@ -20700,6 +20700,54 @@ newsletter emails.
 
 Investor updates aren't offers. They go only to existing shareholders. Nothing we email is an offer of
 shares or tokens.
+
+## b partners and bMarketingX: registering your interest
+
+Who we are. The Bitcoin Corporation Ltd (company no. 16735102), Flat 6, 315 Barking Road, London E13 8EE,
+is the controller. Contact: support@bwalletx.com.
+
+What we collect: your name, your email, and a portfolio link if you give one, plus when you signed up and
+confirmed, which of our sites you signed up on, and the IP address you signed up from. There's no ID check and no
+tax details at this stage.
+
+What we send:
+
+- an email with a link to confirm;
+
+- if you don't confirm, one reminder after 3 days, and nothing more;
+
+- once you've confirmed, we'll email you once when applications open.
+
+When you confirm, your name, email and portfolio link are also emailed to our director, so he can contact you when applications open.
+
+Why, and the lawful basis:
+
+-
+Emailing you about applications: your consent (UK GDPR Art 6(1)(a)). Withdraw it any time by writing to
+support@bwalletx.com, and we'll delete your sign-up.
+
+- Keeping a record of your request, and spotting abuse: our legitimate interests (6(1)(f)).
+
+How long we keep it:
+
+-
+If you confirmed: until 6 months after applications open, then deleted or anonymised. If applications haven't opened
+within 12 months of your sign-up, we delete or anonymise it then.
+
+-
+If you never confirmed: we keep the unconfirmed request for 3 years from sign-up, then delete or anonymise it. We never
+email it again after the one reminder.
+
+Who handles it. It's stored on our own server (`push.bwalletx.com`, which we rent from Hetzner).
+Resend sends our emails, as our processor. Your email address may be processed in the United States, under
+the UK Addendum to the EU Standard Contractual Clauses in our agreement with Resend. It's never sold or used for
+advertising, and never put on chain.
+
+Your rights. You can ask to see, correct or delete your data, or object to how we use it, at
+support@bwalletx.com. You can complain to the Information Commissioner's Office: ico.org.uk, 0303 123 1113.
+
+When applications open, applying involves an ID check and tax details. Our full partner and marketer privacy
+notice explains those, and you'll see it before you apply.
 
 ## Your choices
 
