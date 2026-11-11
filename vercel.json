@@ -177,6 +177,11 @@
       "permanent": true
     },
     {
+      "source": "/space",
+      "destination": "/live",
+      "permanent": false
+    },
+    {
       "source": "/livestream",
       "destination": "/live",
       "permanent": false

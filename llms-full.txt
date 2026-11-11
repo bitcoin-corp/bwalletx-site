@@ -13618,13 +13618,46 @@ Linking Google and X is in bWalletX. The App Store and Google Play version, bWal
 
 Source: https://bwalletx.com/live
 
-# Live. Your token is the ticket.
+# Live on bWalletX. 1¢ to join.
+
+A live audio Space, hosted from a phone inside bWalletX. We code live on screen and build in the open. Bring questions, or bring a laptop and build with us.
+
+Time: TBA
+
+Scan with your phone camera or the bWalletX Scan button to join.
+
+Or open: [link coming soon](#)
+
+[Join the Space](#)
+
+No bWalletX yet? [Get it first](https://bwalletx.com/get), then come back.
+
+## How to join
+
+- 1Get bWalletX. Android, iPhone, Chrome or the web: [bwalletx.com/get](https://bwalletx.com/get).
+
+- 2Buy a 1¢ penny ticket. The ticket is your access pass to the room. It is not an investment.
+
+- 3Tap Join. Listen in, raise a hand, and come on stage if the host brings you up.
+
+The room is ticket-gated, so joining needs bWalletX and a ticket. There is no listen-without-a-wallet link for this one.
+
+## Build with us
+
+bWalletX and `@bwalletx/connect` are open source under the MIT licence. Fork them, read along during the Space, and send pull requests. Developers welcome.
+
+[### bWalletX
+github.com/bitcoin-corp/bwallet](https://github.com/bitcoin-corp/bwallet)
+[### @bwalletx/connect
+github.com/bitcoin-corp/bwalletx-connect](https://github.com/bitcoin-corp/bwalletx-connect)
+
+[Get bWalletX](https://bwalletx.com/get)[Open source](https://bwalletx.com/open-source)
+
+## Live rooms in bWalletX
 
 Creators go live in a room that only their token holders can enter. Hold the token and you’re in. The token, the payment and the room all sit in one wallet.
 
-[Get bWalletX](https://bwalletx.com/get)
-
-## The idea
+### The idea
 
 A creator’s room is gated by the creator’s token. Holders get in and watch the creator live: one person on camera, everyone else watching, with chat alongside. Anyone who doesn’t hold the token sees a “hold 1 to join” door, not the stream.
 
