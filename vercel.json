@@ -705,8 +705,8 @@
       "statusCode": 301
     },
     {
-      "source": "/download/:file(bwalletx-android(?!-5.2.53\\.apk$)[^/]*\\.apk)",
-      "destination": "/download/bwalletx-android-5.2.53.apk",
+      "source": "/download/:file(bwalletx-android(?!-5.2.54\\.apk$)[^/]*\\.apk)",
+      "destination": "/download/bwalletx-android-5.2.54.apk",
       "statusCode": 302
     },
     {
