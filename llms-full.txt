@@ -7655,6 +7655,14 @@ Each release ships to the Android APK, the Chrome extension and the web wallet. 
 
 [Download bWalletX](https://bwalletx.com/download)
 
+## 5.2.54 2026-11-11
+
+- Store payments that can’t be sent (for example when the wallet’s backup can’t save) are now released straight away: nothing is paid and your balance comes back.
+- Payments already stuck that way are cleaned up the next time you open the Store.
+- History now explains when a difference comes from an unsent payment.
+- The wallet’s own sends no longer hold up its backups.
+- The iPhone build of this version follows once Apple finishes setting up our company account. Android, Chrome and web have it now.
+
 ## 5.2.53 2026-11-09
 
 - Stronger protection for the coins your wallet sets aside. We recommend updating.
