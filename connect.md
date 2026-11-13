@@ -62,7 +62,9 @@ All three give you the same thing: an object with the BRC-100 `WalletInterface` 
               p.textContent = 'Scan with bWalletX on your phone, or paste this link into web.bwalletx.com: ' + link;
               panel.append(p);
             },
-            onCode: (code) => panel.append('Check bWalletX shows ' + code + ', then tap Connect.'),
+            onCode: (code) => panel.append(code),
+            // Required: pairing finishes only after a yes here and Connect in bWalletX.
+            confirmCode: (code) => confirm(`Does bWalletX show ${code}?`),
           },
         });
         // 3. Your server checks the signature and starts a session.
@@ -94,7 +96,7 @@ Other things on `window.bWalletX`:
 | Call | What it does |
 |---|---|
 | `bWalletX.connect({ timeout })` | The extension only, authenticated: `{ wallet, info, identityKey }`. Rejects with `code: 'NOT_INSTALLED'`. Doesn't load the full build. |
-| `bWalletX.pair({ onLink, onCode })` | A wallet paired by QR or pasted link, without signing in. |
+| `bWalletX.pair({ onLink, onCode, confirmCode })` | A wallet paired by QR or pasted link, without signing in. |
 | `bWalletX.renderButton(el, { onClick, subtitle })` | The gold button. `subtitle: false` hides the second line. |
 | `bWalletX.load()` | The full build's exports (`signInWithBwalletX`, `pairBwalletX`, `restorePairing`, `clearPairing`, `findBwalletX`, ...). |
 
