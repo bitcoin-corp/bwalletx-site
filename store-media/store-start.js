@@ -185,7 +185,19 @@
         $('pair-link').textContent = link;
         if (window.qrcode) { var q = window.qrcode(0, 'M'); q.addData(link); q.make(); $('pair-qr').innerHTML = q.createSvgTag({ cellSize: 4, margin: 0 }); }
       },
-      onCode: function (code) { $('pair-code').innerHTML = 'Check bWalletX shows <b>' + String(code).replace(/[^0-9]/g, '') + '</b>, then tap Connect.'; },
+      onCode: function () {},
+      // Asked, not just shown: pairing finishes only on a yes here and Connect in bWalletX.
+      confirmCode: function (code) {
+        var el = $('pair-code');
+        el.innerHTML = 'Does bWalletX show <b>' + String(code).replace(/[^0-9]/g, '') + '</b>? ';
+        return new Promise(function (resolve) {
+          var no = document.createElement('button'); no.type = 'button'; no.textContent = 'No';
+          var yes = document.createElement('button'); yes.type = 'button'; yes.textContent = 'Yes, it matches';
+          no.onclick = function () { el.textContent = "The codes didn't match, so nothing was connected."; resolve(false); };
+          yes.onclick = function () { el.textContent = 'Now tap Connect in bWalletX.'; resolve(true); };
+          el.append(no, ' ', yes);
+        });
+      },
     });
   }
   function connect() {
