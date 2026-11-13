@@ -179,15 +179,19 @@
     var box = $('pair-box'); box.hidden = false; $('signin-box').hidden = true;
     $('pair-qr').innerHTML = ''; $('pair-link').textContent = ''; $('pair-code').textContent = '';
     state.pairAbort = typeof AbortController === 'function' ? new AbortController() : null;
+    var asking = false;
     return C.pairBwalletX({
       signal: state.pairAbort ? state.pairAbort.signal : undefined,
       onLink: function (link) {
         $('pair-link').textContent = link;
         if (window.qrcode) { var q = window.qrcode(0, 'M'); q.addData(link); q.make(); $('pair-qr').innerHTML = q.createSvgTag({ cellSize: 4, margin: 0 }); }
       },
-      onCode: function () {},
+      // Shown by every connect version; 0.5.5+ also asks (confirmCode below) and waits for the yes.
+      // 0.5.5 asks before it shows, so don't overwrite the question's buttons.
+      onCode: function (code) { if (asking) return; $('pair-code').innerHTML = 'Check bWalletX shows <b>' + String(code).replace(/[^0-9]/g, '') + '</b>, then tap Connect.'; },
       // Asked, not just shown: pairing finishes only on a yes here and Connect in bWalletX.
       confirmCode: function (code) {
+        asking = true;
         var el = $('pair-code');
         el.innerHTML = 'Does bWalletX show <b>' + String(code).replace(/[^0-9]/g, '') + '</b>? ';
         return new Promise(function (resolve) {
