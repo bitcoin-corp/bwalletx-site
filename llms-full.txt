@@ -1,6 +1,6 @@
 # bWalletX: full site text
 
-Generated 2026-11-11 from https://bwalletx.com. Source pages are linked above each section.
+Generated 2026-11-14 from https://bwalletx.com. Source pages are linked above each section.
 
 ---
 
@@ -769,7 +769,9 @@ Websites, made in the family.bwebx.com →](https://bwebx.com)[### bDriveXEarly
 Your files, sealed on your device.bdrivex.com →](https://bdrivex.com)[### bSearchXComing
 Search the chain: fast search across posts, apps and tokens.bsearchx.com →](https://bsearchx.com)[### b0-xEarly
 Deploy to Bitcoin.b0-x.com →](https://b0-x.com)[### bSignXLive
-Contracts both sides sign.bsignx.com →](https://bsignx.com)[### bGitXLive
+Contracts both sides sign.bsignx.com →](https://bsignx.com)[### bPropertyXComing
+The private deal room for luxury property.bpropertyx.com →](https://bpropertyx.com)[### bGalleryXComing
+The private room for an artwork’s record.bgalleryx.com →](https://bgalleryx.com)[### bGitXLive
 Connect your GitHub repos and give each one a room.bgitx.com →](https://bgitx.com)[### bDNSXComing
 Prove you own a domain, then tokenise it. Trade on DNS DEX.bdnsx.com →](https://bdnsx.com)[### bTerminalXComing
 The pro CLI for your wallet and agents.bterminalx.com →](https://bterminalx.com)
@@ -7243,53 +7245,6 @@ Each app named here is a separate service; bWalletX is not affiliated with any o
 
 ---
 
-Source: https://bwalletx.com/peck-on-b
-
-[On b](https://bwalletx.com/on-b) · Using Peck with bWalletX
-
-+
-
-# Peck on b
-
-Peck posts are plain Bitcoin Schema on chain, so bWalletX can read them. Use Peck as you do, and follow it from the same place you keep your coins.
-
-## What you can do
-
-### Read Peck in the Feed
-
-Open Feed and pick the Peck chip. Posts come from Peck’s public overlay, current to the latest block. Tap a name to see that author’s posts; tap Open to see a post on peck.to.
-
-### Tip signed authors
-
-When a post’s signature checks out, the tip goes to the address that signed it. If it can’t be tied to the author, the tip button says so instead of guessing.
-
-### Like, reply and lock
-
-Lock BSV behind a post you rate; it stays yours. Likes and replies you make here are written on chain as bChat posts.
-
-## Status
-
-What works in bWalletX today, and what doesn’t yet.
-
-- ✓ LivePeck posts in the Feed, from its public overlay
-
-- ✓ LiveA Peck author’s posts on one page
-
-- ✓ LiveTip authors whose signature checks out
-
-- ✓ LiveLock, like and reply from bWalletX (written as bChat)
-
-- ○ Not yetYour bWalletX posts showing in the Peck app
-
-- ○ Not yetImport who you follow on Peck
-
-[Get bWalletX](https://bwalletx.com/get?from=peck-on-b)
-
-
-Your keys stay with you: bWalletX is self-custody. Peck is a separate service; bWalletX is not affiliated with it. Logos belong to their owners. [More apps on b](https://bwalletx.com/on-b).
-
----
-
 Source: https://bwalletx.com/pay-to-stream
 
 # Hear it first. Then pay as you listen.
@@ -7363,6 +7318,52 @@ No popup for every payment. Stop any time and you stop paying.
 [Get bWalletX](https://bwalletx.com/get)
 
 Less noise. More life. Just b. · bWalletX is in beta: test with small amounts. Questions: [support@bwalletx.com](mailto:support@bwalletx.com)
+
+---
+
+Source: https://bwalletx.com/peck-on-b
+
+[On b](https://bwalletx.com/on-b) · Using Peck with bWalletX
+
++
+
+# Peck on b
+
+Peck posts are plain Bitcoin Schema on chain, so bWalletX can read them. Use Peck as you do, and follow it from the same place you keep your coins.
+
+## What you can do
+
+### Read Peck in the Feed
+
+Open Feed and pick the Peck chip. Posts come from Peck’s public overlay, current to the latest block. Tap a name to see that author’s posts; tap Open to see a post on peck.to.
+
+### Tip signed authors
+
+When a post’s signature checks out, the tip goes to the address that signed it. If it can’t be tied to the author, the tip button says so instead of guessing.
+
+### Like, reply and lock
+
+Lock BSV behind a post you rate; it stays yours. Likes and replies you make here are written on chain as bChat posts.
+
+## Status
+
+What works in bWalletX today, and what doesn’t yet.
+
+- ✓ LivePeck posts in the Feed, from its public overlay
+
+- ✓ LiveA Peck author’s posts on one page
+
+- ✓ LiveTip authors whose signature checks out
+
+- ✓ LiveLock, like and reply from bWalletX (written as bChat)
+
+- ○ Not yetYour bWalletX posts showing in the Peck app
+
+- ○ Not yetImport who you follow on Peck
+
+[Get bWalletX](https://bwalletx.com/get?from=peck-on-b)
+
+Your keys stay with you: bWalletX is self-custody. Peck is a separate service; bWalletX is not affiliated with it. Logos belong to their owners. [More apps on b](https://bwalletx.com/on-b).
 
 ---
 
@@ -7732,7 +7733,16 @@ Each release ships to the Android APK, the Chrome extension and the web wallet. 
 
 [Download bWalletX](https://bwalletx.com/download)
 
-## 5.2.56 2026-11-11
+## 5.2.56 2026-11-14
+
+- Your phone, Chrome and the web wallet now agree on your balance, and payments that never went out come back on their own.
+- When a site asks you to sign something, the sheet now says what it’s for, and requests that other services could accept as you ask you every time.
+- The web wallet now runs in one active tab at a time, so two open tabs can’t overwrite each other.
+- Sending to your own paymail now shows just the network fee in History, with a note that it’s you.
+- Refresh wallet now says what needs a look, and sync problems are explained in plain words.
+- The iPhone build of this version follows once Apple finishes setting up our company account. Android, Chrome and web have it now.
+
+## 5.2.54 2026-11-11
 
 - Store payments that can’t be sent (for example when the wallet’s backup can’t save) are now released straight away: nothing is paid and your balance comes back.
 - Payments already stuck that way are cleaned up the next time you open the Store.
@@ -9667,6 +9677,8 @@ Your shop also gets its own web address, `bwalletx.com/shop/your-name`. You pick
 
 Ninja Punk GirlsThemes and art from the NPG universe
 
+TokenBlasterGames on the live chain, and a place to launch your own coin
+
 NPGXBlack and red
 
 VexVoidWhite ink on true black
@@ -9817,6 +9829,10 @@ What works today and what’s still coming. We tick these off as they ship.
 - ✓ LiveThe Store in bWalletX: Exchange › Store, with shops and departments.
 
 - ✓ LiveNPG, NPGX and VexVoid themes, $1 each, paid in BSV with one approval, yours to keep, with a signed receipt.
+
+- ✓ LiveTokenBlaster shop: the TokenBlaster and Assault on Terrornode themes, $1 each, with links to [play](https://www.tokenblaster.lol) and to the [launchpad](https://www.tokenblaster.lol/launch). bWalletX only.
+
+- ◻ ComingTokenBlaster merch and Terrornode ammo in the TokenBlaster shop.
 
 - ✓ LiveRelayX NFTs in bWalletX: found from your 12 words and kept under NFTs › Run ([how](https://bwalletx.com/recover-relayx)).
 
