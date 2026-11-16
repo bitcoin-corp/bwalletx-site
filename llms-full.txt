@@ -1,6 +1,6 @@
 # bWalletX: full site text
 
-Generated 2026-11-14 from https://bwalletx.com. Source pages are linked above each section.
+Generated 2026-11-16 from https://bwalletx.com. Source pages are linked above each section.
 
 ---
 
@@ -20434,7 +20434,7 @@ Source: https://bwalletx.com/privacy
 
 # Privacy Policy
 
-bWalletX (Beta) · Effective 6 October 2026 · Updated 11 November 2026
+bWalletX (Beta) · Effective 6 October 2026 · Updated 15 November 2026
 
 bWalletX is published by The Bitcoin Corporation Ltd and is based on the open-source Yours Wallet (MIT licence).
 It is not made, reviewed or endorsed by the Yours Wallet authors. This policy covers bWalletX (the full-feature
@@ -20801,6 +20801,8 @@ notice explains those, and you'll see it before you apply.
 ## Your choices
 
 - You can delete your account and the data our service keeps from Settings (Delete account). Your conversations with b and your reports are separate: email support@bwalletx.com to have those deleted.
+
+- The steps, and what deleting does and does not remove, are on our [Delete your data](https://www.bwallet.space/delete) page.
 
 - You can delete all app data on your device by signing out in Settings, or by uninstalling the app.
 
