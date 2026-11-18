@@ -2600,6 +2600,101 @@ bWalletX is made by The Bitcoin Corporation Ltd. Brand questions: [support@bwall
 
 ---
 
+Source: https://bwalletx.com/brc100
+
+# A BRC-100 wallet
+
+bWalletX implements the [BRC-100](https://github.com/bitcoin-sv/BRCs/blob/master/wallet/0100.md) wallet interface. Any app or site built on the standard can connect to it, from Chrome, Android or the web. Your keys stay on your device, and you approve what each site may do.
+
+[Get bWalletX](https://bwalletx.com/get)
+[Developer guide](https://bwalletx.com/connect)
+
+## Where it works
+
+- LiveChrome and Brave extension. Answers BRC-100 wallet discovery and provides `window.CWI`.
+
+- LiveAndroid app. Sites opened in the app’s own browser get `window.CWI`. Sites in another browser connect by QR code.
+
+- LiveWeb wallet at [web.bwalletx.com](https://web.bwalletx.com). Connects to a site by pairing link.
+
+- LiveAgents: `bwalletx serve` from the [bwalletx CLI](https://bwalletx.com/cli) runs a BRC-100 wallet on `localhost:3321` for an agent account.
+
+- ComingiPhone App Store build. On iPhone today, use the [web app](https://bwalletx.com/iphone).
+
+- ComingBRC-100 calls from an agent through a paired phone. Today a paired agent account uses the CLI’s own commands; for BRC-100 calls, use a key-file account with `bwalletx serve`.
+
+## How an app finds it
+
+### 1. In the browser: BRC-100 discovery
+
+The page dispatches `brc100:requestWallet`. The extension answers with `brc100:announceWallet`, `info.rdns` `com.bwalletx.extension`. In the Android app’s browser the answer is `space.bwallet.mobile`.
+
+### 2. On a phone or the web wallet: pairing
+
+The page shows a pairing link as a QR code. bWalletX scans it, or the web wallet takes it pasted, and both screens show the same 4-digit code. Calls then go end to end encrypted through our relay.
+
+### 3. Either way: a standard WalletInterface
+
+All three give your app the same BRC-100 `WalletInterface` from `@bsv/sdk`. The open-source [@bwalletx/connect](https://github.com/bitcoin-corp/bwalletx-connect) (MIT) does the discovery and pairing for you, and works with any BRC-100 wallet.
+
+``window.dispatchEvent(new Event('brc100:requestWallet'));
+// bWalletX answers 'brc100:announceWallet' with info.rdns 'com.bwalletx.extension'
+const { publicKey } = await wallet.getPublicKey({ identityKey: true });``
+
+## BRC-100 calls
+
+The extension, the Android app and the web wallet answer the same calls. A sheet means the user is asked first.
+
+CallsbWalletXbwalletx serve
+
+`createAction`, `signAction`Yes · payment sheetYes · daily cap
+
+`abortAction`, `internalizeAction`, `listActions`YesYes
+
+`listOutputs`, `relinquishOutput`Yes · basket sheetYes
+
+`getPublicKey`Yes · sheet on first connectYes
+
+`createSignature`, `verifySignature`, `createHmac`, `verifyHmac`, `encrypt`, `decrypt`Yes · protocol sheetYes
+
+`revealCounterpartyKeyLinkage`, `revealSpecificKeyLinkage`Yes · sheetNo
+
+`acquireCertificate`, `listCertificates`, `proveCertificate`, `relinquishCertificate`Yes · sheetNo
+
+`discoverByIdentityKey`, `discoverByAttributes`Yes · sheetNo
+
+`isAuthenticated`, `waitForAuthentication`, `getHeight`, `getHeaderForHeight`, `getNetwork`, `getVersion`YesYes
+
+Certificate and discovery calls go to the standard wallet toolbox. We haven’t tested them end to end with every certifier and overlay yet; tell us if one doesn’t work for you.
+
+## What bWalletX refuses
+
+### The wallet’s own protocols
+
+Protocols bWalletX uses for itself are refused for sites before any sheet is shown, with `ERR_RESERVED_PROTOCOL`.
+
+### Signatures anyone could reuse
+
+Level-0 signatures are refused for sites. Signatures that another service could accept as the user ask for approval every time, and that approval covers one request only.
+
+### Mainnet only
+
+`getNetwork` returns `mainnet`. bWalletX does not run on testnet.
+
+## Source and docs
+
+- Wallet source: [github.com/bitcoin-corp/bwallet](https://github.com/bitcoin-corp/bwallet)
+
+- Connector (MIT): [github.com/bitcoin-corp/bwalletx-connect](https://github.com/bitcoin-corp/bwalletx-connect) · [npm](https://www.npmjs.com/package/@bwalletx/connect)
+
+- Developer guide: [bwalletx.com/connect](https://bwalletx.com/connect) · [docs](https://docs.bwalletx.com/developers/connect/)
+
+- The standard: [BRC-100](https://github.com/bitcoin-sv/BRCs/blob/master/wallet/0100.md) · [brc100.org](https://brc100.org/)
+
+Questions: [support@bwalletx.com](mailto:support@bwalletx.com)
+
+---
+
 Source: https://bwalletx.com/bshares
 
 # bShares.
