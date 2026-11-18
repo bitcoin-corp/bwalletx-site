@@ -1,6 +1,6 @@
 # bWalletX: full site text
 
-Generated 2026-11-16 from https://bwalletx.com. Source pages are linked above each section.
+Generated 2026-11-18 from https://bwalletx.com. Source pages are linked above each section.
 
 ---
 
@@ -6205,7 +6205,7 @@ Planned: as the people in your contacts join, they’ll be matched to their paym
 
 ## Where this stands
 
-- ✓ LiveAddress book import (CSV, contact cards, JSON, pasted lists) and export to CSV: in the app (5.2.57). Each paymail is looked up as you import.
+- ✓ LiveAddress book import (CSV, contact cards, JSON, pasted lists) and export to CSV: in the app (5.2.56). Each paymail is looked up as you import.
 
 - ✓ LiveSign in with HandCash on bchatx.com: switched on; first real sign-in being tested.
 
@@ -7733,7 +7733,16 @@ Each release ships to the Android APK, the Chrome extension and the web wallet. 
 
 [Download bWalletX](https://bwalletx.com/download)
 
-## 5.2.57 2026-11-14
+## 5.2.57 2026-11-18
+
+- Photos and videos you share in chat, or use as an avatar or cover, now have their location removed.
+- When you let a site do something once, that approval now covers just that one request.
+- In a partnership, each partner’s shares move only with that partner’s own approval.
+- Token sends, locks, purchases and swaps pay the fee only to that token’s own address.
+- The catalogue only shows paid listings their author signed, and the original wins over copies.
+- The iPhone build of this version follows shortly. Android, Chrome and web have it now.
+
+## 5.2.56 2026-11-14
 
 - Your phone, Chrome and the web wallet now agree on your balance, and payments that never went out come back on their own.
 - When a site asks you to sign something, the sheet now says what it’s for, and requests that other services could accept as you ask you every time.
@@ -10404,7 +10413,7 @@ Loading…
 
 ## Where each version is
 
-We ship small updates often, usually several a week. A new version reaches each place at a different speed, because Apple and Google check some of them first. Latest: 5.2.57 (22 Oct 2026), [what’s new](https://bwalletx.com/releases#v5.2.57).
+We ship small updates often, usually several a week. A new version reaches each place at a different speed, because Apple and Google check some of them first. Latest: 5.2.57 (18 Nov 2026), [what’s new](https://bwalletx.com/releases#v5.2.57).
 
 - Web, Chrome extension, Android download (APK): the same day. Now on 5.2.57.
 
@@ -14428,7 +14437,7 @@ Source: https://bwalletx.com/connect
 
 How to let people sign in to your site or app with their bWalletX: one script tag, two routes on your server, and no API keys.
 
-Also as plain Markdown for AI coding agents: [bwalletx.com/connect.md](https://bwalletx.com/connect.md). Checked against bWalletX 5.2.57, connect.js and @bwalletx/connect 0.5.0 on 18 Oct 2026. Full docs: [docs.bwalletx.com/developers/connect](https://docs.bwalletx.com/developers/connect/).
+Also as plain Markdown for AI coding agents: [bwalletx.com/connect.md](https://bwalletx.com/connect.md). Checked against bWalletX 5.2.56, connect.js and @bwalletx/connect 0.5.0 on 18 Oct 2026. Full docs: [docs.bwalletx.com/developers/connect](https://docs.bwalletx.com/developers/connect/).
 
 ## In 30 seconds
 
