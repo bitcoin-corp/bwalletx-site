@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>bWalletX: a BRC-100 wallet</title>
+    <link rel="canonical" href="https://bwalletx.com/brc100" />
+    <meta name="description" content="bWalletX is a BRC-100 wallet. Any app built on the BRC-100 standard can connect to it from Chrome, Android or the web. Your keys stay on your device." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://bwalletx.com/brc100" />
+    <meta property="og:site_name" content="bWalletX" />
+    <meta property="og:title" content="bWalletX: a BRC-100 wallet" />
+    <meta property="og:description" content="bWalletX is a BRC-100 wallet. Any app built on the BRC-100 standard can connect to it from Chrome, Android or the web. Your keys stay on your device." />
+    <meta property="og:image" content="https://bwalletx.com/og-brc100.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="bWalletX, a BRC-100 wallet: the brc100:requestWallet discovery call and the bWalletX extension's answer, with a Connect bWalletX button." />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@bWalletX" />
+    <meta name="twitter:title" content="bWalletX: a BRC-100 wallet" />
+    <meta name="twitter:description" content="bWalletX is a BRC-100 wallet. Any app built on the BRC-100 standard can connect to it from Chrome, Android or the web. Your keys stay on your device." />
+    <meta name="twitter:image" content="https://bwalletx.com/og-brc100.png" />
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="stylesheet" href="/styles.css" />
+    <style>
+      .ext h1 { font-size: clamp(2.2rem, 6vw, 3.4rem); margin: 18px 0 10px; }
+      .ext h2 { margin: 48px 0 10px; font-size: 1.5rem; }
+      .ext p, .ext li { line-height: 1.65; }
+      .ext code { background: #17191e; padding: 2px 7px; border-radius: 6px; overflow-wrap: anywhere; }
+      .box { background: #101114; border: 1px solid #ffffff12; border-radius: 16px; padding: 18px 20px; margin: 16px 0; }
+      .box h3 { margin: 0 0 6px; font-size: 1rem; }
+      .box p { margin: 0; color: #a7adb8; }
+      .ext .small { color: #8a8a86; font-size: 0.85rem; }
+      .ext .row { display: flex; gap: 12px; flex-wrap: wrap; margin: 26px 0; }
+      .ext pre { background: #101114; border: 1px solid #ffffff12; border-radius: 14px; padding: 16px; overflow-x: auto; font-size: 0.85rem; line-height: 1.6; }
+      .methods { width: 100%; border-collapse: collapse; margin: 16px 0; font-size: 0.92rem; }
+      .methods th, .methods td { text-align: left; vertical-align: top; padding: 10px 8px; border-top: 1px solid #ffffff14; }
+      .methods th { color: #F5B800; font-weight: 700; font-size: 0.8rem; letter-spacing: 0.04em; }
+      .methods td:first-child { overflow-wrap: anywhere; }
+      .methods td code { font-size: 0.82rem; }
+      .yes { color: #5fd38a; font-weight: 700; }
+      .no { color: #a7adb8; }
+      .status { list-style: none; padding: 0; }
+      .status li { display: flex; gap: 10px; align-items: baseline; padding: 6px 0; }
+      .tag { flex: none; font-size: 0.75rem; font-weight: 700; border-radius: 999px; padding: 2px 10px; }
+      .tag.live { background: #5fd38a22; color: #5fd38a; }
+      .tag.soon { background: #F5B80022; color: #F5B800; }
+    </style>
+  </head>
+  <body>
+    <div class="beta-banner">bWalletX is in <strong>beta</strong>: test with small amounts.</div>
+    <header class="topbar">
+      <div class="wrap topbar-in">
+        <a class="brand" href="/"><img src="/logo.svg" alt="" width="34" height="30" /><span>bWallet<span class="gold">X</span></span></a>
+        <nav aria-label="Pages">
+          <a href="/features">Features</a><a href="/exchange">Exchange</a><a href="/social">Social</a><a href="/agent">Agents</a><a href="/extension">Extension</a><a href="/developers">Developers</a>
+        </nav>
+        <span class="nav-cta"><a class="dl-btn" href="/get">Download</a><a class="web-btn" href="https://web.bwalletx.com" target="_blank" rel="noopener">Web &rarr;</a></span>
+      </div>
+    </header>
+    <script src="/nav.js"></script>
+    <main class="ext">
+      <img src="/logo.svg" alt="bWalletX" width="72" height="64" />
+      <h1>A <span class="gold">BRC-100</span> wallet</h1>
+      <p class="lede">bWalletX implements the <a href="https://github.com/bitcoin-sv/BRCs/blob/master/wallet/0100.md">BRC-100</a> wallet interface. Any app or site built on the standard can connect to it, from Chrome, Android or the web. Your keys stay on your device, and you approve what each site may do.</p>
+      <div class="row">
+        <a class="btn btn-store" href="/get">Get bWalletX</a>
+        <a class="btn btn-store btn-ghost" href="/connect">Developer guide</a>
+      </div>
+
+      <h2>Where it works</h2>
+      <ul class="status">
+        <li><span class="tag live">Live</span><span><b>Chrome and Brave extension.</b> Answers BRC-100 wallet discovery and provides <code>window.CWI</code>.</span></li>
+        <li><span class="tag live">Live</span><span><b>Android app.</b> Sites opened in the app&rsquo;s own browser get <code>window.CWI</code>. Sites in another browser connect by QR code.</span></li>
+        <li><span class="tag live">Live</span><span><b>Web wallet</b> at <a href="https://web.bwalletx.com">web.bwalletx.com</a>. Connects to a site by pairing link.</span></li>
+        <li><span class="tag live">Live</span><span><b>Agents</b>: <code>bwalletx serve</code> from the <a href="/cli">bwalletx CLI</a> runs a BRC-100 wallet on <code>localhost:3321</code> for an agent account.</span></li>
+        <li><span class="tag soon">Coming</span><span><b>iPhone App Store build.</b> On iPhone today, use the <a href="/iphone">web app</a>.</span></li>
+        <li><span class="tag soon">Coming</span><span><b>BRC-100 calls from an agent through a paired phone.</b> Today a paired agent account uses the CLI&rsquo;s own commands; for BRC-100 calls, use a key-file account with <code>bwalletx serve</code>.</span></li>
+      </ul>
+
+      <h2>How an app finds it</h2>
+      <div class="box"><h3>1. In the browser: BRC-100 discovery</h3><p>The page dispatches <code>brc100:requestWallet</code>. The extension answers with <code>brc100:announceWallet</code>, <code>info.rdns</code> <code>com.bwalletx.extension</code>. In the Android app&rsquo;s browser the answer is <code>space.bwallet.mobile</code>.</p></div>
+      <div class="box"><h3>2. On a phone or the web wallet: pairing</h3><p>The page shows a pairing link as a QR code. bWalletX scans it, or the web wallet takes it pasted, and both screens show the same 4-digit code. Calls then go end to end encrypted through our relay.</p></div>
+      <div class="box"><h3>3. Either way: a standard WalletInterface</h3><p>All three give your app the same BRC-100 <code>WalletInterface</code> from <code>@bsv/sdk</code>. The open-source <a href="https://github.com/bitcoin-corp/bwalletx-connect">@bwalletx/connect</a> (MIT) does the discovery and pairing for you, and works with any BRC-100 wallet.</p></div>
+      <pre><code>window.dispatchEvent(new Event('brc100:requestWallet'));
+// bWalletX answers 'brc100:announceWallet' with info.rdns 'com.bwalletx.extension'
+const { publicKey } = await wallet.getPublicKey({ identityKey: true });</code></pre>
+
+      <h2>BRC-100 calls</h2>
+      <p>The extension, the Android app and the web wallet answer the same calls. A sheet means the user is asked first.</p>
+      <table class="methods">
+        <thead><tr><th>Calls</th><th>bWalletX</th><th>bwalletx serve</th></tr></thead>
+        <tbody>
+          <tr><td><code>createAction</code>, <code>signAction</code></td><td class="yes">Yes &middot; payment sheet</td><td class="yes">Yes &middot; daily cap</td></tr>
+          <tr><td><code>abortAction</code>, <code>internalizeAction</code>, <code>listActions</code></td><td class="yes">Yes</td><td class="yes">Yes</td></tr>
+          <tr><td><code>listOutputs</code>, <code>relinquishOutput</code></td><td class="yes">Yes &middot; basket sheet</td><td class="yes">Yes</td></tr>
+          <tr><td><code>getPublicKey</code></td><td class="yes">Yes &middot; sheet on first connect</td><td class="yes">Yes</td></tr>
+          <tr><td><code>createSignature</code>, <code>verifySignature</code>, <code>createHmac</code>, <code>verifyHmac</code>, <code>encrypt</code>, <code>decrypt</code></td><td class="yes">Yes &middot; protocol sheet</td><td class="yes">Yes</td></tr>
+          <tr><td><code>revealCounterpartyKeyLinkage</code>, <code>revealSpecificKeyLinkage</code></td><td class="yes">Yes &middot; sheet</td><td class="no">No</td></tr>
+          <tr><td><code>acquireCertificate</code>, <code>listCertificates</code>, <code>proveCertificate</code>, <code>relinquishCertificate</code></td><td class="yes">Yes &middot; sheet</td><td class="no">No</td></tr>
+          <tr><td><code>discoverByIdentityKey</code>, <code>discoverByAttributes</code></td><td class="yes">Yes &middot; sheet</td><td class="no">No</td></tr>
+          <tr><td><code>isAuthenticated</code>, <code>waitForAuthentication</code>, <code>getHeight</code>, <code>getHeaderForHeight</code>, <code>getNetwork</code>, <code>getVersion</code></td><td class="yes">Yes</td><td class="yes">Yes</td></tr>
+        </tbody>
+      </table>
+      <p class="small">Certificate and discovery calls go to the standard wallet toolbox. We haven&rsquo;t tested them end to end with every certifier and overlay yet; tell us if one doesn&rsquo;t work for you.</p>
+
+      <h2>What bWalletX refuses</h2>
+      <div class="box"><h3>The wallet&rsquo;s own protocols</h3><p>Protocols bWalletX uses for itself are refused for sites before any sheet is shown, with <code>ERR_RESERVED_PROTOCOL</code>.</p></div>
+      <div class="box"><h3>Signatures anyone could reuse</h3><p>Level-0 signatures are refused for sites. Signatures that another service could accept as the user ask for approval every time, and that approval covers one request only.</p></div>
+      <div class="box"><h3>Mainnet only</h3><p><code>getNetwork</code> returns <code>mainnet</code>. bWalletX does not run on testnet.</p></div>
+
+      <h2>Source and docs</h2>
+      <ul>
+        <li>Wallet source: <a href="https://github.com/bitcoin-corp/bwallet">github.com/bitcoin-corp/bwallet</a></li>
+        <li>Connector (MIT): <a href="https://github.com/bitcoin-corp/bwalletx-connect">github.com/bitcoin-corp/bwalletx-connect</a> &middot; <a href="https://www.npmjs.com/package/@bwalletx/connect">npm</a></li>
+        <li>Developer guide: <a href="/connect">bwalletx.com/connect</a> &middot; <a href="https://docs.bwalletx.com/developers/connect/">docs</a></li>
+        <li>The standard: <a href="https://github.com/bitcoin-sv/BRCs/blob/master/wallet/0100.md">BRC-100</a> &middot; <a href="https://brc100.org/">brc100.org</a></li>
+      </ul>
+      <p class="small">Questions: <a href="mailto:support@bwalletx.com">support@bwalletx.com</a></p>
+    </main>
+  </body>
+</html>
