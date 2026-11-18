@@ -9,7 +9,7 @@ Full text of every page below: https://bwalletx.com/llms-full.txt
 ## Product
 
 - [bWalletX: the smart social super wallet](https://bwalletx.com/): bWalletX is the smart social super wallet: your token, your payments and your rooms in one place. Lock BSV, pots and subscriptions, history and export, token rooms, games, handles and the Exchange. Non-custodial Bitcoin SV wallet for Android, Chrome and the web.
-- [Get bWalletX](https://bwalletx.com/get): Get bWalletX for Android, Chrome, the web and iPhone.
+- [Get bWalletX](https://bwalletx.com/get): Get bWalletX, a BRC-100 wallet, for Android, Chrome, the web and iPhone.
 - [bWalletX for Android](https://bwalletx.com/android): Download the bWalletX Android app (APK): the BSV wallet for tokens, media and apps.
 - [bWalletX on iPhone](https://bwalletx.com/iphone): Use bWalletX on iPhone today: install the web app from Safari in under a minute. No App Store needed.
 - [bWalletX for Chrome](https://bwalletx.com/extension): Install the bWalletX Chrome extension: the full bWalletX wallet in Chrome's side panel, and a wallet websites can connect to.

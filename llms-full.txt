@@ -5102,7 +5102,7 @@ Source: https://bwalletx.com/get
 
 # Get bWalletX
 
-The full bWalletX on every device. Your keys stay on your device.
+The full bWalletX on every device. bWalletX is a [BRC-100](https://github.com/bitcoin-sv/BRCs/blob/master/wallet/0100.md) wallet: it implements the BRC-100 wallet interface, so any app or site built on the standard can connect to it. Your keys stay on your device.
 
 [AndroidAPK download · v5.2.57 beta](https://bwalletx.com/android)
 [ChromeExtension · Web Store v5.2.41 · direct v5.2.57](https://bwalletx.com/extension)
