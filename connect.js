@@ -69,7 +69,7 @@
     return el;
   }
 
-  // Sign-in and phone pairing live in @bwalletx/connect (about 125 KB with @bsv/sdk). It is
+  // Sign-in and phone pairing live in @bwalletx/connect 0.9.0 (about 570 KB, 170 KB gzipped, with @bsv/sdk). It is
   // loaded from next to this file only when one of these is first called.
   var self = document.currentScript && document.currentScript.src;
   var FULL = new URL('connect/bwalletx-connect.global.js', self || 'https://bwalletx.com/').href;

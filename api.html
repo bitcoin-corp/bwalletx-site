@@ -126,7 +126,7 @@
           <ul class="get">
             <li>On a computer: <a href="/extension">install the bWalletX extension</a> for Chrome or Brave, then reload this page.</li>
             <li>On a phone: open <b>bwalletx.com/api</b> in the browser inside the bWalletX app.</li>
-            <li>Phone or web wallet with a QR code: see <a href="/connect">Sign in with bWalletX</a>.</li>
+            <li>Phone or web wallet: tap Connect again and pair with the QR code or Open bWalletX.</li>
           </ul>
         </div>
 
@@ -199,12 +199,12 @@ curl https://bwalletx.com/api/agent/products</code></pre>
       <ul class="status">
         <li><span class="tag live">&check; Live</span><span>Try-it console &check; on this page: run read-only BRC-100 calls (<code>getPublicKey</code>, <code>listOutputs</code>, <code>listActions</code> and more) and a test <code>createSignature</code> against your own wallet, then copy the code</span></li>
         <li><span class="tag live">&check; Live</span><span>Connect from Chrome or Brave with the bWalletX extension, or from the browser inside the bWalletX app</span></li>
+        <li><span class="tag live">&check; Live</span><span>Phone pairing on this page: on a computer without the extension, scan the QR with bWalletX; on a phone, Connect opens bWalletX and it brings you back here (bWalletX 5.2.61 or later)</span></li>
         <li><span class="tag live">&check; Live</span><span>Every BRC-100 call (sign, encrypt, pay, keys), each one approved by the user in their wallet</span></li>
         <li><span class="tag live">&check; Live</span><span>Sign in with bWalletX: <code>connect.js</code> and <code>@bwalletx/connect</code> 0.9.0 on npm. You run the two server routes</span></li>
         <li><span class="tag live">&check; Live</span><span>Phone and web wallet pairing by QR code, on the <a href="/connect">sign-in guide</a></span></li>
         <li><span class="tag live">&check; Live</span><span><code>bwalletx serve</code> on localhost:3321 and <code>bwalletx mcp</code> (CLI 0.5.0 on npm)</span></li>
         <li><span class="tag live">&check; Live</span><span>Public read APIs: paymail names, profiles and the name log, and the agent Store API</span></li>
-        <li><span class="tag">Not built</span><span>Phone pairing on this page. <small>Use the <a href="/connect">sign-in guide</a> for now.</small></span></li>
         <li><span class="tag">Not built</span><span>Webhooks. <small>Nothing calls your server when something happens in a wallet.</small></span></li>
         <li><span class="tag">Not built</span><span>An account API with API keys. <small>No server-side access to a user's wallet or balance; everything goes through the user's own wallet.</small></span></li>
         <li><span class="tag">Not built</span><span>Hosted sign-in or an OAuth-style redirect. <small>You verify the signature on your own server.</small></span></li>
@@ -267,9 +267,19 @@ curl https://bwalletx.com/api/agent/products</code></pre>
           else fallback();
         }
 
+        // Back from bWalletX on a phone: index.html finished the pairing and sent the user back here (this tab only).
+        var resumedHere = false;
+        try { resumedHere = sessionStorage.getItem('bwx:returned') === location.origin + location.pathname; sessionStorage.removeItem('bwx:returned'); } catch (e) { /* private mode */ }
+
         async function findWallet() {
           var lib = window.bWalletXConnect;
-          if (lib && lib.connectBwalletX) return lib.connectBwalletX({ reusePairing: false });
+          if (lib && lib.connectBwalletX) {
+            // No extension or bWalletX browser: pair. A computer shows a QR to scan with bWalletX; a phone shows
+            // "Open bWalletX" and bWalletX brings the user back (via the home page), where the pairing is reused once.
+            var modal = lib.pairingModal ? lib.pairingModal({ title: 'Connect bWalletX' }) : undefined;
+            try { return await lib.connectBwalletX({ reusePairing: resumedHere, pairing: modal }); }
+            finally { resumedHere = false; if (modal) modal.close(); }
+          }
           if (window.bWalletX && window.bWalletX.connect) {
             var r = await window.bWalletX.connect();
             return { wallet: r.wallet, method: 'extension' };
@@ -491,7 +501,11 @@ curl https://bwalletx.com/api/agent/products</code></pre>
             $('f-name').textContent = await lookupName(identityKey);
           } catch (e) {
             wallet = null;
-            if (e && (e.code === 'NOT_FOUND' || e.code === 'NOT_INSTALLED')) {
+            if (e && e.message === 'cancelled') {
+              say('Not connected.');
+            } else if (e && e.code === 'RETURNED_IN_ANOTHER_TAB') {
+              say('You connected bWalletX in another tab. Carry on there, or reload this page.');
+            } else if (e && (e.code === 'NOT_FOUND' || e.code === 'NOT_INSTALLED')) {
               say('bWalletX isn’t in this browser.', true);
               show('bwx-get', true);
             } else {
@@ -513,6 +527,8 @@ curl https://bwalletx.com/api/agent/products</code></pre>
         });
 
         $('f-copy').addEventListener('click', function () { if (identityKey) copy(identityKey, $('f-copy'), 'Copy'); });
+        // After the deferred connect script has run (it loads before DOMContentLoaded).
+        if (resumedHere) document.addEventListener('DOMContentLoaded', function () { btnConnect.click(); });
       })();
     </script>
   </body>
