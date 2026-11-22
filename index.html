@@ -3,6 +3,28 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <!-- Sign in with bWalletX on a phone (@bwalletx/connect 0.9.0): bWalletX sends the user back to this root as
+         /#bwx=ok&…. Take that out of the address bar before any other script (nav.js loads analytics) can read it,
+         load connect for this visit only, finish the pairing, then go back to the page the sign-in started on. -->
+    <script>
+      (function () {
+        var h = location.hash;
+        if (!/(^#|&)bwx=ok(&|$)/.test(h)) return;
+        try { history.replaceState(history.state, '', location.pathname + location.search); } catch (e) { /* no history API */ }
+        var s = document.createElement('script');
+        s.src = 'https://cdn.jsdelivr.net/npm/@bwalletx/connect@0.9.0/dist/bwalletx-connect.global.js';
+        s.integrity = 'sha384-ljVpAVRFkV0Eog6yjxI9c5nJKl0Ri9p77SuIPOohuhh6O1SygKqR1cprJ7kJfrK5';
+        s.crossOrigin = 'anonymous';
+        s.onload = function () {
+          var C = window.bWalletXConnect;
+          if (!C || !C.resumeReturnedPairing) return;
+          C.resumeReturnedPairing({ hash: h }).then(function (r) {
+            if (r && r.page && r.page !== location.origin + location.pathname) location.replace(r.page);
+          }, function () { /* nothing to finish: stay on the home page */ });
+        };
+        document.head.appendChild(s);
+      })();
+    </script>
     <title>bWalletX: the smart social super wallet</title>
     <meta
       name="description"

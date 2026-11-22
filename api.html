@@ -3,6 +3,8 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- @bwalletx/connect 0.9.0, pinned and checked by SRI. First in <head>. bWalletX's phone return (#bwx=ok&…) only lands on the site root, and index.html strips it there before any other script runs. -->
+    <script src="https://cdn.jsdelivr.net/npm/@bwalletx/connect@0.9.0/dist/bwalletx-connect.global.js" integrity="sha384-ljVpAVRFkV0Eog6yjxI9c5nJKl0Ri9p77SuIPOohuhh6O1SygKqR1cprJ7kJfrK5" crossorigin="anonymous" defer></script>
     <title>bWalletX API · Connect your wallet</title>
     <link rel="canonical" href="https://bwalletx.com/api" />
     <meta name="description" content="Connect to the bWalletX API: try BRC-100 calls live with your wallet, then pick a route. BRC-100 in the browser, Sign in with bWalletX, or a local agent wallet and MCP server. No API keys." />
@@ -198,7 +200,7 @@ curl https://bwalletx.com/api/agent/products</code></pre>
         <li><span class="tag live">&check; Live</span><span>Try-it console &check; on this page: run read-only BRC-100 calls (<code>getPublicKey</code>, <code>listOutputs</code>, <code>listActions</code> and more) and a test <code>createSignature</code> against your own wallet, then copy the code</span></li>
         <li><span class="tag live">&check; Live</span><span>Connect from Chrome or Brave with the bWalletX extension, or from the browser inside the bWalletX app</span></li>
         <li><span class="tag live">&check; Live</span><span>Every BRC-100 call (sign, encrypt, pay, keys), each one approved by the user in their wallet</span></li>
-        <li><span class="tag live">&check; Live</span><span>Sign in with bWalletX: <code>connect.js</code> and <code>@bwalletx/connect</code> 0.7.0 on npm. You run the two server routes</span></li>
+        <li><span class="tag live">&check; Live</span><span>Sign in with bWalletX: <code>connect.js</code> and <code>@bwalletx/connect</code> 0.9.0 on npm. You run the two server routes</span></li>
         <li><span class="tag live">&check; Live</span><span>Phone and web wallet pairing by QR code, on the <a href="/connect">sign-in guide</a></span></li>
         <li><span class="tag live">&check; Live</span><span><code>bwalletx serve</code> on localhost:3321 and <code>bwalletx mcp</code> (CLI 0.5.0 on npm)</span></li>
         <li><span class="tag live">&check; Live</span><span>Public read APIs: paymail names, profiles and the name log, and the agent Store API</span></li>
@@ -211,8 +213,7 @@ curl https://bwalletx.com/api/agent/products</code></pre>
 
       <p class="small" style="margin-top: 40px">Full guides: <a href="https://docs.bwalletx.com/developers/connect/">docs.bwalletx.com</a> · All the tools: <a href="/build-on-b">Build on b</a> · Questions: <a href="mailto:support@bwalletx.com">support@bwalletx.com</a></p>
     </main>
-    <!-- @bwalletx/connect 0.7.0 (pinned, checked by SRI). connect.js is the fallback if the CDN is blocked. -->
-    <script src="https://cdn.jsdelivr.net/npm/@bwalletx/connect@0.7.0/dist/bwalletx-connect.global.js" integrity="sha384-VkIrDOw3Hmv7qnytbLGT1hNz7DbJ3IJiI91HSOTqjWu146/hl1KINi4v/hPzTfvI" crossorigin="anonymous" defer></script>
+    <!-- connect.js is the fallback if the CDN copy of @bwalletx/connect (first in <head>) is blocked. -->
     <script src="/connect.js" defer></script>
     <script>
       (function () {
@@ -220,7 +221,7 @@ curl https://bwalletx.com/api/agent/products</code></pre>
         var wallet = null, method = null, identityKey = null;
         var btnConnect = $('bwx-connect'), btnOff = $('bwx-off');
         var VIA = { extension: 'bWalletX extension', 'in-app': 'bWalletX app', pairing: 'Paired phone', wallet: 'Wallet' };
-        var LIB_TAG = '<script src="https://cdn.jsdelivr.net/npm/@bwalletx/connect@0.7.0/dist/bwalletx-connect.global.js"\n  integrity="sha384-VkIrDOw3Hmv7qnytbLGT1hNz7DbJ3IJiI91HSOTqjWu146/hl1KINi4v/hPzTfvI" crossorigin="anonymous"></' + 'script>';
+        var LIB_TAG = '<script src="https://cdn.jsdelivr.net/npm/@bwalletx/connect@0.9.0/dist/bwalletx-connect.global.js"\n  integrity="sha384-ljVpAVRFkV0Eog6yjxI9c5nJKl0Ri9p77SuIPOohuhh6O1SygKqR1cprJ7kJfrK5" crossorigin="anonymous"></' + 'script>';
 
         // The console's allowlist. These are the ONLY wallet methods this page will ever call from the console:
         // read-only calls plus createSignature. Nothing that spends or changes state (createAction, signAction,
