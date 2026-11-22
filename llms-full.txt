@@ -7828,7 +7828,15 @@ Each release ships to the Android APK, the Chrome extension and the web wallet. 
 
 [Download bWalletX](https://bwalletx.com/download)
 
-## 5.2.61 2026-11-21
+## 5.2.61 2026-11-22
+
+- On your phone, ‘Sign in with bWalletX’ on websites now works and brings you back to the site signed in.
+- Fixes a sync error where a payment that first failed and was later mined could be counted twice.
+- Your device keeps a stable identity for backups.
+- Moving your account onto your phone now picks up where it left off instead of starting over.
+- Better protection for your seed phrase, and stronger checks on names.
+
+## 5.2.60 2026-11-21
 
 - Sealing documents on bchatx.com works again: Allow on the Seal sheet no longer says ‘You cancelled’.
 
