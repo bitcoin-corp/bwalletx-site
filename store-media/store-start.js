@@ -1,5 +1,8 @@
 /* "Start your store" on /store (18 Oct 2026).
- * Sign in with bWalletX (extension / in-app browser, else phone pairing by QR) using @bwalletx/connect 0.2.0,
+ * Sign in with bWalletX (extension / in-app browser, else phone pairing) using @bwalletx/connect 0.9.0. On a computer
+ * the page shows its own QR. On a phone, pairingModal() shows "Open bWalletX"; bWalletX sends the user back to the
+ * site root, index.html finishes the pairing and returns here with sessionStorage 'bwx:returned', and this page
+ * picks the pairing up with restorePairing() (inside connectBwalletX),
  * then every call to the shop server is signed by the wallet's identity key: BRC-43 protocol [2,'bwalletx shop'],
  * keyID '1', counterparty 'anyone', over 'bwalletx-shop|v1|<action>|k=v|…' (server: bwalletX site/lib/webShops.js).
  * Nothing secret leaves the wallet. The preview works without signing in; the text fields are kept on this device. */
@@ -188,23 +191,41 @@
       onCode: function (code) { $('pair-code').innerHTML = 'Check bWalletX shows <b>' + String(code).replace(/[^0-9]/g, '') + '</b>, then tap Connect.'; },
     });
   }
-  function connect() {
+  function stopped(e) {
+    $('pair-box').hidden = true; $('signin-box').hidden = false;
+    if (e && (e.name === 'AbortError' || e.message === 'cancelled')) return msg($('signin-msg'), '');
+    if (e && e.code === 'RETURNED_IN_ANOTHER_TAB') return msg($('signin-msg'), 'You finished signing in in another tab. Carry on there, or reload this page.');
+    if (e && e.code === 'NOT_FOUND') return msg($('signin-msg'), 'No bWalletX connection here yet. Tap Continue with bWalletX to connect.', 'bad');
+    msg($('signin-msg'), 'Sign-in stopped: ' + ((e && e.message) || 'no answer from the wallet') + '. No bWalletX yet? Get it at bwalletx.com/get.', 'bad');
+  }
+  // Phones and tablets (0.9.0): no QR to scan with the same phone. pairingModal() shows "Open bWalletX" and asks
+  // bWalletX to bring the user back. `resumed`: the pairing was finished on the way back (see the header).
+  function connectPhone(C, resumed) {
+    var modal = resumed ? null : C.pairingModal({ title: 'Sign in with bWalletX' });
+    msg($('signin-msg'), resumed ? 'Finishing sign-in…' : 'Opening bWalletX…');
+    return C.connectBwalletX({ discoverMs: 1200, reusePairing: !!resumed, pairing: modal || undefined }).then(function (r) {
+      if (modal) modal.close();
+      msg($('signin-msg'), '');
+      return useWallet(r.wallet);
+    }, function (e) {
+      if (modal) modal.close();
+      throw e;
+    });
+  }
+  function connect(resumed) {
     var C = window.bWalletXConnect;
     if (!C) return msg($('signin-msg'), 'Still loading. Try again in a second.', 'bad');
+    if (resumed || (typeof C.isTouchDevice === 'function' && C.isTouchDevice())) return connectPhone(C, resumed).catch(stopped);
     msg($('signin-msg'), 'Looking for bWalletX…');
     C.discoverBwalletX(1200).then(function (found) {
       if (found) return useWallet(found.wallet);
       msg($('signin-msg'), '');
       return startPairing(C).then(useWallet);
-    }).catch(function (e) {
-      $('pair-box').hidden = true; $('signin-box').hidden = false;
-      if (e && e.name === 'AbortError') return msg($('signin-msg'), '');
-      msg($('signin-msg'), 'Sign-in stopped: ' + ((e && e.message) || 'no answer from the wallet') + '. No bWalletX yet? Get it at bwalletx.com/get.', 'bad');
-    });
+    }).catch(stopped);
   }
   document.addEventListener('bwalletx-signin', function (e) {
     if (!e.target || e.target.id !== 'signin') return;
-    e.preventDefault(); connect();
+    e.preventDefault(); connect(false);
   });
   $('pair-cancel').addEventListener('click', function () { if (state.pairAbort) state.pairAbort.abort(); $('pair-box').hidden = true; $('signin-box').hidden = false; });
   $('signout').addEventListener('click', function () {
@@ -258,5 +279,9 @@
 
   restore();
   render();
+  // Back from bWalletX on a phone (index.html set this for this page, in this tab only).
+  var returned = null;
+  try { returned = sessionStorage.getItem('bwx:returned'); sessionStorage.removeItem('bwx:returned'); } catch (e) { /* private mode */ }
+  if (returned && returned === location.origin + location.pathname) connect(true);
   if (f.handle.value) checkHandleSoon();
 })();

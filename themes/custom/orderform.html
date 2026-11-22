@@ -286,6 +286,37 @@
             if (j && j.configured && j.usd) { depUsd = j.usd; $('depAmt').textContent = '$' + j.usd; showDeposit(); }
           }).catch(function () {});
         }
+        // Phone pairing (0.9.0): bWalletX returns to the home page, which sends the user back here in a new page load.
+        // The form is kept on this device while they are in bWalletX, and restored when they come back.
+        var DRAFT = 'bwx.orderform.draft.v1', paired = false;
+        function saveDraft() {
+          var cu = [], cv = [];
+          form.querySelectorAll('.cu').forEach(function (x) { cu.push(x.checked); });
+          form.querySelectorAll('.cv').forEach(function (x) { cv.push(x.value); });
+          var d = { at: Date.now(), tier: tier(), consent: $('consent').checked, cu: cu, cv: cv };
+          ['brand', 'contact', 'link', 'logo', 'note'].forEach(function (k) { d[k] = $(k).value; });
+          try { localStorage.setItem(DRAFT, JSON.stringify(d)); } catch (e) { /* private mode */ }
+        }
+        function dropDraft() { try { localStorage.removeItem(DRAFT); } catch (e) { /* private mode */ } }
+        (function backFromWallet() {
+          var back = null, d = null;
+          try { back = sessionStorage.getItem('bwx:returned'); sessionStorage.removeItem('bwx:returned'); } catch (e) { return; }
+          if (back !== location.origin + location.pathname) return;
+          try { d = JSON.parse(localStorage.getItem(DRAFT) || 'null'); } catch (e) { /* unreadable */ }
+          dropDraft();
+          paired = true;
+          if (d && Date.now() - d.at < 15 * 60 * 1000) {
+            ['brand', 'contact', 'link', 'logo', 'note'].forEach(function (k) { if (typeof d[k] === 'string') $(k).value = d[k]; });
+            var t = form.querySelector('input[name=tier][value="' + d.tier + '"]'); if (t) t.checked = true;
+            $('consent').checked = !!d.consent;
+            form.querySelectorAll('.cu').forEach(function (x, i) { x.checked = !!(d.cu || [])[i]; });
+            form.querySelectorAll('.cv').forEach(function (x, i) { if (/^#[0-9a-f]{6}$/i.test((d.cv || [])[i])) x.value = d.cv[i]; });
+            $('themeNote').hidden = tier() !== 'theme';
+          }
+          say('bWalletX is connected. Check your details, then tap Pay deposit with bWalletX.');
+          showDeposit();
+          var box = $('depositBox'); if (box && box.scrollIntoView) box.scrollIntoView({ block: 'center' });
+        })();
         var enc = new TextEncoder();
         function hex(a) { return Array.prototype.map.call(a, function (x) { return ('0' + (x & 255).toString(16)).slice(-2); }).join(''); }
         function message(action, fields) {
@@ -310,7 +341,17 @@
             say('Opening bWalletX…');
             var C = window.bWalletXConnect;
             if (!C) throw new Error('The bWalletX button didn’t load. Refresh and try again.');
-            var wallet = (await C.connectBwalletX({})).wallet;
+            // No extension or bWalletX browser: pair. A computer gets a QR; a phone gets "Open bWalletX", and bWalletX
+            // brings the user back here (via the home page), so the details are kept on this device meanwhile.
+            var phone = typeof C.isTouchDevice === 'function' && C.isTouchDevice();
+            var modal = C.pairingModal({ title: 'Pay the deposit with bWalletX' });
+            if (phone) saveDraft();
+            var conn;
+            try { conn = await C.connectBwalletX({ discoverMs: 1200, reusePairing: paired, pairing: modal }); }
+            finally { modal.close(); }
+            dropDraft();
+            var wallet = conn.wallet;
+            if (conn.method === 'pairing') { paired = true; say('Connected. Open bWalletX to approve each step, then come back to this page.'); }
             var identityKey = (await wallet.getPublicKey({ identityKey: true })).publicKey;
             var fields = { tier: tier(), brand: $('brand').value.trim(), contact: $('contact').value.trim(), link: $('link').value.trim(), logo: $('logo').value.trim(), colours: JSON.stringify(colours()), note: $('note').value.trim() };
             say('Getting the price…');
@@ -331,7 +372,10 @@
             }
             say('Deposit paid. Thank you: we’ll be in touch at ' + fields.contact + '.');
           } catch (e) {
-            var m = (e && e.code === 'NOT_FOUND') ? 'Open this page in bWalletX, or add the bWalletX extension, then try again.' : (e && e.message) || 'Something went wrong. Nothing was paid.';
+            if (e && e.message === 'cancelled') { say(''); return; }
+            var m = (e && e.code === 'RETURNED_IN_ANOTHER_TAB') ? 'You connected bWalletX in another tab. Carry on there, or reload this page.'
+              : (e && e.code === 'NO_ANSWER_MAYBE_SENT') ? 'No answer from bWalletX. Check bWalletX before you try again.'
+              : (e && e.message) || 'Something went wrong. Nothing was paid.';
             say(m, true);
           } finally { btn.disabled = false; }
         });
