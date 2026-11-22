@@ -1,6 +1,6 @@
 # bWalletX: full site text
 
-Generated 2026-11-21 from https://bwalletx.com. Source pages are linked above each section.
+Generated 2026-11-22 from https://bwalletx.com. Source pages are linked above each section.
 
 ---
 
@@ -3209,7 +3209,7 @@ Our wallet, built on the open BRC-100 interface. Web, Chrome extension and Andro
 ### Connect `@bwalletx/connect`
 Live
 
-Version 0.7.0. Sign in with bWalletX, a React provider, Next.js routes, pay and tip helpers, server-side payment checks and a wallet picker. Works with any BRC-100 wallet, including Metanet Desktop on its own tap.
+Version 0.9.0. Sign in with bWalletX, a React provider, Next.js routes, pay and tip helpers, server-side payment checks and a wallet picker. Works with any BRC-100 wallet, including Metanet Desktop on its own tap.
 
 [npm](https://www.npmjs.com/package/@bwalletx/connect)[GitHub](https://github.com/bitcoin-corp/bwalletx-connect)[The button](https://bwalletx.com/sign-in-button)
 
@@ -14233,7 +14233,7 @@ curl https://bwalletx.com/api/agent/products``
 
 - ✓ LiveEvery BRC-100 call (sign, encrypt, pay, keys), each one approved by the user in their wallet
 
-- ✓ LiveSign in with bWalletX: `connect.js` and `@bwalletx/connect` 0.7.0 on npm. You run the two server routes
+- ✓ LiveSign in with bWalletX: `connect.js` and `@bwalletx/connect` 0.9.0 on npm. You run the two server routes
 
 - ✓ LivePhone and web wallet pairing by QR code, on the [sign-in guide](https://bwalletx.com/connect)
 
@@ -15396,10 +15396,16 @@ Full width
 
 Point `challenge-url` and `verify-url` at the two routes from the [Sign in with bWalletX guide](https://bwalletx.com/connect) (the `@bwalletx/connect/server` helpers write them for you).
 
-``<script src="https://cdn.jsdelivr.net/npm/@bwalletx/connect@0.5.0/dist/bwalletx-connect.global.js"></script>
+``<!-- First in <head>, before analytics or any other script.
+No defer or async, so it runs before them. -->
+<script src="https://cdn.jsdelivr.net/npm/@bwalletx/connect@0.9.0/dist/bwalletx-connect.global.js"
+integrity="sha384-ljVpAVRFkV0Eog6yjxI9c5nJKl0Ri9p77SuIPOohuhh6O1SygKqR1cprJ7kJfrK5"
+crossorigin="anonymous"></script>
+
 <bwalletx-signin
 challenge-url="/auth/bwalletx/challenge"
-verify-url="/auth/bwalletx/verify"></bwalletx-signin>
+verify-url="/auth/bwalletx/verify"
+logout-url="/auth/bwalletx/logout"></bwalletx-signin>
 <script>
 document.addEventListener('bwalletx-signed-in', (e) => {
 // e.detail: { identityKey, method, response }. Your verify route has started the session.
@@ -15407,7 +15413,9 @@ location.assign('/');
 });
 </script>``
 
-The same file is on unpkg: `https://unpkg.com/@bwalletx/connect@0.5.0/dist/bwalletx-connect.global.js`. Pin the version (`@0.5.0`) so the button can’t change under you.
+The same file is on unpkg: `https://unpkg.com/@bwalletx/connect@0.9.0/dist/bwalletx-connect.global.js` (same bytes, same `integrity`). Pin the version (`@0.9.0`) so the button can’t change under you.
+
+On a phone, bWalletX signs in on one card and then sends the user back to your site’s home page (`/#bwx=ok&…`) to finish. So load the same script first in `<head>` on your home page too, with the button on it or a call to `bWalletXConnect.resumeReturnedPairing()`. The script takes that return out of the address bar as it loads, which is why it goes before analytics. Needs bWalletX 5.2.61 or later on the phone.
 
 ## Install from npm
 
