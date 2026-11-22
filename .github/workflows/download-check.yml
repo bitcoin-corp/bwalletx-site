@@ -1,0 +1,29 @@
+# Every push to main: the wallet downloads must match download/latest.json (see .github/scripts/check-downloads.py).
+# A failure emails the pusher; it does not block the push, so releases are not slowed down.
+# The repo keeps every old APK (~1.5 GB), so only the pages, latest.json and the files it names are checked out.
+name: Downloads match latest.json
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+          sparse-checkout-cone-mode: false
+          sparse-checkout: |
+            /*.html
+            /download/latest.json
+            /.github/
+      - name: Check out the files latest.json names
+        run: |
+          paths=$(python3 -c "import json; d=json.load(open('download/latest.json')); p='https://bwalletx.com/download/'; u=[d.get('apk')]+[c.get('url') for c in (d.get('channels') or {}).values()]; print(' '.join(sorted({'/download/'+x[len(p):] for x in u if x and x.startswith(p)})))")
+          git sparse-checkout add $paths
+      - run: python3 .github/scripts/check-downloads.py
