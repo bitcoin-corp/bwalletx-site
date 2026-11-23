@@ -1,30 +1,30 @@
 {
-  "version": "5.2.61",
-  "versionCode": 150,
-  "apk": "https://bwalletx.com/download/bwalletx-android-5.2.61.apk",
-  "sha256": "1308d2e691598d0733888ef9c145e2c74ba46704feb6770a13cafcc10fa4a604",
-  "size": 24537020,
-  "notes_url": "https://bwalletx.com/releases#v5.2.61",
+  "version": "5.2.62",
+  "versionCode": 151,
+  "apk": "https://bwalletx.com/download/bwalletx-android-5.2.62.apk",
+  "sha256": "e33603f8b44af026e7f42cf162492f060762a83e75473d840555baf3c1033148",
+  "size": 24542251,
+  "notes_url": "https://bwalletx.com/releases#v5.2.62",
   "channels": {
     "extension": {
-      "version": "5.2.61",
-      "url": "https://bwalletx.com/download/bwalletx-extension-5.2.61.zip",
-      "sha256": "33e08429189ccd0a439c1930d23b9a2b38c3becd24486120b8a68fdeb9a1fc23",
-      "size": 16412556,
-      "notes_url": "https://bwalletx.com/releases#v5.2.61"
+      "version": "5.2.62",
+      "url": "https://bwalletx.com/download/bwalletx-extension-5.2.62.zip",
+      "sha256": "c312be6b3d383b4d4e8e2119b58aa9728bc4306e1812f1c0d5a6c385a2a251da",
+      "size": 16419707,
+      "notes_url": "https://bwalletx.com/releases#v5.2.62"
     },
     "android-direct": {
-      "version": "5.2.61",
-      "versionCode": 150,
-      "notes_url": "https://bwalletx.com/releases#v5.2.61"
+      "version": "5.2.62",
+      "versionCode": 151,
+      "notes_url": "https://bwalletx.com/releases#v5.2.62"
     },
     "web": {
-      "version": "5.2.61",
-      "notes_url": "https://bwalletx.com/releases#v5.2.61"
+      "version": "5.2.62",
+      "notes_url": "https://bwalletx.com/releases#v5.2.62"
     },
     "ios-private": {
-      "version": "5.2.61",
-      "notes_url": "https://bwalletx.com/releases#v5.2.61"
+      "version": "5.2.62",
+      "notes_url": "https://bwalletx.com/releases#v5.2.62"
     }
   }
 }
