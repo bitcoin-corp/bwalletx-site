@@ -1,6 +1,6 @@
 # bWalletX: full site text
 
-Generated 2026-11-24 from https://bwalletx.com. Source pages are linked above each section.
+Generated 2026-11-27 from https://bwalletx.com. Source pages are linked above each section.
 
 ---
 
@@ -7828,7 +7828,14 @@ Each release ships to the Android APK, the Chrome extension and the web wallet. 
 
 [Download bWalletX](https://bwalletx.com/download)
 
-## 5.2.64 2026-11-24
+## 5.2.64 2026-11-27
+
+- Security fix: a token’s ‘Issued by’ badge can no longer be faked. The wallet now accepts only an issuer statement in its one exact signed form.
+- Scammers Cartel’s fight keys can be used only by scammerscartel.com. No other site you’ve connected can sign with them.
+- Chrome extension: signing out of a website now puts the wallet’s own theme back, instead of leaving it in the site’s colours.
+- The iPhone App Store build of this version follows after Apple’s review. Android, Chrome and web have it now.
+
+## 5.2.63 2026-11-24
 
 - Sealing a document in a chat room now takes one signature and one payment, even if the app closes or loses its connection part-way.
 - If the wallet can’t yet tell whether a seal was paid, it holds it and keeps checking instead of letting you pay again.
