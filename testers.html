@@ -3,21 +3,22 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Get 1 BSV: test bWallet on Android</title>
+    <title>Test bWallet on every platform</title>
     <link rel="canonical" href="https://bwalletx.com/testers" />
-    <meta name="description" content="Get 1 BSV for testing bWallet on Android for 14 days. 20 places. Apply with Google; paid to your own bWallet." />
+    <meta name="description" content="Test bWallet on Android, iPhone, Chrome, the web and desktop. No application, a minute to start. Google needs 12 Android testers for 14 days before bWallet can go on the Play Store." />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://bwalletx.com/testers" />
     <meta property="og:site_name" content="bWalletX" />
-    <meta property="og:title" content="Get 1 BSV: test bWallet on Android" />
-    <meta property="og:description" content="Get 1 BSV for testing bWallet on Android for 14 days. 20 places. Apply with Google; paid to your own bWallet." />
+    <meta property="og:title" content="Test bWallet on every platform" />
+    <meta property="og:description" content="Test bWallet on Android, iPhone, Chrome, the web and desktop. No application, a minute to start. Google needs 12 Android testers for 14 days before bWallet can go on the Play Store." />
     <meta property="og:image" content="https://bwalletx.com/og-testers-v1.png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="bWalletX: help us bring bWallet to Google Play. 12 Android testers needed for 14 days. Become a tester." />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@bWalletX" />
-    <meta name="twitter:title" content="Get 1 BSV: test bWallet on Android" />
-    <meta name="twitter:description" content="Get 1 BSV for testing bWallet on Android for 14 days. 20 places. Apply with Google; paid to your own bWallet." />
+    <meta name="twitter:title" content="Test bWallet on every platform" />
+    <meta name="twitter:description" content="Test bWallet on Android, iPhone, Chrome, the web and desktop. No application, a minute to start. Google needs 12 Android testers for 14 days before bWallet can go on the Play Store." />
     <meta name="twitter:image" content="https://bwalletx.com/og-testers-v1.png" />
     <link rel="icon" href="/favicon.ico" />
     <link rel="stylesheet" href="/styles.css" />
@@ -38,6 +39,14 @@
       .t button.btn { cursor: pointer; border: 0; }
       .t .bar { height: 10px; background: #1b1d22; border-radius: 99px; overflow: hidden; margin: 10px 0; }
       .t .bar i { display: block; height: 100%; background: var(--grad); }
+      .t .plats { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 14px; margin: 22px 0; }
+      .t .plat { background: #101114; border: 1px solid #ffffff12; border-radius: 16px; padding: 18px; display: flex; flex-direction: column; gap: 8px; }
+      .t .plat.need { border-color: var(--gold-hi); }
+      .t .plat h3 { margin: 0; font-size: 1.15rem; }
+      .t .plat p { margin: 0; }
+      .t .plat .go { margin-top: auto; display: flex; flex-wrap: wrap; gap: 8px; padding-top: 6px; }
+      .t .plat .go .btn { font: 600 .95rem var(--hf); padding: 11px 18px; border-radius: 14px; text-decoration: none; text-align: center; display: inline-flex; justify-content: center; flex: 1 1 auto; }
+      .t .tag { display: inline-block; font: 700 .72rem var(--hf); letter-spacing: .08em; text-transform: uppercase; color: var(--gold-hi); }
     </style>
   </head>
   <body>
@@ -54,49 +63,94 @@
     <script src="/nav.js"></script>
     <main class="ext t">
       <img src="/logo.svg" alt="" width="60" height="54" />
-      <section class="testers-box" id="android-testers" aria-labelledby="android-testers-h">
-        <h2 id="android-testers-h">Help us bring bWallet to Google Play</h2>
-        <p>Google needs 12 Android testers for 14 days before we can go public. Takes a minute.</p>
-        <ol>
-          <li>Tap <b>Become a tester</b> and sign in with your Google account.</li>
-          <li>Install bWallet from Google Play.</li>
-          <li>Keep it installed for 14 days.</li>
-        </ol>
-        <div class="tb-row">
-          <a class="btn btn-gold" href="https://play.google.com/apps/testing/com.bitcoincorp.bwallet" rel="noopener">Become a tester</a>
-          <a class="btn btn-ghost" href="https://play.google.com/store/apps/details?id=com.bitcoincorp.bwallet" rel="noopener">Install on Google Play</a>
-        </div>
-        <p class="tb-note">Already using the direct APK? You can keep it; the Play version installs separately, so you can have both.</p>
-      </section>
-      <p class="testers-iphone">iPhone: open now through TestFlight, see below.</p>
-      <h1>Get <span class="gold">1 BSV</span> for testing bWallet</h1>
-      <p class="lede">Test bWallet on your Android phone for 14 days and I'll pay you 1 BSV. Google won't let me publish on the Play Store until at least 12 people have tested it for 14 days in a row, so I'm paying for that time.</p>
+      <h1>Test bWallet on <span class="gold">every platform</span></h1>
+      <p class="lede">We ship small updates several times a week, and testers catch what we miss. Pick your platform: each one takes a minute, none needs an application, and every page says what to try and how to report it.</p>
+
+      <div class="plats">
+        <section class="plat need" id="android-testers" aria-labelledby="android-testers-h">
+          <span class="tag">Most needed</span>
+          <h3 id="android-testers-h">Android: Google Play test</h3>
+          <p>Google needs <b>12 testers who keep bWallet installed for 14 days</b> before it can go on the Play Store. Join with your Google account, install from Google Play, and keep it. Already on the APK? The Play version installs alongside it.</p>
+          <div class="go">
+            <a class="btn btn-gold" href="https://play.google.com/apps/testing/com.bitcoincorp.bwallet" rel="noopener">Become a tester</a>
+            <a class="btn btn-ghost" href="https://play.google.com/store/apps/details?id=com.bitcoincorp.bwallet" rel="noopener">Install</a>
+            <a class="btn btn-ghost" href="/testers/bwallet/android">What to test</a>
+          </div>
+        </section>
+        <section class="plat">
+          <h3>iPhone: TestFlight</h3>
+          <p>Install TestFlight from the App Store, then open <a href="https://testflight.apple.com/join/1TTnQNKm" rel="noopener">testflight.apple.com/join/1TTnQNKm</a> on your iPhone. iOS 15 or later.</p>
+          <div class="go">
+            <a class="btn btn-gold" href="https://testflight.apple.com/join/1TTnQNKm" rel="noopener">Join on TestFlight</a>
+            <a class="btn btn-ghost" href="/testers/bwallet/iphone">What to test</a>
+          </div>
+        </section>
+        <section class="plat">
+          <h3>Chrome extension</h3>
+          <p>bWalletX in your browser: connect to sites, sign in, approve payments. Works in Chrome, Brave and Edge.</p>
+          <div class="go">
+            <a class="btn btn-gold" href="/extension">Get the extension</a>
+            <a class="btn btn-ghost" href="/testers/bwalletx/chrome-extension">What to test</a>
+          </div>
+        </section>
+        <section class="plat">
+          <h3>Web</h3>
+          <p>The full wallet in any browser, phone or computer, with nothing to install.</p>
+          <div class="go">
+            <a class="btn btn-gold" href="https://web.bwalletx.com" rel="noopener">Open web.bwalletx.com</a>
+            <a class="btn btn-ghost" href="/testers/bwalletx/web">What to test</a>
+          </div>
+        </section>
+        <section class="plat">
+          <h3>Desktop</h3>
+          <p>The wide wallet for big screens: every account, pot and chat side by side.</p>
+          <div class="go">
+            <a class="btn btn-gold" href="https://desktop.bwalletx.com" rel="noopener">Open Desktop</a>
+            <a class="btn btn-ghost" href="/testers/bwalletx/desktop">What to test</a>
+          </div>
+        </section>
+        <section class="plat">
+          <h3>Android download (APK)</h3>
+          <p>The full bWalletX edition for Android, straight from us, updated the day we ship.</p>
+          <div class="go">
+            <a class="btn btn-gold" href="/android">Download the APK</a>
+          </div>
+        </section>
+        <section class="plat">
+          <h3>Agents and developers: the CLI</h3>
+          <p>Give an AI agent its own wallet: <code>npm i -g bwalletx</code>, then pair it with your phone (version 0.6.4 or later). Try spending limits, pairing and the MCP server.</p>
+          <div class="go">
+            <a class="btn btn-gold" href="/agent">Agent wallets</a>
+            <a class="btn btn-ghost" href="/developers">Developers</a>
+          </div>
+        </section>
+      </div>
+
+      <div class="card">
+        <p><b>How to report:</b> in the app, Settings &rsaquo; Contact and reports (it includes your app version). Or write to <a href="https://x.com/bWalletX" target="_blank" rel="noopener">@bWalletX on X</a>.</p>
+        <p><b>Found a security hole?</b> Don&rsquo;t post it: send it to <a href="/b-aware">b-Aware</a>, our security reward programme. Check <a href="/bugs">/bugs</a> first for what&rsquo;s already known.</p>
+      </div>
+
+      <h2 id="schedule">Where each version is</h2>
+      <p>A new version reaches each place at a different speed, because Apple and Google check some of them first. Latest: <b>5.2.64</b> (27 Nov 2026), <a href="/releases#v5.2.64">what&rsquo;s new</a>.</p>
+      <div class="card"><ul>
+        <li><b>Web, Desktop, Chrome extension (direct), Android download (APK):</b> the same day. Now on 5.2.64.</li>
+        <li><b>Android, Google Play test:</b> 5.2.64 is with Google&rsquo;s review; testers get it once it clears.</li>
+        <li><b>iPhone, TestFlight:</b> 5.2.64 is with Apple&rsquo;s beta review; it appears in TestFlight once it clears, usually within a day or two.</li>
+        <li><b>Chrome Web Store:</b> 5.2.64 is with Google&rsquo;s review.</li>
+        <li><b>App Store and Play Store:</b> not out yet. bWallet&rsquo;s first store release is being prepared; testers hear first.</li>
+      </ul>
+      <p class="muted">Every release is listed on <a href="/releases">/releases</a>, newest first.</p></div>
+
+      <h2 id="paid">The paid Android test: 1 BSV</h2>
+      <p>To reach Google&rsquo;s 12 testers sooner, we paid 1 BSV for 14 days of Android testing. <b>All 20 paid places are taken.</b> You can still join the Google Play test above for free: Google counts every tester who keeps bWallet installed for 14 days, paid or not.</p>
       <p class="places" id="places">20 places</p>
 
       <div class="card" id="app">
         <p class="muted">Loading…</p>
       </div>
 
-      <h2 id="schedule">Where each version is</h2>
-      <p>We ship small updates often, usually several a week. A new version reaches each place at a different speed, because Apple and Google check some of them first. Latest: <b>5.2.64</b> (23 Nov 2026), <a href="/releases#v5.2.64">what&rsquo;s new</a>.</p>
-      <div class="card"><ul>
-        <li><b>Web, Chrome extension, Android download (APK):</b> the same day. Now on 5.2.64.</li>
-        <li><b>Android, Google Play test:</b> the same day. Now on 5.2.37.</li>
-        <li><b>iPhone, TestFlight:</b> about a day later, after Apple&rsquo;s beta review. 5.2.37 is with Apple now; until it clears, TestFlight still offers an older build.</li>
-        <li><b>App Store and Play Store:</b> not out yet. bWallet&rsquo;s first store release is being prepared; testers will hear first.</li>
-      </ul>
-      <p class="muted">Every release is listed on <a href="/releases">/releases</a>, newest first.</p></div>
-
-      <h2>The Android test link</h2>
-      <p>Join on your phone: <a href="https://play.google.com/apps/testing/com.bitcoincorp.bwallet" rel="noopener"><strong>play.google.com/apps/testing/com.bitcoincorp.bwallet</strong></a>, then install bWallet from Google Play. What to test and how to report is on <a href="/testers/bwallet/android"><strong>/testers/bwallet/android</strong></a>.</p>
-
-      <h2>Testing bWalletX, the full edition?</h2>
-      <p>No application needed: <a href="/testers/bwalletx/chrome-extension"><strong>Chrome extension</strong></a> · <a href="/testers/bwalletx/web"><strong>web</strong></a> · <a href="/testers/bwalletx/desktop"><strong>Desktop</strong></a>. Each page says what to test and how to report.</p>
-
-      <h2>On iPhone?</h2>
-      <p>The iPhone beta is open through TestFlight and has no application step: install TestFlight from the App Store, then open <a href="https://testflight.apple.com/join/1TTnQNKm" rel="noopener"><strong>testflight.apple.com/join/1TTnQNKm</strong></a> on your iPhone. What to test and how to report is on <a href="/testers/bwallet/iphone"><strong>/testers/bwallet/iphone</strong></a>. The paid 14-day test below is Android only, because it is Google&rsquo;s requirement.</p>
-
-      <h2>How it works</h2>
+      <h3>How the paid test works</h3>
       <ol>
         <li>Sign in with Google and apply. Use the Google account on your Android phone.</li>
         <li>I read every application and approve testers by hand. If you're in, I add your email to the Google Play test and you'll see your tester code here.</li>
@@ -105,7 +159,7 @@
         <li>Open bWallet every day for 14 days. Use it like you normally would: send a little, receive, try the features.</li>
       </ol>
 
-      <h2>What you get</h2>
+      <h3>What paid testers get</h3>
       <ul>
         <li><b>0.25 BSV</b> after you first open the app installed from Google Play.</li>
         <li><b>0.75 BSV</b> once you've checked in on at least 12 of the 14 days.</li>

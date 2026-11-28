@@ -1,6 +1,6 @@
 # bWalletX: full site text
 
-Generated 2026-11-27 from https://bwalletx.com. Source pages are linked above each section.
+Generated 2026-11-28 from https://bwalletx.com. Source pages are linked above each section.
 
 ---
 
@@ -10516,58 +10516,90 @@ The Bitcoin Corporation Ltd, Flat 6, 315 Barking Road, London, E13 8EE:
 
 Source: https://bwalletx.com/testers
 
-## Help us bring bWallet to Google Play
+# Test bWallet on every platform
 
-Google needs 12 Android testers for 14 days before we can go public. Takes a minute.
+We ship small updates several times a week, and testers catch what we miss. Pick your platform: each one takes a minute, none needs an application, and every page says what to try and how to report it.
 
-- Tap Become a tester and sign in with your Google account.
+Most needed
 
-- Install bWallet from Google Play.
+### Android: Google Play test
 
-- Keep it installed for 14 days.
+Google needs 12 testers who keep bWallet installed for 14 days before it can go on the Play Store. Join with your Google account, install from Google Play, and keep it. Already on the APK? The Play version installs alongside it.
 
 [Become a tester](https://play.google.com/apps/testing/com.bitcoincorp.bwallet)
-[Install on Google Play](https://play.google.com/store/apps/details?id=com.bitcoincorp.bwallet)
+[Install](https://play.google.com/store/apps/details?id=com.bitcoincorp.bwallet)
+[What to test](https://bwalletx.com/testers/bwallet/android)
 
-Already using the direct APK? You can keep it; the Play version installs separately, so you can have both.
+### iPhone: TestFlight
 
-iPhone: open now through TestFlight, see below.
+Install TestFlight from the App Store, then open [testflight.apple.com/join/1TTnQNKm](https://testflight.apple.com/join/1TTnQNKm) on your iPhone. iOS 15 or later.
 
-# Get 1 BSV for testing bWallet
+[Join on TestFlight](https://testflight.apple.com/join/1TTnQNKm)
+[What to test](https://bwalletx.com/testers/bwallet/iphone)
 
-Test bWallet on your Android phone for 14 days and I'll pay you 1 BSV. Google won't let me publish on the Play Store until at least 12 people have tested it for 14 days in a row, so I'm paying for that time.
+### Chrome extension
+
+bWalletX in your browser: connect to sites, sign in, approve payments. Works in Chrome, Brave and Edge.
+
+[Get the extension](https://bwalletx.com/extension)
+[What to test](https://bwalletx.com/testers/bwalletx/chrome-extension)
+
+### Web
+
+The full wallet in any browser, phone or computer, with nothing to install.
+
+[Open web.bwalletx.com](https://web.bwalletx.com)
+[What to test](https://bwalletx.com/testers/bwalletx/web)
+
+### Desktop
+
+The wide wallet for big screens: every account, pot and chat side by side.
+
+[Open Desktop](https://desktop.bwalletx.com)
+[What to test](https://bwalletx.com/testers/bwalletx/desktop)
+
+### Android download (APK)
+
+The full bWalletX edition for Android, straight from us, updated the day we ship.
+
+[Download the APK](https://bwalletx.com/android)
+
+### Agents and developers: the CLI
+
+Give an AI agent its own wallet: `npm i -g bwalletx`, then pair it with your phone (version 0.6.4 or later). Try spending limits, pairing and the MCP server.
+
+[Agent wallets](https://bwalletx.com/agent)
+[Developers](https://bwalletx.com/developers)
+
+How to report: in the app, Settings › Contact and reports (it includes your app version). Or write to [@bWalletX on X](https://x.com/bWalletX).
+
+Found a security hole? Don’t post it: send it to [b-Aware](https://bwalletx.com/b-aware), our security reward programme. Check [/bugs](https://bwalletx.com/bugs) first for what’s already known.
+
+## Where each version is
+
+A new version reaches each place at a different speed, because Apple and Google check some of them first. Latest: 5.2.64 (27 Nov 2026), [what’s new](https://bwalletx.com/releases#v5.2.64).
+
+- Web, Desktop, Chrome extension (direct), Android download (APK): the same day. Now on 5.2.64.
+
+- Android, Google Play test: 5.2.64 is with Google’s review; testers get it once it clears.
+
+- iPhone, TestFlight: 5.2.64 is with Apple’s beta review; it appears in TestFlight once it clears, usually within a day or two.
+
+- Chrome Web Store: 5.2.64 is with Google’s review.
+
+- App Store and Play Store: not out yet. bWallet’s first store release is being prepared; testers hear first.
+
+Every release is listed on [/releases](https://bwalletx.com/releases), newest first.
+
+## The paid Android test: 1 BSV
+
+To reach Google’s 12 testers sooner, we paid 1 BSV for 14 days of Android testing. All 20 paid places are taken. You can still join the Google Play test above for free: Google counts every tester who keeps bWallet installed for 14 days, paid or not.
 
 20 places
 
 Loading…
 
-## Where each version is
-
-We ship small updates often, usually several a week. A new version reaches each place at a different speed, because Apple and Google check some of them first. Latest: 5.2.64 (23 Nov 2026), [what’s new](https://bwalletx.com/releases#v5.2.64).
-
-- Web, Chrome extension, Android download (APK): the same day. Now on 5.2.64.
-
-- Android, Google Play test: the same day. Now on 5.2.37.
-
-- iPhone, TestFlight: about a day later, after Apple’s beta review. 5.2.37 is with Apple now; until it clears, TestFlight still offers an older build.
-
-- App Store and Play Store: not out yet. bWallet’s first store release is being prepared; testers will hear first.
-
-Every release is listed on [/releases](https://bwalletx.com/releases), newest first.
-
-## The Android test link
-
-Join on your phone: [play.google.com/apps/testing/com.bitcoincorp.bwallet](https://play.google.com/apps/testing/com.bitcoincorp.bwallet), then install bWallet from Google Play. What to test and how to report is on [/testers/bwallet/android](https://bwalletx.com/testers/bwallet/android).
-
-## Testing bWalletX, the full edition?
-
-No application needed: [Chrome extension](https://bwalletx.com/testers/bwalletx/chrome-extension) · [web](https://bwalletx.com/testers/bwalletx/web) · [Desktop](https://bwalletx.com/testers/bwalletx/desktop). Each page says what to test and how to report.
-
-## On iPhone?
-
-The iPhone beta is open through TestFlight and has no application step: install TestFlight from the App Store, then open [testflight.apple.com/join/1TTnQNKm](https://testflight.apple.com/join/1TTnQNKm) on your iPhone. What to test and how to report is on [/testers/bwallet/iphone](https://bwalletx.com/testers/bwallet/iphone). The paid 14-day test below is Android only, because it is Google’s requirement.
-
-## How it works
+### How the paid test works
 
 - Sign in with Google and apply. Use the Google account on your Android phone.
 
@@ -10579,7 +10611,7 @@ The iPhone beta is open through TestFlight and has no application step: install 
 
 - Open bWallet every day for 14 days. Use it like you normally would: send a little, receive, try the features.
 
-## What you get
+### What paid testers get
 
 - 0.25 BSV after you first open the app installed from Google Play.
 
